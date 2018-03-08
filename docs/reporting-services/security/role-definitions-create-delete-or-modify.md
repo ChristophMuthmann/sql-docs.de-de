@@ -1,13 +1,14 @@
 ---
-title: "Erstellen, löschen oder Ändern einer Rolle (Management Studio) | Microsoft Docs"
+title: "Erstellen, Löschen oder Ändern einer Rolle (Management Studio) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,18 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 42
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "42"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6029146092b3aabb2861cafa9ce4cdffa4a397ac
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="role-definitions---create-delete-or-modify"></a>Rollendefinitionen - erstellen, löschen oder ändern
+# <a name="role-definitions---create-delete-or-modify"></a>Rollendefinitionen: Erstellen, Löschen oder Ändern
   Reporting Services stellt vordefinierte Rollen, die eine Zugriffsebene für einen Berichtsserver definieren, zur Verfügung. Jeder Benutzer bzw. jede Benutzergruppe, die auf den Berichtsserver zugreifen möchte, benötigt hierfür eine Rolle, mit der die ausführbaren Aufgaben beschrieben werden. Rollen werden für den gesamten Berichtsserver definiert. Sie können eine Rollendefinition nicht für bestimmte Bereiche des Berichtsservers abändern oder angeben, dass eine Rolle je nach Zusammenhängen unterschiedlich verwendet werden soll.  
   
  Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um Rollen zu erstellen, zu ändern oder zu löschen. Sie können nur Rollen löschen, die nicht verwendet werden.  
@@ -81,10 +81,9 @@ ms.lasthandoff: 08/09/2017
   
          Wählen Sie die Aufgaben aus, die Mitglieder dieser Rolle ausführen können, und klicken Sie dann auf **OK** , um die Änderungen zu übernehmen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Reporting Services in SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Reporting Services in SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
-

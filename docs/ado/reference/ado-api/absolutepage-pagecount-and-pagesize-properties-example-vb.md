@@ -3,7 +3,7 @@ title: AbsolutePage "PageCount" und PageSize Eigenschaften Beispiel (VB) | Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], Visual Basic example
 - PageSize property [ADO], Visual Basic example
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a392960b639431c3dabba43ae577e329474febcd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d74fd93f16571db81cbe5d4c6495260303989395
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage "PageCount" und PageSize Eigenschaften Beispiel (VB)
 ```  
@@ -113,4 +112,3 @@ End Sub
  ["PageCount"-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [Die Eigenschaft PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

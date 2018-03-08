@@ -1,13 +1,14 @@
 ---
 title: Arbeiten mit dem ADOMD.NET-Objektmodell | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - object model (client) [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d5ab7348371437e79b52f16c98890aa2c93431b8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 81a9272284e662eb7f5f47e464e85e324b92a39d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>Beim Abrufen der Metadaten - arbeiten mit ADOMD.NET-Objektmodell
   ADOMD.NET bietet ein Objektmodell zum Anzeigen der Cubes und untergeordneten Objekte, die in einer analytischen Datenquelle enthalten sind. Jedoch sind nicht alle Metadaten für eine bestimmte analytische Datenquelle über das Objektmodell verfügbar. Das Objektmodell bietet nur Zugriff auf die Informationen, die von einer Clientanwendung am sinnvollsten angezeigt werden können, damit ein Benutzer interaktiv Befehle erstellen kann. Aufgrund der geringeren Komplexität der darzustellenden Metadaten ist das ADOMD.NET-Objektmodell einfacher zu verwenden.  
@@ -69,4 +69,3 @@ ms.lasthandoff: 10/24/2017
  [Abrufen von Metadaten aus einer analytischen Datenquelle](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

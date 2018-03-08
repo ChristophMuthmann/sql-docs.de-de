@@ -3,7 +3,7 @@ title: Size-Eigenschaft (ADO-Parameter) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1959316966e284ab1f7880d6afcaa4820c009556
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73a6f0f2cd2e0d59ba6cd3e581e9f2aab8934c5f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="size-property-ado-parameter"></a>Eigenschaft "Größe" (ADO-Parameter)
 Gibt die maximale Größe in Bytes oder Zeichen, der eine [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt.  
@@ -54,5 +53,4 @@ Gibt die maximale Größe in Bytes oder Zeichen, der eine [Parameter](../../../a
  [ActiveConnection, CommandText CommandTimeout, Befehlstyp (CommandType), Größe und Eigenschaften Beispiel für die Richtung (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText CommandTimeout, Befehlstyp (CommandType), Größe und Richtung Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection, CommandText CommandTimeout, Befehlstyp (CommandType), Größe und Eigenschaften Beispiel für die Richtung (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [Eigenschaft "Größe" (ADO-Datenstrom)](../../../ado/reference/ado-api/size-property-ado-stream.md)
-
+ [Size-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)

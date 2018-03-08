@@ -2,9 +2,12 @@
 title: Datensammlung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ keywords:
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 28d83f656e80e1e50b9176a3b705e6b5e62fe0f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-collection"></a>Datensammlung
-  Der Datensammler ist eine Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , die verschiedene Datensätze sammelt. Die Datensammlung erfolgt entweder durchgängig oder nach einem benutzerdefinierten Zeitplan. Der Datensammler speichert die gesammelten Daten dann in einer relationalen Datenbank, die als Verwaltungs-Data Warehouse bezeichnet wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Der Datensammler ist eine Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , die verschiedene Datensätze sammelt. Die Datensammlung erfolgt entweder durchgängig oder nach einem benutzerdefinierten Zeitplan. Der Datensammler speichert die gesammelten Daten dann in einer relationalen Datenbank, die als Verwaltungs-Data Warehouse bezeichnet wird.  
   
 ## <a name="what-is-data-collector"></a>Was ist ein Datensammler? 
  Der Datensammler ist eine Kernkomponente der Datensammlungsplattform von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellten Tools. Der Datensammler stellt über Datenbankserver und Anwendungen einen zentralen Punkt für die Datensammlung bereit. Dieser Sammlungspunkt kann Daten von einer Vielzahl von Quellen abrufen und ist nicht auf Leistungsdaten beschränkt, wie es bei der SQL-Ablaufverfolgung der Fall ist.  
@@ -43,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="concepts"></a>Konzepte  
  Der Datensammler ist in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]integriert und verwendet beides intensiv. Bevor Sie mit dem Datensammler arbeiten, sollten Sie Kenntnisse über bestimmte Konzepte hinsichtlich dieser beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten haben.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird zum Planen und Ausführen von Sammlungsaufträgen verwendet. Sie sollten mit den folgenden Konzepten vertraut sein:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird zum Planen und Ausführen von Sammlungsaufträgen verwendet. Sie sollten mit den folgenden Konzepten vertraut sein:  
   
 -   Auftrag  
   
@@ -59,9 +62,9 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) wird verwendet, um Pakete auszuführen, die Daten von einzelnen Datenanbietern auflisten. Sie sollten mit den folgenden Tools und Konzepten von [!INCLUDE[ssIS](../../includes/ssis-md.md)] vertraut sein:  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paket  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketkonfiguration  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketkonfiguration  
   
  Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
@@ -116,7 +119,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="things-you-can-do"></a>Was Sie tun können  
   
-|Beschreibung|Thema|  
+|Description|Thema|  
 |----------------------|-----------|  
 |Verwalten von unterschiedlichen Aspekten der Datensammlung, wie z.B. das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.|[Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Verwenden von Berichten, um Informationen zum Überwachen der Systemkapazität und zur Behandlung von Problemen mit der Systemleistung abzurufen.|[Berichte der Systemdaten-Sammlungssätze](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
@@ -124,5 +127,4 @@ ms.lasthandoff: 06/22/2017
 |Nutzen der serverseitigen Ablaufverfolgungsfunktionen von SQL Server Profiler, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet.| [Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes der SQL-Ablaufverfolgung (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
   
   
-
 

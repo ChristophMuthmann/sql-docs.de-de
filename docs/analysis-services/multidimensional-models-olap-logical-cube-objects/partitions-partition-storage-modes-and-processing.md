@@ -2,12 +2,13 @@
 title: Partition Speichermodi und Verarbeitung | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -24,20 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d94daaeb72996f418f7f1b30dd8a8b4d76e9a5c6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partitionen – Partition Speichermodi und Verarbeitung
-  Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsleistung, die Speicheranforderungen und die Speicherorte der Partition, der übergeordneten Measuregruppe und des übergeordneten Cubes aus. Die Entscheidung für einen Speichermodus wirkt sich zudem auf die Verarbeitungsmöglichkeiten aus.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsleistung, die Speicheranforderungen und die Speicherorte der Partition, der übergeordneten Measuregruppe und des übergeordneten Cubes aus. Die Entscheidung für einen Speichermodus wirkt sich zudem auf die Verarbeitungsmöglichkeiten aus.  
   
  Für eine Partition kann einer von drei grundlegenden Speichermodi verwendet werden:  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Hybride OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt alle drei grundlegenden Speichermodi. Zudem wird die proaktive Zwischenspeicherung unterstützt. Damit können die Merkmale der ROLAP-Speicherung und der MOLAP-Speicherung sowohl für die Unmittelbarkeit der Daten als auch für die Abfrageleistung kombiniert werden. Weitere Informationen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt alle drei grundlegenden Speichermodi. Zudem wird die proaktive Zwischenspeicherung unterstützt. Damit können die Merkmale der ROLAP-Speicherung und der MOLAP-Speicherung sowohl für die Unmittelbarkeit der Daten als auch für die Abfrageleistung kombiniert werden. Weitere Informationen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  Der Speichermodus MOLAP bewirkt, dass die Aggregationen der Partition sowie eine Kopie der zugehörigen Quelldaten in einer mehrdimensionalen Struktur in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert werden, wenn die Partition verarbeitet wird. Diese MOLAP-Struktur ist stark optimiert, um die Abfrageleistung zu maximieren. Als Speicherort kann der Computer, auf dem die Partition definiert wurde, oder ein anderer Computer mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet werden. Da sich eine Kopie der Quelldaten in der mehrdimensionalen Struktur befindet, können Abfragen aufgelöst werden, ohne auf die Quelldaten der Partition zuzugreifen. Durch das Verwenden von Aggregationen können die Antwortzeiten für Abfragen erheblich verbessert werden. Die Daten in der MOLAP-Struktur der Partition sind nur so aktuell wie am Datum, an dem die letzte Verarbeitung der Partition erfolgte.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 09/01/2017
  Der Speichermodus ROLAP bewirkt, dass die Aggregationen der Partition in indizierten Sichten in der relationalen Datenbank gespeichert werden, die in den Quelldaten der Partition angegeben wurde. Im Gegensatz zu den MOLAP-Speichermodus ROLAP bewirkt nicht, eine Kopie der Quelldaten in gespeichert werden die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenordner. Wenn Ergebnisse nicht aus dem Abfragecache übernommen werden können, werden Abfragen stattdessen mithilfe der indizierten Sichten in der Datenquelle beantwortet. Beim ROLAP-Speicher erfolgt die Beantwortung von Abfragen i. A. langsamer als bei Verwendung der Speichermodi MOLAP oder HOLAP. Auch die Verarbeitungszeit ist bei ROLAP üblicherweise länger. ROLAP ermöglicht den Benutzern jedoch das Anzeigen von Daten in Echtzeit und kann dazu beitragen, Speicherplatz zu sparen, wenn Sie mit großen Datasets arbeiten, die nur unregelmäßig abgefragt werden, z. B. mit reinen Vergangenheitsdaten.  
   
 > [!NOTE]  
->  Bei Verwendung von ROLAP [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gelegten fehlerhafte Informationen bezüglich des unbekannten Elements, wenn ein Join mit einer GROUP BY-Klausel kombiniert wird. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]entfernt relationale Integritätsfehler anstatt den unbekannten Elementwert zurückzugeben.  
+>  Bei Verwendung von ROLAP [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gelegten fehlerhafte Informationen bezüglich des unbekannten Elements, wenn ein Join mit einer GROUP BY-Klausel kombiniert wird. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] entfernt relationale Integritätsfehler anstatt den unbekannten Elementwert zurückzugeben.  
   
  Wenn eine Partition den Speichermodus ROLAP verwendet und die zugehörigen Quelldaten in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gespeichert sind, erstellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] indizierte Sichten, die Aggregationen der Partition enthalten. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keine indizierten Sichten erstellen werden keine Aggregationstabellen erstellt. Obwohl die Sitzungsanforderungen für das Erstellen indizierter Sichten im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durch [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] behandelt werden, müssen für das Erstellen indizierter Sichten für Aggregationen durch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die folgenden Bedingungen durch die ROLAP-Partition und die Tabellen im zugehörigen Schema erfüllt sein:  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 09/01/2017
   
     -   QUOTED_IDENTIFIER  
   
--   Die Gesamtgröße des Indexschlüssels in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] darf 900 Bytes nicht überschreiten. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]implementiert diese Bedingung basierend auf den Schlüsselspalten fester Länge, wenn die CREATE INDEX-Anweisung verarbeitet wird. Jedoch, wenn der Indexschlüssel Spalten variabler Länge stehen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] auch implementiert diese Bedingung bei jedem Update der Basistabellen. Da unterschiedliche Aggregationen unterschiedliche Sichtdefinitionen aufweisen, kann die ROLAP-Verarbeitung mithilfe indizierter Sichten je nach Aggregationsentwurf erfolgreich verlaufen oder fehlschlagen.  
+-   Die Gesamtgröße des Indexschlüssels in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] darf 900 Bytes nicht überschreiten. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] implementiert diese Bedingung basierend auf den Schlüsselspalten fester Länge, wenn die CREATE INDEX-Anweisung verarbeitet wird. Jedoch, wenn der Indexschlüssel Spalten variabler Länge stehen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] auch implementiert diese Bedingung bei jedem Update der Basistabellen. Da unterschiedliche Aggregationen unterschiedliche Sichtdefinitionen aufweisen, kann die ROLAP-Verarbeitung mithilfe indizierter Sichten je nach Aggregationsentwurf erfolgreich verlaufen oder fehlschlagen.  
   
 -   Für die Sitzung, in der die indizierte Sicht erstellt wird, müssen die folgenden Optionen den Wert ON aufweisen: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING und ANSI_WARNING. Diese Einstellung kann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vorgenommen werden.  
   
@@ -94,7 +95,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [Proaktives Zwischenspeichern &#40; Partitionen &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   
-

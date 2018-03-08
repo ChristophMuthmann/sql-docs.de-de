@@ -2,13 +2,13 @@
 title: Mehrdimensionale Modelldatenbanken (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 55
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b9b4fa79c4ef7a37158c1fbeea32a80c56effa2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Mehrdimensionale Modelldatenbanken (SSAS)
-  Eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank stellt eine Sammlung von Datenquellen, Datenquellensichten, Cubes, Dimensionen und Rollen dar. Optional kann eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank Data Mining-Strukturen und benutzerdefinierte Assemblys enthalten, mit deren Hilfe der Datenbank benutzerdefinierte Funktionen hinzugefügt werden können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank stellt eine Sammlung von Datenquellen, Datenquellensichten, Cubes, Dimensionen und Rollen dar. Optional kann eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank Data Mining-Strukturen und benutzerdefinierte Assemblys enthalten, mit deren Hilfe der Datenbank benutzerdefinierte Funktionen hinzugefügt werden können.  
   
  Cubes sind die grundlegenden Abfrageobjekte in Analysis Services. Wenn Sie über eine Clientanwendung eine Verbindung mit einer Analysis Services-Datenbank herstellen, werden Sie mit einem Cube innerhalb dieser Datenbank verbunden. Eine Datenbank kann mehrere Cubes enthalten, wenn Dimensionen, Assemblys, Rollen oder Miningstrukturen in mehreren Kontexten wiederverwendet werden.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/01/2017
   
  [Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Herstellen in Onlinemodus einer Verbindung mit einer Analysis Services-Datenbank](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   
@@ -72,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Abfragen von mehrdimensionalen Daten mit MDX](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
   
-

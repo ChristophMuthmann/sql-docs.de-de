@@ -2,9 +2,12 @@
 title: "Erstellen einer vollständigen Datenbanksicherung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Gehen Sie für SQL Server 2014 unter [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell eine vollständige Datenbanksicherung erstellen.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 10/11/2017
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Wenn eine Datenbank größer wird, ist zum Abschließen von vollständigen Datenbanksicherungen jedoch mehr Zeit und mehr Speicherplatz erforderlich. Erwägen Sie für große Datenbanken die Ergänzung einer vollständigen Datenbanksicherung mit einer Reihe von [differenziellen Datenbanksicherungen]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   Wenn eine Datenbank größer wird, ist zum Abschließen von vollständigen Datenbanksicherungen jedoch mehr Zeit und mehr Speicherplatz erforderlich. Bei einer großen Datenbank bietet es sich an, eine vollständige Datenbanksicherung durch mehrere [differenzielle Datenbanksicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md) zu ergänzen. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Ein Schätzwert der Größe einer vollständigen Datenbanksicherung kann mithilfe der gespeicherten Systemprozedur [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) ermittelt werden.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 10/11/2017
   
  Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss **über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der** -Dienst ausgeführt wird, muss Schreibberechtigungen haben. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Solche Probleme mit der physischen Datei des Sicherungsmediums treten möglicherweise erst auf, wenn auf die physische Ressource zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 >  Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Sicherungstask angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und ein Ziel für das Skript auswählen.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 10/11/2017
   
          Weitere Informationen zum Ablaufdatum von Sicherungen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md):  
   
-21. Verwenden Sie im Abschnitt **Komprimierung** die Dropdownliste **Sicherungskomprimierung festlegen** , um den gewünschten Komprimierungsgrad festzulegen.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist vom Wert der Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** abhängig. Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
+21. Verwenden Sie im Abschnitt **Komprimierung** die Dropdownliste **Sicherungskomprimierung festlegen** , um den gewünschten Komprimierungsgrad festzulegen.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
   
      Weitere Informationen zu den Einstellungen für die Sicherungskomprimierung finden Sie unter [Anzeigen oder Konfigurieren der Serverkonfigurationsoption „Standardeinstellung für die Sicherungskomprimierung“](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
@@ -159,7 +161,7 @@ Sie können den [Wartungsplanungs-Assistenten](../maintenance-plans/use-the-main
 ### <a name="examples"></a>Beispiele  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Vollständige Sicherung auf Datenträger am Standardspeicherort**
 In diesem Beispiel wird die `Sales` -Datenbank auf dem Datenträger am standardmäßigen Sicherungsspeicherort gesichert.  Es wurde nie eine Sicherung von `Sales` erstellt.
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 
@@ -167,7 +169,7 @@ In diesem Beispiel wird die `Sales` -Datenbank auf dem Datenträger am standardm
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.  Vollständige Sicherung auf Datenträger an einem anderen als dem Standardspeicherort**
 In diesem Beispiel wird die `Sales` -Datenbank auf Datenträger unter `E:\MSSQL\BAK`gesichert.  Frühere Sicherungen von `Sales` wurden erstellt.
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 
@@ -202,7 +204,7 @@ In diesem Beispiel wird die `Sales` -Datenbank mit Verschlüsselung am standardm
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Sichern auf den Azure-BLOB-Speicherdienst**
 #### <a name="common-steps"></a>**Allgemeine Schritte**  
 In den drei folgenden Beispielen wird eine vollständige Sicherung der `Sales` -Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Aus Gründen der Übersichtlichkeit sind die ersten vier Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 5**.
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 
@@ -215,13 +217,13 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
 *
     5.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem Textfeld **Azure-Speichercontainer:** .
 
-    6.  Geben Sie `Sales_stripe1of2_20160601.bak` im Textfeld **Sicherungsdatei:** ein.
+    6.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe1of2_20160601.bak`ein.
 
     7.  Klicken Sie auf **OK**.
 
     8.  Wiederholen Sie die Schritte **4** und **5**.
 
-    9.  Geben Sie `Sales_stripe2of2_20160601.bak` im Textfeld **Sicherungsdatei:** ein.
+    9.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe2of2_20160601.bak`ein.
 
     10.  Klicken Sie auf **OK**.
 
@@ -264,10 +266,10 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
   
      [ WITH *mit_Optionen* [ **,**...*o* ] ] ;  
   
-    |Option|Beschreibung|  
+    |Option|Description|  
     |------------|-----------------|  
     |*database*|Die Datenbank, für die eine Sicherungskopie erstellt werden soll.|  
-    |*backup_device* [ **,**...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=***physischer_Sicherungsmediumname*<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK | TAPE } **=***Name_des_physischen_Sicherungsgeräts*<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|  
     |WITH *with_options* [ **,**...*o* ]|Optional geben Sie eine oder mehrere zusätzliche Optionen an, *o*. Weitere Informationen zu einigen der grundlegenden Optionen finden Sie unter Schritt 2.|  
   
 2.  Geben Sie optional eine oder mehrere WITH-Optionen an. Einige der grundlegenden WITH-Optionen werden hier beschrieben. Weitere Informationen zu allen WITH-Optionen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md):  
@@ -280,10 +282,10 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
          VERSCHLÜSSELUNG (ALGORITHMUS, SERVERZERTIFIKAT | ASYMMETRISCHER SCHLÜSSEL)  
          Nur in SQL Server 2014 und höheren Versionen geben Sie den zu verwendenden Verschlüsselungsalgorithmus und das Zertifikat oder den asymmetrischen Schlüssel an, die die Sicherheit bei der Verschlüsselung erhöhen.  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'***Text***'** | **@***Textvariable* }  
          Gibt den Text an, mit dem der Sicherungssatz beschrieben wird. Die Zeichenfolge kann maximal 255 Zeichen haben.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *Name-des-Sicherungssatzes* | **@***Name-des-Sicherungssatzes_Variable* }  
          Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.  
   
     -   Grundlegender Sicherungssatz von WITH-Optionen:  
@@ -292,7 +294,7 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
   
          Verwenden Sie alternativ die FORMAT-Option, um die Sicherungsmedien zu formatieren:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *Medienname* | **@***Medienname_variable* } ] [ **,** MEDIADESCRIPTION **=** { *Text* | **@***Textvariable* } ]  
          Verwenden Sie die FORMAT-Klausel, wenn Sie das Medium das erste Mal einsetzen oder alle vorhandenen Daten überschreiben möchten. Weisen Sie den neuen Medien optional einen Mediennamen und eine Beschreibung zu.  
   
         > [!IMPORTANT]  
@@ -303,7 +305,7 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
 #### <a name="a-back-up-to-a-disk-device"></a>**A. Sichern auf ein Datenträgermedium**  
  In diesem Beispiel wird die gesamte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank auf dem Datenträger gesichert, wobei mithilfe von `FORMAT` ein neuer Mediensatz erstellt wird.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -317,7 +319,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B. Sichern auf ein Bandmedium**  
  Im folgenden Beispiel wird die gesamte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank auf Band gesichert, wobei die Sicherung an vorherige Sicherungen angefügt wird.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -330,7 +332,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Sichern auf ein logisches Bandmedium**  
  Im folgenden Beispiel wird ein logisches Sicherungsmedium für ein Bandlaufwerk erstellt. Im Beispiel wird dann die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank vollständig auf diesem Medium gesichert.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -402,4 +404,3 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)  
   
   
-

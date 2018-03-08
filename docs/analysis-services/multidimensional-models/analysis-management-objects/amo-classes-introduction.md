@@ -1,13 +1,14 @@
 ---
 title: "Einführung in AMO-Klassen | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b288d323d4de3272afb434f3782c1df133e304af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 868de22e20887c0d038cf65690649ae6a41530e1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO-Klassen - Einführung
   Analysis Management Objects (AMO) ist eine Bibliothek von Klassen, die entwickelt wurde, um eine Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] über eine Clientanwendung zu verwalten. AMO-Klassen sind Klassen, die verwendet werden, um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Objekte wie Datenbanken, Dimensionen, Cubes, Miningstrukturen und Modelle, Rollen und Berechtigungen, Ausnahmen usw. zu verwalten.  
@@ -40,10 +40,10 @@ ms.lasthandoff: 09/01/2017
 |Thema|Description|  
 |-----------|-----------------|  
 |[Grundlegende AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Beschreibt Klassen, die erforderlich sind, um einen beliebigen anderen Satz von Klassen verwenden zu können.|  
-|[AMO-OLAP-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Beschreibt Klassen, mit denen Sie die OLAP-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwalten können.|  
-|[AMO-Klassen für Datamining](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Beschreibt Klassen, mit denen Sie die Data Mining-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwalten können.|  
+|[AMO OLAP-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Beschreibt Klassen, mit denen Sie die OLAP-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwalten können.|  
+|[AMO-Klassen für Data Mining](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Beschreibt Klassen, mit denen Sie die Data Mining-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwalten können.|  
 |[AMO-Sicherheitsklassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Beschreibt Klassen, mit denen Sie den Zugriff auf andere Objekte steuern und die Sicherheit aufrechterhalten können.|  
-|[AMO anderen Klassen und Methoden](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Beschreibt Klassen und Methoden, die OLAP- oder Data Mining-Administratoren helfen, ihre täglichen Aufgaben auszuführen.|  
+|[Andere AMO-Klassen und -Methoden](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Beschreibt Klassen und Methoden, die OLAP- oder Data Mining-Administratoren helfen, ihre täglichen Aufgaben auszuführen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices>   
@@ -52,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [Entwickeln mit Analysis Management Objects &#40; AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   
-

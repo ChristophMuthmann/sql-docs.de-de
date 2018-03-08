@@ -3,26 +3,26 @@ title: Befehl "SET" | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET PATH command [ODBC]
+helpviewer_keywords: SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 553c3f464b5a14d578aa05bece939126f7251974
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 490fefba9286a970b21014c66d681426703978fc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-path-command"></a>Befehl "SET"
 Gibt einen Pfad für die Datei sucht. Treiberspezifische Informationen finden Sie unter den Hinweisen.  
@@ -59,4 +59,3 @@ SET PATH TO [Path]
  [SQLColumns (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)
-

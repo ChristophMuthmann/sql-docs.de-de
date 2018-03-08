@@ -2,11 +2,13 @@
 title: Informationen zum Protokollversand (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,20 +27,19 @@ helpviewer_keywords:
 - backup jobs [SQL Server]
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 5ab35997e2241e7ef2c788308c56c6b532852517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-log-shipping-sql-server"></a>Informationen zum Protokollversand (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversand können Sie automatisch Transaktionsprotokollsicherungen von einer *primären Datenbank* auf einer Instanz eines *primären Servers* an eine oder mehrere *sekundäre Datenbanken* auf separaten Instanzen eines *sekundären Servers* senden. Die Transaktionsprotokollsicherungen werden einzeln auf jede der sekundären Datenbanken angewendet. Eine optionale dritte Serverinstanz, die als *Überwachungsserver*bezeichnet wird, zeichnet den Verlauf und den Status von Sicherungs- und Wiederherstellungsvorgängen auf und löst optional Warnungen aus, falls diese Vorgänge nicht wie geplant ausgeführt werden können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokollversand können Sie automatisch Transaktionsprotokollsicherungen von einer *primären Datenbank* auf einer Instanz eines *primären Servers* an eine oder mehrere *sekundäre Datenbanken* auf separaten Instanzen eines *sekundären Servers* senden. Die Transaktionsprotokollsicherungen werden einzeln auf jede der sekundären Datenbanken angewendet. Eine optionale dritte Serverinstanz, die als *Überwachungsserver*bezeichnet wird, zeichnet den Verlauf und den Status von Sicherungs- und Wiederherstellungsvorgängen auf und löst optional Warnungen aus, falls diese Vorgänge nicht wie geplant ausgeführt werden können.  
   
  **In diesem Thema:**  
   
@@ -164,8 +165,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

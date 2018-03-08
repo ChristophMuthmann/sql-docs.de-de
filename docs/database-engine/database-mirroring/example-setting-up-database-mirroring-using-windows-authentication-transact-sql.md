@@ -2,11 +2,13 @@
 title: 'Beispiel: Einrichten einer Datenbankspiegelung mit Windows-Authentifizierung (T-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d9a62068f535e0622152fe263fd93d00524465fa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d5fafa948d63eae3402e6d5b14587170f3675a56
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
-  In diesem Beispiel werden sämtliche Schritte erläutert, die für die Erstellung einer Datenbank-Spiegelungssitzung mit einem Zeugen mithilfe der Windows-Authentifizierung erforderlich sind. In den Beispielen in diesem Thema wird [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet. Beachten Sie Folgendes: Anstelle der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritte können Sie für die Einrichtung von Datenbankspiegelungen den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung verwenden. Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Beispiel werden sämtliche Schritte erläutert, die für die Erstellung einer Datenbank-Spiegelungssitzung mit einem Zeugen mithilfe der Windows-Authentifizierung erforderlich sind. In den Beispielen in diesem Thema wird [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet. Beachten Sie Folgendes: Anstelle der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritte können Sie für die Einrichtung von Datenbankspiegelungen den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung verwenden. Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ## <a name="prerequisite"></a>Voraussetzung  
  In diesem Beispiel wird die **AdventureWorks** -Beispieldatenbank verwendet, in der standardmäßig das einfache Wiederherstellungsmodell zum Einsatz kommt. Um diese Datenbank für die Datenbankspiegelung verwenden zu können, muss sie dahin gehend geändert werden, dass das vollständige Wiederherstellungsmodell verwendet wird. Verwenden Sie zu diesem Zweck in [!INCLUDE[tsql](../../includes/tsql-md.md)] die ALTER DATABASE-Anweisung wie folgt:  
@@ -162,7 +163,7 @@ GO
   
 -   [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
@@ -170,4 +171,3 @@ GO
  [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

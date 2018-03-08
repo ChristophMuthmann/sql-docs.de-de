@@ -1,13 +1,14 @@
 ---
-title: Rollendefinitionen | Microsoft Docs
+title: Rollendefinitionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7618d07d7329a92c4c059b68f099fb6acbf3e338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions"></a>Rollendefinitionen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ist eine *Rollen**definition* eine benannte Auflistung von Aufgaben, die die auf einem Berichtsserver verfügbaren Vorgänge definieren. Rollendefinitionen stellen die Regeln bereit, mit denen der Berichtsserver die Sicherheit erzwingt. Wenn ein Benutzer versucht, eine Aufgabe auszuführen, z. B. das Veröffentlichen eines Berichts in einem Ordner, überprüft der Berichtsserver die Rollenzuweisung des Benutzers, um zu bestimmen, ob die Aufgabe in der Rollendefinition enthalten ist. Falls die Aufgabe in der Rollendefinition enthalten ist, wird die Anforderung gesendet.  
@@ -60,13 +60,12 @@ ms.lasthandoff: 08/09/2017
   
  Sie können eine nicht mehr verwendete Rollendefinition löschen. Es ist nicht möglich, die Rollendefinition, die für die Funktion Meine Berichte ausgewählt ist, zu löschen, solange diese Funktion aktiviert ist. Zum Löschen der für Meine Berichte verwendeten Rollendefinition müssen Sie diese Funktion zunächst deaktivieren oder eine andere Rollendefinition dafür auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Erstellen Sie, löschen Sie oder ändern Sie einer Rolle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40; Berichts-Manager &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Ändern Sie oder löschen Sie einer Rollenzuweisung &#40; Berichts-Manager &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   
-

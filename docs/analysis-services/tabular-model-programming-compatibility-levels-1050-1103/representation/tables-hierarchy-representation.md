@@ -2,31 +2,32 @@
 title: Hierarchiedarstellung (tabellarisch) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 411491544f01c1aad7655a692b7542269f5c0844
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6483e1e3fe0e616c3c870183fcb265f1d2d252ec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---hierarchy-representation"></a>Tabellen - Hierarchiedarstellung
-  In tabellarischen Modellen stellt eine Hierarchie einen Navigationspfad von einem Attribut zu einem anderen dar, der auf Werten basiert, die vom Benutzer ausgewählt wurden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+In tabellarischen Modellen stellt eine Hierarchie einen Navigationspfad von einem Attribut zu einem anderen dar, der auf Werten basiert, die vom Benutzer ausgewählt wurden.  
   
 ## <a name="hierarchy-representation"></a>Hierarchiedarstellung  
   
@@ -108,4 +109,3 @@ private void addHierarchy(
 ```  
   
   
-

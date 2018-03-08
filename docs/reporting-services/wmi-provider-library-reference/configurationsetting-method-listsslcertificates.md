@@ -1,31 +1,30 @@
 ---
-title: 'ListSSLCertificates-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'ListSSLCertificates-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ListSSLCertificates method
+helpviewer_keywords: ListSSLCertificates method
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-caps.latest.revision: 12
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "12"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c7f03453aa500c3eeccbede26dd45d93d6c6ba1c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c8dd72b7dd49e2955b32f0bcb868e7bb04de6a14
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting Methode - ListSSLCertificates
+# <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting-Methode: ListSSLCertificates
   Gibt eine Liste der Zertifikate auf dem Berichtsservercomputer zurück  
   
 ## <a name="syntax"></a>Syntax  
@@ -61,13 +60,12 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Fehlercode gibt an, dass der Aufruf nicht erfolgreich war.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: Data Mining-Abfragetasks | Microsoft Docs
+title: Data Mining-Abfragetask | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
   Der Data Mining-Abfragetask führt Vorhersageabfragen basierend auf in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellten Data Mining-Modellen aus. Die Vorhersageabfrage erstellt mithilfe von Miningmodellen eine Vorhersage für neue Daten. Beispielsweise kann eine Vorhersageabfrage vorhersagen, wie viele Segelboote in den Sommermonaten voraussichtlich verkauft werden, oder sie kann eine Liste potenzieller Kunden generieren, die mit hoher Wahrscheinlichkeit ein Segelboot kaufen werden.  
@@ -81,7 +83,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
   
 ### <a name="mining-model-tab-options"></a>Optionen der Registerkarte Miningmodell  
@@ -113,7 +115,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
   
 ### <a name="build-query-tab-options"></a>Optionen der Registerkarte Abfrage erstellen  
@@ -169,7 +171,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
   
 ### <a name="output-tab-options"></a>Optionen der Registerkarte Ausgabe  
@@ -185,4 +187,3 @@ ms.lasthandoff: 08/11/2017
  **Ausgabetabelle löschen und erneut erstellen**  
  Gibt an, ob die Vorhersageabfrage den Inhalt in der Zieltabelle überschreiben soll, indem die Tabelle gelöscht und anschließend erneut erstellt wird.  
   
-

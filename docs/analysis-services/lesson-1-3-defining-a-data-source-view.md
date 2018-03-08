@@ -2,30 +2,33 @@
 title: Definieren einer Datenquellensicht | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d517f1fc30c695f65024e44aced7ea446bca731
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Lektion 1 bis 3-definieren eine Datenquellensicht
-Nach dem Definieren der Datenquellen für ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt besteht der nächste Schritt im Allgemeinen im Definieren einer Datenquellensicht für das Projekt. Eine Datenquellensicht ist eine einheitliche Sicht der Metadaten von den angegebenen Tabellen und Sichten, die von den Datenquellen im Projekt definiert werden. Das Speichern der Metadaten in der Datenquellensicht ermöglicht das Arbeiten mit den Metadaten während der Entwicklung ohne offene Verbindung mit einer zugrunde liegenden Datenquelle. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Nach dem Definieren der Datenquellen für ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekt besteht der nächste Schritt im Allgemeinen im Definieren einer Datenquellensicht für das Projekt. Eine Datenquellensicht ist eine einheitliche Sicht der Metadaten von den angegebenen Tabellen und Sichten, die von den Datenquellen im Projekt definiert werden. Das Speichern der Metadaten in der Datenquellensicht ermöglicht das Arbeiten mit den Metadaten während der Entwicklung ohne offene Verbindung mit einer zugrunde liegenden Datenquelle. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 In der folgenden Aufgabe definieren Sie eine Datenquellensicht, die fünf Tabellen aus der Datenquelle **AdventureWorksDW2012** umfasst.  
   
@@ -38,7 +41,7 @@ In der folgenden Aufgabe definieren Sie eine Datenquellensicht, die fünf Tabell
 3.  Unter **Relationale Datenquellen**ist die **Adventure Works DW 2012** -Datenquelle ausgewählt. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
-    > Um eine auf mehreren Datenquellen basierende Datenquellensicht zu erstellen, definieren Sie zuerst eine auf einer einzelnen Datenquelle basierende Datenquellensicht. Diese Datenquelle wird dann als primäre Datenquelle bezeichnet. Anschließend können Sie Tabellen und Sichten aus einer sekundären Datenquelle hinzufügen. Beim Entwerfen von Dimensionen, die Attribute enthalten, die auf zugehörigen Tabellen in mehreren Datenquellen basieren, können Sie eine [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenquelle als primäre Datenquelle definieren und deren verteilte Abfragemodulfunktionen verwenden.  
+    > Um eine auf mehreren Datenquellen basierende Datenquellensicht zu erstellen, definieren Sie zuerst eine auf einer einzelnen Datenquelle basierende Datenquellensicht. Diese Datenquelle wird dann als primäre Datenquelle bezeichnet. Anschließend können Sie Tabellen und Sichten aus einer sekundären Datenquelle hinzufügen. Beim Entwerfen von Dimensionen, die Attribute, die basierend auf verknüpften Tabellen in mehreren Datenquellen enthalten, müssen Sie möglicherweise definieren eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenquelle als primäre Datenquelle die verteilte abfragemodulfunktionen verwenden.  
   
 4.  Wählen Sie auf der Seite **Tabellen und Sichten auswählen** Tabellen und Sichten aus der Liste von Objekten aus, die in der ausgewählten Datenquelle verfügbar sind. Sie können diese Liste filtern, sodass das Auswählen von Tabellen und Sichten einfacher wird.  
   
@@ -73,7 +76,7 @@ In der folgenden Aufgabe definieren Sie eine Datenquellensicht, die fünf Tabell
   
     -   Eine für den Datenquellensicht-Designer spezifische Symbolleiste.  
   
-8.  Klicken Sie auf die Schaltfläche [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] development environment, click the **Maximize** button.  
+8.  Klicken Sie auf die Schaltfläche [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , um die -Entwicklungsumgebung zu **maximieren**.  
   
 9. Zur Anzeige der Tabellen im Bereich **Diagramm** in einer 50-Prozent-Darstellung, klicken Sie auf das **Vergrößern** -Symbol in der Symbolleiste des Datenquellensicht-Designers. Dadurch werden die Spaltendetails jeder Tabelle ausgeblendet.  
   
@@ -91,4 +94,3 @@ In der folgenden Aufgabe definieren Sie eine Datenquellensicht, die fünf Tabell
   
   
   
-

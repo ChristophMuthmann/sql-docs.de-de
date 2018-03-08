@@ -2,31 +2,30 @@
 title: Cmdlet "Invoke-ProcessTable" | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e2a7f1392931ec5edd41803f6df6d98aa95403dd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2298c9e882f3f754b16ce33bf6bc72dfc6d80ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Wendet den Vorgang **Verarbeiten** mit einem bestimmten **RefreshType** auf eine **Tabelle**an.  
+# <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable-cmdlet
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Wendet den Vorgang **Verarbeiten** mit einem bestimmten **RefreshType** auf eine **Tabelle**an.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="parameters"></a>Parameter  
   
-### <a name="-tablename-string"></a>-TableName \<Zeichenfolge >  
+### <a name="-tablename-string"></a>-TableName \<string>  
  Der Name der Tabelle, der die zu verarbeitende Partition angehört.  
   
 |||  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-databasename-string"></a>DatabaseName - \<Zeichenfolge >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  Gibt die Datenbank an, zu der die Tabelle gehört.  
   
 |||  
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  Gibt optional die Serverinstanz an, mit der eine Verbindung hergestellt werden soll, wenn Sie nicht das **SQLAS** -Anbieterverzeichnis für den Kontext verwenden.  
   
 |||  
@@ -126,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  Dieser Befehl verarbeitet eine tabellarische Metadatentabelle mit einem **enum** -Aktualisierungstyp.  
   
   
-

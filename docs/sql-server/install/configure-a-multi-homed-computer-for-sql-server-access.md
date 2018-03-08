@@ -2,9 +2,12 @@
 title: "Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -14,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
-  In einem Szenario, in dem ein Server eine Verbindung zu mindestens zwei Netzwerken oder Netzwerksubnetzen bereitstellen muss, wird normalerweise ein mehrfach vernetzter Computer verwendet. Häufig befindet sich dieser Computer in einem Umkreisnetzwerk (auch als DMZ, Demilitarized Zone oder überwachtes Subnetz bezeichnet). In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  In einem Szenario, in dem ein Server eine Verbindung zu mindestens zwei Netzwerken oder Netzwerksubnetzen bereitstellen muss, wird normalerweise ein mehrfach vernetzter Computer verwendet. Häufig befindet sich dieser Computer in einem Umkreisnetzwerk (auch als DMZ, Demilitarized Zone oder überwachtes Subnetz bezeichnet). Dieser Artikel beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.  
   
 > [!NOTE]  
 >  Ein mehrfach vernetzter Computer verfügt über mehrere Netzwerkkarten oder wurde so konfiguriert, dass mehrere IP-Adressen für eine einzelne Netzwerkkarte verwendet werden können. Ein zweifach vernetzter Computer verfügt über zwei Netzwerkkarten oder wurde so konfiguriert, dass zwei IP-Adressen für eine einzelne Netzwerkkarte verwendet werden können.  
   
- Bevor Sie mit diesem Thema fortfahren, sollten Sie mit den Informationen im Thema [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)vertraut sein. Dieses Thema enthält grundlegende Informationen dazu, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten mit der Firewall zusammenarbeiten.  
+ Bevor Sie mit diesem Artikel fortfahren, sollten Sie mit den Informationen im Artikel [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) vertraut sein. Dieser Artikel enthält grundlegende Informationen dazu, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten mit der Firewall zusammenarbeiten.  
   
  **Annahmen für dieses Beispiel:**  
   
@@ -42,7 +47,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Bei einer IPv4-Adresse handelt es sich um eine Reihe von vierstelligen Zahlen, die als Oktett bezeichnetet wird. Jede Zahl ist kleiner als 255 und wird durch Punkte getrennt, z. B. 127.0.0.1. Eine IPv6-Adresse ist eine Reihe von acht Hexadezimalzahlen, die durch Doppelpunkte getrennt werden, z. B. fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   Die Firewall kann entweder den Zugriff über einen bestimmten Port (wie z. B. Port 1433) oder auf das Programm [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe) zulassen. Beide Methoden sind gleichwertig. Da ein Server in einem Umkreisnetzwerk anfälliger für Angriffe ist als ein Server in einem Intranet, wird für dieses Thema angenommen, dass Sie den Zugriff genauer steuern und die Ports, die Sie öffnen, einzeln auswählen möchten. Es wird daher vorausgesetzt, dass Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfigurieren, um auf einem festen Port zu lauschen. Weitere Informationen über die Ports, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   Die Firewall kann entweder den Zugriff über einen bestimmten Port (wie z. B. Port 1433) oder auf das Programm [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe) zulassen. Beide Methoden sind gleichwertig. Da ein Server in einem Umkreisnetzwerk anfälliger für Angriffe ist als ein Server in einem Intranet, wird für diesen Artikel angenommen, dass Sie den Zugriff genauer steuern und die Ports, die Sie öffnen, einzeln auswählen möchten. Es wird daher vorausgesetzt, dass Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfigurieren, um an einem festen Port zu lauschen. Weitere Informationen über die Ports, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 -   In diesem Beispiel wird der Zugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] unter Verwendung von TCP-Port 1433 konfiguriert. Die anderen Ports, die unterschiedliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten sind, können mithilfe der gleichen allgemeinen Schritte konfiguriert werden.  
   
@@ -142,7 +147,7 @@ ms.lasthandoff: 06/22/2017
   
 9. Um die anderen IP-Adressen auf einem mehrfach vernetzten Computer zu konfigurieren, wiederholen Sie diesen Vorgang mit einer anderen IP-Adresse und einer anderen Regel.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-Browserdienst &#40;Datenbankmodul und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Verbindungsaufbau mit SQL Server über einen Proxyserver &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   

@@ -3,10 +3,12 @@ title: Visual FoxPro-Setupdialogfeld ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4142d2806cb71f8cb188f1ab155213493d4dc975
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22208bd706e7b8966f54a501e9580b35d99a0555
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC-Visual FoxPro einrichten (Dialogfeld)
 Die **ODBC Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Ändern einer Visual FoxPro-Datenquelle.  
@@ -35,7 +36,7 @@ Die **ODBC Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Än
  **Datenquellenname**  
  Geben Sie den Namen, die, den Sie für die Datenquelle verwenden möchten.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung für die Datenquelle an.  
   
  **Datenbanktyp**  
@@ -82,4 +83,3 @@ DELETED=YES"
   
  **Abrufen von Daten im Hintergrund**  
  Bestimmt, ob die Datensätze werden im Hintergrund (progressiven abrufen) abgerufen werden, oder die Anwendung wird gewartet, bis alle Datensätze im Resultset abgerufen werden.
-

@@ -2,11 +2,13 @@
 title: Funktionen und Tasks im SQL Server-Hilfsprogramm | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "10"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8176e89f8acfd39b8075dde8d470189d14dfe843
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Funktionen und Tasks im SQL Server-Hilfsprogramm
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Kunden möchten ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung als Ganzes verwalten. Diese Anforderung wird in dieser Version mithilfe des Konzepts der Anwendungs- und Multiserververwaltung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm erfüllt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kunden möchten ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Umgebung als Ganzes verwalten. Diese Anforderung wird in dieser Version mithilfe des Konzepts der Anwendungs- und Multiserververwaltung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm erfüllt.  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Vorteile des SQL Server-Hilfsprogramms  
  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm modelliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-bezogene Entitäten eines Unternehmens in einer einheitlichen Ansicht. Die Blickpunkte des Hilfsprogramm-Explorers und des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) vermitteln Administratoren über eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die als Steuerungspunkt für das Hilfsprogramm (UCP) dient, eine ganzheitliche Sicht auf die Ressourcenintegrität in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Kombination aus Zusammenfassungsdaten und detaillierten Daten, die im UCP für Richtlinien sowohl für die Unter- als auch für die Überauslastung und für eine Vielzahl von Schlüsselparametern angezeigt werden, eröffnen neue Möglichkeiten der Ressourcenkonsolidierung und erleichtern die Erkennung von Ressourcen, die überausgelastet sind. Integritätsrichtlinien sind konfigurierbar und können angepasst werden, indem der obere oder untere Grenzwert für die Ressourcennutzung geändert wird. Sie können globale Überwachungsrichtlinien ändern oder einzelne Überwachungsrichtlinien für jede Entität konfigurieren, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verwaltet wird.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und Datenebenenanwendung, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verwaltet wird, kann auf der Grundlage globaler oder individueller Richtliniendefinitionen überwacht werden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Erste Schritte mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm mithilfe der folgenden Themen:  
   
 |||  
@@ -66,4 +67,3 @@ ms.lasthandoff: 06/22/2017
 |Stellt Links zu UtilityExplorer-F1-Hilfethemen bereit.|[Hilfsprogramm-Explorer (F1-Hilfe)](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   
   
-

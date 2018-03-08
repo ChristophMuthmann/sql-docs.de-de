@@ -1,33 +1,34 @@
 ---
-title: Drucken eines Berichts (Berichts-Generator und SSRS) | Microsoft Docs
+title: Drucken eines Berichts (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: fc47aa9bb4a584849f2779116767637d83142b17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Drucken eines Berichts (Berichts-Generator und SSRS)
-  Nachdem Sie einen Bericht auf einem Berichtsserver speichern, können Sie anzeigen und Drucken des Berichts über einen Browser, der Reporting Services-Webportal oder jede Anwendung, die Sie zum Anzeigen eines exportierten Berichts verwenden. Vor dem Speichern eines Berichts können Sie ihn aus der Vorschau drucken.  
+  Nach dem Speichern eines Berichts auf einem Berichtsserver können Sie diesen mit einem Browser, dem Reporting Services-Webportal oder einer beliebigen Anwendung, die Sie zum Anzeigen eines exportierten Berichts verwenden, anzeigen und drucken. Vor dem Speichern eines Berichts können Sie ihn aus der Vorschau drucken.  
   
  Beim Drucken eines Berichts können Sie das zu verwendende Papierformat festlegen. Durch das Papierformat wird die Anzahl der Seiten in einem Bericht festgelegt und welche Berichtsdaten jeweils auf eine Seite passen. Das Papierformat beeinflusst nur Berichte, die mit harten Seitenumbrüchen gerendert werden: PDF, Bild und Druck. Die Festlegung des Papierformats hat keine Auswirkungen auf andere Renderer. Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
- Mithilfe der Berichts-Viewer-Symbolleiste, auf dem Reporting Services-Webportal oder in der Vorschau im Berichts-Generator können Sie einen Bericht in einem Renderer mit harten Seitenumbrüchen exportieren oder klicken Sie auf die Schaltfläche "Drucken", um eine Kopie des Berichts zu drucken. Möglicherweise müssen Sie das Papierformat oder andere Seiteneinrichtungseigenschaften festlegen. Verwenden Sie das Dialogfeld **Berichtseigenschaften** , um Seiteneinrichtungseigenschaften zu ändern, z. B. das Papierformat.  
+ Auf der Berichts-Viewer-Symbolleiste im Reporting Services-Webportal oder in der Vorschau des Berichts-Generators können Sie einen Bericht in einen Renderer mit harten Seitenumbrüchen exportieren oder auf die Schaltfläche „Drucken“ klicken, um eine Kopie des Berichts zu drucken. Möglicherweise müssen Sie das Papierformat oder andere Seiteneinrichtungseigenschaften festlegen. Verwenden Sie das Dialogfeld **Berichtseigenschaften** , um Seiteneinrichtungseigenschaften zu ändern, z. B. das Papierformat.  
   
  Druckseitenränder können an zwei Stellen angegeben können: im Entwurfsmodus und im Ausführungsmodus.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Druckränder werden im Entwurfs- oder Ausführungsmodus nicht angezeigt. Es gibt keine Beziehung zwischen dem Entwurfsoberflächenbereich und dem Druckbereich des Berichts. Klicken Sie auf der Registerkarte **Ausführen** auf dem Menüband auf "Seitenlayout", um Druckränder im Ausführungsmodus anzuzeigen.  
   
- Weitere Informationen zur berichtspaginierung finden Sie unter [Paginierung in Reporting Services &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Weitere Informationen zur Berichtspaginierung finden Sie unter [Paginierung in Reporting Services (Berichts-Generator und SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-a-web-browser-application"></a>So drucken Sie einen Bericht von einem Webbrowser aus  
   
-1.  Navigieren Sie in der Reporting Services-Webportal auf den Bericht, den Sie drucken möchten. Öffnen Sie den Bericht.  
+1.  Navigieren Sie im Reporting Services-Webportal zu dem Bericht, den Sie drucken möchten. Öffnen Sie den Bericht.  
   
 3.  Klicken Sie auf der Symbolleiste oben im Bericht auf **Drucken**.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-other-applications"></a>So drucken Sie einen Bericht von anderen Anwendungen aus  
   
-1.  Navigieren Sie in der Reporting Services-Webportal auf den Bericht, den Sie drucken möchten. Öffnen Sie den Bericht.  
+1.  Navigieren Sie im Reporting Services-Webportal zu dem Bericht, den Sie drucken möchten. Öffnen Sie den Bericht.  
   
 2.  Wählen Sie auf der Symbolleiste oben im Bericht ein Renderingformat aus, und klicken Sie auf **Exportieren**. Der Bericht wird in einer Viewer-Anwendung geöffnet, die dem Renderingformat entspricht.  
   
@@ -98,10 +99,10 @@ ms.lasthandoff: 08/09/2017
   
 -   Klicken Sie auf **Seite einrichten** auf der Registerkarte **Ausführen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Bericht Eigenschaften (Dialogfeld), Seite einrichten &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [Berichtseigenschaften (Dialogfeld, Seite einrichten, Berichts-Generator)](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

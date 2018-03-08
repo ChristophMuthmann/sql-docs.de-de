@@ -3,26 +3,26 @@ title: "Protokollieren von Aktivitäten | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- logging activity
+helpviewer_keywords: logging activity
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3c62afd5a581469af070b5a9d2c59f14264e1cf7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d748bac061fdd4b76b1df0b9a6cf0a8101f21092
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,4 +126,3 @@ Durch die Addition von ganzzahligen Werten können Sie mehrere Optionen gleichze
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
   
-

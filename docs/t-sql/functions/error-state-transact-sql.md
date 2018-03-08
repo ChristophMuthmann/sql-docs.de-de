@@ -3,8 +3,11 @@ title: ERROR_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,24 +25,23 @@ helpviewer_keywords:
 - CATCH block
 - states [SQL Server], error numbers
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 2d5448d8dbd738177acbcd407448d7a10d835a23
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 07caa8a60512f507c9ad1003c864680e82d48870
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Gibt die Statusnummer des Fehlers, der den CATCH-Block einer try wurde... CATCH-Konstrukts ausgeführt werden.  
+  Gibt die Statusnummer des Fehlers zurück, der bewirkt hat, dass der CATCH-Block eines TRY…CATCH-Konstrukts ausgeführt wurde.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,26 +53,26 @@ ERROR_STATE ( )
  **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn in einem CatchBlock aufgerufen wird, gibt die Statusnummer der Fehlermeldung, die die CATCH-Block ausgeführt werden wurde zurück.  
+ Wenn diese Funktion in einem CATCH-Block aufgerufen wird, wird die Statusnummer der Fehlermeldung zurückgegeben, die bewirkt hat, dass der CATCH-Block ausgeführt wurde.  
   
- Gibt NULL zurück, wenn außerhalb des Bereichs eines CATCH-Blockes aufgerufen.  
+ Gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blockes aufgerufen wird.  
   
-## <a name="remarks"></a>"Hinweise"  
- Einige Fehlermeldungen ausgelöst werden können, an mehreren Punkten im Code für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Beispielsweise kann Fehler "1105 aufgrund" verschiedener Bedingungen ausgelöst werden. Jeder Bedingung, die den Fehler auslöst, wird einen eindeutiger Statuscode zugewiesen.  
+## <a name="remarks"></a>Hinweise  
+ Einige Fehlermeldungen ausgelöst werden können, an mehreren Punkten im Code für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. So kann z. B. der Fehler "1105" aufgrund verschiedener Bedingungen ausgelöst werden. Jeder Bedingung, die den Fehler auslöst, wird ein eindeutiger Statuscode zugewiesen.  
   
- Wenn Datenbanken von bekannten Problemen, wie z. B. Anzeigen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, können Sie mithilfe der Statusnummer bestimmen, ob das aufgezeichnete Problem mit dem aufgetretenen Fehler möglicherweise aufgetretenen. Hatten z. B. wenn ein Knowledge Base-Artikel wird Fehler 1105 mit dem Status 2 erläutert und die Sie empfangene Fehlermeldung 1105 den Status 3 hatte, der Fehler wahrscheinlich eine andere als die im Artikel gemeldete Ursache.  
+ Beim Anzeigen von Datenbanken mit bekannten Problemen, wie z. B. der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, können Sie mithilfe der Statusnummer ermitteln, ob das aufgezeichnete Problem mit dem aufgetretenen Fehler übereinstimmt. Wenn z. B. ein Knowledge Base-Artikel den Fehler 1105 mit dem Status 2 erläutert und die von Ihnen empfangene Fehlermeldung 1105 den Status 3 aufweist, ist der Fehler wahrscheinlich auf eine andere als die im Artikel gemeldete Ursache zurückzuführen.  
   
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Supporttechniker können auch den Statuscode von einem Fehler finden Sie den Speicherort in den Quellcode, in denen dieser Fehler ausgelöst wird, noch weitere Ideen zur Problemdiagnose bereit kann.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Software Service kann ebenfalls mithilfe des Fehlerzustandscodes die Stelle im Quellcode finden, an der dieser Fehler ausgelöst wird. Dies kann Anregungen für die Diagnose des Problems bereitstellen.  
   
  ERROR_STATE kann überall innerhalb des Bereichs eines CATCH-Blockes aufgerufen werden.  
   
- ERROR_STATE gibt den Status "Fehler" unabhängig davon, wie oft die ausgeführt wird, oder, in denen es innerhalb des Bereichs des CATCH-Blockes. Dies steht im Gegensatz zu Funktionen, wie etwa @@ERROR, das nur die Anzahl der Fehler zurückgibt, in der Anweisung unmittelbar auf das Projekt, das einen Fehler verursacht hat, oder klicken Sie in der ersten Anweisung eines CATCH-Blockes.  
+ ERROR_STATE gibt den Fehlerzustand zurück. Dabei spielt es keine Rolle, wie oft die Funktion ausgeführt wird oder wo sie innerhalb des Bereichs des CATCH-Blockes ausgeführt wird. Dies steht im Gegensatz zu Funktionen, wie etwa @@ERROR, das nur die Anzahl der Fehler zurückgibt, in der Anweisung unmittelbar auf das Projekt, das einen Fehler verursacht hat, oder klicken Sie in der ersten Anweisung eines CATCH-Blockes.  
   
- In geschachtelten CATCH-Blöcken gibt ERROR_STATE den Fehler Status für den Bereich des CATCH-block in dem darauf verwiesen wird. Beispielsweise der CATCH-Block eine äußere try... TRY…catch-Konstrukt möglicherweise einen geschachtelten TRY... CATCH-Konstrukt. Innerhalb des geschachtelten CATCH-Blockes gibt ERROR_STATE den Status des Fehlers, der den geschachtelten CATCH-Block aufgerufen hat. Wenn ERROR_STATE im äußeren CATCH-Block ausgeführt wird, gibt den Status des Fehlers, der diesen CATCH-Block aufgerufen hat zurück.  
+ In geschachtelten CATCH-Blöcken gibt ERROR_STATE den Fehlerzustand für den Bereich des CATCH-Blockes zurück, in dem auf die Funktion verwiesen wird. Beispielsweise könnte der CATCH-Block eines äußeren TRY...CATCH-Konstrukts ein geschachteltes TRY...CATCH-Konstrukt aufweisen. Innerhalb des geschachtelten CATCH-Blockes gibt ERROR_STATE den Status des Fehlers zurück, der den geschachtelten CATCH-Block aufgerufen hat. Wenn ERROR_STATE im äußeren CATCH-Block ausgeführt wird, wird der Status des Fehlers zurückgegeben, der diesen CATCH-Block aufgerufen hat.  
   
-## <a name="examples"></a>Beispiele für  
+## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>EIN. Verwenden von ERROR_STATE in einem CATCH-block  
+### <a name="a-using-errorstate-in-a-catch-block"></a>A. Verwenden von ERROR_STATE in einem CATCH-Block  
  Das folgende Beispiel zeigt eine `SELECT` -Anweisung, die Fehler aufgrund einer Division durch 0 generiert. Der Status des Fehlers wird zurückgegeben.  
   
 ```  
@@ -85,7 +87,7 @@ GO
 ```  
   
 ### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_STATE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
- Das folgende Beispiel zeigt eine `SELECT` -Anweisung, die Fehler aufgrund einer Division durch 0 generiert. Zusammen mit den Status "Fehler" werden Informationen im Zusammenhang mit dem Fehler zurückgegeben.  
+ Das folgende Beispiel zeigt eine `SELECT` -Anweisung, die Fehler aufgrund einer Division durch 0 generiert. Zusammen mit dem Fehlerzustand werden Informationen zu dem Fehler zurückgegeben.  
   
 ```  
 BEGIN TRY  
@@ -107,7 +109,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Verwenden von ERROR_STATE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
- Das folgende Beispiel zeigt eine `SELECT` -Anweisung, die Fehler aufgrund einer Division durch 0 generiert. Zusammen mit den Status "Fehler" werden Informationen im Zusammenhang mit dem Fehler zurückgegeben.  
+ Das folgende Beispiel zeigt eine `SELECT` -Anweisung, die Fehler aufgrund einer Division durch 0 generiert. Zusammen mit dem Fehlerzustand werden Informationen zu dem Fehler zurückgegeben.  
   
 ```  
 BEGIN TRY  
@@ -126,16 +128,15 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys.Messages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [WIEDERHOLEN SIE DEN... CATCH &#40; Transact-SQL &#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [ERROR_LINE &#40; Transact-SQL &#41;](../../t-sql/functions/error-line-transact-sql.md)   
- [ERROR_MESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/error-message-transact-sql.md)   
- [ERROR_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_PROCEDURE &#40; Transact-SQL &#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY &#40; Transact-SQL &#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40; Transact-SQL &#41;](../../t-sql/functions/error-transact-sql.md)  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
+ [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
+ [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
+ [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
+ [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
+ [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
+ [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
-
 

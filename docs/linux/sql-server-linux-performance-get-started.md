@@ -1,24 +1,29 @@
 ---
 title: Erste Schritte mit der Leistungsfunktionen von SQL Server on Linux | Microsoft Docs
-description: "Dieses Thema enthält eine Einführung in SQL Server-Leistung-Funktionen für Linux-Benutzer, die noch nicht mit SQL Server sind. Viele dieser Beispiele auf allen Plattformen funktioniert, aber im Rahmen dieses Artikels ist Linux."
+description: "Dieser Artikel enthält eine Einführung in SQL Server-Leistung-Funktionen für Linux-Benutzer, die noch nicht mit SQL Server sind. Viele dieser Beispiele auf allen Plattformen funktioniert, aber im Rahmen dieses Artikels ist Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5936634cf243216f5916812bbe5ec04767932ec7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Leistungsfunktionen von SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Wenn Sie einen Linux-Benutzer, der noch nicht mit SQL Server ist sind, führen die folgenden Aufgaben über einige der Leistungsfeatures. Diese sind nicht eindeutig oder gelten speziell für Linux, aber sie hilft bei der bieten einen Überblick über Bereiche genauere Untersuchung durchführen. In jedem Beispiel wird ein Link in der Dokumentation Tiefe für diesen Bereich bereitgestellt.
 
@@ -28,7 +33,7 @@ Wenn Sie einen Linux-Benutzer, der noch nicht mit SQL Server ist sind, führen d
 ## <a name="create-a-columnstore-index"></a>Erstellen Sie einen columnstore-Index
 Ein columnstore-Index ist eine Technologie zum Speichern und Abfragen großer speichert Daten in eines spaltenbasierten Datenformats, das als Columnstore bezeichnet wird.  
 
-1. Fügen Sie einen columnstore-Index der SalesOrderDetail-Tabelle hinzu, durch das Ausführen des folgenden T-SQL:
+1. Fügen Sie einen columnstore-Index der SalesOrderDetail-Tabelle hinzu, durch die folgenden Transact-SQL-Befehle ausführen:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -37,7 +42,7 @@ Ein columnstore-Index ist eine Technologie zum Speichern und Abfragen großer sp
    GO
    ```
 
-2. Führen Sie die folgende Abfrage, die den columnstore-Index zum Scannen der Tabelle verwenden:
+2. Führen Sie die folgende Abfrage, die den columnstore-Index verwendet, um die Tabelle zu durchsuchen:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -193,4 +198,3 @@ Die verwaltungssicht Dm_os_wait Stats dynamische Abfragen:
    SELECT wait_type, wait_time_ms
    FROM sys.dm_os_wait_stats;
    ```
-

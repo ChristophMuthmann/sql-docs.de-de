@@ -1,10 +1,13 @@
 ---
-title: Verbinden von Komponenten in einem Datenfluss | Microsoft Docs
+title: Verbinden von Komponenten in einem Datenfluss | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 676aa85a4a8b5fcf39f198fe1b70b5b1b9f7fbfe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-components-in-a-data-flow"></a>Verbinden von Komponenten in einem Datenfluss
   In diesem Verfahren wird das Verbinden der Ausgabe von Komponenten in einem Datenfluss mit anderen Komponenten innerhalb desselben Datenflusses beschrieben.  
@@ -54,9 +56,8 @@ Den Datenfluss in einem Paket erstellen Sie auf der Entwurfsoberfläche der Regi
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen oder Löschen einer Komponente in einem Datenfluss](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md) [-Datenfluss](../../integration-services/data-flow/data-flow.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Hinzufügen oder Löschen einer Komponente im Datenfluss](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
+ [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md) [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   
-

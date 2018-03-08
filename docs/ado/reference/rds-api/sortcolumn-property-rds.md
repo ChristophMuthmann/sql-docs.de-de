@@ -1,29 +1,29 @@
 ---
 title: SortColumn-Eigenschaft (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d8e8f610bfb6419637a6fb4aba68723af966a518
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c2cf7afef8435343b9b3c7362940e29fc448056
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn-Eigenschaft (RDS)
 Gibt an, welche Spalte die Datensätze zu sortieren.  
@@ -51,13 +51,12 @@ DataControl.SortColumn = String
  Sortiert eine **Recordset**, müssen Sie zuerst alle ausstehenden Änderungen speichern. Bei Verwendung der **RDS. DataControl**, können Sie die [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) Methode. Beispielsweise, wenn Ihre **RDS. DataControl** ist mit dem Namen ADC1, ist der Code wäre `ADC1.SubmitChanges`. Wenn Sie ADO verwenden **Recordset**, können Sie dessen [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode. Mit **UpdateBatch** ist die empfohlene Methode zum **Recordset** Objekte erstellt, mit der [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) Methode. Der Code kann z. B. `myRS.UpdateBatch` oder `ADC1.Recordset.UpdateBatch`.  
   
 ## <a name="applies-to"></a>Gilt für  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection Eigenschaften und Reset-Methode (Beispiel) (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)   
- [Sortdirections-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
+ [SortDirection-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 
 

@@ -2,28 +2,31 @@
 title: Installieren von SQL Server mit dem Speicher der SMB-Dateifreigabe | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 3b1f88c6df9ea20d8fb0b2b27dbd5e40d6c6dfa7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installieren von SQL Server mit dem Speicher der SMB-Dateifreigabe
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Systemdatenbanken (master, model, msdb und tempdb) sowie [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Benutzerdatenbanken mit dem SMB-Dateiserver (Server Message Block) als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI).  
   
 > [!NOTE]  

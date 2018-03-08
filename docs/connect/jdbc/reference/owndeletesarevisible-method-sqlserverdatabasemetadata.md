@@ -3,29 +3,28 @@ title: OwnDeletesAreVisible-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.ownDeletesAreVisible
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.ownDeletesAreVisible
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61644a52ba7e7c6e9b0eb15ac97295ec681e234e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ec3f4e2d9facb5b82e1189636d0a20d499aedf5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -77,4 +76,3 @@ public boolean ownDeletesAreVisible(int type)
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

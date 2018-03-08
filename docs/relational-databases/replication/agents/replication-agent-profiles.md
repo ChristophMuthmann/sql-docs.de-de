@@ -2,11 +2,13 @@
 title: Replikations-Agentprofile | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,23 +22,23 @@ helpviewer_keywords:
 - Snapshot Agent, profiles
 - Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a11a7821231d4c7fa3a8719a05bdd1a7bc49ff47
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 97d62a00f1d59bd71eb27e55fac11890821940ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-profiles"></a>Replikations-Agent-Profile
-  Wenn die Replikation konfiguriert wird, wird ein Satz Agentprofile auf dem Verteiler installiert. Ein Agentprofil enthält eine Reihe Parameter, die bei jeder Ausführung des Agents zur Anwendung kommen: Jeder Agent meldet sich während seines Startprozesses beim Verteiler an und fragt die Parameter in seinem Profil ab. Im Fall von Mergeabonnements, die die Websynchronisierung verwenden, werden Profile heruntergeladen und auf dem Verteiler gespeichert. Wenn das Profil geändert wird, wird das Profil auf dem Verteiler aktualisiert, wenn der Merge-Agent das nächste Mal ausgeführt wird. Weitere Informationen zur Websynchronisierung finden Sie unter [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn die Replikation konfiguriert wird, wird ein Satz Agentprofile auf dem Verteiler installiert. Ein Agentprofil enthält eine Reihe Parameter, die bei jeder Ausführung des Agents zur Anwendung kommen: Jeder Agent meldet sich während seines Startprozesses beim Verteiler an und fragt die Parameter in seinem Profil ab. Im Fall von Mergeabonnements, die die Websynchronisierung verwenden, werden Profile heruntergeladen und auf dem Verteiler gespeichert. Wenn das Profil geändert wird, wird das Profil auf dem Verteiler aktualisiert, wenn der Merge-Agent das nächste Mal ausgeführt wird. Weitere Informationen zur Websynchronisierung finden Sie unter [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  Die Replikation stellt ein Standardprofil für jeden Agent und zusätzliche vordefinierte Profile für den Protokolllese-Agent, den Verteilungs-Agent und den Merge-Agent bereit. Neben den bereitgestellten Profilen können Sie Profile erstellen, die sich für Ihre Anwendungsanforderungen eignen. Ein Agentprofil ermöglicht ein einfaches Ändern von Schlüsselparametern für alle Agents, die dem Profil zugeordnet sind. Wenn Sie z. B. 20 Momentaufnahme-Agents haben und den Zeittimeout für Abfragen ändern müssen (den **-QueryTimeout** -Parameter), können Sie das Profil für die Momentaufnahme-Agents aktualisieren. Beim nächsten Ausführen verwenden alle Agents dieses Typs automatisch den neuen Wert.  
   
- Sie können auch verschiedene Profile für unterschiedliche Instanzen eines Agents verwenden. Ein Merge-Agent, der beispielsweise über eine DFÜ-Verbindung mit dem Verleger und dem Verteiler verbunden wird, könnte einen Satz Parameter verwenden, die sich besser für die langsamere Kommunikationsverbindung eignen, indem er das Profil für **langsame** Links verwendet.  
+ Sie können auch verschiedene Profile für unterschiedliche Instanzen eines Agents verwenden. Ein Merge-Agent, der beispielsweise über eine DFÜ-Verbindung mit dem Verleger und dem Verteiler verbunden wird, könnte einen Satz Parameter verwenden, die sich besser für die langsamere Kommunikationsverbindung eignen, indem er das Profil für **langsame Links** verwendet.  
   
 > [!NOTE]  
 >  Wenn Sie einen Wert für einen Agentparameter in der Befehlszeile angeben, überschreibt dieser Wert den Wert, der für denselben Parameter im Agentprofil festgelegt wurde.  
@@ -129,8 +131,8 @@ ms.lasthandoff: 06/22/2017
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikations-Agent-Verwaltung](../../../relational-databases/replication/agents/replication-agent-administration.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Verwaltung des Replikations-Agents](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   

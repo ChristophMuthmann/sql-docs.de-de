@@ -3,8 +3,11 @@ title: STAsBinary (Geography-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary method
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c48fc48b7af524e980801a11ac2574f2091823a2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 81277be0a4b5949df414f9b33996d646ecf3b30e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt die Open Geospatial Consortium (OGC) Well-Known Binary (WKB)-Darstellung einer **Geography** Instanz.  
   
@@ -61,7 +63,6 @@ SELECT @g.STAsBinary();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

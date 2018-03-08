@@ -1,10 +1,13 @@
 ---
-title: "Task Prozess ausführen | Microsoft Docs"
+title: "Prozess ausführen (Task) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 65
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 76ea783edab9673a720d5b95883caffff9d9a4d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-process-task"></a>Prozess ausführen (Task)
   Der Task Prozess ausführen führt eine Anwendung oder eine Batchdatei als Teil eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets aus. Mit der Task 'Prozess ausführen' können alle Standardanwendungen wie z. B. [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] oder [!INCLUDE[ofprword](../../includes/ofprword-md.md)]geöffnet werden, normalerweise wird er jedoch zum Ausführen von Geschäftsanwendungen oder Batchdateien für eine Datenquelle verwendet. Beispielsweise können Sie mit dem Task 'Prozess ausführen' eine komprimierte Textdatei expandieren. Anschließend kann das Paket die Textdatei als Datenquelle für den Datenfluss im Paket verwenden. Sie können mit dem Task 'Prozess ausführen' auch eine benutzerdefinierte [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Anwendung ausführen, die einen täglichen Umsatzbericht erstellt. Anschließend können Sie den Bericht an einen "Mail senden"'-Task anfügen und an eine Verteilerliste weiterleiten.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 08/11/2017
   
  Sie können einen Ausdruck verwenden, um verschiedene Eigenschaften des Tasks 'Prozess ausführen' festzulegen.  
   
- Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **StandardInputVariable** verwenden, rufen Sie zum Lesen der Eingabe die **Console.ReadLine** -Methode der Anwendung auf. Weitere Informationen finden Sie in der [Console.ReadLine-Methode](http://go.microsoft.com/fwlink/?LinkId=129201)-Klassenbibliothek im Thema [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **StandardInputVariable** verwenden, rufen Sie zum Lesen der Eingabe die **Console.ReadLine** -Methode der Anwendung auf. Weitere Informationen finden Sie in der [Console.ReadLine-Methode](http://go.microsoft.com/fwlink/?LinkId=129201)-Klassenbibliothek im Thema [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **Argumente** verwenden, führen Sie zum Abrufen der Argumente einen der folgenden Schritte aus:  
   
@@ -90,20 +92,20 @@ ms.lasthandoff: 08/11/2017
 ## <a name="execute-process-task-editor-general-page"></a>Editor für den Task 'Prozess ausführen' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task „Prozess ausführen“** können Sie den Task „Prozess ausführen“ benennen und beschreiben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task 'Prozess ausführen' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Tasks 'Prozess ausführen' ein.  
   
 ## <a name="execute-process-task-editor-process-page"></a>Editor für den Task 'Prozess ausführen' (Seite Verarbeiten)
   Auf der Seite **Verarbeiten** des Dialogfelds **Editor für den Task 'Prozess ausführen'** können Sie die Optionen konfigurieren, die den Prozess ausführen. Zu den Optionen gehören der Name der ausführbaren Datei, der Speicherort dieser Datei, die Argumente der Eingabeaufforderung und die Variablen für die Ein- und Ausgabe.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **RequireFullFileName**  
  Geben Sie an, ob der Task fehlschlagen soll, wenn die ausführbare Datei am angegebenen Speicherort nicht gefunden wird.  
   
@@ -117,15 +119,15 @@ ms.lasthandoff: 08/11/2017
  Geben Sie den Pfad zu dem Ordner ein, in dem die ausführbare Datei enthalten ist, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und suchen Sie den Ordner.  
   
  **StandardInputVariable**  
- Wählen Sie eine Variable für die Bereitstellung der Eingabe an den Prozess, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen:  
+ Wählen Sie eine Variable für die Bereitstellung der Eingabe zum Prozess aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen:  
   
  **Verwandte Themen:** [Variable hinzufügen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Wählen Sie eine Variable zum Erfassen der Ausgabe des Prozesses, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable für die Erfassung der Prozessausgabe aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
  **StandardErrorVariable**  
- Wählen Sie eine Variable zum Erfassen der Fehlerausgabe des Prozessors, oder klicken Sie auf \< **neue Variable...** > um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable für die Erfassung der Fehlerausgabe des Prozesses aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Geben Sie an, ob beim Task ein Fehler auftritt, wenn der Prozessexitcode von dem unter **SuccessValue**angegebenen Wert abweicht.  
@@ -142,9 +144,8 @@ ms.lasthandoff: 08/11/2017
  **WindowStyle**  
  Geben Sie die Fensteranordnung an, in der der Prozess ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   
   
-

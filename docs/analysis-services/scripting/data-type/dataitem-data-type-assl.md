@@ -2,40 +2,35 @@
 title: DataItem-Datentyp (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataItem Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataItem Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DataItem
-helpviewer_keywords:
-- DataItem data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: DataItem
+helpviewer_keywords: DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec40eca06225eef5d9c7e505e4fe2c9dee6972b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3986d23e02287fcf1d411df19a7b46a8768489b7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dataitem-data-type-assl"></a>DataItem-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der die datenbezogenen Merkmale eines Datenelements darstellt, z. B. eine Spalte oder ein Attribut.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der die datenbezogenen Merkmale eines Datenelements, z. B. eine Spalte oder des Attributs darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,16 +52,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|Keine|  
-|Abgeleitete Datentypen|Keine|  
+|Basisdatentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Anmerkungen](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Sortierung](../../../analysis-services/scripting/properties/collation-element-assl.md), [DataSize](../../../analysis-services/scripting/properties/datasize-element-assl.md), [DataType](../../../analysis-services/scripting/properties/datatype-element-assl.md), [Format](../../../analysis-services/scripting/properties/format-element-assl.md), [InvalidXmlCharacters ](../../../analysis-services/scripting/properties/invalidxmlcharacters-element-assl.md), [MimeType](../../../analysis-services/scripting/properties/mimetype-element-assl.md), [NullProcessing](../../../analysis-services/scripting/properties/nullprocessing-element-assl.md), [Quelle](../../../analysis-services/scripting/properties/source-element-binding-assl.md), [Zuschneiden](../../../analysis-services/scripting/properties/trimming-element-assl.md)|  
 |Abgeleitete Elemente|Siehe die Tabelle in den Anmerkungen.|  
   
@@ -98,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

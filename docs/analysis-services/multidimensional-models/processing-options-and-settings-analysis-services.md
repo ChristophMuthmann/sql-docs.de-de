@@ -2,13 +2,13 @@
 title: Verarbeiten von Optionen und Einstellungen (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 48
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Verarbeiten von Optionen und Einstellungen (Analysis Services)
-  Beim Verarbeiten von Objekten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Verarbeitungsoption auswählen, die den Verarbeitungstyp der einzelnen Objekte steuert. Die Verarbeitungstypen unterscheiden sich von Objekt zu Objekt sowie aufgrund von Änderungen, die für das Objekt vorgenommen wurden, seit es zuletzt verarbeitet wurde. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Beim Verarbeiten von Objekten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Verarbeitungsoption auswählen, die den Verarbeitungstyp der einzelnen Objekte steuert. Die Verarbeitungstypen unterscheiden sich von Objekt zu Objekt sowie aufgrund von Änderungen, die für das Objekt vorgenommen wurden, seit es zuletzt verarbeitet wurde. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt.  
   
  Mit den Aufbereitungseinstellungen können Sie steuern, welche Objekte verarbeitet werden, und welche Methoden zum Verarbeiten der Objekte verwendet werden. Bestimmte Aufbereitungseinstellungen werden vor allem für Batchverarbeitungsaufträge verwendet. Weitere Informationen zur Batchverarbeitung finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="processing-options"></a>Verarbeitungsoptionen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbaren Verarbeitungsmethoden beschrieben und die Objekte identifiziert, für die die einzelnen Methoden Unterstützung bieten.  
   
-|Mode|Gilt für|Description|  
+|Modus|Gilt für|Description|  
 |----------|----------------|-----------------|  
 |**Standard verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Erkennt den Verarbeitungsstatus von Datenbankobjekten und führt die Verarbeitung durch, mit der nicht verarbeitete oder teilweise verarbeitete Objekte in den vollständig verarbeiteten Status versetzt werden. Wenn Sie eine Datenbindung ändern, führt die Option Standard verarbeiten für das betroffene Objekt den Schritt Vollständig verarbeiten aus.|  
 |**Vollständig verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Verarbeitet ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt und alle in ihm enthaltenen Objekte. Wenn die Verarbeitungsmethode Vollständig verarbeiten für ein bereits verarbeitetes Objekt ausgeführt wird, löscht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Daten im Objekt und verarbeitet anschließend das Objekt. Dieser Verarbeitungstyp ist erforderlich, wenn eine strukturelle Änderung am Objekt vorgenommen wurde, z. B. wenn eine Attributhierarchie hinzugefügt, gelöscht oder umbenannt wurde.|  
@@ -76,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

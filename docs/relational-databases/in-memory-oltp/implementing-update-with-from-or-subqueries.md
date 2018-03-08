@@ -1,30 +1,31 @@
 ---
 title: Implementieren von UPDATE mit FROM oder Unterabfragen | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3235dffe296bb77f94807ac517fb86fcda33b64e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementieren von UPDATE mit FROM oder Unterabfragen
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Nativ kompilierte T-SQL-Module bieten keine Unterstützung für die FROM-Klausel und unterstützen keine Unterabfragen in UPDATE-Anweisungen (sie werden in SELECT unterstützt). UPDATE-Anweisungen mit der FROM-Klausel werden normalerweise verwendet, um Informationen in einer Tabelle, die auf einem Tabellenwertparameter (table-valued parameter; TVP) basiert, oder Spalten in einer Tabelle in einem AFTER-Trigger zu aktualisieren. 
 
@@ -36,13 +37,13 @@ Dies ist die ursprüngliche T-SQL UPDATE-Anweisung:
   
   
   
-  
+   ```
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
-  
+   ```
   
   
 
@@ -54,13 +55,13 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
   
   
   
-
+ ```
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
     -----------------------------  
-    <a name="---table-and-table-type"></a>-- Tabelle und Tabellentyp
+    -- Table and table type
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -83,14 +84,15 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
     ----------------------------- 
-    <a name="---trigger-that-contains-the-workaround-for-update-with-from"></a>-- Der Trigger, der die Problemumgehung für UPDATE mit FROM enthält. 
+    -- trigger that contains the workaround for UPDATE with FROM 
     -----------------------------  
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
         WITH NATIVE_COMPILATION, SCHEMABINDING  
         AFTER UPDATE  
-    AS BEGIN ATOMIC WITH  
+    AS 
+    BEGIN ATOMIC WITH  
         (  
         TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
         LANGUAGE = N'us_english'  
@@ -105,9 +107,9 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
           @i INT = 1,  @Id INT,  
           @max INT = SCOPE_IDENTITY();  
     
-      ---- Schleife als Problemumgehung, um einen Cursor zu simulieren.
-    ---- Durchläuft die Zeile in der speicheroptimierten Tabelle.  
-      ---- variabel und führt für jede Zeile ein Update aus.  
+      ---- Loop as a workaround to simulate a cursor.
+      ---- Iterate over the rows in the memory-optimized table  
+      ----   variable and perform an update for each row.  
     
       WHILE @i <= @max  
       BEGIN  
@@ -124,7 +126,7 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
     END  
     go  
     -----------------------------  
-    <a name="---test-to-verify-functionality"></a>-- Test zur Überprüfung der Funktionalität
+    -- Test to verify functionality
     -----------------------------  
   
     SET NOCOUNT ON;  
@@ -148,7 +150,7 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
     go  
     -----------------------------  
   
-    /**** Tatsächliche Ausgabe:  
+    /**** Actual output:  
   
     BEFORE-Update   Id   Column2   LastUpdated  
     BEFORE-Update   1       9      2016-04-20 21:18:42.8394659  
@@ -162,5 +164,4 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
     ****/  
   
   
-  
-
+ ```

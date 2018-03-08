@@ -2,28 +2,30 @@
 title: "Kommentare, Formen, andere Objekte, die von Excel Services nicht unterstützt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e81433f28d9b3b3f20ceb99f2e6436a689ba4e86
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb73f60aea4a67a2e7fe7967dc9411762fe8e8f9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>Kommentare, Formen, andere Objekte, die von Excel Services nicht unterstützt.
-  Dieser Fehler tritt auf, wenn Sie einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe Slicer aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Feldliste hinzufügen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dieser Fehler tritt auf, wenn Sie einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe Slicer aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Feldliste hinzufügen.  
   
 ## <a name="details"></a>Details  
   
@@ -45,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  Dieser Fehler kann ignoriert werden. Klicken Sie auf **OK** , um die Fehlermeldung zu schließen und die Verwendung von Arbeitsmappe und Slicern ohne Probleme fortzusetzen.  
   
   
-

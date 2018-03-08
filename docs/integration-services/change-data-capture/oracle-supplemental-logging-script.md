@@ -1,26 +1,28 @@
 ---
-title: Oracle-Protokollierungsskript | Microsoft Docs
+title: "Ergänzendes Oracle-Protokollierungsskript | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4f97617decf23356dc663805494d5a2d9e2d72c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="oracle-supplemental-logging-script"></a>Ergänzendes Oracle-Protokollierungsskript
   In diesem Dialogfeld wird das ergänzende Oracle-Protokollierungsskript angezeigt.  
@@ -29,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
  Je nach den Oracle DBA-Richtlinien in Ihrer Organisation kann es erforderlich sein, dass beim Ausführen des ergänzenden Protokollierungsskripts eine Überprüfung und Genehmigung durch einen Oracle-Datenbankadministrator erfolgt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Sie können die folgenden Optionen verwenden, um festzulegen, wie das Skript ausgeführt wird.  
   
  **Run Script**  
@@ -41,9 +43,8 @@ ms.lasthandoff: 08/03/2017
  **Kopieren**  
  Kopiert das Skript in die Zwischenablage. Nach Abschluss des Vorgangs können Sie das Skript an jedem erforderlichen Speicherort einfügen, falls ein Oracle-Datenbankadministrator das ergänzende Protokollierungsskript untersuchen und ausführen muss.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Verwalten einer CDC-Instanz](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Verwalten einer CDC-Instanz](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Verwalten einer CDC-Instanz](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   
-

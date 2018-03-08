@@ -2,9 +2,12 @@
 title: Registrieren eines verbundenen Servers (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6b6639909649cd9f988b5dd308f831763a82ef3c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: d1b34aea0b591b6b288dbfcc80529750596dd996
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrieren eines verbundenen Servers (SQL Server Management Studio)
-  In diesem Thema wird das Registrieren eines verbundenen Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) beschrieben. Indem Sie den Server registrieren, können Sie die Verbindungsinformationen für Server, auf die Sie häufig zugreifen, speichern. Ein Server kann vor dem Verbinden oder bei der Verbindung im Objekt-Explorer registriert werden.  Sie können Ihre registrierten Server in SSMS anzeigen, indem Sie im Menü zu **Ansicht**\\**Registrierte Server** navigieren.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In diesem Thema wird das Registrieren eines verbundenen Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) beschrieben. Indem Sie den Server registrieren, können Sie die Verbindungsinformationen für Server, auf die Sie häufig zugreifen, speichern. Ein Server kann vor dem Verbinden oder bei der Verbindung im Objekt-Explorer registriert werden.  Sie können Ihre registrierten Server in SSMS anzeigen, indem Sie im Menü zu **Ansicht**\\**Registrierte Server** navigieren.
   
  **In diesem Thema**  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 07/31/2017
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>So registrieren Sie einen Server  
   
@@ -57,7 +60,7 @@ Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem 
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
 
-     -    **Benutzername**  
+     -    **User name**  
 Zeigt den aktuellen Benutzernamen an, zu dem die Verbindung hergestellt wird. Diese schreibgeschützte Option ist nur verfügbar, wenn Sie zum Herstellen der Verbindung die Windows-Authentifizierung ausgewählt haben. Um **Benutzername**zu ändern, melden Sie sich bei dem Computer als ein anderer Benutzer an. 
 
      -    **Anmeldename**  
@@ -84,8 +87,7 @@ Klicken Sie hier, um die Verbindung mit dem unter **Servername**ausgewählten Se
 **Speichern**  
 Klicken Sie hier, um die Einstellungen des registrierten Servers zu speichern. 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen eines neu registrierten Servers (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
   
   
-

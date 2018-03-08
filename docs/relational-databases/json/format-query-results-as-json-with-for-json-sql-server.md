@@ -1,11 +1,12 @@
 ---
 title: Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -15,20 +16,19 @@ helpviewer_keywords:
 - JSON, exporting
 - exporting JSON
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: daf63df4b1999618b39d67953b465143d3d5434d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Formatieren Sie Abfrageergebnisse als JSON, oder exportieren Sie Daten aus SQL Server als JSON, indem Sie die **FOR JSON**-Klausel einer **SELECT**-Anweisung hinzufügen. Verwenden der **FOR JSON**-Klausel, um Clientanwendungen zu vereinfachen, indem Sie die Formatierung der JSON-Ausgabe von der App zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delegieren.
   
@@ -101,7 +101,7 @@ Die Ausgabe der **FOR JSON**-Klausel besitzt die folgenden Eigenschaften:
     -   Ein kleines Resultset kann eine einzelne Zeile enthalten.
     -   Ein großes Resultset teilt den langen JSON-String über mehrere Zeilen auf.
         -   Standardmäßig verkettet SQL Server Management Studio (SSMS) die Ergebnisse in einer einzelnen Zeile, wenn die Ausgabeeinstellung **Results to Grid (Ergebnisse im Raster)** ist. Die SSMS-Statusleiste zeigt die tatsächliche Zeilenanzahl an.
-        -   Möglicherweise erfordern andere Clientanwendungen Code, um längere Ergebnislisten neu zu einer einzelnen gültigen JSON-Zeichenfolge zu kombinieren, indem die Inhalte mehrerer Zeilen verkettet werden. Ein Beispiel für diesen Code in einer C#-Anwendung finden Sie unter [Use FOR JSON output in a C# client app (Verwenden der FOR JSON-Ausgabe in einer C#-Client-App)](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   Möglicherweise erfordern andere Clientanwendungen Code, um längere Ergebnislisten neu zu einer einzelnen gültigen JSON-Zeichenfolge zu kombinieren, indem die Inhalte mehrerer Zeilen verkettet werden. Ein Beispiel für diesen Code in einer C#-Anwendung finden Sie unter [Use FOR JSON output in a C# client app (Verwenden der FOR JSON-Ausgabe in einer C#-Client-App)](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
      ![Beispiel einer FOR JSON-Ausgabe](../../relational-databases/json/media/forjson-example2.png)  
   
@@ -156,12 +156,24 @@ Hier ist ein Beispiel, das veranschaulicht, wie die **FOR JSON**-Klausel die JSO
 -   [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41; (So maskiert FOR JSON Sonderzeichen und Steuerzeichen (SQL Server))](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
     Die **FOR JSON** -Klausel maskiert Sonderzeichen und stellt die Steuerzeichen in der JSON-Ausgabe dar, wie in diesem Thema beschrieben.  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
   
-## <a name="see-also"></a>Siehe auch  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
+
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   
  [Use FOR JSON output in SQL Server and in client apps (SQL Server) (Verwenden der FOR JSON-Ausgabe in SQL Server und Client-Apps (SQL Server))](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)  
   
   
-

@@ -2,32 +2,31 @@
 title: "Benennen Sie Element für Server (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Name element
+dev_langs: XML
+helpviewer_keywords: Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d7feb4a5dc420b10bfb8db5b41d425645534080b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98b9748db2c405491ed94568de25525e208c2ff4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-server-dta"></a>Name-Element für Server (DTA)
-  Enthält den Namen des Servers, auf dem sich die zu optimierenden Datenbanken befinden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Enthält den Namen des Servers, auf dem sich die zu optimierenden Datenbanken befinden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,4 +59,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

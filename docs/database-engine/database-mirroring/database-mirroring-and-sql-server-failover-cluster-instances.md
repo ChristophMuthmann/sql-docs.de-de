@@ -2,11 +2,13 @@
 title: Datenbankspiegelung und SQL Server-Failoverclusterinstanzen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], failover
 - high-availability mode [SQL Server]
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e1ae46bb5ff40113cb61d27882c86f84c87ef546
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d918c018425f0778b729a2a348400b7fbeaa07e7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Datenbankspiegelung und SQL Server-Failoverclusterinstanzen
-  Ein Failovercluster ist eine Kombination eines oder mehrerer physischer Datenträger in einer Clustergruppe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clusterdienste (MSCS, Microsoft Cluster Service), auch als Ressourcengruppe bezeichnet, die teilnehmende Knoten des Clusters sind. Die Ressourcengruppe ist als Failoverclusterinstanz konfiguriert, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hostet. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz wird im Netzwerk wie ein einzelner Computer angezeigt, besitzt jedoch Funktionalität, die ein Failover von einem Knoten zu einem anderen ermöglicht, falls ein Knoten nicht mehr verfügbar ist. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)hostet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ein Failovercluster ist eine Kombination eines oder mehrerer physischer Datenträger in einer Clustergruppe der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Clusterdienste (MSCS, Microsoft Cluster Service), auch als Ressourcengruppe bezeichnet, die teilnehmende Knoten des Clusters sind. Die Ressourcengruppe ist als Failoverclusterinstanz konfiguriert, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hostet. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz wird im Netzwerk wie ein einzelner Computer angezeigt, besitzt jedoch Funktionalität, die ein Failover von einem Knoten zu einem anderen ermöglicht, falls ein Knoten nicht mehr verfügbar ist. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)hostet.  
   
  Failovercluster stellen Unterstützung für hohe Verfügbarkeit für eine gesamte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz bereit, während die Datenbankspiegelung Unterstützung für hohe Verfügbarkeit für eine einzelne Datenbank bereitstellt. Datenbankspiegelung kann zwischen Failoverclustern, aber auch zwischen einem Failovercluster und einem nicht zu einem Cluster gehörenden Host ausgeführt werden.  
   
@@ -68,10 +69,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [AlwaysOn-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   
-

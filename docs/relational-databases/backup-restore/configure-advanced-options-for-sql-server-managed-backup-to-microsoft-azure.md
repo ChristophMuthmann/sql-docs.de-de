@@ -2,28 +2,29 @@
 title: "Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-caps.latest.revision: 8
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4b1f6ccfb9fdcf2fa3022864159fb87e589844df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
-ms.contentlocale: de-de
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure
-  Das folgende Tutorial beschreibt, wie Sie erweiterte Optionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]festlegen. Diese Prozeduren sind nur notwendig, wenn Sie die Funktionen benötigen, die sie bieten. Andernfalls können Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktivieren und sich auf das Standardverhalten verlassen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das folgende Tutorial beschreibt, wie Sie erweiterte Optionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] festlegen. Diese Prozeduren sind nur notwendig, wenn Sie die Funktionen benötigen, die sie bieten. Andernfalls können Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktivieren und sich auf das Standardverhalten verlassen.  
   
  In jedem Szenario wird die Sicherung mit dem `database_name` -Parameter angegeben. Wenn `database_name` NULL oder * ist, wirken sich die Änderungen auf die Standardeinstellungen auf Instanzebene aus. Instanzebeneneinstellungen wirken sich auch auf neue Datenbanken aus, die nach der Änderung erstellt wurden.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/22/2017
   
 3.  **Ein Sicherungszertifikat oder einen asymmetrischen Schlüssel erstellen:** Sie können ein Zertifikat oder einen asymmetrischen Schlüssel mit der Verschlüsselung verwenden. Im folgenden Beispiel wird ein Sicherungszertifikat für die Verschlüsselung erstellt.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -114,11 +115,10 @@ ms.lasthandoff: 08/22/2017
   
     ```  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Nach dem Konfigurieren der erweiterten Optionen und der benutzerdefinierten Zeitpläne müssen Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf der Zieldatenbank oder der SQL Server-Instanz aktivieren. Weitere Informationen finden Sie unter [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
-

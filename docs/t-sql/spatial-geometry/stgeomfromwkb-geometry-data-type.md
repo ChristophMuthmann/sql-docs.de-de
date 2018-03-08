@@ -3,8 +3,11 @@ title: STGeomFromWKB (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB (geometry Data Type)
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 387b2b6af2f1c2b50671f97b0bc7cd31cd4c9664
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ab0d91c444abe3121675ea79c2793c766165d0d6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt eine **geometry** -Instanz von einer Open Geospatial-Konsortium (OGC) Well-Known binary (WKB)-Darstellung zurück.
   
@@ -68,8 +70,7 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Statische Geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

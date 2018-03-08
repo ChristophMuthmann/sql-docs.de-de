@@ -3,8 +3,11 @@ title: EXECUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,19 +33,18 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 104
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="execute-transact-sql"></a>Task-Transact-SQL
+# <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Führt eine Befehlszeichenfolge oder eine Zeichenfolge in eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder eines der folgenden Module: gespeicherte Systemprozedur, benutzerdefinierte gespeicherte Prozedur, gespeicherte CLR-Prozedur, benutzerdefinierte Skalarwertfunktion oder erweiterte gespeicherte Prozedur. Die EXECUTE-Anweisung kann zum Senden von Pass-Through-Befehlen an Verbindungsserver verwendet werden. Darüber hinaus kann der Kontext, in dem eine Zeichenfolge oder ein Befehl ausgeführt wird, explizit festgelegt werden. Metadaten für das Resultset können mit den WITH RESULT SETS-Optionen definiert werden.
@@ -185,7 +187,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -206,7 +208,7 @@ Execute a character string
   
  Bei der Verwendung zum Aufrufen einer benutzerdefinierten Skalarwertfunktion, die @*Return_status* -Variable jeder skalare Datentyp möglich.  
   
- *Modulname*  
+ *module_name*  
  Der vollqualifizierte oder nicht vollqualifizierte Name der aufzurufenden gespeicherten Prozedur oder benutzerdefinierten Skalarwertfunktion. Modulnamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Bei den Namen von erweiterten gespeicherten Prozeduren wird immer nach Groß-/Kleinschreibung unterschieden, unabhängig von der Sortierung des Servers.  
   
  Ein Benutzer kann ein in einer anderen Datenbank erstelltes Modul ausführen, wenn er Besitzer des Moduls ist oder die entsprechende Berechtigung dafür hat, es in dieser Datenbank auszuführen. Ein Benutzer kann ein Modul auf einem anderen Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, wenn er die entsprechende Berechtigung besitzt, diesen Server zu verwenden (Remotezugriff) und das Modul in dieser Datenbank auszuführen. Wird ein Servername, aber kein Datenbankname angegeben, sucht [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] das Modul in der Standarddatenbank des Benutzers.  
@@ -226,7 +228,7 @@ Execute a character string
   
  Dies kann eine Variable sein, die den Namen des eine systemintern kompilierte, skalare benutzerdefinierte Funktion enthält.  
   
- @*Parameter*  
+ @*parameter*  
  Der Parameter für *Modulname*, wie im Modul definiert. Parameternamen muss das @-Zeichen vorangestellt werden. Bei Verwendung mit dem @*Parameter_name*=*Wert* Form, Parameternamen und Konstanten müssen nicht in der Reihenfolge angegeben werden, in dem sie im Modul definiert sind. Jedoch, wenn der @*Parameter_name*=*Wert* Form für die einzelnen Parameter verwendet wird, muss Sie für alle nachfolgenden Parameter verwendet werden.  
   
  Für Parameter sind standardmäßig NULL-Werte zugelassen.  
@@ -242,7 +244,7 @@ Execute a character string
   
  Der Standardwert kann auch NULL sein. Im Allgemeinen gibt die Moduldefinition die Aktion an, die ausgeführt werden soll, wenn ein Parameter den Wert NULL hat.  
   
- @*Variable*  
+ @*variable*  
  Die Variable, die einen Parameter oder einen Rückgabeparameter speichert.  
   
  OUTPUT  
@@ -262,10 +264,10 @@ Execute a character string
  @*string_variable*  
  Der Name einer lokalen Variablen. @*String_variable* kann **Char**, **Varchar**, **Nchar**, oder **Nvarchar** -Datentyp. Dazu gehören die **(max)** -Datentypen.  
   
- [N] "*Tsql_string*"  
+ [N] '*tsql_string*'  
  Eine konstante Zeichenfolge. *Tsql_string* kann **Nvarchar** oder **Varchar** -Datentyp. Wenn N enthalten ist, wird die Zeichenfolge interpretiert, als **Nvarchar** -Datentyp.  
   
- AS \<Context_specification >  
+ AS \<context_specification>  
  Gibt den Kontext an, in dem die Anweisung ausgeführt wird.  
   
  Anmeldung  
@@ -286,18 +288,18 @@ Execute a character string
   
  Weitere Informationen finden Sie unter [angeben eines Benutzer- oder Anmeldename](#_user) weiter unten in diesem Thema.  
   
- [N] "*Command_string*"  
+ [N] '*command_string*'  
  Eine Konstantenzeichenfolge, die den Befehl enthält, der über den Verbindungsserver übergeben werden soll. Wenn N enthalten ist, wird die Zeichenfolge interpretiert, als **Nvarchar** -Datentyp.  
   
  [?]  
  Gibt Parameter für die Werte, in angegeben sind der \<Arg-List > von Pass-Through-Befehlen, die in EXEC('...', \<arg-list>) am verwendet werden \<Linkedsrv >-Anweisung.  
   
- AM *Linked_server_name*  
+ AT *linked_server_name*  
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt an, dass *Command_string* wird *Linked_server_name* und Ergebnisse, sofern vorhanden, werden an den Client zurückgegeben. *Linked_server_name* muss auf eine vorhandene Verbindungsserverdefinition auf dem lokalen Server verweisen. Verbindungsserver werden mithilfe von definiert [Sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
- MIT \<Execute_option >  
+ WITH \<execute_option>  
  Mögliche Ausführungsoptionen. Die RESULT SETS-Optionen können nicht in einer INSERT…EXEC-Anweisung angegeben werden.  
   
 |Begriff|Definition|  
@@ -305,7 +307,7 @@ Execute a character string
 |RECOMPILE|Erzwingt, dass ein neuer Abfrageplan kompiliert, verwendet und nach der Ausführung des Moduls verworfen wird. Falls bereits ein Abfrageplan für das Modul vorhanden ist, verbleibt dieser Plan im Cache.<br /><br /> Verwenden Sie diese Option, wenn der von Ihnen angegebene Parameter atypisch ist oder sich die Daten erheblich geändert haben. Diese Option wird nicht bei erweiterten gespeicherten Prozeduren verwendet. Es wird empfohlen, diese Option nur selten zu verwenden, da sie aufwändig ist.<br /><br /> **Hinweis:** Sie können WITH RECOMPILE nicht verwenden, wenn das Aufrufen einer gespeicherten Prozedur, die OPENDATASOURCE-Syntax verwendet. Die WITH RECOMPILE-Option wird ignoriert, wenn ein vierteiliger Objektname angegeben wird.<br /><br /> **Hinweis:** RECOMPILE wird bei systemintern kompilierte, skalare benutzerdefinierte Funktionen nicht unterstützt. Wenn Sie neu kompilieren, verwenden [Sp_recompile &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**RESULTSETS UNDEFINED**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Bei dieser Option ist nicht sichergestellt, dass, und, wenn ja, welche Ergebnisse zurückgegeben werden, und es wird keine Definition bereitgestellt. Die Anweisung wird ohne Fehler ausgeführt, wenn Ergebnisse zurückgegeben werden oder wenn keine Ergebnisse zurückgegeben werden. RESULT SETS UNDEFINED ist das Standardverhalten, wenn keine result_sets_option angegeben wird.<br /><br /> Für interpretierte benutzerdefinierte Skalarfunktionen und systemintern kompilierte skalare benutzerdefinierte Funktionen, ist diese Option nicht betriebsbereit, da die Funktionen nie ein Resultset zurückgeben.|  
 |RESULT SETS NONE|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Stellt sicher, dass von der EXECUTE-Anweisung keine Ergebnisse zurückgegeben werden. Wenn Ergebnisse zurückgegeben werden, wird der Batch abgebrochen.<br /><br /> Für interpretierte benutzerdefinierte Skalarfunktionen und systemintern kompilierte skalare benutzerdefinierte Funktionen, ist diese Option nicht betriebsbereit, da die Funktionen nie ein Resultset zurückgeben.|  
-|*\<Result_sets_definition >*|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Stellt sicher, dass das Ergebnis wie in der result_sets_definition angegeben zurückgegeben wird. Anweisungen, die mehrere Resultsets zurückgeben, bietet mehrere *Result_sets_definition* Abschnitte. Schließen Sie jede *Result_sets_definition* in Klammern, getrennt durch Kommas. Weitere Informationen finden Sie unter \<Result_sets_definition > Weiter unten in diesem Thema.<br /><br /> Diese Option immer führt zu einem Fehler für systemintern kompilierte, skalare benutzerdefinierte Funktionen auf, da die Funktionen nie ein Resultset zurückgeben.|
+|*\<result_sets_definition>*|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Stellt sicher, dass das Ergebnis wie in der result_sets_definition angegeben zurückgegeben wird. Anweisungen, die mehrere Resultsets zurückgeben, bietet mehrere *Result_sets_definition* Abschnitte. Schließen Sie jede *Result_sets_definition* in Klammern, getrennt durch Kommas. Weitere Informationen finden Sie unter \<Result_sets_definition > Weiter unten in diesem Thema.<br /><br /> Diese Option immer führt zu einem Fehler für systemintern kompilierte, skalare benutzerdefinierte Funktionen auf, da die Funktionen nie ein Resultset zurückgeben.|
   
 \<Result_sets_definition > **betrifft**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -356,7 +358,7 @@ Execute a character string
   
  Eine Änderung des Datenbankkontexts dauert nur so lange, bis die jeweilige EXECUTE-Anweisung beendet ist. Beispielsweise lautet nach der Ausführung von `EXEC` in der folgenden Anweisung der Datenbankkontext master.  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -467,7 +469,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. Verwenden von EXECUTE mit einer Variablen für eine gespeicherte Prozedur  
  Das folgende Beispiel erstellt eine Variable, die den Namen einer gespeicherten Prozedur darstellt.  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
@@ -732,15 +734,14 @@ GO
  [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [Osql (Hilfsprogramm)](../../tools/osql-utility.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Wiederherstellen &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [USER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [OPENDATASOURCE &#40; Transact-SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   
-

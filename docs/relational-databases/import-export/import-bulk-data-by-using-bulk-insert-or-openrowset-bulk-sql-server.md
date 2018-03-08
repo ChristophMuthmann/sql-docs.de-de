@@ -2,9 +2,12 @@
 title: Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9e46865fa25623d2e0ab78a73b89d95e7fd411bd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema erhalten Sie einen Überblick über die Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT-Anweisung und der INSERT...SELECT * FROM OPENROWSET(BULK...)-Anweisung, mit denen ein Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ermöglicht wird. In diesem Thema werden zudem Sicherheitsaspekte beim Verwenden von BULK INSERT und OPENROWSET(BULK…) beschrieben, und mithilfe dieser Methoden wird ein Massenimport aus einer Remotedatenquelle ausgeführt.  
   
@@ -107,12 +109,12 @@ ms.lasthandoff: 10/06/2017
  
  Um die Quelldaten lesen zu können, müssen Sie dem vom SQL Server-Datenbankmodul verwendeten Konto Zugriff auf die Quelldaten gewähren. Wenn sich hingegen ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer mithilfe der Windows-Authentifizierung anmeldet, können von diesem Benutzer nur die Dateien gelesen werden, auf die über das Benutzerkonto zugegriffen werden kann. Das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird dabei nicht berücksichtigt.  
   
- Angenommen, ein Benutzer hat sich mithilfe der Windows-Authentifizierung an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet. Damit der Benutzer zum Importieren von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle BULK INSERT oder OPENROWSET verwenden kann, muss das Konto über Lesezugriff für die Datendatei verfügen. Durch den Zugriff auf die Datendatei kann der Benutzer Daten aus der Datei in eine Tabelle importieren, selbst wenn für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess keine Berechtigung zum Zugreifen auf die Datei verfügbar ist. Der Benutzer muss dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess keine Dateizugriffsberechtigung erteilen.  
+ Angenommen, ein Benutzer hat sich mithilfe der Windows-Authentifizierung an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet. Damit der Benutzer zum Importieren von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle BULK INSERT oder OPENROWSET verwenden kann, muss das Konto über Lesezugriff für die Datendatei verfügen. Durch den Zugriff auf die Datendatei kann der Benutzer Daten aus der Datei in eine Tabelle importieren, selbst wenn für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess keine Berechtigung zum Zugreifen auf die Datei verfügbar ist. Der Benutzer muss dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess keine Dateizugriffsberechtigung erteilen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows können so konfiguriert werden, dass von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz eine Verbindung mit einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz hergestellt wird, indem die Anmeldeinformationen eines authentifizierten Windows-Benutzers weitergeleitet werden. Diese Anordnung wird als *Identitätswechsel* oder *Delegierung*bezeichnet. Es ist wichtig zu wissen, wie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version die Sicherheit für den Benutzeridentitätswechsel verarbeitet wird, wenn Sie BULK INSERT oder OPENROWSET verwenden. Durch einen Benutzeridentitätswechsel kann sich die Datendatei auf einem anderen Computer befinden als der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess oder der Benutzer selbst. Wenn beispielsweise ein Benutzer auf **Computer_A** Zugriff auf eine Datendatei hat, die sich auf **Computer_B**befindet, und die Delegierung der Anmeldeinformationen entsprechend festgelegt ist, kann der Benutzer eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz herstellen, die auf **Computer_C**ausgeführt wird, auf die Datendatei auf **Computer_B**zugreifen und einen Massenimport von Daten aus der Datei in eine Tabelle auf **Computer_C**ausführen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows können so konfiguriert werden, dass von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eine Verbindung mit einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz hergestellt wird, indem die Anmeldeinformationen eines authentifizierten Windows-Benutzers weitergeleitet werden. Diese Anordnung wird als *Identitätswechsel* oder *Delegierung* bezeichnet. Es ist wichtig zu wissen, wie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version die Sicherheit für den Benutzeridentitätswechsel verarbeitet wird, wenn Sie BULK INSERT oder OPENROWSET verwenden. Durch einen Benutzeridentitätswechsel kann sich die Datendatei auf einem anderen Computer befinden als der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess oder der Benutzer selbst. Wenn beispielsweise ein Benutzer auf **Computer_A** Zugriff auf eine Datendatei hat, die sich auf **Computer_B**befindet, und die Delegierung der Anmeldeinformationen entsprechend festgelegt ist, kann der Benutzer eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz herstellen, die auf **Computer_C**ausgeführt wird, auf die Datendatei auf **Computer_B**zugreifen und einen Massenimport von Daten aus der Datei in eine Tabelle auf **Computer_C**ausführen.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Massenimport aus einer Remotedatendatei  
- Die Datendatei muss zwischen zwei Computern freigegeben sein, um mithilfe von BULK INSERT oder INSERT...SELECT \* FROM OPENROWSET(BULK...) den Massenimport von Daten von einem Computer zum anderen auszuführen. Verwenden Sie zum Angeben einer freigegebenen Datendatei den UNC-Namen (Universal Naming Convention) im allgemeinen Format **\\\\***Servername***\\***Freigabename***\\***Pfad***\\***Dateiname*. Zudem muss das Konto, mit dem auf die Datendatei zugegriffen wird, über die Berechtigungen verfügen, die zum Lesen der Datei auf dem Remotedatenträger erforderlich sind.  
+ Die Datendatei muss zwischen zwei Computern freigegeben sein, um mithilfe von BULK INSERT oder INSERT...SELECT \* FROM OPENROWSET(BULK...) den Massenimport von Daten von einem Computer zum anderen auszuführen. Verwenden Sie zum Angeben einer freigegebenen Datendatei den UNC-Namen (Universal Naming Convention) im allgemeinen Format Ein UNC-Name weist das Format **\\\\***Servername***\\***Freigabename***\\***Pfad***\\***Dateiname* auf. Zudem muss das Konto, mit dem auf die Datendatei zugegriffen wird, über die Berechtigungen verfügen, die zum Lesen der Datei auf dem Remotedatenträger erforderlich sind.  
   
  Beispielsweise wird mithilfe der folgenden `BULK INSERT` -Anweisung ein Massenimport von Daten aus der Datendatei `SalesOrderDetail` in die `AdventureWorks` -Tabelle der `newdata.txt`-Datenbank ausgeführt. Diese Datendatei befindet sich im freigegebenen Ordner `\dailyorders` auf dem `salesforce`-Netzwerkfreigabeverzeichnis des `computer2`-Systems.  
   
@@ -136,4 +138,3 @@ GO
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)  
   
   
-

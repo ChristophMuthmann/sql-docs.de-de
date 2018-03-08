@@ -3,8 +3,11 @@ title: Erstellen von Aggregat (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad5cf36e97bf3903cc9d42ec5179de6375624f95
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine benutzerdefinierte Aggregatfunktion, deren Implementierung in einer Klasse einer Assembly in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definiert ist. Damit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aggregatfunktion an die Implementierung bindet, muss zunächst die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly, die die Implementierung enthält, mithilfe einer CREATE ASSEMBLY-Anweisung in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hochgeladen werden.  
   
@@ -65,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  Der Name der Aggregatfunktion, die Sie erstellen möchten.  
   
- **@***Param_name*  
+ **@** *param_name*  
  Ein oder mehrere Parameter im benutzerdefinierten Aggregat. Der Wert eines Parameters muss vom Benutzer angegeben werden, wenn die Aggregatfunktion ausgeführt wird. Geben Sie einen Parameternamen, mit der eine "at"-Zeichen (**@**) als erstes Zeichen. Der Parametername muss den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Parameter gelten lokal in der jeweiligen Funktion.  
   
  *system_scalar_type*  
@@ -83,7 +85,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Der Name eines CLR-benutzerdefinierten Typs, der bereits in der aktuellen Datenbank erstellt wurde. Wenn *Udt_schema_name* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geht davon aus, der Typ gehört, auf das Schema des aktuellen Benutzers.  
   
- *Assembly_name* [ **.** *Class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  Die Assembly, die an die benutzerdefinierte Aggregatfunktion gebunden werden soll, und optional der Name des Schemas, zu dem die Assembly gehört, sowie der Name der Klasse innerhalb der Assembly, die das benutzerdefinierte Aggregat implementiert. Die Assembly muss bereits mit einer CREATE ASSEMBLY-Anweisung in der Datenbank erstellt worden sein. *CLASS_NAME* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner und die Übereinstimmung der Name einer Klasse, die in der Assembly vorhanden ist. *CLASS_NAME* möglicherweise ein Namespace qualifizierten Namen, wenn die zum Erstellen der Klasse verwendete Programmiersprache Namespaces, z. B. c# verwendet. Wenn *Class_name* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird angenommen, sie entspricht dem *Aggregate_name*.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -121,7 +123,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [DROP AGGREGATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   
-

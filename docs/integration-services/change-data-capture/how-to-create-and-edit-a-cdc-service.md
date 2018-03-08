@@ -1,26 +1,28 @@
 ---
-title: Das Erstellen und Bearbeiten eines CDC Service | Microsoft Docs
+title: Erstellen und Bearbeiten eines CDC Service | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7efb4e39c0f7aef7a03105d61f9c5255df815fb2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Erstellen und Bearbeiten eines CDC Service
   In diesen Verfahren wird beschrieben, wie Sie über die CDC Service Configuration Console einen neuen Oracle CDC Service erstellen und bearbeiten.  
@@ -65,9 +67,8 @@ ms.lasthandoff: 08/03/2017
   
 5.  Klicken Sie im Dialogfeld Verbindung mit Oracle herstellen auf **OK** . Beide Dialogfelder werden geschlossen, und der Dienst wird aktualisiert und registriert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Erstellen Sie und bearbeiten Sie eines Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Erstellen und Bearbeiten eines Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: "Verzögerung (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/20/2015
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,22 +21,21 @@ helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: 23
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77598feb87f6766f6c24c454dace2c138315e69b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Greift im gleichen Resultset auf Daten in einer vorherigen Zeile zu, ohne dass ein Selbstjoin in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet wird. LAG ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset vor der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer vorherigen Zeile zu vergleichen.  
+  Greift auf Daten aus einer vorherigen Zeile in das gleiche Ergebnis festzulegen, ohne die Verwendung von einem selbstjoin beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset vor der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer vorherigen Zeile zu vergleichen.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +70,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. Vergleichen von Werten aus verschiedenen Jahren  
  Im folgenden Beispiel wird mithilfe der LAG-Funktion die Differenz der Verkaufszahlen für einen bestimmten Mitarbeiter im Verlauf der Vorjahre zurückgegeben. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile kein LAG-Wert verfügbar ist.  
   
-```  
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -79,8 +81,7 @@ WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 BusinessEntityID SalesYear   CurrentQuota          PreviousQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             0.00  
@@ -95,7 +96,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>B. Vergleichen von Werten innerhalb von Partitionen  
  Im folgenden Beispiel werden mithilfe der LAG-Funktion die Verkaufszahlen des laufenden Jahres verschiedener Mitarbeiter verglichen. Um die Zeilen im Resultset nach Vertriebsgebiet zu unterteilen, wird die PARTITION BY-Klausel angegeben. Die LAG-Funktion wird auf jede Partition einzeln angewendet, und die Berechnung wird für jede Partition neu gestartet. Die ORDER BY-Klausel in der OVER-Klausel sortiert die Zeilen in jeder Partition. Die ORDER BY-Klausel in der SELECT-Anweisung sortiert die Zeilen im gesamten Resultset. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile jeder Partition kein LAG-Wert verfügbar ist.  
   
-```  
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -107,8 +108,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 TerritoryName            BusinessEntityID SalesYTD              PrevRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          0.00  
@@ -122,7 +122,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>C. Angeben willkürlicher Ausdrücke  
  Im folgenden Beispiel wird das Angeben verschiedener willkürlicher Ausdrücke in der Syntax der LAG-Funktion veranschaulicht.  
   
-```  
+```sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -150,7 +150,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: vergleicht Werte verschiedener Quartale  
  Das folgende Beispiel veranschaulicht die LAG-Funktion. Die Abfrage verwendet die LAG-Funktion, um die Differenz der Verkaufszahlen für einen bestimmten Mitarbeiter über vorherige Kalenderquartale zurückzugeben. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile kein LAG-Wert verfügbar ist.  
   
-```  
+```sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  
@@ -178,6 +178,5 @@ Year Quarter  SalesQuota  PrevQuota  Diff
  [LEAD &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
-
 
 

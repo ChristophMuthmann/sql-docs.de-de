@@ -1,30 +1,31 @@
 ---
 title: "Übersicht über | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5a3dd9c765c347b7516706d6e157a47f3c9bd03
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-overview"></a>Übersicht über die Wide World Importers
-Dies ist eine Übersicht über das fiktive Unternehmen Wide World Importers und die Workflows, die in die "wideworldimporters"-Beispieldatenbanken für SQL Server und Azure SQL-Datenbank behoben werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Dies ist eine Übersicht über das fiktive Unternehmen Wide World Importers und die Workflows, die in die "wideworldimporters"-Beispieldatenbanken für SQL Server und Azure SQL-Datenbank behoben werden.  
 
 Wide World Importers (Schlachtfeld) ist eine Großhandel Neuheit waren Importer-Tool und die Verteiler im San Francisco Bay-Bereich ausgeführt.
 
@@ -71,4 +72,3 @@ Das Unternehmen arbeitet mit einem Geschäftsjahr, das am 1. November startet.
 Die Lizenz für die Beispieldatenbank und den Beispielcode wird hier beschrieben: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 Die Beispieldatenbank enthält öffentliche Daten, die aus der kriminalstatistik und natürliche EarthData geladen wurde. Die Nutzungsbedingungen sind hier: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
-

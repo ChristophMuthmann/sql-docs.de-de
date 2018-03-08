@@ -2,42 +2,38 @@
 title: CellInfo-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CellInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CellInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cellinfo
 - http://schemas.microsoft.com/analysisservices/2003/engine#CellInfo
 - urn:schemas-microsoft-com:xml-analysis#CellInfo
-helpviewer_keywords:
-- CellInfo element
+helpviewer_keywords: CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b2e26f0b4adb6872fed90fcab1a84b2ff83c90a1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3a7b38201d5ba5c051cfacfb139ea52a6b93fb09
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo-Element (XMLA)
-  Stellt die Zellmetadaten dar, die das übergeordnete [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) -Element enthält.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Stellt die zellmetadaten übergeordneten [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,11 +50,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -98,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -2,28 +2,30 @@
 title: "Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: 26
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 578d41ef39b11825a175d27dfcf9af08c658ad85
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *Spaltenhauptschlüssel* sind Schlüsselschutzschlüssel, die in Always Encrypted zur Verschlüsselung von Spaltenverschlüsselungsschlüsseln verwendet werden. Spaltenhauptschlüssel müssen in einem vertrauenswürdigen Schlüsselspeicher gespeichert werden. Die Schlüssel müssen für Anwendungen verfügbar sein, die Daten ver- oder entschlüsseln müssen. Auch Tools, die Always Encrypted konfigurieren und Always Encrypted-Schlüssel verwalten, müssen auf die Spaltenhauptschlüssel zugreifen können.
 
@@ -231,7 +233,7 @@ Informationen hierzu finden Sie im Abschnitt „Bereitstellen von Spaltenhauptsc
 Informieren Sie sich in der Dokumentation zu Ihrem HSM und CSP, wie Sie den CSP auf einem Computer konfigurieren und Anwendungen und Benutzern Zugriff auf das HSM gewähren.
  
  
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
   
 - [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
 - [Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
@@ -240,10 +242,9 @@ Informieren Sie sich in der Dokumentation zu Ihrem HSM und CSP, wie Sie den CSP 
   
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen  
 
-- [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [„Immer verschlüsselt“ (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Overview of Key Management for Always Encrypted (Übersicht über die Schlüsselverwaltung für Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Entwickeln von Anwendungen unter Verwendung von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Always Encrypted-Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
-
 

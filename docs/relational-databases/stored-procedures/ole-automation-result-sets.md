@@ -2,9 +2,12 @@
 title: OLE-Automatisierungsresultsets | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-ole
 ms.tgt_pltfrm: 
@@ -17,20 +20,20 @@ helpviewer_keywords:
 - OLE Automation [SQL Server], result sets
 - arrays [SQL Server]
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b3cf49bb4116a3cbf8bf58c327cdb6af5c11468
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 905993b308116f12259c5d0b47c0c3094514d735
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-result-sets"></a>OLE-Automatisierungsresultsets
-  Wenn eine OLE-Automatisierungseigenschaft oder -methode Daten in einem ein- oder zweidimensionalen Array zurückgibt, wird das Array als Resultset an den Client zurückgegeben:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Wenn eine OLE-Automatisierungseigenschaft oder -methode Daten in einem ein- oder zweidimensionalen Array zurückgibt, wird das Array als Resultset an den Client zurückgegeben:  
   
 -   Ein eindimensionales Array wird dem Client als einzeiliges Resultset zurückgegeben, das so viele Spalten wie Elemente im Array enthält. Ein Array(10) wird z. B. als einzelne Zeile mit 10 Spalten zurückgegeben.  
   
@@ -56,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  [OLE-Automatisierungsprozeduren (Serverkonfigurationsoption)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   
   
-

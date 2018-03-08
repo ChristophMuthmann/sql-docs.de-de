@@ -2,11 +2,13 @@
 title: "Konfigurieren der Serverkonfigurationsoption „Benutzeroptionen“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7cd2202d31fdb2b68b25bbe2214df156e38b9ce7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzeroptionen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Benutzeroptionen** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Die Option **Benutzeroptionen** gibt globale Standardwerte für alle Benutzer an. Es wird eine Liste der Standardoptionen der Abfrageverarbeitung für die Dauer der Sitzung eines Benutzers erstellt. Mit der Option **Benutzeroptionen** können Sie die Standardwerte der SET-Optionen ändern (wenn die Standardeinstellungen des Servers nicht verwendet werden können).  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 08/02/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen" mit:**  
   
@@ -49,13 +50,13 @@ ms.lasthandoff: 08/02/2017
   
 -   **Nachbereitung:**  [Nach dem Konfigurieren der Konfigurationsoption „Benutzeroptionen“](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
 -   In der folgenden Tabelle werden die Konfigurationswerte für **Benutzeroptionen**aufgeführt und beschrieben. Nicht alle Konfigurationswerte sind miteinander kompatibel. ANSI_NULL_DFLT_ON und ANSI_NULL_DFLT_OFF können beispielsweise nicht gleichzeitig festgelegt werden.  
   
-    |Wert|Konfiguration|Beschreibung|  
+    |value|Konfiguration|Description|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Steuert die zwischenzeitliche oder verzögerte Einschränkungsüberprüfung.|  
     |2|IMPLICIT_TRANSACTIONS|Steuert bei Verbindungen zu dblib-Netzwerkbibliotheken, ob bei Ausführung einer Anweisung implizit eine Transaktion gestartet wird. Die Einstellung IMPLICIT_TRANSACTIONS wirkt sich weder auf ODBC- noch auf OLE DB-Verbindungen aus.|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/02/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen"  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) zum Konfigurieren der `user options` verwendet wird, um die Einstellung für die ANSI_WARNINGS-Serveroption zu ändern.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  
@@ -115,11 +116,10 @@ GO
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Konfigurationsoption "Benutzeroptionen"  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: Erstellen einer Datenquelle mit der Skriptkomponente | Microsoft Docs
+title: Erstellen einer Quelle mit der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,130 +20,129 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4944c3d5752da21fed90f16a38a33b4fad41515
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b31d28b646ff7f1727809179398906a3bab75e61
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Erstellen einer Quelle mit der Skriptkomponente
   Quellkomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten aus einer Datenquelle zu laden, um sie an Downstreamtransformationen und -ziele zu übergeben. Gewöhnlich stellen Sie über einen vorhandenen Verbindungs-Manager eine Verbindung mit der Datenquelle her.  
   
- Einen Überblick über die Skriptkomponente finden Sie unter [Extending the Data Flow mit der Skriptkomponente](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Eine Übersicht der Skriptkomponenten finden Sie unter [Extending the Data Flow with the Script Component (Erweitern des Datenflusses mit der Skriptkomponente)](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
- Die Skriptkomponente und der Infrastrukturcode, den sie generieren, erleichtern Ihnen die Entwicklung benutzerdefinierter Datenflusskomponenten deutlich. Um die Funktionsweise der Skriptkomponente zu verstehen, kann es jedoch hilfreich sein, sich mit den Schritten, die bei der Entwicklung einer benutzerdefinierten Datenflusskomponente durchlaufen werden, vertraut zu machen. Finden Sie im Abschnitt [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), insbesondere im Thema [Entwickeln einer benutzerdefinierten Quellkomponente](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
+ Die Skriptkomponente und der Infrastrukturcode, den sie generieren, erleichtern Ihnen die Entwicklung benutzerdefinierter Datenflusskomponenten deutlich. Um die Funktionsweise der Skriptkomponente zu verstehen, kann es jedoch hilfreich sein, sich mit den Schritten, die bei der Entwicklung einer benutzerdefinierten Datenflusskomponente durchlaufen werden, vertraut zu machen. Weitere Informationen finden Sie im Abschnitt [Developing a Custom Data Flow Component (Entwickeln einer benutzerdefinierten Datenflusskomponente)](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md). Beachten Sie dabei insbesondere das Thema [Developing a Custom Source Component (Entwickeln einer benutzerdefinierten Quellkomponente)](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
 ## <a name="getting-started-with-a-source-component"></a>Erste Schritte mit einer Quellkomponente  
- Wenn Sie eine Skriptkomponente hinzufügen, um im Bereich Datenfluss des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die **Skriptkomponententyp** Dialogfeld wird geöffnet und fordert Sie zum Auswählen einer Quelle, Ziel oder Transformation Skript. Wählen Sie in diesem Dialogfeld **Quelle**.  
+ Wenn Sie im Bereich Datenfluss des [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designers eine Skriptkomponente hinzufügen, wird das Dialogfeld **Skriptkomponententyp auswählen** geöffnet, und Sie werden zur Auswahl eines Quell-, Ziel- oder Transformationsskripts aufgefordert. Klicken Sie in diesem Dialogfeld auf **Quelle**.  
   
 ## <a name="configuring-a-source-component-in-metadata-design-mode"></a>Konfigurieren einer Quellkomponente im Metadatenentwurfsmodus  
- Nach der Auswahl eine Quellkomponente zu erstellen, konfigurieren Sie die Komponente, mit der **Skript Transformations-Editor**. Weitere Informationen finden Sie unter [Configuring the Script Component in the Script Component Editor](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
+ Nachdem Sie die Erstellung einer Quellkomponente ausgewählt haben, konfigurieren Sie die Komponente mit dem **Transformations-Editor für Skripterstellung**. Weitere Informationen finden Sie unter [Configuring the Script Component in the Script Component Editor (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor)](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
   
- Eine Datenflussquellkomponente verfügt über keine Eingaben und unterstützt eine oder mehrere Ausgaben. Konfiguration der Ausgaben für die Komponente einer der Schritte, die Sie im metadatenentwurfsmodus müssen ist, mithilfe Abschließen der **Skript Transformations-Editor**, bevor Sie das benutzerdefinierte Skript schreiben.  
+ Eine Datenflussquellkomponente verfügt über keine Eingaben und unterstützt eine oder mehrere Ausgaben. Die Konfiguration der Ausgaben für die Komponente ist einer der Schritte, den Sie mithilfe des **Transformations-Editors für Skripterstellung** im Metadatenentwurfsmodus abschließen müssen, bevor Sie das benutzerdefinierte Skript schreiben.  
   
- Sie können auch die Skriptsprache angeben, durch Festlegen der **ScriptLanguage** Eigenschaft auf die **Skript** auf der Seite der **Skript Transformations-Editor**.  
+ Sie können zudem die Skriptsprache über die **ScriptLanguage**-Eigenschaft auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** festlegen.  
   
 > [!NOTE]  
->  Um die Standardskriptsprache für Skriptkomponenten und Skripttasks festzulegen, verwenden die **Skriptsprache** auf die option der **allgemeine** auf der Seite der **Optionen** (Dialogfeld). Weitere Informationen finden Sie unter [General Page](~/integration-services/control-flow/script-task-editor-general-page.md).  
+>  Verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache**, um die Standardskriptsprache für Skriptkomponenten und Skripttasks festzulegen. Weitere Informationen finden Sie unter [General Page](~/integration-services/control-flow/script-task-editor-general-page.md).  
   
 ### <a name="adding-connection-managers"></a>Hinzufügen von Verbindungs-Managern  
- Eine Quellkomponente verwendet normalerweise einen vorhandenen Verbindungs-Manager zum Herstellen einer Verbindung mit der Datenquelle, aus der Daten in den Datenfluss geladen werden. Auf der **Verbindungs-Manager** auf der Seite der **Skript Transformations-Editor**, klicken Sie auf **hinzufügen** geeigneten Verbindungs-Manager hinzufügen.  
+ Eine Quellkomponente verwendet normalerweise einen vorhandenen Verbindungs-Manager zum Herstellen einer Verbindung mit der Datenquelle, aus der Daten in den Datenfluss geladen werden. Klicken Sie im **Transformations-Editor für Skripterstellung** auf der Seite **Verbindungs-Manager** auf **Hinzufügen**, um den passenden Verbindungs-Manager hinzuzufügen.  
   
  Ein Verbindungs-Manager ist jedoch nur eine praktische Einheit, die Daten kapselt und speichert, die sie benötigt, um eine Verbindung mit einer bestimmten Art von Datenquelle herzustellen. Sie müssen, um Daten zu laden und zu speichern sowie möglicherweise auch um eine Verbindung mit der Datenquelle herzustellen und diese zu beenden, eigenen benutzerdefinierten Code schreiben.  
   
- Allgemeine Informationen zur Verwendung von Verbindungs-Manager mit der Skriptkomponente finden Sie unter [Connecting to Data Sources in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
+ Allgemeine Informationen zum Verwenden von Verbindungs-Managern mit der Skriptkomponente finden Sie unter [Connecting to Data Sources in the Script Component (Herstellen einer Verbindung mit Datenquellen in der Skriptkomponente)](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
- Weitere Informationen zu den **Verbindungs-Manager** auf der Seite der **Skript Transformations-Editor**, finden Sie unter [Skript Transformations-Editor &#40; Verbindungsseite-Manager &#41; ](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ Weitere Informationen über die Seite **Verbindungs-Manager** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Connection Managers Page) (Transformations-Editor für Skripterstellung (Seite „Verbindungs-Manager“))](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
   
 ### <a name="configuring-outputs-and-output-columns"></a>Konfigurieren von Ausgaben und Ausgabespalten  
- Eine Quellkomponente verfügt über keine Eingaben und unterstützt eine oder mehrere Ausgaben. Auf der **Eingaben und Ausgaben** auf der Seite der **Skript Transformations-Editor**, eine einzelne Ausgabe standardmäßig erstellt wurde, aber es wurden keine Ausgabespalten erstellt. Auf dieser Seite des Editors haben Sie die Möglichkeit, die folgenden Elemente zu konfigurieren.  
+ Eine Quellkomponente verfügt über keine Eingaben und unterstützt eine oder mehrere Ausgaben. Auf der Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** wurde standardmäßig eine Ausgabe, jedoch keine Ausgabespalten erstellt. Auf dieser Seite des Editors haben Sie die Möglichkeit, die folgenden Elemente zu konfigurieren.  
   
--   Sie müssen Ausgabespalten für jede Ausgabe manuell hinzufügen und konfigurieren. Wählen Sie den ausgabespaltenordner für jede Ausgabe, und klicken Sie dann mithilfe der **Add Column** und **Spalte entfernen** Schaltflächen, um die Ausgabespalten für jede Ausgabe der Quellkomponente zu verwalten. Die Namen, die Sie den Ausgabespalten hier zuweisen, verwenden Sie später mithilfe der typisierten Accessoreigenschaften, die im automatisch generierten Code erstellt wurden, für Verweise im Skript.  
+-   Sie müssen Ausgabespalten für jede Ausgabe manuell hinzufügen und konfigurieren. Wählen Sie den Ausgabespaltenordner für die jeweilige Ausgabe aus, und verwalten Sie anschließend die Ausgabespalten für alle Ausgaben der Quellkomponente mithilfe der Schaltflächen **Spalte hinzufügen** und **Spalte entfernen**. Die Namen, die Sie den Ausgabespalten hier zuweisen, verwenden Sie später mithilfe der typisierten Accessoreigenschaften, die im automatisch generierten Code erstellt wurden, für Verweise im Skript.  
   
--   Sie haben die Möglichkeit, eine oder mehrere zusätzliche Ausgaben zu erstellen, beispielsweise eine simulierte Fehlerausgabe für Zeilen, die unerwartete Werte aufweisen. Verwenden der **Ausgabe hinzufügen** und **Ausgabe entfernen** Schaltflächen, um die Ausgaben der Quellkomponente zu verwalten. Alle Eingabezeilen werden an alle verfügbaren Ausgaben weitergeleitet, es sei denn, Sie auch einen identischen Wert ungleich NULL für angeben der **ExclusionGroup** -Eigenschaft der Ausgaben für jede Zeile nur eine der Ausgaben weiterleiten, die denselben, möchten **ExclusionGroup** Wert. Der spezifische ganzzahlige Wert ausgewählt werden, zum Identifizieren der **ExclusionGroup** spielt keine Rolle.  
+-   Sie haben die Möglichkeit, eine oder mehrere zusätzliche Ausgaben zu erstellen, beispielsweise eine simulierte Fehlerausgabe für Zeilen, die unerwartete Werte aufweisen. Verwenden Sie die Schaltflächen **Ausgabe hinzufügen** und **Ausgabe entfernen**, um die Ausgaben der Quellkomponente zu verwalten. Alle Eingabezeilen werden an alle verfügbaren Ausgaben weitergeleitet, außer Sie legen einen identischen Wert ungleich Null für die **ExclusionGroup**-Eigenschaft der Ausgaben fest, bei denen Sie jede Zeile nur an eine der Ausgaben weiterleiten möchten, die denselben **ExclusionGroup**-Wert aufweisen. Der spezifische ganzzahlige Wert, den Sie auswählen, um **ExclusionGroup** zu kennzeichnen, ist nicht von Bedeutung.  
   
     > [!NOTE]  
-    >  Sie können auch eine Wert ungleich NULL **ExclusionGroup** Eigenschaftswert für eine einzelne Ausgabe, wenn Sie nicht alle Zeilen ausgeben möchten. In diesem Fall jedoch müssen Sie explizit aufrufen der **DirectRowTo\<Outputbuffer >** Methode für jede Zeile, die an die Ausgabe gesendet werden soll.  
+    >  Sie können auch einen Wert ungleich 0 (null) für die **ExclusionGroup**-Eigenschaft für eine einzelne Ausgabe verwenden, wenn Sie nicht alle Zeilen ausgeben möchten. In diesem Fall müssen Sie jedoch für alle Zeilen, die an die Ausgabe gesendet werden sollen, explizit die Methode **DirectRowTo\<outputbuffer>** aufrufen.  
   
 -   Sie können allen Ausgaben einen Anzeigenamen zuweisen. Sie verwenden die Namen der Ausgaben in Ihrem Skript später für Verweise mithilfe der typisierten Accessoreigenschaften, die im automatisch generierten Code erstellt wurden.  
   
--   Üblicherweise haben mehrere Ausgaben in der gleichen **ExclusionGroup** haben die gleichen Ausgabespalten. Falls Sie eine simulierte Fehlerausgabe erstellen, sollten Sie jedoch mehrere Spalten hinzufügen, um Fehlerinformationen zu speichern. Informationen wie das Datenflussmodul Fehlerzeilen verarbeitet, finden Sie unter [mithilfe von Fehlerausgaben in einer Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). In der Skriptkomponente müssen Sie hingegen eigenen Code schreiben, um geeignete Fehlerinformationen für die zusätzlichen Spalten zu erhalten. Weitere Informationen finden Sie unter [simulieren einer Fehlerausgabe für die Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
+-   Üblicherweise besitzen mehrere Ausgaben in derselben **ExclusionGroup** die gleichen Ausgabespalten. Falls Sie eine simulierte Fehlerausgabe erstellen, sollten Sie jedoch mehrere Spalten hinzufügen, um Fehlerinformationen zu speichern. Informationen dazu, wie das Datenflussmodul Fehlerzeilen verarbeitet, finden Sie unter [Using Error Outputs in a Data Flow Component (Verwenden von Fehlerausgaben in einer Datenflusskomponente)](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). In der Skriptkomponente müssen Sie hingegen eigenen Code schreiben, um geeignete Fehlerinformationen für die zusätzlichen Spalten zu erhalten. Weitere Informationen finden Sie unter [Simulating an Error Output for the Script Component (Simulieren einer Fehlerausgabe für die Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
- Weitere Informationen zu den **Eingaben und Ausgaben** auf der Seite der **Skript Transformations-Editor**, finden Sie unter [Skript Transformations-Editor &#40; Eingaben und Ausgaben Seite &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
+ Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
- Treten vorhandenen Variablen, deren Werte, die Sie in Ihrem Skript verwenden möchten, können Sie diese im Hinzufügen der **ReadOnlyVariables** und **ReadWriteVariables** Eigenschaftsfeldern für die **Skript** auf der Seite der **Skript Transformations-Editor**.  
+ Wenn Sie die Werte von vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie diese in den Eigenschaftsfeldern **ReadOnlyVariables** und **ReadWriteVariables** auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** hinzufügen.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftenfelder eingeben, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen eingeben, indem Sie auf die Auslassungspunkte (**...** ) neben dem **ReadOnlyVariables** und **ReadWriteVariables** Eigenschaftenfelder und Auswählen von Variablen in der **Variablen auswählen** (Dialogfeld) .  
+ Wenn Sie mehrere Variablen in die Eigenschaftenfelder eingeben, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungszeichen (**…**) neben den Eigenschaftenfeldern für **ReadOnlyVariables** und **ReadWriteVariables** klicken und dann die Variablen im Dialogfeld **Variablen auswählen** festlegen.  
   
- Allgemeine Informationen zur Verwendung von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
+ Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
- Weitere Informationen zu den **Skript** auf der Seite der **Skript Transformations-Editor**, finden Sie unter [Skript Transformations-Editor &#40; Seite "Skript" &#41; ](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Script Page) (Transformations-Editor für Skripterstellung (Seite „Skript“))](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>Schreiben einer Quellkomponente im Codeentwurfsmodus  
- Nachdem Sie die Metadaten für Ihre Komponente konfiguriert haben, öffnen Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE, das benutzerdefinierte Skript zu codieren. Um VSTA zu öffnen, klicken Sie auf **Bearbeitungsskript** auf die **Skript** auf der Seite der **Skript Transformations-Editor**. Sie können das Skript schreiben, indem Sie entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#-, abhängig von der Skriptsprache für ausgewählte der **ScriptLanguage** Eigenschaft.  
+ Nachdem Sie die Metadaten für die Komponente konfiguriert haben, öffnen Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA), um das benutzerdefinierte Skript zu codieren. Klicken Sie im **Transformations-Editor für Skripterstellung** auf der Seite **Skript** auf **Skript bearbeiten**, um VSTA zu öffnen. Abhängig von der Skriptsprache, die Sie für die **ScriptLanguage**-Eigenschaft ausgewählt haben, können Sie das Skript entweder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# schreiben.  
   
- Wichtige Informationen, die für alle Arten von Komponenten, die mithilfe der Skriptkomponente erstellt gilt, finden Sie unter [codieren und Debuggen der Skriptkomponente](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
+ Wichtige Informationen, die alle Arten von Komponenten betreffen, die mithilfe der Skriptkomponente erstellt wurden, finden Sie unter [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code  
- Wenn Sie die VSTA IDE öffnen, nach dem Erstellen und Konfigurieren einer Quellkomponente die bearbeitbare **ScriptMain** Klasse wird im Code-Editor angezeigt. Sie Ihren benutzerdefinierten Code schreiben, der **ScriptMain** Klasse.  
+ Wenn Sie nach der Erstellung und Konfiguration einer Quellkomponente die VSTA-IDE öffnen, wird die bearbeitbare **ScriptMain**-Klasse im Code-Editor angezeigt. Sie schreiben den benutzerdefinierten Code in der **ScriptMain**-Klasse.  
   
- Die **ScriptMain** -Klasse schließt einen Stub für die **CreateNewOutputRows** Methode. Die **CreateNewOutputRows** ist die wichtigste Methode in einer Quellkomponente.  
+ Die **ScriptMain**-Klasse enthält einen Stub für die **CreateNewOutputRows**-Methode. **CreateNewOutputRows** ist die wichtigste Methode in einer Quellkomponente.  
   
- Wenn Sie öffnen die **Projektexplorer** Fenster in VSTA können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat **BufferWrapper** und **ComponentWrapper** Projekt Elemente. Die **ScriptMain** Klasse erbt von **UserComponent** -Klasse in der **ComponentWrapper** -Projektelement.  
+ Wenn Sie das Fenster **Projektexplorer** in VSTA öffnen, können Sie sehen, dass die Skriptkomponente auch schreibgeschützte **BufferWrapper**- und **ComponentWrapper**-Projektelemente generiert hat. Die **ScriptMain**-Klasse erbt von der **UserComponent**-Klasse im **ComponentWrapper**-Projektelement.  
   
- Zur Laufzeit ruft das Datenflussmodul die **PrimeOutput** Methode in der **UserComponent** Klasse, welche Außerkraftsetzungen der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> übergeordnete Klasse. Die **PrimeOutput** -Methode ruft ihrerseits die folgenden Methoden:  
+ Zur Laufzeit ruft das Datenflussmodul die **PrimeOutput**-Methode in der **UserComponent**-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die **PrimeOutput**-Methode ruft anschließend die folgenden Methoden auf:  
   
-1.  Die **CreateNewOutputRows** -Methode, die Sie in überschreiben **ScriptMain** zum Hinzufügen von Zeilen aus der Datenquelle an die Ausgabe Puffern, deren zunächst leer.  
+1.  Die **CreateNewOutputRows**-Methode, die Sie in **ScriptMain** überschreiben können, um den Ausgabepuffern, die zunächst leer sind, Zeilen der Datenquelle hinzuzufügen.  
   
-2.  Die **FinishOutputs** Methode, die standardmäßig leer ist. Überschreiben Sie diese Methode in **ScriptMain** um Verarbeitungsschritte auszuführen, die zum Abschluss der Ausgabe erforderlich sind.  
+2.  Die **FinishOutputs**-Methode, die standardmäßig leer ist. Überschreiben Sie diese Methode in **ScriptMain**, um Verarbeitungsschritte auszuführen, die zum Abschluss der Ausgabe erforderlich sind.  
   
-3.  Die Private **MarkOutputsAsFinished** aufruft der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> übergeordnete Klasse, um das Datenflussmodul mitzuteilen, dass die Ausgabe abgeschlossen ist. Sie müssen keine Aufrufen **SetEndOfRowset** explizit in Ihrem eigenen Code.  
+3.  Die private **MarkOutputsAsFinished**-Methode, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>-Klasse aufruft, um das Datenflussmodul über die Fertigstellung der Ausgabe in Kenntnis zu setzen. Sie müssen **SetEndOfRowset** nicht explizit im Code aufrufen.  
   
 ### <a name="writing-your-custom-code"></a>Schreiben von benutzerdefiniertem Code  
- Zum Erstellen einer benutzerdefinierten Quellkomponente fertig sind, möchten Sie möglicherweise Schreiben von Skripts in den folgenden Methoden zur Verfügung, in der **ScriptMain** Klasse.  
+ Sie können Skripts in den folgenden Methoden schreiben, die in der **ScriptMain**-Klasse zur Verfügung stehen, um die Erstellung einer benutzerdefinierten Quellkomponente abzuschließen.  
   
-1.  Überschreiben Sie die **' acquireconnections '** Methode, um eine Verbindung mit der externen Datenquelle herstellen. Extrahieren Sie das Verbindungsobjekt bzw. die erforderlichen Verbindungsinformationen vom Verbindungs-Manager.  
+1.  Überschreiben Sie die **AcquireConnections**-Methode, um eine Verbindung mit der externen Datenquelle herzustellen. Extrahieren Sie das Verbindungsobjekt bzw. die erforderlichen Verbindungsinformationen vom Verbindungs-Manager.  
   
-2.  Überschreiben Sie die **PreExecute** -Methode zum Laden von Daten, wenn Sie alle Quelldaten gleichzeitig laden können. Sie können z. B. Ausführen eine **"SqlCommand"** für ein [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank, und Laden Sie alle Quelldaten gleichzeitig in eine **SqlDataReader**. Wenn Sie zu einem Zeitpunkt (z. B. beim Lesen einer Textdatei) die Quelldaten zeilenweise laden müssen, können Sie die Daten laden, wie Sie Zeilen in durchlaufen **CreateNewOutputRows**.  
+2.  Überschreiben Sie die **PreExecute**-Methode, um Daten zu laden, falls Sie alle Quelldaten gleichzeitig laden können. Sie können beispielsweise einen **SqlCommand** über eine [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ausführen und alle Quelldaten gleichzeitig in einen **SqlDataReader** laden. Falls Sie die Quelldaten zeilenweise laden müssen (z.B. beim Lesen einer Textdatei), können Sie die Daten beim Durchlaufen der Zeilen in **CreateNewOutputRows** laden.  
   
-3.  Verwenden Sie die überschriebene **CreateNewOutputRows** -Methode leere Ausgabepuffer neue Zeilen hinzu und füllen Sie die Werte der einzelnen Spalten in den neuen Ausgabezeilen. Verwenden der **AddRow** Methode der einzelnen Ausgabepuffer eine leere neue Zeile hinzufügen, und legen Sie dann die Werte der einzelnen Spalten. Üblicherweise kopieren Sie die Werte aus den Spalten, die aus der externen Quelle geladen werden.  
+3.  Mithilfe der überschriebenen **CreateNewOutputRows**-Methode können Sie leere Ausgabepuffer um neue Zeilen ergänzen und die Werte der einzelnen Spalten den neuen Ausgabezeilen hinzufügen. Verwenden Sie die **AddRow**-Methode der einzelnen Ausgabepuffer, um leere neue Zeilen hinzuzufügen, und legen Sie anschließend die Werte der einzelnen Spalten fest. Üblicherweise kopieren Sie die Werte aus den Spalten, die aus der externen Quelle geladen werden.  
   
-4.  Überschreiben Sie die **"PostExecute"** Methode, um die Verarbeitung der Daten abzuschließen. Sie können z. B. schließen die **SqlDataReader** , dass Sie zum Laden von Daten verwendet.  
+4.  Überschreiben Sie die **PostExecute**-Methode, um die Verarbeitung der Daten abzuschließen. Sie können beispielsweise den **SqlDataReader** schließen, mit dem Sie die Daten geladen haben.  
   
-5.  Überschreiben Sie die **' releaseconnections '** Methode aus der externen Datenquelle zu trennen, falls erforderlich.  
+5.  Überschreiben Sie bei Bedarf die **ReleaseConnections**-Methode, um die Verbindung mit der externen Datenquelle zu trennen.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele veranschaulichen die benutzerdefinierten Code, der erforderlich ist, in der **ScriptMain** Klasse, um die Erstellung einer Quellkomponente.  
+ In den folgenden Beispielen wird der benutzerdefinierte Code veranschaulicht, der in der **ScriptMain**-Klasse zur Erstellung einer Quellkomponente erforderlich ist.  
   
 > [!NOTE]  
->  Diese Beispiele verwenden die **Person.Address** -Tabelle in der **AdventureWorks** Beispieldatenbank aus, und übergeben Sie die erste und die vierte Spalte, die **IntAddressID** und  **Nvarchar (30) City** Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
+>  In diesen Beispielen werden die erste und die vierte Spalte der Tabelle **Person.Address** in der Beispieldatenbank **AdventureWorks** verwendet, und die Spalten **intAddressID** und **nvarchar(30)City** werden durch den Datenfluss weitergeleitet. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
   
 ### <a name="adonet-source-example"></a>ADO.NET-Quellenbeispiel  
- Dieses Beispiel zeigt eine Quellkomponente, die einen vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Verbindungs-Manager zum Laden von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle in den Datenfluss.  
+ Dieses Beispiel zeigt eine Quellkomponente, die einen vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager zum Laden von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in den Datenfluss verwendet.  
   
  Wenn Sie den Beispielcode ausführen möchten, müssen Sie das Paket und die Komponente folgendermaßen konfigurieren:  
   
-1.  Erstellen einer [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Verbindungs-Manager verwendet die **SqlClient** Anbieter zur Verbindung mit der **AdventureWorks** Datenbank.  
+1.  Erstellen Sie einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager, der mithilfe des **SqlClient**-Anbieters eine Verbindung mit der **AdventureWorks**-Datenbank herstellt.  
   
 2.  Fügen Sie der Datenfluss-Designeroberfläche eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Quelle.  
   
-3.  Öffnen der **Skript Transformations-Editor**. Auf der **Eingaben und Ausgaben** Seite, die der standardmäßigen Ausgabe einen aussagekräftigeren Namen, z. B. **"myaddressoutput"**, hinzufügen und konfigurieren Sie die beiden Ausgabespalten **AddressID**und **City**.  
+3.  Öffnen Sie den **Transformations-Editor für Skripterstellung**. Geben Sie auf der Seite **Eingaben und Ausgaben** der Standardausgabe einen aussagekräftigeren Namen ein, z.B. **MyAddressOutput**. Fügen Sie die zwei Ausgabespalten **AddressID** und **City** hinzu, und konfigurieren Sie diese.  
   
     > [!NOTE]  
-    >  Achten Sie darauf, dass Sie den Datentyp ändern die **City** Ausgabespalte in DT_WSTR.  
+    >  Achten Sie darauf, den Datentyp der **City**-Ausgabespalte in DT_WSTR zu ändern.  
   
-4.  Auf der **Verbindungs-Manager** hinzufügen oder erstellen, die [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Verbindungs-Manager, und geben sie einen Namen wie z. B. **"myadonetconnection"**.  
+4.  Fügen Sie auf der Seite **Verbindungs-Manager** den [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager hinzu, oder erstellen Sie diesen, und geben Sie ihm einen Namen wie **MyADONETConnection**.  
   
-5.  Auf der **Skript** auf **Bearbeitungsskript** , und geben Sie das folgende Skript. Schließen Sie dann die skriptentwicklungsumgebung und den **Skript Transformations-Editor**.  
+5.  Klicken Sie auf der Seite **Skript** auf **Skript bearbeiten**, und geben Sie das folgende Skript ein. Schließen Sie anschließend die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.  
   
-6.  Erstellen und konfigurieren Sie eine Zielkomponente, z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel oder die beispielzielkomponente, die [Erstellen eines Ziels mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), der erwartet, dass die  **AddressID** und **City** Spalten. Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Zieltabelle erstellen, durch Ausführen des folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl in der **AdventureWorks** Datenbank:  
+6.  Erstellen und konfigurieren Sie eine Zielkomponente, die die Spalten **AddressID** und **City** erwartet, z.B. ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel oder die Beispielzielkomponente, die unter [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) veranschaulicht wird. Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Zieltabelle erstellen, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl in der **AdventureWorks**-Datenbank ausführen:  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -262,19 +263,19 @@ ms.lasthandoff: 09/26/2017
   
  Wenn Sie den Beispielcode ausführen möchten, müssen Sie das Paket und die Komponente folgendermaßen konfigurieren:  
   
-1.  Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistenten zum Exportieren der **Person.Address** Tabelle aus der **AdventureWorks** -Beispieldatenbank in eine kommagetrennte Flatfile. In diesem Beispiel wird der Dateiname ExportedAddresses.txt verwendet.  
+1.  Exportieren Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten die Tabelle **Person.Address** aus der **AdventureWorks**-Beispieldatenbank in eine durch Trennzeichen getrennte Flatfile. In diesem Beispiel wird der Dateiname ExportedAddresses.txt verwendet.  
   
 2.  Erstellen Sie einen Verbindungs-Manager für Flatfiles, der eine Verbindung mit der exportierten Datendatei herstellt.  
   
 3.  Fügen Sie der Datenfluss-Designeroberfläche eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Quelle.  
   
-4.  Öffnen der **Skript Transformations-Editor**. Auf der **Eingaben und Ausgaben** Seite, die der standardmäßigen Ausgabe einen aussagekräftigeren Namen, z. B. **"myaddressoutput"**. Hinzufügen und konfigurieren Sie die beiden Ausgabespalten **AddressID** und **City**.  
+4.  Öffnen Sie den **Transformations-Editor für Skripterstellung**. Geben Sie auf der Seite **Eingaben und Ausgaben** der Standardausgabe einen aussagekräftigeren Namen ein, z.B. **MyAddressOutput**. Fügen Sie die beiden Ausgabespalten **AddressID** und **City** hinzu, und konfigurieren Sie diese.  
   
-5.  Auf der **Verbindungs-Manager** Seite, hinzufügen oder den Flatfile-Verbindungs-Manager erstellen, verwenden einen beschreibenden Namen wie z. B. **"myflatfilesrcconnectionmanager"**.  
+5.  Fügen Sie auf der Seite **Verbindungs-Manager** den Verbindungs-Manager für Flatfiles hinzu, oder erstellen Sie diesen, und geben Sie ihm einen aussagekräftigen Namen, z.B. **MyFlatFileSrcConnectionManager**.  
   
-6.  Auf der **Skript** auf **Bearbeitungsskript** , und geben Sie das folgende Skript. Schließen Sie dann die skriptentwicklungsumgebung und den **Skript Transformations-Editor**.  
+6.  Klicken Sie auf der Seite **Skript** auf **Skript bearbeiten**, und geben Sie das folgende Skript ein. Schließen Sie anschließend die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.  
   
-7.  Erstellen und konfigurieren Sie eine Zielkomponente, z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel oder die beispielzielkomponente, die [Erstellen eines Ziels mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Zieltabelle erstellen, durch Ausführen des folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl in der **AdventureWorks** Datenbank:  
+7.  Erstellen und konfigurieren Sie eine Zielkomponente, z.B. ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel oder die Beispielzielkomponente, die unter [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) veranschaulicht wird. Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Zieltabelle erstellen, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl in der **AdventureWorks**-Datenbank ausführen:  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -393,9 +394,8 @@ ms.lasthandoff: 09/26/2017
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Ziels mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [Entwickeln einer benutzerdefinierten Quellkomponente](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   
   
-

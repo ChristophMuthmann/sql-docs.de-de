@@ -3,32 +3,33 @@ title: "C, um Beispiele für die Konvertierung von SQL-Daten | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d3270b142cb857876a558122b670bb329e08c93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C, um Beispiele für die Konvertierung von SQL-Daten
 Die folgenden Beispiele veranschaulichen, wie der Treiber C-Daten in SQL-Daten konvertiert:  
   
-|C-Typ-ID|C-Datenwert|SQL-Typ<br /><br /> Bezeichner (identifier)|Column<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
+|C-Typ-ID|C-Datenwert|SQL-Typ<br /><br /> Bezeichner (identifier)|Spalte<br /><br /> length|SQL data<br /><br /> Wert|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|–|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
@@ -52,4 +53,3 @@ Die folgenden Beispiele veranschaulichen, wie der Treiber C-Daten in SQL-Daten k
  [c] die Zahlen in dieser Liste werden die Zahlen in den Feldern der SQL_DATE_STRUCT-Struktur gespeichert.  
   
  [d] die Zahlen in dieser Liste werden die Zahlen in die Felder der Struktur SQL_TIMESTAMP_STRUCT gespeichert.
-

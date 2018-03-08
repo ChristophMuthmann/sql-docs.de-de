@@ -3,7 +3,7 @@ title: Fields-Auflistung (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 167af555c9983598354faa1de4bc4603a9bac006
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22fa67aeac9f4296133af93562299e4f5160d996
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fields-collection-ado"></a>Fields-Auflistung (ADO)
 Enthält alle der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  
@@ -55,4 +54,3 @@ Enthält alle der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)
-

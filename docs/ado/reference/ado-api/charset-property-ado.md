@@ -3,7 +3,7 @@ title: Charset-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 43d23eda107933ab659324de412db0e101f8da00
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c3f9568a04572718bb6b1a968a3bacae4520898
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="charset-property-ado"></a>Charset-Eigenschaft (ADO)
 Gibt den Zeichensatz in das der Inhalt von Text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) übersetzt werden soll, für die Speicherung in den internen Puffer der **Stream** Objekt.  
@@ -46,5 +45,4 @@ Gibt den Zeichensatz in das der Inhalt von Text [Stream](../../../ado/reference/
  Ein Codebeispiel finden Sie unter [Schritt 4: Füllen Sie das Textfeld "Details"](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

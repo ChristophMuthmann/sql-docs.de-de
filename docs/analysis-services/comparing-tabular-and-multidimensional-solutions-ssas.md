@@ -1,31 +1,31 @@
 ---
 title: "Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 49
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dba56641beaa8c22bc1bc0552d51737b81f4128d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
   SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: tabellarische, mehrdimensionale und Power Pivot für SharePoint.
   
  Mehr als ein Ansatz ermöglicht eine Modellierungsumgebung, die auf unterschiedliche Geschäfts- und Benutzeranforderungen zugeschnitten ist. Das mehrdimensionale Modell ist eine auf offenen Standards basierende ausgereifte Technologie, die von zahlreichen Herstellern von BI-Software genutzt wird, aber nur schwer zu meistern ist. Das tabellarische Modell bietet einen relationalen Modellierungsansatz, den viele Entwickler intuitiver finden. Das Power Pivot-Modell ist noch einfacher und bietet eine visuelle Datenmodellierung in Excel sowie Serverunterstützung, die über SharePoint bereitgestellt wird.  
@@ -59,33 +59,33 @@ ms.lasthandoff: 09/01/2017
 |||| 
 |-|-|-|
 ||Multidimensional|Tabellarisch|
-|Aktionen|Ja|Nein|
-|Aggregationen|Ja|Nein|
-|Berechnete Spalte|Nein|ja|  
-|Berechnete Measures|Ja|Ja| 
-|Berechnete Tabellen|Nein|Ja<sup>1</sup>|  
-|Benutzerdefinierte Assemblys|Ja|Nein|
-|Benutzerdefinierte Rollups|Ja|Nein| 
-|Standardelement|Ja|Nein|  
+|Aktionen|ja|nein|
+|Aggregationen|ja|nein|
+|Berechnete Spalte|nein|ja|  
+|Berechnete Measures|ja|ja| 
+|Berechnete Tabellen|nein|Ja<sup>1</sup>|  
+|Benutzerdefinierte Assemblys|ja|nein|
+|Benutzerdefinierte Rollups|ja|nein| 
+|Standardelement|ja|nein|  
 |Anzeigeordner|ja|Ja<sup>1</sup>|  
-|Distinct Count|Ja|Ja (über DAX)|
-|Drillthrough ausführen|ja|Ja (hängt mit Client-Anwendung)|
+|Distinct Count|ja|Ja (über DAX)|
+|Drillthroughberichte|ja|Ja (hängt mit Client-Anwendung)|
 |Hierarchien|ja|ja|
-|KPIs (Key Performance Indicators)|ja|Ja| 
-|Verknüpfte Objekte|Ja|Ja (verknüpfte Tabellen)|
-|M-Ausdrücke|Nein|Ja<sup>1</sup>|
+|KPIs (Key Performance Indicators)|ja|ja| 
+|Verknüpfte Objekte|ja|Ja (verknüpfte Tabellen)|
+|M-Ausdrücke|nein|Ja<sup>1</sup>|
 |m:n-Beziehungen|ja|Nein (es gibt jedoch [bidirektionale kreuzfilter](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) Kompatibilitätsgrade 1200 oder höher)| 
-|Benannte Mengen|Ja|Nein| 
+|Benannte Mengen|ja|nein| 
 |Unregelmäßige Hierarchien|ja|Ja<sup>1</sup>|  
-|Über- und untergeordnete Hierarchien|Ja|Ja (über DAX)|
-|Partitionen|Ja|ja| 
+|Über- und untergeordnete Hierarchien|ja|Ja (über DAX)|
+|Partitionen|ja|ja| 
 |Perspektiven|ja|ja|
 |Sicherheit auf Zeilenebene|ja|ja| 
 |Sicherheit auf Nachrichtenebene-Objekt|ja|Ja<sup>1</sup>|
-|Semiadditive Measures|Ja|ja| 
-|Translations|[Ja](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|ja| 
-|Benutzerdefinierte Hierarchien|Ja|Ja|
-|Rückschreiben|Ja|Nein| 
+|Semiadditive Measures|ja|ja| 
+|Übersetzungen|[Ja](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|ja| 
+|Benutzerdefinierte Hierarchien|ja|ja|
+|Rückschreiben|ja|nein| 
   
  <sup>1</sup> finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) für Informationen zu funktionalen Unterschieden zwischen den Kompatibilitätsgraden funktionsfähig.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 09/01/2017
   
  Die Liste externer Datenquellen, die in jedes Modell importiert werden können, finden Sie in den folgenden Themen:  
   
--   [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+-   [Unterstützte Datenquellen](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
 
 -   [Unterstützte Datenquellen &#40;SSAS – Mehrdimensional&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 09/01/2017
  
  Wenn Sie Reporting Services verwenden, variiert die Verfügbarkeit der Berichtsfunktion je nach Edition und Servermodus. Aus diesem Grund kann sich der zu erstellende Berichtstyp auf den zu installierenden Servermodus auswirken.  
   
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], ein neues Reporting Services-Erstellungstool, das in SharePoint ausgeführt wird, ist auf einem Berichtsserver verfügbar, der in einer SharePoint 2010-Farm bereitgestellt wird. Der einzige Datenquellentyp, der mit diesem Bericht verwendet werden kann, ist eine tabellarische Analysis Services-Modelldatenbank oder eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe. Dies bedeutet, dass Sie über einen Server im tabellarischen Modus oder einen [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für SharePoint-Server verfügen müssen, damit die von diesem Berichtstyp verwendete Datenquelle gehostet wird. Sie können kein mehrdimensionales Modell als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwenden. Sie müssen eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI-Semantikmodellverbindung oder eine freigegebene Reporting Services-Datenquelle erstellen, die als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwendet wird.  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], ein neues Reporting Services-Erstellungstool, das in SharePoint ausgeführt wird, ist auf einem Berichtsserver verfügbar, der in einer SharePoint 2010-Farm bereitgestellt wird. Der einzige Datenquellentyp, der mit diesem Bericht verwendet werden kann, ist eine tabellarische Analysis Services-Modelldatenbank oder eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe. Dies bedeutet, dass Sie über einen Server im tabellarischen Modus oder einen [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für SharePoint-Server verfügen müssen, damit die von diesem Berichtstyp verwendete Datenquelle gehostet wird. Sie können kein mehrdimensionales Modell als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwenden. Sie müssen eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI-Semantikmodellverbindung oder eine freigegebene Reporting Services-Datenquelle erstellen, die als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwendet wird.  
   
  Beliebige Analysis Services-Datenbanken können vom Berichts-Generator und Berichts-Designer verwendet werden, einschließlich [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappen, die in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für SharePoint gehostet werden.  
   
@@ -182,4 +182,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

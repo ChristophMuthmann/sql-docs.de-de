@@ -1,32 +1,33 @@
 ---
-title: "Tabelleneigenschaften (SSAS – tabellarisch) | Microsoft Docs"
+title: Tabelleneigenschaften | Microsoft Docs
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 202902448a31fda27ab2c4d8c0bc894cc50da3db
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a72cbc5fe8e27ee559f748fd93c50a7db8f75a94
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="table-properties-ssas-tabular"></a>Tabelleneigenschaften (SSAS – tabellarisch)
-  In diesem Thema werden Tabelleneigenschaften für tabellarische Modelle beschrieben. Die hier beschriebenen Eigenschaften unterscheiden sich von den Eigenschaften im Dialogfeld Tabelleneigenschaften bearbeiten, mit denen definiert wird, welche Spalten aus der Quelle importiert werden.  
+# <a name="table-properties"></a>Table Properties 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Dieser Artikel beschreibt Tabelleneigenschaften für tabellarische Modelle. Die hier beschriebenen Eigenschaften unterscheiden sich von den Eigenschaften im Dialogfeld Tabelleneigenschaften bearbeiten, mit denen definiert wird, welche Spalten aus der Quelle importiert werden.  
   
  Abschnitte in diesem Thema:  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
  **Berichterstellungseigenschaften**  
   
- Ausführliche Beschreibungen und Informationen zur Konfiguration für Berichterstellungseigenschaften finden Sie unter [Power View-Berichterstellungseigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
+ Ausführliche Beschreibungen und Informationen zur Konfiguration für berichterstellungseigenschaften finden Sie unter [Power View-berichterstellungseigenschaften](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
@@ -62,4 +63,3 @@ ms.lasthandoff: 09/01/2017
 2.  Klicken Sie im **Eigenschaftenfenster** auf eine Eigenschaft, und geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche für weitere Konfigurationsoptionen.  
   
   
-

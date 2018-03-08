@@ -2,31 +2,32 @@
 title: Key Performance Indicator-Darstellung (tabellarisch) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tabellen - Darstellung von Key Performance Indicator
-  Ein KPI misst die Leistung eines Werts, der durch ein Basismeasure definiert wird, anhand eines Zielwerts.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ein KPI misst die Leistung eines Werts, der durch ein Basismeasure definiert wird, anhand eines Zielwerts.  
   
 ## <a name="key-performance-indicator-representation"></a>KPI (Key Performance Indicator)-Darstellung  
  Ein KPI (Key Performance Indicator) ist in tabellarischen Objektmodellen ein Measure mit zusätzlichen Informationen für die grafische Anzeige in der Clientanwendung. Ein KPI weist normalerweise folgende Informationen auf: das angestrebte Ziel, den Status des Measures im Vergleich zum Ziel sowie Informationen dazu, wie der Status grafisch im Clienttool angezeigt werden soll.  
@@ -232,4 +233,3 @@ private void addStaticKPI(object sender, EventArgs e)
  Um ein Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von Key Performance Indicator Darstellungen finden Sie unter den Quellcode der AMO zum Beispiel; Prüfen Sie insbesondere die Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
   
   
-

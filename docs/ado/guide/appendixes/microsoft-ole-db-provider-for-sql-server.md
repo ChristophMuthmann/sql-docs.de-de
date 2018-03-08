@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für SQLServer | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 19
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 11f9d1d69332e1d32b1d6bbabd804ed222b620e1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server-Übersicht
 Microsoft OLE DB-Anbieter für SQL Server, SQLOLEDB, ermöglicht ADO, Microsoft SQL Server anzumelden.
@@ -54,7 +53,7 @@ User ID=MyUserID;Password=MyPassword;"
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt die OLE DB-Anbieter für SQLServer an.|
+|**Provider**|Gibt die OLE DB-Anbieter für SQLServer an.|
 |**Datenquelle** oder **Server**|Gibt den Namen eines Servers.|
 |**Anfangskatalog** oder **Datenbank**|Gibt den Namen einer Datenbank auf dem Server.|
 |**Benutzer-ID** oder **Uid**|Gibt den Benutzernamen (für SQL Server-Authentifizierung).|
@@ -157,7 +156,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|
 |Datenquelle|DBPROP_INIT_DATASOURCE|
-|Datenquellenname|RÜCKGABEWERT|
+|Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellenobjekt Threadingmodell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
 |DBMS-Version|DBPROP_DBMSVER|
@@ -179,7 +178,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Update mit mehreren Tabellen|DBPROP_MULTITABLEUPDATE|
 |NULL-Sortierung|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
-|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
 |Unterstützung für OLE-Objekt|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in der Select-Liste|DBPROP_ORDERBYCOLUMNSINSELECT|
@@ -364,4 +363,3 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 ## <a name="see-also"></a>Siehe auch
  [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Anbietereigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

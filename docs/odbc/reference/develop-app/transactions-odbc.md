@@ -3,27 +3,28 @@ title: ODBC-Transaktionen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 943c1240a9a9ad80c5787597f01917c517966005
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-odbc"></a>ODBC-Transaktionen
 Ein *Transaktion* ist eine Arbeitseinheit, die als einzelne, atomaren Vorgang erfolgt; bedeutet, dass der Vorgang erfolgreich ist oder ein Fehler auftritt, als Ganzes. Betrachten Sie z. B. Geld von einem Bankkonto auf einen anderen übertragen. Dies umfasst zwei Schritte: das Geld vom ersten Konto das Abbuchen und es in der zweiten einzahlen. Es ist wichtig, dass beide Schritte erfolgreich sind. Es ist nicht akzeptabel ein Schritt erfolgreich ausgeführt werden kann und die andere fehlschlägt. Eine Datenbank, die Transaktionen unterstützt kann dies zu garantieren.  
@@ -43,4 +44,3 @@ Ein *Transaktion* ist eine Arbeitseinheit, die als einzelne, atomaren Vorgang er
 -   [Transaktionsisolation](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [Parallelitätssteuerung](../../../odbc/reference/develop-app/concurrency-control.md)
-

@@ -1,12 +1,14 @@
 ---
 title: "Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2016
+ms.date: 12/21/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - installing certificates
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "48"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9986789b1734fb8d5651a591876043754d94efbf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie verschlüsselte Verbindungen für eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durch Angeben eines Zertifikats für die [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers aktivieren können. Für den Servercomputer muss ein Zertifikat bereitgestellt worden sein, und der Clientcomputer muss so eingerichtet sein, dass er die Stammzertifizierungsstelle des Zertifikats als vertrauenswürdig einstuft. Zertifikate werden bereitgestellt, indem sie mithilfe eines Importvorgangs in Windows installiert werden.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 09/12/2017
   
 2.  Führen Sie den **Zertifikatexport-Assistenten**aus, und speichern Sie die Zertifikatsdatei in einem geeigneten Speicherort.  
   
-##  <a name="ConfigureServerConnections"></a> So konfigurieren Sie den Server zum Annehmen verschlüsselter Verbindungen  
+##  <a name="ConfigureServerConnections"></a> Konfigurieren des Servers zum Erzwingen von verschlüsselten Verbindungen  
   
 1.  Erweitern Sie im **SQL Server Configuration Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** *\<Serverinstanz>*, und wählen Sie dann **Eigenschaften**.  
   
@@ -89,11 +90,18 @@ ms.lasthandoff: 09/12/2017
   
 4.  Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu.  
 
+
+> [!NOTE]
+> Konfigurieren Sie den Client so, dass verschlüsselte Verbindungen angefordert werden, um eine sichere Verbindung zwischen Client und Server zu gewährleisten. Weitere Informationen finden Sie [weiter unten in diesem Artikel](#client-request-encrypt-connect-23h).
+
+
+
 ### <a name="wildcard-certificates"></a>Platzhalterzertifikate  
 Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 unterstützen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Platzhalterzertifikate. Andere Clients unterstützen möglicherweise keine Platzhalterzertifikate. Weitere Informationen finden Sie in der Clientdokumentation. Platzhalterzertifikate können nicht mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ausgewählt werden. Sie müssen den Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` bearbeiten und den Fingerabdruck des Zertifikats ohne Leerraum zum Wert des **Zertifikats** hinzufügen, um ein Platzhalterzertifikat zu verwenden.  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> So konfigurieren Sie den Client zum Anfordern verschlüsselter Verbindungen  
   
 1.  Kopieren Sie entweder das Originalzertifikat oder die exportierte Zertifikatsdatei auf den Clientcomputer.  
@@ -112,8 +120,7 @@ Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 unterstützen 
   
 3.  Klicken Sie auf der Registerkarte **Verbindungseigenschaften** auf **Verbindung verschlüsseln**.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)  
-
 

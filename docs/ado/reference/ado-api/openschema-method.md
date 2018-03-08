@@ -3,7 +3,7 @@ title: OpenSchema-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 21
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bf2b79bc39ff1f376801b5df6c24a768067a53b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5c547eb8a6c1208bedffb988096f45b4c871d09
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openschema-method"></a>OpenSchema-Methode
 Ruft die Schemainformationen für die Datenbank vom Anbieter ab.  
@@ -75,7 +74,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Visual C/C++-Benutzer** clientseitige Cursor nicht verwendet werden soll, Abrufen von "ORDINAL_POSITION" eines Spaltenschemas in ADO gibt eine Variante des Typs VT_R8 in MDAC 2.7, MDAC 2.8 und Windows Data Access Components (Windows DAC) 6.0, während in MDAC verwendet 2.6 ist VT_I4. Programme, die nur Aussehen für eine Variante für MDAC 2.6 geschrieben zurückgegebene Typ VT_I4 eine 0 (null) für jede Ordnungszahl, wenn Sie im MDAC 2.7 MDAC 2.8 und Windows DAC 6.0 ohne Änderung ausgeführt erhalten würden. Diese Änderung wurde vorgenommen, da der Datentyp, den OLE DB-zurückgibt DBTYPE_UI4 ist, und in der signierten VT_I4-Typ ist nicht genügend Platz für alle möglichen Werte ungekürzt möglicherweise stattfinden und wodurch ein Verlust von Daten enthalten.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [OpenSchema-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
@@ -84,5 +83,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open-Methode (ADO-Datensatz)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open-Methode (ADO-Datenstrom)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

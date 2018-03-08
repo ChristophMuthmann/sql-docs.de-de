@@ -1,27 +1,27 @@
 ---
-title: "Problembehandlung beim Veröffentlichen oder Anzeigen eines Berichts auf einem Berichtsserver im einheitlichen Modus | Microsoft Docs"
+title: "Problembehandlung beim Veröffentlichen oder Anzeigen eines Berichts auf einem Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2e25f72eddf16b1cbb868f0e944a803df0f40340
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Problembehandlung beim Veröffentlichen oder Anzeigen eines Berichts auf einem Berichtsserver im einheitlichen Modus
   
@@ -42,7 +42,7 @@ Stellen Sie sicher, dass die Berichtsserver-URL die Adresse des Berichtsservers 
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Wenn ich Elemente in meinem veröffentlichten Bericht ein-/ausschalte, geschieht nichts.  
   Wenn Sie einen Bericht in der lokalen Vorschau anzeigen, können Sie Elemente im Bericht ein-/ausschalten und sie anzeigen oder ausblenden. Wenn Sie denselben Bericht nach seiner Veröffentlichung auf dem Berichtsserver anzeigen, funktionieren Elemente zum Ein-/Ausschalten nicht mehr.   
   
-\<Berichtsservername > enthält einen Unterstrich (_)  
+\<Berichtsservername> enthält einen Unterstrich (_).  
   
 Wenn ein Bericht ohne Fehler ausgeführt wird, jedoch Elemente zum Ein-/Ausschalten nicht funktionsfähig sind (wenn z. B. beim Klicken auf ein Erweiterungssymbol (+) nichts geschieht), prüfen Sie den Namen des Computers, der den Berichtsserver hostet. Wenn der Computername einen Unterstrich enthält, sind Elemente zum Ein-/Ausschalten nicht funktionsfähig. Dies ist ein bekanntes Problem. Dieses Problem kann nicht behoben werden.   
   
@@ -57,14 +57,13 @@ Wenn Sie den Berichts-Manager zum Anzeigen von veröffentlichten Berichten mit D
   
 Überprüfen Sie, ob Sie über Berechtigungen für den Zugriff auf die Ordner verfügen, die die zwischengespeicherten Dateien enthalten.   
     
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Troubleshoot Data Retrieval issues with Reporting Services Reports (Problembehandlung: Probleme beim Abrufen von Daten in Reporting Services-Berichten)](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

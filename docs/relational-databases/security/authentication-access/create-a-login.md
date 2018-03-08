@@ -2,11 +2,13 @@
 title: Erstellen eines Anmeldenamens | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
  Als Sicherheitsprinzipale können Anmeldenamen Berechtigungen gewährt werden. Der Gültigkeitsbereich eines Anmeldenamens ist das gesamte [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Um eine bestimmte Datenbank mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verbinden, muss ein Anmeldename einem Datenbankbenutzer zugeordnet werden. Die Berechtigungen innerhalb der Datenbank werden dem Datenbankbenutzer, nicht dem Anmeldenamen, gewährt bzw. verweigert. Einer Anmeldung können Berechtigungen gewährt werden,bei denen der Gültigkeitsbereich die gesamte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abdeckt (z.B. die **CREATE ENDPOINT** -Berechtigung).  
   
-> **HINWEIS:** Wenn eine Anmeldung eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt, wird die Identität in der Masterdatenbank überprüft. Verwenden Sie eigenständige Datenbankbenutzer, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]- und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] -Verbindungen auf Datenbankebene zu authentifizieren. Eine Anmeldung ist nicht erforderlich, wenn Sie eigenständige Datenbankbenutzer verwenden. Eine eigenständige Datenbank ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (und der Masterdatenbank), der die Datenbank hostet, isoliert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt eigenständige Datenbankbenutzer sowohl für die Windows- als auch für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung. Kombinieren Sie bei Verwendung von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]eigenständige Datenbankbenutzer mit den Firewallregeln auf Datenbankebene. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **HINWEIS:** Wenn eine Anmeldung eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt, wird die Identität in der Masterdatenbank überprüft. Verwenden Sie eigenständige Datenbankbenutzer, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] -Verbindungen auf Datenbankebene zu authentifizieren. Eine Anmeldung ist nicht erforderlich, wenn Sie eigenständige Datenbankbenutzer verwenden. Eine eigenständige Datenbank ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (und der Masterdatenbank), der die Datenbank hostet, isoliert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt eigenständige Datenbankbenutzer sowohl für die Windows- als auch für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung. Kombinieren Sie bei Verwendung von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]eigenständige Datenbankbenutzer mit den Firewallregeln auf Datenbankebene. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Security  
 
@@ -151,10 +153,10 @@ ms.lasthandoff: 06/22/2017
  **Standardschema**  
  Gibt das Standardschema des Benutzers an. Wenn ein Benutzer zum ersten Mal erstellt wird, wird als Standardschema **dbo**verwendet. Es kann auch ein Standardschema angegeben werden, das noch nicht vorhanden ist. Für Benutzer, die einer Windows-Gruppe, einem Zertifikat oder einem asymmetrischen Schlüssel zugeordnet sind, kann kein Standardschema angegeben werden.  
   
- **Guest account enabled for:**  *database_name*  
+ **Gastkonto aktiviert für:**  *Datenbankname*  
  Ein Nur-Lese-Attribut, das angibt, ob das Gastkonto für die ausgewählte Datenbank aktiviert ist. Verwenden Sie die Seite **Status** des Dialogfelds **Anmeldungseigenschaften** des Gastkontos, um das Gastkonto zu aktivieren oder zu deaktivieren.  
   
- **Database role membership for:**  *database_name*  
+ **Mitgliedschaft in Datenbankrolle für:**  *Datenbankname*  
  Wählen Sie die Rollen für den Benutzer in der angegebenen Datenbank aus. Alle Benutzer sind Mitglieder der **public** -Rolle in allen Datenbanken und können nicht entfernt werden. Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Sicherungsfähige Elemente  
@@ -279,4 +281,3 @@ ms.lasthandoff: 06/22/2017
  [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

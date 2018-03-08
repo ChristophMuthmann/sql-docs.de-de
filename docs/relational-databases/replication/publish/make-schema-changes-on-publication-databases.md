@@ -2,11 +2,13 @@
 title: "Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +19,25 @@ helpviewer_keywords:
 - schemas [SQL Server replication], replicating changes
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 73
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "73"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
-  Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten weitergegeben:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten weitergegeben:  
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION darf nicht verwendet werden, wenn die Schemaänderungsreplikation aktiviert ist und eine Topologie [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] - oder [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] -Abonnenten enthält. ALTER VIEW  
+-   ALTER TABLE SET LOCK ESCALATION darf nicht verwendet werden, wenn die Schemaänderungsreplikation aktiviert ist und eine Topologie [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]- oder [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)]-Abonnenten enthält.
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   
@@ -109,7 +113,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Die zu löschende Spalte darf nicht in den Filterklauseln eines Artikels einer Veröffentlichung in der Datenbank verwendet werden.  
   
--   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Beispiel:  
+-   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Zum Beispiel:  
   
     -   Sie können keine in einem Primärschlüssel verwendeten Spalten aus Artikeln in Transaktionsveröffentlichungen löschen, da die Spalten von der Replikation verwendet werden.  
   
@@ -160,7 +164,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Die Mergereplikation stellt gespeicherte Prozeduren bereit, mit denen Schemaänderungen bei der Problembehandlung ausgelassen werden können. Weitere Informationen finden Sie unter [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) und [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

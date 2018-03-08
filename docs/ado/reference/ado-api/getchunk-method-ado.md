@@ -3,7 +3,7 @@ title: GetChunk-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b479146e26196e42836ce381e3f5e555dd0a9a6b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4972e08f1db08bde4cdb1241fa36895f2f33ad7b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getchunk-method-ado"></a>GetChunk-Methode (ADO)
 Gibt alle oder einen Teil des Inhalts eines große Text-oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
@@ -69,5 +68,4 @@ variable = field.GetChunk(Size)
  [AppendChunk und GetChunk Methoden Beispiel (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk und GetChunk Methoden (VC++-Beispiel)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [AppendChunk-Methode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Attribute-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-
+ [Attributes-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

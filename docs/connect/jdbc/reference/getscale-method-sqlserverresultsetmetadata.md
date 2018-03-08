@@ -3,29 +3,28 @@ title: GetScale-Methode (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSetMetaData.getScale
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSetMetaData.getScale
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 735f2aa42382009aae985adc10e6ad1affe2d04d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b7f430a6677359673d134f957b8d14c0226322a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,4 +59,3 @@ public int getScale(int column)
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Indexes-Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,19 +19,18 @@ f1_keywords:
 helpviewer_keywords:
 - Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d465c0aad483a55bfe1b2560f23a5de91ff5a754
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66cc6532a626ee65b8f152eb9bca57dc2a6468ec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="indexes-collection-adox"></a>Auflistung von Indizes (ADOX)
+# <a name="indexes-collection-adox"></a>Indexes Collection (ADOX)
 Enthält alle [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte einer Tabelle.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -56,4 +55,3 @@ Enthält alle [Index](../../../ado/reference/adox-api/index-object-adox.md) Obje
 ## <a name="see-also"></a>Siehe auch  
  [Indizes Append-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
-

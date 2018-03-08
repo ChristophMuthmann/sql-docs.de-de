@@ -1,11 +1,13 @@
----
+﻿---
 title: Erstellen Sie TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,20 +31,19 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 140
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 56011e892d5fbc5862f3d7c279bc297c3d0ac04c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen DML-, DDL- oder LOGON-Trigger. Ein Trigger ist eine spezielle Art von gespeicherter Prozedur, die automatisch ausgeführt wird, wenn ein Ereignis auf dem Datenbankserver auftritt. DML-Trigger werden ausgeführt, wenn ein Benutzer versucht, Daten mithilfe eines DML-Ereignisses (Data Manipulation Language, Datenbearbeitungssprache) zu ändern. DML-Ereignisse sind INSERT-, UPDATE- oder DELETE-Anweisungen für eine Tabelle oder Sicht. Diese Trigger werden ausgelöst, sobald ein beliebiges gültiges Ereignis ausgelöst wird, unabhängig davon, ob Tabellenzeilen betroffen sind oder nicht. Weitere Informationen finden Sie unter [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -584,6 +585,5 @@ GO
  [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
   
-
 
 

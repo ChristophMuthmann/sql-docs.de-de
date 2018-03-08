@@ -2,9 +2,12 @@
 title: "Überprüfen einer Version anhand von Geschäftsregeln (Master Data Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - versions [Master Data Services], validating
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-caps.latest.revision: 8
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f916ec589ce3e5f8c4a071342c59e30ab6261191
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2a31c8b91872276636addc25c673f07ba5b11bc7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Überprüfen einer Version anhand von Geschäftsregeln (Master Data Services)
   Überprüfen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Version, um Geschäftsregeln auf alle Elemente in der Modellversion anzuwenden.  
@@ -35,12 +37,12 @@ ms.lasthandoff: 09/07/2017
 > [!NOTE]  
 >  Damit ein Commit für eine Version ausgeführt werden kann, müssen alle Elemente die Überprüfung bestehen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 -   Der Status der Version muss **Öffnen** oder **Gesperrt**sein.  
   
@@ -61,11 +63,11 @@ ms.lasthandoff: 09/07/2017
     > [!NOTE]  
     >  Wenn die Statusanzeige nicht mehr angezeigt wird, hat die Version die Überprüfung beendet.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Sperren einer Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überprüfungsstatus &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
  [Gespeicherte Überprüfungsprozedur &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
@@ -73,4 +75,3 @@ ms.lasthandoff: 09/07/2017
  [Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   
-

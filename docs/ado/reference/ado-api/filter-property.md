@@ -3,7 +3,7 @@ title: Filter-Eigenschaft | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8e0a74efdc9eeef18eac76e582355653d6677139
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6aa8e2349bfd564d0cc72d8d17169c6a5ada5f07
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-property"></a>Filter-Eigenschaft
 Gibt einen Filter für Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -102,5 +101,4 @@ Gibt einen Filter für Daten in einem [Recordset](../../../ado/reference/ado-api
  [Filter- und RecordCount Eigenschaften Beispiel (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
  [Filter- und RecordCount Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Optimieren Sie die Eigenschaft dynamisch (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Dynamische Eigenschaft Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

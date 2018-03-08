@@ -3,7 +3,7 @@ title: NamedParameters-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - NamedParameters property [ADO]
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1c7f49abcb642a958d693351307586b4cbf37548
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 613f4cb52c6225d573d314b83f26c220e7caabfc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters-Eigenschaft (ADO)
 Gibt an, ob Parameternamen an den Anbieter übergeben werden sollen.  
@@ -42,5 +41,4 @@ Gibt an, ob Parameternamen an den Anbieter übergeben werden sollen.
 ## <a name="see-also"></a>Siehe auch  
  [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandStream-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
- [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
-
+ [Parameters-Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

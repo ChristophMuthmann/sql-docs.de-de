@@ -3,8 +3,11 @@ title: Erstellen des DIAGNOSESITZUNG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
-caps.latest.revision: 9
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71f3463ad4d91bd117c322e9e63c0b331b07ca9f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>Erstellen des DIAGNOSESITZUNG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Diagnosesitzungen können Sie auf die Leistung von System- oder Abfrage ausführlicher und benutzerdefinierte Diagnoseinformationen zu speichern.  
   
@@ -67,7 +69,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *max_item_count_num*  
  Die Anzahl der Ereignisse in einer Ansicht beibehalten werden. Z. B. werden 100 angegeben wird, die 100 letzten Ereignisse, die den Filterkriterien entsprechen. um die diagnosesitzung beibehalten werden. Wenn weniger als 100 Ereignisse Übereinstimmung gefunden werden, wird die diagnosesitzung weniger als 100 Ereignisse enthalten. *Max_item_count_num* muss mindestens 100 und kleiner oder gleich 100.000.  
   
- *Ereignisname*  
+ *event_name*  
  Definiert die tatsächliche Ereignisse in der diagnosesitzung gesammelt werden sollen.  *Ereignisname* ist eines der Ereignisse aufgeführt, die [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) , in denen `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
@@ -79,7 +81,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *comp_type*  
  Der Vergleichstyp. Mögliche Werte sind: ist gleich, EqualsOrGreaterThan, EqualsOrLessThan, "GreaterThan", "LessThan", ungleich, Contains, RegEx  
   
- *Eigenschaftsname*  
+ *property_name*  
  Eine Eigenschaft mit dem Ereignis verknüpft wird.  Eigenschaftsnamen können Teil der Capture-Tag sein oder als Teil der Filterkriterien verwendet.  
   
 |Eigenschaftsname|Description|  
@@ -208,4 +210,3 @@ DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;
 ```  
   
   
-

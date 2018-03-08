@@ -1,10 +1,13 @@
 ---
-title: "Wählen Sie Oracle-Tabellen und Spalten | Microsoft Docs"
+title: "Auswählen von Oracle-Tabellen und -Spalten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a32dc9416e79380cb9ce289960ad2ab0942e99fb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5b771c9eccbae877fcc073fcb0075629460343fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-oracle-tables-and-columns"></a>Auswählen von Oracle-Tabellen und -Spalten
   Verwenden Sie die Seite Select Oracle Tables and Columns, um die Tabellen aus der Oracle-Quelldatenbank auszuwählen, in der die Änderungen aufgezeichnet werden. Diese Seite verfügt über die folgenden Elemente:  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Tabellenliste**  
  Die Tabellenliste enthält drei Spalten:  
   
@@ -54,11 +56,10 @@ ms.lasthandoff: 08/03/2017
   
  Klicken Sie nach dem [Auswählen von Oracle-Tabellen zum Aufzeichnen von Änderungen](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md) und/oder dem [Vornehmen von Änderungen an den zum Aufzeichnen von Änderungen ausgewählten Tabellen](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md) in den entsprechenden Dialogfeldern auf **Weiter** , um den Schritt [Generieren und Ausführen des ergänzenden Protokollierungsskripts](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen von SQL Server Change-Datenbankinstanz](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Bearbeiten von Tabellen](../../integration-services/change-data-capture/edit-tables.md)   
  [Hinzufügen von Tabellen zu einer CDC-Instanz](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   
  [Bearbeiten der Tabelleneigenschaften](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
   
-

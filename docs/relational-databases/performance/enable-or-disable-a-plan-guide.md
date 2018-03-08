@@ -2,11 +2,13 @@
 title: Aktivieren oder Deaktivieren einer Planhinweisliste | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.suite: sql
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - plan guides [SQL Server], enabling
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "6"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e3500c6ee0e6e4da1f96e0fb1784a6219e34449
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Aktivieren oder Deaktivieren einer Planhinweisliste
-  Sie können Planhinweislisten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktivieren und aktivieren. Es können entweder eine einzelne Planhinweisliste oder alle Planhinweislisten in einer Datenbank aktiviert oder deaktiviert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können Planhinweislisten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] deaktivieren und aktivieren. Es können entweder eine einzelne Planhinweisliste oder alle Planhinweislisten in einer Datenbank aktiviert oder deaktiviert werden.  
   
  **In diesem Thema**  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So deaktivieren und aktivieren Sie Planhinweislisten mit:**  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Das Deaktivieren oder Aktivieren einer OBJECT-Planhinweisliste erfordert die ALTER-Berechtigung für das Objekt (z. B. Funktion, gespeicherte Prozedur), auf das von der Planhinweisliste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>So deaktivieren oder aktivieren Sie eine Planhinweisliste  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>So deaktivieren oder aktivieren Sie eine Planhinweisliste  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>So deaktivieren oder aktivieren Sie alle Planhinweislisten in einer Datenbank  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -144,4 +145,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
   
-

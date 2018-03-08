@@ -3,10 +3,12 @@ title: "Hinzufügen abgeleiteter Tabellen zu Abfragen (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - table joins [SQL Server]
 - derived tables
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 785774a5caa5409fcedee6c28bc326cf724c9ffa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f54dac23686dfedbba3135cac4be5431f2f24300
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Hinzufügen abgeleiteter Tabellen zu Abfragen (Visual Database Tools)
-Abgeleitete Tabellen stellen Resultsets dar, die als Tabellenquellen in einer Abfrage verwendet werden. Im **Diagrammbereich**können Sie einer Abfrage eine abgeleitete Tabelle hinzufügen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Abgeleitete Tabellen stellen Resultsets dar, die als Tabellenquellen in einer Abfrage verwendet werden. Im **Diagrammbereich**können Sie einer Abfrage eine abgeleitete Tabelle hinzufügen.  
   
 ### <a name="to-add-a-derived-table-to-a-query"></a>So fügen Sie einer Abfrage eine abgeleitete Tabelle hinzu  
   
@@ -38,10 +39,9 @@ Abgeleitete Tabellen stellen Resultsets dar, die als Tabellenquellen in einer Ab
   
     Es wird eine neue Tabelle namens „derivedtbl_*N* “ hinzugefügt, und die SELECT-Anweisung der abgeleiteten Tabelle wird der FROM-Klausel der Abfrage hinzugefügt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Erstellen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Öffnen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
 [SELECT (Transact-SQL)](http://msdn.microsoft.com/en-us/dc85caea-54d1-49af-b166-f3aa2f3a93d0)  
   
-

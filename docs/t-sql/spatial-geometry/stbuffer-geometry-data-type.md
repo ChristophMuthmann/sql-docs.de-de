@@ -3,8 +3,11 @@ title: STBuffer (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ad6ea01e471cf1ec407f0b8372300d07f0118f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ff65df2a1216a29b15a0458e9e4537c748140714
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstellt, deren Abstand zu einer **geometry** -Instanz kleiner oder gleich einem angegebenen Wert ist.
   
@@ -42,7 +44,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abstand*  
+ *distance*  
  Ein Wert vom Typ **float** (**double** in .NET-Framework), der den Abstand zu der geometry-Instanz angibt, um die der Puffer berechnet werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
@@ -169,8 +171,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
   
 ## <a name="see-also"></a>Siehe auch  
  [BufferWithTolerance &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
- [OGC-Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

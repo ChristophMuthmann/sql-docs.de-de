@@ -1,12 +1,14 @@
 ---
-title: Aktualisieren der Version einer Datenflusskomponente | Microsoft Docs
+title: Aktualisieren der Version einer Datenflusskomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8ae9c279e40bcfa3728969f39a1db1f97d7e26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Aktualisieren der Version einer Datenflusskomponente
   Pakete, die mit einer älteren Version der Komponente erstellt wurden, enthalten möglicherweise Metadaten, die nicht mehr gültig sind, beispielsweise benutzerdefinierte Eigenschaften, deren Verwendung in neueren Versionen der Komponenten geändert wurde. Sie können die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Basisklasse überschreiben, um die zuvor in älteren Paketen gespeicherten Metadaten zu aktualisieren, sodass die aktuellen Eigenschaften der Komponente wiedergegeben werden.  
@@ -51,9 +52,9 @@ ms.lasthandoff: 08/03/2017
 -   Legt die Versionsmetadaten auf die aktuelle Version der Komponente fest  
   
 > [!NOTE]  
->  Das Datenflussmodul übergibt seine eigene Versionsnummer an die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> Methode in der *PipelineVersion* Parameter. Dieser Parameter ist in Version 1.0 von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] nicht von Nutzen, kann aber in nachfolgenden Versionen hilfreich sein.  
+>  Das Datenflussmodul übergibt seine eigene Versionsnummer an die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>-Methode im *pipelineVersion*-Parameter. Dieser Parameter ist in Version 1.0 von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] nicht von Nutzen, kann aber in nachfolgenden Versionen hilfreich sein.  
   
- Im Beispielcode werden nur die beiden Enumerationswerte verwendet, die direkt den vorherigen booleschen Werten der benutzerdefinierten Eigenschaft zugeordnet sind. Die anderen verfügbaren Enumerationswerte können vom Benutzer über die benutzerdefinierte Benutzeroberfläche der Komponente im erweiterten Editor oder programmgesteuert ausgewählt werden. Informationen zum Anzeigen von Enumerationswerten für eine benutzerdefinierte Eigenschaft im erweiterten Editor finden Sie unter "Erstellen von benutzerdefinierten Eigenschaften" in [Entwurfszeitmethoden von einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ Im Beispielcode werden nur die beiden Enumerationswerte verwendet, die direkt den vorherigen booleschen Werten der benutzerdefinierten Eigenschaft zugeordnet sind. Die anderen verfügbaren Enumerationswerte können vom Benutzer über die benutzerdefinierte Benutzeroberfläche der Komponente im erweiterten Editor oder programmgesteuert ausgewählt werden. Informationen zum Anzeigen von Enumerationswerten für eine benutzerdefinierte Eigenschaft im erweiterten Editor finden Sie in [Entwurfszeitmethoden einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md) unter „Erstellen von benutzerdefinierten Eigenschaften“.  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -185,4 +186,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

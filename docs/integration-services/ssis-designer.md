@@ -2,9 +2,12 @@
 title: SSIS-Designer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -24,17 +27,16 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
-ms.contentlocale: de-de
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: 1ee578aff11c393694215b85f9c26d3c442e9aa7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  
@@ -149,7 +151,7 @@ Verwenden Sie die Registerkarte **Datenfluss** des [!INCLUDE[ssIS](../includes/s
 ## <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Ausführbare Datei**  
  Wählen Sie die ausführbare Datei aus, für die Sie einen Ereignishandler erstellen möchten. Bei der ausführbaren Datei kann es sich um ein Paket, einen Task oder Container im Paket handeln.  
   
@@ -185,12 +187,11 @@ Pakete verwenden Verbindungs-Manager, um Verbindungen mit Datenquellen, beispiel
   
  Klicken Sie mit der rechten Maustaste in diesen Bereich, und klicken Sie dann im Menü auf die Option für den Task, den Sie ausführen möchten.
  
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Erstellen von Paketen in SQL Server-Datentools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services-Benutzeroberfläche](../integration-services/integration-services-user-interface.md)  
   
   
-

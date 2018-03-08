@@ -2,32 +2,36 @@
 title: "Unbeaufsichtigte Installation für SQL Server unter SUSE Linux Enterprise Server | Microsoft Docs"
 description: "SQL Server-Skript-Beispiel - unbeaufsichtigte Installation für SUSE Linux Enterprise Server"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 3302262c83d8d12e0fff826a2f9c72afa4068941
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: e181fb02497f1673a8993687d159f6636aca4959
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Beispiel: Für die unbeaufsichtigte SQL Server-Installationsskript für SUSE Linux Enterprise Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Beispielskript für die Bash installiert 2017 von SQL Server unter SUSE Linux Enterprise Server (SLES) v12 SP2 ohne interaktiver Eingabe. Er bietet Beispiele für die Installation des Datenbankmoduls, die SQL Server-Befehlszeilentools, SQL Server-Agent, und führt nach der Installation Schritte aus. Optional können Sie einen Administrator zu erstellen und Installieren der Volltextsuche.
 
 > [!TIP]
-> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [quick Start-Lernprogramm für SLES](quickstart-install-connect-suse.md). Weitere Informationen zum Setup finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
+> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [Schnellstart für SLES](quickstart-install-connect-suse.md). Weitere Informationen zum Setup finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Sie benötigen mindestens 3,25 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
+- Sie benötigen mindestens 2 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
 - Das Dateisystem muss **XFS** oder **EXT4**. Andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt.
 - Weitere Informationen zu Systemanforderungen, finden Sie unter [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -37,7 +41,7 @@ Dieses Beispielskript für die Bash installiert 2017 von SQL Server unter SUSE L
 ## <a name="sample-script"></a>Beispielskript
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -226,4 +230,3 @@ Führen Sie dann die Bash-Skripts wie folgt:
 ```
 
 Weitere Informationen zu SQL Server unter Linux finden Sie unter [SQL Server on Linux – Übersicht](sql-server-linux-overview.md).
-

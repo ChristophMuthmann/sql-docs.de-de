@@ -1,12 +1,14 @@
 ---
 title: Zugriff auf Lager Schemas (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +42,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access-Inventur-Schemas (AccessToSQL)
 In den folgenden Abschnitten wird beschrieben, die Tabellen, die von SSMA erstellt werden, wenn Sie zu Access-Schemas exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -93,7 +94,7 @@ Tabellenmetadaten ist exportiert der **SSMA_Access_InventoryTables** Tabelle. Di
 |**LinkedTable**|**nvarchar(4000)**|Eine andere Tabelle, sofern vorhanden, die mit der Tabelle verknüpft ist. Ermöglicht das Verknüpfen von Tabellen Hinzufügungen, löschungen und Updates für die andere Tabelle mithilfe dieser Tabelle.|  
 |**ExternalSource**|**nvarchar(4000)**|Die Datenquelle ist ggf., die der Tabelle zugeordnet. Wenn eine Tabelle verknüpft ist, muss es sich um eine externe Datenquelle, die in diesem Feld angegeben.|  
   
-## <a name="columns"></a>Spalten  
+## <a name="columns"></a>Spalte  
 Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
   
 |Spaltenname|Datentyp|Description|  
@@ -105,7 +106,7 @@ Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Di
 |**IsNullable**|**bit**|Gibt an, ob die Spalte null-Werte enthalten kann. Wenn der Wert 1 ist, kann die Spalte null-Werte enthalten. Wenn der Wert 0 ist, kann nicht in die Spalte null-Werte enthalten. Beachten Sie, dass die Validierungsregel auch verwendet werden kann, um zu verhindern, dass null-Werte.|  
 |**DataType**|**nvarchar(4000)**|Der Access-Datentyp der Spalte, wie z. B. **Text** oder **lang**.|  
 |**IsAutoIncrement**|**bit**|Gibt an, ob ganzzahligen Werten in die Spalte automatisch inkrementiert wird. Wenn der Wert 1 ist, werden die ganzen Zahlen automatisch inkrementiert.|  
-|**Ordnungszahl**|**smallint**|Die Reihenfolge der Spalte in der Tabelle, beginnend mit 0 (null).|  
+|**Ordinal**|**smallint**|Die Reihenfolge der Spalte in der Tabelle, beginnend mit 0 (null).|  
 |**"DefaultValue"**|**nvarchar(4000)**|Der Standardwert für die Spalte.|  
 |**ValidationRule**|**nvarchar(4000)**|Die Regel, die zum Überprüfen der Daten, die hinzugefügt oder aktualisiert werden, in der Spalte verwendet wird.|  
   
@@ -189,6 +190,5 @@ Metadaten des Moduls ist exportiert der **SSMA_Access_InventoryModules** Tabelle
 |**"ModuleName"**|**nvarchar(4000)**|Der Name des Moduls.|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Exportieren eine Access-Inventur](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Exporting an Access Inventory (Exportieren eines Access-Inventars)](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-

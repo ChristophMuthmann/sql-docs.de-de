@@ -1,28 +1,28 @@
 ---
 title: "Auswählen und Konfigurieren von Objekten mit Test (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Selection of Objects to Test,Parameter Comparison Settings
+helpviewer_keywords: Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3b12a1b9ec20f736072d57039d247be13be57e69
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Auswählen und Konfigurieren von Objekten mit Test (OracleToSQL)
 In diesem Schritt wählen Sie die Objekte zu testen, und konfigurieren Einstellungen für den Vergleich von Prozeduren und Funktionen Output-Parameter als auch die Rückgabewerte von Funktionen.  
@@ -90,4 +90,3 @@ Sie können die Werte der Eingabeparameter angeben, auf die **rufen Werte** Seit
 ## <a name="see-also"></a>Siehe auch  
 [Testen von migriert Datenbankobjekte &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

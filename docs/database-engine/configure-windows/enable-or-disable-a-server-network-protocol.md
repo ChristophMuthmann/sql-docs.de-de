@@ -2,9 +2,12 @@
 title: Aktivieren oder Deaktivieren eines Servernetzwerkprotokoll | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,26 +23,26 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: cd18129e43db63cf01623e6b5706c34d79f4ba8e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls
-  Alle Netzwerkprotokolle werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert, sie können jedoch aktiviert oder nicht aktiviert werden. In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Configuration Manager oder PowerShell ein Servernetzwerkprotokoll in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert oder deaktiviert wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] muss beendet und neu gestartet werden, damit die Änderung wirksam wird.  
+# <a name="enable-or-disable-a-server-network-protocol"></a>Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Alle Netzwerkprotokolle werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert, sie können jedoch aktiviert oder nicht aktiviert werden. In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Configuration Manager oder PowerShell ein Servernetzwerkprotokoll in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert oder deaktiviert wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] muss beendet und neu gestartet werden, damit die Änderung wirksam wird.  
   
 > [!IMPORTANT]  
 >  Während des Setups von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] wird eine Anmeldung für die Gruppe BUILTIN\Users hinzugefügt. Dies ermöglicht allen authentifizierten Benutzern des Computers den Zugriff auf die Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] als Element der öffentlichen Rolle. Die BUILTIN\Users-Anmeldung kann sicher entfernt werden, um den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Zugriff auf Computerbenutzer zu beschränken, die eigene Logins besitzen oder Mitglieder anderer Windows-Gruppen mit Logins sind.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]- und [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[sssql14](../../includes/sssql14-md.md)] unterstützen standardmäßig nur TLS 1.0 und SSL 3.0. Wenn Sie durch Änderungen an der SChannel-Betriebssystemebene ein anderes Protokoll (beispielsweise TLS 1.1 oder TLS 1.2) erzwingen, treten bei Ihren Verbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise Fehler auf, wenn Sie nicht das entsprechende Update installiert haben, um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützung für TLS 1.1 und 1.2 hinzuzufügen. Dieses Update finden Sie <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">hier</a>. Ab [!INCLUDE[sssql15](../../includes/sssql15-md.md)] bieten alle SQL Server-Versionen TLS 1.2-Unterstützung, ohne dass weitere Updates erforderlich sind.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[sssql14](../../includes/sssql14-md.md)] unterstützen standardmäßig nur TLS 1.0 und SSL 3.0. Wenn Sie durch Änderungen an der SChannel-Betriebssystemebene ein anderes Protokoll (beispielsweise TLS 1.1 oder TLS 1.2) erzwingen, treten bei Ihren Verbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise Fehler auf, wenn Sie nicht das entsprechende Update installiert haben, um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützung für TLS 1.1 und 1.2 hinzuzufügen. Dieses Update finden Sie <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">hier</a>. Ab [!INCLUDE[sssql15](../../includes/sssql15-md.md)] bieten alle SQL Server-Versionen TLS 1.2-Unterstützung, ohne dass weitere Updates erforderlich sind.
   
  **In diesem Thema**  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="SSMSProcedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
   
-#### So aktivieren Sie ein Server-Netzwerkprotokoll  
+#### <a name="to-enable-a-server-network-protocol"></a>So aktivieren Sie ein Server-Netzwerkprotokoll  
   
 1.  Erweitern Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Konsolenbereich **SQL Server-Netzwerkkonfiguration**.  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="PowerShellProcedure"></a> SQL Server PowerShell  
   
-#### So aktivieren Sie ein Server-Netzwerkprotokoll mit PowerShell  
+#### <a name="to-enable-a-server-network-protocol-using-powershell"></a>So aktivieren Sie ein Server-Netzwerkprotokoll mit PowerShell  
   
 1.  Öffnen Sie eine Eingabeaufforderung unter Administratorberechtigungen.  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 10/04/2017
     $Np  
     ```  
   
-#### So konfigurieren Sie die Protokolle für den lokalen Computer  
+#### <a name="to-configure-the-protocols-for-the-local-computer"></a>So konfigurieren Sie die Protokolle für den lokalen Computer  
   
 -   Wenn das Skript lokal ausgeführt wird und den lokalen Computer konfiguriert, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell das Skript flexibler gestalten, indem der lokale Computernamen dynamisch festgelegt wird. Um den lokalen Computernamen abzurufen, ersetzen Sie die Zeile, die die `$uri` -Variable festlegt, mit der folgenden Zeile.  
   
@@ -107,7 +110,7 @@ ms.lasthandoff: 10/04/2017
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
-#### So starten Sie das Datenbankmodul mit SQL Server PowerShell neu  
+#### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>So starten Sie das Datenbankmodul mit SQL Server PowerShell neu  
   
 -   Nachdem Sie Protokolle aktiviert oder deaktiviert haben, müssen Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] beenden und neu starten, damit die Änderung wirksam wird. Führen Sie die folgenden Anweisungen aus, um die Standardinstanz mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell zu beenden und zu starten. Um eine benannte Instanz zu beenden und zu starten, ersetzen Sie `'MSSQLSERVER'` durch `'MSSQL$<instance_name>'`.  
   
@@ -134,4 +137,3 @@ ms.lasthandoff: 10/04/2017
     ```  
   
   
-

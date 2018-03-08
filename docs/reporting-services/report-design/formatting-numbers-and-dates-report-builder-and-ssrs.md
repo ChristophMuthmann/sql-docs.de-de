@@ -1,13 +1,14 @@
 ---
-title: Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS) | Microsoft Docs
+title: Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +21,16 @@ f1_keywords:
 - "10285"
 - sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: de538e4d272355c1d694d4a79fa0a66424062360
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)
   Sie können Zahlen und Datumsangaben in Datenbereichen formatieren, indem Sie im Dialogfeld **Eigenschaften** des betreffenden Datenbereichs auf der Seite **Zahl** ein Format auswählen.  
@@ -62,12 +62,11 @@ ms.lasthandoff: 08/09/2017
   
 -   Wenn Sie unter **Kategorie** die Option **Währung** auswählen und die Option **Werte anzeigen in**aktivieren, können Sie **Tausender**, **Millionen**oder **Milliarden** auswählen, um Zahlen in Finanzformaten anzuzeigen. Wenn der Feldwert zum Beispiel 1.789.905.394 lautet und Sie **Milliarden** auswählen und zwei Dezimalstellen angeben, wird im Bericht der Wert 1,78 angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatieren von Linien, Farben und Bilder &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Formatieren eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen als Datumsangaben oder Währungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formatieren von Skalen auf einem Messgerät &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   
-

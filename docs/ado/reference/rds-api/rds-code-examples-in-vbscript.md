@@ -3,7 +3,7 @@ title: RDS-Codebeispiele in VBScript | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - RDS samples [ADO], VBScript
 - VBScript RDS examples [ADO]
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 81e6ae7dd9b72fba1ad33cbd2f4bcac7627a38a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bcf513c375007c36458a733e3511a8e12046a95a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-code-examples-in-vbscript"></a>RDS-Codebeispiele in VBScript
 > [!IMPORTANT]
@@ -73,7 +72,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [ExecuteOptions und FetchOptions Eigenschaften-Beispiel](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [FilterColumn, FilterCriterion FilterValue, SortColumn und SortDirection Eigenschaften-Beispiel](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties Example](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
 -   [ReadyState-Eigenschaft (Beispiel)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
   
@@ -84,6 +83,5 @@ ms.lasthandoff: 09/09/2017
 -   [Beispiel für SQL-Eigenschaft](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
   
 -   [Beispiel für URL-Eigenschaft](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
 
 

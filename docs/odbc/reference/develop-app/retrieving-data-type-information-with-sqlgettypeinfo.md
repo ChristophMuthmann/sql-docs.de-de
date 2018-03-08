@@ -3,10 +3,12 @@ title: Abrufen von Daten von Typinformationen mit SQLGetTypeInfo | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b3ae7606967ce0f77fea638a69a8b44f0e175a48
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Abrufen von Informationen mit SQLGetTypeInfo
 Da die Zuordnungen von zugrunde liegenden SQL-Datentypen zu ODBC-Datentypbezeichner ungefähre befinden, bietet-ODBC-Funktion (**SQLGetTypeInfo**) beschrieben, über ein Treiber vollständig kann jeder SQL-Datentyp in der Datenquelle. Diese Funktion gibt ein Resultset, die jede Zeile aus, von denen die Eigenschaften eines einzelnen Datentyps, z. B. Name, Typ-ID, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit beschreibt.  
@@ -39,4 +40,3 @@ Da die Zuordnungen von zugrunde liegenden SQL-Datentypen zu ODBC-Datentypbezeich
 -   ODBC definiert keine Datentypnamen für die Verwendung in **CREATE TABLE** und **ALTER TABLE** Anweisungen. Die Anwendung sollte verwenden Sie stattdessen den Namen in der Spalte TYPE_NAME des zurückgegebenes Resultset zurückgegebenen **SQLGetTypeInfo**. Der Grund dafür ist, obwohl die meisten SQL variiert nicht viel über DBMS, Datentypnamen erheblich variieren. Anstatt das Erzwingen eines Treiber zum Analysieren von SQL-Anweisungen und DBMS-spezifische Datentypnamen standard Datentypnamen ersetzt, erfordert ODBC-Anwendungen, die DBMS-spezifische Namen ursprünglich.  
   
  Beachten Sie, dass **SQLGetTypeInfo** nicht notwendigerweise beschreibt alle Datentypen, die eine Anwendung auftreten kann. Insbesondere können Resultsets nicht direkt von der Datenquelle unterstützte Datentypen enthalten. Beispielsweise werden die Datentypen der Spalten in Resultsets von Katalogfunktionen von ODBC definiert und diese Datentypen möglicherweise nicht von der Datenquelle unterstützt. Um die Merkmale der Datentypen in einem Resultset zu ermitteln, eine Anwendung ruft **SQLColAttribute**.
-

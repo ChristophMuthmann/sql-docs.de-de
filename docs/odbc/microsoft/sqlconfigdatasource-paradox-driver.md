@@ -3,27 +3,28 @@ title: SQLConfigDataSource (Paradox-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1c567bd1490c41822b3df89f04c0d907b0f1a92
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox-Treiber)
 > [!NOTE]  
@@ -49,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |PWD|Das Kennwort.<br /><br /> Dies ist ein optionales Schlüsselwort, und wird vom Treiber nie in die Datei geschrieben werden. Es dient in einem Aufruf von **SQLDriverConnect** für Paradox Dateien Kennwort geschützt. Das verwendete Kennwort ist gültig, wenn eine Tabelle geöffnet wird. Wenn kein Kennwort in der Verbindungszeichenfolge übergeben wird, wird kein Kennwort für diese Tabelle eingerichtet. Wenn Tabellen unterschiedliche Kennwörter haben, mehr als eine kann nicht in derselben Sitzung geöffnet werden, noch können die Tabellen verknüpft werden.|  
 |READONLY|True, um die Datei schreibgeschützt machen. "False", um die Datei nicht schreibgeschützt sein.<br /><br /> Dadurch wird die gleiche Option als **Read Only** im Dialogfeld "Setup".|  
 |THREADS|Die Anzahl der Hintergrundthreads für das Modul nutzen. Dieser Wert ist 3 und kann nicht geändert werden.<br /><br /> Dadurch wird die gleiche Option als **Threads** im Dialogfeld "Setup".|
-

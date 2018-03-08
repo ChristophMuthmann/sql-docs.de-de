@@ -3,33 +3,30 @@ title: SQLManageDataSources | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLManageDataSources
-apilocation:
-- sqlsrv32.dll
+apiname: SQLManageDataSources
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLManageDataSources
-helpviewer_keywords:
-- SQLManageDataSources [ODBC]
+f1_keywords: SQLManageDataSources
+helpviewer_keywords: SQLManageDataSources [ODBC]
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b10fd1109c41d1d19418ce83dd14b60488a85fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8785fef25830aa3987470a8007e115da1cc73a42
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Konformität**  
@@ -131,4 +128,3 @@ BOOL SQLManageDataSources(
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Erstellen von Datenquellen|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|
-

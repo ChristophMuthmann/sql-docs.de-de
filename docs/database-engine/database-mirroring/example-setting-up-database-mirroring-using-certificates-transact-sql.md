@@ -2,9 +2,12 @@
 title: 'Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: 50
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 361727b4d3a6e5373470c8f82319c6447438cf28
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL)
-  In diesem Beispiel werden sämtliche Schritte erläutert, die für das Erstellen einer Datenbank-Spiegelungssitzung mithilfe der zertifikatbasierten Authentifizierung erforderlich sind. In den Beispielen in diesem Thema wird [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet. Sofern Sie nicht garantieren können, dass Ihr Netzwerk sicher ist, wird das Verschlüsseln bei Verbindungen zur Datenbankspiegelung empfohlen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Beispiel werden sämtliche Schritte erläutert, die für das Erstellen einer Datenbank-Spiegelungssitzung mithilfe der zertifikatbasierten Authentifizierung erforderlich sind. In den Beispielen in diesem Thema wird [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet. Sofern Sie nicht garantieren können, dass Ihr Netzwerk sicher ist, wird das Verschlüsseln bei Verbindungen zur Datenbankspiegelung empfohlen.  
   
  Verwenden Sie zum Kopieren eines Zertifikats zu einem anderen System eine sichere Kopiermethode. Seien Sie äußerst vorsichtig, um Ihre Zertifikate zu schützen.  
   
@@ -266,7 +269,7 @@ ms.lasthandoff: 08/02/2017
     ```  
   
     > [!NOTE]  
-    >  Wenn die Ausführung im Modus für hohe Sicherheit mit automatischem Failover geplant ist, sollte die Transaktionssicherheit auf FULL (Standardeinstellung) festgelegt bleiben und der Zeuge so schnell wie möglich nach Ausführung der zweiten SET PARTNER **'***partner_server***'** -Anweisung hinzugefügt werden. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
+    >  Wenn die Ausführung im Modus für hohe Sicherheit mit automatischem Failover geplant ist, sollte die Transaktionssicherheit auf FULL (Standardeinstellung) festgelegt bleiben und der Zeuge so schnell wie möglich nach Ausführung der zweiten SET PARTNER **'***Partnerserver***'**-Anweisung hinzugefügt werden. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
   
  [&#91;Anfang des Beispiels&#93;](#ExampleH2)  
   
@@ -284,7 +287,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Problembehandlung für die Datenbankspiegelungskonfiguration &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Angeben einer Servernetzwerkadresse (Datenbankspiegelung)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
@@ -293,4 +296,3 @@ ms.lasthandoff: 08/02/2017
  [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

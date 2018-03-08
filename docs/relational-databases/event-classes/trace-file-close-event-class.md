@@ -2,9 +2,12 @@
 title: Trace File Close-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,38 +15,37 @@ ms.topic: article
 helpviewer_keywords:
 - Trace File Close event class
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ce196fb683057e914891ca2a58f7db9b813f74b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 51e3b765c1f58c2ee6f34f60d86b2013e7fbfcf6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close-Ereignisklasse
-  Die **Trace File Close** -Ereignisklasse weist darauf hin, dass eine Ablaufverfolgungsdatei während eines Rollovers für Ablaufverfolgungsdateien geschlossen wurde.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die **Trace File Close** -Ereignisklasse weist darauf hin, dass eine Ablaufverfolgungsdatei während eines Rollovers für Ablaufverfolgungsdateien geschlossen wurde.  
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**EventClass**|**int**|Ereignistyp = 150.|27|Nein|  
-|**EventSequence**|**int**|Eindeutiger Timestamp des Ereignisses, das während der Ablaufverfolgung ausgelöst wurde. Diese Zahl erhöht sich bei jedem ausgelösten Ereignis gleichmäßig.|51|Nein|  
+|**EventClass**|**int**|Ereignistyp = 150.|27|nein|  
+|**EventSequence**|**int**|Eindeutiger Timestamp des Ereignisses, das während der Ablaufverfolgung ausgelöst wurde. Diese Zahl erhöht sich bei jedem ausgelösten Ereignis gleichmäßig.|51|nein|  
 |**FileName**|**nvarchar**|Logischer Name der geschlossenen Ablaufverfolgungsdatei.|36|ja|  
 |**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, NULL = Benutzer. Bei dieser Ereignisklasse beläuft sich der Wert immer auf 1.|60|ja|  
 |**LoginName**|**nvarchar**|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username). Bei dieser Ereignisklasse lautet der Wert immer "sa".|11|ja|  
-|**ObjectID**|**int**|Vom System zugewiesene ID der Ablaufverfolgung.|22|Ja|  
-|**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
+|**ObjectID**|**int**|Vom System zugewiesene ID der Ablaufverfolgung.|22|ja|  
+|**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|nein|  
 |**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  
 |**StartTime**|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|ja|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

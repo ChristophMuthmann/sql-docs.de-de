@@ -2,30 +2,30 @@
 title: "Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite „Allgemein“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroupproperties.general.f1
+f1_keywords: sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 43306a76937572c93f01642e5943d24a141690b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 751d94c5aa3e6c2f7d16b25e3e2fa3b2821cbccf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite Allgemein)
-  Dieses Thema gilt für die Registerkarte **Allgemein** des Dialogfelds **Neue Verfügbarkeitsgruppe** und des Dialogfelds **Eigenschaften der Verfügbarkeitsgruppe** .  Das Dialogfeld **Neue Verfügbarkeitsgruppe** ermöglicht es Ihnen, eine neue Verfügbarkeitsgruppe zu erstellen, ohne den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]zu verwenden. Das Dialogfeld **Eigenschaften der Verfügbarkeitsgruppe** ermöglicht es Ihnen, die Konfiguration einer vorhandenen Verfügbarkeitsgruppe anzuzeigen und zu ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema gilt für die Registerkarte **Allgemein** des Dialogfelds **Neue Verfügbarkeitsgruppe** und des Dialogfelds **Eigenschaften der Verfügbarkeitsgruppe**.  Das Dialogfeld **Neue Verfügbarkeitsgruppe** ermöglicht es Ihnen, eine neue Verfügbarkeitsgruppe zu erstellen, ohne den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]zu verwenden. Das Dialogfeld **Eigenschaften der Verfügbarkeitsgruppe** ermöglicht es Ihnen, die Konfiguration einer vorhandenen Verfügbarkeitsgruppe anzuzeigen und zu ändern.  
   
  **So zeigen Sie Verfügbarkeitsgruppeneigenschaften an**  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
  Der Name der Verfügbarkeitsgruppe. Dies ist ein vom Benutzer angegebener Name, der innerhalb des Windows Server-Failoverclusters (WSFC) eindeutig sein muss.  
   
 ## <a name="availability-databases"></a>Verfügbarkeitsdatenbanken  
- **Datenbankname**  
+ **Database Name**  
  Name einer Datenbank, die der Verfügbarkeitsgruppe hinzugefügt wurde.  
   
  **Hinzufügen**  
@@ -70,12 +70,12 @@ ms.lasthandoff: 08/02/2017
  **Synchroner Commit**  
  Das primäre Replikat wartet mit dem Ausführen des Commits für eine bestimmte Transaktion, bis das sekundäre Replikat die Transaktion auf den Datenträger geschrieben hat.  
   
- Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)ausgeführt wird.  
+ Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)ausgetauscht werden.  
   
  **Failovermodus**  
  Der Failovermodus des Replikats. Folgende Werte sind möglich:  
   
- **Automatisch**  
+ **Automatic**  
  Automatisches Failover. Das Replikat ist ein Ziel für automatische Failover. Diese Option wird nur unterstützt, wenn der Verfügbarkeitsmodus auf synchrone Commits festgelegt wird.  
   
  **Manuell**  
@@ -114,8 +114,7 @@ ms.lasthandoff: 08/02/2017
  **Entfernen**  
  Klicken Sie, um ein sekundäres Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

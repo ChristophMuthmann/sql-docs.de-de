@@ -3,7 +3,7 @@ title: Column-Objekt (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 90ca5950c857ea5037381daae3568bc6c7becd71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5a8a5047f4cd4655ebe1dd041e44949ca361c54
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="column-object-adox"></a>Column-Objekt (ADOX)
 Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.  
@@ -67,7 +66,7 @@ Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Spalte-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
+-   [Column-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Append-Methode, Beispiel für Name-Eigenschaft (VB) Spalten und Tabellen](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -77,5 +76,4 @@ Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.
  [Beispiel für ParentCatalog-Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [SortOrder-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -2,43 +2,44 @@
 title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8fd3bd96766ad26c21813f137f8f12452932dea7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset
-  Bietet Informationen zu den auf Spalten- und Segmentebene Speichertabellen, die von einer ausgeführten tabellarischen Analysis Services-Datenbank verwendet oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Modus. Dieses Rowset wird hauptsächlich für Problembehandlung und Analyse verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Bietet Informationen zu den auf Spalten- und Segmentebene Speichertabellen, die von einer ausgeführten tabellarischen Analysis Services-Datenbank verwendet oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Modus. Dieses Rowset wird hauptsächlich für Problembehandlung und Analyse verwendet.  
   
  **Gilt für:** tabellarische Modelle  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** Rowset enthält die folgenden Spalten.  
   
-|**Spaltenname**|**Typindikator**|**Einschränkung**|**Description**|  
+|**Spaltenname**|**Typindikator**|**Einschränkung**|**Beschreibung**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**DATENBANKNAME**|**DBTYPE_WSTR**|ja|Gibt die tabellarische Datenbank an.<br /><br /> Die **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn die aktuelle Datenbank ausgelassen wird verwendet.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|ja|Gibt die tabellarische Datenbank an.<br /><br /> Die **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn die aktuelle Datenbank ausgelassen wird verwendet.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|ja|Der Name des Modells.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|ja|Der Name der Measuregruppe.|  
-|**PARTITIONSNAME**|**DBTYPE_WSTR**|ja|Der Name der Partition.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|ja|Der Name der Partition.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Der Name der Dimension.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||Die interne ID des Tabellensegments.|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||Die interne ID der Spalte.|  
@@ -77,4 +78,3 @@ ORDER BY TABLE_ID
  [Analysis Services-Schemarowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

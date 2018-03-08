@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für ODBC | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b3753748a9e76d24dc968983fa358b5d0050f41
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC (Übersicht)
 Ein ADO- oder RDS-Programmierer würde idealerweise möglich in dem jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, damit ADO direkt in der Datenquelle aufrufen kann. Obwohl Datenbankanbieter zunehmend OLE DB-Schnittstellen implementieren, sind einige Datenquellen noch nicht auf diese Weise bereitgestellt. Allerdings können die meisten DBMS-Systeme heute über ODBC zugegriffen werden.
@@ -59,7 +58,7 @@ MSDASQL
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt die OLE DB-Anbieter für ODBC.|
+|**Provider**|Gibt die OLE DB-Anbieter für ODBC.|
 |**DSN**|Gibt die Namen der Datenquelle an.|
 |**UID**|Gibt den Benutzernamen an.|
 |**PWD**|Gibt das Kennwort des Benutzers an.|
@@ -103,11 +102,11 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Eigenschaftsname|Description|
 |-------------------|-----------------|
 |Zugegriffen werden Prozeduren (KAGPROP_ACCESSIBLEPROCEDURES)|Gibt an, ob der Benutzer den Zugriff auf gespeicherte Prozeduren.|
-|Zugänglich Tabellen (KAGPROP_ACCESSIBLETABLES)|Gibt an, ob der Benutzer die Berechtigung zum Ausführen von SELECT-Anweisungen für Tabellen der Datenbank.|
+|Accessible Tables (KAGPROP_ACCESSIBLETABLES)|Gibt an, ob der Benutzer die Berechtigung zum Ausführen von SELECT-Anweisungen für Tabellen der Datenbank.|
 |Aktive Anweisungen (KAGPROP_ACTIVESTATEMENTS)|Gibt die Anzahl der Handles, die ein ODBC-Treiber für eine Verbindung unterstützen kann.|
 |Treibername (KAGPROP_DRIVERNAME)|Gibt den Dateinamen des ODBC-Treibers an.|
 |ODBC-Treiberversion (KAGPROP_DRIVERODBCVER)|Gibt an, die diesen Treiber unterstützt ODBC-Version.|
-|Verwendung der Datei (KAGPROP_FILEUSAGE)|Gibt an, wie der Treiber eine Datei in einer Datenquelle behandelt. als eine Tabelle oder eines Katalogs.|
+|File Usage (KAGPROP_FILEUSAGE)|Gibt an, wie der Treiber eine Datei in einer Datenquelle behandelt. als eine Tabelle oder eines Katalogs.|
 |Wie Escape-Klausel (KAGPROP_LIKEESCAPECLAUSE)|Gibt an, ob der Treiber die Definition und Verwendung eines Escapezeichens unterstützt für das Prozentzeichen (%) und das Unterstrichzeichen (_) im LIKE-Prädikat einer WHERE-Klausel.|
 |Max-Spalten in Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Gibt die maximale Anzahl von Spalten, die in der GROUP BY-Klausel einer SELECT-Anweisung aufgeführt werden können.|
 |Maximale Anzahl von Spalten im Index (KAGPROP_MAXCOLUMNSININDEX)|Gibt die maximale Anzahl von Spalten, die in einem Index aufgenommen werden kann.|
@@ -180,13 +179,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit des standardmäßigen ADO **Recordset** Eigenschaften:
 
-|Eigenschaft|"ForwardOnly"|Dynamic|Keyset|STATIC-Cursor|
+|Eigenschaft|ForwardOnly|Dynamic|Keyset|STATIC-Cursor|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Nicht verfügbar|Nicht verfügbar|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Nicht verfügbar|Nicht verfügbar|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|Schreibgeschützt|Schreibgeschützt|Schreibgeschützt|
-|[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)|Nicht verfügbar|Nicht verfügbar|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Nicht verfügbar|Nicht verfügbar|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
@@ -195,7 +194,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
-|["PageCount"](../../../ado/reference/ado-api/pagecount-property-ado.md)|Lese-/Schreibzugriff|Nicht verfügbar|Schreibgeschützt|Schreibgeschützt|
+|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Lese-/Schreibzugriff|Nicht verfügbar|Schreibgeschützt|Schreibgeschützt|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Lese-/Schreibzugriff|Nicht verfügbar|Schreibgeschützt|Schreibgeschützt|
 |[Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
@@ -206,25 +205,25 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit des standardmäßigen ADO **Recordset** Methoden:
 
-|Methode|"ForwardOnly"|Dynamic|Keyset|STATIC-Cursor|
+|Methode|ForwardOnly|Dynamic|Keyset|STATIC-Cursor|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|ja|ja|ja|ja|
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|ja|ja|ja|ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|ja|ja|ja|ja|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|ja|ja|ja|ja|
-|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein|Ja|ja|
+|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|nein|Nein|ja|ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|ja|ja|ja|
 |[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|ja|ja|ja|ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|ja|ja|ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|ja|ja|ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein|Ja|ja|ja|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|ja|ja|ja|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein|Ja|ja|ja|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|ja|ja|ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|ja|ja|ja|ja|
 |[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|ja|ja|ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|ja|ja|ja|
-|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein|Ja|ja|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|nein|Nein|ja|ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|ja|ja|ja|
 |[Update](../../../ado/reference/ado-api/update-method.md)|ja|ja|ja|ja|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|ja|ja|ja|ja|
@@ -251,7 +250,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|
 |Datenquelle|DBPROP_INIT_DATASOURCE|
-|Datenquellenname|RÜCKGABEWERT|
+|Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellenobjekt Threadingmodell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
 |DBMS-Version|DBPROP_DBMSVER|
@@ -268,7 +267,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|
 |Maximale Zeilengröße schließt BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Maximale Anzahl von Tabellen in SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modus|DBPROP_INIT_MODE|
 |Mehrere Parametersätze|DBPROP_MULTIPLEPARAMSETS|
 |Mehrere Ergebnisse|DBPROP_MULTIPLERESULTS|
 |Mehrere Speicherobjekte|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -276,7 +275,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |NULL-Sortierung|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB-Dienste|DBPROP_INIT_OLEDBSERVICES|
-|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
 |Unterstützung für OLE-Objekt|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in der Select-Liste|DBPROP_ORDERBYCOLUMNSINSELECT|
@@ -440,4 +439,3 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 ## <a name="see-also"></a>Siehe auch
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [ausführen Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Anbietereigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)
-

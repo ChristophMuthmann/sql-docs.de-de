@@ -2,12 +2,13 @@
 title: Microsoft Association Algorithm Technical Reference | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 24
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a029a6efad9ebdbc15e42d593db28f9530b1b8e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Association-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus ist eine einfache Implementierung des bekannten Apriori-Algorithmus.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus ist eine einfache Implementierung des bekannten Apriori-Algorithmus.  
   
  Sowohl der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus als auch der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus können zur Analyse von Zuordnungen dienen, die jeweils erfassten Regeln können jedoch abhängig vom Algorithmus differieren. In einem Entscheidungsstrukturmodell basieren die Aufteilungen, von denen bestimmte Regeln abgeleitet werden, auf Informationen, während die Regeln in einem Zuordnungsmodell vollständig auf Vertrauen beruhen. Daher ist in einem Zuordnungsmodell eine starke Regel bzw. eine Regel, deren Vertrauen hoch ist, nicht unbedingt interessant, da sie keine neuen Informationen bietet.  
   
@@ -170,7 +171,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Zuordnungsmodellen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   
-

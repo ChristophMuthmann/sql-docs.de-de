@@ -3,7 +3,7 @@ title: Indizes Append-(VC++-Methodenbeispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Indexes Append method [ADOX], VC++ example
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f77126d6f6f852a5868a8476b8c0a16e0d553d31
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42314be9fd3ccd32af162ce6679cea2b84b5ed37
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="indexes-append-method-example-vc"></a>Indizes Append-(VC++-Methodenbeispiel)
 Der folgende Code veranschaulicht, wie ein neuer Index erstellt wird. Der Index ist auf zwei Spalten in der Tabelle.  
@@ -98,4 +97,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

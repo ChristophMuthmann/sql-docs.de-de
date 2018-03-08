@@ -1,29 +1,30 @@
 ---
 title: Aktualisieren Sie aus der Datenbank (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c62364a5dae70a00624cceddc87e9673466212fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5c0d2d3ad83249c4e438e01a31a41d9e8e226ce8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-db2tosql"></a>Aktualisieren Sie aus der Datenbank (DB2ToSQL)
 Die **aus der Datenbank aktualisieren** Dialogfeld können Sie auswählen, welche Objekte von der DB2-Datenbank zu aktualisieren. Zeilen, die Sie im Dialogfeld sind farblich codiert, basierend auf dem Status der Metadaten:  
@@ -40,7 +41,7 @@ Sie können angeben, die Einstellungen der Standardrichtlinie Objekt aktualisier
   
 Für den Zugriff auf die **aus der Datenbank aktualisieren** mit der rechten Maustaste ein Objekt in DB2-Metadaten-Explorer, und klicken Sie im Dialogfeld **aus der Datenbank aktualisieren**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Reduzieren (-)**  
 Reduzieren Sie alle Objektgruppen, um einzelne Objekte auszublenden.  
   
@@ -61,4 +62,3 @@ Zeigt eine **Legende** (Dialogfeld). Die Legende enthält die Zuordnung zwischen
   
 Beibehalten der **Legende** Dialogfeld auf der Basis von der **aus der Datenbank aktualisieren** wählen Sie im Dialogfeld die **im Vordergrund anzeigen** Kontrollkästchen.  
   
-

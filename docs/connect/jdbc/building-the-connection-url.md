@@ -3,24 +3,26 @@ title: Die Verbindungs-URL erstellen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: 53
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b5707221b51bff301aa5e9214497ba9090750aae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>Erstellen der Verbindungs-URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Benannte und mehrere SQL Server-Instanzen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]lässt die Installation mehrerer Datenbankinstanzen Server. Jede Instanz wird durch einen bestimmten Namen gekennzeichnet. Verbindung mit einer benannten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie entweder die Portnummer der benannten Instanz (bevorzugt) angeben, oder Sie können den Instanznamen als JDBC-URL-Eigenschaft angeben oder ein **Datasource** Eigenschaft. Wenn keine Eigenschaft für Instanzname oder Portnummer angegeben wurde, wird eine Verbindung zur Standardinstanz erstellt. Vergleichen Sie die folgenden Beispiele:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lässt die Installation mehrerer Datenbankinstanzen Server. Jede Instanz wird durch einen bestimmten Namen gekennzeichnet. Verbindung mit einer benannten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie entweder die Portnummer der benannten Instanz (bevorzugt) angeben, oder Sie können den Instanznamen als JDBC-URL-Eigenschaft angeben oder ein **Datasource** Eigenschaft. Wenn keine Eigenschaft für Instanzname oder Portnummer angegeben wurde, wird eine Verbindung zur Standardinstanz erstellt. Vergleichen Sie die folgenden Beispiele:  
   
  Gehen Sie folgendermaßen vor, wenn eine Portnummer verwendet werden soll:  
   
@@ -96,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Leerräume innerhalb der Klammern sind literal und werden nicht gekürzt.  
   
-##  <a name="Connectingintegrated"></a>Herstellen einer Verbindung mit integrierter Authentifizierung unter Windows  
+##  <a name="Connectingintegrated"></a> Herstellen einer Verbindung mit integrierter Authentifizierung unter Windows  
  Der JDBC-Treiber unterstützt über die integratedSecurity-Verbindungszeichenfolgeneigenschaft die Verwendung der integrierten Authentifizierung vom Typ 2 auf Windows-Betriebssystemen. Wenn Sie die integrierte Authentifizierung verwenden möchten, müssen Sie die Datei „sqljdbc_auth.dll“ in ein Verzeichnis im Windows-Systempfad des Computers kopieren, auf dem der JDBC-Treiber installiert ist.  
   
  Die „sqljdbc_auth.dll“-Dateien werden im folgenden Pfad installiert:  
@@ -110,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von „sqljdbc_auth.dll“ angeben. Wenn der JDBC-Treiber beispielsweise im Standardverzeichnis installiert ist, können Sie den Speicherort der DLL beim Start der Java-Anwendung mit dem folgenden VM-Argument (Virtual Machine) angeben:  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>Herstellen von Verbindungen mit IPv6-Adressen  
  Der JDBC-Treiber unterstützt die Verwendung von IPv6-Adressen in der properties-Auflistung der Verbindung und in der serverName-Eigenschaft der Verbindungszeichenfolge. Der ursprüngliche ServerName-Wert, z. B. Jdbc:*Sqlserver*://*ServerName*, wird für IPv6-Adressen in Verbindungszeichenfolgen nicht unterstützt. Verwenden einen Namen für *ServerName* anstatt einer IPv6-Adresse wird in jedem Fall in der Verbindung arbeiten. Die folgenden Beispiele enthalten weitere Informationen.  
@@ -128,7 +130,6 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Herstellen einer Verbindung mit SQLServer mit der JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

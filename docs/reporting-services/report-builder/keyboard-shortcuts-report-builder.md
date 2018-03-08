@@ -1,29 +1,30 @@
 ---
-title: Tastenkombinationen (Berichts-Generator) | Microsoft Docs
+title: Tastenkombinationen (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: fd67c49706dce9306843bac51ae20ff23a112789
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tastenkombinationen (Berichts-Generator)
   Im Berichts-Generator stehen Ihnen für die Navigation alle von der Windows-Umgebung unterstützten Tastenkombinationen zur Verfügung, wenn Sie paginierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte erstellen und ändern. Sie können aus mehreren Standardtastenkombinationsschemas auswählen.  
@@ -96,9 +97,9 @@ ms.lasthandoff: 08/09/2017
 |Verkleinert die Ansicht des Kartensichtbereichs, wenn ein Kartenviewport ausgewählt ist.|STRG+Minuszeichen (-)|  
 |Zugriffstastenmodus zum Schwenken und Vergrößern des Kartensichtbereichs, wenn ein Kartenviewport ausgewählt ist.|STRG+Linksklick|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Entwurfsansicht des Berichts &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glossar &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Glossar (Berichts-Generator)](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

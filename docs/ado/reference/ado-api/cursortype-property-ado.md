@@ -3,7 +3,7 @@ title: CursorType-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6b2123fe185bd52947812bea251c7af4b46989a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7031dc9b7acd89eea8491837ec4a550f34dc1ef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-property-ado"></a>CursorType-Eigenschaft (ADO)
 Gibt den Typ der Cursor, mit dem einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -48,9 +47,9 @@ Gibt den Typ der Cursor, mit dem einem [Recordset](../../../ado/reference/ado-ap
 |Für ein Recordset mit diesem CursorType|Die Methode unterstützt muss für alle diese Konstanten "true" zurückgeben.|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**adOpenForwardOnly**|none|  
-|**adOpenKeyset**|**zulässt**, **AdHoldRecords**, **AdMovePrevious**, **AdResync**|  
+|**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**zulässt**, **AdHoldRecords**, **AdMovePrevious**, **AdResync**|  
+|**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
   
 > [!NOTE]
 >  Obwohl **unterstützt**(**AdUpdateBatch**) gilt möglicherweise für dynamische "und" Forward-only-Cursor, Batch, die Sie Softwareupdates sollten entweder einen Keyset- oder static-Cursor verwenden. Festlegen der [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaft **AdLockBatchOptimistic** und die **CursorLocation** Eigenschaft **AdUseClient** So aktivieren Sie den Cursor Dienst für OLE DB, die für BatchUpdates erforderlich ist.  
@@ -66,5 +65,4 @@ Gibt den Typ der Cursor, mit dem einem [Recordset](../../../ado/reference/ado-ap
 ## <a name="see-also"></a>Siehe auch  
  [CursorType LockType und EditMode Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType LockType und EditMode Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
- [Unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)

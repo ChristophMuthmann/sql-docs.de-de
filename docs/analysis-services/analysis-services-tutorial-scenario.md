@@ -2,30 +2,32 @@
 title: Analysis Services-Lernprogrammszenario | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 85890ac9d5264bdce01f5bf10a0060532da00646
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 933a07504d0237d67becb2d98e1f5271548cb14a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services-Lernprogrammszenario
-Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]ist ein großes, multinationales Herstellungsunternehmen, das produziert und vertreibt Fahrräder aus Metallene und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
   
 In den vergangenen Jahren hat [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] die kleine Fabrik Importadores Neptuno erworben, die sich in Mexiko befindet. Importadores Neptuno stellt einige wichtige Unterkomponenten für die [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] -Produktlinie her. Diese Unterkomponenten werden für die Produktendmontage in Bothell angeliefert. Im Jahr 2005 wurde Importadores Neptuno alleiniger Hersteller und Vertreiber der Tourenrad-Produktgruppe.  
   
@@ -70,8 +72,7 @@ Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen A
 Die Lektionen im Analysis Services-Lernprogramm bieten eine Anleitung zum Erstellen einer Cubedatenbank, die all diese Zielsetzungen erfüllt. Um mit der Erstellung zu beginnen, gehen Sie zur ersten Lektion über: [Lesson 1: Create a New Tabular Model Project](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Mehrdimensionale Modellierung &#40; Adventure Works-Lernprogramm &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
-

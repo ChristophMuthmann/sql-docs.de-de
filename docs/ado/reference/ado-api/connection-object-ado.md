@@ -3,7 +3,7 @@ title: Verbindungsobjekt (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7beb64b0620b1a5b603c02cb36904e3a42f5b3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be2ba43e34c56e19dcb6eee03368ab1b3bc442a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-object-ado"></a>Verbindungsobjekt (ADO)
 Stellt eine offene Verbindung mit einer Datenquelle dar.  
@@ -107,5 +106,4 @@ cnn. "parameter"
  [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

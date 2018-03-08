@@ -2,31 +2,31 @@
 title: Replikationsmonitor | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.beta2.f1
-helpviewer_keywords:
-- Replication Monitor, help
+f1_keywords: sql13.rep.monitor.beta2.f1
+helpviewer_keywords: Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e42bb12b2af3ec0e640314aa4f703feb12666329
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "26"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4875b39c775e1e62b81c325386833a3be7860b46
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor"></a>Replikationsmonitor
-  Dieser Abschnitt der Dokumentation enthält Informationen zum Replikationsmonitor. Die im Monitor angezeigten Seiten und Dialogfelder können Unterschiede aufweisen, abhängig vom Replikationstyp und der Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die überwacht wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt der Dokumentation enthält Informationen zum Replikationsmonitor. Die im Monitor angezeigten Seiten und Dialogfelder können Unterschiede aufweisen, abhängig vom Replikationstyp und der Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die überwacht wird.  
   
 -   [Replikationsmonitor (Hauptseite)](../../relational-databases/replication/replication-monitor-main-page.md)  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Spalten sortieren](../../relational-databases/replication/sort-columns.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [Eigenschaftenreferenz &#40;Replikation&#41;](../../relational-databases/replication/properties-reference-replication.md)  

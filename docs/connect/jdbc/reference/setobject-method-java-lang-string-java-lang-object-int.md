@@ -3,29 +3,28 @@ title: SetObject-Methode (java.lang.String, java.lang.Object, Int) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.setObject (java.lang.String, java.lang.Object, int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.setObject (java.lang.String, java.lang.Object, int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: a9a0c802-7851-4826-b173-87b0c0acb3a0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa74e58019c49d1485026936eab9f9572ea4985f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5003e02e42d8b64160f92796ae4e319989c03c01
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int"></a>setObject-Methode (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -70,4 +69,3 @@ public void setObject(java.lang.String sCol,
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

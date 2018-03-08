@@ -2,27 +2,27 @@
 title: Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Durch das Deinstallieren von IIS kann der Dienst zu einer SSL-gerichteten Berichtsserver-URL vorübergehend unterbrochen werden. Aus diesem Grund wird dringend empfohlen, den Computer neu zu starten, nachdem Sie IIS deinstalliert haben.  
   
-     Sie müssen den Computer neu starten, um alle SSL-Sitzungen aus dem Cache zu löschen. Einige Betriebssysteme speichern SSL-Sitzungen bis zu 10 Stunden im Cache. Aus diesem Grund funktioniert eine https:// -URL auch, nachdem die SSL-Bindung von der URL-Reservierung in HTTP.SYS entfernt wurde. Durch den Neustart des Computers werden alle geöffneten Verbindungen geschlossen, die den Kanal verwenden.  
+     Sie müssen den Computer neu starten, um alle SSL-Sitzungen aus dem Cache zu löschen. Einige Betriebssysteme speichern SSL-Sitzungen bis zu 10 Stunden im Cache. Aus diesem Grund funktioniert eine https:// URL auch, nachdem die SSL-Bindung von der URL-Reservierung in HTTP.SYS entfernt wurde. Durch den Neustart des Computers werden alle geöffneten Verbindungen geschlossen, die den Kanal verwenden.  
   
 ## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>Binden von SSL an eine URL-Reservierung für Reporting Services  
  In den folgenden Schritten wird nicht erläutert, wie Sie Zertifikate anfordern, generieren, herunterladen oder installieren. Sie müssen bereits ein Zertifakt installiert haben, das verwendet werden kann. Es bleibt Ihnen überlassen, welche Zertifikatseigenschaften Sie angeben, welche Zertifizierungsstelle Sie verwenden und mit welchen Tools und Hilfsprogrammen Sie das Zertifikat anfordern und installieren.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie SSL-Bindungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mithilfe des Konfigurations-Managers für Reporting Services entfernen, funktioniert SSL möglicherweise nicht mehr für Websites auf einem Server, auf dem Internetinformationsdienste (IIS) ausgeführt werden, bzw. auf einem anderen HTTP.SYS-Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird der folgende Registrierungsschlüssel entfernt. Zusammen mit diesem Registrierungsschlüssel wird auch die SSL-Bindung für IIS entfernt. Ohne diese Bindung wird SSL nicht für das HTTPS-Protokoll bereitgestellt. Um dieses Problem zu diagnostizieren, verwenden Sie den IIS-Manager oder das Befehlszeilen-Hilfsprogramm HTTPCFG.exe. Zur Lösung des Problems stellen Sie die SSL-Bindung für die Websites mithilfe des IIS-Managers wieder her. Um das Problem in Zukunft zu vermeiden, entfernen Sie die SSL-Bindungen mit dem IIS-Manager und stellen die Bindung dann mithilfe des IIS-Managers für die gewünschten Websites wieder her. Weitere Informationen finden Sie im Knowledge Base-Artikel [SSL funktioniert nach dem Entfernen einer SSL-Bindung nicht mehr (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

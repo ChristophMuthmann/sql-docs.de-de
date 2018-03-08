@@ -2,9 +2,12 @@
 title: Anzeigen von Offlineprotokolldateien | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 18
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 339787b7252b5604a08770d417fe39d5b63aca70
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0e87fd686f9962562af63a50f216254081a17581
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
-  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien von einer lokalen oder Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien von einer lokalen oder Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann.  
   
  Auf die Offlineprotokolldateien können Sie von Registrierte Server oder programmgesteuert mit WMI- und WQL (WMI Query Language)-Abfragen zugreifen.  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Öffnen Sie das Snap-In WMI-Kontrolle. Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie im **Startmenü**auf **Suche starten** , geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie im **Startmenü** auf **Suche starten**, geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
   
     -   Klicken Sie auf **Start**, dann auf **Ausführen**, geben Sie **wmimgmt.msc**ein, und drücken Sie dann die EINGABETASTE.  
   
@@ -123,8 +126,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Wenn das Laden der Protokolldateien zu lange dauert, können Sie auf der Symbolleiste des Protokolldatei-Viewers auf **Beenden** klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Protokolldatei-Viewer](../../relational-databases/logs/log-file-viewer.md)  
   
   
-

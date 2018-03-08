@@ -1,10 +1,13 @@
 ---
-title: Eigenschaftsausdrucks-Editor | Microsoft Docs
+title: Eigenschaftsausdrucks-Editor | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dffc58ddd7cae6136f22a8d9db8126730071e990
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 35043f343fe16ac5c848d0c7dd2f9b21b95b18a5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="property-expressions-editor"></a>Eigenschaftsausdrucks-Editor
   Verwenden Sie das Dialogfeld **Eigenschaftsausdrucks-Editor** , um die Eigenschaftsausdrücke, durch die Eigenschaftswerte aktualisiert werden, zu erstellen, zu bearbeiten oder zu löschen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Eigenschaft**  
  Wählen Sie eine Objekteigenschaft aus der Liste aus.  
   
@@ -45,12 +47,11 @@ ms.lasthandoff: 08/03/2017
  **Delete**  
  Wählen Sie eine Eigenschaft aus, und klicken Sie anschließend auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
- [Integrationsservices &#40; SSIS &#41; Variablen](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Systemvariablen](../../integration-services/system-variables.md)   
- [Integrationsservices &#40; SSIS &#41; Ausdrücke](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   
   
-

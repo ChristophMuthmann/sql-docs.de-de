@@ -3,8 +3,11 @@ title: Point (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - Point (geometry Data Type)
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e153b3bbaf18e6c4b69171e56f2fdae6965396a7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 89f1a91310ea7ccbc6d4ab8724022c3463e4ea8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="point-geometry-data-type"></a>Point (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Erstellt eine **geometry** -Instanz, die mit ihren X- und Y-Werten sowie dem SRID (Spatial Reference ID) eine **Point** -Instanz darstellt.
   
@@ -45,7 +47,7 @@ Point ( X, Y, SRID )
  *X*  
  Ein **float** -Ausdruck, der die X-Koordinate der zu erstellenden **Point** -Instanz angibt.  
   
- *Y*  
+ *J*  
  Ein **float** -Ausdruck, der die Y-Koordinate der zu erstellenden **Point** -Instanz angibt.  
   
  *SRID*  
@@ -68,8 +70,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte statische Geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

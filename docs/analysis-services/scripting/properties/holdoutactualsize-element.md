@@ -2,36 +2,33 @@
 title: HoldoutActualSize-Element | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutActualSize
-helpviewer_keywords:
-- HoldoutActualSize element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutActualSize
+helpviewer_keywords: HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 02c225e85ee594abb21c7d96eb68f05a8ef2b435
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24a26b453f90fc82e91b1572b0e79af6477caa22
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="holdoutactualsize-element"></a>HoldoutActualSize-Element
-  Gibt die tatsächliche Größe an, nach der Verarbeitung der zurückhaltungspartition, die den Testsatz enthält eine [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) Element. Die übrigen Fälle im Datensatz werden zum Training verwendet. Diese Eigenschaft ist schreibgeschützt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt die tatsächliche Größe an, nach der Verarbeitung der zurückhaltungspartition, die den Testsatz enthält eine [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) Element. Die übrigen Fälle im Datensatz werden zum Training verwendet. Diese Eigenschaft ist schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,18 +43,18 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Schreibgeschützter ganzzahliger Wert.|  
-|Standardwert|Nicht zutreffend|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Standardwert|Nicht verfügbar|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert für **HoldoutActualSize** hängt von den Quelldaten sowie von den Werten für [HoldoutMaxCases](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md), [HoldoutMaxPercent](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md), und [HoldoutSeed](../../../analysis-services/scripting/properties/holdoutseed-element.md). Daher ist der Wert für **HoldoutActualSize** ist erst verfügbar, nachdem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Miningstruktur verarbeitet.  
@@ -74,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [HoldoutSeed-Element](../../../analysis-services/scripting/properties/holdoutseed-element.md)  
   
   
-

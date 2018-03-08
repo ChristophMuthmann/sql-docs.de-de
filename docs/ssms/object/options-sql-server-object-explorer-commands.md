@@ -3,29 +3,29 @@ title: "Optionen (SQL Server-Objekt-Explorer – Befehle) | Microsoft-Dokumentat
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
+f1_keywords: VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: da27431ddc8718e711bc4c4a0d0ced4fca1106c8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8ce2864c359c33efe354de4f85fd347f51047874
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Optionen (SQL Server-Objekt-Explorer – Befehle)
-Wenn Sie mit der rechten Maustaste auf eine Tabelle oder eine Sicht im Objekt-Explorer klicken, werden die beiden folgenden Optionen zum Anzeigen von Zeilen in der Tabelle angezeigt:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie mit der rechten Maustaste auf eine Tabelle oder eine Sicht im Objekt-Explorer klicken, werden die beiden folgenden Optionen zum Anzeigen von Zeilen in der Tabelle angezeigt:  
   
 -   **Die ersten 1000 Zeilen auswählen**  
   
@@ -47,7 +47,6 @@ Gibt die Anzahl von beim Bearbeiten von Zeilen in einer Tabelle zurückzugebende
 **Wert für den Befehl „Die ersten <n> Zeilen auswählen“**  
 Gibt die im erstellten Abfrage-Editor Skript angegebene Anzahl von zurückzugebenden Zeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [SQL Server Audit (Datenbankmodul)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   
-

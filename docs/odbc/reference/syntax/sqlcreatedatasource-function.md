@@ -3,33 +3,30 @@ title: SQLCreateDataSource Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCreateDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCreateDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCreateDataSource
-helpviewer_keywords:
-- SQLCreateDataSource function [ODBC]
+f1_keywords: SQLCreateDataSource
+helpviewer_keywords: SQLCreateDataSource function [ODBC]
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9077489c1380b0c750c9a725dfa50f813a5418da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c4c7b0b4ebecf75f1bcf31b0b1716a7076513488
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource-Funktion
 **Konformität**  
@@ -117,4 +114,3 @@ BOOL SQLCreateDataSource(
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Verwalten von Datenquellen|[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|
-

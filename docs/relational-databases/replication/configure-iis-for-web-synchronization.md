@@ -2,11 +2,13 @@
 title: "Konfigurieren von IIS für die Websynchronisierung | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "88"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
-  Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  Geben Sie im Feld **Pfad** einen Pfad für das virtuelle Verzeichnis ein. Wenn Sie beispielsweise **websync1** in das Feld **Alias** eingegeben haben, geben Sie **C:\Inetpub\wwwroot\websync1** in das Feld **Pfad** ein. Klicken Sie auf **Weiter**.  
   
-    3.  Klicken Sie in beiden Dialogfeldern auf **Ja**. Damit geben Sie an, dass Sie einen neuen Ordner erstellen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ISAPI-DLL-Datei kopieren möchten. .  
+    3.  Klicken Sie in beiden Dialogfeldern auf **Ja**. Damit geben Sie an, dass Sie einen neuen Ordner erstellen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ISAPI-DLL-Datei kopieren möchten. zugreifen.  
   
 7.  Gehen Sie auf der Seite **Authentifizierter Zugriff** wie folgt vor:  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 06/22/2017
   
 8.  Gehen Sie auf der Seite **Verzeichniszugriff** wie folgt vor:  
   
-    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
+    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. Es handelt sich dabei um die Konten, die Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements oder als Wert für den [-Parameter von](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* eingeben.  
   
 9. Geben Sie auf der Seite **Zugriff auf Momentaufnahmefreigabe** die Momentaufnahmefreigabe ein. Die entsprechenden Berechtigungen für diese Freigabe werden so erteilt, dass die Abonnenten auf die Momentaufnahmedateien zugreifen können. Weitere Informationen zu den Berechtigungen für die Freigabe finden Sie unter [Sichern des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -328,7 +329,7 @@ ms.lasthandoff: 06/22/2017
   
     5.  Klicken Sie auf **OK**.  
   
-2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: `https://server.domain.com/directory/replisapi.dll?diag`  
+2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  Wenn das für IIS angegebene Zertifikat nicht vom Windows-Betriebssystem erkannt wird, wird das Dialogfeld **Sicherheitshinweis** angezeigt. Dieser Hinweis wird möglicherweise angezeigt, weil das Zertifikat ein Testzertifikat ist oder es von einer Zertifizierungsstelle ausgestellt wurde, die von Windows nicht erkannt wird.  
   
@@ -354,7 +355,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Geben Sie im Dialogfeld **Verbindung mit \<ServerName> herstellen** den Anmeldenamen und das Kennwort an, den bzw. das der Merge-Agent zum Herstellen der Verbindung mit dem IIS verwenden soll. Diese Anmeldeinformationen werden auch im Assistenten für neue Abonnements angegeben.  
   
-5.  Überprüfen Sie im Internet Explorer-Fenster mit **** Diagnoseinformationen zur SQL-Websynchronisierung, ob der Wert in jeder **Status** -Spalte der Seite **Erfolg**lautet.  
+5.  Überprüfen Sie im Internet Explorer-Fenster mit **Diagnoseinformationen zur SQL-Websynchronisierung**, ob der Wert in jeder **Status** -Spalte der Seite **Erfolg**lautet.  
   
 6.  Stellen Sie sicher, dass das Zertifikat ordnungsgemäß auf dem Abonnenten installiert ist:  
   
@@ -362,8 +363,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  Stellen Sie eine Verbindung mit dem Server im Diagnosemodus her. Wenn das Zertifikat ordnungsgemäß installiert ist, wird das Dialogfeld **Sicherheitshinweis** nicht angezeigt. Wenn das Dialogfeld angezeigt wird, ist der Merge-Agent nicht in der Lage, eine Verbindung mit dem Computer mit IIS herzustellen. Sie müssen daher sicherstellen, dass das Zertifikat für den Server, auf den Sie zugreifen, dem Zertifikatsspeicher auf dem Abonnenten als vertrauenswürdiges Zertifikat hinzugefügt wurde. Weitere Informationen zum Exportieren von Zertifikaten finden Sie in der IIS-Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

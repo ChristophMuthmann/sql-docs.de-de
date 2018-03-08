@@ -2,30 +2,31 @@
 title: MSSQLSERVER_17194 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "17194"
-helpviewer_keywords:
-- 17194 (Database Engine error)
+f1_keywords: "17194"
+helpviewer_keywords: 17194 (Database Engine error)
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f33e6e16d4f62e7b39afe3b5cd9b57ce13d15a1a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "11"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2a825c018485a699a6efe62df7dfdd533dca40db
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver17194"></a>MSSQLSERVER_17194
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -49,4 +50,3 @@ Verwenden Sie zum Bestimmen einer möglichen Lösung für weitere Fehlermeldungs
 Weitere Informationen zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Server-Netzwerkkonfiguration](~/database-engine/configure-windows/server-network-configuration.md) und [Client-Netzwerkkonfiguration](~/database-engine/configure-windows/client-network-configuration.md).  
   
 ## <a name="internal-only"></a>Nur intern  
-

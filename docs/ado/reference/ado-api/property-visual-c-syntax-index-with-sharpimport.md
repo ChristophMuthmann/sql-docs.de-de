@@ -3,7 +3,7 @@ title: 'Eigenschaft (Visual C++-Syntax Index mit #import) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Property collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 76b277e4ebf6c27115b80cc7e2fda7b1a89588fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e739c4b9e29ecb2a77fbf1c0720840efae1f9f76
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>Eigenschaft (Visual C++-Syntax Index mit #import)
 ## <a name="properties"></a>Eigenschaften  
@@ -52,4 +51,3 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
   
 ## <a name="see-also"></a>Siehe auch  
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-

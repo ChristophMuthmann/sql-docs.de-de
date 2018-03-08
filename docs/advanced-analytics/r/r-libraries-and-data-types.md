@@ -3,27 +3,28 @@ title: Arbeiten mit R-Datentypen | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 16
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: c4ab2ed64eaaf970057987c7169d12e93c4380ad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>R-Bibliotheken und R-Datentypen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, die R-Bibliotheken, die enthalten sind und die Datentypen, die in den folgenden Produkten unterstützt werden:
 
@@ -73,7 +74,7 @@ Die folgende Tabelle zeigt die Änderungen der Datentypen und Werte an, wenn Dat
 |**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
 |**tinyint**|`integer`|**int**||
-|**ssNoversion**|`character`|**varchar(max)**||
+|**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Nur als Eingabeparameter und als Ausgabe zulässig|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Nur als Eingabeparameter und als Ausgabe zulässig|
 |**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
@@ -199,4 +200,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ## <a name="see-also"></a>Siehe auch
 
 [Python-Bibliotheken und Datentypen](../python/python-libraries-and-data-types.md)
-

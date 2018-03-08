@@ -2,13 +2,13 @@
 title: Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 31b9c4f95cca42e2150cab40b92308df89efbef6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 646c4b12597380221671a5894118b86a57f84dd1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services)
-  Nachdem eine Datenquellensicht (data source view; DSV) in einem Projekt oder einer Datenbank von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] definiert wurde, kann sich das Schema in einer zugrunde liegenden Datenquelle ändern. In einem Entwicklungsprojekt werden diese Änderungen nicht automatisch erkannt oder aktualisiert. Wenn Sie das Projekt auf einem Server bereitgestellt haben, werden darüber hinaus Verarbeitungsfehler auftreten, wenn Analysis Services keine Verbindung mehr mit der externen Datenquelle herstellen kann.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nachdem eine Datenquellensicht (data source view; DSV) in einem Projekt oder einer Datenbank von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] definiert wurde, kann sich das Schema in einer zugrunde liegenden Datenquelle ändern. In einem Entwicklungsprojekt werden diese Änderungen nicht automatisch erkannt oder aktualisiert. Wenn Sie das Projekt auf einem Server bereitgestellt haben, werden darüber hinaus Verarbeitungsfehler auftreten, wenn Analysis Services keine Verbindung mehr mit der externen Datenquelle herstellen kann.  
   
  Um die Datenquellensicht zu aktualisieren, sodass sie mit der externen Datenquelle übereinstimmt, können Sie die Datenquellensicht in Business Intelligence Development Studio (BIDS) aktualisieren. Beim Aktualisieren der Datenquellensicht werden Änderungen an den externen Datenquellen erkannt, auf denen die Datenquellensicht basiert, sowie eine Änderungsliste erstellt, in der Hinzufügungen oder Löschungen in Bezug auf die externe Datenquelle aufgeführt sind. Anschießend können Sie den Satz von Änderungen auf die Datenquellensicht anwenden, die eine erneute Ausrichtung mit der zugrunde liegenden Datenbank vornimmt. Beachten Sie, dass die Aktualisierung der Cubes und Dimensionen im Projekt, von denen die Datenquellensicht verwendet wird, häufig mit zusätzlicher Arbeit verbunden ist.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Hinzufügen neuer eindeutiger Einschränkungen. Wenn für eine Tabelle in der Datenquellensicht ein logischer Primärschlüssel vorhanden ist und der Tabelle in der Datenquelle ein physischer Schlüssel hinzugefügt wird, wird der logische Schlüssel entfernt und durch den physischen Schlüssel ersetzt.  
   
- Bei der Aktualisierung werden einer Datenquellensicht nie neue Tabellen hinzugefügt. Wenn Sie eine neue Tabelle hinzufügen möchten, muss dieser Schritt manuell erfolgen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)aus.  
+ Bei der Aktualisierung werden einer Datenquellensicht nie neue Tabellen hinzugefügt. Wenn Sie eine neue Tabelle hinzufügen möchten, muss dieser Schritt manuell erfolgen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_DSVrefresh"></a> Aktualisieren einer Datenquellensicht in SQL Server Data Tools  
  Um eine Datenquellensicht zu aktualisieren, doppelklicken Sie auf die Datenquellensicht im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  Dies startet den Datenquellensicht-Designer.  Klicken Sie dann klicken Sie auf die Schaltfläche Datenquellensicht aktualisieren im Designer, oder wählen Sie **aktualisieren** aus dem Menü Datenquellensicht an.  
@@ -70,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

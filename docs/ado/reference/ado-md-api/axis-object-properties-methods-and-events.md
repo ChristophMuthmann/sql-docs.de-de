@@ -3,7 +3,7 @@ title: Achse-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Axis object [ADO MD], members
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8f4c0cff7a47ff09f7ac22c00bce2567f2359118
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 540d1344d9d599e6549686dbe66b5f6a08beb090
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Achse-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -45,5 +44,4 @@ ms.lasthandoff: 09/09/2017
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Achsenobjekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)
-
+ [Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

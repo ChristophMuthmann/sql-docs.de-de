@@ -1,11 +1,13 @@
 ---
 title: 'Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS) | Microsoft-Dokumentation'
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -13,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f6e88b211fc2a053ffeadb038298a28179a94d88
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9de61b250b8605e5f47a58ff7bb77e10c54ab123
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In dieser Lektion erstellen Sie Anmeldeinformationen zum Speichern der Sicherheitsinformationen, die von SQL Server verwendet wird, um in einen Azure-Container zu schreiben und aus diesem zu lesen, den Sie in [Lektion 1: Erstellen einer Richtlinie und einer Shared Access Signature (SAS) in einem Azure-Container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)erstellt haben.  
   
 SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature für diesen Container gespeichert.  
@@ -70,10 +72,9 @@ Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu er
   
 [Lektion 3: Datenbanksicherung über URLs](../relational-databases/lesson-3-database-backup-to-url.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Anmeldeinformationen &#40;Datenbankmodul&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
-
 

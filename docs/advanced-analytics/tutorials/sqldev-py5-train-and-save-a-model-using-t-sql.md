@@ -2,31 +2,32 @@
 title: 'Schritt 5: Trainieren, und speichern Sie ein Python-Modell mithilfe des T-SQL | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 11fa031229d8bc08a9091c3fa6f85e81468d7379
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Schritt 5: Trainieren Sie, und speichern Sie ein Python-Modell mithilfe des T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms [In Datenbank-Python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -132,7 +133,7 @@ Zum Trainieren des Modells auf neue Daten zu vereinfachen, wird den Aufruf von S
 
 3. Öffnen Sie die Tabelle *nyc\_Taxi_models*. Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_enthält.
 
-    *Linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -197,7 +198,7 @@ Mithilfe von **Revoscalepy**, können Sie remote rechenkontexte erstellen, Versc
 
 3. Öffnen Sie die Tabelle *nyc_taxi_models*. Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_enthält.
 
-    *Rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 Im nächsten Schritt verwenden Sie die trainierten Modelle Vorhersagen erstellen.
 
@@ -208,4 +209,3 @@ Im nächsten Schritt verwenden Sie die trainierten Modelle Vorhersagen erstellen
 ## <a name="previous-step"></a>Vorherigen Schritt
 
 [Schritt 4: Erstellen von Datenfunktionen mit T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
-

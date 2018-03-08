@@ -3,7 +3,7 @@ title: "Recordset (ADO für Visual C++-Syntax) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - Recordset collection [ADO], ADO for Visual C++ syntax
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2a718411e6cf6b7e35712ef6b450d8057c381bac
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7769e3bd54276d32c13c0a867d29584a746acb8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (ADO für Visual C++-Syntax)
 ## <a name="methods"></a>Methoden  
@@ -128,4 +127,3 @@ WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRe
   
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

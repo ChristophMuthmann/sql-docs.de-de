@@ -3,29 +3,28 @@ title: GetXAConnection-Methode () | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerXADataSource.getXAConnection ()
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerXADataSource.getXAConnection ()
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a870a55bc7e3bd3cc5fcc79ac68ec963a0a11b30
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6fd5681b0ece55e113d03c9ee21950f1cae19f43
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getxaconnection-method-"></a>getXAConnection-Methode ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,4 +57,3 @@ public javax.sql.XAConnection getXAConnection()
  [SQLServerXADataSource-Klasse](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
   
   
-

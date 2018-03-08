@@ -3,8 +3,11 @@ title: "Primäre Ausdrücke (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 339cb237a14869c2d747d81e32bc572ba003a5e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4340836259f69bfd723b8b1482f6d81c4198442c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="primary-expressions-xquery"></a>Primärausdrücke (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Die XQuery-Primärausdrücke umfassen Literale, Variablenverweise, Kontextelementausdrücke, Konstruktoren und Funktionsaufrufe.  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 09/01/2017
  Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Eurosymbol dargestellt werden, durch den Zeichenverweis "&\#8364;".  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0, als Basis für die Analyse.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0 als Grundlage für die Analyse.  
   
 ### <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen die Verwendung von Literalen sowie Entitäts- und Zeichenverweisen.  
@@ -192,4 +194,3 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  [XML-Konstruktion &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
   
   
-

@@ -2,25 +2,26 @@
 title: "Zugriff auf Daten für DQS-Vorgänge | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "15"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf4ccaec030d6db0db4b3e83b8051e4ca97b5b2f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a03861b1706667657461ecf95196fc6cb3501d2f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Zugriff auf Daten für DQS-Vorgänge
   Sie haben die folgenden Möglichkeiten, um die Quelldaten für [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)-Vorgänge zu verwenden und die verarbeiteten Daten zu exportieren:  
@@ -55,11 +56,10 @@ ms.lasthandoff: 09/01/2017
   
 6.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf **OK** , um die Änderungen zu übernehmen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Versuchen Sie, DQS-Vorgänge auszuführen, die auf die Datenbank als Datenquelle für den DQS-Vorgang zugreifen, und exportieren Sie dann die verarbeiteten Daten in die Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   
-

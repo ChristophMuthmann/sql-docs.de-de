@@ -3,8 +3,11 @@ title: "Festlegen eines SQL Server-Alias für den SQL Server-Agent-Dienst | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssms
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - aliases [SQL Server], creating
 - SQL Server Agent, aliases
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-caps.latest.revision: 5
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8ab5a19e73661e5695bd98f3469c507f328c12a3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 34ac8dbca47438f2a551a423a72db455d41298d0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>So legen Sie einen SQL Server-Alias für den für den SQL Server-Agent-Dienst mithilfe von SQL Server Management Studio fest
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In diesem Thema wird beschrieben, wie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ein [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Alias für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent festgelegt wird, der für das Herstellen einer Verbindung mit [!INCLUDE[ssDE](../../includes/ssde_md.md)] verwendet wird. Standardmäßig stellt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienst eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] über Named Pipes mithilfe dynamischer Servernamen her, die keine zusätzliche Clientkonfiguration erfordern. Einen Serververbindungsalias müssen Sie nur konfigurieren, wenn Sie nicht den standardmäßigen Netzwerktransport verwenden oder wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] herstellen, die an einer alternativen Named Pipe lauscht.  
   
 **In diesem Thema**  
@@ -46,7 +49,7 @@ In diesem Thema wird beschrieben, wie mithilfe von [!INCLUDE[ssManStudioFull](..
   
 -   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Knoten wird nur im Objekt-Explorer angezeigt, wenn Sie die Berechtigung besitzen, ihn zu verwenden.  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Berechtigungen  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent muss zur Verwendung der Anmeldeinformationen eines Kontos konfiguriert werden, das Mitglied der festen Serverrolle **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ist, um seine Funktionen ausführen zu können. Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
@@ -69,10 +72,9 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
   
-3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents***Servername* unter **Seite auswählen**auf **Verbindung**, und  
+3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents***Servername* unter **Seite auswählen** auf **Verbindung**, und  
   
 4.  geben Sie im Feld **Aliasname für den lokalen Hostserver** den Alias des Servers ein, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent verbunden werden soll.  
   
 5.  Klicken Sie auf **OK**.  
   
-

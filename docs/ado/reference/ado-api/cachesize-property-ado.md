@@ -3,7 +3,7 @@ title: CacheSize-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: de4d82f2788ce1166e8b69cd13e8f214b6338688
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d5a36905a4de936dcac630adf97688d2b40855
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cachesize-property-ado"></a>CacheSize-Eigenschaft (ADO)
 Gibt die Anzahl der Datensätze aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, das lokal im Arbeitsspeicher zwischengespeichert werden.  
@@ -58,5 +57,4 @@ Gibt die Anzahl der Datensätze aus einem [Recordset](../../../ado/reference/ado
 ## <a name="see-also"></a>Siehe auch  
  [CacheSize (VB-Beispiel)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [Beispiel für CacheSize-Eigenschaft (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
-
+ [CacheSize-Eigenschaft – Beispiel (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

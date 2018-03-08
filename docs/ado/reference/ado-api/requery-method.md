@@ -3,7 +3,7 @@ title: Requery-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Requery method [ADO]
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a6e81cda01f894b87d2741f80735b21b23423ce6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f59d4c6cdcdb3f34be4361969da15e5af117f995
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="requery-method"></a>Requery-Methode
 Aktualisiert die Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt durch erneutes Ausführen der Abfrage auf der das Objekt basiert.  
@@ -61,4 +60,3 @@ recordset.Requery Options
  [Führen Sie abzufragen und Clear-Methoden-Beispiel (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [Führen Sie Requery und deaktivieren Sie die Methoden (VC++-Beispiel)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)
-

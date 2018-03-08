@@ -2,32 +2,33 @@
 title: "Geben Sie an, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - conditional delete tracking [SQL Server replication]
 - merge replication [SQL Server replication], conditional delete tracking
 ms.assetid: 0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 285e91369dfc5572b0da94fc110ce8b9e720b8a6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6c10021f3e512e63262439fc28f7f9693a95c952
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles"></a>Geben Sie an, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -53,8 +54,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Wenn die Quelltabelle eines Artikels bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von **delete_tracking** für beide Artikel gleich sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   
-

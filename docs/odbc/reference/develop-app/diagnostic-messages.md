@@ -3,10 +3,12 @@ title: Diagnosemeldungen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-messages"></a>Diagnosemeldungen
 Eine diagnosemeldung wird mit jeder SQLSTATE zurückgegeben. Die gleiche SQLSTATE wird häufig mit einer Anzahl verschiedener Nachrichten zurückgegeben. Beispielsweise ist SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) für die meisten Fehler in SQL-Syntax zurückgegeben. Jede Syntaxfehler ist jedoch wahrscheinlich durch eine andere Meldung beschrieben werden.  
@@ -56,4 +57,3 @@ Eine diagnosemeldung wird mit jeder SQLSTATE zurückgegeben. Die gleiche SQLSTAT
  [1] In diesem Fall wird der Treiber als der Treiber und der Datenquelle fungiert.  
   
  Klammern (**[]**) in der Nachricht enthalten sein müssen, und zeigen optionale Elemente.
-

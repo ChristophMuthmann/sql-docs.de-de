@@ -3,7 +3,7 @@ title: UpdateBatch und CancelBatch-Methoden (Beispiel) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c7dbdece0c57258d3ea957ddacfa49bf5966462d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4764a994d4ba1db8f6a848db7db2c07317e41d74
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch und CancelBatch-Methoden (Beispiel) (VB)
 Dieses Beispiel zeigt die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode in Verbindung mit der [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methode.  
@@ -134,4 +133,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)
-

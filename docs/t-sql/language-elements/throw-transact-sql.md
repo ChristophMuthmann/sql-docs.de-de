@@ -1,10 +1,13 @@
 ---
-title: THROW (Transact-SQL) | Microsoft Docs
+title: THROW (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 919d12395255bc754fe89a20659576435ab51e9e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 04e09db13babdf05ba4cfa2f213f6d6e0d58c1a5
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Löst eine Ausnahme aus und übergibt die Ausführung an einem CATCH-Block eines TRY…CATCH-Konstrukts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -47,18 +49,18 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="arguments"></a>Argumente  
  *error_number*  
- Eine Konstante oder Variable, die die Ausnahme darstellt. *Error_number* ist **Int** muss größer als oder gleich 50000 und kleiner oder gleich 2147483647 sein.  
+ Eine Konstante oder Variable, die die Ausnahme darstellt. *error_number* ist vom Datentyp **int** und muss größer oder gleich 50.000 und kleiner oder gleich 2.147.483.647 sein.  
   
  *Nachricht*  
- Eine Zeichenfolge oder Variable, die die Ausnahme beschreibt. *Nachricht* ist **nvarchar(2048)**.  
+ Eine Zeichenfolge oder Variable, die die Ausnahme beschreibt. *message* entspricht **nvarchar(2048)**.  
   
- *Status*  
- Ist eine Konstante oder Variable zwischen 0 und 255, die den Status angibt, der der Nachricht zugeordnet werden soll. *Status* ist **"tinyint"**.  
+ *state*  
+ Ist eine Konstante oder Variable zwischen 0 und 255, die den Status angibt, der der Nachricht zugeordnet werden soll. *state* entspricht **tinyint**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Auf die Anweisung vor der THROW-Anweisung muss als Anweisungsabschlusszeichen das Semikolon (;) folgen.  
   
- Wenn kein TRY…CATCH-Konstrukt verfügbar ist, wird die Sitzung beendet. Die Zeilennummer und die Prozedur, in der die Ausnahme ausgelöst wird, werden festgelegt. Der Schweregrad wird auf 16 festgelegt.  
+ Wenn kein TRY…CATCH-Konstrukt verfügbar ist, wird der Anweisungsbatch beendet. Die Zeilennummer und die Prozedur, in der die Ausnahme ausgelöst wird, werden festgelegt. Der Schweregrad wird auf 16 festgelegt.  
   
  Wenn die THROW-Anweisung ohne Parameter angegeben wird, muss sie in einem CATCH-Block enthalten sein. Dies bewirkt, dass die abgefangene Ausnahme ausgelöst wird. Jeder in einer THROW-Anweisung auftretende Fehler führt dazu, dass der Anweisungsbatch beendet wird.  
   
@@ -69,16 +71,16 @@ THROW [ { error_number | @local_variable },
   
 |RAISERROR-Anweisung|THROW-Anweisung|  
 |-------------------------|---------------------|  
-|Wenn eine *Msg_id* übergeben wird, RAISERROR, muss die ID in sys.messages definiert werden.|Die *Error_number* Parameter enthält keinen in sys.messages definiert werden.|  
-|Die *Msg_str* kann Parameter enthalten **Printf** -Formatvorlagen.|Die *Nachricht* Parameter akzeptiert keine **Printf** -Formatierung.|  
-|Die *Schweregrad* Parameter gibt den Schweregrad der Ausnahme.|Es ist keine *Schweregrad* Parameter. Der Ausnahmeschweregrad ist immer auf 16 festgelegt.|  
+|Wenn eine *msg_id* an RAISERROR übergeben wird, muss die ID in „sys.messages“ definiert werden.|Der Parameter *error_number* muss nicht in „sys.messages“ definiert werden.|  
+|Der Parameter *msg_str* kann **printf**-Formatierungen enthalten.|Der Parameter *message* akzeptiert keine **printf**-Formatierung.|  
+|Der Parameter *severity* gibt den Schweregrad der Ausnahme an.|Es ist kein *severity*-Parameter vorhanden. Der Ausnahmeschweregrad ist immer auf 16 festgelegt.|  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. Verwenden von THROW zum Auslösen einer Ausnahme  
  Im folgenden Beispiel wird gezeigt, wie die `THROW`-Anweisung zum Auslösen einer Ausnahme verwendet wird.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -93,7 +95,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. Verwenden von THROW zum erneuten Auslösen einer Ausnahme  
  Im folgenden Beispiel wird gezeigt, wie die `THROW`-Anweisung verwendet wird, um die zuletzt ausgelöste Ausnahme erneut auszulösen.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -122,9 +124,9 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. Verwenden von FORMATMESSAGE mit THROW  
- Im folgenden Beispiel wird gezeigt, wie die `FORMATMESSAGE`-Funktion mit `THROW` verwendet wird, um eine benutzerdefinierte Fehlermeldung auszulösen. Zunächst wird im Bespiel eine benutzerdefinierte Fehlermeldung mithilfe von `sp_addmessage` erstellt. Da die THROW-Anweisung keine Ersetzungsparameter im zulässt der *Nachricht* Parameter in der Weise, die RaiseError der FORMATMESSAGE-Funktion wird verwendet, um die drei von Fehlermeldung 60000 erwarteten Parameterwerte übergeben.  
+ Im folgenden Beispiel wird gezeigt, wie die `FORMATMESSAGE`-Funktion mit `THROW` verwendet wird, um eine benutzerdefinierte Fehlermeldung auszulösen. Zunächst wird im Bespiel eine benutzerdefinierte Fehlermeldung mithilfe von `sp_addmessage` erstellt. Da die THROW-Anweisung im Unterschied zu RAISERROR keine Ersetzungsparameter im *message*-Parameter zulässt, werden die drei von der Fehlermeldung 60000 erwarteten Parameterwerte von der FORMATMESSAGE-Funktion übergeben.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  
@@ -145,22 +147,21 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
- [Datenbankmodulfehlern](../../relational-databases/errors-events/database-engine-error-severities.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [Database Engine Error Severities (Schweregrad von Datenbank-Engine-Fehlern)](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40; Transact-SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [GESTARTET... END &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
-
 

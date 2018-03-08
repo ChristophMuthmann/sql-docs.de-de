@@ -2,30 +2,30 @@
 title: SQL Server, Statistiken zu Batchantworten (Objekt) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:Batch Resp Statistics
+helpviewer_keywords: SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc35f5f03d3b395fc09765fa8ac5ef8158ad8c51
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 95ca0cdfcfe13e5176e205b6168a6e5117b35c09
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Statistiken zu Batchantworten (Objekt)
-Das Leistungsobjekt **SQLServer:Statistiken zu Batchantworten** stellt Leistungsindikatoren zum Nachverfolgen von SQL Server-Batchantwortzeiten bereit.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Leistungsobjekt **SQLServer:Statistiken zu Batchantworten** stellt Leistungsindikatoren zum Nachverfolgen von SQL Server-Batchantwortzeiten bereit.
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **Statistiken zu Batchantworten** beschrieben.
 
@@ -48,7 +48,7 @@ In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **Statistik
 |**Batches >=010000ms & \<020000ms**|Die Anzahl der SQL-Batches mit einer Antwortzeit größer oder gleich 10.000 ms, aber kleiner als 20.000 ms.|
 |**Batches >=020000ms & \<050000ms**|Die Anzahl der SQL-Batches mit einer Antwortzeit größer oder gleich 20.000 ms, aber kleiner als 50.000 ms.|
 |**Batches >=050000ms & \<100000ms**|Die Anzahl der SQL-Batches mit einer Antwortzeit größer oder gleich 50.000 ms, aber kleiner als 100.000 ms.| 
-|**Batches &gt;= 100000 ms**|Die Anzahl der SQL-Batches mit einer Antwortzeit größer oder gleich 100.000 ms.| 
+|**Batches >= 100000 ms**|Die Anzahl der SQL-Batches mit einer Antwortzeit größer oder gleich 100.000 ms.| 
 
 Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
@@ -59,7 +59,6 @@ Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:
 |**Verstrichene Zeit: Anforderungen**|Die für die Anforderung verstrichene Zeit.|  
 |**Verstrichene Zeit: Gesamt(ms)**|Die für den Batch verstrichene Zeit.|  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [SQL Server, Plancache-Objekt](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [Überwachen der Ressourcenverwendung (Systemmonitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-

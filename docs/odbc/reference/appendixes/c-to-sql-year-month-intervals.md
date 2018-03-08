@@ -3,10 +3,12 @@ title: 'C, um SQL: Jahr-Monat-Intervallen | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - year-month intervals [ODBC]
 - data conversions from C to SQL types [ODBC], year-month intervals
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 880564e5883299b5f79df4f0480ab81ae8c9de1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a6b4e1992ea5f446203b125261f5572c2bd9db7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C, um SQL: Jahr-Monat-Intervallen
 Der Bezeichner für die Jahr-Monat-Intervall ODBC C-Datentypen sind:  
@@ -48,4 +49,3 @@ Der Bezeichner für die Jahr-Monat-Intervall ODBC C-Datentypen sind:
  Die Standard-Konvertierung eines Intervalls C-Typ ist für das entsprechende Jahr-Monat-Intervall SQL-Typ.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten aus dem Intervall C-Datentyp zu konvertieren und setzt voraus, dass die Größe des Datenpuffers die Größe des Intervalls C-Datentyp ist. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
-

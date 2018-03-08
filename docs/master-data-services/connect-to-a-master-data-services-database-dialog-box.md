@@ -2,9 +2,12 @@
 title: Verbindung mit einer Master Data Services-Datenbank herstellen (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.srvconnect.f1
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5c4c248076922acb7f503e208a9221ba99007cd9
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a22108e299b00eff5a39a66568babce2e0ce1664
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Verbindung mit einer Master Data Services-Datenbank herstellen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Verbindung mit einer Master Data Services-Datenbank herstellen** , um eine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank auszuwählen.  
@@ -40,15 +42,14 @@ ms.lasthandoff: 09/07/2017
 |------------------|-----------------|  
 |**SQL Server-Instanz**|Geben Sie den Namen der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Instanz an, auf der die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank gehostet werden soll. Dies kann eine Standardinstanz oder eine benannte Instanz auf einem lokalen oder Remotecomputer sein. Geben Sie die Informationen wie folgt an:<br /><br /> Einen Punkt (.) für die Verbindung mit der Standardinstanz auf dem lokalen Computer.<br /><br /> Den Servernamen oder die IP-Adresse für die Verbindung mit der Standardinstanz auf dem angegebenen lokalen oder Remotecomputer.<br /><br /> Der Servername oder die IP-Adresse und der Instanzname für die Verbindung mit der benannten Instanz auf dem angegebenen lokalen oder Remotecomputer. Geben Sie diese Informationen im Format *Servername*\\*Instanzname*an.|  
 |**Authentifizierungstyp**|Wählen Sie den Authentifizierungstyp aus, der für die Verbindung mit der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz verwendet werden soll. Welche Datenbanken in der Dropdownliste **Master Data Services-Datenbank** angezeigt werden, hängt von den Anmeldeinformationen ab, mit denen Sie die Verbindung herstellen.<br /><br /> Mögliche Authentifizierungstypen:<br /><br /> **Aktueller Benutzer – Integrierte Sicherheit**: Verwendet die integrierte Windows-Authentifizierung, um eine Verbindung mit den Anmeldeinformationen des aktuellen Windows-Benutzerkontos herzustellen. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] verwendet die Windows-Anmeldeinformationen des Benutzers, der am Computer angemeldet ist und die Anwendung geöffnet hat. Sie können keine anderen Windows-Anmeldeinformationen in der Anwendung angeben. Wenn Sie die Verbindung mit anderen Windows-Anmeldeinformationen herstellen möchten, müssen Sie sich als der betreffende Benutzer am Computer anmelden und [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]öffnen.<br /><br /> **SQL Server-Konto**: Verwendet ein SQL Server-Konto für die Verbindung. Wenn Sie diese Option auswählen, sind die Felder **Benutzername** und **Kennwort** aktiviert, und Sie müssen Anmeldeinformationen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konto auf der betreffenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angeben.|  
-|**Benutzername**|Geben Sie den Namen des Benutzerkontos an, unter dem eine Verbindung mit der angegebenen SQL Server-Instanz hergestellt wird. Das Konto muss der Rolle **sysadmin** auf der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angehören:<br /><br /> Wenn der **Authentifizierungstyp** auf **Aktueller Benutzer – Integrierte Sicherheit**festgelegt wurde, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das auf dem Computer angemeldet ist.<br /><br /> Wenn der **Authentifizierungstyp** auf **SQL Server-Konto**festgelegt wurde, ist das Feld **Benutzername** aktiviert, und Sie müssen Anmeldeinformationen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konto auf der betreffenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angeben.|  
+|**User name**|Geben Sie den Namen des Benutzerkontos an, unter dem eine Verbindung mit der angegebenen SQL Server-Instanz hergestellt wird. Das Konto muss der Rolle **sysadmin** auf der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angehören:<br /><br /> Wenn der **Authentifizierungstyp** auf **Aktueller Benutzer – Integrierte Sicherheit**festgelegt wurde, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das auf dem Computer angemeldet ist.<br /><br /> Wenn der **Authentifizierungstyp** auf **SQL Server-Konto**festgelegt wurde, ist das Feld **Benutzername** aktiviert, und Sie müssen Anmeldeinformationen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konto auf der betreffenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angeben.|  
 |**Kennwort**|Geben Sie das Kennwort ein, das dem Benutzerkonto zugeordnet ist:<br /><br /> Wenn der **Authentifizierungstyp** auf **Aktueller Benutzer – Integrierte Sicherheit**festgelegt wurde, ist das Feld **Kennwort** schreibgeschützt, und die Verbindung wird mit Anmeldeinformationen des angegebenen Windows-Benutzerkontos hergestellt.<br /><br /> Wenn der **Authentifizierungstyp** auf **SQL Server-Konto**festgelegt wurde, ist das Feld **Kennwort** aktiviert, und Sie müssen das Kennwort angeben, das dem betreffenden Benutzerkonto zugeordnet ist.|  
-|**Connect**|Stellen Sie mit den angegebenen Anmeldeinformationen eine Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz her.|  
+|**Verbinden**|Stellen Sie mit den angegebenen Anmeldeinformationen eine Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz her.|  
 |**Master Data Services-Datenbank**|Zeigt die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken in der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz auf Grundlage der folgenden Kriterien an:<br /><br /> Wenn der Benutzer Mitglied der Serverrolle **sysadmin** für diese Instanz ist, werden alle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken in dieser Instanz angezeigt.<br /><br /> Wenn der Benutzer ein Mitglied der Datenbankrolle **db_owner** für beliebige [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken auf dieser Instanz ist, werden diese [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken angezeigt.<br /><br/> Weitere Informationen zu SQL Server finden Sie unter [Rollen auf Serverebene](../relational-databases/security/authentication-access/server-level-roles.md) und [Rollen auf Datenbankebene](../relational-databases/security/authentication-access/database-level-roles.md).|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)
   
   
-

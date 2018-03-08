@@ -3,8 +3,11 @@ title: GRANT-Assemblyberechtigungen (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - assemblies [CLR integration], permissions
 - GRANT statement, assemblies
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-caps.latest.revision: 29
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dac4e6d367f159660d2743c3bee37ece397b7dd6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d163245f90ce50defdea4b7a075ef9d0fb9b5afd
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT-Assemblyberechtigungen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erteilt Berechtigungen für eine Assembly.  
   
@@ -119,4 +121,3 @@ AS *Granting_principal*
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

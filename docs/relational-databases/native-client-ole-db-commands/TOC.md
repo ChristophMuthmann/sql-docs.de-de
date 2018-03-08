@@ -1,6 +1,6 @@
 # [Befehle](commands.md)
 # [Befehlsparameter](command-parameters.md)
-# [Befehlssyntax](command-syntax.md)
+# [Befehlsyntax](command-syntax.md)
 # [Mehrere Rowsetergebnisse generierende Befehle](commands-generating-multiple-rowset-results.md)
 # [Vorbereiten von Befehlen](preparing-commands.md)
-# [Verwenden IMultipleResults, um mehrere Resultsets verarbeiten](using-imultipleresults-to-process-multiple-result-sets.md)
+# [Verwenden von 'IMultipleResults' zur Verarbeitung mehrerer Resultsets](using-imultipleresults-to-process-multiple-result-sets.md)

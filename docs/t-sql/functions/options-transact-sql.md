@@ -3,8 +3,11 @@ title: '@@OPTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - '@@OPTIONS function'
 - current SET options
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-caps.latest.revision: 34
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 9480ffeffa83650b5cf44ad51547c36d5563b13b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: 75919b6d27b2a81a9aba3575d3a9f3c54f0e0850
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;Optionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den aktuellen SET-Optionen zurück.  
   
@@ -85,4 +87,3 @@ RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)
  [Konfigurieren der Benutzeroptionen (Serverkonfigurationsoption)](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)  
   
   
-

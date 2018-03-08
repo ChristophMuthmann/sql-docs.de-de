@@ -3,26 +3,26 @@ title: SQLNativeSql (Cursorbibliothek) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLNativeSql function [ODBC], Cursor Library
+helpviewer_keywords: SQLNativeSql function [ODBC], Cursor Library
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2bd3fd6851cd3d59187a239d7d6aad2ffd269ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6062933f8f6d144b31da430788e8edd75da2eea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql (Cursor Library)
 > [!IMPORTANT]  
@@ -34,4 +34,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Die Cursorbibliothek gibt fälschlicherweise SQLSTATE 34000 (Ungültiger Cursorname) zurück, wenn der Name des Cursors ist ungültig in eine positionierte Update- oder Delete-Anweisung, die übergeben wird die *InStatementText* Argument **SQLNativeSql** . **SQLNativeSql** nicht Syntaxfehler, zurückgeben, die erst nach der Vorbereitung der Anweisung oder der Ausführung zurückgegeben werden soll.
-

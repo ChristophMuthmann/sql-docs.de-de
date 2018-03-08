@@ -1,10 +1,13 @@
 ---
-title: "Transformation für Suche | Microsoft Docs"
+title: "Transformation für Suche | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,17 +26,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 08/19/2017
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterscheiden sich in der Art des Zeichenfolgenvergleichs. Wenn die Transformation für Suche so konfiguriert ist, dass das Verweisdataset in den Cache geladen wird, bevor die Transformation für Suche ausgeführt wird, führt [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] den Suchvergleich im Cache aus. Andernfalls verwendet der Suchvorgang eine parametrisierte SQL-Anweisung, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt den Suchvergleich aus. Dies bedeutet, dass die Transformation für Suche je nach Cachetyp möglicherweise eine unterschiedliche Anzahl von Übereinstimmungen aus der gleichen Suchtabelle zurückgibt.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Einzelheiten finden Sie in den folgenden Hilfethemen:  
   
 -   [Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
@@ -148,7 +150,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="lookup-transformation-editor-general-page"></a>Transformations-Editor für Suche (Seite 'Allgemein')
   Auf der Seite **Allgemein** des Dialogfelds Transformations-Editor für Suche können Sie den Cachemodus und den Verbindungstyp auswählen sowie angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Vollcache**  
  Das Verweisdataset wird generiert und in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
   
@@ -161,7 +163,7 @@ ms.lasthandoff: 08/19/2017
  **Cacheverbindungs-Manager**  
  Die Transformation für Suche wird für die Verwendung eines Cacheverbindungs-Managers konfiguriert. Diese Option ist nur verfügbar, wenn die Option Vollcache ausgewählt ist.  
   
- **OLE DB-Verbindungs-Manager**  
+ **Teilcache**  
  Die Transformation für Suche wird für die Verwendung eines OLE DB-Verbindungs-Managers konfiguriert.  
   
  **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen**  
@@ -177,7 +179,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="lookup-transformation-editor-connection-page"></a>Transformations-Editor für Suche (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Transformations-Editor für Suche** können Sie einen Verbindungs-Manager auswählen. Wenn Sie einen OLE DB-Verbindungs-Manager auswählen, wählen Sie auch eine Abfrage, Tabelle oder Sicht zum Generieren des Verweisdatasets aus.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche** auf der Seite **Allgemein** die Optionen **Vollcache** und Cacheverbindungs-Manager auswählen.  
   
  **Allgemein**  
@@ -198,7 +200,7 @@ ms.lasthandoff: 08/19/2017
  Wählen Sie eine vorhandene Tabelle oder Sicht aus der Liste aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu**klicken.  
   
 > [!NOTE]  
->  Wenn Sie auf der Seite **Erweitert** im **Transformations-Editor** für Suche eine SQL-Anweisung angeben, wird durch diese SQL-Anweisung der hier ausgewählte Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+>  Wenn Sie auf der Seite **Erweitert** im **Transformations-Editor für Suche** eine SQL-Anweisung angeben, wird durch diese SQL-Anweisung der hier ausgewählte Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle.  
@@ -224,7 +226,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für Suche** können Sie den Join zwischen der Quell- und der Verweistabelle angeben sowie Suchspalten aus der Verweistabelle auswählen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Die Eingabespalten sind die Spalten im Datenfluss aus einer verbundenen Quelle. Die Datentypen der Eingabe- und Suchspalte müssen übereinstimmen.  
   
@@ -253,7 +255,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="lookup-transformation-editor-advanced-page"></a>Transformations-Editor für Suche (Seite 'Erweitert')
   Auf der Seite **Erweitert** des Dialogfelds **Transformations-Editor für Suche** können Sie die teilweise Zwischenspeicherung konfigurieren und die SQL-Anweisung für die Suchtransformation ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Cachegröße (32-Bit)**  
  Passen Sie die Cachegröße (in Megabytes) für 32-Bit-Computer an. Der Standardwert ist 5 Megabytes.  
   
@@ -270,7 +272,7 @@ ms.lasthandoff: 08/19/2017
  Hiermit ändern Sie die zum Generieren des Verweisdatasets verwendete SQL-Anweisung.  
   
 > [!NOTE]  
->  Durch die auf dieser Seite angegebene optionale SQL-Anweisung wird der auf der Seite **Verbindung** im **Transformations-Editor** für Suche angegebene Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+>  Durch die auf dieser Seite angegebene optionale SQL-Anweisung wird der auf der Seite **Verbindung** im **Transformations-Editor für Suche**angegebene Tabellenname überschrieben und ersetzt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
   
  **Abfrageparameter festlegen**  
  Ordnen Sie mithilfe des Dialogfelds **Abfrageparameter festlegen** die Eingabespalten den Parametern zu.  
@@ -278,11 +280,10 @@ ms.lasthandoff: 08/19/2017
 ### <a name="external-resources"></a>Externe Ressourcen  
  Blogeintrag [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transformation für Fuzzysuche](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformation für Ausdruckssuche](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

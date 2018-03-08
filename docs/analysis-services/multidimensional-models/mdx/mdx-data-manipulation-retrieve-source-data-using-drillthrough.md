@@ -2,13 +2,13 @@
 title: Verwenden von DRILLTHROUGH zum Abrufen von Quelldaten (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - queries [MDX], DRILLTHROUGH statement
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1749970e49904d8788c08f8be29cd20d189ebca3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9470c5edd50bab3622ad73f3e3404a4747b07dd7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX - Datenbearbeitung: Abrufen von Quelldaten verwenden von DRILLTHROUGH
-  Die [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)-Anweisung wird in MDX (Multidimensional Expressions) dazu verwendet, ein Rowset aus den Quelldaten für eine Cubezelle abzurufen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Die [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)-Anweisung wird in MDX (Multidimensional Expressions) dazu verwendet, ein Rowset aus den Quelldaten für eine Cubezelle abzurufen.  
   
  Damit eine **DRILLTHROUGH** -Anweisung für einen Cube ausgeführt werden kann, muss für diesen Cube eine Drillthroughaktion definiert sein. Um eine Drillthroughaktion zu definieren, klicken Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]im Cube-Designer im **Aktionsbereich** auf der Symbolleiste auf **Neue Drillthroughaktion**. In der neuen Drillthroughaktion geben Sie den Aktionsnamen, das Ziel, die Bedingung und die Spalten an, die von der **DRILLTHROUGH** -Anweisung zurückgegeben werden sollen.  
   
@@ -63,7 +63,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Bearbeiten von Daten &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

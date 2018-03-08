@@ -2,31 +2,32 @@
 title: SQL Server, Zugriffsmethoden-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dfbbfd6ac0e746fc8165186745006a1834f5aebe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
-  Das **Zugriffsmethoden** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren zum Überwachen des Zugriffs auf die logischen Daten in der Datenbank bereit. Der physische Zugriff auf die Datenbankseiten auf dem Datenträger wird mithilfe der **Puffer-Manager** -Leistungsindikatoren überwacht. Durch die Überwachung der Methoden, die für den Zugriff auf in der Datenbank gespeicherte Daten verwendet werden, können Sie leichter bestimmen, ob die Abfrageleistung verbessert werden kann, indem Sie Indizes hinzufügen oder ändern, Partitionen hinzufügen oder verschieben, Dateien oder Dateigruppen hinzufügen, Indizes defragmentieren oder Abfragen neu schreiben. Die **Zugriffsmethoden** -Leistungsindikatoren können auch zum Überwachen des Umfangs der Daten, Indizes und des freien Speicherplatzes in der Datenbank verwendet werden und dadurch einen Hinweis auf das Datenvolumen und die Fragmentierung der einzelnen Serverinstanzen geben. Eine zu starke Fragmentierung kann die Leistung beeinträchtigen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **Zugriffsmethoden**-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren zum Überwachen des Zugriffs auf die logischen Daten in der Datenbank bereit. Der physische Zugriff auf die Datenbankseiten auf dem Datenträger wird mithilfe der **Puffer-Manager** -Leistungsindikatoren überwacht. Durch die Überwachung der Methoden, die für den Zugriff auf in der Datenbank gespeicherte Daten verwendet werden, können Sie leichter bestimmen, ob die Abfrageleistung verbessert werden kann, indem Sie Indizes hinzufügen oder ändern, Partitionen hinzufügen oder verschieben, Dateien oder Dateigruppen hinzufügen, Indizes defragmentieren oder Abfragen neu schreiben. Die **Zugriffsmethoden** -Leistungsindikatoren können auch zum Überwachen des Umfangs der Daten, Indizes und des freien Speicherplatzes in der Datenbank verwendet werden und dadurch einen Hinweis auf das Datenvolumen und die Fragmentierung der einzelnen Serverinstanzen geben. Eine zu starke Fragmentierung kann die Leistung beeinträchtigen.  
   
  Einzelheiten über Datenmengen, Fragmentierung und Auslastung finden Sie in den folgenden dynamischen Verwaltungssichten:  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  Diese Tabelle enthält eine Beschreibung der Indikatoren für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zugriffsmethoden** -Leistungsindikatoren überwacht.  
   
-|Zugriffsmethoden-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Zugriffsmethoden-Leistungsindikatoren von SQL Server|Description|  
 |----------------------------------------|-----------------|  
 |**Cleanupbatches für AUs/Sekunde**|Anzahl der Batches pro Sekunde, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erfolgreich ausgeführt wurden.|  
 |**Cleanups für AUs/Sekunde**|Anzahl der Zuordnungseinheiten pro Sekunde, die durch den Hintergrundtask für den Cleanup zurückgestellter gelöschter Zuordnungseinheiten erfolgreich gelöscht wurden. Für jeden Einheitenlöschvorgang sind mehrere Batches erforderlich.|  
@@ -95,8 +96,7 @@ ms.lasthandoff: 06/22/2017
 |**Basis für Arbeitstabellen aus Cache**|Nur zur internen Verwendung.|  
 |**Quote der Arbeitstabellen aus Cache**|Prozentsatz der erstellten Arbeitstabellen, bei denen die ersten zwei Seiten der Arbeitstabelle nicht zugeordnet wurden, sondern im Arbeitstabellencache verfügbar waren. (Wenn eine Arbeitstabelle gelöscht wird, kann die Zuordnung von zwei Seiten beibehalten werden, die an den Arbeitstabellencache zurückgegeben werden. Hierdurch wird die Leistung erhöht.)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

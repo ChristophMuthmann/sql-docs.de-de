@@ -2,9 +2,12 @@
 title: Registrierte Server (F1-Hilfe) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fec25c98a971d3f38d4113042d50a25469e56777
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: df1eb91bc84f39d0e2277731d5329d79b8c43e78
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="registered-servers-f1-help"></a>Registrierte Server (F1-Hilfe)
-  Dieser Abschnitt enthält die F1-Hilfe zur Komponente Registrierte Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Er beschreibt die verschiedenen Optionen.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dieser Abschnitt enthält die F1-Hilfe zur Komponente Registrierte Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Er beschreibt die verschiedenen Optionen.
   
  Informationen zu registrierten Servern und Links zu den mit ihnen möglichen Aktionen finden Sie im Thema [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md) . 
  
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Reporting Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe wie **Reporting Services**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Servertyp**  
  Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich **Registrierte Server** angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
@@ -85,7 +88,7 @@ ms.lasthandoff: 09/01/2017
   
  Um auf diese Seite zuzugreifen, klicken Sie auf der Symbolleiste für Registrierte Server auf **Analysis Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe (z.B. **Analysis Services**), zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Servertyp**  
  Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich „Registrierte Server“ angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 09/01/2017
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Integration Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Servertyp**  
  Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbankmodul**, **Analysis-Server**, **Analysis-Server** **SQL Server Compact** **Registrierte Server** auf **Integration Services** .  
   
@@ -151,4 +154,3 @@ ms.lasthandoff: 09/01/2017
  
  
   
-

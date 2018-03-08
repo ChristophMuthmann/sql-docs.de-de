@@ -3,7 +3,7 @@ title: 'Senden die Updates: UpdateBatch-Methode | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: 3
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 061435976bb08c644705e80c0d1d605ee944f304
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6cad1bfd63ffafd32d0621f6142717cd7175ccd0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Senden die Updates: UpdateBatch-Methode
 Im folgende Code wird ein Recordset im Batchmodus durch Festlegen der LockType-Eigenschaft AdLockBatchOptimistic und CursorLocation auf AdUseClient geöffnet. Es fügt zwei neue Datensätze und ändert den Wert eines Felds in einem vorhandenen Datensatz, und speichern die ursprünglichen Werte, und ruft dann UpdateBatch um, dass die Änderungen werden wieder an die Datenquelle zu senden.  
@@ -64,4 +63,3 @@ Im folgende Code wird ein Recordset im Batchmodus durch Festlegen der LockType-E
   
 ## <a name="see-also"></a>Siehe auch  
  [Batchmodus](../../../ado/guide/data/batch-mode.md)
-

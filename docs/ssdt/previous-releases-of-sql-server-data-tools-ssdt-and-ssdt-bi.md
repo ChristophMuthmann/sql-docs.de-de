@@ -1,29 +1,31 @@
 ---
 title: "Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 09/28/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-caps.latest.revision: 23
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 08c7c2eddb0d5624058d301241406df54360fbdb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: dcc05f9e7bb009bb164f3577b7a82ba7b1c9b215
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) stellt Projektvorlagen und Entwurfsoberflächen zum Erstellen von SQL Server-Inhaltstypen bereit: relationale Datenbanken, Analysis Services-Modelle, Reporting Services-Berichte und Integration Services-Pakete.  
   
 SSDT basiert auf einer Visual Studio-Shell und wird zusammen mit SQL Server veröffentlicht. Neue Versionen von SSDT umfassen die neuesten Funktionen von SQL Server. Ältere Versionen enthalten die Vorlagen und die Entwurfsumgebung, die für diese Version aktuell waren.  
@@ -37,12 +39,26 @@ SSDT ist abwärtskompatibel, d.h., Sie können jederzeit [das neueste SSDT](down
 
 Die letzten Downloads werden für den unwahrscheinlichen Fall bereitgestellt, dass Sie mit der [aktuellen Version](download-sql-server-data-tools-ssdt.md) Probleme haben. 
 
-|Release| Visual Studio 2015|Visual Studio 2013|
-|:---|:---|:---|
-|17.2|[SSDT für VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* n/v|
-|17.1|[SSDT für VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* n/v|
-|17.0|[SSDT für VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/v|
-|16.5|[SSDT für VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT für VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
+|Release| Visual Studio 2017|
+|:---|:---|
+|15.5.1|[SSDT für VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
+<br>
+
+
+|Release| Visual Studio 2015|
+|:---|:---|
+|17.3|[SSDT für VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
+|17.2|[SSDT für VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| 
+|17.1|[SSDT für VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
+|17.0|[SSDT für VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
+|16.5|[SSDT für VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+<br>
+
+|Release| Visual Studio 2013|
+|:---|:---|
+|16.5|[SSDT für VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+<br>
+
 
 \* SSDT unterstützt die letzten beiden Versionen von Visual Studio. SSDT für VS2013 wird mit dem Release von Visual Studio 2017 nicht mehr aktualisiert. Weitere Informationen finden Sie im Abschnitt *Häufig gestellte Fragen* dieses [Blogbeitrags des SSDT-Teams](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
@@ -76,8 +92,7 @@ Business Intelligence Development Studio (BIDS) wird über SQL Server-Setup inst
   
 Für SQL Server 2012 oder 2014 können Sie entweder **SSDT-BI für Visual Studio 2012** oder **SSDT-BI foder Visual Studio 2013**. Der einzige Unterschied zwischen den beiden besteht in der Visual Studio-Version.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL Tools and Utilities (Tools und Hilfsprogramme für SQL)](../tools/overview-sql-tools.md)
-

@@ -1,10 +1,13 @@
 ---
-title: (Platzhalterzeichen - nicht zu suchende(s) Zeichen) (Transact-SQL) | Microsoft Docs
+title: '[^] (Platzhalterzeichen - nicht zu suchende(s) Zeichen) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,19 +26,18 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[^] (wildcard - character(s) not to match)'
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96749cb88e4d98b112de2ce1eb9bff4c7e156e42
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cef479bc6f0368a2d08a99265551cf7860b677e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="wildcard---characters-not-to-match-transact-sql"></a>(Platzhalterzeichen - nicht zu suchende(s) Zeichen) (Transact-SQL)
+# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\](Platzhalterzeichen - nicht zu suchende(s) Zeichen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Entspricht einem einzelnen Zeichen, das nicht dem Bereich oder der Menge angehört, der bzw. die zwischen den eckigen Klammern angegeben ist.  
@@ -53,11 +55,10 @@ ORDER BY FirstName;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [WIE &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [% &#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; (Platzhalterzeichen – zu suchende(s) Zeichen)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [_ (Platzhalterzeichen-einzelnes zu suchendes Zeichen)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+  [&#91; &#93; &#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [\_&#40; Platzhalterzeichen - einzelnes zu suchendes Zeichen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   
-

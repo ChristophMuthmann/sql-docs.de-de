@@ -2,13 +2,13 @@
 title: "Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f690c0226a15794d36b70a72d679972a5f34918
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX - Datenmanipulation: Grundlegendes zur Übergabe bestellen und Lösungsreihenfolge
-  Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
   
  Auf einen Berechnungsdurchlauf kann durch eine Ordnungsposition verwiesen werden, die Berechnungsdurchlaufnummer genannt wird. Die Anzahl an Berechnungsdurchläufen, die für eine vollständige Berechnung aller Zellen eines Cubes erforderlich sind, wird als Berechnungsdurchlauftiefe des Cubes bezeichnet.  
   
@@ -156,7 +156,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- In diesem Beispiel für eine kombinierte MDX-Abfrage weist `Profit Margin` die höchste Lösungsreihenfolge auf und hat daher bei der Interaktion zweier Ausdrücke Vorrang. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wertet die betreffende Zelle mit der `Profit Margin` -Formel aus. Das Ergebnis dieser geschachtelten Berechnung ist in der folgenden Tabelle dargestellt.  
+ In diesem Beispiel für eine kombinierte MDX-Abfrage weist `Profit Margin` die höchste Lösungsreihenfolge auf und hat daher bei der Interaktion zweier Ausdrücke Vorrang. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wertet die betreffende Zelle mit der `Profit Margin`-Formel aus. Das Ergebnis dieser geschachtelten Berechnung ist in der folgenden Tabelle dargestellt.  
   
 ||Internet Sales Amount|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -220,10 +220,9 @@ FROM [Adventure Works]
  Die Lösungsreihenfolge kann ein sehr komplexes Problem darstellen, besonders in Cubes mit einer hohen Anzahl von Dimensionen, die berechnete Elemente, benutzerdefinierte Rollupformeln oder berechnete Zellen beinhalten. Wenn [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eine MDX-Abfrage auswertet, berücksichtigt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Werte der Lösungsreihenfolge für alle Teile in einem bestimmten Durchlauf, einschließlich der Dimensionen des in der MDX-Abfrage angegebenen Cubes.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40; MDX &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40; MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [CREATE MEMBER-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Bearbeiten von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Erstellen Sie MEMBER-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Bearbeiten von Daten &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

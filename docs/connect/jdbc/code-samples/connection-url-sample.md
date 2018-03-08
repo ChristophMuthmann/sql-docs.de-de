@@ -3,23 +3,24 @@ title: Verbindungs-URL-Beispiel | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: faf1226122383aeae01bf70d5fb6792ffc3b3969
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bbb062925c0c0ee1c14c0f2190101c8967d0c65
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connection-url-sample"></a>Verbindungs-URL - Beispiel
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

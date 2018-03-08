@@ -2,9 +2,12 @@
 title: "Veröffentlichen von Daten und Datenbankobjekten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -41,29 +44,30 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
-  Wenn Sie eine Veröffentlichung erstellen möchten, können Sie die Tabellen und anderen Datenbankobjekte auswählen, die Sie veröffentlichen möchten. Mit einer Replikation können die folgenden Datenbankobjekte veröffentlicht werden:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Wenn Sie eine Veröffentlichung erstellen möchten, können Sie die Tabellen und anderen Datenbankobjekte auswählen, die Sie veröffentlichen möchten. Mit einer Replikation können die folgenden Datenbankobjekte veröffentlicht werden:  
   
 |Datenbankobjekt|Momentaufnahmereplikation und Transaktionsreplikation|Mergereplikation|  
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tabellen|X|X|  
 |Partitionierte Tabellen|X|X|  
 |Gespeicherte Prozeduren – Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|X|  
-|Gespeicherte Prozeduren – Ausführung ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|Nein|  
+|Gespeicherte Prozeduren – Ausführung ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|nein|  
 |Sichten|X|X|  
 |Indizierte Sichten|X|X|  
-|Indizierte Sichten als Tabellen|X|Nein|  
+|Indizierte Sichten als Tabellen|X|nein|  
 |Benutzerdefinierte Typen (CLR)|X|X|  
 |Benutzerdefinierte Funktionen ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|X|  
 |Aliasdatentypen|X|X|  
@@ -121,9 +125,9 @@ ms.lasthandoff: 06/22/2017
   
  Beim Veröffentlichen einer Tabelle für die Replikation können Sie angeben, welche Schemaobjekte auf den Abonnenten kopiert werden sollen, z. B. deklarierte referenzielle Integrität (PRIMARY KEY-Einschränkungen, Referenzeinschränkungen, eindeutige Einschränkungen), Indizes, Benutzer-DML-Trigger (DDL-Trigger können nicht repliziert werden), erweiterte Eigenschaften und Sortierungen. Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert.  
   
- Weitere Informationen zum Angeben von Schemaoptionen finden Sie unter [Angeben von Schemaoptionen](../../../relational-databases/replication/publish/specify-schema-options.md) oder <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
+ Informationen zum Angeben von Schemaoptionen finden Sie unter [Angeben von Schemaoptionen](../../../relational-databases/replication/publish/specify-schema-options.md) oder <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### <a name="partitioned-tables-and-indexes"></a>Partitionierte Tabellen und Indizes  
+### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
  Die Replikation unterstützt das Veröffentlichen von Tabellen und Indizes. Das Maß an Unterstützung hängt vom verwendeten Replikationstyp und den Optionen ab, die für die Veröffentlichung und die mit den partitionierten Tabellen verbundenen Artikel angegeben werden. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Veröffentlichen gespeicherter Prozeduren  
@@ -201,7 +205,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
- Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften - \<***Article***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften\<***Artikel***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Veröffentlichen von Daten auf Abonnenten, auf denen eine frühere Version von SQL Server ausgeführt wird  
   
@@ -251,9 +255,9 @@ ms.lasthandoff: 06/22/2017
   
      Weitere Informationen zu diesen Parametern finden Sie unter [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   Die Transaktionsreplikation und die ungefilterte Mergereplikation unterstützen das Veröffentlichen einer Tabelle in mehreren Veröffentlichungen und das anschließende Abonnieren innerhalb einer einzelnen Tabelle in der Abonnementdatenbank (üblicherweise als Rollupszenario bezeichnet). Rollup wird häufig zum Aggregieren von Teilsätzen von Daten aus mehreren Speicherorten in einer Tabelle auf einem zentralen Abonnenten verwendet. Gefilterte Mergeveröffentlichungen unterstützen das Szenario mit einem zentralen Abonnenten nicht. Bei der Mergereplikation wird das Rollup typischerweise über eine einzelne Veröffentlichung mit parametrisierten Zeilenfiltern implementiert. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Die Transaktionsreplikation und die ungefilterte Mergereplikation unterstützen das Veröffentlichen einer Tabelle in mehreren Veröffentlichungen und das anschließende Abonnieren innerhalb einer einzelnen Tabelle in der Abonnementdatenbank (üblicherweise als Rollupszenario bezeichnet). Rollup wird häufig zum Aggregieren von Teilsätzen von Daten aus mehreren Speicherorten in einer Tabelle auf einem zentralen Abonnenten verwendet. Gefilterte Mergeveröffentlichungen unterstützen das Szenario mit einem zentralen Abonnenten nicht. Bei der Mergereplikation wird das Rollup typischerweise über eine einzelne Veröffentlichung mit parametrisierten Zeilenfiltern implementiert. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Verteilung konfigurieren](../../../relational-databases/replication/configure-distribution.md)   
  [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)   
@@ -262,4 +266,3 @@ ms.lasthandoff: 06/22/2017
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

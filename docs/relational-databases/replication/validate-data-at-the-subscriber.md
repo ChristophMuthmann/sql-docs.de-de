@@ -2,11 +2,13 @@
 title: "Überprüfen von Daten auf dem Abonnenten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - validating data
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 43528ddbe29580c30ca15d0588b5bd6d24d66a48
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fcd9d7f9e729a1d2ebb7cc876ce3807aa839f079
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-data-at-the-subscriber"></a>Überprüfen der Daten am Abonnenten
-  In diesem Thema wird beschrieben, wie Daten beim Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) überprüft werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Daten beim Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (Replication Management Objects, RMO) überprüft werden.  
   
  Der Prozess der Datenüberprüfung besteht aus drei Teilen:  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 07/31/2017
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 07/31/2017
   
 -   In den Überprüfungsergebnissen wird angezeigt, ob die Überprüfung erfolgreich war oder fehlgeschlagen ist, es wird jedoch nicht angegeben, in welchen Zeilen die Überprüfung beim Auftreten eines Fehlers fehlgeschlagen ist. Verwenden Sie das Hilfsprogramm [tablediff Utility](../../tools/tablediff-utility.md), um die Daten auf dem Verleger und auf dem Abonnenten zu vergleichen. Informationen zum Verwenden dieses Hilfsprogramms finden Sie unter [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>So überprüfen Sie Daten für Abonnements einer Transaktionsveröffentlichung (Management Studio)  
   

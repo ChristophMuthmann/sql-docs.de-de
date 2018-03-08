@@ -2,30 +2,32 @@
 title: SQL Server, Puffer-Manager-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Buffer Manager object
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 492c60be544246d0f94e5a8eba4198bca2815e95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Puffer-Manager-Objekt
-  Das **Puffer-Manager** -Objekt stellt Leistungsindikatoren bereit, mit denen die Verwendung folgender Ressourcen durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **Puffer-Manager**-Objekt stellt Leistungsindikatoren bereit, mit denen die Verwendung folgender Ressourcen durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann:  
   
 -   Arbeitsspeicher zum Speichern von Datenseiten.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 06/22/2017
 |**Zielseiten**|Die ideale Anzahl von Seiten im Pufferpool.|
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServer: Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, Plancache-Objekt](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

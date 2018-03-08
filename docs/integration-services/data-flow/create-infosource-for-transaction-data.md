@@ -1,26 +1,28 @@
 ---
-title: "InfoSource für Transaktionsdaten erstellen | Microsoft Docs"
+title: "InfoSource für Transaktionsdaten erstellen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 140508a2b52ad86ddb7916e3ed0d5350d26aab73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource-for-transaction-data"></a>InfoSource für Transaktionsdaten erstellen
   Verwenden Sie das Dialogfeld **InfoSource für Transaktionsdaten erstellen** , um eine neue InfoSource für Transaktionsdaten im SAP NetWeaver BW-System zu erstellen.  
@@ -86,7 +88,7 @@ ms.lasthandoff: 08/03/2017
  **Typ**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |UNI|Einheiten|  
@@ -96,9 +98,8 @@ ms.lasthandoff: 08/03/2017
  **Einheitenfeld**  
  Geben Sie die Einheiten an, die vom InfoObject verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

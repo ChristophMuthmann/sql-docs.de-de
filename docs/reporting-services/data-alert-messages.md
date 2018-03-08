@@ -1,27 +1,27 @@
 ---
-title: Datenwarnmeldungen | Microsoft Docs
+title: Datenwarnmeldungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8e12172ffc24d67a0ad27f07be3c08b17e9c660f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-alert-messages"></a>Datenwarnmeldungen
 
@@ -29,23 +29,23 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services--datenwarnungen übermitteln zwei Typen von datenwarnmeldungen per e-Mail: Meldungen mit datenwarnungsergebnissen und Meldungen mit fehlerbeschreibungen. Durch Meldungen mit Ergebnissen werden alle Empfänger über Änderungen der Berichtsdaten informiert, die von allgemeinem Interesse und wichtig für Geschäftsentscheidungen sind. Tritt aus einem unbestimmten Grund ein Fehler auf, und sind die Ergebnisse nicht verfügbar, wird stattdessen die Fehlermeldung gesendet.
+In SQL Server Reporting Services werden zwei Typen von Datenwarnmeldungen per E-Mail übermittelt: Meldungen mit Datenwarnungsergebnissen und Meldungen mit Fehlerbeschreibungen. Durch Meldungen mit Ergebnissen werden alle Empfänger über Änderungen der Berichtsdaten informiert, die von allgemeinem Interesse und wichtig für Geschäftsentscheidungen sind. Tritt aus einem unbestimmten Grund ein Fehler auf, und sind die Ergebnisse nicht verfügbar, wird stattdessen die Fehlermeldung gesendet.
 
 Der Eigentümer der Datenwarnungsdefinition kann auch Informationen zur Datenwarnungsinstanz im Datenwarnungs-Manager anzeigen. Weitere Informationen finden Sie unter [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
 > [!NOTE]
-> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
   
 ##  <a name="DataAlertMessages"></a> Datenwarnmeldungen  
  Die folgenden Bilder zeigen eine Datenwarnmeldung mit Ergebnissen und eine Warnmeldung mit einer Fehlerbeschreibung.  
   
  **Ergebnismeldung**  
   
- ![Daten-Warnungs-e-Mail-Nachricht mit Ergebnissen](../reporting-services/media/rs-alertmessageresults.gif "Daten-Warnungs-e-Mail-Nachricht mit Ergebnissen")  
+ ![Datenwarnungs-E-Mail mit Ergebnissen](../reporting-services/media/rs-alertmessageresults.gif "Data alert e-mail message with results")  
   
  **Fehlermeldung**  
   
- ![Datenwarnmeldung mit Fehlermeldung](../reporting-services/media/rs-alertmessageerrror.gif "datenwarnmeldung mit Fehlermeldung")  
+ ![Datenwarnmeldung mit Fehlermeldung](../reporting-services/media/rs-alertmessageerrror.gif "Data alert message with error message")  
   
  Die Meldungen beinhalten die gleichen Informationstypen.  
   
@@ -69,14 +69,13 @@ Der Eigentümer der Datenwarnungsdefinition kann auch Informationen zur Datenwar
 ##  <a name="HowTo"></a> Verwandte Aufgaben  
  Dieser Abschnitt listet Prozeduren zum Erstellen und Bearbeiten der Datenwarnungsdefinitionen auf, die viele der in den Datenwarnmeldungen angezeigten Informationen bieten.  
   
--   [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Create a Data Alert in Data Alert Designer (Erstellen einer Datenwarnung im Datenwarnungs-Designer)](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Edit a Data Alert in Alert Designer (Bearbeiten einer Datenwarnung im Warnungs-Designer)](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

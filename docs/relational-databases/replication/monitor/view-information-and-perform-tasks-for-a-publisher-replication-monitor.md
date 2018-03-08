@@ -2,11 +2,13 @@
 title: "Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger (Replikationsmonitor) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - viewing Publisher information
 - Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4d592cc39ec10a3f56275e177edd0b3e12b8b5d9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ea8e2cca0de14fff51a284f2cc4c119c0d7bb8ff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger (Replikationsmonitor)
-  Der Replikationsmonitor bietet folgende Registerkarten, auf denen Informationen zu dem ausgewählten Verleger angezeigt werden:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Replikationsmonitor bietet folgende Registerkarten, auf denen Informationen zu dem ausgewählten Verleger angezeigt werden:  
   
 -   **Veröffentlichungen**  
   
@@ -70,8 +72,8 @@ ms.lasthandoff: 06/22/2017
   
     -   Um einen Agent zu beenden, der ausgeführt wird, klicken Sie mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agent beenden**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Überwachen (Replikation)](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

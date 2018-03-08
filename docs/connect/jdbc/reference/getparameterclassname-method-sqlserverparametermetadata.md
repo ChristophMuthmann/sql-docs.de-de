@@ -3,29 +3,28 @@ title: GetParameterClassName-Methode (SQLServerParameterMetaData) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerParameterMetaData.getParameterClassName
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerParameterMetaData.getParameterClassName
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30c1e386d1bb7067fb4454115ec71fa6a88d869
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 53d055fe1ddfc16e688c9277fc643d95a282b604
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName-Methode (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,4 +58,3 @@ public java.lang.String getParameterClassName(int param)
  [SQLServerParameterMetaData-Klasse](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
   
   
-

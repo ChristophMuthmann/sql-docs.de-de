@@ -1,34 +1,31 @@
 ---
-title: WindowsServiceIdentityConfigured-Eigenschaft | Microsoft Docs
+title: WindowsServiceIdentityConfigured-Eigenschaft | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- WindowsServiceIdentityConfigured
-apilocation:
-- reportingservices.mof
+apiname: WindowsServiceIdentityConfigured
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- WindowsServiceIdentityConfigured property
+helpviewer_keywords: WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-caps.latest.revision: 17
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "17"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd668d2e660d41d2c2881a5500696a988b9a40b8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 40fa286153ba9164f85bc948dc261b0249fbdc4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="windowsserviceidentityconfigured-property"></a>WindowsServiceIdentityConfigured-Eigenschaft
   Gibt die Identität zurück, unter der der Report Server-Windows-Dienst entsprechend seiner letzten Konfiguration ausgeführt wird. Schreibgeschützt.  
@@ -52,8 +49,7 @@ public string WindowsServiceIdentityConfigured;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

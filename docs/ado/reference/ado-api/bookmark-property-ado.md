@@ -3,7 +3,7 @@ title: Bookmark-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0e98d0519652cc5d28723e635672815629ce1621
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bookmark-property-ado"></a>Bookmark-Eigenschaft (ADO)
 Gibt ein Lesezeichen, die eindeutig für den aktuellen Datensatz in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, oder legt den aktuellen Datensatz einer **Recordset** -Objekt, das durch ein gültiges Lesezeichen identifizierten Datensatz.  
@@ -54,5 +53,4 @@ Gibt ein Lesezeichen, die eindeutig für den aktuellen Datensatz in einer [Recor
 ## <a name="see-also"></a>Siehe auch  
  [BOF, EOF und Lesezeichen-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF, EOF und Lesezeichen Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)

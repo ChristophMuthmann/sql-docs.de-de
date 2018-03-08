@@ -3,10 +3,12 @@ title: "DiagnoseDatensätze | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df08adfc15a2ad80bac007a65ce4ed9304194f20
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 598f047d1ae18e2c37587df270001b49d1b15831
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-records"></a>DiagnoseDatensätze
 Jede Umgebung zugeordnet, Verbindung, der Anweisung und Deskriptorhandles sind *DiagnoseDatensätze*. Dieser Datensatz enthält Diagnoseinformationen über die letzte Funktion aufgerufen, die ein bestimmtes Handle verwendet. Nur, wenn eine andere Funktion mit diesem Handle aufgerufen wird, werden die Datensätze ersetzt. Es gibt keine Beschränkung der Anzahl der DiagnoseDatensätze, die jeweils gespeichert werden können.  
@@ -42,4 +43,3 @@ Jede Umgebung zugeordnet, Verbindung, der Anweisung und Deskriptorhandles sind *
 -   [Headerdatensatz](../../../odbc/reference/develop-app/header-record.md)  
   
 -   [Statusdatensätze](../../../odbc/reference/develop-app/status-records.md)
-

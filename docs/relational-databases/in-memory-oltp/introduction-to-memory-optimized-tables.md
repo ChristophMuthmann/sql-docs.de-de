@@ -2,28 +2,30 @@
 title: "Einführung in speicheroptimierte Tabellen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: 22
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
-ms.openlocfilehash: d657ed0f95a167c8589551078302fac9aa8d462f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Speicheroptimierte Tabellen werden mit [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) erstellt.  
   
@@ -64,7 +66,7 @@ Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilie
 |Funktion|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Speicheroptimierte Tabelle|ja|ja|Nein*|  
-|Speicheroptimierter Tabellentyp|ja|ja|Nein|  
+|Speicheroptimierter Tabellentyp|ja|ja|nein|  
 |Systemintern kompilierte gespeicherte Prozedur|Das Schachteln von systemintern kompilierten gespeicherten Prozeduren wird jetzt unterstützt. Sie können in gespeicherten Prozeduren die EXECUTE-Syntax verwenden, solange die Prozedur, auf die verwiesen wird, ebenfalls systemintern kompiliert wird.|ja|Nein*|  
   
  *Sie können auf eine speicheroptimierte Tabelle oder eine systemintern kompilierte gespeicherte Prozedur nicht über die Kontextverbindung (die Verbindung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn ein CLR-Modul ausgeführt wird) zugreifen. Sie können jedoch eine andere Verbindung erstellen und öffnen, über die Sie auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen können.  
@@ -108,9 +110,8 @@ EXECUTE AS CALLER ist mit einer geringen Leistungseinbuße (ungefähr 10 %) verb
 
 Eine kurze Erläuterung typischer Szenarien, in denen die Leistung mit [!INCLUDE[hek_1](../../includes/hek-1-md.md)] verbessert werden kann, finden Sie unter [In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

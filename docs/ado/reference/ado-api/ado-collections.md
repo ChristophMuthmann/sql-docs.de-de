@@ -3,7 +3,7 @@ title: ADO-Auflistungen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0894c9d4e69000ad274b4b8a31b41ff0a2474900
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 633ae5b4a31c6b305aada1b6b3984b85caa8a1da
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-collections"></a>ADO-Auflistungen
 Werden die Beziehungen zwischen diesen Auflistungen und ADO-Objekten dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -36,7 +35,7 @@ Werden die Beziehungen zwischen diesen Auflistungen und ADO-Objekten dargestellt
 |||  
 |-|-|  
 |[Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)|Enthält alle der **Fehler** in Reaktion auf einen einzelnen anbieterbezogenen Fehler erstellten Objekte.|  
-|[Felder](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle der **Feld** Objekte von einem **Recordset** Objekt.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle der **Feld** Objekte von einem **Recordset** Objekt.|  
 |[Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md)|Enthält alle der **Parameter** Objekte von einem **Befehl** Objekt.|  
 |[Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md)|Enthält alle der **Eigenschaft** Objekte für eine bestimmte Instanz eines Objekts.|  
   
@@ -49,5 +48,4 @@ Werden die Beziehungen zwischen diesen Auflistungen und ADO-Objekten dargestellt
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
-
+ [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)

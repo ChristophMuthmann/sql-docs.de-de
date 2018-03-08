@@ -1,10 +1,13 @@
 ---
-title: REVERSE (SSIS-Ausdruck) | Microsoft Docs
+title: REVERSE (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb7529a91258c78d9bc8c752c775a5544975e7d0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f34128df8045d69fd6e783dd3ec1a91170ed5beb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS-Ausdruck)
   Gibt einen Zeichenausdruck in umgekehrter Reihenfolge zurück.  
@@ -42,7 +44,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das *character_expression* -Argument muss den Datentyp „DT_WSTR“ aufweisen.  
   
  REVERSE gibt ein NULL-Ergebnis zurück, wenn *character_expression* NULL ist.  
@@ -60,8 +62,7 @@ REVERSE("Mountain Bike")
 REVERSE(@Name)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

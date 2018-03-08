@@ -3,7 +3,7 @@ title: ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_UPDATECRITERIA_ENUM [ADO]
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cf0c00fb7f353171686f57405879b3beb544aa1d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 730a97c27d4aa57632ecf14b0f5cbddffb689d70
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Gibt an, welche Felder verwendet werden können, zum Erkennen von Konflikten während einer optimistischen Aktualisierung einer Zeile der Datenquelle mit einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -51,4 +50,3 @@ Gibt an, welche Felder verwendet werden können, zum Erkennen von Konflikten wä
 |AdoEnums.AdcPropUpdateCriteria.KEY|  
 |AdoEnums.AdcPropUpdateCriteria.TIMESTAMP|  
 |AdoEnums.AdcPropUpdateCriteria.UPDCOLS|
-

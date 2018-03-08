@@ -1,27 +1,27 @@
 ---
-title: "Vorbereiten von Excel-Daten für mobile Reporting Services-Berichte | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services
   
@@ -83,7 +83,7 @@ Datumsfelder sind für viele mobile Berichte unerlässlich, weswegen Sie sichers
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-Nachdem Sie die Zellen konvertiert haben, müssen Sie sie als Datumsangaben formatieren, indem Sie sie oder die gesamte Spalte auswählen > **Kontext**menü > **Zellen formatieren** > **Datum** aus der Liste **Kategorie**. Sie können ebenfalls den Textkonvertierungs-Assistenten von Excel verwenden, um Textzellen in ordnungsgemäß formatierte Datumsangaben zu konvertieren.  
+Nachdem Sie die Zellen konvertiert haben, müssen Sie sie als Datumsangaben formatieren, indem Sie sie oder die gesamte Spalte auswählen > **Kontext**-Menü > **Zellen formatieren** > **Datum** aus der Liste **Kategorie**. Sie können ebenfalls den Textkonvertierungs-Assistenten von Excel verwenden, um Textzellen in ordnungsgemäß formatierte Datumsangaben zu konvertieren.  
   
 ## <a name="unsupported"></a>Nicht unterstützt  
   
@@ -92,7 +92,7 @@ Arbeitsblattdaten können beim Importieren unvorhersehbare Ergebnisse hervorrufe
 Benutzerdefinierte Objekte in Excel-Arbeitsblättern, einschließlich PivotTables, Visualisierungen und Bilder, werden nicht in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]importiert.  
   
 ### <a name="see-also"></a>Siehe auch  
-- [Vorbereiten von Daten für mobile Berichte von Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [Vorbereiten von Daten für mobile Reporting Services-Berichte](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPad-App](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI für iOS)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPhone-App](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI für iOS)  
@@ -103,5 +103,4 @@ Benutzerdefinierte Objekte in Excel-Arbeitsblättern, einschließlich PivotTable
   
   
   
-
 

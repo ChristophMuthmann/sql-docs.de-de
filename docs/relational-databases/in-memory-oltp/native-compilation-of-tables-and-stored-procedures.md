@@ -2,28 +2,30 @@
 title: Systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f9cbe1802a5a4a353ad4af72abcb092187aa8e0a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
-ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Mit In-Memory OLTP wird das Konzept der systeminternen Kompilierung eingeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann gespeicherte Prozeduren, die auf speicheroptimierte Tabellen zugreifen, nativ kompilieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann außerdem speicheroptimierte Tabellen nativ kompilieren. Die systeminterne Kompilierung ermöglicht einen schnelleren Datenzugriff und eine effizientere Abfrageausführung als interpretiertes (herkömmliches) [!INCLUDE[tsql](../../includes/tsql-md.md)]. Beim systeminternen Kompilieren von Tabellen und gespeicherten Prozeduren werden DLLs erzeugt.
 
 Die systeminterne Kompilierung von speicheroptimierten Tabellentypen wird ebenfalls unterstützt. Weitere Informationen finden Sie unter [Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
@@ -39,7 +41,7 @@ In-Memory OLTP kompiliert speicheroptimierte Tabellen bei deren Erstellung sowie
 
 Die folgende Abfrage zeigt alle DLLs für Tabellen und gespeicherte Prozeduren, die aktuell in den Arbeitsspeicher des Servers geladen sind:
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -63,7 +65,7 @@ Beim Erstellen einer speicheroptimierten Tabelle mithilfe der **CREATE TABLE** -
 
 Betrachten Sie das folgende Beispielskript, in dem eine Datenbank und eine speicheroptimierte Tabelle erstellt werden:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -156,7 +158,7 @@ Weitere Informationen zu systemintern kompilierten gespeicherten Prozeduren find
 
 Betrachten Sie das folgende Beispiel für eine gespeicherte Prozedur, die Zeilen in die Tabelle t1 aus dem vorherigen Beispiel einfügt:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -213,9 +215,8 @@ Die Dateien, die erzeugt werden, wenn eine Tabelle oder eine gespeicherte Prozed
 
 Zum Verwalten dieser Dateien ist keine Benutzerinteraktion erforderlich. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und entfernt die Dateien nach Bedarf.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-[Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
-

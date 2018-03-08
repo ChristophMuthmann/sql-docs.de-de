@@ -2,30 +2,30 @@
 title: "SPN-Registrierung für Analysis Services-Instanz | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d0d90aea6725bd45cded022791699cf910b7bdd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN-Registrierung für eine Analysis Services-Instanz
-  Durch einen Dienstprinzipalnamen (Service Principal Name, SPN) wird eine Dienstinstanz in einer Active Directory-Domäne eindeutig identifiziert, wenn Kerberos zur gegenseitigen Authentifizierung von Client- und Dienstidentitäten verwendet wird. Ein SPN ist dem Anmeldekonto zugeordnet, unter dem die Dienstinstanz ausgeführt wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Durch einen Dienstprinzipalnamen (Service Principal Name, SPN) wird eine Dienstinstanz in einer Active Directory-Domäne eindeutig identifiziert, wenn Kerberos zur gegenseitigen Authentifizierung von Client- und Dienstidentitäten verwendet wird. Ein SPN ist dem Anmeldekonto zugeordnet, unter dem die Dienstinstanz ausgeführt wird.  
   
  Bei Clientanwendungen, die über die Kerberos-Authentifizierung eine Verbindung mit Analysis Services herstellen, wird von den Analysis Services-Clientbibliotheken ein SPN erstellt. Dieser basiert auf der Verbindungszeichenfolge und anderen bekannten Variablen wie der Dienstklasse, die in der jeweiligen Analysis Services-Version fest definiert sind.  
   
@@ -100,7 +100,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Beispielsyntax für eine benannte Instanz ausgeführt wird als NT Service\MSOLAP$\<Instanzname >**  
   
- In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02**und der Instanzname **AW-FINANCE**. Es wird erneut, das Konto "Machine", die für den SPN angegeben wird, anstatt das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
+ In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. Es wird erneut, das Konto "Machine", die für den SPN angegeben wird, anstatt das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -172,15 +172,14 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft-BI-Authentifizierung und Identitätsdelegierung](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Gegenseitige Authentifizierung mithilfe von Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Gewusst wie: Konfigurieren von SQL Server 2008 Analysis Services und SQL Server 2005 Analysis Services, um die Kerberos-Authentifizierung verwenden](http://support.microsoft.com/kb/917409)   
- [Dienstprinzipalnamen (SPNs) SetSPN Syntax (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [Welchen SPN verwende ich, und wie gelangen es vorhanden?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Konfigurieren von SQL Server 2008 Analysis Services und SQL Server 2005 Analysis Services, um Kerberos-Authentifizierung zu verwenden](http://support.microsoft.com/kb/917409)   
+ [SetSPN-Syntax (Setspn.exe) für Dienstprinzipalnamen (SPN)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Welchen SPN verwende ich, und wie gebe ich ihn an?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Schrittweise Anleitung für Dienstkonten](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Gewusst wie: Verwenden von Dienstprinzipalnamen bei der Konfiguration von Webanwendungen, die gehostet werden auf Internetinformationsdienste (IIS)](http://support.microsoft.com/kb/929650)   
+ [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Verwenden von Dienstprinzipalnamen bei der Konfiguration von in Internetinformationsdienste (IIS) gehosteten Webanwendungen](http://support.microsoft.com/kb/929650)   
  [Neuigkeiten in Dienstkonten](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Konfigurieren der Kerberos-Authentifizierung für SharePoint 2010-Produkte (Whitepaper)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   
-

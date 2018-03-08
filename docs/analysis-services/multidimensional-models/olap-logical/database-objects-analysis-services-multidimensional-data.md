@@ -2,12 +2,13 @@
 title: "Datenbankobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,20 +21,20 @@ helpviewer_keywords:
 - Analysis Services objects
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f328102326537d201daa4bb627d818a3a58661dc
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32024dc0799fcc7324fd30349a65e741773db66b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Datenbankobjekte (Analysis Services - Mehrdimensionale Daten)
-  Ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz enthält Datenbankobjekte und Assemblys für die Verwendung mit online analytical Processing (OLAP) und Datamining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz enthält Datenbankobjekte und Assemblys für die Verwendung mit online analytical Processing (OLAP) und Datamining.  
   
 -   Datenbanken enthalten OLAP- und Data Mining-Objekte, z.&#160;B. Datenquellen, Datenquellensichten, Cubes, Measures, Measuregruppen, Dimensionen, Attribute, Hierarchien, Miningstrukturen, Miningmodelle und Rollen.  
   
@@ -76,8 +77,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützte Datenquellen &#40; SSAS – mehrdimensional &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Mehrdimensionale Modelllösungen &#40; SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Mehrdimensionale Modelllösungen ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Datamining-Lösungen](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

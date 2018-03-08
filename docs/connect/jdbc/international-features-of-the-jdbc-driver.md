@@ -3,24 +3,25 @@ title: Internationale Funktionen des JDBC-Treibers | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b319e0fe0972b236c03694899c5d4361dbcc473
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Internationale Funktionen des JDBC-Treibers
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -68,7 +69,6 @@ ms.lasthandoff: 09/09/2017
 >  Der Großteil der für Windows-Plattformen geschriebenen Konfliktlösersoftware basiert auf den Internet-DSN-Standards und verwendet aus diesem Grund mit hoher Wahrscheinlichkeit das Punycode-Format für IDN. Ein Windows-basierter DNS-Server in einem privaten Netzwerk kann hingegen so konfiguriert werden, dass die Verwendung von UTF-8-Zeichen auf Serverbasis möglich ist.  Weitere Informationen finden Sie unter [Unterstützung für Unicode-Zeichen](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

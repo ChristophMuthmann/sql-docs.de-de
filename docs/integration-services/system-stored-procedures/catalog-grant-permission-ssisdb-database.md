@@ -1,10 +1,13 @@
 ---
-title: Catalog. grant_permission (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.grant_permission (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,22 +16,21 @@ helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: c7c079453409e0af538aaeb2c82f6596e05b7d49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gewährt eine Berechtigung für ein sicherungsfähiges Objekt in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Gewährt eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,33 +42,33 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @object_type =] *Object_type*  
- Der Typ des sicherungsfähigen Objekts. Typen sicherungsfähiger Objekte lauten Ordner (`1`), Projekt (`2`), Umgebung (`3`), und Vorgang (`4`). Die *Object_type* ist **"smallint"***.*  
+ [ @object_type = ] *object_type*  
+ Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint***.*  
   
- [ @object_id =] *Object_id*  
- Der eindeutige Bezeichner (ID) des sicherungsfähigen Objekts. Die *Object_id* ist **"bigint"**.  
+ [ @object_id = ] *object_id*  
+ Der eindeutige Bezeichner (ID) des sicherungsfähigen Objekts. Das Argument *object_id* ist vom Typ **bigint**.  
   
- [ @principal_id =] *Principal_id*  
- Die ID des Prinzipals, dem eine Berechtigung gewährt werden soll. Die *Principal_id* ist **Int**.  
+ [ @principal_id = ] *principal_id*  
+ Die ID des Prinzipals, dem eine Berechtigung gewährt werden soll. Das Argument *principal_id* ist vom Typ **int**.  
   
- [ @permission_type =] *Permission_type*  
- Der Typ der zu gewährenden Berechtigung. Die *Permission_type* ist **"smallint"**.  
+ [ @permission_type = ] *permission_type*  
+ Der Typ der zu gewährenden Berechtigung. Das Argument *permission_type* ist vom Typ **smallint**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg)  
   
- 1 (Object_class ist ungültig.)  
+ 1 („object_class“ ist ungültig)  
   
- 2 (Object_id ist nicht vorhanden)  
+ 2 („object_id“ ist nicht vorhanden)  
   
- 3 (Prinzipal ist nicht vorhanden)  
+ 3 („principal“ ist nicht vorhanden)  
   
- 4 (Berechtigung ist ungültig.)  
+ 4 („permission“ ist ungültig)  
   
  5 (anderer Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -77,16 +79,16 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
 
-Dieses Verfahren kann nicht von Anmeldungen, die von SQL Server authentifiziert wurden, nicht aufgerufen werden. Er kann nicht von der Anmeldenamens "sa" aufgerufen werden.
+Dieses Verfahren kann nicht durch Anmeldevorgänge aufgerufen werden, die von SQL Server authentifiziert wurden. Es kann nicht durch die SA-Anmeldung aufgerufen werden.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit dieser gespeicherten Prozedur können Sie die in der folgenden Tabelle beschriebenen Typen von Berechtigungen gewähren:  
   
 |permission_type-Wert|Berechtigungsname|Berechtigungsbeschreibung|Anwendbare Objekttypen|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Ermöglicht es dem Prinzipal, Informationen zu lesen, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, den Inhalt von anderen Objekten innerhalb des Objekts aufzuzählen oder zu lesen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`2`|MODIFY|Ermöglicht es dem Prinzipal, Informationen zu ändern, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, andere Objekte innerhalb des Objekts zu ändern.|Ordner, Projekt, Umgebung, Vorgang|  
-|`3`|EXECUTE|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Projekt|  
+|`3`|Führen Sie|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Projekt|  
 |`4`|MANAGE_PERMISSIONS|Ermöglicht es dem Prinzipal, den Objekten Berechtigungen zuzuweisen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`100`|CREATE_OBJECTS|Ermöglicht es dem Prinzipal, Objekte im Ordner zu erstellen.|Ordner|  
 |`101`|READ_OBJECTS|Ermöglicht es dem Prinzipal, alle Objekte im Ordner zu lesen.|Ordner|  
@@ -98,4 +100,3 @@ Dieses Verfahren kann nicht von Anmeldungen, die von SQL Server authentifiziert 
  Entsprechende Fehler und Meldungen finden Sie im Abschnitt "Rückgabecodewerte".  
   
   
-

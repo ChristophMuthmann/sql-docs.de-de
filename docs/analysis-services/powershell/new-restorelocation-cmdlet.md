@@ -2,31 +2,30 @@
 title: New-Restorelocations-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a87852e69b55ea26cb56fe6918d1d4310c339f27
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocations-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Gibt Informationen an, die verwendet wurden, um eine Datenbank wiederherzustellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Gibt Informationen an, die verwendet wurden, um eine Datenbank wiederherzustellen.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-datasourceid-string"></a>-DataSourceId \<Zeichenfolge >  
+### <a name="-datasourceid-string"></a>-DataSourceId \<string>  
   
 |||  
 |-|-|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString \<Zeichenfolge >  
+### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
  Gibt die Verbindungszeichenfolge mit einer Analysis Services-Remoteinstanz an.  
   
 |||  
@@ -119,7 +118,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-credential-pscredential"></a>-Credential \<"PSCredential" >  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential>  
  Dieser Parameter wird für die Übergabe in einem Benutzernamen und einem Kennwort verwendet, wenn eine HTTP-Verbindung zu einer Analysis Services-Instanz verwendet wird, für die HTTP-Zugriff konfiguriert wurde. Weitere Informationen finden Sie unter [Konfigurieren des HTTP-Zugriffs auf Analysis Services unter Internetinformationsdienste (IIS) &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) für HTTP-Verbindungen.  
   
  Wenn dieser Parameter angegeben wird, werden der Benutzername und das Kennwort verwendet, um eine Verbindung mit der angegebenen Analysis-Server-Instanz herzustellen. Wenn keine Anmeldeinformationen angegeben sind, wird das Standard-Windows-Konto des Benutzers, der das Tool ausführt, verwendet.  
@@ -139,10 +138,9 @@ ms.lasthandoff: 09/01/2017
   
 |||  
 |-|-|  
-|Eingaben|InclusionThresholdSetting|  
-|Ausgaben|InclusionThresholdSetting|  
+|Eingaben|Keine|  
+|Ausgaben|Keine|  
   
 ## <a name="examples"></a>Beispiele  
   
   
-

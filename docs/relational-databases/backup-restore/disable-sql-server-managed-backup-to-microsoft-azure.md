@@ -2,28 +2,30 @@
 title: Deaktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: 8
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: caf1e311db9cc0844294417dfd06e4a384265a4b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3f462b0563e37d528808f43b180435fa75a15dc3
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Deaktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure
-  In diesem Thema wird beschrieben, wie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sowohl auf Datenbank- als auch auf Instanzebene deaktiviert oder angehalten wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sowohl auf Datenbank- als auch auf Instanzebene deaktiviert oder angehalten wird.  
   
 ##  <a name="DatabaseDisable"></a> Deaktivieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für eine Datenbank  
  Sie können die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Einstellungen deaktivieren, indem Sie die gespeicherte Systemprozedur [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) verwenden. Der *@enable_backup* -Parameter wird zum Aktivieren und Deaktivieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] -Konfigurationen für eine bestimmte Datenbank verwendet, wobei die Konfigurationseinstellungen mit 1 aktiviert und mit 0 deaktiviert werden.  
@@ -76,7 +78,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   
@@ -165,8 +168,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
   
   
-

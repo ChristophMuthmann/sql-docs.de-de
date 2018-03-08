@@ -1,31 +1,31 @@
 ---
-title: "Festlegen des Datentyps einer Spalte (SSAS – tabellarisch) | Microsoft Docs"
+title: Festlegen des Datentyps einer Spalte | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 770ce419a167c71914334ea6fa1b3fd397566b34
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Festlegen des Datentyps einer Spalte (SSAS – tabellarisch)
-  Wenn Sie Daten importieren oder Daten in ein Modell einfügen, werden Datentypen vom Modell-Designer automatisch erkannt und angewendet. Nachdem Sie dem Modell Daten hinzugefügt haben, können Sie den Datentyp einer Spalte manuell ändern, um die Speicherung von Daten zu ändern. Bei Bedarf können Sie stattdessen nur das Anzeigeformat der Daten ändern, ohne die Methode der Datenspeicherung zu ändern.  
+# <a name="set-the-data-type-of-a-column"></a>Einstellung des Datentyps einer Spalte 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Wenn Sie Daten importieren oder Daten in ein Modell einfügen, werden Datentypen vom Modell-Designer automatisch erkannt und angewendet. Nachdem Sie dem Modell Daten hinzugefügt haben, können Sie den Datentyp einer Spalte manuell ändern, um die Speicherung von Daten zu ändern. Bei Bedarf können Sie stattdessen nur das Anzeigeformat der Daten ändern, ohne die Methode der Datenspeicherung zu ändern.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>So ändern Sie den Datentyp oder das Anzeigeformat für eine Spalte  
   
@@ -80,10 +80,9 @@ ms.lasthandoff: 09/01/2017
   
  Wenn der Datentyp unterstützt wird, der Modell-Designer jedoch Werte findet, die vom neuen Datentyp nicht unterstützt werden, erhalten Sie eine weitere Fehlermeldung. Sie müssen die Datenwerte korrigieren, bevor Sie fortfahren.  
   
- Unter [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)finden Sie detaillierte Informationen zu den Datentypen, die in Business Intelligence-Semantikmodellen verwendet werden. Zudem wird erläutert, wie die Datentypen implizit konvertiert und wie verschiedene Datentypen in Formeln verwendet werden.  
+ Ausführliche Informationen zu den Datentypen in Business Intelligence-Semantikmodellen verwendet Verwandtschaft implizit konvertiert und wie verschiedene Datentypen in Formeln verwendet werden, finden Sie unter [unterstützte Datentypen](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+ [Unterstützte Datentypen](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   
-

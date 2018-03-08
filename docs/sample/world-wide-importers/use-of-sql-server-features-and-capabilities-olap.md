@@ -1,30 +1,31 @@
 ---
 title: Verwendung von SQL Server-Features und Funktionen | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 9179b95331ddcad4a704feadae2aa3f9211f8dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66fe9487c8b7d2189d69917fc81226a4f698af7c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW Verwendung von SQL Server-Features und Funktionen
-WideWorldImportersDW dient zum Großteil der wichtigsten Funktionen von SQL Server zu präsentieren, die für Data Warehouse- und Analysen geeignet sind. Im folgenden wird eine Liste der SQL Server-Features und Funktionen und eine Beschreibung, wie sie in WideWorldImportersDW verwendet werden.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW dient zum Großteil der wichtigsten Funktionen von SQL Server zu präsentieren, die für Data Warehouse- und Analysen geeignet sind. Im folgenden wird eine Liste der SQL Server-Features und Funktionen und eine Beschreibung, wie sie in WideWorldImportersDW verwendet werden.
 
 ## <a name="polybase"></a>PolyBase
 
@@ -117,4 +118,3 @@ Wird für alle partitionierten Tabellen verwendete Partitionsfunktion `PF_Date`,
 WideWorldImportersDW verwendet SCHEMA_ONLY-Tabellen für das staging-Tabellen. Alle `Integration.` * `_Staging` Tabellen sind SCHEMA_ONLY Speicheroptimierte Tabellen.
 
 Der Vorteil, dass SCHEMA_ONLY-Tabellen ist, dass sie nicht angemeldet sind, und Zugriff auf die Festplatte ist nicht erforderlich. Dies verbessert die Leistung des ETL-Prozesses. Da diese Tabellen nicht angemeldet sind, werden Sie in ihren Inhalt verloren, wenn ein Fehler auftritt. Die Datenquelle ist jedoch weiterhin verfügbar, damit ETL-Prozess einfach neu gestartet werden kann, wenn ein Fehler auftritt.
-

@@ -2,9 +2,12 @@
 title: "Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -13,24 +16,24 @@ helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c4777803a1f747090166b1bc004a2ee349c91860
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
- Nach der Vorbereitung der Spiegeldatenbank ( [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)) können Sie eine Sitzung zur Datenbankspiegelung beginnen. Die Prinzipal-, Spiegel- und Zeugenserverinstanzen müssen separate Serverinstanzen sein, die auf getrennten Hostsystemen ausgeführt werden.  
+ Nach der Vorbereitung der Spiegeldatenbank ( [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)) können Sie eine Sitzung zur Datenbankspiegelung beginnen. Die Prinzipal-, Spiegel- und Zeugenserverinstanzen müssen separate Serverinstanzen sein, die auf getrennten Hostsystemen ausgeführt werden.  
   
 > [!IMPORTANT]  
 >  Die Konfiguration der Datenbankspiegelung sollte außerhalb der Spitzenbetriebszeiten durchgeführt werden, da sich die Konfiguration der Spiegelung auf die Leistung auswirken kann.  
@@ -68,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  Um den Prinzipalserver als Partner auf der Spiegelungsdatenbank festzulegen, stellen Sie eine Verbindung mit dem Spiegelungsserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***<Server-Netzwerkadresse>*  
+     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***<Netzwerkadresse_des_Servers>*  
   
      Dabei ist *<Datenbankname>* der Name der zu spiegelnden Datenbank (dieser Name ist für beide Partner gleich) und *<Server-Netzwerkadresse>* die Servernetzwerkadresse des Prinzipalservers.  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 5.  Um den Spiegelserver als Partner auf der Prinzipaldatenbank festzulegen, stellen Sie eine Verbindung mit dem Prinzipalserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***<Server-Netzwerkadresse>*  
+     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***<Netzwerkadresse_des_Servers>*  
   
      Weitere Informationen finden Sie unter Schritt 4.  
   
@@ -214,7 +217,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Ein vollständiges Beispiel für das Einrichten der Sicherheitskomponenten, das Vorbereiten der Spiegeldatenbank, das Einrichten der Partner und das Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
@@ -228,5 +231,4 @@ ms.lasthandoff: 08/02/2017
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-
 

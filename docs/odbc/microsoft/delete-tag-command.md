@@ -3,26 +3,26 @@ title: TAG-Befehl DELETE | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DELETE TAG command [ODBC]
+helpviewer_keywords: DELETE TAG command [ODBC]
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf31107e21cee13d51046e43acc5c557cf20b9ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c10f0daac2f672b40b3bda050401e9873afe6aa8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-tag-command"></a>Löschen Sie die TAG-Befehl
 Entfernt eine oder Tags aus einer zusammengesetzten (CDX)-Indexdatei.  
@@ -50,5 +50,4 @@ DELETE TAG ALL [OF CDXFileName]
  Visual FoxPro sucht zuerst nach einem Tag in der Indexdatei strukturellen zusammengesetzten (falls keines geöffnet ist). Wenn das Tag in der Indexdatei strukturellen zusammengesetzten enthalten ist, sucht Visual FoxPro für den Transponder in anderen Indexdateien öffnen zusammengesetzten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Befehl "INDEX"](../../odbc/microsoft/index-command.md)
-
+ [Befehl INDEX](../../odbc/microsoft/index-command.md)

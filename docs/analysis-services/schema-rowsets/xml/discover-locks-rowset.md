@@ -2,33 +2,31 @@
 title: DISCOVER_LOCKS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_LOCKS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_LOCKS rowset
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d50a6cb0bdc6bfdb27fdbfff4c79b25c43e27e58
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS-Rowset
-  Stellt Informationen über die aktuellen Sperren auf dem Server bereit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt Informationen über die aktuellen Sperren auf dem Server bereit.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_LOCKS** -Rowset enthält die folgenden Spalten.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="lock-types"></a>Typen von Sperren  
   
-|Name der Sperre|Wert|Beschreibung|  
+|Name der Sperre|value|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Keine Sperre.|  
 |LOCK_SESSION_LOCK|0x0000001|Inaktive Sitzung, führt nicht zu Einschränkungen von anderen Sperren.|  
@@ -75,7 +73,6 @@ ms.lasthandoff: 09/01/2017
 |LOCK_INVALID|0x0000080|Ungültige Sperre.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

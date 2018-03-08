@@ -3,7 +3,7 @@ title: Status-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - State property [ADO], VC++ example
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6bdb7823ed43d251105330ef235fe16537037ac5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8aeca0021dc40b34dc19e59308256f6b7c4438f8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="state-property-example-vc"></a>State-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel verwendet die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft, um eine Meldung angezeigt, während der asynchronen Verbindungen geöffnet sind und asynchrone Befehle ausgeführt werden.  
@@ -145,4 +144,3 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Siehe auch  
  [State-Eigenschaft (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
-

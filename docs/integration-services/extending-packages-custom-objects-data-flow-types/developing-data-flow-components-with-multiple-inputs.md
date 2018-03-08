@@ -1,45 +1,46 @@
 ---
-title: Entwickeln von Datenflusskomponenten mit mehreren Eingaben | Microsoft Docs
+title: Entwickeln von Datenflusskomponenten mit mehreren Eingaben | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2cafe3a18fbe930088347304ed758afe505771d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d4fae151d8feb9753eca9704b1b58f6ab7c609cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Entwickeln von Datenflusskomponenten mit mehreren Eingaben
-  Eine Datenflusskomponente mit mehreren Eingaben verbraucht möglicherweise übermäßig viel Arbeitsspeicher, wenn die Eingaben unregelmäßig Daten erzeugen. Wenn Sie eine benutzerdefinierte Datenflusskomponente, die zwei oder mehr Eingaben unterstützt entwickeln, können Sie diese hohe speicherauslastung verwalten, mit den folgenden Elementen im Microsoft.SqlServer.Dts.Pipeline-Namespace:  
+  Eine Datenflusskomponente mit mehreren Eingaben verbraucht möglicherweise übermäßig viel Arbeitsspeicher, wenn die Eingaben unregelmäßig Daten erzeugen. Wenn Sie eine benutzerdefinierte Datenflusskomponente entwickeln, die mindestens zwei Eingaben unterstützt, können Sie diese hohe Speicherauslastung verwalten, indem Sie die folgenden Elemente im Namespace „Microsoft.SqlServer.Dts.Pipeline“ verwenden:  
   
 -   Die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A>-Eigenschaft der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>-Klasse. Legen Sie den Wert dieser Eigenschaft auf **true** fest, um den Code zu implementieren, der erforderlich ist, damit die benutzerdefinierte Datenflusskomponente unregelmäßige Datenflüsse verwaltet.  
   
--   Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Klasse. Sie müssen eine Implementierung dieser Methode bereitstellen, wenn Sie festlegen, die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> Eigenschaft **"true"**. Wenn Sie keine Implementierung bereitstellen, löst das Datenflussmodul zur Laufzeit eine Ausnahme aus.  
+-   Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Klasse. Sie müssen eine Implementierung dieser Methode bereitstellen, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A>-Eigenschaft auf **TRUE** festlegen. Wenn Sie keine Implementierung bereitstellen, löst das Datenflussmodul zur Laufzeit eine Ausnahme aus.  
   
--   Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Klasse. Sie müssen auch eine Implementierung dieser Methode bereitstellen, wenn Sie festlegen der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> Eigenschaft **"true"** und die benutzerdefinierte Komponente mehr als zwei Eingaben unterstützt. Wenn Sie keine Implementierung bereitstellen, löst das Datenflussmodul zur Laufzeit eine Ausnahme aus, wenn der Benutzer mehr als zwei Eingaben anfügt.  
+-   Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Klasse. Sie müssen auch eine Implementierung dieser Methode bereitstellen, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A>-Eigenschaft auf **TRUE** festlegen und die benutzerdefinierte Komponente mehr als zwei Eingaben unterstützt. Wenn Sie keine Implementierung bereitstellen, löst das Datenflussmodul zur Laufzeit eine Ausnahme aus, wenn der Benutzer mehr als zwei Eingaben anfügt.  
   
  Zusammen ermöglichen diese Elemente es Ihnen, eine Lösung für hohe Speicherauslastungen zu entwickeln, die der von Microsoft entwickelten Lösung für die Transformationen für Zusammenführen und Zusammenführungsjoin ähnelt.  
   
 ## <a name="setting-the-supportsbackpressure-property"></a>Festlegen der SupportsBackPressure-Eigenschaft  
- Der erste Schritt beim Implementieren einer besseren Speicherverwaltung für eine benutzerdefinierte Datenflusskomponente, die mehrere Eingaben unterstützt, zum Festlegen des Werts, der wird die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> Eigenschaft **"true"** in der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Bei den Wert der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> ist **"true"**, das Datenflussmodul Ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode und, wenn mehr als zwei Eingaben vorhanden sind, ruft auch die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> Methode zur Laufzeit.  
+ Der erste Schritt beim Implementieren einer besseren Speicherverwaltung für eine benutzerdefinierte Datenflusskomponente, die mehrere Eingaben unterstützt, besteht darin, den Wert der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A>-Eigenschaft im <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> auf **TRUE** festzulegen. Wenn der Wert von <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> **TRUE** ist, ruft das Datenflussmodul die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode auf. Bei mehr als zwei Eingaben wird außerdem die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode zur Laufzeit aufgerufen.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> legt den Wert des <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> auf **"true"**.  
+ Im folgenden Beispiel legt die Implementierung von <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> den Wert von <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> auf **TRUE** fest.  
   
 ```csharp  
 [DtsPipelineComponent(ComponentType = ComponentType.Transform,  
@@ -56,19 +57,19 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 ```  
   
 ## <a name="implementing-the-isinputready-method"></a>Implementieren der IsInputReady-Methode  
- Beim Festlegen des Werts des der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> Eigenschaft, um **"true"** in der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> -Objekt, müssen Sie auch eine Implementierung für Bereitstellen der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> Klasse.  
+ Wenn Sie den Wert der <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A>-Eigenschaft im <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>-Objekt auf **TRUE** festlegen, müssen Sie auch eine Implementierung für die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Klasse bereitstellen.  
   
 > [!NOTE]  
->  Die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode sollte nicht die Implementierungen in der Basisklasse aufrufen. Die Standardimplementierung dieser Methode in der Basisklasse löst lediglich eine **NotImplementedException**aus.  
+>  Die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode sollte nicht die Implementierungen in der Basisklasse aufrufen. Die Standardimplementierung dieser Methode in der Basisklasse löst lediglich eine **NotImplementedException**aus.  
   
- Wenn Sie diese Methode implementieren, legen Sie den Status eines Elements im booleschen *canProcess* -Array für jede Eingabe der Komponente fest. (Die Eingaben werden durch ihre ID-Werte in identifiziert die *InputIDs* Array.) Beim Festlegen des Werts eines Elements in der *CanProcess* array an **"true"** für eine Eingabe, ruft das Datenflussmodul der Komponente <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> Methode und die angegebene Eingabe mehr Daten bereit.  
+ Wenn Sie diese Methode implementieren, legen Sie den Status eines Elements im booleschen *canProcess* -Array für jede Eingabe der Komponente fest. (Die Eingaben werden von ihren ID-Werten im *inputIDs*-Array identifiziert.) Wenn Sie den Wert eines Elements im *canProcess*-Array für eine Eingabe auf **TRUE** festlegen, ruft das Datenflussmodul die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode der Komponente auf und stellt für die angegebene Eingabe mehr Daten bereit.  
   
  Es sind mehr Upstreamdaten verfügbar, und der Wert des *canProcess* -Arrayelements muss für mindestens eine Eingabe immer **true**sein. Andernfalls wird die Verarbeitung angehalten.  
   
  Das Datenflussmodul ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode vor dem Senden der einzelnen Datenpuffer auf, um zu bestimmen, welche Eingaben auf den Empfang weiterer Daten warten. Wenn der Rückgabewert angibt, dass eine Eingabe blockiert wird, speichert das Datenflussmodul vorübergehend zusätzliche Datenpuffer für diese Eingabe, statt sie an die Komponente zu senden.  
   
 > [!NOTE]  
->  Rufen Sie nicht die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> oder <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> Methoden in Ihrem eigenen Code. Das Datenflussmodul ruft diese Methoden und die anderen Methoden der **PipelineComponent** -Klasse auf, die Sie überschreiben, wenn das Datenflussmodul die Komponente ausführt.  
+>  Sie rufen die Methode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> oder <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> nicht in eigenem Code auf. Das Datenflussmodul ruft diese Methoden und die anderen Methoden der **PipelineComponent** -Klasse auf, die Sie überschreiben, wenn das Datenflussmodul die Komponente ausführt.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel gibt die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode an, dass eine Eingabe auf den Empfang weiterer Daten wartet, wenn die folgenden Voraussetzungen erfüllt sind:  
@@ -94,21 +95,21 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- Im vorangehenden Beispiel wird das boolesche `inputEOR` -Array verwendet, um anzugeben, ob für die jeweiligen Eingaben weitere Upstreamdaten verfügbar sind. `EOR` im Namen des Arrays steht für "Ende des Rowsets" und bezieht sich auf die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft von Datenflusspuffern. In einem Abschnitt des Beispiels, das nicht hier eingeschlossen ist der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> Methode überprüft den Wert der die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> -Eigenschaft für die einzelnen Datenpuffer, die es empfängt. Wenn der Wert **"true"** gibt an, dass es steht keine Upstreamdaten mehr für eine Eingabe, die im Beispiel wird der Wert von der `inputEOR` Arrayelements für diese Eingabe auf **"true"**. In diesem Beispiel für die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode legt den Wert des entsprechenden Elements in der *CanProcess* array an **"false"** für eine Eingabe bei den Wert des der `inputEOR` Arrayelement zeigt an, dass Es ist keine Upstreamdaten mehr verfügbar, für die Eingabe.  
+ Im vorangehenden Beispiel wird das boolesche `inputEOR` -Array verwendet, um anzugeben, ob für die jeweiligen Eingaben weitere Upstreamdaten verfügbar sind. `EOR` im Namen des Arrays steht für "Ende des Rowsets" und bezieht sich auf die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft von Datenflusspuffern. In einem Teil des Beispiels, der hier nicht enthalten ist, überprüft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode den Wert der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft für jeden empfangenen Datenpuffer. Wenn durch den Wert **TRUE** angegeben wird, dass für eine Eingabe keine Upstreamdaten mehr verfügbar sind, wird im Beispiel der Wert des `inputEOR`-Arrayelements für diese Eingabe auf **TRUE** festgelegt. In diesem Beispiel für die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode wird der Wert des entsprechenden Elements im *canProcess*-Array für eine Eingabe auf **TRUE** festgelegt, wenn der Wert des `inputEOR`-Arrayelements angibt, dass für die Eingabe keine Upstreamdaten mehr verfügbar sind.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>Implementieren der GetDependentInputs-Methode  
- Wenn die benutzerdefinierte Datenflusskomponente mehr als zwei Eingaben unterstützt, müssen Sie auch eine Implementierung für Bereitstellen der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> Klasse.  
+ Wenn die benutzerdefinierte Datenflusskomponente mehr als zwei Eingaben unterstützt, müssen Sie auch eine Implementierung für die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Klasse bereitstellen.  
   
 > [!NOTE]  
->  Die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> Methode sollte nicht die Implementierungen in der Basisklasse aufrufen. Die Standardimplementierung dieser Methode in der Basisklasse löst lediglich eine **NotImplementedException**aus.  
+>  Die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode sollte nicht die Implementierungen in der Basisklasse aufrufen. Die Standardimplementierung dieser Methode in der Basisklasse löst lediglich eine **NotImplementedException**aus.  
   
- Das Datenflussmodul ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode nur auf, wenn der Benutzer mehr als zwei Eingaben an die Komponente anfügt. Wenn eine Komponente nur über zwei Eingaben verfügt und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode gibt an, dass eine Eingabe blockiert ist (*CanProcess* = **"false"**), das Datenflussmodul weiß, dass die andere Eingabe ist Empfang weiterer Daten wartet. Jedoch, wenn mehr als zwei Eingaben vorhanden sind und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode gibt an, dass eine Eingabe blockiert ist, der zusätzliche Code in die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> identifiziert, welche Eingaben auf den Empfang weiterer Daten warten sind.  
+ Das Datenflussmodul ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode nur auf, wenn der Benutzer mehr als zwei Eingaben an die Komponente anfügt. Wenn eine Komponente nur über zwei Eingaben verfügt und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode angibt, dass eine Eingabe blockiert ist (*canProcess* = **FALSE**), erkennt das Datenflussmodul, dass die andere Eingabe auf den Empfang weiterer Daten wartet. Wenn jedoch mehr als zwei Eingaben vorhanden sind und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode angibt, dass eine Eingabe blockiert ist, identifiziert der zusätzliche Code in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>, welche Eingaben auf den Empfang weiterer Daten warten.  
   
 > [!NOTE]  
->  Rufen Sie nicht die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> oder <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> Methoden in Ihrem eigenen Code. Das Datenflussmodul ruft diese Methoden und die anderen Methoden der **PipelineComponent** -Klasse auf, die Sie überschreiben, wenn das Datenflussmodul die Komponente ausführt.  
+>  Sie rufen die Methode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> oder <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> nicht in eigenem Code auf. Das Datenflussmodul ruft diese Methoden und die anderen Methoden der **PipelineComponent** -Klasse auf, die Sie überschreiben, wenn das Datenflussmodul die Komponente ausführt.  
   
 ### <a name="example"></a>Beispiel  
- Wenn eine bestimmte Eingabe blockiert ist, gibt die folgende Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode eine Auflistung der Eingaben zurück, die auf den Empfang weiterer Daten warten und daher die betreffende Eingabe blockieren. Die Komponente identifiziert die blockierenden Eingaben, indem überprüft wird, ob außer der blockierten Eingabe andere Eingaben derzeit in den Puffern, die die Komponente bereits empfangen hat, nicht über Daten verfügen, die verarbeitet werden können (`inputBuffers[i].CurrentRow() == null`). Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> Methode gibt dann die Auflistung der blockierenden Eingaben als Auflistung von Eingabe-IDs zurück.  
+ Wenn eine bestimmte Eingabe blockiert ist, gibt die folgende Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode eine Auflistung der Eingaben zurück, die auf den Empfang weiterer Daten warten und daher die betreffende Eingabe blockieren. Die Komponente identifiziert die blockierenden Eingaben, indem überprüft wird, ob außer der blockierten Eingabe andere Eingaben derzeit in den Puffern, die die Komponente bereits empfangen hat, nicht über Daten verfügen, die verarbeitet werden können (`inputBuffers[i].CurrentRow() == null`). Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode gibt dann die Auflistung der blockierenden Eingaben als Auflistung von Eingabe-IDs zurück.  
   
 ```csharp  
 public override Collection<int> GetDependentInputs(int blockedInputID)  
@@ -128,4 +129,3 @@ public override Collection<int> GetDependentInputs(int blockedInputID)
 ```  
   
   
-

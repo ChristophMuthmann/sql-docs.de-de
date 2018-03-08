@@ -2,11 +2,12 @@
 title: Aktualisieren von replizierten Datenbanken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -18,18 +19,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 74
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 36886a9e4abd9eced97d4baf7d5e96d8aaf2d5d7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-replicated-databases"></a>Aktualisieren von replizierten Datenbanken
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] unterstützt das Aktualisieren replizierter Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Während der Aktualisierung eines Knotens müssen die auf anderen Knoten ausgeführten Aktivitäten nicht beendet werden. Stellen Sie sicher, dass die Regeln, die im Hinblick auf die in einer Topologie unterstützten Versionen gelten, eingehalten werden:  
   
 -   Für den Verteiler ist jede Version zulässig, die der Verleger-Version entspricht oder höher als diese ist. (In vielen Fällen gehören Verteiler und Verleger derselben Instanz an.)  
@@ -43,7 +46,7 @@ ms.lasthandoff: 08/02/2017
     -   Für einen Abonnenten einer Mergeveröffentlichung ist jede Version zulässig, die der Verleger-Version entspricht oder niedriger als diese ist.  
   
 > [!NOTE]  
->  Das Thema ist sowohl in der Hilfe zum Setup als auch in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation enthalten. Über die fett formatierten Links in der Hilfe zum Setup gelangen Sie zu Themen, die nur in der Onlinedokumentation verfügbar sind. **Sie können eine Upgradestrategie für den Verleger, Abonnenten und Verteiler erstellen, indem Sie die Optionen verwenden, die in diesem [post (Beitrag)](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) beschrieben werden**. 
+>  Dieser Artikel ist sowohl in der Hilfe zum Setup als auch in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation enthalten. Über die fett formatierten Links in der Hilfe zum Setup gelangen Sie zu Artikeln, die nur in der Onlinedokumentation verfügbar sind. **Sie können eine Upgradestrategie für den Verleger, Abonnenten und Verteiler erstellen, indem Sie die Optionen verwenden, die in diesem [post (Beitrag)](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) beschrieben werden**. 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>Führen Sie den Protokolllese-Agent für die Transaktionsreplikation vor dem Upgrade aus.  
  Bevor Sie [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]aktualisieren, müssen Sie sich vergewissern, dass alle Transaktionen mit ausgeführtem Commit von veröffentlichten Tabellen vom Protokolllese-Agent verarbeitet wurden. Um sicherzustellen, dass alle Transaktionen verarbeitet wurden, führen Sie die folgenden Schritte für jede Datenbank aus, die Transaktionsveröffentlichungen enthält:  
@@ -67,7 +70,7 @@ ms.lasthandoff: 08/02/2017
   
  Die Mergereplikation speichert die Metadaten der Veröffentlichung und des Abonnements in einer Reihe von Systemtabellen in den Veröffentlichungs- und Abonnement-Datenbanken. Bei Ausführung des s werden die Veröffentlichungsmetadaten aktualisiert, und bei Ausführung des Merge-Agents werden die Abonnementmetadaten aktualisiert. Der Agent wird nur benötigt, um eine Momentaufnahme der Veröffentlichung zu generieren. Wenn bei einer Mergeveröffentlichung parametrisierte Filter verwendet werden, gibt es auch für jede Partition eine Momentaufnahme. Diese partitionierten Momentaufnahmen zu aktualisieren, ist nicht erforderlich.  
   
- Die Agents werden in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], im Replikationsmonitor oder in der Befehlszeile ausgeführt. Weitere Informationen zum Ausführen des Momentaufnahme-Agents finden Sie unter den folgenden Themen:  
+ Die Agents werden in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], im Replikationsmonitor oder in der Befehlszeile ausgeführt. Weitere Informationen zum Ausführen des Momentaufnahme-Agents finden Sie in den folgenden Artikeln:  
   
 -   [Erstellen und Anwenden der Anfangsmomentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -75,9 +78,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [Erstellen und Anwenden der Anfangsmomentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- Weitere Informationen zum Ausführen des Merge-Agents finden Sie unter den folgenden Themen:  
+ Weitere Informationen zum Ausführen des Merge-Agents finden Sie in den folgenden Artikeln:  
   
 -   [Synchronisieren eines Pullabonnements](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   
@@ -94,7 +97,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Wiederherstellen einer replizierten Datenbank von einer früheren Version  
  Um sicherzustellen, dass die Replikationseinstellungen beibehalten werden, wenn die Sicherung einer replizierten Datenbank mithilfe einer früheren Version wiederhergestellt wird, stellen Sie die Sicherung auf einem Server und in einer Datenbank wieder her, deren Namen mit den Namen des Servers und der Datenbank übereinstimmen, von dem bzw. der die Sicherung erstellt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwaltung &#40;Replikation&#41;](../../relational-databases/replication/administration/administration-replication.md)   
  [Abwärtskompatibilität von Replikationen](../../relational-databases/replication/replication-backward-compatibility.md)   
  [Neuigkeiten (Replikation)](../../relational-databases/replication/what-s-new-replication.md)   
@@ -102,4 +105,3 @@ ms.lasthandoff: 08/02/2017
  [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

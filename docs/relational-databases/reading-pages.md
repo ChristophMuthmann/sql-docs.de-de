@@ -3,8 +3,11 @@ title: Lesen von Seiten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-caps.latest.revision: 3
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ac5398f3b10db59812539e58abaff9ef2c7cd0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1561e7c3cea406881dc9722f26a4dfa4cefe0310
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reading-pages"></a>Lesen von Seiten
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die E/A-Aktivitäten einer Instanz von SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] schließen logische und physische Lesevorgänge ein. Ein logischer Lesevorgang erfolgt immer dann, wenn das [!INCLUDE[ssDE](../includes/ssde-md.md)] eine Seite aus dem [Puffercache](../relational-databases/memory-management-architecture-guide.md)anfordert. Wenn sich die Seite derzeit nicht im Puffercache befindet, wird ein physischer Lesevorgang durchgeführt, um die Seite vom Datenträger in den Puffercache zu kopieren.
 
@@ -58,6 +61,6 @@ Nehmen Sie z. B. an, Sie verfügen über eine Tabelle mit 500.000 Seiten. UserA 
 
 Ohne die erweiterten Scanfunktionen müssten sich die einzelnen Benutzer den Pufferspeicher teilen, was Konflikte in der Speicherverteilung verursachen würde. Dieselben Seiten würden dann einmal für jeden Benutzer gelesen werden, anstatt einmal gelesen und dann für mehrere Benutzer freigegeben zu werden. Dies würde die Leistung beeinträchtigen und Ressourcen unnötig beanspruchen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Handbuch zur Architektur von Seiten und Blöcken](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Schreiben von Seiten](../relational-databases/writing-pages.md)

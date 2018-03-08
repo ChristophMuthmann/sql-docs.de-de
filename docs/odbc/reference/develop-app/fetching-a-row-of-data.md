@@ -3,10 +3,12 @@ title: Abrufen einer Datenzeile | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-a-row-of-data"></a>Abrufen einer Datenzeile
 Um eine Zeile mit Daten abzurufen, eine Anwendung ruft **SQLFetch**. **SQLFetch** kann mit jeder Art des Cursors aufgerufen werden, aber nur den Rowset-Cursor in eine Richtung vorwärts verschoben. **SQLFetch** verschiebt den Cursor auf die nächste Zeile und gibt die Daten für alle Spalten, die durch Aufrufe von gebunden wurden **SQLBindCol**. Wenn sich der Cursor auf das Ende des Resultsets erreicht festgelegt, **SQLFetch** gibt SQL_NO_DATA zurück. Beispiele für das Aufrufen von **SQLFetch**, finden Sie unter [SQLBindCol verwenden](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
@@ -41,4 +42,3 @@ Um eine Zeile mit Daten abzurufen, eine Anwendung ruft **SQLFetch**. **SQLFetch*
  Zeichendaten müssen Null-terminiert sein vom Treiber vor der Rückgabe an die Anwendung, auch wenn es abgeschnitten wurde. Die Null-Abschlusszeichen benötigt Speicherplatz in der gebundenen Puffer jedoch nicht in der zurückgegebenen Bytelänge enthalten ist. Nehmen Sie z. B. an eine Anwendung verwendet Zeichenfolgen, die Zeichendaten in ASCII-Zeichensatz besteht, ein Treiber ist 50 Zeichen mit Daten zurückgegeben und die Anwendung Puffer ist 25 Byte lang. Im Puffer der die Anwendung, gibt der Treiber die ersten 24 Zeichen, gefolgt von einer Null-Abschlusszeichen. In der Längen-/Indikatorpuffers wird eine Länge von 50 zurückgegeben.  
   
  Die Anwendung kann eine beschränkte Anzahl an Zeilen im Resultset durch Festlegen von SQL_ATTR_MAX_ROWS-Anweisungsattribut vor dem Ausführen der Anweisung, die das Ergebnis erstellt. Der Seitenansicht in einer Anwendung, die zum Formatieren von Berichten benötigt beispielsweise nur genügend Daten für die erste Seite des Berichts anzuzeigen. Beschränken die Größe des Resultsets, würde eine solche Funktion schneller ausgeführt. Dieses Anweisungsattribut richtet sich an den Netzwerkverkehr zu reduzieren und möglicherweise vom alle Treiber nicht unterstützt werden.
-

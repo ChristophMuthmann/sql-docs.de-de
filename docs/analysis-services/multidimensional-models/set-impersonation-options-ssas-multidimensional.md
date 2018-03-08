@@ -2,34 +2,31 @@
 title: "Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.impersonationinfo.f1
-helpviewer_keywords:
-- Impersonation Information dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords: Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9dfd1dbf5f4f514136695dc2bb0d776afda99562
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
-  Wenn Sie ein **data source** -Objekt in einem Analysis Services-Modell erstellen, müssen Sie unter den verschiedenen Einstellungen eine Option für den Identitätswechsel konfigurieren. Diese Option bestimmt, ob Analysis Services die Identität eines bestimmten Windows-Benutzerkontos annimmt, wenn lokale Vorgänge im Zusammenhang mit der Verbindung ausgeführt werden, z. B. das Laden eines OLE DB-Datenanbieters oder das Auflösen von Benutzerprofilinformationen in Umgebungen, die Roamingprofile unterstützen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Beim Erstellen einer **Datenquelle** Objekt in einem Analysis Services-Modell besteht eine der Einstellungen, die Sie konfigurieren müssen, ist eine Option für den Identitätswechsel. Diese Option bestimmt, ob Analysis Services die Identität eines bestimmten Windows-Benutzerkontos annimmt, wenn lokale Vorgänge im Zusammenhang mit der Verbindung ausgeführt werden, z. B. das Laden eines OLE DB-Datenanbieters oder das Auflösen von Benutzerprofilinformationen in Umgebungen, die Roamingprofile unterstützen.  
   
  Bei Verbindungen, die Windows-Authentifizierung verwenden, bestimmt die Identitätswechseloption außerdem die Benutzeridentität, unter der Abfragen an die externe Datenquelle ausgeführt werden. Wenn Sie die Identitätswechseloption z.B. auf **contoso\dbuser**festlegen, werden Datenabfragen während der Verarbeitung als **contoso\dbuser** auf dem Datenbankserver ausgeführt.  
   
@@ -111,4 +108,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

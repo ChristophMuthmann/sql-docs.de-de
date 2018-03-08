@@ -1,23 +1,25 @@
 ---
 title: Neuigkeiten in SQL Server 2017 Analysis Services | Microsoft Docs
 ms.date: 10/27/2017
-ms.prod: sql-server-2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5c393f9de5b85dbba3ae02e2614513e875496490
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
-ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
-ms.contentlocale: de-de
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Neuigkeiten in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -251,4 +253,3 @@ Zusätzlich zu den neuen Features gehören Analysis Services, SSDT und SSMS, die
 ## <a name="see-also"></a>Siehe auch
 [Versionsanmerkungen zu SQLServer 2017](../sql-server/sql-server-2017-release-notes.md)   
 [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-

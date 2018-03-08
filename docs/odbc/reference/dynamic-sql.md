@@ -3,10 +3,12 @@ title: Dynamisches SQL | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-sql"></a>Dynamische SQL-Anweisungen
 Obwohl statisches SQL auch in vielen Fällen funktioniert, besteht eine Klasse von Anwendungen, in denen der Datenzugriff im Voraus nicht bestimmt werden kann. Nehmen Sie z. B. an, dass eine Kalkulationstabelle kann der Benutzer eine Abfrage eingeben, die das Arbeitsblatt, das DBMS dann zum Abrufen von Daten sendet. Der Inhalt dieser Abfrage können nicht für den Programmierer offensichtlich bekannt sein, wenn die Tabellenkalkulationsprogramm geschrieben wird.  
@@ -45,4 +46,3 @@ Obwohl statisches SQL auch in vielen Fällen funktioniert, besteht eine Klasse v
 3.  Das Programm können die EXECUTE-Anweisung wiederholt wird, unterschiedliche Parameterwerte jedem angeben die dynamische-Anweisung ausgeführt wird.  
   
  Die vorbereitete Ausführung ist noch nicht mit statischen SQL identisch. In statischen SQL erfolgen die ersten vier Schritte der Verarbeitung einer SQL-Anweisung zum Zeitpunkt der Kompilierung. Bei der vorbereiteten Ausführung dieser Schritte weiterhin stattfinden zur Laufzeit, aber sie nur einmal ausgeführt werden; Ausführung des Plans findet statt nur EXECUTE aufgerufen wird. Dadurch werden in der Architektur von dynamischem SQL inhärenten Leistung Nachteile zu vermeiden. Die nächste Abbildung zeigt die Unterschiede zwischen statischen SQL, dynamische SQL mit unmittelbare Ausführung und dynamischem SQL mit vorbereitete Ausführung.
-

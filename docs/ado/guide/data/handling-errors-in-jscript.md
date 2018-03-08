@@ -3,7 +3,7 @@ title: Fehlerbehandlung in JScript | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6d6baf88299055da515c10763f4b821258ed2b9b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b88b7b9a746b15425f449d672d7c663cfcbe1f15
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-errors-in-jscript"></a>Fehlerbehandlung in JScript
 Muss Ihr Microsoft JScript® Code überprüfen, die **Anzahl** Eigenschaft von der **Verbindung** des Objekts **Fehler** Auflistung. Wenn der Wert größer als 0 ist, der die Auflistung durchlaufen Sie und drucken Sie die Werte wie in allen anderen Sprachen.  
@@ -78,4 +77,3 @@ Muss Ihr Microsoft JScript® Code überprüfen, die **Anzahl** Eigenschaft von d
 </HTML>  
 <!-- EndErrorExampleJS -->  
 ```
-

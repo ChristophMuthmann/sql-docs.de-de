@@ -3,7 +3,7 @@ title: "Gruppen und Benutzer für anfügen, ChangePassword Methoden (VC++-Beispi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Append method [ADOX], VC++ example
 - Users Append method [ADOX], VC++ example
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f5e0fc3a0e0979486f65b6719d36682d6a9f5466
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 27c236255bc74da84977347d20862ca94f1ea04a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Gruppen und Benutzer für anfügen, ChangePassword Methoden (VC++-Beispiel)
 In diesem Beispiel wird veranschaulicht, die [Anfügen](../../../ado/reference/adox-api/append-method-adox-groups.md) Methode [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md), als auch die [Append](../../../ado/reference/adox-api/append-method-adox-users.md) Methode [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) durch Hinzufügen einer neuen [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) und eine neue [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) an das System. Die neue **Gruppe** wird angefügt, um die **Gruppen** -Sammlung der neuen **Benutzer**. Folglich ist die neue **Benutzer** wird hinzugefügt, um die **Gruppe**. Darüber hinaus die [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) Methode dient zum Angeben der **Benutzer** Kennwort.  
@@ -138,4 +137,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

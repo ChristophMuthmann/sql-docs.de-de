@@ -2,32 +2,29 @@
 title: Tables-Objekt (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables-Objekt (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Definiert in einem Modell enthaltenen Tabellen an. Tabellen in einem Modell sind entweder gebunden, um Tabellen in einer externen Datenbank, aus der Daten importiert oder abgefragt werden, oder eine berechnete Tabelle aus einer DAX-Ausdruck erstellt. Innerhalb einer Tabelle, eine oder mehrere **Partition** Objekte beschreiben die Quelle der Daten.  Zwischen Tabellen eine **Beziehung** Objekt gibt an, die Kardinalität, Filter und andere Eigenschaften der Beziehung.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert in einem Modell enthaltenen Tabellen an. Tabellen in einem Modell sind entweder gebunden, um Tabellen in einer externen Datenbank, aus der Daten importiert oder abgefragt werden, oder eine berechnete Tabelle aus einer DAX-Ausdruck erstellt. Innerhalb einer Tabelle, eine oder mehrere **Partition** Objekte beschreiben die Quelle der Daten.  Zwischen Tabellen eine **Beziehung** Objekt gibt an, die Kardinalität, Filter und andere Eigenschaften der Beziehung.  
   
 ## <a name="object-definition"></a>Objektdefinition  
  Alle Objekte verfügen über einen gemeinsamen Satz von Eigenschaften, einschließlich Name, Typ, Beschreibung, eine eigenschaftsauflistung und Anmerkungen. **Tabelle** Objekte verfügen außerdem über die folgenden Eigenschaften.  
@@ -37,7 +34,7 @@ ms.lasthandoff: 09/01/2017
   
  "IsHidden"  
  Ein boolescher Wert, der angibt, ob die Tabelle behandelt wird als von Visualisierung Clienttools ausgeblendet.  
-"True", wenn die Tabelle, als behandelt wird ausgeblendet. andernfalls "false".  
+TRUE, wenn die Tabelle als ausgeblendetes Element behandelt wird; andernfalls FALSE.  
   
  Spalten  
  Stellt eine Spalte in einer Tabelle. Es ist ein untergeordnetes Element eines Table-Objekts. Jede Spalte verfügt über eine Reihe von Eigenschaften definiert, die beeinflussen, wie Clientanwendungen die Daten in der Spalte visuell darzustellen.  
@@ -822,4 +819,3 @@ ms.lasthandoff: 09/01/2017
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

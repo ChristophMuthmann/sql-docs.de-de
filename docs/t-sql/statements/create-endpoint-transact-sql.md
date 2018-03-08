@@ -3,8 +3,11 @@ title: Erstellen Sie ENDPUNKT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,20 +34,19 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 135
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 072e142531102533d278ec57573079f5bd90c99e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt Endpunkte und definiert deren Eigenschaften, einschließlich der für Clientanwendungen verfügbaren Methoden. Verwandte Berechtigungsinformationen finden Sie unter [GRANT (Endpunktberechtigungen) &#40; Transact-SQL &#41; ](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
@@ -149,10 +151,10 @@ FOR DATABASE_MIRRORING (
   
  Die folgenden Argumente gelten nur für die TCP-Option.  
   
- LISTENER_PORT  **=**  *"ListenerPort"*  
+ LISTENER_PORT **= *** "ListenerPort"*  
  Gibt die Portnummer an, die für Verbindungen vom Service Broker-TCP/IP überwacht wird. Gemäß der Konvention wird 4022 verwendet, aber jede Zahl zwischen 1024 und 32767 ist gültig.  
   
- LISTENER_IP  **=**  alle | **(***4-Teil-IP-* **)** | **(** "*ip_address_v6*"  **)**  
+ LISTENER_IP  **=**  alle |  **(*** 4-Teil-IP-* **)** | **(** "*ip_address_v6 *" **)**  
  Gibt die IP-Adresse an, auf der der Endpunkt lauscht. Der Standardwert ist ALL. Das bedeutet, dass die Überwachung lässt eine Verbindung an einer gültigen IP-Adresse zulässt.  
   
  Wenn Sie die Datenbankspiegelung mit einer IP-Adresse anstelle eines vollqualifizierten Domänennamens (`ALTER DATABASE SET PARTNER = partner_IP_address` oder `ALTER DATABASE SET WITNESS = witness_IP_address`) konfigurieren, müssen Sie beim Erstellen von Spiegelungsendpunkten `LISTENER_IP =IP_address` anstelle von `LISTENER_IP=ALL` angeben.  
@@ -171,7 +173,7 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  Alle Spiegelungsverbindungen auf einer Serverinstanz verwenden einen gemeinsamen Datenbankspiegelungsendpunkt. Jeder Versuch, einen zusätzlichen Datenbankspiegelungsendpunkt zu erstellen, ist fehlerhaft.  
   
- **\<Authentication_options >:: =**  
+ **\<authentication_options> ::=**  
   
  **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
  Gibt an, dass der Endpunkt mithilfe des Windows-Authentifizierungsprotokolls die Endpunkte authentifizieren soll. Dies ist die Standardeinstellung.  
@@ -234,7 +236,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Nachrichten für externe Dienste werden verworfen. Dies ist die Standardeinstellung.  
   
- MESSAGE_FORWARD_SIZE  **=**  *Forward_size*  
+ MESSAGE_FORWARD_SIZE **= *** Forward_size*  
  Gibt an, wie viel Speicherplatz dem Endpunkt zum Speichern weiterzuleitender Nachrichten maximal in MB zugeordnet werden soll.  
   
  **Optionen für DATABASE_MIRRORING**  
@@ -294,9 +296,8 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

@@ -1,29 +1,31 @@
 ---
-title: Dm_execution_performance_counters (SSISDB-Datenbank) | Microsoft Docs
+title: dm_execution_performance_counters (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666192f42269b1cc9b5c9503eccc849059f00652
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>Funktionen - dm_execution_performance_counters
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+# <a name="functions---dmexecutionperformancecounters"></a>Funktionen – dm_execution_performance_counters
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Leistungsstatistik für eine Ausführung zurück, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server ausgeführt wird.  
   
@@ -35,15 +37,15 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @execution_id =] *Execution_id*  
+ [ @execution_id = ] *execution_id*  
  Der eindeutige Bezeichner der Ausführung, die ein oder mehrere Pakete enthält. Die Ausführung von Paketen mit dem Task "Paket ausführen" erfolgt in der gleichen Ausführung wie die Ausführung des übergeordneten Pakets.  
   
  Wenn eine Ausführungs-ID nicht angegeben wird, werden Leistungsstatistiken für mehrere Ausführungen zurückgegeben. Wenn Sie ein Mitglied der **ssis_admin** -Datenbankrolle sind, werden Leistungsstatistiken für alle aktiven Ausführungen zurückgegeben.  Wenn Sie kein Mitglied der **ssis_admin** -Datenbankrolle sind, werden Leistungsstatistiken zu den aktiven Ausführungen zurückgegeben, für die Sie Leseberechtigungen haben. *execution_id* ist **BigInt**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle werden die von der dm_execution_performance_counter-Funktion zurückgegebenen Leistungsindikatornamenswerte aufgeführt.  
   
-|Indikatorname|Beschreibung|  
+|Indikatorname|Description|  
 |------------------|-----------------|  
 |Gelesene BLOB-Bytes|Anzahl der Bytes der BLOB-Daten (Binary Large Object), die das Datenflussmodul in allen Datenquellen liest.|  
 |Geschriebene BLOB-Bytes|Anzahl der Bytes der BLOB-Daten (Binary Large Object), die das Datenflussmodul in alle Ziele schreibt.|  
@@ -61,11 +63,11 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Rückgabewert  
  Die dm_execution_performance_counters-Funktion gibt für eine aktive Ausführung eine Tabelle mit den folgenden Spalten zurück. Die zurückgegebenen Informationen sind für alle in der Ausführung enthaltenen Pakete. Sind keine Ausführungen aktiv, wird eine leere Tabelle zurückgegeben.  
   
-|Spaltenname|Spaltentyp|Beschreibung|Hinweise|  
+|Spaltenname|Spaltentyp|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
-|execution_id|**"Bigint"**<br /><br /> **NULL** ist kein gültiger Wert.|Eindeutiger Bezeichner für die das Paket enthaltende Ausführung.||  
-|counter_name|**vom Datentyp nvarchar(128)**|Der Name des Leistungsindikators.|Siehe den Abschnitt von Werten **Hinweise** .|  
-|counter_value|**"Bigint"**|Wert, der vom Indikator zurückgegeben wird.||  
+|execution_id|**BigInt**<br /><br /> **NULL** ist kein gültiger Wert.|Eindeutiger Bezeichner für die das Paket enthaltende Ausführung.||  
+|counter_name|**nvarchar(128)**|Der Name des Leistungsindikators.|Siehe den Abschnitt von Werten **Hinweise** .|  
+|counter_value|**BigInt**|Wert, der vom Indikator zurückgegeben wird.||  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel gibt die Funktion Statistiken für eine aktive Ausführung mit einer ID von 34 zurück.  
@@ -75,7 +77,7 @@ select * from [catalog].[dm_execution_performance_counters] (34)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel gibt die Funktion Statistiken für alle Ausführungen, die unter der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server, abhängig von Ihren Berechtigungen.  
+ Im folgenden Beispiel gibt die Funktion abhängig von den Berechtigungen Statistiken für alle Ausführungen zurück, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server ausgeführt werden.  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
@@ -99,4 +101,3 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   Die angegebene Ausführungs-ID ist ungültig.  
   
   
-

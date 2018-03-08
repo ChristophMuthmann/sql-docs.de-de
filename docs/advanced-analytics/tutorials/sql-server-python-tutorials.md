@@ -3,29 +3,22 @@ title: "Lernprogramme für SQL Server-Python | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to:
+vapplies_to:
 - SQL Server 2017
 dev_langs:
 - Python
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 42a9339f5983eeef28250db7a384f37efd4dad9d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 70b2ada0c6b2cade444af1f7dde67f0adfd90b35
-ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server-Python-Lernprogramme
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel enthält eine Liste der Lernprogramme und Beispiele, in denen die Verwendung von Python mit SQL Server-2017 veranschaulicht. Durch diese Beispiele und Demos erfahren Sie:
 
@@ -92,4 +85,3 @@ Wenn Probleme auftreten, finden Sie in diesem Artikel finden Sie einige häufig 
 ## <a name="see-also"></a>Siehe auch
 
 [R-Tutorials für SQL Server](sql-server-r-tutorials.md)
-

@@ -2,11 +2,13 @@
 title: "Löschen von EXTERNEN Bibliothek (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,16 +20,15 @@ helpviewer_keywords:
 - DROP EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: ac2814f7c0b0d1bf6de60d52ea65e54caab0f72d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+manager: craigg
+ms.openlocfilehash: 8c45da28bf795fca50454fde21eb7d2c3c798296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-library-transact-sql"></a>Löschen von EXTERNEN Bibliothek (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Löscht eine vorhandenes Paket-Bibliothek.
 
@@ -76,9 +77,8 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen von EXTERNEN Bibliothek (Transact-SQL)](create-external-library-transact-sql.md)  
-[ALTER externe Bibliothek (Transact-SQL)](alter-external-library-transact-sql.md)  
-[Sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[Sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
+[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
 

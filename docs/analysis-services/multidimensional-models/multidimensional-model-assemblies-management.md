@@ -2,13 +2,13 @@
 title: Mehrdimensionales Modell Assemblys-Verwaltung | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, die mit den Sprachen MDX (Multidimensional Expressions) und DMX (Data Mining Extensions) verwendet werden können. Diese sind für standardmäßige statistische Berechnungen ebenso geeignet wie für das Durchlaufen der Elemente in einer Hierarchie. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX), die entwickelt, um die standardmäßige statistische Berechnungen wie zum durchlaufenden der Elemente in einer Hierarchie zu erreichen. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
   
  Deshalb bietet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Möglichkeit, einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder -Datenbank Assemblys hinzuzufügen. Mithilfe von Assemblys können Sie mit einer beliebigen CLR-Sprache (Common Language Runtime), z. B. Microsoft Visual Basic .NET oder Microsoft Visual C#, externe benutzerdefinierte Funktionen erstellen. Darüber hinaus können Sie COM-Automatisierungssprachen (Component Object Model) wie Microsoft Visual Basic oder Microsoft Visual C++ verwenden.  
   
@@ -124,4 +124,3 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  [Definieren von gespeicherten Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

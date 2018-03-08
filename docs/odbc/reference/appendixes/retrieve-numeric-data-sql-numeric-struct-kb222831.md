@@ -6,6 +6,10 @@ authors: MightyPen
 manager: jhubbard
 editor: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.devlang: C++
 ms.topic: article
@@ -14,12 +18,11 @@ ms.tgt_pltfrm: NA
 ms.workload: Inactive
 ms.date: 07/13/2017
 ms.author: genemi
+ms.openlocfilehash: 1a49585e1bf9d0f871a80f8bf386102b5cac8f0a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed79b7c006efaeb6af03a10c7421eb71d1ab69ad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Abrufen von numerischen Daten mit SQL\_numerischen\_Struktur
 
@@ -385,5 +388,4 @@ http://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/1812
 
 https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/c-data-types
 -->
-
 

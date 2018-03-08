@@ -2,11 +2,13 @@
 title: Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "79"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird erläutert, wie eine vollständige Datenbanksicherung mit SQL Server Management Studio wiederhergestellt wird.    
        
@@ -79,9 +80,9 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
             **Hinzufügen**  
             Abhängig vom Medientyp, den Sie in der Dropdownliste **Sicherungsmedientyp** ausgewählt haben, wird durch das Klicken auf **Hinzufügen** eines der folgenden Dialogfelder geöffnet. (Ist die Liste im Listenfeld **Sicherungsmedien** voll, ist die Schaltfläche **Hinzufügen** nicht verfügbar.)
 
-            |Medientyp|Dialogfeld|Beschreibung|    
+            |Medientyp|Dialogfeld|Description|    
             |----------------|----------------|-----------------|    
-            |**File**|**Sicherungsdatei suchen**|In diesem Dialogfeld können Sie eine lokale Datei aus der Struktur auswählen oder eine Remotedatei mithilfe des vollqualifizierten UNC-Namens (Universal Naming Convention) angeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
+            |**Zuletzt geöffnete Dateien**|**Sicherungsdatei suchen**|In diesem Dialogfeld können Sie eine lokale Datei aus der Struktur auswählen oder eine Remotedatei mithilfe des vollqualifizierten UNC-Namens (Universal Naming Convention) angeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|    
             |**Sicherungsmedium**|**Sicherungsmedium auswählen**|In diesem Dialogfeld können Sie aus einer Liste logischer Sicherungsmedien auswählen, die auf der Serverinstanz definiert sind.|    
             |**Band**|**Sicherungsband auswählen**|In diesem Dialogfeld können Sie aus einer Liste der Bandlaufwerke auswählen, die physisch mit dem Computer verbunden sind, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird.|    
             |**URL**|**Speicherort der Sicherungsdatei auswählen**|In diesem Dialogfeld können Sie vorhandene SQL Server-Anmeldeinformationen/Azure-Speichercontainer auswählen, einen neuen Azure-Speichercontainer mit einer Shared Access Signature (SAS) erstellen oder eine SAS und SQL Server-Anmeldeinformationen für einen vorhandenen Speichercontainer generieren.  Siehe auch [Herstellen einer Verbindung zu einem Microsoft Azure-Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)|  
@@ -276,7 +277,7 @@ Die Datenbank `Sales` wird aus einer Sicherung unter `https://mystorageaccount.b
 12. Klicken Sie auf **OK**.
 
 
-## <a name="see-also"></a>Siehe auch    
+## <a name="see-also"></a>Weitere Informationen finden Sie unter    
  [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Wiederherstellen einer Datenbank an einem neuen Speicherort &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     
@@ -286,4 +287,3 @@ Die Datenbank `Sales` wird aus einer Sicherung unter `https://mystorageaccount.b
  [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)    
     
   
-

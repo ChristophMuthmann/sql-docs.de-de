@@ -3,30 +3,34 @@ title: "Konfigurieren des Protokollversands für SQL Server on Linux | Microsoft
 description: "Dieses Lernprogramm zeigt ein einfaches Beispiel dafür, wie eine SQL Server-Instanz unter Linux auf einer sekundären Instanz, die unter Verwendung des Protokollversands repliziert."
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc8c8094c6701af90aa9f645dc24fff8a70394b9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit Protokollversand unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server-Protokollversand ist eine HA-Konfiguration, in dem eine Datenbank von einem primären Server auf einem oder mehreren sekundären Servern repliziert. Kurz gesagt, ist eine Sicherung der Quelldatenbank auf dem sekundären Server wiederhergestellt. Klicken Sie dann der primäre Server erstellt Sicherungen des Transaktionsprotokolls in regelmäßigen Abständen und die sekundären Servern wiederhergestellt werden, aktualisieren die sekundäre Kopie der Datenbank. 
 
   ![Protokollversandmonitors](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Wie in der Abbildung weiter oben beschrieben, umfasst eine protokollversandsitzung die folgenden Schritte aus:
+Wie beschrieben in diesem Bild eine protokollversandsitzung umfasst die folgenden Schritte aus:
 
 - Sichern die Transaktionsprotokolldatei auf dem primären SQL Server-Instanz
 - Die Protokollsicherungsdatei Transaktion kopiert über das Netzwerk, auf eine oder mehrere sekundäre SQL Server-Instanzen
@@ -310,6 +314,5 @@ Wie in der Abbildung weiter oben beschrieben, umfasst eine protokollversandsitzu
     GO  
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
 
 

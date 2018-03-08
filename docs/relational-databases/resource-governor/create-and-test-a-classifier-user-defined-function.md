@@ -2,11 +2,13 @@
 title: Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - classifier function [SQL Server], create
 - Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d5135bcfab53fafb3ec2564f2607a64f46a61c53
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
-ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
-ms.openlocfilehash: 95cb4a61a662dae4168e1b67900cce9c16de315f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion
-  In diesem Thema wird das Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion (User-Defined Function, UDF) erläutert. Die Schritte umfassen das Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird das Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion (User-Defined Function, UDF) erläutert. Die Schritte umfassen das Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor.  
   
  Das in der folgenden Prozedur dargestellte Beispiel veranschaulicht die Möglichkeiten zum Erstellen einer recht komplexen benutzerdefinierten Klassifizierungsfunktion.  
   
@@ -272,7 +273,7 @@ ms.lasthandoff: 07/31/2017
         > [!WARNING]  
         >  Es wird dringend empfohlen, diese Best Practices zu befolgen. Wenn Sie die Best Practices aufgrund von Problemen nicht befolgen können, wenden Sie sich an den Microsoft Support, um zukünftigen Problemen vorzubeugen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Aktivieren der Ressourcenkontrolle](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Ressourcenpool für die Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
@@ -286,4 +287,3 @@ ms.lasthandoff: 07/31/2017
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: Remote Blob Store (RBS) (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -13,22 +16,21 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 331cb2ea2826eec7bebba7d67ad5def405f2085e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 11edeb0ba81666ecf64adf189bd704de81af5a32
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB-Speicher (RBS) ist eine optionale Add-On-Komponente, mit der Datenbankadministratoren Binary Large Objects in Speicherlösungen statt direkt auf dem Hauptdatenbankserver speichern können.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote Blob Store (RBS) ist eine optionale Add-On-Komponente, mit der Datenbankadministratoren Binary Large Objects in Speicherlösungen statt direkt auf dem Hauptdatenbankserver speichern können.  
   
  RBS ist nicht auf den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installationsmedien enthalten. Er wird auch nicht über das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprogram installiert.  
   
@@ -233,9 +235,8 @@ FROM [mssqlrbs_resources].[rbs_internal_blob_store_credentials];
 SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Remoteblobspeicher und Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   
-

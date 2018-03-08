@@ -2,28 +2,29 @@
 title: "Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.suite: sql
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 45707ee7bbed4fe4060bcf3134fe98783cb59690
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools
-  Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program; CEIP) uns dabei hilft, unsere Software zu verbessern.  Sie können Tools konfigurieren, um Ihr Einverständnis jederzeit zu widerrufen bzw. neu zu erteilen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP) uns dabei hilft, unsere Software zu verbessern.  Sie können Tools konfigurieren, um Ihr Einverständnis jederzeit zu widerrufen bzw. neu zu erteilen.  
   
 > [!NOTE]  
 >  Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server 2016-Releases sowie anderer Produkte und Dienste finden Sie in diesen [Datenschutzbestimmungen von Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
@@ -147,4 +148,3 @@ ms.lasthandoff: 07/31/2017
 -   1 bedeutet einschalten  
   
   
-

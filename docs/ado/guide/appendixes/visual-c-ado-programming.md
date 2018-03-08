@@ -3,7 +3,7 @@ title: Visual C++-ADO-Programmierung | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9000f90f30c8761845305e75cf3d0ea7ea86927a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++-ADO-Programmierung
 Die ADO-API-Referenz beschreibt die Funktionalität von der ADO-Anwendungsprogrammierschnittstelle (API) eine Microsoft Visual Basic-ähnliche Syntax verwenden. Obwohl die beabsichtigte Zielgruppe alle Benutzer ist, verwendet ADO-Programmierer verschiedene Sprachen wie Visual Basic, Visual C++ (mit und ohne die **#import** Richtlinie), und Visual J++ (mit dem Paket für den ADO/WFC-Klasse).  
@@ -47,7 +46,7 @@ Die ADO-API-Referenz beschreibt die Funktionalität von der ADO-Anwendungsprogra
   
  Für jeden Vorgang innerhalb einer Klasse (d. h. eine Methode oder Eigenschaft aufrufen) besteht eine Deklaration zum Aufrufen des Vorgangs direkt (d. h. "unformatiert" Form des Vorgangs), und eine Deklaration, um den unformatierten Vorgang aufrufen und einen COM-Fehler auslösen, wenn der Vorgang nicht Succ ausgeführt essfully. Wenn der Vorgang eine Eigenschaft ist, ist normalerweise eine Compilerdirektive, die eine alternative Syntax für den Vorgang erstellt, die Syntax wie Visual Basic besteht.  
   
- Vorgänge, die den Wert einer Eigenschaft abzurufen haben Namen im Format **abrufen***Eigenschaft*. Vorgänge, die den Wert einer Eigenschaft festgelegt haben Namen im Format **Put***Eigenschaft*. Vorgänge, die den Wert einer Eigenschaft mit einem Zeiger auf ein ADO-Objekt festgelegt haben Namen im Format **PutRef***Eigenschaft*.  
+ Vorgänge, die den Wert einer Eigenschaft abzurufen haben Namen im Format **abrufen *** Eigenschaft*. Vorgänge, die den Wert einer Eigenschaft festgelegt haben Namen im Format **Put *** Eigenschaft*. Vorgänge, die den Wert einer Eigenschaft mit einem Zeiger auf ein ADO-Objekt festgelegt haben Namen im Format **PutRef *** Eigenschaft*.  
   
  Sie können abrufen oder festlegen eine Eigenschaft durch Aufrufe der folgenden Formen:  
   
@@ -72,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- Generiert der Compiler den entsprechenden **abrufen***-*, **Put**-, oder **PutRef***-Eigenschaft* Aufruf basierend auf welche alternative Syntax deklariert wird, und gibt an, ob die Eigenschaft wird gelesen bzw. geschrieben werden.  
+ Generiert der Compiler den entsprechenden **Get ***-*, **Put**-, oder **PutRef *** Eigenschaft* Aufruf basierend auf welche alternative Syntax deklariert wird und ob die Eigenschaft ist gelesen oder geschrieben.  
   
  Die **__declspec(property...)**  kann nur die Compilerdirektive deklarieren **abrufen**, **put**, oder **abrufen** und **put** alternative Syntax für eine Funktion. Nur schreibgeschützte Vorgänge haben eine **abrufen** Deklaration; nur-schreiben Vorgänge, die nur eine **put** -Deklaration; Vorgänge, die sind sowohl Lese-als auch haben beide **abrufen** und **put** Deklarationen.  
   
- Es sind nur zwei Deklarationen mit dieser Richtlinie möglich; Allerdings kann jede Eigenschaft drei Eigenschaftenfunktionen aufweisen: **abrufen***Eigenschaft*, **Put***Eigenschaft*, und **PutRef**  *Eigenschaft*. In diesem Fall ist nur zwei Formen der Eigenschaft, die alternative Syntax.  
+ Es sind nur zwei Deklarationen mit dieser Richtlinie möglich; Allerdings kann jede Eigenschaft drei Eigenschaftenfunktionen aufweisen: **abrufen *** Eigenschaft*, **Put *** Eigenschaft*, und **PutRef *** Eigenschaft*. In diesem Fall ist nur zwei Formen der Eigenschaft, die alternative Syntax.  
   
- Z. B. die **Befehl** Objekt **ActiveConnection** Eigenschaft wird deklariert, wobei eine alternative Syntax für **abrufen***ActiveConnection*und **PutRef***ActiveConnection*. Die **PutRef**-Syntax ist eine gute Wahl, da in der Praxis, Sie in der Regel werden ein offenes aufnehmen möchten **Verbindung** Objekt (d. h. eine **Verbindung** Objektzeiger) in diesem Diese Eigenschaft. Auf der anderen Seite der **Recordset** Objekt hat **abrufen**-, **Put**-, und **PutRef***ActiveConnection*Vorgänge, aber keine alternative Syntax.  
+ Z. B. die **Befehl** Objekt **ActiveConnection** Eigenschaft wird deklariert, wobei eine alternative Syntax für **abrufen *** ActiveConnection* und **PutRef * ** ActiveConnection*. Die **PutRef**-Syntax ist eine gute Wahl, da in der Praxis, Sie in der Regel werden ein offenes aufnehmen möchten **Verbindung** Objekt (d. h. eine **Verbindung** Objektzeiger) in diesem Diese Eigenschaft. Andererseits, die **Recordset** Objekt hat **abrufen**-, **Put**-, und **PutRef *** ActiveConnection* Vorgänge, aber keine Alternative Die Syntax.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Sammlungen, die GetItem-Methode und die Item-Eigenschaft  
  ADO definiert mehrere Auflistungen, einschließlich **Felder**, **Parameter**, **Eigenschaften**, und **Fehler**. In Visual C++ die **GetItem (***Index***)** Methode gibt ein Element der Auflistung zurück. *Index* ist ein **Variant**, dessen Wert der wird entweder einen numerischen Index des Elements in der Auflistung oder eine Zeichenfolge, die mit dem Namen des Elements.  
@@ -168,7 +167,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Die letzte Anfrage Rückgabecodes explizit das zweite boolesche Argument des Konstruktors mit den optional, Standardwert `true`. Dieses Argument bewirkt, dass die **Variant** Konstruktor aufrufen seiner **AddRef**()-Methode, die ADO automatisch kompensiert die **_variant_t::Release()**()-Methode Wenn die ADO-Methode oder Eigenschaft aufrufen abgeschlossen ist.  
   
-### <a name="safearray"></a>SafeArray-Elements  
+### <a name="safearray"></a>SafeArray  
  Ein **SafeArray** ist ein strukturierte Daten-Typ, ein Array von anderen Datentypen enthält. Ein **SafeArray** heißt *sichere* daran, dass es Informationen über die Grenzen der einzelnen Dimensionen des Arrays enthält, und den Zugriff auf Arrayelemente innerhalb dieser Grenzen schränkt.  
   
  Wenn die ADO-API-Referenz besagt, dass eine Methode oder Eigenschaft akzeptiert, oder gibt ein Array zurück, es bedeutet, dass die Methode oder Eigenschaft akzeptiert bzw. zurückgibt eine **SafeArray**, nicht systemeigenen C/C++-Arrays.  
@@ -440,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- Dieses Visual C++-Beispiel zeigt die **abrufen**/**Put**/**PutRef***Eigenschaft*.  
+ Dieses Visual C++-Beispiel zeigt die **abrufen**/**Put**/**PutRef *** Eigenschaft*.  
   
 #### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen kommentierten Abschnitten im Codebeispiel.  
@@ -604,4 +603,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

@@ -3,7 +3,7 @@ title: RowPosition-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0e384d850a51cc94439a896040951ec3c23f2f6a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00206531bf8154d509f79e7229b1a2da319fa5fa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rowposition-property-ado"></a>RowPosition-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB- **RowPosition** Objekt vom bzw. auf eine **ADORecordsetConstruction** Objekt. Bei Verwendung von **Put_RowPosition** festzulegende der **RowPosition** -Objekt, das resultierende **Recordset** -Objekt verwendet die **RowPosition** -Objekt hinzu Bestimmen der aktuellen Zeile.  
@@ -61,4 +60,3 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordsetConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
-

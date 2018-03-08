@@ -1,29 +1,30 @@
 ---
 title: "Erste Schritte mit SSMA für Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 1765ceb5cb1f4100d60a0f429635f9fc80d14e82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ad25369dc4a9d9cc7a26795320050dcb583e92b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Erste Schritte mit SSMA für Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) für Oracle können Sie schnell, konvertieren Sie Oracle-Datenbankschemas auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Schemas Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Migrieren von Daten aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -101,7 +102,7 @@ Die folgende Tabelle zeigt die SSMA-Menüs.
   
 |Menü|Description|  
 |----|-----------|  
-|**File**|Enthält Befehle zum Arbeiten mit Projekten und Herstellen einer Verbindung mit Oracle Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Zuletzt geöffnete Dateien**|Enthält Befehle zum Arbeiten mit Projekten und Herstellen einer Verbindung mit Oracle Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**Bearbeiten**|Enthält Befehle zum Suchen nach und Arbeiten mit Text in den Detailseiten, z. B. das Kopieren [!INCLUDE[tsql](../../includes/tsql_md.md)] aus dem SQL-Detailbereich. Enthält auch die **Lesezeichen verwalten** Option eine Liste der vorhandenen Lesezeichen angezeigt, in denen werden. Die Schaltflächen können auf der rechten Seite des Dialogfelds Sie um das Lesezeichen zu verwalten.|  
 |**Ansicht**|Enthält die **Synchronisieren der Metadaten-Explorer** Befehl. Die die Objekte zwischen Oracle Metadaten-Explorer synchronisiert und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer. Enthält auch Befehle anzeigen oder Ausblenden der **Ausgabe** und **Fehlerliste** Bereiche und eine Option **Layouts** Layouts verwalten.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten und Migrieren von Objekten und Daten. Bietet außerdem Zugriff auf die **globale Einstellungen** und **Projekteinstellungen** Dialogfelder.|  
@@ -119,4 +120,3 @@ Die **Ansicht** Menü enthält Befehle zum Umschalten der Sichtbarkeit der im Au
 [Migrieren von Oracle-Daten in SQLServer &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
 [Referenz zur Benutzeroberfläche &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-

@@ -2,43 +2,35 @@
 title: "Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
-  In diesem Thema wird die Verwendung von Arbeitsmappen beschrieben, die in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Umgebungen früherer Versionen erstellt wurden. Außerdem wird erläutert, wie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappen aktualisiert werden, um die Vorteile neuer, in diesem Release eingeführter Features zu nutzen. Weitere Informationen zu neuen Features finden Sie unter [Neues in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+In diesem Thema wird die Verwendung von Arbeitsmappen beschrieben, die in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Umgebungen früherer Versionen erstellt wurden. Außerdem wird erläutert, wie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappen aktualisiert werden, um die Vorteile neuer, in diesem Release eingeführter Features zu nutzen. Weitere Informationen zu neuen Features finden Sie unter [Neues in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  Für das Upgrade von Arbeitsmappen, die automatisch auf dem Server aktualisiert werden, kann kein Rollback ausgeführt werden. Sobald eine Arbeitsmappe aktualisiert wurde, bleibt sie auf diesem Stand. Um eine frühere Version zu verwenden, können Sie die vorherige Arbeitsmappe erneut in SharePoint veröffentlichen, eine frühere Version wiederherstellen oder die Arbeitsmappe wiederverwenden. Weitere Informationen zum Wiederherstellen oder Wiederverwenden eines Dokuments in SharePoint finden Sie unter [Planen des Schutzes von Inhalten mit Papierkörben und der Versionsverwaltung](http://go.microsoft.com/fwlink/?LinkId=238669).  
   
- Dieses Thema enthält folgende Abschnitte:  
-  
--   [Übersicht über das Aktualisieren von Arbeitsmappen](#bkmk_overview)  
-  
--   [Aktualisieren von Arbeitsmappen der Version 2008 R2 auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [Aktualisieren von Versionen, die mit dem 2012 Power Pivot-Add-In für Excel erstellt wurden, auf Office 2013-Arbeitsmappen](#bkmk_to_2012sp1_from_2012)  
-  
--   [Aktualisieren von Versionen, die mit dem 2008 R2 Power Pivot-Add-In für Excel 2010 erstellt wurden, auf SQL Server 2012-Arbeitsmappen](#bkmk_to_2012_from_2008R2)  
-  
--   [Ausführen mehrerer Arbeitsmappenversionen auf einem neueren Server](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Übersicht über das Aktualisieren von Arbeitsmappen  
  Eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappe ist eine Excel-Arbeitsmappe, die eingebettete [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Daten enthält. Das Aktualisieren einer Arbeitsmappe bietet zwei Vorteile:  
@@ -103,7 +95,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  Aktualisieren Sie jede Arbeitsmappe manuell, indem Sie sie in Microsoft Excel 2013 öffnen.  
   
-2.  Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, laden Sie die Arbeitsmappe herunter und öffnen sie in Microsoft Excel 2013.  
+2.  Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, laden Sie die Arbeitsmappe herunter und öffnen sie in Microsoft Excel 2013.  
   
 3.  Öffnen Sie das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Fenster, und aktualisieren Sie das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modell.  
   
@@ -181,4 +173,3 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  [Anzeigen von Daten aktualisieren Sicherungsverlauf &#40; PowerPivot für SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   
-

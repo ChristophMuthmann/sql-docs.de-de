@@ -3,10 +3,12 @@ title: "Löschen einer Projektmappe | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], deleting
 - deleting solutions
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b783dbb2d94608d4d3d798403dde78b34027d38d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 734a0e6e42282eed62416cc0d360b6d7bc53f6a7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-solution"></a>Löschen einer Projektmappe
-Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem physischen Speicher und die Dateielemente aus der Projektmappe entfernt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem physischen Speicher und die Dateielemente aus der Projektmappe entfernt.  
   
 > [!NOTE]  
 > Im Gegensatz zu Projekten und Elementen kann eine Projektmappe nur unwiderruflich gelöscht und nicht vorübergehend entfernt werden.  
@@ -42,10 +43,9 @@ Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem p
   
 4.  Klicken Sie im Menü **Datei** auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Erstellen einer neuen Projektmappe](../../ssms/solution/create-a-new-solution.md)  
 [Erstellen eines Projekts](../../ssms/solution/create-a-project.md)  
 [Entfernen oder Löschen eines Elements oder Projekts](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
   
-

@@ -1,26 +1,28 @@
 ---
-title: "Microsoft Connector für SAP BW | Microsoft Docs"
+title: "Microsoft Connector für SAP BW | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9edd63d224f5d4053133cba28ad31a8fba93522
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4cf1d7dec8128747af1a4f8e30fc16270b4e2504
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW besteht aus drei Komponenten, mit denen Sie Daten aus einem SAP NetWeaver BW-System, Version 7, extrahieren oder in ein solches System laden können.  
@@ -57,4 +59,3 @@ ms.lasthandoff: 08/03/2017
  Beschreibt die Benutzeroberfläche der einzelnen Komponenten im [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW.  
   
   
-

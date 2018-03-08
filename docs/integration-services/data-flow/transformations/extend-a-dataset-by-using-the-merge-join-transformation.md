@@ -1,10 +1,13 @@
 ---
-title: Erweitern eines Datasets mithilfe der Merge Join Transformations | Microsoft Docs
+title: "Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoin | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 00aaf46bb6b24813a79300be3a23d2a3aab28e41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoins
   Das Paket muss bereits mindestens einen Datenflusstask und zwei Datenflusskomponenten enthalten, die Eingaben für die Transformation für Zusammenführungsjoins bereitstellen, damit Sie eine Transformation für Zusammenführungsjoins hinzufügen und konfigurieren können.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Wenn Sie den Typ **Linker äußerer Join** auswählen, können Sie auf **Eingaben vertauschen** klicken, um die Eingaben zu vertauschen und den linken äußeren Join in einen rechten äußeren Join zu ändern.  
   
-7.  Ziehen Sie Spalten in der linken Eingabe auf Spalten in der rechten Eingabe, um die Joinspalten anzugeben. Falls die Spalten denselben Namen haben, können Sie das entsprechende Kontrollkästchen **** aktivieren, damit die Transformation für Zusammenführungsjoin den Join automatisch erstellt.  
+7.  Ziehen Sie Spalten in der linken Eingabe auf Spalten in der rechten Eingabe, um die Joinspalten anzugeben. Falls die Spalten denselben Namen haben, können Sie das **entsprechende Kontrollkästchen** aktivieren, damit die Transformation für Zusammenführungsjoin den Join automatisch erstellt.  
   
     > [!NOTE]  
     >  Joins können nur zwischen Spalten mit der gleichen Sortierposition erstellt werden, und die Joins müssen in der von der Sortierposition angegebenen Reihenfolge erstellt werden. Wenn Sie versuchen, die Joins außerhalb der Reihenfolge zu erstellen, werden Sie vom **Transformations-Editor für Zusammenführungsjoin** aufgefordert, zusätzliche Joins für die ausgelassenen Sortierreihenfolgepositionen zu erstellen.  
@@ -65,11 +67,10 @@ ms.lasthandoff: 08/03/2017
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transformation für Zusammenführungsjoin](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -3,8 +3,11 @@ title: Abrufen von Daten (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1333af6ceba4a4410fefadd1a99d8611fae88a6a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ruft eine bestimmte Zeile aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor ab.  
   
@@ -70,7 +72,7 @@ FETCH
  LAST  
  Gibt die letzte Zeile im Cursor zurück und macht sie zur aktuellen Zeile.  
   
- ABSOLUTE {  *n* | @*Nvar*}  
+ ABSOLUTE { *n*| @*nvar*}  
  Wenn  *n*  oder @*Nvar* positive Zahl ist, wird die Zeile zurückgegeben  *n*  ausgehend vom Anfang des Cursors-te. der zurückgegebenen Zeile der aktuelle Zeile. Wenn  *n*  oder @*Nvar* ist ein negativer Wert ist, wird die Zeile  *n*  vor dem Ende des Cursors-te. der zurückgegebenen Zeile der aktuelle Zeile. Wenn  *n*  oder @*Nvar* gleich 0 ist, werden keine Zeilen zurückgegeben. *n*muss eine ganzzahlige Konstante und @*Nvar* muss **"smallint"**, **"tinyint"**, oder **Int**.  
   
  RELATIVE {  *n* | @*Nvar*}  
@@ -79,7 +81,7 @@ FETCH
  GLOBAL  
  Gibt an, dass *Cursor_name* auf einen globalen Cursor verweist.  
   
- *Cursorname*  
+ *cursor_name*  
  Der Name des geöffneten Cursors, von dem der Abruf erfolgen soll. Wenn sowohl ein globaler als auch ein lokaler Cursor mit vorhanden *Cursor_name* als Buchstabenfolge, *Cursor_name* auf den globalen Cursor, wenn GLOBAL angegeben ist und auf den lokalen Cursor GLOBAL nicht angegeben ist.  
   
  @*cursor_variable_name*  
@@ -213,10 +215,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schließen &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [Aufheben der ZUORDNUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [OPEN &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   
-

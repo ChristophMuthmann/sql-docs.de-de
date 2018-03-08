@@ -3,8 +3,11 @@ title: Object_id (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: 63
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a612928c3a30b48d3dc8e1dedd4375ca564555d8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4978a07401fa33e0244a61181e29cfd6146b695e
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die Datenbankobjekt-ID eines Objekts mit Schemabereich zurück.  
   
@@ -71,10 +73,10 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass integrierte Funktionen (z. B. OBJECT_ID), die Metadaten ausgeben, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn der Parameter für eine Systemfunktion optional ist, wird von der aktuellen Datenbank, dem aktuellen Hostcomputer, dem aktuellen Serverbenutzer oder dem aktuellen Datenbankbenutzer ausgegangen. Auf integrierte Funktionen müssen immer runde Klammern folgen.  
   
- Wenn ein temporären Tabellennamen angegeben wird, muss der Datenbankname vor den Namen der temporären Tabelle stammen, wenn die aktuelle Datenbank ist **Tempdb**. Beispiel: `SELECT OBJECT_ID('tempdb..#mytemptable')`  
+ Wenn ein temporären Tabellennamen angegeben wird, muss der Datenbankname vor den Namen der temporären Tabelle stammen, wenn die aktuelle Datenbank ist **Tempdb**. Beispiel: `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
   
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke &#40; Transact-SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) und [, auf dem &#40; Transact-SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
   
@@ -133,10 +135,10 @@ GO
  Das folgende Beispiel gibt die Objekt-ID für die `FactFinance`-Tabelle in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank zurück.  
   
 ```  
-SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
+SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Sys. dm_db_index_operational_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
@@ -144,5 +146,4 @@ SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
  [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)  
   
   
-
 

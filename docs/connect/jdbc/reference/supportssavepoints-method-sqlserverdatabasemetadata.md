@@ -3,29 +3,28 @@ title: SupportsSavepoints-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.supportsSavepoints
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.supportsSavepoints
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: cd2418c9-e95d-4820-82bd-944287387b60
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9e689ee33360f3cc13842fac0bbf87111165a4ca
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4a76d16a96321e1c6fbbca74ccd7ac0e554507b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>supportsSavepoints-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,4 +53,3 @@ public boolean supportsSavepoints()
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

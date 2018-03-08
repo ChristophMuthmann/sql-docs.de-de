@@ -2,11 +2,13 @@
 title: "Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e18fc38d0f5baa2c49a487a362dc8612bc61f404
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 184067cec6269692f38b92b71cfc208bfab8256d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Die Funktionen für aktive sekundäre Replikate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] umfassen Unterstützung für den schreibgeschützten Zugriff auf ein oder mehrere sekundäre Replikate (*lesbare sekundäre Replikate*). Lesbare sekundäre Replikate lassen den schreibgeschützten Zugriff auf alle eigenen sekundären Datenbanken zu. Bei lesbaren sekundären Datenbanken ist jedoch kein Schreibschutz festgelegt. Sie sind dynamisch. Eine sekundäre Datenbank wird geändert, wenn Änderungen an der zugehörigen primären Datenbank auf die sekundäre Datenbank angewendet werden. Bei einem typischen sekundären Replikat liegen die Daten in den sekundären Datenbanken nahezu in Echtzeit vor. Dies gilt auch für dauerhafte speicheroptimierte Tabellen. Weiterhin werden Volltextindizes mit den sekundären Datenbanken synchronisiert. In vielen Fällen beträgt die Datenlatenz zwischen einer primären Datenbank und der zugehörigen sekundären Datenbank nur wenige Sekunden.  
   
@@ -207,9 +208,9 @@ ms.lasthandoff: 08/02/2017
 -   Das Suffix „_readonly_database_statistic“ ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Sie können dieses Suffix nicht verwenden, wenn Sie Statistiken in einer primären Datenbank erstellen. Weitere Informationen finden Sie unter [Statistics](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Zugreifen auf speicheroptimierte Tabellen auf einem sekundären Replikat  
- Mit speicheroptimierten Tabellen können für primäre und sekundäre Replikate dieselben Transaktionsisolationsstufen verwendet werden. Es wird empfohlen, die Isolationsstufe auf Sitzungsebene auf READ COMMITTED und die Datenbankebenenoption auf MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festzulegen. Beispiel:  
+ Mit speicheroptimierten Tabellen können für primäre und sekundäre Replikate dieselben Transaktionsisolationsstufen verwendet werden. Es wird empfohlen, die Isolationsstufe auf Sitzungsebene auf READ COMMITTED und die Datenbankebenenoption auf MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festzulegen. Zum Beispiel:  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -236,10 +237,10 @@ GO
   
     |Lesbares sekundäres Replikat?|Ist Momentaufnahmeisolation oder RCSI-Stufe aktiviert?|Primäre Datenbank|Sekundäre Datenbank|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |Nein|Nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
-    |Nein|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
-    |Ja|Nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
-    |Ja|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |nein|nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
+    |nein|ja|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
+    |ja|nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |ja|ja|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -259,11 +260,10 @@ GO
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistik](../../../relational-databases/statistics/statistics.md)  
   
   
-

@@ -3,8 +3,11 @@ title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - CREATE FULLTEXT CATALOG statement
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-caps.latest.revision: 60
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: f08bdaeaacb970c839ea1d7bb31c44f454daadf8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 65872ec24d605e61bf284446c976c51b053e999c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen Volltextkatalog für eine Datenbank. Ein Volltextkatalog kann mehrere Volltextindizes besitzen, ein Volltextindex kann jedoch nur Teil eines Volltextkatalogs sein. Jede Datenbank kann keinen oder mehrere Volltextkataloge enthalten.  
   
@@ -128,4 +130,3 @@ GO
  
   
   
-

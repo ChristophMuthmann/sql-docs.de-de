@@ -3,8 +3,11 @@ title: Col_name-Funktion (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
-caps.latest.revision: 28
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: c697b619907bb3d80fbbff800b2ac29ef574af8d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: c69e738d69be578b92becba95e70534061286f43
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt den Namen einer Spalte mit einer angegebenen Tabellenidentifikationsnummer und Spaltenidentifikationsnummer zurück.
   
@@ -90,5 +92,4 @@ BusinessEntityID
 [COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
-
 

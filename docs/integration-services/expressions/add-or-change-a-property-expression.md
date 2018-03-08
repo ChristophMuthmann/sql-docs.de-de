@@ -1,10 +1,13 @@
 ---
-title: "Hinzufügen oder Ändern eines Eigenschaftsausdrucks | Microsoft Docs"
+title: "Hinzufügen oder Ändern eines Eigenschaftsausdrucks | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9f115f318366e743e0a933239b55ccda16b5171
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b1ee8f6cfea444ee02880800908683213701af6e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-change-a-property-expression"></a>Hinzufügen oder Ändern eines Eigenschaftsausdrucks
   Sie können Eigenschaftsausdrücke für Pakete, Tasks, Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer, Ereignishandler, Verbindungs-Manager auf Paket- und Projektebene sowie für Protokollanbieter erstellen.  
@@ -69,15 +71,14 @@ ms.lasthandoff: 08/03/2017
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Ausdrücke](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integrationsservices &#40; SSIS &#41; Pakete](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integrationsservices &#40; SSIS &#41; Ereignishandler](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integrationsservices &#40; SSIS &#41; Verbindungen](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integrationsservices &#40; SSIS &#41; Protokollierung](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

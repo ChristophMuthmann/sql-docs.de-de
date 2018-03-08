@@ -1,30 +1,30 @@
 ---
-title: "Erstellen, ändern und Löschen von Momentaufnahmen im Berichtsverlauf | Microsoft Docs"
+title: "Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: 40
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "40"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d3f31eeab1cd9bf01b3d0525a1599678c7912ac7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf
   Der Berichtsverlauf ist eine Auflistung von Berichtsmomentaufnahmen. Zum Verwalten des Berichtsverlaufs können Sie Momentaufnahmen hinzufügen und löschen oder Eigenschaften zur Speicherung des Berichtsverlaufs ändern. Der Berichtsverlauf kann manuell oder nach einem Zeitplan erstellt werden.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  Momentaufnahmen im Berichtsverlauf werden nach dem Erstellungsdatum und der Erstellungsuhrzeit identifiziert. Das Datum und die Uhrzeit basieren auf dem Zeitpunkt der Ausführung der Abfrage.  
   
 ## <a name="creating-snapshots-in-report-history"></a>Erstellen von Momentaufnahmen im Berichtsverlauf  
- Momentaufnahmen können manuell oder in geplanten Intervallen für jeden Bericht erstellt werden, der unbeaufsichtigt ausgeführt werden kann. Zur unbeaufsichtigten Ausführung muss der Bericht gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwenden. Wenn darüber hinaus im Bericht Parameter verwendet werden, müssen Sie Standardwerte für die Ausführung des Berichts angeben. Auf den Eigenschaftenseiten für den Bericht können Sie gespeicherte Anmeldeinformationen und Parameterwerte angeben. Weitere Informationen finden Sie unter [Parameter (Eigenschaftenseite) &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
+ Momentaufnahmen können manuell oder in geplanten Intervallen für jeden Bericht erstellt werden, der unbeaufsichtigt ausgeführt werden kann. Zur unbeaufsichtigten Ausführung muss der Bericht gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwenden. Wenn darüber hinaus im Bericht Parameter verwendet werden, müssen Sie Standardwerte für die Ausführung des Berichts angeben. Auf den Eigenschaftenseiten für den Bericht können Sie gespeicherte Anmeldeinformationen und Parameterwerte angeben. Weitere Informationen finden Sie unter [Parameter Eigenschaftenseite (Berichts-Manager)](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
   
  Beim Erstellen eines Berichtsmomentaufnahmen werden die folgenden Elemente zusammen mit der Berichtsmomentaufnahme in der Berichtsserver-Datenbank gespeichert:  
   
@@ -65,12 +65,11 @@ ms.lasthandoff: 08/09/2017
   
  Der Berichtsverlauf wird beim Löschen eines Berichts ebenfalls gelöscht. Wenn Sie z. B. einen monatlichen Umsatzbericht löschen, weil Sie ihn durch eine neuere Version ersetzen, werden alle zugehörigen Berichtsverläufe ebenfalls gelöscht. Beim Verschieben eines Berichts werden auch alle Berichtsverläufe verschoben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen des Berichtsverlaufs &#40; Reporting Services in SharePoint integrierten Modus &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Berichtsinhaltsverwaltung für Server &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Hinzufügen einer Momentaufnahme zum Melden von Sicherungsverlauf &#40; Berichts-Manager &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Einschränken des Berichtsverlaufs &#40; Berichts-Manager &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen eines Berichtsverlaufs &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Einschränken des Berichtsverlaufs (Berichts-Manager)](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   
-

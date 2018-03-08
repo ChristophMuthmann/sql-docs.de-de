@@ -3,10 +3,12 @@ title: Konvertierung von Datentypen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversions"></a>Datentypkonvertierungen
 Daten konvertiert werden können von einem Typ in einen anderen an einem der vier Mal: Wenn Daten übertragen aus einer Anwendungsvariablen in eine andere (C#, C) Sendens von Daten in einer Anwendungsvariablen an einen Anweisungsparameter (C zu SQL) zurückgegebenen Daten in einer Resultsetspalte eine Anwendungsvariable (SQL zu C), und wenn Daten aus einer Spalte für die Datenquelle an eine andere (SQL to SQL) übertragen wird.  
@@ -38,4 +39,3 @@ Daten konvertiert werden können von einem Typ in einen anderen an einem der vie
  ODBC definiert, wie Daten zwischen jeder SQL- und C-Datentyp konvertiert werden. Im Grunde ODBC unterstützt alle angemessene Konvertierungen, z. B. ein Zeichen-, Integer und ganze Zahl, "float", und unterstützt keine Standardschaltfläche Konvertierungen, z. B. "float", um Datum. Treiber sind erforderlich, um alle Konvertierungen für jeden SQL-Datentyp unterstützen, die sie unterstützen. Eine vollständige Liste der Konvertierung zwischen SQL und C-Datentypen finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) und [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D:-Datentypen.  
   
  ODBC definiert auch eine skalare Funktion zum Konvertieren von Daten von einem SQL-Datentyp in einen anderen. Die **konvertieren** skalare Funktion wird vom Treiber auf die zugrunde liegenden skalaren Funktion oder Funktionen, die zum Durchführen von Konvertierungen in der Datenquelle definiert zugeordnet. Da diese Funktion DBMS-spezifische Funktionen zugeordnet ist, werden keine ODBC definiert, Funktionsweise dieser Konvertierungen oder welche Konvertierungen unterstützt werden müssen. Eine Anwendung ermittelt, welche Konvertierungen von einem bestimmten Treiber und einer Datenquelle durch die SQL_CONVERT Optionen in unterstützt werden **SQLGetInfo**. Weitere Informationen zu den **konvertieren** Skalarfunktion, finden Sie unter [Escapesequenzen in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) und [explizite Umwandlungsfunktion für Datentyp](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
-

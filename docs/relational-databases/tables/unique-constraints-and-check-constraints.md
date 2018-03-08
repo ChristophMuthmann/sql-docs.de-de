@@ -2,28 +2,29 @@
 title: "UNIQUE- und CHECK-Einschränkungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
 - Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "20"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b5596207dc1188bd9830c0993402194954737c6a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 42a8cd2f6d94288e5f118b35f3765cd3ad7b63ce
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE- und CHECK-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -108,4 +109,3 @@ DELETE CheckTbl WHERE col1 = 10;
 |Beschreibt, wie die Eigenschaften einer CHECK-Einschränkung angezeigt werden.|[UNIQUE- und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   
-

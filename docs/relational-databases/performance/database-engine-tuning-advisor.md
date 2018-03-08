@@ -2,30 +2,30 @@
 title: Datenbankoptimierungsratgeber | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dta.general.f1
+f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "16"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4f0b031b0c98dd9f7708aebd13984f22403f3de1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
   
 -   Beheben der Leistungsprobleme einer bestimmten Problemabfrage  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Der Datenbankoptimierungsratgeber speichert Daten zu Optimierungssitzungen und andere Informationen in der **msdb** -Datenbank. Wenn an der **msdb** -Datenbank Änderungen vorgenommen werden, besteht das Risiko, dass Optimierungssitzungsdaten verloren gehen. Um dieses Risiko zu umgehen, müssen Sie für die **msdb** -Datenbank eine geeignete Sicherungsstrategie implementieren.  
   
-## <a name="performance-considerations"></a>Leistungsaspekte  
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Der Datenbankmodul-Optimierungsratgeber kann bei der Analyse signifikante Prozessor- und Arbeitsspeicherressourcen belegen. Um zu vermeiden, dass die Leistung des Produktionsservers beeinträchtigt wird, wenden Sie eine der folgenden Strategien an:  
   
 -   Optimieren Sie die Datenbanken, wenn der Server frei ist. Der Datenbankoptimierungsratgeber kann sich auf Wartungstasks auswirken.  
@@ -130,4 +130,3 @@ ms.lasthandoff: 06/22/2017
 |Anzeigen der Ergebnisse des Datenbankoptimierungsvorgangs<br /><br /> Auswählen und Implementieren von Optimierungsempfehlungen<br /><br /> Durchführen einer Was-wäre-wenn-Analyse für die Arbeitsauslastung<br /><br /> Überprüfen vorhandener Optimierungssitzungen, Klonen von Sitzungen auf Grundlage vorhandener Sitzungen <br />oder Bearbeiten vorhandener Optimierungsempfehlungen zur weiteren Auswertung oder Implementierung<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|[Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   
-

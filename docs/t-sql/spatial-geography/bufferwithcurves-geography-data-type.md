@@ -3,8 +3,11 @@ title: BufferWithCurves (Geography-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80f16777999a029e1063305a0d1b8501af7e05d7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0978418fe682728d02f7c65b5bff581154ae231c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt eine **Geography** -Instanz, die für die Menge aller Punkte, deren Abstand von der aufrufenden **Geography** Instanz ist kleiner als oder gleich der *Abstand* Parameter.  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abstand*  
+ *distance*  
  Ist eine **"float"** aus der Geography-Instanz werden kann, der angibt, der maximalen Abstands der Punkte, den Puffer bilden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
@@ -149,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [BufferWithCurves &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   
-

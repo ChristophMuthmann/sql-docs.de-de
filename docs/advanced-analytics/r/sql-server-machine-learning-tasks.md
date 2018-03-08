@@ -1,72 +1,75 @@
 ---
-title: SQL Server-Machine LEarning-Aufgaben | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 04/16/2017
-ms.prod: sql-server-2016
+title: Machine learning-Lebenszyklus und die Teamprozess | Microsoft Docs
+ms.date: 11/03/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52ad3f10-6d24-477a-aeb6-110456b2ed1c
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 27a80fa7dddf5066e87a60998a691c07acfb40ab
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: c0e7a0929d5caa84df1a1fb02894db08313a36bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="sql-server-machine-learning-tasks"></a>SQL Server-Machine Learning-Aufgaben
+# <a name="machine-learning-lifecycle-and-personas"></a>Machine Learning-Lebenszyklus und Rollen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] kombiniert die Leistungsfähigkeit und Flexibilität der Open-Source-Sprache R mit Unternehmenstools für Datenspeicherung und -verwaltung, Workflowentwicklung, Berichte und Visualisierung. Dieses Thema beschreibt die Machine learning-Lebenszyklus und wie SQL Server die Bedürfnisse vier unterschiedlicher datenexperten unterstützt, die beim Machine Learning Enagged sind.
+Machine Learning-Projekte können komplex sein, da sie die Fähigkeiten und Zusammenarbeit, der einen unterschiedlichen Satz von IT-Experten benötigen. Dieser Artikel beschreibt die principal Aufgaben in Machine Learning Lebenszyklus, der Typ des datenexperten, die im maschinellen lernen und wie die Anforderungen von SQL Server unterstützt beteiligt sind.
+
+> [!TIP]
+> 
+> Bevor Sie ein Machine Learning-Projekts beginnen, es wird empfohlen, dass die Tools und best Practices, die von bereitgestellt werden, überprüfen Sie die [Microsoft Team Data Science-Prozess](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), oder TDSP. Dieser Prozess der Erstellung von Machine learning-Berater bei Microsoft best Practices für die Planung und Iterationen für Machine learning-Projekte zu konsolidieren. Die TDSP auf der Branchenstandards, z. B. CRISP-DM, enthält jedoch aktuelle Methoden wie die DevOps und visualisieren.
 
 ## <a name="machine-learning-life-cycle"></a>Machine Learning-Lebenszyklus
 
-Machine Learning ist nicht an eine kurzfristige Aufgabe jedoch eher einen langfristigen Prozess, der alle Aspekte der Daten im Unternehmen berührt. Machine Learning beginnt mit der Kennung der Unternehmensziele und Regeln und Sammeln von Daten von Sensoren und Geschäftsanwendungen. Machine Learning ist stark von Prozessen zum Extrahieren, verarbeiten und Speichern von Daten und wird zunehmend wichtig, wenn Richtlinien für das Speichern, extrahieren und Überwachungsdaten in Betracht gezogen. Machine Learning wird jetzt eine wichtige Component von Strategien für die Berichterstattung und Analyse, als auch kundenengagement und Feedback.
+Machine Learning ist ein komplexer Prozess, der alle Aspekte der Daten im Unternehmen berührt und vielen Machine Learning-Projekten enden dauert länger und komplexer als erwartet wird. Hier sind einige der Methoden, durch das Machine Learning Daten Mitarbeiter im Unternehmen erfordert:
 
++ Machine Learning beginnt mit der ID der Ziele und Geschäftsregeln.
++ Machine Learning-Spezialisten müssen von Richtlinien zum Speichern, extrahieren und Überwachungsdaten bewusst sein.
++ Auflistung von potenziell anwendbaren Daten geht es weiter.  Datenquellen müssen identifiziert werden, und die entsprechenden Daten von Sensoren und Geschäftsanwendungen extrahiert. 
++ Die Qualität der Machine Learning bemühungen ist stark abhängig von nicht nur den Typ der Daten, die verfügbar sind, aber sehr Prozesse zum Extrahieren, verarbeiten und Speichern von Daten verwendet. 
++ Kein Machine Learning-Projekt wäre vollständig ohne eine Strategie für die Berichterstattung und Analyse und möglicherweise kundenengagement und Feedback.
 
+SQL Server unterstützt viele der Lücken zwischen Enterprise-Daten-Experten und Machine Learning-Experten zu überbrücken:
 
-SQL Server ist Ideal für Machine Learning, da der Großteil der Lücken in Machine learning-Prozesses Brücke:
++ Daten können lokal gespeichert werden oder in der Cloud
++ SQL Server ist in jeder Phase des Enterprise-Datenverarbeitung, einschließlich der berichterstellung und ETL integriert.
++ SQL Server unterstützt, datensicherheit, die die Datenredundanz und Überwachung
++ Stellt die Ressourcenkontrolle
 
-+ Funktioniert lokal oder in der Cloud
-+ In jeder Phase des Enterprise-Datenverarbeitung, einschließlich Business Intelligence integriert
-+ Unterstützt die verbesserte Sicherheit
-+ Stellt die Ressourcenkontrolle und Überwachung
+## <a name="data-scientists"></a>Datenanalysten
 
-## <a name="data-professionals-and-how-they-use-machine-learning"></a>Daten-Experten und wie sie verwenden Machine Learning
+Datenanalysten verwenden eine Vielzahl von Tools für die Analyse und Machine learning, die von Excel oder kostenlose Open Source-Plattformen bis hin zu kostspieligen statistischen Programmsuites, die fundierte technische Kenntnisse erfordern. Verwenden von R oder Python mit SQL Server bietet jedoch einige besondere Vorteile im Vergleich zu diesen herkömmlichen Tools:
 
-### <a name="data-scientists"></a>Datenanalysten
-
-Data haben Scientists Zugriff auf eine Vielzahl von Tools für die Analyse und Machine learning, die von Excel oder kostenlose Open Source-Plattformen bis hin zu kostspieligen statistischen Programmsuites, die fundierte technische Kenntnisse erfordern. Integration mit SQL Server bietet jedoch besondere Vorteile:
-
-+ Entwickeln und testen Sie Ihre Lösungen mithilfe der R-Entwicklungsumgebung Ihrer Wahl.
-+ Drücken Sie Berechnungen mit der Datenbank, die datenverschiebungen bei gleichzeitiger Einhaltung von Sicherheitsrichtlinien des Unternehmens zu vermeiden.
++ Sie können die entwickeln und testen eine Lösung, indem Sie mithilfe der Entwicklungsumgebung Ihrer Wahl und anschließend bereitstellen Ihres R oder Python-Codes im Rahmen des T-SQL-Code.
++ Verschieben Sie komplexe Berechnungen aus der Data Scientist Laptop und an den Server, um die Einhaltung von Sicherheitsrichtlinien des Unternehmens datenverschiebungen zu vermeiden.
 + Leistung und Skalierung über spezielle R-Pakete und APIs verbessert. Sie sind nicht mehr von der Singlethread-, arbeitsspeichergebundenem Architektur von R beschränkt und können mit mehreren Threads, Kernen und Prozessen Berechnungen mit großen Datasets arbeiten.
-+ R-Code kann problemlos für die Produktion bereitgestellt und von Unternehmenstools, Anwendungen, andere Datenbanken und Dashboards aufgerufen werden.
-+ Datenanalysten können bereitstellen und aktualisieren eine analyselösung standardanforderungen für die Verwaltung von Unternehmensdaten, einschließlich Sicherheit und Überwachung des Benutzerzugriffs
-+ Codeportabilität: R-Code erneut problemlos für andere Datenquellen, wie z.B. Hadoop verwenden
++ Codeportabilität: Lösungen können in SQL Server oder in Hadoop oder Linux ausführen mit [Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). Code einmal, überall bereitstellen.
 
-### <a name="application-and-database-developers"></a>Anwendungs- und Datenbankentwickler
+## <a name="application-and-database-developers"></a>Anwendungs- und Datenbankentwickler
 
-Datenbankentwickler stehen vor der Aufgabe, zahlreiche Technologien integrieren und die Ergebnisse zusammenführen zu müssen, sodass diese im gesamten Unternehmen gemeinsam genutzt werden können. Ein Datenbankentwickler arbeitet zusammen mit Anwendungsentwicklern, SQL-Entwicklern und Datenspezialisten an dem Entwurf und der Bereitstellung von Lösungen und an empfohlenen Datenverwaltungsmodellen. 
+Datenbankentwickler stehen vor der Aufgabe, zahlreiche Technologien integrieren und die Ergebnisse zusammenführen zu müssen, sodass diese im gesamten Unternehmen gemeinsam genutzt werden können. Ein Datenbankentwickler arbeitet zusammen mit Anwendungsentwicklern, SQL-Entwickler und Datenanalysten Lösungen entwerfen, Datenverwaltungsmethoden, und zu entwickeln oder Bereitstellen von Lösungen.
 
-Integration mit SQL Server bietet folgende Vorteile für Data-Entwickler, die Arbeiten mit Machine Learning:
+Integration mit SQL Server bietet viele Vorteile für Entwickler von Data:
 
-+ Verwenden von vertrauten Tools für die Interaktion mit R-Skripts. Ermöglichen der Data Scientist RStudio verwenden, während die Daten die Lösung mit SQL Server Management Studio bereitstellen. Keine weiteren kann von R oder Python-Lösungen.
-+ Optimieren Sie, indem Sie mischen und Anpassen von SQL "und" R "oder" SQL "und" Python. In vielen Fällen können mithilfe von SQL Server-Funktionen, z. B. in-Memory-Columnstoreindexes oder sehr schnell Aggregate wesentlich effizienter in T-SQL komplexe Vorgänge für große Datasets ausgeführt werden. Verwenden Sie ein Machine learning-Sprache, in denen es sinnvoll, und verwenden Sie SQL verschieben und Daten zu verarbeiten.
-+ Analyseergebnisse Automatisieren von Tasks, die für große Mengen an Daten, z. B. Generieren von vorhersagebewertungen für Produktionsdaten wiederholt ausgeführt werden müssen.
-+ Führen Sie R oder Python-Skript aus einer beliebigen Anwendung, die verwendet [!INCLUDE[tsql](../../includes/tsql-md.md)]. Rufen Sie einfach eine gespeicherte Prozedur zum Erstellen einer parametrisierten Modell, generieren eine komplexe grafische Ausgabe oder Vorhersagen ausgeben.
-+ Die **"revoscaler"** und **Revoscalepy** APIs großen Datasets ausgeführt werden und mit mehreren Threads, Kernen und Prozessen datenbankinternen Berechnungen profitieren können.
++ Der Data Scientist kann RStudio, verwenden, während die Daten die Lösung mit SQL Server Management Studio bereitstellen. Keine weiteren kann von R oder Python-Lösungen.
++ Optimieren Sie Ihre Lösungen, indem das beste aus T-SQL und R, Python verwenden. Komplexe Vorgänge für große Datasets können ausgeführt werden, mithilfe von SQL Server als weit effizienter in r nutzen die Kenntnis der Datenbankexperten zum Verbessern der Leistung der Machine Learning-Lösungen, mit in-Memory-columnstore-Indizes, und Aggregationen mithilfe von SQL-basierten Vorgängen. 
++ Analyseergebnisse Automatisieren von Tasks, die für große Mengen an Daten, z. B. Generieren von vorhersagebewertungen für Produktionsdaten wiederholt ausgeführt werden müssen. 
++ Zugriff parametrisiert R oder Python-Skript aus einer beliebigen Anwendung, die verwendet [!INCLUDE[tsql](../../includes/tsql-md.md)]. Rufen Sie einfach eine gespeicherte Prozedur zum Trainieren eines Modells, eine grafische Ausgabe zu generieren oder Vorhersagen ausgeben.
++ APIs können Streamen von großen Datasets und von mehreren Threads, Kernen und Prozessen datenbankinternen Berechnungen profitieren.
 
 Informationen zu Aufgaben finden Sie unter:
-+ [Operationalizing Your R Code](../../advanced-analytics/r-services/operationalizing-your-r-code.md)
++ [Operationalisieren von R-code](../../advanced-analytics/r/operationalizing-your-r-code.md)
 
 ### <a name="database-administrators"></a>Datenbankadministratoren
 
@@ -74,27 +77,26 @@ Datenbankadministratoren müssen konkurrierende Projekte und Prioritäten in ein
 
 SQL Server bietet die besonderen Funktionen für den Datenbankadministrator, der die Data Science-Rolle unterstützt werden muss:
 
-+ Sicherheit von SQL Server: der Architektur des [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] gewährleistet die Sicherheit Ihrer Datenbanken und isoliert die Ausführung von externen Skript-Sitzungen vom Betrieb der Datenbankinstanz. Sie können angeben, wer über die Berechtigung zum Ausführen von Machine Learning-Skripts verfügt, und wer können neue R-Pakete installieren, der mithilfe von Datenbankrollen.
++ Sicherheit von SQL Server: der Architektur des [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] gewährleistet die Sicherheit Ihrer Datenbanken und isoliert die Ausführung von externen Skript-Sitzungen vom Betrieb der Datenbankinstanz. Sie können angeben, wer die Berechtigung zum Ausführen von Skripts für Machine Learning und Datenbankrollen verwenden, um Pakete zu verwalten ist.
 
 + R und Python-Sitzungen werden ausgeführt, in einem separaten Prozess, um sicherzustellen, dass der Server wie gewohnt ausgeführt wird weiterhin, auch wenn die externe Skript Probleme auftreten.
 
 + Die Ressourcenkontrolle mithilfe von SQL Server können Sie steuern, die Speicher und Prozesse, die auf externen Laufzeiten zugeordnet werden, um zu verhindern, dass umfangreiche Berechnungen die gesamtleistung des Servers gefährden.
 
 Informationen zu Aufgaben finden Sie unter:
-+ [Managing and Monitoring R Solutions](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)
++ [Verwalten und Überwachen von Machine Learning-Lösungen](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 
-### <a name="architects-and-etl-designers"></a>Architekten und ETL-Entwickler
+## <a name="architects-and-data-engineers"></a>Architekten und Data engineers
 
-Architekten entwerfen integrierte Workflows, die alle Aspekte des Lebenszyklus von Machine Learning umfassen. Data Engineers entwerfen und erstellen ETL-Lösungen und zu bestimmen, wie namens Feature Engineering optimieren Verknüpfung Aufgaben werden im Rahmen des Machine learning-Prozesses. Die gesamte Plattform muss häufig entworfen werden, um konkurrierende und ergänzende geschäftliche Anforderungen zu verteilen.
+Architekten entwerfen integrierte Workflows, die alle Aspekte des Lebenszyklus von Machine Learning umfassen. Data Engineers entwerfen und erstellen ETL-Lösungen und bestimmen, wie Feature engineering-Aufgaben für maschinelles lernen zu optimieren. Konkurrierende geschäftsanforderungen auszugleichen, muss die gesamte Datenplattform entworfen werden.
 
 Da [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] eng in andere Microsoft-Tools integriert ist, z.B. in den Business Intelligence- und Data Warehouse-Stapel, die Enterprise Cloud- und Mobilitätstools sowie Hadoop, gibt es zahlreiche Vorteile für Datentechniker und Systemarchitekten, die erweiterte Analysen ausführen möchten.
 
-+ Vertraute Entwicklungstools für die Entwicklung von R und Python-Lösungen. Sie können eine beliebige Python oder R-Skript mithilfe von gespeicherten Systemprozeduren zum Auffüllen von Datasets, generieren Grafiken oder Abrufen von Vorhersagen aufrufen. Keine weitere parallele Workflows von entwerfen in Data Science und ETL-Tools. Unterstützung für Azure Data Factory und Azure SQL-Datenbank erleichtert es, Transformieren und Verwalten von Daten und Cloud-Datenquellen in Machine learning-Workflows verwenden.
++ Rufen Sie alle Python oder R-Skript mithilfe von gespeicherten Systemprozeduren zum Auffüllen von Datasets, generieren Grafiken oder Abrufen von Vorhersagen. Keine weitere parallele Workflows von entwerfen in Data Science und ETL-Tools. Unterstützung für Azure Data Factory und Azure SQL-Datenbank erleichtert es, Cloud-Datenquellen in Machine learning-Workflows verwendet werden.
 
-+ Planung und Verwaltung mithilfe von operationalisierung-Funktionen in Microsoft R Server.
++ Verwenden Sie für die Planung und Verwaltung von Machine learning-Aufgaben Automation standard-Workflows in SQL Server, basierend auf Integration Services, SQL-Agent oder Azure Data Factory. Alternativ können Sie verwenden die [operationalisierung Funktionen](https://docs.microsoft.com/machine-learning-server/operationalize/how-to-deploy-web-service-publish-manage-in-r) in Machine Learning-Server.
 
 Informationen zu Aufgaben finden Sie unter:
 
-+ [Erstellen von Workflows, die R in SQL Server verwenden](../../advanced-analytics/r-services/creating-workflows-that-use-r-in-sql-server.md)
-
++ [Erstellen von Machine Learning-Workflows in SQL Server](../../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md)
 

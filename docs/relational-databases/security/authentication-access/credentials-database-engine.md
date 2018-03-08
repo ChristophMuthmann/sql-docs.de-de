@@ -2,11 +2,13 @@
 title: Anmeldeinformationen (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +23,19 @@ helpviewer_keywords:
 - credentials [SQL Server], about credentials
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c1e49cf402cf944e912e4297f6a315a570f27e8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: ad9fe32b0bf2bed4908e7268ad85aae474e9e4cc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="credentials-database-engine"></a>Anmeldeinformationen (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen (Anmeldeinformationen) enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erforderlich sind. Diese Informationen werden intern von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet. Die meisten Anmeldeinformationen enthalten einen Windows-Benutzernamen und ein Kennwort.  
   
@@ -52,4 +54,3 @@ ms.lasthandoff: 06/22/2017
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
   
-

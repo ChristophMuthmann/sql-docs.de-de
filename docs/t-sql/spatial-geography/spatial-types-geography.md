@@ -3,8 +3,11 @@ title: Geography (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - geography data type [SQL Server], Transact-SQL
 - spatial data types [SQL Server]
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3525cc718e5e0efddd6cef2e3f2cff57247058c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2f9a5b86f49e2d5e9b07908cd3c866999ff2f646
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="spatial-types---geography"></a>Räumliche Typen - Geographie
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Der räumlichkeitsdatentyp **Geography**, wird als .NET common Language Runtime (CLR)-Datentyp in implementiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Typ stellt Daten in einem Erdkugel-Koordinatensystem dar. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
 
 ## <a name="registering-the-geography-type"></a>Registrieren des geography-Datentyps  
- Der **geography** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geography** -Typs in der gleichen Weise erstellen und **geography** -Daten in der gleichen Weise verwenden wie andere vom System bereitgestellte Typen. Kann in permanenten und nicht permanenten berechneten Spalten verwendet werden.  
+ Der **geography** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geography** -Typs in der gleichen Weise erstellen und **geography** -Daten in der gleichen Weise verwenden wie andere vom System bereitgestellte Typen. Kann in persistierten und nicht persistierten berechneten Spalten verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -101,4 +103,3 @@ CREATE TABLE SpatialTable
 
   
   
-

@@ -2,31 +2,32 @@
 title: "Festlegen einer maximalen Dateigröße für eine Ablaufverfolgungsdatei (SQL Server Profiler) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - maximum file size for traces
 - size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "24"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f3825b505604bb3d80bc640983a00bf9c80ae87
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd660e6fde56cc13e709a0fea4500f84fbc087a2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>Festlegen einer maximalen Dateigröße für eine Ablaufverfolgungsdatei (SQL Server Profiler)
-  Verwenden Sie die folgende Prozedur, um die maximale Dateigröße für eine Ablaufverfolgungsdatei festzulegen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden Sie das folgende Verfahren, um die maximale Dateigröße für eine Ablaufverfolgungsdatei festzulegen.  
   
 ### <a name="to-set-a-maximum-file-size-for-a-trace-file"></a>So legen Sie die maximale Dateigröße für eine Ablaufverfolgungsdatei fest  
   
@@ -56,4 +57,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

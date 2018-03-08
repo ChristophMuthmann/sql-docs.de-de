@@ -3,26 +3,26 @@ title: Laden des PHP-SQL-Treibers | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- loading the driver
+helpviewer_keywords: loading the driver
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 90ba63857ea38481577083d2a85999e789dfcb84
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cb2200b2c5d151981e9dcdf8322dd7c43b91c6ee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="loading-the-php-sql-driver"></a>Laden des PHP-SQL-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -97,4 +97,3 @@ Weitere Informationen zu PHP-Funktionen, die im Zusammenhang mit der dynamischen
 [Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
 [SQLSRV-Treiber – API-Referenz](../../connect/php/sqlsrv-driver-api-reference.md)  
   
-

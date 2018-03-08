@@ -2,12 +2,13 @@
 title: "Geschachtelte Tabellen (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 52
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Stellt eine eindeutige Methode zum Verarbeiten von diesen Fällen mit *geschachtelte Tabellen*. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
   
  ![Zwei Tabellen mit einer geschachtelten Tabelle kombiniert](../../analysis-services/data-mining/media/nested-tables.gif "zwei Tabellen mit einer geschachtelten Tabelle kombiniert")  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 09/01/2017
  Wenn die geschachtelte Tabelle beispielsweise die Spalten **Product**, **ProductQuantity**und **ProductPrice**enthält, können Sie **Product** als Schlüsselspalte der geschachtelten Tabelle festlegen und der Miningstruktur **ProductQuantity** als Eingabespalte hinzufügen.  
   
 ## <a name="filtering-nested-table-data"></a>Filtern von geschachtelten Tabellendaten  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie Filter für Daten definieren, die zum Trainieren oder Testen eines Data Mining-Modells verwendet werden. Mit einem Filter kann die Zusammensetzung des Modell beeinflusst oder das Modell an einer Teilmenge der Fälle getestet werden. Filter können auch auf geschachtelte Tabellen angewendet werden. Es gibt Einschränkungen bezüglich der Syntax, die für geschachtelte Tabellen verwendet werden kann.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie Filter für Daten definieren, die zum Trainieren oder Testen eines Data Mining-Modells verwendet werden. Ein Filter kann die Zusammensetzung des Modell beeinflusst oder zum Testen des Modells für eine Teilmenge der Fälle verwendet werden. Filter können auch auf geschachtelte Tabellen angewendet werden. Es gibt Einschränkungen bezüglich der Syntax, die für geschachtelte Tabellen verwendet werden kann.  
   
  Wenn Sie einen Filter auf eine geschachtelte Tabelle anwenden, prüfen Sie, ob ein Attribut vorhanden oder nicht vorhanden ist. Sie können beispielsweise einen Filter anwenden, der die im Modell verwendeten Fälle auf diejenigen Fälle beschränkt, die in der geschachtelten Tabelle einen bestimmten Wert aufweisen. Sie könnten die im Modell verwendeten Fälle auch auf die Kunden beschränken, die einen bestimmten Artikel nicht gekauft haben.  
   
@@ -72,8 +73,7 @@ ms.lasthandoff: 09/01/2017
  Weitere Informationen zum Erstellen und Verwenden von Modellfiltern finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
-

@@ -2,31 +2,32 @@
 title: 'Schritt 6: Operationalisieren die Python-Modell mithilfe von SQL Server | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 7dcda2d17413e6c660510498c4b3ea770bb0b09d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Schritt 6: Operationalisieren Sie die Python-Modell mithilfe von SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms [In Datenbank-Python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -333,7 +334,7 @@ GO
 Nachdem Sie die gespeicherten Prozeduren erstellt wurden, ist es einfach, eine Bewertung, die basierend auf einem Modell zu generieren. Öffnen Sie einfach ein neues **Abfrage** Fenster und eingeben oder Einfügen von Parametern für jede der merkmalspalten. Die sieben erforderlichen Werte für diese Funktion Spalten, in Reihenfolge sind:
     
 + *passenger_count*
-+ *Trip_distance* v*Trip_time_in_secs*
++ *trip_distance* v*trip_time_in_secs*
 + *pickup_latitude*
 + *pickup_longitude*
 + *dropoff_latitude*
@@ -377,4 +378,3 @@ In diesem Lernprogramm haben Sie gelernt, wie mit Python-Code eingebettet in ges
 ## <a name="see-also"></a>Siehe auch
 
 [Machine Learning-Dienste mit Python](../python/sql-server-python-services.md)
-

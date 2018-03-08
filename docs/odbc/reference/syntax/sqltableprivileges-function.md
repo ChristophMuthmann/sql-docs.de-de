@@ -3,33 +3,30 @@ title: SQLTablePrivileges-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLTablePrivileges
-apilocation:
-- sqlsrv32.dll
+apiname: SQLTablePrivileges
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLTablePrivileges
-helpviewer_keywords:
-- SQLTablePrivileges function [ODBC]
+f1_keywords: SQLTablePrivileges
+helpviewer_keywords: SQLTablePrivileges function [ODBC]
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6554826bdd2e63a6ce3baad75f747d3e923216a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbd57115dfcb65a1ee0057a4cd091ed208ddefd5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges-Funktion
 **Konformität**  
@@ -156,4 +153,3 @@ SQLRETURN SQLTablePrivileges(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

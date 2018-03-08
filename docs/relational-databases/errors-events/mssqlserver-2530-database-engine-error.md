@@ -2,27 +2,29 @@
 title: MSSQLSERVER_2530 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f76fdb2ecd6b78b52699bc35340916b63e0e44d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3235cee13ecfc73cc3a3fee5e83a320c8f25b842
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver2530"></a>MSSQLSERVER_2530
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -56,4 +58,3 @@ Die DBCC-Anweisung kann nicht fortfahren, da der angegebene Index deaktiviert wu
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
 [DBCC DBREINDEX &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)  
   
-

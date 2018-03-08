@@ -2,11 +2,13 @@
 title: "Durchführen der Wissensermittlung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/04/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,24 +17,23 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "38"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Durchführen der Wissensermittlung
   In diesem Thema wird beschrieben, wie eine Wissensdatenbank über die Wissensermittlung erstellt wird. Im Wissensermittlungsprozess werden die Daten in einer Beispieldatenquelle in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) über einen computergestützten Prozess analysiert, und das gewonnene Wissen wird zur Wissensdatenbank hinzugefügt. Dieses Wissen kann im Schritt **Domänenwerte verwalten** der Wissensermittlungsaktivität oder in der Domänenverwaltungsaktivität geändert und verbessert werden.  
   
  Die Wissensermittlung ist ein über einen Assistenten ausgeführter Prozess mit drei Schritten, die vollständig abgeschlossen werden müssen.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, wenn sich die Quelldaten, für die Sie den Ermittlungsprozess ausführen, in einer Excel-Datei befinden. Andernfalls sind Sie nicht in der Lage, die Excel-Datei in der Zuordnungsphase auszuwählen. Die von Microsoft Excel erstellten Dateien können die Erweiterung .xlsx, .xls oder .csv haben. Wenn die 64-Bit-Version von Excel verwendet wird, werden nur Excel 2003-Dateien (.xls) unterstützt; Excel 2007- oder 2010-Dateien (.xlsx) werden nicht unterstützt. Wenn Sie die 64-Bit-Version von Excel 2007 oder 2010 verwenden, speichern Sie die Datei als XLS-Datei oder CSV-Datei, oder installieren Sie stattdessen eine 32-Bit-Version von Excel.  
@@ -71,12 +72,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  Ordnen Sie in der Tabelle **Zuordnungen** jede Quellspalte, für die die Wissensermittlung durchgeführt werden soll, einer Domäne in der Wissensdatenbank wie folgt zu:  
   
-    1.  Erstellen Sie eine Zuordnung, indem Sie eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile auswählen und dann eine Domäne aus der Dropdownliste für die Spalte **Domäne** in der gleichen Zeile auswählen (wenn eine Domäne vorhanden ist). Wenn keine Domäne vorhanden ist, klicken Sie auf **Domäne erstellen** oder **Verbunddomäne erstellen** , um eine Domäne zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer Domänenregel](../data-quality-services/create-a-domain-rule.md) oder [Verbunddomäne erstellen](../data-quality-services/create-a-composite-domain.md).  
+    1.  Erstellen Sie eine Zuordnung, indem Sie eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile auswählen und dann eine Domäne aus der Dropdownliste für die Spalte **Domäne** in der gleichen Zeile auswählen (wenn eine Domäne vorhanden ist). Wenn keine Domäne vorhanden ist, klicken Sie auf **Domäne erstellen** oder **Verbunddomäne erstellen** , um eine Domäne zu erstellen. Weitere Informationen finden Sie unter [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) oder [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Wiederholen Sie den vorherigen Schritt für jede Zuordnung. Um die Anzahl der Zeilen in der Tabelle zu ändern, klicken Sie auf **Spaltenzuordnung hinzufügen**, oder wählen Sie eine Zeile aus, und klicken Sie auf **Ausgewählte Spaltenzuordnung entfernen**. Wenn Sie auf **Ausgewählte Spaltenzuordnung entfernen** klicken, während eine aufgefüllte Zeile ausgewählt ist, wird die ausgewählte Zeile gelöscht, auch wenn es eine nicht aufgefüllte Zeile gibt.  
   
         > [!NOTE]  
-        >  Sie können die Quelldaten zum Durchführen der Wissensermittlung einer DQS-Domäne nur zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Weitere Informationen zu den unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Sie können die Quelldaten zum Durchführen der Wissensermittlung einer DQS-Domäne nur zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Weitere Informationen zu den unterstützten Datentypen finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Klicken Sie auf **Verbunddomänen anzeigen/auswählen** aus, um die Verbunddomänen anzuzeigen, die definiert wurden. Wenn keine Verbunddomänen definiert wurden, ist das Steuerelement nicht verfügbar.  
   
@@ -291,7 +292,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Es gibt nur wenige gültige Werte im Feld; Sie sollten die Zuordnung und die Relevanz von Domänenregeln für den Feldinhalt überprüfen.  
   
- Weitere Informationen zur Profilerstellung finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Weitere Informationen zur Profilerstellung finden Sie unter [Datenprofilerstellung und Benachrichtigungen in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

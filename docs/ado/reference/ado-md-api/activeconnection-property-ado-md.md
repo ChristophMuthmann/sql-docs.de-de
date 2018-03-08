@@ -3,7 +3,7 @@ title: ActiveConnection-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0ec51c77b1963832cf101278b5c00bcbfe253093
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae0ad910a0535599d7e134d3314030537068ab25
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection-Eigenschaft (ADO MD)
 Gibt an, welche ADO [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt das aktuellen Cellset oder Katalog derzeit gehört.  
@@ -74,4 +73,3 @@ Gibt an, welche ADO [Verbindung](../../../ado/reference/ado-api/connection-objec
  [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open-Methode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
-

@@ -2,28 +2,31 @@
 title: Partitionierung auf Anwendungsebene | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: 12
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-level-partitioning"></a>Partitionierung auf Anwendungsebene
-  Diese Anwendung verarbeitet Aufträge. Es besteht ein hoher Verarbeitungsaufwand für aktuelle Aufträge. Bei älteren Bestellungen ist der Verarbeitungsaufwand gering. Neue Aufträge befinden sich in einer speicheroptimierten Tabelle. Ältere Aufträge befinden sich in einer datenträgerbasierten Tabelle. Alle Aufträge nach dem *hotDate* sind in der speicheroptimierten Tabelle enthalten. Alle Aufträge vor dem *hotDate* sind in der datenträgerbasierten Tabelle enthalten. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Diese Anwendung verarbeitet Aufträge. Es besteht ein hoher Verarbeitungsaufwand für aktuelle Aufträge. Bei älteren Bestellungen ist der Verarbeitungsaufwand gering. Neue Aufträge befinden sich in einer speicheroptimierten Tabelle. Ältere Aufträge befinden sich in einer datenträgerbasierten Tabelle. Alle Aufträge nach dem *hotDate* sind in der speicheroptimierten Tabelle enthalten. Alle Aufträge vor dem *hotDate* sind in der datenträgerbasierten Tabelle enthalten. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  
   
  In diesem Beispiel wird keine partitionierte Tabelle für die datenträgerbasierte Tabelle verwendet. Allerdings wird ein expliziter Teilungspunkt zwischen den beiden Tabellen mithilfe einer dritten Tabelle nachverfolgt. Mit dem Teilungspunkt kann sichergestellt werden, dass neu eingefügte Daten basierend auf dem Datum immer der richtigen Tabelle hinzugefügt werden. Er kann auch verwendet werden, um zu bestimmen, wo Daten gesucht werden sollen. Selbst verspätet eingegangene Daten werden in die richtige Tabelle eingefügt.  
   
@@ -31,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="code-listing"></a>Codelisting  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  
@@ -219,8 +222,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Codebeispiele für In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
-

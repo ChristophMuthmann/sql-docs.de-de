@@ -2,9 +2,12 @@
 title: "FOR XML-Unterstützung für den xml-Datentyp | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: db0cb5f5484415cdac27c18bf177f3b06eed8509
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>FOR XML-Unterstützung für den xml-Datentyp
-  Wenn eine FOR XML-Abfrage eine Spalte vom **xml** -Typ in der SELECT-Klausel angibt, werden die Spaltenwerte unabhängig davon, ob die ELEMENTS-Direktive angegeben wird, im zurückgegebenen XML als Elemente zugeordnet. XML-Deklarationen in einer Spalte des **xml** -Typs werden nicht serialisiert.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Wenn eine FOR XML-Abfrage eine Spalte vom **xml** -Typ in der SELECT-Klausel angibt, werden die Spaltenwerte unabhängig davon, ob die ELEMENTS-Direktive angegeben wird, im zurückgegebenen XML als Elemente zugeordnet. XML-Deklarationen in einer Spalte des **xml** -Typs werden nicht serialisiert.  
   
  Die folgende Abfrage ruft z.B. Kundenkontaktinformationen, wie etwa die `BusinessEntityID`-, `FirstName`- und `LastName` -Spalten, und die Rufnummern aus der `AdditionalContactInfo` -Spalte ab, die vom Typ **XML** ist.  
   
@@ -208,8 +211,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [FOR XML-Unterstützung für verschiedene SQL Server-Datentypen](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   
-

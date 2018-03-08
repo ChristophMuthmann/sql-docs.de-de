@@ -2,15 +2,16 @@
 title: Aktualisieren von Replikationsskripts (Replikationsprogrammierung mit Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - scripts [SQL Server replication], upgrading
 - upgrading SQL Server, replicated databases
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - replication [SQL Server], upgrading
 - upgrading replicated databases
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ef24ad75fa3a8d6e2e181d436dd878a133135b6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "41"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 09f8ed7bf8cbd407a8bd9dc706d5e9aadf34ce65
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aktualisieren von Replikationsskripts (Replikationsprogrammierung mit Transact-SQL)
-  Mithilfe von[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skriptdateien kann eine Replikationstopologie programmgesteuert konfiguriert werden. Weitere Informationen finden Sie unter [Replikationskonzepte für gespeicherte Systemprozeduren](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skriptdateien kann eine Replikationstopologie programmgesteuert konfiguriert werden. Weitere Informationen finden Sie unter [Replikationskonzepte für gespeicherte Systemprozeduren](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
 >  Skripts, die von Mitgliedern der **sysadmin** -Rolle ausgeführt werden, müssen nicht aktualisiert werden. Dennoch empfiehlt es sich, vorhandene Skripts wie in diesem Thema beschrieben zu ändern. Geben Sie ein Konto mit Mindestberechtigungen für jeden Replikations-Agent an, wie im Abschnitt zu den für die Agents erforderlichen Berechtigungen im Thema [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)beschrieben.  
@@ -191,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)   

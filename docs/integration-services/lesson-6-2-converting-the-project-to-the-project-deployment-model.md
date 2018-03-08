@@ -1,10 +1,13 @@
 ---
-title: 'Schritt 2: Das Projekt in das Projektbereitstellungsmodell konvertieren | Microsoft Docs'
+title: 'Schritt 2: Konvertieren des Projekts in das Projektbereitstellungsmodell | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 49fac3d56083932db49125ea4660e89d9808f187
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7a4b8892be5ea6a606c1ef28d37cf0902d78f56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Lektion 6-2-Projekt in das Projektbereitstellungsmodell konvertieren
+# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Lektion 6-2: Konvertieren des Projekts in das Projektbereitstellungsmodell
 In dieser Aufgabe verwenden Sie den Konvertierungs-Assistenten von Integration Services-Projekt, um das Projekt in das Projektbereitstellungsmodell zu konvertieren.  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>Konvertieren des Projekts in das Projektbereitstellungsmodell  
@@ -57,9 +59,8 @@ In dieser Aufgabe verwenden Sie den Konvertierungs-Assistenten von Integration S
   
 13. Klicken Sie auf der Registerkarte "Parameter", und stellen Sie sicher, dass das Paket jetzt einen Parameter für VarFolderName enthält und der Wert denselben Pfad für den Ordner der neuen Beispieldaten aus der Lektion 5-Konfigurationsdatei angegeben ist.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 3: Testen des Pakets aus Lektion 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
   
   
-

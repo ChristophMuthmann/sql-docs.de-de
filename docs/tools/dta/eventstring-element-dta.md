@@ -2,32 +2,31 @@
 title: EventString-Element (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- EventString element
+dev_langs: XML
+helpviewer_keywords: EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "12"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85e5c89f87a0a6eda0173511f818e047fc0c51c9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>EventString-Element (DTA)
-  Gibt eine auf einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript basierende Arbeitsauslastung direkt in der XML-Eingabedatei an.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript basierende arbeitsauslastung direkt in der XML-Eingabedatei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Attribut|Beschreibung|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |**Weight**|Optional. Gibt den Gewichtungsfaktor der Abfrage (ein Faktor für die Wichtigkeit) für das angegebene Ereignis an. Sie können die Gewichtung mit einem **float** -Datentyp angeben. Beispiel: **Weight**="100.01". Der Mindestwert für **Weight** ist "0".|  
   
@@ -68,4 +67,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

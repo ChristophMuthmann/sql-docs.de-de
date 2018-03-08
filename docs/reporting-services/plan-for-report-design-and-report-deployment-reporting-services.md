@@ -1,27 +1,27 @@
 ---
-title: Planen von Berichtsentwurf und-Bereitstellung | Reporting Services | Microsoft Docs
+title: Planen von Berichtsentwurf und -bereitstellung | Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 4d4a2081da55117fa6fa6b6ad84ac4ec21b84ee6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Ansätzen zum Erstellen und Bereitstellen von paginierten Berichten. Erhalten Sie Informationen, wie Sie eine Umgebung für die Berichterstellung und einen Berichtsserver planen, die reibungslos zusammenarbeiten.
@@ -115,10 +115,9 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
 -   [Hinzufügen und Konfigurieren der ReportViewer-Steuerelemente](http://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)   
- [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
-

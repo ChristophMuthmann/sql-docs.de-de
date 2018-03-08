@@ -1,10 +1,13 @@
 ---
-title: Catalog. revoke_permission (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.revoke_permission (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,22 +16,21 @@ helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Widerruft eine Berechtigung für ein sicherungsfähiges Objekt in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Widerruft eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,36 +42,36 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @object_type =] *Object_type*  
- Der Typ des sicherungsfähigen Objekts. Typen sicherungsfähiger Objekte lauten Ordner (`1`), Projekt (`2`), Umgebung (`3`), und Vorgang (`4`). Die *Object_type* ist **"smallint"***.*  
+ [ @object_type = ] *object_type*  
+ Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint***.*  
   
- [ @object_id =] *Object_id*  
- Die eindeutige Identitifier (ID) des sicherungsfähigen Objekts. Die *Object_id* ist **"bigint"**.  
+ [ @object_id = ] *object_id*  
+ Der eindeutige Bezeichner (ID) des sicherungsfähigen Objekts. Das Argument *object_id* ist vom Typ **bigint**.  
   
- [ @principal_id =] *Principal_id*  
- Die ID des Prinzipals, dessen Berechtigung widerrufen werden soll. Die *Principal_id* ist **Int**.  
+ [ @principal_id = ] *principal_id*  
+ Die ID des Prinzipals, dessen Berechtigung widerrufen werden soll. Das Argument *principal_id* ist vom Typ **int**.  
   
- [ @permission_type =] *Permission_type*  
- Art der Berechtigung. Die *Permission_type* ist **"smallint"**.  
+ [ @permission_type = ] *permission_type*  
+ Art der Berechtigung. Das Argument *permission_type* ist vom Typ **smallint**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg)  
   
- 1 (Object_class ist nicht gültig.)  
+ 1 („object_class“ ist ungültig)  
   
- 2 (Object_id ist nicht vorhanden)  
+ 2 („object_id“ ist nicht vorhanden)  
   
- 3 (Prinzipal ist nicht vorhanden)  
+ 3 („principal“ ist nicht vorhanden)  
   
- 4 (Berechtigung ist nicht gültig.)  
+ 4 („permission“ ist ungültig)  
   
  5 (anderer Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>Hinweise  
- Keine  
+## <a name="remarks"></a>Remarks  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -80,8 +82,8 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Permission_type angegeben wird, entfernt die gespeicherte Prozedur die Berechtigung, die dem Prinzipal für das Objekt explizit zugewiesen ist. Auch wenn keine solchen Instanzen vorhanden sind, gibt die Prozedur einen Erfolgscodewert (`0`) zurück. Wenn Permission_type weggelassen wird, entfernt die gespeicherte Prozedur alle Berechtigungen des Prinzipals für das Objekt an.  
+## <a name="remarks"></a>Remarks  
+ Wenn „permission_type“ angegeben wird, entfernt die gespeicherte Prozedur die Berechtigung, die dem Prinzipal für das Objekt explizit zugewiesen wurde. Auch wenn keine solchen Instanzen vorhanden sind, gibt die Prozedur einen Erfolgscodewert (`0`) zurück. Wenn „permission_type“ ausgelassen wird, entfernt die gespeicherte Prozedur alle Berechtigungen des Prinzipals für das Objekt.  
   
 > [!NOTE]  
 >  Der Prinzipal verfügt möglicherweise immer noch über die angegebene Berechtigung für das Objekt, wenn der Prinzipal ein Mitglied einer Rolle ist, die über die angegebene Berechtigung verfügt.  
@@ -92,7 +94,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Ermöglicht es dem Prinzipal, Informationen zu lesen, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, den Inhalt von anderen Objekten innerhalb des Objekts aufzuzählen oder zu lesen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`2`|MODIFY|Ermöglicht es dem Prinzipal, Informationen zu ändern, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, andere Objekte innerhalb des Objekts zu ändern.|Ordner, Projekt, Umgebung, Vorgang|  
-|`3`|EXECUTE|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Projekt|  
+|`3`|Führen Sie|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Projekt|  
 |`4`|MANAGE_PERMISSIONS|Ermöglicht es dem Prinzipal, den Objekten Berechtigungen zuzuweisen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`100`|CREATE_OBJECTS|Ermöglicht es dem Prinzipal, Objekte im Ordner zu erstellen.|Ordner|  
 |`101`|READ_OBJECTS|Ermöglicht es dem Prinzipal, alle Objekte im Ordner zu lesen.|Ordner|  
@@ -101,4 +103,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|Ermöglicht es dem Prinzipal, Berechtigungen für alle Objekte im Ordner zu verwalten.|Ordner|  
   
   
-

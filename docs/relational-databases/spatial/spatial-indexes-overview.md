@@ -2,9 +2,12 @@
 title: "Übersicht über räumliche Indizes | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bcfa4dfbf2af7d1cd124ed16fef13eeed89bfcb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 97c9aa05a5dc7eba5a47a616f15ba5e4faca0b16
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt räumliche Daten und räumliche Indizes. Ein *räumlicher Index* ist ein erweiterter Index, der es Ihnen ermöglicht, eine räumliche Spalte zu indizieren. Eine räumliche Spalte ist eine Tabellenspalte mit Daten eines räumlichen Datentyps wie beispielsweise **geometry** oder **geography**.  
   
 > [!IMPORTANT]  
@@ -67,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 >  Die Rasterdichten eines räumlichen Index sind in den Spalten level_1_grid, level_2_grid, level_3_grid und level_4_grid der [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) -Katalogsicht sichtbar, wenn der Datenbank-Kompatibilitätsgrad auf 100 oder niedriger festgelegt wird. Die Mosaikschemaoptionen **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** füllen diese Spalten nicht auf. Die sys.spatial_index_tessellations-Katalogsicht enthält **NULL** -Werte für diese Spalten, wenn die automatischen Rasteroptionen verwendet werden.  
   
 ###  <a name="tessellation"></a> Mosaik  
- Nach der Zerlegung eines indizierten Raums in eine Rasterhierarchie werden die Daten anhand des räumlichen Indexes zeilenweise aus der räumlichen Spalte gelesen. Nachdem die Daten für ein räumliches Objekt (bzw. eine räumliche Instanz) gelesen wurden, wird unter Verwendung des räumlichen Index ein *Mosaikprozess* für dieses Objekt durchgeführt. Durch den Mosaikprozess wird das Objekt in die Rasterhierarchie eingepasst, indem das Objekt einer Menge von Rasterzellen zugeordnet wird, die es berührt (*berührte Zellen*). Auf Ebene 1 der Rasterhierarchie beginnend, verläuft der Mosaikprozess *breitenorientiert* über der Ebene. Potenziell kann der Prozess über alle vier Ebenen fortgesetzt werden, wobei zu einem Zeitpunkt jeweils nur eine Ebene bearbeitet werden kann.  
+ Nach der Zerlegung eines indizierten Raums in eine Rasterhierarchie werden die Daten anhand des räumlichen Indexes zeilenweise aus der räumlichen Spalte gelesen. Nachdem die Daten für ein räumliches Objekt (bzw. eine räumliche Instanz) gelesen wurden, wird unter Verwendung des räumlichen Index ein *Mosaikprozess* für dieses Objekt durchgeführt. Durch den Mosaikprozess wird das Objekt in die Rasterhierarchie eingepasst, indem das Objekt der Menge von Rasterzellen zugeordnet wird, die es berührt (*berührte Zellen*). Auf Ebene 1 der Rasterhierarchie beginnend, verläuft der Mosaikprozess *breitenorientiert* über der Ebene. Potenziell kann der Prozess über alle vier Ebenen fortgesetzt werden, wobei zu einem Zeitpunkt jeweils nur eine Ebene bearbeitet werden kann.  
   
  Ergebnis des Mosaikprozesses ist eine Menge berührter Zellen, die im räumlichen Index für das betreffende Objekt verzeichnet sind. Durch das Verweisen auf diese aufgezeichneten Zellen kann mit dem räumlichen Index die Position des Objekts im Raum relativ zu anderen Objekten der räumlichen Spalte, die ebenfalls im Index gespeichert sind, bestimmt werden.  
   
@@ -104,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
  Betrachten Sie beispielsweise die vorstehende Abbildung, die ein Oktagon zeigt, das vollständig in Zelle&nbsp;15 des Rasters der Ebene&nbsp;1 passt. In der Abbildung wurde Zelle&nbsp;15 dem Mosaikprozess unterzogen, wodurch das Oktagon in neun Zellen der Ebene&nbsp;2 zerlegt wurde. In dieser Illustration wird davon ausgegangen, dass der Zellen-pro-Objekt-Grenzwert gleich&nbsp;9 oder höher ist. Wäre der Zellen-pro-Objekt-Grenzwert gleich 8 oder kleiner, dann würde Zelle&nbsp;15 nicht im Mosaikprozess berücksichtigt, und nur diese eine Zelle&nbsp;15 würde für das Objekt gezählt.  
   
- In der Standardeinstellung ist der Zellen-pro-Objekt-Grenzwert mit 16&nbsp;Zellen pro Objekt definiert, was für die meisten räumlichen Indizes einen zufriedenstellenden Kompromiss zwischen Raum und Genauigkeit darstellt. In der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung kann jedoch eine CELLS_PER_OBJECT**=***n-* Klausel angegeben werden, die es Ihnen ermöglicht, einen Zellen-pro-Objekt-Grenzwert zwischen 1 und 8192 (einschließlich) festzulegen.  
+ In der Standardeinstellung ist der Zellen-pro-Objekt-Grenzwert mit 16&nbsp;Zellen pro Objekt definiert, was für die meisten räumlichen Indizes einen zufriedenstellenden Kompromiss zwischen Raum und Genauigkeit darstellt. In der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann jedoch eine CELLS_PER_OBJECT**=***n*-Klausel angegeben werden, die es Ihnen ermöglicht, einen Zellen-pro-Objekt-Grenzwert zwischen 1 und 8192 (einschließlich) festzulegen.  
   
 > [!NOTE]  
 >  Die **cells_per_object** -Einstellung eines räumlichen Index wird in der [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) -Katalogsicht angezeigt.  
@@ -133,7 +136,7 @@ ms.lasthandoff: 06/22/2017
 >  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
   
 ##### <a name="the-bounding-box"></a>Das umgebende Feld  
- Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, **(***x-min***,***y-min***)** und **(***x-max***,***y-max***)**, die als Eigenschaften des räumlichen Index gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
+ Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, **(***x-min***,***y-min***)** und **(***x-max***,***y-max***)**, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
   
 -   *x-min* ist die X-Koordinate der linken unteren Ecke des umgebenden Felds.  
   
@@ -146,11 +149,11 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Diese Koordinaten werden in der BOUNDING_BOX-Klausel der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung angegeben.  
   
- Die Koordinaten **(***x-min***,***y-min***)** und **(***x-max***,***y-max***)** bestimmen die Position und die Größe des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
+ Die Koordinaten **(***x-min***,***y-min***)** und **(***x-max***,***y-max***)** bestimmen die Position und die Dimension des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
   
  Der räumliche Index zerlegt den Raum im umgebenden Feld. Das Raster der Ebene&nbsp;1 der Rasterhierarchie füllt das umgebende Feld aus. Zur Platzierung eines geometrischen Objekts in der Rasterhierarchie vergleicht der räumliche Index die Koordinaten des Objekts mit den Koordinaten des umgebenden Felds.  
   
- Die folgende Abbildung zeigt die Punkte, die durch die Koordinaten **(***x-min***,***y-min***)** und **(***x-max***,***y-max***)** des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
+ Die folgende Illustration zeigt die Punkte, die durch die Koordinaten **(***x-min***,***y-min***)** und **(***x-max***,***y-max***)** des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
   
  ![Umgebendes Feld mit Koordinaten und Zelle 0](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0")  
   
@@ -187,7 +190,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="geometry"></a> Von räumlichen Indizes unterstützte geometry-Methoden  
  Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
- *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
+ *geometrie1*.*Methodenname*(*geometrie2*)*Vergleichsoperator**gültige_Zahl*  
   
  Es wird nur dann ein Ergebnis ungleich NULL zurückgegeben, wenn *geometry1* und *geometry2* über den gleichen [SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)verfügen. Anderenfalls gibt die Methode NULL zurück.  
   
@@ -212,7 +215,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="geography"></a> Von räumlichen Indizes unterstützte geography-Methoden  
  Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten geography-Methoden: STIntersects(),STEquals() und STDistance(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
- *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
+ *geographie1*.*Methodenname*(*geographie2*)*Vergleichsoperator**gültige_Zahl*  
   
  Es wird nur dann ein Ergebnis ungleich NULL zurückgegeben, wenn *geography1* und *geography2* über den gleichen [SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)verfügen. Anderenfalls gibt die Methode NULL zurück.  
   
@@ -246,8 +249,7 @@ WHERE <SpatialColumn>.STDistance(@reference_object) IS NOT NULL
 ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
-

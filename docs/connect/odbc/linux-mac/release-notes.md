@@ -3,8 +3,11 @@ title: Versionshinweise - Microsoft ODBC Driver for SQL Server unter Linux und M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -13,15 +16,40 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 84bb78e184f1bca9e683aeebf46b178e3a7dd61f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Anmerkungen zu dieser Version für den Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>What's New in der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber 17 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] auf Linux- und MacOS
+
+**Neue Verteilungen unterstützt**: MacOS hohe Sierra und Ubuntu 17.10 
+
+**Verbesserte Leistung beim**: größer als 10 x leistungsverbesserung beim Treiber konvertiert werden soll, bzw. Sie daraus UTF-8/16.
+
+**Funktionen**:
+
+Always Encrypted-Unterstützung für BCP-API
+
+Neues Verbindungszeichenfolgen-Attribut UseFMTOnly bewirkt, dass Treiber ältere Metadaten in besonderen Fällen, dass temporäre Tabellen verwenden.
+
+Unterstützung für die verwaltete Azure SQL-Instanz (Erweiterte privater Ansicht). 
+> [!NOTE]
+> Es gibt eine Reihe von Unterschieden bei Verwendung verwalteter Instanzen:
+> -   FILESTREAM wird nicht unterstützt. 
+> -   Lokalen Dateisystem Zugriff wird nicht unterstützt, aber für Angaben wie Tracefiles erforderlich 
+> -   Erstellen Sie UDT aus lokalen Pfad wird nicht unterstützt. 
+> -   Integrierte Windows-Authentifizierung wird nicht unterstützt. 
+> -   DTC wird nicht unterstützt. 
+> -   Konto'sa' ist nicht vorhanden (Standardkonto ist "CloudSA" genannt)
+> -   TDS-token-Fehler (0xAA) gibt falsche Servernamen zurück.
+> -   Sonderzeichen im Datenbanknamen werden nicht unterstützt. 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] wird nicht unterstützt.
+> -   Die Fehlermeldungen werden immer auf Englisch angezeigt, unabhängig von der Sprache Einstellungen (wie Azure) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>What's New in der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] auf Linux- und MacOS  
 
@@ -54,4 +82,3 @@ Der ODBC-Treiber unter Linux unterstützt [!INCLUDE[ssHADR](../../../includes/ss
 Der ODBC-Treiber unter Linux unterstützt Verbindungen mit Microsoft Azure SQL-Datenbanken. Weitere Informationen finden Sie unter [Gewusst wie: Verbinden mit Microsoft Azure SQL-Datenbank mithilfe von ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
 
 Die `-l` Option (Anmeldungstimeout) wurde um `bcp`. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit **Bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
-

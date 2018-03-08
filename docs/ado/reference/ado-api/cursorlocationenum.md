@@ -3,7 +3,7 @@ title: CursorLocationEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocationEnum enumeration [ADO]
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 52bd88c7d2f5916e33094c085296f5fec8f99d28
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0937fcab4319e24a2bd213971bea2761b94df75
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Gibt den Speicherort des Cursordiensts.  
@@ -50,4 +49,3 @@ Gibt den Speicherort des Cursordiensts.
   
 ## <a name="applies-to"></a>Gilt für  
  [CursorLocation-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)
-

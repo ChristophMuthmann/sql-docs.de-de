@@ -2,9 +2,12 @@
 title: "Artikeleigenschaften – &lt;Artikel&gt; | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -14,19 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
-  Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
   
 > [!NOTE]  
 >  Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -43,13 +46,13 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="options-for-all-publications"></a>Optionen für alle Veröffentlichungen  
  **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren**  
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurde die Tabellen- und Indexpartitionierung eingeführt, die in keinem Zusammenhang zu der Partitionierung stehen, die die Replikation über Zeilen- und Spaltenfilter anbietet. Die Optionen **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren** geben an, ob Partitionierungsschemas auf den Abonnenten kopiert werden sollen. Weitere Informationen zur Partitionierung finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurde die Tabellen- und Indexpartitionierung eingeführt, die in keinem Zusammenhang zu der Partitionierung stehen, die die Replikation über Zeilen- und Spaltenfilter anbietet. Die Optionen **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren** geben an, ob Partitionierungsschemas auf den Abonnenten kopiert werden sollen. Weitere Informationen zur Partitionierung finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Datentypen konvertieren**  
  Bestimmt, ob beim Erstellen von Objekten auf dem Abonnenten benutzerdefinierte Datentypen in Basisdatentypen konvertiert werden. Zu den benutzerdefinierten Datentypen gehören die benutzerdefinierten CLR-Typen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden. Geben Sie den Wert **True** an, wenn Sie diese Datentypen auf frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]replizieren. Auf diese Weise stellen Sie sicher, dass sie auf dem Abonnenten fehlerfrei verarbeitet werden können.  
   
  **Schemas auf dem Abonnenten erstellen**  
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas eingeführt, die mithilfe der CREATE SCHEMA-Anweisung definiert werden. Ein Schema ist der Eigentümer eines Objekts. Es wird in einem mehrteiligen Namen verwendet, z.B. \<Database>.\<Schema>.\<Object>. Wenn Sie in der Datenbank Objekte haben, deren Besitzer nicht DBO ist, kann die Replikation diese Schemas auf dem Abonnenten erstellen, sodass veröffentlichte Objekte erstellt werden können.  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas eingeführt, die mithilfe der CREATE SCHEMA-Anweisung definiert werden. Ein Schema ist der Eigentümer eines Objekts. Es wird in einem mehrteiligen Namen verwendet, z.B. \<Database>.\<Schema>.\<Object>. Wenn Sie in der Datenbank Objekte haben, deren Besitzer nicht DBO ist, kann die Replikation diese Schemas auf dem Abonnenten erstellen, sodass veröffentlichte Objekte erstellt werden können.  
   
  Gehen Sie folgendermaßen vor, wenn Sie Daten auf Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]replizieren:  
   
@@ -86,7 +89,7 @@ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas 
   
  Mit den Optionen unter **Anweisungsübermittlung** wird angegeben, ob eine gespeicherte Prozedur verwendet wird und wenn ja, welches Format für an die Prozedur übergebene Parameter verwendet werden soll. Die Optionen für **gespeicherte Prozeduren** ermöglichen es Ihnen, die Prozeduren zu verwenden, die die Replikation automatisch erstellt, oder diese durch von Ihnen erstellte benutzerdefinierte Prozeduren zu ersetzen.  
   
- Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
+ Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
  **Replizieren**  
  Diese Option gilt nur für gespeicherte Prozeduren. Sie bestimmt, ob die Definition der gespeicherten Prozedur (die CREATE PROCEDURE-Anweisung) oder deren Ausführung repliziert wird. Wenn Sie die Ausführung der Prozedur replizieren, wird die Prozedurdefinition auf den Abonnenten repliziert, nachdem das Abonnement initialisiert wurde. Wenn die Prozedur auf dem Verleger ausgeführt wird, führt die Replikation die zugehörige Prozedur auf dem Abonnenten aus. Dies kann in Fällen, in denen große Batchvorgänge ausgeführt werden, zu einer deutlich verbesserten Leistung führen. Weitere Informationen finden Sie unter [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
@@ -176,7 +179,7 @@ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas 
   
 -   Für einige Typen sind mehrere Typen zur Auswahl vorhanden. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt die Verwendung der Standardzuordnung, sofern die Anwendung keine andere Zuordnung erfordert. Weitere Informationen finden Sie unter [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Erstellen und Anwenden der Anfangsmomentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

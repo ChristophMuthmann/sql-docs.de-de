@@ -3,10 +3,12 @@ title: "Erstellen von ausgelegte Anmeldeinformationen für die Datenbank (Transa
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>Erstellen von ausgelegte Anmeldeinformationen für die Datenbank (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Erstellt einen Datenbank-Anmeldeinformationen. Datenbank-Anmeldeinformationen wird nicht für einen Server Anmelde- oder Benutzer zugeordnet. Die Anmeldeinformationen werden von der Datenbank verwendet, um den Zugriff auf den externen Speicherort jedes Mal, wenn die Datenbank einen Vorgang ausführt, der Zugriff benötigt.  
   
@@ -93,7 +94,7 @@ WITH IDENTITY = 'identity_name'
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Erstellen einer Datenbank werden Anmeldeinformationen für Ihre Anwendung begrenzt.
  Das folgende Beispiel erstellt die datenbankweite Anmeldeinformationen namens `AppCred`. Die datenbankbezogenen Anmeldeinformationen enthält, die Windows-Benutzer `Mary5` und ein Kennwort anzugeben.  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -105,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Erstellen einer Datenbank werden Anmeldeinformationen für eine shared Access Signature beschränkt.   
 Das folgende Beispiel erstellt die datenbankweit gültigen Anmeldeinformationen, die verwendet werden kann, erstellen eine [externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md), die möglich Massenvorgänge, z. B. [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Signaturen für freigegebenen Zugriff kann nicht mit PolyBase in SQL Server, APS oder SQL Data Warehouse verwendet werden.
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -117,7 +118,7 @@ Das folgende Beispiel erstellt die datenbankweit gültigen Anmeldeinformationen,
 Azure Data Lake-Speicher verwendet eine Azure Active Directory-Anwendung für Service to Service-Authentifizierung.
 Bitte [erstellen Sie eine AAD-Anwendung](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) und Dokumentieren Sie die "client_id", die OAuth_2.0_Token_EndPoint und den Schlüssel ein, bevor Sie versuchen, eine datenbankweite Anmeldeinformationen zu erstellen.
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'
@@ -136,4 +137,3 @@ WITH
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   
-

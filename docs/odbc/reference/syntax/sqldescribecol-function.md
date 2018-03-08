@@ -3,33 +3,30 @@ title: SQLDescribeCol-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDescribeCol
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDescribeCol
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDescribeCol
-helpviewer_keywords:
-- SQLDescribeCol function [ODBC]
+f1_keywords: SQLDescribeCol
+helpviewer_keywords: SQLDescribeCol function [ODBC]
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a6fcf834f88a1ecc609b56a0f8f493ee5a3c1ab
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol-Funktion
 **Konformität**  
@@ -75,9 +72,9 @@ SQLRETURN SQLDescribeCol(
  *DataTypePtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem den SQL-Datentyp der Spalte zurückgegeben. Dieser Wert wird aus dem Feld SQL_DESC_CONCISE_TYPE vom IRD gelesen. Dadurch wird einer der Werte in [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md), oder treiberspezifischen SQL-Datentyp. Wenn der Datentyp bestimmt werden kann, kehrt der Treiber SQL_UNKNOWN_TYPE zurück.  
   
- In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP wird zurückgegeben, * \*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten bzw.; in ODBC 2..* X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben wird. Der Treiber-Manager führt die erforderlichen Zuordnungen, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3.* X* Treiber oder wenn eine ODBC 3..* X* Anwendung arbeitet mit einer ODBC 2..* X* Treiber.  
+ In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP wird zurückgegeben,  *\*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten bzw.; in ODBC 2.. *X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben wird. Der Treiber-Manager führt die erforderlichen Zuordnungen, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* Treiber oder wenn eine ODBC 3.. *X* Anwendung arbeitet mit einer ODBC 2.. *X* Treiber.  
   
- Wenn *ColumnNumber* entspricht 0 (für eine Lesezeichenspalte), wird im SQL_BINARY zurückgegeben * \*DataTypePtr* für Lesezeichen variabler Länge. (SQL_INTEGER wird zurückgegeben, wenn von einer ODBC 3. Lesezeichen verwendet werden. *x* Anwendung arbeiten mit einer ODBC 2..* X* Treiber oder von einer ODBC 2..* X* Anwendung arbeiten mit einem ODBC 3..* X* Treiber.)  
+ Wenn *ColumnNumber* entspricht 0 (für eine Lesezeichenspalte), wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* für Lesezeichen variabler Länge. (SQL_INTEGER wird zurückgegeben, wenn von einer ODBC 3. Lesezeichen verwendet werden. *x* Anwendung arbeiten mit einer ODBC 2.. *X* Treiber oder von einer ODBC 2.. *X* Anwendung arbeiten mit einem ODBC 3.. *X* Treiber.)  
   
  Weitere Informationen zu diesen Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie unter der Treiber-Dokumentation.  
   
@@ -109,10 +106,10 @@ SQLRETURN SQLDescribeCol(
 |07005|Vorbereitete Anweisung keine *Cursor-Spezifikation*|Die zugeordnete Anweisung die *StatementHandle* hat kein Resultset zurückgegeben. Es wurden keine Spalten zu beschreiben.|  
 |07009|Ungültiger Deskriptorindex|(DM) der Wert für das Argument angegebene *ColumnNumber* gleich 0 und die Option-Anweisung SQL_ATTR_USE_BOOKMARKS wurde SQL_UB_OFF.<br /><br /> Der Wert für das Argument angegebene *ColumnNumber* war größer als die Anzahl der Spalten im Resultset.|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Speicherbelegungsfehler|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY008|Der Vorgang wurde abgebrochen|Asynchroner Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* aus einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn **SQLDescribeCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) hieß die Funktion vor dem Aufruf **SQLPrepare**, **SQLExecute**, oder eine Katalogfunktion des Anweisungshandles.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die * StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn **SQLDescribeCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) hieß die Funktion vor dem Aufruf **SQLPrepare**, **SQLExecute**, oder eine Katalogfunktion des Anweisungshandles.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *Pufferlänge* war kleiner als 0.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -121,7 +118,7 @@ SQLRETURN SQLDescribeCol(
 |IM017|Abrufintervall ist im Modus für asynchrone Benachrichtigung deaktiviert.|Sobald das Benachrichtigungsmodell verwendet wird, ist die Abruf deaktiviert.|  
 |IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchrone Vorgangs auf diesem Handle aufgerufen wurde.|Wenn die vorherigen Funktionsaufruf auf das Handle SQL_STILL_EXECUTING zurückgibt und Benachrichtigungsmodus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf das Handle nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
   
- **SQLDescribeCol** zurückgeben kann eine beliebige SQLSTATE, die von zurückgegeben werden kann **SQLPrepare** oder **SQLExecute** beim Aufruf nach **SQLPrepare** und vor ** SQLExecute**, je nachdem, wenn die Datenquelle für die SQL-Anweisung, die das Anweisungshandle zugeordnet auswertet.  
+ **SQLDescribeCol** zurückgeben kann eine beliebige SQLSTATE, die von zurückgegeben werden kann **SQLPrepare** oder **SQLExecute** beim Aufruf nach **SQLPrepare** und vor  **SQLExecute**, je nachdem, wenn die Datenquelle für die SQL-Anweisung, die das Anweisungshandle zugeordnet auswertet.  
   
  Aus Gründen der Leistung eine Anwendung sollte nicht aufrufen **SQLDescribeCol** vor der Ausführung einer Anweisung.  
   
@@ -147,4 +144,3 @@ SQLRETURN SQLDescribeCol(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

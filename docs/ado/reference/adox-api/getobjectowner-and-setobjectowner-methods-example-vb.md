@@ -3,7 +3,7 @@ title: GetObjectOwner- und SetObjectOwner Methoden Beispiel (VB) | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], Visual Basic example
 - GetObjectOwner method [ADOX], Visual Basic example
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aa3d1c1490138ce3b13352cd7ce72ac24b762d9c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65254f67ef864418a4c75e9e3f2b035c610e594e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner- und SetObjectOwner Methoden Beispiel (VB)
 Dieses Beispiel zeigt die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) und [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) Methoden. Dieser Code geht davon aus, das Vorhandensein der Gruppe "Accounting (finden Sie unter der [Gruppen und Benutzer für anfügen, ChangePassword Methoden Beispiel (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) zu erfahren, wie diese Gruppe mit dem System hinzufügen). Der Besitzer der Tabelle Kategorien, die in das Buchhaltungszahlenformat geändert festgelegt ist.  
@@ -73,4 +72,3 @@ End Sub
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetObjectOwner-Methode (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [SetObjectOwner-Methode](../../../ado/reference/adox-api/setobjectowner-method.md)
-

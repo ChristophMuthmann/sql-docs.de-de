@@ -1,31 +1,33 @@
 ---
-title: Catalog. create_environment_variable (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.create_environment_variable (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: e7bd491ec0bc33dbcc35a309208b37cf3893d062
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Erstellen Sie eine Umgebungsvariable in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Erstellt eine Umgebungsvariable im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,32 +42,32 @@ catalog.create_environment_variable [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@folder_name =] *Ordnername*  
+ [@folder_name =] *folder_name*  
  Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [@environment_name =] *Environment_name*  
+ [@environment_name =] *environment_name*  
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
   
- [@variable_name =] *Variable_name*  
+ [@variable_name =] *variable_name*  
  Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)**.  
   
- [@data_type =] *Data_type*  
- Der Datentyp der Variablen. Unterstützt die folgenden Anweisungstypen Variable Umgebungsdaten **booleschen**, **Byte**, **"DateTime"**, **doppelte**, **Int16**, **Int32**, **Int64**, **einzelne**, **Zeichenfolge**, **UInt32**, und  **UInt64**. Nicht unterstützte umgebungsvariablendatentypen sind **Char**, **DBNull**, **Objekt**, und **"SByte"**. Der Datentyp der *Data_type* Parameter ist **vom Datentyp nvarchar(128)**.  
+ [@data_type =] *data_type*  
+ Der Datentyp der Variablen. Zu den unterstützten Umgebungsvariablen-Datentypen zählen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** und **UInt64**. Die Umgebungsvariablen-Datentypen **Char**, **DBNull**, **Object** und **Sbyte** werden nicht unterstützt. Der *data_type*-Parameter ist vom Typ **nvarchar(128)**.  
   
- [@sensitive =] *vertrauliche*  
- Gibt an, ob die Variable einen vertraulichen Wert enthält. Verwenden Sie den Wert `1` , um anzugeben, dass der Wert der Umgebungsvariablen vertraulich ist, oder den Wert `0` , um anzugeben, dass er nicht vertraulich ist. Ein vertraulicher Wert wird verschlüsselt, wenn er gespeichert wird. Ein Wert, der nicht vertraulich ist, wird als nur-Text gespeichert. *Vertrauliche* ist **Bit**.  
+ [@sensitive =] *sensitive*  
+ Gibt an, ob die Variable einen vertraulichen Wert enthält. Verwenden Sie den Wert `1` , um anzugeben, dass der Wert der Umgebungsvariablen vertraulich ist, oder den Wert `0` , um anzugeben, dass er nicht vertraulich ist. Ein vertraulicher Wert wird verschlüsselt, wenn er gespeichert wird. Ein Wert, der nicht vertraulich ist, wird als Nur-Text-Wert gespeichert. *Sensitive* ist vom Typ **bit**.  
   
- [@value =] *Wert*  
+ [@value =] *value*  
  Der Wert der Umgebungsvariablen. Der *value* ist **sql_variant**.  
   
- [@description =] *Beschreibung*  
- Die Beschreibung der Umgebungsvariablen. Die *Wert* ist **nvarchar(1024)**.  
+ [@description =] *description*  
+ Die Beschreibung der Umgebungsvariablen. *value* ist vom Typ **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -85,29 +87,28 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit einer Umgebungsvariablen kann zur Ausführung eines Pakets einem Projektparameter oder Paketparameter effizient ein Wert zugewiesen werden. Umgebungsvariablen ermöglichen die Organisation von Parameterwerten. Variablennamen müssen innerhalb einer Umgebung eindeutig sein.  
   
  Die gespeicherte Prozedur überprüft den Datentyp der Variablen, um sicherzustellen, dass sie vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog unterstützt wird.  
   
 > [!TIP]  
->  Erwägen Sie die **Int16** -Datentyp im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] statt des nicht unterstützten **"SByte"** -Datentyp.  
+>  Eventuell sollten Sie anstelle des nicht unterstützten Datentyps **Sbyte** den Datentyp **Int16** in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden.  
   
- An diese gespeicherte Prozedur übergebene Wert der *Wert* Parameter konvertiert wird, aus einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Datentyp, ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp gemäß der folgenden Tabelle:  
+ Der Wert, der dieser gespeicherten Prozedur mit dem Parameter *value* übergeben wurde, wird gemäß der folgenden Tabelle von einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentyp in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp konvertiert:  
   
 |Integration Services-Datentyp|SQL Server-Datentyp|  
 |------------------------------------|--------------------------|  
 |**Boolean**|**bit**|  
-|**Byte**|**binäre**, **Varbinary**|  
-|**DateTime**|**"DateTime"**, **datetime2**, **"DateTimeOffset"**, **Smalldatetime**|  
-|**Double**|Genaue numerische: **decimal**, **numerischen**; Ungefähre numerische: **"float"**, **real**|  
+|**Byte**|**binary**, **varbinary**|  
+|**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
+|**Double**|Genauer numerischer Ausdruck: **decimal**, **numeric**; ungefährer numerischer Ausdruck: **float**, **real**|  
 |**Int16**|**smallint**|  
 |**Int32**|**int**|  
-|**Int64-Typ**|**bigint**|  
-|**Single**|Genaue numerische: **decimal**, **numerischen**; Ungefähre numerische: **"float"**, **real**|  
-|**String**|**Varchar**, **Nvarchar**, **Char**|  
-|**UInt32**|**Int** (**Int** ist die beste Entsprechung zu **Uint32**.)|  
-|**UInt64**|**"bigint"** (**Int** ist die beste Entsprechung zu **Uint64**.)|  
+|**Int64**|**bigint**|  
+|**Single**|Genauer numerischer Ausdruck: **decimal**, **numeric**; ungefährer numerischer Ausdruck: **float**, **real**|  
+|**String**|**varchar**, **nvarchar**, **char**|  
+|**UInt32**|**int** (**int** ist die nächste verfügbare Zuordnung zu **Uint32**.)|  
+|**UInt64**|**bigint** (**int** ist die nächste verfügbare Zuordnung zu **Uint64**.)|  
   
   
-

@@ -2,9 +2,12 @@
 title: 'Beispiel: Angeben der ID- und der IDREF-Direktive | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc36427330033bac793e8f62658b62b93c18dbf6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9998ad6318f303861473e5e510c782b16fbb42ff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Beispiel: Angeben der ID- und der IDREF-Direktive
-  Dieses Beispiel entspricht fast dem Beispiel unter [Angeben der ELEMENTXSINIL-Direktive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . Der einzige Unterschied ist, dass in der Abfrage die **ID** -Direktive und die **IDREF** -Direktive angegeben werden. Diese Direktiven überschreiben die Typen des **SalesPersonID**-Attributs im <`OrderHeader`>-Element und im <`OrderDetail`>-Element. Auf diese Weise werden dokumentinterne Links gebildet. Sie benötigen das Schema, um die überschriebenen Typen anzuzeigen. Um das Schema abzurufen, gibt die Abfrage die Option **XMLDATA** in der FOR XML-Klausel an.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Dieses Beispiel entspricht fast dem Beispiel unter [Angeben der ELEMENTXSINIL-Direktive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . Der einzige Unterschied ist, dass in der Abfrage die **ID** -Direktive und die **IDREF** -Direktive angegeben werden. Diese Direktiven überschreiben die Typen des **SalesPersonID**-Attributs im <`OrderHeader`>-Element und im <`OrderDetail`>-Element. Auf diese Weise werden dokumentinterne Links gebildet. Sie benötigen das Schema, um die überschriebenen Typen anzuzeigen. Um das Schema abzurufen, gibt die Abfrage die Option **XMLDATA** in der FOR XML-Klausel an.  
   
 ```  
 USE AdventureWorks2012;  
@@ -110,8 +113,7 @@ FOR XML EXPLICIT, XMLDATA
 ...  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

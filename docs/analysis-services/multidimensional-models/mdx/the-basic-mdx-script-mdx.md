@@ -2,13 +2,13 @@
 title: Grundlegendes MDX-Skript (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - expressions [MDX], scripts
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f3f42d92332116ff94f0175619cc42face9a8b36
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Grundlegendes MDX-Skript (MDX)
-  Ein MDX-Skript (Multidimensional Expressions, mehrdimensionale Ausdrücke) definiert den Berechnungsprozess für einen Cube in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Es gibt zwei Arten von MDX-Skripts:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ein MDX-Skript (Multidimensional Expressions, mehrdimensionale Ausdrücke) definiert den Berechnungsprozess für einen Cube in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Es gibt zwei Arten von MDX-Skripts:  
   
  **Das MDX-Standardskript**  
  In dem Moment, in dem Sie einen Cube erstellen, erstellt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ein MDX-Standardskript für den Cube. In diesem Skript ist ein Berechnungsdurchlauf für den gesamten Cube definiert.  
@@ -59,18 +59,18 @@ ms.lasthandoff: 09/01/2017
  Alle MDX-Skriptanweisungen  
  In einem MDX-Skript steuern MDX-Skriptbefehle den Kontext und den Gültigkeitsbereich von Berechnungen und verwalten das Verhalten anderer Anweisungen im MDX-Skript. Zu dieser Kategorie gehören die folgenden Anweisungen:  
   
--   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
+-   [BERECHNEN](../../../mdx/mdx-scripting-calculate.md)  
   
--   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
+-   [FIXIEREN](../../../mdx/mdx-scripting-freeze.md)  
   
--   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
+-   [BEREICH](../../../mdx/mdx-scripting-scope.md)  
   
  Weitere Informationen zu MDX-Skriptanweisungen finden Sie unter [MDX-Skriptanweisungen &#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md).  
   
  [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
  Die CREATE MEMBER-Anweisung erstellt berechnete Elemente. Weitere Informationen zum Erstellen berechneter Elemente finden Sie unter [Erstellen von berechneten Elementen in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
+ [GRUPPE ERSTELLEN](../../../mdx/mdx-data-definition-create-set.md)  
  Die CREATE SET-Anweisung erstellt benannte Mengen. Weitere Informationen zum Erstellen von benannten Mengen finden Sie unter [Erstellen von benannten Mengen in MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Bedingte Anweisungen  
@@ -97,8 +97,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Sprachreferenz &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX-Sprachreferenz &#40; MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Grundlegendes zu MDX-Skripts &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   
-

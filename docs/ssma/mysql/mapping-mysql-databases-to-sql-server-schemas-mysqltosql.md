@@ -1,12 +1,14 @@
 ---
 title: Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4dd351ebbb052515d953f02ae74282dd1e1d62f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f6472656dbfd31ca64348d066cca19f303b4a5f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySQLToSQL)
 Standardmäßig SSMA für die MySQL migriert alle Objekte in einer MySQL-Schema in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen Schemas MySQL anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken.  
@@ -74,7 +75,7 @@ Wenn Sie die Zuordnung zwischen einer MySQL-Schema und eine SQL Server-Datenbank
   
 1.  Klicken Sie unter der Registerkarte "Schema-Zuordnung" Wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** , um die Standarddatenbank und das Schema wiederherzustellen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Wenn Sie die Konvertierung von MySQL-Objekten in SQL Server- bzw. SQL Azure-Objekte analysieren möchten, können Sie [erstellen Sie ein Konvertierungsbericht](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) andernfalls können Sie [konvertieren Sie die MySQL-Datenbank-Objektdefinitionen](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) in SQL Server oder SQL Azure-Schemas  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -83,4 +84,3 @@ Wenn Sie die Konvertierung von MySQL-Objekten in SQL Server- bzw. SQL Azure-Obje
 [Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Herstellen einer Verbindung mit SQLServer &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-

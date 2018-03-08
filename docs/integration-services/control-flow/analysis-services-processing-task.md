@@ -1,10 +1,13 @@
 ---
-title: Analysis Services-Verarbeitungstask | Microsoft Docs
+title: Analysis Services-Verarbeitungstask | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cad0ce4adcf182892b62473aacb9e1c8d310f6c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services-Verarbeitungstask
   Der Verarbeitungstask [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verarbeitet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte, beispielsweise tabellarische Modelle, Cubes, Dimensionen und Miningmodelle.  
@@ -87,14 +89,14 @@ ms.lasthandoff: 08/11/2017
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Verarbeitungstask** können Sie den Analysis Services-Verarbeitungstask benennen und beschreiben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Analysis Services-Verarbeitungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Analysis Services-Verarbeitungstasks ein.  
   
 ## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Analysis Services)
@@ -110,7 +112,7 @@ ms.lasthandoff: 08/11/2017
   
 4.  Batcheinstellungen werden für tabellarische Modelle ignoriert.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Analysis Services-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Analysis Services-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -152,4 +154,3 @@ ms.lasthandoff: 08/11/2017
   
  **Verwandte Themen:** [Dialogfeld „Einstellungen ändern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-

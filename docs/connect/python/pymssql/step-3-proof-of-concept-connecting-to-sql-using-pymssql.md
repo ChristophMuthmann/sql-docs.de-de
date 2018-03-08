@@ -3,24 +3,25 @@ title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL Pyms
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: python
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 54ce9bbbda135b91e7b361ad7f763248a2259c38
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f230af88796afce17b6858a7e4ac5136a04e9dd3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -92,4 +93,3 @@ Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen in der Sie:
   ## <a name="next-steps"></a>Nächste Schritte  
   
 Weitere Informationen finden Sie unter der [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
-

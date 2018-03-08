@@ -2,28 +2,30 @@
 title: "Hinzufügen von Transact-SQL-Ausschnitten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2498e15c9927adde026e426ead756be389ce08d1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9bd8c5a0b370191fd823f2ca815ebf9080d1838
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="add-transact-sql-snippets"></a>Hinzufügen von Transact-SQL-Ausschnitten
-  Sie können dem Satz von vordefinierten Ausschnitten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten sind, eigene Transact-SQL-Codeausschnitte hinzufügen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können dem Satz von vordefinierten Ausschnitten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind, eigene Transact-SQL-Codeausschnitte hinzufügen.  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Erstellen einer Transact-SQL-Ausschnittdatei  
  Der erste Teil des Erstellens eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codeausschnitts besteht darin, eine XML-Datei mit dem Text des Codeausschnitts zu erstellen. Die Datei muss die Dateierweiterung SNIPPET aufweisen und die Anforderungen des [Codeausschnittschemas](http://go.microsoft.com/fwlink/?LinkId=207504)erfüllen. Legen Sie die Ausschnittsprache auf SQL fest.  
@@ -115,8 +117,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Navigieren Sie zum Ordner, der die Datei "TryCatch.snippet" enthält, klicken Sie auf die Datei "TryCatch.snippet", und klicken Sie auf die Schaltfläche **Öffnen** . Im Ordner **Eigene Codeausschnitte** sollte kein TryCatch-Ausschnitt vorhanden sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einfügen von Transact-SQL-Umschließungsausschnitten](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   
-

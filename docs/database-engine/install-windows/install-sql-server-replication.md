@@ -2,11 +2,12 @@
 title: Installieren der SQL Server-Replikation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -18,18 +19,20 @@ helpviewer_keywords:
 - replication [SQL Server], installing
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
-caps.latest.revision: 41
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 70e40040c5302af98ebca91248f14c9077fc43b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 940e08436b6de08978f37a33b134b58f6661f866
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-replication"></a>Installieren der SQL Server-Replikation
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Die Replikationskomponenten können mithilfe des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über die Eingabeaufforderung installiert werden. Installieren Sie die Replikation, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren oder wenn Sie eine vorhandene Instanz ändern.  
   
 Nachdem die Replikationskomponenten installiert wurden, müssen Sie den Server konfigurieren, um die Replikation verwenden zu können. Weitere Informationen finden Sie unter [Konfigurieren der Verteilung](../../relational-databases/replication/configure-distribution.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
@@ -53,4 +56,3 @@ Nachdem die Replikationskomponenten installiert wurden, müssen Sie den Server k
  [Features Supported by the Editions of SQL Server (Von den Editionen von SQL Server unterstützte Features)](../../sql-server/editions-and-components-of-sql-server-2017.md)  
   
   
-

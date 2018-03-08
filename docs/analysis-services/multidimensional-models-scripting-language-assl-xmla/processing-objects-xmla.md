@@ -1,13 +1,14 @@
 ---
 title: Verarbeiten von Objekten (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -24,17 +25,16 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6dfc2fafb76d19ea986b697ec065abec738f4c05
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-objects-xmla"></a>Verarbeiten von Objekten (XMLA)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Verarbeitung den Schritt bzw. Reihe von Schritten, durch Daten in Informationen für Geschäftsanalysen umgewandelt. Die Verarbeitung ist je nach Objekttyp unterschiedlich, aber immer Teil einer Umwandlung von Daten in Informationen.  
@@ -193,4 +193,3 @@ ms.lasthandoff: 09/01/2017
 ```  
   
   
-

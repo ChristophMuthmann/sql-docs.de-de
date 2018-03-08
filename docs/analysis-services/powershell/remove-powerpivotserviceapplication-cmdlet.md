@@ -2,31 +2,30 @@
 title: Remove-PowerPivotServiceApplication-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11219fe0dd15b594d6c59565226e8f25b8259fe8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Löscht eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Löscht eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -57,7 +56,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-confirm-switch"></a>-Bestätigen Sie \<wechseln >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  Fordert eine Bestätigung an, bevor der Befehl ausgeführt wird. Dieser Wert ist standardmäßig aktiviert. Geben Sie Confirm:$false für einen Befehl an, um die Bestätigungsantwort in einem Befehl zu umgehen.  
   
 |||  
@@ -79,7 +78,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-removedata-switch"></a>-RemoveData \<wechseln >  
+### <a name="-removedata-switch"></a>-RemoveData \<switch>  
  Entfernt die Dienstanwendungs-Datenbank, in der Zeitpläne zur Datenaktualisierung, Daten zur Arbeitsmappenverwendung, Instanzzuordnungen, die zum Verfolgen der geladenen Datenbanken verwendet werden, und andere interne Daten enthalten sind.  
   
 |||  
@@ -90,7 +89,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer und OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
@@ -126,4 +125,3 @@ CC:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmn
  In diesem Beispiel wird eine einzelne [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zusammen mit der dazugehörigen Datenbank und den Cachedateien gelöscht.  
   
   
-

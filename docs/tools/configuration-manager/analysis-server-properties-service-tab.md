@@ -2,28 +2,31 @@
 title: Analysis Server-Eigenschaften (Registerkarte Dienst) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a262eb84e3264fd1ac4b6a58435344ef7f2fbbe7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8d2da25a920e0d5e25f9b7fa72ce48529fa6686
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="analysis-server-properties-service-tab"></a>Analysis-Server-Eigenschaften (Registerkarte Dienst)
-  Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Dienst. Dieser Dienst ist für die ordnungsgemäße Ausführung von [!INCLUDE[ssAS](../../includes/ssas-md.md)] zwingend erforderlich. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Dienst. Dieser Dienst ist für die ordnungsgemäße Ausführung von [!INCLUDE[ssAS](../../includes/ssas-md.md)] zwingend erforderlich. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
 ## <a name="options"></a>enthalten  
  **Binärpfad**  
@@ -60,4 +63,3 @@ ms.lasthandoff: 08/02/2017
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist.  
   
   
-

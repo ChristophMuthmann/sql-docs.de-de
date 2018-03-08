@@ -1,12 +1,14 @@
 ---
-title: Abfragen des Active Directory with the Script Task | Microsoft Docs
+title: Abfragen des Active Directory mit dem Skripttask | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9eb991a2cd5fa7da5e60d761b8618534a99c9dd6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Abfragen des Active Directory mit dem Skripttask
-  Anwendungen für die Verarbeitung von Unternehmensdaten, wie z. B. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete, müssen Daten häufig je nach Stellung, Berufsbezeichnung und anderen im Active Directory gespeicherten Eigenschaften der Mitarbeiter unterschiedlich verarbeiten. Active Directory ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Verzeichnisdienst, der einen zentralen Speicher für Metadaten nicht nur Informationen zu Benutzern, sondern auch über andere Unternehmensressourcen wie z. B. Computer und Drucker bereitstellt. Die **System.DirectoryServices** Namespace in Microsoft .NET Framework stellt Klassen zur Arbeit mit Active Directory, helfen Ihnen beim datenverarbeitungsworkflow anhand der Informationen, die sie speichert.  
+  Anwendungen für die Verarbeitung von Unternehmensdaten, wie z. B. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete, müssen Daten häufig je nach Stellung, Berufsbezeichnung und anderen im Active Directory gespeicherten Eigenschaften der Mitarbeiter unterschiedlich verarbeiten. Active Directory ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Verzeichnisdienst, der einen zentralen Speicher für Metadaten nicht nur über Benutzer, sondern auch über andere Werte des Unternehmens, wie etwa über Computer und Drucker, bereitstellt. Der **System.DirectoryServices**-Namespace in Microsoft .NET Framework stellt Klassen für die Verwendung mit Active Directory bereit, sodass Sie den Datenverarbeitungsworkflow anhand der darin gespeicherten Informationen weiterleiten können.  
   
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
@@ -44,13 +45,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  Erstellen Sie die drei Zeichenfolgenvariablen `email`, `name` und `title`. Geben Sie eine gültige Unternehmens-E-Mail-Adresse als Wert der `email`-Variable ein.  
   
-2.  Auf der **Skript** auf der Seite der **Skripttask-Editor**, Hinzufügen der `email` -Variablen an die **ReadOnlyVariables** Eigenschaft.  
+2.  Fügen Sie auf der Seite **Skript** im **Skripttask-Editor** die `email`-Variable der **ReadOnlyVariables**-Eigenschaft hinzu.  
   
-3.  Hinzufügen der `name` und `title` Variablen, um die **ReadWriteVariables** Eigenschaft.  
+3.  Fügen Sie die Variablen `name` und `title` der **ReadWriteVariables**-Eigenschaft hinzu.  
   
-4.  Fügen Sie im skriptprojekt einen Verweis auf die **System.DirectoryServices** Namespace.  
+4.  Fügen Sie im Skriptprojekt dem **System.DirectoryServices**-Namespace einen Verweis hinzu.  
   
-5.  zugreifen. In Ihrem Code verwenden ein **Importe** -Anweisung zum Importieren der **DirectoryServices** Namespace.  
+5.  zugreifen. Verwenden Sie in Ihrem Code eine **Imports**-Anweisung zum Importieren des **DirectoryServices**-Namespace.  
   
 > [!NOTE]  
 >  Damit dieses Skript ausgeführt werden kann, muss im Netzwerk des Unternehmens Active Directory verwendet werden. Zudem müssen die in diesem Beispiel verwendeten Mitarbeiterinformationen im Unternehmen gespeichert werden.  
@@ -115,7 +116,6 @@ public void Main()
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Technische Artikel [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588), auf social.technet.microsoft.com  
+-   Technischer Artikel – [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) (Verarbeiten von Active Directory-Informationen in SSIS) – unter „social.technet.microsoft.com“  
   
   
-

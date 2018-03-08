@@ -3,24 +3,25 @@ title: 'Pdostatement:: errorInfo | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3162819c44a96b5dcc9ae4c5b3b30ad22fb0a528
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3e570149983e08d69d32da146871ad4ae0c4f52
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,4 +66,3 @@ print_r ($stmt->errorInfo());
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

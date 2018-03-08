@@ -2,34 +2,32 @@
 title: Teilmenge (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- subset
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Subset function
+f1_keywords: subset
+dev_langs: kbMDX
+helpviewer_keywords: Subset function
 ms.assetid: 49a7cd28-cd6f-4ae7-8c91-94a8652a97a5
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6f461f979c9d064305b0004fb906673e97f2ab5f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0496a6481cebf95e67a6f41a95ed37c522e44a13
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt eine Teilmenge von Tupeln aus einer angegebenen Menge zurück.  
   
@@ -44,10 +42,10 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Start*  
+ *Starten*  
  Ein gültiger numerischer Ausdruck, der die Position des ersten zurückzugebenden Tupels angibt.  
   
- *Count*  
+ *Anzahl*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Tupel angibt, die zurückgegeben werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -75,4 +73,3 @@ FROM [Adventure Works]
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

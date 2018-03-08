@@ -3,8 +3,11 @@ title: WRITETEXT-Anweisung (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5bf092ec05c2ae07864c12f092cf8b98f97234fa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ermöglicht die minimal protokollierte, interaktive Aktualisierung einer vorhandenen **Text**, **Ntext**, oder **Image** Spalte. WRITETEXT überschreibt alle vorhandenen Daten in der betreffenden Spalte. WRITETEXT kann nicht verwendet werden, auf **Text**, **Ntext**, und **Image** Spalten in den Ansichten.  
   
@@ -61,7 +63,7 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  Es wird empfohlen, die BULK-Option nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen zu verwenden. Diese Option kann in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert oder entfernt werden.  
   
- *Tabelle* **.column**  
+ *table* **.column**  
  Der Name der Tabelle und **Text**, **Ntext**, oder **Image** zu aktualisierenden Spalte. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Datenbank- und des Besitzernamens ist optional.  
   
  *text_ptr*  
@@ -70,7 +72,7 @@ WRITETEXT [BULK]
  WITH LOG  
  Wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignoriert. Die Protokollierung wird durch das für die Datenbank wirksame Wiederherstellungsmodell bestimmt.  
   
- *Daten*  
+ *data*  
  Der tatsächliche **Text**, **Ntext** oder **Image** zum Speichern von Daten. *Daten* kann ein Literal oder ein Parameter sein. Die maximale Länge des Texts, die interaktiv mit WRITETEXT eingefügt werden kann, ist etwa 120 KB **Text**, **Ntext**, und **Image** Daten.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -125,4 +127,3 @@ GO
  [UPDATETEXT &#40; Transact-SQL &#41;](../../t-sql/queries/updatetext-transact-sql.md)  
   
   
-

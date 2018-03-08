@@ -3,8 +3,11 @@ title: "Verweigern datenbankweit gültige Anmeldeinformationen (Transact-SQL) | 
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - DENY statement, database scoped credentials
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-caps.latest.revision: 2
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dcb2ee7f32cea0c848850dc504a91067611b743e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: adcbe36f2ffabfc63521fe905933295402178977
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>VERWEIGERTE datenbankweit gültige Anmeldeinformationen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Verweigert Berechtigungen für datenbankweit gültigen Anmeldeinformationen.  
 
@@ -120,4 +122,3 @@ DENY permission  [ ,...n ]
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

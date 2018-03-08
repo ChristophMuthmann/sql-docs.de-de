@@ -2,57 +2,42 @@
 title: "Installieren oder Deinstallieren des PowerPivot für SharePoint Add-in (SharePoint 2016) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c2f754a253e2c33555712dd456002ed69b608188
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1dbd22c1c09de66200cda7300f34666ea453777a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>Installieren oder Deinstallieren des Power Pivot für SharePoint-Add-In (SharePoint 2016)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] ist eine Sammlung von Anwendungsserverkomponenten und Back-End-Diensten, die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenzugriff in einer [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] -Farm bereitstellen. Das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerpivot16.msi**) ist ein Installationspaket, mit dem die Anwendungsserverkomponenten installiert werden.  
   
  **Hinweis:** In diesem Thema wird das Installieren der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Lösungsdateien sowie des [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2016-Konfigurationstools beschrieben. Nach der Installation finden Sie im folgenden Thema Informationen zum Konfigurationstool und zusätzlichen Funktionen: [Konfigurieren von PowerPivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
  Informationen zum Herunterladen von **spPowerPivot16.msi**finden Sie unter [Microsoft® SQL Server® 2016 Power Pivot® für Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675).  
   
- **In diesem Thema:**  
-  
--   [Hintergrund](#bkmk_background)  
-  
--   [Installationsort der Datei „spPowerPivot16.msi“](#bkmk_where_to_install)  
-  
--   [Anforderungen und erforderliche Komponenten](#bkmk_prereq)  
-  
--   [Installieren von PowerPivot für SharePoint](#bkmk_install)  
-  
--   [Bereitstellen der SharePoint-Lösungsdateien mit Power Pivot für SharePoint 2016-Konfigurationstool](#bkmk_deploy_solution)  
-  
--   [Deinstallieren oder Reparieren des Add-Ins](#bkmk_remove_addin)  
-  
-
-**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
-  
 ##  <a name="bkmk_background"></a> Hintergrund  
   
 -   **Anwendungsserver:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Funktionen in SharePoint 2016 umfassen die Verwendung von Arbeitsmappen als Datenquelle, die planmäßige Datenaktualisierung und das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Management-Dashboard.  
   
-     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Installer-Paket (**"sppowerpivot16.msi"**), die Analysis Services-Clientbibliotheken bereitstellt und Kopien [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] -Installationsdateien auf dem Computer. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Funktionen in SharePoint werden vom Installationsprogramm nicht bereitgestellt oder konfiguriert. Die folgenden Komponenten sind standardmäßig installiert:  
+     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] ist ein  **Windows Installer-Paket ([!INCLUDE[msCoName](../../../includes/msconame-md.md)]spPowerpivot16.msi**), das Analysis Services-Clientbibliotheken bereitstellt und [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]-Installationsdateien auf den Computer kopiert. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Funktionen in SharePoint werden vom Installationsprogramm nicht bereitgestellt oder konfiguriert. Die folgenden Komponenten sind standardmäßig installiert:  
   
-    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]. Diese Komponente enthält PowerShell-Skripts („.ps1“-Dateien), SharePoint-Lösungspakete (.wsp) und das [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] -Konfigurationstool zum Bereitstellen von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in einer SharePoint 2016-Farm.  
+    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]aus. Diese Komponente enthält PowerShell-Skripts („.ps1“-Dateien), SharePoint-Lösungspakete (.wsp) und das [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] -Konfigurationstool zum Bereitstellen von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in einer SharePoint 2016-Farm.  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB-Anbieter für Analysis Services (MSOLAP)  
   
@@ -144,7 +129,7 @@ Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
 ```  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin16|[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Konfiguration|  
 |SQL_OLAPDM|Analysis Services OLE DB Provider für SQL Server 2016|  
@@ -202,7 +187,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
     msiexec.exe /f spPowerPivot16.msi  
     ```  
   
- oder  
+ OR  
   
 -   Zum Deinstallieren führen Sie den folgenden Befehl aus:  
   
@@ -211,4 +196,3 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
     ```  
   
   
-

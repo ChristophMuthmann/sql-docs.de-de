@@ -3,8 +3,11 @@ title: Einbinden relationaler Daten in XML-Daten | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,28 +22,27 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fbb6d199812f90c07e9efa81da11f834e58cdb59
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Einbinden relationaler Daten in XML-Daten
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Sie können angeben, [Xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md) gegen eine **Xml** -Datentyp, Variable oder Spalte. Z. B. die [Query &#40; &#41; -Methode &#40; Xml-Datentyp &#41; ](../../t-sql/xml/query-method-xml-data-type.md) führt die angegebene XQuery-Abfrage für eine XML-Instanz. Beim Erstellen von XML-Code auf diese Art sollten Sie einen Wert aus einer Nicht-XML-Typspalte oder eine Transact-SQL-Variable einbringen. Dieser Prozess wird als Einbinden relationaler Daten in XML bezeichnet.  
   
  Um relationale Nicht-XML-Daten in XML zu binden, bietet das SQL Server-Datenbankmodul folgende Pseudofunktionen:  
   
--   [SQL: Column &#40; &#41; Function &#40; XQuery &#41; ](../../xquery/xquery-extension-functions-sql-column.md) Können Sie die Werte aus einer relationalen Spalte in einem XQuery- oder XML DML-Ausdruck verwenden.  
+-   [sql:column&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md) Lets you use the values from a relational column in your XQuery or XML DML expression.  
   
--   [SQL: Variable &#40; &#41; Function &#40; XQuery &#41; ](../../xquery/xquery-extension-functions-sql-variable.md) . Gibt Ihnen die Möglichkeit, den Wert einer SQL-Variablen im XQuery- oder XML DML-Ausdruck zu verwenden.  
+-   [sql:variable&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-variable.md) . Gibt Ihnen die Möglichkeit, den Wert einer SQL-Variablen im XQuery- oder XML DML-Ausdruck zu verwenden.  
   
  Sie können diese Funktionen mit **Xml** -Datentypmethoden tritt ein, wenn Sie einen relationalen Werts in XML verfügbar machen möchten.  
   
@@ -65,4 +67,3 @@ WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1
  [xml Data Type Methods (xml-Datentypmethoden)](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

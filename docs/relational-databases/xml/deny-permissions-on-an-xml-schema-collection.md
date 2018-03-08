@@ -2,9 +2,12 @@
 title: "Verweigern von Berechtigungen für eine XML-Schemaauflistung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f671b78f43515a1968b384660df5b13fc933b252
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Verweigern von Berechtigungen für eine XML-Schemaauflistung
-  Die Berechtigung zum Erstellen einer neuen XML-Schemaauflistung bzw. zum Verwenden einer vorhandenen Schemaauflistung kann verweigert werden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Die Berechtigung zum Erstellen einer neuen XML-Schemaauflistung bzw. zum Verwenden einer vorhandenen Schemaauflistung kann verweigert werden.  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Verweigern der Berechtigung zum Erstellen einer XML-Schemaauflistung  
  Es gibt folgende Möglichkeiten, um die Berechtigung zum Erstellen einer XML-Schemaauflistung zu verweigern:  
@@ -192,7 +196,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

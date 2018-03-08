@@ -3,8 +3,11 @@ title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 79750bc5f94a7a2b459d0b3e3266ea7ee91bc4dc
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Defragmentiert Indizes der angegebenen Tabelle oder Sicht.
   
@@ -60,16 +62,16 @@ DBCC INDEXDEFRAG
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* | *Database_id* | 0  
+ *database_name* | *database_id* | 0  
  Die Datenbank, die den zu defragmentierenden Index enthält. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  *TABLE_NAME* | *Table_id* | *View_name* | *View_id*  
  Die Tabelle oder Sicht, die den zu defragmentierenden Index enthält. Tabellen- und Sichtnamen müssen den Regeln für Bezeichner entsprechen.  
   
- *Index_name* | *Index_id*  
+ *index_name* | *index_id*  
  Der Name oder die ID für den Index, der defragmentiert werden soll. Falls nicht angegeben, werden von der Anweisung alle Indizes der angegebenen Tabelle oder Sicht defragmentiert. Indexnamen müssen den Regeln für Bezeichner entsprechen.  
   
- *Partitionsnummer* | 0  
+ *partition_number* | 0  
  Die Partitionsnummer des Indexes, der defragmentiert werden soll. Falls nichts oder 0 angegeben ist, werden von der Anweisung alle Partitionen im angegebenen Index defragmentiert.  
   
  WITH NO_INFOMSGS  
@@ -240,5 +242,4 @@ GO
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
   
   
-
 

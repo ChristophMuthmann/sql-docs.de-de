@@ -3,8 +3,11 @@ title: "Logische Ausdrücke (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - EBV
 - expressions [XQuery], logical
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d7ba6bb6a2f80e4d8b203dabae52bc57a852b925
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e6a7c65f0c5758bdc8f50582d6d2288f9918677b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="logical-expressions-xquery"></a>Logische Ausdrücke (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery unterstützt die logischen **und** und **oder** Operatoren.  
   
@@ -84,4 +86,3 @@ where ProductModelID=19
  [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
   
   
-

@@ -1,35 +1,34 @@
 ---
-title: "Übersicht über übermittlungserweiterungen | Microsoft Docs"
+title: "Übersicht über Übermittlungserweiterungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 1a93b20878414182a98b4994984b1633ab6a9497
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="delivery-extensions-overview"></a>Übersicht über Übermittlungserweiterungen
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ermöglicht Benutzern das Erstellen und Veröffentlichen von Berichten, die einmal erstellt und veröffentlicht, an diverse Orte übermittelt werden können. Außerdem enthält [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verschiedene Übermittlungserweiterungen und eine Übermittlungs-API, mit der Entwickler zusätzliche Übermittlungserweiterungen erstellen können, um die Übermittlungsfunktionen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] noch zu erweitern.  
+  Mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Benutzer Berichte erstellen und veröffentlichen, die nach der Erstellung und Veröffentlichung an diverse Orte übermittelt werden können. Außerdem enthält [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verschiedene Übermittlungserweiterungen und eine Übermittlungs-API, mit der Entwickler zusätzliche Übermittlungserweiterungen erstellen können, um die Übermittlungsfunktionen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] noch zu erweitern.  
   
  In folgender Tabelle finden Sie eine Liste der Übermittlungserweiterungen, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten sind.  
   
@@ -38,10 +37,10 @@ ms.lasthandoff: 08/12/2017
 |Berichtsserver-E-Mail|Verwendet einen SMTP-Server, um Berichte an einzelne Benutzer oder Gruppen zu senden.|  
 |Berichtsserver-Dateifreigabe|Wird verwendet, um Berichte in Ihrer Organisation an Netzwerk-Dateifreigaben zu verteilen. Bietet die Möglichkeit, einen Bericht automatisch nach einem festgelegten Zeitplan in eine Dateifreigabe zu kopieren.|  
   
- ![Reporting Servicearchitektur der übermittlungserweiterungen](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Architektur der übermittlungserweiterungen Reporting Services")  
+ ![Reporting Service-Architektur der Übermittlungserweiterungen](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
 Architektur der Übermittlungserweiterungen von Reporting Services  
   
- Übermittlungserweiterungen und Abonnements werden paarweise zugeordnet. Wenn Sie ein Abonnement erstellen, kann ein Benutzer wählen Sie eine der verfügbaren übermittlungserweiterungen, um zu bestimmen, wie der Bericht übermittelt wird. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] befinden sich Abonnements in der Berichtsserver-Datenbank. Wenn ein Ereignis auftritt, gleicht [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] das Ereignis mit den in der Berichtsserver-Datenbank enthaltenen Abonnements ab. Für jedes Abonnement, das an das Ergebnis gebunden ist, erstellt der Berichtsserver eine Benachrichtigung. Bei datengesteuerten Abonnements wird eine Benachrichtigung für jeden Empfänger erstellt. Sobald eine Benachrichtigung erstellt wurde, ruft der Berichtsserver eine bestimmte Übermittlungserweiterung auf und übernimmt die in der Benachrichtigung angegebenen Werte für die Erweiterungseinstellungen. Die Übermittlungserweiterung sendet die Benachrichtigung an den Benutzer, wie von der ausgewählten Übermittlungserweiterung angegeben.  
+ Übermittlungserweiterungen und Abonnements werden paarweise zugeordnet. Beim Erstellen eines Abonnements kann der Benutzer eine der verfügbaren Übermittlungserweiterungen auswählen, um die Art der Übermittlung des Berichts zu bestimmen. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] befinden sich Abonnements in der Berichtsserver-Datenbank. Wenn ein Ereignis auftritt, gleicht [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] das Ereignis mit den in der Berichtsserver-Datenbank enthaltenen Abonnements ab. Für jedes Abonnement, das an das Ergebnis gebunden ist, erstellt der Berichtsserver eine Benachrichtigung. Bei datengesteuerten Abonnements wird eine Benachrichtigung für jeden Empfänger erstellt. Sobald eine Benachrichtigung erstellt wurde, ruft der Berichtsserver eine bestimmte Übermittlungserweiterung auf und übernimmt die in der Benachrichtigung angegebenen Werte für die Erweiterungseinstellungen. Die Übermittlungserweiterung sendet die Benachrichtigung an den Benutzer, wie von der ausgewählten Übermittlungserweiterung angegeben.  
   
  Übermittlungserweiterungen implementieren die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Übermittlungserweiterungs-API. Da die Übermittlungserweiterungen die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Übermittlungserweiterungs-API unterstützen, können sie Benachrichtigungen vom Berichtsserver empfangen und den Status der Benachrichtigung angeben.  
   
@@ -55,17 +54,16 @@ Architektur der Übermittlungserweiterungen von Reporting Services
   
 -   Einen Bereitstellungscomputer, auf dem ein Berichtsserver installiert ist.  
   
--   Einen Entwicklungscomputer mit [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installiert.  
+-   Einen Entwicklungscomputer, auf dem [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] oder das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK installiert ist.  
   
 -   Sehr gute Kenntnisse der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Funktionen und -Fähigkeiten, insbesondere zu Abonnement und Übermittlung.  
   
 -   Sehr gute Kenntnisse der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]- und Websteuerungselemente, wenn Sie eine eigene Abonnementbenutzeroberfläche für den Berichts-Manager implementieren möchten.  
   
--   Entwicklungserfahrung in einer [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sprache, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#- oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Entwicklungserfahrung in einer [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Sprache, z.B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
-## <a name="see-also"></a>Siehe auch  
- [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Implementieren von Übermittlungserweiterungen](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

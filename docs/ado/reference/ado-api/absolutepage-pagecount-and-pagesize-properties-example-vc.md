@@ -3,7 +3,7 @@ title: AbsolutePage "PageCount" und PageSize Eigenschaften (VC++-Beispiel) | Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], VC++ example
 - PageSize property [ADO], VC++ example
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d2f76c8159a384a544fa92e451731502097db493
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be4eeeffa5d456a0d9a2c04af1f0957988ccccf4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage "PageCount" und PageSize Eigenschaften (VC++-Beispiel)
 Dieses Beispiel verwendet die [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), ["PageCount"](../../../ado/reference/ado-api/pagecount-property-ado.md), und [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) Eigenschaften Anzeigenamen und Einstellungsdaten aus der ***Mitarbeiter*** Tabelle fünf Datensätzen zu einem Zeitpunkt.  
@@ -191,4 +190,3 @@ void PrintProviderError(_ConnectionPtr pConnection) {
  ["PageCount"-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [Die Eigenschaft PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

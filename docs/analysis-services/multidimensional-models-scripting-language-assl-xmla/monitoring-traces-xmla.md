@@ -1,13 +1,14 @@
 ---
 title: "Überwachen von Ablaufverfolgungen (XMLA) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3895ae75a7e7e34456756ea9dfb5b2fe4198e32c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d63e2b7e07c01d0f937618cfc521921e9d16dc43
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Überwachen von Ablaufverfolgungen (XMLA)
   Sie können die [abonnieren](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die **abonnieren** Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   
  Das Rowset enthält die in der folgenden Tabelle aufgeführten Spalten.  
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|Die von der Ablaufverfolgung empfangene Ereignisklasse des Ereignisses.|  
 |EventSubclass|Lange ganze Zahl|Die von der Ablaufverfolgung empfangene Ereignisunterklasse des Ereignisses.|  
@@ -83,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

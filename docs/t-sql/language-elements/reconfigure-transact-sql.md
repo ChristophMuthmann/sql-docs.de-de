@@ -1,10 +1,13 @@
----
+﻿---
 title: RECONFIGURE-Anweisung (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32039a4077f028a078e9265c6d18f5cbb6187e3f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 432e5157969a10f36273db3bbd8990fa9e332b68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aktualisiert den derzeit konfigurierten Wert (Spalte **config_value** im Resultset **sp_configure**) einer Konfigurationsoption mit der gespeicherten Systemprozedur **sp_configure**. Da einige Konfigurationsoptionen das Beenden und erneute Starten des Servers für die Aktualisierung des aktuell ausgeführten Werts erfordern, aktualisiert RECONFIGURE bei Änderung des Konfigurationswerts nicht immer den aktuell ausgeführten Wert (Spalte **run_value** im Resultset **sp_configure**).     
     
@@ -81,4 +83,3 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     
   
-

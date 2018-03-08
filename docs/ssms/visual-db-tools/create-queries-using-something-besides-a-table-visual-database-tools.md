@@ -3,30 +3,31 @@ title: Erstellen von Abfragen mit anderen Quellen als einer Tabelle | Microsoft-
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 81736e0887c58abe30013ef052c7eb699c6a2c37
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Erstellen von Abfragen mit anderen Quellen als einer Tabelle (Visual Database Tools)
-Wenn Sie eine Abrufabfrage erstellen, geben Sie die aufzunehmenden Spalten und Zeilen sowie den Ort an, von dem der Abfrageprozessor die Ausgangsdaten abrufen kann. Üblicherweise handelt es sich bei diesen Ausgangsdaten um eine Tabelle oder mehrere verknüpfte Tabellen. Die zugrunde liegenden Daten können jedoch auch aus anderen Quellen stammen. Dies können Sichten, Abfragen, Synonyme oder benutzerdefinierte Funktionen sein, die eine Tabelle zurückgeben.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie eine Abrufabfrage erstellen, geben Sie die aufzunehmenden Spalten und Zeilen sowie den Ort an, von dem der Abfrageprozessor die Ausgangsdaten abrufen kann. Üblicherweise handelt es sich bei diesen Ausgangsdaten um eine Tabelle oder mehrere verknüpfte Tabellen. Die zugrunde liegenden Daten können jedoch auch aus anderen Quellen stammen. Dies können Sichten, Abfragen, Synonyme oder benutzerdefinierte Funktionen sein, die eine Tabelle zurückgeben.  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>Verwenden einer Sicht anstelle einer Tabelle  
 Sie können Zeilen aus einer Sicht auswählen. Nehmen Sie z. B. an, dass die Datenbank eine Sicht mit der Bezeichnung "ExpensiveBooks" enthält, in der jede Zeile einen Titel mit einem Preis über 19,99 beschreibt. Die Definition der Sicht kann folgendermaßen lauten:  
@@ -148,4 +149,3 @@ FROM
   
 "VPA30890F" ist die emp_id des Managers, dessen Organisation abgerufen wird. Weitere Informationen zum Hinzufügen einer Abfrage zu einer benutzerdefinierten Funktion finden Sie unter [Hinzufügen von Tabellen zu Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Eine vollständige Beschreibung der benutzerdefinierten Funktionen finden Sie unter [Benutzerdefinierte Funktionen](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   
-

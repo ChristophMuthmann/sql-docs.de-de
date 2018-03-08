@@ -1,10 +1,13 @@
----
+﻿---
 title: "Aktivieren der erforderlichen Komponenten für FileTable | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ce0f4c7dfaf36fffd79bd6dc27e148fa2c6b29e7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
-  Beschreibt, wie die erforderlichen Komponenten zum Erstellen und Verwenden von FileTables aktiviert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt, wie die erforderlichen Komponenten zum Erstellen und Verwenden von FileTables aktiviert werden.  
   
 ##  <a name="EnablePrereq"></a> Aktivieren der erforderlichen Komponenten für FileTable  
  Aktivieren Sie zum Aktivieren der erforderlichen Komponenten zum Erstellen und Verwenden von FileTables die folgenden Elemente:  
@@ -62,7 +65,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="HowToCheckAccess"></a> Vorgehensweise: Überprüfen, ob nicht transaktionaler Zugriff auf Datenbanken aktiviert ist  
  Fragen Sie die Katalogsicht [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) ab, und überprüfen Sie die Spalten **non_transacted_access** und **non_transacted_access_desc**.  
   
-```tsql  
+```sql  
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
@@ -74,14 +77,14 @@ GO
  **Angeben der Ebene des nicht transaktionalen Zugriffs mit Transact-SQL**  
  -   Wenn Sie **eine neue Datenbank erstellen**, rufen Sie die [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung mit der FILESTREAM-Option **NON_TRANSACTED_ACCESS** auf.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
   
 -   Wenn Sie **eine vorhandene Datenbank ändern**, rufen Sie die [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung mit der FILESTREAM-Option **NON_TRANSACTED_ACCESS** auf.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
@@ -100,7 +103,7 @@ GO
  **Angeben eines Verzeichnisses für FileTables mit Transact-SQL**  
  -   Wenn Sie **eine neue Datenbank erstellen**, rufen Sie die [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -108,7 +111,7 @@ GO
   
 -   Wenn Sie **eine vorhandene Datenbank ändern**, rufen Sie die [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf. Wenn Sie diese Optionen verwenden, um den Verzeichnisnamen zu ändern, muss die Datenbank exklusiv gesperrt sein und darf keine offenen Dateihandles aufweisen.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -116,7 +119,7 @@ GO
   
 -   Wenn Sie **eine Datenbank anfügen**, rufen Sie die [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung mit der **FOR ATTACH**-Option und der FILESTREAM-Option **DIRECTORY_NAME** auf.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         FOR ATTACH WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -124,7 +127,7 @@ GO
   
 -   Wenn Sie **eine Datenbank wiederherstellen**, rufen Sie die [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf.  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE database_name  
         WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -136,7 +139,7 @@ GO
 ###  <a name="viewnames"></a> Vorgehensweise: Anzeigen vorhandener Verzeichnisnamen für die Instanz  
  Fragen Sie zum Anzeigen einer Liste vorhandener Verzeichnisnamen für die Instanz die [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)-Katalogsicht ab, und überprüfen Sie die **filestream_database_directory_name**-Spalte.  
   
-```tsql  
+```sql  
 SELECT DB_NAME ( database_id ), directory_name  
     FROM sys.database_filestream_options;  
 GO  
@@ -159,4 +162,3 @@ GO
 -   Wenn Sie eine Datenbank löschen, die für FileTables aktiviert wurde, werden das Verzeichnis auf Datenbankebene und alle Verzeichnisstrukturen aller FileTables darunter entfernt.  
   
   
-

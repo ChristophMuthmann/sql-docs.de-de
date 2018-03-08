@@ -2,13 +2,13 @@
 title: Konfigurieren von Attributbeziehungseigenschaften | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - properties [Analysis Services], attribute relationships
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bcc42c8bcd73c52851f3ed7fae5f4f7a4915b450
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b43a3d43e189279b45d5347b746a047f8f76eb88
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---configure-attribute-properties"></a>Attributbeziehungen - Konfigurieren von Attributeigenschaften
-  In der folgenden Tabelle sind die Eigenschaften einer Attributbeziehung aufgeführt und beschrieben.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In der folgenden Tabelle sind die Eigenschaften einer Attributbeziehung aufgeführt und beschrieben.  
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
@@ -42,4 +42,3 @@ ms.lasthandoff: 09/01/2017
 |Visible|Bestimmt die Sichtbarkeit der Attributbeziehung. Die Werte sind True und False. Der Standardwert lautet "True".|  
   
   
-

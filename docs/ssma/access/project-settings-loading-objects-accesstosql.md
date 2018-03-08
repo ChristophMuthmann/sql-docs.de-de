@@ -1,29 +1,30 @@
 ---
 title: Projekteinstellungen (Laden von Objekten) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 84737c6b747174f993765a6d86081759cfedd4bb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Projekteinstellungen (Laden von Objekten) (AccessToSQL)
 Die projekteinstellungen Laden von Objekten können Sie konfigurieren, wie den Zugriff auf Datenbankobjekte mit SQL Server-Datenbankobjekte synchronisiert werden.  
@@ -36,7 +37,7 @@ Sie können zwei unterschiedliche Synchronisierung Seiten zugreifen, die die gle
   
 -   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** Menü klicken Sie auf **Projekteinstellungen**, und klicken Sie dann auf **Objekte laden** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 ##### <a name="misc"></a>Sonstiges  
   
@@ -83,4 +84,3 @@ Gibt die Standardeinstellung im Dialogfeld Synchronisierung, bei der lokalen Met
   
 -   Bei Auswahl des **Skip**, SSMA wird keine Aktualisierung Aktionen ausführen.  
   
-

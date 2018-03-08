@@ -2,30 +2,30 @@
 title: "Datenspalten für Sitzungsereignisse | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Session Events event category
+helpviewer_keywords: Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="session-events-data-columns"></a>Datenspalten für Sitzungsereignisse
-  Die Sitzungsereignisse-Ereigniskategorie weist folgende Ereignisklasse auf:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Sitzungsereignisse-Ereigniskategorie weist folgende Ereignisklasse:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
 |------------------|--------------------|---------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Duration|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  
@@ -95,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Sicherheitsüberwachung-Ereigniskategorie](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   
-

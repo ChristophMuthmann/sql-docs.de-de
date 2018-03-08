@@ -3,8 +3,11 @@ title: "PRÜFPUNKT (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,20 +30,19 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d3c0dd607231880ebd7a43b3740eb2cb22b9c195
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6353bd534827ff9066bd7b184a09d67b5867c3cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Generiert einen manuellen Prüfpunkt in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, mit der Sie aktuell verbunden sind.  
   
@@ -74,7 +76,6 @@ CHECKPOINT [ checkpoint_duration ]
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Konfigurieren Sie die Wiederherstellungsintervall-Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)   
- [Herunterfahren &#40; Transact-SQL &#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
+ [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
   
   
-

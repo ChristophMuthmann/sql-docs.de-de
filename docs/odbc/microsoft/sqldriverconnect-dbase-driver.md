@@ -3,8 +3,11 @@ title: SQLDriverConnect (dBASE-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], dBASE Driver
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 59ffc1188c1d98dc5697a65f69ab8792145f1ea3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8548e95e4b7c0e34ba71f73698174d5c25b1c4b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (dBASE-Treiber)
 > [!NOTE]  
@@ -42,5 +44,4 @@ ms.lasthandoff: 09/09/2017
   
 |Treiber|Schlüsselwörter, die erforderlich sind|Beispiele|  
 |------------|-----------------------|--------------|  
-|DBASE|DriverID-Treiber|Driver = {Microsoft dBASE-Treiber (*.DBF)}; DBQ = "c:\Temp"; DriverID = 277|
-
+|dBASE|DriverID-Treiber|Driver={Microsoft dBASE Driver (*.dbf)}; DBQ=c:\temp; DriverID=277|

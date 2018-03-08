@@ -1,12 +1,14 @@
 ---
 title: "Vorbereiten von Access-Datenbanken f체r die Migration (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/15/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -24,17 +26,16 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 0d94578759156dcde898a23267fb91922fc98b03
-ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten von Access-Datenbanken f체r die Migration (AccessToSQL)
 Vor dem Migrieren von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], m체ssen Sie feststellen, welche Datenbanken zu migrieren, und stellen Sie sicher, dass diese Datenbanken f체r die Migration bereit sind.  
@@ -86,4 +87,3 @@ Sie sollten auch die Eigenschaften, z. B. Listen von Datenbankobjekten, Dateigr�
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Verkn체pfen von Access-Anwendungen mit SQLServer](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)
-

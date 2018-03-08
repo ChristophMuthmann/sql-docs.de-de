@@ -3,7 +3,7 @@ title: "Beispiel für Dateneigenschaften Handler (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Handler property [ADO], Visual Basic example
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f43ffa45dfb9c42fdef684cf44a5932d5799194b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8eaff81d3a43a36b671c31354948da2f54e3f199
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handler-property-example-vb"></a>Beispiel für Dateneigenschaften Handler (VB)
 > [!IMPORTANT]
@@ -88,7 +87,6 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handlereigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
+ [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

@@ -2,11 +2,13 @@
 title: "Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 01d279d30860e0e10cf3a76b447aaec245541fcc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d7f8c3105d562dd4203f5f9d2f47852068af819
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken (SQL Server)
-  Dieses Thema enthält Informationen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse, für die Schwellenwerte für Warnungen konfiguriert und die Datenbankspiegelung verwaltet werden können. Sie können den Datenbankspiegelungs-Monitor oder die gespeicherten Prozeduren **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**und **sp_dbmmonitordropalert** verwenden. Dieses Thema enthält darüber hinaus Informationen über das Konfigurieren von Warnungen für Datenbank-Spiegelungsereignisse.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Informationen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse, für die Schwellenwerte für Warnungen konfiguriert und die Datenbankspiegelung verwaltet werden können. Sie können den Datenbankspiegelungs-Monitor oder die gespeicherten Prozeduren **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**und **sp_dbmmonitordropalert** verwenden. Dieses Thema enthält darüber hinaus Informationen über das Konfigurieren von Warnungen für Datenbank-Spiegelungsereignisse.  
   
  Nachdem für eine gespiegelte Datenbank die Überwachung eingerichtet wurde, können vom Systemadministrator für mehrere Schlüsselleistungsmetriken Warnungsschwellenwerte konfiguriert werden. Administratoren können für diese Metriken und andere Datenbank-Spiegelungsereignisse auch Warnungsmeldungen konfigurieren.  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 08/02/2017
   
      Mit den folgenden gespeicherten Systemprozeduren kann ein Administrator Warnungsschwellenwerte für die gespiegelten Datenbanken jeweils für einen Partner festlegen.  
   
-    |Verfahren|Beschreibung|  
+    |Verfahren|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|Mit dieser Prozedur können Warnungsschwellenwerte für eine bestimmte Spiegelungsleistungsmetrik hinzugefügt oder geändert werden.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Gibt Informationen zu Warnungsschwellenwerten zurück, die für eine oder mehrere der Schlüsselleistungsmetriken für die Überwachung der Datenbankspiegelung festgelegt wurden.|  
@@ -144,9 +145,8 @@ ms.lasthandoff: 08/02/2017
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   
-

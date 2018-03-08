@@ -3,7 +3,7 @@ title: "Konfigurieren für den sicheren bzw. uneingeschränkten DataFactory | Mi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - DataFactory configuration in RDS [ADO]
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 34b33a8b1d729a97fd246edcb4d6056954130c27
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 745f6c7408f72ee1df0c5757007588b76fe334fc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Konfigurieren für den sicheren bzw. uneingeschränkten DataFactory
 > [!IMPORTANT]
@@ -48,7 +47,6 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Siehe auch  
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

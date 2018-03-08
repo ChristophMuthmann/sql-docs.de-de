@@ -2,34 +2,32 @@
 title: IMDEmbeddedData Schnittstelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0fae25125663ceca4a0cc2c7ddf94f72841ace2a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData-Schnittstelle
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
+# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData Interface
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
   
 -   Ruft einen Bezeichner in den eingebetteten Datenstrom im Containerdokument ab.  
   
@@ -103,7 +101,7 @@ HRESULT GetStreamIdentifier (
  **S_OK**  
  Der Datenstrombezeichner wurde erfolgreich zurückgegeben.  
   
- **"S_FALSE"**  
+ **S_FALSE**  
  Es ist kein Datenstrombezeichner vorhanden.  
   
  **E_FAIL**  
@@ -285,7 +283,7 @@ HRESULT IsDirty ( void )
  **S_OK**  
  Die Datenbank wurde seit der letzten Speicherung geändert.  
   
- **"S_FALSE"**  
+ **S_FALSE**  
  Die Datenbank wurde seit der letzten Speicherung nicht geändert.  
   
  **E_FAIL**  
@@ -346,4 +344,3 @@ HRESULT Save (
  Die Datenbank konnte nicht gespeichert werden, da auf dem Speichergerät kein Speicherplatz mehr verfügbar ist.  
   
   
-

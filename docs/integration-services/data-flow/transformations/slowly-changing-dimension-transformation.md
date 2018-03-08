@@ -1,10 +1,13 @@
 ---
-title: "Langsam veränderliche Dimension Transformation | Microsoft Docs"
+title: "Transformation für langsam veränderliche Dimensionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
   Die Transformation für langsam veränderliche Dimensionen koordiniert das Aktualisieren und Einfügen von Datensätzen in Data Warehouse-Dimensionstabellen. Beispielsweise können Sie mit dieser Transformation die Transformationsausgaben konfigurieren, die Datensätze in der DimProduct-Tabelle der [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] -Datenbank mit Daten aus der Production.Products-Tabelle in der AdventureWorks-OLTP-Datenbank aktualisieren und ersetzen.  
@@ -107,7 +109,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Der Assistent zum Laden einer Dimension, der Sie durch die Schritte zum Konfigurieren der Transformation für langsam veränderliche Dimensionen und zum Erstellen des Datenflusses für Transformationsausgaben führt. Führen Sie den Assistenten zum Laden einer Dimension erneut aus, um die Konfiguration für langsam veränderliche Dimensionen zu ändern. Weitere Informationen finden Sie unter [Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
@@ -115,4 +117,3 @@ ms.lasthandoff: 08/03/2017
 -   Blogeintrag, [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(Optimieren des Assistenten für langsam veränderliche Dimensionen), auf blogs.msdn.com.  
   
   
-

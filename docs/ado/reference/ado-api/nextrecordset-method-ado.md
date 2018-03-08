@@ -3,7 +3,7 @@ title: NextRecordset-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7650cb3516311f3eb93e93304ba9d20ec874466
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset-Methode (ADO)
 Löscht die aktuelle [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt und gibt die nächste **Recordset** durch eine Reihe von Befehlen gelangt.  
@@ -72,5 +71,4 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 ## <a name="see-also"></a>Siehe auch  
  [NextRecordset-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
- [NextRecordset-Methode (VC++-Beispiel)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
-
+ [NextRecordset-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

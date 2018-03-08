@@ -3,7 +3,7 @@ title: "Visual Basic für Applikationen-Funktionen | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bdf33a21339147c9e6b24ff35f08fb2b483bb8f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2352c6de536981aee960617ad5afc8f2598721e6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic für Applikationen-Funktionen
 Im folgende Visual Basic für Applikationen-Funktionen können in Daten strukturieren CALC-Ausdrücken verwendet werden:  
@@ -44,14 +43,14 @@ Im folgende Visual Basic für Applikationen-Funktionen können in Daten struktur
 |ZW|Hex|Hex$|Hour|IIF|InStr|  
 |int|ZINSZ|IKV|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Left|  
-|LINKSB|Links$|LINKSB$|Len|Log|LGlätten|  
+|LINKSB|Links$|LeftB$|Len|Log|LGlätten|  
 |LGlätten$|Mid|Teil$|Minute|QIKV|Month|  
 |jetzt|ZZR|NBW|Oct|Oktal$|RMZ|  
 |KAPZ|BW|QBColor|ZINS|RGB|Right|  
-|RECHTSB|Rechts$|RECHTSB$|ZZG|RGlätten|RTrim$|  
+|RECHTSB|Rechts$|RightB$|ZZG|RGlätten|RTrim$|  
 |Zweimal|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
 |QWurzel|Str|Str$|StrVgl|StrKonv|String|  
-|String$|DIA|Tan|Uhrzeit|Time$|Zeitgeber|  
+|String$|DIA|Tan|Zeit|Time$|Zeitgeber|  
 |ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypName|Großbst|  
 |Großbst$|Val|VarType|Arbeitstag|Year||  
   
@@ -62,5 +61,4 @@ Im folgende Visual Basic für Applikationen-Funktionen können in Daten struktur
  [Erforderlichen Anbieter Daten können strukturiert werden.](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Form "APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
- [Shape-COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)
-
+ [SHAPE COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)

@@ -1,30 +1,31 @@
 ---
 title: Installieren von Analysis Services | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/11/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Installieren von SQL Server Analysis Services
-  SQL Server Analysis Services ist ein analytischer Datenbankserver, der hostet tabellarische Modelle, multidimensionale Cubes und Datamining-Modelle, die Sie über Berichte, Kalkulationstabellen und Dashboards zugreifen können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services ist ein analytischer Datenbankserver, der hostet tabellarische Modelle, multidimensionale Cubes und Datamining-Modelle, die Sie über Berichte, Kalkulationstabellen und Dashboards zugreifen können.  
   
  Analysis Services ist mit mehreren Instanzen, was bedeutet, dass Sie die mehr als eine Kopie auf einem einzelnen Computer zu installieren oder neue und alte Versionen-Seite-an-Seite ausführen können. Jede von Ihnen installierte Instanz wird in einem von drei Modi entsprechend den Setupeinstellungen ausgeführt: „Mehrdimensional und Data Mining“, „Tabellarisch“ oder „SharePoint“. Wenn Sie mehrere Modi verwenden möchten, benötigen Sie für jeden Modus eine separate Instanz.  
   
@@ -72,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Bei**ASSERVERMODE** wird die Groß- und Kleinschreibung berücksichtigt.  Alle Werte müssen in Großbuchstaben angegeben werden. In der folgenden Tabelle werden die gültigen Werte für **ASSERVERMODE**beschrieben.  
   
-|Wert|Beschreibung|  
+|Wert|Description|  
 |-----------|-----------------|  
 |TABULAR|Dies ist der Standardwert. Wenn Sie nicht festlegen **ASSERVERMODE**, der Server im tabellarischen Modus installiert ist.|
 |MULTIDIMENSIONAL|Dieser Wert ist optional.|  
@@ -81,7 +82,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## <a name="see-also"></a>Siehe auch  
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Tabellenmodellierung (SSAS – tabellarisch)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [Tabellenmodellierung](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   
-

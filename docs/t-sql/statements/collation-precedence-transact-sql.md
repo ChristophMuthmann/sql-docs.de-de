@@ -3,8 +3,11 @@ title: Rangfolge von Sortierungen (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - collation coercion rules
 - rules [SQL Server], collations
 ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
-caps.latest.revision: 34
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 019f6941b64abf41e03e445b2e4e74a2758d2a2d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d80966502f5538989f3615658e3766e8c3e718f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collation-precedence-transact-sql"></a>Rangfolge von Sortierungen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Mit der Rangfolge von Sortierungen, die auch als Sortierungsprioritätsregeln bezeichnet werden, wird Folgendes festgelegt:  
   
@@ -249,4 +251,3 @@ a
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   
-

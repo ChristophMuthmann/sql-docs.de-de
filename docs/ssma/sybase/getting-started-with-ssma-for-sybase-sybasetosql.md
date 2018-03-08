@@ -3,27 +3,28 @@ title: "Erste Schritte mit SSMA für SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 065df566ccda835de6ce899f78feb3dcc0d06e4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
-ms.openlocfilehash: aafb1156f2036e09fa4f610380a5a1d24a5dbdad
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Erste Schritte mit SSMA für SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA), SAP ASE können Sie schnell konvertieren Datenbankschemas auf SAP Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank-Schemas, laden die resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank und Migrieren von Daten aus SAP ASE zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.  
@@ -103,9 +104,9 @@ SSMA enthält die folgenden Menüs:
   
 |Menü|Description|  
 |--------|---------------|  
-|**File**|Enthält Befehle zum Arbeiten mit Projekten, Herstellen einer Verbindung mit SAP ASE und Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.|  
+|**Zuletzt geöffnete Dateien**|Enthält Befehle zum Arbeiten mit Projekten, Herstellen einer Verbindung mit SAP ASE und Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen nach und Arbeiten mit Text in den Detailseiten, z. B. das Kopieren [!INCLUDE[tsql](../../includes/tsql_md.md)] aus dem SQL-Detailbereich. Enthält auch die **Lesezeichen verwalten** auswählen, wo Sie eine Liste der vorhandenen Lesezeichen finden können. Die Schaltflächen können auf der rechten Seite des Dialogfelds Sie um das Lesezeichen zu verwalten.|  
-|**Sicht**|Enthält die **Synchronisieren der Metadaten-Explorer** Befehl. Hiermit erfolgt die Synchronisierung der Objekte zwischen Sybase-Metadaten-Explorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Metadaten-Explorer. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** und **Fehlerliste** Bereiche und eine Option **Layouts** Layouts verwalten.|  
+|**Ansicht**|Enthält die **Synchronisieren der Metadaten-Explorer** Befehl. Hiermit erfolgt die Synchronisierung der Objekte zwischen Sybase-Metadaten-Explorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Metadaten-Explorer. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** und **Fehlerliste** Bereiche und eine Option **Layouts** Layouts verwalten.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten, Exportieren von Daten und Objekte und Daten migrieren. Bietet außerdem Zugriff auf die **globale Einstellungen** und **Projekteinstellungen** Dialogfelder.|  
 |**Tester**|Enthält Befehle zum Erstellen von Testfällen, Anzeigen von Testergebnissen und Befehle für die sicherungsverwaltung Datenbank.|  
 |**Hilfe**|Bietet Zugriff auf das SSMA-Hilfe und die **zu** (Dialogfeld).|  
@@ -120,4 +121,3 @@ Die **Ansicht** Menü enthält Befehle zum Umschalten der Sichtbarkeit der im Au
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von SAP ASE Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Referenz zur Benutzeroberfläche &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
-

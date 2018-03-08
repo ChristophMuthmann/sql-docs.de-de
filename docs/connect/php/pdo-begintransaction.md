@@ -3,24 +3,25 @@ title: 'PDO:: BeginTransaction | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 131edab231009e63c32a3c5b7a4d6ffccfc7d407
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6c65de9c08dd4d92480c855378516850814ecd6b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,4 +69,3 @@ Im folgenden Beispiel wird eine Datenbank namens „Test“ und eine Tabelle nam
 [PDO-Klasse](../../connect/php/pdo-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

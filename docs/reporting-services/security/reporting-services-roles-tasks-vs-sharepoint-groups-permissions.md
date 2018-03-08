@@ -1,13 +1,14 @@
 ---
-title: Reporting Services-Rollen-Tasks im Vergleich zu SharePoint-Gruppen-Berechtigungen | Microsoft Docs
+title: Reporting Services-Rollen/Tasks im Vergleich zu SharePoint-Gruppen/Berechtigungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,18 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: dfd05ee367b083d2e7a159cbd659a94edd743886
-ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
-ms.contentlocale: de-de
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: 7d115273f5072941acde9c0f2370e7f42b484678
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services-Rollen-Tasks im Vergleich zu SharePoint-Gruppen-Berechtigungen
+# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services-Rollen/Tasks im Vergleich zu SharePoint-Gruppen/Berechtigungen
   In diesem Thema werden rollen- und taskbasierte Autorisierungsfunktionen im einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mit den Sicherheitsfunktionen in SharePoint-Produkten verglichen. In diesem Thema werden die Terminologie und Merkmale von Rollen, Tasks, SharePoint-Gruppen, Berechtigungsstufen und Berechtigungen verglichen.  
   
 ||  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/07/2017
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Rolle|SharePoint-Gruppen|  
 |--------------------------------------|-----------------------|  
-|**Browser**<br /><br /> Sicht|Verwenden Sie die Gruppe **Besucher** , um Berechtigungen zum Anzeigen von Berichten zu erteilen. Die Gruppe **Besucher** verfügt über die Berechtigungsstufe Lesen, mit der Gruppenmitglieder Seiten, Listenelemente und Dokumente anzeigen können.|  
+|**Browser**<br /><br /> Anzeigen|Verwenden Sie die Gruppe **Besucher** , um Berechtigungen zum Anzeigen von Berichten zu erteilen. Die Gruppe **Besucher** verfügt über die Berechtigungsstufe Lesen, mit der Gruppenmitglieder Seiten, Listenelemente und Dokumente anzeigen können.|  
 |**Inhalts-Manager**<br /><br /> Volle Berechtigungen für alle Elemente und Vorgänge auf Elementebene, einschließlich Berechtigungen zum Festlegen der Sicherheit.|Mit der Gruppe **Besitzer** gewähren Sie volle Kontrolle über die Verwaltung von Berichtsserverelementen auf einer SharePoint-Website. Die Gruppe **Besitzer** verfügt über die Berechtigungen Vollzugriff, mit denen Gruppenmitglieder Änderungen am Websiteinhalt, einzelnen Webseiten oder der Funktionalität vornehmen können. Der Vollzugriff sollte nur Websiteadministratoren gewährt werden.|  
 |**Meine Berichte**|Es ist keine entsprechende Gruppe vorhanden. **Meine Berichte** wird auf einem Berichtsserver, der im SharePoint-Modus ausgeführt wird, nicht unterstützt. Wenn Sie eine entsprechende Funktionalität wünschen, können Sie die Funktionen für Meine Website [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] in  verwenden.|  
 |**Verleger**<br /><br /> Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen hinzufügen, aktualisieren, anzeigen und löschen.|Mit der Gruppe **Mitglieder** erteilen Sie Berechtigungen zum Hinzufügen von Elementen, Bearbeiten von Elementen und Aktualisieren von Verweisen auf abhängige Elemente auf einer SharePoint-Website. Die Gruppe **Mitglieder** verfügt über die Berechtigungsebene Teilnehmen, mit der Gruppenmitglieder Seiten anzeigen, Elemente hinzufügen und aktualisieren sowie Änderungen zur Genehmigung übermitteln können.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/07/2017
 |Task im einheitlichen Modus|Rollentyp|Entsprechende SharePoint-Berechtigung|  
 |----------------------|---------------|--------------------------------------|  
 |Berichte lesen|Element|Elemente bearbeiten, Elemente anzeigen|  
-|Verknüpfte Berichte erstellen|Element|Nicht unterstützt.|  
+|Verknüpfte Berichte erstellen|Element|Wird nicht unterstützt.|  
 |Alle Abonnements verwalten|Element|Benachrichtigungen verwalten|  
 |Datenquellen verwalten|Element|Elemente hinzufügen, Elemente bearbeiten, Elemente löschen, Elemente anzeigen|  
 |Ordner verwalten|Element|Elemente hinzufügen, Elemente bearbeiten, Elemente löschen, Elemente anzeigen|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/07/2017
 |Berichtsservereigenschaften anzeigen|System|Keine (nicht zutreffend) Es wird vom Berichtsserver nicht kontrolliert, ob ein Benutzer über die Berechtigung zum Anzeigen der Integrationseinstellungen in der Zentraladministration verfügt.|  
 |Freigegebene Zeitpläne anzeigen|System|Elemente öffnen|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
@@ -116,4 +116,3 @@ ms.lasthandoff: 11/07/2017
  [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

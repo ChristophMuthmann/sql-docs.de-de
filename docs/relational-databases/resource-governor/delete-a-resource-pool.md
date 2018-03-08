@@ -2,38 +2,40 @@
 title: "Löschen eines Ressourcenpools | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, resource pool delete
 - resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 857ce687209066520bb2ec552b93fd46d547b38e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "9"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 83fa1d83dfd3b93f4dab77e6b941a26d1bd6ae8e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-resource-pool"></a>Löschen eines Ressourcenpools
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Einen Ressourcenpool können Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit Transact-SQL löschen.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **To delete a resource pool, using:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
+-   **Zum Löschen eines Ressourcenpools mit:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
  Ressourcenpools mit Arbeitsauslastungsgruppen können nicht gelöscht werden.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
@@ -71,8 +73,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Erstellen eines Ressourcenpools](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Ändern der Einstellungen für den Ressourcenpool](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
@@ -86,4 +88,3 @@ GO
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
-

@@ -32,7 +32,7 @@
 ### [Hinzufügen von Spalten zu einer Tabelle](add-columns-to-a-table-ssas-tabular.md)  
 ### [Löschen einer Spalte](delete-a-column-ssas-tabular.md)  
 ### [Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
-### [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit der Zeitintelligenz (SSAS Tabular)](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
+### [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
 ### [Hinzufügen einer Tabelle](add-a-table-ssas-tabular.md)  
 ### [Löschen einer Tabelle](delete-a-table-ssas-tabular.md)  
 ### [Erstellen einer berechneten Tabelle](create-a-calculated-table-ssas-tabular.md)  

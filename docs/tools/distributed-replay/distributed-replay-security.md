@@ -2,28 +2,29 @@
 title: Distributed Replay-Sicherheit | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "29"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 71e00ff0a5ea435715c5895fa2ec212ad5a8f056
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
-  Bevor Sie die Distributed Replay-Funktion von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren und verwenden, sollten Sie die wichtigen Sicherheitsinformationen in diesem Thema lesen. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Bevor Sie installieren und Verwenden der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion, lesen Sie die wichtigen Sicherheitsinformationen in diesem Thema. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
   
 ## <a name="user-and-service-accounts"></a>Benutzer- und Dienstkonten  
  In der folgenden Tabelle werden die Konten beschrieben, die für Distributed Replay verwendet werden. Nach der Installation von Distributed Replay müssen Sie die Sicherheitsprinzipale zuweisen, unter denen der Controller und der Clientdienst ausgeführt werden. Daher empfiehlt es sich, dass Sie die entsprechenden Domänenbenutzerkonten konfigurieren, bevor Sie die Distributed Replay-Funktionen installieren.  
@@ -138,4 +139,3 @@ ms.lasthandoff: 08/02/2017
  [Installieren von Distributed Replay – Übersicht](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   
-

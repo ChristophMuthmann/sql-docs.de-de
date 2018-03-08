@@ -1,10 +1,13 @@
 ---
-title: "SQL Server Integration Services (SSIS)-Projekte und Lösungen | Microsoft Docs"
+title: Integration Services-Projekte und -Projektmappen (SSIS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,22 +21,21 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 246a6df702e323d57d21e9e014aa059db31b300e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b1d5948bbcd6531b5a69cc85699cbdf06d87c662
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Pakete werden in Projekten befinden. Sie müssen die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Umgebung installieren, um [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Umgebung installieren, um [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
  Wenn Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellen, enthält das Dialogfeld **Neues Projekt** die Vorlage **Integration Services-Projekt** . Diese Projektvorlage erstellt ein neues Projekt, das ein einzelnes Paket enthält.  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 09/26/2017
  Projekte werden in Projektmappen gespeichert. Sie können zuerst eine Projektmappe erstellen und dann ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen. Falls keine Projektmappe vorhanden ist, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] automatisch eine Projektmappe für Sie, wenn Sie das Projekt erstellen. Eine Projektmappe kann mehrere Projekte unterschiedlichen Typs enthalten.  
   
 > [!TIP]  
->  Standardmäßig wird bei der Erstellung eines neuen Projekts in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], die Projektmappe nicht im gezeigt **Projektmappen-Explorer** Bereich. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen**aus.  
+>  Wenn Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ein neues Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektmappen-Explorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen**aus.  
 
 ## <a name="solutions-contain-projects"></a>Lösungen enthalten Projekte  
  Eine Projektmappe ist ein Container, in dem die Projekte gruppiert und verwaltet werden, die Sie zum Entwickeln von End-to-End-Unternehmenslösungen verwenden. Mithilfe einer Projektmappe können Sie mehrere Projekte als Einheit verwalten und zusammenhängende Projekte für eine Unternehmenslösung zusammenbringen.  
@@ -66,7 +68,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="folders-in-integration-services-projects"></a>Ordner in SQL Server Integration Services-Projekten  
  Im folgenden Diagramm werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]veranschaulicht.  
   
- ![Ordner in einem Integration Services-Projekt](../integration-services/media/solutionexplorer.gif "Ordner in einem Integration Services-Projekt")  
+ ![Ordner in einem Integration Services-Projekt](../integration-services/media/solutionexplorer.gif "Folders in an Integration Services project")  
   
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
   
- ![TargetServerVersion-Eigenschaft im Dialogfeld Projekt](../integration-services/media/targetserverversion2.png "TargetServerVersion-Eigenschaft in den Projekteigenschaften (Dialogfeld)")  
+ ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
  
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts  
   
@@ -121,11 +123,11 @@ ms.lasthandoff: 09/26/2017
   
 2.  Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
   
-     ![TargetServerVersion-Eigenschaft im Dialogfeld Projekt](../integration-services/media/targetserverversion2.png "TargetServerVersion-Eigenschaft in den Projekteigenschaften (Dialogfeld)")  
+     ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   
  Sie können Pakete für SQL Server 2016, SQL Server 2014 oder SQL Server 2012 erstellen, verwalten und ausführen.  
 
-## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Importieren Sie ein vorhandenes Projekt mit dem Import-Projekt-Assistenten
+## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Importieren eines bestehenden Projekts mit dem Assistenten zum Importieren von Projekten
   
 1.  Klicken Sie in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]im Menü **Datei** > **auf** Neu **Projekt** .  
   
@@ -186,7 +188,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Das Projekt wird dem Projektmappenordner im **Projektmappen-Explorer**hinzugefügt.  
   
-## <a name="remove-a-project-from-a-solution"></a>Entfernen Sie ein Projekt aus einer Projektmappe
+## <a name="remove-a-project-from-a-solution"></a>Entfernen eines Projekts aus einer Projektmappe
  Sie können ein Projekt aus einer Projektmappe nur entfernen, wenn die Projektmappe in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]sichtbar ist. Nachdem die Projektmappe sichtbar ist, können alle Projekte, außer einem Projekt, entfernt werden. Sobald nur ein Projekt verbleibt, wird der Projektmappenordner in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nicht mehr angezeigt, und das Löschen des letzten Projekts ist nicht möglich.  
    
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Projektmappe, aus der Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt entfernen möchten.  
@@ -208,7 +210,7 @@ ms.lasthandoff: 09/26/2017
 3.  Das neue Element wird im Projektmappen-Explorer im entsprechenden Ordner angezeigt.  
 
 ## <a name="copy-project-items"></a>Kopieren von Projektelementen  
-Sie können Objekte im Kopieren einer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt oder zwischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekte. Sie können Objekte auch zwischen anderen Typen von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekten, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]kopieren. Für den Kopiervorgang zwischen den Projekten müssen die Projekte Teil derselben [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projektmappe sein.
+Sie können Objekte in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt oder zwischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekten kopieren. Sie können Objekte auch zwischen anderen Typen von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekten, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]kopieren. Für den Kopiervorgang zwischen den Projekten müssen die Projekte Teil derselben [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projektmappe sein.
 
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt bzw. die Projektmappe, mit dem bzw. mit der Sie arbeiten möchten.  
   
@@ -220,4 +222,3 @@ Sie können Objekte im Kopieren einer [!INCLUDE[ssISnoversion](../includes/ssisn
   
      Die Elemente werden automatisch in den richtigen Ordner kopiert. Wenn Sie in das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt Elemente kopieren, die keine Pakete darstellen, werden die Elemente in den Ordner **Sonstiges** kopiert.  
      
-

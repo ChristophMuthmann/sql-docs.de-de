@@ -2,33 +2,31 @@
 title: "Personalisierungserweiterungen für Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8da5ac35a5e9f46fbaedf831555d6b1475b41234
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Personalisierungserweiterungen für Analysis Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen sind die Grundlage für das Konzept der Implementierung einer Plug-in-Architektur. In einer Plug-In-Architektur können Sie neue Cubeobjekte und -funktionalitäten dynamisch entwickeln und problemlos für andere Entwickler freigeben. Daher [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen bieten die Funktionen, die mit der Folgendes erreicht werden können:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen sind die Grundlage für das Konzept der Implementierung einer Plug-in-Architektur. In einer Plug-In-Architektur können Sie neue Cubeobjekte und -funktionalitäten dynamisch entwickeln und problemlos für andere Entwickler freigeben. Daher [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen bieten die Funktionen, die mit der Folgendes erreicht werden können:  
   
 -   **Dynamischer Entwurf und Bereitstellung** unmittelbar nach dem Entwerfen und Bereitstellen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen, haben Benutzer am Anfang der nächsten benutzersitzung Zugriff auf die Objekte und Funktionen.  
   
@@ -154,4 +152,3 @@ ms.lasthandoff: 09/01/2017
  MDSCHEMA_KPIS wird eine scope-Spalte hinzugefügt. Die Bereichswerte lauten wie folgt: MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
   
   
-

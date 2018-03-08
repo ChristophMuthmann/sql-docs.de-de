@@ -2,13 +2,13 @@
 title: "Verwenden von Cuberückschreiben (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e1a704ba6b69cba4750df3e51e6e27d3626d877
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>MDX - Datenänderung: Verwenden von Cuberückschreiben
-  Sie aktualisieren einen Cube, indem Sie die [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) -Anweisung verwenden. Mit dieser Anweisung können Sie ein Tupel mit einem bestimmten Wert aktualisieren. Damit Sie einen Cube mit der UPDATE CUBE-Anweisung effizient aktualisieren können, müssen Sie die Syntax der Anweisung, die Fehlerbedingungen, die auftreten können, und die Auswirkungen kennen, die Updates auf einen Cube haben können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Sie aktualisieren einen Cube, indem Sie die [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) -Anweisung verwenden. Mit dieser Anweisung können Sie ein Tupel mit einem bestimmten Wert aktualisieren. Damit Sie einen Cube mit der UPDATE CUBE-Anweisung effizient aktualisieren können, müssen Sie die Syntax der Anweisung, die Fehlerbedingungen, die auftreten können, und die Auswirkungen kennen, die Updates auf einen Cube haben können.  
   
 ## <a name="update-cube-statement-syntax"></a>Syntax der UPDATE CUBE-Anweisung  
  Die folgende Syntax beschreibt die UPDATE CUBE-Anweisung:  
@@ -124,7 +124,6 @@ USE_EQUAL_ALLOCATION
 -   Ändern der Dimensionsgranularität für eine Dimension, die im Rückschreiben enthalten ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ändern von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Ändern von Daten &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   
-

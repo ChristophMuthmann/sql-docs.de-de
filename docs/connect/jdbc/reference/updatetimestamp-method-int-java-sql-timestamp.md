@@ -3,29 +3,28 @@ title: UpdateTimestamp-Methode (Int, java.sql.Timestamp) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateTimestamp (int, java.sql.Timestamp)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateTimestamp (int, java.sql.Timestamp)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: db83d9d7-137b-4a28-a2ca-d4782e0a256e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: caad0346179f4af9548f840c0d0745e4df8b19d1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f73e665c3c9d5b072f8505e3fe7e7386cd188713
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updatetimestamp-method-int-javasqltimestamp"></a>updateTimestamp-Methode (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public void updateTimestamp(int index,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

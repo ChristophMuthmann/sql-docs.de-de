@@ -3,7 +3,7 @@ title: ADO-Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4315048296c450e1365874e021725c8160612313
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59492bb63fd11aa1c60b3c45daed5a7431475cd9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-events"></a>ADO-Ereignisse
 |||  
@@ -62,5 +61,4 @@ ms.lasthandoff: 09/09/2017
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
-
+ [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)

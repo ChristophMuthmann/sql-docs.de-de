@@ -1,11 +1,13 @@
 ---
-title: "Wählen Sie eine Datenquelle (SQL Server-Import / Export-Assistent) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Auswählen einer Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-caps.latest.revision: 124
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 80d35cb294fd900611c73ca37bba2a66baef0767
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 7fe6c34e33f62bf5205763b2f2cf22f868ff418e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
   Nach der Begrüßungsseite zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent die Seite **Datenquelle auswählen**an. Auf dieser Seite geben Sie Informationen zur Quelle für Ihre Daten an und darüber, wie Sie eine Verbindung mit dieser herstellen.
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/28/2017
 Weitere Informationen zu Datenquellen, die Sie verwenden können, finden Sie unter [Welche Datenquellen und -ziele kann ich verwenden?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Screenshot der Seite „Datenquelle auswählen“ 
-Der folgende Screenshot zeigt den oberen Teil der Seite **Datenquelle auswählen** im Assistenten, der sich nicht ändert. Der Rest der Seite verfügt über eine Variable Anzahl von Optionen, die von der Datenquelle abhängig sind, die Sie hier auswählen.
+Der folgende Screenshot zeigt den oberen Teil der Seite **Datenquelle auswählen** im Assistenten, der sich nicht ändert. Auf den restlichen Seiten finden Sie verschiedene Optionen, die von der von Ihnen ausgewählten Datenquelle abhängig sind.
 
 ![Quelle auswählen](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -39,43 +40,42 @@ Der folgende Screenshot zeigt den oberen Teil der Seite **Datenquelle auswählen
  **Datenquelle**  
 Geben Sie die Datenquelle an, indem Sie einen Datenanbieter auswählen, der eine Verbindung mit der Quelle herstellen kann.
 
--   **Der Datenanbieter, die Sie benötigen ist in der Regel aus dem Namen offensichtlich**, da der Name des Anbieters in der Regel der Name der Datenquelle - z. B. enthält *Flatfile* Quellen, Microsoft *Excel*, Microsoft *Zugriff*, .net Framework-Datenanbieter für *SqlServer*, .net Framework-Datenanbieter für *Oracle*.
+-   **In der Regel können Sie anhand des jeweiligen Namens erkennen, welchen Datenanbieter Sie benötigen**, da der Name des Anbieters für gewöhnlich den Namen der Datenquelle enthält, z.B. *Flatfile*-Quelle, Microsoft *Excel*, Microsoft *Access*, .NET Framework-Datenanbieter für *SQL Server* und .NET Framework-Datenanbieter für *Oracle*.
 
--   **Wenn Sie einen ODBC-Treiber für die Datenquelle haben**, wählen Sie die .net Framework-Datenanbieter für ODBC. Geben Sie dann die treiberspezifische Informationen. ODBC-Treiber sind nicht in der Dropdown-Liste der Datenquellen aufgeführt. .Net fungiert Framework-Datenanbieter für ODBC als Wrapper um die ODBC-Treiber. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer ODBC-Datenquelle](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+-   **Wenn Sie über einen ODBC-Treiber für Ihre Datenquelle verfügen**, wählen Sie den .NET Framework-Datenanbieter für ODBC aus. Geben Sie dann die für den Treiber spezifischen Informationen ein. ODBC-Treiber werden in der Dropdownliste der Datenquellen nicht aufgeführt. Der .NET Framework-Datenanbieter für ODBC fungiert als Wrapper für den ODBC-Treiber. Weitere Informationen finden Sie unter [Connect to an ODBC Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit einer ODBC-Datenquelle [SQL Server-Import/Export-Assistent]).
 
--   **Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar.** In der Regel können Sie alle Anbieter auswählen, die für Ihre Quelle verwendet werden können. Angenommen, für die Verbindung an Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie die .NET Framework-Datenanbieter für SQL Server oder SQL Server-ODBC-Treiber verwenden. (Anderer Anbieter werden auch weiterhin in der Liste aber werden nicht mehr unterstützt.) 
+-   **Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar.** In der Regel können Sie alle Anbieter auswählen, die für Ihre Quelle verwendet werden können. Sie können z.B. den .NET Framework-Datenanbieter für SQL Server oder den SQL Server-ODBC-Treiber verwenden, um eine Verbindung mit Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. (Andere Anbieter werden zwar noch in der Liste aufgeführt, aber nicht mehr unterstützt.) 
 
-## <a name="my-data-source-isnt-in-the-list"></a>Der Datenquelle nicht in der Liste
--   **Möglicherweise müssen Sie den Datenanbieter herunterladen** von Microsoft oder von einem Drittanbieter. Die Liste der verfügbaren Datenanbieter in der **Datenquelle** Liste enthält nur die Anbieter, die auf Ihrem Computer installiert. Weitere Informationen zu Datenquellen, die Sie verwenden können, finden Sie unter [Welche Datenquellen und -ziele kann ich verwenden?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
+## <a name="my-data-source-isnt-in-the-list"></a>Die Datenquelle befindet sich nicht in der Liste
+-   **Sie müssen möglicherweise den Datenanbieter** von Microsoft oder von einem Drittanbieter herunterladen. Die Liste der verfügbaren Anbieter in der Liste **Datenquelle** beinhaltet nur die auf Ihrem Computer installierten Anbieter. Weitere Informationen zu Datenquellen, die Sie verwenden können, finden Sie unter [Welche Datenquellen und -ziele kann ich verwenden?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
--   **Haben Sie einen ODBC-Treiber für Ihre Datenquelle?** ODBC-Treiber sind nicht in der Dropdown-Liste der Datenquellen aufgeführt. Wenn Sie einen ODBC-Treiber für die Datenquelle haben, wählen Sie die .net Framework-Datenanbieter für ODBC. Geben Sie dann die treiberspezifische Informationen. .Net fungiert Framework-Datenanbieter für ODBC als Wrapper um die ODBC-Treiber. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer ODBC-Datenquelle](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+-   **Ist ein ODBC-Treiber für die Datenquelle installiert?** ODBC-Treiber werden in der Dropdownliste der Datenquellen nicht aufgeführt. Wenn Sie beispielsweise über einen ODBC-Treiber für Ihre Datenquelle verfügen, wählen Sie den .NET Framework-Datenanbieter für ODBC aus. Geben Sie dann die für den Treiber spezifischen Informationen ein. Der .NET Framework-Datenanbieter für ODBC fungiert als Wrapper für den ODBC-Treiber. Weitere Informationen finden Sie unter [Connect to an ODBC Data Source (SQL Server Import and Export Wizard)](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit einer ODBC-Datenquelle [SQL Server-Import/Export-Assistent]).
 
--   **64-Bit- und 32-Bit-Anbieter.** Wenn Sie die 64-Bit-Assistenten ausführen, werden Sie nicht angezeigt Datenquellen für den nur ein 32-Bit-Anbieter installiert ist (und umgekehrt).
+-   **64-Bit- und 32-Bit-Anbieter.** Wenn Sie den 64-Bit-Assistenten ausführen, werden Ihnen keine Datenquellen angezeigt, für die nur ein 32-Bit-Anbieter installiert ist (und umgekehrt).
 
 > [!NOTE]
-> Um die 64-Bit-Version von den SQL Server-Import / Export-Assistenten verwenden zu können, müssen Sie SQL Server installieren. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen, und nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten installieren.
+> Sie müssen SQL Server installieren, um die 64-Bit-Version des SQL Server-Import/Export-Assistenten verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
 
 ## <a name="after-you-choose-a-data-source"></a>Nach dem Auswählen der Datenquelle
-Nach dem Auswählen einer Datenquelle, die restliche der **wählen Sie eine Datenquelle** weist auf eine Variable Anzahl von Optionen, die von den Datenanbieter abhängen, die Sie auswählen.
+Nachdem Sie eine Datenquelle ausgewählt haben, stehen Ihnen auf der Seite **Datenquelle auswählen** verschiedene Optionen zur Verfügung, die vom Datenanbieter abhängig sind, den Sie auswählen.
 
-Zur Verbindung mit einer häufig verwendeten Datenquelle finden Sie in den folgenden Seiten.
--   [Herstellen einer Verbindung mit SQLServer](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+Sehen Sie sich eine der folgenden Seiten an, um eine Verbindung mit einer häufig verwendeten Datenquelle herzustellen.
+-   [Connect to SQL Server (Herstellen einer Verbindung mit SQL Server)](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Herstellen einer Verbindung mit Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
--   [Herstellen einer Verbindung mit Flatfile-Dateien (Textdateien)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
--   [Herstellen einer Verbindung mit Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
--   [Herstellen einer Verbindung mit Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Herstellen einer Verbindung mit ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
--   [Herstellen einer Verbindung mit Azure-Blob-Speicher](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
--   [Herstellen einer Verbindung mit PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
--   [Herstellen einer Verbindung mit MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
+-   [Connect to flat files (text files)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit Flatfiles [Textdateien])
+-   [Connect to Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit Excel)
+-   [Connect to Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit Access)
+-   [Connect with ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit ODBC)
+-   [Connect to Azure Blob Storage](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit Azure Blob Storage)
+-   [Connect to PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit PostgreSQL)
+-   [Connect to MySQL (Herstellen einer Verbindung mit MySQL)](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
-Informationen zum Herstellen einer Verbindung mit einer Datenquelle, die hier nicht aufgeführt ist, finden Sie unter [der Zeichenfolgen-Verbindungsverweis](https://www.connectionstrings.com/). Diese Site eines Drittanbieters enthält Beispiele für Verbindungszeichenfolgen und Weitere Informationen zu Datenanbietern und die Verbindungsinformationen, die sie benötigen.
+Weitere Informationen zum Herstellen einer Verbindung mit einer Datenquelle, die hier nicht aufgeführt ist, finden Sie unter [The Connection Strings Reference (Verweis auf Verbindungszeichenfolgen)](https://www.connectionstrings.com/). Auf dieser Website eines Drittanbieters sind Beispielverbindungszeichenfolgen aufgelistet, und es werden Angaben zu Datenanbietern und den erforderlichen Verbindungsinformationen bereitgestellt.
 
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie Informationen zur Quelle Ihrer Daten bereitgestellt haben und darüber, wie Sie eine Verbindung mit ihnen herstellen, wird als nächste Seite **Ziel auswählen**angezeigt. Auf dieser Seite geben Sie Informationen zum Ziel für Ihre Daten an und dazu, wie Sie eine Verbindung damit herstellen. Weitere Informationen finden Sie unter [Ziel auswählen](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
  
 ## <a name="see-also"></a>Siehe auch
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

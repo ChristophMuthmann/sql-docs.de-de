@@ -3,7 +3,7 @@ title: Property-Objekt (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c9d13366eb3554738fbd50da2ed09db8bceb6f5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa319e0fa981b3346232e3d3848bfdfe843d9f31
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-object-adox"></a>Property-Objekt (ADOX)
 Stellt ein Merkmal eines ADOX-Objekts dar.  
@@ -52,5 +51,4 @@ Stellt ein Merkmal eines ADOX-Objekts dar.
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [ADOX-Eigenschaft Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)
-
+-   [ADOX-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)

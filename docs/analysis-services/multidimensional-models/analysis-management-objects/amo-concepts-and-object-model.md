@@ -1,13 +1,14 @@
 ---
 title: AMO-Konzepte und-Objektmodell | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,17 +23,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5fb57ba499669e09d177892eb861ad8994819e85
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO-Konzepte und -Objektmodell
   Dieses Thema enthält eine Definition von Analysis Management Objects (AMO) Beziehung zwischen AMO und anderen Tools und Bibliotheken in der Architektur des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], und eine begriffserklärung aller wichtigen Objekte in AMO.  
@@ -53,10 +53,10 @@ ms.lasthandoff: 09/01/2017
   
  [Automatisieren von administrativen Tasks mit AMO](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture"></a>AMO in der Analysis Services-Architektur  
+##  <a name="AMOintheAnalysisServicesArchitecture">AMO in der Analysis Services-Architektur</a>  
  Programmbedingt ist AMO nur für die Objektverwaltung bestimmt und nicht zum Abfragen von Daten. Wenn der Benutzer muss Abfrage [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Daten von einer Clientanwendung, die Clientanwendung die zu verwendende [Entwickeln mit ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
-##  <a name="AMOArchitecture"></a>AMO-Architektur  
+##  <a name="AMOArchitecture">AMO-Architektur</a>  
  AMO ist eine vollständige Bibliothek von Klassen zur Verwaltung einer Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] von einer Clientanwendung in verwaltetem Code in .NET Framework, Version 2.0.  
   
  Die AMO-Bibliothek der Klassen wurde als Hierarchie von Klassen entwickelt, wobei bestimmte Klassen vor anderen instanziiert werden müssen, damit Sie sie in Ihrem Code verwenden können. Es gibt auch Erweiterungsklassen, die jederzeit in Ihrem Code instanziiert werden können. Bevor Sie eine Erweiterungsklasse verwenden, werden Sie jedoch wahrscheinlich mindestens eine Hierarchieklasse instanziieren.  
@@ -81,16 +81,16 @@ ms.lasthandoff: 09/01/2017
 |Klassensatz|Zweck|  
 |---------------|-------------|  
 |[Grundlegende AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Klassen, die erforderlich sind, um einen beliebigen anderen Satz von Klassen verwenden zu können.|  
-|[AMO-OLAP-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Klassen, mit denen Sie die OLAP-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwalten können.|  
-|[AMO-Klassen für Datamining](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Klassen, mit denen Sie die Data Mining-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwalten können.|  
+|[AMO OLAP-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Klassen, mit denen Sie die OLAP-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwalten können.|  
+|[AMO-Klassen für Data Mining](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Klassen, mit denen Sie die Data Mining-Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwalten können.|  
 |[AMO-Sicherheitsklassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Klassen, mit denen Sie den Zugriff auf andere Objekte steuern und die Sicherheit aufrechterhalten können.|  
-|[AMO anderen Klassen und Methoden](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Klassen und Methoden, die OLAP- oder Data Mining-Administratoren helfen, ihre täglichen Aufgaben auszuführen.|  
+|[Andere AMO-Klassen und -Methoden](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Klassen und Methoden, die OLAP- oder Data Mining-Administratoren helfen, ihre täglichen Aufgaben auszuführen.|  
   
-##  <a name="bkmk_UsingAMO"></a>Mithilfe von AMO  
+##  <a name="bkmk_UsingAMO">Mithilfe von AMO</a>  
  AMO ist insbesondere für die Automatisierung wiederkehrender Tasks hilfreich, beispielsweise für das Erstellen neuer Partitionen in einer Measuregruppe basierend auf neuen Daten in der Faktentabelle oder für das erneute Trainieren eines Miningmodells basierend auf neuen Daten. Diese Tasks, die neue Objekte erstellen, werden in der Regel monatlich, wöchentlich oder vierteljährlich ausgeführt. Die neuen Objekte können problemlos, basierend auf den neuen Daten, von der Anwendung benannt werden.  
   
 ##### <a name="analysis-services-administrators"></a>Analysis Services-Administratoren  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Administratoren können AMO verwenden, um die Verarbeitung von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbanken zu automatisieren. Zum Entwerfen und Bereitstellen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbanken sollten Sie [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwenden.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Administratoren können AMO verwenden, um die Verarbeitung automatisieren [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbanken. Zum Entwerfen und Bereitstellen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbanken sollten Sie [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwenden.  
   
 ##### <a name="developers"></a>Entwickler  
  Entwickler können AMO verwenden, um Administratorschnittstellen für angegebene Sätze von Benutzern zu entwickeln. Diese Schnittstellen können den Zugriff auf [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Objekte einschränken und Benutzer auf bestimmte Tasks beschränken. Beispielsweise können Sie mit AMO eine Sicherungsanwendung erstellen, die es einem Benutzer ermöglicht, alle Datenbankobjekte anzuzeigen, eine beliebige Datenbank auszuwählen und sie auf einem der angegebenen Geräte zu sichern.  
@@ -103,7 +103,7 @@ ms.lasthandoff: 09/01/2017
 ##### <a name="data-mining-advanced-users"></a>Fortgeschrittene Data Mining-Benutzer  
  Für fortgeschrittene Data Mining-Benutzer ist AMO besonders hilfreich, wenn große Modellmengen in regelmäßigen Abständen neu trainiert werden müssen.  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO"></a>Automatisieren von administrativen Tasks mit AMO  
+##  <a name="AutomatingAdministrativeTaskswithAMO">Automatisieren von administrativen Tasks mit AMO</a>  
  Die meisten wiederkehrenden Tasks können am besten entwickelt, bereitgestellt und verwaltet werden, wenn sie mithilfe von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und nicht als Anwendung in einer Sprache Ihrer Wahl entwickelt werden. Jedoch können Sie AMO für wiederkehrende Tasks verwenden, die nicht mit [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] automatisiert werden können. AMO ist auch hilfreich, wenn Sie mithilfe von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eine spezialisierte Anwendung für Business Intelligence entwickeln möchten.  
   
 ##### <a name="automatic-object-management"></a>Automatische Objektverwaltung  
@@ -124,4 +124,3 @@ ms.lasthandoff: 09/01/2017
  AMO kann nicht verwendet werden, um die Daten abzufragen. Verwenden Sie zum Abfragen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Daten, einschließlich Cubes und Miningmodellen, ADOMD.NET in einer Benutzeranwendung. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
   
-

@@ -3,27 +3,28 @@ title: Erste Schritte mit SQLServer Machine Learning | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 12/07/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: 34
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: d643bbdf32b946c5342484fa531303b5b74f4bcb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea25548e0dfb3aa8a433c0fb014ad44a0f031f07
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Erste Schritte mit SQLServer Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services in SQL Server dient zur Installation ohne Verfügbarmachen der Daten zu Sicherheitsrisiken oder gleitenden Daten Unnecesarily Data Science-Aufgaben unterstützen.
 
@@ -83,7 +84,7 @@ Bisher mussten Datenanalysten verwenden R Probleme mit der Leistung und Skalieru
 
 + **"Revoscaler"**.: Diese R-Paket enthält die Implementierung einiger der beliebtesten R-Funktionen neu gestaltet, um die Parallelität und Skalierung bereitzustellen. Das Paket enthält auch Funktionen, die die Leistung und Skalierung weiter erhöhen, indem Berechnungen mittels Push auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer übertragen werden, der in der Regel über wesentlich mehr Arbeitsspeicher und Rechenleistung verfügt.
 
-+ **Revoscalepy**. Diese Python-Clientbibliothek, neue und nur in SQL Server 2017 CTP 2.0 verfügbar implementiert die am häufigsten verwendeten Funktionen im "revoscaler", z. B. remote rechenkontexte und viele Algorithmen, die unterstützt verteilte Verarbeitung.
++ **revoscalepy**. Diese Python-Clientbibliothek, neue und nur in SQL Server 2017 CTP 2.0 verfügbar implementiert die am häufigsten verwendeten Funktionen im "revoscaler", z. B. remote rechenkontexte und viele Algorithmen, die unterstützt verteilte Verarbeitung.
 
 + Wählen Sie die beste Sprache für den Task aus.  R ist am besten für statistische Berechnungen, die schwierig zu implementieren, verwenden SQL sind. Für setbasierte Vorgänge für Daten, nutzen die Leistungsfähigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um optimale Leistung zu erzielen. Verwenden Sie das in-Memory-Datenbankmodul für sehr schnelle Berechnungen über Spalten.
 
@@ -135,4 +136,3 @@ Erfahren Sie, die Syntax für die aufrufende R aus einer gespeicherten Prozedur.
 ## <a name="solutions"></a>Lösungen
 
 Weitere Beispiele, einschließlich der Branche = spezifische Lösung-Vorlagen finden Sie unter [SQL Server-Machine Learning-Lernprogramme](../tutorials/machine-learning-services-tutorials.md).
-

@@ -2,9 +2,12 @@
 title: "ObjectType (Spalte für Ablaufverfolgungsereignisse) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,30 +18,30 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType (Spalte für Ablaufverfolgungsereignisse)
-  Die ObjectType-Spalte wird für eine Vielzahl von Ablaufverfolgungsereignissen verwendet. In diesem Thema werden die möglichen Werte dieser Spalte und eine Definition des jeweiligen Wertes aufgeführt.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die ObjectType-Spalte wird für eine Vielzahl von Ablaufverfolgungsereignissen verwendet. In diesem Thema werden die möglichen Werte dieser Spalte und eine Definition des jeweiligen Wertes aufgeführt.  
   
 ## <a name="object-type-column-values"></a>Werte der ObjectType-Spalte  
   
-|Wert|Definition|  
+|value|Definition|  
 |-----------|----------------|  
 |8259|CHECK-Einschränkung|  
 |8260|Standard (Einschränkung oder eigenständig)|  
 |8262|FOREIGN KEY-Einschränkung|  
 |8272|Gespeicherte Prozedur|  
-|8274|Rule|  
+|8274|Regel|  
 |8275|Systemtabelle|  
 |8276|Trigger für Server|  
 |8277|Tabelle (benutzerdefiniert)|  
@@ -68,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 |19283|ObfusKey|  
 |19521|Anmeldung mit asymmetrischem Schlüssel|  
 |19523|Anmeldung mit Zertifikat|  
-|19538|Rolle|  
+|19538|-Rolle|  
 |19539|SQL-Anmeldung|  
 |19543|Windows-Anmeldung|  
 |20034|Remotedienstbindung|  
@@ -106,8 +109,7 @@ ms.lasthandoff: 06/22/2017
 |22611|XML-Schema|  
 |22868|Typ|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Herstellen einer Verbindung mit SQLDriverConnect | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d9f6177b384da8866c8140cc30f1d32bca0bb635
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7bdfbf03fb4e67fcd0bc88ecf9212e3bb9cd7773
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Herstellen einer Verbindung mit SQLDriverConnect
 **SQLDriverConnect** wird für die Verbindung mit einer Datenquelle mithilfe einer Verbindungszeichenfolge verwendet. **SQLDriverConnect** anstelle von **SQLConnect** folgende Gründe vorliegen:  
@@ -45,9 +46,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [Treiberspezifische Verbindungsinformationen](../../../odbc/reference/develop-app/driver-specific-connection-information.md)  
   
--   [Der Benutzer aufgefordert, Verbindungsinformationen](../../../odbc/reference/develop-app/prompting-the-user-for-connection-information.md)  
+-   [Auffordern des Benutzers zur Eingabe der Verbindungsinformationen](../../../odbc/reference/develop-app/prompting-the-user-for-connection-information.md)  
   
--   [Herstellen einer Verbindung mit Datenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)  
+-   [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)  
   
 -   [Herstellen einer Verbindung direkt mit dem Treiber](../../../odbc/reference/develop-app/connecting-directly-to-drivers.md)
-

@@ -3,8 +3,11 @@ title: Parse (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - Parse (geometry Data Type)
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64adf9398a6ea63203f75714aa97ccf2653e947b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5800c6dba5cd962ba5aa218e90d33cf329e017c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parse-geometry-data-type"></a>Parse (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt eine **geometry** -Instanz aus einer Open Geospatial-Konsortium (OGC) Well-Known Text (WKT)-Darstellung zurück. `Parse()`entspricht dem [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md), mit der Ausnahme, dass es eine räumliche wird vorausgesetzt ID SRID (Spatial reference) 0 als Parameter. Die Eingabe kann optional Z- (Höhe) und M-Werte (Measure) tragen.
   
@@ -65,8 +67,7 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>Siehe auch  
  [STGeomFromText](../../t-sql/spatial-geometry/parse-geometry-data-type.md)   
- [Erweiterte statische Geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

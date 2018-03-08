@@ -3,7 +3,7 @@ title: Streams und Persistenz | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4a0a45a32086dc3befd19e720c8d600b6b43adde
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af1ecf7ed9f4702d986d6f1881b3264ab8171c87
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streams-and-persistence"></a>Streams und Persistenz
 Die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [speichern](../../../ado/reference/ado-api/save-method.md) Methode speichert, oder *weiterhin*, eine **Recordset** in einer Datei und die [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)Methode Wiederherstellungen der **Recordset** aus dieser Datei.  
@@ -170,6 +169,5 @@ function GetRs()
   
 ## <a name="see-also"></a>Siehe auch  
  [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)
-

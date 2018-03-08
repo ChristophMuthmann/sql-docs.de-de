@@ -2,13 +2,13 @@
 title: Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], creating without data source
 - standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20035f6d8fff0c5d45b4c807cf6202531156741d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension ohne vorhandene Datenquelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Nichtzeittabelle in der Datenquelle generieren** aus. Um in der zugrunde liegenden Datenquelle eine neue Dimensionstabelle zu erstellen, müssen Sie über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Wenn Sie eine Dimension ohne vorab definierte Datenquellensicht definieren, können Sie entweder eine vollständig neue Dimension definieren oder eine Dimensionsvorlage verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension ohne vorhandene Datenquelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Nichtzeittabelle in der Datenquelle generieren** aus. Um in der zugrunde liegenden Datenquelle eine neue Dimensionstabelle zu erstellen, müssen Sie über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Wenn Sie eine Dimension ohne vorab definierte Datenquellensicht definieren, können Sie entweder eine vollständig neue Dimension definieren oder eine Dimensionsvorlage verwenden.  
   
  Im Dimensions-Assistenten werden Dimensionsvorlagen bereitgestellt, die Sie als Grundlage für verschiedene gängige Dimensionstypen verwenden können. Sie haben die Wahl zwischen den folgenden Dimensionstypen:  
   
@@ -115,4 +115,3 @@ ms.lasthandoff: 09/01/2017
  [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   
-

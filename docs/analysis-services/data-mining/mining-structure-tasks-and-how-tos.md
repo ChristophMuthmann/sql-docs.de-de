@@ -2,31 +2,30 @@
 title: "Mining-Struktur Tasks und Anweisungen für | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], how-to topics
+helpviewer_keywords: mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a9b949aa861e9db20c60f64c75d5edd41e9247c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 37193320cddce5b0ecccaf9d0040992118bc0e44
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tasks und Anweisungen für Miningstrukturen
-  Die Registerkarte **Miningstruktur** im Data Mining-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält Tools, mit denen Sie eine Miningstruktur erstellen, bearbeiten und verarbeiten können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die **Miningstruktur** Registerkarte Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält Tools, die Sie zum Erstellen, bearbeiten und Verarbeiten einer Miningstruktur verwenden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [Entwerfen und Implementieren (Themen zur Vorgehensweise) (Analysis Services &ndash; Data Mining)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   
-

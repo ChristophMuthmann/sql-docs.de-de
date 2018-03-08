@@ -2,30 +2,30 @@
 title: Verbinden von PowerPivot-Dienstanwendung in SharePoint-Web-App in der Zertifizierungsstelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cbaf5f7fce645c4133c94a5ae1562b7aabcfc897
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Verbinden von PowerPivot-Dienstanwendung in SharePoint-Web-App in der Zertifizierungsstelle
-  Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung kann von einer beliebigen Anzahl von SharePoint-Webanwendungen in der Farm verwendet werden. Um eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zur Verfügung zu stellen, fügen Sie sie einer Dienstzuordnungsliste hinzu.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung kann von einer beliebigen Anzahl von SharePoint-Webanwendungen in der Farm verwendet werden. Um eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zur Verfügung zu stellen, fügen Sie sie einer Dienstzuordnungsliste hinzu.  
   
 > [!IMPORTANT]  
 >  Damit das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard ordnungsgemäß funktioniert, muss eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung in der Standardgruppe enthalten sein. Fügen Sie nicht mehr als eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zu der Standardgruppe hinzu. Das Hinzufügen mehrerer Einträge des gleichen Dienstanwendungstyps ist keine unterstützte Konfiguration und könnte Fehler verursachen. Wenn Sie zusätzliche Dienstanwendungen erstellen, fügen Sie sie benutzerdefinierten Listen hinzu.  
@@ -69,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Anfängliche Konfiguration (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   
-

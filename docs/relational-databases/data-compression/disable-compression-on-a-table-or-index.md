@@ -2,29 +2,31 @@
 title: "So deaktivieren Sie die Komprimierung für eine Tabelle oder einen Index | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-compression
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: data-compression
+ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data compression [SQL Server], disabling
+helpviewer_keywords: data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 342baf08233852778ca7caaf5a528d0362490de6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 26617d7ebdeae568acb35d518cc17f068b607ba3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deaktivieren der Komprimierung für eine Tabelle oder einen Index
+
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
   In diesem Thema wird beschrieben, wie die Komprimierung für eine Tabelle oder einen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktiviert wird.  
   
  **In diesem Thema**  
@@ -33,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So deaktivieren Sie die Komprimierung für eine Tabelle oder einen Index mit:**  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle oder den Index.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>So deaktivieren Sie die Komprimierung für eine Tabelle  
   
@@ -196,7 +198,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-disable-compression-on-a-table"></a>So deaktivieren Sie die Komprimierung für eine Tabelle  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -212,7 +214,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-disable-compression-on-an-index"></a>So deaktivieren Sie die Komprimierung für einen Index  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -228,4 +230,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) und [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
-

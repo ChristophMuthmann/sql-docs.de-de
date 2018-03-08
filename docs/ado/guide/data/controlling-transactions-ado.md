@@ -3,7 +3,7 @@ title: Steuern von Transaktionen (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: df516c37eb40638cd23fa9e6ada2683c9af8e05c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controlling-transactions-ado"></a>Steuern von Transaktionen (ADO)
 ADO unterstützt transaktionsverarbeitung innerhalb einer Verbindungs mit der Hilfe der **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden auf eine  **Verbindung** Objekt. Das allgemeine Konzept der Implementierung der transaktionsverarbeitung in ADO wird im folgenden einfachen Codeausschnitt veranschaulicht.  
@@ -88,4 +87,3 @@ oConn.Close
  Hier wird die transaktionsverarbeitung verwendet, um sicherzustellen, dass die beiden Datensätze werden als eine Einheit des Vorgangs aktualisiert, und entweder sind die zwei Produktnamen ausgetauscht oder überhaupt nicht geändert.  
   
  Weitere ausführliche Diskussionen transaktionsverarbeitung finden Sie unter [wird aktualisiert und Beibehalten von Daten](../../../ado/guide/data/updating-and-persisting-data.md).
-

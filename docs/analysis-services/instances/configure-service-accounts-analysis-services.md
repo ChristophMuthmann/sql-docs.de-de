@@ -2,13 +2,13 @@
 title: Konfigurieren von Dienstkonten (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 54
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8557ed990a03d36aaf4728726de1bb3dd67d6c9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
-  Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
   
  Dieses Thema enthält ergänzende Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich erforderlichen zusätzlichen Berechtigungen für tabellarische und gruppierte Installationen. Außerdem werden Berechtigungen behandelt, die zur Unterstützung von Servervorgängen erforderlich sind. Sie können beispielsweise Verarbeitungs- und Abfrageoperationen so konfigurieren, dass sie über das Dienstkonto ausgeführt werden. In diesem Fall müssen Sie zusätzliche Berechtigungen gewähren.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="logon-account-recommendations"></a>Kontoempfehlungen für die Anmeldung  
  In einem Failovercluster sollten alle Instanzen von Analysis Services so konfiguriert werden, dass sie ein Windows-Domänenbenutzerkonto verwenden. Weisen Sie dasselbe Konto für alle Instanzen zu. Weitere Informationen finden Sie unter [Clustern von Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden: **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$***Instanzname* für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
+ Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$ *** Instanzname* für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Erteilen von Berechtigungen für Analysis Services  
  Dieser Abschnitt erläutert die Berechtigungen, die Analysis Services für lokale, interne Vorgänge wie das Starten der ausführbaren Datei, das Lesen der Konfigurationsdatei und das Laden von Datenbanken aus dem Datenverzeichnis benötigt. Wenn Sie stattdessen Anleitungen zum Festlegen von Berechtigungen für den Zugriff auf externe Daten und Interoperabilität mit anderen Diensten und Anwendungen suchen, finden Sie weitere Informationen unter [Erteilen zusätzlicher Berechtigungen für bestimmte Servervorgänge](#bkmk_tasks) weiter unten in diesem Thema.  
@@ -103,7 +103,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_FilePermissions"></a> Dateisystemberechtigungen, die dem Analysis Services-Dienstkonto zugewiesen sind  
   
 > [!NOTE]  
->  Eine Liste der Berechtigungen für die einzelnen Programmordner finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) .  
+>  Eine Liste der Berechtigungen für die einzelnen Programmordner finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
 >   
 >  Unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) finden Sie Informationen zu Dateiberechtigungen im Zusammenhang mit IIS-Konfiguration und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 09/01/2017
   
 2.  Verwendung **Computer-Manager** | **lokale Benutzer und Gruppen** | **Gruppen** zum Überprüfen der Mitgliedschaft der SQLServerMSASUser$\<Servername >$\<Instancename > Sicherheitsgruppe.  
   
-     Die Mitglieds-SID sollte der Pro-Dienst-SID aus Schritt 1 entsprechen.  
+     Die Mitglieds-SID sollte der Pro-Dienst-SID aus Schritt 1 entsprechen.  
   
 3.  Verwenden Sie **Windows-Explorer** | **Programme** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** , um zu überprüfen, ob der Sicherheitsgruppe in Schritt 2 Ordnersicherheitseigenschaften erteilt wurden.  
   
@@ -156,13 +156,12 @@ ms.lasthandoff: 09/01/2017
 |Schreiben in eine Abfrageprotokolltabelle in einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank|Erstellen eines Datenbankanmeldenamens für das Dienstkonto und Zuweisen von Schreibrechten für die Abfrageprotokolltabelle|Sie können die Abfrageprotokollierung aktivieren, um in einer Datenbanktabelle Verwendungsdaten für nachfolgende Analysen zu sammeln. Das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkonto muss über Schreibberechtigungen für die Abfrageprotokolltabelle in der festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank verfügen. Wenn diese Tabelle noch nicht vorhanden ist und erstellt werden muss, erfordert das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Anmeldekonto außerdem die Berechtigung zum Erstellen von Tabellen in der festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Weitere Informationen finden Sie unter [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (Blog)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) (Verbessern der Leistung von SQL Server Analysis Services mit dem Assistenten für die verwendungsbasierte Optimierung) und [Query Logging in Analysis Services (Blog)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)(Abfrageprotokollierung in Analysis Services).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server-Dienstkonto und pro-Dienst-SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server verwendet eine Dienst-SID, um die Dienstisolation (KB-Artikel)](http://support.microsoft.com/kb/2620201)   
+ [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [SQL Server-Dienstkonto und pro Dienst-SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server verwendet eine Dienst-SID, um die Dienstisolation bereitzustellen (KB-Artikel)](http://support.microsoft.com/kb/2620201)   
  [Zugriffstoken (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [Sicherheits-IDs (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [Zugriffstoken (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Zugriffssteuerungslisten (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   
-

@@ -3,7 +3,7 @@ title: Member-Objekt (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c7b34e45ff23a1a71c1a45b1190d923e94328154
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ca510493f83f7cfcc97b37586c1e26aee7c3ab24
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
 Stellt ein Element einer Ebene in einem Cube die untergeordneten Elemente eines Elements einer Ebene oder ein Mitglied einer Position auf einer Achse eines cellSets dar.  
@@ -90,7 +89,7 @@ Stellt ein Element einer Ebene in einem Cube die untergeordneten Elemente eines 
 |MemberGUID|Die GUID des Elements.|  
 |MemberName|Der Name des Elements.|  
 |MemberOrdinal|Die Ordinalzahl des Elements.|  
-|MemberType-Element|Der Typ des Elements.|  
+|MemberType|Der Typ des Elements.|  
 |MemberUniqueName|Der eindeutige Name des Elements.|  
 |ParentCount|Die Anzahl der übergeordneten Elemente dieses Elements.|  
 |ParentLevel|Die Nummer der Ebene des übergeordneten Element.|  
@@ -104,5 +103,4 @@ Stellt ein Element einer Ebene in einem Cube die untergeordneten Elemente eines 
 ## <a name="see-also"></a>Siehe auch  
  [Katalog-Beispiel (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Members-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

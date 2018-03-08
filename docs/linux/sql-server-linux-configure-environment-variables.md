@@ -1,25 +1,29 @@
 ---
 title: Konfigurieren von SQL Server mit Umgebungsvariablen | Microsoft Docs
-description: Dieses Thema beschreibt die Umgebungsvariablen zu verwenden, um bestimmte 2017 von SQL Server-Einstellungen unter Linux konfigurieren.
+description: Dieser Artikel beschreibt die Umgebungsvariablen zu verwenden, um bestimmte 2017 von SQL Server-Einstellungen unter Linux konfigurieren.
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 07/21/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 72c648e147b628a4a99ffc9605ba42b11c83883e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server mit Umgebungsvariablen unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Mehrere verschiedene Umgebungsvariablen können Sie SQL Server-2017 unter Linux konfigurieren. Diese Variablen werden in zwei Szenarien verwendet:
 
@@ -45,7 +49,11 @@ Mehrere verschiedene Umgebungsvariablen können Sie SQL Server-2017 unter Linux 
 | **MSSQL_DATA_DIR** | Ändern Sie das Verzeichnis, in dem die neuen SQL Server-Datenbank-Datendateien (MDF) erstellt werden. |
 | **MSSQL_LOG_DIR** | Ändern Sie das Verzeichnis, in dem die neue SQL Server-Protokolldateien (LDF) Datenbankdateien erstellt werden. |
 | **MSSQL_DUMP_DIR** | Ändern Sie das Verzeichnis, in dem SQL Server die Speicherabbilder und andere Dateien zur Problembehandlung in der Standardeinstellung ablegt. |
-| **MSSQL_ENABLE_HADR** | Aktivieren von Verfügbarkeitsgruppen. |
+| **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise "1" aktiviert ist, und "0" ist deaktiviert. |
+| **MSSQL_AGENT_ENABLED** | SQL Server-Agent zu aktivieren. Beispielsweise "true" aktiviert ist, und 'false' ist deaktiviert. Agent ist standardmäßig deaktiviert.  |
+| **MSSQL_MASTER_DATA_FILE** | Legt den Speicherort der master-Datenbank-Datendatei an. |
+| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der master-Datenbank-Protokolldatei fest. |
+
 
 ## <a name="example-initial-setup"></a>Beispiel: Anfangssetup
 
@@ -82,11 +90,10 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> Der Prozess zum Ausführen von Produktions-Editionen in Containern ist etwas anders. Weitere Informationen finden Sie unter [ausführen Produktion containerimages](sql-server-linux-configure-docker.md#production).
+> Die Vorgehensweise zum Ausführen von Produktionseditionen in Containern weicht hiervon minimal ab. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Andere SQL Server-Einstellungen, die hier nicht aufgelistet sind, finden Sie unter [konfigurieren Sie SQL Server unter Linux mit dem Tool Mssql-Conf](sql-server-linux-configure-mssql-conf.md).
 
 Weitere Informationen zum Installieren und Ausführen von SQL Server unter Linux finden Sie unter [Installieren von SQL Server on Linux](sql-server-linux-setup.md).
-

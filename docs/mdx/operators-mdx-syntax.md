@@ -2,35 +2,35 @@
 title: Operatoren (MDX-Syntax) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="operators-mdx-syntax"></a>Operatoren (MDX-Syntax)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In MDX (Multidimensional Expressions) können Sie mit Operatoren die folgenden Aktionen ausführen:  
   
@@ -46,13 +46,13 @@ ms.lasthandoff: 08/02/2017
   
 |Art der auszuführenden Operation|Verwenden Sie|  
 |---------------------------------------|---------|  
-|Weist einen Wert zu einer Variablen oder zuordnen eine Resultsetspalte zu einem Alias.|[Zuweisungsoperatoren](../mdx/assignment-operators.md)|  
-|Addition, Subtraktion, Multiplikation, Division.|[Arithmetische Operatoren](../mdx/arithmetic-operators.md)|  
-|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitweise Operatoren](../mdx/bitwise-operators.md)|  
-|Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Vergleichsoperatoren](../mdx/comparison-operators.md)|  
-|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Verkettungsoperatoren](../mdx/concatenation-operators.md)|  
-|Dauerhaftes oder temporäres Kombinieren von zwei Mengenausdrücken zu einer Menge.|[Mengenoperatoren](../mdx/set-operators.md)|  
-|Ausführen einer Operation für einen Operanden.|[Unäre Operatoren](../mdx/unary-operators.md)|  
+|Weist einen Wert zu einer Variablen oder zuordnen eine Resultsetspalte zu einem Alias.|[Assignment Operators (Zuweisungsoperatoren)](../mdx/assignment-operators.md)|  
+|Addition, Subtraktion, Multiplikation, Division.|[Arithmetic Operators (Arithmetische Operatoren)](../mdx/arithmetic-operators.md)|  
+|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitwise Operators (Bitweise Operatoren)](../mdx/bitwise-operators.md)|  
+|Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Comparison Operators (Vergleichsoperatoren)](../mdx/comparison-operators.md)|  
+|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Concatenation Operators (Verkettungsoperatoren)](../mdx/concatenation-operators.md)|  
+|Dauerhaftes oder temporäres Kombinieren von zwei Mengenausdrücken zu einer Menge.|[Set Operators (Mengenoperatoren)](../mdx/set-operators.md)|  
+|Ausführen einer Operation für einen Operanden.|[Unary Operators (Unäre Operatoren)](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
 >  In Abfragen kann jeder Benutzer Operationen ausführen, sofern die Daten in dem Cube, der mit einem Operator verwendet werden soll, für diesen Benutzer sichtbar sind. Sie benötigen allerdings die entsprechenden Berechtigungen, um die Daten erfolgreich ändern zu können.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 08/02/2017
   
 -   XOR  
   
--   OR  
+-   oder  
   
  Weitere Informationen zu Operatoren in MDX finden Sie unter [MDX-Operatorreferenz &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -116,4 +116,3 @@ ms.lasthandoff: 08/02/2017
  [MDX-Syntaxelemente &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

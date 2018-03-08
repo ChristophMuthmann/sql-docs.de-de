@@ -3,8 +3,11 @@ title: REVOKE (Endpunktberechtigungen) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - REVOKE statement, endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
-caps.latest.revision: 24
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad8770d584c82fc6c5de12104059717030d21f87
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a02fa4d0d19e52599b8b148410e099f989afe4f3
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE (Endpunktberechtigungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Hebt die Berechtigungen auf, die für einen Endpunkt erteilt oder verweigert wurden.  
   
@@ -137,5 +139,4 @@ GO
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

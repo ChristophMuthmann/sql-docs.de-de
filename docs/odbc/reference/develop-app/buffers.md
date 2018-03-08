@@ -3,10 +3,12 @@ title: Puffer | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5953f3409a3886abbf76963d0207a89be1e83aec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffers"></a>Puffer
 Ein Puffer ist jedem Teil einer Anwendung Arbeitsspeicher verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Beispielsweise Anwendungspuffer können zugeordnet werden, oder *gebunden* Resultsetspalten mit **SQLBindCol**. Wie jede Zeile abgerufen wird, werden die Daten für jede Spalte in diesen Puffern zurückgegeben. *Geben Sie Puffer* dienen zum Übergeben von Daten aus der Anwendung an den Treiber; *Ausgabepuffer* werden verwendet, um Daten aus dem Treiber an die Anwendung zurückgegeben.  
@@ -61,5 +62,4 @@ Ein Puffer ist jedem Teil einer Anwendung Arbeitsspeicher verwendet, um Daten zw
   
 -   [Zuweisen und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   
--   [Mithilfe der Datenpuffer](../../../odbc/reference/develop-app/using-data-buffers.md)
-
+-   [Verwenden von Datenpuffern](../../../odbc/reference/develop-app/using-data-buffers.md)

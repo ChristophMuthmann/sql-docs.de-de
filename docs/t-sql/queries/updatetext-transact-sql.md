@@ -3,8 +3,11 @@ title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - data updates [SQL Server], UPDATETEXT statement
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49bd324f97f6ba1d2e8a8120bb502199b4ca0f06
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c4d7c7a51daeba116e695ba9cae797f0d69c70cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aktualisiert ein vorhandenes **Text**, **Ntext**, oder **Image** Feld. Verwenden Sie UPDATETEXT so ändern Sie nur einen Teil einer **Text**, **Ntext**, oder **Image** Spalte vorhanden. Verwenden Sie WRITETEXT zum Aktualisieren und ersetzen die gesamte **Text**, **Ntext**, oder **Image** Feld.  
   
@@ -61,7 +63,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  Es wird empfohlen, die BULK-Option nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen zu verwenden. Diese Option kann in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert oder entfernt werden.  
   
- *TABLE_NAME* **.** *dest_column_name*  
+ *table_name* **.** *dest_column_name*  
  Der Name der Tabelle und **Text**, **Ntext**, oder **Image** Spalte aktualisiert werden. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Datenbank- und des Besitzernamens ist optional.  
   
  *dest_text_ptr*  
@@ -79,7 +81,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  *inserted_data*  
  Sind die Daten in den vorhandenen einzufügenden **Text**, **Ntext**, oder **Image** Spalte bei der *Insert_offset* Speicherort. Dies ist eine einzelne **Char**, **Nchar**, **Varchar**, **Nvarchar**, **binäre**,  **Varbinary**, **Text**, **Ntext**, oder **Image** Wert. *Inserted_data* kann ein Literal oder eine Variable sein.  
   
- *TABLE_NAME.src_column_name*  
+ *table_name.src_column_name*  
  Der Name der Tabelle und **Text**, **Ntext**, oder **Image** Spalte, die als Quelle der eingefügten Daten verwendet. Tabellen- und Spaltennamen müssen den Regeln für Bezeichner entsprechen.  
   
  *src_text_ptr*  
@@ -130,8 +132,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   
   
-

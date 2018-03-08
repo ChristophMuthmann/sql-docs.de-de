@@ -2,9 +2,12 @@
 title: Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio) | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,20 @@ helpviewer_keywords:
 - Configure Management Data Warehouse Wizard
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: da6483877cf2f69a3aa638f635366f91b9f7352a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
-  In diesem Thema wird beschrieben, wie Sie das Verwaltungs-Data Warehouse für die Unterstützung der Datenspeicherung für einzelne oder mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, die den Datensammler verwenden, konfigurieren müssen Diese Instanzen können sich auf dem gleichen Server oder auf verschiedenen Servern befinden. In diesem Thema sind auch Beschreibungen der Benutzeroberfläche des Dialogfelds [Assistent für die Konfiguration des Verwaltungs-Data Warehouses](#Wizard) enthalten. Weitere Informationen zum Konfigurieren eines Datensammlers finden Sie unter [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie das Verwaltungs-Data Warehouse für die Unterstützung der Datenspeicherung für einzelne oder mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, die den Datensammler verwenden, konfigurieren müssen Diese Instanzen können sich auf dem gleichen Server oder auf verschiedenen Servern befinden. In diesem Thema sind auch Beschreibungen der Benutzeroberfläche des Dialogfelds [Assistent für die Konfiguration des Verwaltungs-Data Warehouses](#Wizard) enthalten. Weitere Informationen zum Konfigurieren eines Datensammlers finden Sie unter [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für die Verwendung eines der Systemdienstkonten (Lokales System, Netzwerkdienst oder Lokaler Dienst) konfiguriert ist und das Verwaltungs-Data Warehouse auf einer anderen Instanz als der Datensammler erstellt wird, müssen Sie die Sammlungssätze so konfigurieren, dass sie einen Proxy zum Hochladen von Daten in das Verwaltungs-Data Warehouse verwenden.  
@@ -138,11 +141,10 @@ ms.lasthandoff: 08/18/2017
  **Schließen**  
  Schließen Sie den Assistenten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
  [Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)  
   
   
-

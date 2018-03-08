@@ -3,27 +3,29 @@ title: RESTORE DATABASE (Parallel Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
-caps.latest.revision: 8
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 001813cf0e7d00e089046d8580108eb10ef4cba0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-database-parallel-data-warehouse"></a>Wiederherstellen der Datenbank (Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+# <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Wiederhergestellt eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Benutzerdatenbank von einer datenbanksicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance. Wiederherstellung der Datenbank aus einer Sicherung, die zuvor von erstellt die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) Befehl. Das Sichern und Wiederherstellen in einen Notfallwiederherstellungsplan erstellen oder Datenbanken aus einer Anwendung auf einen anderen verschoben.  
   
@@ -64,7 +66,7 @@ RESTORE HEADERONLY
   
  Eine Benutzerdatenbank wiederherstellen eine vollständigen datenbanksicherung wiederhergestellt und anschließend optional eine differenzielle Sicherung in der Einheit wiederhergestellt. Eine Wiederherstellung einer Benutzerdatenbank enthält wiederherstellen, Datenbankbenutzer und Datenbankrollen.  
   
- FROM DISK = '\\\\*UNC_path*\\*Backup_directory*"  
+ FROM DISK = '\\\\*UNC_path*\\*backup_directory*'  
  Der Netzwerkpfad und das Verzeichnis, aus dem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] werden die Sicherungsdateien wiederherstellen. Beispielsweise FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup ".  
   
  *backup_directory*  
@@ -185,4 +187,3 @@ RESTORE HEADERONLY
  [Datenbank sichern &#40; Parallel Datawarehouse &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   
-

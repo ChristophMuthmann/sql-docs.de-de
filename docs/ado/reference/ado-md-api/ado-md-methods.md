@@ -3,7 +3,7 @@ title: ADO MD-Methoden | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - ADO MD, methods
 - methods [ADO MD]
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 17554c2f26ca0cd4ffbe5a2a651812b8db09555a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a22015949e145744ee34344685076bd4d7fa565
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-methods"></a>ADO MD-Methoden
 |||  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD-Objekte](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD-Eigenschaften](../../../ado/reference/ado-md-api/ado-md-properties.md)
-

@@ -3,8 +3,11 @@ title: Typsystem (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e84467e5f4ec58e1601868f1406c8c7cfd972a94
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-system-xquery"></a>Typensystem (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery ist eine stark typisierte Sprache für Schematypen und eine schwach typisierte Sprache für nicht typisierte Daten. Zu den vordefinierten Typen von XQuery zählen folgende Typen:  
   
@@ -160,4 +162,3 @@ WHERE ProductModelID=7
  [XQuery Basics (XQuery-Grundlagen)](../xquery/xquery-basics.md)  
   
   
-

@@ -1,31 +1,33 @@
 ---
-title: ODBC-Flusskomponenten | Microsoft Docs
+title: ODBC-Flusskomponenten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1d2f92077fd1424827866820a0627ac62447e3f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC-Flusskomponenten
   In diesem Thema werden die erforderlichen Begriffe der Erstellung eines ODBC-Datenflusses mit [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- Der Konnektor für Open Database Connectivity (ODBC) von Attunity für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] erleichtert SSIS-Entwicklern das Erstellen von Paketen, mit denen Daten aus Datenbanken mit ODBC-Unterstützung geladen bzw. wieder entladen werden.  
+ Der Connector für Open Database Connectivity (ODBC) für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ermöglicht SSIS-Entwicklern ein einfaches Erstellen von Paketen, mit denen Daten aus Datenbanken mit ODBC-Unterstützung geladen bzw. wieder entladen werden.  
   
  Der ODBC-Connector ist auf die Erzielung der optimalen Leistung ausgelegt, was das Laden (bzw. Entladen) von Daten in eine Datenbank mit ODBC-Unterstützung im [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]-Kontext betrifft.  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Erstellen Sie in [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ein neues [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
--   Erstellen Sie einen ODBC-Verbindungs-Manager, der einen lokal installierten Sybase ODBC-Treiber mit einem DSN verwendet, der auf eine lokale Sybase-Datenbank oder Sybase-Remotedatenbank verweist. Die Daten werden in diese Datenbank extrahiert.  
+-   Erstellen Sie einen ODBC-Verbindungs-Manager, der einen lokal installierten Sybase ODBC-Treiber mit einem DSN verwendet, der auf eine lokale Sybase-Datenbank oder Sybase-Remotedatenbank verweist. Die Daten werden in diese Datenbank extrahiert.  
   
 -   Erstellen Sie einen OLE DB-Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herstellt, in die Sie die Daten laden möchten.  
   
@@ -141,4 +143,3 @@ Es ist keine Datentypunterstützung für erweiterbare C-Typen vorhanden, die in 
 -   [ODBC-Ziel](../../integration-services/data-flow/odbc-destination.md)  
   
  
-

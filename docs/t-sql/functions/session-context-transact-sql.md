@@ -1,11 +1,13 @@
 ---
 title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - SESSION_CONTEXT function
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
-caps.latest.revision: 11
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 23eea4b51009272ae06987ee2e9c1730750b3d6d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3bf9da8f88f28b71e4133900384f27d37729d695
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt den Wert des angegebenen Schlüssels in den Kontext der aktuellen Sitzung zurück. Der Wert wird festgelegt, mit der [Sp_set_session_context &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) Prozedur.  
   
@@ -75,4 +76,3 @@ SELECT SESSION_CONTEXT(N'user_id');
  [SET CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   
-

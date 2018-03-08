@@ -3,8 +3,11 @@ title: FOR-Klausel (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 54
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f092e78608e8fa2b44061056ef4e5b9e7e1649a7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 085a9c7f6422c70cc43086d2174a5c7aa485040e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Verwenden Sie die FOR-Klausel, um eine der folgenden Optionen für Abfrageergebnisse anzugeben.  
   
@@ -182,7 +184,7 @@ JSON
  XML  
  Gibt an, dass die Ergebnisse einer Abfrage als XLM-Dokument zurückgegeben werden. Einer der folgenden XML-Modi muss angegeben werden: RAW, AUTO oder EXPLICIT. Weitere Informationen zu XML-Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [FOR XML &#40; SQLServer &#41; ](../../relational-databases/xml/for-xml-sql-server.md).  
   
- ROHDATEN [ **("***ElementName***")** ]  
+ RAW [ **('***ElementName***')** ]  
  Verwendet das Abfrageergebnis und wandelt jede Zeile im Resultset in ein XML-Element mit einem generischen Bezeichner \<Zeile / > als Elementtag. Sie können optional einen Namen für das Zeilenelement angeben. Die resultierende XML-Ausgabe verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [verwenden RAW-Modus mit FOR XML-](../../relational-databases/xml/use-raw-mode-with-for-xml.md) und [verwenden RAW-Modus mit FOR XML-](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  AUTO  
@@ -197,7 +199,7 @@ JSON
 > [!IMPORTANT]  
 >  Die XMLDATA-Direktive ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- XMLSCHEMA [ **("***TargetNameSpaceURI***")** ]  
+ XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
  Gibt das XSD-Inlineschema zurück. Beim Angeben dieser Direktive können Sie optional einen Zielnamespace-URI angeben, der den angegebenen Namespace im Schema zurückgibt. Weitere Informationen finden Sie unter [Generieren eines XSD-Inlineschemas](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
  ELEMENTS  
@@ -209,7 +211,7 @@ JSON
  ABSENT  
  Gibt an, dass dem XML-Ergebnis für NULL-Spaltenwerte keine entsprechenden XML-Elemente hinzugefügt werden. Diese Option kann nur mit der ELEMENTS-Direktive angegeben werden.  
   
- Pfad [ **("***ElementName***")** ]  
+ PATH [ **('***ElementName***')** ]  
  Generiert eine \<Zeile >-elementwrapper für jede Zeile im Resultset. Optional können Sie angeben, den Namen eines Elements, für die \<Zeile >-elementwrapper. Wenn eine leere Zeichenfolge, z. B. FOR XML PATH angegeben wird (**''**)), ein Wrapper-Element wird nicht generiert. Die Verwendung von PATH kann eine einfachere Alternative zu mithilfe der EXPLICIT-Direktive geschriebenen Abfragen darstellen. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
   
  BINARY BASE64  
@@ -265,4 +267,3 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-

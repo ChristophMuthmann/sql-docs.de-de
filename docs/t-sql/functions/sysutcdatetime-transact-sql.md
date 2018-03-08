@@ -3,8 +3,11 @@ title: SYSUTCDATETIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/01/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - SYSUTCDATETIME function [SQL Server]
 - time [SQL Server], system
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: b01ce3327bbedb114df93e89fb7c5ee94f5ec58a
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 7279e9d23cc57d433059b44e82b20eebd80e275b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine **datetime2** -Wert enthält das Datum und die Uhrzeit des Computers, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Das Datum und die Uhrzeit wird als UTC-Zeit (Coordinated Universal Time) zurückgegeben. Die Angabe der Genauigkeit in Sekundenbruchteilen erfolgt in einem Bereich von 1 bis 7 Stellen. Die Standardgenauigkeit beträgt 7 Stellen.  
   
@@ -133,9 +135,8 @@ Time             Date Time
 ## <a name="see-also"></a>Siehe auch  
  [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Datums- und Zeitdaten Typen und-Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [ZEITZONE &AMP; #40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [ZEITZONE &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
-
 
 

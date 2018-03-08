@@ -1,10 +1,13 @@
 ---
-title: CDC-Quelle | Microsoft Docs
+title: CDC-Quelle | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-source"></a>CDC-Quelle
   Die CDC-Quelle liest einen Bereich mit Änderungsdaten aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen und übermittelt die Änderungen an die anderen SSIS-Downstreamkomponenten.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 08/17/2017
   
 -   Name der CDC-Statuspaketvariablen, auf deren Grundlage der CDC-Verarbeitungsbereich bestimmt wird. Die CDC-Quelle ändert diese Variable nicht.  
   
- Von der CDC-Quelle zurückgegebenen Daten entspricht der zurückgegebene der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC-Funktionen **CDC. fn_cdc_get_all_changes_\<Capture-Instance-Name >** oder **fn_cdc_get_net_changes_\<Capture-Instance-Name >** (sofern vorhanden). Die einzige optionale Hinzufügung ist die Spalte **__$initial_processing** , in der angegeben wird, ob sich der aktuelle Verarbeitungsbereich mit einem erstmaligen Ladevorgang der Tabelle überschneiden kann. Weitere Informationen zur erstmaligen Verarbeitung finden Sie unter [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
+ Die von der CDC-Quelle zurückgegebenen Daten entsprechen den Daten, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-CDC-Funktionen **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** oder **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** zurückgegeben werden (falls verfügbar). Die einzige optionale Hinzufügung ist die Spalte **__$initial_processing** , in der angegeben wird, ob sich der aktuelle Verarbeitungsbereich mit einem erstmaligen Ladevorgang der Tabelle überschneiden kann. Weitere Informationen zur erstmaligen Verarbeitung finden Sie unter [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  Die CDC-Quelle weist eine reguläre Ausgabe und eine Fehlerausgabe auf.  
   
@@ -83,20 +85,20 @@ use <cdc-enabled-database-name>
   
  Dabei gilt:  
   
--   \<CDC-aktiviert – Database-Name > ist der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank, die die Änderungstabellen enthält.  
+-   \<cdc-enabled-database-name> ist der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, in der die Änderungstabellen enthalten sind.  
   
--   \<Wert von State-CE > ist der Wert, der in der CDC-Statusvariablen als CS /\<Wert von State-CE > / (CS steht für den aktuellen-Verarbeitung-Range-Start).  
+-   \<value-from-state-cs> ist der Wert, der in der CDC-Statusvariablen als CS/\<value-from-state-cs>/ (CS steht für Current-processing-range-Start) angegeben wird.  
   
--   \<Wert von State-ce > ist der Wert, der in der CDC-Statusvariablen als CE /\<Wert von State-CE > / (CE steht für den aktuellen-Verarbeitung-Range-End).  
+-   \<value-from-state-ce> ist der Wert, der in der CDC-Statusvariablen als CE/\<value-from-state-ce>/ (CE steht für Current-processing-range-End) angegeben wird.  
   
--   \<Modus > die CDC-Verarbeitungsmodi werden. Die Verarbeitungsmodi haben einen der folgenden Werte: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
+-   \<mode> steht für die CDC-Verarbeitungsmodi. Die Verarbeitungsmodi haben einen der folgenden Werte: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
   
  Dieses Skript trägt zur Isolierung von Problemen bei, indem sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]reproduziert werden, wo sie leicht reproduziert und identifiziert werden können.  
   
 #### <a name="sql-server-error-message"></a>SQL Server-Fehlermeldung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt möglicherweise die folgende Meldung zurück:  
   
- **Eine unzureichende Anzahl von Argumenten bereitgestellt wurden, für die Prozedur oder Funktion CDC. fn_cdc_get_net_changes_\<... >.**  
+ **Für die Prozedur oder Funktion cdc.fn_cdc_get_net_changes_\<..> wurden zu wenig Argumente bereitgestellt.**  
   
  Dieser Fehler gibt nicht an, dass ein Argument fehlt. Die Bedeutung ist, dass die Start- bzw. End-LSN-Werte in der CDC-Statusvariablen ungültig sind.  
   
@@ -107,7 +109,7 @@ use <cdc-enabled-database-name>
   
 -   [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für CDC &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -126,7 +128,7 @@ use <cdc-enabled-database-name>
 -   [Extrahieren von Änderungsdaten mithilfe der CDC-Quelle](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## <a name="cdc-source-editor-connection-manager-page"></a>Quellen-Editor für CDC (Seite Verbindungs-Manager)
-  Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für CDC** können Sie den ADO.NET-Verbindungs-Manager für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Datenbank auswählen, aus der die CDC-Quelle Änderungszeilen liest (CDC-Datenbank). Nachdem Sie die CDC-Datenbank ausgewählt haben, müssen Sie eine aufgezeichnete Tabelle in der Datenbank auswählen.  
+  Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für CDC** können Sie den ADO.NET-Verbindungs-Manager für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank auswählen, aus der die CDC-Quelle Änderungszeilen liest (CDC-Datenbank). Nachdem Sie die CDC-Datenbank ausgewählt haben, müssen Sie eine aufgezeichnete Tabelle in der Datenbank auswählen.  
   
  Weitere Informationen zur CDC-Quelle finden Sie unter [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
@@ -139,7 +141,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Verbindungs-Manager**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **ADO.NET-Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.  
   
@@ -152,7 +154,7 @@ use <cdc-enabled-database-name>
  **Capture instance**  
  Wählen Sie den Namen der CDC-Aufzeichnungsinstanz mit der zu lesenden CDC-Tabelle aus, oder geben Sie ihn ein.  
   
- Eine aufgezeichnete Quelltabelle kann über eine oder zwei aufgezeichnete Instanzen zum Behandeln des nahtlosen Übergangs der Tabellendefinition mithilfe von Schemaänderungen verfügen. Wenn mehr als eine Aufzeichnungsinstanz für die aufzuzeichnende Quelltabelle definiert wird, müssen Sie hier die gewünschte Aufzeichnungsinstanz auswählen. Der Erfassung Standardinstanzname für eine Tabelle [Schema]. [Table] ist \<Schema > _\<Tabelle > jedoch, dass tatsächlich verwendeten aufzeichnungsinstanznamen verwendet unterscheiden können. Die tatsächliche Tabelle, die gelesen wird, wird der CDC-Tabelle **cdc.\< Aufzeichnungsinstanz > _CT**.  
+ Eine aufgezeichnete Quelltabelle kann über eine oder zwei aufgezeichnete Instanzen zum Behandeln des nahtlosen Übergangs der Tabellendefinition mithilfe von Schemaänderungen verfügen. Wenn mehr als eine Aufzeichnungsinstanz für die aufzuzeichnende Quelltabelle definiert wird, müssen Sie hier die gewünschte Aufzeichnungsinstanz auswählen. Der Standardname einer Aufzeichnungsinstanz für eine Tabelle [Schema].[Tabelle] lautet \<Schema>_\<Tabelle>. Die tatsächlich verwendeten Namen der Aufzeichnungsinstanzen können jedoch abweichen. Die tatsächliche Tabelle, aus der gelesen wird, ist die CDC-Tabelle **cdc.\<Aufzeichnungsinstanz>_CT**.  
   
  **CDC Processing Mode**  
  Wählen Sie den Verarbeitungsmodus aus, der sich für die Behandlung Ihrer Verarbeitungsanforderungen am besten eignet. Folgende Optionen sind möglich:  
@@ -163,9 +165,9 @@ use <cdc-enabled-database-name>
   
 -   **Net**: Gibt nur eine Änderungszeile pro Quellzeile zurück, die im aktuellen CDC-Verarbeitungsbereich geändert wurde. Wenn eine Quellzeile mehrmals aktualisiert wurde, wird die kombinierte Änderung erzeugt (Beispiel: Einfügen+Update wird als einzelner Updatevorgang und Update+Löschen als einzelner Löschvorgang erzeugt). Beim Arbeiten im Änderungsverarbeitungsmodus Net ist es möglich, die Änderungen auf Lösch-, Einfüge- und Updatevorgänge aufzuteilen und parallel zu behandeln, da die einzelne Quellzeile in mehr als einer Ausgabe vorhanden ist.  
   
--   **NET mit updatemaske**: Dieser Modus ähnelt dem normalen Net-Modus, jedoch werden außerdem boolesche Spalten mit dem Namensmuster hinzugefügt **__ $\<Spaltenname >\__Changed** , die auf geänderte Spalten in der aktuellen Änderungszeile.  
+-   **Net with update mask:** Dieser Modus ähnelt dem normalen Net-Modus, aber es werden außerdem boolesche Spalten mit dem Namensmuster **__$\<Spaltenname>\___Changed** hinzugefügt, die auf geänderte Spalten in der aktuellen Änderungszeile hinweisen.  
   
--   **Net with merge**: Dieser Modus ähnelt dem normalen Net-Modus, aber hierbei sind Einfüge- und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
+-   **Net with merge:**Dieser Modus ähnelt dem normalen Net-Modus, aber hierbei sind Einfüge- und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
   
 > [!NOTE]  
 >  Für alle Nettoänderungsoptionen muss die Quelltabelle über einen Primärschlüssel oder einen eindeutigen Index verfügen. Für Tabellen ohne Primärschlüssel oder eindeutigen Index muss die Option **All** verwendet werden.  
@@ -192,7 +194,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Spalten**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten in der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
   
@@ -214,7 +216,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -227,7 +229,7 @@ use <cdc-enabled-database-name>
  **Abschneiden**  
  Wählen Sie aus, wie die CDC-Quelle Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Wird nicht verwendet.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -253,4 +255,3 @@ use <cdc-enabled-database-name>
 -   Blogeintrag, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), auf mattmasson.com.  
   
   
-

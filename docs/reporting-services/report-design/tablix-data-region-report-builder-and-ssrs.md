@@ -1,27 +1,27 @@
 ---
-title: Tablix-Datenbereich (Berichts-Generator und SSRS) | Microsoft Docs
+title: Tablix-Datenbereich (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3e08fe0bcf2fd5c2285eea6c0c43e494e8a0f50
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix-Datenbereich (Berichts-Generator und SSRS)
   Der Tablix-Datenbereich ist in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]ein Berichtselement mit verallgemeinertem Layout, in dem paginierte Berichtsdaten in Zellen angezeigt werden, die in Zeilen und Spalten organisiert sind. Bei den Berichtsdaten kann es sich um aus der Datenquelle abgerufene Detaildaten oder in benutzerdefinierten Gruppen organisierte aggregierte Detaildaten handeln. Jede Tablix-Zelle kann ein beliebiges Berichtselement enthalten, z. B. ein Textfeld, ein Bild oder einen anderen Datenbereich (z. B. einen Tablix-Bereich, ein Diagramm oder ein Messgerät). Wenn Sie einer Zelle mehrere Berichtselemente hinzufügen möchten, erstellen Sie zuerst ein Rechteck, das als Container fungiert. Anschließend fügen Sie dem Rechteck Berichtselemente hinzu.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 *  Statische und dynamische Zeilen und Spalten sowie deren Beziehung zu Gruppen  
   
- Dieser Artikel beschreibt diese Konzepte zur Erklärung der Struktur, die vom Berichts-Generator und vom Berichts-Designer hinzugefügt werden, wenn Sie Vorlagen hinzufügen und Gruppen erstellen, damit Sie die Struktur entsprechend Ihren Anforderungen ändern können. Berichts-Generator und Berichts-Designer stellen eine Reihe von visuellen Indikatoren bereit, die Ihnen das Verständnis der Tablix-Datenbereichsstruktur erleichtern. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Dieser Artikel beschreibt diese Konzepte zur Erklärung der Struktur, die vom Berichts-Generator und vom Berichts-Designer hinzugefügt werden, wenn Sie Vorlagen hinzufügen und Gruppen erstellen, damit Sie die Struktur entsprechend Ihren Anforderungen ändern können. Berichts-Generator und Berichts-Designer stellen eine Reihe von visuellen Indikatoren bereit, die Ihnen das Verständnis der Tablix-Datenbereichsstruktur erleichtern. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="understanding-detail-and-grouped-data"></a>Grundlegendes zu Detaildaten und gruppierten Daten  
  Detaildaten sind sämtliche Daten aus einem Berichtsdataset, die von der Datenquelle zurückgegeben werden. Detaildaten sind im Wesentlichen die Daten, die beim Ausführen einer Datasetabfrage im Ergebnisbereich des Abfrage-Designers angezeigt werden. Zu den tatsächlichen Detaildaten zählen die vom Benutzer erstellten berechneten Felder. Sie werden durch Filter beschränkt, die für das Dataset, den Datenbereich und die Detailgruppe festgelegt sind. Detaildaten werden in einer Detailzeile mithilfe eines einfachen Ausdrucks angezeigt, z. B. [Quantity]. Beim Ausführen des Berichts wird die Detailzeile zur Laufzeit in den Abfrageergebnissen einmal pro Zeile wiederholt.  
   
- Gruppierte Daten sind Detaildaten, die anhand eines Werts organisiert werden, den Sie in der Gruppendefinition angeben, z.B. [SalesOrder]. Gruppierte Daten werden in Gruppenzeilen und -spalten mithilfe einfacher Ausdrücke angezeigt, durch die die gruppierten Daten aggregiert werden, z. B. [Sum(Quantity)]. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Gruppierte Daten sind Detaildaten, die anhand eines Werts organisiert werden, den Sie in der Gruppendefinition angeben, z.B. [SalesOrder]. Gruppierte Daten werden in Gruppenzeilen und -spalten mithilfe einfacher Ausdrücke angezeigt, durch die die gruppierten Daten aggregiert werden, z. B. [Sum(Quantity)]. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-group-hierarchies"></a>Grundlegendes zu Gruppenhierarchien  
  Gruppen sind als Elemente von Gruppenhierarchien organisiert. Hierarchien von Zeilengruppen und Spaltengruppen sind identische Strukturen auf unterschiedlichen Achsen. Stellen Sie sich vor, dass Zeilengruppen auf der Seite nach unten und Spaltengruppen quer über die Seite erweitert werden.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
  Zellen im Tablix-Eckbereich werden automatisch erstellt, wenn sowohl Zeilengruppen als auch Spaltengruppen definiert wurden. In Zellen in diesem Bereich können Bezeichnungen angezeigt werden. Sie können die Zellen jedoch auch zusammenführen und einen Titel erstellen.  
   
- Weitere Informationen finden Sie unter [Zonen des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-static-and-dynamic-rows-and-columns"></a>Grundlegendes zu statischen und dynamischen Zeilen und Spalten  
  In einem Tablix-Datenbereich werden Zellen in Zeilen und Spalten organisiert, die Gruppen zugeordnet sind. Gruppenstrukturen für Zeilengruppen und Spalten sind identisch. In diesem Beispiel werden Zeilengruppen verwendet, die gleichen Konzepte gelten aber auch für Spaltengruppen.  
@@ -81,13 +81,12 @@ ms.lasthandoff: 08/09/2017
   
  Dynamische Gruppenzeilen werden erstellt, wenn Sie einem vorhandenen Tablix-Datenbereich eine Zeilengruppe oder Spaltengruppe hinzufügen. In Zellen in dynamischen Gruppenzeilen werden aggregierte Werte für den Standardbereich angezeigt.  
   
- Durch die Funktion Gesamtergebnis hinzufügen wird automatisch eine Zeile außerhalb der aktuellen Gruppe erstellt, in der Werte angezeigt werden, die im Bereich der Gruppe liegen. Sie können statische und dynamische Zeilen auch manuell hinzufügen. Anhand von visuellen Indikatoren können Sie statische Zeilen von dynamischen Zeilen unterscheiden. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Durch die Funktion Gesamtergebnis hinzufügen wird automatisch eine Zeile außerhalb der aktuellen Gruppe erstellt, in der Werte angezeigt werden, die im Bereich der Gruppe liegen. Sie können statische und dynamische Zeilen auch manuell hinzufügen. Anhand von visuellen Indikatoren können Sie statische Zeilen von dynamischen Zeilen unterscheiden. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Verknüpfen mehrerer Datenbereiche das gleiche Dataset &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

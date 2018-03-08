@@ -9,26 +9,30 @@ editor:
 tags: 
 ms.assetid: 
 ms.service: 
+ms.component: polybase
+ms.suite: sql
 ms.custom: 
 ms.workload: 
 ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
 ms.date: 07/19/2017"
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
+ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 423ce5e7a0f686c6b97abfe20050de22ef785e70
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Sie können ein interaktives, in PolyBase integriertes Diagnosetool verwenden, um Probleme bei der Authentifizierung zu beheben, wenn Sie PolyBase mit einem durch Kerberos gesicherte Hadoop-Cluster verwenden. 
 
 Dieser Artikel dient als Hilfestellung beim Debuggingprozess solcher Probleme mit diesem Tool.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 1. SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 oder höher mit installiertem PolyBase
 1. Ein Hadoop-Cluster (Cloudera oder Hortonworks), das durch Kerberos gesicherte wird (Active Directory oder MIT)
@@ -178,7 +182,7 @@ Wenn Sie hier angelangt sind bedeutet dies, dass (a) die drei Akteure ordnungsge
 Wenn das Tool ausgeführt wurde und die Eigenschaften den Zielpfads *nicht* ausgegeben wurden (Prüfpunkt 4), wird eine Ausnahme ausgelöst. Überprüfen Sie diese und bestimmen Sie, an welcher Stelle sie in den vier Schritten aufgetreten ist. Beachten Sie dabei die folgenden häufig auftretenden Probleme, die möglicherweise aufgetreten sein können, in dieser Reihenfolge:
 | Ausnahme und Meldungen | Ursache | 
 | --- | --- |
-| org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS]\(Die SIMPLE-Authentifizierung ist nicht aktiviert. Verfügbar: [TOKEN, KERBEROS]) | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS" (Die Datei „core-site.xml“ verfügt nicht über die Eigenschaft „hadoop.security.authentication“ um „KERBEROS“ festzulegen).|
+| org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] (Die SIMPLE-Authentifizierung ist nicht aktiviert. Verfügbar: [TOKEN, KERBEROS]) | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS" (Die Datei „core-site.xml“ verfügt nicht über die Eigenschaft „hadoop.security.authentication“ um „KERBEROS“ festzulegen).|
 |javax.security.auth.login.LoginException<br>Client not found in Kerberos database (6) - CLIENT_NOT_FOUND (Der Client konnte in der Kerberos-Datenbank nicht gefunden werden – CLIENT_NOT_FOUND). |    Der angegebene Administratordienstprinzipal existiert im angegebenen Bereich in „core-site.xml“ nicht.|
 | javax.security.auth.login.LoginException<br> Prüfsumme fehlgeschlagen |    Der Administratordienstprinzipal existiert, aber das Kennwort ist ungültig. |
 | Native config name: C:\Windows\krb5.ini<br>Loaded from native config (Nativer Konfigurationsname: C:\Windows\krb5.ini Aus nativer Konfiguration geladen) | Hierbei handelt es sich nicht um eine Ausnahme, sondern es weist darauf hin, dass „krb5LoginModule“ von Java eine benutzerdefinierte Clientkonfiguration auf Ihrem Computer erkannt hat. Überprüfen Sie Ihre benutzerdefinierten Clienteinstellungen, da diese möglicherweise dieses Problem verursachen. |
@@ -204,6 +208,5 @@ In Active Directory können Sie sich die SPN anschauen, indem Sie an die folgend
 [Cloudera’s Guide to setting up Kerberos for CDH (Cloudera-Leitfaden: Einrichten von Kerberos für CDH)](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP (Hortonworks-Leitfaden: Einrichten von Kerberos für HDP)](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [Problembehandlung in PolyBase](polybase-troubleshooting.md)
-
 
 

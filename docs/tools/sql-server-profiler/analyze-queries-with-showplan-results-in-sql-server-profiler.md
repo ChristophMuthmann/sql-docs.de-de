@@ -2,11 +2,13 @@
 title: Analysieren von Abfragen mit SHOWPLAN-Ergebnissen in SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "30"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analysieren von Abfragen mit SHOWPLAN-Ergebnissen in SQL Server Profiler
-  Sie können einer Ablaufverfolgungsdefinition Showplan-Ereignisklassen hinzufügen, die bewirken, dass von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Abfrageplaninformationen in der Ablaufverfolgung gesammelt und angezeigt werden. Darüber hinaus können Showplanereignisse aus anderen, in dieser Ablaufverfolgung gesammelten Ereignissen extrahiert und in einer separaten XML-Datei gespeichert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Showplan-Ereignisklassen hinzufügen, um eine Ablaufverfolgungsdefinition, die dazu führen, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zu sammeln und Anzeigen von Informationen in der Ablaufverfolgung. Darüber hinaus können Showplanereignisse aus anderen, in dieser Ablaufverfolgung gesammelten Ereignissen extrahiert und in einer separaten XML-Datei gespeichert werden.  
   
  Beim Extrahieren von Showplanereignissen aus der Ablaufverfolgung kann eine der folgenden Methoden angewendet werden:  
   
@@ -56,4 +57,3 @@ ms.lasthandoff: 10/24/2017
  [Leistung (Ereigniskategorie)](../../relational-databases/event-classes/performance-event-category.md)  
   
   
-

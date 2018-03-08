@@ -2,44 +2,40 @@
 title: Execute-Methode (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Execute Method
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Execute Method
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - EXECUTE
 - urn:schemas-microsoft-com:xml-analysis#
 - http://schemas.microsoft.com/analysisservices/2003/engine#
 - microsoft.xml.analysis.execute
 - urn:schemas-microsoft-com:xml-analysis#Execute
-helpviewer_keywords:
-- Execute method
+helpviewer_keywords: Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 083137b2c739916210113373c709ab04c0e8f4e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22bf60ae16e6b4e5f30bf694505e77857b6c0600
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---methods---execute"></a>Führen Sie die XML-Elemente - Methoden-
-  Sendet XML für Analysis (XMLA) Befehle mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dies schließt Anforderungen im Zusammenhang mit Datenübertragung ein, z. B. das Abrufen oder Aktualisieren von Daten auf dem Server.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Sendet XML für Analysis (XMLA) Befehle mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dies schließt Anforderungen im Zusammenhang mit Datenübertragung ein, z. B. das Abrufen oder Aktualisieren von Daten auf dem Server.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -58,17 +54,17 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftritt.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|Keine|  
+|Übergeordnetes Element|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Befehl](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md), [Parameter](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md), [Eigenschaften](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -103,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services-Schemarowsets](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

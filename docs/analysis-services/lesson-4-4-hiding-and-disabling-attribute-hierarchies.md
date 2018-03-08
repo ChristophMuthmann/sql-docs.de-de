@@ -2,29 +2,32 @@
 title: Ausblenden und Deaktivieren von Attributhierarchien | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a880757dcdaa945cbe9fdb100bb1ded80e584227
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2ce558665422afad097ef1aa840f4d041dd8090e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lektion 4-4-ausblenden und Deaktivieren von Attributhierarchien
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Standardmäßig wird eine Attributhierarchie für jedes Attribut in einer Dimension erstellt, und jede Hierarchie ist für die Dimensionierung von Faktendaten verfügbar. Diese Hierarchie setzt sich aus einer Gesamtergebnisebene und einer Detailebene mit allen Elementen der Hierarchie zusammen. Ihnen ist bereits bekannt, dass Sie Attribute in benutzerdefinierten Hierarchien organisieren können, um Navigationspfade in einem Cube bereitzustellen. Unter bestimmten Umständen möchten Sie möglicherweise einige Attribute und deren Hierarchien deaktivieren oder ausblenden. Bestimmte Attribute wie Sozialversicherungs- oder Personalausweisnummer, Lohnsatz, Geburtsdatum und Anmeldeinformationen sind beispielsweise keine Attribute, mit denen Benutzer Cubeinformationen dimensionieren. Stattdessen werden diese Informationen nur als Details eines bestimmten Attributelements angezeigt. Diese Attributhierarchien können von Ihnen ausgeblendet werden, sodass die Attribute nur als Elementeigenschaften eines bestimmten Attributs angezeigt werden. Sie möchten Elemente anderer Attribute, beispielsweise Kundennamen oder Postleitzahlen, möglicherweise nur anzeigen lassen, wenn sie durch eine Benutzerhierarchie und nicht unabhängig durch eine Attributhierarchie angezeigt werden. Ein Grund dafür kann in der schieren Anzahl verschiedener Elemente in der Attributhierarchie liegen. Zur Steigerung der Verarbeitungsleistung sollten Sie schließlich Attributhierarchien deaktivieren, die nicht von Benutzern zum Durchsuchen verwendet werden.  
   
 Der Wert der **AttributeHierarchyEnabled** -Eigenschaft bestimmt, ob eine Attributhierarchie erstellt wird. Wenn diese Eigenschaft auf **False**festgelegt ist, wird die Attributhierarchie nicht erstellt, und das Attribut kann nicht als Ebene in einer Benutzerhierarchie verwendet werden. Die Attributhierarchie ist nur als Elementeigenschaft vorhanden. Allerdings kann eine deaktivierte Attributhierarchie weiterhin verwendet werden, um die Elemente eines anderen Attributs zu bestellen. Wenn der Wert der **AttributeHierarchyEnabled** -Eigenschaft auf **TRUE**festgelegt ist, wird mit dem Wert der **AttributeHierarchyVisible** -Eigenschaft bestimmt, ob die Attributhierarchie angezeigt wird, unabhängig von ihrer Verwendung in einer benutzerdefinierten Hierarchie.  
@@ -137,4 +140,3 @@ Mithilfe der Aufgaben in diesem Thema werden Sie Sozialversicherungsnummern und 
   
   
   
-

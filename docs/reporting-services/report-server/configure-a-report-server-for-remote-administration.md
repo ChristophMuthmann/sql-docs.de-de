@@ -1,12 +1,14 @@
 ---
-title: "Konfigurieren eines Berichtsservers für die Remoteverwaltung | Microsoft Docs"
+title: "Konfigurieren eines Berichtsservers für die Remoteverwaltung | Microsoft-Dokumentation"
 ms.date: 09/14/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 11
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "11"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Konfigurieren eines Berichtsservers für die Remoteverwaltung
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Berichtsserverinstanzen lokal oder remote konfigurieren. Zum Konfigurieren einer Remote-Berichtsserverinstanz können Sie das Reporting Services-Konfigurationstool verwenden oder benutzerdefinierten Code schreiben, der für den Anbieter der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Windows-Verwaltungsinstrumentation (Windows Management Instrumentation oder WMI) verwendet wird. Das Reporting Services-Konfigurationstool stellt dem WMI-Anbieter eine grafische Benutzeroberfläche bereit, sodass Sie einen Berichtsserver konfigurieren können, ohne Code schreiben zu müssen. Wenn Sie das Tool starten, können Sie einen Remoteserver angeben, zu dem eine Verbindung hergestellt werden soll.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Zum Ändern der Firewalleinstellungen müssen Sie lokal angemeldet und Mitglied der lokalen Administratorengruppe sein. Die Windows-Firewalleinstellungen eines Remotecomputers können nicht über eine Remoteverbindung geändert werden.  
   
  Wenn Sie die Remoteverwaltung für einen Benutzer aktivieren möchten, der kein Administrator ist, müssen Sie dem Konto DCOM-Remoteaktivierungsberechtigungen gewähren (Distributed Component Object Model). Anweisungen zum Konfigurieren des Servers für den Zugriff durch Nichtadministratoren sind in diesem Thema enthalten.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], dann auf **Konfigurationstools**, und klicken Sie auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Erweitern Sie im linken Bereich den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann für die Instanz von **** auf Protokolle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Erweitern Sie im linken Bereich den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann für die Instanz von auf **Protokolle** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3.  Aktivieren Sie im Detailbereich die Protokolle TCP/IP und Named Pipes, und starten Sie dann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Geben Sie den Namen Ihres Benutzerkontos ein, und klicken Sie dann auf **OK**.  
   
-10. In **Berechtigungen für \<Benutzer oder Gruppe >**in der **zulassen** Spalte **Remotestart** und **Remoteaktivierung**, und klicken Sie dann auf **OK**.  
+10. Aktivieren Sie unter **Berechtigungen für \<Benutzer oder Gruppe>** in der Spalte **Zulassen** die Optionen **Remotestart** und **Remoteaktivierung**, und klicken Sie dann auf **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Festlegen von Berechtigungen für den Berichtsserver-WMI-Namespace für Nichtadministratoren  
   
@@ -145,8 +146,7 @@ ms.lasthandoff: 08/09/2017
   
 13. Aktivieren Sie in der Spalte **Zulassen** die Optionen **Konto aktivieren**, **Remoteaktivierung**und **Sicherheit lesen**, und klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

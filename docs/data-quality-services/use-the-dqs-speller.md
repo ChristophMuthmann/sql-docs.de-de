@@ -2,25 +2,26 @@
 title: "Verwenden der DQS-Rechtschreibprüfung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "15"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-dqs-speller"></a>Verwenden der DQS-Rechtschreibprüfung
   Die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Rechtschreibprüfung überprüft die Syntax, Rechtschreibung und Satzstruktur von Zeichenfolgenwerten in einer Domäne. Die Rechtschreibprüfung ist eine eigenständige, clientseitige Funktion, die nicht in serverseitige Module integriert ist und keine Auswirkungen auf aktuelle Abläufe oder Status hat. Mit der Rechtschreibprüfung werden die Zeichenfolgenwerte identifiziert, bei denen es sich möglicherweise um Fehler handelt. Diese werden an der gleichen Stelle, an der andere manuelle Änderungen an Domänenwerten vorgenommen werden, mit einem roten Unterstrich markiert. Dazu gehören die folgenden Stellen:  
@@ -33,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Die Rechtschreibprüfung funktioniert nur in einzelnen Domänen mit dem Datentyp Zeichenfolge. Alle Werte in einer einzelnen Domäne des Datentyps Zeichenfolge werden zur Überprüfung an die Rechtschreibprüfung gesendet. Die Rechtschreibprüfung funktioniert weder für eine Verbunddomäne noch für Domänen, die nicht vom Typ Zeichenfolge sind, oder kombinierte Werte (z. B. Buchstaben und Zahlen ohne Leerzeichen), römische Ziffern, einzelne Zeichen bzw. Werte, die nur aus Großbuchstaben bestehen.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um die Rechtschreibprüfung ausführen zu können, ist es erforderlich, dass eine Wissensdatenbank und eine Domäne in der Wissensermittlungs- oder Domänenverwaltungsaktivität geöffnet sind, die Rechtschreibprüfung für die entsprechende Domäne und Seite aktiviert ist und die Spracheigenschaft für die Domäne angegeben ist.  
@@ -78,4 +79,3 @@ ms.lasthandoff: 09/09/2017
  DQS stellt Vorschläge für Werte sowohl in der Spalte **Wert** als auch in der Spalte **Korrigieren in** der Tabelle **Wert** bereit. Wenn Sie einen Vorschlag in der Spalte **Wert** auswählen, wird der Werttyp auf **Fehler**festgelegt, und der Vorschlag wird in die Spalte **Korrigieren in** kopiert, so als hätten Sie den Wert manuell eingefügt. Eine bereits vorhandene Korrektur wird zu einem Vorschlag. Wenn Sie auf der Seite **Ergebnisse verwalten und anzeigen** der Aktivität **Bereinigung** einen Vorschlag in der Spalte **Korrigieren in** auswählen, ersetzt DQS den derzeit ausgewählten Wert durch die Auswahl, und der derzeit ausgewählte Wert wird ein Vorschlag. Auf der Seite **Ergebnisse verwalten und anzeigen** der Aktivität **Bereinigung** werden keine Vorschläge auf Datensatzebene (das untere Raster) gemacht.  
   
   
-

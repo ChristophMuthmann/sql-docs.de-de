@@ -3,7 +3,7 @@ title: AbsolutePosition-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2d1df667bb580d451e527e458d83703940483f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9c8a31bd7b0fbf2809b09b10b2ebcb983d7c811c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition-Eigenschaft (ADO)
 Gibt die Ordnungsposition einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aktuellen Datensatz des Objekts.  
@@ -60,4 +59,3 @@ Gibt die Ordnungsposition einer [Recordset](../../../ado/reference/ado-api/recor
  [AbsolutePosition- und CursorLocation Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [AbsolutePage-Eigenschaft (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)
-

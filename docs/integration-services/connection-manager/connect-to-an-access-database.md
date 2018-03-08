@@ -1,10 +1,13 @@
 ---
-title: Herstellen einer Verbindung mit einer Access-Datenbank | Microsoft Docs
+title: Herstellen einer Verbindung mit einer Access-Datenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: b5e60880b40a66a6f669bcfd53dcc59e497bbf0a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 44c04e7978ca425eb6fb625374f9404e3f286fde
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-database"></a>Herstellen einer Verbindung zu einer Access-Datenbank
   Um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket mit einer Microsoft Office Access-Datenquelle zu verbinden, sind ein OLE DB-Verbindungs-Manager und ein Datenanbieter erforderlich. Welchen Datenanbieter Sie verwenden, hängt von der Access-Version ab, mit der die Datenquelle erstellt wurde:  
@@ -39,13 +41,13 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Konnektivitätskomponenten für Microsoft Excel- und Access-Dateien
   
-Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Dateien herunterladen, sofern diese nicht bereits installiert sind. Die neueste Version der datenkonnektivitätskomponenten für Access und Excel-Dateien hier herunterladen: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Dateien herunterladen, wenn diese nicht bereits installiert sind. Laden Sie die neueste Version der Konnektivitätskomponenten für Access- und Excel-Dateien hier herunter: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
-Die neueste Version der Komponenten kann von früheren Versionen von Access erstellte Dateien öffnen.
+Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Access erstellt wurden.
 
-Verfügt der Computer eine 32-Bit-Version von Office, dann müssen Sie die 32-Bit-Version der Komponenten zu installieren, und außerdem müssen Sie sicherstellen, dass Sie das Paket im 32-Bit-Modus ausführen.
+Wenn der Computer über eine 32-Bit-Version von Office verfügt, müssen Sie die 32-Bit-Version der Komponenten installieren. Sie müssen zudem sicherstellen, dass Sie das Paket im 32-Bit-Modus ausführen.
 
-Wenn Sie ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie Access-Datenbank-Engine 2016 Redistributable und nicht die Microsoft Access 2016 Runtime herunterladen. Wenn Sie das Installationsprogramm ausführen, sehen Sie eine Fehlermeldung angezeigt, dass Sie die Download-Seite-an-Seite mit den Office-Klick-und-Los-Komponenten installieren können. Um diese Fehlermeldung umgehen, führen Sie die Installation im stillen Modus, indem Sie ein Eingabeaufforderungsfenster öffnen und Ausführen der. EXE-Datei, die Sie heruntergeladen, mit der `/quiet` wechseln. Beispiel:
+Wenn Sie über ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie die weitervertreibbare Komponente von Access Database Engine 2016 und nicht Microsoft Access 2016 Runtime herunterladen. Wenn Sie das Installationsprogramm ausführen, wird möglicherweise eine Fehlermeldung angezeigt, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Zum Beispiel:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
@@ -100,8 +102,7 @@ Wenn Sie ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie Acces
   
      Bei Auswahl von **Microsoft Office 12.0 Access Database Engine OLE DB Provider** als **Datenquelle**erstellt der Assistent automatisch den notwendigen OLE DB-Verbindungs-Manager mit dem richtigen Datenanbieter. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Herstellen einer Verbindung mit einer Excel-Arbeitsmappe](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   
-

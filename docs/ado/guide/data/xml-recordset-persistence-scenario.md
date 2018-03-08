@@ -3,7 +3,7 @@ title: "Speicherszenario für XML-Recordset | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cf4899425669d8c65b6b3661fb75e8bf37091ce9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd47944f218c6cb4d3bea571b27be990c5f7f530
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Speicherszenario für XML-Recordset
 In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die den Inhalt von einem Recordset-Objekt direkt in die ASP-Response-Objekt speichert.  
@@ -123,4 +122,3 @@ In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die d
 ## <a name="see-also"></a>Siehe auch  
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)   
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

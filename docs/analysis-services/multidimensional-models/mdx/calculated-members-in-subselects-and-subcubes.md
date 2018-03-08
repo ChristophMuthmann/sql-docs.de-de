@@ -1,32 +1,31 @@
 ---
 title: "Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
-  Ein berechnetes Element ist ein Dimensionselement, dessen Wert zur Laufzeit aus einem Ausdruck berechnet wird und das in untergeordneten SELECT-Ausdrücken und in Teilcubes verwendet werden kann, um den Cubebereich einer Abfrage genauer zu definieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ein berechnetes Element ist ein Dimensionselement, dessen Wert zur Laufzeit aus einem Ausdruck berechnet wird und das in untergeordneten SELECT-Ausdrücken und in Teilcubes verwendet werden kann, um den Cubebereich einer Abfrage genauer zu definieren.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Aktivieren berechneter Elemente im Teilbereich  
  Die Verbindungszeichenfolgen-Eigenschaft **SubQueries** unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder die **DBPROPMSMDSUBQUERIES** -Eigenschaft unter [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definiert das Verhalten oder die Zulässigkeit von berechneten Elementen oder berechneten Sätzen in Unterauswahlen oder Teilcubes. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  
@@ -136,4 +135,3 @@ Where [Measures].[Reseller Sales Amount]
  [Unterstützte XMLA-Eigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   
-

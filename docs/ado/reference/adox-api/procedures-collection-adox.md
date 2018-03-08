@@ -3,7 +3,7 @@ title: Prozeduren-Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,19 +19,18 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5c02ac401065cfb605bcf097b8305d3e5cbb424a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52ea3d1aa490325f3abe4f5fdca80dea6edb5174
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="procedures-collection-adox"></a>Prozeduren-Auflistung (ADOX)
+# <a name="procedures-collection-adox"></a>Procedures Collection (ADOX)
 Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -61,5 +60,4 @@ Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.m
  [Prozeduren aktualisiert Methodenbeispiel (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
  [Prozeduren Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Prozedurobjekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
-
+ [Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)

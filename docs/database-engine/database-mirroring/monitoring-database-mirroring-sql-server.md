@@ -2,9 +2,12 @@
 title: "Überwachen der Datenbankspiegelung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 78
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 882ea4b4fd7c2954ec3586e78db5c22aa0418e54
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
-  Dieser Abschnitt stellt den Datenbankspiegelungs-Monitor und die gespeicherten Prozeduren **sp_dbmmonitor** vor, erklärt die Funktionsweise der Überwachung von Datenbankspiegelungen (mit dem **Auftrag für den Datenbankspiegelungs-Monitor**) und bietet einen Überblick über die Informationen, die Sie im Zusammenhang mit Datenbankspiegelungssitzungen überwachen können. Außerdem erläutert dieser Abschnitt das Definieren von Warnschwellenwerten für eine Reihe vordefinierter Datenbankspiegelungsereignisse sowie das Einrichten von Warnungen für jedes Datenbankspiegelungsereignis.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dieser Abschnitt stellt den Datenbankspiegelungs-Monitor und die gespeicherten Prozeduren **sp_dbmmonitor** vor, erklärt die Funktionsweise der Überwachung von Datenbankspiegelungen (mit dem **Auftrag für den Datenbankspiegelungs-Monitor**) und bietet einen Überblick über die Informationen, die Sie im Zusammenhang mit Datenbankspiegelungssitzungen überwachen können. Außerdem erläutert dieser Abschnitt das Definieren von Warnschwellenwerten für eine Reihe vordefinierter Datenbankspiegelungsereignisse sowie das Einrichten von Warnungen für jedes Datenbankspiegelungsereignis.  
   
  Sie können eine gespiegelte Datenbank während einer Spiegelungssitzung überwachen, um zu überprüfen, ob und auf welche Weise ein Datenfluss stattfindet. Zum Einrichten und Verwalten der Überwachung für eine oder mehrere gespiegelte Datenbanken auf einer Serverinstanz können Sie entweder den Datenbanküberwachungs-Monitor oder die gespeicherten Systemprozeduren **sp_dbmmonitor** verwenden.  
   
@@ -87,7 +90,7 @@ ms.lasthandoff: 08/02/2017
   
      In der folgenden Tabelle werden die gespeicherten Prozeduren vorgestellt, mit denen die Datenbankspiegelungsüberwachung unabhängig vom Datenbankspiegelungs-Monitor verwaltet und verwendet werden kann.  
   
-    |Verfahren|Beschreibung|  
+    |Verfahren|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Erstellt einen Auftrag, mit dem in regelmäßigen Abständen die Statusinformationen für jede gespiegelte Datenbank auf der Serverinstanz aktualisiert werden.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Ändert den Wert eines Parameters für die Datenbank-Spiegelungsüberwachung.|  
@@ -135,7 +138,7 @@ ms.lasthandoff: 08/02/2017
      Systemadministratoren können mit der gespeicherten Systemprozedur **sp_dbmmonitorresults** die Statustabelle anzeigen und bei Bedarf aktualisieren, sofern sie nicht in den vorhergehenden 15 Sekunden aktualisiert wurde. Diese Prozedur ruft die **sp_dbmmonitorupdate** -Prozedur auf und gibt, abhängig von der im Prozeduraufruf angeforderten Menge, eine oder mehrere Verlaufszeilen zurück. Informationen zu dem in den Resultsets angezeigten Status finden Sie unter [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Überwachen des Datenbankspiegelungs-Status (durch dbm_monitor Members)  
- Wie bereits erwähnt, wird beim ersten Ausführen von **sp_dbmmonitorupdate** die feste Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank erstellt. Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Welches Alter der angezeigte Status hat, geht aus den in den Beschriftungen **Prinzipalprotokoll (***\<time>***)** und **Spiegelungsprotokoll (***\<time>***)** angezeigten Uhrzeiten auf der Seite **Status** hervor.  
+ Wie bereits erwähnt, wird beim ersten Ausführen von **sp_dbmmonitorupdate** die feste Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank erstellt. Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Welches Alter der angezeigte Status hat, geht aus den in den Beschriftungen **Prinzipalprotokoll (***\<Zeit>***)** und **Spiegelungsprotokoll (***\<Zeit>***)** angezeigten Uhrzeiten auf der Seite **Status** hervor.  
   
  Für Mitglieder der festen Datenbankrolle **dbm_monitor** wird die Statustabelle über den **Auftrag für den Datenbankspiegelungs-Monitor** in regelmäßigen Intervallen aktualisiert. Wenn der Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wird, veraltet der Status zunehmend und gibt möglicherweise nicht mehr die Konfiguration der Spiegelungssitzung wieder. So kann z. B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
   
@@ -334,9 +337,8 @@ ms.lasthandoff: 08/02/2017
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "Ausdrücke (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 826d1ab9f4a0a68d692551ae58a529ab8b7ebfae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-transact-sql"></a>Ausdrücke (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Eine Kombination aus Symbolen und Operatoren, die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] auswertet, um einen einzelnen Datenwert zu erhalten. Einfache Ausdrücke können aus einzelnen Konstanten, Variablen, Spalten oder Skalarfunktionen bestehen. Mithilfe von Operatoren können zwei oder mehrere einfache Ausdrücke zu einem komplexen Ausdruck verknüpft werden.  
   
@@ -87,15 +89,15 @@ ms.lasthandoff: 09/01/2017
   
 |Begriff|Definition|  
 |----------|----------------|  
-|*Konstante*|Ein Symbol, das einen einzelnen bestimmten Datenwert darstellt. Weitere Informationen finden Sie unter [Konstanten &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
+|*constant*|Ein Symbol, das einen einzelnen bestimmten Datenwert darstellt. Weitere Informationen finden Sie unter [Konstanten &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Ist eine Einheit der [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax, die einen bestimmten Dienst bereitstellt und einen einzelnen Wert zurückgibt. *Scalar_function* integrierte Skalarfunktion, z. B. der Funktionen SUM, GETDATE oder CAST oder skalare benutzerdefinierte Funktionen werden können.|  
-|[ *Table_name***.** ]|Der Name oder Alias einer Tabelle.|  
-|*Spalte*|Ist der Name einer Spalte. Nur der Name der Spalte ist in einem Ausdruck zulässig.|  
-|*Variable*|Der Name einer Variablen oder eines Parameters. Weitere Informationen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
+|[ *table_name***.** ]|Der Name oder Alias einer Tabelle.|  
+|*column*|Ist der Name einer Spalte. Nur der Name der Spalte ist in einem Ausdruck zulässig.|  
+|*variable*|Der Name einer Variablen oder eines Parameters. Weitere Informationen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** *Ausdruck***)** |Ein beliebiger gültiger Ausdruck, wie er in diesem Thema definiert ist. Die Klammern sind gruppierende Operatoren, die sicherstellen, dass alle Operatoren in dem in Klammern stehenden Ausdruck ausgewertet werden, bevor der resultierende Ausdruck mit einem weiteren Ausdruck kombiniert wird.|  
-|**(** *Scalar_subquery* **)**|Eine Unterabfrage, die einen Wert zurückgibt. Beispiel:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
-|{ *Unary_operator* }|Unäre Operatoren können nur auf Ausdrücke angewendet werden, die zu einem der Datentypen in der numerischen Datentypkategorie ausgewertet werden. Ein Operator, der nur einen numerischen Operanden besitzt:<br /><br /> + zeigt eine positive Zahl an.<br /><br /> - zeigt eine negative Zahl an.<br /><br /> ~ zeigt den Einserkomplementoperator an.|  
-|{ *Binary_operator* }|Ein Operator, der die Art und Weise definiert, in der zwei Ausdrücke kombiniert werden, um ein einzelnes Resultat zu liefern. *Binary_operator* kann ein arithmetischer Operator, der Zuweisungsoperator (=), ein bitweiser Operator, ein Vergleichsoperator, ein logischer Operator, der Operator für zeichenfolgenverkettung (+) oder ein unäroperator sein. Weitere Informationen zu Operatoren finden Sie unter [Operatoren &#40; Transact-SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
+|**(** *scalar_subquery* **)**|Eine Unterabfrage, die einen Wert zurückgibt. Beispiel:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|{ *unary_operator* }|Unäre Operatoren können nur auf Ausdrücke angewendet werden, die zu einem der Datentypen in der numerischen Datentypkategorie ausgewertet werden. Ein Operator, der nur einen numerischen Operanden besitzt:<br /><br /> + zeigt eine positive Zahl an.<br /><br /> - zeigt eine negative Zahl an.<br /><br /> ~ zeigt den Einserkomplementoperator an.|  
+|{ *binary_operator* }|Ein Operator, der die Art und Weise definiert, in der zwei Ausdrücke kombiniert werden, um ein einzelnes Resultat zu liefern. *Binary_operator* kann ein arithmetischer Operator, der Zuweisungsoperator (=), ein bitweiser Operator, ein Vergleichsoperator, ein logischer Operator, der Operator für zeichenfolgenverkettung (+) oder ein unäroperator sein. Weitere Informationen zu Operatoren finden Sie unter [Operatoren &#40; Transact-SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|Eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Rangfolgefunktion. Weitere Informationen finden Sie unter [Rangfolge Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/ranking-functions-transact-sql.md).|  
 |*aggregate_windowed_function*|Eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Aggregatfunktion mit der OVER-Klausel. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
@@ -134,18 +136,17 @@ GO
  Der Ausdruck `1+2` wird für jede Zeile des Resultsets zu `3` ausgewertet. Obwohl der Ausdruck `ProductID` für jede Zeile des Resultsets einen eindeutigen Wert erzeugt, besitzt jede Zeile nur genau einen Wert für `ProductID`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ZEITZONE &AMP; #40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [Groß-/KLEINSCHREIBUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Die Rangfolge der Datentypen &#40; Transact-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [WIE &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [NULLIF &#40; Transact-SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [NULLIF &#40;Transact-SQL&#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

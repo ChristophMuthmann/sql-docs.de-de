@@ -1,10 +1,13 @@
 ---
 title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,47 +29,44 @@ helpviewer_keywords:
 - locking [SQL Server], isolation levels
 - transactions [SQL Server], isolation levels
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
-caps.latest.revision: 80
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 166cd04ce5e62b46b9d6e991cf528d3abd9e9af9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cde588fed7aad439e90c97de99ba89633a1df2c5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Steuert das Verhalten von Sperren und der Zeilenversionsverwaltung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die von einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgestellt wurden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>Syntax
+
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-## <a name="syntax"></a>Syntax  
+SET TRANSACTION ISOLATION LEVEL
+    { READ UNCOMMITTED
+    | READ COMMITTED
+    | REPEATABLE READ
+    | SNAPSHOT
+    | SERIALIZABLE
+    }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET TRANSACTION ISOLATION LEVEL  
-    { READ UNCOMMITTED  
-    | READ COMMITTED  
-    | REPEATABLE READ  
-    | SNAPSHOT  
-    | SERIALIZABLE  
-    }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED  
-[ ; ]  
-```  
-  
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+```
+
 ## <a name="arguments"></a>Argumente  
  READ UNCOMMITTED  
  Gibt an, dass Anweisungen Zeilen lesen können, die von anderen Transaktionen geändert wurden, für die jedoch noch kein Commit ausgeführt wurde.  
@@ -195,4 +195,3 @@ GO
  [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   
   
-

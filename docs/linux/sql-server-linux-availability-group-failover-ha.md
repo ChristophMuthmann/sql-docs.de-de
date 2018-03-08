@@ -3,23 +3,27 @@ title: "Betrieb der verfügbarkeitsgruppe SQL Server on Linux | Microsoft Docs"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 07/20/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Betreiben Sie HA-verfügbarkeitsgruppe für SQL Server on Linux
+# <a name="operate-always-on-availability-groups-on-linux"></a>Betreiben Sie Always On-Verfügbarkeitsgruppen unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ## <a name="failover"></a>Führen Sie ein Failover der verfügbarkeitsgruppe.
 
@@ -125,7 +129,7 @@ Weitere Informationen:
  [SLES Administratorhandbuch - Ressourcen](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>Bei der Cluster-Tools nicht reaktionsfähig sind manuell verschieben 
+### <a name="forceManual"></a> Bei der Cluster-Tools nicht reaktionsfähig sind manuell verschieben 
 
 In Extremfällen, wenn ein Benutzer die Verwaltungstools verwenden kann, für die Interaktion mit dem Cluster (d. h. der Cluster ist nicht mehr reagiert, Clusterverwaltungsprogrammen haben ein fehlerhaftes Verhalten), die Benutzer möglicherweise manuell - Failover unter Umgehung des externen Cluster-Managers. Dies wird nicht empfohlen, für die normalen Vorgänge und sollte verwendet werden, in Fällen Cluster ausgeführt wird, die failoveraktion mit den Verwaltungstools Cluster auszuführen.
 
@@ -154,7 +158,7 @@ Gehen folgendermaßen Sie vor, um das Failover von SQL Server-Tools, bei einem F
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Ein Failover der verfügbarkeitsgruppe mit Transact-SQL. Im Beispiel unten ersetzen `<**MyAg**>` mit dem Namen der verfügbarkeitsgruppe. Herstellen einer Verbindung mit der Instanz von SQL Server, die das sekundäre Zielreplikat hostet, und führen Sie den folgenden Befehl aus:
+1. Ein Failover der verfügbarkeitsgruppe mit Transact-SQL. Ersetzen Sie im folgenden Beispiel `<**MyAg**>` mit dem Namen der verfügbarkeitsgruppe. Herstellen einer Verbindung mit der Instanz von SQL Server, die das sekundäre Zielreplikat hostet, und führen Sie den folgenden Befehl aus:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -181,7 +185,7 @@ In den folgenden Abschnitten wird erläutert, wie ein paralleles Upgrade mit SQL
 
 Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Linux sind, ist der Clustertyp der verfügbarkeitsgruppe entweder `EXTERNAL` oder `NONE`. Eine verfügbarkeitsgruppe, die von einem Cluster-Manager verwaltet wird, neben Windows Server-Failovercluster (WSFC ist) `EXTERNAL`. Schrittmacher mit Corosync ist ein Beispiel für einen externen Cluster-Manager. Eine verfügbarkeitsgruppe mit keine Cluster-Manager verfügt Clustertyp `NONE` die Aktualisierung hier beschriebenen Schritte sind spezifisch für Verfügbarkeitsgruppen von Clustertyp `EXTERNAL` oder `NONE`.
 
-1. Bevor Sie beginnen, Sichern Sie jede Datenbank.
+1. Bevor Sie beginnen, müssen Sie jede Datenbank sichern.
 2. Aktualisieren von SQL Server-Instanzen, sekundäre Replikate gehostet.
 
     A. Aktualisieren Sie zuerst die asynchronen sekundären Replikate.
@@ -198,7 +202,7 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b. 2. Upgrade von SQL Server auf dem sekundären Replikat
+   b.2. Upgrade von SQL Server auf dem sekundären Replikat
 
    Das folgende Beispiel-Upgrades `mssql-server` und `mssql-server-ha` Pakete.
 
@@ -206,7 +210,7 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b. 3. Entfernen der Speicherorteinschränkung
+   b.3. Entfernen der Speicherorteinschränkung
 
    Beenden Sie vor dem Ausführen von Upgrade-Befehls, die Ressource, damit der Cluster nicht werden überwacht und sie unnötig fehl. Im folgenden Beispiel wird eine standorteinschränkung für den Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten, der das Ziel für das Upgrade Replikat hostet.
 
@@ -240,7 +244,7 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Aktualisieren Sie SQL Server auf dem alten primären Replikat durch Wiederholen der Schritte b. 1-b. 3 oben beschriebene Prozedur, nach dem Failover.
+1. Aktualisieren Sie SQL Server auf dem alten primären Replikat durch Wiederholen der Schritte b. 1-b. 3 beschriebene Prozedur, nach dem Failover.
 
    Das folgende Beispiel-Upgrades `mssql-server` und `mssql-server-ha` Pakete.
 
@@ -263,7 +267,7 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. Für eine Verfügbarkeitsgruppen mit einem externen-Cluster ist Manager – Geben Sie den Cluster, auf dem EXTERNEN und Bereinigung der standorteinschränkung, die durch das manuelle Failover verursacht wurde. 
+1. Bereinigen Sie für eine Verfügbarkeitsgruppen mit einem externen Cluster-Manager - wobei Clustertyp extern ist die standorteinschränkung, die durch das manuelle Failover verursacht wurde. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
@@ -293,4 +297,3 @@ Führen Sie zum Löschen einer verfügbarkeitsgruppe [DROP AVAILABILITY GROUP](.
 [Konfigurieren von SUSE Linux Enterprise Server-Cluster für Clusterressourcen für SQL Server-Verfügbarkeitsgruppe](sql-server-linux-availability-group-cluster-sles.md)
 
 [Konfigurieren Sie Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe Clusterressourcen](sql-server-linux-availability-group-cluster-ubuntu.md)
-

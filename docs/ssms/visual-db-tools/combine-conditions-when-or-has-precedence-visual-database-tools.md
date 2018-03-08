@@ -3,10 +3,12 @@ title: "Kombinieren von Bedingungen, wenn „OR“ Vorrang hat (Visual Database 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - combining search conditions
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 85774366530b325149474e2dbb527fdc33b01cad
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 01acb8eb71b820655cb6c77df1495099cd0e7f81
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Kombinieren von Bedingungen, wenn OR Vorrang hat (Visual Database Tools)
-Wenn die mit OR verbundene Bedingungen den Vorrang vor den mit AND verbundenen Bedingungen haben sollen, muss die AND-Bedingung für jede OR-Bedingung wiederholt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn die mit OR verbundene Bedingungen den Vorrang vor den mit AND verbundenen Bedingungen haben sollen, muss die AND-Bedingung für jede OR-Bedingung wiederholt werden.  
   
 Angenommen, Sie möchten alle Mitarbeiter suchen, die der Firma seit mehr als fünf Jahren angehören und gering qualifizierte Tätigkeiten auf unterer Betriebsebene ausführen oder im Ruhestand sind. Diese Abfrage erfordert drei Bedingungen: eine einzelne Bedingung, die mit zwei weiteren Bedingungen durch AND verknüpft ist:  
   
@@ -75,8 +76,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 > [!NOTE]  
 > Wenn Sie die Suchbedingungen im unmittelbar oberhalb des [SQL-Bereichs](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)angezeigten Format eingeben und dann im Diagramm- oder Kriterienbereich Änderungen an der Abfrage vornehmen, wird die SQL-Anweisung vom Abfrage- und Sicht-Designer neu erstellt, damit sie mit dem Formular übereinstimmt, das die explizit auf beide OR-Bedingungen verteilte AND-Bedingung enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

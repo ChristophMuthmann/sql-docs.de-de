@@ -1,11 +1,13 @@
 ---
 title: DROP-Funktion (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - dropping user-defined functions
 - deleting user-defined functions
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-caps.latest.revision: 49
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b85cb68749cdcf88d62d9d8fbf136a37e845519
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c0768b2a24a939bc2e646fb4cc7173762eae7679
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Entfernt eine oder mehrere benutzerdefinierte Funktionen aus der aktuellen Datenbank. Benutzerdefinierte Erstellung erfolgt mithilfe von [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) und mithilfe von geändert [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md).  
   
@@ -96,4 +97,3 @@ DROP FUNCTION Sales.fn_SalesByStore;
  [Sys.Parameters &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   
-

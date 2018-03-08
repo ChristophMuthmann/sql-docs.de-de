@@ -1,12 +1,14 @@
 ---
-title: Entwickeln eines benutzerdefinierten Protokollanbieters | Microsoft Docs
+title: Entwickeln eines benutzerdefinierten Protokollanbieters | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9d5dee6649539d340fd9954798db913136553aae
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 250645eca562335491fe058c0ac418c6069c1c58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-log-provider"></a>Entwickeln eines benutzerdefinierten Protokollanbieters
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] bietet umfassende Protokollierungsfunktionen, mit denen Sie bei der Paketausführung auftretende Ereignisse erfassen können. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]enthält eine Vielzahl von Protokollanbietern, Protokolle erstellt und in Formaten wie XML, Text, in Datenbanken oder im Windows-Ereignisprotokoll gespeichert werden. Sollten die Protokollanbieter und die angebotenen Ausgabeformate Ihre Anforderungen nicht vollständig erfüllen, können Sie benutzerdefinierte Protokollanbieter erstellen.  
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] bietet umfassende Protokollierungsfunktionen, mit denen Sie bei der Paketausführung auftretende Ereignisse erfassen können. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beinhaltet eine Palette von Protokollanbietern, über die Protokolle erstellt und in Formaten wie XML, in Textform, in Datenbanken oder im Windows-Ereignisprotokoll gespeichert werden können. Sollten die Protokollanbieter und die angebotenen Ausgabeformate Ihre Anforderungen nicht vollständig erfüllen, können Sie benutzerdefinierte Protokollanbieter erstellen.  
   
  Zum Erstellen eines benutzerdefinierten Protokollanbieters müssen Sie eine Klasse erstellen, die von der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>-Basisklasse erbt, das <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>-Attribut auf die neue Klasse anwenden und die Hauptmethoden und -eigenschaften der Basisklasse, einschließlich der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>-Eigenschaft und der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>-Methode, überschreibt.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/03/2017
  Beschreibt die Implementierung eines benutzerdefinierten Protokollanbieters durch Überschreiben der Methoden und Eigenschaften der Basisklasse.  
   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokollanbieter](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
- Individuelle Benutzeroberflächen für benutzerdefinierte Protokollanbieter werden in nicht unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ Benutzerdefinierte Oberflächen für benutzerdefinierte Protokollanbieter werden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] nicht unterstützt.  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 08/03/2017
  Informationen zu allen Arten benutzerdefinierter Objekte, die Sie in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] erstellen können, finden Sie in den folgenden Themen:  
   
  [Entwickeln benutzerdefinierter Objekte für Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
- Beschreibt die grundlegenden Schritte bei der Implementierung aller Arten benutzerdefinierter Objekte für [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ Beschreibt die grundlegenden Schritte bei der Implementierung aller Typen von benutzerdefinierten Objekten in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
  [Beibehalten von benutzerdefinierten Objekten](../../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
  Beschreibt die benutzerdefinierte Persistenz und erklärt, wann diese notwendig ist.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/03/2017
  Beschreibt die Techniken für das Erstellen, Signieren, Bereitstellen und Debuggen von benutzerdefinierten Objekten.  
   
 ### <a name="information-about-other-custom-objects"></a>Informationen zu anderen benutzerdefinierten Objekten  
- Informationen zu den anderen Arten benutzerdefinierter Objekte, die Sie, in erstellen können [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], finden Sie unter den folgenden Themen:  
+ Informationen zu den anderen Typen benutzerdefinierter Objekte, die Sie in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] erstellen können, finden Sie in den folgenden Themen:  
   
  [Entwickeln eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Erläutert die Programmierung benutzerdefinierter Tasks.  
@@ -77,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Erläutert die Programmierung benutzerdefinierter Datenflussquellen, Transformationen und Ziele.  
   
-

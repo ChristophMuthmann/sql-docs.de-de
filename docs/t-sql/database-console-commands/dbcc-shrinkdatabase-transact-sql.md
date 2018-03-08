@@ -1,10 +1,13 @@
----
-title: DBCC SHRINKDATABASE (Transact-SQL) | Microsoft Docs
+﻿---
+title: DBCC SHRINKDATABASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,20 +30,19 @@ helpviewer_keywords:
 - logs [SQL Server], shrinking
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
-caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7f6e9fa3feea20bfeb82037cb9358370c67aaa0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6df29a0951f565bbe622e2ca3f8752a827488685
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Reduziert die Größe der Daten- und Protokolldateien in der angegebenen Datenbank.
   
@@ -58,21 +60,21 @@ DBCC SHRINKDATABASE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* | *Database_id* | 0  
+ *database_name* | *database_id* | 0  
  Der Name oder die ID der Datenbank, die verkleinert werden soll. Wird 0 angegeben, wird die aktuelle Datenbank verwendet.  
   
  *target_percent*  
  Der gewünschte Prozentsatz an freiem Speicherplatz, der in der Datenbankdatei übrig bleiben soll, nachdem die Datenbank verkleinert wurde.  
   
  NOTRUNCATE  
- Komprimiert die Daten in Datendateien durch Verschieben von zugeordneten Seiten vom Ende einer Datei in nicht zugeordnete Seiten am Dateianfang. *Target_percent* ist optional.  
+ Komprimiert die Daten in Datendateien durch Verschieben von zugeordneten Seiten vom Ende einer Datei in nicht zugeordnete Seiten am Dateianfang. *target_percent* ist optional. Diese Option wird nicht von Azure SQL Data Warehouse unterstützt. 
   
  Der freie Speicherplatz am Dateiende wird nicht an das Betriebssystem zurückgegeben, und die physische Größe der Datei bleibt unverändert. Daher scheint die Datenbank bei Angabe von NOTRUNCATE nicht verkleinert zu werden.  
   
  NOTRUNCATE gilt nur für Datendateien. Die Protokolldatei ist nicht betroffen.  
   
  TRUNCATEONLY  
- Gibt den gesamten freien Speicherplatz am Dateiende an das Betriebssystem frei, es werden jedoch keine Seiten innerhalb der Datei verschoben. Die Datendatei wird nur bis zum letzten zugeordneten Block verkleinert. *Target_percent* wird ignoriert, wenn mit TRUNCATEONLY angegeben.  
+ Gibt den gesamten freien Speicherplatz am Dateiende an das Betriebssystem frei, es werden jedoch keine Seiten innerhalb der Datei verschoben. Die Datendatei wird nur bis zum letzten zugeordneten Block verkleinert. Der Parameter *target_percent* wird ignoriert, wenn er mit TRUNCATEONLY angegeben wird. Diese Option wird nicht von Azure SQL Data Warehouse unterstützt.
   
  TRUNCATEONLY wirkt sich auf die Protokolldatei aus. Um nur die Datendatei abzuschneiden, verwenden Sie DBCC SHRINKFILE.  
   
@@ -94,10 +96,10 @@ In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
 >[!NOTE]
 > Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zeigt keine Zeilen für Dateien an, die nicht verkleinert wurden.  
   
-## <a name="remarks"></a>Hinweise  
-Zum Verkleinern aller Daten- und Protokolldateien einer bestimmten Datenbank führen Sie den DBCC SHRINKDATABASE-Befehl aus. Führen Sie zum Verkleinern einer einzelnen Daten- oder Protokolldatei zu einem Zeitpunkt für eine bestimmte Datenbank, die [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) Befehl.
+## <a name="remarks"></a>Remarks  
+Zum Verkleinern aller Daten- und Protokolldateien einer bestimmten Datenbank führen Sie den DBCC SHRINKDATABASE-Befehl aus. Führen Sie zum Verkleinern einer einzelnen Daten- oder Protokolldatei einer bestimmten Datenbank den Befehl [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) aus.
   
-Führen Sie zum Anzeigen des aktuellen freien (nicht zugeordneten) Speicherplatzes in der Datenbank, [Sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
+Führen Sie [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) zum Anzeigen des aktuellen freien (nicht zugeordneten) Speicherplatzes in der Datenbank aus.
   
 DBCC SHRINKDATABASE-Vorgänge können an jeder Stelle des Vorgangs beendet werden, wobei der bereits abgeschlossene Anteil erhalten bleibt.
   
@@ -108,17 +110,20 @@ Das Ausführen von DBCC SHRINKDATABASE ohne eine der Optionen NOTRUNCATE oder TR
 Die Datenbank, die verkleinert werden soll, muss sich nicht im Einzelbenutzermodus befinden. Andere Benutzer können während der Verkleinerung darin arbeiten. Das gilt auch für Systemdatenbanken.
   
 Während einer Datenbanksicherung können Sie die Datenbank nicht verkleinern. Umgekehrt können Sie eine Datenbank nicht sichern, während ein Verkleinerungsvorgang für die Datenbank ausgeführt wird.
+
+>[!NOTE]
+> Aktuell wird DBCC SHRINKDATABASE von Azure SQL Data Warehouse nicht unterstützt, wenn TDE aktiviert ist.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Funktionsweise von DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE verkleinert Datendateien pro Datei, Protokolldateien jedoch so, als lägen alle Protokolldateien in einem zusammenhängenden Protokollpool vor. Dateien werden immer am Ende verkleinert.
   
-Angenommen Sie eine Datenbank namens **Mydb** mit einer Datendatei und zwei Protokolldateien. Die Daten und Protokolldateien sind jeweils 10 MB groß, und die Datendatei enthält 6 MB an Daten.
+Gehen Sie von einer Datenbank namens **mydb** mit einer Datendatei und zwei Protokolldateien aus. Die Datendatei und die Protokolldateien sind jeweils 10 MB groß, die Datendatei enthält 6 MB an Daten.
   
-Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] berechnet für jede Datei eine Zielgröße, auf die die Datei verkleinert werden soll. Wenn DBCC SHRINKDATABASE mit *target_percent* angegeben wird, dann berechnet das [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Zielgröße einen prozentualen Anteil von *target_percent* des freien Speicherplatzes der Datei nach der Verkleinerung. Wenn Sie z. B. für die Verkleinerung von **mydb** den Wert 25 für *target_percent* angeben, dann berechnet das [!INCL
+Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] berechnet für jede Datei eine Zielgröße. Auf diese Größe soll die Datei verkleinert werden. Wenn DBCC SHRINKDATABASE mit *target_percent* angegeben wird, dann berechnet das [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Zielgröße einen prozentualen Anteil von *target_percent* des freien Speicherplatzes der Datei nach der Verkleinerung. Wenn Sie z. B. für die Verkleinerung von **mydb** den Wert 25 für *target_percent* angeben, dann berechnet das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zielgröße für die Datendatei mit 8 MB (6 MB Daten plus 2 MB freier Speicherplatz). Aus diesem Grund verschiebt [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Daten aus den letzten 2 MB der Datendatei in freie Bereiche in den ersten 8 MB der Datendatei, um anschließend die Datei zu verkleinern.
   
-Angenommen die Datendatei der **Mydb** enthält 7 MB Daten. Angeben einer *Target_percent* von 30 kann diese Datendatei auf einen freien Prozentsatz von 30 verkleinert werden. Allerdings angeben einer *Target_percent* 40 wird nicht verkleinert werden, die Datendatei da die [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht möglich ist, eine Datei auf eine Größe kleiner ist als die Daten aktuell belegt. Sie können auch vorstellen dieses Problems eine andere Möglichkeit: 40 Prozent Erwünschter freier Speicherplatz Plus 70 Prozent volle Datendatei (7 MB von 10 MB) ist mehr als 100 Prozent. Da der gewünschte freie Prozentsatz, der erwünscht ist zuzüglich des Prozentsatzes, der von die Datendatei belegt ist mehr als 100 Prozent (um 10 Prozent), alle *Target_size* größer als 30 die Datendatei nicht verkleinert werden.
+Angenommen, die Datendatei von **mydb** enthält 7 MB Daten. Durch die Angabe eines *target_percent*-Werts von 30 kann diese Datendatei auf einen freien Prozentsatz von 30 verkleinert werden. Durch die Angabe eines *target_percent*-Werts von 40 wird die Datendatei jedoch nicht verkleinert, da [!INCLUDE[ssDE](../../includes/ssde-md.md)] keine Datei auf eine Größe verkleinert, die unter der von den Daten belegten Größe liegt. Sie können dieses Problem auch anders betrachten: 40 Prozent erwünschter freier Speicherplatz plus eine zu 70 Prozent volle Datendatei (7 MB von 10 MB) ergeben mehr als 100 Prozent. Da der gewünschte freie Prozentsatz zuzüglich des Prozentsatzes, den die Datendatei gegenwärtig belegt, den Wert „100 Prozent“ um 10 Prozent übersteigt, wird die Datendatei nicht verkleinert, wenn der Wert von *target_size* größer als 30 ist.
   
-Für Protokolldateien die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet *Target_percent* zum Berechnen der Zielgröße des gesamten Protokolls; deshalb *Target_percent* ist die Menge des freien Speicherplatzes im Protokoll nach dem Verkleinerungsvorgang. Die Zielgröße für das gesamte Protokoll wird dann in eine Zielgröße für jede Protokolldatei umgewandelt.
+Bei Protokolldateien wird *target_percent* von [!INCLUDE[ssDE](../../includes/ssde-md.md)] dafür verwendet, die Zielgröße der gesamten Protokolldatei zu berechnen, sodass *target_percent* die Größe des freien Speicherplatzes in der Protokolldatei nach dem Verkleinern angibt. Die Zielgröße für das gesamte Protokoll wird dann in eine Zielgröße für jede Protokolldatei umgewandelt.
   
 DBCC SHRINKDATABASE versucht, jede physische Protokolldatei sofort auf ihre Zielgröße zu verkleinern. Wenn sich kein Teil des logischen Protokolls in den virtuellen Protokollen befindet, die außerhalb der Zielgröße der Protokolldatei liegen, wird die Datei erfolgreich abgeschnitten, und DBCC SHRINKDATABASE wird ohne Meldungen beendet. Wenn sich dagegen ein Teil des logischen Protokolls in den virtuellen Protokollen befindet, die außerhalb der Zielgröße liegen, gibt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] so viel Speicherplatz frei wie möglich und gibt dann eine Informationsmeldung aus. Die Meldung beschreibt, welche Aktionen erforderlich sind, um das logische Protokoll aus den virtuellen Protokollen am Ende der Datei zu verschieben. Nachdem diese Aktionen ausgeführt wurden, kann der verbleibende Speicherplatz mit DBCC SHRINKDATABASE freigegeben werden.
   
@@ -132,7 +137,7 @@ Berücksichtigen Sie die folgenden Informationen, wenn Sie eine Datenbank verkle
 -   Legen Sie die Datenbankoption AUTO_SHRINK nicht auf ON fest, es sei denn, besondere Anforderungen machen dies erforderlich.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
- Es ist möglich, dass Verkleinerungsvorgänge durch eine Transaktion blockiert werden, die unter ausgeführt wird eine [Zeile auf zeilenversionsverwaltung basierende Isolationsstufe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Erfolgt z. B. während eines DBCC SHRINKDATABASE-Vorgangs gleichzeitig ein umfangreicher Löschvorgang, der auf einer auf Zeilenversionsverwaltung basierenden Isolationsstufe ausgeführt wird, wird auf den Abschluss des Löschvorgangs gewartet, bevor die Dateien verkleinert werden. Ist dies der Fall, geben DBCC SHRINKFILE- und DBCC SHRINKDATABASE-Vorgänge in der ersten Stunde alle fünf Minuten, danach jede Stunde eine Informationsmeldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll (5202 für SHRINKDATABASE und 5203 für SHRINKFILE) aus. Das Fehlerprotokoll kann beispielsweise eine Fehlermeldung wie die folgende enthalten:  
+ Es kann vorkommen, dass Verkleinerungsvorgänge durch eine Transaktion blockiert werden, die auf einer auf [Zeilenversionsverwaltung basierenden Isolationsstufe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) ausgeführt wird. Erfolgt z. B. während eines DBCC SHRINKDATABASE-Vorgangs gleichzeitig ein umfangreicher Löschvorgang, der auf einer auf Zeilenversionsverwaltung basierenden Isolationsstufe ausgeführt wird, wird auf den Abschluss des Löschvorgangs gewartet, bevor die Dateien verkleinert werden. Ist dies der Fall, geben DBCC SHRINKFILE- und DBCC SHRINKDATABASE-Vorgänge in der ersten Stunde alle fünf Minuten, danach jede Stunde eine Informationsmeldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll (5202 für SHRINKDATABASE und 5203 für SHRINKFILE) aus. Das Fehlerprotokoll kann beispielsweise eine Fehlermeldung wie die folgende enthalten:  
   
 ```sql
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
@@ -140,9 +145,9 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-Dies bedeutet, dass der Verkleinerungsvorgang durch Momentaufnahmetransaktionen mit Zeitstempeln älter als 109 blockiert ist, was der letzten vom Verkleinerungsvorgang abgeschlossenen Transaktion entspricht. Außerdem zeigt es an, die die **Transaction_sequence_num**, oder **First_snapshot_sequence_num** Spalten in der [Sys. dm_tran_active_snapshot_database_transactions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) -verwaltungssicht Wert 15 enthält. Wenn entweder die **Transaction_sequence_num**, oder **First_snapshot_sequence_num** Spalten in der Sicht enthält eine Zahl kleiner als die letzte Transaktion, die abgeschlossen wird, durch einen Verkleinerungsvorgang (109), die Verkleinern Vorgang wartet, bis zum Abschluss dieser Transaktionen.
+Dies bedeutet, dass der Verkleinerungsvorgang durch Momentaufnahmetransaktionen mit Zeitstempeln älter als 109 blockiert ist, was der letzten vom Verkleinerungsvorgang abgeschlossenen Transaktion entspricht. Außerdem wird angezeigt, dass die Spalte **transaction_sequence_num** oder **first_snapshot_sequence_num** in der dynamischen Verwaltungssicht [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) einen Wert von 15 enthält. Wenn die Spalte **transaction_sequence_num** oder **first_snapshot_sequence_num** in der Sicht eine Zahl enthält, die kleiner als die letzte durch einen Verkleinerungsvorgang abgeschlossene Transaktion ist (109), wird mit dem Verkleinerungsvorgang bis zum Abschluss dieser Transaktionen gewartet.
   
-Um das Problem zu beheben, können Sie eine der folgenden Aufgaben ausführen:
+Führen Sie eine der folgenden Aufgaben aus, um das Problem zu beheben:
 -   Beenden Sie die Transaktion, die den Verkleinerungsvorgang blockiert.  
 -   Beenden Sie den Verkleinerungsvorgang. Der bereits abgeschlossene Teil bleibt erhalten.  
 -   Führen Sie keine besonderen Aktionen aus, und lassen Sie zu, dass mit dem Verkleinerungsvorgang gewartet wird, bis die blockierende Transaktion abgeschlossen ist.  
@@ -174,4 +179,3 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 [Verkleinern einer Datenbank](../../relational-databases/databases/shrink-a-database.md)
   
   
-

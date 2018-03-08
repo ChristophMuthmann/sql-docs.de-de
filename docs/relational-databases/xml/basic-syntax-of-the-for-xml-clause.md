@@ -2,9 +2,12 @@
 title: Basissyntax der FOR XML-Klausel | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -16,19 +19,20 @@ helpviewer_keywords:
 - FOR XML clause, syntax
 - FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55ad10ef334f0e5f754060c5abb619db6e837e97
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: e8ddf22a9e26c4452c97dea011beb9de01885443
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Basissyntax der FOR XML-Klausel
-  Der FOR XML-Modus kann RAW, AUTO, EXPLICIT oder PATH lauten. Er bestimmt die Form des erhaltenen XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Der FOR XML-Modus kann RAW, AUTO, EXPLICIT oder PATH lauten. Er bestimmt die Form des erhaltenen XML.  
   
 > [!IMPORTANT]  
 >  Die XMLDATA-Direktive zur FOR XML-Option ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -95,7 +99,7 @@ XML
  ROOT [('*RootName*')]  
  Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Der Standardwert lautet "root".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   

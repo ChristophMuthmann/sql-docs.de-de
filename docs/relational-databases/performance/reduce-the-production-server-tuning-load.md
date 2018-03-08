@@ -2,11 +2,13 @@
 title: Reduzieren der Optimierungsauslastung des Produktionsservers | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7cc75ed2f7ab28f5ad1498f9a6dfa8d6ad8b770
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzieren der Optimierungsauslastung des Produktionsservers
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber nutzt den Abfrageoptimierer, um die Arbeitsauslastung zu analysieren und Optimierungsempfehlungen zu geben. Wenn diese Analyse auf dem Produktionsserver ausgeführt wird, erhöht sich die Serverlast. Dies kann zu Einbußen bei der Serverleistung während der Optimierungssitzung führen. Sie reduzieren die Serverlast während einer Optimierungssitzung, indem Sie zusätzlich zum Produktionsserver einen Testserver verwenden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgeber nutzt den Abfrageoptimierer, um die Arbeitsauslastung zu analysieren und Optimierungsempfehlungen zu geben. Wenn diese Analyse auf dem Produktionsserver ausgeführt wird, erhöht sich die Serverlast. Dies kann zu Einbußen bei der Serverleistung während der Optimierungssitzung führen. Sie reduzieren die Serverlast während einer Optimierungssitzung, indem Sie zusätzlich zum Produktionsserver einen Testserver verwenden.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Verwendung eines Testservers durch den Datenbankoptimierungsratgeber  
  Die traditionelle Verwendungsweise eines Testservers besteht im Kopieren aller Daten vom Produktionsserver auf den Testserver, Optimieren des Testservers und anschließenden Implementieren der Empfehlung auf dem Produktionsserver. Dadurch wird zwar die Leistungsbeeinträchtigung auf dem Produktionsserver beseitigt, aber dies entspricht nicht der optimalen Lösung. Beispielsweise kann das Kopieren großer Datenbankmengen vom Produktionsserver auf den Testserver viel Zeit und viele Ressourcen beanspruchen. Darüber hinaus ist die Testserverhardware selten so leistungsfähig wie die Hardware, die für Produktionsserver bereitgestellt wird. Der Optimierungsprozess basiert auf dem Abfrageoptimierer, und die von diesem generierten Empfehlungen hängen teilweise von der zugrunde liegenden Hardware ab. Falls die Test- und die Produktionsserverhardware nicht identisch sind, wird dadurch die Qualität der Empfehlungen des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers reduziert.  
@@ -96,7 +98,7 @@ ms.lasthandoff: 06/22/2017
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Gesichtspunkte bei der Verwendung von Testservern](../../relational-databases/performance/considerations-for-using-test-servers.md)   
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   

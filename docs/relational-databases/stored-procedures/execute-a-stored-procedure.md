@@ -2,9 +2,12 @@
 title: "Ausführen einer gespeicherten Prozedur | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -19,19 +22,19 @@ helpviewer_keywords:
 - stored procedures [SQL Server], executing
 - user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: c4052a34b4365de0382e7a8118f743231b8f4873
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Ausführen einer gespeicherten Prozedur](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
 
   In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Ausführen einer gespeicherten Prozedur mit:**  
   
@@ -54,13 +57,13 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
 -   Die Sortierung der aufrufenden Datenbank wird beim Zuordnen von Systemprozedurnamen verwendet. Aus diesem Grund muss in Prozeduraufrufen immer die genaue Groß-/Kleinschreibung von Systemprozedurnamen verwendet werden. Der folgende Code schlägt z. B. fehl, wenn er im Kontext einer Datenbank ausgeführt wird, bei deren Sortierung die Groß-/Kleinschreibung beachtet wird:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 06/22/2017
   
      Systemprozeduren beginnen mit dem Präfix **sp_**. Da sie in allen benutzer- und systemdefinierten Datenbanken logisch angezeigt werden, können sie in jeder Datenbank ausgeführt werden, ohne den Prozedurnamen voll zu qualifizieren. Es wird jedoch empfohlen, die Namen aller Systemprozeduren mit dem **sys** -Schemanamen für das Schema zu qualifizieren, um Namenskonflikte zu vermeiden. Das folgende Beispiel zeigt die empfohlene Methode für das Aufrufen einer Systemprozedur.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
      Das folgende Beispiel zeigt die empfohlene Methode für das Ausführen einer benutzerdefinierten Prozedur. Beachten Sie, dass die Prozedur einen Eingabeparameter akzeptiert. Informationen zum Angeben von Ein- und Ausgabeparametern finden Sie unter [Angeben von Parametern](../../relational-databases/stored-procedures/specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -92,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
      -Oder-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -132,7 +135,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Weitere Informationen finden Sie unter [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)ausführen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>So führen Sie eine gespeicherte Prozedur aus  
   
@@ -156,7 +159,7 @@ ms.lasthandoff: 06/22/2017
      **NULL-Wert übergeben**  
      Übergibt als Wert des Parameters einen NULL-Wert.  
   
-     **Wert**  
+     **ReplTest1**  
      Geben Sie den Wert des Parameters bei Aufruf der Prozedur ein.  
   
 5.  Klicken Sie auf **OK**, um die gespeicherte Prozedur auszuführen.  
@@ -171,7 +174,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dieses Beispiel zeigt, wie eine gespeicherte Prozedur ausgeführt wird, die einen Parameter erwartet. Im Beispiel wird die gespeicherte Prozedur `uspGetEmployeeManagers` mit dem  `6` -Parameterwert `@EmployeeID` ausgeführt.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -186,7 +189,7 @@ GO
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dieses Beispiel zeigt, wie [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) verwendet wird, um die automatische Ausführung einer Prozedur festzulegen.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -202,7 +205,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dieses Beispiel zeigt, wie [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) verwendet wird, um die automatische Ausführung einer Prozedur zu beenden.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -211,7 +214,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Angeben von Parametern](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

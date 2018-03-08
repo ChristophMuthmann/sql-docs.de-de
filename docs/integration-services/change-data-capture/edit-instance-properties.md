@@ -1,26 +1,28 @@
 ---
-title: Bearbeiten von Instanzeigenschaften | Microsoft Docs
+title: Bearbeiten der Instanzeigenschaften | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ba04041ff88617c249184201805023c215f8d649
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-instance-properties"></a>Bearbeiten von Instanzeigenschaften
   Nehmen Sie mithilfe des Eigenschaften-Editors Änderungen an der CDC-Instanz vor, nachdem Sie die Erstkonfigurationen erstellt haben. Sie können im Eigenschaften-Editor die folgenden Schritte ausführen.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Bearbeiten der Tabelleneigenschaften](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
--   [Überprüfen Sie und generieren Sie ergänzender Protokollierungsskripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+-   [Überprüfen und Generieren ergänzender Protokollierungsskripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
 -   [Bearbeiten der erweiterten Eigenschaften](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
      Sie können auch im linken Bereich mit der rechten Maustaste auf den Dienst klicken und **Eigenschaften**wählen.  
   
-### <a name="or"></a>OR  
+### <a name="or"></a>oder  
   
 1.  Wählen Sie im linken Bereich der CDC Designer Console den Dienst aus, mit dem Sie arbeiten.  
   
@@ -58,4 +60,3 @@ ms.lasthandoff: 08/03/2017
      Sie können auch in der Liste im mittleren Bereich der CDC Designer Console mit der rechten Maustaste auf den Dienst klicken und **Eigenschaften**wählen.  
   
   
-

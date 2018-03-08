@@ -2,11 +2,13 @@
 title: "Abfrageausdrücke und eindeutige Ressourcennamen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,27 @@ helpviewer_keywords:
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 87e90bc33f653b36eac95fd8f525d5eb235ed1ea
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70426dcb9e6ca23d3e8de717fe7b9430155c7243
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
-  Die SMO-Modelle ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins verwenden zwei Typen von Ausdruckszeichenfolgen, die XPath-Ausdrücken ähneln. Bei Abfrageausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Objekte in einer Objektmodellhierarchie aufgezählt werden. Ein eindeutiger Ressourcenname (Uniform Resource Name, URN) ist ein spezieller Typ einer Abfrageausdrucks-Zeichenfolge, der ein einzelnes Objekt eindeutig kennzeichnet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+Die SMO-Modelle ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins verwenden zwei Typen von Ausdruckszeichenfolgen, die XPath-Ausdrücken ähneln. Bei Abfrageausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Objekte in einer Objektmodellhierarchie aufgezählt werden. Ein eindeutiger Ressourcenname (Uniform Resource Name, URN) ist ein spezieller Typ einer Abfrageausdrucks-Zeichenfolge, der ein einzelnes Objekt eindeutig kennzeichnet.  
+
+> [!NOTE]
+> Es gibt zwei SQL Server PowerShell-Module: **SqlServer** und **SQLPS**. Das **SQLPS**-Modul ist zwar in der SQL Server-Installation (für die Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert. Das **SqlServer**-Modul ist das aktuellste PowerShell-Modul. Das **SqlServer**-Modul enthält aktualisierte Versionen der Cmdlets in **SQLPS** sowie neue Cmdlets zur Unterstützung der neuesten SQL-Funktionen.  
+> Vorherige Versionen des **SqlServer**-Moduls *waren* in SQL Server Management Studio (SSMS) enthalten, allerdings nur in den Versionen 16.x. Das **SqlServer**-Modul muss über den PowerShell-Katalog installiert werden, damit PowerShell mit SSMS 17.0 und höher verwendet werden kann.
+> Informationen zur Installation des **SqlServer**-Moduls finden Sie unter [Installieren von SQL Server PowerShell](download-sql-server-ps-module.md).
+
   
 ## <a name="syntax"></a>Syntax  
   
@@ -92,9 +101,9 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |||  
 |-|-|  
 |yyyy|Vierstellige Jahreszahl|  
-|mm|Zweistellige Monatsangabe (01 bis 12)|  
+|MM|Zweistellige Monatsangabe (01 bis 12)|  
 |dd|Zweistellige Tagesangabe (01 bis 31)|  
-|hh|Zweistellige Angabe der Stunde im 24-Stunden-Format (01 bis 23)|  
+|hh|Zweistellige Angabe der Stunde im 24-Stunden-Format (01 bis 23).|  
 |mi|Zweistellige Minutenangabe (01 bis 59)|  
 |ss|Zweistellige Sekundenangabe (01 bis 59)|  
 |mmm|Anzahl der Millisekunden (001 bis 999)|  
@@ -107,7 +116,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Keine (\<*PropertyExpression*>)  
  Negiert den Evaluierungswert von *PropertyExpression*und listet alle Objekte auf, die nicht der in *PropertyExpression*angegebenen Bedingung entsprechen. Zum Beispiel listet not(contains(@Name, 'xyz')) alle Objekte auf, deren Name nicht die Zeichenfolge xyz aufweist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Abfrageausdrücke sind Zeichenfolgen, die die Knoten in einer SMO-Modellhierarchie auflisten. Jeder Knoten besitzt einen Filterausdruck, der die Kriterien angibt, mit denen bestimmt werden kann, welche Objekte an diesem Knoten aufgelistet sind. Abfrageausdrücke werden anhand der XPath-Ausdruckssprache modelliert. Abfrageausdrücke implementieren eine kleine Teilmenge von Ausdrücken, die von XPath unterstützt werden, und weisen zudem einige Erweiterungen auf, die nicht in XPath zu finden sind. Bei XPath-Ausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Tags in einem XML-Dokument aufgezählt werden. Weitere Informationen zu XPath finden Sie unter [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
   
  Abfrageausdrücke müssen mit einem absoluten Verweis auf das Serverobjekt beginnen. Relative Ausdrücke mit einem vorangestellten Schrägstrich (/) sind nicht zulässig. Die Sequenz der Objekte, die in einem Abfrageausdruck angegeben sind, muss der Hierarchie der Auflistungsobjekte im zugeordneten Objektmodell entsprechen. Ein Abfrageausdruck beispielsweise, der auf Objekte im Microsoft.SqlServer.Management.Smo-Namespace verweist, muss mit einem Serverknoten beginnen, gefolgt von einem Datenbankknoten usw.  
@@ -165,9 +174,8 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Invoke-PolicyEvaluation-Cmdlet](../powershell/invoke-policyevaluation-cmdlet.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Invoke-PolicyEvaluation-Cmdlet](invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Datenbankmodul&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
-

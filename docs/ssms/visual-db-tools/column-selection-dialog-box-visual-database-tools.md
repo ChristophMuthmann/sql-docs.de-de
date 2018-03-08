@@ -3,34 +3,35 @@ title: Spaltenauswahl (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4e13dc3712d55ec542cdb783ec3482127c527638
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ec9eb8b6cee6f16dc54f6d16a43d1f94f16a8e11
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Spaltenauswahl (Dialogfeld) (Visual Database Tools)
-Mit diesem Dialogfeld können Sie die benutzerdefinierte Sicht für Tabellen im Datenbankdiagramm ändern. In der benutzerdefinierten Sicht werden nur die vom Benutzer angegebenen Spalteneigenschaften angezeigt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit diesem Dialogfeld können Sie die benutzerdefinierte Sicht für Tabellen im Datenbankdiagramm ändern. In der benutzerdefinierten Sicht werden nur die vom Benutzer angegebenen Spalteneigenschaften angezeigt.  
   
 Dieses Dialogfeld wird angezeigt, wenn Sie mit der rechten Maustaste auf eine Tabelle klicken und anschließend im Kontextmenü die Option **Benutzerdefinierte Sicht ändern** auswählen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Verfügbare Spalten**  
 Führt alle in der ausgewählten Datenbanktabelle vorhandenen Spalten auf. Die hier aufgeführten Spalten sind von den Eigenschaften der Datenbanktabelle und dem Datenbanktyp abhängig. Markieren Sie die gewünschte Spalte, und verschieben Sie diese mithilfe der Pfeilschaltflächen in das Feld **Ausgewählte Spalten** .  
   
@@ -53,8 +54,7 @@ Speichert die benutzerdefinierte Sicht.
 **Abbrechen**  
 Bricht die Änderung der benutzerdefinierten Sicht ab.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Anpassen des Umfangs der in Diagrammen angezeigten Informationen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
-

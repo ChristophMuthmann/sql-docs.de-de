@@ -3,7 +3,7 @@ title: Resync-(VC++-Methodenbeispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Resync method [ADO], VC++ example
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fee3132f63213f7683d8e8c33d86617b91da6549
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9250c47d60d915e7fed931a5ff8b1f12ff8b9ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-method-example-vc"></a>Resync-(VC++-Methodenbeispiel)
 Dieses Beispiel veranschaulicht die Verwendung der [Resync](../../../ado/reference/ado-api/resync-method.md) Methode, um Daten in ein statisches Recordset zu aktualisieren.  
@@ -152,4 +151,3 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Siehe auch  
  [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)
-

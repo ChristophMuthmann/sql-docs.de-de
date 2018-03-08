@@ -2,19 +2,19 @@
 title: ALTER MINING STRUCTURE (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Bei Verwendung der **ALTER MINING STRUCTURE** -Anweisung zum Erstellen eines neuen Miningmodells, die Struktur muss bereits vorhanden sein. Im Gegensatz dazu werden bei Verwendung die Anweisung [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), erstellen Sie ein Modell und die zugrunde liegende Struktur automatisch zur gleichen Zeit zu generieren.  
   
@@ -140,7 +139,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**VORHERSAGEN**|Diese Spalte kann vom Modell vorhergesagt werden, und ihre Werte können als Eingabe verwendet werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
+|**PREDICT**|Diese Spalte kann vom Modell vorhergesagt werden, und ihre Werte können als Eingabe verwendet werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
 |**PREDICT_ONLY**|Diese Spalte kann vom Modell vorhergesagt werden, aber ihre Werte können in Eingabefällen nicht dazu verwendet werden, den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
   
 ## <a name="filter-criteria-expressions"></a>Filterkriterienausdrücke  
@@ -222,7 +221,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

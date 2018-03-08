@@ -3,7 +3,7 @@ title: Connect-Abschnitt der Anpassungsdatei | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6ec65ea217935e007427a087f2a05162649f226
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern. Die **verbinden** Abschnitt gibt Ausnahmen zu diesem Verhalten. Angenommen, wenn alle der **verbinden** Abschnitte wurden, fehlt oder ist leer, und klicken Sie dann standardmäßig keine Verbindungen hergestellt werden konnte.  
@@ -64,7 +63,7 @@ connectionString
 |Teil|Description|  
 |----------|-----------------|  
 |**Verbinden**|Eine Literalzeichenfolge, die dies weist darauf hin handelt es sich um einen Verbindungszeichenfolgeneintrag.|  
-|***"ConnectionString"***|Eine Zeichenfolge, die die gesamte Clientverbindungszeichenfolge ersetzt.|  
+|***connectionString***|Eine Zeichenfolge, die die gesamte Clientverbindungszeichenfolge ersetzt.|  
 |**Zugriff**|Eine Literalzeichenfolge, die dies weist darauf hin handelt es sich um einen Eintrag.|  
 |***accessRight***|Einer der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** – Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** – der Benutzer kann die Datenquelle lesen.<br />-   **ReadWrite** – Benutzer Lese- oder Schreibzugriff auf die Datenquelle.|  
   
@@ -78,7 +77,6 @@ connectionString
  [Erforderlichen Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

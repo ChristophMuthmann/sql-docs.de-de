@@ -3,8 +3,11 @@ title: COS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - cosine
 - COS function
 ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
-caps.latest.revision: 21
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 6b36878b5c26053a18c868baf2ddf8a4741fe724
-ms.contentlocale: de-de
-ms.lasthandoff: 10/12/2017
-
+ms.openlocfilehash: ef4c3de755304ff2b61452570fe218ab42382f37
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Eine mathematische Funktion, die den trigonometrischen Kosinus des im angegebenen Ausdruck im Bogenmaß angegebenen Winkels zurückgibt.
   
@@ -91,5 +93,4 @@ cosCalc1  cosCalc2
 [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
-
 

@@ -2,30 +2,31 @@
 title: Vorhersagen und Zeichnen von Modell (R in SQL-Schnellstart) | Microsoft Docs
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 15
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>Vorhersagen und Zeichnen von Modell (R in SQL-Schnellstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Zum Ausführen _Bewertung_ mit neuen Daten, eines der trainierten Modelle aus der Tabelle, und rufen Sie dann einen neuen Satz von Daten auf dem Vorhersagen basieren. Bewertung ist ein Begriff, die in Data Science manchmal verwendet werden, um das Generieren von Vorhersagen, Wahrscheinlichkeit oder andere Werte basierend auf neuen Daten, die bzw. der in einem trainierten Modell importiert haben.
 
@@ -184,4 +185,3 @@ Finden Sie unter folgenden zusätzlichen Ressourcen für weitere R-Beispiele:
 + [Erste Schritte mit MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     Weitere Informationen über die schnelle, skalierbare Algorithmen für maschinelles lernen von Microsoft Research.
-

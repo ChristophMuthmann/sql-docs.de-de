@@ -1,33 +1,33 @@
 ---
-title: SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS) | Microsoft Docs
+title: SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: d73b3b84f1a2c2fb8a9427cde1deba7a8745c90e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] ist eine skalierbare Data Warehouse-Anwendung, die durch massive Parallelverarbeitung Leistung und Skalierbarkeit bietet. [!INCLUDE[ssDW](../../includes/ssdw-md.md)]verwendet SQL Server-Datenbanken für die verteilte Verarbeitung und datenspeicherung.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] ist eine skalierbare Data Warehouse-Anwendung, die durch massive Parallelverarbeitung Leistung und Skalierbarkeit bietet. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verwendet SQL Server-Datenbanken für die verteilte Verarbeitung und Datenspeicherung.  
   
- Die Appliance-Partitionen, die große Datenbanktabellen auf mehrere physische Knoten, wobei jeder Knoten eine eigene Instanz von SQL Server ausgeführt wird. Wenn ein Bericht eine Verbindung mit [!INCLUDE[ssDW](../../includes/ssdw-md.md)] herstellt, um Berichtsdaten abzurufen, wird eine Verbindung mit dem Steuerungsknoten hergestellt, der die Abfrageverarbeitung in der [!INCLUDE[ssDW](../../includes/ssdw-md.md)] -Anwendung verwaltet. Nachdem die Verbindung hergestellt wurde, arbeiten Sie mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz in einer [!INCLUDE[ssDW](../../includes/ssdw-md.md)] -Umgebung wie mit anderen Instanzen.  
+ Die Anwendung partitioniert große Datenbanktabellen auf mehrere physische Knoten, wobei jeder Knoten eine eigene Instanz von SQL Server ausführt. Wenn ein Bericht eine Verbindung mit [!INCLUDE[ssDW](../../includes/ssdw-md.md)] herstellt, um Berichtsdaten abzurufen, wird eine Verbindung mit dem Steuerungsknoten hergestellt, der die Abfrageverarbeitung in der [!INCLUDE[ssDW](../../includes/ssdw-md.md)] -Anwendung verwaltet. Nachdem die Verbindung hergestellt wurde, arbeiten Sie mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz in einer [!INCLUDE[ssDW](../../includes/ssdw-md.md)] -Umgebung wie mit anderen Instanzen.  
   
  Wenn Sie Daten aus [!INCLUDE[ssDW](../../includes/ssdw-md.md)] in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[ssDW](../../includes/ssdw-md.md)]herzustellen und Daten abzurufen.  
   
@@ -57,7 +57,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Verwendung eines gespeicherten Benutzernamens und eines gespeicherten Kennworts. Aktivieren Sie Optionen zur Verwendung der Anmeldeinformationen als Windows-Anmeldeinformationen, um den doppelten Sprung auszuhandeln, der auftritt, wenn sich die Datenbank mit den Berichtsdaten vom Berichtsserver unterscheidet. Sie können auch die Identität des authentifizierten Benutzers annehmen, nachdem die Verbindung mit der Datenquelle hergestellt wurde.  
   
--   Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
+-   Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
  Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
@@ -73,13 +73,13 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Verwenden Sie die Schaltfläche **Abfrage importieren** in einem Abfrage-Designer, um nach einer SQL- oder RDL-Datei zu suchen und eine Abfrage zu importieren.  
   
- Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers &#40;Berichts-Generator&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers &#40;Berichts-Generator&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
  Der textbasierte Abfrage-Designer unterstützt den [Textmodus](#QueryText) , in dem Sie [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Befehle zur Auswahl von Daten aus der Datenquelle eingeben.  
   
 -   [Text](#QueryText)  
   
- Verwenden Sie [!INCLUDE[DWsql](../../includes/dwsql-md.md)] mit [!INCLUDE[ssDW](../../includes/ssdw-md.md)] und [!INCLUDE[tsql](../../includes/tsql-md.md)] mit SQL Server. Die zwei Dialekte der SQL-Programmiersprache sind sehr ähnlich. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellenverbindungstyp geschriebene Abfragen können in der Regel für den [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] -Datenquellenverbindungstyp verwendet werden.  
+ Sie verwenden [!INCLUDE[DWsql](../../includes/dwsql-md.md)] mit [!INCLUDE[ssDW](../../includes/ssdw-md.md)] und [!INCLUDE[tsql](../../includes/tsql-md.md)] mit SQL Server. Die zwei Dialekte der SQL-Programmiersprache sind sehr ähnlich. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellenverbindungstyp geschriebene Abfragen können in der Regel für den [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] -Datenquellenverbindungstyp verwendet werden.  
   
  Eine Abfrage, die Berichtsdaten aus einer großen Datenbank abruft (z. B. einem Data Warehouse wie [!INCLUDE[ssDW](../../includes/ssdw-md.md)]), kann ein Resultset mit sehr vielen Zeilen generieren, sofern Sie die Daten nicht aggregieren und zusammenfassen, um die Anzahl der zurückgegebenen Zeilen zu reduzieren. Abfragen, die Aggregate und eine Gruppierung enthalten, können mit dem grafischen oder dem textbasierten Abfrage-Designer geschrieben werden.  
   
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Hinzufügen eines Filters auf ein Dataset &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Verwandte Abschnitte  
@@ -153,13 +153,13 @@ WHERE EmployeeID = (@EmpID)
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
- [Melden Sie eingebettete Datasets und freigegebene Datasets &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Enthält Informationen zu eingebetteten und freigegebenen Datasets.  
   
- [Datasetfeldauflistung &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
- [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).  
+ [Von Reporting Services unterstützte Datenquellen (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
 
 ## <a name="next-steps"></a>Nächste Schritte
@@ -168,4 +168,4 @@ WHERE EmployeeID = (@EmpID)
 [Filtern, Gruppieren und Sortieren von Daten](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Ausdrücke](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

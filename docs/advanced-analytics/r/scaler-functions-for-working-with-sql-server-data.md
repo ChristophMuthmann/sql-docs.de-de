@@ -2,29 +2,30 @@
 title: RevoScaleR-Funktionen zum Arbeiten mit SQL Server-Daten | Microsoft Docs
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c93fc378a7255c5a4f4b8f4833794cc0817c9996
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>RevoScaleR-Funktionen zum Arbeiten mit SQL Server-Daten
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Thema enthält eine Übersicht über die wichtigsten Funktionen, die im "revoscaler" für das Arbeiten mit SQL Server-Daten bereitgestellt.
 
@@ -75,4 +76,3 @@ Z. B. Wenn Sie regelmäßig große Mengen von Daten aus einer Datenbank auf eine
 + [RxReadXdf](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) -liest Daten aus einer XDF-Datei in einem Datenrahmen
 
 Weitere Informationen zum Arbeiten mit diesen Funktionen, einschließlich der Verwendung von Daten als Datenquellen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], finden Sie unter [so wird's gemacht-Handbücher für die Datenanalyse in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-introduction).
-

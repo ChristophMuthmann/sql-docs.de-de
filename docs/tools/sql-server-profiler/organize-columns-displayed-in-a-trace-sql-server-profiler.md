@@ -2,11 +2,13 @@
 title: Organisieren von Spalten in einer Ablaufverfolgung (SQL Server Profiler) angezeigte | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f1c097e900a9ed76bb5160ecab37238344d7a33
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organisieren von in einer Ablaufverfolgung angezeigten Spalten (SQL Server Profiler)
-  Sie können Datenspalten in einer Ablaufverfolgung gruppieren, indem Sie in der Ablaufverfolgungstabelle oder im Dialogfeld **Eigenschaften der Ablaufverfolgungsdatei** die Option **Spalten organisieren** auswählen oder wenn Sie eine Ablaufverfolgung definieren. Durch das Gruppieren der Datenspalten können Sie die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsausgabe besser analysieren. Weitere Informationen finden Sie unter [Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Datenspalten in einer Ablaufverfolgung gruppieren, indem Sie auswählen **Spalten organisieren** in der Ablaufverfolgungstabelle oder **Eigenschaften der Ablaufverfolgungsdatei** (Dialogfeld), oder wenn Sie eine Ablaufverfolgung definieren. Durch das Gruppieren der Datenspalten können Sie die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsausgabe besser analysieren. Weitere Informationen finden Sie unter [Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  **Spalten organisieren** ermöglicht Ihnen das Gruppieren der Ablaufverfolgungsereignisse oder das Gruppieren und Aggregieren dieser Ereignisse anhand der von Ihnen ausgewählten Datenspalten.  
   
@@ -93,4 +94,3 @@ ms.lasthandoff: 08/02/2017
  [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   
-

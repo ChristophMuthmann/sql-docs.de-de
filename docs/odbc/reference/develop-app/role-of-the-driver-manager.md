@@ -3,10 +3,12 @@ title: Rolle der Treiber-Manager | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7718a3d514c6862807cc4b47ecca8729c4c3a162
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-driver-manager"></a>Rolle des Treiber-Managers
 Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die sie generiert. Insbesondere wird bestimmt, welcher Datensatz, hat den höchsten Rang, und zuerst zurückgegeben werden soll. Der Treiber ist verantwortlich für die Anordnung von statusdatensätzen, die sie generiert. Wenn durch den Treiber-Manager und der Treiber Statusdatensätze zurückgesendet werden, ist der Treiber-Manager für ihre Anordnung verantwortlich. Weitere Informationen finden Sie unter [Sequenz Statusdatensätze](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
@@ -39,11 +40,10 @@ Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätz
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Argument Wert überprüft](../../../odbc/reference/develop-app/argument-value-checks.md)  
+-   [Überprüfungen des Argumentwerts](../../../odbc/reference/develop-app/argument-value-checks.md)  
   
--   [Überprüfung des Zustandsübergangs](../../../odbc/reference/develop-app/state-transition-checks.md)  
+-   [Überprüfungen des Statusübergangs](../../../odbc/reference/develop-app/state-transition-checks.md)  
   
 -   [Überprüfungen auf allgemeine Fehler](../../../odbc/reference/develop-app/general-error-checks.md)  
   
--   [Treiber-Manager-Fehler und Warnung überprüft](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
-
+-   [Fehler des Treiber-Managers und Überprüfungen der Warnung](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)

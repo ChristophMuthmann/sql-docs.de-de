@@ -1,35 +1,34 @@
 ---
-title: "Übersicht über Renderingerweiterungen | Microsoft Docs"
+title: "Übersicht über Renderingerweiterungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "41"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: bf4ef7421e85e95d40a28803adec2c279b9a80bc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: bc07df4510aff77e5bb0fa5ef5ca6fff3ad23beb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-extensions-overview"></a>Übersicht über Renderingerweiterungen
-  Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Image und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
+  Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Bilder und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
   
 > [!NOTE]  
 >  Welche Renderingerweiterungen zur Verfügung stehen, sehen Sie auf der Liste der installierten Erweiterungen in der Datei RSReportServer.config.  
@@ -48,12 +47,12 @@ ms.lasthandoff: 08/12/2017
 |**MHTML** (Teil der HTML-Renderingerweiterung)|Rendert einen Bericht im MHTML-Format. Der Bericht wird in Internet Explorer geöffnet. Das Format wird als **Webarchiv** im Export-Dropdownfeld der Berichtssymbolleiste angezeigt.|  
 |**NULL**|Rendert einen Bericht in keinem bestimmten Format. Diese Renderingerweiterung ist dann sinnvoll, wenn Berichte im Cache eingefügt werden sollen. NULL-Rendering sollte in Verbindung mit einer geplanten Ausführung oder Übermittlung verwendet werden.|  
   
- Weitere Informationen zu den empfohlenen Formaten und ihrer Verwendung finden Sie unter [Exportieren von Berichten &#40; Berichts-Generator und SSRS &#41; ](../../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Weitere Informationen zu den empfohlenen Formaten und deren Verwendung finden Sie unter [Exportieren von Berichten (Berichts-Generator und SSRS)](../../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
  Jede Renderingerweiterung, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] implementiert und mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] geliefert wird, verwendet eine Reihe gemeinsamer Schnittstellen. Damit wird sichergestellt, dass jeder Erweiterung vergleichbare Funktionen implementiert und die Komplexität des Renderingcodes im Kern des Berichtsservers reduziert.  
   
 ## <a name="rendering-object-model"></a>Renderingobjektmodell  
- Wenn ein Bericht verarbeitet wird, ist das Ergebnis ein öffentliches verfügbares Objektmodell, das als Renderingobjektmodell (ROM) bezeichnet wird. Das Renderingobjektmodell ist eine Auflistung von Klassen, die Inhalte, Layout und Daten eines verarbeiteten Berichts definieren. Das ROM steht Entwicklern zur Verfügung, die benutzerdefinierte Renderingerweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entwerfen, entwickeln und bereitstellen möchten. Ein ROM wird erstellt, wenn der Berichtsserver die XML-Definition eines Berichts zusammen mit den benutzerdefinierten Berichtsdaten verarbeitet. Wenn die Verarbeitung abgeschlossen ist, wird das öffentliche Modell von einer Renderingerweiterung zur Definition der Berichtsausgabe verwendet. Verfügbaren öffentlichen Klassen des ROMs werden definiert, der **Microsoft.ReportingServices.OnDemandReportRendering** Namespace.  
+ Wenn ein Bericht verarbeitet wird, ist das Ergebnis ein öffentliches verfügbares Objektmodell, das als Renderingobjektmodell (ROM) bezeichnet wird. Das Renderingobjektmodell ist eine Auflistung von Klassen, die Inhalte, Layout und Daten eines verarbeiteten Berichts definieren. Das ROM steht Entwicklern zur Verfügung, die benutzerdefinierte Renderingerweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entwerfen, entwickeln und bereitstellen möchten. Ein ROM wird erstellt, wenn der Berichtsserver die XML-Definition eines Berichts zusammen mit den benutzerdefinierten Berichtsdaten verarbeitet. Wenn die Verarbeitung abgeschlossen ist, wird das öffentliche Modell von einer Renderingerweiterung zur Definition der Berichtsausgabe verwendet. Die verfügbaren öffentlichen Klassen des ROMs sind im **Microsoft.ReportingServices.OnDemandReportRendering**-Namespace definiert.  
   
 ## <a name="writing-custom-rendering-extensions"></a>Schreiben von benutzerdefinierten Renderingerweiterungen  
  Bevor Sie sich dazu entscheiden, eine benutzerdefinierte Renderingerweiterung zu erstellen, sollten Sie einfachere Alternativen prüfen. Folgende Aktionen sind möglich:  
@@ -62,13 +61,12 @@ ms.lasthandoff: 08/12/2017
   
 -   Fügen Sie benutzerdefinierte Formatierungs- und Präsentationsfunktionen hinzu, indem Sie XSL-Transformationen (XSLT) mit der Ausgabe des XML-Renderingformats kombinieren.  
   
- Das Schreiben von benutzerdefinierten Renderingerweiterungen ist nicht ganz einfach. Eine Renderingerweiterung muss normalerweise alle möglichen Kombinationen von Berichtselementen unterstützen und erfordert, dass Sie Hunderte von Klassen, Schnittstellen, Methoden und Eigenschaften implementieren. Wenn Sie einen Bericht in einem Format rendern müssen, die in nicht eingeschlossen ist [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und sich entschieden, einer eigene Implementierung von eine Renderingerweiterung in verwaltetem Code zu schreiben, Erweiterung Renderingcodes implementieren muss die **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** -Schnittstelle, die vom Berichtsserver erforderlich ist.  
+ Das Schreiben von benutzerdefinierten Renderingerweiterungen ist nicht ganz einfach. Eine Renderingerweiterung muss normalerweise alle möglichen Kombinationen von Berichtselementen unterstützen und erfordert, dass Sie Hunderte von Klassen, Schnittstellen, Methoden und Eigenschaften implementieren. Wenn Sie einen Bericht in einem Format rendern müssen, das nicht in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten ist, und sich entscheiden, eine eigene Implementierung einer Renderingerweiterung mit verwaltetem Code zu schreiben, dann muss die Renderingerweiterung die vom Berichtsserver benötigte **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**-Schnittstelle implementieren.  
   
  Ergänzende Dokumentation sowie Whitepapers zu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] finden Sie in den aktuellen technischen Ressourcen auf der [Reporting Services-Website](http://go.microsoft.com/fwlink/?LinkId=19951).  
   
-## <a name="see-also"></a>Siehe auch  
- [Implementieren von Renderingerweiterungen](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Implementing a Rendering Extension (Implementieren von Renderingerweiterungen)](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

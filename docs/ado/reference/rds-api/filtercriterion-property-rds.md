@@ -3,7 +3,7 @@ title: FilterCriterion-Eigenschaft (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8221e70c15c4c7eda5404d0bb56a40a856964baa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b30e26e6584e6895185eb67ceb7824ae7323cea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion-Eigenschaft (RDS)
 Gibt an, die Evaluation-Operator, um in den Filterwert verwenden.  
@@ -56,14 +55,13 @@ DataControl.FilterCriterion = String
  Wenn sowohl die Filter- und sortierungsausdrücke Eigenschaften festgelegt sind, und Sie rufen die **zurücksetzen** -Methode, das Rowset zuerst gefiltert, und klicken Sie dann sortiert. Die null-Werte sind für eine aufsteigende Sortierung, am oberen; für eine absteigende Sortierung an, der null-Werte werden im unteren Bereich (Standardverhalten aufsteigender ist).  
   
 ## <a name="applies-to"></a>Gilt für  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection Eigenschaften und Reset-Methode (Beispiel) (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [FilterColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
  [FilterValue-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
  [SortColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Sortdirections-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
+ [SortDirection-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 

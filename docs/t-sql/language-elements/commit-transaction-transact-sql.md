@@ -3,8 +3,11 @@ title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,20 +31,19 @@ helpviewer_keywords:
 - COMMIT TRANSACTION statement
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 84ca8221700d3eabd443b84d97dea4f698e9f945
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a716ab7298d1ea678d6a23944849dccdebebd118
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Markiert das Ende einer erfolgreichen impliziten oder expliziten Transaktion. @ IF@TRANCOUNT beträgt 1, COMMIT TRANSACTION macht alle datenänderungen seit dem Start der Transaktion einen dauerhaften Bestandteil der Datenbank durch die Transaktion und dekrementiert @ belegten Ressourcen freigegeben@TRANCOUNT auf 0. @ IF@TRANCOUNT ist größer als 1, COMMIT TRANSACTION dekrementiert @@TRANCOUNT nur von 1 und die Transaktion bleibt aktiv.  
   
@@ -170,11 +172,10 @@ PRINT N'Transaction count after COMMIT OuterTran = '
 ## <a name="see-also"></a>Siehe auch  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
-

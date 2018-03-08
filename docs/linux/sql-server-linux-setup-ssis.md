@@ -1,25 +1,29 @@
 ---
 title: Installieren von SQL Server Integrationsservices unter Linux | Microsoft Docs
-description: Dieses Thema beschreibt, wie SQL Server Integration Services (SSIS) unter Linux zu installieren.
+description: Dieser Artikel beschreibt, wie SQL Server Integration Services (SSIS) unter Linux zu installieren.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
+ms.openlocfilehash: 70e5bddb584135585042d9521ab580777e0e8b5a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installieren von SQL Server Integration Services (SSIS) unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Führen Sie die Schritte in diesem Artikel, um die Installation von SQL Server Integration Services (`mssql-server-is`) unter Linux. Weitere Informationen zu den Features, die in dieser Version der Integrationsdienste für Linux unterstützt, finden Sie unter der [Release Notes](sql-server-linux-release-notes.md).
 
@@ -28,7 +32,7 @@ Installieren Sie SQL Server-Integration-Server für Ihre Plattform aus:
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a>Installieren Sie SSIS für Ubuntu
+## <a name="ubuntu"></a> Installieren Sie SSIS für Ubuntu
 So installieren Sie die `mssql-server-is` Paket auf Ubuntu, gehen Sie folgendermaßen vor:
 
 1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel.
@@ -72,10 +76,10 @@ sudo apt-get install mssql-server-is
 ### <a name="remove-ssis"></a>Entfernen von SSIS
 So entfernen Sie `mssql-server-is`, können Sie folgenden Befehl ausführen:
 ```bash
-sudo apt-get remove msssql-server-is
+sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a>Installieren Sie SSIS auf RHEL
+## <a name="RHEL"></a> Installieren Sie SSIS auf RHEL
 So installieren Sie die `mssql-server-is` Paket auf RHEL, gehen Sie folgendermaßen vor:
 
 1. Herunterladen der Konfigurationsdatei für Microsoft SQL Server-Red Hat-Repository.
@@ -113,22 +117,40 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>Entfernen von SSIS
 So entfernen Sie `mssql-server-is`, können Sie folgenden Befehl ausführen:
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
 
+## <a name="unattended-installation"></a>Für die unbeaufsichtigte installation
+Um eine unbeaufsichtigte Installation ausgeführt wird, wenn Sie zur `ssis-conf setup`, führen Sie folgende Schritte aus:
+1.  Geben Sie die `-n` (keine Aufforderung) Option.
+2.  Geben Sie erforderliche Werte durch Festlegen von Umgebungsvariablen an.
 
+Das folgende Beispiel führt die folgenden Schritte:
+-   SSIS wird installiert.
+-   Gibt an, die Developer Edition durch Angeben eines Werts für die `SSIS_PID` -Umgebungsvariablen angegeben.
+-   Akzeptiert den Endbenutzer-Lizenzvertrag durch Angeben eines Werts für die `ACCEPT_EULA` -Umgebungsvariablen angegeben.
+-   Führt eine unbeaufsichtigte Installation durch Angabe der `-n` (keine Aufforderung) Option.
 
-
-## <a name="run-a-package"></a>Ausführen eines Pakets
-Kopieren Sie das SSIS-Paket auf dem Linux-Computer. Verwenden Sie dann den folgenden Befehl zum Ausführen des Pakets an.
-
-```bash
-dtexec /F <package name> /DE <protection password>
+```
+sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
 ```
 
+### <a name="environment-variables-for-unattended-installation"></a>Umgebungsvariablen für die unbeaufsichtigte installation
 
+| Umgebungsvariable | Description |
+|---|---|
+| **ACCEPT_EULA** | Die SQL Server-Lizenzbedingungen, die bei Festlegung auf einen beliebigen Wert akzeptiert (z. B. `Y`).|
+| **SSIS_PID** | Legt die Edition oder Product Key für SQL Server fest. Hier sind die möglichen Werte ein:<br/>Evaluation<br/>Entwickler<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Einen Product key<br/><br/>Wenn Sie einen Product Key angeben, muss der Product Key im Format `#####-#####-#####-#####-#####`, wobei `#` ein Buchstabe oder eine Zahl.  |
+| | |
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zur Verwendung von SSIS unter Linux zu extrahieren, Transformieren und Laden von Daten finden Sie unter [extrahieren, Transformieren und Laden von Daten für SQL Server on Linux mit SSIS](sql-server-linux-migrate-ssis.md).
+Zum Ausführen von SSIS-Pakete auf Linux finden Sie unter [extrahieren, Transformieren und Laden von Daten für SQL Server on Linux mit SSIS](sql-server-linux-migrate-ssis.md).
 
+Konfigurieren zusätzliche Einstellungen der SSIS unter Linux finden Sie [konfigurieren Sie SQL Server Integration Services unter Linux mit Ssis-Conf](sql-server-linux-configure-ssis.md).
+
+## <a name="related-content-about-ssis-on-linux"></a>Verwandte Inhalte über SSIS unter Linux
+-   [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](sql-server-linux-migrate-ssis.md)
+-   [Konfigurieren von SQL Server Integration Services unter Linux mit Ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Einschränkungen und bekannten Probleme für SSIS unter Linux](sql-server-linux-ssis-known-issues.md)
+-   [Zeitplan SQL Server Integration Services-paketausführung unter Linux mit cron](sql-server-linux-schedule-ssis-packages.md)

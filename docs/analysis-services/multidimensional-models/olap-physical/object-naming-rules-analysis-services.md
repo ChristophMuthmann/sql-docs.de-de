@@ -2,33 +2,31 @@
 title: Benennungsregeln (Analysis Services)-Objekt | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], naming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 116ee643ee52c3bdb8c5b6188ba5198afc24265d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
-  In diesem Thema werden Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschrieben, die in Objektnamen, in Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht verwendet werden können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird beschrieben, Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen in einem nicht verwendet werden, Objektnamen, im Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a>Benennungskonventionen  
  Jedes Objekt verfügt über eine **Namen** und **ID** -Eigenschaft, die innerhalb des Bereichs der übergeordneten Auflistung eindeutig sein muss. Beispielsweise können zwei Dimensionen denselben Namen haben, solange sich beide in unterschiedlichen Datenbanken befinden.  
@@ -88,9 +86,9 @@ ms.lasthandoff: 09/01/2017
   
 |Servermodus und Datenbank-Kompatibilitätsgrad|Reservierte Zeichen zulässig?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (alle Versionen)|Nein|  
-|Tabellarischer Modus - 1050|Nein|  
-|Tabellarischer Modus - 1100|Nein|  
+|MOLAP (alle Versionen)|nein|  
+|Tabellarischer Modus - 1050|nein|  
+|Tabellarischer Modus - 1100|nein|  
 |Tabellarischer Modus – 1130 und höher|ja|  
   
  Für Datenbanken kann als ModelType Default angegeben sein. 
@@ -102,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis-Kompatibilität &#40; XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   
-

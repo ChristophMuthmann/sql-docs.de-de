@@ -2,10 +2,13 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: "Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern"
 ms.custom: 
-ms.date: 10/13/2017
-ms.prod: sql-server-2017
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,19 +16,16 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack;monicar
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 In diesem Artikel werden die folgenden Funktionen zur adaptiven Abfrageverarbeitung beschrieben, die Sie zur Verbesserung der Abfrageleistung in SQL Server und in der Azure SQL-Datenbank verwenden können:
 - Feedback zur Speicherzuweisung im Batchmodus
@@ -41,7 +41,7 @@ Manchmal ist der vom Abfrageoptimierer ausgewählte Plan nicht optimal. Dies kan
 ![Funktionen der adaptiven Abfrageverarbeitung](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>So aktivieren Sie die adaptive Abfrageverarbeitung
-Sie können Workloads automatisch für die adaptive Abfrageverarbeitung zulassen, indem Sie den Kompatibilitätsgrad 140 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Beispiel:
+Sie können Workloads automatisch für die adaptive Abfrageverarbeitung zulassen, indem Sie den Kompatibilitätsgrad 140 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Zum Beispiel:
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
@@ -183,7 +183,7 @@ Vergleichen Sie den vorherigen Plan mit dem tatsächlich generierten Plan mit ak
 1. Beachten Sie auch, dass es keine Überlaufwarnungen mehr gibt, da mehr Speicherplatz auf Grundlage der tatsächlichen Zeilenzahl, die den MSTVF-Table Scan durchläuft, zugewiesen wird.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Zulässige Anweisungen für verschachtelte Ausführungen
-Verweisanweisungen von MSTVF in verschachtelten Ausführungen müssen aktuell schreibgeschützt sein und dürfen nicht Teil eines Datenmodifizierungsvorgangs sein. Zudem sind MSTVFs nicht für die verschachtelte Ausführung zulässig, wenn Sie in einer CROSS APPLY-Anweisung verwendet werden.
+Verweisanweisungen von MSTVF in verschachtelten Ausführungen müssen aktuell schreibgeschützt sein und dürfen nicht Teil eines Datenmodifizierungsvorgangs sein. MSTVFs eignen sich nur für die verschachtelte Ausführung, wenn Sie Laufzeitkonstanten verwenden.
 
 ### <a name="interleaved-execution-benefits"></a>Vorteile der verschachtelten Ausführung
 Allgemein gilt: Je höher der Unterschied zwischen der geschätzten und tatsächlichen Zeilenzahl in Verbindung mit der Zahl von Downstreamplanvorgängen ist, desto mehr wird die Leistung beeinträchtigt.
@@ -224,12 +224,11 @@ Eine Anweisung mit OPTION(RECOMPILE) erstellt einen neuen Plan mit der verschach
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Geschachtelte Ausführung und Interoperabilität des Abfragespeichers
 Pläne mit der verschachtelten Ausführung können erzwungen werden. Der Plan ist die Version mit angepassten Kardinalitätsschätzungen auf Grundlage der ersten Ausführung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 
 [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)
 
 [Veranschaulichung der adaptiven Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

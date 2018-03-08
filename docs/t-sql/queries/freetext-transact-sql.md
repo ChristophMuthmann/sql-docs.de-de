@@ -3,8 +3,11 @@ title: FREETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - words in predicate [full-text search]
 - column searches [full-text search]
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48c7ce4788a0c5da0b22e80ab1dc366091c25f97
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e6687946e13dd6c801fcd256a0e463bdacb3779f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ist ein Prädikat, das verwendet wird, der [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE-Klausel](../../t-sql/queries/where-transact-sql.md) von eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung zum Ausführen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche für die Volltext-volltextindizierte Spalten mit zeichenbasierten Datentypen. Dieses Prädikat sucht nach Werten, die der Bedeutung der Suchbedingung entsprechen und nicht genau mit dem Wortlaut der Suchbedingung übereinstimmen. Bei Verwendung von FREETEXT führt das Modul für die Volltextabfrage intern die folgenden Aktionen für die *Freetext_string*weist jedem Begriff eine Gewichtung und sucht dann nach Übereinstimmungen:  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Informationen zu den Formen der Volltextsuche, die von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +62,7 @@ FREETEXT ( { column_name | (column_list) | * }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Spaltenname*  
+ *column_name*  
  Der Name einer oder mehrerer volltextindizierten Spalten der in der FROM-Klausel angegebenen Tabelle. Die Spalten des Typs sein **Char**, **Varchar**, **Nchar**, **Nvarchar**, **Text**, **Ntext**, **Image**, **Xml**, **Varbinary**, oder **varbinary(max)**.  
   
  *column_list*  
@@ -76,7 +78,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  Die Verwendung von WEIGHT, FORMSOF, Platzhaltern, NEAR und anderer Syntax ist nicht zulässig. *Freetext_string* ist wörtertrennung, bezeichnet, und übergeben den Thesaurus.  
   
- *Freetext_string* ist **Nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `FREETEXT`-Prädikat.  
+ *Freetext_string* ist **Nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Große Zeichenfolge Datentypen nvarchar(max)-Datentyp und varchar(max)-Datentyp können nicht verwendet werden. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `FREETEXT`-Prädikat.  
   
 ```  
   
@@ -106,10 +108,10 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Sie können auch den OPTIMIZE FOR-Abfragehinweis für Fälle verwenden, in denen ein nicht optimalen Plan generiert wird.  
   
- Sprache *Language_term*  
+ LANGUAGE *language_term*  
  Die Sprache, deren Ressourcen für die Wörtertrennung, die Wortstammerkennung und den Thesaurus sowie die Entfernung von Stoppwörtern in der Abfrage verwendet werden. Dieser Parameter ist optional und kann als Zeichenfolge, ganze Zahl oder Hexadezimalwert entsprechend dem Gebietsschemabezeichner (Locale Identifier – LCID) einer Sprache angegeben werden. Wenn *Language_term* angegeben ist, wird die entsprechende Sprache gelten für alle Elemente der Suchbedingung. Wird kein Wert angegeben, wird die Volltextsprache der Spalte verwendet.  
   
- Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, legt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache fest. Beim Abfragen einer solchen Spalte Angabe *Sprache**Language_term* kann die Wahrscheinlichkeit einer hohen Übereinstimmung erhöhen.  
+ Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, legt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache fest. Beim Abfragen einer solchen Spalte Angabe *Sprache ** Language_term* kann die Wahrscheinlichkeit einer hohen Übereinstimmung erhöhen.  
   
  Wenn als eine Zeichenfolge angegeben *Language_term* entspricht der **Alias** Spaltenwert in er [sys.syslanguages &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) -kompatibilitätssicht angezeigt.  Die Zeichenfolge muss in einfache Anführungszeichen eingeschlossen werden, wie in "*Language_term*". Wenn als eine ganze Zahl angegeben *Language_term* ist der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. Wenn als hexadezimaler Wert angegeben *Language_term* ist 0 X, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
@@ -173,7 +175,6 @@ GO
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

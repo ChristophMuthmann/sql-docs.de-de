@@ -3,8 +3,11 @@ title: ALTER SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - sequence number object, altering
 - ALTER SEQUENCE statement
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-caps.latest.revision: 24
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de7fd182be8fd79574c098a499a40a34d38aaf21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 66960ed0ae27cb7ecbe2d39d0e30d1ec12dcc3cb
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Ändert die Argumente eines vorhandenen Sequenzobjekts. Wenn die Sequenz erstellt wurde, mit der **CACHE** Option ändern die Sequenz den Cache neu erstellt.  
   
@@ -190,4 +192,3 @@ ALTER SEQUENCE Test.CountBy1
  [Sp_sequence_get_range &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   
-

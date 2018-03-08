@@ -1,10 +1,13 @@
 ---
-title: '| (Bitweises inklusives OR) (SSIS-Ausdruck) | Microsoft Docs'
+title: '| (Bitweises inklusives OR) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90a8167d52a50c569418af86d4f36526ad3482c0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3051e7e2debd63deb2fa26d26b8fd21cecf14247
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (Bitweises inklusives OR) (SSIS-Ausdruck)
   Führt eine bitweise OR-Operation mit zwei ganzzahligen Werten aus. Jedes Bit des ersten Operanden wird mit dem entsprechenden Bit des zweiten Operanden verglichen. Wenn eines der Bits 1 ist, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.  
@@ -45,7 +47,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn eine der Bedingungen NULL ist, lautet das Ergebnis des Ausdrucks NULL.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
@@ -97,11 +99,10 @@ ReorderPoint | SafetyStockLevel
   
  00000111  
   
-## <a name="see-also"></a>Siehe auch  
- [&#124; &#124; &#40; Logisches OR &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
- [^ &#40; Bitweises exklusives OR &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
- [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [&#124;&#124; &#40;Logisches OR&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
+ [^ &#40;Bitweises exklusives OR&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
+ [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

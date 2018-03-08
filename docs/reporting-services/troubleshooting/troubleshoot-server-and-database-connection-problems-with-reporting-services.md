@@ -1,27 +1,27 @@
 ---
-title: Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services | Microsoft Docs
+title: Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services
 Verwenden Sie dieses Thema, um Probleme zu behandeln, die beim Herstellen einer Verbindung mit einem Berichtsserver auftreten. In diesem Thema werden außerdem Informationen zu "Unerwartete Fehler"-Meldungen bereitgestellt. Weitere Informationen zum Konfigurieren von Datenquellen und Konfigurieren von Verbindungsinformationen des Berichtsservers finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) und [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -63,7 +63,7 @@ Um diesen Fehler zu beheben, können Sie entweder die Verbindungszeichenfolge so
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>WMI-Fehler beim Herstellen einer Verbindung mit einem Berichtsserver in Management Studio  
 Standardmäßig verwendet Management Studio den Reporting Services-WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation), um eine Verbindung mit dem Berichtsserver herzustellen. Wenn der WMI-Anbieter nicht ordnungsgemäß installiert ist, tritt beim Versuch, eine Verbindung mit dem Berichtsserver herzustellen, der folgende Fehler auf:  
   
-Kann keine Verbindung mit \<Namen Ihres Servers >. Der WMI-Anbieter für Berichtsdienste ist nicht installiert oder falsch konfiguriert (Microsoft.SqlServer.Management.UI.RSClient).  
+Es kann keine Verbindung mit \<dem Namen Ihres Servers> hergestellt werden. Der WMI-Anbieter für Berichtsdienste ist nicht installiert oder falsch konfiguriert (Microsoft.SqlServer.Management.UI.RSClient).  
   
 Um diesen Fehler zu beheben, sollten Sie die Software neu installieren. In allen anderen Fällen können Sie das Problem zeitweilig umgehen, indem Sie über den SOAP-Endpunkt eine Verbindung mit dem Berichtsserver herstellen:  
   
@@ -117,15 +117,14 @@ Es gibt zwei Lösungen für dieses Problem:
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Die Verbindung mit den Verzeichnissen /reports und /reportserver ist nicht möglich, wenn die Berichtsserverdatenbanken auf einem virtuellen SQL Server erstellt werden, der auf einem MSCS-Cluster (Microsoft-Clusterdienste) ausgeführt wird.  
 Wenn Sie die Berichtsserverdatenbanken **ReportServer** und **ReportServerTempDB**auf einem virtuellen SQL Server erstellen, der in einem MSCS-Cluster ausgeführt wird, wird der Remotename im Format `<domain>\<computer_name>$` möglicherweise nicht als Anmeldung auf dem SQL Server registriert. Wenn Sie das Berichtsserver-Dienstkonto als ein Konto konfiguriert haben, das diesen Remotenamen für Verbindungen erfordert, können Benutzer keine Verbindung mit den Verzeichnissen „/reports“ und „/reportserver“ in Reporting Services herstellen. Zum Beispiel erfordert das integrierte Windows-Konto NetworkService diesen Remotenamen. Um dieses Problem zu vermeiden, verwenden Sie ein explizites Domänenkonto oder eine SQL Server-Anmeldung, um eine Verbindung mit den Berichtsserverdatenbanken herzustellen.  
     
-  ## <a name="see-also"></a>Siehe auch  
+  ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Troubleshoot Data Retrieval issues with Reporting Services Reports (Problembehandlung: Probleme beim Abrufen von Daten in Reporting Services-Berichten)](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

@@ -3,31 +3,32 @@ title: Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart) | Microsoft 
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 36
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c023af0a3a9b9c53cb2b6adf7298c18657a60803
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Tutorial erklärt Ihnen, wie Sie grundsätzlich ein R-Skript aus einer gespeicherten T-SQL-Prozedur aufrufen.
 
@@ -53,7 +54,7 @@ Die SQL Server-Instanz kann im virtuellen Computer in Azure oder lokal sein. Bea
 
 Zum Ausführen von SQL-Abfragen, die R-Skripts enthalten, können Sie eine andere Anwendung, die eine Verbindung mit einer Datenbank herstellen und T-SQL-Code ausführen können. SQL-Experten können SQL Server Management Studio (SSMS) oder Visual Studio verwenden.
 
-Für dieses Lernprogramm soll zeigen, wie einfach es ist zum Ausführen von R in SQL Server, wir haben verwendet die neue **Mssql-Erweiterung für Visual Studio Code**. Visual Studio Code ist einer kostenlosen Entwicklungsumgebung, die unter Linux, Mac OS oder Windows ausgeführt werden kann. Die **Mssql*** Erweiterung ist eine einfache Erweiterung für die Ausführung von SQL-Abfragen. Informationen zur Installation finden Sie im Artikel [Use the mssql extension for Visual Studio Code (Verwenden der MSSQL-Erweiterung für Visual Studio Code)](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Für dieses Lernprogramm soll zeigen, wie einfach es ist zum Ausführen von R in SQL Server, wir haben verwendet die neue **Mssql-Erweiterung für Visual Studio Code**. Visual Studio Code ist einer kostenlosen Entwicklungsumgebung, die unter Linux, Mac OS oder Windows ausgeführt werden kann. Die **Mssql** Erweiterung ist eine einfache Erweiterung für die Ausführung von T-SQL-Abfragen. Informationen zur Installation finden Sie im Artikel [Use the mssql extension for Visual Studio Code (Verwenden der MSSQL-Erweiterung für Visual Studio Code)](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Verbinden mit Datenbank und Ausführen eines Hello World-Testskripts
 
@@ -102,4 +103,3 @@ Lektion 3: [mit R-Funktionen mit SQL Server-Daten](rtsql-using-r-functions-with-
 Lektion 4: [aus einem Vorhersagemodell erstellen](rtsql-create-a-predictive-model-r.md)
 
 Lektion 5: [Vorhersagen und der Zeichnungsfläche aus Modell](rtsql-predict-and-plot-from-model.md)
-

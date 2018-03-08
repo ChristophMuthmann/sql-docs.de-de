@@ -3,8 +3,11 @@ title: "WIDERRUFEN Sie Berechtigungen für symmetrische Schlüssel (Transact-SQL
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - permissions [SQL Server], symmetric keys
 - REVOKE statement, symmetric keys
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
-caps.latest.revision: 19
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cf946b948a1bd79fbcf017833e708e545c6ffba5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8a700868c11a26597509fe675f7de675084b5ecc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE (Berechtigungen für symmetrische Schlüssel) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Hebt die Berechtigungen auf, die für einen symmetrischen Schlüssel erteilt oder verweigert wurden.  
    
@@ -141,5 +143,4 @@ GO
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-
 

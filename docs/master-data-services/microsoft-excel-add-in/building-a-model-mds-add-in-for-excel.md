@@ -2,25 +2,27 @@
 title: "Erstellen eines Modells (MDS-Add-In für Excel) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
-caps.latest.revision: 5
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a205aa008476eab04faa3570d8d34f68662b460c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 88556cf988d88fac1d9cb9a4c18dd0cfc5a1e72f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Erstellen eines Modells (MDS-Add-In für Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren eine Teilmenge der Administratorfunktionen ausführen, die in der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung verfügbar sind.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 09/07/2017
   
  Als Administrator müssen Sie das Modell mit der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder dem Webdienst erstellen. Sie können Entitäten und Attribute innerhalb des Modells dann mithilfe von [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] erstellen. Weitere Informationen zu Modellobjekten finden Sie unter [Modelle &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Die meisten Administratortasks müssen weiterhin in der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder mithilfe des Webdiensts ausgeführt werden. In der folgenden Tabelle ist aufgeführt, welche Tools Administratoren verwenden können, um Tasks unter MDS auszuführen.  
   
 |Taskbeschreibung|Tool|Thema|  
@@ -76,4 +78,3 @@ ms.lasthandoff: 09/07/2017
 -   [Bereitstellen von Modellen &#40;Master Data Services&#41;](../../master-data-services/deploying-models-master-data-services.md)  
   
   
-

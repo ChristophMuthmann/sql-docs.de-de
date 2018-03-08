@@ -3,7 +3,7 @@ title: "Microsoft Data strukturiert werden, Dienst für OLE DB (ADO-Dienstanbiet
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bcdf661427b97fe58681a6747a3b074e4965f4b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3510664e97b64c36b7c1c7b42ca475194b6d01e2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data strukturiert werden, Dienst für OLE DB-Übersicht
 > [!IMPORTANT]
@@ -69,5 +68,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  Weitere Informationen zu Daten strukturieren, finden Sie unter [Datenstrukturierung](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

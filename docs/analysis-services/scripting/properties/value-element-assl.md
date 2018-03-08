@@ -2,40 +2,35 @@
 title: Value-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Value Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Value Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Value
-helpviewer_keywords:
-- Value element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Value
+helpviewer_keywords: Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 007c2b2da48f72655bfd131eedf61db9f8989a3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5b31ced28db41575887a07ccf6c6e303aea5aaf1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="value-element-assl"></a>Value-Element (ASSL)
-  Enthält den Wert des übergeordneten Elements.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Wert des übergeordneten Elements.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,24 +45,24 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Finden Sie in der folgenden Tabelle aus.|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 |Vorgänger oder übergeordnetes Element|Datentyp|  
 |------------------------|---------------|  
 |[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)|Jeder simpleType|  
 |[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|Jeder simpleType|  
-|Alle sonstigen|String|  
+|Alle sonstigen|Zeichenfolge|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md), [Anmerkung](../../../analysis-services/scripting/objects/annotation-element-assl.md), [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md), [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md), [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md), [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Das **Value** -Element enthält den Wert, der dem übergeordneten Element zugeordnet ist. Der erwartete Wert des **Value** -Elements hängt vom übergeordneten Element ab (siehe folgende Tabelle).  
@@ -87,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

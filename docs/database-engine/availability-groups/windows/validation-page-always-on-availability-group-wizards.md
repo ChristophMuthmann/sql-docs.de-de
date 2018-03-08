@@ -2,34 +2,34 @@
 title: "Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.addreplicawizard.validation.f1
 - sql13.swb.adddatabasewizard.validation.f1
 - sql13.swb.newagwizard.validation.f1
-helpviewer_keywords:
-- ', listeners'
+helpviewer_keywords: ', listeners'
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7068522fbb73363053151da7140dcfa2ad365aef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f8c43c0c8a698fb38f67f7ba6ba0ad897692f00
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   
     
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/02/2017
  **Ergebnis**  
  Zeigt einen der folgenden Linktexte an. Klicken Sie auf den Link, um weitere Informationen zum Ergebnis eines bestimmten Überprüfungsschritts anzuzeigen.  
   
-|Ergebnis|Beschreibung|  
+|Ergebnis|Description|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
 |**Ausgelassen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  
@@ -57,15 +57,14 @@ ms.lasthandoff: 08/02/2017
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Registrieren von Geschäftsobjekten auf dem Client für die Verwendung m
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: adba9240c501136d891686da3e5361be96e80ee0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e293eb58053259dd229656152094763ac31b48a2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM
 Benutzerdefinierte Geschäftsobjekte müssen sicherstellen, dass die Clientseite ihren Programmnamen (ProgId) eine ID (CLSID) zugeordnet werden können, die über DCOM verwendet werden kann. Aus diesem Grund muss die ProgID des DCOM-Objekte werden in der Registrierung die clientseitige und ordnen Sie die Klassen-ID des serverseitigen Business-Objekts. Für die anderen unterstützten Protokolle (HTTP, HTTPS und in-Process) ist dies nicht erforderlich.  
@@ -39,6 +38,5 @@ Benutzerdefinierte Geschäftsobjekte müssen sicherstellen, dass die Clientseite
 [HKEY_CLASSES_ROOT]  
 \MyBObj\Clsid\(Default) "{00112233-4455-6677-8899-00AABBCCDDEE}"  
 ```
-
 
 

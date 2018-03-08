@@ -1,28 +1,29 @@
 ---
 title: "Leistung für R Services - Ergebnisse und Ressourcen | Microsoft Docs"
 ms.custom: 
-ms.date: 07/15/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistung für R Services: Ergebnisse und Ressourcen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel ist die vierte und letzte in einer Reihe, die zur leistungsoptimierung für R Services beschreibt. Dieser Artikel beschreibt die Methoden, die Ergebnisse und die Schlussfolgerungen zwei Fallstudien, die verschiedene Methoden zur Optimierung getestet.
 
@@ -31,7 +32,7 @@ Die zwei Fallstudien mussten unterschiedliche Ziele:
 + Die erste Fallstudie vom Entwicklungsteam R Services gesucht, um die Auswirkungen auf bestimmte Optimierungstechniken messen
 + Die zweite Fallstudie erprobt von einem Data scientists Team mehrere Methoden, um die bestmögliche Optimierung für ein bestimmtes bewerteten hohem Volumen-Szenario zu bestimmen.
 
-In diesem Thema werden die detaillierten Ergebnisse der ersten Fallstudie aufgelistet. Für die zweite Fallstudie beschreibt eine Übersicht über die allgemeine Ergebnisse. Am Ende dieses Themas finden Sie Links für alle Skripts und Beispieldaten und Ressourcen, die von den ursprünglichen Autoren verwendet.
+In diesem Thema werden die detaillierten Ergebnisse der ersten Fallstudie aufgelistet. Für die zweite Fallstudie beschreibt eine Übersicht über die allgemeine Ergebnisse. Sind Sie am Ende dieses Themas Links für alle Skripts und Beispieldaten und Ressourcen, die von den ursprünglichen Autoren verwendet.
 
 ## <a name="performance-case-study-airline-dataset"></a>Leistung-Fallstudie: Airline-Dataset
 
@@ -97,7 +98,7 @@ In diesem Abschnitt werden vor und nach der Ergebnisse aller Tests vergleicht.
 
 Der erste Test verglichen, die Verwendung von Komprimierung und eine einspaltige Tabelle zum Verringern der Größe der Daten.
 
-| Tabellenname            | Zeilen     | Reserviert.   | Daten       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
+| Tabellenname            | Zeilen     | Reserviert.   | data       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2.978.816 KB | 2.972.160 KB | 6.128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625.784 KB  | 623.744 KB  | 1.352 KB    | 688 KB  | 79%                 |
@@ -187,7 +188,7 @@ Dieser Test bewertet die Auswirkungen der Änderung des R-Codes, um ein häufige
 
 | Tabellenname          | Testname   | Durchschnittliche Zeit |
 |---------------------|-------------|--------------|
-| *Airline-Aktivität*           | *FactorCol* | 10.72        |
+| *Airline*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **Schlussfolgerungen**
@@ -280,13 +281,13 @@ Die Testergebnisse anzeigen, die Zeit für das Modell speichern, und die Zeit zu
 
 Laden eines trainierten Modells aus einer Tabelle ist deutlich schneller tun Vorhersageabfragen aus. Es wird empfohlen, dass Sie das Modell erstellen und ausführen, alle in einem Skript Bewertung vermeiden.
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>Fallstudie: Optimierung für die Fortsetzung, die entsprechende Aufgabe
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Fallstudie: Optimierung für den Task Resume-Abgleich
 
-Das Modell Resume-Abgleich wurde von Microsoft Data scientists Ke Huang So testen Sie die Leistung von R-Code in SQL Server, und aktivieren Datenanalysten unterstützen skalierbare, auf Unternehmensebene Lösungen entwickelt.
+Das Modell Resume-Abgleich wurde entwickelt, von Microsoft Data scientists Ke Huang zum Testen der Leistung von R-Code in SQL Server, und auf diese Weise dies der Fall ist Hilfe Data Scientists skalierbarer erstellen, Lösungen auf Unternehmensebene.
 
 ### <a name="methods"></a>Methoden
 
-Die "revoscaler" und die MicrosoftML Pakete wurden zum Trainieren eines Vorhersagemodells in einer komplexen R-Lösung, die im Zusammenhang mit großen Datasets verwendet. SQL-Abfragen und R-Code wurden identisch. Alle Tests wurden auf einer einzelnen Azure-VM mit SQL Server-Installation ausgeführt. Der Autor verglichen dann bewerteten Zeiten mit und ohne diese Optimierungen, die von SQL Server bereitgestellt wird:
+Die "revoscaler" und die MicrosoftML Pakete wurden zum Trainieren eines Vorhersagemodells in einer komplexen R-Lösung, die im Zusammenhang mit großen Datasets verwendet. SQL-Abfragen und R-Code wurden in den Tests identisch. Tests wurden auf einer einzelnen Azure-VM mit SQL Server-Installation ausgeführt. Der Autor verglichen dann bewerteten Zeiten mit und ohne die folgenden Optimierungen, die von SQL Server bereitgestellt wird:
 
 - In-Memory-Tabellen
 - Soft-NUMA
@@ -328,12 +329,9 @@ Die Konfiguration, die die beste Leistung im Resume-übereinstimmenden zu unters
 
 -   Maximaler Arbeitsspeicher für die Verwendung von R-Sitzungen = 70 %
 
-Für das Modell fortsetzen übereinstimmende externes Skript Verwendung starker wurde und gibt es keine andere Datenbank Datenbankmoduldienste ausgeführt wurden. Aus diesem Grund für externe Skripts reservierten Ressourcen wurde auf 70 % erhöht, die beste Konfiguration bereit skriptleistung war.
+Für das Modell fortsetzen übereinstimmende externes Skript Verwendung starker wurde und gibt es keine andere Datenbank Datenbankmoduldienste ausgeführt wurden. Aus diesem Grund wurden für externe Skripts reservierten Ressourcen auf 70 % erhöht, die die beste Konfiguration bereit skriptleistung erwiesen.
 
-Diese Konfiguration wurde auf eingetroffen sind, indem Sie mit unterschiedlichen Werten experimentieren. Wenn Sie unterschiedliche Hardware- oder einer anderen Projektmappe verwenden, kann die optimale Konfiguration unterscheiden.
-
-> [!IMPORTANT]
-> Experimentieren Sie, um die beste Konfiguration für Ihren Fall gefunden!
+Diese Konfiguration wurde auf eingetroffen sind, indem Sie mit unterschiedlichen Werten experimentieren. Wenn Sie unterschiedliche Hardware- oder einer anderen Projektmappe verwenden, kann die optimale Konfiguration unterscheiden. Probieren Sie immer die beste Konfiguration für Ihren Fall gefunden!
 
 In der Projektmappe optimiert wurden 1.1 Millionen Datenzeilen (mit 100 Funktionen) in weniger als 8,5 Sekunden auf einem Computer von 20 Kernen bewertet. Optimierungen wird die Leistung im Hinblick auf bewerteten Zeit erheblich verbessert.
 
@@ -342,6 +340,16 @@ Die Ergebnisse vorgeschlagen, die auch die **Anzahl von Funktionen** hatte einen
 Es wird empfohlen, dass Sie in diesem Blog-Artikel und die zugehörigen Lernprogramm ausführliche Informationen zu lesen.
 
 -   [Optimierung Tipps und Tricks für Machine Learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+Viele Benutzer haben bereits erwähnt, ergibt sich eine kleine Pause während die Laufzeit von R (oder Python) zum ersten Mal geladen wird. Aus diesem Grund wie bei diesen Tests beschrieben die Zeit für die erste Ausführung ist häufig gemessen, aber später verworfen. Nachfolgende zwischenspeicherungen möglicherweise wichtige Leistungsunterschiede zwischen dem ersten und zweiten ausgeführt. Es gibt auch ein gewisser Aufwand Wenn Daten zwischen SQL Server und die externe Runtime verschoben werden vor allem, wenn Daten über das Netzwerk, anstatt direkt aus SQL Server geladen wird übergeben werden.
+
+Aus diesen Gründen ist keine einfache Lösung zur Vermeidung derartiger diesmal erstmalige Laden mit Auswirkungen auf die Leistung erheblich abhängig von der Aufgabe. Zwischenspeichern wird z. B. für einzeiliges Bewertung in Batches ausgeführt. Daher aufeinander folgende bewerteten Operationen sind wesentlich schneller, und weder das Modell noch der R-Laufzeit wird erneut geladen. Sie können auch [native Bewertung](../sql-native-scoring.md) zu vermeiden, dass die R-Laufzeitversion vollständig geladen.
+
+Für große Modelle trainieren oder bewerten in großen Batches, möglicherweise der Aufwand im Vergleich zu die Gewinne aus datenverschiebungen zu vermeiden oder streaming und parallele Verarbeitung minimal. Finden Sie in dieser letzten Blogs und Beispiele für zusätzliche Leistungsleitfaden:
+
++ [Loan Klassifizierung mithilfe von SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [Frühe kundenmeinungen mit R-Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [Mithilfe von R um 1 Million Transaktionen pro Sekunde Betrug zu erkennen](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Ressourcen
 
@@ -361,7 +369,7 @@ Im folgenden finden Links zu Informationen, Tools und Skripts, die in die Entwic
 
 + [Wie unterstützt SQL Server NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>Erfahren Sie mehr über SQL Server-Optimierungen
 
@@ -407,4 +415,3 @@ Im folgenden finden Links zu Informationen, Tools und Skripts, die in die Entwic
 [Optimieren der Leistung für R - R Optimierung von Code und Daten](r-and-data-optimization-r-services.md)
 
 [Performance Tuning - Fallstudien](performance-case-study-r-services.md)
-

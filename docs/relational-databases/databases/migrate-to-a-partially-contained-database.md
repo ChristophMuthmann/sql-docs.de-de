@@ -2,29 +2,30 @@
 title: "Migrieren zu einer partiell eigenständigen Datenbank | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- contained database, migrating to
+helpviewer_keywords: contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "17"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4c2bad59ca0fb052d9adcfd15f41efc7c995db08
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>Migrieren zu einer partiell eigenständigen Datenbank
-  In diesem Thema wird beschrieben, wie die Umstellung auf das teilweise eigenständige Datenbankmodell vorbereitet wird. Anschließend werden die Migrationsschritte erläutert.  
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie die Umstellung auf das teilweise eigenständige Datenbankmodell vorbereitet wird. Anschließend werden die Migrationsschritte erläutert.  
   
  **In diesem Thema:**  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Aktivieren von enthaltenen Datenbanken mit Transact-SQL  
  Im folgenden Beispiel werden enthaltene Datenbanken für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz aktiviert.  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -79,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank mit Transact-SQL  
  Im folgenden Beispiel wird die Datenbank `Accounting` in eine teilweise eigenständige Datenbank konvertiert.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -98,7 +99,7 @@ GO
 ##  <a name="users"></a> Migrieren von Benutzern zu Benutzern eigenständiger Datenbanken  
  Im folgenden Beispiel werden alle Benutzer, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen basieren, in Benutzer enthaltener Datenbanken mit Kennwörtern migriert. Nicht berücksichtigt werden Anmeldungen, die nicht aktiviert sind. Das Beispiel muss in der enthaltenen Datenbank ausgeführt werden.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   
@@ -121,7 +122,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

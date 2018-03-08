@@ -2,40 +2,38 @@
 title: DISCOVER_CONNECTIONS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CONNECTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d9d56f64f0b4cb1912e9eaaa7e644c6cbc29ad44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b02c9f5d9a9e22e626143a6ca5701ac5b1db50e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS-Rowset
-  Stellt Informationen zur Ressourcenverwendung und Aktivität der zurzeit geöffneten Verbindungen auf dem Server bereit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt ressourcenverwendungs- und Aktivitätsinformationen über bereit der zurzeit geöffneten Verbindungen auf dem Server.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_CONNECTIONS** -Rowset enthält die folgenden Spalten.  
   
-|Spaltenname|Typindikator|Einschränkungen|Description|  
+|Spaltenname|Typindikator|Restrictions|Description|  
 |-----------------|--------------------|------------------|-----------------|  
 |**CONNECTION_ID**|**DBTYPE_I4**|ja|Eine eindeutige Zahl, die die Verbindung identifiziert.|  
 |**CONNECTION_USER_NAME**|**DBTYPE_WSTR**|ja|Der Name des Benutzers dieser Verbindung.|  
@@ -60,13 +58,12 @@ ms.lasthandoff: 09/01/2017
   
  Die folgende Tabelle enthält die GUID und die Zeichenfolgenwerte, die dieses Rowset identifizieren.  
   
-|Argument|Wert|  
+|Argument|value|  
 |--------------|-----------|  
 |GUID|a07ccd25-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|Verbindungen|  
   
-## <a name="see-also"></a>Siehe auch  
- [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

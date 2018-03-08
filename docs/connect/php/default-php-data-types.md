@@ -3,27 +3,28 @@ title: Default PHP Data Types | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ff008fdf5cd27300da5912c5347f8c7089bdf53
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2db2186adfe8fc12a80c1459a0e5b768dfd9fe45
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -119,4 +120,3 @@ Teilweise Unterstützung besagt, dass Sie den Spaltentyp nicht programmgesteuert
 [Datentypen (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   
-

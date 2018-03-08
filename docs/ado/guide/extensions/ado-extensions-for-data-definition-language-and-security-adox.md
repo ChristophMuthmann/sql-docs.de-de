@@ -3,7 +3,7 @@ title: "ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX) | M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 39b1a173669b89eb339301f13ec3f34220aaf2b3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b349282479f2b3b63bb5d93557ef1d99b0aeddc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)
 Dieser Abschnitt enthält die folgenden Themen.  
@@ -31,4 +30,3 @@ Dieser Abschnitt enthält die folgenden Themen.
 -   [Grundlegendes zu ADOX](../../../ado/guide/extensions/adox-fundamentals.md)  
   
 -   [Unterstützung von Zertifikatanbietern zur ADOX](../../../ado/guide/extensions/provider-support-for-adox-ado.md)
-

@@ -2,32 +2,29 @@
 title: RESTORE-Befehl (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1b03fce8372619208cc6f065ff4f2cf805efb5fb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>RESTORE-Befehl (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Stellt eine Analysis Services-Datenbank aus einer Sicherungsdatei wieder her.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Eine Analysis Services-Datenbank wiederhergestellt aus einer Sicherungsdatei.  
   
 ## <a name="request"></a>Anforderung  
   
@@ -64,8 +61,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Eigenschaft**|**Default**|**Description**|  
-|database|[Erforderlich]|Der Name des Datenbankobjekts wiederhergestellt werden.|  
+|**Eigenschaft**|**Default**|**Beschreibung**|  
+|Datenbank|[Erforderlich]|Der Name des Datenbankobjekts wiederhergestellt werden.|  
 |file|[Erforderlich]|Die Sicherungsdatei/Pfad.|  
 |Kennwort|Empty|Das Kennwort zum Entschlüsseln der Sicherungsdatei verwendet werden soll.|  
 |allowOverwrite|False|Ein boolescher Wert, der bei "true", gibt an, dass eine Sicherungsdatei, die bereits vorhanden ist, werden überschrieben; andernfalls "false".|  
@@ -105,9 +102,8 @@ ms.lasthandoff: 09/01/2017
   
  Die [ \[MS-SSAS-T\]: SQL Server Analysis Services-Tabellendatenbank (SQL Server Technische Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) Dokuments Abschnitt 3.1.5.2.2, die die Struktur der Befehle für JSON-tabellarischen Metadaten und Objekte beschreibt. Aktuell enthält dieses Dokument Befehle und Funktionen, die noch nicht im TMSL-Skript implementiert. Finden Sie unter [Tabular Model Scripting Language &#40; TMSL &#41; Verweis](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) für Informationen zu den was unterstützt wird  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
-

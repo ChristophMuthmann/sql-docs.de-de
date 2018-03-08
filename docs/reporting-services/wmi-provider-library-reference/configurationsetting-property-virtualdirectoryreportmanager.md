@@ -1,31 +1,30 @@
 ---
-title: ConfigurationSetting Eigenschaft - VirtualDirectoryReportManager | Microsoft Docs
+title: 'ConfigurationSetting-Eigenschaft: VirtualDirectoryReportManager | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- VirtualDirectoryReportManager property
+helpviewer_keywords: VirtualDirectoryReportManager property
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da0fa1a7b2d74dc0196f23264cf90aa56726b529
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 823da54c03dd4f808d477eeb41c4169ecbc39a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---virtualdirectoryreportmanager"></a>ConfigurationSetting Eigenschaft - VirtualDirectoryReportManager
+# <a name="configurationsetting-property---virtualdirectoryreportmanager"></a>ConfigurationSetting-Eigenschaft: VirtualDirectoryReportManager
   Gibt das virtuelle Verzeichnis für die Berichts-Manager-Anwendung zurück. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,8 +46,7 @@ public string VirtualDirectoryReportManager;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -3,7 +3,7 @@ title: InvokeService (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0b0cf05dcc458245d1c8d64bd0f5c8d00178db9e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20e7b09600a0ec96b089322a1bd4d55e75eb9acf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Gibt einen Zeiger auf die angeforderte Schnittstelle auf einer leistungsfähigere Version des Objekts zurück.  
@@ -65,6 +64,5 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
 ## <a name="see-also"></a>Siehe auch  
  [RDS-Methoden](../../../ado/reference/rds-api/rds-methods.md)
-
 
 

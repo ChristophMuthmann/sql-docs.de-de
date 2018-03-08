@@ -1,13 +1,14 @@
 ---
-title: Aktualisieren und Migrieren von Reporting Services | Microsoft Docs
+title: Aktualisieren und Migrieren von Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,22 @@ helpviewer_keywords:
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 92
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "92"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/25/2017
-
+ms.openlocfilehash: f67b915820ae2d458ff6e43c7c3b0bbe7fdf1f98
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
-# <a name="upgrade-and-migrate-reporting-services"></a>Aktualisieren und Migrieren von Reporting Services
+# <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  In diesem Thema wird eine Übersicht der Upgrade- und Migrationsoptionen für SQL Server Reporting Services. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade von einer SQL Server Reporting Services-Bereitstellung:  
+  Dieser Artikel dient zur Übersicht über die Upgrade- und Migrationsoptionen für SQL Server Reporting Services. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer SQL Server Reporting Services-Bereitstellung:  
   
 -   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als "direktes" Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie weiter unten in diesem Dokument im Abschnitt "Migration vom einheitlichen Modus zum SharePoint-Modus".  
   
@@ -45,21 +44,21 @@ ms.lasthandoff: 10/25/2017
  Eine ausführliche Liste der unterstützten Editionen und Versionen, die aktualisiert werden können, finden Sie unter [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Aktuelle Informationen zu Problemen mit SQL Server finden Sie hier:  
+>  Die neuesten Informationen zu Problemen mit SQL Server finden Sie unter:  
 >   
 >  -   [Versionsanmerkungen zu SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124)herunter.  
   
   
 ##  <a name="bkmk_side_by_side"></a> Parallele Installationen  
- SQL Server Reporting Services im einheitlichen Modus kann die installierten Seite-an-Seite mit einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Bereitstellung im einheitlichen Modus.  
+ SQL Server Reporting Services im einheitlichen Modus kann parallel mit einer Bereitstellung von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] im einheitlichen Modus installiert sein.  
   
- Es gibt keine Unterstützung für Seite-an-Seite-Bereitstellungen von SQL Server Reporting Services im SharePoint-Modus und allen Vorgängerversionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Komponenten von SharePoint-Modus.  
+ Parallele Bereitstellungen von Komponenten mit SQL Server Reporting Services im SharePoint-Modus und allen Vorgängerversionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus werden nicht unterstützt.  
   
   
 ##  <a name="bkmk_inplace_upgrade"></a> Direktes Upgrade  
  Das Upgrade wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup kann verwendet werden, um ein Upgrade von einer oder allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, einschließlich [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], durchzuführen. Setup erkennt die vorhandenen Instanzen und fordert Sie auf, das Upgrade durchzuführen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup stellt Upgradeoptionen bereit, die Sie als Befehlszeilenargument oder im Setup-Assistenten angeben können.  
   
- Bei der Ausführung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup können Sie die Option zum Aktualisieren von einer der folgenden Versionen auswählen oder Sie können eine neue Instanz von SQL Server Reporting Services, die Seite-an-Seite vorhandene Installationen ausgeführt wird:  
+ Wenn Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup ausführen, können Sie die Option zum Aktualisieren einer der folgenden Versionen auswählen, oder Sie können eine neue SQL Server Reporting Services-Instanz installieren, die parallel zu vorhandenen Installationen ausgeführt wird:  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -77,11 +76,11 @@ ms.lasthandoff: 10/25/2017
   
   
 ##  <a name="bkmk_upgrade_checklist"></a> Prüfliste vor dem Upgrade  
- Vor dem Upgrade auf SQL Server Reporting Services, überprüfen Sie die folgenden Schritte aus:  
+ Sehen Sie sich Folgendes an, bevor Sie SQL Server Reporting Services aktualisieren:  
   
 -   Überprüfen Sie die Anforderungen, um festzustellen, ob [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]von Ihrer Hard- und Software unterstützt wird. Weitere Informationen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   Verwenden Sie (System Configuration Checker, SCC), um den Berichtsservercomputer nach Bedingungen zu scannen, die eine erfolgreiche Installation von SQL Server Reporting Services verhindern könnten. Weitere Informationen finden Sie unter [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   Verwenden Sie die Systemkonfigurationsprüfung, um den Berichtsservercomputer auf Bedingungen zu überprüfen, die eine erfolgreiche Installation von SQL Server Reporting Services verhindern könnten. Weitere Informationen finden Sie unter [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
 -   Lesen Sie bewährte Methoden und Anleitungen hinsichtlich der Sicherheit für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
@@ -91,7 +90,7 @@ ms.lasthandoff: 10/25/2017
   
 -   Sichern Sie alle Anpassungen von vorhandenen virtuellen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verzeichnissen in IIS.  
   
--   Entfernen Sie ungültige SSL-Zertifikate.  Dies schließt Zertifikate ein, die abgelaufen sind und vor dem Upgrade von Reporting Services nicht aktualisiert werden sollen.  Ungültige Zertifikate haben Fehler beim Upgrade zur Folge, und die folgende Fehlermeldung wird in die Reporting Services-Protokolldatei geschrieben: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Ein SSL-Zertifikat (Secure Sockets Layer) ist für die Website nicht konfiguriert.**.  
+-   Entfernen Sie ungültige SSL-Zertifikate.  Dies schließt Zertifikate ein, die abgelaufen sind und vor dem Upgrade von Reporting Services nicht aktualisiert werden sollen.  Ungültige Zertifikate haben Fehler beim Upgrade zur Folge, und die folgende Fehlermeldung wird in die Reporting Services-Protokolldatei geschrieben: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Ein SSL-Zertifikat (Secure Sockets Layer) ist für die Website nicht konfiguriert**.  
   
  Bevor Sie eine Produktionsumgebung aktualisieren, führen Sie immer ein Testupgrade in einer Vorproduktionsumgebung aus, die die gleiche Konfiguration wie Ihre Produktionsumgebung aufweist.  
   
@@ -101,7 +100,7 @@ ms.lasthandoff: 10/25/2017
   
  Eine manuelle **Migration** der Berichtsserverinstallation ist allerdings erforderlich, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Sie möchten den Typ des in der Bereitstellung verwendeten Berichtsservers ändern. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf den SharePoint-Modus aktualisieren bzw. konvertieren. Weitere Informationen finden Sie unter [vom einheitlichen Modus zum SharePoint-Migration &#40; SSRS &#41; ](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Sie möchten den Typ des in der Bereitstellung verwendeten Berichtsservers ändern. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf den SharePoint-Modus aktualisieren bzw. konvertieren. Weitere Informationen finden Sie unter [Native to SharePoint Migration (SSRS) (Migration vom einheitlichen Modus zum SharePoint-Modus (SSRS))](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   Sie möchten die Zeit verkürzen, die der Berichtsserver während des Upgradevorgangs offline geschaltet wird. Die derzeitige Installation bleibt online, während Sie Inhaltsdaten auf eine neue Berichtsserverinstanz kopieren und die Installation testen, ohne dass der Status der vorhandenen Berichtsserverinstallation geändert wird.  
   
@@ -115,13 +114,13 @@ ms.lasthandoff: 10/25/2017
   
 1.  Falls sich die Berichtsserver-Datenbank auf einem Remotecomputer befindet und Sie nicht über Updateberechtigungen für diese Datenbank verfügen, fordert Setup Sie zur Angabe von Anmeldeinformationen für das Upgrade auf eine Remoteberichtsserver-Datenbank auf. Achten Sie darauf, Anmeldeinformationen bereitzustellen, die über **sysadmin** -Berechtigungen oder Berechtigungen für Datenbankupdates verfügen.  
   
-2.  Setup führt eine Prüfung auf Bedingungen und Einstellungen durch, die das Upgrade verhindern, und liest Konfigurationseinstellungen ein. Beispiele hierfür sind benutzerdefinierte Erweiterungen, die auf dem Berichtsserver bereitgestellt werden. Wenn das Upgrade blockiert ist, müssen Sie entweder Ihre Installation ändern, damit das Upgrade wird nicht mehr blockiert, oder eine Migration auf eine neue Instanz von SQL Server Reporting Services. Weitere Informationen finden Sie in der Dokumentation von Upgrade Advisor.  
+2.  Setup führt eine Prüfung auf Bedingungen und Einstellungen durch, die das Upgrade verhindern, und liest Konfigurationseinstellungen ein. Beispiele hierfür sind benutzerdefinierte Erweiterungen, die auf dem Berichtsserver bereitgestellt werden. Wenn das Upgrade blockiert wird, müssen Sie entweder Ihre Installation so ändern, dass die Blockierung des Upgrades aufgehoben wird, oder eine Migration auf eine neue SQL Server Reporting Services-Instanz durchführen. Weitere Informationen finden Sie in der Dokumentation von Upgrade Advisor.  
   
 3.  Wenn das Upgrade fortgesetzt werden kann, fordert das Setup Sie auf, mit dem Upgradevorgang fortzufahren.  
   
-4.  Setup erstellt neue Ordner für SQL Server Reporting Services-Programmdateien. Die Programmordner für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation enthalten MSRS13.\< *Instanzname*>.  
+4.  Beim Setup werden neue Ordner für SQL Server Reporting Services-Programmdateien erstellt. Die Programmordner für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation enthalten MSRS13.\<*instanzname*>.  
   
-5.  Setup fügt der Berichtsserver-Programmdateien SQL Server Reporting Services-Konfigurationstools und Befehlszeilen-Hilfsprogramme, die die berichtsserverfunktion gehören.  
+5.  Beim Setup werden die Programmdateien des SQL Server Reporting Services-Berichtsservers, die Konfigurationstools und die Befehlszeilenhilfsprogramme hinzugefügt, die zur Berichtsserverfunktion gehören.  
   
     1.  Programmdateien aus der vorherigen Version werden entfernt.  
   
@@ -131,30 +130,30 @@ ms.lasthandoff: 10/25/2017
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist in einem separaten Download erhältlich. Weitere Informationen finden Sie unter [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   
-6.  Setup verwendet den Diensteintrag im Dienstkontroll-Manager für den SQL Server Reporting Services Report Server-Dienst erneut. Dieser Diensteintrag enthält das Konto des Berichtserver-Windows-Diensts.  
+6.  Das Setup verwendet den Diensteintrag im Dienststeuerungs-Manager für den SQL Server Reporting Services-Berichtsserverdienst erneut. Dieser Diensteintrag enthält das Konto des Berichtserver-Windows-Diensts.  
   
 7.  Setup reserviert neue URLs auf der Grundlage von vorhandenen virtuellen Verzeichniseinstellungen in IIS. Setup entfernt möglicherweise keine virtuellen Verzeichnisse in IIS, vergessen Sie also nicht, diese nach Abschluss des Upgrades manuell zu entfernen.  
   
 8.  Beim Setup werden die Einstellungen in den Konfigurationsdateien zusammengeführt. Auf der Grundlage der Konfigurationsdateien aus der aktuellen Installation werden neue Einträge hinzugefügt. Veraltete Einträge werden nicht entfernt; sie werden jedoch nach Abschluss des Upgrades nicht mehr vom Berichtsserver gelesen. Beim Upgrade werden alte Protokolldateien, die veraltete Datei RSWebApplication.config oder Einstellungen für virtuelle Verzeichnisse in IIS nicht gelöscht. Beim Upgrade werden ältere Versionen von Berichts-Designer, Management Studio und andere Clienttools nicht entfernt. Wenn Sie diese Dateien und Tools nicht mehr benötigen, müssen Sie sie nach Abschluss des Upgrades entfernen.  
   
- **Migration:** Migrieren von einer früheren Version einer Installation im einheitlichen Modus auf SQL Server Reporting Services ist die gleichen Schritte für alle unterstützten Versionen, die weiter oben in diesem Thema aufgeführt sind. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migration:** Wenn Sie eine frühere Version einer Installation im einheitlichen Modus zu SQL Server Reporting Services migrieren, sind die Schritte für alle unterstützten Versionen, die oben in diesem Artikel aufgeführt sind, identisch. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
   
 ##  <a name="bkmk_native_scaleout"></a> Aktualisieren einer Bereitstellung für horizontales Skalieren mit Reporting Services im einheitlichen Modus  
  Im Folgenden erhalten Sie eine Übersicht darüber, wie Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im einheitlichen Modus aktualisieren, die horizontal auf mehr als einen Berichtsserver skaliert ist. Bei diesem Vorgang muss die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung außer Betrieb gesetzt werden:  
   
-1.  Sichern Sie die Berichtsserver-Datenbanken und die Verschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) und [hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40; SSRS-Konfigurations-Manager &#41; ](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Sichern Sie die Berichtsserver-Datenbanken und die Verschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) und [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  Verwenden Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und entfernen Sie alle Berichtsserver aus der horizontal skalierten Bereitstellung. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-3.  Aktualisieren Sie einen Berichtsserver, mit SQL Server Reporting Services.  
+3.  Aktualisieren Sie einen der Berichtsserver auf SQL Server Reporting Services.  
   
 4.  Verwenden Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, um die Berichtsserver der Bereitstellung für horizontales Skalieren wieder hinzuzufügen. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Wiederholen Sie für jeden Server die Schritte für das Upgrade und das horizontale Skalieren.  
   
 ##  <a name="bkmk_sharePoint_scenarios"></a> Upgrade im SharePoint-Modus und Migrationsszenarien  
- In den folgenden Abschnitten wird beschrieben, die Probleme und grundlegenden Schritte zum Aktualisieren oder Migrieren von angegebenen Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SQL Server Reporting Services im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus.  
+ In den folgenden Abschnitten werden die Probleme und grundlegenden Schritte beschrieben, die ausgeführt werden müssen, um von bestimmten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Versionen im SharePoint-Modus auf SQL Server Reporting Services im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Modus zu aktualisieren oder eine Migration vorzunehmen.  
   
  Zum Upgrade einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im SharePoint-Modus sind zwei Installationskomponenten verfügbar.  
   
@@ -165,41 +164,41 @@ ms.lasthandoff: 10/25/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
- Ausführliche Schritte zum Migrieren einer Installations im SharePoint-Modus finden Sie unter [Migrieren einer Installation von Reporting Services &#40; SharePoint-Modus &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+ Ausführliche Schritte zum Migrieren einer Installation im SharePoint-Modus finden Sie unter [Migrate a Reporting Services Installation (SharePoint Mode) (Migrieren einer Reporting Services-Installation (SharePoint Modus))](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  Bei einigen der folgenden Szenarien muss die SharePoint-Umgebung heruntergefahren werden, damit die verschiedenen Technologien aktualisiert werden können. Wenn in Ihrer Umgebung keine Ausfallzeiten tolerierbar sind, müssen Sie anstelle eines direkten Upgrades eine Migration ausführen.  
   
-### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]mit SQLServer Reporting Services  
+### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] zu SQL Server Reporting Services  
  **Startumgebung:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1, SharePoint 2010 oder SharePoint 2013.  
   
- **Endumgebung:** SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
+ **Endumgebung**: SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
   
 -   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades von SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
   
      Wenn Sie über eine in SharePoint 2010 integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation verfügen, kann der SharePoint-Server nicht direkt aktualisiert werden. Sie haben jedoch die Möglichkeit, Inhaltsdatenbanken und Dienstanwendungsdatenbanken von der SharePoint 2010-Farm zu einer SharePoint 2013/2016-Farm zu migrieren.  
   
-### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]mit SQLServer Reporting Services  
+### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] zu SQL Server Reporting Services  
  **Startumgebung:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
- **Endumgebung:** SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
+ **Endumgebung**: SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
   
 -   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades von SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
   
      Wenn Sie über eine in SharePoint 2010 integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation verfügen, kann der SharePoint-Server nicht direkt aktualisiert werden. Sie haben jedoch die Möglichkeit, Inhaltsdatenbanken und Dienstanwendungsdatenbanken von der SharePoint 2010-Farm zu einer SharePoint 2013/2016-Farm zu migrieren.  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]mit SQLServer Reporting Services  
+### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] zu SQL Server Reporting Services  
  **Startumgebung:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
- **Endumgebung:** SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.  
+ **Endumgebung**: SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.  
  
 -   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades von SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
 
     SharePoint muss zuerst migriert werden, bevor Sie Reporting Services aktualisieren können.
   
--   Installieren Sie die SQL Server Reporting Services-Version von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -add-in für SharePoint auf jedem Web-Front-End in der Farm. Sie können das Add-in mithilfe von SQL Server Reporting Services-Installations-Assistenten oder durch Herunterladen des Add-Ins installieren.  
+-   Installieren Sie die SQL Server Reporting Services-Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-Ins für SharePoint auf jedem Web-Front-End in der Farm. Sie können das Add-In mit dem SQL Server Reporting Services-Installations-Assistenten oder durch Herunterladen des Add-Ins installieren.  
   
--   Führen Sie SQL Server Reporting Services-Installation, um die SharePoint-Modus für jeden 'Berichtsserver' zu aktualisieren. Der SQL Server-Installations-Assistent installiert den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst und erstellt eine neue Dienstanwendung. 
+-   Führen Sie die Installation von SQL Server Reporting Services aus, um das Upgrade des SharePoint-Modus für jeden „Berichtsserver“ auszuführen. Der SQL Server-Installations-Assistent installiert den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst und erstellt eine neue Dienstanwendung. 
   
   
 ##  <a name="bkmk_migration_considerations"></a> Migrationsüberlegungen  
@@ -254,4 +253,3 @@ ms.lasthandoff: 10/25/2017
 [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -2,9 +2,12 @@
 title: "Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: 
@@ -17,20 +20,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, multirow
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8f8f36c8882e981ba4096fdccab4bed5801ebc9e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 39adf5f718f4f4e0789e8e10bf6aa5e007fe6f0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen
-  Wenn Sie den Code für einen DML-Trigger schreiben, sollten Sie berücksichtigen, dass es sich bei der Anweisung, die zum Auslösen des Triggers führt, um eine einzelne Anweisung handeln kann, die sich jedoch nicht nur auf eine einzelne Zeile, sondern auf mehrere Datenzeilen auswirkt. Dieses Verhalten trifft häufig auf UPDATE- und DELETE-Trigger zu, da sich diese Anweisungen oft auf mehrere Zeilen auswirken. Eher ungewöhnlich ist dieses Verhalten für INSERT-Trigger, da durch die einfache INSERT-Anweisung nur eine einzelne Zeile hinzugefügt wird. Da ein INSERT-Trigger jedoch durch eine INSERT INTO (*table_name*) SELECT-Anweisung ausgelöst werden kann, kann die Einfügung mehrerer Zeilen zum Aufruf eines einzelnen Triggers führen.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Wenn Sie den Code für einen DML-Trigger schreiben, sollten Sie berücksichtigen, dass es sich bei der Anweisung, die zum Auslösen des Triggers führt, um eine einzelne Anweisung handeln kann, die sich jedoch nicht nur auf eine einzelne Zeile, sondern auf mehrere Datenzeilen auswirkt. Dieses Verhalten trifft häufig auf UPDATE- und DELETE-Trigger zu, da sich diese Anweisungen oft auf mehrere Zeilen auswirken. Eher ungewöhnlich ist dieses Verhalten für INSERT-Trigger, da durch die einfache INSERT-Anweisung nur eine einzelne Zeile hinzugefügt wird. Da ein INSERT-Trigger jedoch durch eine INSERT INTO (*table_name*) SELECT-Anweisung ausgelöst werden kann, kann die Einfügung mehrerer Zeilen zum Aufruf eines einzelnen Triggers führen.  
   
  Die Berücksichtigung mehrzeiliger Operationen ist insbesondere dann wichtig, wenn ein Trigger dazu dient, zusammenfassende Werte für eine Tabelle automatisch neu zu berechnen und die Ergebnisse in einer anderen Tabelle zu speichern, um weitere Berechnungen durchführen zu können.  
   
@@ -111,8 +114,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)  
   
   
-

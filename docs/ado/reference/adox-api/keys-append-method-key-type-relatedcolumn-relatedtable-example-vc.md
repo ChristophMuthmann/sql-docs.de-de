@@ -3,7 +3,7 @@ title: Erstellen Sie ein neue Foreign Key (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 79fb82f1c3a761643c4f23c1a3299642eab74d61
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b435b9550c2d18248797bc88ee68eb3e0a1ddff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften (VC++-Beispiel)
 Der folgende Code veranschaulicht, wie einen neue foreign Key. Es wird davon ausgegangen, dass zwei Tabellen (Customers und Orders) vorhanden sein.  
@@ -105,4 +104,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

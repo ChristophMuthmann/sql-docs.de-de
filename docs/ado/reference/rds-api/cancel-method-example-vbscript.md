@@ -3,7 +3,7 @@ title: Cancel Methodenbeispiel (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Cancel method [ADO], VBScript example
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7b403587af4267fa1fd604e7adc57e2a25eded2c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 018b787751e09de4ee8e40d8b2c217a0d4c4c69f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel-Methode (Beispiel) (VBScript)
 > [!IMPORTANT]
@@ -78,6 +77,5 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Cancel-Methode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
-
 
 

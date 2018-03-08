@@ -3,7 +3,7 @@ title: MarshalOptionsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptionsEnum enumeration [ADO]
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 837e648bdc05324fe1a1618fec69d778b8cafd5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a0a36e0451f8a0f64ccf1e7e7cf98478c33400f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Gibt an, welche Datensätze mit dem Server zurückgegeben werden sollen.  
@@ -47,5 +46,4 @@ Gibt an, welche Datensätze mit dem Server zurückgegeben werden sollen.
 |AdoEnums.MarshalOptions.MODIFIEDONLY|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Marshalling (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
-
+ [MarshalOptions-Eigenschaft (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

@@ -2,9 +2,12 @@
 title: Netzwerkprotokolle und Netzwerkbibliotheken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -21,18 +24,20 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 50
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aac8ea2ddd6582529952398f3896f548d8117078
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>Netzwerkprotokolle und Netzwerkbibliotheken
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Ein Server kann gleichzeitig auf mehreren Netzwerkprotokollen lauschen bzw. diese überwachen. Jedes Protokoll muss jedoch konfiguriert sein. Wenn ein bestimmtes Protokoll nicht konfiguriert ist, kann der Server auf diesem Protokoll nicht lauschen. Nach der Installation können diese Protokollkonfigurationen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden.  
   
 ## <a name="default-sql-server-network-configuration"></a>Standardnetzwerkkonfiguration von SQL Server  
@@ -85,11 +90,11 @@ ms.lasthandoff: 06/22/2017
   
  Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfigurationen finden Sie in den folgenden Themen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation:  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfigurationen finden Sie in den folgenden Artikeln der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation:  
   
 -   [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)  

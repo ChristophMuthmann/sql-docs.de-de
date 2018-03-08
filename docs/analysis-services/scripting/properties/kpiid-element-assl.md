@@ -2,40 +2,35 @@
 title: KpiID-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- KpiID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: KpiID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- KpiID
-helpviewer_keywords:
-- KpiID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: KpiID
+helpviewer_keywords: KpiID element
 ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b21076030d8106466e1ce032bdf4cf1b370b23f9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c464e68cab5ba1f4e9ae87b6ae11fb185068373e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpiid-element-assl"></a>KpiID-Element (ASSL)
-  Enthält einen Bezeichner (ID), der einem [Perspective](../../../analysis-services/scripting/objects/kpi-element-assl.md) -Element ein [KPI](../../../analysis-services/scripting/objects/perspective-element-assl.md) -Element zuordnet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält einen Bezeichner (ID), die ordnet eine [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) Element mit einem [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,18 +45,18 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|String|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|Zeichenfolge|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[PerspectiveKpi](../../../analysis-services/scripting/data-type/perspectivekpi-data-type-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Element, das das übergeordnete Element des entspricht **KpiID** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
@@ -70,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [Eigenschaften (ASSL)](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

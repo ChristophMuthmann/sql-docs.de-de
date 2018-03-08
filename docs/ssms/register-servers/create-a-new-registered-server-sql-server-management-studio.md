@@ -2,33 +2,33 @@
 title: Erstellen eines neu registrierten Servers (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.registerserver.general.sqlce.f1
 - sql13.swb.registerserver.general.sqlserver.f1
-helpviewer_keywords:
-- Registered Servers [SQL Server], creating new registered servers
+helpviewer_keywords: Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fa26a8ce5bc17a2c1f0528321f01129b7d861782
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c1abf6b65c375b2490a83e3ac278fca56f6189de
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Erstellen eines neu registrierten Servers (SQL Server Management Studio)
-  In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Server speichern, auf die Sie häufig zugreifen, indem Sie den Server in der Komponente Registrierte Server von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]registrieren. Ein Server kann vor dem Herstellen einer Verbindung oder bei der Verbindungsherstellung über den Objekt-Explorer registriert werden. Es gibt eine spezielle Menüoption zum Registrieren der Serverinstanzen auf dem lokalen Computer.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Server speichern, auf die Sie häufig zugreifen, indem Sie den Server in der Komponente „Registrierte Server“ von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] registrieren. Ein Server kann vor dem Herstellen einer Verbindung oder bei der Verbindungsherstellung über den Objekt-Explorer registriert werden. Es gibt eine spezielle Menüoption zum Registrieren der Serverinstanzen auf dem lokalen Computer.  
   
  Es gibt zwei Arten von registrierten Servern:  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 07/31/2017
   
      Zentrale Verwaltungsserver speichern Serverregistrierungen im zentralen Verwaltungsserver anstatt im Dateisystem. Zentrale Verwaltungsserver und untergeordnete registrierte Server können nur mithilfe der Windows-Authentifizierung registriert werden. Wenn ein zentraler Verwaltungsserver registriert wurde, werden seine zugeordneten registrierten Server automatisch angezeigt. Weitere Informationen zu zentralen Verwaltungsservern finden Sie unter [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die älter sind als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , können nicht als zentraler Verwaltungsserver festgelegt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>So registrieren Sie die lokalen Serverinstanzen  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 07/31/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
   
-     **Benutzername**  
+     **User name**  
      Zeigt den aktuellen Benutzernamen an, zu dem die Verbindung hergestellt wird. Diese schreibgeschützte Option ist nur verfügbar, wenn Sie zum Herstellen der Verbindung die Windows-Authentifizierung ausgewählt haben. Um **Benutzername**zu ändern, melden Sie sich bei dem Computer als ein anderer Benutzer an.  
   
      **Anmeldename**  
@@ -105,10 +105,9 @@ ms.lasthandoff: 07/31/2017
   
  Um Abfragen für alle Server auszuführen, die bei einem zentralen Verwaltungsserver registriert sind, erweitern Sie den zentralen Verwaltungsserver, klicken Sie mit der rechten Maustaste auf die Servergruppe, zeigen Sie auf **Verbinden**, und klicken Sie dann auf **Neue Abfrage**. Wenn Abfragen im neuen Abfrage-Editorfenster ausgeführt werden, werden sie anhand der gespeicherten Verbindungsinformationen und des Kontexts für die Windows-Authentifizierung, für alle Server in der Servergruppe ausgeführt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausblenden von Systemobjekten im Objekt-Explorer](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
  [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   
   
-

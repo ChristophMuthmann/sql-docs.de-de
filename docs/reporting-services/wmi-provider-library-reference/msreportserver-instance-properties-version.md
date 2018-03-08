@@ -1,31 +1,30 @@
 ---
-title: 'Versionseigenschaft (WMI: MSReportServer_Instance) | Microsoft Docs'
+title: 'Version-Eigenschaft (WMI: MSReportServer_Instance) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Version property
+helpviewer_keywords: Version property
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 342c13617ea4841f68df243ed21bd51683f328d0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a60f83caf5c54d5c853f1e5fe0167f748be1a4b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance-Eigenschaften - Version
+# <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance-Eigenschaften: Version
   Gibt die Version des Berichtsservers im Format "Hauptversion.Nebenversion.Build.Revision" zurück. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,8 +46,7 @@ public string Version;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

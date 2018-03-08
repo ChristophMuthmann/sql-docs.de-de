@@ -3,27 +3,28 @@ title: Anweisungshandles | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d80db9c7ce795514dd362e37170aa58cce817c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-handles"></a>Anweisungshandles
 Ein *Anweisung* ist am einfachsten als betrachtet eine SQL-Anweisung, wie z. B. **wählen \* aus Mitarbeiter**. Eine Anweisung ist jedoch mehr als nur eine SQL-Anweisung: er besteht aus der alle Informationen, die SQL-Anweisung, wie z. B. alle Resultsets, die von der Anweisung erstellt und in der Ausführung der Anweisung verwendeten Parametern zugeordnet. Eine Anweisung muss auch nicht zu eine Anwendung definierte SQL-Anweisung verfügen. Z. B. wenn ein Katalog-Funktion wie **SQLTables** wird ausgeführt für eine Anweisung, die es führt einer vordefinierte SQL-Anweisung, die eine Liste der Tabellennamen zurückgibt.  
@@ -43,4 +44,3 @@ Ein *Anweisung* ist am einfachsten als betrachtet eine SQL-Anweisung, wie z. B. 
  Anweisungshandles werden in den meisten ODBC-Funktionen verwendet. Sie werden vor allem, in der Funktionen verwendet, Parameter gebunden und Resultsetspalten (**SQLBindParameter** und **SQLBindCol**), Vorbereiten und Ausführen von Anweisungen (**SQLPrepare** **SQLExecute**, und **SQLExecDirect**), Abrufen von Metadaten (**SQLColAttribute** und **SQLDescribeCol**), Abrufen von Daten Ergebnisse (**SQLFetch**), und rufen Sie die Diagnose (**SQLGetDiagField** und **SQLGetDiagRec**). Sie werden auch in Katalogfunktionen verwendet (**SQLColumns**, **SQLTables**usw.) und eine Reihe weiterer Funktionen.  
   
  Anweisungshandles zugeordnet **SQLAllocHandle** und mit freigegebenen **SQLFreeHandle**.
-

@@ -2,31 +2,30 @@
 title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Prediction [Analysis Services], selecting mining models
+helpviewer_keywords: Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea29a1f9406014bf684d4c573ed2640bb7d0cf96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0634ebe36d956f356d13384159eb1171d4fc2ea4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Anwenden von Vorhersagefunktionen auf ein Modell
-  Zum Erstellen einer Vorhersageabfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining müssen Sie zuerst das Miningmodell auswählen, auf dem die Abfrage basieren soll. Sie können jedes Miningmodell auswählen, das im aktuellen Projekt vorhanden ist.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Zum Erstellen einer Vorhersageabfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, müssen Sie zuerst das Miningmodell auf dem die Abfrage basieren auswählen. Sie können jedes Miningmodell auswählen, das im aktuellen Projekt vorhanden ist.  
   
  Nachdem Sie ein Modell ausgewählt haben, fügen Sie der Abfrage eine *Vorhersagefunktion* hinzu. Eine Vorhersagefunktion kann verwendet werden, um eine Vorhersage zu erhalten. Aber Sie können auch Vorhersagefunktionen hinzufügen, die damit zusammenhängenden Statistiken zurückgeben, z. B. die Wahrscheinlichkeit des vorhergesagten Wert oder Informationen, die beim Generieren der Vorhersage verwendet wurden.  
   
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

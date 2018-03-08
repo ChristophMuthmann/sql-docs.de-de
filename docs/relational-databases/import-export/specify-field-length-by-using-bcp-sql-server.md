@@ -2,9 +2,12 @@
 title: "Angeben der Feldlänge mithilfe von bcp (SQL Server) | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -16,22 +19,23 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 772ed44be6795e676b18fcfc915f851e4ce24e97
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ad5143f4bc309f4156ebc4ea174ac11f4b9246fb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Angeben der Feldlänge mithilfe von bcp (SQL Server)
-  Die Feldlänge weist auf die maximale Anzahl von Zeichen hin, die zum Darstellen der Daten im Zeichenformat benötigt werden. Die Feldlänge ist bereits bekannt, wenn die Daten im systemeigenen Format gespeichert werden, z. B. im **int** -Datentyp, der 4 Bytes benötigt. Wenn Sie für die Präfixlänge „0“ angeben, werden Sie vom **bcp** -Befehl aufgefordert, die Feldlänge, die Standardfeldlängen sowie die Auswirkung der Feldlänge auf die Datenspeicherung in Datendateien mit **char** -Daten anzugeben.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Die Feldlänge weist auf die maximale Anzahl von Zeichen hin, die zum Darstellen der Daten im Zeichenformat benötigt werden. Die Feldlänge ist bereits bekannt, wenn die Daten im systemeigenen Format gespeichert werden, z. B. im **int** -Datentyp, der 4 Bytes benötigt. Wenn Sie für die Präfixlänge „0“ angeben, werden Sie vom **bcp** -Befehl aufgefordert, die Feldlänge, die Standardfeldlängen sowie die Auswirkung der Feldlänge auf die Datenspeicherung in Datendateien mit **char** -Daten anzugeben.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Die bcp-Eingabeaufforderung für die Feldlänge  
- Wenn ein interaktiver **bcp**-Befehl die Option **in** oder **out**, jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w** oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Feldlänge für jedes Datenfeld auf:  
+ Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w**oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Feldlänge für jedes Datenfeld auf:  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -124,7 +128,7 @@ ms.lasthandoff: 06/22/2017
   
  Wenn Sie eine Datendatei erstellen, die später erneut in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden soll, und dabei den Speicherplatz auf ein Minimum begrenzen möchten, sollten Sie ein Längenpräfix mit dem Standard-Dateispeichertyp und der Standardfeldlänge verwenden. Dies gilt für jeden der vorangegangenen Fälle.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

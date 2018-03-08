@@ -1,10 +1,13 @@
 ---
-title: Azure HDInsight-Verbindungs-Manager | Microsoft Docs
+title: Azure HDInsight-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,27 +16,25 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPHDICM.F1
 - SQL14.DTS.DESIGNER.AFPHDICM.F1
 ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
-caps.latest.revision: 4
+caps.latest.revision: 
 author: Lingxi-Li
 ms.author: lingxl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 080cd1184d3c29673ac476d6fe6087b697160544
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 3ead8a391d34f3d679beee4e85aed5bacd0e1334
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight-Verbindungs-Manager
-Die **Azure HDInsight-Verbindungs-Manager** ermöglicht einem SSIS-Paket für die Verbindung mit einem Azure HDInsight-Cluster.
+Der **Azure HDInsight-Verbindungs-Manager** ermöglicht einem SSIS-Paket, die Verbindung mit einem Azure HDInsight-Cluster herzustellen.
 
-Die **Azure HDInsight-Verbindungs-Manager** ist eine Komponente von der [SQL Server Integration Services (SSIS) Feature Pack für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+Der **Azure HDInsight-Verbindungs-Manager** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-Zum Erstellen und Konfigurieren einer **Azure HDInsight-Verbindungs-Manager**, befolgen Sie die folgenden Schritte aus:
+Zum Erstellen und Konfigurieren eines **Azure HDInsight-Verbindungs-Managers** führen Sie die folgenden Schritte aus:
 
-1. In der **SSIS-Verbindungs-Manager hinzufügen** wählen Sie im Dialogfeld **AzureHDInsight**, und klicken Sie auf **hinzufügen**.
-2. In der **Azure HDInsight-Verbindungs-Manager-Editor** Dialogfeld geben die **Cluster-DNS-Namen** (ohne das Protokollpräfix) **Benutzername**, und **Kennwort** für den HDInsight-Cluster für die Verbindung.
+1. Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **AzureHDInsight**aus, und klicken Sie auf **Hinzufügen**.
+2. Geben Sie im Dialogfeld **Azure HDInsight-Verbindungs-Manager-Editor** den **Cluster-DNS-Namen** (ohne Protokollpräfix), den **Benutzernamen** und das **Kennwort** für den HDInsight-Cluster ein, mit dem die Verbindung hergestellt werden soll.
 3. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.
 4. Die Eigenschaften des Verbindungs-Managers, die Sie im Fenster **Eigenschaften** erstellt haben, werden angezeigt.
-

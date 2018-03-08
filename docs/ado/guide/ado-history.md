@@ -8,23 +8,22 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-features-for-each-release"></a>ADO-Funktionen für jedes Release
 In diesem Thema werden die neuen Funktionen von jeder Version von ADO, ADO MD und ADOX aufgelistet.
@@ -51,17 +50,17 @@ Ein geschachtelte Shape-Befehl gibt jetzt maximal 512 **Recordsets**. Dies bedeu
  *Unterstützung für 64-Bit-Plattform* ADO 2.7 bietet Unterstützung für 64-Bit-Prozessoren.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***Methode* beginnen mit ADO 2.6, ADO MD-Objekte können mit abgerufen werden, eindeutige Namen entsprechend den Angaben von der [UniqueName-Eigenschaft (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Die Namen der übergeordneten Objekte müssen nicht bekannt sein, und übergeordneten Auflistungen müssen nicht aufgefüllt werden, um ein Objekt abzurufen. Finden Sie unter [GetSchemaObject-Methode (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***Methode* beginnen mit ADO 2.6, ADO MD-Objekte können mit abgerufen werden, eindeutige Namen entsprechend den Angaben von der [UniqueName-Eigenschaft (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Die Namen der übergeordneten Objekte müssen nicht bekannt sein, und übergeordneten Auflistungen müssen nicht aufgefüllt werden, um ein Objekt abzurufen. Finden Sie unter [GetSchemaObject-Methode (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Befehl Streams* der **Befehl** Objekt unterstützt die Befehle im Stream-Format als Alternative zur Verwendung der **CommandText** Eigenschaft. Die [CommandStream-Eigenschaft (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) können verwendet werden, um die XML-Vorlagen oder Updategrams als angeben der **Befehl** Eingabe mit der Microsoft OLE DB-Anbieter für SQL Server.
 
- **Dialekt***Eigenschaft* [Dialekt](../../ado/reference/ado-api/dialect-property.md) ist eine neue Eigenschaft, die der Syntax definiert und die allgemeinen Regeln, dass der Anbieter verwendet, um die Zeichenfolge oder den Stream zu analysieren.  
+ **Dialekt***Eigenschaft* [Dialekt](../../ado/reference/ado-api/dialect-property.md) ist eine neue Eigenschaft, die der Syntax definiert und die allgemeinen Regeln, dass der Anbieter verwendet, um die Zeichenfolge oder den Stream zu analysieren.
 
- **Recordset.Open***Methode* der [Execute-Methode](../../ado/reference/ado-api/execute-method-ado-command.md) von der ADO **Befehl** Objekt wurde verbessert, um Datenströme für ein- und Ausgaben zu verwenden.  
+ **Recordset.Open***Methode* der [Execute-Methode](../../ado/reference/ado-api/execute-method-ado-command.md) von der ADO **Befehl** Objekt wurde verbessert, um Datenströme für ein- und Ausgaben zu verwenden.
 
  *Statusvalues Feld* , wenn der Benutzer eine DB_E_ERRORSOCCURRED beim Ändern fehlerbehaftete einer **Feld** des eine **Recordset**, ADO wird jetzt Füllen der **Field.Status**Eigenschaft mit dem entsprechenden Statusinformationen, damit der Benutzer hat weitere Informationen zu den Einzelheiten. Finden Sie unter [Status-Eigenschaft (ADO-Feld)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***Eigenschaft* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) ist eine neue Eigenschaft von der **Befehl** -Objekt, das zeigt an, dass der Anbieter sollte mit dem Namen Parameter.  
+ **NamedParameters***Eigenschaft* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) ist eine neue Eigenschaft von der **Befehl** -Objekt, das zeigt an, dass der Anbieter sollte mit dem Namen Parameter.
 
  *Resultsets in Datenströmen* ADO kann Resultsets zurückgeben, aus einer Datenquelle in einem **Stream**, anstelle eines **Recordset** Objekt. Verwenden die neueste Version des Microsoft OLE DB-Anbieter für SQL Server, erhalten XML-Ergebnisse vom Anbieter Sie durch Ausführen einer Abfrage "Für XML". Ein **Stream** , empfängt das Resultset kann mit einem Befehl "Für XML" als Quelle geöffnet werden. Finden Sie unter [Abrufen von Resultsets in Streams](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
@@ -75,4 +74,3 @@ Ein geschachtelte Shape-Befehl gibt jetzt maximal 512 **Recordsets**. Dies bedeu
  *URL-Bindung* ADO 2.5 führt die Verwendung einer URL als Alternative eine Verbindung und der Befehlstext in Text um Namen Daten um Objekte zu speichern. Eine URL verwendet werden kann, mit dem vorhandenen **Verbindung** und **Recordset** auch Objekte wie mit dem neuen **Datensatz** und **Stream** Objekte.
 
  *Datenanbieter, die Unterstützung von URL-Bindung* ADO 2.5 unterstützt OLE DB-Anbieter, die die URL-Schemas zu erkennen. Dies schließt OLE DB-Anbieter für Internet Publishing, die greift auf das Dateisystem von Windows 2000 und erkennt die vorhandene HTTP-Schema.
-

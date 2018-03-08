@@ -1,13 +1,14 @@
 ---
 title: Sicherheit auf Zeilenebene | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Grafik zur Sicherheit auf Zeilenebene](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
   
@@ -373,4 +373,3 @@ GO
  [Erstellen benutzerdefinierter Funktionen &#40;Datenbankmodul&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
-

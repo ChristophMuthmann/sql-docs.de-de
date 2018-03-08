@@ -3,7 +3,7 @@ title: Prozeduren Auflistungseigenschaften, Methoden und Ereignisse | Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Procedures collection [ADOX], members
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 06f1fa5caf697bc917af9e82bf1268d2f5741e2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6f7901d22ab55e68fcc25af721728a7076ba2d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Prozeduren Auflistungseigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -44,5 +43,4 @@ ms.lasthandoff: 09/09/2017
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozeduren-Auflistung (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
-
+ [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)

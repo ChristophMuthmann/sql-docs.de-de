@@ -2,27 +2,31 @@
 title: "Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c07b191fe73f8cab21a9f3876230d344ad99968
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: bf2e9bf99c208efeb26fe0a2b87b6a7bab964dd2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
-  In diesem Thema wird beschrieben, wie Sie Knotenpfade zum Index angeben, und es werden Optimierungshinweise für die Indizierung aufgeführt, wenn Sie selektive XML-Indizes erstellen oder ändern.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie Knotenpfade zum Index angeben, und es werden Optimierungshinweise für die Indizierung aufgeführt, wenn Sie selektive XML-Indizes erstellen oder ändern.  
   
  Sie geben Knotenpfade und Optimierungshinweise gleichzeitig in einer der folgenden Anweisungen an:  
   
@@ -65,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
  Hier ist ein Beispiel für einen selektiven, mit Standardzuordnungen erstellten XML-Index. Für alle drei Pfade werden der Standardknotentyp (**xs:untypedAtomic**) und Kardinalität verwendet.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -96,7 +100,7 @@ mypath03 = '/a/b/d'
   
  Sie können den selektiven XML-Index wie nachfolgend aufgeführt optimieren:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -120,7 +124,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Betrachten Sie die folgende Abfrage:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -128,7 +132,7 @@ FROM myXMLTable T
   
  Die angegebene Abfrage gibt einen Wert des Pfads `/a/b/d` zurück, der in einen NVARCHAR(200)-Datentyp gepackt ist, sodass der für den Knoten anzugebende Datentyp offensichtlich ist. Es gibt jedoch kein Schema, um die Kardinalität des Knotens in nicht typisiertem XML anzugeben. Um diesen Knoten anzugeben ( `d` tritt höchstens einmal unter dem übergeordneten Knoten `b`auf), erstellen Sie einen selektiven XML-Index, der den Optimierungshinweis SINGLETON wie folgt verwendet:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -226,7 +230,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Betrachten Sie die folgende einfache Abfrage des [Beispiel-XML-Dokuments](#sample) in diesem Thema:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -241,7 +245,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Um die Leistung der oben aufgeführten SELECT-Anweisung zu verbessern, können Sie den folgenden selektiven XML-Index erstellen:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -254,7 +258,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Indizieren von identischen Pfaden  
  Sie können keine identischen Pfade als gleichen Datentyp unter verschiedenen Pfadnamen höher stufen. Die folgende Abfrage löst z. B. einen Fehler aus, da `pathOne` und `pathTwo` identisch sind:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -265,7 +269,7 @@ FOR
   
  Sie können jedoch identische Pfade als andere Datentypen mit anderen Namen höher stufen. So ist die folgende Abfrage beispielsweise jetzt akzeptabel, da die Datentypen verschieden sind:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -281,7 +285,7 @@ FOR
   
  Hier ist eine einfache XQuery aufgeführt, die die exist()-Methode verwendet:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -296,7 +300,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Hier ist eine komplexere Variante der vorherigen XQuery mit einem angewendeten Prädikat aufgeführt:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -312,7 +316,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Hier ist eine komplexe Abfrage mit einer value()-Klausel aufgeführt:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -330,7 +334,7 @@ FROM myXMLTable T
   
  Hier ist eine Abfrage aufgeführt, die eine FLWOR-Klausel innerhalb einer exist()-Klausel verwendet. (Der Name "FLWOR" leitet sich von den fünf Klauseln ab, aus denen sich ein FLWOR-Ausdruck von XQuery zusammensetzen kann: for, let, where, order by und return.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -360,20 +364,20 @@ WHERE T.xmldata.exist('
   
 |Optimierungshinweis|Effizienterer Speicher|Verbesserte Leistung|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Ja|Nein|  
-|**SINGLETON**|Nein|Ja|  
-|**DATA TYPE**|Ja|Ja|  
-|**MAXLENGTH**|Ja|Ja|  
+|**node()**|ja|nein|  
+|**SINGLETON**|nein|ja|  
+|**DATA TYPE**|ja|ja|  
+|**MAXLENGTH**|ja|ja|  
   
 ### <a name="optimization-hints-and-data-types"></a>Optimierungshinweise und Datentypen  
  Sie können Knoten als XQuery-Datentypen oder als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen indizieren. In der folgenden Tabelle ist aufgeführt, welche Optimierungshinweise für die einzelnen Datentypen unterstützt werden.  
   
 |Optimierungshinweis|XQuery-Datentypen|SQL-Datentypen|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Ja|Nein|  
-|**SINGLETON**|Ja|Ja|  
-|**DATA TYPE**|Ja|Nein|  
-|**MAXLENGTH**|Ja|Nein|  
+|**node()**|ja|nein|  
+|**SINGLETON**|ja|ja|  
+|**DATA TYPE**|ja|nein|  
+|**MAXLENGTH**|ja|nein|  
   
 ### <a name="node-optimization-hint"></a>node()-Optimierungshinweis  
  Gilt für: XQuery-Datentypen  
@@ -382,7 +386,7 @@ WHERE T.xmldata.exist('
   
  Betrachten Sie das folgende Beispiel:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  
@@ -437,7 +441,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Erstellen, Ändern und Löschen selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

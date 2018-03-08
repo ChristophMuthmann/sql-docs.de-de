@@ -2,30 +2,30 @@
 title: "Löschen eine PowerPivot-Datenfeedbibliothek | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e1f2ed93aa09903f34ba5d6e1e177920157ea4dd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 759522b9708946298a7266f06359fe07a0dcdfb1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Löschen einer Power Pivot-Datenfeedbibliothek
-  Sie müssen der Websitebesitzer sein, um eine Datenfeedbibliothek löschen zu können. Wenn die Bibliothek Elemente enthält, werden sie zusammen mit der Bibliothek gelöscht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie müssen der Websitebesitzer sein, um eine Datenfeedbibliothek löschen zu können. Wenn die Bibliothek Elemente enthält, werden sie zusammen mit der Bibliothek gelöscht.  
   
  Sie müssen den Namen der zu löschenden Datenfeedbibliothek kennen.  
   
@@ -45,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot-Datenfeeds](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
-

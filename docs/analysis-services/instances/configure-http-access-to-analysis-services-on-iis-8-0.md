@@ -2,30 +2,30 @@
 title: Konfigurieren von HTTP-Zugriff auf Analysis Services auf IIS 8.0 | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bfb3bdd7224a72849e35bd1433e59267b559f0f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services auf IIS 8.0
-  In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
   
 -   Der Clientzugriff erfolgt über Internet- oder Extranetverbindungen, mit Einschränkungen dazu, welche Ports aktiviert werden können,  
   
@@ -129,11 +129,11 @@ ms.lasthandoff: 09/01/2017
   
 4.  Stellen Sie sicher, dass der Ordner \inetpub\wwwroot\OLAP auf dem Webserver Folgendes enthält: MSMDPUMP.DLL, MSMDPUMP.INI sowie einen Ordner Resources. Die Ordnerstruktur sollte wie folgt aussehen:  
   
-    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Schritt 2: Erstellen eines Anwendungspools und eines virtuellen Verzeichnisses in IIS  
  Als Nächstes erstellen Sie einen Anwendungspool und einen Endpunkt für die Datapump.  
@@ -324,4 +324,3 @@ ms.lasthandoff: 09/01/2017
  [Gewusst wie: Einrichten von SSL in IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   
-

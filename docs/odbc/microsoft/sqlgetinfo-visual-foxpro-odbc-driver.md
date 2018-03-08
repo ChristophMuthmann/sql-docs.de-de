@@ -3,26 +3,26 @@ title: SQLGetInfo (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2aa64242f7ae74d7bf815d197e67b91c460e4a54
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE gibt SQL_BP_SCROLL zurück.  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  SQL_COLUMN_ALIAS gibt "Y" zurück.  
   
  SQL_CONCAT_NULL_BEHAVIOR gibt SQL_CB_NULL zurück.  
@@ -460,4 +460,3 @@ ms.lasthandoff: 09/09/2017
  SQL_UNION gibt SQL_U_UNION oder SQL_U_UNION_ALL zurück.  
   
  Gibt SQL_USER_NAME \<leer >.
-

@@ -1,32 +1,31 @@
 ---
 title: "Database Consistency Checker (DBCC) für Analysis Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e8ecc3c51619c7f1ebbe5b109f0710500184a27
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
-  DBCC ermöglicht bei Bedarf Datenbanküberprüfungen für mehrdimensionale und tabellarische Datenbanken auf einer Analysis Services-Instanz. Sie können DBCC in einem MDX- oder XMLA-Abfragefenster in SQL Server Management Studio (SSMS) ausführen und die DBCC-Ausgabe in SQL Server Profiler- oder XEvent-Sitzungen in SSMS verfolgen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC ermöglicht bei Bedarf Datenbanküberprüfungen für mehrdimensionale und tabellarische Datenbanken auf einer Analysis Services-Instanz. Sie können DBCC in einem MDX- oder XMLA-Abfragefenster in SQL Server Management Studio (SSMS) ausführen und die DBCC-Ausgabe in SQL Server Profiler- oder XEvent-Sitzungen in SSMS verfolgen.  
 Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder ausführliche Fehlerinformationen zurück, wenn das Objekt beschädigt ist.   In diesem Artikel erfahren Sie, wie Sie den Befehl ausführen, die Ergebnisse analysieren und auftretende Probleme behandeln.  
   
  Bei tabellarischen Datenbanken entsprechen die von DBCC ausgeführten Konsistenzprüfungen der integrierten Überprüfung, die automatisch jedes Mal auftritt, wenn Sie eine Datenbank erneut laden, synchronisieren oder wiederherstellen.  Im Gegensatz dazu fallen Konsistenzprüfungen für mehrdimensionale Datenbanken nur an, wenn Sie DBCC bei Bedarf ausführen.  
@@ -174,7 +173,7 @@ Execution complete
   
 4.  DBCC-Aktivitäten werden in SQL Server Profiler über **Command** -Ereignisse mit einer Ereignisunterklasse von DBCC gekennzeichnet:  
   
-     ![SSAS-Dbcc-Profiler-Eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "Ssas-Dbcc-Profiler-Eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      Der Ereigniscode 32 ist die DBCC-Ausführung.  
   
@@ -312,4 +311,3 @@ Execution complete
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

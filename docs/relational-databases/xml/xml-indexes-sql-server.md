@@ -2,9 +2,12 @@
 title: XML-Indizes (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -33,19 +36,20 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-caps.latest.revision: 59
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5b905c48770f83d3b77e2549466eb2513d270b30
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 6ae2dbced7f4a077bcab341abf84eba5c189c3da
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-indexes-sql-server"></a>XML-Indizes (SQL Server)
-  XML-Indizes können für **xml** -Datentypspalten erstellt werden. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+XML-Indizes können für **xml** -Datentypspalten erstellt werden. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
   
 -   In Ihren Arbeitsauslastungen sind Abfragen von XML-Spalten üblich. Die Wartungskosten für den XML-Index während der Datenänderung müssen berücksichtigt werden.  
   
@@ -97,11 +101,11 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Primärschlüssel der Basistabelle. Der Primärschlüssel der Basistabelle wird im primären XML-Index für den Rückwärtsjoin mit der Basistabelle dupliziert, und die maximale Anzahl von Spalten im Primärschlüssel der Basistabelle ist auf 15 beschränkt.  
   
- Diese Knoteninformationen werden zum Auswerten und Erstellen der XML-Ergebnisse für eine angegebene Abfrage verwendet. Zu Optimierungszwecken werden der Tagname und die Knotentypinformationen als ganze Zahlen codiert; die Path-Spalte verwendet die gleiche Codierung. Pfade werden außerdem in umgekehrter Reihenfolge gespeichert, damit eine Pfadzuordnung erfolgen kann, wenn nur das Pfadsuffix bekannt ist. Beispiel:  
+ Diese Knoteninformationen werden zum Auswerten und Erstellen der XML-Ergebnisse für eine angegebene Abfrage verwendet. Zu Optimierungszwecken werden der Tagname und die Knotentypinformationen als ganze Zahlen codiert; die Path-Spalte verwendet die gleiche Codierung. Pfade werden außerdem in umgekehrter Reihenfolge gespeichert, damit eine Pfadzuordnung erfolgen kann, wenn nur das Pfadsuffix bekannt ist. Zum Beispiel:  
   
 -   `//ContactRecord/PhoneNumber` , wobei nur die beiden letzten Schritte bekannt sind.  
   
- OR  
+ oder  
   
 -   `/Book/*/Title` ; dabei wird das Platzhalterzeichen (`*`) in der Mitte des Ausdrucks angegeben.  
   
@@ -145,7 +149,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` ; gibt nur den Pfad an.  
   
- OR  
+ oder  
   
 -   `/root/Location/@LocationID[.="10"]` ; gibt den Pfad- und Knotenwert an.  
   
@@ -217,7 +221,7 @@ WHERE ProductModelID = 19
   
  Der von XML-Indizes verwendete Speicherplatz kann in der Tabellenwertfunktion [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)gefunden werden. Sie stellt für alle Indextypen Informationen bereit, wie z. B. zur Anzahl der belegten Datenträgerseiten, zur durchschnittlichen Zeilengröße in Byte und zur Anzahl der Datensätze. Dieses schließt auch XML-Indizes ein. Diese Informationen sind für jede Datenbankpartition verfügbar. XML-Indizes verwenden das Partitionierungsschema und die Partitionierungsfunktion der Basistabelle.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

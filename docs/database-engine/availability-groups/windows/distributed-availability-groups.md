@@ -1,32 +1,31 @@
 ---
 title: "Verteilte Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.date: 01/12/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Availability Groups [SQL Server], distributed
+helpviewer_keywords: Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
-
-Verteilte Verfügbarkeitsgruppen sind eine neue Funktion, die in SQL Server 2016 als Variation der bestehenden Funktion für Always On-Verfügbarkeitsgruppen eingeführt. Dieser Artikel erläutert einige Aspekte von verteilten Verfügbarkeitsgruppen und ergänzt die bestehende [SQL Server documentation (SQL Server-Dokumentation)](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verteilte Verfügbarkeitsgruppen sind eine neue Funktion, die in SQL Server 2016 als Variation der bestehenden Funktion für Always On-Verfügbarkeitsgruppen eingeführt wurde. Dieser Artikel erläutert einige Aspekte von verteilten Verfügbarkeitsgruppen und ergänzt die bestehende [SQL Server documentation (SQL Server-Dokumentation)](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > „DAG“ ist nicht die offizielle Abkürzung für *verteilte Verfügbarkeitsgruppe*, da die Abkürzung bereits für die Database Availability Group-Exchange-Funktion verwendet wird. Diese Exchange-Funktion steht nicht in Zusammenhang mit den Verfügbarkeitsgruppen oder verteilten Verfügbarkeitsgruppen in SQL Server.
@@ -148,7 +147,11 @@ Die folgende Abbildung zeigt AG 1 als das primäre Replikat von zwei unterschied
 
 In den beiden obigen Beispielen können insgesamt bis zu 27 Replikate in den drei Verfügbarkeitsgruppen vorhanden sein, von denen jedes für schreibgeschützte Abfragen verwendet werden kann. 
 
-[Read-only routing (Schreibgeschütztes Routing)]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) ist mithilfe von verteilten Verfügbarkeitsgruppen derzeit nicht möglich. Alle Abfragen, die zur Verbindung den Listener verwenden, gehen an das primäre Replikat. Andernfalls müssen Sie jedes Replikat so konfigurieren, dass alle Verbindungen als sekundäres Replikat zugelassen werden und direkt auf diese zugegriffen wird. Dieses Verhalten wird mit einem Update zu SQL Server 2016 oder in einer zukünftigen Version von SQL Server möglicherweise geändert.
+Das [schreibgeschützte Routing]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) funktioniert nicht vollständig mit verteilten Verfügbarkeitsgruppen. Genauer gesagt
+
+1. kann das schreibgeschützte Routing konfiguriert werden, um für die primäre Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe zu funktionieren. 
+2. Das schreibgeschützte Routing kann konfiguriert werden, funktioniert jedoch nicht für die sekundäre Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe. Alle Abfragen, die den Listener verwenden, um eine Verbindung mit der sekundären Verfügbarkeitsgruppe herzustellen, werden an das primäre Replikat der sekundären Verfügbarkeitsgruppe weitergeleitet. Andernfalls müssen Sie jedes Replikat so konfigurieren, dass alle Verbindungen als sekundäres Replikat zugelassen werden und direkt auf diese zugegriffen wird. Das schreibgeschützte Routing funktioniert jedoch, wenn die sekundäre Verfügbarkeitsgruppe nach einem Failover zur primären Verfügbarkeitsgruppe wird. Dieses Verhalten wird mit einem Update zu SQL Server 2016 oder in einer zukünftigen Version von SQL Server möglicherweise geändert.
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Initialisieren von sekundären Verfügbarkeitsgruppen in eine verteilte Verfügbarkeitsgruppe
 
@@ -285,4 +288,3 @@ and ag.is_distributed = 1
 [13]: ./media/dag-13-performance-information-distributed-ag.png
 
  
-

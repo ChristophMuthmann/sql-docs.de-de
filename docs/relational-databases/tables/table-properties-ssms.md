@@ -2,11 +2,13 @@
 title: "Tabelleneigenschaften – SSMS | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +18,19 @@ f1_keywords:
 - sql12.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e1bc425e913f88fe7becd220f2275bacf6b21340
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "43"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4afb3c196e046c7f7517df5489c4c62f10da6ec2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](../../relational-databases/tables/view-the-table-definition.md).  
   
@@ -175,7 +177,7 @@ ms.lasthandoff: 06/22/2017
   
  Das FILESTREAM-Partitionsschema muss mit dem Schema symmetrisch sein, das in der Option **Partitionsschema** angegeben ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen der Tabellendefinition](../../relational-databases/tables/view-the-table-definition.md)   
  [Ändern von Spalten &#40;Datenbankmodul&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   

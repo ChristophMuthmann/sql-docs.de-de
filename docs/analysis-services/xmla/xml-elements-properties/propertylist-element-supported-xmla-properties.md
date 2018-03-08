@@ -2,36 +2,35 @@
 title: "Unterstützt die XMLA-Eigenschaften (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [XML for Analysis]
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc63db6c3f61de7e77ea41e3c5a24acd4d3b275e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>PropertyList-Element - unterstützt die XMLA-Eigenschaften
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in der folgenden Tabelle aufgeführten Servereigenschaften unterstützt. Sie verwenden diese aufgelisteten Eigenschaften in der [Eigenschaften](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) Element von der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) und [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methoden.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in der folgenden Tabelle aufgeführten Servereigenschaften unterstützt. Sie verwenden diese aufgelisteten Eigenschaften in der [Eigenschaften](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) Element von der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) und [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methoden.  
   
 |Name|Description|Typ|Werte|  
 |----------|-----------------|----------|------------|  
@@ -151,4 +150,3 @@ ms.lasthandoff: 09/01/2017
  [PropertyList-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   
-

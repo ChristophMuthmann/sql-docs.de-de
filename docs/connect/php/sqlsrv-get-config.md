@@ -3,30 +3,30 @@ title: Sqlsrv_get_config | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_get_config
+apiname: sqlsrv_get_config
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_get_config
 - sqlsrv_get_config
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c76e394715b1a866e193c1484f19c458a61668cc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5712c6f98da82b422e76a7cb6c8d07adac86b5e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,4 +54,3 @@ Wenn **false** von **sqlsrv_get_config**zurückgegeben wird, müssen Sie [sqlsrv
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   
-

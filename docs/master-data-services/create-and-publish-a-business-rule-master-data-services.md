@@ -1,11 +1,13 @@
 ---
 title: "Erstellen und Veröffentlichen einer Geschäftsregel (Master Data Services) | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -14,27 +16,26 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-caps.latest.revision: 14
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9ecc8007584cb5408a8d247558a9b9b7c19e0c28
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c74bf4d6520ca399be34da8369f6f62b2eb3d3ec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Erstellen und Veröffentlichen einer Geschäftsregel (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Geschäftsregel, um die Genauigkeit der Masterdaten sicherzustellen. Nachdem Sie eine Regel erstellt haben, müssen Sie diese veröffentlichen, damit Sie sie auf Daten anwenden können.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>So erstellen und veröffentlichen Sie eine Geschäftsregel  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 09/07/2017
     > [!NOTE]  
     >  Benachrichtigungen werden nur für Regeln gesendet, die eine Überprüfungsaktion einschließen.  
   
-10. Klicken Sie im **IF** -Abschnitt auf **Hinzufügen**. Ein Panel wird angezeigt.  
+10. Klicken Sie im **IF** -Abschnitt auf **Hinzufügen**. Ein Bereich wird angezeigt.  
   
 11. Wählen Sie ein Attribut aus der Dropdownliste **Attribut** aus.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 09/07/2017
   
 15. Fügen Sie der Regel option mehrere Bedingungen hinzu. Weitere Informationen finden Sie unter [Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
-16. Klicken Sie im **THEN** -Abschnitt auf **Hinzufügen** . Ein Panel wird angezeigt.  
+16. Klicken Sie im **THEN** -Abschnitt auf **Hinzufügen** . Ein Bereich wird angezeigt.  
   
 17. Wählen Sie ein Attribut aus der Dropdownliste **Attribut** aus.  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 09/07/2017
   
 21. Optional können Sie eine **ELSE** -Aktion hinzufügen, indem Sie folgende Schritte ausführen.  
   
-    1.  Klicken Sie unter dem **ELSE** -Abschnitt auf **Hinzufügen**. Ein Panel wird angezeigt.  
+    1.  Klicken Sie unter dem **ELSE** -Abschnitt auf **Hinzufügen**. Ein Bereich wird angezeigt.  
   
     2.  Wählen Sie ein Attribut aus der Dropdownliste **Attribut** aus.  
   
@@ -105,16 +106,16 @@ ms.lasthandoff: 09/07/2017
 ## <a name="grid-columns"></a>Rasterspalten  
  Für jede erstelle Geschäftsregel wird dem Raster eine Zeile mit sechs Spalten hinzugefügt. Das sind die Spalten.  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
 |Status|Wenn Sie auf **Speichern** klicken, wird das folgende Bild angezeigt, das angibt, dass die Geschäftsregel aktualisiert wird.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Falls beim Erstellen oder Bearbeiten einer Geschäftsregel Fehler auftreten, wird das folgende Bild angezeigt.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Falls der Status „OK“ lautet, wird das folgende Bild angezeigt.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |Name|Der Geschäftsregelname|  
-|Beschreibung|Die Beschreibung der Geschäftsregel.|  
+|Description|Die Beschreibung der Geschäftsregel.|  
 |Geschäftsregelstatus|Einer der folgenden Geschäftsregelstatus: : „Keine Regel definiert“, „Aktiv“, „Ausgeschlossen“, „ausstehende Änderungen“, „ausstehender Ausschluss“ und „ausstehende Löschung“.|  
 |Ausgeschlossen|Gibt an, ob die Geschäftsregel ausgeschlossen ist.|  
 |Benachrichtigung|Gibt den Benutzer oder eine Gruppe an, an den bzw. die die E-Mail-Benachrichtigung gesendet werden soll.|  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
   
 -   Führen Sie zum Anwenden von Geschäftsregeln auf Daten eine der folgenden Prozeduren aus:  
   
@@ -122,10 +123,9 @@ ms.lasthandoff: 09/07/2017
   
     -   [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Ändern des Namens einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   
-

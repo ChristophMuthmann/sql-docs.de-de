@@ -1,12 +1,14 @@
 ---
 title: Erstellen von Skriptdateien (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddfe50aa62403c1dda26ebf1f2017bdf45bf7864
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4615763a634b408a523004df2bc674227c5e327
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-mysqltosql"></a>Erstellen von Skriptdateien (MySQLToSQL)
 Der erste Schritt vor dem Starten SSMA-Konsolenanwendung auf die Skriptdatei erstellt wird und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindung erstellen.  
@@ -411,4 +412,3 @@ Im nächsten Schritt in der Konsole funktioniert [erstellen Variable Wertdateien
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen Variablenwert Dateien &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   
-

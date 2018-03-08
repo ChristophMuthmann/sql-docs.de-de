@@ -2,30 +2,30 @@
 title: Erstellen einer Ablaufverfolgung (SQL Server Profiler) | Microsoft Docs
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- traces [SQL Server], creating
+helpviewer_keywords: traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "28"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9b40c4ab9616ec4d7a1271c5e3b5c1a0a36be2e7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: adc6db788d4245009d2f70b8af01b84730cb7bb7
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Erstellen einer Ablaufverfolgung (SQL Server Profiler)
-  In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] eine Ablaufverfolgung erstellen können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieses Thema beschreibt, wie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum Erstellen einer Ablaufverfolgung.  
   
 ### <a name="to-create-a-trace"></a>So erstellen Sie eine Ablaufverfolgung  
   
@@ -64,4 +64,3 @@ ms.lasthandoff: 10/24/2017
  [Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokolldaten &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
-

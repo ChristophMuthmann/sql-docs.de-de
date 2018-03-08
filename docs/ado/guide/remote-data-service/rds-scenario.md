@@ -3,7 +3,7 @@ title: RDS-Szenario | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 920df727d2714629a45280133c53011afccc5c4d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>RDS-Szenario
 > [!IMPORTANT]
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
  Dieses Szenario wird davon ausgegangen, dass Sie wissen, wie grundlegende HTML Layouttags, Techniken verwenden DHTML-Datenbindung und Programm mit ActiveX-Steuerelementen verwenden.  
   
- Wenn Sie das SDK installiert haben, kann der vollständigen Quellcode für die beispielanwendung Adressbuch im SDK-Verzeichnis am samples\dataaccess\rds\AddressBook\AddressBook.asp gefunden werden. In Internet Explorer 4.0 oder höher, geben Sie zum Anzeigen des Szenarios Adressbuch  **http://*Webserver*/RDS/AddressBook/AddressBook.asp**, in denen *Webserver* ist der Name zugewiesen zu Ihrem Server Windows NT 4.0 oder Windows 2000-Webserver, auf denen Internet Information Services (IIS) und ASP ausgeführt wird.  
+ Wenn Sie das SDK installiert haben, kann der vollständigen Quellcode für die beispielanwendung Adressbuch im SDK-Verzeichnis am samples\dataaccess\rds\AddressBook\AddressBook.asp gefunden werden. In Internet Explorer 4.0 oder höher, geben Sie zum Anzeigen des Szenarios Adressbuch **http://*Webserver*/RDS/AddressBook/AddressBook.asp** , in denen *Webserver* ist der angegebene Name zu Ihrem Server Windows NT 4.0 oder Windows 2000-Webserver wird, Internet Information Services (IIS) und ASP ausgeführt.  
   
 ## <a name="introduction-to-address-book"></a>Einführung in das Adressbuch  
  Die beispielanwendung Adressbuch bietet ein einfaches online Adressbuch, die mit einem Suchverzeichnis über ein Intranet veröffentlicht werden können. Das Adressbuch ist so konzipiert, dass ein Benutzer eine Suchzeichenfolge in einem oder mehreren Feldern zum Anfordern von Informationen über Mitarbeiter eingeben kann. Wenn Sie die Basisfunktionen von Remote Data Service anzeigen möchten, wird die beispielanwendung absichtlich "klein", mit einer Mindestanzahl von Objekten und Suchfelder beibehalten.  
@@ -74,6 +73,5 @@ ms.lasthandoff: 09/09/2017
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS-Grundlagen](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
 
 

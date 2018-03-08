@@ -2,29 +2,30 @@
 title: "Data Science-Szenarien und Lösungsvorlagen | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 17
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 618e2d43d4ae9e9c214084a4da3ab9d1688b3dba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Data Science-Szenarien und -Projektmappenvorlagen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Vorlagen sind Beispiellösungen, die bewährte Methoden veranschaulichen und Bausteine für die schnelle Implementierung einer Lösung bereitstellen. Jede Vorlage dient zur Lösung eines bestimmten Problems, für einen bestimmten vertikal oder Branche. Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. Diese Vorlagen verwenden, um zu erfahren, wie [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] funktioniert. Anschließend können Sie anpassen, die Vorlage, um Ihr eigenes Szenario anpassen und erstellen Sie eine benutzerdefinierte Lösung. 
 
@@ -113,7 +114,6 @@ Zum Herunterladen der Dateien in den einzelnen Vorlagen können Sie GitHub-Befeh
 ## <a name="next-steps"></a>Nächste Schritte
 
 + [SQL Server Machine Learning-Lernprogramme](machine-learning-services-tutorials.md)
-
 
 
 

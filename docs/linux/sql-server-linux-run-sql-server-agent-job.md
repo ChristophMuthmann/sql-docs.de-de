@@ -3,23 +3,27 @@ title: "Erstellen und Ausführen von Aufträgen für SQL Server on Linux | Micro
 description: "In diesem Lernprogramm wird gezeigt, wie SQL Server-Agent-Auftrag auf dem Linux ausgeführt wird."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: bd57860078a1dec510e0c8547a97291975a4d330
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server-Aufträge werden verwendet, um regelmäßig die gleiche Sequenz von Befehlen in der SQL Server-Datenbank ausführen. Dieses Lernprogramm enthält ein Beispiel zum Erstellen eines SQL Server-Agent-Auftrags unter Linux mit Transact-SQL und SQL Server Management Studio (SSMS).
 
@@ -43,23 +47,22 @@ Die folgenden erforderlichen Komponenten sind optional:
 * Windows-Computer mit SSMS:
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) für optionale SSMS Schritte.
 
-## <a name="install-sql-server-agent"></a>Installieren von SQL Server-Agent
+## <a name="enable-sql-server-agent"></a>Aktivieren Sie SQL Server-Agent
 
-Um SQL Server-Agent für Linux verwenden, installieren Sie zuerst die **Mssql-Server-Agent** Paket auf einem Computer, die bereits von SQL Server-2017 installiert.
+Um SQL Server-Agent für Linux verwenden zu können, müssen Sie zuerst SQL Server-Agent auf einem Computer aktivieren, die bereits von SQL Server-2017 installiert.
 
-1. Installieren Sie **Mssql-Server-Agent** mit den entsprechenden Befehl für Ihr Betriebssystem Linux.
-
-   | Platform | Installation Befehle |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. Um SQL Server-Agent zu aktivieren, führen Sie den folgenden Schritt aus.
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. Starten Sie SQL Server mit dem folgenden Befehl ein:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> Beginnend mit SQL Server 2017 CU4, SQL Server-Agent ist im Lieferumfang der **Mssql Server** Packen und ist standardmäßig deaktiviert. Für-Agent vor dem CU4 Besuch eingerichtet [Installieren von SQL Server-Agent für Linux](sql-server-linux-setup-sql-agent.md).
 
 ## <a name="create-a-sample-database"></a>Erstellen einer Beispieldatenbank
 
@@ -204,4 +207,3 @@ Als Nächstes lernen Sie andere Funktionen zum Erstellen und Verwalten von Auftr
 
 > [!div class="nextstepaction"]
 >[SQL Server-Agent-Dokumentation](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
-

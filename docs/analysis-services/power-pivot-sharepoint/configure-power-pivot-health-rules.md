@@ -2,29 +2,29 @@
 title: "Konfigurieren von PowerPivot-Integritätsregeln | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42cc598c702a0e88063896717926e280171d0371
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Konfigurieren von Power Pivot-Integritätsregeln
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint enthält SharePoint-Integritätsregeln, mithilfe derer Sie Probleme mit der Serververfügbarkeit und -konfiguration überwachen und beheben können. Die für [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint geltenden Integritätsregeln werden auf der Seite „Regeldefinitionen überprüfen“ angezeigt.  
   
  Integritätsregeln ermöglichen die frühe Erkennung von Serverproblemen, die zu Dienstunterbrechungen führen können. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint stellt eine Reihe von Regeln bereit, mit denen Sie Probleme identifizieren und beheben können, bevor sie sich auf die Benutzer auswirken. Sie können viele dieser Regeln an die eindeutigen Merkmale der Bereitstellung anpassen. Wenn Sie z. B. mehr Zeit möchten, um auf Warnungen zum Speicherplatz zu reagieren, können Sie den Prozentsatz des verfügbaren Speicherplatzes von 5 % auf 10 % erhöhen, damit Sie die Warnung früher erhalten.  
@@ -139,4 +139,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
  [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

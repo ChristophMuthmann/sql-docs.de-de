@@ -3,29 +3,28 @@ title: SetBinaryStream-Methode (SQLServerBlob) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerBlob.setBinaryStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerBlob.setBinaryStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ac8acfad3cd0bc279edf0d11d230d17eaebf195
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 630244ef25c3206d9c66ad2797d1a435661d1a60
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream-Methode (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public java.io.OutputStream setBinaryStream(long pos)
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
-

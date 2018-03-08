@@ -2,27 +2,30 @@
 title: "SQL Server Management Studio-Unterstützung für In-Memory OLTP | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
-caps.latest.revision: 31
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 420c0a1dfd43a55dfda4c2e6dc612c2e49538e93
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist eine integrierte Umgebung für das Verwalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
   
  In den Tasks in diesem Thema wird beschrieben, wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet wird, um speicheroptimierte Tabellen, Indizes für speicheroptimierte Tabellen, systemintern kompilierte gespeicherte Prozeduren und benutzerdefinierte speicheroptimierte Tabellentypen zu verwalten.  
@@ -160,8 +163,7 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zu nicht unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen finden Sie unter [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-Unterstützung für In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
-

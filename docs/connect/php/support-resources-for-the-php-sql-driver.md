@@ -3,26 +3,26 @@ title: "Supportressourcen für den PHP-SQL-Treiber | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- support
+helpviewer_keywords: support
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2b2225256554828dfd749280ed5b401fb181972
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b2bda9171fe1aafdcf94bb0601e9a505b0a67341
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="support-resources-for-the-php-sql-driver"></a>Supportressourcen für den PHP-SQL-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,4 +61,3 @@ Bei Supportfragen zu [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]k�
 ## <a name="see-also"></a>Siehe auch  
 [Übersicht zum PHP-SQL-Treiber](../../connect/php/overview-of-the-php-sql-driver.md)
   
-

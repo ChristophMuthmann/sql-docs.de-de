@@ -2,30 +2,30 @@
 title: "Erste Schritte mit Berechtigungen für das Datenbankmodul | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- permissions [SQL Server], getting started
+helpviewer_keywords: permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für das Datenbankmodul
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Berechtigungen im [!INCLUDE[ssDE](../../../includes/ssde-md.md)] werden auf Serverebene über Anmeldungen und Serverrollen und auf Datenbankebene über Datenbankbenutzer und Datenbankrollen verwaltet. Das Modell für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] stellt innerhalb jeder Datenbank dasselbe System zur Verfügung, doch die Berechtigungen auf Serverebene sind nicht verfügbar. In diesem Thema werden verschiedene grundlegende Sicherheitskonzepte untersucht. Anschließend wird eine typische Implementierung der Berechtigungen beschrieben.  
   
@@ -193,7 +193,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  Führen Sie die folgende Anweisung in einer Datenbank aus, um die expliziten Berechtigungen zurückzugeben, die in einer Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]) erteilt oder verweigert wurden.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -208,7 +208,7 @@ JOIN sys.objects AS obj
   
  Um die Mitglieder der Serverrollen zurückgegeben (nur[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), führen Sie die folgende Anweisung aus.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -220,7 +220,7 @@ JOIN sys.server_principals AS sRole
  
  Führen Sie die folgende Anweisung in der Datenbank aus, um die Mitglieder der Datenbankrollen zurückzugeben ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]).  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -229,16 +229,16 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Weitere Themen, die Ihnen den Einstieg erleichtern, finden Sie unter:  
   
 -   [Tutorial: Erste Schritte mit dem Datenbankmodul](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Erstellen einer Datenbank &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
   
--   [Lernprogramm: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Sicherheitsbezogene dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
@@ -247,4 +247,3 @@ JOIN sys.database_principals AS dRole
  [Ermitteln effektiver Datenbankmodulberechtigungen](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
-

@@ -2,30 +2,32 @@
 title: Erstellen und Anwenden der Anfangsmomentaufnahme | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 807e2b855264f77959faa4699d761739af3e5137
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 982f9d9f347e664e72363d13c6e10fa016162d59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Erstellen und Anwenden der Anfangsmomentaufnahme
-  In diesem Thema wird beschrieben, wie die Anfangsmomentaufnahme in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt und übernommen wird. Mergeveröffentlichungen, die parametrisierte Filter verwenden, erfordern eine zweiteilige Momentaufnahme. Weitere Informationen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie die Anfangsmomentaufnahme in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (Replication Management Objects, RMO) erstellt und übernommen wird. Mergeveröffentlichungen, die parametrisierte Filter verwenden, erfordern eine zweiteilige Momentaufnahme. Weitere Informationen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **In diesem Thema**  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, wird vom Momentaufnahme-Agent standardmäßig sofort eine Momentaufnahme generiert, nachdem mit dem Assistenten für neue Veröffentlichung eine Veröffentlichung erstellt wurde. Diese Momentaufnahme wird dann standardmäßig vom Verteilungs-Agent (bei der Momentaufnahme- und der Transaktionsreplikation) oder vom Merge-Agent (bei Mergeabonnement) für alle Abonnements angewendet. Eine Momentaufnahme kann auch mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem Replikationsmonitor generiert werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>So erstellen Sie eine Momentaufnahme in Management Studio  
@@ -160,78 +162,78 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
 ```  
   
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
- Momentaufnahmen werden nach dem Erstellen einer Veröffentlichung vom Momentaufnahme-Agent generiert. Sie können diese Momentaufnahmen mit Replikationsverwaltungsobjekten (RMO) und dem direkten Zugriff von verwaltetem Code auf Funktionen des Replikations-Agents programmgesteuert generieren. Welche Objekte Sie verwenden, hängt vom Typ der Replikation ab. Der Momentaufnahme-Agent kann synchron mit dem <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent>-Objekt oder asynchron mit dem Agentauftrag gestartet werden. Nachdem die Anfangsmomentaufnahme generiert wurde, wird sie an den Abonnenten übertragen und auf diesen angewendet, sobald die erste Synchronisierung für das Abonnement durchgeführt wird. Sie müssen den Agent immer dann erneut ausführen, wenn die vorhandene Momentaufnahme keine gültigen und aktuellen Daten mehr enthält. Weitere Informationen finden Sie unter [Verwalten von Veröffentlichungen](../../relational-databases/replication/publish/maintain-publications.md).  
+ Momentaufnahmen werden nach dem Erstellen einer Veröffentlichung vom Momentaufnahme-Agent generiert. Sie können diese Momentaufnahmen mit Replikationsverwaltungsobjekten (RMO) und dem direkten Zugriff von verwaltetem Code auf Funktionen des Replikations-Agents programmgesteuert generieren. Welche Objekte Sie verwenden, hängt vom Typ der Replikation ab. Der Momentaufnahme-Agent kann synchron mit dem <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> -Objekt oder asynchron mit dem Agentauftrag gestartet werden. Nachdem die Anfangsmomentaufnahme generiert wurde, wird sie an den Abonnenten übertragen und auf diesen angewendet, sobald die erste Synchronisierung für das Abonnement durchgeführt wird. Sie müssen den Agent immer dann erneut ausführen, wenn die vorhandene Momentaufnahme keine gültigen und aktuellen Daten mehr enthält. Weitere Informationen finden Sie unter [Verwalten von Veröffentlichungen](../../relational-databases/replication/publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](http://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Momentaufnahme- oder Transaktionsveröffentlichung durch Starten des Auftrags des Momentaufnahme-Agents (asynchron)  
   
-1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die restlichen Objekteigenschaften zu laden. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften zu laden. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Wenn der Wert von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> **false** lautet, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> auf, um den Agentauftrag für die Momentaufnahme dieser Veröffentlichung zu erstellen.  
+4.  Wenn der Wert von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> auf **false**lautet, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> auf, um den Agentauftrag für die Momentaufnahme dieser Veröffentlichung zu erstellen.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A>-Methode auf, um den Agentauftrag zu starten, der die Momentaufnahme für diese Veröffentlichung generiert.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> -Methode auf, um den Agentauftrag zu starten, der die Momentaufnahme für diese Veröffentlichung generiert.  
   
-6.  (Optional) Wenn der Wert von <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> **true** lautet, steht die Momentaufnahme den Abonnenten zur Verfügung.  
+6.  (Optional) Wenn der Wert von <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> auf **true**lautet, steht die Momentaufnahme den Abonnenten zur Verfügung.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Momentaufnahme- oder Transaktionsveröffentlichung durch Ausführen des Momentaufnahme-Agents (synchron)  
   
-1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent>-Klasse, und legen Sie die folgenden erforderlichen Eigenschaften fest:  
+1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> -Klasse, und legen Sie die folgenden erforderlichen Eigenschaften fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A>: Name des Verlegers  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – Name des Verlegers  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A>: Name der Veröffentlichungsdatenbank  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – Name der Veröffentlichungsdatenbank  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A>: Name der Veröffentlichung  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> &ndash; Den Namen der Veröffentlichung  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A>: Name des Verteilers  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> &ndash; Den Namen des Verteilers  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A>: Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung bei der Windows-Authentifizierung bei der Verbindung mit dem Verleger, oder Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> und Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A>und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> zur Verwendung bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung bei der Verbindung mit dem Verleger. Die Windows-Authentifizierung wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> Den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung der Windows-Authentifizierung, wenn eine Verbindung mit dem Verleger hergestellt wird, oder den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> sowie Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> zur Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, wenn eine Verbindung mit dem Verleger hergestellt wird. Die Windows-Authentifizierung wird empfohlen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A>: Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung bei der Windows-Authentifizierung bei der Verbindung mit dem Verteiler, oder Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> und Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> zur Verwendung bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung bei der Verbindung mit dem Verteiler. Die Windows-Authentifizierung wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> Den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung der Windows-Authentifizierung, wenn eine Verbindung mit dem Verteiler hergestellt wird, oder den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> sowie Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> zur Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, wenn eine Verbindung mit dem Verteiler hergestellt wird. Die Windows-Authentifizierung wird empfohlen.  
   
-2.  Legen Sie einen Wert von <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> oder <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A> fest.  
+2.  Legen Sie den Wert <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> oder <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>-Methode auf.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> -Methode auf.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Mergeveröffentlichung durch Starten des Auftrags des Momentaufnahme-Agents (asynchron)  
   
-1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die restlichen Objekteigenschaften zu laden. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften zu laden. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Wenn der Wert von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> **false** lautet, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> auf, um den Agentauftrag für die Momentaufnahme dieser Veröffentlichung zu erstellen.  
+4.  Wenn der Wert von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> auf **false**lautet, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> auf, um den Agentauftrag für die Momentaufnahme dieser Veröffentlichung zu erstellen.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A>-Methode auf, um den Agentauftrag zu starten, der die Momentaufnahme für diese Veröffentlichung generiert.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> -Methode auf, um den Agentauftrag zu starten, der die Momentaufnahme für diese Veröffentlichung generiert.  
   
-6.  (Optional) Wenn der Wert von <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> **true** lautet, steht die Momentaufnahme den Abonnenten zur Verfügung.  
+6.  (Optional) Wenn der Wert von <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> auf **true**lautet, steht die Momentaufnahme den Abonnenten zur Verfügung.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Mergeveröffentlichung durch Ausführen des Momentaufnahme-Agents (synchron)  
   
-1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent>-Klasse, und legen Sie die folgenden erforderlichen Eigenschaften fest:  
+1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> -Klasse, und legen Sie die folgenden erforderlichen Eigenschaften fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A>: Name des Verlegers  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – Name des Verlegers  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A>: Name der Veröffentlichungsdatenbank  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – Name der Veröffentlichungsdatenbank  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A>: Name der Veröffentlichung  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> &ndash; Den Namen der Veröffentlichung  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A>: Name des Verteilers  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> &ndash; Den Namen des Verteilers  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A>: Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung bei der Windows-Authentifizierung bei der Verbindung mit dem Verleger, oder Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> und Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A>und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> zur Verwendung bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung bei der Verbindung mit dem Verleger. Die Windows-Authentifizierung wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> Den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung der Windows-Authentifizierung, wenn eine Verbindung mit dem Verleger hergestellt wird, oder den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> sowie Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> zur Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, wenn eine Verbindung mit dem Verleger hergestellt wird. Die Windows-Authentifizierung wird empfohlen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A>: Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung bei der Windows-Authentifizierung bei der Verbindung mit dem Verteiler, oder Wert von <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> und Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> zur Verwendung bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung bei der Verbindung mit dem Verteiler. Die Windows-Authentifizierung wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> Den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> zur Verwendung der Windows-Authentifizierung, wenn eine Verbindung mit dem Verteiler hergestellt wird, oder den Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> sowie Werte für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> und <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> zur Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, wenn eine Verbindung mit dem Verteiler hergestellt wird. Die Windows-Authentifizierung wird empfohlen.  
   
-2.  Legen Sie den Wert <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A> fest.  
+2.  Legen Sie den Wert <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> für <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>-Methode auf.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> -Methode auf.  
   
 ###  <a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel wird der Momentaufnahme-Agent synchron ausgeführt, um die Anfangsmomentaufnahme für eine Transaktionsveröffentlichung zu generieren.  
@@ -246,15 +248,15 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
  [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Initialisieren eines Abonnements mit einer Momentaufnahme](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   

@@ -1,13 +1,14 @@
 ---
-title: Berichtsdefinitionssprache (SSRS) | Microsoft Docs
+title: Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +21,16 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "52"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
   Bei der Berichtsdefinitionssprache (RDL) handelt es sich um eine XML-Darstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsdefinition. In einer Berichtsdefinition sind Informationen zum Datenabruf und Datenlayout für einen Bericht enthalten. RDL besteht aus XML-Elementen, die der für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]entwickelten XML-Grammatik entsprechen. Sie können eigene benutzerdefinierte Funktionen zur Steuerung von Werten, Formaten und Formatierungen von Berichtselementen hinzufügen, indem Sie in Berichtsdefinitionsdateien auf Code-Assemblys zugreifen.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  Das Schema enthält beispielsweise das RDL-Element **ReportParameters**, das den komplexen Typ **ReportParametersType**aufweist. Gemäß der Konvention ist ein komplexer Typ für ein Element der Name des Elements gefolgt von dem Wort **Type**. Ein **ReportParameters** -Element kann im **Report** -Element (einem komplexen Typ) enthalten sein und selbst **ReportParameter** -Elemente enthalten. Ein **ReportParameterType** ist ein einfacher Typ, bei dem es sich nur um einen der folgenden Werte handeln kann: **Boolean**, **DateTime**, **Integer**, **Float**oder **String**. Weitere Informationen zu XML-Schema-Datentypen finden Sie unter [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871).  
   
- Die RDL-XSD steht in der Datei "ReportDefinition.xsd" zur Verfügung, die sich im Ordner "Extras" auf der Produkt-CD-ROM befindet. Es ist auch auf dem Berichtsserver mit der folgenden URL verfügbar: `http://servername/reportserver/reportdefinition.xsd`.  
+ Die RDL-XSD steht in der Datei "ReportDefinition.xsd" zur Verfügung, die sich im Ordner "Extras" auf der Produkt-CD-ROM befindet. Sie ist auch auf dem Berichtsserver über die folgende URL verfügbar: `http://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Erstellen einer RDL  
  Da RDL offen und erweiterbar ist, können viele verschiedene Tools und Anwendungen erstellt werden, die RDL auf Basis des entsprechenden XML-Schemas generieren.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_RDL_Types"></a> RDL-Typen  
  Die folgenden Tabelle führt die in RDL-Elementen und Attributen verwendete Typen auf.  
   
-|Type|Description|  
+|Typ|Description|  
 |----------|-----------------|  
 |**Binär (Binary)**|Eine Eigenschaft mit einem Base-64-codierten Binärwert.|  
 |**Boolean**|Eine Eigenschaft, die den Wert **true** oder **false** für ein Objekt annehmen kann. Sofern nichts anderes angegeben ist, hat ein nicht angegebenes, optionales Boolean-Objekt den Wert **False**.|  
@@ -87,15 +87,14 @@ ms.lasthandoff: 08/09/2017
 |**CLR-Typ(en)**|**Entsprechender Datentyp**|  
 |-----------------------|---------------------------------|  
 |Boolean|Boolean|  
-|DateTime, DateTimeOffset|DateTime|  
+|DateTime, DateTimeOffset|datetime|  
 |Int16, Int32, UInt16, Byte, SByte|Integer|  
-|Single, Double|Float|  
-|String, Char, GUID, Timespan|String|  
+|Single, Double|float|  
+|String, Char, GUID, Timespan|Zeichenfolge|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
- [Verwenden von benutzerdefinierten Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Custom Report Items (Benutzerdefinierte Berichtselemente)](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   
-

@@ -3,33 +3,30 @@ title: SQLInstallerError Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallerError
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallerError
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallerError
-helpviewer_keywords:
-- SQLInstallerError [ODBC]
+f1_keywords: SQLInstallerError
+helpviewer_keywords: SQLInstallerError [ODBC]
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c3cdc3ae1e4efe4292077851a4f457bae4af17bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError-Funktion
 **Konformität**  
@@ -85,4 +82,3 @@ RETCODE SQLInstallerError(
  Um mehrere Fehler für einen Funktionsaufruf abzurufen, eine Anwendung ruft **SQLInstallerError** mehrere Male.  
   
  Wenn es keine zusätzlichen Informationen sind **SQLInstallerError** SQL_NO_DATA zurückgibt, die *PfErrorCode* Argument ist nicht definiert ist, die *PcbErrorMsg* Argument gleich 0 ist, und die *LpszErrorMsg* -Argument enthält ein einzelnes Zeichen für die Null-Terminierung (es sei denn, die *CbErrorMsgMax* Argument gleich 0 ist).
-

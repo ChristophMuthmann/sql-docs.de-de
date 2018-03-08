@@ -3,7 +3,7 @@ title: Grundlegende RDS-Programmiermodell | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS programming model [ADO]
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 08544cd52698b2c28eb8dd56ee59bbe1c2662acd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d99d092b91ed150a3ad9163f2c4f7e513554e9f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="basic-rds-programming-model"></a>Grundlegende RDS-Programmiermodell
 > [!IMPORTANT]
@@ -57,6 +56,5 @@ ms.lasthandoff: 09/09/2017
  [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

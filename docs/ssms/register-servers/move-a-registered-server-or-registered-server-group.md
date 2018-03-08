@@ -2,9 +2,12 @@
 title: Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6cf97c1bdf28d3f6ab6523d463c44a92a6ba7a87
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 0f10ce19a0dff3da8ab598e07ee53a407af06b38
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe
-  In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server organisieren, indem Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]einen registrierten Server oder Servergruppen verschieben. Servergruppen können registrierte Server oder weitere Servergruppen enthalten. Sowohl Server als auch Servergruppen können von einer Servergruppe in die andere verschoben werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server organisieren, indem Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]einen registrierten Server oder Servergruppen verschieben. Servergruppen können registrierte Server oder weitere Servergruppen enthalten. Sowohl Server als auch Servergruppen können von einer Servergruppe in die andere verschoben werden.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -39,9 +42,8 @@ ms.lasthandoff: 07/31/2017
   
 2.  Erweitern Sie im Dialogfeld **Serverregistrierung verschieben** die Liste mit den Servergruppen, klicken Sie auf den Knoten, in dem der Server bzw. die Servergruppe angezeigt werden soll, und klicken Sie dann auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md)   
  [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: Beschreibung von gruppierten und nicht gruppierten Indizes | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.date: 11/28/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -13,23 +16,21 @@ helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Beschreibung von gruppierten und nicht gruppierten Indizes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Beschreibung von gruppierten und nicht gruppierten Indizes](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
-
 
   Ein Index ist eine Struktur auf dem Datenträger, die einer Tabelle oder einer Sicht zugeordnet ist und durch die das Abrufen von Zeilen aus der Tabelle oder Sicht beschleunigt wird. Ein Index enthält Schlüssel, die aus einer oder mehreren Spalten in der Tabelle oder Sicht erstellt werden. Diese Schlüssel werden in einer Struktur (B-Struktur) gespeichert, die es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, die den Schlüsselwerten zugeordneten Zeilen schnell und effizient zu finden.  
   
@@ -67,10 +68,12 @@ ms.lasthandoff: 08/19/2017
   
  Der Abfrageoptimierer wählt beim Ausführen von Abfragen normalerweise die effizienteste Methode aus. Wenn jedoch keine Indizes verfügbar sind, muss der Abfrageoptimierer einen Tabellenscan verwenden. Ihre Aufgabe besteht darin, Indizes zu entwerfen und zu erstellen, die optimal für Ihre Umgebung geeignet sind, damit der Abfrageoptimierer seine Auswahl unter mehreren effizienten Indizes treffen kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt den [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md) bereit, der Sie bei der Analyse Ihrer Datenbankumgebung und der Auswahl der geeigneten Indizes unterstützt.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+> [!IMPORTANT] 
+> Weitere Informationen zu den Richtlinien und Besonderheiten für das Entwerfen von Indizes finden Sie unter [SQL Server Index Design Guide (Handbuch zum Entwerfen von SQL Server-Indizes)](../../relational-databases/sql-server-index-design-guide.md).
+
+## <a name="related-content"></a>Verwandte Inhalte  
+ [Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)     
  [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   
-

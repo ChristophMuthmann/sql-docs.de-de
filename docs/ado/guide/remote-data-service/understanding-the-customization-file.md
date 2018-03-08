@@ -3,7 +3,7 @@ title: Grundlegendes zur Anpassungsdatei | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cadf89ac579b11ab829ecd288fec77df81eb0603
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zu der Anpassungsdatei
 Jede Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern (**[]**), die einen Typ und die Parameter enthält. Die vier Abschnittstypen werden durch die Literalzeichenfolgen angegeben **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist die Literalzeichenfolge, der Standardwert, eine vom Benutzer angegebenen Bezeichner oder nichts an.  
@@ -51,18 +50,18 @@ identifier
   
 |Teil|Description|  
 |----------|-----------------|  
-|**eine Verbindung herstellen**|Eine literale Zeichenfolge, die eine Verbindungszeichenfolge ändert.|  
-|**SQL**|Eine literale Zeichenfolge, die eine Befehlszeichenfolge ändert.|  
-|**UserList**|Eine literale Zeichenfolge, die die Zugriffsrechte eines bestimmten Benutzers ändert.|  
-|**Protokolle**|Ein Zeichenfolgenliteral, das eine Aufzeichnung Ausführungsfehler Protokolldatei angibt.|  
-|**Standardwert**|Ein Zeichenfolgenliteral, das verwendet wird, wenn kein Bezeichner angegeben wird oder gefunden.|  
-|*Bezeichner*|Eine Zeichenfolge, die eine Zeichenfolge in entspricht dem **verbinden** oder **Befehl** Zeichenfolge.<br /><br /> -Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **verbinden** und die Bezeichner in der Verbindungszeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **Sql** und die Bezeichner in der Befehlszeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **Userlist** und die ID-Zeichenfolge entspricht einem **verbinden** Abschnitt Bezeichner.|  
+|**connect**|Eine literale Zeichenfolge, die eine Verbindungszeichenfolge ändert.|  
+|**sql**|Eine literale Zeichenfolge, die eine Befehlszeichenfolge ändert.|  
+|**userlist**|Eine literale Zeichenfolge, die die Zugriffsrechte eines bestimmten Benutzers ändert.|  
+|**logs**|Ein Zeichenfolgenliteral, das eine Aufzeichnung Ausführungsfehler Protokolldatei angibt.|  
+|**default**|Ein Zeichenfolgenliteral, das verwendet wird, wenn kein Bezeichner angegeben wird oder gefunden.|  
+|*identifier*|Eine Zeichenfolge, die eine Zeichenfolge in entspricht dem **verbinden** oder **Befehl** Zeichenfolge.<br /><br /> -Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **verbinden** und die Bezeichner in der Verbindungszeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **Sql** und die Bezeichner in der Befehlszeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt aus, wenn der Überschrift des Abschnitts enthält **Userlist** und die ID-Zeichenfolge entspricht einem **verbinden** Abschnitt Bezeichner.|  
   
  Die **DataFactory** Ruft den Handler auf, und übergeben Sie Clientparameter. Der Handler sucht nach ganzen Zeichenfolgen in die Clientparameter, die Bezeichner in den entsprechenden Abschnitt-Headern übereinstimmen. Wenn eine Übereinstimmung gefunden wird, werden die Inhalte des Abschnitts an den Clientparameter angewendet.  
   
  Ein bestimmtes Bereichs wird in den folgenden Situationen verwendet:  
   
--   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients die Schlüsselwort, eine Verbindung herstellen "**Datenquelle =***Wert*", entspricht einer **verbinden** Abschnitt Bezeichner*.*  
+-   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients die Schlüsselwort, eine Verbindung herstellen "**Datenquelle = *** Wert*", entspricht einer **verbinden** Abschnitt Bezeichner*.*  
   
 -   Ein **Sql** Abschnitt wird verwendet, wenn die Clientbefehlszeichenfolge eine Zeichenfolge enthält, die entspricht einer **Sql** Abschnitt Bezeichner.  
   
@@ -82,7 +81,6 @@ identifier
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Erforderlichen Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

@@ -1,11 +1,13 @@
 ---
-title: Azure HDInsight-Delete Cluster-Task | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: Azure HDInsight-Delete Cluster-Task | Microsoft-Dokumentation
+ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,36 +16,34 @@ f1_keywords:
 - sql13.dts.designer.afpdelcltask.f1
 - sql14.dts.designer.afpdelcltask.f1
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f98b69e8bd3b2e78f6dd20a19ca17a83a834c3b3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: db580410f37f1310ccc2bf30f6620157fcb60cf9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight-Delete Cluster-Task
-Die **Azure HDInsight Delete Cluster-Task** ermöglicht einem SSIS-Paket So löschen Sie einen Azure HDInsight-Cluster in der angegebenen Gruppe für Azure Abonnement- und Ressourcenstatus.
+Der **Azure HDInsight-Delete Cluster-Task** ermöglicht einem SSIS-Paket das Löschen eines Azure HDInsight-Clusters im angegebenen Azure-Abonnement und der Ressourcengruppe.
   
-Die **Azure HDInsight Delete Cluster-Task** ist eine Komponente von der [SQL Server Integration Services (SSIS) Feature Pack für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+Der **Azure HDInsight-Delete Cluster-Task** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
 > [!NOTE]
-> Das Löschen eines HDInsight-Clusters dauert 10 ~ 20 Minuten.  
+> Das Löschen eines HDInsight-Clusters kann 10-20 Minuten in Anspruch nehmen.  
   
 Um einen **Azure HDInsight-Delete Cluster-Task**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Bearbeiten** , um das folgende Dialogfeld A **zure HDInsight-Delete Cluster-Task-Editor** anzuzeigen.  
   
-Die folgende Tabelle enthält eine Beschreibung für die Felder im Dialogfeld.  
+Die folgende Tabelle enthält Beschreibungen für die Felder in diesem Dialogfeld.  
   
 |||  
 |-|-|  
-|**Feld**|**Description**|  
-|AzureResourceManagerConnection|Wählen Sie einen vorhandenen Azure Resource Manager Verbindungs-Manager, oder erstellen Sie eine neue, mit der HDInsight-Cluster löschen.|
-|"SubscriptionId"|Geben Sie die ID des Abonnements, in dem der HDInsight-Cluster befindet.|
-|"ResourceGroup"|Geben Sie den Azure-Ressourcengruppe, in dem der HDInsight-Cluster befindet.|
+|**Feld**|**Beschreibung**|  
+|AzureResourceManagerConnection|Wählen Sie einen vorhandenen Azure Resource Manager-Verbindungs-Manager aus, oder erstellen Sie einen neuen, mit dem der HDInsight-Cluster gelöscht wird.|
+|SubscriptionId|Geben Sie die ID des Abonnements an, in dem sich der HDInsight-Cluster befindet.|
+|ResourceGroup|Geben Sie die Azure-Ressourcengruppe an, in der sich der HDInsight-Cluster befindet.|
 |ClusterName|Geben Sie den Namen des zu löschenden Clusters an.|  
 |FailIfNotExists|Geben Sie an, ob der Task einen Fehler ausgeben soll, wenn der Cluster nicht vorhanden ist.|
-

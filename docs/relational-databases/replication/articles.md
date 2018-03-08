@@ -2,29 +2,30 @@
 title: Artikel | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articles.f1
+f1_keywords: sql13.rep.newpubwizard.articles.f1
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84279951c3f009f4174fbdbca5f1b43109efa422
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4d49b4d4004781301ffe7e25d83b12104ab95121
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="articles"></a>Artikel
-  Auf der Seite **Artikel** können Sie angeben, welche Datenbankobjekte als Artikel in die Veröffentlichung eingeschlossen werden sollen. Wenn Sie ein Datenbankobjekt veröffentlichen, das von mindestens einem weiteren Datenbankobjekt abhängt, müssen Sie alle Objekte veröffentlichen, auf die verwiesen wird. Wenn Sie beispielsweise eine Sicht veröffentlichen, die von einer Tabelle abhängt, muss auch die Tabelle veröffentlicht werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf der Seite **Artikel** können Sie angeben, welche Datenbankobjekte als Artikel in die Veröffentlichung eingeschlossen werden sollen. Wenn Sie ein Datenbankobjekt veröffentlichen, das von mindestens einem weiteren Datenbankobjekt abhängt, müssen Sie alle Objekte veröffentlichen, auf die verwiesen wird. Wenn Sie beispielsweise eine Sicht veröffentlichen, die von einer Tabelle abhängt, muss auch die Tabelle veröffentlicht werden.  
   
  Objekte, die nicht veröffentlicht werden können, sind neben dem Objekt durch ein rotes Symbol gekennzeichnet. Zusätzlich wird im Informationsbereich am unteren Rand der Assistentenseite eine Erläuterung angezeigt. Folgende Objekte können nicht veröffentlicht werden:  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="column-filters"></a>Spaltenfilter  
  Die Spalten auf dieser Seite können Sie filtern, indem Sie im Bereich **Zu veröffentlichende Objekte** eine Tabelle erweitern und dann nur die erforderlichen Spalten auswählen (Zeilen können auf der Seite **Tabellenzeilen filtern** dieses Assistenten gefiltert werden). Das Filtern von Spalten kann aus verschiedenen Gründen nützlich sein, darunter aus Sicherheitsgründen (um zu vermeiden, dass vertrauliche Daten ungewollt repliziert werden) oder aus Leistungsgründen (um beispielsweise die Replikation großer BLOB-Spalten zu vermeiden). Weitere Informationen zum Filtern von Spalten, einschließlich einer Liste von Spaltentypen, die nicht gefiltert werden können, finden Sie unter [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Im Bereich **Zu veröffentlichende Objekte** können Sie folgende Schritte ausführen:  
   
 -   Anzeigen aller für die Replikation verfügbaren Objekte.  
@@ -64,10 +65,10 @@ ms.lasthandoff: 06/22/2017
   
 -   Klicken Sie auf **Eigenschaften des hervorgehobenen \<ObjectType>-Artikels festlegen**, um das Dialogfeld **Artikeleigenschaften - \<ObjectName>** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden nur auf das Objekt angewendet, das im Objektbereich auf der Seite **Artikel** markiert ist.  
   
--   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel festlegen**, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die im Objektbereich auf der Seite **Artikel** vorhanden sind, einschließlich jener Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
+-   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel** festlegen, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die im Objektbereich auf der Seite **Artikel** vorhanden sind, einschließlich jener Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
   
     > [!NOTE]  
-    >  Durch die Änderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel**, werden alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen überschrieben. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
+    >  Durch die Änderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** werden alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen überschrieben. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
   
  **Die durch Hervorhebung markierte Tabelle ist nur herunterladbar**  
  Nur für Mergereplikationen zulässig. Nur in[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Durch Auswahl dieser Option geben Sie an, dass bei Verwendung eines Clientabonnements keine Änderungen auf dem Abonnenten zulässig sind. Da nur herunterladbare Artikel nicht auf dem Abonnenten aktualisiert werden können, wird das Nachverfolgen von Metadaten nicht an die Abonnenten gesendet. Das kann den Speicher auf den Abonnenten entlasten und zu einer höheren Leistung führen, besonders bei einer langsamen Netzwerkverbindung. Diese Option entspricht dem Wert **Nur herunterladbar auf Abonnenten, Abonnentenänderungen nicht zulassen** für die Option **Synchronisierungsrichtung** im Dialogfeld **Artikeleigenschaften** . Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
  **Nur in der Liste aktivierte Objekte anzeigen**  
  Aktivieren Sie dieses Kontrollkästchen, um nur die im Objektbereich ausgewählten Artikel anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Erstellen einer Veröffentlichung](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  

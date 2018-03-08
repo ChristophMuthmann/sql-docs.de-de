@@ -2,9 +2,12 @@
 title: "Speicherplatzanforderungen für Index-DDL-Vorgänge | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e719a7f09c1661573826bb59ccd86e2034bd3f0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c71784eb7a7a8e9ed2456cb7ae7718fafc9e1e6a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Speicherplatzanforderungen für Index-DDL-Vorgänge
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Der Speicherplatz ist beim Erstellen, Neuerstellen oder Löschen von Indizes ein wichtiger Aspekt, der berücksichtigt werden muss. Unzureichender Speicherplatz kann die Leistung verringern oder sogar bewirken, dass der Indexvorgang einen Fehler erzeugt. Dieses Thema stellt allgemeine Informationen bereit, die Sie beim Ermitteln des Speicherplatzes unterstützen können, der für DDL-Vorgänge (Data Definition Language) des Indexes erforderlich ist.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
  Onlineindexvorgänge verwenden die Zeilenversionsverwaltung, um den Indexvorgang von den Auswirkungen der Änderungen zu isolieren, die von anderen Transaktionen vorgenommen wurden. Auf diese Weise ist es nicht erforderlich, freigegebene Sperren für Zeilen anzufordern, die gelesen wurden. Gleichzeitige Update- und Löschvorgänge durch Benutzer während Onlineindexvorgänge erfordern Speicherplatz für Versionsdatensätze in **tempdb**. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Transaktionsprotokollspeicherplatz für Indexvorgänge](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
@@ -109,4 +111,3 @@ ms.lasthandoff: 06/22/2017
  [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   
-

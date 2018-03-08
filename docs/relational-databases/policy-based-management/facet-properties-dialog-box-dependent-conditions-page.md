@@ -2,37 +2,36 @@
 title: "Dialogfeld „Facet-Eigenschaften“, Seite „Abhängige Bedingungen“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.facet.dependentconditions.f1
+f1_keywords: sql13.swb.dmf.facet.dependentconditions.f1
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 212154e385d63663bcd858ddd83fd5ad73431c15
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bbd566299b8ed27c401227c170fa312e4a2fa530
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Abhängige Bedingungen'
-  Mithilfe dieses Dialogfelds können Sie eine Liste von Bedingungen anzeigen, die derzeit auf dieses Facet der richtlinienbasierten Verwaltung verweisen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie eine Liste von Bedingungen anzeigen, die derzeit auf dieses Facet der richtlinienbasierten Verwaltung verweisen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Listet den Namen jeder Bedingung auf, die auf das aktuelle Facet verweist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

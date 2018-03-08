@@ -3,8 +3,11 @@ title: Sequenz und QNames (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - QName [XQuery]
 - predefined namespaces [XML in SQL Server]
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f75694958ca453d1b630a0c02c422d35c6ff4c34
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79e43de914a80fd8f39ebab0b93c55c1e1fc2670
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenz und QNames (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema werden die folgenden grundlegenden Konzepte von XQuery beschrieben:  
   
@@ -159,4 +161,3 @@ WHERE ProductModelID=7;
  [XQuery Basics (XQuery-Grundlagen)](../xquery/xquery-basics.md)  
   
   
-

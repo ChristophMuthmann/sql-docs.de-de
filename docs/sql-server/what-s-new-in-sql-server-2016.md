@@ -1,11 +1,13 @@
 ---
 title: Was ist neu in SQLServer 2016
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: 
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 224
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
  Mit SQL Server 2016 können Sie intelligente, unternehmenskritische Anwendungen mithilfe einer skalierbaren, hybriden Datenbankplattform erstellen, in der bereits alles Features integriert sind – von arbeitsspeicherinterner Leistung über erweiterte Sicherheit bis hin zu datenbankinternen Analysen. Das SQL Server 2016-Release bietet neue Sicherheitsfunktionen, Abfragemöglichkeiten, Hadoop- und Cloudintegration, R-Analyse und viele weitere Verbesserungen und Erweiterungen. 
 
 Auf dieser Seite finden Sie eine zusammenfassende Übersicht sowie Links zu detaillierten Informationen zu den Neuerungen, die SQL Server 2016 für jede SQL Server-Komponente bietet. 
@@ -113,4 +115,3 @@ Weitere Informationen finden Sie unter [Reporting Services (SSRS)](../reporting-
 - [Neues SQL PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

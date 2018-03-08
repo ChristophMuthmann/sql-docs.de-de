@@ -3,29 +3,28 @@ title: GetResponseBuffering-Methode (SQLServerDataSource) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDataSource.getResponseBuffering()
-apilocation:
-- SQLServerDataSource.getResponseBuffering()
+apiname: SQLServerDataSource.getResponseBuffering()
+apilocation: SQLServerDataSource.getResponseBuffering()
 apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b11609d9b29bbd76a65c3db3dff12a94d4d96767
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c278b31f870286f55d51a04dda2db4b43464ce4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,4 +54,3 @@ public java.lang.String getResponseBuffering()
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

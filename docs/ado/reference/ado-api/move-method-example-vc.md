@@ -3,7 +3,7 @@ title: Verschieben der (VC++-Methodenbeispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Move method [ADO], VC++ example
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 554b78e38b47cdfde7ed6bfdc5667ae2959c3d50
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af89c8f0dfdc4839ff85a68891e45e426d7bf26d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-example-vc"></a>Move-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die [verschieben](../../../ado/reference/ado-api/move-method-ado.md) Methode, um den Datensatzzeiger zu positionieren, basierend auf Benutzereingaben.  
@@ -267,4 +266,3 @@ Enter number of records to Move
   
 ## <a name="see-also"></a>Siehe auch  
  [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)
-

@@ -1,29 +1,28 @@
 ---
-title: Migrieren einer Reporting Services-Installation (SharePoint-Modus) | Microsoft Docs
+title: Migrieren einer Installation von Reporting Services (SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 23
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 75bce56e88ef80a33d13e188ad0ecbf3e8b453ec
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrieren einer Installation von Reporting Services (SharePoint-Modus)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/17/2017
 -   [Verschieben von Inhaltsdatenbanken in SharePoint 2013](http://technet.microsoft.com/library/cc262792.aspx).
   
 ##  <a name="bkmk_prior_versions"></a> Migrieren von Reporting Services-Versionen im SharePoint-Modus vor SQL Server 2012  
- Die Architektur von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus wurde in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]geändert. Die Änderungen betreffen auch das Datenbankschema der Dienstanwendung. Wenn Sie zum migrieren möchten [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint-Modus von einer Version vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], zuerst die neue SharePoint-Umgebung erstellen, durch die Installation von SharePoint und SQL Server 2016 Reporting Services SharePoint-Modus. Weitere Informationen finden Sie unter [Installieren des SharePoint-Modus von Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ Die Architektur von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus wurde in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]geändert. Die Änderungen betreffen auch das Datenbankschema der Dienstanwendung. Wenn Sie von einer Version vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] im SharePoint-Modus migrieren möchten, erstellen Sie zuerst die neue SharePoint-Umgebung, indem Sie SharePoint und SQL Server 2016 Reporting Services im SharePoint-Modus installieren. Weitere Informationen finden Sie unter [Installieren des SharePoint-Modus von Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
  Sobald die neue SharePoint-Umgebung ausgeführt wird, können Sie zwischen der reinen Migration von Inhalten oder einer vollständigen Migration auf Datenbankebene (einschließlich Inhaltsdatenbanken) auswählen.  
   
@@ -63,30 +62,30 @@ ms.lasthandoff: 08/17/2017
 -   **Reporting Services-Migrationstool:** Das Tool kann Ihre Berichtselemente von einem Server im einheitlichen Modus zu einem Server im SharePoint-Modus kopieren. Weitere Informationen finden Sie unter [Reporting Services-Migrationstool](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Vollständige Migration  
- **Vollständige Migration:** Wenn Sie SharePoint-Inhaltsdatenbanken zusammen mit den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Katalogdatenbanken zu einer neuen Farm migrieren, können Sie eine Reihe von Sicherungs- und Wiederherstellungsoptionen verwenden, die in diesem Thema zusammengefasst sind. In einigen Fällen müssen Sie in der Wiederherstellungsphase ein anderes Tool verwenden als in der Sicherungsphase. Beispielsweise können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager zum Verschlüsseln der Sicherung von einer früheren Version von Schlüsseln [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , aber Sie müssen SharePoint-Zentraladministration oder PowerShell verwenden, um die Verschlüsselungsschlüssel in einer SQL Server 2016 Reporting Services SharePoint-Modus-Installation wiederherstellen.  
+ **Vollständige Migration:** Wenn Sie SharePoint-Inhaltsdatenbanken zusammen mit den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Katalogdatenbanken zu einer neuen Farm migrieren, können Sie eine Reihe von Sicherungs- und Wiederherstellungsoptionen verwenden, die in diesem Thema zusammengefasst sind. In einigen Fällen müssen Sie in der Wiederherstellungsphase ein anderes Tool verwenden als in der Sicherungsphase. Beispielsweise können Sie den Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwenden, um Verschlüsselungsschlüssel einer Vorgängerversion von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zu sichern. In diesem Fall müssen Sie jedoch die SharePoint-Zentraladministration oder PowerShell verwenden, um die Verschlüsselungsschlüssel in einer SQL Server 2016 Reporting Services-Installation im SharePoint-Modus wiederherzustellen.  
   
 ####  <a name="bkmk_databases"></a> Datenbanken, die in der abgeschlossenen Migration angezeigt werden  
  In der folgenden Tabelle sind die SQL Server-Datenbanken von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] beschrieben, die nach der erfolgreichen Migration der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation im SharePoint-Modus zur Verfügung stehen:  
   
 |Datenbank|Beispielname||  
 |--------------|------------------|-|  
-|Katalogdatenbank|ReportingService_ [GUID der dienstanwendung] **(\*)**|Wird vom Benutzer migriert.|  
-|Temporäre Datenbank|ReportingService_ [GUID der dienstanwendung] TempDB **(\*)**|Wird vom Benutzer migriert.|  
+|Katalogdatenbank|ReportingService_[GUID der Dienstanwendung] **(\*)**|Wird vom Benutzer migriert.|  
+|Temporäre Datenbank|ReportingService_[GUID der Dienstanwendung]TempDB **(\*)**|Wird vom Benutzer migriert.|  
 |Warnungsdatenbank|ReportingService_[GUID der Dienstanwendung]_Alerting|Wird zusammen mit einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt.|  
   
- **(\*)** Die in der Tabelle angezeigten Beispielnamen folgen die Namenskonvention SSRS verwendet, bei der Erstellung einer neuen SSRS-dienstanwendung. Wenn Sie von einem anderen Server migrieren, verfügen Ihr Katalog und die tempDBs über die entsprechenden Namen der ursprünglichen Installation.  
+ **(\*)** Die in der Tabelle angezeigten Beispielnamen folgen der Namenskonvention, die von SSRS beim Erstellen einer neuen SSRS-Dienstanwendung verwendet wird. Wenn Sie von einem anderen Server migrieren, verfügen Ihr Katalog und die tempDBs über die entsprechenden Namen der ursprünglichen Installation.  
   
 ####  <a name="bkmk_backup_operations"></a> Sicherungsvorgänge  
  In diesem Abschnitt werden die zu migrierenden Informationstypen und die Tools bzw. die Vorgehensweise zum Abschließen des Sicherungsvorgangs beschrieben.  
   
- ![Einfaches Diagramm der SSRS SharePoint-Migration](../../reporting-services/install-windows/media/rs-sharepoint-migration.gif "einfaches Diagramm der SSRS SharePoint-Migration")  
+ ![Einfaches Diagramm der SSRS SharePoint-Migration](../../reporting-services/install-windows/media/rs-sharepoint-migration.gif "Basic diagram of SSRS SharePoint Migration")  
   
 ||Objekte|Methode|Hinweise|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel.|**Rskeymgmt.exe** oder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Die angegebenen Tools können für die Sicherung verwendet werden, für die Wiederherstellung werden jedoch die Verwaltungsseiten für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung oder PowerShell verwendet.|  
 |**2**|SharePoint-Inhaltsdatenbanken.||Sichern Sie die Datenbank, und trennen Sie sie.<br /><br /> Informationen finden Sie im Abschnitt „Upgrade mit Anfügen der Datenbanken“ in [Bestimmen der Upgrademethode (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx).|  
 |**3**|SQL Server-Datenbank, die der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Katalogdatenbank entspricht.|Sichern und Wiederherstellen von SQL Server-Datenbanken<br /><br /> oder<br /><br /> Trennen und erneutes Anfügen der SQL Server-Datenbank||  
-|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien|Einfacher Dateikopiervorgang|Wenn Sie Änderungen an der Datei vorgenommen haben, müssen Sie nur „rsreportserver.config“ kopieren. Beispiel für den Standardspeicherort von Dateien: C:\Programme\Gemeinsame Dateien\Microsoft Shared\Web-Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> "Web.config" für die Berichtsserver-ASP.NET-Anwendung.<br /><br /> "Machine.config" für ASP.NET.|  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien|Einfacher Dateikopiervorgang|Wenn Sie Änderungen an der Datei vorgenommen haben, müssen Sie nur „rsreportserver.config“ kopieren. Beispiel für den Standardspeicherort von Dateien: C:\Programme\Gemeinsame Dateien\Microsoft Shared\Web-Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> "Web.config" für die Berichtsserver-ASP.NET-Anwendung.<br /><br /> "Machine.config" für ASP.NET.|  
   
 ####  <a name="bkmk_restore_operations"></a> Wiederherstellungsvorgänge  
  In diesem Abschnitt werden die zu migrierenden Informationstypen und die Tools bzw. die Vorgehensweise zum Abschließen des Wiederherstellungsvorgangs beschrieben. Die zur Wiederherstellung verwendeten Tools können sich von den Tools unterscheiden, die Sie für die Sicherung verwendet haben.  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/17/2017
 ||Objekte|Methode|Hinweise|  
 |-|-------------|------------|-----------|  
 |**1**|Stellen Sie SharePoint-Inhaltsdatenbanken in der neuen Farm wieder her.|SharePoint-Upgrade mit Anfügen der Datenbanken.|Grundlegende Schritte:<br /><br /> 1) Stellen Sie die Datenbank auf dem neuen Server wieder her.<br /><br /> 2) Fügen Sie die Inhaltsdatenbank an eine Webanwendung an, indem Sie die URL angeben.<br /><br /> 3) "Get-SPWebapplication" listet alle Webanwendungen und die URLs auf.<br /><br /> <br /><br /> Weitere Informationen finden Sie im Abschnitt „Upgrade mit Anfügen der Datenbanken“ in [Bestimmen der Upgrademethode (SharePoint Server 2010) (http://technet.microsoft.com/en-us/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)und [Anfügen von Datenbanken und Durchführen eines Upgrades auf SharePoint Server 2010 (http://technet.microsoft.com/en-us/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
-|**2**|Stellen Sie die SQL Server-Datenbank wieder her, die der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Katalogdatenbank (ReportServer) entspricht.|Sichern und Wiederherstellen von SQL-Datenbanken<br /><br /> **oder**<br /><br /> Anfügen und Trennen von SQL Server-Datenbanken|Die Datenbank verwendet wird, erstmalig [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aktualisiert das Datenbankschema nach Bedarf, damit er mit der SQL Server 2016-Umgebung funktioniert.|  
+|**2**|Stellen Sie die SQL Server-Datenbank wieder her, die der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Katalogdatenbank (ReportServer) entspricht.|Sichern und Wiederherstellen von SQL-Datenbanken<br /><br /> **oder**<br /><br /> Anfügen und Trennen von SQL Server-Datenbanken|Wenn die Datenbank erstmalig verwendet wird, aktualisiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] das Datenbankschema nach Bedarf, damit es in der SQL Server 2016-Umgebung funktioniert.|  
 |**3**|Erstellen Sie eine neue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.|Erstellen Sie eine neue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.|Wenn Sie die neue Dienstanwendung erstellen, konfigurieren Sie sie für die Verwendung der kopierten Berichtsserver-Datenbank.<br /><br /> Weitere Informationen zur Verwendung der SharePoint-Zentraladministration finden Sie im Abschnitt „Schritt 3: Erstellen einer neuen Reporting Services-Dienstanwendung“ unter [Installieren des ersten Berichtsservers im SharePoint-Modus](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Beispiele für die Verwendung von PowerShell finden Sie im Abschnitt "Erstellen einer Reporting Services-Dienstanwendung mit PowerShell" unter [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Stellen Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien wieder her.|Einfacher Dateikopiervorgang|Beispiel für den Standardspeicherort von Dateien: C:\Programme\Gemeinsame Dateien\Microsoft Shared\Web-Server Extensions\15\WebServices\Reporting|  
 |||||  
@@ -136,7 +135,6 @@ ms.lasthandoff: 08/17/2017
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Migrieren einer Reporting Services-Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+[Migrieren einer Installation von Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

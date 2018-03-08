@@ -3,33 +3,30 @@ title: SQLBrowseConnect-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBrowseConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBrowseConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBrowseConnect
-helpviewer_keywords:
-- SQLBrowseConnect function [ODBC]
+f1_keywords: SQLBrowseConnect
+helpviewer_keywords: SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f8117cc5238576f840cdb98f5ffaded38aed0d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect-Funktion
 **Konformität**  
@@ -292,4 +289,3 @@ int main() {
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -2,32 +2,29 @@
 title: Model-Objekts (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-object-tmsl"></a>Model-Objekts (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Definiert ein tabellarisches Modell. Es ist ein Modell pro Datenbank und nur eine Datenbank, die in einem Befehl angegeben werden kann. Ein Datenbankobjekt ist das übergeordnete Objekt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert ein tabellarisches Modell. Es ist ein Modell pro Datenbank und nur eine Datenbank, die in einem Befehl angegeben werden kann. Ein Datenbankobjekt ist das übergeordnete Objekt.  
   
  Modelldefinitionen sind zu groß für die gesamte Syntax in einem Thema zu reproduzieren. Aus diesem Grund kann eine partielle syntaxhervorhebung, mit die Hauptbestandteile unten mit Links zu untergeordneten Objekten gefunden werden.  
   
@@ -41,7 +38,7 @@ ms.lasthandoff: 09/01/2017
  Alle Objekte verfügen über einen gemeinsamen Satz von Eigenschaften, einschließlich Name, Typ, Beschreibung, eine eigenschaftsauflistung und Anmerkungen. **Modell** Objekte verfügen außerdem über die folgenden Eigenschaften.  
   
  StorageLocation  
- Der Speicherort auf dem Datenträger, um das Modell zu platzieren.  
+ Der Speicherort auf dem Datenträger, auf dem das Modell platziert werden soll.  
   
  defaultMode  
  Die Standardmethode zum Bereitstellen von Daten in der Partition.  
@@ -98,9 +95,8 @@ ms.lasthandoff: 09/01/2017
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

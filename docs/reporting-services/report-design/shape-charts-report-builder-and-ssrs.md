@@ -1,27 +1,27 @@
 ---
-title: Formdiagramme (Berichts-Generator und SSRS) | Microsoft Docs
+title: Formdiagramme (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 339028127ce757f08aed35ee0868da28c69a5355
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Formdiagramme (Berichts-Generator und SSRS)
   Ein Formdiagramm zeigt Wertdaten als Prozentsatz des Ganzen an. Formdiagramme werden üblicherweise zum Anzeigen proportionaler Vergleiche zwischen verschiedenen Werten in einem Satz verwendet. Kategorien werden durch einzelne Segmente der Form dargestellt. Die Größe des Segments wird durch den Wert bestimmt. Formdiagramme werden ähnlich verwendet wie Kreisdiagramme, außer dass die Kategorien von der größten zur kleinsten angeordnet werden.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Die folgende Abbildung zeigt ein Beispiel für ein Trichterdiagramm.  
   
- ![Trichterdiagramm](../../reporting-services/report-design/media/rs-funnelchart.gif "Trichterdiagramm")  
+ ![Trichterdiagramm](../../reporting-services/report-design/media/rs-funnelchart.gif "Funnel chart")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Formdiagramme eignen sich sehr gut, um proportionale Prozentwerte in sortierter Reihenfolge anzuzeigen. Um die Konsistenz zu wahren, werden die Werte im Dataset jedoch standardmäßig nicht sortiert. Es bietet sich an, die Werte vom höchsten zum niedrigsten Wert zu sortieren, um die Daten möglichst exakt als Trichter oder Pyramide darzustellen. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   NULL-, leere und negative Werte haben keine Auswirkungen auf die Berechnung von Verhältnissen. Aus diesem Grund werden diese Werte nicht in einem Formdiagramm angezeigt. Wenn Sie diese Werte in Ihrem Diagramm visuell darstellen möchten, ändern Sie den Diagrammtyp. Weitere Informationen zum Hinzufügen von leeren Punkte zu einem nicht-Formdiagramm finden Sie unter [Hinzufügen von leeren Punkten zum Diagramm &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   NULL-, leere und negative Werte haben keine Auswirkungen auf die Berechnung von Verhältnissen. Aus diesem Grund werden diese Werte nicht in einem Formdiagramm angezeigt. Wenn Sie diese Werte in Ihrem Diagramm visuell darstellen möchten, ändern Sie den Diagrammtyp. Weitere Informationen zum Hinzufügen von leeren Punkten zu einem Nicht-Formdiagramm finden Sie unter [Hinzufügen von leeren Punkten zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Wenn Sie mithilfe einer benutzerdefinierten Palette eigene Farben in einem Formdiagramm definieren, müssen in der Palette genügend Farben vorhanden sein, damit jeder Datenpunkt mit einer eigenen Farbe hervorgehoben werden kann. Weitere Informationen finden Sie unter [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -57,13 +57,12 @@ ms.lasthandoff: 08/09/2017
   
 -   Formdiagrammtypen können nicht mit anderen Diagrammtypen im gleichen Diagrammbereich kombiniert werden. Wenn Sie Vergleiche zwischen Daten in einem Formdiagramm und Daten in einem anderen Diagrammtyp anzeigen möchten, müssen Sie einen zweiten Diagrammbereich hinzufügen.  
   
--   Sie können zusätzliche Zeichnungsarten für Kreis- und Ringdiagramme verwenden, um die visuelle Wirkung zu erhöhen. Finden Sie unter [Formatieren von Reihenfarben in einem Diagramm &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) für Weitere Informationen.  
+-   Sie können zusätzliche Zeichnungsarten für Kreis- und Ringdiagramme verwenden, um die visuelle Wirkung zu erhöhen. Weitere Informationen finden Sie unter [Formatieren von Reihenfarben in einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Leere und Null-Datenpunkte in Diagrammen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Kreisdiagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   
-

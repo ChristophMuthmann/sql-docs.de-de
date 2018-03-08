@@ -2,11 +2,13 @@
 title: Verbessern der Leistung der Mergereplikation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - performance [SQL Server replication], merge replication
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 47
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "47"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd62d43d9f77f0baf63487c15381e07814eea63d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
-  Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden beschriebenen zusätzlichen Aspekte im Zusammenhang mit einer Mergereplikation machen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](../../../relational-databases/replication/administration/enhance-general-replication-performance.md) beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden im Zusammenhang mit einer Mergereplikation beschriebenen zusätzlichen Aspekte machen.  
   
 ## <a name="database-design"></a>Datenbankentwurf  
   
@@ -68,11 +69,11 @@ ms.lasthandoff: 06/22/2017
   
 -   Verwenden Sie vorausberechnete Partitionen mit parametrisierten Filtern (diese Funktion wird standardmäßig verwendet). Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Vorausberechnete Partitionen setzen dem Filterverhalten bestimmte Grenzen. Wenn Ihre Anwendung mit diesen Grenzen nicht zurecht kommt, legen Sie für die **keep_partition_changes** -Option **True**fest. Dies führt zu einer Leistungssteigerung. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Vorausberechnete Partitionen setzen dem Filterverhalten bestimmte Grenzen. Wenn Ihre Anwendung mit diesen Grenzen nicht zurecht kommt, legen Sie für die **keep_partition_changes** -Option **True**fest. Dies führt zu einer Leistungssteigerung. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Verwenden Sie bei Daten, die zwar gefiltert, nicht aber von mehreren Benutzer genutzt werden sollen, Partitionen, die sich nicht überlappen.  
   
-     Die Replikation kann die Leistung bei Daten optimieren, die sich nicht in mehreren Partitionen befinden bzw. an mehrere Abonnements gesendet werden. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Die Replikation kann die Leistung bei Daten optimieren, die sich nicht in mehreren Partitionen befinden bzw. an mehrere Abonnements gesendet werden. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Erstellen Sie keine komplexen Joinfilterhierarchien.  
   
@@ -152,4 +153,3 @@ ms.lasthandoff: 06/22/2017
      Bei Mergereplikationen zeigt der Replikationsmonitor auf der Registerkarte **Synchronisierungsverlauf** detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierter Statistiken finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
   
-

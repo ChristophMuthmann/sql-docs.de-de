@@ -1,48 +1,50 @@
 ---
-title: "Führen Sie ein SSIS-Paket von der Befehlszeile aus | Microsoft Docs"
+title: "Ausführen eines SSIS-Pakets über die Eingabeaufforderung | Microsoft-Dokumentation"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: quick-start
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a33b8518ec3284f5de73d38c87209057dc1c7487
-ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 8d5c64fa4ba32ebd9e95d728b3a7655b523d9627
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Führen Sie ein SSIS-Paket von der Befehlszeile aus mit DTExec.exe
-Dieser Schnellstart-Lernprogramm veranschaulicht, wie ein SSIS-Paket von der Befehlszeile aus ausführen, durch Ausführen `DTExec.exe` mit den entsprechenden Parametern.
+# <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Ausführen eines SSIS-Pakets über die Eingabeaufforderung mit „DTExec.exe“
+Dieses Schnellstarttutorial zeigt das Ausführen eines SSIS-Pakets über die Eingabeaufforderung mittels Ausführung von `DTExec.exe` mit den entsprechenden Parametern.
 
 > [!NOTE]
-> In diesem Artikel beschriebene Methode wurde nicht mit einer Azure SQL-Datenbankserver bereitgestellten Pakete getestet.
+> Die in diesem Artikel beschriebene Methode wurde nicht Paketen getestet, die für einen Azure SQL-Datenbank-Server bereitgestellt werden.
 
-Weitere Informationen zu `DTExec.exe`, finden Sie unter [Dtexec-Hilfsprogramm](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility).
+Weitere Informationen zu `DTExec.exe` finden Sie unter [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility) (Hilfprogramm dtexec).
 
 ## <a name="run-a-package-with-dtexec"></a>Ausführen eines Pakets mit dtexec
 
-Falls der Ordner, die enthält `DTExec.exe` befindet sich nicht in Ihrer `path` Umgebungsvariablen müssen unter Umständen verwendet die `cd` Befehl aus, um in das Verzeichnis zu ändern. Für SQL Server 2017 dieser Ordner ist in der Regel `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
+Wenn sich der Ordner, der `DTExec.exe` enthält, nicht in Ihrer Umgebungsvariable `path` befindet, müssen Sie möglicherweise mit dem Befehl `cd` in das Verzeichnis wechseln. Bei SQL Server 2017 lautet dieser Ordner in der Regel `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
 
-Mit den Parameterwerten, die im folgenden Beispiel verwendet wird führt das Programm das Paket in der angegebene Ordnerpfad auf dem SSIS-Server – d. h. der Server, SSIS-Katalogdatenbank (SSISDB) gehostet. Die `/Server` Parameter enthält den Namen des Servers. Das Programm stellt eine Verbindung als der aktuelle Benutzer mit integrierter Windows-Authentifizierung her. SQL-Authentifizierung verwenden, geben Sie die `/User` und `Password` Parameter durch die entsprechenden Werte.
+Mit den im folgenden Beispiel verwendeten Parameterwerten führt das Programm das Paket im angegebenen Ordnerpfad auf dem SSIS-Server aus – d.h. dem Server, der die SSIS-Katalogdatenbank (SSISDB) hostet. Der `/Server`-Parameter stellt den Namen des Servers bereit. Das Programm stellt als aktueller Benutzer eine Verbindung mit der integrierten Windows-Authentifizierung her. Um die SQL-Authentifizierung zu verwenden, geben Sie die entsprechenden Werte für die Parameter `/User` und `Password` an.
 
 1. Öffnen Sie ein Eingabeaufforderungsfenster.
 
-2. Führen Sie `DTExec.exe` und geben Sie mindestens Werte für die `ISServer` und die `Server` Parameter, wie im folgenden Beispiel gezeigt:
+2. Führen Sie `DTExec.exe` aus, und geben Sie mindestens für die Parameter `ISServer` und `Server` Werte an, wie im folgenden Beispiel gezeigt:
 
     ```cmd
     dtexec /ISServer "\SSISDB\Project1Folder\Integration Services Project1\Package.dtsx" /Server "localhost"
     ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Erwägen Sie andere Verfahren zum Ausführen eines Pakets aus.
-    - [Führen Sie ein SSIS-Paket mit SSMS](./ssis-quickstart-run-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Führen Sie ein SSIS-Paket mit PowerShell](ssis-quickstart-run-powershell.md)
-    - [Führen Sie ein SSIS-Paket mit c#](./ssis-quickstart-run-dotnet.md) 
-
+- Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
+    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
+    - [Ausführen eines SSIS-Pakets mit PowerShell](ssis-quickstart-run-powershell.md)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

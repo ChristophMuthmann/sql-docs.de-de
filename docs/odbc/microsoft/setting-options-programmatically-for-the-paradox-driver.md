@@ -3,10 +3,12 @@ title: "Festlegen von Optionen für den Treiber Paradox programmgesteuert | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7c881a428d279c4136d3d2422afc6cc79d9d502
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c353ec7cca4744a4189891a4123eaf6263b8fd51
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Festlegen von Optionen für den Treiber Paradox programmgesteuert
 |Option|Description|Methode|  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |Wählen Sie Verzeichnis|Zeigt ein Dialogfeld, in dem Sie ein Verzeichnis mit den Dateien, die Sie zugreifen möchten auswählen können.<br /><br /> Beim Definieren eines Quellverzeichnisses Daten geben Sie das Verzeichnis, in dem die am häufigsten Dateien verwendeten, befinden. Der ODBC-Treiber verwendet dieses Verzeichnis als Standardverzeichnis. Kopieren Sie andere Dateien in dieses Verzeichnis, wenn sie häufig verwendet werden. Alternativ können Sie den Dateinamen in einer SELECT-Anweisung mit dem Verzeichnisnamen qualifizieren:<br /><br /> WÄHLEN SIE \* AUS C:\MYDIR\EMP<br /><br /> Sie können ein neues Standardverzeichnis angeben, mit der **SQLSetConnectOption** Funktion mit der Option SQL_CURRENT_QUALIFIER.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Wählen Sie Netzwerkverzeichnis|Der vollständige Pfad des Verzeichnisses, eine Datenbank Paradox Sperren enthält, da sie entweder die Datei Pdoxusrs.net enthält (in 4 Paradox. *X*) oder die Datei Paradox.net (5 Paradox. *X*). Wenn das Verzeichnis nicht eine dieser Dateien enthält, erstellt der Paradox-Treiber eine. Informationen zu diesen Dateien finden Sie unter der Paradox-Dokumentation.<br /><br /> Bevor Sie einem Netzwerkverzeichnis auswählen können, geben Sie Ihren Benutzernamen Paradox in der **Benutzername** Textfeld. Klicken Sie auf **Netzwerkverzeichnis wählen** einem Netzwerkverzeichnis auswählen.|Um diese Option dynamisch festzulegen, verwenden die **x** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Benutzername|Der Benutzername des Paradox. Dies ist der Name, die an andere Benutzer von Paradox Dateien angezeigt werden, wenn eine Sperre auftritt.|Um diese Option dynamisch festzulegen, verwenden die **PARADOXUSERNAME** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
-

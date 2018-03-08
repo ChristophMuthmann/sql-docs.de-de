@@ -3,30 +3,31 @@ title: "Lernprogramme für SQL Server-R | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a313a6f26283b96d138671991438197ae0cc0332
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server-R-Lernprogramme
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel enthält eine Liste der Lernprogramme und Beispiele, in denen die Verwendung von R mit SQL Server 2016 oder SQL Server-2017 veranschaulicht. Durch diese Beispiele und Demos erfahren Sie:
 
@@ -118,4 +119,3 @@ Nach dem Ausführen von SQL Server-Setup, vergessen Sie nicht folgenden wichtige
 + Sicherstellen Sie, dass der SQL-Anmeldung oder die Windows-Benutzerkonto hat erforderlichen Berechtigungen zum Verbinden mit dem Server, der zum Lesen von Daten und erstellen das Beispiel erforderlichen Datenbankobjekte
 
 Wenn Probleme auftreten, finden Sie in diesem Artikel finden Sie einige häufig auftretende Probleme: [Problembehandlung Machine Learning-Dienste](../machine-learning-troubleshooting-faq.md)
-

@@ -1,11 +1,12 @@
 ---
-title: Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON (SQL Server) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+title: Analysieren und Transformieren von JSON-Daten mit OPENJSON (SQL Server) | Microsoft-Dokumentation
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -15,25 +16,24 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d6caf93638c66ff2c8c23842fafdedff1fd22fcb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 6e4a7b49bb01bd4254fad855daedd3981b2fa6a8
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analysieren und Transformieren von JSON-Daten mit OPENJSON (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Die Rowsetfunktion **OPENJSON** konvertiert JSON-Text in eine Reihe von Zeilen und Spalten. Nach der Transformation einer JSON-Sammlung in ein Rowset mithilfe von **OPENJSON** können Sie jede beliebige SQL-Abfrage auf zurückgegebene Daten ausführen oder diese in eine Tabelle von SQL Server einfügen. 
   
 Die **OPENJSON**-Funktion greift ein einzelnes JSON-Objekt oder eine Sammlung von JSON-Objekten auf und transformiert sie in eine oder mehrere Zeilen. Die **OPENJSON**-Funktion gibt standardmäßig die folgenden Daten zurück:
--   Aus einem JSON-Objekt gibt die Funktion alle Schlüsselwertpaare zurück, die auf der ersten Ebene gefunden werden.
+-   Aus einem JSON-Objekt gibt die Funktion alle Schlüssel-Wert-Paare zurück, die auf der ersten Ebene gefunden werden.
 -   Aus einem JSON-Array gibt die Funktion alle Elemente des Arrays mit ihren Indizes zurück.  
 
 Sie können eine optionale **WITH**-Klausel hinzufügen, um ein Schema bereitzustellen, das die Struktur der Ausgabe definiert.  
@@ -60,9 +60,9 @@ FROM OPENJSON(@json);
   
 **Ergebnisse**  
   
-|Schlüssel|value|Typ|  
+|Schlüssel|Wert|Typ|  
 |---------|-----------|----------|  
-|name|John|1|  
+|NAME|John|1|  
 |surname|Doe|1|  
 |age|45|2|  
 |skills|["SQL","C#","MVC"]|4|
@@ -121,7 +121,7 @@ WITH (
   
 **Ergebnisse**  
   
-|Number|Datum|Customer|Quantity|  
+|Number|date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
@@ -145,11 +145,23 @@ Sie können den Kompatibilitätsgrad in der `sys.databases`-Ansicht oder in den 
 Sie können den Kompatibilitätsgrad einer Datenbank mithilfe des folgenden Befehls ändern:   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
   
-## <a name="see-also"></a>Siehe auch  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
+
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   
-

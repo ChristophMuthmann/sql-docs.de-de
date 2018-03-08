@@ -1,27 +1,28 @@
 ---
-title: "Lektion 4: Hinzufügen einer Tabellenstatus zum Bericht (Reporting Services) | Microsoft Docs"
+title: "Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 3f6b048b66f575746c47c1fc083ecc266305684c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)
 Nach dem Definieren des Datasets können Sie mit dem Entwerfen des Berichts beginnen. Zum Erstellen eines Berichtslayouts verschieben Sie mit Drag und Drop Datenbereiche, Textfelder, Bilder und andere Elemente auf die Entwurfsoberfläche, die in den Bericht eingebunden werden sollen.  
@@ -64,17 +65,16 @@ Wenn Sie einen Bericht in der Vorschau anzeigen, können Sie den gerenderten Ber
   
     In der folgenden Abbildung wird ein Teil des Berichts in der Ansicht Vorschau angezeigt.  
   
-    ![Vorschau, Detailzeilen der Tabelle mit 5 Spalten](../reporting-services/media/rs-basictabledetailspreview.png "Vorschau, Detailzeilen der Tabelle mit 5 Spalten")  
+    ![Vorschau, Detailzeilen der Tabelle mit 5 Spalten](../reporting-services/media/rs-basictabledetailspreview.png "Preview, Detail rows of table with 5 columns")  
   
     Beachten Sie, dass die Währungsangabe (in der Spalte Line Total) sechs Stellen nach dem Dezimaltrennzeichen aufweist und dass das Datum einen Zeitstempel enthält. Diese Formatierung wird in der nächsten Lektion korrigiert.  
   
 > [!NOTE]  
 > Klicken Sie im Menü **Datei** auf **Alle Speichern** , um den Bericht zu speichern.  
   
-## <a name="next-steps"></a>Nächste Schritte  
-Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Finden Sie unter [Lektion 5: Formatieren eines Berichts &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+## <a name="next-steps"></a>Next Steps  
+Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Weitere Informationen finden Sie unter [Lektion 5: Formatieren eines Berichts (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Tabellen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [Datasetfeld-Auflistung &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-

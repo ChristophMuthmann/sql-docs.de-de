@@ -2,25 +2,26 @@
 title: Python-Bibliotheken | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 6292b9139f4ad43a0bdd8de4b1d849cb0caaa627
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec0e006a71bb8634b77b83551c9ad82bdb41b246
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Python-Bibliotheken und Datentypen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, die Python-Bibliotheken, die in den folgenden Produkten enthalten sind:
 
@@ -63,7 +64,6 @@ Diese Tabelle enthält die implizite Konvertierungen, die bereitgestellt werden.
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|
 |**varchar(max)**|`str`|
-
 
 
 

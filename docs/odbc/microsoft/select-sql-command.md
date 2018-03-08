@@ -3,26 +3,26 @@ title: "Wählen Sie-SQL-Befehl | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- select [ODBC]
+helpviewer_keywords: select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3604d435a8a95e3690d335e25e1a94b3bbb0b1a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select---sql-command"></a>Wählen Sie-SQL-Befehl
 Ruft Daten aus einer oder mehreren Tabellen ab.  
@@ -290,4 +290,3 @@ WHERE customer.cust_id NOT IN ;
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
  [LEGEN SIE GENAUE](../../odbc/microsoft/set-exact-command.md)
-

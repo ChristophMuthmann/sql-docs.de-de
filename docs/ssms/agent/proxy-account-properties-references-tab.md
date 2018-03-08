@@ -3,31 +3,31 @@ title: Proxyeigenschaften (Registerkarte Verweise) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.proxy.references.f1
+f1_keywords: sql13.ag.proxy.references.f1
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d8c7fda047880cfbe79109a2c63e640b2e4f2b6c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ce3bdf9b642888886162f18f102086fa843b300c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxyeigenschaften (Registerkarte Verweise)
-Diese schreibgeschützte Seite führt die Auftragsschritte auf, die auf ein Proxykonto des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agents verweisen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Diese schreibgeschützte Seite führt die Auftragsschritte auf, die auf ein Proxykonto des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agents verweisen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Auftragsname**  
 Namen der Aufträge, die dieses Proxykonto verwenden.  
   
@@ -37,7 +37,6 @@ Namen der Auftragsschritte, die dieses Proxykonto verwenden.
 **Subsystem**  
 Subsystem, das von diesem Proxykonto verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen eines Proxys für den SQL Server-Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   
-

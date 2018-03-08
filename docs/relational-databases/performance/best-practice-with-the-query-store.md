@@ -1,36 +1,35 @@
 ---
 title: "Bewährte Methoden für den Abfragespeicher | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, best practices
+helpviewer_keywords: Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7e41e78e7e4ffc1699a79bee2e7ed6236210e52d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema werden die bewährten Methoden für den Einsatz eines Abfragespeichers bei Ihrer Arbeitsauslastung vorgestellt.  
   
-##  <a name="SSMS"></a> Verwenden der aktuellen Version von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden des neuesten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über mehrere Benutzeroberflächen, die zum Konfigurieren des Abfragespeichers sowie zur Nutzung der gesammelten Daten über Ihre Arbeitsauslastung konzipiert wurden.  
 Laden Sie die neueste Version von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [hier](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) herunter.  
   
@@ -58,7 +57,7 @@ Die Standardparameter sind gut für einen schnellen Einstieg geeignet; Sie sollt
   
  Der Standardwert (100 MB) reicht möglicherweise nicht aus, wenn die Arbeitsauslastung eine große Anzahl unterschiedlicher Abfragen und Pläne generiert oder wenn der Abfrageverlauf einen längeren Zeitraum aufbewahrt werden soll. Verfolgen Sie den aktuellen Speicherplatz und erhöhen Sie die maximale Größe (MB), um zu verhindern, dass der Abfragespeicher in den schreibgeschützten Modus übergeht.  Verwenden Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , oder führen Sie das folgende Skript aus, um aktuelle Informationen zur Größe des Abfragespeichers zu erhalten:  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -69,14 +68,14 @@ FROM sys.database_query_store_options;
   
  Im folgenden Skript wird eine neue maximale Größe (MB) festgelegt:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Statistiksammlungsintervall:** Definiert den Grad der Granularität während der gesammelten Laufzeitstatistik (der Standardwert ist 1 Stunde). Ziehen Sie einen niedrigeren Wert in Betracht, wenn Sie eine geringere Granularität oder weniger Zeit benötigen, um Probleme zu erkennen und zu mindern. Denken Sie jedoch daran, dass dies unmittelbar die Größe der Abfragespeicherdaten beeinflusst. Verwenden Sie SSMS oder Transact-SQL, um einen anderen Wert für das Statistiksammlungsintervall festzulegen:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -85,7 +84,7 @@ Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang
   
  Vermeiden Sie es, Verlaufsdaten aufzubewahren, die Sie nicht mehr verwenden möchten. Dies reduziert die Wahrscheinlichkeit für Änderungen in den schreibgeschützten Status. Die Größe der Abfragespeicherdaten sowie die Zeit, um Probleme zu erkennen und zu mindern, lassen sich besser vorhersagen. Verwenden Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder das folgende Skript, um die zeitbasierte Cleanuprichtlinie zu konfigurieren:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -94,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  Es wird dringend empfohlen, das größenbasierte Cleanup zu aktivieren, um sicherzustellen, dass der Abfragespeicher immer im Lese-/ Schreibmodus ausgeführt wird und die neuesten Daten erfasst.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -109,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  Das folgende Skript legt den Abfrageerfassungsmodus auf Auto fest:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -121,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Aktivieren Sie Abfragespeicher mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , wie im vorherigen Abschnitt beschrieben, oder führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus:  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -129,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im Objekt-Explorer von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , um Problembehandlungsansichten für bestimmte Szenarien zu öffnen.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Abfragespeicheransichten arbeiten mit dem Satz von Ausführungsmetriken, die alle als eine der folgenden Statistikfunktionen ausgedrückt werden:  
   
-|Ausführungsmetrik|Statistikfunktion|  
-|----------------------|------------------------|  
-|CPU-Zeit, Dauer, Ausführungsanzahl, logische Lesevorgänge, logische Schreibvorgänge, Speicherverbrauch und physische Lesevorgänge|Durchschnitt, Maximum, Minimum, Standardabweichung, Gesamt|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version|Ausführungsmetrik|Statistikfunktion|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU-Zeit, Dauer, Ausführungsanzahl, logische Lesevorgänge, logische Schreibvorgänge, Speicherverbrauch, physische Lesevorgänge, CLR-Zeit, Parallelitätsgrad (Degree of Parallelism DOP) und Zeilenanzahl|Durchschnitt, Maximum, Minimum, Standardabweichung, Gesamt|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU-Zeit, Dauer, Ausführungsanzahl, logische Lesevorgänge, logische Schreibvorgänge, Speicherverbrauch, physische Lesevorgänge, CLR-Zeit, Parallelitätsgrad (Degree of Parallelism, DOP), Zeilenanzahl, Protokollspeicher, TempDB-Speicher und Wartezeiten|Durchschnitt, Maximum, Minimum, Standardabweichung, Gesamt|
   
  Die folgende Grafik veranschaulicht, wie Sie die Abfragespeicheransichten suchen:  
   
@@ -179,7 +179,7 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
 ##  <a name="Verify"></a> Überprüfen, ob der Abfragespeicher kontinuierlich Abfragedaten erfasst  
  Der Abfragespeicher kann den Betriebsmodus automatisch ändern. Überwachen Sie regelmäßig den Status des Abfragespeichers, um sicherzustellen, dass der Abfragespeicher funktioniert, und um Maßnahmen zu ergreifen, um Ausfälle aufgrund von vermeidbaren Ursachen zu verhindern. Führen Sie die folgende Abfrage aus, um den Betriebsmodus zu ermitteln und die wichtigsten Parameter anzuzeigen:  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -200,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   Bereinigen Sie die Abfragespeicherdaten mithilfe der folgenden Anweisung:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Wenden Sie einen oder beide der folgenden Schritte an, indem Sie die folgende Anweisung ausführen, die den Betriebsmodus explizit wieder in den Lese-/ Schreibzugriff zurücksetzt:  
+Wenden Sie einen oder beide der folgenden Schritte an, indem Sie die folgende Anweisung ausführen, die den Betriebsmodus explizit wieder in den Lese-/ Schreibzugriff zurücksetzt:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -222,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Fehlerzustand  
  Zum Wiederherstellen des Abfragespeichers versuchen Sie explizit den Lese-/Schreibmodus einzustellen, und prüfen Sie den tatsächlichen Status erneut.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -238,9 +238,9 @@ FROM sys.database_query_store_options;
  
  Der Abfragedatenspeicher konnte durch die Ausführung der gespeicherten Prozedur **sp_query_store_consistency_check** innerhalb der betroffenen Datenbank wiederhergestellt werden.
  
- Falls dieser Schritt nicht erfolgreich war, versuchen Sie den Abfragespeicher zu löschen, bevor Sie den Lese-/Schreibmodus anfordern.  
+ Falls dieser Schritt nicht erfolgreich war, versuchen Sie, den Abfragespeicher zu löschen, bevor Sie den Lese-/Schreibmodus anfordern.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -303,7 +303,7 @@ Daher wird die Leistung Ihrer Arbeitsauslastung suboptimal sein, und der Abfrage
 
  Die Planerzwingung ist ein nützlicher Mechanismus zur Behandlung von Leistungsproblemen für kritische Abfragen, um sie besser vorhersagbar zu machen. Wie bei Planhinweisen und Planhinweislisten ist das Erzwingen eines Plans jedoch keine Garantie dafür, dass er in späteren Ausführungen verwendet wird. Wenn das Datenbankschema sich derart ändert, dass Objekte, auf die der Ausführungsplan verweist, geändert oder gelöscht werden, beginnt das Erzwingen eines Plans in der Regel zu scheitern. In diesem Fall greift [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Neukompilierung der Abfrage zurück, während die tatsächliche Ursache für den Fehler beim Erzwingen in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) eingeblendet wird. Die folgende Abfrage gibt Informationen zu erzwungenen Plänen zurück:  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   
@@ -330,11 +330,10 @@ Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen,
   
   Das Ablaufverfolgungsflag 7752 ermöglicht das asynchrone Laden eines Abfragespeichers und erlaubt SQL Server die Ausführung von Abfragen, bevor der Abfragespeicher vollständig geladen wurde. Der Abfragespeicher verhindert standardmäßig, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde.
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)  
   
-

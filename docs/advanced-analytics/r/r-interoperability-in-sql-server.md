@@ -2,27 +2,28 @@
 title: "R-Interoperabilität in SQL Server R Services|Microsoft-Dokumente"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b494e320bf52a98ea02cae6dc3c7feb41aea4217
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>R-Interoperabilität in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Thema konzentriert sich auf den Mechanismus zum Ausführen für R in SQL Server und beschreibt die Unterschiede zwischen Microsoft R und open-Source-R.
 
@@ -32,11 +33,11 @@ Weitere Informationen zu zusätzlichen Komponenten finden Sie unter [neue Kompon
 
 ### <a name="open-source-r-components"></a>Open Source-R-Komponenten
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] enthält eine vollständige Verteilung der Basis-R-Pakete und -Tools. Weitere Informationen darüber, was in der Basis-Verteilung enthalten ist, finden Sie unter der Dokumentation, die während der Installation den folgenden standardmäßigen Speicherort installiert: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] enthält eine vollständige Verteilung der R-Basispakete und-Tools an. Weitere Informationen darüber, was in der Basis-Verteilung enthalten ist, finden Sie unter der Dokumentation, die während der Installation den folgenden standardmäßigen Speicherort installiert: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 Im Rahmen der Installation von [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], müssen Sie den Bedingungen der öffentlichen GNU-Lizenz zustimmen. Anschließend können Sie Standard-R-Pakete ohne weitere Änderungen ausführen, wie in anderen Open-Source-Verteilungen von R.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ändert die R-Laufzeit in keiner Weise. Die R-Laufzeit wird außerhalb des [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Prozesses ausgeführt und kann unabhängig von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ausgeführt werden. Es wird jedoch dringend empfohlen, diese Tools nicht zu verwenden, während [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] R verwendet, um Ressourcenkonflikte zu vermeiden.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] R-Laufzeitmoduls in keiner Weise werden nicht geändert werden. Die R-Laufzeit wird außerhalb des [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Prozesses ausgeführt und kann unabhängig von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ausgeführt werden. Es wird jedoch dringend empfohlen, diese Tools nicht zu verwenden, während [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] R verwendet, um Ressourcenkonflikte zu vermeiden.
 
 Die R-Basispaket-Verteilung, die mit einer bestimmten [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Instanz verknüpft ist, finden Sie in dem Ordner, der mit der Instanz verknüpft ist. Z. B. Wenn Sie R Services auf der Standardinstanz installiert haben, R-Bibliotheken in diesem Ordner in der Standardeinstellung befinden:
 
@@ -73,10 +74,9 @@ Zudem wird empfohlen, dass Sie versuchen [MicrosoftML](https://docs.microsoft.co
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Architekturübersicht](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
+[Übersicht über die Architektur](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
 
 [Zur Unterstützung von R-Komponenten in SQL Server](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)
 
-[Sicherheit (Übersicht)](../../advanced-analytics/r/security-overview-sql-server-r.md)
-
+[Sicherheitsübersicht](../../advanced-analytics/r/security-overview-sql-server-r.md)
 

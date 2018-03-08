@@ -2,34 +2,32 @@
 title: CSDLBI-Konzepte | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 79e7bf085f6bd1faab6fe367a2c8319192c7f2f7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0b38e5f9de0860c75c0262c2e9684cc5440ba22d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Die konzeptionelle Schemadefinitionssprache mit BI-Anmerkungen (CSDLBI) basiert auf Entity Data Framework, einer Abstraktion zum Darstellen von Daten, die es ermöglicht, dass unterschiedliche Datasets programmgesteuert aufgerufen, abgefragt oder exportiert werden können. CSDLBI wird verwendet, um mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenmodelle darzustellen, weil diese Sprache umfangreiche datengesteuerte Berichterstellungsfunktionen und Anwendungen unterstützt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die konzeptionelle Schemadefinitionssprache mit BI-Anmerkungen (CSDLBI) basiert auf Entity Data Framework, einer Abstraktion zum Darstellen von Daten, die es ermöglicht, dass unterschiedliche Datasets programmgesteuert aufgerufen, abgefragt oder exportiert werden können. CSDLBI wird verwendet, um mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenmodelle darzustellen, weil diese Sprache umfangreiche datengesteuerte Berichterstellungsfunktionen und Anwendungen unterstützt.  
   
  In diesem Abschnitt wird erläutert, wie die CSDLBI-Darstellung (tabellarischen und mehrdimensionalen) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenmodellen zugeordnet wird, und es werden Beispiele für die einzelnen Modelltypen bereitgestellt.  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 09/01/2017
   
  Die **EntitySet** enthält keine Informationen zu Spalten oder Daten in der Tabelle. Die ausführliche Beschreibung der Spalten und ihrer Eigenschaften wird im EntityType-Element bereitgestellt.  
   
- Die **EntitySet** -Element für jede Entität (Tabelle) umfasst eine Auflistung von Eigenschaften, die definieren, die Schlüsselspalte, den Datentyp und die Länge der Spalte, NULL-Zulässigkeit, das Sortierverhalten usw.. Im folgenden CSDL-Auszug werden z. B. drei Spalten in der Customer-Tabelle beschrieben. Die erste Spalte ist eine spezielle ausgeblendete Spalte, die intern vom Modell verwendet wird.  
+ Die **EntitySet** -Element für jede Entität (Tabelle) umfasst eine Auflistung von Eigenschaften, die definieren, die Schlüsselspalte, den Datentyp und die Länge der Spalte, NULL-Zulässigkeit, das Sortierverhalten usw. Im folgenden CSDL-Auszug werden z. B. drei Spalten in der Customer-Tabelle beschrieben. Die erste Spalte ist eine spezielle ausgeblendete Spalte, die intern vom Modell verwendet wird.  
   
 ```  
 <EntityType Name="Customer">  
@@ -98,7 +96,7 @@ ms.lasthandoff: 09/01/2017
   
  Zuordnungen haben immer genau zwei Enden, die jeweils auf ein Feld oder eine Spalte in einer Tabelle zeigen. Daher sind mehrere Beziehungen zwischen zwei Tabellen möglich, wenn die Beziehungen verschiedene Endpunkte haben. Den Endpunkten der Zuordnung wird ein Rollenname zugewiesen, der angibt, wie die Zuordnung im Kontext des Datenmodells verwendet wird. Ein Beispiel für einen Rollennamen möglicherweise **"ShipTo"**, die bei Anwendung auf eine Kunden-ID, die die Kunden-ID in eine Orders-Tabelle verknüpft ist.  
   
- Die CSDLBI-Darstellung des Modells enthält auch Attribute in der Zuordnung, die bestimmen, wie die Entitäten einander in Hinsicht zugeordnet sind, die *Multiplizität* der Zuordnung. Multiplizität gibt an, ob das Attribut oder die Spalte am Endpunkt einer Beziehung zwischen Tabellen auf der 1-Seite oder auf der n-Seite einer 1:n-Beziehung ist. Es gibt keinen separaten Wert für 1:1-Beziehungen. CSDLBI-Anmerkungen unterstützen eine Multiplizität von 0 (das bedeutet, dass die Entität nicht zugeordnet ist) oder 0..1, was entweder eine 1:1-Beziehung oder eine 1:n-Beziehung bedeutet.  
+ Die CSDLBI-Darstellung des Modells enthält auch Attribute in der Zuordnung, die bestimmen, wie die Entitäten einander in Hinsicht zugeordnet sind, die *Multiplizität* der Zuordnung. Multiplizität gibt an, ob das Attribut oder die Spalte am Endpunkt einer Beziehung zwischen Tabellen auf der 1-Seite oder auf der n-Seite einer 1:n-Beziehung ist. Es gibt keinen separaten Wert für 1:1-Beziehungen. CSDLBI-Anmerkungen unterstützen eine Multiplizität von 0 (das bedeutet, dass die Entität nicht zugeordnet ist) oder 0.1, was entweder eine 1:1-Beziehung oder eine 1:n-Beziehung bedeutet.  
   
  Im folgenden Beispiel wird die CSDLBI-Ausgabe für eine Beziehung zwischen den Tabellen "Date" und "ProductInventory" dargestellt, wobei die zwei Tabellen über die DateAlternateKey-Spalte verknüpft sind. Beachten Sie, dass standardmäßig der Name des der **AssociationSet** ist der vollqualifizierte Name der Spalten, die in der Beziehung beteiligt sind. Sie können dieses Verhalten jedoch ändern, wenn Sie das Modell erstellen, und ein anderes Namensformat verwenden.  
   
@@ -157,7 +155,6 @@ ms.lasthandoff: 09/01/2017
  **Einschränkungen:** zellensicherheit wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [CSDL-Anmerkungen für Business Intelligence &#40; CSDLBI &#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

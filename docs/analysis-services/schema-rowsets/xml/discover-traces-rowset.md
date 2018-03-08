@@ -2,31 +2,32 @@
 title: DISCOVER_TRACES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2eaf3708434961840620a71ffdcaf898b5124301
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES-Rowset
-  Stellt Informationen über die derzeit aktiven Ablaufverfolgungen auf dem Server bereit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Stellt Informationen über die derzeit aktiven Ablaufverfolgungen auf dem Server bereit.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
 |**TraceID**|**DBTYPE_WSTR**|Die Ablaufverfolgungs-ID.|  
-|**Ablaufverfolgungsname**|**DBTYPE_WSTR**|Der Ablaufverfolgungsname.|  
+|**TraceName**|**DBTYPE_WSTR**|Der Ablaufverfolgungsname.|  
 |**LogFileName**|**DBTYPE_WSTR**|Der Name der Ablaufverfolgungsprotokolldatei.|  
 |**LogFileSize**|**DBTYPE_I4**|Die Größe der Ablaufverfolgungsprotokolldatei.|  
 |**LogFileRollover**|**DBTYPE_BOOL**|true, um anzugeben, dass die Protokolldatei von neuem beginnen soll, andernfalls false.|  
@@ -69,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

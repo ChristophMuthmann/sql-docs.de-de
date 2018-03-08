@@ -2,12 +2,13 @@
 title: "Spezifikationen der maximalen Kapazität (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb411a22638d709e633504675bd91dbcfa835810
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Spezifikationen der maximalen Kapazität (Analysis Services)
-  Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Komponenten definierter Objekte unter unterschiedlichen Serverbereitstellungsmodi an.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Komponenten definierter Objekte unter unterschiedlichen Serverbereitstellungsmodi an.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -37,9 +38,9 @@ ms.lasthandoff: 09/01/2017
   
  [SharePoint (DeploymentMode = 1)](#bkmk_sharepoint)  
   
- [Tabellarisch (DeploymentMode = 2)](#bkmk_vertipaq)  
+ [Tabular (DeploymentMode=2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>Mehrdimensionale und Datamining (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">Mehrdimensionale und Datamining (DeploymentMode = 0)</a>  
  Der MOLAP-Speichermodus, der sowohl Daten als auch Metadaten speichert, verfügt über zusätzliche physische Grenzen für Dateigrößen. Zeichenfolgenspeicherdateien weisen standardmäßig eine maximale Größe von 4 GB auf. Wenn Sie größere Dateien für Zeichenfolgenspeicher benötigen, können Sie eine andere Zeichenfolgenspeicherarchitektur angeben. Weitere Informationen finden Sie unter [Zeichenfolgenspeicher für Dimensionen und Partitionen konfigurieren](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
 |Objekt|Maximale Größe/Anzahl|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 09/01/2017
   
  Weitere Informationen zu datenquellenbegrenzungen für online analytical Processing (OLAP) und Datamining finden Sie unter [unterstützte Datenquellen &#40; SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Unterstützte Datenquellen &#40; SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), und [ASSL-Objekte und-Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
   
 |Objekt|Maximale Größe/Anzahl|  
 |------------|----------------------------|  
@@ -87,7 +88,7 @@ ms.lasthandoff: 09/01/2017
 |Datensatzgröße in der Quellabfrage|64 KB|  
 |Die Länge von Objektnamen|100 Zeichen|  
   
-##  <a name="bkmk_vertipaq"></a>Tabellarisch (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq"></a> Tabellarisch (DeploymentMode = 2)  
 Im folgenden werden die theoretischen Grenzwerte. Leistung wird am niedrigere Zahlen verringert werden.   
 
 |Objekt|Maximale Größe/Anzahl|  
@@ -109,4 +110,3 @@ Im folgenden werden die theoretischen Grenzwerte. Leistung wird am niedrigere Za
  [Allgemeine Eigenschaften](../../../analysis-services/server-properties/general-properties.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: "Neuheiten bei SSMA für die Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 03/01/2018
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - sql-ssma
 ms.tgt_pltfrm: 
@@ -13,20 +16,27 @@ applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 487fa165ce29ae2ae2a7fffe4463e88fb45001c6
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
-ms.openlocfilehash: 5cc5b9bf49c28b298570e0c867c5b03e8ad99c47
-ms.contentlocale: de-de
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Was ist neu in SSMA für Access (AccessToSQL)
 In diesem Thema werden die SSMA für Access-Änderungen in jeder Version aufgelistet.  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+Die v7.7-Version von SSMA für Access umfasst die folgenden Änderungen:
+- SSMA für Access wurde mit den entsprechenden Updates verbessert, die Qualität und Konvertierung Metriken zu verbessern.
+- Basierend auf der großen Nachfrage ist die 32-Bit-Version von SSMA für Access zurück. Im Vergleich zu die vorherige Implementierung (vor v7.4), es gibt zwei Installationspakete, aber sie können nicht nebeneinander installiert werden. Daher müssen Sie die am besten geeignete Version basierend auf die Konnektivitätskomponenten verwaltungsstufe auswählen. Es ist immer vorzuziehen, nach Möglichkeit die 64-Bit-Version zu verwenden.
+
+> [!IMPORTANT]
+> SSMA v7.4 und höheren Versionen ist .net 4.5.2 eine Installation Voraussetzung.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 Die v7.6-Version von SSMA für Access wurde verbessert, mit der targeted Korrekturen, die Qualität und Konvertierung Metriken zu verbessern und Unterstützung für SQL Server-2017 (öffentliche Vorschau). Unterstützung für SQL Server-2017 auf Windows- und Linux ist als öffentliche Vorschau verfügbar und sollte nicht für die Produktionsmigrationen verwendet werden.
@@ -34,7 +44,7 @@ Die v7.6-Version von SSMA für Access wurde verbessert, mit der targeted Korrekt
 > [!IMPORTANT]
 > SSMA v7.4 und höhere Versionen .net 4.5.2 ist eine Voraussetzung für Installation, und die 32-Bit-Version des Tools wurde eingestellt.
 
-## <a name="ssma-v75"></a>SSMA 7.5
+## <a name="ssma-v75"></a>SSMA v7.5
 Die Version 7.5 von SSMA für Access wurde verbessert, mit zahlreiche Verbesserungen, um größere Barrierefreiheit für Personen mit behinderungen sicherzustellen.
 
 > [!IMPORTANT]
@@ -50,7 +60,7 @@ Die v7.4-Version von SSMA für Access umfasst die folgenden Änderungen:
 > [!IMPORTANT]
 > .NET 4.5.2 ist eine Voraussetzung für die Installation von SSMA v7.4. Darüber hinaus wird v7.4 ab, die 32-Bit-Version von SSMA nicht mehr unterstützt wird.
 
-## <a name="ssma-v73"></a>SSMA V7. 3
+## <a name="ssma-v73"></a>SSMA v7.3
 Die V7. 3-Version von SSMA für Access umfasst die folgenden Änderungen:
 - Verbesserte Qualität und Konvertierung Metrik mit dem Ziel Korrekturen, die basierend auf Kundenfeedback.
 - SSMA Extensibility Framework verfügbar gemacht werden, über die folgenden Elemente:
@@ -63,7 +73,7 @@ Die V7. 3-Version von SSMA für Access umfasst die folgenden Änderungen:
       - Anweisungen zum Erstellen eines benutzerdefinierten Konverters stehen in diesem Blogbeitrag [Erweitern von SQL Server Migration Assistant Funktionen](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       - Beispielprojekt für die Konvertierung herunterladen dies [Blogbeitrag](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
-## <a name="ssma-v72"></a>SSMA V7. 2
+## <a name="ssma-v72"></a>SSMA v7.2
 Die V7. 2-Version von SSMA für Access umfasst die folgenden Änderungen:
 - Verbesserte Qualität und Konvertierung Metrik mit dem Ziel Korrekturen, die basierend auf Kundenfeedback.
 - Telemetrie-Erweiterungen bieten eine bessere Datenpunkte, um Kundenprobleme zu beheben und zu verbessern SSMAs-Wechselkurse.
@@ -178,4 +188,3 @@ Vom November 2006 von SSMA für Access umfasst die folgenden Änderungen:
   
 ## <a name="july-2006"></a>Juli 2006  
 Die Version von Juli 2006 von SSMA für Access war die erste Version.
-

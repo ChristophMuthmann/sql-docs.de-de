@@ -2,39 +2,43 @@
 title: "Unbeaufsichtigte Installation für SQLServer auf Ubuntu | Microsoft Docs"
 description: "SQL Server-Skript-Beispiel - unbeaufsichtigte Installation für Ubuntu"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: f6df20d942331b6361651ade82b6158b2c6798de
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Für die unbeaufsichtigte SQL Server-Installationsskript für Ubuntu
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Beispielskript für die Bash installiert SQL Server 2017 auf Ubuntu 16.04, ohne interaktiver Eingabe. Er bietet Beispiele für die Installation des Datenbankmoduls, die SQL Server-Befehlszeilentools, SQL Server-Agent, und führt nach der Installation Schritte aus. Optional können Sie einen Administrator zu erstellen und Installieren der Volltextsuche.
 
 > [!TIP]
-> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [quick Start-Lernprogramm für Ubuntu](quickstart-install-connect-ubuntu.md). Weitere Informationen zum Setup finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
+> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [Schnellstart für Ubuntu](quickstart-install-connect-ubuntu.md). Weitere Informationen zum Setup finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Sie benötigen mindestens 3,25 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
+- Sie benötigen mindestens 2 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
 - Das Dateisystem muss **XFS** oder **EXT4**. Andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt.
 - Weitere Informationen zu Systemanforderungen, finden Sie unter [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Beispielskript
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -224,4 +228,3 @@ Führen Sie dann die Bash-Skripts wie folgt:
 ```
 
 Weitere Informationen zu SQL Server unter Linux finden Sie unter [SQL Server on Linux – Übersicht](sql-server-linux-overview.md).
-

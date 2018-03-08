@@ -2,35 +2,32 @@
 title: BottomCount-Funktion (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomCount function
+f1_keywords: BOTTOMCOUNT
+dev_langs: DMX
+helpviewer_keywords: BottomCount function
 ms.assetid: bbe2f1d6-c8b5-49ce-ae13-337114a50aee
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c9713edf665aa2eabf726ee65f07baedd42ca8a9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt die angegebene Anzahl von untersten Zeilen in der durch einen Ausdruck angegebenen aufsteigenden Rangreihenfolge zurück.  
   
@@ -47,7 +44,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellenausdruck >  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Wert, der durch die \<rank Expression > Argument legt die aufsteigende Rangreihenfolge für die Zeilen, die in bereitgestellt werden die \<Tabellenausdruck > Argument und der Anzahl von untersten Zeilen, die im angegebenen der \<Anzahl > zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
@@ -112,7 +109,7 @@ NATURAL PREDICTION JOIN
   
  **Hinweis** in diesem Beispiel wird nur bereitgestellt, um die Verwendung der BottomCount-Funktion zu veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)   
@@ -120,4 +117,3 @@ NATURAL PREDICTION JOIN
  [TopCount &#40; DMX &#41;](../dmx/topcount-dmx.md)  
   
   
-

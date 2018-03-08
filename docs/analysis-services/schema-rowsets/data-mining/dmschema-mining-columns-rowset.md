@@ -2,36 +2,33 @@
 title: DMSCHEMA_MINING_COLUMNS Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_COLUMNS
+apiname: DMSCHEMA_MINING_COLUMNS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_COLUMNS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e37841617289eaa71af4d7c2c091459f32a745b6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa9ee7c66193eb84f883ba0500a8617421f2228e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS-Rowset
-  Beschreibt die einzelnen Spalten aller Datamining-Modellen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dieses Rowset wird auf den aktuellen Katalog eingeschränkt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die einzelnen Spalten aller Datamining-Modellen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dieses Rowset wird auf den aktuellen Katalog eingeschränkt.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_COLUMNS** Rowset enthält die folgenden Spalten.  
@@ -91,7 +88,6 @@ ms.lasthandoff: 09/01/2017
 |**SPALTENNAME**|**DBTYPE_WSTR**|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Schreiben einen eigene benutzerdefinierten Ereignishandler | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e311f541cbca186a18d19f3ec2f22ff547cf69a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 445f0d8d7a870ceda6cf4028b0cebe9264ed8358
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Sie einen eigene benutzerdefinierten Handler
 Sie möchten einem eigenen Handler zu schreiben, wenn Sie einen IIS-Server-Administrator möchte die Standardeinstellung für die Unterstützung von RDS werden jedoch mehr Kontrolle über die benutzeranforderungen und Zugriffsrechte.  
@@ -63,7 +62,7 @@ Sie möchten einem eigenen Handler zu schreiben, wenn Sie einen IIS-Server-Admin
   
  ***pRS*** ein **Recordset** Objekt.  
   
-## <a name="msdfhdlidl"></a>///msdfhdl.idl  
+## <a name="msdfhdlidl"></a>msdfhdl.idl  
  Dies ist die Schnittstellendefinition für **IDataFactoryHandler** , angezeigt wird, der **///msdfhdl.idl** Datei.  
   
 ```  
@@ -115,6 +114,5 @@ HRESULT _stdcall GetRecordset(
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Erforderlichen Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
 
 

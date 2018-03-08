@@ -1,31 +1,33 @@
 ---
 title: SQL Server 2008 R2 SP2 Release Notes | Microsoft-Dokumentation
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a497aaec3879414fe2a7c6785a180ebf77ba25de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 25aba71ea2c8b7fc8b0944ad5731e6edcb161c37
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-In diesem Dokument mit Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie Microsoft SQL Server 2008 R2 Service Pack 2 installieren bzw. mit der Problembehandlung beginnen. Diese Versionsanmerkungen gelten für alle Editionen von SQL Server 2008 R2 SP2 und sind nur online verfügbar. Das Dokument wird regelmäßig aktualisiert.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Dokument mit Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie Microsoft SQL Server 2008 R2 Service Pack 2 installieren bzw. mit der Problembehandlung beginnen. Diese Versionsanmerkungen gelten für alle Editionen von SQL Server 2008 R2 SP2 und sind nur online verfügbar. Das Dokument wird regelmäßig aktualisiert.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Neues in Service Pack 2  
 Die dynamische Verwaltungsansicht (DMV) **sys.dm_db_stats_properties**wurde hinzugefügt. Mit dieser DMV können Statistikeigenschaften für eine angegebene Tabelle oder indizierte Sicht in der aktuellen Datenbank zurückgegeben werden. Beispielsweise gibt diese DMV die Anzahl der als Stichprobe entnommenen Zeilen und die Anzahl der Schritte im Histogramm zurück.  
@@ -68,4 +70,3 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
 ## <a name="see-also"></a>Siehe auch  
 [Ermitteln der Version und Edition von SQL Server](http://support.microsoft.com/kb/321185)  
   
-

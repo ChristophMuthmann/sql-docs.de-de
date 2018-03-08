@@ -3,7 +3,7 @@ title: "Ausführen der Beispielanwendung der Adressbuch | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 24b1cac0950ec41087998edfe2c1393509cac8ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dca092267dfba700e1d079f8d2147c7f204e6e32
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="running-the-address-book-sample-application"></a>Ausführen der Adresse Book-Beispielanwendung
 > [!IMPORTANT]
@@ -43,7 +42,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  Geben Sie in Microsoft Internet Explorer 4.0 oder höher, die folgende Adresse:  
   
-     **http://** *Webserver* **/RDS/AddressBook/AddrBook.asp**  
+     **http://** *webserver* **/RDS/AddressBook/AddrBook.asp**  
   
      wobei *Webserver* ist der Name des Webservers, auf dem die RDS-Serverkomponenten installiert sind.  
   
@@ -51,7 +50,6 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Adress Book-Datenbindungsobjekt](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
 
 
 

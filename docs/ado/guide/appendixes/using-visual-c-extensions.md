@@ -3,7 +3,7 @@ title: Verwenden von Visual C++-Erweiterungen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90ef5f49740a7e9e750ade714f0571f2642f0d47
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Visual C++-Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
@@ -97,33 +96,33 @@ Update(CADORecordBinding *binding)
  **BEGIN_ADO_BINDING**(*Klasse*)
 
 ### <a name="fixed-length-data"></a>Daten fester Länge
- **ADO_FIXED_LENGTH_ENTRY**(*Ordnungszahl, Datentyp, Puffer, den Status ändern*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordnungszahl, Datentyp, Puffer ändern*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Numerische Daten
- **ADO_NUMERIC_ENTRY**(*Ordnungszahl, Datentyp, Puffer, Genauigkeit, Dezimalstellen, Status ändern*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
 
- **ADO_NUMERIC_ENTRY2**(*Ändern der Ordnungszahl "," DataType "," Puffer "," Precision, Scale,*)
+ **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>Daten variabler Länge
- **ADO_VARIABLE_LENGTH_ENTRY**(*Ordnungszahl, Datentyp, Puffer, Größe, Status, Länge ändern*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordnungszahl, Datentyp, Puffer, Größe, den Status ändern*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*ändern Ordnungszahl, Datentyp, Puffer, Größe, Länge,*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordnungszahl, Datentyp, Puffer, Größe, ändern*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>Binden Einträge Ende
- **END_ADO_BINDING**)
+ **END_ADO_BINDING**()
 
 |Parameter|Description|
 |---------------|-----------------|
-|*Klasse*|Klasse, die in dem die Bindungseinträge und die C/C++-Variablen definiert werden.|
+|*Class*|Klasse, die in dem die Bindungseinträge und die C/C++-Variablen definiert werden.|
 |*Ordinal*|Ordnungszahl, beginnend mit 1, der die **Recordset** Feld, das die C/C++-Variable entspricht.|
-|*Datentyp*|Entsprechende ADO-Datentyp, der die C/C++-Variable (finden Sie unter [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) eine Liste gültiger Datentypen). Der Wert, der die **Recordset** Feld wird in diesen Datentyp konvertiert werden, bei Bedarf.|
-|*Puffer*|Name der C/C++-Variablen, in denen die **Recordset** Feld gespeichert werden.|
+|*DataType*|Entsprechende ADO-Datentyp, der die C/C++-Variable (finden Sie unter [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) eine Liste gültiger Datentypen). Der Wert, der die **Recordset** Feld wird in diesen Datentyp konvertiert werden, bei Bedarf.|
+|*Buffer*|Name der C/C++-Variablen, in denen die **Recordset** Feld gespeichert werden.|
 |*Größe*|Maximale Größe in Byte der *Puffer*. Wenn *Puffer* enthält eine Zeichenfolge variabler Länge Platz für ein abschließendes NULL zulassen.|
 |*Status*|Name einer Variablen, die angibt, ob der Inhalt des *Puffer* gültig sind, und gibt an, ob die Konvertierung des Felds, das *DataType* war erfolgreich.<br /><br /> Die beiden wichtigsten Werte für diese Variable sind **AdFldOK**, was bedeutet, dass die Konvertierung war erfolgreich, und **AdFldNull**, was bedeutet, dass den Wert des Felds wäre eine Variante des Typs VT_NULL und nicht nur leer.<br /><br /> Mögliche Werte für *Status* sind aufgeführt, in der nächsten Tabelle, "Statuswerte".|
 |*Ändern*|Boolesches Flag; Wenn TRUE, gibt ADO ist zulässig, zum Aktualisieren der entsprechenden **Recordset** Feld mit dem Wert in *Puffer*.<br /><br /> Die mit einem booleschen Wert *ändern* Parameter auf "true", Aktivieren von ADO, um dem gebundenen Feld zu aktualisieren, und "false", wenn Sie den überprüfen, jedoch nicht ändern möchten.|
@@ -155,4 +154,3 @@ Update(CADORecordBinding *binding)
 
 ## <a name="see-also"></a>Siehe auch
  [Visual C++-Erweiterungen-Beispiel](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++-Erweiterungen-Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)
-

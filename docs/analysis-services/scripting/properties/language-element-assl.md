@@ -2,40 +2,35 @@
 title: Language-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Language Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Language Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- LANGUAGE
-helpviewer_keywords:
-- Language element
+applies_to: SQL Server 2016 Preview
+f1_keywords: LANGUAGE
+helpviewer_keywords: Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2dd0264d572e190278d5cad42e4874554312f72
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9d20a2cd26f92bcfba3978289b7bae07deedc11f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="language-element-assl"></a>Language-Element (ASSL)
-  Enthält den Sprachenbezeichner des übergeordneten Elements.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Sprachenbezeichner des übergeordneten Elements.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,10 +45,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Integer|  
-|Standardwert|Keine|  
+|Standardwert|InclusionThresholdSetting|  
 |Cardinality|Finden Sie in der folgenden Tabelle aus.|  
   
 |Vorgänger oder übergeordnetes Element|Cardinality|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 09/01/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md), [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [Übersetzung](../../../analysis-services/scripting/objects/translation-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Das **Language** -Element enthält die standardmäßige Sprachen-ID, die vom übergeordneten Element verwendet wird, oder die spezifische Sprachen-ID für ein **Translation** -Element. Die Sprache sollte definiert werden, indem man Gebietsschemabezeichnercodes (LCID) verwendet. Zum Beispiel wird LCID 1033 verwendet, um die englische (U.S.) Sprache anzugeben.  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

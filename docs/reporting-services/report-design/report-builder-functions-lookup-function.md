@@ -1,29 +1,29 @@
 ---
-title: Lookup-Funktion (Berichts-Generator und SSRS) | Microsoft Docs
+title: Lookup-Funktion (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4426bffe23295c623d0bba5592c1488cb0ede770
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9b1777520453efb9a38b687825249705bf66fd81
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-builder-functions---lookup-function"></a>Berichts-Generator Funktionen - Lookup-Funktion
+# <a name="report-builder-functions---lookup-function"></a>Funktionen des Berichts-Generators: Lookup-Funktion
   Gibt den ersten übereinstimmenden Wert für den angegebenen Namen aus einem Dataset mit Name-Wert-Paaren zurück.  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Rückgabewert  
  Gibt einen Wert vom Typ **Variant**zurück; gibt **Nothing** zurück, wenn keine Übereinstimmung vorhanden ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Rufen Sie für ein Name-Wert-Paar, für das eine 1:1-Beziehung vorhanden ist, den Wert mithilfe von **Lookup** aus dem angegebenen Dataset ab. Beispiel: Für ein ID-Feld in einer Tabelle können Sie das entsprechende Namensfeld mithilfe von **Lookup** aus einem Dataset abrufen, das nicht an den Datenbereich gebunden wird.  
   
  Mit**Lookup** wird Folgendes ausgeführt:  
@@ -65,7 +65,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Der Ergebnisausdruckswert wird zurückgegeben.  
   
- Um mehrere Werte für einen einzelnen Namen oder ein Schlüsselfeld abzurufen, für das eine 1:n-Beziehung vorhanden ist, verwenden Sie [LookupSet-Funktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Aufzurufende **Suche** für eine Wertemenge verwenden [Multilookup Function &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+ Verwenden Sie [LookupSet-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookupset-function.md), um mehrere Werte für einen einzelnen Namen oder ein Schlüsselfeld abzurufen, für das eine 1:n-Beziehung vorhanden ist. Verwenden Sie die [Multilookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md), um **Lookup** für mehrere Werte aufzurufen.  
   
  Es gelten folgende Einschränkungen:  
   
@@ -91,7 +91,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
     -   Die Eigenschaft „Report.Language“.  
   
- Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) und [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Weitere Informationen finden Sie in der [Aggregatfunktionsreferenz (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) und unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="example"></a>Beispiel  
  Nehmen Sie im folgenden Beispiel an, dass eine Tabelle an ein Dataset gebunden wird, das ein Feld für den Produktbezeichner "ProductID" enthält. Ein separates Dataset mit dem Namen "Product" enthält den entsprechenden Produktbezeichner "ID" und den Produktnamen "Name".  
@@ -102,11 +102,10 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 =Lookup(Fields!ProductID.Value, Fields!ID.Value, Fields!Name.Value, "Product")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrucksverwendungen in Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Datentypen in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

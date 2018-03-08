@@ -3,7 +3,7 @@ title: ADOX-Objektmodell | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 46dc06e89839347b86b7ef68045ee6463a562b2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 092afd2b651b14b1a7fe34c934ff729b8b88ae6d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-object-model"></a>ADOX-Objektmodell
 Das folgende Diagramm veranschaulicht, wie Objekte dargestellt und ADOX miteinander verknüpft sind. Weitere Informationen zu einem bestimmten Objekt bzw. die Sammlung, finden Sie unter den bestimmten Referenzthema oder [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md) und [ADOX Sammlungen](../../../ado/reference/adox-api/adox-collections.md).  
@@ -43,4 +42,3 @@ Das folgende Diagramm veranschaulicht, wie Objekte dargestellt und ADOX miteinan
  [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
  [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

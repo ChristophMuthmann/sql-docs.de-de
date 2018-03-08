@@ -3,7 +3,7 @@ title: Abrufen von Resultsets in Streams | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 34f1cc4730f984427d207162694c68e3641be575
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Streams
 Anstatt das Empfangen von Ergebnissen in der herkömmlichen **Recordset** -Objekt ADO kann stattdessen Abfrageergebnisse in einen Stream abzurufen. Das ADO **Stream** Objekt (oder andere Objekte, die die COM unterstützt **IStream** Benutzeroberfläche, z. B. die ASP **anfordern** und **Antwort** Objekte ) kann verwendet werden, um diese Ergebnisse enthalten. Eine Verwendung für diese Funktion wird zum Abrufen von Ergebnissen im XML-Format. Mit SQL Server können z. B. XML-Ergebnisse auf verschiedene Weise, wie z. B. mithilfe der FOR XML-Klausel mit einer SQL SELECT-Abfrage oder eine XPath-Abfrage zurückgegeben.  
@@ -188,4 +187,3 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>Hinweise  
  An diesem Punkt XML wurde an den Clientbrowser gestreamt wurde und es kann angezeigt werden. Dies erfolgt mithilfe einer clientseitigen VBScript zum Binden von XML-Dokument an eine Instanz des DOM und Schleifendurchlauf durch jeden untergeordneten Knoten, um eine Liste der Produkte im HTML-Format erstellen.
-

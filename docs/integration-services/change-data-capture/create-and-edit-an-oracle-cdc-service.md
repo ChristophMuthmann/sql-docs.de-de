@@ -1,10 +1,13 @@
 ---
-title: Erstellen und Bearbeiten eines Oracle CDC Service | Microsoft Docs
+title: Erstellen und Bearbeiten eines Oracle CDC Service | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Erstellen und Bearbeiten eines Oracle CDC Service
   Sie erstellen und bearbeiten einen neuen Oracle CDC-Windows-Dienst über die CDC Service Configuration Console.  
@@ -35,13 +37,13 @@ ms.lasthandoff: 09/26/2017
   
  Geben Sie im Dialogfeld New Oracle CDC Windows Service oder CDC Service Properties die folgenden Informationen ein.  
   
-** Service Name **  
+**Dienstname**  
  Geben Sie den Namen des neuen Oracle CDC-Windows-Diensts ein. Sie sollten nach Möglichkeit keine langen Namen verwenden. Die Zeichen "/" und "\" dürfen im Dienstnamen nicht verwendet werden.  
   
 > [!NOTE]  
 > Beim Bearbeiten des Diensts ist diese Option nicht verfügbar. Sie können den Namen eines Windows-Diensts, der bereits vorhanden ist, nicht ändern.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Diensts als Hilfe zur Identifizierung ein.  
   
  **Dienstkonto**  
@@ -61,7 +63,7 @@ ms.lasthandoff: 09/26/2017
   
      Sie können ein lokales Windows-Konto oder ein Windows-Domänenkonto für das Dienstkonto verwenden. In diesem Fall müssen Sie das **Kennwort** für dieses Konto eingeben. Dieses Konto kann für den lokalen Host gelten oder ein Domänenkonto sein. Beachten Sie, dass Sie das Kennwort, falls es sich ändert, in der Windows-Systemsteuerung unter Lokale Dienste aktualisieren müssen.  
   
- **Servernamen**: Wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz für die Verbindung (z. B.  **\\ \\< Computer_name >\\< Instance_name >**). Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
+ **Servername**: Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz aus, mit der eine Verbindung hergestellt werden soll, z.B. **\\\\<Computername>\\<Instanzname>**. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
  **Authentifizierung**  
  Wählen Sie eine der folgenden Optionen aus:  
@@ -76,7 +78,7 @@ ms.lasthandoff: 09/26/2017
   
  Informationen zu den Daten, die Sie im Dialogfeld Verbindung mit SQL Server herstellen eingeben müssen, finden Sie unter [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
- **enthalten**  
+ **Optionen**  
  Klicken Sie auf den Pfeil, um die verfügbaren Optionen anzuzeigen, die konfiguriert werden sollen. Sie können für diese Optionen auch die Standardwerte unverändert lassen. Verfügbare Optionen:  
   
 -   **Verbindungstimeout**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange der CDC Service für Oracle auf eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] warten soll, bevor ein Timeout eintritt. Der Standardwert lautet **15**.  
@@ -92,8 +94,7 @@ ms.lasthandoff: 09/26/2017
   
  Das gleiche Masterkennwort muss auch verwendet werden, wenn andere Instanzen des gleichen Diensts auf anderen Knoten eines Clusters in der Konfiguration für hohe Verfügbarkeit eingerichtet werden. Wenn Sie das Masterkennwort vergessen oder ändern, müssen alle in Oracle CDC-Instanzdatenbanken gespeicherten Log Mining-Kennwörter über die CDC Designer Console neu eingegeben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Bearbeiten eines CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

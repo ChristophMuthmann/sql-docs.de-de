@@ -2,31 +2,32 @@
 title: 'Schritt 2: Importieren von Daten in SQL Server mit PowerShell | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Schritt 2: Importieren von Daten in SQL Server mit PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms [In Datenbank-Python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -57,7 +58,7 @@ Wenn Probleme auftreten, können Sie das Skript als Referenz verwenden, die Schr
     - Der Name oder die Adresse des eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Instanz, in denen Machine Learning-Dienste mit Python installiert wurde.
     - Den Benutzernamen und das Kennwort für ein Konto auf der Instanz. Das Konto, das Sie verwenden, benötigen die Möglichkeit zum Erstellen von Datenbanken, Tabellen und gespeicherte Prozeduren erstellen und Massenimport von Daten in Tabellen laden. 
     - Wenn Sie nicht den Benutzernamen und das Kennwort angeben, Ihre Windows-Identität wird verwendet, um die Anmeldung beim SQL Server, und Sie werden höher gestuft, um ein Kennwort einzugeben.
-    - Der Pfad und der Dateiname der Beispieldatendatei, die Sie zuvor heruntergeladen haben. Beispielsweise `C:\temp\pysql\nyctaxi1pct.csv`
+    - Der Pfad und der Dateiname der Beispieldatendatei, die Sie zuvor heruntergeladen haben. Beispiel: `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > Um die Daten erfolgreich zu laden, müssen der Bibliothek "xmlrw.dll" im gleichen Ordner wie bcp.exe sein.
@@ -103,5 +104,4 @@ In den letzten Teil dieser exemplarischen Vorgehensweise erstellen Sie diesen zu
 ## <a name="previous-step"></a>Vorherigen Schritt
 
 [Schritt 1: Herunterladen der Beispieldaten](sqldev-py1-download-the-sample-data.md)
-
 

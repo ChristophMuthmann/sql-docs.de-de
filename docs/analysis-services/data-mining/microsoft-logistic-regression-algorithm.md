@@ -2,12 +2,13 @@
 title: Microsoft Logistic Regression-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4d3e835e6620ed5e4efb551d3e3ebcde7cf3bf8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft Logistic Regression-Algorithmus
-  Die logistische Regression ist ein gängiges statistisches Verfahren, das zum Modellieren von binären Ergebnissen verwendet wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die logistische Regression ist ein gängiges statistisches Verfahren, das zum Modellieren von binären Ergebnissen verwendet wird.  
   
  Es gibt in der Statistikforschung verschiedene Implementierungen einer logistischen Regression, die unterschiedliche Lerntechniken verwenden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus wurde basierend auf einer Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus implementiert. Dieser Algorithmus weist viele der Qualitäten neuronaler Netzwerke auf, ist jedoch einfacher zu trainieren.  
   
@@ -87,7 +88,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
+ [Beispiele für logistische Regressionsmodellabfragen](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   
   
-

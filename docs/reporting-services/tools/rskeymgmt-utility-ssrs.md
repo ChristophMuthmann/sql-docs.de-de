@@ -1,13 +1,14 @@
 ---
-title: RSKEYMGMT-Hilfsprogramm (SSRS) | Microsoft Docs
+title: rskeymgmt-Hilfsprogramm (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +23,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
   Dient zum Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der verwendet wird, um vertrauliche Berichtsserverdaten vor nicht autorisiertem Zugriff zu schützen. Dieses Hilfsprogramm wird auch verwendet, um Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren zu verknüpfen. Eine *Berichtsserverbereitstellung für horizontales Skalieren* bezeichnet mehrere Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
@@ -136,7 +136,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>Löschen von Verschlüsselungsschlüsseln und verschlüsselten Inhalten  
- In diesem Beispiel wird gezeigt, wie alle auf einem Berichtsserver gespeicherten Verschlüsselungsschlüssel gelöscht werden. Wenn es sich bei der Installation um eine Berichtsserverbereitstellung für horizontales Skalieren handelt, werden die Verschlüsselungsschlüssel für alle Berichtsserverinstanzen gelöscht, die in die Bereitstellung eingeschlossen sind. Durch das Löschen eines Verschlüsselungsschlüssels werden auch alle verschlüsselten Werte in der Berichtsserver-Datenbank gelöscht. Weitere Informationen zu verschlüsselten Inhalten finden Sie unter [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+ In diesem Beispiel wird gezeigt, wie alle auf einem Berichtsserver gespeicherten Verschlüsselungsschlüssel gelöscht werden. Wenn es sich bei der Installation um eine Berichtsserverbereitstellung für horizontales Skalieren handelt, werden die Verschlüsselungsschlüssel für alle Berichtsserverinstanzen gelöscht, die in die Bereitstellung eingeschlossen sind. Durch das Löschen eines Verschlüsselungsschlüssels werden auch alle verschlüsselten Werte in der Berichtsserver-Datenbank gelöscht. Weitere Informationen zu verschlüsselten Inhalten finden Sie unter [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -155,7 +155,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Verknüpfen von Berichtsserverinstanzen auf demselben Computer  
  Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie die Argumente **-u** und **-v** nicht fest, wenn Sie Berichtsserverinstanzen verknüpfen, die lokal installiert sind. Die Argumente **-u** und **-v** werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente festlegen, wird die folgende Fehlermeldung angezeigt: "Benutzeranmeldeinformationen können nicht für lokale Verbindungen verwendet werden."  
   
- Das folgende Beispiel veranschaulicht die Syntax für eine Bereitstellung für horizontales Skalieren mithilfe mehrerer lokaler Instanzen. In diesem Beispiel \< **Initializedinstance**> ist der Name einer Instanz, die bereits initialisiert ist, um die Berichtsserver-Datenbank verwenden und \< **Newinstance**> ist der Name der Instanz, die Sie zur Bereitstellung hinzufügen möchten:  
+ Das folgende Beispiel veranschaulicht die Syntax für eine Bereitstellung für horizontales Skalieren mithilfe mehrerer lokaler Instanzen. In diesem Beispiel ist \<**initializedinstance**> der Name einer Instanz, die bereits für die Verwendung der Berichtsserver-Datenbank initialisiert wurde, und \<**newinstance**> ist der Name der Instanz, die der Bereitstellung hinzugefügt werden soll:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -171,20 +171,19 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Dateispeicherort  
- RSKEYMGMT.exe befindet sich unter  **\<* Laufwerk*>: \Programme\Microsoft SQL Server\110\Tools\Binn ** oder  **\<* Laufwerk*>: \Programme Dateien (x86) \Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
+ Rskeymgmt.exe befindet sich unter **\<*Laufwerk*>:\Programme\Microsoft SQL Server\110\Tools\Binn** oder unter **\<*Laufwerk*>:\Programme (x86)\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Berichtsserver verschlüsselt gespeicherte Anmeldeinformationen und Verbindungsinformationen. Zum Verschlüsseln von Daten werden ein öffentlicher Schlüssel und ein symmetrischer Schlüssel verwendet. Eine Berichtsserver-Datenbank muss über gültige Schlüssel verfügen, damit der Berichtsserver ausgeführt werden kann. Mithilfe von **rskeymgmt** können Sie die Schlüssel sichern, löschen oder wiederherstellen. Wenn die Schlüssel nicht wiederhergestellt werden können, bietet dieses Tool eine Möglichkeit zum Löschen verschlüsselter Inhalte, die nicht mehr verwendet werden können.  
   
  Das Hilfsprogramm **rskeymgmt** wird zum Verwalten des Schlüsselsatzes verwendet, der während der Installation oder Initialisierung definiert wurde. Über einen RPC-Endpunkt (Remote Procedure Call, Remoteprozeduraufruf) stellt es eine Verbindung mit dem Windows-Dienst des lokalen Berichtsservers her. Der Windows-Dienst des Berichtsservers muss ausgeführt werden, damit dieses Hilfsprogramm funktionsfähig ist.  
   
- Weitere Informationen zu den Verschlüsselungsschlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Weitere Informationen zu den Verschlüsselungsschlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Bereitstellung für horizontales Skalieren – Reporting Services im einheitlichen Modus &#40;Konfigurations-Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services-Berichtsserver &#40; Im einheitlichen Modus &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

@@ -3,36 +3,36 @@ title: Erstellen der EXTERNEN Datenquelle (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
 ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 477d2f682da2c91ba8e4bfd42186c4b1b9735f85
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-data-source-transact-sql"></a>Erstellen der EXTERNEN Datenquelle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+# <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Erstellt eine externe Datenquelle für PolyBase, elastischen Datenbankabfragen oder Azure Blob-Speicher. Abhängig vom jeweiligen Szenario unterscheidet sich deutlich die Syntax aus. Eine Datenquelle erstellt, für PolyBase kann nicht für elastische Datenbanken Abfragen verwendet werden.  Auf ähnliche Weise kann eine Datenquelle erstellt, die für elastische Datenbanken Abfragen für PolyBase usw. verwendet werden. 
   
@@ -135,22 +135,22 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumente  
  *Data_source_name* gibt den benutzerdefinierten Namen für die Datenquelle. Der Name muss innerhalb der Datenbank in SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse eindeutig sein. Der Name muss innerhalb des Servers in Parallel Data Warehouse eindeutig sein.
   
- TYP = [HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
+ TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  Gibt den Datenquellentyp. HADOOP verwenden, wird die externen Datenquelle Hadoop oder Azure-Speicher-BLOBs für Hadoop. Verwenden Sie SHARD_MAP_MANAGER aus, wenn eine externe Datenquelle für elastische Datenbanken Abfrage für Sharding in Azure SQL-Datenbank zu erstellen. Verwenden Sie RDBMS mit externen Datenquellen für datenbankübergreifende Abfragen mit elastischen Datenbank in Azure SQL-Datenbank.  BLOB_STORAGE verwenden, beim Ausführen von Massenvorgängen mithilfe von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) mit [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
   
-Speicherort = \<Location_path > **HADOOP**    
+LOCATION = \<location_path> **HADOOP**    
 Für HADOOP gibt den Uniform Resource Indicator (URI) für einen Hadoop-Cluster.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: Den Computernamen oder IP-Adresse des Hadoop-Clusters – Namenode.  
 Port: die – Namenode IPC-Port. Dies wird durch die fs.default.name Konfigurationsparameter in Hadoop angegeben. Wenn der Wert nicht angegeben wird, wird standardmäßig 8020 verwendet werden.  
-Beispiel:`LOCATION = 'hdfs://10.10.10.10:8020'`
+Beispiel: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Gibt den URI für die Verbindung mit Azure-Blob-Speicher für den Azure-Blob-Speicher mit Hadoop.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 Wasb [s]: Gibt das Protokoll für Azure Blob-Speicher. Die [s] ist optional und gibt eine sichere SSL-Verbindung; von SQL Server gesendete Daten werden sicher über das SSL-Protokoll verschlüsselt. Es wird dringend empfohlen, mithilfe von "Wasbs" anstelle von "Wasb". Beachten Sie, dass der Speicherort asv [s] statt Wasb [s]. Die Syntax der asv [s] ist veraltet und wird in einer zukünftigen Version entfernt.  
 Container: Gibt den Namen des Azure-Blob-Speichercontainer. Um den Stammcontainer der einer Domäne Speicherkonto anzugeben, verwenden Sie den Domänennamen anstelle des Namens des Entitätencontainers. Root-Container sind schreibgeschützt, damit keine Daten zurück in den Container geschrieben werden.  
 Account_name: den vollständig qualifizierten Domänennamen (FQDN) des Azure-Speicherkonto.  
-Beispiel:`LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
+Beispiel: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 Speicherort für Azure Data Lake-Speicher gibt an, dass der URI für das Herstellen einer Verbindung mit Ihrem Azure Data Lake-Speicher.
 
@@ -259,7 +259,7 @@ Eine vollständige Liste der Hadoop-Distributionen und Versionen, die von jeder 
  Anmeldeinformationen = *Credential_name*  
  Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit der externen Datenquelle. Ein Beispiel finden Sie unter [C. erstellen eine Azure-Blob-Speicher des externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Zum Erstellen von Anmeldeinformationen finden Sie unter [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Beachten Sie, dass die Anmeldeinformationen nicht bei öffentlichen Datasets erforderlich ist, die den anonymen Zugriff zulassen. 
   
- Database_name = *"QueryDatabaseName"*  
+ DATABASE_NAME = *'QueryDatabaseName'*  
  Der Name der Datenbank, die als die shardzuordnungs-Manager (für SHARD_MAP_MANAGER) besitzt oder die remote-Datenbank (für RDBMS).  
   
  SHARD_MAP_NAME = *"ShardMapName"*  
@@ -308,7 +308,7 @@ Zum erfolgreichen PolyBase-Abfragen bei Hadoop NameNode Failover zu gewährleist
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Externe Datenquelle Verweis Hadoop erstellen  
 Um eine externe Datenquelle, um Ihre Hortonworks oder Cloudera Hadoop-Cluster verweisen zu erstellen, geben Sie den Computernamen oder IP-Adresse des Hadoop Namenode und -Port.  
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -320,7 +320,7 @@ WITH (
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Erstellen Sie die externe Datenquelle Verweis Hadoop mit Weitergabe aktiviert  
 Angeben der Option RESOURCE_MANAGER_LOCATION Pushdown Berechnung an Hadoop für PolyBase-Abfragen zu aktivieren. Nach der Aktivierung verwendet PolyBase eine kostenbasierte Entscheidung, um zu bestimmen, ob die Abfrage Berechnung an Hadoop geschoben werden sollte, oder alle Daten, die zum Verarbeiten der Abfrage in SQL Server verschoben werden soll.
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -333,7 +333,7 @@ WITH (
 ###  <a name="credential"></a> C. Erstellen Sie die externe Datenquelle, um Kerberos-gesicherte Hadoop verweisen  
 Um sicherzustellen, dass Kerberos-gesicherte Hadoop-Clusters ist, können überprüfen Sie den Wert der hadoop.security.authentication-Eigenschaft im Hadoop-Core-site.xml. Um ein Kerberos-gesicherten Hadoop-Cluster zu verweisen, müssen Sie die datenbankweit gültigen Anmeldeinformationen angeben, die Kerberos-Benutzernamen und Kennwort enthält. Datenbank-Hauptschlüssels wird verwendet, um Bereichsbezogene Anmeldeinformation Datenbank zu verschlüsseln. 
   
-```tsql  
+```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
 
@@ -380,7 +380,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Erstellen einer Shard Zuordnung Manager externe-Datenquelle
 Geben Sie den Namen des logischen Servers, der die shardzuordnungs-Manager in Azure SQL-Datenbank oder SQL Server-Datenbanken auf virtuellen Azure-Computer hostet, zum Erstellen einer externen Datenquelle, um eine SHARD_MAP_MANAGER zu verweisen.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
@@ -400,7 +400,7 @@ WITH (
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. Erstellen einer externen RDBMS-Datenquelle
 Zum Erstellen einer externen Datenquelle ein RDBMS verweisen gibt den Namen des logischen Servers der Remotedatenbank in Azure SQL-Datenbank.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
@@ -418,34 +418,10 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>Beispiele: SQL Azure Datawarehouse
 
-### <a name="g-create-external-data-source-to-reference-azure-blob-storage"></a>G. Erstellen Sie die externe Datenquelle, um die Azure-Blob-Speicher verweisen
-Geben Sie zum Erstellen einer externen Datenquelle, um Ihren Azure-Blob-Speichercontainer verweisen der Azure-Blob-Speicher-URI und datenbankweit gültigen Anmeldeinformationen, die Ihren Azure-speicherkontoschlüssel enthält.
-
-In diesem Beispiel ist die externen Datenquelle ein Azure-Blob-Speichercontainer Dailylogs unter Azure Storage-Konto mit dem Namen Myaccount aufgerufen. Die externe Datenquelle für die Azure-Speicher ist für die Datenübertragung nur und prädikatweitergabe nicht unterstützt.
-
-Dieses Beispiel zeigt, wie Sie die datenbankbezogenen Anmeldeinformationen für die Authentifizierung beim Azure-Speicher zu erstellen. Geben Sie den Azure-Speicher-kontoschlüssel in der Datenbank-Anmeldeinformation an. Geben Sie eine beliebige Zeichenfolge in die Datenbank im Bereich einer Identität der Anmeldeinformationen, er wird nicht für die Authentifizierung beim Azure-Speicher verwendet. Anschließend wird die Anmeldeinformationen in der Anweisung verwendet, die von einer externen Datenquelle erstellt.
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### <a name="h-create-external-data-source-to-reference-azure-data-lake-store"></a>H. Erstellen der externen Datenquelle zu verweisen Azure Data Lake-Speicher
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Erstellen der externen Datenquelle zu verweisen Azure Data Lake-Speicher
 Azure Data Lake-Speicher-Konnektivität basiert auf der ADLS-URI und dem Dienstprinzipal Ihrer Azure Active Directory-Anwendung. Dokumentation zum Erstellen dieser Anwendung finden Sie unter[Data Lake-Speicher-Authentifizierung mithilfe von Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
-```tsql
+```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY
 
@@ -465,21 +441,10 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>Beispiele: Parallel Datawarehouse
 
-### <a name="i-create-external-data-source-to-reference-hadoop"></a>I. Externe Datenquelle Verweis Hadoop erstellen
-Um eine externe Datenquelle, um Ihre Hortonworks oder Cloudera Hadoop-Cluster verweisen zu erstellen, geben Sie den Computernamen oder IP-Adresse des Hadoop Namenode und -Port.
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### <a name="j-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>J. Erstellen Sie die externe Datenquelle Verweis Hadoop mit Weitergabe aktiviert
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Erstellen Sie die externe Datenquelle Verweis Hadoop mit Weitergabe aktiviert
 Angeben der Option JOB_TRACKER_LOCATION Pushdown Berechnung an Hadoop für PolyBase-Abfragen zu aktivieren. Nach der Aktivierung verwendet PolyBase eine kostenbasierte Entscheidung, um zu bestimmen, ob die Abfrage Berechnung an Hadoop geschoben werden sollte, oder alle Daten, die zum Verarbeiten der Abfrage in SQL Server verschoben werden soll. 
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -488,12 +453,12 @@ WITH (
 );
 ```
 
-### <a name="k-create-external-data-source-to-reference-azure-blob-storage"></a>K. Erstellen Sie die externe Datenquelle, um die Azure-Blob-Speicher verweisen
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Erstellen Sie die externe Datenquelle, um die Azure-Blob-Speicher verweisen
 So erstellen eine externe Datenquelle für Ihren Azure-Blob-Speichercontainer verweisen, geben Sie dem Azure-Blob-Speicher-URI als die externen Daten Quellspeicherort. PDW-Core-site.xml-Datei für die Authentifizierung Ihrer Azure-speicherkontoschlüssel hinzugefügt.
 
 In diesem Beispiel ist die externen Datenquelle ein Azure-Blob-Speichercontainer Dailylogs unter Azure Storage-Konto mit dem Namen Myaccount aufgerufen. Die externe Datenquelle für die Azure-Speicher ist für die Datenübertragung nur und prädikatweitergabe nicht unterstützt.
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
         TYPE = HADOOP, 
         LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
@@ -501,10 +466,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>Beispiele: Massenvorgänge   
-### <a name="l-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>L. Erstellen einer externen Datenquelle für Massenvorgänge Abrufen von Daten aus dem Azure-Blob-Speicher.   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Erstellen einer externen Datenquelle für Massenvorgänge Abrufen von Daten aus dem Azure-Blob-Speicher.   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Verwenden Sie die folgende Datenquelle für Massenvorgänge mit [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Die Anmeldeinformationen verwendet, muss erstellt werden, mithilfe von `SHARED ACCESS SIGNATURE` als Identität. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -515,13 +480,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 In diesem Beispiel verwendet, finden Sie unter [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
 ## <a name="see-also"></a>Siehe auch
-[Ändern der EXTERNEN Datenquelle (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
+[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
-[Erstellen Sie die externe Tabelle AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+[CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [Erstellen Sie die Tabelle als SELECT &#40; Azure SQL Datawarehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[Sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
-
 

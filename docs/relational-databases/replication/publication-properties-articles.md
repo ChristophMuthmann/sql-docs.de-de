@@ -2,29 +2,30 @@
 title: "Veröffentlichungseigenschaften (Registerkarte Artikel) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.articles.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f3d08559887a470d82cfe98848373191f26f467b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d9c3cb3eab7b2145f9f49b8a340cf2215278dbd1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-articles"></a>Veröffentlichungseigenschaften (Registerkarte Artikel)
-  Die Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften** enthält Informationen zu den in einer Veröffentlichung enthaltenen Artikeln. Auf dieser Seite können Sie Artikel per Drag und Drop aus vorhandenen Veröffentlichungen hinzufügen sowie Artikeleigenschaften und Filtereinstellungen für Spalten ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften** enthält Informationen zu den in einer Veröffentlichung enthaltenen Artikeln. Auf dieser Seite können Sie Artikel per Drag und Drop aus vorhandenen Veröffentlichungen hinzufügen sowie Artikeleigenschaften und Filtereinstellungen für Spalten ändern.  
   
 > [!NOTE]  
 >  Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md) und [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -51,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="column-filters"></a>Spaltenfilter  
  Die Spalten auf dieser Seite können Sie filtern, indem Sie im Bereich **Zu veröffentlichende Objekte** eine Tabelle erweitern und dann nur die erforderlichen Spalten auswählen (Zeilen können auf der Seite **Tabellenzeilen filtern** dieses Assistenten gefiltert werden). Das Filtern von Spalten kann aus verschiedenen Gründen nützlich sein, darunter aus Sicherheitsgründen (um zu vermeiden, dass vertrauliche Daten ungewollt repliziert werden) oder aus Leistungsgründen (um beispielsweise die Replikation großer BLOB-Spalten zu vermeiden). Weitere Informationen zum Filtern von Spalten, einschließlich einer Liste von Spaltentypen, die nicht gefiltert werden können, finden Sie unter [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Im Bereich **Zu veröffentlichende Objekte** können Sie folgende Schritte ausführen:  
   
 -   Anzeigen aller für die Replikation verfügbaren Objekte.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Klicken Sie auf **Eigenschaften des hervorgehobenen \<ObjectType>-Artikels festlegen**, um das Dialogfeld **Artikeleigenschaften - \<ObjectName>** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden nur auf das Objekt angewendet, das im Objektbereich auf der Seite **Artikel** markiert ist.  
   
--   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel festlegen**, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die im Objektbereich auf der Seite **Artikel** vorhanden sind, einschließlich jener Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
+-   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel** festlegen, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die im Objektbereich auf der Seite **Artikel** vorhanden sind, einschließlich jener Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
   
     > [!NOTE]  
     >  Durch die Änderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** werden alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen überschrieben. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 06/22/2017
  **Nur in der Liste aktivierte Objekte anzeigen**  
  Aktivieren Sie dieses Kontrollkästchen, um nur die im Objektbereich ausgewählten Artikel anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Erstellen und Anwenden der Anfangsmomentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

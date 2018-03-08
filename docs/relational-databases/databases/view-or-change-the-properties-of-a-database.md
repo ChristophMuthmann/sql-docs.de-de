@@ -1,13 +1,14 @@
 ---
 title: "Anzeigen oder Ändern der Eigenschaften einer Datenbank | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 01/05/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - databases [SQL Server], viewing
 - viewing databases
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "42"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8e4fb0867c0950595c6d8460dfa2a53a7fa87db7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Anzeigen oder Ändern der Eigenschaften einer Datenbank
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird die Vorgehensweise zum Anzeigen oder Ändern der Eigenschaften einer Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]beschrieben. Nachdem Sie eine Datenbankeigenschaft geändert haben, tritt die Änderung sofort in Kraft.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie die Eigenschaften einer Datenbank an oder ändern diese mit:**  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Ändern der Eigenschaften einer Datenbank ist die ALTER-Berechtigung für die Datenbank erforderlich. Zum Anzeigen der Eigenschaften einer Datenbank ist mindestens eine Mitgliedschaft in der Public-Datenbankrolle erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-properties-of-a-database"></a>So zeigen Sie die Eigenschaften einer Datenbank an oder ändern diese  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die Systemfunktion [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) verwendet, um den Status der AUTO_SHRINK-Datenbankoption in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank zurückzugeben. Der Rückgabewert 1 bedeutet, dass die Option auf ON festgelegt ist, und der Rückgabewert 0 bedeutet, dass die Option auf OFF festgelegt ist.  
   
-    ```tsql  
+    ```sql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht abgefragt, um mehrere Eigenschaften der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank anzuzeigen. In diesem Beispiel wird die Datenbank-ID-Nummer (`database_id`), der Schreibschutz- oder Lese-/Schreibstatus der Datenbank (`is_read_only`), die Sortierung für die Datenbank (`collation_name`) und der Datenbank-Kompatibilitätsgrad (`compatibility_level`) zurückgegeben.  
   
-    ```tsql  
+    ```sql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
@@ -103,7 +104,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) abgefragt, um mehrere Eigenschaften der aktuellen Datenbank anzuzeigen.  
   
-    ```tsql  
+    ```sql  
     SELECT configuration_id, name, value, value_for_secondary  
     FROM sys.database_scoped_configurations;  
     ```  
@@ -134,11 +135,11 @@ ms.lasthandoff: 06/22/2017
   
 3.  Kopieren Sie das folgende Beispiel, und fügen Sie es in das Abfragefenster ein. Im folgenden Beispiel wird MAXDOP für eine sekundäre Datenbank auf den Wert für die primäre Datenbank festgelegt.  
   
-    ```  
-    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
+    ```sql  
+    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
@@ -148,4 +149,3 @@ ms.lasthandoff: 06/22/2017
 
   
   
-

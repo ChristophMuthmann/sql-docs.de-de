@@ -3,8 +3,11 @@ title: GRANT (Zertifikatberechtigungen) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - permissions [SQL Server], certificates
 - GRANT statement, certificates
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-caps.latest.revision: 15
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 06cd8f6b6b9e6a05326bad54319961a2120b979d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 968e67e85dba6766fb3ddf80517bc69702475fac
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (Zertifikatberechtigungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erteilt Berechtigungen für ein Zertifikat in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
@@ -120,4 +122,3 @@ AS *Granting_principal*
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

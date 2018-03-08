@@ -1,29 +1,30 @@
 ---
 title: "Festlegen von Optionen für Projekt (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2ffdaea48e85e53a6ba170ab34251a1d26e193f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f5b71db23d56150fbc6a2f7990ba9960d83d2d1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>Einstellungsoptionen für Projekt (DB2ToSQL)
 Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben Objekt Konvertierung, Objekt laden, Benutzeroberflächen- und Migration benutzereinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
@@ -45,7 +46,7 @@ SSMA verfügt über fünf Mengen von projekteinstellungen:
   
 Es sind auch vier Modi für diese Einstellungen konfigurieren:  
   
--   Standardwert  
+-   Default  
   
 -   Optimistisch  
   
@@ -98,7 +99,7 @@ Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Ein
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
   
 -   Zum Anpassen der Zuordnung von Quelle und Ziel-Datentypen finden Sie unter [Zuordnung DB2 und SQL Server-Datentypen &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
@@ -108,4 +109,3 @@ Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:
 ## <a name="see-also"></a>Siehe auch  
 [Zuordnen von DB2 und SQL Server-Datentypen &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   
-

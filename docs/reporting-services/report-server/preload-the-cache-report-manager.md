@@ -1,30 +1,30 @@
 ---
-title: Vorabladen des Caches (Berichts-Manager) | Microsoft Docs
+title: Vorabladen des Caches (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7f1198cddebd82cbabaccd635dc10182236bcc33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preload-the-cache-report-manager"></a>Vorabladen des Caches (Berichts-Manager)
   Sie können den Cache für ein freigegebenes Dataset vorab laden, indem Sie einen Cacheaktualisierungsplan für das freigegebene Dataset erstellen.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>So laden Sie den Cache vorab, indem Sie einen Cacheaktualisierungsplan erstellen  
   
-1.  Starten Sie den [Berichts-Manager im einheitlichen SSRS-Modus](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** und dann zu dem Element, das zwischengespeichert werden soll.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>So laden Sie den Cache mit einem benutzerspezifischen Bericht vorab, indem Sie ein datengesteuertes Abonnement verwenden  
   
-1.  Starten Sie den [Berichts-Manager im einheitlichen SSRS-Modus](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** und dann zum Bericht, für den Sie ein Abonnement erstellen möchten.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  Klicken Sie auf **Weiter**.  
   
-9. Geben Sie die Abfrage oder den Befehl an, die bzw. der Abonnentendaten abruft. Sie können auch den Timeoutzeitraum für Abfragen erhöhen, deren Verarbeitung lange dauert. Beispiel:  
+9. Geben Sie die Abfrage oder den Befehl an, die bzw. der Abonnentendaten abruft. Sie können auch den Timeoutzeitraum für Abfragen erhöhen, deren Verarbeitung lange dauert. Zum Beispiel:  
   
     ```  
     Select * from UserInfo  
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/09/2017
      Oder klicken Sie zum Erstellen eines benutzerdefinierten Zeitplans auf **Nach einem Zeitplan, der für dieses Abonnement erstellt wurde** , und klicken Sie dann auf **Weiter**. Konfigurieren Sie den Zeitplan, und klicken Sie dann auf **Fertig stellen**.  
   
     > [!NOTE]  
-    >  Die Abonnenten empfangen nur dann den neuesten Bericht, wenn der von Ihnen konfigurierte Zeitplan konsistent mit dem Zeitplan für die Berichtsübermittlung ist, den Sie für die Abonnenten definiert haben. Weitere Informationen finden Sie unter [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Die Abonnenten empfangen nur dann den neuesten Bericht, wenn der von Ihnen konfigurierte Zeitplan konsistent mit dem Zeitplan für die Berichtsübermittlung ist, den Sie für die Abonnenten definiert haben. Weitere Informationen finden Sie unter [Berichts-Manager (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Konfigurieren Sie die Ausführungsoptionen für den Bericht wie folgt: Klicken Sie auf der Berichtsseite auf die Registerkarte **Eigenschaften** .  
   
@@ -119,18 +119,17 @@ ms.lasthandoff: 08/09/2017
   
 17. Wählen Sie eine der folgenden zwei Cacheoptionen aus, und konfigurieren Sie die Ablaufzeit wie folgt:  
   
-    -   Wenn die zwischengespeicherte Kopie nach einem bestimmten Zeitraum ablaufen soll, klicken Sie auf **Eine temporäre Kopie des Berichts zwischenspeichern. Kopie des Berichts nach einer Anzahl von Minuten abläuft.** Geben Sie die Anzahl von Minuten für den Berichtsablauf ein.  
+    -   Wenn die zwischengespeicherte Kopie nach einem bestimmten Zeitraum ablaufen soll, klicken Sie auf **Eine temporäre Kopie des Berichts zwischenspeichern. Diese Kopie soll nach der folgenden Anzahl von Minuten ablaufen.** Geben Sie die Anzahl von Minuten für den Berichtsablauf ein.  
   
-    -   Wenn die zwischengespeicherte Kopie nach einem Zeitplan ablaufen soll, klicken Sie auf **eine temporäre Kopie des Berichts Zwischenspeichern. Kopie des Berichts nach folgendem Zeitplan abläuft.** Klicken Sie auf **Konfigurieren**, oder wählen Sie einen freigegebenen Zeitplan aus, um einen Zeitplan für den Berichtsablauf festzulegen.  
+    -   Wenn die zwischengespeicherte Kopie nach einem Zeitplan ablaufen soll, klicken Sie auf **Eine temporäre Kopie des Berichts zwischenspeichern. Die Kopie des Berichts läuft gemäß dem folgenden Zeitplan ab.** Klicken Sie auf **Konfigurieren**, oder wählen Sie einen freigegebenen Zeitplan aus, um einen Zeitplan für den Berichtsablauf festzulegen.  
   
 18. Klicken Sie auf **Anwenden**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Leistung, Momentaufnahmen, Zwischenspeichern &#40; Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [Leistung, Momentaufnahmen, Zwischenspeichern (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

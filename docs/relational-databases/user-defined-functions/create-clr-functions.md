@@ -2,9 +2,12 @@
 title: Erstellen von CLR-Funktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - CLR functions [SQL Server]
 - user-defined functions [SQL Server], CLR
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3589282697cb1a7d11c7e5c18db204140ad0653
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 494efdab2237d7212355142682b921e3d0cfc215
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-clr-functions"></a>Erstellen von CLR-Funktionen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Sie können ein Datenbankobjekt in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellen, das in einer Assembly programmiert wird, die in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -CLR (Common Language Runtime) erstellt wird. Datenbankobjekte, die das reichhaltige Programmiermodell nutzen können, das von der Common Language Runtime bereitgestellt wird, sind z. B. Aggregatfunktionen, Funktionen, gespeicherte Prozeduren, Trigger und Typen.  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="accessing-native-code"></a>Zugreifen auf systemeigenen Code  
  CLR-Funktionen können für den Zugriff auf nativen (nicht verwalteten) Code verwendet werden, z.B. in C oder C++ geschriebenen Code. Dazu wird PInvoke vom verwalteten Code aus ausgeführt (Einzelheiten finden Sie unter [Aufrufen nativer Funktionen aus verwaltetem Code](http://go.microsoft.com/fwlink/?LinkID=181929) ). Dies kann die Wiederverwendung von Legacycode als CLR-UDFs oder das Programmieren leistungskritischer UDFs in systemeigenem Code ermöglichen. Die Verwendung einer UNSAFE-Assembly wird in diesem Fall vorausgesetzt. Warnhinweise zur Verwendung von UNSAFE-Assemblys finden Sie unter [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen benutzerdefinierter Funktionen &#40;Datenbankmodul&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [Erstellen benutzerdefinierter Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)   
  [Ausführen von benutzerdefinierten Funktionen](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   

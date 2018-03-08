@@ -2,11 +2,13 @@
 title: "Verzögerte Transaktionen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deferred transactions
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
-caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 990768fa64b5da13d633c28ae64a0ab0c95e78b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="deferred-transactions-sql-server"></a>Markierte Transaktionen [SQL Server]
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise kann eine beschädigte Transaktion verzögert werden, wenn für das Rollback (Rückgängig machen) erforderliche Daten während des Starts der Datenbank offline sind. Bei einer *verzögerten Transaktion* handelt es sich um eine Transaktion, für die kein Commit ausgeführt wird, wenn die Rollforwardphase beendet wird, und bei der ein Fehler auftritt, sodass für die Transaktion kein Rollback ausgeführt werden kann. Da kein Rollback ausgeführt werden kann, wird die Transaktion verzögert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Enterprise kann eine beschädigte Transaktion verzögert werden, wenn für das Rollback (Rückgängig machen) erforderliche Daten während des Starts der Datenbank offline sind. Bei einer *verzögerten Transaktion* handelt es sich um eine Transaktion, für die kein Commit ausgeführt wird, wenn die Rollforwardphase beendet wird, und bei der ein Fehler auftritt, sodass für die Transaktion kein Rollback ausgeführt werden kann. Da kein Rollback ausgeführt werden kann, wird die Transaktion verzögert.  
   
 > [!NOTE]  
 >  Beschädigte Transaktionen werden nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise verzögert. In anderen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann eine beschädigte Transaktion nicht gestartet werden.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |Aktion|Lösung (bei E/A-Fehlern oder wenn erforderliche Daten offline sind)|  
 |------------|-----------------------------------------------------------------------|  
 |Serverstart|verzögerten Transaktion|  
-|Wiederherstellung|verzögerten Transaktion|  
+|Wiederherstellung|Verzögerte Transaktion|  
 |Anfügen|Anfügen erzeugt einen Fehler|  
 |AutoNeustart|verzögerten Transaktion|  
 |Erstellen einer Datenbank oder einer Datenbankmomentaufnahme|Erstellen erzeugt einen Fehler|  
@@ -92,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
          Sobald DBCC auf die beschädigte Seite stößt, wird ihre Zuordnung aufgehoben, und es werden alle damit verbundenen Fehler repariert. Durch diesen Ansatz kann die Datenbank in einem physisch konsistenten Status wieder online geschaltet werden. Allerdings können dabei weitere Daten verloren gehen. Aus diesem Grund sollte dieser Ansatz nur als letzte Möglichkeit verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Entfernen von veralteten Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

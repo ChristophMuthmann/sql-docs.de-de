@@ -1,12 +1,14 @@
 ---
-title: Erweitern einer Fehlerausgabe with the Script Component | Microsoft Docs
+title: Erweitern einer Fehlerausgabe mit der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,30 +19,29 @@ helpviewer_keywords:
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 3881b57f4089dbb075d019f9bd1a88a96a307b72
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ff54224860771a8cbb4c21d6262558519dd771be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Erweitern einer Fehlerausgabe mit der Skriptkomponente
-  Standardmäßig werden die beiden zusätzlichen Spalten in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Fehlerausgabe, ErrorCode und ErrorColumn, enthalten nur numerische Codes darstellen, die eine Fehlernummer und die ID der Spalte, in dem der Fehler aufgetreten ist. Diese numerischen Werte möglicherweise nur von begrenztem Nutzen, ohne die entsprechende fehlerbeschreibung und den Spaltennamen.  
+  Standardmäßig enthalten die beiden zusätzlichen Spalten in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehlerausgabe – ErrorCode und ErrorColumn – nur numerische Codes, die eine Fehlernummer darstellen, und die ID der Spalte, in der der Fehler auftrat. Diese numerischen Werte sind ohne die entsprechende Fehlerbeschreibung und den Spaltennamen nur von begrenztem Nutzen.  
   
- In diesem Thema wird beschrieben, wie die fehlerbeschreibung und den Namen der Spalte im Datenfluss vorhandenen fehlerausgabedaten hinzufügen, indem Sie mithilfe der Skriptkomponente. Im Beispiel wird die Fehlerbeschreibung einem bestimmten vordefinierten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehlercode hinzugefügt. Dazu wird die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle verwendet, die von der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der Skriptkomponente bereitgestellt wird. Im Beispiel fügt den Namen der Spalte entspricht der erfassten Herkunfts-ID mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> Methode derselben Schnittstelle.  
+ In diesem Thema wird beschrieben, wie Sie mithilfe der Skriptkomponente den im Datenfluss vorhandenen Fehlerausgabedaten die Fehlerbeschreibung und den Spaltennamen hinzufügen. Im Beispiel wird die Fehlerbeschreibung einem bestimmten vordefinierten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehlercode hinzugefügt. Dazu wird die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle verwendet, die von der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der Skriptkomponente bereitgestellt wird. Dann wird im Beispiel mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>-Methode derselben Schnittstelle der Spaltenname hinzugefügt, der der erfassten Herkunfts-ID entspricht.  
   
 > [!NOTE]  
 >  Wenn Sie eine Komponente erstellen möchten, die Sie einfacher in mehreren Datenflusstasks und Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skriptkomponentenbeispiel als Ausgangspunkt für eine benutzerdefinierte Datenflusskomponente zu verwenden. Weitere Informationen finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="example"></a>Beispiel  
- Das hier dargestellte Beispiel verwendet eine Skriptkomponente als Transformation konfiguriert, um die fehlerbeschreibung und den Namen der Spalte im Datenfluss vorhandenen fehlerausgabedaten hinzufügen.  
+ In diesem Beispiel wird gezeigt, wie mit einer Skriptkomponente, die als Transformation konfiguriert ist, den im Datenfluss vorhandenen Fehlerausgabedaten die Fehlerbeschreibung und der Spaltenname hinzugefügt werden.  
   
- Weitere Informationen zum Konfigurieren von für die Verwendung der Skriptkomponente als Transformation im Datenfluss finden Sie unter [Erstellen einer synchronen Transformation mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) und [Erstellen einer asynchronen Transformation mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Weitere Informationen zum Konfigurieren der Skriptkomponente für die Verwendung als Transformation im Datenfluss finden Sie unter [Erstellen einer synchronen Transformation mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) und [Creating an Asynchronous Transformation with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) (Erstellen einer asynchronen Transformation mit der Skriptkomponente).  
   
 #### <a name="to-configure-this-script-component-example"></a>So konfigurieren Sie dieses Skriptkomponentenbeispiel  
   
@@ -50,21 +51,21 @@ ms.lasthandoff: 08/03/2017
   
 3.  Verbinden Sie die Fehlerausgabe der Upstreamkomponente mit der neuen Skriptkomponente.  
   
-4.  Öffnen der **Skript Transformations-Editor**, und klicken Sie auf die **Skript** Seite für die **ScriptLanguage** -Eigenschaft, wählen Sie die Skriptsprache.  
+4.  Öffnen Sie den **Transformations-Editor für Skripterstellung**, und wählen Sie auf der Seite **Skript** für die **ScriptLanguage**-Eigenschaft die Skriptsprache aus.  
   
-5.  Klicken Sie auf **Bearbeitungsskript** So öffnen die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE, und fügen Sie den unten dargestellten Beispielcode hinzu.  
+5.  Klicken Sie auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und den unten dargestellten Beispielcode einzufügen.  
   
 6.  Schließen Sie VSTA.  
   
-7.  Das Skript Transformations-Editor auf die **Eingabespalten** Seite, wählen Sie die ErrorCode und ErrorColumn-Spalten.  
+7.  Wählen Sie im Transformations-Editor für Skripterstellung auf der Seite **Eingabespalten** die Spalten ErrorCode und ErrorColumn aus.  
   
-8.  Auf der **Eingaben und Ausgaben** Seite, fügen Sie zwei neue Spalten hinzu.  
+8.  Fügen Sie auf der Seite **Eingaben und Ausgaben** zwei neue Spalten hinzu.  
   
-    -   Fügen Sie eine neue Ausgabespalte des Typs **Zeichenfolge** mit dem Namen **ErrorDescription**. Vergrößern Sie die Standardlänge der neuen Spalte auf 255, damit auch lange Meldungen angezeigt werden können.  
+    -   Fügen Sie eine neue Ausgabespalte des Typs **Zeichenfolge** mit dem Namen **ErrorDescription** hinzu. Vergrößern Sie die Standardlänge der neuen Spalte auf 255, damit auch lange Meldungen angezeigt werden können.  
   
-    -   Fügen Sie eine andere neue Ausgabespalte des Typs **Zeichenfolge** mit dem Namen **ColumnName**. Erhöhen Sie die standardmäßige Länge der neuen Spalte auf 255, damit lange Werte unterstützen.  
+    -   Fügen Sie eine weitere neue Ausgabespalte des Typs **Zeichenfolge** mit dem Namen **ColumnName** hinzu. Vergrößern Sie die Standardlänge der neuen Spalte auf 255, damit auch lange Werte angezeigt werden können.  
   
-9. Schließen der **Skript Transformations-Editor.**  
+9. Schließen Sie den **Transformations-Editor für Skripterstellung**.  
   
 10. Fügen Sie die Ausgabe der Skriptkomponente an ein geeignetes Ziel an. Ein Flatfileziel ist die einfachste Möglichkeit zur Konfiguration bei Ad-hoc-Tests.  
   
@@ -107,10 +108,9 @@ public class ScriptMain:
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)   
  [Verwenden von Fehlerausgaben in einer Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Erstellen einer synchronen Transformation mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
   
   
-

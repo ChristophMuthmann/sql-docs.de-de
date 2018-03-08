@@ -2,9 +2,12 @@
 title: "Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, pdw
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 14
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4a75f97300af0ddf7023fd95efa5e3a973ec332a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: b57b1e802969995f87d5663e5e7dbdc92700a9b5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
   Stellt globale Konfigurationseinstellungen für die PolyBase-Hadoop- und Azure Blob Storage-Konnektivität dar oder ändert diese.  
   
@@ -49,10 +51,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@configname=** ] **'***option_name***'**  
+ [ **@configname=** ] **'***Optionsname***'**  
  Der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)**. Der Standardwert ist NULL. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ **@configvalue=** ] **'***Wert***'**  
  Die neue Konfigurationseinstellung. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Maximalwert kann je nach Option unterschiedlich sein.  
   
  **'hadoop connectivity'**  
@@ -145,11 +147,10 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
-

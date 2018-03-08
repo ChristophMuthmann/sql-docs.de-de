@@ -3,10 +3,12 @@ title: "Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d99326f7d045aff95bf753d7f1ff68826f313af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich (Visual Database Tools)
-Abfragen können eine beliebige Anzahl von Suchbedingungen enthalten, die mit beliebig vielen AND-Operatoren und OR-Operatoren verknüpft werden können. Eine Abfrage mit mehreren AND-Klauseln und OR-Klauseln kann sehr komplex sein. Es ist daher hilfreich zu wissen, wie eine Abfrage bei der Ausführung interpretiert wird und wie sie im [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) und im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) dargestellt wird.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Abfragen können eine beliebige Anzahl von Suchbedingungen enthalten, die mit beliebig vielen AND-Operatoren und OR-Operatoren verknüpft werden können. Eine Abfrage mit mehreren AND-Klauseln und OR-Klauseln kann sehr komplex sein. Es ist daher hilfreich zu wissen, wie eine Abfrage bei der Ausführung interpretiert wird und wie sie im [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) und im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) dargestellt wird.  
   
 > [!NOTE]  
 > Ausführliche Informationen zu Suchbedingungen, die nur einen AND- oder OR-Operator enthalten, finden Sie unter [Angeben mehrerer Suchbedingungen für eine Spalte &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) und [Angeben mehrerer Suchbedingungen für mehrere Spalten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  
@@ -170,7 +171,6 @@ Diese WHERE-Klausel wird vom Abfrage- und Sicht-Designer folgendermaßen im Krit
   
 Wenn Sie die Abfrage ändern (z. B. durch Ändern eines der Werte im Kriterienbereich), erstellt der Abfrage- und Sicht-Designer die SQL-Anweisung im SQL-Bereich neu. Die neu erstellte SQL-Anweisung stimmt eher mit der Anzeige im Kriterienbereich als mit der ursprünglichen Anweisung überein. Wenn der Kriterienbereich z. B. verteilte AND-Klauseln enthält, wird die Anweisung im SQL-Bereich mit eindeutig verteilten AND-Klauseln erstellt. Ausführliche Informationen finden Sie weiter oben unter "Verwenden von AND mit mehreren OR-Klauseln".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

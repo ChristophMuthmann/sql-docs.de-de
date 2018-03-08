@@ -3,29 +3,29 @@ title: Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explo
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Management Studio [SQL Server], custom reports
+helpviewer_keywords: SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9e99d307624e968284409f779dec6eb9a8731a4e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0cf165a803e6b6b8fa5640b5dd3e38173f59fa4c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten
-Benutzerdefinierte Berichte können im Kontext eines ausgewählten Objekt-Explorer-Knotens ausgeführt werden, wenn mit den benutzerdefinierten Berichten auf die Berichtsparameter dieses Knotens verwiesen wird. Dadurch kann für einen benutzerdefinierten Bericht der aktuelle Kontext verwendet werden, beispielsweise die aktuelle Datenbank oder ein Datenbank- bzw. Serverobjekt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Benutzerdefinierte Berichte können im Kontext eines ausgewählten Objekt-Explorer-Knotens ausgeführt werden, wenn mit den benutzerdefinierten Berichten auf die Berichtsparameter dieses Knotens verwiesen wird. Dadurch kann für einen benutzerdefinierten Bericht der aktuelle Kontext verwendet werden, beispielsweise die aktuelle Datenbank oder ein Datenbank- bzw. Serverobjekt.  
   
 ## <a name="object-explorer-node-report-parameters"></a>Berichtsparameter für Objekt-Explorer-Knoten  
   
@@ -533,9 +533,8 @@ Für den mithilfe des im Folgenden aufgeführten Codes erstellten Bericht werden
 </Report></pre>  
 ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Hinzufügen eines benutzerdefinierten Berichts zu Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
   
-

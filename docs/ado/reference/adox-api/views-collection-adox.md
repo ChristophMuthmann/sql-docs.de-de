@@ -3,7 +3,7 @@ title: Ansichten der Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d1eabbf43dbfffaf3304b72b18adc15cce4e75e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8c15a8add685bf62faa307fc420f51a8c547776
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-adox"></a>Views-Auflistung (ADOX)
 Enthält alle [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) Objekte eines Katalogs.  
@@ -51,7 +50,7 @@ Enthält alle [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) Obj
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Ansichten Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
+-   [Views Collection Properties, Methods, and Events (Views-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ansichten und Felder Beispiel für Auflistungen (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
@@ -61,4 +60,3 @@ Enthält alle [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) Obj
  [Ansichten aktualisieren Methodenbeispiel (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
-

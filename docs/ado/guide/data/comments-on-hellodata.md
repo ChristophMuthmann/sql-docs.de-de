@@ -3,7 +3,7 @@ title: Kommentare zur HelloData | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2265e361258ee49a9d387f3cb879f138c196ba8e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comments-on-hellodata"></a>Kommentare zur HelloData
 Die HelloData-Anwendung führt Sie durch die grundlegenden Operationen des eine typische ADO-Anwendung: erste, untersuchen, bearbeiten und Aktualisieren von Daten. Wenn Sie die Anwendung starten, klicken Sie auf die erste Schaltfläche **Daten abrufen**. Dies führt die **GetData** Unterroutine.  
@@ -82,4 +81,3 @@ Die HelloData-Anwendung führt Sie durch die grundlegenden Operationen des eine 
   
 ## <a name="formunload"></a>Form_Unload  
  Die **Form_Unload** Unterroutine ist wichtig, verschiedene Ursachen. Zuerst, da dies eine beispielanwendung ist, bereinigt Form_Unload die Änderungen, die in der Datenbank vor dem Beenden der Anwendung vorgenommen wurden. Zweitens im Code wird gezeigt, wie ein Befehl direkt aus einem geöffneten ausgeführt werden kann **Verbindung** Objekt mithilfe der **Execute** Methode. Abschließend wird ein Beispiel für das Ausführen einer Abfrage nicht Zeile zurückgibt (eine UPDATE-Abfrage), für die Datenquelle.
-

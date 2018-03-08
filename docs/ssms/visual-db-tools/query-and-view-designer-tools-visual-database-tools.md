@@ -3,10 +3,12 @@ title: Tools im Abfrage- und Sicht-Designer (Visual Database Tools) | Microsoft-
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - Query Designer [SQL Server], components
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7dfecc428309240485cbd05b4b4da95c65e0a04b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 45b05e606f083b20fa7b1ba9e8a25b4defcf7c7c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Tools im Abfrage- und Sicht-Designer (Visual Database Tools)
-Beim Erstellen von Abfragen, Sichten, Inlinefunktionen oder gespeicherten Prozeduren mit einer einzelnen Anweisung stehen Ihnen im Designer vier Bereiche zur Verfügung: der Diagrammbereich, der Kriterienbereich, der SQL-Bereich und der Ergebnisbereich.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Beim Erstellen von Abfragen, Sichten, Inlinefunktionen oder gespeicherten Prozeduren mit einer einzelnen Anweisung stehen Ihnen im Designer vier Bereiche zur Verfügung: der Diagrammbereich, der Kriterienbereich, der SQL-Bereich und der Ergebnisbereich.  
   
 ![Abfragedesigner](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "Abfragedesigner")  
   
@@ -52,9 +53,8 @@ Sie können jeden dieser Bereiche verwenden, um eine Abfrage oder Sicht zu erste
 ## <a name="displaying-and-hiding-panes"></a>Anzeigen und Ausblenden von Bereichen  
 Klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche, zeigen Sie auf **Bereich**, und klicken Sie dann auf den Namen des Bereichs, um einen Bereich auszublenden oder einen nicht sichtbaren Bereich anzuzeigen. Wenn der Abfrage- und Sicht-Designer im Abfrage-Designermodus geöffnet wird, ist der Bereich **Ergebnisse** nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Öffnen des Abfrage- und Sicht-Designers &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
 [SQL-Editor &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sql-editor-visual-database-tools.md)  
   
-

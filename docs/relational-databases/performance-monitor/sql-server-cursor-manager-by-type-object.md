@@ -2,35 +2,36 @@
 title: SQL Server, Cursor-Manager nach Typ-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Cursor Manager by Type object
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 800c82cf495aa64371b2ca15bcc2e8833b5fd87d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b818f7a5222dc92896e9624ef7cbc89f05fe2af8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, Cursor-Manager nach Typ-Objekt
-  Das **SQLServer:Cursor-Manager nach Typ** -Objekt stellt Leistungsindikatoren zum Überwachen von Cursorn bereit, die nach dem Typ gruppiert sind.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:Cursor-Manager nach Typ**-Objekt stellt Leistungsindikatoren zum Überwachen von Cursorn bereit, die nach dem Typ gruppiert sind.  
   
  Diese Tabelle beschreibt die Leistungsindikatoren des **SQLServer:Cursor-Manager nach Typ** -Objekts von SQL Server.  
   
-|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|Beschreibung|  
+|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|Description|  
 |-------------------------------------|-----------------|  
 |**Aktive Cursor**|Anzahl der aktiven Cursor.|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
@@ -44,15 +45,14 @@ ms.lasthandoff: 06/22/2017
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Cursor-Manager-Instanz|Beschreibung|  
+|Cursor-Manager-Instanz|Description|  
 |-----------------------------|-----------------|  
 |**_Total**|Informationen für alle Cursor.|  
 |**API Cursor**|Nur die API-Cursor-Informationen.|  
 |**TSQL Global Cursor**|Nur die globalen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorinformationen.|  
 |**TSQL Local Cursor**|Nur die lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorinformationen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

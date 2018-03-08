@@ -2,9 +2,12 @@
 title: Cursors | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,19 +21,19 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 882f657706c9875732e89321ffb9d5fe3061b32a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursors"></a>Cursor
-  Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Beispielsweise besteht der Zeilensatz, der von einer SELECT-Anweisung zurückgegeben wird, aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, vor allem interaktive Onlineanwendungen, sind nicht immer effektiv, wenn das gesamte Resultset als eine Einheit bearbeitet wird. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Beispielsweise besteht der Zeilensatz, der von einer SELECT-Anweisung zurückgegeben wird, aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, vor allem interaktive Onlineanwendungen, sind nicht immer effektiv, wenn das gesamte Resultset als eine Einheit bearbeitet wird. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
   
  Cursor erweitern die Verarbeitung von Ergebnissen folgendermaßen:  
   
@@ -117,9 +120,9 @@ ms.lasthandoff: 06/22/2017
 5.  Schließen Sie den Cursor.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+ [Cursorverhalten](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [Implementieren von Cursorn](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
  [Cursorfunktionen &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

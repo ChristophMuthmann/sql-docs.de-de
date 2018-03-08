@@ -2,24 +2,25 @@
 title: "Einführung in Revoscalepy | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="introducing-revoscalepy"></a>Einführung in revoscalepy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **Revoscalepy** ist eine neue Bibliothek, sofern von Microsoft zur Unterstützung verteilter Datenverarbeitung, compute Remote Kontexte und hohe Leistung Algorithmen für Python.
 
@@ -91,7 +92,7 @@ Die folgenden Machine Learning-Algorithmen und Zusammenfassungsfunktionen vom "r
 |`rx_predict` | Vorhersagen von einem trainierten Modell generieren|`rx_predict_ex`in CTP 2.0|
 |`rx_summary` | Generieren Sie eine Zusammenfassung des Modells||
 
-Neue Machine Learning-Algorithmen werden ebenfalls bereitgestellt, von der Python-Version von [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+Neue Machine Learning-Algorithmen werden ebenfalls bereitgestellt, von der Python-Version von [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | Funktion| Description|
 | ------ | ------ |
@@ -125,7 +126,7 @@ Sie können Code ein ausführen **Revoscalepy** Funktionen entweder lokal oder i
 
 Wenn lokal ausgeführt wird, Sie in der Regel ein Python-Skript ausführen, über die Befehlszeile oder aus einer Entwicklungsumgebung Python und geben Sie einen SQL Server-computekontext mithilfe eines der der **Revoscalepy** Funktionen. Sie können die remote-computekontext für den gesamten Code oder für einzelne Funktionen verwenden. Sie möchten z. B. Auslagern modelltrainings zum Server, der die neuesten Daten verwenden und Verschieben von Daten zu vermeiden.
 
-Wenn Sie ein vollständiges Python-Skript in der gespeicherten Prozedur platzieren möchten [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), es wird empfohlen, die als einzelne Funktion den Code so umschreiben, die Eingaben und Ausgaben klar definiert wurde. Eingaben und Ausgaben muss **Pandas** Datenrahmen. Nachdem dies geschehen ist, können Sie rufen Sie die gespeicherte Prozedur von jedem beliebigen Client, der T-SQL unterstützt, einfach SQL-Abfragen als Eingaben übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [In-Database Python-Analyse für Entwickler L](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Wenn Sie ein vollständiges Python-Skript in der gespeicherten Prozedur platzieren möchten [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), es wird empfohlen, die als einzelne Funktion den Code so umschreiben, die Eingaben und Ausgaben klar definiert wurde. Eingaben und Ausgaben muss **Pandas** Datenrahmen. Nachdem dies geschehen ist, können Sie rufen Sie die gespeicherte Prozedur von jedem beliebigen Client, der T-SQL unterstützt, einfach SQL-Abfragen als Eingaben übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [In-Database Python-Analyse für SQL-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-remote-compute-contexts"></a>Verwenden remote rechenkontexte
 
@@ -162,7 +163,7 @@ Zum Ausführen von Python-Code in SQL Server muss installiert sein 2017 von SQL 
 
 Vollständige Dokumentation für diese APIs sind verfügbar, wenn das Produkt veröffentlicht wird. In der Zwischenzeit wird empfohlen, dass Sie die entsprechende Funktion in den Bibliotheken "revoscaler" oder MicrosoftML verweisen.
 
-+ ["Revoscaler"](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 Erhalten Sie Hilfe für eine beliebige Python-Funktion, durch Importieren des Moduls, und dem anschließenden Aufrufen `help()`. Z. B. Ausführung `help(revoscalepy)` aus Python-IDE gibt eine Liste aller Funktionen im Modul Revoscalepy mit ihren Signaturen zurück.

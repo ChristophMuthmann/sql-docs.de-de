@@ -3,7 +3,7 @@ title: RDS gibt &quot;Stream nicht lesen&quot; Fehler | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a14606f5ac503494159a70129e13b53b51758e72
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b5c0cbc0d8c83a2d36fc931616046b0261938a0a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS gibt &quot;Stream nicht lesen&quot; Fehler
 "Das Datenstromobjekt konnte nicht gelesen werden, da er leer ist oder die aktuelle Position am Ende des Streams ist. Legen Sie für nicht leere Datenströme die aktuelle Position mit der Position-Eigenschaft. Um festzustellen, ob ein Stream leer ist, überprüfen Sie die Größeneigenschaft."  
@@ -37,6 +36,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

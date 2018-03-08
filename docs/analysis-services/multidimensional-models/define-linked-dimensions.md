@@ -2,33 +2,33 @@
 title: "Definieren von verknüpften Dimensionen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d7830d5075da8ab4b741ecb31bbdefb3acdf6cb9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-linked-dimensions"></a>Definieren von verknüpften Dimensionen
-  Eine verknüpfte Dimension basiert auf einer Dimension, die in einer anderen Analysis Services-Datenbank mit derselben Version und demselben Kompatibilitätsgrad erstellt und gespeichert wurde. Mithilfe einer verknüpften Dimension können Sie eine Dimension in einer Datenbank erstellen, speichern und verwalten und gleichzeitig Benutzern mehrerer Datenbanken zur Verfügung stellen. Für Benutzer sieht eine verknüpfte Dimension genauso aus wie jede andere Dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine verknüpfte Dimension basiert auf einer Dimension, die in einer anderen Analysis Services-Datenbank mit derselben Version und demselben Kompatibilitätsgrad erstellt und gespeichert wurde. Mithilfe einer verknüpften Dimension können Sie eine Dimension in einer Datenbank erstellen, speichern und verwalten und gleichzeitig Benutzern mehrerer Datenbanken zur Verfügung stellen. Für Benutzer sieht eine verknüpfte Dimension genauso aus wie jede andere Dimension.  
   
  Verknüpfte Dimensionen sind schreibgeschützt. Wenn Sie die Dimension ändern oder neue Beziehungen erstellen möchten, müssen Sie die Quelldimension ändern und anschließend die verknüpfte Dimension und deren Beziehungen löschen und neu erstellen. Es ist nicht möglich, eine verknüpfte Dimension zu aktualisieren, um Änderungen aus dem Quellobjekt zu übernehmen.  
   
@@ -88,4 +88,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensionsbeziehungen](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Erstellen einer Verbindungszeichenfolge | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6d8c472f66f0b39e575b96d874d60948bb1a98b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90105b448604f3b99fefc2598fa375677f0bbdb4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-a-connection-string"></a>Erstellen einer Verbindungszeichenfolge
 Eine Verbindungszeichenfolge besteht aus einer Liste von Argument-Wert-Paaren (d. h. Parameter), die durch Semikolons getrennt sind. Beispiel:  
@@ -41,7 +40,7 @@ Eine Verbindungszeichenfolge besteht aus einer Liste von Argument-Wert-Paaren (d
   
 |Argument|Description|  
 |--------------|-----------------|  
-|*Anbieter*|Gibt den Namen eines Anbieters für die Verbindung verwenden.|  
+|*Provider*|Gibt den Namen eines Anbieters für die Verbindung verwenden.|  
 |*Dateiname*|Gibt den Namen einer anbieterspezifischen-Datei (z. B. eine persistente Datenquellenobjekt), die voreingestellte Verbindungsinformationen enthält.|  
 |*URL*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
 |*Remoteanbieter*|Gibt den Namen eines Anbieters beim Öffnen einer clientseitigen Verbindung verwenden. (Nur remote Data Service.)|  
@@ -64,4 +63,3 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```
-

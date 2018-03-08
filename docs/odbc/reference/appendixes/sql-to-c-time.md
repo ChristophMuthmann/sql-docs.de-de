@@ -3,10 +3,12 @@ title: SQL in "c:" Zeit | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - time data type [ODBC]
 - data conversions from SQL to C types [ODBC], time
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b9879b2a051045fb4ecc6aeb75b92020b187652
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-time"></a>SQL in "c:" Zeit
 Der Bezeichner für die Zeit, die ODBC-SQL-Datentyp ist:  
@@ -50,4 +51,3 @@ Der Bezeichner für die Zeit, die ODBC-SQL-Datentyp ist:
  [d] Dies ist die Größe des entsprechenden C-Datentyp.  
   
  Wenn SQL Zeitdaten in Zeichendaten C konvertiert werden, wird die resultierende Zeichenfolge der "*" hh "*:*mm*:*ss*" Format. Dieses Format wird durch die Einstellung der Windows® Land nicht beeinflusst.
-

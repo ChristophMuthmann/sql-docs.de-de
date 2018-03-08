@@ -2,27 +2,27 @@
 title: "Erstellen einer verknüpften Domäne | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.linkeddomain.f1
+f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "20"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>Erstellen einer verknüpften Domäne
   In diesem Thema wird beschrieben, wie eine verknüpfte Domäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine verknüpfte Domäne wird aus einer anderen, zuvor vorhandenen Domäne, erstellt und erbt alle Werte, Regeln und Eigenschaften von der Domäne, mit der sie verknüpft wird - mit Ausnahme des Namens und der Beschreibung. Sie können einen Satz verknüpfter Domänen als eine Domäne verwalten. Indem Sie eine Domäne mit der anderen verknüpfen, erstellen Sie eine Domäne, die ihre Inhalte von einer anderen Domäne erbt.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/09/2017
   
  Ein Beispiel ist ein Datensatz, der die folgenden Felder enthält: Kundenvorname, Kundennachname und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters der Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamedomäne der Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht der Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters der Verbunddomäne hinzugefügt wird.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um eine verknüpfte Domäne zu erstellen, müssen Sie eine Wissensdatenbank und eine vorhandene Domäne haben, zu der Sie eine Verknüpfung herstellen möchten.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Öffnen oder erstellen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm eine Wissensdatenbank. Wählen Sie **Domänenverwaltung** als Aktivität aus, und klicken Sie dann auf **Öffnen** oder **Erstellen**. Weitere Informationen finden Sie unter [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) oder [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Öffnen oder erstellen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm eine Wissensdatenbank. Wählen Sie **Domänenverwaltung** als Aktivität aus, und klicken Sie dann auf **Öffnen** oder **Erstellen**. Weitere Informationen finden Sie unter [Erstellen einer Wissensdatenbank](../data-quality-services/create-a-knowledge-base.md) oder [Öffnen einer Wissensdatenbank](../data-quality-services/open-a-knowledge-base.md).  
   
 3.  Klicken Sie in der **Domänenliste** auf der Seite **Domänenverwaltung** mit der rechten Maustaste auf die Domäne, die Sie mit einer neuen Domäne verknüpfen möchten, und klicken Sie dann auf **Verknüpfte Domäne erstellen**.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  Falls notwendig können Sie den Namen oder die Beschreibung der verknüpften Domäne auf der Registerkarte „Domäneneigenschaften“ ändern.  
   
-7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
+7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Sie können den Namen und die Beschreibung einer verknüpften Domäne ändern.  
   
--   Um die Domäneneigenschaften für die Eigenschaften **Datentyp**, **Führende Werte verwenden**oder **Formatausgabe an** zu ändern, wählen Sie die Domäne aus, zu der Sie eine Verknüpfung erstellt haben, und ändern Sie diese Einstellungen auf der Registerkarte **Domäneneigenschaften** für diese Domäne. Sie können diese Einstellungen nicht in den Eigenschaften der verknüpften Domäne ändern. Weitere Informationen finden Sie unter [Create a Domain](../data-quality-services/create-a-domain.md).  
+-   Um die Domäneneigenschaften für die Eigenschaften **Datentyp**, **Führende Werte verwenden**oder **Formatausgabe an** zu ändern, wählen Sie die Domäne aus, zu der Sie eine Verknüpfung erstellt haben, und ändern Sie diese Einstellungen auf der Registerkarte **Domäneneigenschaften** für diese Domäne. Sie können diese Einstellungen nicht in den Eigenschaften der verknüpften Domäne ändern. Weitere Informationen finden Sie unter [Erstellen einer Domäne](../data-quality-services/create-a-domain.md).  
   
 -   Einstellungen auf den Registerkarten **Verweisdaten**, **Domänenregeln**, **Domänenwerte**und **Begriffsbasierte Beziehungen** der Domänenverwaltungsseite können für die verknüpfte Domäne oder die Domäne, mit der sie verknüpft wurde, geändert werden. Die Änderungen werden von der anderen Domäne geerbt.  
   
@@ -104,4 +104,3 @@ ms.lasthandoff: 09/09/2017
 -   Wenn Sie auf eine verknüpfte Domäne auf einer der Domänenverwaltungsregisterkarten doppelklicken, wird die Domäne für die Bearbeitung mit einem Hinweis in der Namenszeichenfolge geöffnet, dass es sich um eine verknüpfte Domäne handelt.  
   
   
-

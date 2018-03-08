@@ -2,15 +2,16 @@
 title: "Ausführbare Konzepte für die Programmierung von Replikations-Agents | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
 - programming [SQL Server replication], agents
@@ -18,24 +19,23 @@ helpviewer_keywords:
 - agents [SQL Server replication], executables
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "38"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 096156484b2378713485e1177eb9b0cfd6faa5d8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 13d16f3c7cee8e344917238bf8637cfef202432a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-executables-concepts"></a>Ausführbare Konzepte für die Programmierung von Replikations-Agents
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Replikations-Agents können wie folgt programmgesteuert kontrolliert werden:  
   
--   Mithilfe der verwalteten Programmierungsschnittstellen für die Programmierung von Agents im <xref:Microsoft.SqlServer.Replication>-Namespace  
+-   Mit den verwalteten Schnittstellen für die Agent-Programmierung im <xref:Microsoft.SqlServer.Replication> Namespace  
   
 -   Durch Aufrufen von ausführbaren Dateien von Agents mit einem angegebenen Satz von Parametern von der Eingabeaufforderung aus  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 06/22/2017
   
 -   [Replikationsprotokolllese-Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Replikationsmerge-Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Warteschlangenlese-Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
--   [Replikationsmomentaufnahme-Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  Beim Aufrufen von Replikations-Agents können Sie Leistungsprofile verwenden, um einen definierten Satz von Parametern automatisch an die ausführbare Datei des Agents zu übergeben. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -119,4 +119,3 @@ REM -- The following command must be supplied without line breaks.
 ```  
   
   
-

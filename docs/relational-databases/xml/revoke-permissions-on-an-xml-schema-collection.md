@@ -2,9 +2,12 @@
 title: "Aufheben der Berechtigungen für eine XML-Schemaauflistung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: dc855ac7206e483b4a024d2fa31876a73ffa80b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Aufheben der Berechtigungen für eine XML-Schemaauflistung
-  Die Berechtigung zum Erstellen einer XML-Schemaauflistung kann mithilfe eines der folgenden Verfahren aufgehoben werden:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Die Berechtigung zum Erstellen einer XML-Schemaauflistung kann mithilfe eines der folgenden Verfahren aufgehoben werden:  
   
 -   Aufheben der ALTER-Berechtigung für das relationale Schema. Der Prinzipal kann in diesem Fall keine XML-Schemaauflistung im relationalen Schema erstellen. Der Prinzipal kann dies jedoch auch weiterhin in anderen relationalen Schemas in der gleichen Datenbank.  
   
@@ -145,7 +149,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

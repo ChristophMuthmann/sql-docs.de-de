@@ -3,10 +3,12 @@ title: Anwendungen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2a2e9924d032e3ccc32d613a1799c3abd84880f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="applications"></a>Anwendungen
 Ein *Anwendung* ist ein Programm, das die ODBC-API für den Datenzugriff aufruft. Obwohl viele Arten von Anwendungen möglich sind, fallen in drei Kategorien unterteilt, die als Beispiele in diesem Handbuch verwendet werden.  
@@ -60,4 +61,3 @@ Ein *Anwendung* ist ein Programm, das die ODBC-API für den Datenzugriff aufruft
 -   Trennen die Datenquelle aus.  
   
  Da die meisten Datenzugriffe mit SQL ausgeführt wird, werden die primäre Aufgabe, die für die Anwendung ODBC verwenden SQL-Anweisungen zu senden und Abrufen der Ergebnisse (sofern vorhanden), das durch diese Anweisungen generiert werden. Andere Aufgaben, die für die Anwendung ODBC verwenden sind bestimmen und Treiber Funktionen anpassen und den Datenbankkatalog durchsuchen.
-

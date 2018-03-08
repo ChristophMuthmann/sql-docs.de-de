@@ -2,29 +2,30 @@
 title: MSSQLSERVER_846 | Microsoft Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 846 (Database Engine error)
+helpviewer_keywords: 846 (Database Engine error)
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9aa5db91ca324f96b69206d23f211f07a046d09a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541151ada9220ea2f6374db6118adc5192f2bc7c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver846"></a>MSSQLSERVER_846
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -70,4 +71,3 @@ Wenn Sie dieses Problem umgehen möchten, werden die Fehlermeldungen in Abhängi
   
 -   Stellen Sie sicher, dass Sie die Option FILEGROWTH auf Inkremente festlegen, die groß genug sind und somit nicht häufig auftreten. Planen Sie einen Auftrag, um den verfügbaren Speicherplatz in den Datenbanken zu überprüfen, und erhöhen Sie dann die Datenbankgröße außerhalb der Spitzenzeiten.  
   
-

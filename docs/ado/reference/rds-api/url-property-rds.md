@@ -1,29 +1,30 @@
 ---
 title: URL-Eigenschaft (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0f050d414dce5afcdfff8457e93505068cb7d8d9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: feda106c2ce5450fa86550dbc83fd40c928c1510
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="url-property-rds"></a>URL-Eigenschaft (RDS)
 Gibt eine Zeichenfolge, die eine relative oder absolute URL enthält, an.  
@@ -54,10 +55,9 @@ Run time: DataControl.URL="Server"
  Wenn die **URL** Eigenschaft festgelegt wurde, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) wird Änderungen an den Speicherort, der die URL senden.  
   
 ## <a name="applies-to"></a>Gilt für  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Die URL-Eigenschaft-Beispiel (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
+ [URL-Eigenschaft – Beispiel (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

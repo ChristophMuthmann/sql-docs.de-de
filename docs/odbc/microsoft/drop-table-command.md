@@ -3,26 +3,26 @@ title: DROP TABLE-Befehl | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- drop table command [ODBC]
+helpviewer_keywords: drop table command [ODBC]
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6b38eeeba42f1a24520c176fb2f49caac1712e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f346bc3701df00cdddf5e6af77f500017570bd51
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drop-table-command"></a>DROP TABLE-Befehl
 Entfernt eine Tabelle aus der Datenbank mit der Datenquelle angegeben, und vom Datenträger gelöscht.  
@@ -56,4 +56,3 @@ DROP TABLE TableName | FileName | ?
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE *Base Tabellenname*|Datenbank (.dbc-Datei)|REMOVE-Tabelle *TableName* löschen|  
 ||Verzeichnis des freien Tabellen (DBF-Dateien)|ERASE- *DbfName*<br /><br /> ERASE- *CdxName*<br /><br /> ERASE- *FptName*|
-

@@ -1,27 +1,28 @@
 ---
 title: Importieren und Exportieren von Daten von SQL Server und Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/17/2017
-ms.prod: sql-server-2016
+ms.date: 10/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importieren und Exportieren von Daten von SQL Server und Azure SQL-Datenbank
-Sie können eine Vielzahl von Methoden zum Importieren und Exportieren von Daten von SQL Server und Azure SQL-Datenbank verwenden. Zu diesen Methoden zählen Transact-SQL-Anweisungen, Befehlszeilentools und Assistenten.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können eine Vielzahl von Methoden zum Importieren und Exportieren von Daten von SQL Server und Azure SQL-Datenbank verwenden. Zu diesen Methoden zählen Transact-SQL-Anweisungen, Befehlszeilentools und Assistenten.
 
 Sie können Daten ebenfalls in einer Vielzahl von Dateiformaten importieren und exportieren. Zu diesen Formaten zählen Flatfiles, Excel, gängige relationale Datenbanken und verschiedene Clouddienste.
 
@@ -35,6 +36,7 @@ Sie können Daten mit dem Hilfsprogramm für BCP-Befehlszeilen importieren und e
 
 ### <a name="use-the-import-flat-file-wizard"></a>Verwenden des Assistenten zum Importieren von Flatfiles
 Wenn Sie nicht alle Konfigurationsoptionen des Import- und Export-Assistenten und anderer Tools benötigen, können Sie eine Textdatei in SQL Server importieren, indem Sie den **Assistenten zum Importieren von Flatfiles** in SQL Server Management Studio (SSMS) verwenden. Weitere Informationen finden Sie in den folgenden Artikeln:
+- [Import Flat File to SQL Wizard (Assistent zum Importieren von Flatfiles in SQL)](import-flat-file-wizard.md)
 - [Neuigkeiten in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Einführung in den neuen Assistenten zum Importieren von Flatfiles in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -53,7 +55,7 @@ Wenn Sie einen benutzerdefinierten Datenimport entwerfen möchten, können Sie e
 Sie können Daten von Flatfiles oder einer Vielzahl von anderen Dateiformaten, relationalen Datenbanken und Clouddiensten importieren und exportieren. Weitere Informationen zu diesen Optionen für bestimmte Tools finden Sie in den folgenden Themen:
 -   Informationen zum SQL Server-Import/Export-Assistenten finden Sie unter [Connect to Data Sources with the SQL Server Import and Export Wizard (Herstellen einer Verbindung zu Datenquellen mit dem SQL Server-Import/Export-Assistenten)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Informationen zu SQL Server Integration Services finden Sie unter [Integration Services-Verbindungen (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Informationen zu Azure Data Factory finden Sie unter [Azure Data Factory-Connectors](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Informationen zu Azure Data Factory finden Sie unter [Azure Data Factory-Connectors](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Häufig verwendete Dateiformate
 
@@ -65,4 +67,3 @@ Für häufig verwendete Dateiformate sind spezielle Überlegungen und Beispiele 
 
 ## <a name="next-steps"></a>Nächste Schritte
 Verwenden Sie den SQL Server-Import/Export-Assistenten, wenn Sie nicht sicher sind, welche Schritte Sie beim Importieren oder Exportieren zuerst durchführen sollen. Eine kurze Einführung finden Sie unter [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
-

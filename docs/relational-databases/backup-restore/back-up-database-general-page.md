@@ -2,9 +2,12 @@
 title: "Datenbank sichern (Seite „Allgemein“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -12,25 +15,25 @@ ms.topic: article
 f1_keywords:
 - sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-database-general-page"></a>Datenbank sichern (Seite Allgemein)
-  Verwenden Sie im Dialogfeld **Datenbank sichern** die Seite **Allgemein** , um die Einstellungen für einen Sicherungsvorgang der Datenbank anzuzeigen und zu ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Verwenden Sie im Dialogfeld **Datenbank sichern** die Seite **Allgemein** , um die Einstellungen für einen Sicherungsvorgang der Datenbank anzuzeigen und zu ändern.  
   
  Weitere Informationen zu grundlegenden Sicherungskonzepten finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
+>  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md)-Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
  **So verwenden Sie SQL Server Management Studio zum Erstellen einer Sicherung**  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Für eine Teilsicherung müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Anweisung mit der Option PARTIAL verwenden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="source"></a>Quelle  
  Mithilfe der Optionen des Bereichs **Quelle** werden die Datenbank identifiziert und der Sicherungstyp und die Sicherungskomponente für den Sicherungsvorgang angegeben.  
@@ -59,9 +62,9 @@ ms.lasthandoff: 08/03/2017
  **Sicherungstyp**  
  Wählen Sie den Sicherungstyp aus, der für die angegebene Datenbank ausgeführt werden soll.  
   
-|Sicherungstyp|Verfügbar für|Einschränkungen|  
+|Sicherungstyp|Verfügbar für|Restrictions|  
 |-----------------|-------------------|------------------|  
-|Full|Datenbanken, Dateien und Dateigruppen|Bei der **master** -Datenbank sind nur vollständige Sicherungen möglich.<br /><br /> Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
+|Vollständig|Datenbanken, Dateien und Dateigruppen|Bei der **master** -Datenbank sind nur vollständige Sicherungen möglich.<br /><br /> Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
 |Differenziell|Datenbanken, Dateien und Dateigruppen|Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
 |Transaktionsprotokoll|Transaktionsprotokolle|Transaktionsprotokollsicherungen sind beim einfachen Wiederherstellungsmodell nicht verfügbar.|  
   
@@ -93,13 +96,13 @@ ms.lasthandoff: 08/03/2017
 |||  
 |-|-|  
 |**Datenträger**|Sicherung auf einem Datenträger. Hierbei kann es sich um eine Systemdatei oder ein datenträgerbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Datenträger werden in der Liste **Sichern auf** angezeigt. Sie können bis zu 64 Datenträger für den Sicherungsvorgang auswählen.|  
-|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
+|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**URL**|Sicherung im Microsoft Azure-BLOB-Speicher|  
   
  Welche Optionen als Nächstes angezeigt werden, ist abhängig vom Typ des ausgewählten Ziels. Wenn Sie einen Datenträger oder ein Band auswählen, werden die folgenden Optionen angezeigt:  
   
  **Hinzufügen**  
- Fügt der Liste **Sichern auf** eine Datei oder ein Medium hinzu. Sie können auf 64 Medien gleichzeitig auf einem lokalen Datenträger oder Remotedatenträger sichern. Verwenden Sie den vollqualifizierten UNC-Namen (Universal Naming Convention), um eine Datei auf einem Remotedatenträger anzugeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Fügt der Liste **Sichern auf** eine Datei oder ein Medium hinzu. Sie können auf 64 Medien gleichzeitig auf einem lokalen Datenträger oder Remotedatenträger sichern. Verwenden Sie den vollqualifizierten UNC-Namen (Universal Naming Convention), um eine Datei auf einem Remotedatenträger anzugeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.  
  
  
   
@@ -134,7 +137,7 @@ Wenn Sie eine **URL** als Sicherungsziel ausgewählt haben, werden die folgenden
   **Neuer Container:**  
 Wird verwendet, um einen vorhandenen Container zu registrieren, für den Sie keine SAS besitzen.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung zu einem Microsoft Azure-Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -142,4 +145,3 @@ Wird verwendet, um einen vorhandenen Container zu registrieren, für den Sie kei
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

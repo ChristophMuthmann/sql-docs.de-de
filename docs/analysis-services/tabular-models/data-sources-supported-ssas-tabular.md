@@ -1,37 +1,35 @@
 ---
 title: "In tabellarischen Modellen von SQL Server Analysis Services unterstützte Datenquellen | Microsoft Docs"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: 2d716dc332ec8271a11498b6385d4801b64b808a
-ms.contentlocale: de-de
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>In tabellarischen Modellen unterstützte Datenquellen
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Azure Analysis Services, finden Sie unter [in Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]   
-Azure Analysis Services, finden Sie unter [in Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-datasource).
-
-  In diesem Thema werden die Datenquellentypen beschrieben, die mit tabellarischen Modellen verwendet werden können.  
+  Dieser Artikel beschreibt die Typen von Datenquellen, die mit tabellarischen Modellen verwendet werden können.  
   
-##  <a name="bkmk_supported_ds"></a>Unterstützte Datenquellen für tabellarische Modelle im Arbeitsspeicher  
+##  <a name="bkmk_supported_ds"></a> Unterstützte Datenquellen für tabellarische Modelle im Arbeitsspeicher  
 Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]werden die für die einzelnen Datenquellen aufgelisteten Anbieter nicht von Setup installiert. Einige Anbieter wurden möglicherweise mit anderen Anwendungen auf Ihrem Computer installiert werden. In anderen Fällen müssen Sie möglicherweise herunterladen und Installieren des Anbieters.  
   
 |||||  
@@ -49,7 +47,7 @@ Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstud
 |Microsoft Excel-Dateien|Excel 2010 und höher|.xlsx, xlsm, .xlsb, .xltx, .xltm|ACE 14 OLE DB-Anbieter|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe|Microsoft SQL Server 2008 und höher Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (wird nur für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen verwendet, die in SharePoint-Farmen veröffentlicht werden, in denen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert ist)|  
 |Analysis Services-Cube|Microsoft SQL Server 2008 und höher Analysis Services|(–)|ASOLEDB 10|  
-|Datenfeeds<br /><br /> (wird verwendet, um Daten aus Reporting Services-Berichten, Atom-Dienstdokumenten, Microsoft Azure Marketplace DataMarket und einem einzelnen Datenfeed zu importieren)|Atom 1.0-Format<br /><br /> Sämtliche Datenbanken oder Dokumente, die als Windows Communication Foundation (WCF) Data Service (früher ADO.NET Data Services) verfügbar gemacht werden.|`.atomsvc`für ein dienstdokument definiert, das einen oder mehrere feeds<br /><br /> ".atom" für ein Atom-Webfeeddokument|Microsoft-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Datenfeeds<br /><br /> (wird verwendet, um Daten aus Reporting Services-Berichten, Atom-Dienstdokumenten, Microsoft Azure Marketplace DataMarket und einem einzelnen Datenfeed zu importieren)|Atom 1.0-Format<br /><br /> Sämtliche Datenbanken oder Dokumente, die als Windows Communication Foundation (WCF) Data Service (früher ADO.NET Data Services) verfügbar gemacht werden.|`.atomsvc` für ein dienstdokument definiert, das einen oder mehrere feeds<br /><br /> ".atom" für ein Atom-Webfeeddokument|Microsoft-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office Database Connection-Dateien||ODC||  
   
   
@@ -75,4 +73,3 @@ Sie können auch Zeit sparen, indem Sie mehrere Tabellen importieren und dann di
 Spalten, die ähnliche Daten in anderen Datenquellen enthalten, bilden die Basis bei der Erstellung von Beziehungen innerhalb des Modell-Designers. Wenn Sie heterogene Datenquellen verwenden, wählen Sie Tabellen mit Spalten aus, die Tabellen in anderen Datenquellen zugeordnet werden können, die identische oder ähnliche Daten enthalten.  
   
 OLE DB-Anbieter können in einigen Fällen bessere Leistung für umfangreiche Datenmengen anbieten. Bei der Auswahl zwischen unterschiedlichen Anbietern für die gleiche Datenquelle sollten Sie zuerst den OLE DB-Anbieter wählen.  
-

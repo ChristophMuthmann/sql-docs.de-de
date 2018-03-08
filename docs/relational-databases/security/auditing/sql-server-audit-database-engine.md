@@ -2,32 +2,33 @@
 title: SQL Server Audit (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- audit
+f1_keywords: audit
 helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 58
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "58"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
   
@@ -218,5 +219,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server-Überwachungsdatensätze](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
-
 

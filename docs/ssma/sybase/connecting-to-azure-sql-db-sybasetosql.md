@@ -3,27 +3,28 @@ title: Herstellen einer Verbindung mit Azure SQL-Datenbank (SybaseToSQL) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 74be54cbdac01197d4756ae1f30b6285e8c2fa90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 217492904d3d21818fed28222dcc6acaf193c92b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (SybaseToSQL)
 Zum Migrieren von Sybase-Datenbanken in Azure SQL-Datenbank müssen Sie mit der Zielinstanz von Azure SQL-Datenbank verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von Azure SQL-Datenbank ab und Datenbankmetadaten in der Azure SQL-DB-Metadaten-Explorer angezeigt. SSMA speichert Informationen der Instanz von Azure SQL-Datenbank, Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  
@@ -95,4 +96,3 @@ Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

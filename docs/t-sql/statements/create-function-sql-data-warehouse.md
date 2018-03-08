@@ -3,8 +3,11 @@ title: CREATE-Funktion (SQL Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-caps.latest.revision: 14
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55f1b7e612a1c7d120e06078b0fdba45d6409d36
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-function-sql-data-warehouse"></a>CREATE-Funktion (SQL Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Eine benutzerdefinierte Funktion ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Routine, die Parameter annehmen, eine Aktion, z. B. eine komplexe Berechnung, und gibt das Ergebnis dieser Aktion als Wert zurück. Der Rückgabewert muss einen skalaren (Einzelwert). Verwenden Sie diese Anweisung zum Erstellen einer wiederverwendbaren Routine, die auf folgende Weise verwendet werden kann:  
   
@@ -72,13 +74,13 @@ RETURNS return_data_type
  *schema_name*  
  Der Name des Schemas, zu dem die benutzerdefinierte Funktion gehört.  
   
- *Funktionsname*  
+ *function_name*  
  Der Name der benutzerdefinierten Funktion. Funktionsnamen müssen den Regeln für Bezeichner entsprechen und innerhalb der Datenbank und für jedes Schema eindeutig sein.  
   
 > [!NOTE]  
 >  Auf den Funktionsnamen müssen Klammern folgen, selbst wenn kein Parameter angegeben ist.  
   
- @*Parametername*  
+ @*parameter_name*  
  Ein Parameter in der benutzerdefinierten Funktion. Ein oder mehrere Parameter können deklariert werden.  
   
  Eine Funktion kann maximal 2.100 Parameter haben. Der Benutzer muss beim Ausführen einer Funktion den Wert jedes deklarierten Parameters angeben (sofern kein Standardwert für den betreffenden Parameter definiert ist).  
@@ -91,7 +93,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  Ist der Datentyp des Parameters an. Für [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, die alle skalaren Datentypen, die in unterstützt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sind zulässig. Der Datentyp Timestamp (Rowversion) ist kein unterstützter Typ.  
   
- [=*Standard* ]  
+ [ =*default* ]  
  Ein Standardwert für den Parameter. Wenn eine *Standardwert* Wert definiert ist, kann die Funktion ausgeführt werden, ohne einen Wert für diesen Parameter anzugeben.  
   
  Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert abzurufen. In diesem Punkt gibt es einen Unterschied zum Verwenden von Parametern in einer gespeicherten Prozedur. Fehlt im Aufruf einer gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet.  
@@ -104,10 +106,10 @@ RETURNS return_data_type
   
  In Skalarfunktionen *Function_body* ist eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die einen skalaren Wert ergeben.  
   
- *"scalar_expression"*  
+ *scalar_expression*  
  Gibt den skalaren Wert an, den die Skalarfunktion zurückgibt.  
   
- **\<Function_option >:: =** 
+ **\<function_option>::=** 
   
  Gibt an, dass die Funktion mindestens über eine der folgenden Optionen verfügen wird.  
   
@@ -171,7 +173,7 @@ GO
   
  [Sys.Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : Zeigt Informationen zu den in benutzerdefinierten Funktionen definierten Parametern.  
   
- [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Zeigt die zugrunde liegenden Objekte, die auf eine Funktion verweist.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Displays the underlying objects referenced by a function.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Funktion erstellt wird.  
@@ -200,6 +202,5 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
  [DROP-Funktion (SQLServer PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
-
 
 

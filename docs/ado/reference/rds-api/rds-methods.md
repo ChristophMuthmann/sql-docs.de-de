@@ -1,29 +1,30 @@
 ---
 title: RDS-Methoden | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5b2f4f52ffde70ad0d045acf5228045ad3baf84c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623b1f814d23ab8a23e87634ba1fe16b647907d0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-methods"></a>RDS-Methoden
 > [!IMPORTANT]
@@ -42,10 +43,9 @@ ms.lasthandoff: 09/09/2017
 |[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen **Recordset** Objekt.|  
 |[Abfrage (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Eine gültige SQL-Abfragezeichenfolge zurückzugebenden verwendet eine **Recordset**.|  
 |[Aktualisieren (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Fragt die Datenquelle angegeben, der **verbinden** Eigenschaft und aktualisiert die Ergebnisse der Abfrage.|  
-|[Zurücksetzen (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Führt Sie der Sortier- oder Filtereigenschaften für eine clientseitige **Recordset**basierend auf den angegebenen Eigenschaften der sortieren und filtern.|  
+|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Führt Sie der Sortier- oder Filtereigenschaften für eine clientseitige **Recordset**basierend auf den angegebenen Eigenschaften der sortieren und filtern.|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Ausstehende Änderungen von der lokal zwischengespeicherten und aktualisierbare übermittelt **Recordset** mit der Datenquelle angegeben, der **verbinden** Eigenschaft.|  
 |[Synchronize-Methode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungszeichenfolge (zur Verwendung mit ADO 2.5 und höher) angegeben.|  
 |[Synchronize21-Methode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset, mit der Datenbank, die durch die Verbindungszeichenfolge (zur Verwendung mit ADO 2.1) angegeben.|
-
 
 

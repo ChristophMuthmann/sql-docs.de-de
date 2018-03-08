@@ -3,7 +3,7 @@ title: Spalte-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Column object [ADOX], members
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ac816520bd62856ddc00d7c065baeb9cc222670c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad684cebbf2cca74856fb6c06ae1718dceac1444
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="column-object-properties-methods-and-events"></a>Spalte-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-

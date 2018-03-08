@@ -1,11 +1,13 @@
 ---
 title: Problembehandlung in PolyBase | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 8/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -16,29 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: de-de
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-troubleshooting"></a>Problembehandlung in PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  Verwenden Sie die in diesem Thema vorgestellten Methoden, um in PolyBase eine Problembehandlung durchzuführen.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Verwenden Sie die in diesem Thema vorgestellten Methoden, um in PolyBase eine Problembehandlung durchzuführen.  
   
 ## <a name="catalog-views"></a>Katalogsichten  
  Verwenden Sie die hier aufgelisteten Katalogsichten, um PolyBase-Vorgänge zu verwalten.  
   
 |||  
 |-|-|  
-|Sicht|Description|  
+|Anzeigen|Description|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifiziert externe Tabellen.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifiziert externe Datenquellen.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifiziert externe Dateiformate.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 10/12/2017
   
      Notieren Sie die Ausführungs-ID der am längsten ausgeführten Abfrage.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -90,7 +90,7 @@ ms.lasthandoff: 10/12/2017
   
     -   DMS: impliziert einen Vorgang des PolyBase-Datenverschiebungsdiensts. Fahren Sie mit Schritt 3b fort.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -106,7 +106,7 @@ ms.lasthandoff: 10/12/2017
   
          Verwenden Sie die in den vorherigen Schritten notierte Ausführungs-ID und den Schrittindex. Verwenden Sie die in den vorherigen Schritten notierte Ausführungs-ID und den Schrittindex.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -119,7 +119,7 @@ ms.lasthandoff: 10/12/2017
   
          Verwenden Sie die in den vorherigen Schritten notierte Ausführungs-ID und den Schrittindex.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -133,7 +133,7 @@ ms.lasthandoff: 10/12/2017
   
      Verwenden Sie die in den vorherigen Schritten notierte Ausführungs-ID und den Schrittindex.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   
@@ -247,4 +247,3 @@ Wie Sie Fehler in externen Tabellen beheben, erfahren Sie in diesem Blog von Mur
 
 ## <a name="see-also"></a>Siehe auch
 [Troubleshoot PolyBase Kerberos connectivity (Problembehandlung: PolyBase-Kerberos-Konnektivität)](polybase-troubleshoot-connectivity.md)
-

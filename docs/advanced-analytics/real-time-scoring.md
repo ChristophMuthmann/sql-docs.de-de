@@ -1,27 +1,28 @@
 ---
 title: Bewerten von Realtime | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-
 # <a name="realtime-scoring"></a>Echtzeit-Bewertung
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, ein Feature in SQL Server 2016 und SQL Server-2017, der Machine Learning-Modellen in beinahe in Echtzeit unterstützt Bewertung verfügbar.
 
@@ -54,56 +55,56 @@ Ein Beispiel für RxPredict wie kann für die Bewertung verwendet, finden Sie un
 
 Echtzeit-Bewertung wird auf diesen Plattformen unterstützt:
 
-+ SQL Server 2017 Machine Learning Services (einschließlich Microsoft R Server 9.1.0)
++ SQL Server 2017-Machine Learning-Dienste
 + SQL Server R Services 2016 mit einer Aktualisierung der R-Services-Instanz für Microsoft R Server 9.1.0 oder höher
-+ Microsoft-Machine Learning-Server (eigenständig)
++ Machine Learning-Server (eigenständig)
 
 Auf SQL Server müssen Sie die Funktion im Voraus Bewertung Echtzeit aktivieren. Dies ist, da die Funktion, die Installation der CLR-basierten Bibliotheken in SQL Server erfordert.
 
-Informationen zu Echtzeit Bewertung in einer verteilten Umgebung basierend auf Microsoft R Server finden Sie auf der [PublishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) Funktion zur Verfügung, in der [MrsDeploy Paket](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), welche unterstützt Veröffentlichen von Modellen in Echtzeit Bewertung als neue einen Webdienst, der auf R-Server ausgeführt wird.
+Informationen zu Echtzeit Bewertung in einer verteilten Umgebung basierend auf Microsoft R Server finden Sie auf der [PublishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) Funktion zur Verfügung, in der [MrsDeploy Paket](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), welche unterstützt Veröffentlichen von Modellen in Echtzeit Bewertung als neue einen Webdienst, der auf R-Server ausgeführt wird.
 
 ### <a name="restrictions"></a>Einschränkungen
 
-+ Das Modell muss im voraus mit einer der unterstützten trainiert **Rx** Algorithmen. Weitere Informationen finden Sie unter [Algorithmen unterstützt](#bkmk_rt_supported_algos). Echtzeit-batchbewertung mit Sp_rxPredict unterstützt "revoscaler" und MicrosoftML Algorithmen.
++ Das Modell muss im voraus mit einer der unterstützten trainiert **Rx** Algorithmen. Weitere Informationen finden Sie unter [Algorithmen unterstützt](#bkmk_rt_supported_algos). Echtzeit-batchbewertung mit `sp_rxPredict` "revoscaler" und MicrosoftML Algorithmen unterstützt.
 
-+ Das Modell muss gespeichert werden, mithilfe der neuen Serialisierungsfunktion, die in Microsoft R Server 9.1.0 bereitgestellt. Die Serialisierungsmethode wurde optimiert, um schnelle Bewertung unterstützen.
++ Das Modell muss gespeichert werden, mit den neuen Serialisierungsfunktionen: [RxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) für R, und [Rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) für Python. Diese Serialisierungsfunktionen wurden zur Unterstützung von schnellen Bewertung optimiert.
 
-+ Echtzeit-Bewertung wird ein R-Interpreter nicht verwendet werden. Daher wird keine Funktionen, die R-Interpreter möglicherweise während des Schritts bewerteten nicht unterstützt.  Hierzu gehören zum Beispiel:
++ Echtzeit-Bewertung wird ein Interpreter Interpreter nicht verwendet werden. solche Funktionen verwendet werden, die möglicherweise ein Interpreter wird deshalb nicht während des Schritts bewerteten unterstützt.  Hierzu gehören zum Beispiel:
 
   + Modelle mit der `rxGlm` oder `rxNaiveBayes` Algorithmen werden derzeit nicht unterstützt.
 
   + "Revoscaler"-Modelle, verwenden ein R-Transformationsfunktion oder eine Formel, die eine Transformation enthält, z. B. <code>A ~ log(B)</code> werden in Echtzeit Bewertung nicht unterstützt. Ein Modell für diesen Typ verwenden, empfiehlt es sich, dass das Ausführen der Transformations für die Eingabe von Daten vor der Übergabe an die Echtzeit-Bewertung.
 
-+ Echtzeit-Bewertung ist zurzeit für schnelle Vorhersagen in kleinere Datasets, die im Bereich von ein paar Zeilen bis Hunderte von tausend Zeilen optimiert. Für sehr große Datasets kann die Bewertung in R über RxPredict schneller sein.
++ Echtzeit-Bewertung ist zurzeit für schnelle Vorhersagen in kleinere Datasets, die im Bereich von ein paar Zeilen bis Hunderte von tausend Zeilen optimiert. In sehr großen Datasets können mit [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) möglicherweise schneller.
 
 ### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-realtime-scoring"></a><a name="bkmk_rt_supported_algos">Algorithmen, die Echtzeit-Bewertung unterstützen
 
 + "Revoscaler"-Modelle
 
-  + [RxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)\*
-  + [RxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)\*
-  + [RxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)\*
-  + [der RxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)\*
-  + [RxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   Modelle mit markierten \* unterstützen auch die systemeigenen batchbewertung mit der PREDICT-Funktion.
 
-+ MicrosoftML Modelle
++ MicrosoftML models
 
-  + [rxFastTrees](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + Transformationen von MicrosoftML bereitgestellten
 
-  + [featurizeText](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/r-server/r-reference/microsoftml/concat)
-  + ["categorical"](https://docs.microsoft.com/r-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>Nicht unterstützte Modelltypen
 
@@ -122,4 +123,3 @@ Die folgenden Modelltypen werden nicht unterstützt:
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Wie Sie Echtzeit-Bewertung](r/how-to-do-realtime-scoring.md)
-

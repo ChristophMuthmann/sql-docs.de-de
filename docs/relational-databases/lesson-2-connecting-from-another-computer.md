@@ -2,9 +2,12 @@
 title: 'Lektion 2: Herstellen einer Verbindung von einem anderen Computer | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,18 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express und Evaluation Edition von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
   
 Diese Lektion enthält die folgenden Aufgaben:  
@@ -128,7 +132,7 @@ Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst 
   
 2.  Bestätigen Sie im Dialogfeld **Verbindung mit Server herstellen** in der Liste **Servertyp** die Option **Datenbankmodul** .  
   
-3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher **tcp:***<Computername>* ein. Geben Sie in unserem Beispiel für eine benannte Instanz **tcp:***<Computername>***,49172** ein.  
+3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher Folgendes ein: **tcp:***<Computername>*. In unserem Beispiel für eine benannte Instanz geben Sie Folgendes ein: **tcp:***<Computername>***,49172**.  
   
     > [!NOTE]  
     > Wenn Sie **tcp:** nicht im Feld **Servername** eingeben, testet der Client alle aktivierten Protokolle in der Reihenfolge, die in der Clientkonfiguration festgelegt ist.  
@@ -145,5 +149,4 @@ Diese Ausführungen beenden das kurze Lernprogramm zur Konnektivität.
 ## <a name="return-to-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme  
 [Lernprogramm: Erste Schritte mit dem Datenbankmodul](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
-
 

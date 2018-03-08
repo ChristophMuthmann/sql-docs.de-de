@@ -2,33 +2,33 @@
 title: Erstellen von Analysis Services-Projekten (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30763929d7f46a24b25d48967548274f694f1f87
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Erstellen von Analysis Services-Projekten (SSDT)
-  Sie können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf ähnliche Weise wie ein beliebiges Programmierungsprojekt in Visual Studio erstellen. Beim Erstellen eines Projekts wird eine Gruppe von XML-Dateien im Ausgabeverzeichnis erstellt. Diese XML-Dateien verwenden ASSL (Analysis Services Scripting Language). Hierbei handelt es sich um den XML-Dialekt, den die Clientanwendungen, einschließlich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , zum Kommunizieren mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwenden, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte zu erstellen oder zu ändern. Diese XML-Dateien werden zum Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objektdefinitionen in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf einer angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf ähnliche Weise wie ein beliebiges Programmierungsprojekt in Visual Studio erstellen. Beim Erstellen eines Projekts wird eine Gruppe von XML-Dateien im Ausgabeverzeichnis erstellt. Diese XML-Dateien verwenden ASSL (Analysis Services Scripting Language). Hierbei handelt es sich um den XML-Dialekt, den die Clientanwendungen, einschließlich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , zum Kommunizieren mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwenden, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte zu erstellen oder zu ändern. Diese XML-Dateien werden zum Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objektdefinitionen in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf einer angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwendet.  
   
 ## <a name="building-a-project"></a>Erstellen eines Projekts  
  Beim Erstellen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] im Ausgabeordner eine vollständige Gruppe von XML-Dateien mit allen notwendigen ASSL-Befehlen erstellt, die zum Erstellen aller [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankobjekte im Projekt erforderlich sind. Wenn das Projekt zuvor erstellt und für die aktive Konfiguration die inkrementelle Bereitstellung angegeben wurde, dann wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] außerdem eine XML-Datei mit ASSL-Befehlen zum Ausführen eines inkrementellen Updates für die bereitgestellten Objekte erstellt. Diese XML-Datei wird in den Projektordner \\..\obj\<Aktive Konfiguration>\> geschrieben. Durch inkrementelle Builds können Sie beim Bereitstellen und Verarbeiten eines sehr umfangreichen Projekts oder einer sehr großen Datenbank Zeit sparen.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/01/2017
   
 |Dateien (im Ordner obj)|Description|  
 |-----------------------------|-----------------|  
-|\<Konfigurationsname > \LastBuilt.xml|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
+|\<Configuration Name>\LastBuilt.xml|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
   
  Diese XML-Dateien enthalten keine \<erstellen > und \<Alter >-Tags, die während der Bereitstellung erstellt werden.  
   
@@ -66,7 +66,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language &#40;ASSL für XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Bereitstellen von Analysis Services-Projekten &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   
-

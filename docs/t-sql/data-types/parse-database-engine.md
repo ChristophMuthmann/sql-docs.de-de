@@ -3,8 +3,11 @@ title: Parse (Datenbankmodul) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - Parse [Database Engine]
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
-caps.latest.revision: 17
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 027940c7575f3c7901cd8668879064ff375d9986
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e80c29d1a13e0b77792ec6d3533d4d80cf355b40
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="parse-database-engine"></a>Parse (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Parse konvertiert die kanonische Zeichenfolgendarstellung einer **Hierarchyid** zu einem **Hierarchyid** Wert. Analyse wird implizit aufgerufen, wenn eine Konvertierung von einem Zeichenfolgentyp in **Hierarchyid** auftritt. Dient als Gegenstück des [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() ist eine statische Methode.
   
@@ -100,4 +102,3 @@ SqlHierarchyId.Parse(input);
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
   
   
-

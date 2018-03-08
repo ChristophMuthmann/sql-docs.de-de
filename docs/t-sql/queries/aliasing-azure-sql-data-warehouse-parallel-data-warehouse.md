@@ -1,29 +1,31 @@
 ---
-title: Aliasing (Azure SQL Datawarehouse, Parallel Datawarehouse) | Microsoft Docs
+title: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
-caps.latest.revision: 11
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: edc81ce4377f490b482d920871ad361c98f961c5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 65d5799c33afabe8ebbdb212c13661699b9fea9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Aliasing (Azure SQL Datawarehouse, Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Aliasing ermöglicht es, den temporären Ersatz einer kurz und leicht zu merkenden Zeichenfolge anstelle eines Tabellen- oder Spaltennamens Verzeichnisnamens [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] Abfragen. Tabellenaliase werden häufig in JOIN-Abfragen verwendet werden, da die JOIN-Syntax vollqualifizierten Objektnamen erforderlich ist, wenn Sie auf Spalten verweisen.  
   
@@ -42,7 +44,7 @@ object_source [ AS ] alias
  AS  
  Ein optionaler Alias Präposition. Bei der Arbeit mit Variablen Aliasing Bereich ist das AS-Schlüsselwort nicht zulässig.  
   
- *Alias*  
+ *alias*  
  Der Name der gewünschten temporären Verweis für die Tabelle oder Spalte. Alle gültigen Objektnamen ein kann verwendet werden. Weitere Informationen finden Sie unter "Benennungsregeln für Objekt" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -81,8 +83,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
 ## <a name="see-also"></a>Siehe auch  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-

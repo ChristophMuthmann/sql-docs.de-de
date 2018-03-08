@@ -3,30 +3,31 @@ title: "SQL Server Management Studio-Hilfemenü | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - SQL Server Management Studio Help [SQL Server], menu items
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f1a8a62081f11a1475f73505d5963616c663621f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio-Hilfemenü
-Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in der Menüleiste von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]verfügbar sind.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in der Menüleiste von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] verfügbar sind.  
   
 [Informationen zu SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   
@@ -52,4 +53,3 @@ Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in 
   
 [Dialogfeld Fenster &#40;Hilfe von Microsoft Document Explorer&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   
-

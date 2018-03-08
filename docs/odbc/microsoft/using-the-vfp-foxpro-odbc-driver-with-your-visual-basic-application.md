@@ -3,10 +3,12 @@ title: Verwenden Sie den VFP FoxPro ODBC-Treiber mit Visual Basic-Anwendung | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 266577d54e579956fcc2435283a9835c19f9ef36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Verwenden des VFP FoxPro ODBC-Treibers mit Visual Basic-Anwendung
 Ihr Microsoft® Visual Basic®-Anwendung kann kommunizieren mit Visual FoxPro-Daten erstellen ein Steuerelement, das mit einer Visual FoxPro-Datenquelle eine Verbindung herstellt.  
@@ -71,4 +72,3 @@ Ihr Microsoft® Visual Basic®-Anwendung kann kommunizieren mit Visual FoxPro-Da
     ```  
   
 8.  Führen Sie das Formular, und verwenden Sie das Steuerelement über die Kunden-Id-Felder aus der Visual FoxPro-TasTrade-Beispieldatenbank zu überspringen.
-

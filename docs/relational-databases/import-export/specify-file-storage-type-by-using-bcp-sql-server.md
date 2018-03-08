@@ -2,9 +2,12 @@
 title: Angeben des Dateispeichertyps mithilfe von bcp (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -16,19 +19,20 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc454960a271c4fdfeb5e04337b2fb8ab1790127
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Angeben des Dateispeichertyps mithilfe von bcp (SQL Server)
-  Der *Dateispeichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format), als Zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, bei dem die implizite Konvertierung unterstützt wird, exportiert werden. Beispielsweise kann ein **smallint** als ein **int**kopiert werden. Benutzerdefinierte Datentypen werden als Basistypen exportiert.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Der *Dateispeichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format), als Zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, bei dem die implizite Konvertierung unterstützt wird, exportiert werden. Beispielsweise kann ein **smallint** als ein **int**kopiert werden. Benutzerdefinierte Datentypen werden als Basistypen exportiert.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Die bcp-Eingabeaufforderung für den Dateispeichertyp  
  Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w**oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe des Dateispeichertyps für jedes Datenfeld auf:  
@@ -49,11 +53,11 @@ ms.lasthandoff: 07/31/2017
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text***\*|**T**[**ext**]|  
+    |**Text***\*|**T**[**ext**]|  
     |**ntext2**|**W**|  
     |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |**image***\*|**I**[**mage**]|  
+    |**Image***\*|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**Uhrzeit**|**te**|  
@@ -90,11 +94,11 @@ ms.lasthandoff: 07/31/2017
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text***\*|SQLCHAR|  
-|**ntext***\*|SQLNCHAR|  
+|**Text***\*|SQLCHAR|  
+|**NText***\*|SQLNCHAR|  
 |**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**image***\*|SQLBINARY|  
+|**Image***\*|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  
@@ -129,7 +133,7 @@ ms.lasthandoff: 07/31/2017
     > [!NOTE]  
     >  Nachdem Sie interaktiv alle Felder in einem **bcp**-Befehl angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

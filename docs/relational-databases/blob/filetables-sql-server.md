@@ -2,9 +2,12 @@
 title: FileTables (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0702c1621fb3f37ef61e5fcd2df66fa9a7019cf7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
-  Die FileTable-Funktion bietet für die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherten Dateidaten Unterstützung für den Windows-Dateinamespace und die Kompatibilität mit Windows-Anwendungen. Mit FileTable können das Speichersystem und die Datenverwaltungskomponenten einer Anwendung integriert werden. Zudem werden integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste (z. B. Volltextsuche und semantische Suche) über unstrukturierte Daten und Metadaten bereitgestellt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Die FileTable-Funktion bietet für die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherten Dateidaten Unterstützung für den Windows-Dateinamespace und die Kompatibilität mit Windows-Anwendungen. Mit FileTable können das Speichersystem und die Datenverwaltungskomponenten einer Anwendung integriert werden. Zudem werden integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste (z. B. Volltextsuche und semantische Suche) über unstrukturierte Daten und Metadaten bereitgestellt.  
   
  So können Sie Dateien und Dokumente in besonderen Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichern, die als FileTables bezeichnet werden, und auf diese über Windows-Anwendungen zugreifen, so als ob sie im Dateisystem gespeichert wären, ohne Clientanwendungen ändern zu müssen.  
   
@@ -63,9 +66,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Jede Zeile enthält die im Folgenden aufgeführten Elemente. Weitere Informationen zum Schema einer FileTable finden Sie unter [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
   
-    -   Eine**file_stream** -Spalte für Datenstromdaten und ein **stream_id** -Bezeichner (GUID). (Die **file_stream** -Spalte für ein Verzeichnis ist NULL.)  
+    -   Eine **file_stream**-Spalte für Datenstromdaten und ein **stream_id**-Bezeichner (GUID). (Die **file_stream** -Spalte für ein Verzeichnis ist NULL.)  
   
-    -   Sowohl die **path_locator** -Spalte als auch die **parent_path_locator** -Spalte zur Darstellung und Verwaltung der Datei- und Verzeichnishierarchie.  
+    -   Sowohl die **path_locator**-Spalte als auch die **parent_path_locator**-Spalte zur Darstellung und Verwaltung der aktuellen Elementhierarchie (Datei oder Verzeichnis) und Verzeichnishierarchie.  
   
     -   10 Dateiattribute, z. B. Erstellungsdatum und Änderungsdatum, die von Datei-E/A-APIs benötigt werden.  
   
@@ -115,7 +118,7 @@ ms.lasthandoff: 06/22/2017
  [Laden von Dateien in FileTables](../../relational-databases/blob/load-files-into-filetables.md)  
  Beschreibt, wie Dateien in FileTables geladen und migriert werden.  
   
- [Arbeiten mit Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Verwenden von Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
  Beschreibt die Verzeichnisstruktur, mit der die Dateien in FileTables gespeichert werden.  
   
  [Zugreifen auf FileTables mit Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)  
@@ -138,4 +141,3 @@ ms.lasthandoff: 06/22/2017
  Listet die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekte auf, die zur Unterstützung der FileTable-Funktion hinzugefügt oder geändert wurden.  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,20 +35,19 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS zeigt die aktuelle Abfrageoptimierungsstatistik für eine Tabelle oder eine indizierte Sicht an. Der Abfrageoptimierer verwendet Statistiken, um die Kardinalität oder Anzahl der Zeilen im Abfrageergebnis zu schätzen. Hierdurch wird es dem Abfrageoptimierer ermöglicht, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um im Abfrageplan statt des Index Scan-Operators den Index Seek-Operator auszuwählen und so die Abfrageleistung zu verbessern, indem ein ressourcenintensiver Indexscan vermieden wird.
   
@@ -90,7 +92,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAMM | STATS_STREAM [ **,**  *n*  ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
  Wenn mindestens eine dieser Optionen angegeben wird, schränkt dies die Resultsets ein, die von der Anweisung an die angegebene Option oder die angegebenen Optionen zurückgegeben werden. Wenn keine Optionen angegeben sind, werden alle Statistikinformationen zurückgegeben.  
   
  STATS_STREAM entspricht [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
@@ -101,7 +103,7 @@ In der folgenden Tabelle werden die Spalten beschrieben, die im Resultset zurüc
 |Spaltenname|Description|  
 |-----------------|-----------------|  
 |Name|Name des Statistikobjekts.|  
-|Updated|Datum und Uhrzeit des letzten Updates der Statistik. Die [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) Funktion ist eine alternative Möglichkeit zum Abrufen dieser Informationen.|  
+|Updated|Datum und Uhrzeit des letzten Updates der Statistik. Die [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) Funktion ist eine alternative Möglichkeit zum Abrufen dieser Informationen. Weitere Informationen finden Sie unter der ["Hinweise"](#Remarks) Abschnitt auf dieser Seite.|  
 |Zeilen|Gesamtanzahl der Zeilen in der Tabelle oder indizierten Sicht zum Zeitpunkt des letzten Updates der Statistik. Wenn die Statistik gefiltert wird oder einem gefilterten Index entspricht, kann die Anzahl der Zeilen geringer als die Anzahl der Zeilen in der Tabelle sein. Weitere Informationen finden Sie unter[Statistiken](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Gesamtzahl der Zeilen, die für die statistischen Berechnungen in die Stichprobe aufgenommen wurden. Wenn Rows Sampled < Rows, sind das angezeigte Histogramm und die Dichteergebnisse Schätzungen auf Grundlage der als Stichprobe entnommenen Zeilen.|  
 |Schritte|Anzahl der Schritte im Histogramm. Jeder Schritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Die Histogrammschritte werden in der Statistik in der ersten Schlüsselspalte definiert. Die maximale Anzahl von Schritten ist 200.|  
@@ -130,9 +132,11 @@ Die folgende Tabelle beschreibt die Spalten, die im Resultset zurückgegeben wer
 |DISTINCT_RANGE_ROWS|Geschätzte Anzahl von Zeilen mit einem unterschiedlichen Spaltenwert innerhalb eines Histogrammschritts ohne den oberen Grenzwert.|  
 |AVG_RANGE_ROWS|Durchschnittliche Anzahl von Zeilen mit doppelten Spaltenwerten in einem Histogrammschritt ohne den oberen Grenzwert (RANGE_ROWS / DISTINCT_RANGE_ROWS für DISTINCT_RANGE_ROWS > 0).| 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="Remarks"></a> Hinweise 
+
+Statistiken Aktualisierungsdatum befindet sich in der [Statistik-Blob-Objekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) zusammen mit den [Histogramm](#histogram) und [dichtevektor](#density), nicht in den Metadaten. Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, das Datum ist nicht verfügbar, und die *aktualisiert* Spalte ist NULL. Dies ist der Fall für gefilterte Statistiken für die das Prädikat keine Zeilen zurückgibt, oder für neue, leere Tabellen.
   
-## <a name="histogram"></a>Histogramm  
+## <a name="histogram"></a> Histogramm  
 Ein Histogramm misst die Häufigkeit des Vorkommens für jeden unterschiedlichen Wert in einem Dataset. Der Abfrageoptimierer berechnet ein Histogramm für die Spaltenwerte in der ersten Schlüsselspalte des Statistikobjekts und wählt die Spaltenwerte aus, indem statistische Zeilenstichproben entnommen werden oder indem ein vollständiger Scan aller Zeilen in der Tabelle oder Sicht ausgeführt wird. Wenn das Histogramm anhand einer Gruppe von Zeilenstichproben erstellt wird, handelt es sich bei der gespeicherten Gesamtzahl von Zeilen und unterschiedlichen Werten um Schätzungen, die keine ganzen Zahlen sein müssen.
   
 Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, berechnet die Anzahl der Werte, die den einzelnen unterschiedlichen Spaltenwerten entsprechen, und aggregiert die Spaltenwerte dann in maximal 200 zusammenhängenden Histogrammschritten. Jeder Schritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Der Bereich enthält alle möglichen Spaltenwerte zwischen den Begrenzungswerten, ohne die Begrenzungswerte selbst. Der niedrigste der sortierten Spaltenwerte ist der obere Grenzwert für den ersten Histogrammschritt.
@@ -148,8 +152,8 @@ Für jeden Histogrammschritt gilt:
   
 Der Abfrageoptimierer definiert die Histogrammschritte gemäß ihrer statistischen Bedeutung. Dabei wird ein Algorithmus für die maximale Differenz verwendet, um die Anzahl der Schritte im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die maximale Anzahl von Schritten ist 200. Die Anzahl von Histogrammschritten kann geringer sein als die Anzahl unterschiedlicher Werte, auch bei Spalten mit weniger als 200 Grenzpunkten. Beispielsweise kann eine Spalte mit 100 unterschiedlichen Werten ein Histogramm mit weniger als 100 Grenzpunkten aufweisen.
   
-## <a name="density-vector"></a>Dichtevektor  
-Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfragen zu erweitern, die mehrere Spalten aus derselben Tabelle oder indizierten Sicht zurückgeben. Der Dichtevektor enthält eine Dichte für jedes Präfix von Spalten im Statistikobjekt. Wenn ein Statistikobjekt beispielsweise die Schlüsselspalten CustomerId, ItemId und Price enthält, wird die Dichte für jedes der folgenden Spaltenpräfixe berechnet:
+## <a name="density"></a> Dichtevektor  
+Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfragen zu erweitern, die mehrere Spalten aus derselben Tabelle oder indizierten Sicht zurückgeben. Der Dichtevektor enthält eine Dichte für jedes Präfix von Spalten im Statistikobjekt. Wenn ein Statistikobjekt beispielsweise die Schlüsselspalten `CustomerId`, `ItemId` und `Price` enthält, wird die Dichte für jedes der folgenden Spaltenpräfixe berechnet:
   
 |Spaltenpräfix|Dichte berechnet für|  
 |---|---|
@@ -163,7 +167,7 @@ Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfr
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 Zum Anzeigen des statistikobjekts muss der Benutzer Besitzer der Tabelle, oder der Benutzer muss ein Mitglied der `sysadmin` festen Serverrolle, die `db_owner` festen Datenbankrolle oder der `db_ddladmin` festen Datenbankrolle "".
   
-Durch SQL Server 2012 SP1 werden die Berechtigungseinschränkungen gelockert, sodass Benutzer mit SELECT-Berechtigung in der Lage sind, diesen Befehl auszuführen. Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreich mit SELECT-Berechtigung ausgeführt werden kann:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 werden die und ermöglicht es Benutzern mit SELECT-Berechtigung, um diesen Befehl verwenden. Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreich mit SELECT-Berechtigung ausgeführt werden kann:
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten im Statistikobjekt.  
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten in einer Filterbedingung (falls vorhanden).  
 -   Die Tabelle eine Sicherheitsrichtlinie auf Zeilenebene nicht möglich.  
@@ -185,7 +189,7 @@ DBCC SHOW_STATISTICS wird in externen Tabellen nicht unterstützt.
 ### <a name="a-returning-all-statistics-information"></a>A. Zurückgeben aller Statistikinformationen  
 Das folgende Beispiel zeigt alle Statistikinformationen für die `AK_Address_rowguid` Index, der die `Person.Address` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -193,7 +197,7 @@ GO
 ### <a name="b-specifying-the-histogram-option"></a>B. Angeben der HISTOGRAM-Option  
 Dies schränkt die Statistikinformationen für den Histogrammdaten für Customer_LastName angezeigt.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -202,7 +206,7 @@ GO
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Zeigt den Inhalt der eine Statistik-Objekt  
  Das folgende Beispiel zeigt den Inhalt der Customer_LastName Statistiken für die DimCustomer-Tabelle.  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   
@@ -220,11 +224,10 @@ Die Ergebnisse zeigen die Header, density_vector und Teil des Histogramms.
 [Statistik](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-[DROP STATISTICS &#40; Transact-SQL &#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
-[Sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
-[Sp_createstats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
-[STATS_DATE &#40; Transact-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
+[DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
+[sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
+[sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
+[STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-[Sys. dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
-[Sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
-
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

@@ -3,7 +3,7 @@ title: OriginalValue und OriginalValue Eigenschaften (VC++-Beispiel) | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 458d61ec4c0d35376b4d989a7a2974483abe591e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e73d970163aba564c6ed199a2024511db7579a89
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue und OriginalValue Eigenschaften (VC++-Beispiel)
 Dieses Beispiel zeigt die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [OriginalValue](../../../ado/reference/ado-api/underlyingvalue-property.md) Eigenschaften, die über eine Meldung angezeigt, wenn ein Datensatz Daten liegenden wurde geändert, während ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) BatchUpdate.  
@@ -230,5 +229,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [OriginalValue-Eigenschaft (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [OriginalValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)
-
+ [UnderlyingValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)

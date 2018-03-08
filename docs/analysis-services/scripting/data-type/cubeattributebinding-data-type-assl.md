@@ -2,40 +2,35 @@
 title: CubeAttributeBinding-Datentyp (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubeAttributeBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubeAttributeBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubeAttributeBinding
-helpviewer_keywords:
-- CubeAttributeBinding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubeAttributeBinding
+helpviewer_keywords: CubeAttributeBinding data type
 ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b3b36e62778ca36d4a9d361f324b3efe941205dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fdf785e1a7e59dec690c664f8b726f2c636399b3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cubeattributebinding-data-type-assl"></a>CubeAttributeBinding-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der die Bindung eines Attributs in einer Cubedimension zu entweder einer Aktions- oder einer Miningstrukturspalte darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen abgeleiteten Datentyp, der die Bindung eines Attributs in einer Cubedimension zu entweder einer Aktions- oder einer Miningstrukturspalte darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,16 +48,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[Bindung](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
-|Abgeleitete Datentypen|Keine|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md), [CubeID](../../../analysis-services/scripting/properties/cubeid-element-assl.md), [Ordnungszahl](../../../analysis-services/scripting/properties/ordinal-element-assl.md), [Typ](../../../analysis-services/scripting/properties/type-element-binding-assl.md)|  
 |Abgeleitete Elemente|Finden Sie unter [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

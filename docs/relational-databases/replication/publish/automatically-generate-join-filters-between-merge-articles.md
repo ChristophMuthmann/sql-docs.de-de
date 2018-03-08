@@ -2,30 +2,32 @@
 title: Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - automatic join filter generation
 - join filters
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 076775dfba28cf3857c8ae056c8c46d44a0ce630
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "38"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 3ad22d47f8673b81ce7cc8c8f2bda399f59f9b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln
-  Mithilfe des Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Zeilen filtern** können Sie eine Reihe von Joinfiltern automatisch generieren. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe des Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf der Seite **Zeilen filtern** können Sie eine Reihe von Joinfiltern automatisch generieren. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Wenn Sie nach dem Initialisieren von Abonnements für die Veröffentlichung automatisch eine Reihe von Joinfiltern im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** generieren, müssen Sie eine neue Momentaufnahme generieren und nach der Änderung alle Abonnements erneut initialisieren. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -69,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
      Nach der Analyse der Anweisung erstellt die Replikation die nötigen Joinfilter und zeigt sie auf der Seite **Tabellenzeilen filtern** oder der Seite **Zeilen filtern** im Bereich **Gefilterte Tabellen** an. Wenn Sie Filter im Assistenten für neue Veröffentlichung generieren und noch nicht den Verteiler für den Verleger konfiguriert haben, für den dieser Assistent ausgeführt wird, werden Sie zum Konfigurieren des Verteilers aufgefordert.  
   
-4.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** befinden, klicken Sie auf **OK**, um eine Speicherung vorzunehmen und das Dialogfeld zu schließen.  
+4.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>So ändern Sie einen automatisch generierten Filter  
   
@@ -83,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften –** Veröffentlichung> **auf der Seite \<Zeilen filtern** im Bereich **Gefilterte Tabellen** einen Filter aus, und klicken Sie dann auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

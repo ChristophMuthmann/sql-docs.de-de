@@ -3,8 +3,11 @@ title: Verwenden von PIVOT und UNPIVOT | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 413e4e89679358f0c53c82340dcae5640387ddcb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1feee91c251b5c1f326e8e69569186c049007d9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>VON - Verwenden von PIVOT und UNPIVOT
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sie können die `PIVOT` und `UNPIVOT` relationale Operatoren, um eine Tabellenwert-Ausdruck in einer anderen Tabelle zu ändern. `PIVOT`Aktivieren die eindeutigen Werte einer Spalte des Ausdrucks in mehrere Spalten in der Ausgabe dreht eine tabellenwertausdrucks, Aggregationen und führt, sind sie für verbliebene Spaltenwerte erforderlich, die in der endgültigen Ausgabe erwünscht sind. `UNPIVOT`Führt den entgegengesetzten Vorgang zu PIVOT er setzt Spalten eines tabellenwertausdrucks in Spaltenwerte zurück.  
   
@@ -210,8 +212,7 @@ VendorID    Employee    Orders
  Die `Sales.vSalesPersonSalesByFiscalYears` anzeigen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispiel Datenbank verwendet `PIVOT` um den Gesamtumsatz jedes Vertriebsmitarbeiters pro Geschäftsjahr zurückzugeben. Die Ansicht im Skript [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im **Objekt-Explorer**, suchen Sie die Sicht der **Ansichten** Ordner für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank. Mit der rechten Maustaste des Ansichtsnamens aus, und wählen Sie dann **Skriptansicht als**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AUS (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [Fall (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

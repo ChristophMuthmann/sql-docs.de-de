@@ -2,26 +2,27 @@
 title: "Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
 In diesem Tutorial fügen Sie einen Parameter zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu, sodass Leser des Berichts Berichtsdaten für einen Wert oder mehrere Werte filtern können. 
@@ -504,11 +505,10 @@ Wenn Sie einen einwertigen Parameter in einen mehrwertigen Parameter ändern mö
   
 Der Bericht wird auf dem Berichtsserver gespeichert. Der Berichtsserver, mit dem Sie verbunden sind, wird in der Statusleiste unten im Fenster angezeigt.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Damit ist die exemplarische Vorgehensweise zum Hinzufügen eines Parameters zum Bericht abgeschlossen. Weitere Informationen zu Parametern finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 * [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)
 * [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup-Funktion](../reporting-services/report-design/report-builder-functions-lookup-function.md)   
-

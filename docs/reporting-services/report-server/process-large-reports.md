@@ -1,13 +1,14 @@
 ---
-title: "Verarbeiten von große Berichten | Microsoft Docs"
+title: "Verarbeiten von großen Berichten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: 42
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "42"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 048397a9df14002d360512b64d1384a20d608906
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="process-large-reports"></a>Verarbeiten von großen Berichten
   Die Verarbeitung umfangreicher Berichte stellt eine Herausforderung dar und erfordert bestimmte Konfigurationseinstellungen, damit die Berichte ordnungsgemäß ausgeführt werden können. Sie sollten nur dann bedarfsgesteuert ausgeführt werden, wenn sie die Paginierung unterstützen.  
@@ -74,12 +74,11 @@ ms.lasthandoff: 08/09/2017
   
  Für eine Übermittlung von Berichten per E-Mail müssen Sie das Abonnement so konfigurieren, dass es einen Link einschließt. Sie sollten Berichte nicht als Anlage versenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Berichtsinhaltsverwaltung für Server &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Vorabladen des Caches &#40; Berichts-Manager &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Vorabladen des Caches (Berichts-Manager)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

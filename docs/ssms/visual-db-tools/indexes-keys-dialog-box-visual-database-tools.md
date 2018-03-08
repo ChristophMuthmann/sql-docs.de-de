@@ -3,35 +3,36 @@ title: "Indizes – Schlüssel (Dialogfeld) (Visual Database Tools)| Microsoft-D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 342d284b458c1eacb6ba358e51a502630268bc67
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1fefdecbd07572aabddd724be6e997fa5b0d6fce
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Indizes – Schlüssel (Dialogfeld) (Visual Database Tools)
-Mit diesem Dialogfeld können Sie Indizes, Primärschlüssel und eindeutige Schlüssel erstellen oder ändern. Um auf das Dialogfeld zuzugreifen, öffnen Sie die Tabellendefinition für die Tabelle mit dem Index oder Schlüssel. Klicken Sie mit der rechten Maustaste auf das Tabellendefinitions-Datenblatt, und klicken Sie dann auf **Indizes/Schlüssel**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit diesem Dialogfeld können Sie Indizes, Primärschlüssel und eindeutige Schlüssel erstellen oder ändern. Um auf das Dialogfeld zuzugreifen, öffnen Sie die Tabellendefinition für die Tabelle mit dem Index oder Schlüssel. Klicken Sie mit der rechten Maustaste auf das Tabellendefinitions-Datenblatt, und klicken Sie dann auf **Indizes/Schlüssel**.  
   
 > [!NOTE]  
 > Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index**  
 Listet die vorhandenen Primärschlüssel, eindeutigen Schlüssel und Indizes auf. Wenn Sie einen Index oder Schlüssel auswählen, werden dessen Eigenschaften rechts im Datenblatt angezeigt. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
@@ -118,8 +119,7 @@ Geben Sie an, ob das zugrunde liegende [!INCLUDE[ssDE](../../includes/ssde_md.md
 **Zeilensperren sind zulässig**  
 Geben Sie an, ob das Sperren auf Zeilenebene für diesen Index zugelassen ist. Das Zulassen oder Untersagen von Sperren auf Zeilenebene wirkt sich auf die Datenbankleistung aus. Die empfohlene Einstellung lautet **Ja**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Einschränkungen (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
 [Verwenden von Schlüsseln (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   
-

@@ -1,29 +1,31 @@
 ---
 title: "Unterstützte Funktionen für nativ kompilierte T-SQL-Module | Microsoft Dokumentation"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 462245faec6b34c8ad38e47ec23c1f8038769ae8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   Dieses Thema listet die T-SQL-Oberflächenbereiche und unterstützten Funktionen im Hauptteil nativ kompilierter T-SQL-Module auf, wie gespeicherte Prozeduren ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), benutzerdefinierte Skalarfunktionen, Inline-Tabellenwertfunktionen und Trigger.  
@@ -136,7 +138,7 @@ HAVING-Klausel:
   - Dieser Grenzwert kann herabgesetzt werden, wenn die Abfrage Joins oder Aggregatfunktionen enthält. (Beispielsweise liegt die Beschränkung bei einem Join mit zwei Tabellen bei 4.096 Zeilen. Bei zwei Joins mit drei Tabellen lautet der Grenzwert 2.730 Zeilen).  
   - Sie können Ergebnisse erhalten, die größer als 8.192 sind, indem Sie die Anzahl von Zeilen in einer Variablen speichern:  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -154,7 +156,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   UPDATE  
 
--   DELETE  
+-   Delete  
 
 -   WHERE wird zusammen mit UPDATE- und DELETE-Anweisungen unterstützt.  
 
@@ -195,8 +197,8 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Bitweise Operatoren ~, &, |, und ^  
 
 -   APPLY-Operator
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.
 
 ##  <a name="bfncsp"></a> Integrierte Funktionen in nativ kompilierten Modulen  
  Die folgenden Funktionen werden in Einschränkungen in speicheroptimierten Tabellen und in nativ kompilierten T-SQL-Modulen unterstützt.  
@@ -206,8 +208,8 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Datumsfunktionen: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME und YEAR.  
 
 -   Zeichenfolgenfunktionen: LEN, LTRIM, RTRIM und SUBSTRING.  
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden die folgenden integrierten Funktionen ebenfalls unterstützt: TRIM, TRANSLATE und CONCAT_WS.  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden die folgenden integrierten Funktionen ebenfalls unterstützt: TRIM, TRANSLATE und CONCAT_WS.  
 
 -   Identitätsfunktionen: SCOPE_IDENTITY  
 
@@ -216,8 +218,8 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Uniqueidentifier-Funktionen: NEWID und NEWSEQUENTIALID  
 
 -   JSON-Funktionen  
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden die JSON-Funktionen in nativ kompilierten Modulen unterstützt.
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden die JSON-Funktionen in nativ kompilierten Modulen unterstützt.
 
 -   Fehlerfunktionen: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE  
 
@@ -256,7 +258,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
  Beispiel mit TOP N = 8192: Wird kompiliert  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -269,7 +271,7 @@ GO
 
  Beispiel mit TOP N > 8192: Kann nicht kompiliert werden  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -284,7 +286,7 @@ GO
 
  Beispiel mit einer Variablen: Wird kompiliert  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -304,9 +306,8 @@ GO
 
  Die Formel zum Berechnen eines im ungünstigsten Fall unterstützten Maximalwerts für N in TOP N lautet wie folgt: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

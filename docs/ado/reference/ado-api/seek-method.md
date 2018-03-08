@@ -3,7 +3,7 @@ title: Seek (Methode) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: af29a65772019a31c495fedc546b204e98455809
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d401bca51d735b2d0d633716cee732ad2ab9a086
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seek-method"></a>Seek-Methode
 Sucht den Index des eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) schnell die Zeile finden, die mit den angegebenen Werten übereinstimmt, und ändert die aktuelle Zeilenposition Zeile.  
@@ -65,4 +64,3 @@ recordset.Seek KeyValues, SeekOption
  [Seek-Methode und Index-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)
-

@@ -2,11 +2,12 @@
 title: Konfigurieren von SQL Server in einer Server Core-Installation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -15,26 +16,28 @@ helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 2356991aa91bc1390638d5cb84935068c79f2fd3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
-Dieses Thema enthält Details zum Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Server Core-Installation.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Dieser Artikel enthält Details zum Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Server Core-Installation.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Konfigurieren und Verwalten von Server Core unter Windows Server  
-Der Abschnitt enthält Verweise auf die Themen zur Konfiguration und Verwaltung einer Server Core-Installation.  
+Der Abschnitt enthält Verweise auf die Artikel zur Konfiguration und Verwaltung einer Server Core-Installation.  
   
 Nicht alle Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] werden im Server Core-Modus unterstützt.  Einige dieser Funktionen können auf einem Clientcomputer oder anderen Server, der nicht Server Core ausführt, installiert und mit den auf Server Core installierten Datenbankmoduldiensten verbunden werden.  
   
-Weitere Informationen zur Remotekonfiguration und -verwaltung einer Server Core-Installation finden Sie in den folgenden Themen:  
+Weitere Informationen zur Remotekonfiguration und -verwaltung einer Server Core-Installation finden Sie in den folgenden Artikeln:  
   
 - [Installation von Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -116,7 +119,7 @@ Diese Schritte müssen auf einem PC mit der Clientversion von Windows oder Windo
   
 7. Wählen Sie die Registerkarte **Hohe Verfügbarkeit (immer aktiviert)** aus.  
   
-8. Überprüfen Sie, ob das Feld Name des Windows-Failoverclusters den Namen des lokalen Failoverclusterknoten enthält. Wenn dieses Feld leer ist, unterstützt diese Serverinstanz AlwaysOn-Verfügbarkeitsgruppen aktuell nicht. Der lokale Computer ist kein Clusterknoten, der WSFC-Cluster wurde geschlossen oder diese Edition von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] unterstützt keine AlwaysOn-Verfügbarkeitsgruppen.  
+8. Überprüfen Sie, ob das Feld Name des Windows-Failoverclusters den Namen des lokalen Failoverclusterknoten enthält. Wenn dieses Feld leer ist, unterstützt diese Serverinstanz AlwaysOn-Verfügbarkeitsgruppen aktuell nicht. Der lokale Computer ist kein Clusterknoten, der WSFC-Cluster wurde heruntergefahren oder diese Edition von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] unterstützt keine AlwaysOn-Verfügbarkeitsgruppen.  
   
 9. Aktivieren Sie das Kontrollkästchen AlwaysOn-Verfügbarkeitsgruppen aktivieren, und klicken Sie auf OK.  
   
@@ -228,11 +231,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Verwenden von Tools zur Problembehandlung  
  Mit dem Hilfsprogramm [SQLdiag](../../tools/sqldiag-utility.md) können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. SQLdiag dient dazu, das Sammeln von Diagnoseinformationen für Microsoft Support Services zu beschleunigen und zu vereinfachen.  
   
- Sie können das Hilfsprogramm in der Administrator-Eingabeaufforderung auf Server Core mit der Syntax starten, die im Thema [SQLdiag Utility](../../tools/sqldiag-utility.md)angegeben ist.  
+ Sie können das Hilfsprogramm in der Administrator-Eingabeaufforderung auf dem Server Core-Computer mit der Syntax starten, die im Artikel [SQLdiag Utility](../../tools/sqldiag-utility.md)angegeben ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von SQL Server unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Themen zu Vorgehensweisen für die Installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Artikel zu Vorgehensweisen für die Installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   
-

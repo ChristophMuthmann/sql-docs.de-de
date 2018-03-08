@@ -3,42 +3,43 @@ title: Abfrageeigenschaften (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 310d9c728820be6bc8f31b24cc979dea6ad1f7ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8fbfa283615298113db6fd52de97c27f73291d8d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-properties-visual-database-tools"></a>Abfrageeigenschaften (Visual Database Tools)
-Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn im Abfrage- und Sicht-Designer eine Abfrage geöffnet ist. Sofern nichts anderes angegeben ist, können Sie diese Eigenschaften im Eigenschaftenfenster bearbeiten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn im Abfrage- und Sicht-Designer eine Abfrage geöffnet ist. Sofern nichts anderes angegeben ist, können Sie diese Eigenschaften im Eigenschaftenfenster bearbeiten.  
   
 > [!NOTE]  
 > Die Eigenschaften in diesem Thema sind nicht alphabetisch, sondern nach Kategorie sortiert.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Kategorie Identität**  
 Erweitern Sie das Element, um die **Name** -Eigenschaft anzuzeigen.  
   
 **Name**  
 Zeigt den Namen der aktuellen Abfrage an. Kann in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]nicht geändert werden.  
   
-**Datenbankname**  
+**Database Name**  
 Zeigt den Namen der Datenquelle für die ausgewählte Tabelle an.  
   
 **Servername**  
@@ -87,8 +88,7 @@ Geben Sie an, dass die Abfrage nur die ersten *n* Prozent der Zeilen im Resultse
 **WITH TIES**  
 Geben Sie an, dass die Sicht eine WITH TIES-Klausel enthält. Diese Klausel ist hilfreich, wenn eine Sicht sowohl eine ORDER BY-Klausel als auch eine TOP-Klausel mit Prozentangabe enthält. Wenn diese Option festgelegt ist und der Prozentbereich in der Mitte einer Zeilenfolge mit identischen Werten in der ORDER BY-Klausel endet, wird die Sicht bis ans Ende der betreffenden Zeilenfolge erweitert. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 oder höher.)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen von Abfragen mit Parametern &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

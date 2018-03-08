@@ -1,10 +1,13 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/17/2016
-ms.prod: sql-server-2016
+ms.date: 01/11/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -14,21 +17,19 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2e0a757bb7582d3bc9690d804ab34d47aeaedf03
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 404dcc9a6be22c8a56c2a2311fb28062c280af64
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-
-[!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 FILESTREAM ermöglicht es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen, nicht strukturierte Daten wie beispielsweise Dokumente und Bilder im Dateisystem zu speichern. Anwendungen können die umfassenden Streaming-APIs und die Leistung des Dateisystems nutzen und dabei die Transaktionskonsistenz zwischen den nicht strukturierten Daten und den entsprechenden strukturierten Daten erhalten.  
   
@@ -153,13 +154,13 @@ Der Remotedateisystemzugriff auf FILESTREAM-Daten wird über das SMB (Server Mes
 
 Die Erstellung von Speicherabbildern (E/A mit Speicherabbildern) mit einem FILESTREAM-Handle wird nicht unterstützt. Wenn Speicherabbilder für FILESTREAM-Daten verwendet werden, kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] weder die Konsistenz und Dauerhaftigkeit der Daten noch die Datenbankintegrität garantieren.  
 
-## <a name="related-tasks"></a>Verwandte Aufgaben
+## <a name="related-tasks"></a>Related Tasks
 
 [Aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [Erstellen einer FILESTREAM-aktivierten Datenbank](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
 [Erstellen einer Tabelle zum Speichern von FILESTREAM-Daten](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
 [Zugreifen auf FILESTREAM-Daten mit Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md) [Erstellen von Clientanwendungen für FILESTREAM-Daten](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
-[Zugreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+[ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
 [Vornehmen von Teilupdates an FILESTREAM-Daten](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)  
 [Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
 [Verschieben einer FILESTREAM-aktivierten Datenbank](../../relational-databases/blob/move-a-filestream-enabled-database.md)  
@@ -169,4 +170,3 @@ Die Erstellung von Speicherabbildern (E/A mit Speicherabbildern) mit einem FILES
 ## <a name="related-content"></a>Verwandte Inhalte
 
 [FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
-

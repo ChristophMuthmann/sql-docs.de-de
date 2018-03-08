@@ -2,29 +2,28 @@
 title: SQL Server-Datendateien in Microsoft Azure | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59dd3517d0b0e4cfdafb470132e620576f1ffbc7
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
-  ![Datendateien in Azure](../../relational-databases/databases/media/data-files-on-azure.png "Data files on Azure")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Datendateien in Azure](../../relational-databases/databases/media/data-files-on-azure.png "Data files on Azure")  
   
  Die SQL Server-Datendateien in Microsoft Azure ermöglichen die native Unterstützung von SQL Server-Datenbankdateien, die als Microsoft Azure-Blobs gespeichert sind. Mit der Funktion können Sie eine Datenbank in SQL Server erstellen, die lokal oder auf einem virtuellen Computer in Microsoft Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten im Microsoft Azure Blob Storage bereitgestellt wird. Diese Erweiterung vereinfacht insbesondere das Verschieben von Datenbanken zwischen Computern mithilfe von Trenn- und Anfügevorgängen. Darüber hinaus bietet sie einen alternativen Speicherort für Datenbank-Sicherungsdateien, da Wiederherstellungen im oder aus dem Microsoft Azure Storage ermöglicht werden. Mit erweiterten Funktionen für das Virtualisieren und Verschieben von Daten sowie für Sicherheit und Verfügbarkeit unterstützt sie verschiedene Hybridlösungen und bietet zusätzlich kostengünstige, einfache Verwaltungsfunktionen für hohe Verfügbarkeit und flexible Skalierung.
  

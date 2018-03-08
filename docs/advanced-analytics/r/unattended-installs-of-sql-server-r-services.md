@@ -1,78 +1,118 @@
 ---
 title: Unbeaufsichtigte Installation von Machine Learning Services | Microsoft Docs
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: 18
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: babb74aa866404853cfef83e1d30159354f385e7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Unbeaufsichtigte Installation von Machine Learning-Services (Datenbankintern)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieses Thema beschreibt, wie Befehlszeilenargumente mit SQL Server-Setup zum Installieren von Machine Learning in einer Instanz des Datenbankmoduls im stillen Modus. Bei einer unbeaufsichtigten Installation verwenden Sie keine die interaktiven Features des Setup-Assistenten, und müssen alle Argumente, die erforderlich sind, um die Installation abzuschließen, einschließlich von Lizenzverträgen für SQL Server und für Machine Learning-Komponenten bereitstellen.
+Dieser Artikel beschreibt die Befehlszeilenargumente mit SQL Server-Setup zu verwenden, um die Machine learning-Komponenten zu installieren.
 
-**Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Services (Datenbankintern)
+Für die unbeaufsichtigte Installation bedeutet, dass Sie nicht die interaktiven Features des Setup-Assistenten verwenden, und geben Sie stattdessen alle Argumente, die erforderlich sind, um die Installation abzuschließen, einschließlich von Lizenzverträgen für SQL Server und für Machine Learning-Komponenten auf einem über die Befehlszeile oder als Teil eines Skripts, in der Regel im stillen Modus.
 
-> [!IMPORTANT]
-> 
-> In SQL Server 2016 und SQL Server-2017 sind zusätzliche Schritte erforderlich, nachdem Setup abgeschlossen ist, um das Feature zu aktivieren. Diese umfassen eine Neukonfiguration und Neustart der Instanz. Achten Sie darauf, dass Sie alle Schritte zu überprüfen.
++ [SQL Server 2016 R Services](#bkmk_OldInstall)
++ [SQL Server 2017 Machine Learning-Services](#bkmk_NewInstall) mit R oder Python
++ [Microsoft R Server "oder" Machine Learning-Server](../r/install-microsoft-r-server-from-the-command-line.md)
+
+**Gilt für: SQL Server 2017 Machine Learning Services (Datenbankintern), SQL Server 2016 R Services**
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 + Sie müssen das Datenbankmodul für jede Instanz installieren, in dem Sie Machine Learning verwenden möchten.
 
-+ Wenn der Computer nicht über Internetzugriff verfügt, achten Sie darauf, dass Sie die Installationsprogramme für Machine learning von Komponenten im Voraus zu installieren. Speicherorte für den Download, finden Sie unter [Machine Learning-Komponenten ohne Internetzugang installieren](../../advanced-analytics/r/installing-ml-components-without-internet-access.md).
++ Wenn der Computer nicht über Internetzugriff verfügt, achten Sie darauf, dass Sie die Installationsprogramme für Machine learning von Komponenten im Voraus herunterladen. Finden Sie unter [Machine Learning-Komponenten ohne Internetzugang installieren](../r/installing-ml-components-without-internet-access.md).
 
-+ Es sind neue Parameter, die im Zusammenhang mit der open-Source-Komponenten für R und Python-Lizenzierung. Sie müssen die Lizenzbedingungen für ein separates Argument für jede Sprache zustimmen, die Sie installieren. Wenn Sie diesen Parameter nicht in der Befehlszeile verwenden, schlägt das Setup fehl.
++ Es gibt separate Parameter für die open-Source-Komponenten für R und Python-Lizenzierung. SQL Server 2016 unterstützt nur R; SQL Server-2017 unterstützt R und Python. Sie müssen die Lizenzbedingungen für jede Sprache zustimmen, die Sie installieren. Setup schlägt fehl, wenn Sie diesen Parameter nicht in der Befehlszeile aufnehmen.
 
 + Um Setup abzuschließen ohne Anforderungen reagieren, stellen Sie sicher, dass Sie alle erforderlichen Argumente, einschließlich der für die Lizenzierung und für andere Features, die Sie installieren möchten, möglicherweise identifiziert haben.
 
-> [!NOTE] 
-> In frühen Versionen war der gemischten Sicherheitsmodus, der SQL-Anmeldungen unterstützt erforderlich. Allerdings sollten Sie erwägen, die Authentifizierung im gemischten Modus zur Unterstützung der Entwicklung von datenspezialisten unter Verwendung einer SQL-Anmeldung aktivieren.
++ Die **gemischt** Sicherheitsmodus, der SQL-Anmeldungen unterstützt war in frühen Versionen erforderlich. Obwohl es nicht mehr benötigt wird, sollten Sie erwägen, aktivieren die Authentifizierung im gemischten Modus Lösungsentwicklung von datenspezialisten unterstützt werden, die eine SQL-Anmeldung verwenden.
 
-## <a name="bkmk_NewInstall"></a>Unbeaufsichtigte Installation von Machine Learning-Dienste mit R
+> [!IMPORTANT]
+> 
+> Nachdem Setup abgeschlossen ist, um das Feature zu aktivieren, sind zusätzliche Schritte erforderlich. Diese umfassen eine Neukonfiguration und Neustart der Instanz. Achten Sie darauf, dass Sie alle Elemente im Abschnitt überprüfen auf [Schritte nach der Installation](#bkmk_PostInstall) nach Abschluss des Setups die erforderlichen Aktionen bestimmt.
 
-Das folgende Beispiel zeigt die **minimale** erforderlichen Features, die in der Befehlszeile angeben, wenn eine automatische, für die unbeaufsichtigte Ausführung der Installation von SQL Server 2017 Machines-Diensten (In-Database).
+## <a name="bkmk_NewInstall"></a>  Installation für SQL Server-2017 über die Befehlszeile
 
-1. Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und führen Sie den folgenden Befehl:
+Im folgenden Beispiel enthalten die **minimale** erforderlichen Funktionen.
 
-    ```  
-    Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS
-    ```
-    
-    Beachten Sie die Flags, die für R in SQL Server-2017 erforderlich: `ADVANCEDANALYTICS`, `SQL_INST_MR`, und `IACCEPTROPENLICENSETERMS`.
-2. Starten Sie den Server neu.
-3. Führen Sie die Schritte für die Konfiguration nach der Installation aus, wie in beschrieben [in diesem Abschnitt](#bkmk_PostInstall). Ein weiterer Neustart des SQL Server-Dienste werden benötigt.
+> [!IMPORTANT]
+> Achten Sie darauf, dass alle Befehle in einer Eingabeaufforderung mit erhöhten Rechten ausgeführt werden.
+> 
+> Nachdem die Installation abgeschlossen ist, sind einige zusätzliche Schritte erforderlich. Finden Sie unter [in diesem Abschnitt](#bkmk_PostInstall). 
+> Ein weiterer Neustart des SQL Server-Dienste werden benötigt, nachdem die Konfiguration abgeschlossen ist.
 
-## <a name="OldInstall"></a>Für die unbeaufsichtigte Installation von R Services (Datenbankintern)
+### <a name="install-r-only"></a>Nur Installieren von R
+
+Das folgende Beispiel zeigt, dass die Argumente erforderlich, um ein automatisches, unbeaufsichtigtes Ausführen von SQL Server 2017 Machine Services (Datenbankintern) installieren, mit der Sprache "R" hinzugefügt.
+
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS
+```
+
+Beachten Sie die Flags, die für R in SQL Server-2017 erforderlich:
+
++ `ADVANCEDANALYTICS`
++ `SQL_INST_MR`
++ `IACCEPTROPENLICENSETERMS`installiert haben.
+
+### <a name="install-python-only"></a>Installieren Sie Python nur
+
+Das folgende Beispiel zeigt, dass die Argumente erforderlich, um ein automatisches, unbeaufsichtigtes Ausführen von SQL Server 2017 Machine Services (Datenbankintern) mit der Python-Programmiersprache hinzugefügt installieren.
+
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
+```
+
+Beachten Sie die Flags für Python in SQL Server-2017 erforderlich:
+
++ `ADVANCEDANALYTICS`
++ `SQL_INST_MPY`
++ `IACCEPTPYTHONOPENLICENSETERMS`
+
+### <a name="install-both-r-and-python-on-a-named-instance"></a>Installieren von R und Python auf einer benannten Instanz
+
+Das folgende Beispiel zeigt, dass die Argumente erforderlich, um ein automatisches, unbeaufsichtigtes Ausführen von SQL Server 2017 Machine Services (In-Database) installieren, auf einer benannten Instanz. R und Python-Sprachen werden hinzugefügt.
+
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
+```
+
+## <a name="OldInstall"></a> Installation für SQL Server 2016 über die Befehlszeile
  
- Das folgende Beispiel zeigt die **minimale** erforderlichen Features, die in der Befehlszeile angeben, wenn eine automatische, für die unbeaufsichtigte Ausführung von SQL Server 2016 R Services zu installieren.
+Das folgende Beispiel zeigt, dass die Argumente erforderlich, um ein automatisches, unbeaufsichtigtes Ausführen von SQL Server 2016 installieren, mit der Sprache "R" hinzugefügt.
 
-1. Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und führen Sie den folgenden Befehl:
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQL,ADVANCEDANALYTICS /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS
+```
 
-    ```  
-    Setup.exe /q /ACTION=Install /FEATURES=SQL,ADVANCEDANALYTICS /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS
-    ```
-    Beachten Sie die Flags für 2016 R SERVICES erforderlich sind: `ADVANCEDANALYTICS` und `IACCEPTROPENLICENSETERMS`.
-2. Starten Sie den Server neu.
-3. Führen Sie die Schritte für die Konfiguration nach der Installation aus, wie in beschrieben [in diesem Abschnitt](#bkmk_PostInstall). Ein weiterer Neustart des SQL Server-Dienste werden benötigt.
+Beachten Sie die Flags für 2016 R Services erforderlich sind:
+
++ `ADVANCEDANALYTICS`
++ `IACCEPTROPENLICENSETERMS`
 
 ## <a name = "bkmk_PostInstall"></a>Zusätzliche Schritte nach der Installation
+
+Sie müssen die folgenden Schritte ausführen, nachdem SQL Server-Setup abgeschlossen ist, unabhängig davon, welche Version ist, die Sie installiert. Machine Learning-Funktionen sind nicht standardmäßig aktiviert und müssen explizit aktiviert werden.
 
 1.  Nachdem die Installation abgeschlossen ist, öffnen Sie ein neues **Abfrage** Fenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und führen Sie den folgenden Befehl zum Aktivieren der Funktion.
   
@@ -86,5 +126,8 @@ Das folgende Beispiel zeigt die **minimale** erforderlichen Features, die in der
   
 2.  Starten Sie SQL Server-Diensts für den neu konfigurierten Instanz neu. Auf diese Weise wird automatisch neu gestartet den zugehörigen [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] als auch Service.
 
-3. Möglicherweise sind weitere Schritte erforderlich, wenn Sie eine benutzerdefinierte Sicherheitskonfiguration verwenden, oder wenn Sie SQL Server einsetzen möchten, um Remoterechenkontexte zu unterstützen. Weitere Informationen finden Sie unter [Häufig gestellte Fragen zu Upgrade und Installation](../../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md).
-
+> [!IMPORTANT]
+> 
+> Einige zusätzliche Schritte können erforderlich sein, wenn Sie eine benutzerdefinierte Sicherheitskonfiguration haben oder wenn Sie die SQL Server als computekontext verwenden beim Ausführen von R oder Python-Code von einem Remoteclient aus. 
+> 
+> Weitere Informationen finden Sie unter [häufig gestellte Fragen zu Upgrade und Installation](../../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md).

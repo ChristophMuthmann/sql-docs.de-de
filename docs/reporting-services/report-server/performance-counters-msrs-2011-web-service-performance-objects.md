@@ -1,13 +1,14 @@
 ---
-title: "Leistungsindikatoren für den MSRS 2011 Web Service, Leistungsobjekte | Microsoft Docs"
+title: "Leistungsindikatoren für MSRS 2011-Webdienstleistungsobjekte | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,18 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "50"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e159f7c4fa846e30fbd1ca8f43b5c18df44d4c5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Leistungsindikatoren für den MSRS 2011 Web Service, Leistungsobjekte für ""
+# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Leistungsindikatoren für MSRS 2011-Webdienstleistungsobjekte
   In diesem Thema werden Leistungsindikatoren für die Leistungsobjekte **MSRS 2011 Web Service** und **MSRS 2011 Windows Service** beschrieben. Diese Objekte sind Teil einer [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Bereitstellung im einheitlichen Modus.  
   
 > [!NOTE]  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 |Leistungsindikator|Description|  
 |-------------|-----------------|  
 |**Aktive Sitzungen**|Die Anzahl der aktiven Sitzungen. Dieser Leistungsindikator stellt eine kumulierte Anzahl aller durch Berichtsausführungen generierten Browsersitzungen bereit, unabhängig davon, ob sie noch aktiv sind.<br /><br /> Der Leistungsindikator wird verringert, wenn Sitzungsdatensätze entfernt werden. Standardmäßig werden Sitzungen nach einer Inaktivität von zehn Minuten entfernt.|  
-|**Cachetreffer/Sekunde**|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe **Cachetreffer gesamt** weiter unten in diesem Thema.)|  
+|**Cachetreffer/Sekunde**|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe **Gesamtanzahl der Cachetreffer** weiter unten in diesem Thema.)|  
 |**Cachetreffer/Sekunde (Semantikmodelle)**|Die Anzahl der Anforderungen für ein zwischengespeichertes Modell pro Sekunde. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte.|  
 |**Cachefehler/Sekunde**|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Bericht aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |**Cachefehler/Sekunde (Semantikmodelle)**|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Modell aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 08/09/2017
 |-------------|-----------------|  
 |**Aktive Sitzungen**|Die Anzahl der aktiven Sitzungen, die in der Berichtsserver-Datenbank gespeichert sind. Dieser Leistungsindikator liefert die Gesamtanzahl aller verfügbaren Browsersitzungen, die aus Berichtsabonnements generiert wurden, unabhängig davon, ob sie noch aktiv sind oder nicht.|  
 |**Cacheleerungen/Sekunde**|Die Anzahl der Cacheleerungen pro Sekunde.|  
-|**Cachetreffer/Sekunde**|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe **Cachetreffer gesamt** weiter unten in diesem Thema.)|  
+|**Cachetreffer/Sekunde**|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe **Gesamtanzahl der Cachetreffer** weiter unten in diesem Thema.)|  
 |**Cachetreffer/Sekunde (Semantikmodelle)**|Die Anzahl der Anforderungen für zwischengespeicherte Modelle pro Sekunde.|  
 |**Cachefehler/Sekunde**|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Bericht aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |**Cachefehler/Sekunde (Semantikmodelle)**|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Modell aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
@@ -118,7 +118,7 @@ ms.lasthandoff: 08/09/2017
 |**Updates von Momentaufnahmen gesamt**|Die Gesamtanzahl der Updates für Berichtsausführungs-Momentaufnahmen.|  
   
 ##  <a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
- ![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, in denen countersetname mit "MSR"beginnt:  
+ ![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen CounterSetName mit „msr“ beginnt:  
   
 ```  
 get-counter -listset msr*  
@@ -130,10 +130,9 @@ get-counter -listset msr*
 (get-counter -listset "MSRS 2011 Windows Service").paths  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Leistung des Berichtsservers](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Leistungsindikatoren für den MSRS 2011 Web Service SharePoint Mode und den MSRS 2011 Windows Service SharePoint-Modus, Leistungsobjekte &#40; SharePoint-Modus &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Leistungsindikatoren für Leistungsobjekte des MSRS 2011-Webdiensts im SharePoint-Modus und des MSRS 2011-Windows-Diensts im SharePoint-Modus (SharePoint-Modus)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects (Leistungsindikatoren für die Leistungsobjekte ReportServer:Service und ReportServerSharePoint:Service)](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   
-

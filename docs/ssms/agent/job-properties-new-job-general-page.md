@@ -3,31 +3,31 @@ title: "Auftragseigenschaften – Neuer Auftrag (Seite „Allgemein“) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.general.f1
+f1_keywords: sql13.ag.job.general.f1
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 884ed5fdf244272e5f46dc3d2faf0a8d1ee8a9b2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fd8582b78d4633b90b092654ed87b07f5b88fdb5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-properties---new-job-general-page"></a>Auftragseigenschaften – Neuer Auftrag (Seite „Allgemein“)
-Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften eines Agentauftrags in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] anzeigen und ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agentauftrags anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Ändern Sie den Namen des Auftrags.  
   
@@ -40,10 +40,10 @@ Wählen Sie die Auftragskategorie für den Auftrag aus.
 **...**  
 Zeigt die Aufträge in der ausgewählten Kategorie an.  
   
-**Description**  
+**Beschreibung**  
 Ändern Sie die Beschreibung des Auftrags.  
   
-**Aktiviert**  
+**Enabled**  
 Aktivieren Sie den Auftrag. Wenn der Auftrag nicht aktiviert ist, wird er nicht als Antwort auf einen Zeitplan oder eine Warnung ausgeführt. Sie können den Auftrag jedoch weiterhin mithilfe der gespeicherten Prozedur **sp_start_job** starten.  
   
 **Quelle**  
@@ -61,8 +61,7 @@ Zeigt das Datum und die Uhrzeit des Starts der letzten Ausführung des Auftrags 
 **Auftragsverlauf anzeigen**  
 Zeigt den Auftragsverlauf für den Auftrag an. Nur auf der Seite **Auftragseigenschaften– Allgemein** verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  
 [Auftragskategorien – Auftragskategorien verwalten](../../ssms/agent/job-categories-manage-job-categories.md)  
   
-

@@ -1,10 +1,13 @@
 ---
-title: -Skript | Microsoft Docs
+title: Skripttask | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 02febb9ffc5fd20842bff97edc231005a64c30dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task"></a>Skripttask
   Der Skripttask stellt Code zum Ausführen von Funktionen bereit, die in den integrierten Tasks und Transformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht verfügbar sind. Der Skripttask kann auch Funktionen in einem einzigen Skript zusammenfassen, statt mehrere Tasks und Transformationen zu verwenden. Sie verwenden den Skripttask für einmalige Aktionen in einem Paket (einmalig pro aufgezähltem Objekt), anstatt diese einmalig pro Datenzeile auszuführen.  
@@ -97,16 +99,16 @@ ms.lasthandoff: 08/11/2017
 ## <a name="script-task-editor-general-page"></a>Skripttask-Editor (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Skripttask-Editor** können Sie einen Namen und eine Beschreibung für den Skripttask angeben.  
   
- Weitere Informationen zum Skripttask finden Sie unter [Skripttask](../../integration-services/control-flow/script-task.md) und [Konfigurieren des Scripttask im Scripttask-Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Erweitern von Paketen mit dem Skripttask](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Konfigurieren des Skripttasks im Skripttask-Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Skripttask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Skripttasks ein.  
   
 ## <a name="script-task-editor-script-page"></a>Skripttask-Editor (Seite Skript)
@@ -115,9 +117,9 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  In [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] und höheren Versionen werden alle Skripts vorkompiliert. In früheren Versionen wurde eine **PrecompileScriptIntoBinaryCode** -Eigenschaft festgelegt, um anzugeben, dass das Skript vorkompiliert wurde.  
   
- Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Erweitern von Paketen mit dem Skripttask](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Konfigurieren des Skripttasks im Skripttask-Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **ScriptLanguage**  
  Wählen Sie die Skriptsprache für den Task aus, entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
@@ -147,7 +149,6 @@ ms.lasthandoff: 08/11/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
+-   Technischer Artikel [Vorgehensweise: Senden von E-Mails mit Zustellungsbenachrichtigung in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: (Division ist gleich) (Transact-SQL) | Microsoft Docs
+title: (Divisionszuweisung) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,21 +19,22 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - compound operators, /=
+- assignment operators, /=
+- augmented operators, /=
 - /= (divide equals)
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 796aa8801ebfff9d1bb3ef6e194eadaa907601d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 0b32481d1595c7414ca3a364e2cd3984d39c69cc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="divide-equals-transact-sql"></a>(Division ist gleich) (Transact-SQL)
+# <a name="-division-assignment-transact-sql"></a>/= (Division Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Dividiert eine Zahl durch eine andere und legt einen Wert auf das Ergebnis des Vorgangs fest. Angenommen, eine Variable @x ist gleich 34, klicken Sie dann `@x /= 2` nimmt den ursprünglichen Wert des @x, dividiert durch 2 und legt @x auf diesen neuen Wert (17).  
@@ -51,7 +55,7 @@ expression /= expression
  Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge höher steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [&#40; aufgrund einer Division &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/divide-transact-sql.md).  
+ Weitere Informationen finden Sie unter [&#40; Division &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/divide-transact-sql.md).  
 
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird eine Variable auf 17. Anschließend wird die `/=` Operator, um die Variable auf die Hälfte der ursprünglichen Wert festgelegt.  
@@ -69,8 +73,7 @@ SELECT @myVariable AS ResultVariable;
 
 ## <a name="see-also"></a>Siehe auch  
  [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

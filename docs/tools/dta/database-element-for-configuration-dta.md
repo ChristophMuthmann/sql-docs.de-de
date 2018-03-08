@@ -2,32 +2,31 @@
 title: "Database-Element für Konfiguration (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Database element
+dev_langs: XML
+helpviewer_keywords: Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "12"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 02fc044ef6ce1e015743ee503ed77ea843b0e182
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad4af22826a868e1860d5170fb156ba74d1b903c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-configuration-dta"></a>Database-Element für Konfiguration (DTA)
-  Gibt die Datenbank an, für die der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das **Configuration** -Element angegeben).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die Datenbank, für die der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (gemäß der **Konfiguration** Element).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,4 +62,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

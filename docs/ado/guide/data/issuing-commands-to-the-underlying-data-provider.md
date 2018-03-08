@@ -3,7 +3,7 @@ title: Ausgeben von Befehlen an den zugrunde liegenden Datenanbieter | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - underlying providers [ADO]
 - data shaping [ADO], commands
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f27f4fb143db0c210097f0ae1ab7804ae827853e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a144e0130fec6d62ee55ea68001901815a29fef9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Ausgeben von Befehlen an den zugrunde liegenden Datenanbieter
 Solche Befehle, die nicht mit der Form beginnt wird an den Datenanbieter übergeben. Dies ist gleichbedeutend mit dem ein Shape-Befehl in der Form "Form" {Anbieterbefehl}". Diese Befehle führen *nicht* erzeugen eine **Recordset**. Ist z. B. "Form" {DROP TABLE MyTable} "einen Befehl uneingeschränkt Form vorausgesetzt, dass der Datenanbieter DROP TABLE unterstützt.  
@@ -38,4 +37,3 @@ Solche Befehle, die nicht mit der Form beginnt wird an den Datenanbieter überge
  [Daten strukturiert werden, Beispiel](../../../ado/guide/data/data-shaping-example.md)   
  [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
-

@@ -2,11 +2,13 @@
 title: Filtern einer Ablaufverfolgung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "28"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
-  Durch Filter werden die in einer Ablaufverfolgung aufgezeichneten Ereignisse eingeschränkt. Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben. Wenn Sie z. B. die Benutzernamen von Windows in der Ablaufverfolgung auf bestimmte Benutzer beschränken, werden die Ausgabedaten auf die für Sie interessanten Benutzer reduziert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durch Filter werden die in einer Ablaufverfolgung aufgezeichneten Ereignisse eingeschränkt. Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben. Wenn Sie z. B. die Benutzernamen von Windows in der Ablaufverfolgung auf bestimmte Benutzer beschränken, werden die Ausgabedaten auf die für Sie interessanten Benutzer reduziert.  
   
  Es ist nicht obligatorisch, einen Filter für eine Ablaufverfolgung festzulegen. Durch einen Filter wird jedoch der bei der Ablaufverfolgung entstehende Verarbeitungsaufwand verringert. Durch einen Filter werden genauer ausgewählte Daten zurückgegeben, wodurch sich Leistungsanalyse und -überwachung vereinfachen.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 06/22/2017
   
  Ob Filter verfügbar sind, ist von der Datenspalte abhängig. Einige Datenspalten können nicht gefiltert werden. Filterbare Datenspalten können nur durch bestimmte relationale Operatoren gefiltert werden, wie Sie der folgenden Tabelle entnehmen können.  
   
-|Relationaler Operator|Operatorsymbol|Beschreibung|  
+|Relationaler Operator|Operatorsymbol|Description|  
 |-------------------------|---------------------|-----------------|  
 |Wie|Wie|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
 |Nicht wie|Nicht wie|Die Ereignisablaufverfolgungsdaten dürfen nicht dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
@@ -187,4 +188,3 @@ ms.lasthandoff: 06/22/2017
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)  
   
   
-

@@ -3,24 +3,25 @@ title: Position-Methode (java.sql.NClob, long) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4a4007d3e734210f8a60a56884898dfb48c7a970
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0be71ad3437edf9febc776f83b26953593f294f7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="position-method-javasqlnclob-long"></a>position-Methode (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,4 +61,3 @@ long position(java.sql.NClob searchstr,
  [SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)  
   
   
-

@@ -2,16 +2,16 @@
 title: Struktur und die Verwendung von DMX-Vorhersageabfragen | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - empty prediction joins [DMX]
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5f25d8ecd230ca4d2e7aa6a694536e71f5dd0f4e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fca2ff8ef1e6fbe496d412a82c1d2694005ffe6b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struktur und Verwendung von DMX-Vorhersageabfragen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], können Sie die Vorhersageabfrage in Data Mining Extensions (DMX), unbekannte Spaltenwerte in ein neues Dataset, das auf der Grundlage der Ergebnisse eines Miningmodells vorherzusagen.  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **WÄHLEN SIE [VEREINFACHT]**  
   
--   **NACH OBEN**  
+-   **TOP**  
   
 -   **VON***\<Modell >***PREDICTION JOIN**   
   
@@ -95,7 +94,6 @@ ms.lasthandoff: 08/02/2017
  [Datamining-Erweiterungen &#40; DMX &#41; Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [Grundlegendes zur Select-Anweisung von DMX](../dmx/understanding-the-dmx-select-statement.md)  
+ [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

@@ -1,26 +1,27 @@
 ---
-title: "Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen | Microsoft Docs"
+title: "Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: cacc9e4b99055911d8fa46e0ce43c082fd4a8ccc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d713c0c3cf84bb17e0a2bd318a2b59179fa5edf9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen
   Wenn Sie Ausdrücke schreiben, stellen Sie fest, dass der Begriff *Bereich* in mehreren Zusammenhängen verwendet wird. Ein Bereich kann die Daten angeben, die zum Auswerten eines Ausdrucks verwendet werden, oder den Satz von Textfeldern auf einer gerenderten Seite bzw. den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können, bezeichnen. Sie finden den Begriff *Bereich* in Themen, die sich auf die Auswertung von Ausdrücken, Aggregatfunktionssyntax, und bedingte Sichtbarkeit beziehen, sowie in Fehlermeldungen im Zusammenhang mit diesen Bereichen. Mit den folgenden Beschreibungen können Sie feststellen, welche Bedeutung von *Bereich* zutrifft:  
@@ -72,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Benannter Bereich** Der Name eines Datasets, eines Datenbereichs oder einer Datenbereichsgruppe innerhalb des Bereichs für den Ausdruck. Bei Aggregatberechnungen können Sie einen enthaltenden Bereich angeben. Sie können einen benannten Bereich nicht sowohl für eine Zeilengruppe als auch eine Spaltengruppe im selben Ausdruck angeben. Sie können nur dann einen enthaltenen Bereich angeben, wenn der Ausdruck für ein Aggregat eines Aggregats gilt.  
   
-     Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die [erste Function &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), also in einer Aggregatfunktion gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
+     Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die Aggregatfunktion [First-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md) gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -99,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  Die Spaltenüberschrift für die Gebietsgruppe wurde zu Anzeigezwecken in zwei Zellen geteilt. Die erste Zelle zeigt den Gebietsnamen und die Gesamtbeträge an, die zweite Zelle verfügt über Platzhaltertext zur Berechnung des prozentualen Anteils jedes Gebiets an den Gesamtverkäufen.  
   
- ![Rs_BasicTableSumCellScope](../../reporting-services/report-design/media/rs-basictablesumcellscope.gif "Rs_BasicTableSumCellScope")  
+ ![rs_StandardTabelleSummeZelleBereich](../../reporting-services/report-design/media/rs-basictablesumcellscope.gif "rs_BasicTableSumCellScope")  
   
  Hier wird davon ausgegangen, dass das Dataset DataSet1 und die Tabelle Tablix1 genannt wird. In der folgenden Tabelle werden die Zellenbezeichnung, der Standardbereich und Beispiele dazu aufgeführt. Die Werte für den Platzhaltertext werden in Ausdruckssyntax dargestellt.  
   
@@ -114,14 +115,14 @@ ms.lasthandoff: 08/09/2017
 |C07|Äußere Zeilengruppe "Cat"|[Cat]<br /><br /> [Sum(Qty)]|`=Fields!Cat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C08|Entspricht C07|||  
 |C09|Äußere Zeilengruppe "Cat" und innere Spaltengruppe "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C10|Entspricht C07|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
-|C11|Äußere Zeilengruppe "Cat" und Spaltengruppe "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
+|C10|Entspricht C07|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
+|C11|Äußere Zeilengruppe "Cat" und Spaltengruppe "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
 |C12|Innere Zeilengruppe "Subcat"|[Subcat]<br /><br /> [Sum(Qty)]|`=Fields!SubCat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C13|Innere Zeilengruppe "Subcat" und innere Spaltengruppe "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C14|Innere Zeilengruppe "Subcat"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
-|C15|Innere Zeilengruppe "Subcat" und Spaltengruppe "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C14|Innere Zeilengruppe "Subcat"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C15|Innere Zeilengruppe "Subcat" und Spaltengruppe "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- Weitere Informationen zur Interpretation visueller Hinweise für Tablix-Datenbereiche finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zu den Tablix-Datenbereich, finden Sie unter [Tablix-Datenbereichszelle, Zeilen und Spalten &#40; Berichts-Generator &#41; und SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zu Ausdrücken und Aggregaten finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Weitere Informationen zur Interpretation visueller Hinweise für Tablix-Datenbereiche finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zum Tablix-Datenbereich finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zu Ausdrücken und Aggregaten finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
 ##  <a name="Sparklines"></a> Synchronisieren von Skalen für Sparklines  
@@ -164,11 +165,11 @@ ms.lasthandoff: 08/09/2017
  In zahlreichen Berichten kann bei Berechnungen für Gruppen eine Vielzahl an Zellen mit dem Wert 0 (null) oder NULL erstellt werden. Wenn Sie Ihren Bericht übersichtlicher gestalten möchten, können Sie einen Ausdruck zum Zurückgeben von Leerräumen hinzufügen, wenn der Aggregatwert 0 (null) ist. Weitere Informationen finden Sie unter „Beispiele zur Unterdrückung von NULL- oder 0-Werten“ in [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Beispiele für Gruppierungsausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Erstellen von rekursiven Hierarchiegruppen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Formatieren von Text und Platzhalter &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

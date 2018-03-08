@@ -1,39 +1,40 @@
 ---
-title: OData-Quelleneigenschaften | Microsoft Docs
+title: OData-Quelleneigenschaften | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 64e297a37c3b6449551968b5788f8c2c0ddd4ab6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 59b56a5040b7ea0219478f134a358f447eac8ad1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-source-properties"></a>OData-Quelleneigenschaften
-Wenn Sie mit der rechten Maustaste **OData-Quelle** im Datenfluss und auf **Eigenschaften**, Sie finden Sie unter Eigenschaften für die **OData-Quelle** -Komponente in den **Eigenschaften** Fenster.  
+Wenn Sie im Datenfluss mit der rechten Maustaste auf **OData-Quelle** und anschließend auf **Eigenschaften**klicken, werden die Eigenschaften der Komponente **OData-Quelle** im Fenster **Eigenschaften** angezeigt.  
 
 ## <a name="properties"></a>Eigenschaften 
 |Eigenschaft|Description|  
 |-|-|  
-|CollectionName|Der Name der Auflistung, um vom OData-Dienst abrufen. Die Eigenschaft **CollectionName** wird verwendet, wenn **UseResourcePath** FALSE ist.<br /><br /> Diese Eigenschaft ist Expressionable, die Sie den Wert zur Laufzeit festlegen kann. Jedoch, wenn die Metadaten der Auflistung nicht den Metadaten, der zur Entwurfszeit vorhanden waren übereinstimmen, tritt ein Validierungsfehler, datenflussausführung fehlschlägt.|  
+|CollectionName|Der Name der Auflistung, die Sie vom OData-Dienst abrufen. Die Eigenschaft **CollectionName** wird verwendet, wenn **UseResourcePath** FALSE ist.<br /><br /> Diese Eigenschaft ist ausdrucksfähig, sodass Sie den Wert zur Laufzeit festlegen können. Wenn die Metadaten der Auflistung jedoch nicht mit den Metadaten übereinstimmen, die zur Entwurfszeit verwendet wurden, tritt ein Überprüfungsfehler auf, der zum Abbruch der Datenflussausführung führt.|  
 |DefaultStringLength|Dieser Wert gibt die Standardlänge für Zeichenfolgenspalten an, die keine maximale Länge aufweisen.<br /><br /> **Standardwert:** 4000|  
-|Abfrage|Die OData-Abfrageparameter. Diese Eigenschaft ist Expressionable und kann zur Laufzeit festgelegt werden.|  
+|Dataseteigenschaften|Die OData-Abfrageparameter. Diese Eigenschaft ist ausdrucksfähig und kann zur Laufzeit festgelegt werden.|  
 |ResourcePath|Verwenden Sie diese Eigenschaft, wenn Sie einen vollständigen Ressourcenpfad angeben müssen, anstatt nur einen Auflistungsnamen auszuwählen. Diese Eigenschaft wird verwendet, wenn **UseResourcePath** TRUE ist.|  
 |UseResourcePath|Beim Wert TRUE wird der **ResourcePath** -Wert an die Basis-URL angefügt, um den Speicherort des OData-Feeds zu bestimmen. Bei FALSE wird der **CollectionName** -Wert verwendet.<br /><br /> **Standardwert:** False|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [OData-Quelle](odata-source.md)
-

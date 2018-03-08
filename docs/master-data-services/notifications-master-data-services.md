@@ -2,9 +2,12 @@
 title: Benachrichtigungen (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-caps.latest.revision: 15
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aa5fd134e53be86c371427f396443f89e6c0e68e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f8fae51be3dfb642f437ab64a69db532074d58bf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="notifications-master-data-services"></a>Benachrichtigungen (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] kann konfiguriert werden, um eine E-Mail-Benachrichtigung zu senden, wenn die Überprüfung der Geschäftsregel fehlschlägt oder sich der Status einer Modellversion oder eines Changesets ändert.  
@@ -38,14 +40,14 @@ ms.lasthandoff: 09/07/2017
   
 |Instanz|Description|  
 |--------------|-----------------|  
-|Daten haben die Geschäftsregelüberprüfung nicht bestanden.|Es müssen separate Geschäftsregeln konfiguriert werden, um E-Mails zu senden, wenn ein Attributwert die Geschäftsregelüberprüfung nicht besteht. Die Benachrichtigung enthält die folgenden Informationen.<br /><br /> Model<br /><br /> Version<br /><br /> Entität<br /><br /> Elementcode<br /><br /> Fehlgeschlagene Geschäftsregel<br /><br /> Link zum Element, für das der Attributwert die Geschäftsregelüberprüfung nicht bestanden hat<br /><br /> Zeitpunkt der Benachrichtigungsausgabe<br /><br /> Weitere Informationen finden Sie unter [Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)konfiguriert.|  
-|Der Status einer Modellversion ändert sich.|Jedes Mal, wenn sich der Status einer Modellversion ändert, erhalten Modelladministratoren automatisch eine Benachrichtigung. Die Benachrichtigung enthält die folgenden Informationen.<br /><br /> Model<br /><br /> Version<br /><br /> Vorheriger und neuer Status der Version<br /><br /> Zeitpunkt der Benachrichtigungsausgabe<br /><br /> Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
-|Changesetstatus ändert sich|Bei jeder Änderung eines Changesetstatus für eine Entität, die genehmigt werden muss, erhalten Entitätsadministratoren und/oder Changesetbesitzer automatisch eine Benachrichtigung. Die Benachrichtigung enthält die folgenden Informationen.<br /><br /> Model<br /><br /> Version<br /><br /> Changesetname<br /><br /> Vorheriger Status<br /><br /> Neuer Status<br /><br /> einen Link für das Anwenden des Changesets, um die ausstehenden Änderungen anzuzeigen und zu ändern<br /><br /> Weitere Informationen finden Sie unter [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).|  
+|Daten haben die Geschäftsregelüberprüfung nicht bestanden.|Es müssen separate Geschäftsregeln konfiguriert werden, um E-Mails zu senden, wenn ein Attributwert die Geschäftsregelüberprüfung nicht besteht. Die Benachrichtigung enthält die folgenden Informationen.<br /><br /> Model<br /><br /> Versionsoptionen<br /><br /> Entität<br /><br /> Elementcode<br /><br /> Fehlgeschlagene Geschäftsregel<br /><br /> Link zum Element, für das der Attributwert die Geschäftsregelüberprüfung nicht bestanden hat<br /><br /> Zeitpunkt der Benachrichtigungsausgabe<br /><br /> Weitere Informationen finden Sie unter [Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)konfiguriert.|  
+|Der Status einer Modellversion ändert sich.|Jedes Mal, wenn sich der Status einer Modellversion ändert, erhalten Modelladministratoren automatisch eine Benachrichtigung. Die Benachrichtigung enthält die folgenden Informationen.<br /><br /> Model<br /><br /> Versionsoptionen<br /><br /> Vorheriger und neuer Status der Version<br /><br /> Zeitpunkt der Benachrichtigungsausgabe<br /><br /> Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.|  
+|Changesetstatus ändert sich|Bei jeder Änderung eines Changesetstatus für eine Entität, die genehmigt werden muss, erhalten Entitätsadministratoren und/oder Changesetbesitzer automatisch eine Benachrichtigung. Die Benachrichtigung enthält die folgenden Informationen.<br /><br /> Model<br /><br /> Versionsoptionen<br /><br /> Changesetname<br /><br /> Vorheriger Status<br /><br /> Neuer Status<br /><br /> einen Link für das Anwenden des Changesets, um die ausstehenden Änderungen anzuzeigen und zu ändern<br /><br /> Weitere Informationen finden Sie unter [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).|  
   
 ## <a name="system-settings"></a>Systemeinstellungen  
  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] verfügt über Einstellungen, die sich auf Benachrichtigungen auswirken. Sie können diese Einstellungen in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder direkt in der Tabelle Systemeinstellungen der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -61,4 +63,3 @@ ms.lasthandoff: 09/07/2017
 -   [Problembehandlung für E-Mail-Benachrichtigungen (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
   
   
-

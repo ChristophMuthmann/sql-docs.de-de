@@ -3,7 +3,7 @@ title: Anpassung der Datei UserList Abschnitt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5521648ed1c4d125168d3f9afb7a4c884854d9b4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-userlist-section"></a>Anpassung UserList Dateiabschnitt
 Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem gleichen *Bezeichner* Parameter.  
@@ -39,12 +38,12 @@ Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem 
 ## <a name="syntax"></a>Syntax  
  Ein Benutzer Zugriffseintrag weist das Format:  
   
- *Benutzername***=**   
+ *userName* **=**   
  ***accessRights***  
   
 |Teil|Description|  
 |----------|-----------------|  
-|*Benutzername*|Die *Benutzernamen* der Person, die diese Verbindung. Gültige Benutzernamen sind mit IIS hergestellt **Service Manager** Dialogfeld.|  
+|*userName*|Die *Benutzernamen* der Person, die diese Verbindung. Gültige Benutzernamen sind mit IIS hergestellt **Service Manager** Dialogfeld.|  
 |***accessRights***|Einer der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** – Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** – der Benutzer kann die Datenquelle lesen.<br />-   **ReadWrite** – Benutzer Lese- oder Schreibzugriff auf die Datenquelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -55,6 +54,5 @@ Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem 
  [Erforderlichen Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

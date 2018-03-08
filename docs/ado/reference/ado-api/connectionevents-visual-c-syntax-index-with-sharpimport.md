@@ -3,7 +3,7 @@ title: 'ConnectionEvents (Visual C++-Syntax Index mit #import) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - 'ConnectionEvents collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c99d265baba06dd965e0d85bebd88dd1603d88ba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 504a3075c1728f15a5d718b3994f5b4f093eeb4e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (Visual C++-Syntax Index mit #import)
 ## <a name="events"></a>Ereignisse  
@@ -71,4 +70,3 @@ HRESULT ConnectComplete( struct Error *
 HRESULT Disconnect( enum EventStatusEnum *  
     adStatus, struct _Connection *     pConnection );  
 ```
-

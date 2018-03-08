@@ -2,13 +2,13 @@
 title: Aktualisieren von Analysis Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 79
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   Analysis Services-Instanzen können auf eine SQL Server-Version mit demselben Servermodus aktualisiert werden, um von den Funktionen zu profitieren, die in der aktuellen Version eingeführt wurden. Informationen zu diesen Funktionen finden Sie unter [What's New in Analysis Services (Neuigkeiten in Analysis Services)](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Sie können jede Instanz unabhängig von anderen Instanzen, die auf derselben Hardware ausgeführt werden, direkt aktualisieren. Die meisten Administratoren entscheiden sich für die Installation einer neuen Instanz der neuen Version zum Testen der Anwendung, ehe Produktionsarbeitsauslastungen auf den neuen Server übertragen werden. Doch für Entwicklungs- oder Testserver kann ein direktes Upgrade möglicherweise empfehlenswert sein.  
@@ -77,13 +79,13 @@ ms.lasthandoff: 09/12/2017
   
  Tabellarische und mehrdimensionale Datenbanken haben unterschiedliche Versionspfade. Es ist Zufall, dass mehrdimensionale und tabellarische Modelle über ähnlich nummerierte Kompatibilitätsgrade verfügen.  Die Modi werden sich mit unterschiedlichem Tempo entwickeln, sobald Änderungen an Features sich nur auf ein Modell auswirken.  
   
- Die folgende Tabelle enthält Hintergrundinformationen zu den Kompatibilitätsgraden, doch Sie sollten die Detailthemen lesen, um zu erfahren, was die einzelnen Grade zu bieten haben.  
+ Die folgende Tabelle enthält Hintergrundinformationen zu den Kompatibilitätsgraden, doch Sie sollten die Artikel mit detaillierten Informationen lesen, um zu erfahren, was die einzelnen Grade zu bieten haben.  
   
 ||||  
 |-|-|-|  
 |Tabellarisch|1400|SQL Server 2017|
 |Tabellarisch|1200|SQL Server 2016|  
-|Tabellarisch|1103|SQL Server 2014|  
+|Tabellarisch|1103|SQLServer 2014|  
 |Tabellarisch|1100|SQL Server 2012|  
 |Multidimensional|1100|SQL Server 2012 und höher|  
 |Multidimensional|1050|SQL Server 2005, 2008, 2008 R2|  
@@ -95,4 +97,3 @@ ms.lasthandoff: 09/12/2017
  [Aktualisieren von PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   
   
-

@@ -3,33 +3,30 @@ title: SQLExtendedFetch Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLExtendedFetch
-apilocation:
-- sqlsrv32.dll
+apiname: SQLExtendedFetch
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLExtendedFetch
-helpviewer_keywords:
-- SQLExtendedFetch function [ODBC]
+f1_keywords: SQLExtendedFetch
+helpviewer_keywords: SQLExtendedFetch function [ODBC]
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 100b877fb6adc71b0f42dd41a0bc8a8d437b1d1a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a6c0336d9f7d3495e7e2ef925b86d47c472ff2ec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch-Funktion
 **Konformität**  
@@ -148,4 +145,3 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

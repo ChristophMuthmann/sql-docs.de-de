@@ -3,24 +3,25 @@ title: Verwenden von Anweisungen mit SQL | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e672add8738558615d01d6d402bec5cbe34dc295
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5cba782d32a60b2bbdcf61276db6a1989f82c50b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-sql"></a>Verwenden von Anweisungen mit SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,13 +39,12 @@ ms.lasthandoff: 09/09/2017
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Verwenden einer SQL-Anweisung ohne Parameter](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|Beschreibt die Verwendung von SQL-Anweisungen, die keine Parameter enthalten.|  
-|[Verwenden eine SQL-Anweisung mit Parametern](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|Beschreibt die Verwendung von SQL-Anweisungen, die Parameter enthalten.|  
-|[Verwenden eine SQL-Anweisung zum Ändern von Datenbankobjekten](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|Beschreibt die Verwendung von SQL-Anweisungen, um Datenbankobjekte zu ändern.|  
-|[Verwenden eine SQL-Anweisung zum Ändern von Daten](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|Beschreibt die Verwendung von SQL-Anweisungen, um Daten in einer Datenbank zu ändern.|  
+|[Verwenden von SQL-Anweisungen ohne Parameter](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|Beschreibt die Verwendung von SQL-Anweisungen, die keine Parameter enthalten.|  
+|[Verwenden von SQL-Anweisungen mit Parametern](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|Beschreibt die Verwendung von SQL-Anweisungen, die Parameter enthalten.|  
+|[Ändern von Datenbankobjekten mit SQL-Anweisungen](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|Beschreibt die Verwendung von SQL-Anweisungen, um Datenbankobjekte zu ändern.|  
+|[Ändern von Daten mit SQL-Anweisungen](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|Beschreibt die Verwendung von SQL-Anweisungen, um Daten in einer Datenbank zu ändern.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Anweisungen mit der JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

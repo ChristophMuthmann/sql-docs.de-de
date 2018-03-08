@@ -2,11 +2,13 @@
 title: "Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,19 +16,19 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7fc2b166d0e56bb1590e3da1705553ffab2b6ac0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 18521a8d3f0deb2c7ada0a3633c3d9e606eff9b5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
-  In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** und **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** und **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
   
 |Registerkarte|Kurze Beschreibung|  
 |---------|-----------------------|  
@@ -212,10 +214,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [Erstellen eines Datenbankspiegelungs-Endpunkts für Always On-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
-

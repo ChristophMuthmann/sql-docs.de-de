@@ -2,11 +2,13 @@
 title: "Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b8208251edaeccba14b4da06e44f053893d0c5aa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 47e98a220a3480a854be76dbae16e98c0c17d180
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server)
-  Nachdem Sie für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversandkonfiguration ein Failover zu einem sekundären Server ausgeführt haben, können Sie die sekundäre Datenbank so konfigurieren, dass sie als primäre Datenbank fungiert. Anschließend können Sie primäre und sekundäre Datenbanken je nach Bedarf austauschen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nachdem Sie für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokollversandkonfiguration ein Failover zu einem sekundären Server ausgeführt haben, können Sie die sekundäre Datenbank so konfigurieren, dass sie als primäre Datenbank fungiert. Anschließend können Sie primäre und sekundäre Datenbanken je nach Bedarf austauschen.  
   
 ## <a name="performing-the-initial-role-change"></a>Ausführen der ersten Rollenänderung  
  Bei erstmaligem Failover zu einer sekundären Datenbank und einer anschließenden Konfiguration als neuer primärer Datenbank müssen Sie mehrere Schritte ausführen. Nachdem Sie diese anfänglichen Schritte ausgeführt haben, können Sie die Rollen zwischen der primären und sekundären Datenbank problemlos wechseln.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 08/02/2017
   
 2.  Deaktivieren Sie den Protokollversand-Sicherungsauftrag auf dem ursprünglichen primären Server, und kopieren Sie die Aufträge auf den ursprünglichen sekundären Server, um sie dort wiederherzustellen.  
   
-3.  Konfigurieren Sie für die sekundäre Datenbank (die neue primäre Datenbank) den Protokollversand mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md). Berücksichtigen Sie folgende Punkte:  
+3.  Konfigurieren Sie für die sekundäre Datenbank (die neue primäre Datenbank) den Protokollversand mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt. Berücksichtigen Sie folgende Punkte:  
   
     1.  Verwenden Sie dieselbe Freigabe zum Erstellen von Sicherungen, die Sie für den ursprünglichen primären Server erstellt haben.  
   
@@ -91,8 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

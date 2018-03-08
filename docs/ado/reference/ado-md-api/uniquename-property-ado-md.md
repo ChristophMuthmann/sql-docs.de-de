@@ -3,7 +3,7 @@ title: UniqueName-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - UniqueName property [ADO MD]
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d3ba61914c7f0c16ab886b9cedbdcb603b44b139
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db08f27a2c793c45b9083f2f3b3e83e5175562e7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName-Eigenschaft (ADO MD)
 Gibt einen eindeutigen Namen für das aktuelle Objekt an.  
@@ -45,8 +44,7 @@ Gibt einen eindeutigen Namen für das aktuelle Objekt an.
 |||  
 |-|-|  
 |[Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
-|[Ebenenobjekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
+|[Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Name-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)
-

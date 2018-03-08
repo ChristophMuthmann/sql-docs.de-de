@@ -3,7 +3,7 @@ title: Error-Objekt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 00f04d9ccdfd4547e7d207edc21db44a4e04508b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a283d7d40140e46668dc704196316a4a52c1fdbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-object"></a>Error-Objekt
 Enthält Details über Data Access-Fehlern, die auf einem einzelnen Vorgang im Zusammenhang mit dem Anbieter beziehen.  
@@ -62,12 +61,11 @@ Enthält Details über Data Access-Fehlern, die auf einem einzelnen Vorgang im Z
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Fehler-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
+-   [Error-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -3,10 +3,12 @@ title: Verwenden von Spalten in Aggregatabfragen (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - aggregate queries [SQL Server]
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d0baf031eb2757f9df899c871f983e231b3f96e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64aee66141249bc2a1848f6a65ec9683c73dc429
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Verwenden von Spalten in Aggregatabfragen (Visual Database Tools)
-Wenn Sie Aggregatabfragen erstellen, geht der [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) von bestimmten Annahmen aus, sodass eine gültige Abfrage konstruiert werden kann. Wenn Sie z. B. eine Aggregatabfrage erstellen und eine Datenspalte für die Ausgabe kennzeichnen, nimmt der Abfrage- und Sicht-Designer die Spalte automatisch in die GROUP BY-Klausel auf und verhindert so, dass der Inhalt einer einzelnen Zeile in einer Zusammenfassung angezeigt werden kann.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie Aggregatabfragen erstellen, geht der [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) von bestimmten Annahmen aus, sodass eine gültige Abfrage konstruiert werden kann. Wenn Sie z. B. eine Aggregatabfrage erstellen und eine Datenspalte für die Ausgabe kennzeichnen, nimmt der Abfrage- und Sicht-Designer die Spalte automatisch in die GROUP BY-Klausel auf und verhindert so, dass der Inhalt einer einzelnen Zeile in einer Zusammenfassung angezeigt werden kann.  
   
 ## <a name="using-group-by"></a>Verwenden von Gruppieren nach  
 Der Abfrage- und Sicht-Designer greift beim Arbeiten mit Spalten auf folgende Richtlinien zurück:  
@@ -71,8 +72,7 @@ Die folgenden Prinzipien beschreiben, wie Sie in einer Aggregatabfrage beim Fest
   
 -   Wenn Sie eine Aggregatfunktion in einer Suchbedingung verwenden, beinhaltet die Bedingung eine Zusammenfassung und muss somit Teil der HAVING-Klausel sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Sortieren und Gruppieren von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
-

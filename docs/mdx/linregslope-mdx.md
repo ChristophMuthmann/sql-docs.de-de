@@ -2,34 +2,32 @@
 title: LinRegSlope (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LINREGSLOPE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinRegSlope function
+f1_keywords: LINREGSLOPE
+dev_langs: kbMDX
+helpviewer_keywords: LinRegSlope function
 ms.assetid: dc61f941-b25d-4eef-9b25-75e03a1dd6de
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8c19f0f4efd0c44686dc55aea244a18a32881fba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 225c9be61c4403c9a52f61e89821c97193aa7756
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Berechnet die lineare Regression einer Menge und gibt den Wert des Regressionskoeffizienten in der regressionsgleichung y = Ax + b.  
   
@@ -73,4 +71,3 @@ LinRegSlope(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

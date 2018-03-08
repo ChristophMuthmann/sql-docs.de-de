@@ -3,7 +3,7 @@ title: Beibehalten von Daten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 533801c5f6717ec32a821a79acadce3f953c8d71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9862fc9f45674d3995b857eec222d8f560870a6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="persisting-data"></a>Beibehalten von Daten
 Tragbare Computer (z. B. mit Laptops) hat die Notwendigkeit von Anwendungen generiert, die in einem verbundenen und nicht verbundenen Zustand ausgeführt werden kann. ADO hat Unterstützung für diese hinzugefügt, durch die Vergabe des Entwicklers der Möglichkeit zum Speichern eines Clientcursors **Recordset** auf den Datenträger, und Laden Sie es später erneut.  
@@ -123,9 +122,8 @@ Destination, PersistFormat
 ## <a name="remarks"></a>Hinweise  
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Weitere Informationen zum Recordset Persistenz](../../../ado/guide/data/more-about-recordset-persistence.md)  
+-   [Weitere Informationen zur Recordset-Beibehaltung](../../../ado/guide/data/more-about-recordset-persistence.md)  
   
--   [Beibehalten von gefiltert und hierarchische Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
+-   [Beibehalten von gefilterten und hierarchischen Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
   
 -   [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

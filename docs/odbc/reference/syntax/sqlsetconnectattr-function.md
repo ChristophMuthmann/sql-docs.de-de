@@ -3,33 +3,30 @@ title: SQLSetConnectAttr-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetConnectAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetConnectAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetConnectAttr
-helpviewer_keywords:
-- SQLSetConnectAttr function [ODBC]
+f1_keywords: SQLSetConnectAttr
+helpviewer_keywords: SQLSetConnectAttr function [ODBC]
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4006d05403781ada24cf43903cd14a971366e12a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr-Funktion
 **Konformität**  
@@ -132,7 +129,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Einige Verbindungsattribute können festgelegt werden, nur verwendet werden, bevor eine Verbindung hergestellt wurde. andere können festgelegt werden, nachdem eine Verbindung hergestellt wurde. Die folgende Tabelle zeigt die Verbindungsattribute, die festgelegt werden müssen, bevor oder nachdem eine Verbindung hergestellt wurde. *Entweder* gibt an, dass das Attribut entweder vor oder nach der Verbindung festgelegt werden kann.  
   
-|Attribut|Legen Sie vor oder nach Verbindung?|  
+|attribute|Legen Sie vor oder nach Verbindung?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|Entweder [1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Sowohl als auch|  
@@ -213,4 +210,3 @@ SQLRETURN SQLSetConnectAttr(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

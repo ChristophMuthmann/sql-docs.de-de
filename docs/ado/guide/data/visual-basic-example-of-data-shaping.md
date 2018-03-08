@@ -3,7 +3,7 @@ title: Visual Basic-Beispiel Strukturieren von Daten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93c4a1caa34ee7df065c0e6bac3536ec4e403efd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7b2716ffe745fcbb9359c34c33317e61ac82602
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic-Beispiel Strukturieren von Daten
 ```  
@@ -111,4 +110,3 @@ End Function
 5.  Kopieren Sie den vorangehenden Code aus, und fügen Sie ihn in die **Code** Seite, um alle vorhandenen Code zu ersetzen.  
   
 6.  Wählen Sie **starten** aus der **ausführen** -Menü, um die Anwendung ausführen.
-

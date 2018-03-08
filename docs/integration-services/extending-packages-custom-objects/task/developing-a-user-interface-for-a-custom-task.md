@@ -1,12 +1,14 @@
 ---
-title: "Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task | Microsoft Docs"
+title: "Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,31 +25,30 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b79f177afc2c0c5014e9e50c98409f2ecc655025
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task
   Das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Objektmodell bietet Entwicklern benutzerdefinierter Tasks eine einfache Möglichkeit, eine individuelle Benutzeroberfläche für einen Task zu erstellen, der dann in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] integriert und angezeigt werden kann. Die Benutzeroberfläche kann nützliche Informationen für den Benutzer im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer bereitstellen und den Benutzern Hinweise geben, wie sie die Eigenschaften und Einstellungen des benutzerdefinierten Tasks ordnungsgemäß konfigurieren können.  
   
  Bei der Entwicklung einer benutzerdefinierten Benutzeroberfläche für einen Task werden zwei wichtige Klassen verwendet. Diese Klassen werden in der folgenden Tabelle beschrieben.  
   
-|Klasse|Description|  
+|Class|Description|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Ein Attribut, das einen verwalteten Task identifiziert und über seine Eigenschaften Informationen zur Entwurfszeit angibt, um zu kontrollieren, wie der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer das Objekt anzeigt, bzw. wie er mit ihm interagiert.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Eine vom Task verwendete Schnittstelle, um den Task seiner benutzerdefinierten Benutzeroberfläche zuzuordnen.|  
   
  Dieser Abschnitt beschreibt die Rolle der <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attribute und der <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>-Schnittstelle bei der Entwicklung einer Benutzeroberfläche für einen benutzerdefinierten Task und enthält Einzelheiten zur Erstellung, Integration, Bereitstellung und dem Debuggen des Tasks innerhalb des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers.  
   
- Die [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer bietet mehrere Einstiegspunkte zur Benutzeroberfläche für den Task: der Benutzer kann auswählen **bearbeiten** im Kontextmenü auf den Task doppelklicken oder klicken Sie auf die **Editor anzeigen** Link am unteren Rand der Eigenschaftenseite. Wenn der Benutzer auf einen dieser Einstiegspunkte zugreift, dann sucht und lädt der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer die Assembly, die die Benutzeroberfläche für den Task enthält. Die Benutzeroberfläche für den Task ist für die Erstellung des Eigenschaftendialogfelds verantwortlich, das dem Benutzer in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt wird.  
+ Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer stellt mehrere Einstiegspunkte zur Benutzeroberfläche für den Task bereit: Der Benutzer kann im Kontextmenü **Bearbeiten** auswählen, auf den Task doppelklicken oder unten auf dem Eigenschaftenblatt auf den Link **Editor anzeigen** klicken. Wenn der Benutzer auf einen dieser Einstiegspunkte zugreift, dann sucht und lädt der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer die Assembly, die die Benutzeroberfläche für den Task enthält. Die Benutzeroberfläche für den Task ist für die Erstellung des Eigenschaftendialogfelds verantwortlich, das dem Benutzer in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt wird.  
   
  Ein Task und seine Benutzeroberfläche sind separate Entitäten. Sie sollten in separaten Assemblys implementiert werden, um den Aufwand bei der Lokalisierung, der Bereitstellung und den Wartungsarbeiten zu reduzieren. Mit Ausnahme der Informationen, die in den im Task codierten<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attributwerten enthalten sind, werden von der DLL keine Informationen zur Benutzeroerfläche geladen oder aufgerufen bzw. sind solche Informationen in der Regel nicht in ihr enthalten. Dies ist die einzige Möglichkeit der Zuordnung eines Task zu seiner Benutzeroberfläche.  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Sollte bei Verwendung auf einen der Werte in der <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>-Enumeration festgelegt werden. Beispiel: `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Enthält Kontaktinformationen, falls für den Task technischer Support benötigt wird.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Weist dem Task einen Typ zu.|  
-|Attribute.TypeId|Ruft bei Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. Weitere Informationen finden Sie unter **Attribute.TypeID** Eigenschaft in der .NET Framework-Klassenbibliothek.|  
+|Attribute.TypeId|Ruft bei Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. Weitere Informationen finden Sie in der .NET Framework-Klassenbibliothek unter der Eigenschaft **Attribute.TypeID**.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|Der Typname der Assembly, der vom [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer zum Laden der Assembly verwendet wird. Diese Eigenschaft wird verwendet, um die Benutzeroberflächenassembly für den Task zu suchen.|  
   
  Im folgenden Codebeispiel wird das <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> gezeigt, wie es aussehen würde, wenn es oberhalb der Klassendefinition codiert wäre.  
@@ -124,7 +125,7 @@ End Class 'MyTask
   
  Der Designer ruft die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A>-Methode auf, um das Fenster anzufordern, das im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer angezeigt wird. Der Task erstellt eine Instanz des Fensters, das die Benutzeroberfläche für den Task enthält, und gibt die Benutzeroberfläche wieder zur Anzeige an den Designer zurück. In der Regel werden die <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>- und <xref:Microsoft.SqlServer.Dts.Runtime.Connections>-Objekte dem Fenster über einen überladenen Konstruktor bereitgestellt, sodass sie zum Konfigurieren des Tasks verwendet werden können.  
   
- Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer ruft die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A>-Methode der Task-Benutzeroberfläche auf, um die Benutzeroberfläche für den Task anzuzeigen. Die Task-Benutzeroberfläche gibt das Windows Form von dieser Methode zurück, und der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer zeigt dieses Formular als modales Dialogfeld an. Wenn das Formular geschlossen wird, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] prüft den Wert der-Designer die **DialogResult** -Eigenschaft des Formulars, um zu bestimmen, ob der Task geändert wurde und ob diese Änderungen gespeichert werden soll. Wenn der Wert von der **DialogResult** Eigenschaft ist **OK**, die [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ruft die persistenzmethoden des Tasks, um die Änderungen zu speichern; andernfalls, die Änderungen werden verworfen.  
+ Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer ruft die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A>-Methode der Task-Benutzeroberfläche auf, um die Benutzeroberfläche für den Task anzuzeigen. Die Task-Benutzeroberfläche gibt das Windows Form von dieser Methode zurück, und der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer zeigt dieses Formular als modales Dialogfeld an. Wenn das Formular geschlossen ist, untersucht der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer den Wert der Eigenschaft **DialogResult** des Formulars, um zu ermitteln, ob der Task geändert wurde und ob diese Änderungen gespeichert werde sollten. Wenn der Wert der **DialogResult**-Eigenschaft **OK** lautet, dann ruft der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer die Persistenzmethoden des Tasks auf, um die Änderungen zu speichern; andernfalls werden die Änderungen verworfen.  
   
  Das folgende Codebeispiel implementiert die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>-Schnittstelle, wobei es von der Existenz einer Windows Form-Klasse mit dem Namen SampleTaskForm ausgeht.  
   
@@ -204,10 +205,9 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [Codieren eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

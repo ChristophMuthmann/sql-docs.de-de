@@ -3,7 +3,7 @@ title: Spalten und Tabellen Append-Methode, benennen Sie die Eigenschaft (VC++-B
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c76a4633df33b051598332411eb90b6e2fbd7248
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c57894545ce19cb7e85043a1f5969c980df5146
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Spalten und Tabellen Append-Methode, Name-Eigenschaft (VC++-Beispiel)
 Der folgende Code veranschaulicht, wie eine neue Tabelle erstellt wird.  
@@ -93,4 +92,3 @@ int main() {
  [Append-Methode (ADOX-Spalten)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
-

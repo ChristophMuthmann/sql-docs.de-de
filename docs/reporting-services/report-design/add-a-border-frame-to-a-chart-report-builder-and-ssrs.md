@@ -1,27 +1,27 @@
 ---
-title: "Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a14ce29863b00c01cb77f837c369256a1096f65
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 552c3d4f8fa7e632ccb3d35af6986157aa934191
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS)
   Sie können die visuelle Wirkung eines Diagramms verbessern, indem Sie einen Rahmen um das Diagramm ziehen. Sie können einen Rahmen im Dialogfeld **Diagrammeigenschaften** oder im Bereich Eigenschaften auswählen. Die Diagrammrahmen können nicht für einen beliebigen anderen Datenbereich übernommen werden.  
@@ -51,10 +51,9 @@ ms.lasthandoff: 08/09/2017
   
 7.  (Optional) Wenn Sie einen Rahmentyp auswählen, geben Sie ein Format und eine Farbe für den Rahmen an. Die Liste **Framefüllfarbe** enthält allgemein verwendete Farben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren eines Diagramms &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   
-

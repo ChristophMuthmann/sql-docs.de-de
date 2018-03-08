@@ -1,27 +1,27 @@
 ---
-title: Balkendiagramme (Berichts-Generator und SSRS) | Microsoft Docs
+title: Balkendiagramme (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8412ab6ab529d51a8dc2626ff724b70440b1e357
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Balkendiagramme (Berichts-Generator und SSRS)
   Ein Balkendiagramm zeigt Reihen als Sätze horizontaler Balken an. Das einfache Balkendiagramm ist eng mit dem Säulendiagramm und dem Bereichsbalkendiagramm verbunden. Das Säulendiagramm zeigt Reihen als Sätze vertikaler Balken an, während das Bereichsbalkendiagramm Reihen als Sätze horizontaler Balken mit verschiedenen Anfangs- und Endpunkten darstellt.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Die folgende Abbildung zeigt ein Balkendiagramm. Das Balkendiagramm ist für diese Daten ausgezeichnet geeignet, da alle drei Reihen einen gemeinsamen Zeitraum verwenden und so zuverlässige Vergleiche vorgenommen werden können.  
   
- ![Balkendiagramm](../../reporting-services/report-design/media/barchart.gif "Balkendiagramm")  
+ ![Balkendiagramm](../../reporting-services/report-design/media/barchart.gif "Bar chart")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,18 +63,17 @@ ms.lasthandoff: 08/09/2017
   
 -   Wenn im Verhältnis zur Größe des Diagramms viele Datenpunkte im Dataset vorhanden sind, wird die Größe der Säulen oder Balken und der Abstand zwischen diesen verringert. Um die Breite der Säulen in einem Diagramm manuell festzulegen, ändern Sie deren Breite in Pixel, indem Sie die **PointWidth** -Eigenschaft ändern. Standardmäßig ist der Wert dieser Eigenschaft 0,8. Wenn Sie die Breite der Säulen oder Balken in einem Diagramm erhöhen, verringert sich der Abstand zwischen den einzelnen Säulen oder Balken.  
   
-## <a name="see-also"></a>Siehe auch  
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Diagrammtypen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Leere und Null-Datenpunkte in Diagrammen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Säulendiagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Bereichsdiagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Formatieren von Reihenfarben in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formatieren der Legende in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Säulendiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   
-

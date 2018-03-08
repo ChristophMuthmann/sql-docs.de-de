@@ -3,8 +3,11 @@ title: CHARINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-caps.latest.revision: 52
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5467f9d98562fac8262e537887d03c1d68b25d88
-ms.contentlocale: de-de
-ms.lasthandoff: 10/12/2017
-
+ms.openlocfilehash: ed2f5334c0c76288ca31cf07857a87f2d1c72033
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Sucht in einem Ausdruck nach einem anderen Ausdruck und gibt dessen Startposition zurück, falls gefunden.
   
@@ -49,10 +51,10 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 *expressionToFind*  
 Ist ein Zeichen [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , die die zu suchende Sequenz enthält. *ExpressionToFind* ist auf 8000 Zeichen beschränkt.
   
-*"expressiontosearch"*  
+*expressionToSearch*  
 Der zu suchende Zeichenausdruck.
   
-*"start_location"*  
+*start_location*  
 Ist ein **Ganzzahl** oder **"bigint"** Ausdruck, bei dem die Suche beginnt. Wenn *"start_location"* nicht angegeben wird, ist eine negative Zahl oder 0 ist, die Suche beginnt am Anfang des *"expressiontosearch"*.
   
 ## <a name="return-types"></a>Rückgabetypen
@@ -238,11 +240,12 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[+ &#40; Verketten von Zeichenfolgen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [+ &#40; Verketten von Zeichenfolgen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-
 
 

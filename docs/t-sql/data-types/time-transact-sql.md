@@ -3,8 +3,11 @@ title: Zeitpunkt (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 45
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
-ms.contentlocale: de-de
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Definiert eine Uhrzeit. Die Uhrzeit basiert auf einem 24-Stunden-Format und beachtet keine Zeitzonen.  
   
@@ -48,10 +50,10 @@ ms.lasthandoff: 10/05/2017
 |Syntax|**Zeit** [(*Bruchteilen zweite Skala*)]|  
 |Verwendung|Deklarieren Sie @MyTime **time(7)**<br /><br /> Erstellen der Tabelle Table1 (Column1 **time(7)** )|  
 |*Sekundenbruchteile*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Bei Informatica – kann dies eine Ganzzahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für die Sekundenbruchteile Dezimalstellen ist 7 (100 NS).|  
-|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|ss [.nnnnnnn] (ss [.nnn] für Informatica –)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
+|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|ss [.nnnnnnn] für Informatica –)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
 |Bereich|00:00:00.0000000 über 23:59:59.9999999 (00:00:00.000 über 23:59:59.999 für Informatica –)|  
 |Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> n\*ist null bis sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica n\* ist null bis drei Ziffern im Bereich von 0 bis 999.|  
-|Zeichenlänge|mindestens 8 Positionen (HH) bis maximal 16 (ss.nnnnnnn). Für Informatica – ist die maximal 12 (hh:mm:ss.nnn).|  
+|Zeichenlänge|Mindestens 8 Positionen (hh:mm:ss) bis maximal 16 Positionen (hh:mm:ss.nnnnnnn) Für Informatica – ist die maximal 12 (hh:mm:ss.nnn).|  
 |Genauigkeit, Dezimalstellen<br /><br /> (Benutzer gibt nur Dezimalstellen an)|Finden Sie in der folgenden Tabelle aus.|  
 |Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. Im Informatica –, die Standardeinstellung ist 4 Bytes fest, der Standardwert ist 1 ms Bruchteilen zweiter mit einfacher Genauigkeit.|  
 |Genauigkeit|100 Nanosekunden (1 Millisekunde im Informatica –)|  
@@ -277,4 +279,3 @@ SELECT
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

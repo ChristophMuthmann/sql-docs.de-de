@@ -2,12 +2,13 @@
 title: Microsoft Sequence Clustering-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 49
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09d9c1909f093547dedd79823a06d9647f0bd6a8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein einzigartiger Algorithmus, der die Sequenzanalyse mit dem Clustering kombiniert. Mithilfe dieses Algorithmus können Sie Daten zu Ereignissen untersuchen, die durch *Sequenzen*verknüpft werden können. Der Algorithmus ermittelt die am häufigsten vorkommenden Sequenzen und führt dann ein Clustering identischer Sequenzen durch. Die folgenden Beispiele veranschaulichen die Arten von Sequenzen, die Sie als Daten für Machine Learning erfassen können, um Aufschluss über häufige Probleme oder Geschäftsszenarios zu erhalten:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein einzigartiger Algorithmus, der die Sequenzanalyse mit dem Clustering kombiniert. Mithilfe dieses Algorithmus können Sie Daten zu Ereignissen untersuchen, die durch *Sequenzen*verknüpft werden können. Der Algorithmus ermittelt die am häufigsten vorkommenden Sequenzen und führt dann ein Clustering identischer Sequenzen durch. Die folgenden Beispiele veranschaulichen die Arten von Sequenzen, die Sie als Daten für Machine Learning erfassen können, um Aufschluss über häufige Probleme oder Geschäftsszenarios zu erhalten:  
   
 -   Clickstreams oder Klickpfade, die erstellt werden, wenn Benutzer navigieren oder eine Website durchsuchen  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 09/01/2017
  Dieser Algorithmus ähnelt dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clustering-Algorithmus in vielerlei Hinsicht. Anstatt jedoch nach Clustern mit Fällen zu suchen, die ähnliche Attribute enthalten, sucht der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus nach Clustern mit Fällen, die ähnliche Pfade in einer Sequenz enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Auf der Website von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] web site collects information about what pages site users visit, and about the order in which the pages are visited. Da die Firma die Möglichkeit der Onlinebestellung bietet, müssen sich die Kunden bei der Site anmelden. Dadurch erhält die Firma Informationen zum Klickverhalten jedes einzelnen Kundenprofils. Mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus kann die Firma diese Daten verarbeiten und so Gruppen oder Cluster von Kunden ermitteln, die ähnliche Klickmuster oder -sequenzen aufweisen. Die Firma kann dann anhand dieser Cluster die Bewegungen der Benutzer auf der Website analysieren und diejenigen Seiten identifizieren, die am engsten mit dem Verkauf eines bestimmten Produkts verbunden sind. Außerdem lässt sich vorhersagen, welche Seiten mit der höchsten Wahrscheinlichkeit als Nächstes besucht werden.  
+ Die [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] Website sammelt Informationen darüber, welche Seiten die Benutzer besuchen Sie Website und die Reihenfolge, in der Seiten besucht werden. Da die Firma die Möglichkeit der Onlinebestellung bietet, müssen sich die Kunden bei der Site anmelden. Dadurch erhält die Firma Informationen zum Klickverhalten jedes einzelnen Kundenprofils. Mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus kann die Firma diese Daten verarbeiten und so Gruppen oder Cluster von Kunden ermitteln, die ähnliche Klickmuster oder -sequenzen aufweisen. Die Firma kann dann anhand dieser Cluster die Bewegungen der Benutzer auf der Website analysieren und diejenigen Seiten identifizieren, die am engsten mit dem Verkauf eines bestimmten Produkts verbunden sind. Außerdem lässt sich vorhersagen, welche Seiten mit der höchsten Wahrscheinlichkeit als Nächstes besucht werden.  
   
 ## <a name="how-the-algorithm-works"></a>Funktionsweise des Algorithmus  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein hybrider Algorithmus, der Clustering-Techniken mit Markov-Kettenanalysen verbindet, um Cluster und deren Sequenzen zu identifizieren.  Eines der Kennzeichen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus besteht in der Verwendung von Sequenzdaten. Diese Daten repräsentieren in der Regel eine Reihe von Ereignissen oder Statusübergängen in einem Dataset, wie z. B. eine Reihe von Produktkäufen oder Webklickfolgen eines bestimmten Benutzers. Um zu bestimmen, welche Sequenzen als Eingaben für das Clustering am besten geeignet sind, überprüft der Algorithmus alle Übergangswahrscheinlichkeiten und misst die Differenzen oder Abstände zwischen allen im Dataset möglichen Sequenzen. Nachdem der Algorithmus eine Liste der möglichen Sequenzen erstellt hat, verwendet er die Sequenzinformationen als Eingabe für das Clustering mit Erwartungsmaximierung (EM).  
@@ -83,10 +84,9 @@ ms.lasthandoff: 09/01/2017
 -   Unterstützt die Verwendung von OLAP-Miningmodellen und die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Sequence Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Sequence Clustering-Abfragebeispiele](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   
-

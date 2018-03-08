@@ -3,7 +3,7 @@ title: "Aktueller Datensatz und Größe der Recordset | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6cc6f4bbded2e78203d95820cc590f6c69380fcd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb50826230e46cc71106a2b17d01914eae024f47
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="current-record-and-size-of-recordset"></a>Aktueller Datensatz und Größe des Recordsets
 In diesem Abschnitt wird beschrieben, wie die aktuelle Position des Cursors im Beispiel finden **Recordset** in [JScript-Codebeispiel wird ein Recordset zurückzugebenden](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
@@ -56,4 +55,3 @@ oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText
  Dieser Abschnitt enthält das folgende Thema.  
   
  [Grenzen eines Recordsets](../../../ado/guide/data/boundaries-of-a-recordset.md)
-

@@ -1,10 +1,13 @@
 ---
-title: == (Gleich) (SSIS-Ausdruck) | Microsoft Docs
+title: == (Gleich) (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2944b2ac0c650f3a7a3d447d20b34bee5fa27e20
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d936922ff3b2978ca446d061ca8ddf3e1c4cbf30
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-equal-ssis-expression"></a>== (Gleich) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke gleich sind. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
@@ -45,7 +47,7 @@ expression1 == expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn einer der Ausdrücke im Vergleich NULL ist, ist das Ergebnis des Vergleichs NULL. Wenn beide Ausdrücke NULL sind, ist das Ergebnis NULL.  
   
  Für die Ausdrucksgruppe ( *expression1* und *expression2*) muss eine der folgenden Regeln eingehalten werden:  
@@ -107,10 +109,9 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [\! = &#40; Ungleich &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
- [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

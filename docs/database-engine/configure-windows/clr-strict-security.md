@@ -3,11 +3,13 @@ title: CLR Strict Security | Microsoft-Dokumentation
 description: Konfigurieren von CLR Strict Security in SQL Server
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,24 +21,23 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: 
-caps.latest.revision: 0
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "0"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 01eebbd834d8c1877743f65220af48dd23739f94
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 54f976fac931d9cdc731f4b3e91c433d66310194
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="clr-strict-security"></a>CLR Strict Security   
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Steuert die Interpretation der Berechtigungen `SAFE`, `EXTERNAL ACCESS` und `UNSAFE` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
-|Wert |Beschreibung | 
+|value |Description | 
 |----- |----- | 
 |0 |Deaktiviert: Wird für die Abwärtskompatibilität bereitgestellt. Der Wert `Disabled` wird empfohlen. | 
 |1 |Aktiviert: Dadurch ignoriert [!INCLUDE[ssde-md](../../includes/ssde-md.md)] die `PERMISSION_SET`-Information auf den Assemblys und interpretiert diese immer als `UNSAFE`.  Der Standardwert für [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] lautet `Enabled`. | 
@@ -44,7 +45,7 @@ Steuert die Interpretation der Berechtigungen `SAFE`, `EXTERNAL ACCESS` und `UNS
 >  [!WARNING]
 >  CLR verwendet die Codezugriffssicherheit (Code Access Security, CAS) im .NET Framework, die nicht länger als Sicherheitsbegrenzung unterstützt wird. Eine CLR-Assembly, die mit `PERMISSION_SET = SAFE` erstellt wurde, kann womöglich auf externe Systemressourcen zugreifen, nicht verwalteten Code aufrufen und sysadmin-Privilegien erwerben. Ab [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] wird eine `sp_configure`-Option mit der Bezeichnung `clr strict security` eingeführt, um die Sicherheit von CLR-Assemblys zu erhöhen. `clr strict security` ist standardmäßig aktiviert und behandelt `SAFE`- und `EXTERNAL_ACCESS`-Assemblys so, als wären Sie als `UNSAFE` gekennzeichnet. Die Option `clr strict security` kann für die Abwärtskompatibilität deaktiviert werden, es wird jedoch nicht empfohlen. Microsoft empfiehlt, dass alle Assemblys durch ein Zertifikat oder einen asymmetrischen Schlüssel mit einem entsprechenden Anmeldenamen signiert werden, dem `UNSAFE ASSEMBLY`-Berechtigung für die Masterdatenbank gewährt wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Administratoren können auch Assemblys einer Liste von Assemblys hinzufügen, der das Datenbankmodul vertrauen sollte. Weitere Informationen finden Sie unter [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
 
-## <a name="remarks"></a>Hinweise   
+## <a name="remarks"></a>Remarks   
 
 Falls die Option `PERMISSION_SET` aktiviert ist, wir sie in den Anweisungen `CREATE ASSEMBLY` und `ALTER ASSEMBLY` zur Laufzeit ignoriert, jedoch werden die `PERMISSION_SET`-Optionen in den Metadaten beibehalten. Das Ignorieren dieser Option vermindert die Trennung vorhandener Codeanweisungen.
 
@@ -67,9 +68,8 @@ Die folgenden Berechtigungen werden zum Erstellen einer CLR-Assembly benötigt, 
   - Die `TRUSTWORTHY`-Eigenschaft der Datenbank ist auf `ON` festgelegt, und der Besitzer der Datenbank ist ein Anmeldename, der über `UNSAFE ASSEMBLY`-Berechtigungen auf dem Server verfügt. Diese Option wird nicht empfohlen.  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CLR-fähig (Serverkonfigurationsoption)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)
-

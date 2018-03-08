@@ -3,7 +3,7 @@ title: Clone Methodenbeispiel (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 29a38db68c56955eb9d17a83ee5156674859b7c5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 311d18547421d327a8d1af3f85d9995ddfa8f5c6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-example-vbscript"></a>Clone-Methode (Beispiel) (VBScript)
 Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und dann ermöglicht dem Benutzer, der den Datensatz Zeiger jeder Kopie unabhängig zu positionieren.  
@@ -128,4 +127,3 @@ Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method
 ## <a name="see-also"></a>Siehe auch  
  [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

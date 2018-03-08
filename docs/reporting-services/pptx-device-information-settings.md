@@ -1,14 +1,14 @@
 ---
-title: "PPTX-Geräteinformationseinstellungen | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "PPTX-Geräteinformationseinstellungen | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 09/11/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +17,21 @@ helpviewer_keywords:
 - pptx
 - export
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aa67165e961e76569daadff1fc610c4d16a1e63
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0b83a1cd9142dab2b74f5dbb3148576d851faf24
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pptx-device-information-settings"></a>PPTX-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichten im PPTX-Format aufgeführt.  
   
-|Einstellung|Wert|  
+|Einstellung|value|  
 |-------------|-----------|  
 |**Spalten**|Die für den Bericht gewünschte Anzahl der Spalten. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**ColumnSpacing**|Der für den Bericht gewünschte Spaltenabstand. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
@@ -48,11 +47,10 @@ ms.lasthandoff: 08/09/2017
 |**StartPage**|Die erste Seite des zu rendernden Berichts. Der Wert **0** gibt an, dass alle Seiten des Berichts gerendert werden. Der Standardwert ist **1**.|  
 |**UseReportPageSize**|Wenn „UseReportPageSize =**false** “, ist die Standardfoliengröße der PowerPoint-Standard 13,333” x 7,5” (Seitenverhältnis 16:9). Wenn "UseReportPageSize =true", ist die Standardfoliengröße die definierte Seitengröße des Berichts.<br /><br /> Der Standardwert ist **false**<br /><br /> Beachten Sie, dass die PageWidth- und PageHeight-Einstellungen die Standardbreite und -höhe überschreiben.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in "rsreportserver.config"](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   
-

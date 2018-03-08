@@ -2,32 +2,31 @@
 title: "Überprüfen einer PowerPivot für SharePoint-Installation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Überprüfen einer Power Pivot für SharePoint-Installation
-  Eine Instanz von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, die Sie in einer SharePoint-Farm installieren, wird über die SharePoint-Zentraladministration verwaltet. Sie können zumindest die Seiten in der Zentraladministration und auf SharePoint-Websites durchsuchen, um zu überprüfen, ob [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Serverkomponenten und -funktionen verfügbar sind. Um jedoch eine Installation vollständig zu überprüfen, müssen Sie eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappe haben, die Sie in SharePoint veröffentlichen und auf die Sie über eine Bibliothek zugreifen können. Zu Testzwecken können Sie eine Beispielarbeitsmappe veröffentlichen, die bereits [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Daten enthält, und damit überprüfen, ob die SharePoint-Integration ordnungsgemäß konfiguriert wurde.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Eine Instanz von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, die Sie in einer SharePoint-Farm installieren, wird über die SharePoint-Zentraladministration verwaltet. Sie können zumindest die Seiten in der Zentraladministration und auf SharePoint-Websites durchsuchen, um zu überprüfen, ob [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Serverkomponenten und -funktionen verfügbar sind. Um jedoch eine Installation vollständig zu überprüfen, müssen Sie eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappe haben, die Sie in SharePoint veröffentlichen und auf die Sie über eine Bibliothek zugreifen können. Zu Testzwecken können Sie eine Beispielarbeitsmappe veröffentlichen, die bereits [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Daten enthält, und damit überprüfen, ob die SharePoint-Integration ordnungsgemäß konfiguriert wurde.  
+
   
 ##  <a name="verifyinstall"></a> Überprüfen der Integration der Zentraladministration  
  Um die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Integration über die Zentraladministration zu überprüfen, gehen Sie wie folgt vor:  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
 11. Überprüfen Sie im Computerdateisystem den folgenden Ordner, um zu bestimmen, ob Dateien auf dem Datenträger zwischengespeichert wurden. Das Vorhandensein zwischengespeicherter Dateien ist eine weitere Bestätigung, dass die Bereitstellung betriebsbereit ist. Um den Dateicache anzuzeigen, wechseln Sie in den [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]-Dienstanwendungsordner [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default. Jede zwischengespeicherte Datenbank wird in einem eigenen Ordner gespeichert. Dabei wird eine GUID-basierte Namenskonvention verwendet, um einen eindeutigen Namen sicherzustellen.  
   
   
-

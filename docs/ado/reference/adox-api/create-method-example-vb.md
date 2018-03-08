@@ -3,7 +3,7 @@ title: Create-Methode-Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Create method [ADOX], Visual Basic example
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: da338a38485850ea383644af3c64ee9ba1cfb975
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5211692bd7bcaf7d2fc008e1c801d8346f5ea432
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-method-example-vb"></a>Create-Methode-Beispiel (VB)
 Der folgende Code veranschaulicht das Erstellen einer neuen Microsoft Jet-Datenbank mit der [erstellen](../../../ado/reference/adox-api/create-method-adox.md) Methode.  
@@ -60,4 +59,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create-Methode (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-

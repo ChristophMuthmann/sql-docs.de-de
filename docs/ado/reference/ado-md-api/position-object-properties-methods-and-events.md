@@ -3,7 +3,7 @@ title: Positionieren von Objekteigenschaften, Methoden und Ereignisse | Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Position object [ADO MD], members
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 16a0afd4d1defbf431821c9a4a299fd37c8e3d50
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d922279956e3d53a38463fae29ebe6774879c3e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="position-object-properties-methods-and-events"></a>Position-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -42,4 +41,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Position-Objekt (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
-

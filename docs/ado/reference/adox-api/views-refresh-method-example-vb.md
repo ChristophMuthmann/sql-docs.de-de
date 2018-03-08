@@ -3,7 +3,7 @@ title: Ansichten aktualisieren Methodenbeispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b38ea0dc734cf38462f15fe702510186bfa0ff8f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b6e526091804e36790f79a051399ff69e479df4a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-refresh-method-example-vb"></a>Ansichten aktualisieren Methodenbeispiel (VB)
 Der folgende Code zeigt die Vorgehensweise beim Aktualisieren der [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md). Dies ist erforderlich, bevor Sie [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) Objekte aus der **Katalog** zugegriffen werden kann.  
@@ -66,4 +65,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-

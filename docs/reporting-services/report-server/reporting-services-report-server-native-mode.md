@@ -1,13 +1,14 @@
 ---
-title: Reporting Services-Berichtsserver (einheitlicher Modus) | Microsoft Docs
+title: Reporting Services-Berichtsserver (einheitlicher Modus) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-caps.latest.revision: 24
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "24"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65acea8f2887a2c45553c69d8d53ecfeb65e96a5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services-Berichtsserver (einheitlicher Modus)
   Ein für den einheitlichen Modus konfigurierter Berichtsserver läuft als Anwendungsserver, der alle Verarbeitungs- und Verwaltungsfunktionen ausschließlich über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten bereitstellt.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bezieht sich die Inhaltsverwaltung auf die Verwaltung von Berichten, Modellen, Ordnern, Ressourcen und freigegebenen Datenquellen. Diese Elemente können jeweils unabhängig voneinander über Eigenschaften und Sicherheitseinstellungen verwaltet werden. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden.  
   
 > [!NOTE]  
->  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zur Verwaltung der Umgebung, in denen ein Berichtsserver ausgeführt wird, finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40; Reporting Services-SharePoint-Modus &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers (SharePoint-Modus von Reporting Services)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  Die Inhaltsverwaltung umfasst die folgenden Aufgaben:  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Ausgleichen der Anforderungen hinsichtlich der Verarbeitung von Berichten auf dem Server und Angeben der Berichte, die bei Bedarf ausgeführt werden bzw. die aus dem Cache geladen werden.  
   
- Die Berechtigung, Verwaltungsaufgaben auszuführen, wird durch zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen &#40; Reporting Services &#41; ](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Die Berechtigung, Verwaltungsaufgaben auszuführen, wird durch zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Tools zum Verwalten von Berichtsserverinhalt schließen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] bzw. den Berichts-Manager ein. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Der Berichts-Manager wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden.  
   
@@ -112,9 +112,8 @@ ms.lasthandoff: 08/09/2017
   
  Sie können eine Bildressource in einem Bericht verwenden, indem Sie die Bilddatei dem Projekt hinzufügen und es mit dem Bericht veröffentlichen. Nach dem Veröffentlichen des Bilds können Sie den Bildverweis im Bericht aktualisieren, sodass er auf die Ressource auf dem Berichtsserver verweist, und dann nur den Bericht erneut veröffentlichen, um die Änderungen zu speichern. Sie können anschließend das Bild unabhängig vom Bericht aktualisieren, indem Sie die Ressource erneut veröffentlichen. Der Bericht verwendet die aktuelle Version des Bilds, die auf dem Berichtsserver verfügbar ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Problembehandlung für eine Reporting Services-Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Troubleshoot a Reporting Services Installation (Problembehandlung für eine Reporting Services-Installation)](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   
-

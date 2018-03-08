@@ -1,12 +1,14 @@
 ---
-title: "Skript für Beispielaufgaben | Microsoft Docs"
+title: Skripttask-Beispiele | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5187a97eb3424813b94b03438a31c62f583ee852
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task-examples"></a>Skripttask-Beispiele
   Bei Skripttask handelt es sich um ein Mehrzwecktool, das Sie in einem Paket verwenden können, um nahezu alle Anforderungen zu erfüllen, die von den Tasks nicht erfüllt werden, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind. In diesem Thema werden Skripttaskcodebeispiele aufgeführt, in denen einige der verfügbaren Funktionen veranschaulicht werden.  
@@ -48,16 +49,16 @@ ms.lasthandoff: 09/26/2017
  Erstellt eine Liste mit Dateien, die benutzerspezifische Kriterien erfüllen, und füllt eine Variable für den späteren Gebrauch durch den Foreach from-Variablenenumerator.  
   
  [Abfragen des Active Directory mit dem Skripttask](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- Ruft Benutzerinformationen aus Active Directory basierend auf den Wert des ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mithilfe von Klassen im Namespace System.DirectoryServices Variable.  
+ Ruft Benutzerinformationen von Active Directory basierend auf dem Wert einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Variable ab, indem im System.DirectoryServices-Namespace Klassen verwendet werden.  
   
  [Überwachen von Leistungsindikatoren mit dem Skripttask](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- Erstellt einen benutzerdefinierten Leistungsindikator, der zum Nachverfolgen des Ausführungsstatus eines verwendet werden kann ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paket mithilfe von Klassen im System.Diagnostics-Namespace.  
+ Erstellt einen benutzerdefinierten Leistungsindikator, mit dem der Ausführungsfortschritt eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets überprüft werden kann, indem im System.Diagnostics-Namespace Klassen verwendet werden.  
   
  [Arbeiten mit Bildern mithilfe des Skripttasks](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- Komprimiert Bilder in das JPEG-Format und Miniaturbilder von ihnen, mithilfe der Klassen im Namespace "System.Drawing" erstellt.  
+ Komprimiert Bilder in das JPEG-Format und erstellt aus ihnen Miniaturbilder, indem im System.Drawing-Namespace Klassen verwendet werden.  
   
  [Suchen installierter Drucker mit dem Skripttask](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- Sucht installierte Drucker, die ein bestimmtes Papierformat unterstützen, mithilfe der Klassen im System.Drawing.Printing-Namespace an.  
+ Sucht installierte Drucker, die ein bestimmtes Papierformat unterstützen, indem im System.Drawing.Printing-Namespace Klassen verwendet werden.  
   
  [Senden einer HTML-E-Mail mit dem Skripttask](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  Sendet eine Mail-Nachricht im HTML-Format anstatt im Nur-Text-Format.  
@@ -84,4 +85,3 @@ ms.lasthandoff: 09/26/2017
  Protokolliert die Anzahl der Elemente, die vom Task zu aktivierten Protokollanbietern verarbeitet wird.  
   
   
-

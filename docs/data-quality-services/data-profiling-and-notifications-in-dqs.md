@@ -2,25 +2,26 @@
 title: Datenprofilerstellung und Benachrichtigungen in DQS | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "25"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ba77e475bd530b362b4a2f918c6ee7c0b901443
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Datenprofilerstellung und Benachrichtigungen in DQS
   Datenprofilerstellung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist der Prozess des Analysierens der Daten in einer vorhandenen Datenquelle und des Anzeigens von Statistiken zu den Daten in DQS-Aktivitäten. Sie versorgt Sie mit automatischen Messungen der Datenqualität. DQS-Profilerstellung wird in DQS-Wissensverwaltung und Data Quality-Projekte integriert. Sie ist dynamisch und anpassbar. Die Profilerstellung hat zwei Hauptziele: erstens, Sie durch Data Quality-Prozesse zu führen und Ihre Entscheidungen zu unterstützen, und zweitens, die Effektivität der Prozesse zu bewerten. Der DQS-Profilerstellungsprozess hat die folgenden Vorteile:  
@@ -99,11 +100,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie Benachrichtigungen in DQS aktiviert und deaktiviert werden.|[Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   
-

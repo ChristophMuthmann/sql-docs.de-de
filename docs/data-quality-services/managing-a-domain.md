@@ -2,25 +2,26 @@
 title: "Verwalten einer Domäne | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "13"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13743e56a9965e9a417b7c8222a7fa534b7feced
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managing-a-domain"></a>Verwalten einer Domäne
   In diesem Thema wird die Verwendung von Domänen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Eine Domäne enthält eine semantische Darstellung der Daten in einem bestimmten Feld in der Datenquelle, die analysiert werden soll. Eine Domäne ist Teil einer Wissensdatenbank, die Sie für eine Datenquelle erstellen, und das Wissen, das Sie durch Analysieren einer Beispieldatenquelle oder dem Importieren von Daten erhalten, wird den in der Wissensdatenbank definierten Domänen hinzugefügt. Das Wissen in diesen Domänen wird später verwendet, um Bereinigungen und Abgleiche in einem Data Quality-Projekt auszuführen. Domänen sind der Kern aller Aktivitäten in Data Quality Services.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 09/09/2017
  Sie können auch eine Verbunddomäne erstellen, die aus zwei oder mehr einzelnen Domänen besteht, von denen jede Wissen über allgemeine Daten enthält. Weitere Informationen finden Sie unter [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md).  
   
 ## <a name="domain-properties"></a>Domäneneigenschaften  
- Wenn Sie eine Domäne erstellen, haben Sie die folgenden Optionen zum Auffüllen der Domäne aus den Quelldaten und zur Ausgabe der Domänenwerte. Weitere Informationen finden Sie unter [Domain-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
+ Wenn Sie eine Domäne erstellen, haben Sie die folgenden Optionen zum Auffüllen der Domäne aus den Quelldaten und zur Ausgabe der Domänenwerte. Weitere Informationen finden Sie unter [Festlegen von Domäneneigenschaften](../data-quality-services/set-domain-properties.md).  
   
 -   Wählen Sie den Typ der Daten aus, mit denen Sie die Domäne auffüllen. Informationen zu Datentypen, die für jeden Domänendatentyp unterstützt wurden, finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 09/09/2017
 |Verwenden von Beziehungen zum Korrigieren eines Begriffs, der Teil eines Werts in einer Domäne ist|[Erstellen von begriffsbasierten Beziehungen](../data-quality-services/create-term-based-relations.md)|  
 |Abschließen, Schließen oder Abbrechen der Domänenverwaltungsaktivität|[Beenden der Domänenverwaltungsaktivität](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -66,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 |Erstellen einer Verbunddomäne und Hinzufügen von Wissen zur Domäne.|[Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md)|  
   
   
-

@@ -3,7 +3,7 @@ title: Anpassungsdatei protokolliert Abschnitt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 10f6e47bcf8cede8c59a406fef4951a11cbd56bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99d22cd98548548463f1cbd5516d26faaf4b9bf1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-logs-section"></a>Anpassung Dateiabschnitt-Protokolle
 Die **Protokolle** Abschnitt enthält einen Protokolleintrag für die Datei, der den Namen einer Datei angibt, die Fehler beim Ausführen des zeichnet die **DataFactory**.  
@@ -48,7 +47,7 @@ FileName
   
 |Teil|Description|  
 |----------|-----------------|  
-|**Err**|Eine Literalzeichenfolge, die dies weist darauf hin handelt es sich um einen Protokolleintrag für die Datei.|  
+|**err**|Eine Literalzeichenfolge, die dies weist darauf hin handelt es sich um einen Protokolleintrag für die Datei.|  
 |*FileName*|Einen vollständigen Pfad und Dateinamen ein. Der Name der Standard ist **c:\msdfmap.log**.|  
   
  Die Protokolldatei enthält den Benutzernamen, HRESULT, Datum und Zeit der einzelnen Fehler an.  
@@ -61,6 +60,5 @@ FileName
  [Erforderlichen Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

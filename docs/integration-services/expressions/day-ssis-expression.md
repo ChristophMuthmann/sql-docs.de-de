@@ -1,10 +1,13 @@
 ---
-title: DAY (SSIS-Ausdruck) | Microsoft Docs
+title: DAY (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e297f7021239ded4aa76ad61e75fddba528ccf6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 417f08ab011404918c1f87ecb4aaf14a08e6f4fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS-Ausdruck)
   Gibt eine ganze Zahl zurück, die den datepart-Wert für den Tag eines Datums darstellt.  
@@ -42,7 +44,7 @@ DAY(date)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  DAY gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -71,13 +73,12 @@ DAY(ModifiedDate)
 DAY(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DATEADD &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEDIFF &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [Monat &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [Jahr &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DATEADD &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [MONTH &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [YEAR &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

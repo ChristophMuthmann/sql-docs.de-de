@@ -2,32 +2,31 @@
 title: "Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- HierarchyID
+applies_to: SQL Server 2016
+helpviewer_keywords: HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "23"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4569fb3f5bc56d04624756eb3fccba8da1d4ad2f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 09e5072fb37f7791f3f597ab3d2a6e382e302e47
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>Lektion 1-2 – Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
-In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
   
 -   Erstellen Sie eine neue Tabelle, die eine **hierarchyid** -Spalte enthält. Diese Spalte könnte die vorhandenen Spalten **EmployeeID** und **ManagerID** ersetzen. Sie behalten diese Spalten jedoch bei, weil bestehende Anwendungen möglicherweise auf diese Spalten verweisen und weil dann die Daten nach der Übertragung leichter verständlich sind. Gemäß der Tabellendefinition ist **OrgNode** der Primärschlüssel, so dass diese Spalte eindeutige Werte enthalten muss. Der gruppierte Index der Spalte **OrgNode** speichert das Datum in **OrgNode** -Sequenz.  
   
@@ -169,9 +168,8 @@ In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabe
   
 In der nächsten Aufgabe werden Indizes erstellt, um die hierarchische Struktur zu unterstützen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Optimieren der NewOrg-Tabelle](../../relational-databases/tables/lesson-1-3-optimizing-the-neworg-table.md)  
   
   
   
-

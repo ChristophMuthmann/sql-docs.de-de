@@ -3,27 +3,28 @@ title: "Vorgehensweise: Ausführen von parametrisierten Abfragen | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b233b2ac8b3ca454381eb3e0782ece33d59cbc8a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Vorgehensweise: Ausführen von parametrisierten Abfragen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -198,4 +199,3 @@ sqlsrv_close( $conn);
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   
-

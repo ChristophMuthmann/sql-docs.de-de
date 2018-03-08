@@ -3,8 +3,11 @@ title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,20 +34,19 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], INSERT statement
 - inserting data
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-caps.latest.revision: 136
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef8387c2bbbc109ad7ec325e4faf632a983d96c9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Fügt einer Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine oder mehrere Zeilen hinzu. Beispiele finden Sie unter [Beispiele](#InsertExamples).  
   
@@ -1027,7 +1029,6 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [Verwenden der Tabellen inserted und deleted](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
   
-
 
 
 

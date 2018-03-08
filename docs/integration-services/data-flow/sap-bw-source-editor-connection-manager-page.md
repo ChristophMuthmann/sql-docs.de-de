@@ -1,10 +1,13 @@
 ---
-title: SAP BW-Quelle-Editor (Seite Verbindungs-Manager) | Microsoft Docs
+title: "Quellen-Editor für SAP BW (Seite „Verbindungs-Manager“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für SAP BW** können Sie den SAP BW-Verbindungs-Manager für die SAP BW-Quelle auswählen. Auf dieser Seite wählen Sie außerdem den Ausführungsmodus und die Parameter aus, mit denen Sie die Daten aus dem SAP NetWeaver BW-System extrahieren.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 08/03/2017
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
  **SAP BW-Verbindungs-Manager**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **SAP BW-Verbindungs-Manager** einen neuen Verbindungs-Manager.  
@@ -128,11 +130,10 @@ ms.lasthandoff: 08/03/2017
  **Anforderungs-ID**  
  Geben Sie die Anforderungs-ID ein, die der Extrahierung zugeordnet ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für SAP BW &#40; Seite "Spalten" &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [Quellen-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Quellen-Editor für SAP BW &#40; Seite "Erweitert" &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

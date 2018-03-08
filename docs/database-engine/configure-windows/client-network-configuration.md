@@ -2,11 +2,13 @@
 title: Clientnetzwerkkonfiguration | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "38"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d2ece426d8fa9a328746e26346455f625ef8a7f5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0cbddc4384df93a3a1987c12d3fbd2664d57e3b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="client-network-configuration"></a>Client-Netzwerkkonfiguration
-  Mithilfe von Clientsoftware sind Clientcomputer in der Lage, eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Netzwerk herzustellen. Ein "Client" ist eine Front-End-Anwendung, die die von einem Server bereitgestellten Dienste verwendet, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Der Computer, auf dem sich diese Anwendung befindet, wird als *Clientcomputer*bezeichnet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe von Clientsoftware sind Clientcomputer in der Lage, eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Netzwerk herzustellen. Ein "Client" ist eine Front-End-Anwendung, die die von einem Server bereitgestellten Dienste verwendet, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Der Computer, auf dem sich diese Anwendung befindet, wird als *Clientcomputer*bezeichnet.  
   
  Auf der einfachsten Ebene kann sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Client auf demselben Computer wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]befinden. In der Regel stellt jedoch ein Client eine Verbindung mit mindestens einem Remoteserver über ein Netzwerk her. Die Client/Server-Architektur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht die problemlose Verwaltung mehrerer Clients und Server in einem Netzwerk. Die Standardclientkonfigurationen sind in den meisten Situationen ausreichend.  
   
@@ -85,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [Verwalten der Datenbankmoduldienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
-

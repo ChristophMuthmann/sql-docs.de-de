@@ -2,9 +2,12 @@
 title: "Domänenunabhängige Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
-
 # <a name="domain-independent-availability-groups"></a>Domänenunabhängige Verfügbarkeitsgruppen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On-Verfügbarkeitsgruppen erfordern einen zugrunde liegenden Windows Server-Failovercluster (WSFC). Das Bereitstellen eines WSFC über Windows Server 2012 R2 erfordert, dass die Server, die an einem WSFC teilnehmen (auch als Knoten bekannt) mit derselben Domäne verknüpft sind. Weitere Informationen zu Active Directory Domain Services (AD DS), finden Sie [hier](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 
@@ -85,69 +87,87 @@ Die Erstellung einer domänenunabhängigen Verfügbarkeitsgruppe kann derzeit vo
 1. [Mithilfe der Anweisungen unter diesem Link](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/) stellen Sie einen Workgroupcluster bereit, der aus allen Servern besteht, die in der Verfügbarkeitsgruppe vorhanden sein werden. Stellen Sie sicher, dass das allgemeine DNS-Suffix bereits konfiguriert ist, bevor Sie den Workgroupcluster konfigurieren.
 2. [Aktivieren Sie die Funktion „Always On-Verfügbarkeitsgruppen“](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) auf jeder Instanz, die an einer oder mehreren Verfügbarkeitsgruppen teilnehmen soll. Der Neustart jeder SQL Server-Instanz ist so erforderlich.
 3. Jede Instanz, die das primäre Replikat hostet, erfordert einen Datenbankhauptschlüssel. Wenn nicht bereits ein Hauptschlüssel vorhanden ist, führen Sie den folgenden Befehl aus:
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. Erstellen sie auf der Instanz, die das primäre Replikat sein wird, das Zertifikat, das jeweils für eingehende Verbindungen auf den sekundären Replikaten und für die Sicherung des Endpunkts auf dem primären Replikat verwendet wird.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. Sichern Sie das Zertifikat. Sie können es bei Bedarf auch weiter mit einem privaten Schlüssel sichern. In diesem Beispiel wird kein privater Schlüssel verwendet.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. Wiederholen Sie die Schritte 4 und 5, um Zertifikate aus jedem sekundären Replikat zu erstellen und zu sichern. Verwenden Sie hierzu die passenden Namen für die Zertifikate, z.B. „InstanceB_Cert“.
 7. Sie müssen auf dem primären Replikat einen Anmeldenamen für jedes sekundäre Replikat der Verfügbarkeitsgruppe erstellen. Diesem Anmeldename wird die Berechtigung zur Verbindung mit dem Endpunkt gewährt, der von der domänenunabhängigen Verfügbarkeitsgruppe verwendet wird. Beispielsweise für ein Replikat mit der Bezeichnung „InstanceB“:
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. Erstellen Sie auf jedem sekundären Replikat einen Anmeldenamen für das primäre Replikat. Diesem Anmeldenamen werden Berechtigungen für die Verbindung mit dem Endpunkt erteilt. Beispielsweise auf einem Replikat mit der Bezeichnung „InstanceB“:
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. Erstellen Sie für alle Instanzen einen Benutzer für jeden Anmeldenamen, der erstellt wurde. Dieser wird beim Wiederherstellen der Zertifikate verwendet. Geben Sie beispielsweise Folgendes ein, um einen Benutzer für das primäre Replikat zu erstellen:
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. Erstellen Sie für jedes Replikat, das möglicherweise ein primäres Replikat ist, einen Anmeldenamen und Benutzer auf allen entsprechenden sekundären Replikaten.
-11. Stellen Sie auf jeder Instanz die Zertifikate für die anderen Instanzen wieder her, für die ein Anmeldename und Benutzer erstellt wurde. Stellen Sie alle sekundären Replikatzertifikate auf dem primären Replikat wieder her. Stellen Sie auf jedem sekundären Replikat das Zertifikat des primären Replikats wieder her. Wiederholen Sie diesen Vorgang für jedes andere Replikat, das das primäre Replikat sein kann. Beispiel:
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+11. Stellen Sie auf jeder Instanz die Zertifikate für die anderen Instanzen wieder her, für die ein Anmeldename und Benutzer erstellt wurde. Stellen Sie alle sekundären Replikatzertifikate auf dem primären Replikat wieder her. Stellen Sie auf jedem sekundären Replikat das Zertifikat des primären Replikats wieder her. Wiederholen Sie diesen Vorgang für jedes andere Replikat, das das primäre Replikat sein kann. Zum Beispiel:
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. Erstellen Sie den Endpunkt, der von der Verfügbarkeitsgruppe auf jeder Instanz verwendet wird, die ein Replikat sein wird. Für Verfügbarkeitsgruppen muss der Endpunkt über einen Typ DATABASE_MIRRORING verfügen. Der Endpunkt nutzt das in Schritt 4 erstellte Zertifikat für diese Instanz zur Authentifizierung. Eine Beispielsyntax zum Erstellen eines Endpunkts mithilfe eines Zertifikats ist unten dargestellt. Verwenden Sie die passende Verschlüsselungsmethode und andere Optionen, die relevant für Ihre Umgebung sind. Weitere Informationen zu den verfügbaren Optionen finden Sie unter [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. Weisen Sie jedem in dieser Instanz in Schritt 9 erstellten Benutzer Rechte zu, sodass dieser eine Verbindung mit dem Endpunkt herstellen kann. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. Sobald die zugrunde liegenden Zertifikate und die Endpunktsicherheit konfiguriert ist, erstellen Sie die Verfügbarkeitsgruppe mit Ihrer bevorzugten Methode. Es wird empfohlen, eine manuelle Sicherung sowie eine Kopie und Wiederherstellung der Sicherung auszuführen, die zum Initialisieren des sekundären Replikats verwendet wird, oder verwenden Sie alternativ [automatisches Seeding](automatically-initialize-always-on-availability-group.md). Das Verwenden des Assistenten zum Initialisieren des sekundären Replikats beinhaltet die Verwendung der Server Message Block-Dateien (SMB), die möglicherweise nicht funktionieren, wenn Sie einen Workgroupcluster nutzen, der nicht mit der Domäne verbunden ist.
 15. Wenn Sie einen Listener erstellen, stellen Sie sicher, dass der Name und die IP-Adresse jeweils in DNS registriert sind.
 
 ### <a name="next-steps"></a>Nächste Schritte 
 
-- [Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
@@ -158,4 +178,3 @@ GO
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
 [4]: ./media/diag-successful-dns-suffix.png
-

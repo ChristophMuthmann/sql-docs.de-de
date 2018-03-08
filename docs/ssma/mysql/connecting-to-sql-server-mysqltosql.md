@@ -1,12 +1,14 @@
 ---
 title: Herstellen einer Verbindung mit SQLServer (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ed92b4a6b8b54e797f6dd623153ea677743a6c7b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8a00088252b6cab4971b7574f6f3e840c326d2f8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Herstellen einer Verbindung mit SQLServer (MySQLToSQL)
 Um MySQL-Datenbanken zu SQL Server zu migrieren, müssen Sie mit der Zielinstanz von SQL Server verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von SQL Server ab und Datenbankmetadaten in der SQL Server-Metadaten-Explorer angezeigt. SSMA speichert Informationen der Instanz von SQL Server Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  
@@ -126,4 +127,3 @@ Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

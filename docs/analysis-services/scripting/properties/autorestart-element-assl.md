@@ -2,40 +2,35 @@
 title: AutoRestart-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AutoRestart Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AutoRestart Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AutoRestart
-helpviewer_keywords:
-- AutoRestart element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AutoRestart
+helpviewer_keywords: AutoRestart element
 ms.assetid: 4c6a0e40-8e13-4d63-bf98-9470ffe95d02
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 20afdbf4888c717eb33caa22c8760ac4183cbe14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5b9297e05483d0b924a29d294ca0c4ed90ef4ae7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="autorestart-element-assl"></a>AutoRestart-Element (ASSL)
-  Bestimmt, ob eine [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md) Element sollte automatisch neu gestartet, wenn die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Dienst beendet und neu gestartet wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bestimmt, ob eine [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md) Element sollte automatisch neu gestartet, wenn die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Dienst beendet und neu gestartet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Boolean|  
 |Standardwert|**False**|  
@@ -61,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Trace](../../../analysis-services/scripting/objects/trace-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Element, das das übergeordnete Element des entspricht **AutoRestart** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trace>.  
@@ -71,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

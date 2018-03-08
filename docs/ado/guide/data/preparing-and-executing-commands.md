@@ -3,7 +3,7 @@ title: "Vorbereiten und Ausführen von Befehlen | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e9c8bce6735f6fb7db1f0c279514aca3420d3ba1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="preparing-and-executing-commands"></a>Vorbereiten und Ausführen von Befehlen
 Befehle sind Anweisungen zu einem Anbieter ausgestellt Eingriffe für die zugrunde liegenden Datenquelle. Eine SQL-Anweisung ist z. B. ein Befehl für den Microsoft SQL-Datenanbieter. In ADO werden Befehle in der Regel durch dargestellt **Befehl** Objekte aufweist, obwohl der einfache Befehle auch ausgegeben werden können, können Sie über **Verbindung** oder **Recordset** Objekte.  
@@ -52,4 +51,3 @@ Befehle sind Anweisungen zu einem Anbieter ausgestellt Eingriffe für die zugrun
 -   [Benannte Befehle](../../../ado/guide/data/named-commands.md)  
   
 -   [Übergeben von Parametern an einen benannten Befehl](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
-

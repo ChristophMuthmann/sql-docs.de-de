@@ -2,29 +2,30 @@
 title: MSSQLSERVER_5554 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5554 (Database Engine error)
+helpviewer_keywords: 5554 (Database Engine error)
 ms.assetid: 7134bbe5-d240-4a98-85ce-b13cc8ae9b0e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 45d6f39467c40af5da0a959e427aacdc30f9d4bb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8f5b8dd08230e8fbb22961dafc4b469acedcac05
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver5554"></a>MSSQLSERVER_5554
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -43,4 +44,3 @@ In MARS (Multiple Active Result Sets) oder Triggerszenarios verwendet [!INCLUDE[
 ## <a name="user-action"></a>Benutzeraktion  
 Versuchen Sie, wiederholte Datenupdates in derselben Transaktion zu vermeiden.  
   
-

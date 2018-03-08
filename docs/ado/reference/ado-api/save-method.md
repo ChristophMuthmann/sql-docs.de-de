@@ -3,7 +3,7 @@ title: Save-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edefe1c8d25abd84d5a5f82d7dde8035d82022ee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-method"></a>Save-Methode
 Speichert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -99,7 +98,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
   
 |||  
 |-|-|  
-|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
+|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speichern Sie und öffnen Sie die Methoden-Beispiel (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
@@ -107,4 +106,3 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open-Methode (ADO-Datenstrom)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [SaveToFile-Methode](../../../ado/reference/ado-api/savetofile-method.md)
-

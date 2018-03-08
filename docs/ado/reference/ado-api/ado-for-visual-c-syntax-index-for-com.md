@@ -3,7 +3,7 @@ title: "ADO für Visual C++-Syntax Index COM | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,22 +19,21 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 081d81654e6898496e81b809b9c4925020630181
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ace385c89003d7b528643c5047337eb32ed0847e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++-Syntax Index für COM
 Dieser Index ist ein Querverweis auf der Grundlage von Microsoft Visual C++ ADO-Sprachreferenz.  
   
- Bei Verwendung der **#import** Richtlinie in der Anwendung, eine Headerdatei generiert wird, mit denen Sie ähnliche Syntax wie Microsoft Visual Basic verwenden. Eigenschaftennamen des Formulars **Get_***PropertyName* und **Put_***PropertyName* behandelt werden kann, als ob sie einfach als deklariertwurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
+ Bei Verwendung der **#import** Richtlinie in der Anwendung, eine Headerdatei generiert wird, mit denen Sie ähnliche Syntax wie Microsoft Visual Basic verwenden. Eigenschaftennamen des Formulars **Get_ *** PropertyName* und **Put_ *** PropertyName* behandelt werden kann, als ob sie einfach als deklariert wurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
   
  Alle Methoden, Eigenschaften und Ereignisse sind Funktionen, die Zurückgeben einer **HRESULT**, die Sie testen können, um festzustellen, ob die Funktion erfolgreich ausgeführt.  
   
@@ -60,5 +59,4 @@ Dieser Index ist ein Querverweis auf der Grundlage von Microsoft Visual C++ ADO-
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO für Visual C++-Syntax Index mit #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
-
+ [Microsoft ActiveX Data Objects (ADO) (Microsoft ActiveX-Datenobjekte (ADO))](../../../ado/microsoft-activex-data-objects-ado.md)

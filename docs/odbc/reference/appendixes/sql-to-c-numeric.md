@@ -3,10 +3,12 @@ title: SQL in "c:" numerischen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - numeric data type [ODBC], converting
 - converting data from SQL to C types [ODBC], numeric
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f09af0c145da9d435bce70619a5388f1cecb581
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5513983bcd8d7858629bb1a9f45ff5489ad46246
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-numeric"></a>SQL in numerischen Wert "c:"
 Der Bezeichner für die numerische ODBC SQL-Datentypen sind:  
@@ -100,4 +101,3 @@ if (fCType == SQL_C_NUMERIC) {
       goto error;  
    retcode = SQLSetDescField(hdesc, iCol, SQL_DESC_DATA_PTR, (SQLPOINTER) &(num), sizeof(num));  
 ```
-

@@ -1,20 +1,20 @@
 ---
 title: DROP DATABASE (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], deleting
 - removing databases
@@ -25,20 +25,19 @@ helpviewer_keywords:
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 6e963031c1d9f27293a2f0786e7f0ce19183f038
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 6e1a96bb64c8cb6a81311f422d370e36d9489ca4
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Entfernt eine oder mehrere Benutzerdatenbanken oder Datenbank-Momentaufnahmen aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
   
@@ -162,4 +161,3 @@ DROP DATABASE sales_snapshot0600;
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
   
-

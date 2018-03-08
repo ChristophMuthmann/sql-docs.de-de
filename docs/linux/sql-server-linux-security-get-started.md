@@ -1,24 +1,29 @@
 ---
 title: Erste Schritte mit SQL Server-Sicherheit unter Linux | Microsoft Docs
-description: Dieses Thema beschreibt die typischen Sicherheitsaktionen.
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+description: Dieser Artikel beschreibt die typischen Sicherheitsaktionen.
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 254df7047188570cbf766efb29b486d77d095a98
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfeatures von SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Wenn Sie einen Linux-Benutzer, der noch nicht mit SQL Server ist sind, führen die folgenden Aufgaben durch einige der Sicherheitsaufgaben. Diese sind nicht eindeutig oder gelten speziell für Linux, aber sie hilft bei der bieten einen Überblick über Bereiche genauere Untersuchung durchführen. In jedem Beispiel wird ein Link, um die ausführliche Dokumentation für diesen Bereich bereitgestellt.
 
@@ -35,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Verwenden Sie immer ein sicheres Kennwort anstelle der oben genannten Sternchen.
+>  Verwenden Sie immer ein sicheres Kennwort anstelle der Sternchen im vorherigen Befehl.
 
 Anmeldungen können eine Verbindung mit SQL Server und Zugriffsrechte (mit eingeschränkten Berechtigungen) für die master-Datenbank. Zur Verbindung mit einer Benutzerdatenbank benötigt eine Anmeldung eine entsprechende Identität auf Datenbankebene, einen Datenbankbenutzer bezeichnet. Benutzer sind für jede Datenbank spezifisch und müssen separat erstellt werden, in jeder Datenbank aus, um ihnen den Zugriff zu erteilen. Im folgende Beispiel wird Sie in der AdventureWorks2014-Datenbank verschoben und verwendet dann die [CREATE USER](../t-sql/statements/create-user-transact-sql.md) -Anweisung zum Erstellen einer Benutzers namens Larry, die mit der Anmeldung mit dem Namen Larry anfallen. Obwohl die Anmeldung und der Benutzer verknüpft sind (die miteinander verknüpft sind), handelt es sich um unterschiedliche Objekte. Der Anmeldename ist einem Prinzipal auf Serverebene. Der Benutzer ist ein Prinzipal auf Datenbankebene.
 
@@ -61,7 +66,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Jetzt die Anmeldung Jerry können weitere Anmeldungen erstellen, und der Benutzer Jerry kann weitere Benutzer erstellen.
+Die Anmeldung Larry kann weitere Anmeldungen erstellen können, und der Benutzer Jerry kann weitere Benutzer erstellen.
 
 
 ## <a name="granting-access-with-least-privileges"></a>Erteilen des Zugriffs mit den geringsten Privilegien
@@ -98,7 +103,7 @@ Weitere Informationen über das Berechtigungssystem finden Sie unter [erste Schr
 
 [Sicherheit auf Zeilenebene](../relational-databases/security/row-level-security.md) ermöglicht es Ihnen, den Zugriff auf die Zeilen in einer Datenbank, basierend auf dem Benutzer, die Ausführung einer Abfrage einschränken. Diese Funktion eignet sich für Szenarien wie das sicherstellen, dass Kunden nur ihre eigenen Daten zugreifen können, oder dass Mitarbeiter nur auf Daten zugreifen können, die für ihre Abteilung relevant ist.   
 
-Die Schritte unten Gang durch das Einrichten von zwei Benutzern mit verschiedenen Zeilenebene Zugriff auf die `Sales.SalesOrderHeader` Tabelle. 
+Die folgenden Schritte führen, über das Einrichten von zwei Benutzern mit unterschiedlichen auf Zeilenebene Zugriff auf die `Sales.SalesOrderHeader` Tabelle. 
 
 Erstellen Sie zwei Benutzerkonten zum Testen der Sicherheit auf Zeilenebene:    
    
@@ -244,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Um TDE zu entfernen, führen`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Um TDE zu entfernen, führen `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 Die Verschlüsselung und Entschlüsselung Vorgänge werden von SQL Server in Hintergrundthreads geplant. Sie können den Status dieser Vorgänge mithilfe der in der Liste weiter unten in diesem Thema genannten Katalogsichten und dynamischen Verwaltungssichten anzeigen.   
 
@@ -287,4 +292,3 @@ Weitere Informationen finden Sie unter [Sicherungsverschlüsselung](../relationa
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu den Sicherheitsfeatures von SQL Server finden Sie unter [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
-

@@ -1,9 +1,9 @@
 ---
-title: Fehlerbehandlung | Microsoft Docs
+title: Fehlerbehandlung | Microsoft-Dokumentation
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eeb8b4abe5d199e3887b526c77163dcb8f1272fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ADO verwendet mehrere unterschiedliche Verfahren, um eine Anwendung von Fehlern zu benachrichtigen, die auftreten. Dieser Abschnitt beschreibt die Arten von Fehlern, die auftreten können, bei Verwendung von ADO und wie Ihre Anwendung informiert wird. Schließlich werden Vorschläge dazu, wie Sie diesen Fehler zu behandeln.  
@@ -53,11 +52,10 @@ ADO verwendet mehrere unterschiedliche Verfahren, um eine Anwendung von Fehlern 
   
 -   [Anbieterfehler](../../../ado/guide/data/provider-errors.md)  
   
--   [Fehler im Zusammenhang mit dem Feld Informationen](../../../ado/guide/data/field-related-error-information.md)  
+-   [Fehlerinformationen im Zusammenhang mit Feldern](../../../ado/guide/data/field-related-error-information.md)  
   
 -   [Recordset-bezogene Fehlerinformationen](../../../ado/guide/data/recordset-related-error-information.md)  
   
--   [Behandeln von Fehlern In anderen Sprachen](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [Behandeln von Fehlern in anderen Sprachen](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
 -   [Vorhersehen von Fehlern](../../../ado/guide/data/anticipating-errors.md)
-

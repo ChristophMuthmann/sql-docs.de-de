@@ -2,9 +2,12 @@
 title: "Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -14,19 +17,19 @@ applies_to:
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b1bbad6626f6270ab555c18b49d436eadfd0dff
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b30cc7798d28ce9b13f9448f583891170f7309fd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Mergeveröffentlichung, um eine Teilmenge der Tabellen **Employee**, **SalesOrderHeader**und **SalesOrderDetail** in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank zu veröffentlichen. Diese Tabellen werden mit parametrisierten Zeilenfiltern gefiltert, sodass in den einzelnen Abonnements jeweils eine eindeutige Teilmenge der Daten enthalten ist. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Merge-Agent verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hinzu. Für dieses Lernprogramm ist es erforderlich, dass Sie das vorherige Lernprogramm ( [Vorbereiten des Servers für die Replikation](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>So erstellen Sie eine Veröffentlichung und definieren Artikel  
@@ -90,7 +93,7 @@ In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../in
   
 21. Wählen Sie **Momentaufnahme sofort erstellen**aus, deaktivieren Sie **Ausführung des Momentaufnahme-Agents zu folgenden Zeitpunkten planen**und klicken Sie auf **Weiter**.  
   
-22. Klicken Sie auf der Seite „Agentsicherheit“ auf **Sicherheitseinstellungen**, geben Sie im Feld **Prozesskonto** das Konto \<*Machine_Name>***\repl_snapshot** und das Kennwort für das Konto ein und klicken Sie anschließend auf **OK**. Klicken Sie auf **Fertig stellen**.  
+22. Klicken Sie auf der Seite „Agentsicherheit“ auf **Sicherheitseinstellungen**, geben Sie im Feld **Prozesskonto** das Konto \<*Computername>***\repl_snapshot** und das Kennwort für das Konto ein, und klicken Sie anschließend auf **OK**. Klicken Sie auf **Fertig stellen**.  
   
 23. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Veröffentlichungsname** den Namen **AdvWorksSalesOrdersMerge** ein und klicken Sie auf **Fertig stellen**.  
   
@@ -114,16 +117,15 @@ In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../in
   
 3.  Wählen Sie die Seite **Veröffentlichungszugriffsliste** aus und klicken Sie auf **Hinzufügen**.  
   
-4.  Wählen Sie im Dialogfeld „Veröffentlichungszugriff hinzufügen“ Folgendes aus: *<Computername>***\repl_merge**. Klicken Sie anschließend auf **OK**. Klicken Sie auf **OK**.  
+4.  Klicken Sie im Dialogfeld „Veröffentlichungszugriff hinzufügen“ auf *<Computername>***\repl_merge**, und klicken Sie anschließend auf **OK**. Klicken Sie auf **OK**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Sie haben die Mergeveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Siehe [Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)  
 [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md)  
   
   
   
-

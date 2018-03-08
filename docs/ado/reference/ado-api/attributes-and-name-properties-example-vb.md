@@ -3,7 +3,7 @@ title: Attribute und Eigenschaften Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 28506a9073abf5c71a049aec7a651d4896c8ff9b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07787bcccbd64ab9c81a22e169fb3124606bc400
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attribute und Eigenschaften Beispiel (VB)
 Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet die [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft zum Anzeigen der Namen der einzelnen **Feld** und **Eigenschaft** Objekt.  
@@ -140,4 +139,3 @@ End Sub
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Name-Eigenschaft (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-

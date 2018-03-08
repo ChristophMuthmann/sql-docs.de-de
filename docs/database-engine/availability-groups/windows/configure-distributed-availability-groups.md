@@ -2,33 +2,35 @@
 title: "Konfigurieren verteilter Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppe) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
-ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
-ms.contentlocale: de-de
-ms.lasthandoff: 09/20/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-
 # <a name="configure-distributed-availability-group"></a>Konfigurieren verteilter Verfügbarkeitsgruppen  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Um eine verteilte Verfügbarkeitsgruppe zu erstellen, müssen Sie eine Verfügbarkeitsgruppe und einen Listener auf jedem Windows Server Failover Cluster (WSFC) erstellen. Anschließend kombinieren Sie diese Verfügbarkeitsgruppen zu einer verteilten Verfügbarkeitsgruppe. Die folgenden Schritte stellen ein einfaches Beispiel in Transact-SQL dar. Dieses Beispiel deckt nicht alle Details zum Erstellen von Verfügbarkeitsgruppen und Listenern ab; vielmehr legt es den Schwerpunkt auf die Herausarbeitung der wichtigsten Anforderungen. 
 
 Eine technische Übersicht über verteilte Verfügbarkeitsgruppen finden Sie unter [Verteilte Verfügbarkeitsgruppen](distributed-availability-groups.md).   
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Festlegen der Endpunktlistener zur Überwachung aller IP-Adressen
 
@@ -207,12 +209,18 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## <a name="failover"></a> Verknüpfen der Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe
+Nachdem die Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe in einen Wiederherstellungsstatus gewechselt ist, müssen Sie sie manuell mit der Verfügbarkeitsgruppe verknüpfen.
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a> Failover auf eine sekundäre Verfügbarkeitsgruppe  
 Zurzeit wird nur manuelles Failover unterstützt. Die folgende Transact-SQL-Anweisung führt ein Failover auf die verteilte Verfügbarkeitsgruppe mit dem Namen `distributedag` aus:  
 
 
-1. Legen Sie den Verfügbarkeitsmodus für die sekundäre Verfügbarkeitsgruppe auf synchronen Commit fest. 
+1. Legen Sie den Verfügbarkeitsmodus für beide Verfügbarkeitsgruppen auf synchronen Commit fest. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -221,7 +229,7 @@ Zurzeit wird nur manuelles Failover unterstützt. Die folgende Transact-SQL-Anwe
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 
@@ -344,4 +352,3 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
-

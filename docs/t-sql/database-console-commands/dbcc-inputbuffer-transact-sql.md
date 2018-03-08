@@ -1,10 +1,13 @@
 ---
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/16/2017
-
+ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Zeigt die letzte Anweisung, die von einem Client mit einer Instanz von gesendete [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -62,7 +64,7 @@ SELECT request_id
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
-WITH  
+mit  
 Aktiviert anzugebende Optionen.  
   
 NO_INFOMSGS  
@@ -75,7 +77,7 @@ DBCC INPUTBUFFER gibt ein Rowset mit folgenden Spalten zurück.
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Der Ereignistyp. Dies kann **RPC Event** oder **Language Event**sein. Wurde kein letztes Ereignis erkannt, wird **No Event** ausgegeben.|  
 |**Parameter**|**smallint**|0 = Text<br /><br /> 1 -  *n*  = Parameter|  
-|**"EventInfo"**|**nvarchar(4000)**|Wenn **EventType** gleich RPC, enthält **EventInfo** nur den Namen der Prozedur. Wenn **EventType** gleich Language, werden nur die ersten 4000 Zeichen des Ereignisses angezeigt.|  
+|**EventInfo**|**nvarchar(4000)**|Wenn **EventType** gleich RPC, enthält **EventInfo** nur den Namen der Prozedur. Wenn **EventType** gleich Language, werden nur die ersten 4000 Zeichen des Ereignisses angezeigt.|  
   
 Beispielsweise gibt DBCC INPUTBUFFER das folgende Resultset zurück, wenn das letzte Ereignis im Puffer DBCC INPUTBUFFER(11) war:
   
@@ -126,7 +128,6 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>Siehe auch  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[Sys. dm_exec_input_buffer &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
-

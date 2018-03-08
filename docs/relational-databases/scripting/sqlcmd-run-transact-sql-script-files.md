@@ -2,9 +2,12 @@
 title: "Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“"
 ms.custom: 
 ms.date: 07/15/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8986c5788ed0223ada33369c9b30bec899596140
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 815b9a2deb8dd4c3f81e46257ae3756eeefe9512
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“
- Verwenden Sie zum Ausführen einer Transact-SQL-Skriptdatei den Befehl **sqlcmd** . Eine Transact-SQL-Skriptdatei ist eine Textdatei, die eine Kombination aus Transact-SQL-Anweisungen, **sqlcmd** -Befehlen und Skriptvariablen enthalten kann.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie zum Ausführen einer Transact-SQL-Skriptdatei den Befehl **sqlcmd**. Eine Transact-SQL-Skriptdatei ist eine Textdatei, die eine Kombination aus Transact-SQL-Anweisungen, **sqlcmd** -Befehlen und Skriptvariablen enthalten kann.  
 
 ## <a name="create-a-script-file"></a>Erstellen einer Skriptdatei  
  Führen Sie die folgenden Schritte aus, um eine einfache Transact-SQL-Skriptdatei mithilfe des Editors zu erstellen:  
@@ -70,9 +73,8 @@ ms.lasthandoff: 06/22/2017
   
  In diesem Fall erfolgt keine Ausgabe im Eingabeaufforderungsfenster. Stattdessen erfolgt die Ausgabe in die Datei EmpAdds.txt. Sie können diese Ausgabe prüfen, indem Sie die Datei EmpAdds.txt öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Hilfsprogramms "sqlcmd"](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
- [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   
-

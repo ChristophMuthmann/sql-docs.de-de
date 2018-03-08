@@ -3,7 +3,7 @@ title: 'Schritt 2: Initialisieren der wichtigsten Listenfeld | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 60ece26fab2c6f691614b609d1dd3f07f42231e4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c291da043764d9599311704af86952eec47578b6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Schritt 2: Initialisieren der wichtigsten Listenfeld
 Um globale Datensatz und Recordset-Objekte zu deklarieren, fügen Sie den folgenden Code in die (Allgemein) (Deklarationen) für Form1 ein:  
@@ -60,5 +59,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Internet, die Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Schritt 1: Einrichten von Visual Basic-Projekt](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [Schritt 3: Auffüllen der Felder Listenfeld](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
-
+ [Schritt 3: Auffüllen des Listenfelds „Fields“](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

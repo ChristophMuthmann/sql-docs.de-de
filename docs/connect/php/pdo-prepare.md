@@ -3,24 +3,25 @@ title: 'PDO:: Prepare | Microsoft Docs'
 ms.custom: 
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34fa1a4f5bfa9e37f698e15e835285e836a8d959
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a83fabca6866e8e3b106d8696ef03514a93aa62
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -143,4 +144,3 @@ print_r($row);
 [PDO-Klasse](../../connect/php/pdo-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

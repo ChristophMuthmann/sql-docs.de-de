@@ -2,11 +2,12 @@
 title: SQL Server-Installation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/06/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -18,18 +19,19 @@ helpviewer_keywords:
 - installation [SQL Server]
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 34
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 8fe0874d637f1597814bf14c8d12d111ece4cee1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 095a3d6d9fd7f16b337136f564fea18160b8636c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-installation"></a>SQL Server-Installation
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Der Installations-Assistent für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine einzelne Funktionsstruktur für die Installation aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten:  
   
@@ -88,6 +90,6 @@ Beschreibt, wie der Computer auf [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
 Links und Informationen für alle unterstützten Versionen von [finden Sie im](https://msdn.microsoft.com/library/ff803383.aspx) SQL Server-Update Center [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Neuigkeiten in der SQL Server-Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
 [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  

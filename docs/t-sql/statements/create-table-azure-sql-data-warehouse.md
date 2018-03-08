@@ -3,9 +3,11 @@ title: Erstellen der Tabelle (Azure SQL Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 07/14/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11df71495b55ca72074c6ab928caaf6474bb2576
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-table-azure-sql-data-warehouse"></a>Erstellen der Tabelle (Azure SQL Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Erstellt eine neue Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  
@@ -105,7 +106,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *table_name*  
  Der Name der neuen Tabelle. Um eine lokale temporäre Tabelle zu erstellen, der Tabellenname muss mit # vorangestellt werden.  Weitere erläuterungen und Hinweise für temporäre Tabellen finden Sie unter [temporäre Tabellen in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
  
- *Spaltenname*  
+ *column_name*  
  Der Name einer Tabellenspalte.
    
 ### <a name="ColumnOptions"></a>Spaltenoptionen
@@ -116,7 +117,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `NULL` | `NOT NULL`  
  Gibt an, ob `NULL` Werte in der Spalte zulässig sind. Der Standardwert ist `NULL`.  
   
- [ `CONSTRAINT` *Constraint_name* ] `DEFAULT` *Constant_expression*  
+ [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
  Gibt den Standardwert für die Spalte an.  
   
  | Argument | Erklärung |
@@ -143,7 +144,7 @@ Die Tabelle als gruppierten columnstore-Index gespeichert. Der gruppierte column
 ### <a name="TableDistributionOptions"></a>Tabelle Verteilungsoptionen
 Um zu verstehen, wie die beste Verteilungsmethode auszuwählen und verteilte Tabellen zu verwenden, finden Sie unter [Verteilen von Tabellen in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH`( *Distribution_column_name* )   
+`DISTRIBUTION = HASH` ( *distribution_column_name* )   
 Weist jede Zeile an einen Verteilungspunkt durch den Wert in gespeicherten hashing *Distribution_column_name*. Der Algorithmus ist deterministisch, was bedeutet, dass immer den gleichen Wert für die gleiche Verteilung Hashs.  Die verteilungsspalte sollten seit alle Zeilen, die NULL wurde für die gleiche Verteilung zugewiesen werden, haben, als NOT NULL definiert werden.
 
 `DISTRIBUTION = ROUND_ROBIN`   
@@ -155,7 +156,7 @@ Speichert eine Kopie der Tabelle auf jeder Compute-Knoten. Für [!INCLUDE[ssSDW]
 ### <a name="TablePartitionOptions"></a>Tabellenoptionen für die partition
 Anleitung zur Verwendung von Tabellenpartitionen, finden Sie unter [Partitionierung von Tabellen in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION`( *Partition_column_name* `RANGE` [ `LEFT`  |  `RIGHT` ] `FOR VALUES` ([ *Boundary_value* [,... *n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Erstellt ein oder mehrere Tabellenpartitionen. Hierbei handelt es sich um horizontale Slices, mit denen Sie Vorgänge auf Teilmengen von Zeilen unabhängig davon, ob die Tabelle als Heap, gruppierter Index oder gruppierten columnstore-Index gespeichert wird. Im Gegensatz zu der verteilungsspalte bestimmen Tabellenpartitionen nicht die Verteilung, in dem jede Zeile gespeichert wird. Stattdessen bestimmen Tabellenpartitionen, wie Zeilen gruppiert und innerhalb jedes Verteilungspunkts gespeichert sind.  
  
 | Argument | Erklärung |
@@ -251,7 +252,7 @@ Identisch mit `datetime`, außer dass Sie die Anzahl der Bruchteile von Sekunden
 | `tinyint` |1|  
   
  `bit`  
- Ein Integer-Datentyp, der den Wert annehmen kann `1`, `0`, oder "NULL. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]optimiert das Speichern von Bitspalten. Wenn in einer Tabelle 8 oder weniger Bitspalten vorhanden sind, werden die Spalten als 1 Byte gespeichert. Wenn sind zwischen 9 und 16-Bit-Spalten vorhanden, die Spalten werden als 2 Byte gespeichert usw..  
+ Ein Integer-Datentyp, der den Wert annehmen kann `1`, `0`, oder "NULL. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]optimiert das Speichern von Bitspalten. Wenn in einer Tabelle 8 oder weniger Bitspalten vorhanden sind, werden die Spalten als 1 Byte gespeichert. Wenn sind zwischen 9 und 16-Bit-Spalten vorhanden, die Spalten werden als 2 Byte gespeichert usw.  
   
  `nvarchar`[(  *n*   |  `max` )]-- `max` gilt nur für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
  Unicode-Daten variabler Länge. *n*ein Wert zwischen 1 und 4000 kann sein. `max` gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Speichergröße in Bytes ist zweimal die Anzahl eingegebener Zeichen + 2 Byte. Die eingegebenen Daten können 0 Zeichen lang sein.  
@@ -282,7 +283,7 @@ Identisch mit `datetime`, außer dass Sie die Anzahl der Bruchteile von Sekunden
 
 Erstellen einer partitionierten Tabelle erfordert die Berechtigung in den `db_ddladmin` feste Datenbankrolle oder
 
-- `ALTER ANY DATASPACE`Berechtigung
+- `ALTER ANY DATASPACE` permission
   
  Die Anmeldung, die eine lokale temporäre Tabelle erstellt `CONTROL`, `INSERT`, `SELECT`, und `UPDATE` Berechtigungen für die Tabelle.  
  
@@ -448,7 +449,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G. Erstellen Sie eine replizierte Tabelle  
+### <a name="Replicated"></a> G. Erstellen Sie eine replizierte Tabelle  
  Das folgende Beispiel erstellt eine replizierte Tabelle wie in den vorherigen Beispielen. Replizierte Tabellen werden vollständig in jeder Serverknoten kopiert. Mit dieser Kopie auf jedem Knoten der COMPUTE-wird die datenverschiebung für Abfragen reduziert. In diesem Beispiel wird mit einem gruppierten INDEX erstellt, der bietet bessere datenkomprimierung als einen Heap und enthält möglicherweise nicht genügend Zeilen um gute CLUSTERED COLUMNSTORE INDEX-Komprimierung zu erreichen.  
   
 ```  
@@ -468,7 +469,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Beispiele für Tabellenpartitionen
 
-###  <a name="PartitionedTable"></a>H. Erstellen Sie eine partitionierte Tabelle  
+###  <a name="PartitionedTable"></a> H. Erstellen Sie eine partitionierte Tabelle  
  Das folgende Beispiel erstellt die gleiche Tabelle wie im Beispiel ein, durch das Hinzufügen von RANGE LEFT Partitionierung für die `id` Spalte. Es gibt vier Partitionsbegrenzungswerte ansprechen fünf Partitionen.  
   
 ```  
@@ -502,7 +503,7 @@ WITH
 -   Partitionieren von 4:30 < Col 40 < =   
 -   Partition 5:40 < = Col  
   
-### <a name="OnePartition"></a>ICH. Erstellen Sie eine partitionierte Tabelle mit einer partition  
+### <a name="OnePartition"></a> I. Erstellen Sie eine partitionierte Tabelle mit einer partition  
  Im folgende Beispiel wird eine partitionierte Tabelle mit einer Partition erstellt. Es gibt keine Begrenzungswerte an, was dazu führt zu einer einzigen Partition.  
   
 ```  
@@ -518,7 +519,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J. Erstellen Sie eine Tabelle mit der Partitionierung Datum  
+### <a name="DatePartition"></a> J. Erstellen Sie eine Tabelle mit der Partitionierung Datum  
  Das folgende Beispiel erstellt eine neue Tabelle namens `myTable`, mit der Partitionierung für eine `date` Spalte. Mit RANGE RIGHT und Datumsangaben für die Begrenzungswerte, legt er die Daten ein Monats in jeder Partition.  
   
 ```  
@@ -565,4 +566,3 @@ WITH
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

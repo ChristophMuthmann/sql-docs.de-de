@@ -1,27 +1,27 @@
 ---
-title: Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator und SSRS) | Microsoft Docs
+title: Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 241966104849ba33d0797d337c5a993d06d0c661
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator und SSRS)
   Mit jedem unterstützten Webbrowser kann ein Bericht über eine Direktverbindung mit einem Berichtsserver angezeigt werden. Für jeden Bericht gibt es auf einem Berichtsserver eine URL-Adresse. Sie können die Webadresse eines Berichts eingeben, um ihn in einem Browserfenster unabhängig von der Webanwendung zu öffnen. Der Bericht wird im HTML-Format geöffnet und enthält die Berichtssymbolleiste, sodass Sie auf Seiten navigieren oder Datenwerte innerhalb des Berichts suchen können. Sie können in der URL Parameter festlegen, um die Symbolleiste auszublenden oder das Ausgabeformat des Berichts auszuwählen.  
@@ -48,9 +48,9 @@ Ordner in einem Browser
   
 -   Ein Link ohne weiteren Indikator ist ein Bericht oder ein Modell.  
   
--   Das Tag \<ds > Gibt eine freigegebene Datenquelle an.  
+-   Das Tag \<ds> gibt eine freigegebene Datenquelle an.  
   
--   Das Tag \<Dir > Gibt ein Ordnerelement an.  
+-   Das Tag \<dir> gibt ein Ordnerelement an.  
   
 -   Eine Dateierweiterung zeigt eine Ressource an. Die Dateierweiterung identifiziert den MIME-Typ der Ressource. Beispielsweise steht .jpg für ein Bild im JPEG-Format.  
   
@@ -64,4 +64,3 @@ Ordner in einem Browser
  Weitere Informationen über den Zugriff auf einen Bericht über eine URL, einschließlich Informationen über den Aufbau einer URL finden Sie unter "URL-Zugriff" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
   
-

@@ -3,7 +3,7 @@ title: 'Parameter (Visual C++-Syntax Index mit #import) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Parameter collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 47eaa6b14625105702528f105900fd4500123945
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2711de796936a8023ece248f92c7052dc859a720
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>Parameter (Visual C++-Syntax Index mit #import)
 ## <a name="methods"></a>Methoden  
@@ -79,4 +78,3 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
   
 ## <a name="see-also"></a>Siehe auch  
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
-

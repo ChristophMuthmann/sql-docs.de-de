@@ -1,34 +1,35 @@
 ---
-title: 'Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator) | Microsoft Docs'
+title: 'Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie zwei Arten von paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. 
 
 Die folgende Abbildung zeigt die Berichte, die Sie erstellen werden und wie der Feldwert „Games and Toys“ aus dem Hauptbericht im Titel des Drillthroughberichts angezeigt wird. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie „Games and Toys!“.  
   
-![Rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "Rs_DrillthroughCubeTutorial")  
+![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
@@ -59,7 +60,7 @@ Erstellen Sie im Dialogfeld „Erste Schritte“ mit dem **Tabellen- oder Matrix
 3.  Vergewissern Sie sich, dass im rechten Bereich **Tabellen- oder Matrix-Assistent** ausgewählt ist.  
   
 ## <a name="DConnection"></a>1a. Angeben einer Datenverbindung  
-Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einem Analysis Services-Cube oder einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird. In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zum Verwenden einer freigegebenen Datenquelle finden Sie unter [Alternative Möglichkeiten zum Abrufen von einer Verbindung mit Daten &#40; Berichts-Generator &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einem Analysis Services-Cube oder einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird. In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
   
@@ -114,7 +115,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
     > [!TIP]  
-    > Wenn Sie nicht, um die MDX-Abfrage manuell zu erstellen möchten, klicken Sie auf die ![in den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "in den Entwurfsmodus wechseln") Symbol, Wechseln der Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer, und fahren Sie mit Schritt 6 in [So erstellen Sie das Dataset](#DSkip).  
+    > Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 6 unter [So erstellen Sie das Dataset](#DSkip) fort.  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -405,7 +406,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
     > [!TIP]  
-    > Wenn Sie nicht, um die MDX-Abfrage manuell zu erstellen möchten, klicken Sie auf die ![in den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "in den Entwurfsmodus zu wechseln") Symbol, den Abfrage-Designer in den Abfragemodus zu wechseln, fügen Sie die abgeschlossene MDX in den Abfrage-Designer, und fahren Sie mit Schritt 5 in [So erstellen Sie das Dataset](#MSkip).  
+    > Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 5 unter [So erstellen Sie das Dataset](#MSkip) fort.  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -688,7 +689,6 @@ Führen Sie den Hauptbericht aus, und klicken Sie dann auf Werte in der Produktk
   
 5.  Sie können sich auch andere Produktkategorien ansehen, indem Sie auf deren Namen klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md)  
   
-

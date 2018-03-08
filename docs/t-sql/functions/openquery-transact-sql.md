@@ -3,8 +3,11 @@ title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-caps.latest.revision: 42
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 2a3ad57f9cd898d4c059df725b380be28622035e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Führt die angegebene Pass-Through-Abfrage auf dem angegebenen Verbindungsserver aus. Bei diesem Server handelt es sich um eine OLE DB-Datenquelle. Auf OPENQUERY kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Auf OPENQUERY kann auch als Zieltabelle einer INSERT-, UPDATE- oder DELETE-Anweisung verwiesen werden. Dies hängt von den Funktionen des OLE DB-Anbieters ab. Obwohl die Abfrage möglicherweise mehrere Resultsets zurückgibt, gibt OPENQUERY nur das erste zurück.  
   
@@ -59,7 +61,7 @@ OPENQUERY ( linked_server ,'query' )
   
  Mit OPENQUERY können keine erweiterten gespeicherten Prozeduren für einen Verbindungsserver ausgeführt werden. Eine erweiterte gespeicherte Prozedur kann jedoch auf einem Verbindungsserver ausgeführt werden, wenn der vierteilige Name verwendet wird. Beispiel:  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
@@ -73,7 +75,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. Ausführen einer UPDATE-Pass-Through-Abfrage  
  Im folgenden Beispiel wird eine `UPDATE`-Pass-Through-Abfrage für den in Beispiel A erstellten Verbindungsserver verwendet.  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +83,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. Ausführen einer INSERT-Pass-Through-Abfrage  
  Im folgenden Beispiel wird eine `INSERT`-Pass-Through-Abfrage für den in Beispiel A erstellten Verbindungsserver verwendet.  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,14 +91,14 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. Ausführen einer DELETE-Pass-Through-Abfrage  
  Im folgenden Beispiel wird eine `DELETE`-Pass-Through-Abfrage verwendet, um die in Beispiel C eingefügte Zeile zu löschen.  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Ausführen einer SELECT-Pass-Through-Abfrage  
  Im folgenden Beispiel wird ein Pass-Through- `SELECT` Abfrage, die in Beispiel c eingefügte Zeile auszuwählen.  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     
@@ -114,4 +116,3 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

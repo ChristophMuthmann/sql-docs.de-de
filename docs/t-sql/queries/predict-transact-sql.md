@@ -2,32 +2,31 @@
 title: VORHERSAGEN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
 - PREDICT_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- PREDICT clause
+dev_langs: TSQL
+helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 529cb229b6658085d0f2122604a4ed638f66a84c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>VORHERSAGEN Sie (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Generiert einen vorhergesagten Wert oder die Ergebnisse auf Grundlage eines gespeicherten Modells.  
 
@@ -62,11 +61,11 @@ Die `MODEL` Parameter wird verwendet, um das Modell für die Bewertung oder für
 
 Das Modellobjekt kann mithilfe von R oder Python oder ein anderes Tool erstellt werden.
 
-**Daten**
+**data**
 
 DATA-Parameter dient zum Angeben der Daten für die Bewertung oder die Vorhersage verwendet. Daten in Form einer Tabellenquelle in der Abfrage angegeben. Tabellenquelle kann es sich um eine Tabelle, Tabellenalias, CTE-Alias, Sicht oder Tabellenwertfunktion handeln.
 
-**Parameter**
+**parameters**
 
 Der Parameter-Parameter wird verwendet, an die optionale benutzerdefinierte Parameter für die Bewertung oder die Vorhersage verwendet.
 
@@ -74,7 +73,7 @@ Der Name jedes Parameters bezieht sich auf den Typ des Modells. Die RxPredict-Fu
 
 > [HINWEIS] Diese Option wird nicht unterstützt, in der Vorabversion von SQL Server-2017 und dienen lediglich der Forward-Kompatibilität enthalten ist.
 
-**MIT ( \<Result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 Die WITH-Klausel wird verwendet, um das Schema für die zurückgegebene Ausgabe angeben der `PREDICT` Funktion.
 
@@ -197,6 +196,5 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
-
 
 

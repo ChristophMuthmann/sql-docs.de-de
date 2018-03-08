@@ -1,10 +1,13 @@
 ---
-title: Muster Profil Anforderung Spaltenoptionen (Datenprofilerstellungs-Task) | Microsoft Docs
+title: "Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: 154dc4da51c19363cb9fd41616e9e89ea3d3ded8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenmusterprofil** festzulegen. Ein Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Mit diesem Profil können Sie Probleme in Ihren Daten, wie z. B. ungültige Zeichenfolgen, ermitteln und reguläre Ausdrücke vorschlagen, die in Zukunft zum Überprüfen neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit US-Postleitzahlen kann die regulären Ausdrücke \d{5}-\d{4}, \d{5}, und \d{9}.erstellen. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **Trennzeichen** Standardmäßig enthält die Liste der Trennzeichen die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
--   **Symbole** wird standardmäßig die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%` sowie den Teilstrich. Sind die Symbole beispielsweise "`()-`", wird der Wert "(425) 123-4567" mit dem Token ["(", "425", ")", "123", "-", "4567", ")"] versehen.  
+-   **Symbole** Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%` sowie den Teilstrich. Sind die Symbole beispielsweise "`()-`", wird der Wert "(425) 123-4567" mit dem Token ["(", "425", ")", "123", "-", "4567", ")"] versehen.  
   
  Ein Zeichen kann nicht zugleich ein Trennzeichen und ein Symbol sein.  
   
@@ -91,7 +93,7 @@ ms.lasthandoff: 10/05/2017
   
  Weitere Informationen finden Sie im Abschnitt "TableorView-Optionen" in diesem Thema.  
   
- **Spalte**  
+ **Column**  
  Wählen Sie die vorhandene Spalte aus, für die ein Profil erstellt werden soll. Wählen Sie **(\*)** aus, um ein Profil für alle Spalten zu erstellen.  
   
  Weitere Informationen finden Sie im Abschnitt "Spaltenoptionen" in diesem Thema.  
@@ -117,7 +119,7 @@ ms.lasthandoff: 10/05/2017
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **MaxNumberOfPatterns**  
  Geben Sie die maximale Anzahl von Mustern an, die das Profil berechnen soll. Der Standardwert dieser Option ist 10. Der Maximalwert ist 100.  
   
@@ -133,7 +135,7 @@ ms.lasthandoff: 10/05/2017
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
  **Symbols**  
- Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und " @ " für E-Mail-Adressen enthalten. Standardmäßig wird die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
@@ -147,9 +149,8 @@ ms.lasthandoff: 10/05/2017
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

@@ -3,7 +3,7 @@ title: VBScript-ADO-Programmierung | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f725eec0027d1c06715b72785a1fe06a4fa4cedb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="vbscript-ado-programming"></a>VBScript-ADO-Programmierung
 ## <a name="creating-an-ado-project"></a>Erstellen eines ADO-Projekts  
@@ -92,4 +91,3 @@ Response.Write("Success!")
 -   Sie können keine **auf Fehler Goto \<Bezeichnung >** in VBScript.  
   
 -   VBScript unterstützt einige der integrierten Visual Basic-Funktionen wie z. B. **Msgbox**, **Datum**, und **IsNumeric**. Da VBScript eine Teilmenge von Visual Basic ist, werden jedoch nicht alle integrierte Funktionen unterstützt. Z. B. VBScript unterstützt nicht die **Format** Funktion und die-e/a-Dateifunktionen.
-

@@ -2,9 +2,12 @@
 title: Abfrage-Editor des Datenbankmoduls (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: 47
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40ac7dd736d0366fe5cb564719a375e2e6a6a43d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor des Datenbankmoduls (SQL Server Management Studio)
-  Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
   
 ## <a name="transact-sql-f1-help"></a>F1-Hilfe für Transact-SQL  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt bei der Auswahl von F1 den Link zu einem Referenzthema einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Markieren Sie hierzu den Namen einer Transact-SQL-Anweisung, und wählen Sie dann F1 aus. Das Hilfesuchmodul sucht dann nach einem Thema mit einem F1-Hilfeattribut, das der markierten Zeichenfolge entspricht.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sql-editor-toolbar"></a>SQL-Editor-Symbolleiste  
  Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet ist, wird die SQL-Editor-Symbolleiste mit den folgenden Schaltflächen angezeigt:  
   
- **Connect**  
+ **Verbinden**  
  Öffnet das Dialogfeld **Verbindung mit Server herstellen** . Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem Server herstellen.  
   
  **Trennen**  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
  Gibt die Abfrageergebnisse als ein oder mehrere Raster im Fenster **Ergebnisse** zurück.  
   
  **Ergebnisse in Datei**  
- Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in**den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname**den Namen der Datei ein, und klicken Sie dann auf **Speichern** , um die Abfrageergebnisse als **Berichtsdatei** mit der Dateierweiterung ".rpt" zu speichern. Klicken Sie auf den Pfeil nach unten auf der Schaltfläche **Speichern** , und klicken Sie anschließend auf **Mit Codierung speichern**, um erweiterte Optionen anzugeben.  
+ Wenn die Abfrage ausgeführt wird, wird das Dialogfeld **Ergebnisse speichern** geöffnet. Wählen Sie unter **Speichern in**den Ordner aus, in dem Sie die Datei speichern möchten. Geben Sie unter **Dateiname**den Namen der Datei ein, und klicken Sie dann auf **Speichern**, um die Abfrageergebnisse als **Berichtsdatei** mit der Dateierweiterung ".rpt" zu speichern. Klicken Sie auf den Pfeil nach unten auf der Schaltfläche **Speichern** , und klicken Sie anschließend auf **Mit Codierung speichern**, um erweiterte Optionen anzugeben.  
   
  **Auswahl kommentieren**  
  Markiert die aktuelle Zeile als Kommentar, indem am Zeilenanfang ein Kommentaroperator (--) hinzugefügt wird.  
@@ -153,8 +155,7 @@ ms.lasthandoff: 06/22/2017
  **Windows**  
  Öffnet entweder das Fenster **Breakpoint** oder das **Direktfenster** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

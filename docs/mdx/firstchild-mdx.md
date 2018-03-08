@@ -2,34 +2,32 @@
 title: FirstChild (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- FIRSTCHILD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- FirstChild function
+f1_keywords: FIRSTCHILD
+dev_langs: kbMDX
+helpviewer_keywords: FirstChild function
 ms.assetid: 3c19a169-7658-4b31-93a9-85f74225ba05
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b55730d658ec1b0397e377e3908b87b1d9bda04f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b003d5df78f2387b54bc306c4edb2bdb2c1beadf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="firstchild-mdx"></a>FirstChild (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt das erste untergeordnete Element eines angegebenen Elements zurück.  
   
@@ -57,4 +55,3 @@ FROM [Adventure Works]
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

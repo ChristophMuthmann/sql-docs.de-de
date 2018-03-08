@@ -1,11 +1,13 @@
 ---
 title: PolyBase T-SQL-Objekte | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -14,22 +16,20 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: 20
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9941f7e1c8bda690114a626315c9fe5afb4a2da7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
-ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL-Objekte
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
-
-  Um PolyBase verwenden zu können, müssen Sie externe Tabellen erstellen, um auf Ihre externen Daten zu verweisen.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Um PolyBase verwenden zu können, müssen Sie externe Tabellen erstellen, um auf Ihre externen Daten zu verweisen.  
   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]
 >  PolyBase unterstützt in SQL Server 2016 nur Windows-Benutzer. Wenn Sie versuchen, mit einem SQL-Benutzer eine Abfrage an eine externe Tabelle von PolyBase zu senden, schlägt die Abfrage fehl.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Konfigurieren Sie PolyBase. Siehe [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## <a name="create-external-tables-for-hadoop"></a>Erstellen externen Tabellen für Hadoop
@@ -299,9 +299,8 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
 ## <a name="next-steps"></a>Nächste Schritte  
  Beispiele für Abfragen finden Sie unter [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md)(PolyBase-Abfragen).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erste Schritte mit PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

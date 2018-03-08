@@ -1,1 +1,1 @@
- Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt. 
+ Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Künftige Kompatibilität wird nicht garantiert. 

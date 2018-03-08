@@ -3,10 +3,12 @@ title: "Ebene 1 Schnittstelle Konformität | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3889b64da6484b7aac8adfb0b643467fc716e560
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-1-interface-conformance"></a>Ebene 1 Schnittstelle Konformität
 Der Konformitätsgrad des Ebene-1-Schnittstelle enthält die Schnittstelle Konformität Ebene Kernfunktionalität sowie auf zusätzliche Funktionen, z. B. Transaktionen, die in der Regel in eine relationale OLTP-DBMS verfügbar sind. Ein Ebene-1-Schnittstelle – konforme-Treiber ermöglicht die Anwendung, zusätzlich zu den Funktionen in der zentrale Schnittstelle Konformitätsgrad gehen:  
@@ -40,4 +41,3 @@ Der Konformitätsgrad des Ebene-1-Schnittstelle enthält die Schnittstelle Konfo
 |107|Verwenden Sie ODBC-Funktionen anstelle von SQL-Anweisungen, um bestimmte Datenbankvorgänge durchzuführen: **SQLSetPos** mit SQL_POSITION und SQL_REFRESH.|  
 |108|Zugreifen auf den Inhalt der mehrere Resultsets, die durch Aufrufen von Batches und gespeicherte Prozeduren generiert **SQLMoreResults**.|  
 |109|Begrenzen von Transaktionen, die Aufteilung auf verschiedene ODBC-Funktionen mit "true" Unteilbarkeit und die Möglichkeit zum Angeben der SQL_ROLLBACK in **SQLEndTran**.|
-

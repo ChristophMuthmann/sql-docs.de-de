@@ -1,30 +1,31 @@
 ---
 title: "Übersetzungen in tabellarischen Modellen (Analysis Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 28ff4ea7472597ae86b426ec0a15de399f56d14f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Übersetzungen in Tabellenmodellen (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Fügt Unterstützung für übersetzungszeichenfolgen für Tabellenmodelle hinzu. Einzelne Objekte im Modell können mehrere Übersetzungen eines Namens oder einer Beschreibung aufweisen, wodurch die Unterstützung von mehrsprachigen Versionen innerhalb der Modelldefinition möglich wird.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Fügt Unterstützung für übersetzungszeichenfolgen für Tabellenmodelle hinzu. Einzelne Objekte im Modell können mehrere Übersetzungen eines Namens oder einer Beschreibung aufweisen, wodurch die Unterstützung von mehrsprachigen Versionen innerhalb der Modelldefinition möglich wird.  
   
  Übersetzte Zeichenfolgen stehen nur für Objektmetadaten (Namen und Beschreibungen von Tabellen und Spalten) zur Verfügung, die in einem Clienttool wie einer Excel PivotTable-Liste angezeigt werden.  Zum Verwenden von übersetzten Listen gibt die Clientverbindung die Kultur an. Im Feature **In Excel analysieren** können Sie die Sprache in einer Dropdownliste auswählen. Für andere Tools muss die Kultur möglicherweise in der Verbindungszeichenfolge eingegeben werden.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 09/01/2017
   
 4.  Klicken Sie auf **Sprachdatei exportieren**.  Geben Sie einen Dateinamen und einen Speicherort an.  
   
- ![SSAS-tabular-übersetzen-Export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "Ssas-tabular-übersetzen-Export")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>Hinzufügen von Übersetzungen  
  Eine leere JSON-Übersetzungsdatei enthält Metadaten für Übersetzungen in einer bestimmten Sprache. Übersetzungsplatzhalter für Objektnamen und Beschreibungen sind im Abschnitt **Culture** am Ende der Modelldefinition angegeben. Übersetzungen können für folgende Elemente hinzugefügt werden:  
@@ -71,7 +72,7 @@ ms.lasthandoff: 09/01/2017
   
  Das folgende Beispiel zeigt übersetzte Titel und Beschreibungen für die Tabellen **DimProduct** und **DimCustomer** .  
   
- ![SSAS-tabular-übersetzen-Json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "Ssas-tabular-übersetzen-Json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  Zum Öffnen der Datei kann ein beliebiger JSON-Editor verwendet werden, wir empfehlen jedoch, den JSON-Editor in Visual Studio zu verwenden, damit Ihnen auch der Befehl „Code anzeigen“ im Projektmappen-Explorer zum Anzeigen der Tabellenmodelldefinition in SSDT zur Verfügung steht. Den JSON-Editor erhalten Sie als Teil einer [installierten Vollversion von Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). Die kostenlose Community-Edition enthält den JSON-Editor.  
@@ -111,14 +112,13 @@ ms.lasthandoff: 09/01/2017
   
 2.  Wählen Sie im Excel-Verbindungsdialogfeld die Kultur aus, für die Zeichenfolgenübersetzungen in Ihrem Modell vorhanden sind. Excel erkennt die im Modell definierten Kulturen und füllt die Dropdownliste entsprechend auf.  
   
-     ![SSAS-tabular-Übersetzungen-excel-](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "Ssas-tabular-Übersetzungen-excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      Wenn Sie eine PivotTable erstellen, sollten die übersetzten Tabellen- und Spaltennamen angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Globalisierungsszenarien für Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [In Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   
-

@@ -2,29 +2,30 @@
 title: "Hinzufügen und Bearbeiten von Join | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.addeditjoin.f1
+f1_keywords: sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70780bc8284ad454014f2b1e0188d9a22db6ba03
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d9aece9102787b048d9a46f32a17013ae057a9da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-join"></a>Join hinzufügen und Join bearbeiten
-  In den Dialogfeldern **Join hinzufügen** und **Join bearbeiten** können Sie Joinfilter für Mergeveröffentlichungen hinzufügen bzw. bearbeiten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In den Dialogfeldern **Join hinzufügen** und **Join bearbeiten** können Sie Joinfilter für Mergeveröffentlichungen hinzufügen bzw. bearbeiten.  
   
 > [!NOTE]  
 >  Für das Bearbeiten in einer vorhandenen Veröffentlichung ist eine neue Momentaufnahme für die Veröffentlichung erforderlich. Wenn eine Veröffentlichung Abonnements besitzt, müssen die Abonnements erneut initialisiert werden. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -36,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Joinfilter können zwar eine unbegrenzte Anzahl von Tabellen umfassen, Filter mit sehr vielen Tabellen können sich jedoch nachteilig auf die Leistung während der Mergeverarbeitung auswirken. Wenn Sie Joinsfilter für fünf oder mehr Tabellen erstellen, sollten Sie andere Lösungen in Betracht ziehen: Kleinere Tabellen, Tabellen, die nicht geändert werden, oder Tabellen, bei denen es sich primär um Nachschlagetabellen handelt, sollten in diesem Fall nicht gefiltert werden. Verwenden Sie Joinfilter nur zwischen Tabellen, die für die Abonnenten partitioniert werden müssen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Dieses Dialogfeld enthält einen dreistufigen Vorgang zur Erstellung eines Joinfilters zwischen zwei Tabellen. Wenn mehrere Joinfilter erstellt werden sollen, muss der Vorgang mithilfe des Dialogfelds mehrfach ausgeführt werden.  
   
 1.  **Überprüfen Sie die gefilterte Tabelle, und wählen Sie die verknüpfte Tabelle aus**  
@@ -66,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
  Nachdem Sie einen Filter hinzugefügt oder bearbeitet haben, klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen. Der von Ihnen angegebene Filter wird analysiert und für die Tabelle in der SELECT-Klausel ausgeführt. Wenn die Filteranweisung Syntaxfehler oder andere Probleme enthält, werden Sie benachrichtigt und können die Filteranweisung bearbeiten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)   

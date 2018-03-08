@@ -1,26 +1,29 @@
 ---
 title: Migrieren von Datenbanken zu SQL Server on Linux | Microsoft Docs
-description: Dieses Thema beschreibt die verschiedenen Optionen zum Migrieren von Datenbanken und die Daten in SQL Server unter Linux.
+description: Dieser Artikel beschreibt die verschiedenen Optionen zum Migrieren von Datenbanken und die Daten in SQL Server unter Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: 18970e7a18f635dbceac9fbbaa8b2d26aef7df94
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migrieren von Datenbanken und strukturierte Daten zu SQL Server on Linux 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Sie können Ihre Datenbanken und die Daten zu SQL Server-2017 auf Linux laufende migrieren. Der Methode Ihrer Wahl verwenden, hängt von den Quelldaten und Ihr konkretes Szenario ab. Die folgenden Abschnitte enthalten bewährte Methoden für verschiedene Szenarien mit Migration.
 
@@ -49,4 +52,3 @@ Weitere Informationen zu diesen Verfahren finden Sie unter den folgenden Themen:
 
 - [Massenkopieren von Daten mithilfe von bcp](sql-server-linux-migrate-bcp.md)
 - [Extrahieren, Transformieren und Laden von Daten für SQL Server on Linux mit SSIS](sql-server-linux-migrate-ssis.md) 
-

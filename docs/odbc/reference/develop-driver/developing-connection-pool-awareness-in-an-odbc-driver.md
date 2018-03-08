@@ -3,24 +3,25 @@ title: Entwickeln von Verbindungspool wissen in eine ODBC-Treiber | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b96e4ef1e53fec8361bd96dee81206efdf138538
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b7b550bd24788f30926aaee5ae42a8de79a59c9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool wissen in eine ODBC-Treiber
 In diesem Artikel werden die Details der Entwicklung von eines ODBC-Treibers, der enthält Informationen darüber, wie der Treiber Connection pooling-Dienste bieten sollte.  
@@ -153,4 +154,3 @@ In diesem Artikel werden die Details der Entwicklung von eines ODBC-Treibers, de
 ## <a name="see-also"></a>Siehe auch  
  [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC-Dienstanbieterschnittstelle (Service Provider Interface, SPI) – Referenz](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
-

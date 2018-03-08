@@ -3,10 +3,12 @@ title: Abrufen von Ausgabeparametern mit SQLGetData | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1c4c3a857436f9b66d5aed447a6d5b47d59915a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Abrufen von Ausgabeparametern mit SQLGetData
 Vor der ODBC 3.8 konnte eine Anwendung nur die Output-Parameter einer Abfrage mit einer gebundenen Ausgabepuffer abrufen. Allerdings ist es schwierig, einen sehr umfangreichen Puffer zuzuordnen, wenn die Größe des Parameterwerts sehr groß ist (z. B. ein großes Bild). ODBC 3.8 führt eine neue Methode zum Abrufen von Ausgabeparametern in Teilen. Eine Anwendung kann nun Aufrufen **SQLGetData** mit einem kleinen Puffer mehrere Male auf, um einen großen Parameterwert abzurufen. Dies ähnelt der welcher Spaltendaten abrufen.  
@@ -274,5 +275,4 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)
-
+ [Anweisungsparameter](../../../odbc/reference/develop-app/statement-parameters.md)

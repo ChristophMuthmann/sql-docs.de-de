@@ -3,30 +3,31 @@ title: Fehler in SQL-Syntax (Dialogfeld) (Visual Database Tools) | Microsoft-Dok
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.sqlsyntaxerrorsencountered
 - vdtsql.chm:69641
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2e262ce93a610c0e0e184a0083eedcc1326499fd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13f60877428daa406f1bcd74d36a3ebfd21e7a28
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Fehler in SQL-Syntax (Dialogfeld) (Visual Database Tools)
-In diesem Dialogfeld werden Sie darauf hingewiesen, dass der Designer die SQL-Anweisung im SQL-Bereich nicht analysieren kann.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Dialogfeld werden Sie darauf hingewiesen, dass der Designer die SQL-Anweisung im SQL-Bereich nicht analysieren kann.  
   
 Dieses Dialogfeld wird angezeigt, wenn Sie eine SQL-Anweisung im SQL-Bereich eingeben oder bearbeiten, dann zu einem anderen Bereich wechseln, die Abfrage überprüfen oder versuchen sie auszuführen, und gleichzeitig eine der folgenden Bedingungen zutrifft:  
   
@@ -41,7 +42,6 @@ Dieses Dialogfeld wird angezeigt, wenn Sie eine SQL-Anweisung im SQL-Bereich ein
   
 Das Dialogfeld zeigt eine Meldung mit dem Hinweis an, dass die SQL-Anweisung nicht analysiert werden kann. Klicken Sie auf **OK** , um den Vorgang fortzusetzen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

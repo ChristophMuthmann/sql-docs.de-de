@@ -1,28 +1,29 @@
 ---
-title: Arbeiten mit freigegebenen Datasets (Webportal) | Microsoft Docs
+title: Arbeiten mit freigegebenen Datasets (Webportal) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e72c48f816752530abddb6246410e4936ac20a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Arbeiten Sie mit freigegebenen Datasets - Webportal
+# <a name="work-with-shared-datasets---web-portal"></a>Arbeiten mit freigegebenen Datasets (Webportal)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -55,7 +56,7 @@ Sie können Sie Folgendes tun, um ein vorhandenes freigegebenes Dataset zu verwa
 > [!NOTE]
 > Falls Sie das freigegebene Dataset nicht im Ordner sehen, stellen Sie sicher, dass Sie Datasets anzeigen. Sie können **Ansicht** aus der Menüleiste in der oberen rechten Ecke des Webportals auswählen. Stellen Sie sicher, dass **Datasets** aktiviert ist.  
   
-1.  Wählen Sie die **mit den Auslassungszeichen (...)**  für das Dataset, die Sie verwalten möchten.  
+1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset aus, das Sie verwalten möchten.  
   
     ![SSRS-Dataset-Auslassungspunkte](../reporting-services/media/ssrsdataset-ellipse.png)  
   
@@ -111,5 +112,4 @@ Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen**auswä
   
 Sie können gelistete Pläne **Bearbeiten** oder **Löschen** . Die Option **Neu aus vorhandenem** wird nur aktiviert, wenn genau ein Cacheaktualisierungsplan ausgewählt ist. Durch diese Option wird ein neuer Aktualisierungsplan erstellt, der vom ursprünglichen Plan kopiert wird. Die Seite Cacheaktualisierungsplan wird geöffnet und enthält bereits die Details des ausgewählten Plans. Anschließend können Sie die Optionen für den Aktualisierungsplan ändern und den Plan mit einer neuen Beschreibung speichern.  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

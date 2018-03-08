@@ -2,31 +2,30 @@
 title: "Auswählen eines Miningmodell- und Datamining-Viewers | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Viewer [Analysis Services], types
+helpviewer_keywords: Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 66c80a12bb03635d48078f5be284e6718dc33e9e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13296651eb2fd572106c52014ce0a42ac81c9781
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Auswählen eines Miningmodell- und Data Mining-Viewers
-  Zum Durchsuchen eines Miningmodells können Sie einen der Viewer auf der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers verwenden. Sie können mühelos zwischen Modellen wechseln oder den verwendeten Viewer ändern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können ein Miningmodell durchsuchen, mit einem der Viewer auf die **Miningmodell-Viewer** des Data Mining-Designers. Sie können mühelos zwischen Modellen wechseln oder den verwendeten Viewer ändern.  
   
 -   Das Dropdown-Listenfeld **Miningmodell** der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält eine Liste aller Miningmodelle, die sich in der aktuellen Miningstruktur befinden.  
   
@@ -47,7 +46,6 @@ ms.lasthandoff: 09/01/2017
  Das ausgewählte Miningmodell wird in dem Viewer geöffnet, der für den jeweiligen Modelltyp bereitgestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tasks und Anweisungen für den Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

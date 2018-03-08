@@ -2,32 +2,33 @@
 title: Verwalten einer Wissensdatenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/04/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "9"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ec5d8a43b723e1ac68974147851a54ff1c2a986
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="manage-a-knowledge-base"></a>Verwalten einer Wissensdatenbank
   In diesem Thema wird beschrieben, wie Verwaltungsfunktionen für eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt werden. Sie können eine Wissensdatenbank löschen, entsperren, umbenennen, vorgenommene Anpassungen verwerfen und die Eigenschaften der Wissensdatenbank anzeigen.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um eine Wissensdatenbank zu verwalten, muss die Wissensdatenbank bereits erstellt und entweder veröffentlicht (wenn sie eine andere Person erstellt hat) oder geschlossen (wenn Sie sie erstellt haben) worden sein.  
   
 ###  <a name="Security"></a> Sicherheit  
@@ -87,4 +88,3 @@ ms.lasthandoff: 09/09/2017
 -   Wenn Sie sie löschen, müssen Sie eine andere Wissensdatenbank für die Bearbeitung auswählen oder eine neue erstellen.  
   
   
-

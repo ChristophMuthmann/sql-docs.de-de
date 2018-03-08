@@ -2,28 +2,30 @@
 title: "Konnte nicht aktualisiert werden Daten für eine Datenverbindung in der Arbeitsmappe | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e92a6ac8d430b88c18ecae14c2a52771b566d39d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden.
-  Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten, wenn es eine Verbindungsanforderung an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server sendet und die Anforderung fehlschlägt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten, wenn es eine Verbindungsanforderung an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server sendet und die Anforderung fehlschlägt.  
   
 ## <a name="details"></a>Details  
   
@@ -72,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  Ein oder mehrere Dienste könnten sich in einem inkonsistenten Status befinden. In einigen Fällen kann das Problem durch Ausführen von IISRESET behoben werden.  
   
   
-

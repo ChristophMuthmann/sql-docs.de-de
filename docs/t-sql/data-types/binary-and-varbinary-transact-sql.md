@@ -3,8 +3,11 @@ title: Binary und Varbinary (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 8/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - varbinary data type
 - binary [SQL Server], about binary data type
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-caps.latest.revision: 27
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e6aaf00b8e846316c92897360932703a013150e8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4ad5bce3cacc0f892f7087df785da8cedcb4e932
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary und varbinary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Binäre Datentypen mit fester Länge bzw. mit variabler Länge.
   
@@ -92,4 +94,3 @@ Das endgültige Ergebnis ist `57921` und nicht `123457`.
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

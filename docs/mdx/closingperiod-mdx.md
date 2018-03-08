@@ -2,34 +2,32 @@
 title: ClosingPeriod (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CLOSINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ClosingPeriod function
+f1_keywords: CLOSINGPERIOD
+dev_langs: kbMDX
+helpviewer_keywords: ClosingPeriod function
 ms.assetid: ae709017-219d-43e1-a98a-a85bd365b4cd
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4fa2207edb9ea3e732807a3d4ac0783334c361c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 921c058bf83cb8e3b54b310dcc9e65bc8202d569
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt das letzte gleichgeordnete Element unter den nachfolgenden Werten eines angegebenen Elements auf einer angegebenen Ebene zurück.  
   
@@ -47,7 +45,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Funktion ist hauptsächlich zur Verwendung mit einer Dimension des Typ Time vorgesehen, kann jedoch auch mit beliebigen anderen Dimensionen verwendet werden.  
   
 -   Wenn ein Ebenenausdruck angegeben wird, die **ClosingPeriod** -Funktion verwendet die Dimension, die die angegebene Ebene enthält, und gibt das letzte gleichgeordnete Element unter den nachfolgenden Werten des Standardelements auf der angegebenen Ebene zurück.  
@@ -92,10 +90,9 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OpeningPeriod &#40; MDX &#41;](../mdx/openingperiod-mdx.md)   
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling &#40; MDX &#41;](../mdx/lastsibling-mdx.md)  
   
   
-

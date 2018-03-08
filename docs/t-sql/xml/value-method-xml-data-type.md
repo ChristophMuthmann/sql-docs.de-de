@@ -3,8 +3,11 @@ title: Value()-Methode (Xml-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b2cd81e4b96ce5c38a816c50728d794390bb383
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7a3822e0469836b59369eb676ece956533d4df58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-method-xml-data-type"></a>value()-Methode (xml-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Führt eine XQuery-Abfrage für den XML-Code aus und gibt einen Wert im SQL-Typ zurück. Diese Methode gibt einen Skalarwert zurück.  
   
@@ -141,7 +143,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Verwenden der exist()-Methode anstelle der value()-Methode  
- Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Zum Beispiel:  
+ Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Beispiel:  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
@@ -166,8 +168,7 @@ GO
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

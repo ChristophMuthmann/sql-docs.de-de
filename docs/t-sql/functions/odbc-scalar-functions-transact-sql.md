@@ -3,8 +3,11 @@ title: ODBC-Skalarfunktionen (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -51,20 +54,19 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-caps.latest.revision: 17
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b248e52c25e3c4a7cdbb0e52b1df50623e048189
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2838242bcef767206af71446f9decd9ed798536a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC-Skalarfunktionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sie können [ODBC-Skalarfunktionen](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. Diese Anweisungen werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretiert. Sie können in gespeicherten Prozeduren und benutzerdefinierten Funktionen verwendet werden. Hierzu zählen Zeichenfolgen-, Uhrzeit-, Datums-, Intervall- und Systemfunktionen sowie numerische Funktionen.  
   
@@ -256,7 +258,6 @@ SELECT {fn WEEK( @date_exp )};
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-
 
 
 

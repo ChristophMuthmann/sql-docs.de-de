@@ -3,29 +3,29 @@ title: Erstellen von Abfragen (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- queries [SQL Server], creating
+helpviewer_keywords: queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d30a0729357abf0cfc18942d0da6db3f36f11686
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>Erstellen von Abfragen (Visual Database Tools)
-Mit Abfragen können Daten aus den Tabellen und Sichten in der Datenbank abgerufen werden. Sie erstellen und verwenden Abfragen im **Abfrage- und Sicht-Designer**, der vier Bereiche umfasst: den [Diagrammbereich](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), den [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), den [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)und den [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit Abfragen können Daten aus den Tabellen und Sichten in der Datenbank abgerufen werden. Sie erstellen und verwenden Abfragen im **Abfrage- und Sicht-Designer**, der vier Bereiche umfasst: den [Diagrammbereich](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), den [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), den [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)und den [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### <a name="to-create-a-new-query"></a>So erstellen Sie eine neue Abfrage  
   
@@ -48,11 +48,10 @@ Mit Abfragen können Daten aus den Tabellen und Sichten in der Datenbank abgeruf
   
 Zur weiteren Verfeinerung der Abfrage können Sie den SQL-Code im **SQL-Bereich** ändern oder im **Kriterienbereich**Optionen wie die Sortierreihenfolge und Spaltenaliase auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Speichern von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Typen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

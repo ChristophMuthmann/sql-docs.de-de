@@ -3,8 +3,11 @@ title: GO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17b78d6ca719088ade9d54db73b8ee10ef8072a5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 63fe775455df2b9b25ec3abc8bb0208aa6b5dd0e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-utilities-statements---go"></a>Anweisungen für SQL Server-Hilfsprogramme - GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthält Befehle, die nicht [!INCLUDE[tsql](../../includes/tsql-md.md)] sind aber -Anweisungen erkannt, durch die **Sqlcmd** und **Osql** Hilfsprogramme und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code-Editor. Die Befehle können zur Vereinfachung der Lesbarkeit und Ausführung von Batches und Skripts verwendet werden.  
   
@@ -119,4 +121,3 @@ GO 2
 ```  
   
   
-

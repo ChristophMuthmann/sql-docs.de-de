@@ -3,10 +3,12 @@ title: Erstellen von Abfragen mit Joins (Visual Database Tools)|Microsoft-Dokume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 011d5fd28f4a5f5bab66fd6579c8e84f52a5989d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7ed79dcb5c61626c229f4d4c361764be1b1193e2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Erstellen von Abfragen mit Joins (Visual Database Tools)
-Ein Abfrageergebnis kann Daten aus mehreren Tabellen oder Tabellenwertobjekten enthalten. Daten aus mehreren Tabellenwertobjekten können mit dem JOIN-Vorgang aus SQL kombiniert werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ein Abfrageergebnis kann Daten aus mehreren Tabellen oder Tabellenwertobjekten enthalten. Daten aus mehreren Tabellenwertobjekten können mit dem JOIN-Vorgang aus SQL kombiniert werden.  
   
 Informationen zum Erstellen von Abfragen mit mehreren Tabellen finden Sie unter folgenden Themen.  
   
@@ -76,4 +77,3 @@ Stellt Links zu Themen bereit, in denen die gängigsten Abfrageaufgaben behandel
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Stellt Links zu Themen bereit, in denen die verschiedenen Arten von Suchkriterien und deren Verwendung beschrieben werden.  
   
-

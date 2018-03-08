@@ -3,7 +3,7 @@ title: Anbieterfehler | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Wenn ein Anbieterfehler auftritt, wird ein Laufzeitfehler-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Auflistung der aktiven **Verbindung** -Objekt, das enthält einen oder mehrere Fehler, die beschreiben, was aufgetreten ist.  
@@ -74,8 +73,8 @@ End Function
   
 |Eigenschaftsname|Description|  
 |-------------------|-----------------|  
-|**Description**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
-|**HelpContext HelpFile**|Bezieht sich auf das Hilfethema und Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
+|**Beschreibung**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
+|**HelpContext, HelpFile**|Bezieht sich auf das Hilfethema und Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
 |**NativeError**|Die anbieterspezifische Fehlernummer.|  
 |**Anzahl**|Ein Long Integer-Wert, der die Anzahl darstellt (aufgeführt der **ErrorValueEnum**) des aufgetretenen Fehlers.|  
 |**Quelle**|Gibt den Namen des Objekts oder der Anwendung, die ein Fehler generiert.|  
@@ -87,4 +86,3 @@ End Function
  Die **Fehler** Objekt wird auch verwendet, wenn ereignisbezogene Fehler auftreten. Sie können bestimmen, ob im Prozess ist ein Fehler, die ein ADO-Ereignis ausgelöst wird aufgetreten, indem Sie überprüfen die **Fehler** Objekt als Ereignisparameter übergeben.  
   
  Wenn der Vorgang, der bewirkt, ein Ereignis dass erfolgreich abgeschlossen wird der *AdStatus* Parameter des ereignishandlers festgelegt *AdStatusOK*. Andererseits, wenn der Vorgang, der das Ereignis ausgelöst wurde nicht erfolgreich war, die *AdStatus* Parametersatz auf *AdStatusErrorsOccurred*. In diesem Fall die *pError* Parameter enthält einen **Fehler** -Objekt, das den Fehler beschreibt.
-

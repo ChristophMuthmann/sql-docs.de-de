@@ -2,15 +2,16 @@
 title: MDX-Funktionsreferenz (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - member functions [MDX]
 - level functions [MDX]
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - logical functions [MDX]
 - set functions [MDX]
 ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: d6a0eecf1084cc17b1a2a08b7ef1c43c81d2e346
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 30cd14ab8d2725f559e317f92071a289ab047268
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX-Funktionsreferenz (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet für die Verwendung von Funktionen in MDX (Multidimensional Expressions)-Syntax. Funktionen können in jeder gültigen MDX-Anweisung verwendet werden, z. B. in Abfragen, benutzerdefinierten Rollupdefinitionen und anderen Berechnungen. Dieser Abschnitt enthält Informationen zu den in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthaltenen MDX-Funktionen.  
   
@@ -242,8 +242,7 @@ ms.lasthandoff: 08/02/2017
 |--------------|-----------------|  
 |[Fehler &#40; MDX &#41;](../mdx/error-mdx.md)|Löst einen Fehler aus. Optional wird eine angegebene Fehlermeldung ausgegeben.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
-

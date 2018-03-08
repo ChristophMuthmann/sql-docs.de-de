@@ -3,33 +3,30 @@ title: SQLRemoveDSNFromIni Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLRemoveDSNFromIni
-apilocation:
-- sqlsrv32.dll
+apiname: SQLRemoveDSNFromIni
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLRemoveDSNFromIni
-helpviewer_keywords:
-- SQLRemoveDSNFromIni function [ODBC]
+f1_keywords: SQLRemoveDSNFromIni
+helpviewer_keywords: SQLRemoveDSNFromIni function [ODBC]
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d53af3854ff74a075033a787820ee868e76e667
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83c51c7363cd031aefa60c71270e3fa5e9f779ed
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni-Funktion
 **Konformität**  
@@ -76,4 +73,3 @@ BOOL SQLRemoveDSNFromIni(
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Entfernen die Standarddatenquelle|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
 |Die Systeminformationen hinzugefügt einen Datenquellennamen|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

@@ -1,10 +1,13 @@
 ---
-title: "Erstellen der Funktion zum Abrufen der Änderungsdaten | Microsoft Docs"
+title: "Erstellen der Funktion zum Abrufen der Änderungsdaten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3e717ccf46cc7929c510229b19a16eb5a857487
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
   Nach Abschluss der Ablaufsteuerung für ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der nächste Task die Erstellung einer Tabellenwertfunktion, mit der die Änderungsdaten abgerufen werden. Sie müssen diese Funktion nur einmal vor dem ersten inkrementellen Laden erstellen.  
@@ -121,9 +123,9 @@ deallocate #hfunctions
   
  Zur Vereinfachung der Abfrage aller Zeilen einer Änderungstabelle unterstützt die generierte Wrapperfunktion auch folgende Konventionen:  
   
--   Wenn die @start_time -Parameter ist null, die Wrapperfunktionen verwenden den niedrigsten LSN-Wert in der Aufzeichnungsinstanz als untere Grenze der Abfrage.  
+-   Wenn der @start_time-Parameter NULL ist, verwendet die Wrapperfunktion den niedrigsten LSN-Wert in der Aufzeichnungsinstanz als untere Begrenzung der Abfrage.  
   
--   Wenn die @end_time -Parameter ist null, die Wrapperfunktionen den höchsten LSN-Wert in der Aufzeichnungsinstanz als die Obergrenze für die Abfrage verwenden.  
+-   Wenn der @end_time-Parameter NULL ist, verwendet die Wrapperfunktion den höchsten LSN-Wert in der Aufzeichnungsinstanz als obere Begrenzung der Abfrage.  
   
  Die meisten Benutzer sollten die von der gespeicherten Systemprozedur **sys.sp_cdc_generate_wrapper_function** erstellte Wrapperfunktion ohne Änderungen verwenden können. Wenn Sie die Wrapperfunktion anpassen möchten, müssen Sie jedoch die CREATE-Skripts anpassen, bevor Sie diese ausführen.  
   
@@ -217,7 +219,7 @@ go
 |**__$seqval**|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
 |**__$operation**|**int**|Der Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (Werte vor dem Updatevorgang)<br /><br /> 4 = Update (Werte nach dem Updatevorgang)|  
 |**__$update_mask**|**varbinary(128)**|Eine Bitmaske, die auf den Spaltenordnungszahlen der Änderungstabelle basiert, die geänderte Spalten identifiziert. Sie könnten diesen Wert überprüfen, wenn Sie bestimmen müssten, welche Spalten sich geändert haben.|  
-|**\<erfasste quelltabellenspalten >**|variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten ursprünglich keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
+|**\<erfasste Quelltabellenspalten>**|variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten ursprünglich keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
   
  Weitere Informationen finden Sie unter [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
@@ -227,4 +229,3 @@ go
  **Nächstes Thema**[Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

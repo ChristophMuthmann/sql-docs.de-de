@@ -1,10 +1,13 @@
 ---
-title: (Modulo) (SSIS-Ausdruck) | Microsoft Docs
+title: (Modulo) (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 135fbe7a231de0b77ba3637ef53a4fc785453c10
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2236fea4b5454f79427019e2d90633e98e77e89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="modulo-ssis-expression"></a>(Modulo) (SSIS-Ausdrücke)
   Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten bereit.  
@@ -47,7 +49,7 @@ dividend % divisor
 ## <a name="result-types"></a>Ergebnistypen  
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Beide Ausdrücke müssen zu ganzzahligen Datentypen mit oder ohne Vorzeichen ausgewertet werden.  
   
  Wenn einer der Operanden NULL ist, ist das Ergebnis NULL.  
@@ -79,9 +81,8 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

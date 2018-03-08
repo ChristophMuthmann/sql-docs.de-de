@@ -3,8 +3,11 @@ title: Operatorrangfolge (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0c7bd10a7d53f4de8fb5aedbe6f1cf3c9be42b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c9de4447c5918edbc33ec67c783272f724883e81
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="operator-precedence-transact-sql"></a>Operatorrangfolge (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Besitzt ein komplexer Ausdruck mehrere Operatoren, bestimmt die Operatorenrangfolge die Reihenfolge, in der die einzelnen Operationen durchgeführt werden. Die Ausführungsreihenfolge kann sich entscheidend auf das Ergebnis auswirken.  
   
@@ -39,8 +41,8 @@ ms.lasthandoff: 09/01/2017
 |Ebene|Operatoren|  
 |-----------|---------------|  
 |1|~ (Bitweises NOT)|  
-|2|* (Multiplikation), / (Division), % (Modulo)|  
-|3|+ (Positiv), - (negativ) + (Addition) (+ verketten), - (Subtraktion), & (bitweises AND), ^ (Bitweises exklusives OR), &#124; (Bitweises OR)|  
+|2|* (Multiplikation) / (Division), % (Modulo)|  
+|3|+ (Positiv), - (negativ) + (Addition) (+ verketten),-(Subtraktion), & (bitweises AND), ^ (Bitweises exklusives OR), &#124; (Bitweises OR)|  
 |4|=, >, \<, > =, < =, <>,! =,! >,! < (Vergleichsoperatoren)|  
 |5|NICHT|  
 |6|AND|  
@@ -88,8 +90,7 @@ SELECT @MyNumber;
   
 ## <a name="see-also"></a>Siehe auch  
  [Logische Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-

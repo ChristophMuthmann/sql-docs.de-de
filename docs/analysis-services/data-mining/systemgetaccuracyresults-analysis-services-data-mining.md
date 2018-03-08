@@ -2,11 +2,13 @@
 title: "SystemGetAccuracyResults (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -14,20 +16,20 @@ helpviewer_keywords:
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6b2eca528b40afd905661e2508e93529159b8627
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data Mining)
-  Gibt Genauigkeitsmetriken einer Kreuzvalidierung für eine Miningstruktur und alle verwandten Modelle zurück, wobei Clustering-Modelle ausgeschlossen sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Gibt Genauigkeitsmetriken einer Kreuzvalidierung für eine Miningstruktur und alle verwandten Modelle zurück, wobei Clustering-Modelle ausgeschlossen sind.  
   
  Diese gespeicherte Prozedur gibt Metriken für das ganze Dataset als einzelne Partition zurück. Um das Dataset in Querschnitte zu partitionieren und Metriken für jede Partition zurückzugeben, verwenden Sie [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -71,12 +73,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Eine vollständige Liste der möglichen Werte finden Sie in diesem Thema im Abschnitt mit den Hinweisen.  
   
- (Erforderlich)  
+ (erforderlich)  
   
  *Zielattribut*  
  Zeichenfolge, die den Namen eines vorhersagbaren Objekts enthält. Ein vorhersagbares Objekt kann eine Spalte, eine verschachtelte Tabellenspalte oder eine Schlüsselspalte für eine geschachtelte Tabelle eines Miningmodells sein.  
   
- (Erforderlich)  
+ (erforderlich)  
   
  *Zielstatus*  
  Zeichenfolge, die einen bestimmten vorherzusagenden Wert enthält.  
@@ -167,7 +169,6 @@ CALL SystemGetAccuracyResults (
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
-

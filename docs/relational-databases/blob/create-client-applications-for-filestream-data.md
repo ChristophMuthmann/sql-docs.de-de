@@ -2,9 +2,12 @@
 title: "Erstellen von Clientanwendungen für FILESTREAM-Daten | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 59471e22accea7996e3bd5d87b5cf6ff077e26c5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Erstellen von Clientanwendungen für FILESTREAM-Daten
-  Sie können Win32 zum Lesen und Schreiben von Daten in einem FILESTREAM BLOB verwenden. Hierfür sind die folgenden Schritte erforderlich:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Sie können Win32 APIs zum Lesen und Schreiben von Daten in einem FILESTREAM BLOB verwenden. Hierfür sind die folgenden Schritte erforderlich:  
   
 -   Lesen des FILESTREAM-Dateipfads.  
   
@@ -53,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="path"></a> Lesen des FILESTREAM-Dateipfads  
  Jeder Zelle in einer FILESTREAM-Tabelle ist ein Dateipfad zugeordnet. Um den Pfad zu lesen, verwenden Sie die **PathName** -Eigenschaft einer **varbinary(max)** -Spalte in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Das folgende Beispiel zeigt, wie der Dateipfad einer **varbinary(max)** -Spalte gelesen wird.  
   
- [!code-sql[FILESTREAM #FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
+ [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
 ###  <a name="trx"></a> Lesen des Transaktionskontexts  
  Um den aktuellen Transaktionskontext abzurufen, verwenden Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) function. Das folgende Beispiel zeigt, wie eine Transaktion gestartet und der aktuelle Transaktionskontext gelesen wird.  
@@ -89,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Wenn eine Anwendung das SMB (Server Message Block)-Protokoll verwendet, sollten FILESTREAM-BLOB-Daten in einem Vielfachen von 60 KB gelesen werden, um die Leistung zu optimieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [Zugreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Binary Large Object &#40;BLOB&#41;-Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

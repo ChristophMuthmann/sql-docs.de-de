@@ -1,11 +1,13 @@
 ---
 title: DROP AGGREGATE (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +25,19 @@ helpviewer_keywords:
 - deleting user-defined functions
 - DROP AGGREGATE statement
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a9fcab3dc576f15110bed8c1c82271731f326280
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8f01299f0a5db2ed47975a964104e720cb7c8c52
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Entfernt eine benutzerdefinierte Aggregatfunktion aus der aktuellen Datenbank. Benutzerdefinierte Aggregatfunktionen Erstellung erfolgt mithilfe von [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   
@@ -50,7 +51,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
   
 ## <a name="arguments"></a>Argumente  
  *IF VORHANDEN IST*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Bedingt löscht das Aggregat nur, wenn sie bereits vorhanden ist.  
   
@@ -74,8 +75,7 @@ DROP AGGREGATE dbo.Concatenate;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie Aggregat &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [Erstellen benutzerdefinierter Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
   
   
-

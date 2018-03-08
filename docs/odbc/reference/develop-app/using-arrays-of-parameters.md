@@ -3,27 +3,28 @@ title: Verwenden von Arrays von Parametern | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da3d5662b8eb85f994142aea0e4dff237fd9852b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-arrays-of-parameters"></a>Verwenden von Arrays von Parametern
 Verwenden von Arrays von Parametern, die Anwendung ruft **SQLSetStmtAttr** mit einer *Attribut* Argument SQL_ATTR_PARAMSET_SIZE auf die Anzahl von Parametersätzen angeben. Ruft **SQLSetStmtAttr** mit einem *Attribut* Argument SQL_ATTR_PARAMS_PROCESSED_PTR zum Angeben der Adresse einer Variablen, in dem der Treiber kann die Anzahl von Parametersätzen verarbeitet, zurückgeben, Legt fest, einschließlich Fehler. Sie ruft **SQLSetStmtAttr** mit einer *Attribut* Argument des SQL_ATTR_PARAM_STATUS_PTR, zeigen Sie auf ein Array, in dem Statusinformationen für jede Zeile von Parameterwerten zurückgegeben. Der Treiber speichert diese Adressen in der Struktur, die es für die Anweisung enthält.  
@@ -58,4 +59,3 @@ Verwenden von Arrays von Parametern, die Anwendung ruft **SQLSetStmtAttr** mit e
 -   Da der Treiber nicht mit den Wert in interpretiert der *ParameterValuePtr* Argument **SQLBindParameter** für Data-at-Execution-Parameter, wenn die Anwendung einen Zeiger auf ein Array bereitstellt  **SQLParamData** nicht extrahieren und an die Anwendung ein Element dieses Arrays zurück. Stattdessen wird zurückgegeben, dass der skalare Wert an die Anwendung bereitgestellt wurde. Dies bedeutet, dass der Rückgabewert von **SQLParamData** ist nicht ausreichend, um anzugeben, die Parameter für die die Anwendung muss zum Senden von Daten, die Anwendung muss außerdem berücksichtigt die aktuelle Zeilennummer.  
   
      Wenn nur einige der Elemente eines Arrays von Parametern Data-at-Execution-Parameter sind, leitet die Anwendung muss die Adresse eines Arrays in *ParameterValuePtr* , die Elemente für alle Parameter enthält. Dieses Array wird normalerweise für die Parameter interpretiert, die keine Data-at-Execution-Parameter sind. Für die Data-at-Execution-Parameter den Wert, der **SQLParamData** bietet auf die Anwendung, die normalerweise verwendet werden kann, die Daten zu identifizieren, die der Treiber bei dieser Gelegenheit anfordert, wird immer die Adresse des Arrays.
-

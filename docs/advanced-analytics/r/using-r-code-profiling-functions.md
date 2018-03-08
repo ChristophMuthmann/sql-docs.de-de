@@ -2,27 +2,29 @@
 title: Verwenden von R-Code-Profilerstellungsfunktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: 6
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 3aecbcf80a76fdfd84cca277f5f0de0f8dc7bb4e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fe4b8a4299570f07b858962bb665e37fc980e44
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>Verwenden von R-Code-Profilerstellungsfunktionen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Neben SQL Server-Ressourcen und Tools zum Überwachen von R-Skriptausführung können Sie auch Leistungstools von anderen R-Paketen verwenden, um weitere Informationen zu internen Funktionsaufrufen zu erhalten. Dieses Thema enthält eine Übersicht über einige grundlegende Ressourcen, die Ihnen den Einstieg erleichtern. Für eine Anleitung durch einen Experten empfehlen wir das Kapitel über [Performance](http://adv-r.had.co.nz/Performance.html) (Leistung) im Buch „Advanced R“ von Hadley Wickham.
 
 ## <a name="using-rprof"></a>Verwenden von RPROF
@@ -77,7 +79,6 @@ Das Kapitel ist auch online verfügbar: [https://cran.r-project.org/doc/manuals/
 ### <a name="location-of-r-help-files"></a>Speicherort der R-Hilfedateien
 
 C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
-
 
 
 

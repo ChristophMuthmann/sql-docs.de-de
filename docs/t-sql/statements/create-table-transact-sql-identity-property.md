@@ -3,8 +3,11 @@ title: IDENTITY (Eigenschaft) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-caps.latest.revision: 27
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1eb7f960210ec89a66f1307d8476e6d47494861f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c8ed5f2b2dd8daaf244f9e12ea17a69ff489ae3b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql-identity-property"></a>Erstellen der Tabelle (Transact-SQL) IDENTITY (Eigenschaft)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Erstellt eine Identitätsspalte in einer Tabelle. Diese Eigenschaft wird in den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen CREATE TABLE und ALTER TABLE verwendet.  
   
@@ -184,4 +186,3 @@ SET IDENTITY_INSERT img OFF;
  [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   
-

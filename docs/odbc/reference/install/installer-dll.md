@@ -3,27 +3,28 @@ title: Installer DLL | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - installing ODBC components [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88ed1ece55476753d70ec9897453b3ea96df63aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ae0994102599bf2b1a36e6f2945537cea59c47d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installer-dll"></a>Installer DLL
 > [!NOTE]  
@@ -34,4 +35,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Siehe auch  
  [Registrierungseinträge für ODBC-Komponenten](../../../odbc/reference/install/registry-entries-for-odbc-components.md)   
  [Registrierungseinträge für Datenquellen](../../../odbc/reference/install/registry-entries-for-data-sources.md)
-

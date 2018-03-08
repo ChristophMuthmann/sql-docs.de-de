@@ -2,30 +2,30 @@
 title: "Kompatibilitätsgrad einer mehrdimensionalen Datenbank (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 946cb28ca1e25508ac0d997c982d82886dbf4402
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Kompatibilitätsgrad einer mehrdimensionalen Datenbank (Analysis Services)
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird die Funktionsebene einer Datenbank durch die Eigenschaft „Datenbank-Kompatibilitätsgrad“ bestimmt. Kompatibilitätsgrade sind für jeden Modelltyp spezifisch. Abhängig davon, ob die Datenbank mehrdimensional oder tabellarisch ist, hat ein Kompatibilitätsgrad von **1100** beispielsweise eine unterschiedliche Bedeutung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird die Funktionsebene einer Datenbank durch die Eigenschaft „Datenbank-Kompatibilitätsgrad“ bestimmt. Kompatibilitätsgrade sind für jeden Modelltyp spezifisch. Abhängig davon, ob die Datenbank mehrdimensional oder tabellarisch ist, hat ein Kompatibilitätsgrad von **1100** beispielsweise eine unterschiedliche Bedeutung.  
   
  In diesem Thema wird nur der Kompatibilitätsgrad für mehrdimensionale Datenbanken beschrieben. Weitere Informationen zu tabellarischen Lösungen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
@@ -102,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [Sichern, Wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   
-

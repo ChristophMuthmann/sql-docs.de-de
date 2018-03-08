@@ -3,8 +3,11 @@ title: WIEDERHOLEN SIE DEN... CATCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,20 +31,19 @@ helpviewer_keywords:
 - BEGIN TRY statement
 - CATCH block
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-caps.latest.revision: 79
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
-ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 4278a699e1624521fb781e9eda6ffab40e221d8e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Implementiert die Fehlerbehandlung für [!INCLUDE[tsql](../../includes/tsql-md.md)], die Ähnlichkeiten mit der Ausnahmebehandlung in den Sprachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ hat. Eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen kann in einen TRY-Block eingeschlossen werden. Wenn innerhalb des TRY-Blocks ein Fehler auftritt, wird die Steuerung an eine andere Gruppe von Anweisungen innerhalb eines CATCH-Blocks übergeben.  
   
@@ -108,7 +110,7 @@ END CATCH
   
  Diese Funktionen geben NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen werden. Fehlerinformationen können mithilfe dieser Funktionen an beliebiger Stelle im Bereich des CATCH-Blocks abgerufen werden. Das folgende Skript zeigt beispielsweise eine gespeicherte Prozedur, die Fehlerbehandlungsfunktionen umfasst. Im `CATCH`-Block eines `TRY…CATCH`-Konstrukts wird die gespeicherte Prozedur aufgerufen, und Informationen zum Fehler werden zurückgegeben.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -161,7 +163,7 @@ END CATCH;
   
  Das folgende Beispiel zeigt, wie ein Fehler bei der Objektnamensauflösung, der von einer `SELECT`-Anweisung generiert wurde, nicht vom `TRY…CATCH`-Konstrukt erfasst wurde. Er wird jedoch vom `CATCH`-Block erfasst, wenn dieselbe `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur ausgeführt wird.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -178,7 +180,7 @@ END CATCH
   
  Das Ausführen der `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur führt dazu, dass der Fehler auf einer Ebene unter dem `TRY`-Block auftritt. Der Fehler wird vom `TRY…CATCH`-Konstrukt behandelt.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -211,7 +213,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Verwenden von TRY…CATCH  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Fehler führt dazu, dass die Ausführung zum dazugehörigen `CATCH`-Block wechselt.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -231,7 +233,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. Verwenden von TRY…CATCH in einer Transaktion  
  Das folgende Beispiel zeigt die Funktionsweise eines `TRY…CATCH`-Blocks innerhalb einer Transaktion. Die Anweisung innerhalb des `TRY`-Blocks generiert einen Fehler aufgrund einer Einschränkungsverletzung.  
   
-```t-sql  
+```sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -260,7 +262,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. Verwenden von TRY…CATCH mit XACT_STATE  
  Das folgende Beispiel zeigt, wie das `TRY…CATCH`-Konstrukt zur Behandlung von Fehlern verwendet wird, die innerhalb einer Transaktion auftreten. Über die `XACT_STATE`-Funktion wird bestimmt, ob für die Transaktion ein Commit oder ein Rollback ausgeführt werden soll. In diesem Beispiel hat `SET XACT_ABORT` den Wert `ON`. Dies bewirkt, dass die Transaktion nach dem Fehler aufgrund einer Einschränkungsverletzung nicht commitfähig ist.  
   
-```t-sql  
+```sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -329,7 +331,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. Verwenden von TRY…CATCH  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Fehler führt dazu, dass die Ausführung zum dazugehörigen `CATCH`-Block wechselt.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -346,7 +348,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [THROW &#40; Transact-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Datenbankmodulfehlern](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
@@ -356,11 +358,10 @@ GO
  [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40; Transact-SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [GESTARTET... END &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
-
 

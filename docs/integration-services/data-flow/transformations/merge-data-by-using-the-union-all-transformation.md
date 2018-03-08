@@ -1,10 +1,13 @@
 ---
-title: "Zusammenführen von Daten mithilfe der Union All-Transformation | Microsoft Docs"
+title: "Zusammenführen von Daten mithilfe der Transformation für UNION ALL | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2f9933f48083b0849ba01312979911bacb4fd86
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e171fc263daa72d8cea4c9e21b05c1ad452817e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Zusammenführen von Daten mithilfe der Transformation für UNION ALL
   Das Paket muss bereits mindestens einen Datenflusstask und zwei Datenquellen enthalten, damit Sie eine Transformation für UNION ALL hinzufügen und konfigurieren können.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Doppelklicken Sie auf die Transformation für UNION ALL.  
   
-5.  Ordnen Sie im **Transformations-Editor für UNION ALL**eine Spalte aus einer Eingabe einer Spalte in der Liste **Name der Ausgabespalte** zu. Klicken Sie dazu auf eine Zeile, und wählen Sie dann eine Spalte in der Eingabeliste aus. Wählen Sie  **\<ignorieren >** in der Eingabeliste zum Zuordnen der Spalte auszulassen.  
+5.  Ordnen Sie im **Transformations-Editor für UNION ALL**eine Spalte aus einer Eingabe einer Spalte in der Liste **Name der Ausgabespalte** zu. Klicken Sie dazu auf eine Zeile, und wählen Sie dann eine Spalte in der Eingabeliste aus. Wählen Sie in der Eingabeliste **\<ignorieren>** aus, um das Zuordnen der Spalte zu überspringen.  
   
     > [!NOTE]  
     >  Für die Zuordnung von zwei Spalten müssen die Metadaten der Spalten übereinstimmen.  
@@ -59,11 +61,10 @@ ms.lasthandoff: 08/03/2017
   
 9. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Union All-Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

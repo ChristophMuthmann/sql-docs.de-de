@@ -3,32 +3,33 @@ title: Mit Microsoft Azure Storage verbinden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: 
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f6948e2719018550a07b9b20087bcfc255ef72cb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: ea0fbb6f0297dfdbe94974de472c7a48ce8ce831
-ms.openlocfilehash: b673559a735d3b28d6055a1440183861b3db692a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Mit Microsoft Azure Storage verbinden
-Verwenden Sie das Dialogfeld **Windows Azure Storage-Verbindung** , um ein Speicherkonto anzugeben und die Verbindung mit Windows Azure zu überprüfen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Windows Azure Storage-Verbindung**, um ein Speicherkonto anzugeben und die Verbindung mit Windows Azure zu überprüfen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 Geben Sie die folgenden Informationen zum Windows Azure-Konto an, und klicken Sie dann auf **Weiter** , um fortzufahren.  
   
 1.  **Speicherkonto** – Geben Sie den Speicherkontonamen an.
@@ -46,4 +47,3 @@ Geben Sie die folgenden Informationen zum Windows Azure-Konto an, und klicken Si
   
 4.  **Kontoschlüssel speichern** – Bei Aktivierung dieser Option wird das Kennwort in einer verschlüsselten Datei gespeichert.  
   
-

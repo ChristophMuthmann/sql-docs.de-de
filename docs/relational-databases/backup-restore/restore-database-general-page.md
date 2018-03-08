@@ -2,30 +2,30 @@
 title: "Datenbank wiederherstellen (Seite „Allgemein“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restoredb.general.f1
+f1_keywords: sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "89"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac731905f16f406cafd6402ebb647cddbae83005
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-general-page"></a>Datenbank wiederherstellen (Seite 'Allgemein')
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Verwenden Sie die Seite **Allgemein** , um Informationen zu Ziel- und Quelldatenbanken für einen Wiederherstellungsvorgang der Datenbank anzugeben.  
     
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
  Um eine verschlüsselte Sicherung wiederherstellen zu können, müssen **VIEW DEFINITION** -Berechtigungen für das Zertifikat oder den asymmetrischen Schlüssel verfügbar sein, die bzw. der während der Sicherung zum Verschlüsseln verwendet wurde.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="source"></a>Quelle  
  Mit den Optionen des Bereichs **Wiederherstellen von**kann der Speicherort der Sicherungssätze für die Datenbank identifiziert und bestimmt werden, welche Sicherungssätze wiederhergestellt werden sollen.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="restoring-from-microsoft-azure-storage"></a>Wiederherstellen von Microsoft Azure Storage  
 Wählen Sie **URL** aus der Dropdownliste **Sicherungsmedientyp:** im Dialogfeld **Sicherungsmedien auswählen** aus.  Klicken Sie auf **Hinzufügen** , um das Dialogfeld **Speicherort für Sicherungsdatei auswählen** zu öffnen. Dort können Sie vorhandene SQL Server-Anmeldeinformationen/Azure-Speichercontainer auswählen, einen neuen Azure-Speichercontainer mit einer Shared Access Signature (SAS) erstellen oder eine SAS- und SQL Server-Anmeldeinformationen für einen vorhandenen Speichercontainer generieren. Sobald die Verbindung mit dem Speicherkonto hergestellt wurde, werden die Sicherungsdateien im Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** angezeigt. Dort können Sie die Datei auswählen, die für die Wiederherstellung verwendet werden soll.  Weitere Informationen finden Sie unter [Connect to A Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)(Herstellen einer Verbindung zu einem Microsoft Azure-Abonnement).
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Wiederherstellen einer Datenbank bis zu einer markierten Transaktion &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
@@ -94,4 +94,3 @@ Wählen Sie **URL** aus der Dropdownliste **Sicherungsmedientyp:** im Dialogfeld
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   
-

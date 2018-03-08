@@ -1,26 +1,27 @@
 ---
 title: Projekt Settings(Synchronization) (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 030b6346a174d83234216e9c779b01026abe7b07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40e18de9f96f69472fc3fb7b8720a0abdb27d2fb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Projekt Settings(Synchronization) (OracleToSQL)
 Die Seite "Synchronisierung", der die **Projekteinstellungen** das Dialogfeld enthält Einstellungen, die anpassen, wie SSMA lädt und Aktualisierungen-Datenbankobjekte, z. B. Tabellen und gespeicherten Prozeduren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -103,4 +104,3 @@ Gibt die Standardeinstellung im Dialogfeld Synchronisierung, bei der lokalen Met
   
 -   Bei Auswahl des **Skip**, SSMA wird keine Aktualisierung Aktionen ausführen.  
   
-

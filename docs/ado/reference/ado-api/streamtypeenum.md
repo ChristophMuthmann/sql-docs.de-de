@@ -3,7 +3,7 @@ title: StreamTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - StreamTypeEnum enumeration [ADO]
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c177ce7cb62862743f81fab207ab8f6c8f842af0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ac3e7193183ecfbc4d814d11e36c9ab7c6ba8bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 Gibt den Typ der Daten in einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -42,5 +41,4 @@ Gibt den Typ der Daten in einem [Stream](../../../ado/reference/ado-api/stream-o
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Type-Eigenschaft (ADO-Datenstrom)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-
+ [Type-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

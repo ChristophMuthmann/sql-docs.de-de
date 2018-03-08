@@ -3,7 +3,7 @@ title: 'Fields-Auflistung: Eigenschaften, Methoden und Ereignisse | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Fields collection [ADO], members
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4bc7d293661994f74abc936b94dc7f5870ec2472
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a92b7509181f9d8c8d2559621aeb690eba7bc85
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Sammlungseigenschaften Felder, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
  [CancelUpdate-Methode](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
- [Delete-Methode (ADO Fields-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
+ [Delete-Methode (Fields-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
   
  [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -50,5 +49,4 @@ ms.lasthandoff: 09/09/2017
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)
-
+ [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)

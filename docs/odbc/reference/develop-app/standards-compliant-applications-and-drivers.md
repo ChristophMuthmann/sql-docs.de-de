@@ -3,10 +3,12 @@ title: Mit Standards kompatible Anwendungen und-Treiber | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 14d3ca332605e2d40d967e0e8b27b54e82613f46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Mit Standards kompatible Anwendungen und-Treiber
 Eine mit Standards kompatible Anwendung oder Treiber ist, die Open Group CAE-Spezifikation "Data Management: SQL Call-Level Interface (CLI)" und der ISO/IEC 9075 entspricht-3:1995 (E) Call-Level-Interface (SQL/CLI).  
@@ -46,4 +47,3 @@ Eine mit Standards kompatible Anwendung oder Treiber ist, die Open Group CAE-Spe
 -   Die ISO-CLI, die ODBC 3. veröffentlichungshäufigkeit*.x* Headerdateien enthalten Aliase für Typen von Informationen in Aufrufen verwendet **SQLGetInfo**. Eine mit Standards kompatible Anwendung kann diese Aliase verwenden, statt die ODBC 3.*.x* Informationstypen. Weitere Informationen finden Sie im nächste Thema [Headerdateien](../../../odbc/reference/develop-app/header-files.md).  
   
 -   Eine mit Standards kompatible Anwendung muss überprüfen, ob alle Funktionen, die es unterstützt der Treiber unterstützt werden mit geeignet sind. Festlegen der Anweisungsattribut SQL_ATTR_CURSOR_SCROLLABLE auf SQL_SCROLLABLE und das Festlegen der Anweisungsattribut SQL_ATTR_CURSOR_SENSITIVITY auf SQL_INSENSITIVE oder SQL_SENSITIVE sind Funktionen, die als optionale Funktionen in den Standards verfügbar sind jedoch nicht enthalten sind, in die ODBC 3.*.x* Core level und daher möglicherweise nicht unterstützt durch alle ODBC 3.*.x* Treiber. Eine mit Standards kompatible Anwendung diese Funktionen verwendet, sollten sie sicher, dass der Treiber, dem er arbeitet unterstützt.
-

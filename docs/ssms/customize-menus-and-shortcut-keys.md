@@ -3,10 +3,12 @@ title: "Anpassen von Menüs und Tastenkombinationen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3bcf61e149e5e2a9460709330d72d7ba23023c62
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 26565d1078d8fcb813cc634ce5d3cee05d151f4a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
-Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+*<single letter>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+*<single letter>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
   
 Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die Seite **Tastatur** des Dialogfelds **Extras**/**Optionen** erstellt werden.  
   
@@ -165,7 +166,6 @@ Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die
 > [!NOTE]  
 > Einige Befehle sind nur verfügbar, wenn in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] relevanter Inhalt angezeigt wird. Wenn keine Befehle im Menü verfügbar sind, ist das Menüelement nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Funktionen in SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
   
-

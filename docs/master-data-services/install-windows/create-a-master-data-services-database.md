@@ -2,25 +2,27 @@
 title: Erstellen einer Master Data Services-Datenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-caps.latest.revision: 9
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1b580be2ada4c13541a9cad6eb037c62627337b1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 11c0868eeeb9c196e074b85dbb780ea0020be968
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-master-data-services-database"></a>Erstellen einer Master Data Services-Datenbank
   Erstellen Sie eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank, wenn Sie zur Unterstützung der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung und des [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Webdiensts eine neuen Datenbank benötigen.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 09/07/2017
   
 4.  Führen Sie die Schritte im Assistenten **Datenbank erstellen** aus, um die Datenbank zu erstellen und zu konfigurieren. Informationen zu den Benutzeroberflächenoptionen im Assistenten finden Sie unter [Datenbank erstellen &#40;Assistent im Konfigurations-Manager für Master Data Services&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
   
 -   Konfigurieren Sie die Systemeinstellungen für die Datenbank und die Webanwendung. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md).  
   
@@ -47,8 +49,7 @@ ms.lasthandoff: 09/07/2017
   
 -   Konfigurieren Sie einen Wartungsplan, um die Datenbank und Transaktionsprotokolle zu sichern. Weitere Informationen finden Sie unter [Datenbankanforderungen &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

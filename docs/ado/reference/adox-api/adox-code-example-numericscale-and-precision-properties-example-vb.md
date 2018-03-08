@@ -3,7 +3,7 @@ title: NumericScale und Genauigkeit Eigenschaften-Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Precision property [ADOX], Visual Basic example
 - NumericScale property [ADOX], Visual Basic example
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 670ba4225a9c89955c0bb62290617bde199f31d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41bacabc5cfcaff1ef48e03e5db00f3acd58da7a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX-Codebeispiel: NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, die [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) und [Genauigkeit](../../../ado/reference/adox-api/precision-property-adox.md) Eigenschaften der [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekt. Dieser Code zeigt an, deren Wert für die **Bestelldetails** Tabelle mit den *Northwind* Datenbank.  
@@ -87,4 +86,3 @@ End Sub
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale-Eigenschaft (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision-Eigenschaft (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)
-

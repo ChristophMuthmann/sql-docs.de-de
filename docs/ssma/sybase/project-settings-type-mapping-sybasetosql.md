@@ -3,27 +3,28 @@ title: Projekteinstellungen (Zuordnung) (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594ef6405a41b199d527eaae56a77c7f1d91c4e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
-ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Projekteinstellungen (Zuordnung) (SybaseToSQL)
 Die Seite "Type Mapping", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen.  
@@ -34,7 +35,7 @@ Die Seite "Type Mapping" steht in der **Projekteinstellungen** und **Projekt Sta
   
 -   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, und wählen Sie dann **Type Mapping** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Quelltyp**  
 Der zugeordnete ASE-Datentyp.  
   
@@ -152,4 +153,3 @@ Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLU
 |**Varchar [\*... 8000]**|**Varchar [\*]**|  
 |**Varchar [8001..\*]**|**varchar(max)**|  
   
-

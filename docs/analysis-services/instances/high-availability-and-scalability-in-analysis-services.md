@@ -2,28 +2,30 @@
 title: "Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services
-  In diesem Artikel werden die am häufigsten verwendeten Techniken beschrieben, um Analysis Services-Datenbanken hoch verfügbar und skalierbar zu machen. Zwar lassen sich diese beiden Ziele separat behandeln, praktisch gehen sie jedoch oftmals Hand in Hand: Einer skalierbaren Bereitstellung für umfangreiche Abfrage- oder Verarbeitungsauslastungen wird normalerweise auch die Erwartung hoher Verfügbarkeit entgegengebracht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In diesem Artikel werden die am häufigsten verwendeten Techniken beschrieben, um Analysis Services-Datenbanken hoch verfügbar und skalierbar zu machen. Zwar lassen sich diese beiden Ziele separat behandeln, praktisch gehen sie jedoch oftmals Hand in Hand: Für eine skalierbaren Bereitstellung für umfangreiche Abfrage- oder Verarbeitungsauslastungen wird typischerweise auch Hochverfügbarkeit gefordert.  
   
  Der umgekehrte Fall trifft jedoch nicht immer zu. Hohe Verfügbarkeit ohne Skalierbarkeit kann das einzige Ziel sein, wenn bindende Vereinbarungen zum Service Level für unternehmenswichtige, aber mäßige Abfrageauslastungen getroffen wurden.  
   
@@ -32,20 +34,20 @@ ms.lasthandoff: 09/01/2017
 ## <a name="key-points"></a>Die wichtigsten Punkte  
  Da sich die Techniken zum Erzielen hoher Verfügbarkeit und Skalierbarkeit von denen des relationalen Datenbankmoduls unterscheiden, stellt eine kurze Zusammenfassung der wichtigsten Punkte eine wirksame Einführung in die für Analysis Services verwendeten Techniken dar:  
   
--   Analysis Services verwendet die in die Windows-Serverplattform integrierten Mechanismen für hohe Verfügbarkeit und Skalierbarkeit: Netzwerklastenausgleich (NLB, Network Load Balancing), Windows Server Failover Clustering (WSFC) oder beide.  
+-   Analysis Services verwendet die in die Windows-Serverplattform integrierten Mechanismen für Hochverfügbarkeit und Skalierbarkeit: Netzwerklastenausgleich (NLB, Network Load Balancing), Windows Server Failover Clustering (WSFC) oder beide.  
   
     > [!NOTE]  
     >  Das Feature Always On des relationalen Datenbankmoduls erstreckt sich nicht auf Analysis Services.  Eine Analysis Services-Instanz kann nicht für die Ausführung in einer Always On-Verfügbarkeitsgruppe konfiguriert werden.  
     >   
     >  Zwar wird Analysis Services nicht in Always On-Verfügbarkeitsgruppen ausgeführt, jedoch können Daten aus relationalen Always On-Datenbanken sowohl abgerufen als auch verarbeitet werden. Anweisungen zum Konfigurieren einer hoch verfügbaren relationalen Datenbank für die Verwendung durch Analysis Services finden Sie unter [Analysis Services mit Always On-Verfügbarkeitsgruppen](../../database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md).  
   
--   Hohe Verfügbarkeit kann als einzelnes Ziel mithilfe von Serverredundanz in einem Failovercluster erreicht werden. Für Ersatzknoten wird eine mit dem aktiven Knoten identische Hard- und Softwarekonfiguration angenommen.  Bei eigenständigem Einsatz erhalten Sie durch WSFC hohe Verfügbarkeit, jedoch ohne Skalierbarkeit.  
+-   Hohe Verfügbarkeit kann als einzelnes Ziel mithilfe von Serverredundanz in einem Failovercluster erreicht werden. Für Ersatzknoten wird eine mit dem aktiven Knoten identische Hard- und Softwarekonfiguration angenommen.  Bei eigenständigem Einsatz erhalten Sie durch WSFC Hochverfügbarkeit, jedoch ohne Skalierbarkeit.  
   
 -   Skalierbarkeit mit oder ohne Verfügbarkeit wird mithilfe von NLB von schreibgeschützten Datenbanken erreicht.  Skalierbarkeit ist normalerweise eine Anforderung, wenn das Abfrageaufkommen groß ist oder plötzlichen Spitzen unterliegt.  
   
-     Lastenausgleich in Verbindung mit mehreren schreibgeschützten Datenbanken gibt Ihnen sowohl Skalierbarkeit als auch hohe Verfügbarkeit, da alle Knoten aktiv sind und die Anforderungen beim Ausfall eines Servers automatisch auf die verbleibenden Knoten verteilt werden. Wenn Sie sowohl Skalierbarkeit als auch Verfügbarkeit benötigen, ist ein NLB-Cluster die richtige Wahl.  
+     Lastenausgleich in Verbindung mit mehreren schreibgeschützten Datenbanken gibt Ihnen sowohl Skalierbarkeit als auch Hochverfügbarkeit, da alle Knoten aktiv sind und die Anforderungen beim Ausfall eines Servers automatisch auf die verbleibenden Knoten verteilt werden. Wenn Sie sowohl Skalierbarkeit als auch Verfügbarkeit benötigen, ist ein NLB-Cluster die richtige Wahl.  
   
- Bei der Verarbeitung stellen die Ziele der hohen Verfügbarkeit und Skalierbarkeit eine weniger große Herausforderung dar, da Sie den zeitlichen Ablauf und den Umfang des Betriebs steuern können. Die Verarbeitung kann sowohl teilweise als auch inkrementell über die Teilbereiche eines Modells verteilt erfolgen; allerdings muss an irgendeinem Punkt ein Modell vollständig auf einem einzelnen Server verarbeitet werden, um die Datenkonsistenz über alle Indizes und Aggregationen hinweg sicherzustellen. Eine robuste skalierbare Architektur baut auf Hardware auf, die die gesamte Verarbeitung in jedem praktisch geforderten Rhythmus leisten kann. Bei großen Lösungen ist diese Arbeit als unabhängiger Vorgang mit eigenen Hardwareressourcen strukturiert.  
+ Bei der Verarbeitung stellen die Ziele der Hochverfügbarkeit und Skalierbarkeit eine weniger große Herausforderung dar, da Sie den zeitlichen Ablauf und den Umfang des Betriebs steuern können. Die Verarbeitung kann sowohl teilweise als auch inkrementell über die Teilbereiche eines Modells verteilt erfolgen; allerdings muss an irgendeinem Punkt ein Modell vollständig auf einem einzelnen Server verarbeitet werden, um die Datenkonsistenz über alle Indizes und Aggregationen hinweg sicherzustellen. Eine robuste skalierbare Architektur baut auf Hardware auf, die die gesamte Verarbeitung in jedem praktisch geforderten Rhythmus leisten kann. Bei großen Lösungen ist diese Arbeit als unabhängiger Vorgang mit eigenen Hardwareressourcen strukturiert.  
   
 ##  <a name="bkmk_serverconfig"></a> Einzel- im Vergleich zu Mehrserverkonfigurationen  
  In einer gewöhnlichen Einzelserverbereitstellung werden Verarbeitungs- und Abfragearbeitsauslastungen parallel ausgeführt, unter der Annahme, dass die Systemressourcen für beide Aktivitäten ausreichen. Bei Analysis Services bleiben die vorhandenen Datenstrukturen intakt und unterstützen die Abfrageverarbeitung, während eine aktualisierte Version im Hintergrund verarbeitet wird. Der Besitz von genügend Arbeitsspeicher und Speicherplatz zum Verarbeiten temporärer Datenstrukturen ist eine Hardwareanforderung, die für alle Servermodi zutrifft, obwohl jeder Modus verschiedene Anforderungen an die Systemressourcen stellt und mit verschiedenen Graden der NUMA-Unterstützung einhergeht.  
@@ -60,11 +62,11 @@ ms.lasthandoff: 09/01/2017
   
  Manchmal schreiben Betriebsbedingungen die Verwendung mehrerer Server vor. Beispielsweise bestehen Failovercluster definitionsgemäß aus mehreren Servern, wobei jeder Knoten auf identischer Hard- und Softwarekonfiguration ausgeführt wird.  
   
- Analog dazu verlangt ein dringender Bedarf an hoher Verfügbarkeit bei Abfrageauslastungen nach mehreren Servern. In diesem Szenario ist die empfohlene Konfiguration für Analysis Services eine Mischung aus schreibgeschützten Datenbanken und Datenbanken mit Schreib-/Lesezugriff, die auf getrennten Instanzen von Analysis Services auf dedizierter Hardware ausgeführt werden. Schreibgeschützte Datenbanken verarbeiten Abfrageanforderungen. Datenbanken mit Schreib-/Lesetzugriff werden für die Verarbeitung verwendet. Eine erweiterte Beschreibung dieser häufig verwendeten Technik wird im nächsten Abschnitt gegeben.  
+ Analog dazu verlangt ein dringender Bedarf an Hochverfügbarkeit bei Abfrageauslastungen nach mehreren Servern. In diesem Szenario ist die empfohlene Konfiguration für Analysis Services eine Mischung aus schreibgeschützten Datenbanken und Datenbanken mit Schreib-/Lesezugriff, die auf getrennten Instanzen von Analysis Services auf dedizierter Hardware ausgeführt werden. Schreibgeschützte Datenbanken verarbeiten Abfrageanforderungen. Datenbanken mit Schreib-/Lesetzugriff werden für die Verarbeitung verwendet. Eine erweiterte Beschreibung dieser häufig verwendeten Technik wird im nächsten Abschnitt gegeben.  
   
- **Virtuelle Maschinen und hohe Verfügbarkeit**  
+ **Virtuelle Maschinen und Hochverfügbarkeit**  
   
- Eine andere Strategie, um hohe Anforderungen an die Verfügbarkeit zu befriedigen, könnte die Verwendung virtueller Computer einschließen. Wenn die geforderte Verfügbarkeit durch Bereitstellung eines Ersatzservers innerhalb von Stunden anstelle von Minuten erreicht werden kann, ist möglicherweise der Einsatz von virtuellen Computern sinnvoll, die bei Bedarf gestartet und mit aktualisierten Datenbanken geladen werden können, die bei einem zentralen Speicherort abgerufen werden.  
+ Eine andere Strategie, um die Anforderungen von Hochverfügbarkeit zu erfüllen, könnte die Verwendung virtueller Computer einschließen. Wenn die geforderte Verfügbarkeit durch Bereitstellung eines Ersatzservers innerhalb von Stunden anstelle von Minuten erreicht werden kann, ist möglicherweise der Einsatz von virtuellen Computern sinnvoll, die bei Bedarf gestartet und mit aktualisierten Datenbanken geladen werden können, die bei einem zentralen Speicherort abgerufen werden.  
   
 ## <a name="scalability-using-read-only-and-read-write-databases"></a>Skalierbarkeit unter Verwendung von schreibgeschützten Datenbanken und Datenbanken mit Lese-/Schreibzugriff  
  Netzwerklastenausgleich wird für hohe oder eskalierende Abfrage- oder Verarbeitungsauslastungen empfohlen. Analysis Services-Datenbanken in einer NLB-Lösung werden als schreibgeschützte Datenbanken definiert, um über die Abfragen hinweg Konsistenz sicherzustellen.  
@@ -91,7 +93,7 @@ ms.lasthandoff: 09/01/2017
 |Mehrdimensionale Modelle mit ROLAP-Speicher|Maximieren Sie Datenträger-E/A, und minieren Sie Netzwerklatenz.|  
   
 ## <a name="highly-availability-and-redundancy-through-wsfc"></a>Hohe Verfügbarkeit und Redundanz mithilfe von WSFC  
- Analysis Services können auf einem vorhandenen Windows Server-Failovercluster (WSFC) installiert werden, um hohe Verfügbarkeit zu erzielen, die den Dienst innerhalb der kürzest möglichen Zeit wiederherstellt.  
+ Analysis Services können auf einem vorhandenen Windows Server-Failovercluster (WSFC) installiert werden, um Hochverfügbarkeit zu erzielen, die den Dienst innerhalb der kürzest möglichen Zeit wiederherstellt.  
   
  Failovercluster bieten Vollzugriff (Lesen und Rückschreiben) auf die Datenbank, jedoch immer nur auf einem Knoten. Sekundäre Datenbanken werden auf weiteren Knoten im Cluster ausgeführt, die als Ersatzserver dienen, falls der erste Knoten ausfällt.  
   
@@ -111,4 +113,3 @@ ms.lasthandoff: 09/01/2017
  [Eine Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösung](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   
-

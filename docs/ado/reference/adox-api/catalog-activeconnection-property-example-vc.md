@@ -3,7 +3,7 @@ title: Katalog ActiveConnection-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 743c9a3eb5394b098b21a3957299dd837becd52c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f4307883e400990f36caa55384c00a991b36feb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Katalog ActiveConnection-Eigenschaft (VC++-Beispiel)
 Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft, um eine gültige, offene Verbindung "geöffnet" des Katalogs. Aus einem Katalog öffnen können Sie die Schemaobjekte in diesem Katalog zugreifen.  
@@ -121,4 +120,3 @@ void OpenConnectionWithStringX() {
   
 ## <a name="see-also"></a>Siehe auch  
  [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
-

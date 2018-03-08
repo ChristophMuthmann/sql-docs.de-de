@@ -3,7 +3,7 @@ title: NumericScale-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 21e85b7e9645761a6d25227113deb5d3eb564720
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 98f5c141f0cf9483ab7d527f46911a36257ced47
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-property-ado"></a>NumericScale-Eigenschaft (ADO)
 Gibt die Dezimalstellen der numerischen Werte in einer [Parameter](../../../ado/reference/ado-api/parameter-object.md) oder [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
@@ -54,4 +53,3 @@ Gibt die Dezimalstellen der numerischen Werte in einer [Parameter](../../../ado/
  [NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale und Precision-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Precision-Eigenschaft (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-

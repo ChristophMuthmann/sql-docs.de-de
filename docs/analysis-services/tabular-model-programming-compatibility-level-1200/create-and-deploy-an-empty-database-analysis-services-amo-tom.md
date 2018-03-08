@@ -2,32 +2,29 @@
 title: Erstellen und Bereitstellen eine leere Datenbank (Analysis Services AMO-TOM) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dcb916e9-97c5-47e0-922a-404891423b2a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9f2529d4f7cb3e4912b3d0b6d0ee0879c46d83ec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8aafa733ba61563072e304cf77945203df7585d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>Erstellen und Bereitstellen einer leeren Datenbank (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Ein gängiges Programmiermodells Szenario für AMO-TOM besteht darin Datenbanken und -Modelle im Handumdrehen zu generieren. Dieser Artikel führt Sie durch die Schritte zum Erstellen einer Datenbank. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ein gängiges Programmiermodells Szenario für AMO-TOM besteht darin Datenbanken und -Modelle im Handumdrehen zu generieren. Dieser Artikel führt Sie durch die Schritte zum Erstellen einer Datenbank. 
 
 Für tabellarische Lösungen besteht eine 1: 1-Entsprechung zwischen einer Datenbank- und modellsicherheitseinstellungen, mit der ein Modell pro Datenbank zur Verfügung. Sie können einen oder anderen in der Regel angeben, und das Modul wird das fehlende Objekt ableiten. 
 
@@ -112,4 +109,3 @@ Sobald eine Datenbank erstellt wurde, können Sie Modellobjekte hinzufügen:
 - [Hinzufügen einer Datenquelle mit einem tabellarischen Modell](../../analysis-services/tabular-model-programming-compatibility-level-1200/add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
 - [Erstellen von Tabellen, Partitionen und Spalten in einem tabellarischen Modell](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md)
  
-

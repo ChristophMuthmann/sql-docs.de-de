@@ -2,9 +2,12 @@
 title: DDL-Ereignisgruppen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-ddl
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - DDL event groups
 - DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c3ffbbf2c2aa0fb781bc6f3a5927d95d4975092f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-event-groups"></a>DDL-Ereignisgruppen
-  Die folgenden Tabelle geben einen Überblick über die DDL-Ereignisgruppen, die zum Ausführen eines DDL-Triggers oder einer Ereignisbenachrichtigung verwendet werden können, sowie über die hiervon abgedeckten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Beachten Sie den inklusiven Charakter der Ereignisgruppen. Ein DDL-Trigger oder eine Ereignisbenachrichtigung, der bzw. die FOR DDL_TABLE_EVENTS (10018) angibt, deckt z. B. die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen CREATE TABLE, ALTER TABLE und DROP TABLE ab. Ein DDL-Trigger oder eine Ereignisbenachrichtigung, der bzw. die FOR DDL_TABLE_VIEW_EVENTS (10017) angibt, deckt alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen unter den Typen DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS und DDL_STATISTICS_EVENTS ab.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Die folgenden Tabelle geben einen Überblick über die DDL-Ereignisgruppen, die zum Ausführen eines DDL-Triggers oder einer Ereignisbenachrichtigung verwendet werden können, sowie über die hiervon abgedeckten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Beachten Sie den inklusiven Charakter der Ereignisgruppen. Ein DDL-Trigger oder eine Ereignisbenachrichtigung, der bzw. die FOR DDL_TABLE_EVENTS (10018) angibt, deckt z. B. die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen CREATE TABLE, ALTER TABLE und DROP TABLE ab. Ein DDL-Trigger oder eine Ereignisbenachrichtigung, der bzw. die FOR DDL_TABLE_VIEW_EVENTS (10017) angibt, deckt alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen unter den Typen DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS und DDL_STATISTICS_EVENTS ab.  
   
 > [!NOTE]  
 >  Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger oder Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z.B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
@@ -36,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 ||||  
 |-|-|-|  
-|parent_type|Typ|name|  
+|parent_type|Typ|NAME|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
@@ -319,7 +323,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)   
  [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md)  

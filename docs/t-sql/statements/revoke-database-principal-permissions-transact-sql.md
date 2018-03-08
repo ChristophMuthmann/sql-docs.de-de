@@ -3,8 +3,11 @@ title: "REVOKE-Berechtigungen für Datenbankprinzipal (Transact-SQL) | Microsoft
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-caps.latest.revision: 30
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee64655f9ac49775692d88ff6bcd95fd7ff28f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c02242a5428a6ae7c2426efd517809f8e374da4e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (Berechtigungen für Datenbankprinzipal) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Hebt Berechtigungen auf, die für einen Datenbankbenutzer, eine Datenbankrolle oder Anwendungsrolle erteilt oder verweigert wurden.  
   
@@ -206,5 +208,4 @@ GO
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

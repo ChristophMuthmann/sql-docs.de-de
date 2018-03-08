@@ -3,7 +3,7 @@ title: Umstrukturieren von Name-Eigenschaft dynamisch (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b14593e427db76994976091e5916ffe49aefe82
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Umstrukturieren von Name-Eigenschaft dynamisch (ADO)
 Gibt einen Namen für die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -52,4 +51,3 @@ Gibt einen Namen für die [Recordset](../../../ado/reference/ado-api/recordset-o
  [Microsoft Data strukturiert werden, Dienst für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

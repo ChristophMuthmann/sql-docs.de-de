@@ -2,33 +2,32 @@
 title: ALTER externe Bibliothek (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
 - ALTER_EXTERNAL_LIBRARY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER EXTERNAL LIBRARY
+dev_langs: TSQL
+helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: b728fa43959ee047173b1533e70d46e5b1e0f7c1
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER externe Bibliothek (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Ändert den Inhalt einer vorhandenen externen Paket-Bibliothek.
 
@@ -74,7 +73,7 @@ Die Datei kann in Form von ein lokaler Pfad oder ein Netzwerkpfad angegeben werd
 
 Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder die Common Language Runtime ist nur eine Datei Artefakt oder Inhalt zulässig.
 
-**DATA_SOURCE = External_data_source_name**
+**DATA_SOURCE = external_data_source_name**
 
 Gibt den Namen der externen Datenquelle, die den Speicherort der Bibliotheksdatei enthält. Dieser Speicherort muss es sich um ein Azure-Blob-Speicherpfad verweisen. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
@@ -138,8 +137,7 @@ ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 
 
 ## <a name="see-also"></a>Siehe auch  
 
-[Erstellen von EXTERNEN Bibliothek (Transact-SQL)](create-external-library-transact-sql.md)
-[löschen externe Bibliothek (Transact-SQL)](drop-external-library-transact-sql.md)  
-[Sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[Sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
+[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

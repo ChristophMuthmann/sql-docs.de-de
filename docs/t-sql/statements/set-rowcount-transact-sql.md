@@ -3,8 +3,11 @@ title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - limiting rows returned
 - queries [SQL Server], stopping
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eda7f9faf2bb45b06cf1112dbe48cbdb281fdab3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1e27fcb521763eb38d7aec4a89d8a9e13d7e520f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bewirkt, dass die Verarbeitung der Abfrage durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet wird, sobald die angegebene Anzahl von Zeilen zurückgegeben wurde.  
   
@@ -130,5 +132,4 @@ WHERE AccountType = 'Assets';
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-
 

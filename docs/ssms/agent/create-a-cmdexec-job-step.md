@@ -3,29 +3,29 @@ title: Erstellen eines CmdExec-Auftragsschritts | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CmdExec jobs
+helpviewer_keywords: CmdExec jobs
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ab55ccc01ef81dceb8658b335c33b0439aebd090
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 38adea14555f1c1ccd6ae37c9bec1778bdffdab6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="create-a-cmdexec-job-step"></a>Erstellen eines CmdExec-Auftragsschritts
-In diesem Thema wird beschrieben, wie Sie einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftragsschritt in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] , der ein ausführbares Programm oder einen Betriebssystembefehl verwendet, mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] oder SQL Server Management Objects erstellen und definieren können.  
+# <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent-Auftragsschritt in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], der ein ausführbares Programm oder einen Betriebssystembefehl verwendet, mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] oder SQL Server Management Objects erstellen und definieren können.  
   
 **In diesem Thema**  
   
@@ -102,4 +102,3 @@ Weitere Informationen finden Sie unter [sp_add_jobstep (Transact-SQL)](http://ms
   
 Verwenden Sie die **JobStep** -Klasse indem Sie eine von Ihnen ausgewählte Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell verwenden.  
   
-

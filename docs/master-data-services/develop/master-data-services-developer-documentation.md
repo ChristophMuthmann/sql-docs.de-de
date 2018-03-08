@@ -2,27 +2,28 @@
 title: Master Data Services Developer Documentation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 21898c90044ec62c1a7d55fbcfa0cf03d46ba7ce
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services Developer Documentation
   Hier finden Sie Informationen zum Schreiben von Code, um anzupassen, wie Sie und Ihre Benutzer mit [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] interagieren. Vorgehensweise:  
@@ -53,9 +54,9 @@ ms.lasthandoff: 09/07/2017
  Anweisungen zum Erstellen einer Workflowhandlerassembly, zum Konfigurieren und Starten des SQL Server MDS Workflow Integration Service sowie zum Erstellen einer Geschäftsregel in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] für den Start eines benutzerdefinierten Workflows.  
   
 ## <a name="web-server-namespaces"></a>Webserver-Namespaces  
- Durch [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] wird eine Reihe von Assemblys auf dem Webservercomputer installiert. Diese Assemblys enthalten Namespaces, die für erweiterte Szenarien verwendet werden können, in denen das Verhalten des Webservercomputers angepasst wird. In der folgenden Tabelle werden diese Namespaces beschrieben.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] wird eine Reihe von Assemblys auf dem Webservercomputer installiert. Diese Assemblys enthalten Namespaces, die für erweiterte Szenarien verwendet werden können, in denen das Verhalten des Webservercomputers angepasst wird. In der folgenden Tabelle werden diese Namespaces beschrieben.  
   
-|Namespace|Beschreibung|  
+|Namespace|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|Enthält Klassen, die zum Erstellen eines Bereitstellungspakets aus einem Modell und zum Bereitstellen eines Pakets in einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank verwendet werden können.|  
 |<xref:Microsoft.MasterDataServices.Services>|Enthält eine Klasse zum Empfangen und Verarbeiten von Webdienstvorgängen, die durch die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung an den Webservercomputer übergeben wurden.|  
@@ -64,4 +65,3 @@ ms.lasthandoff: 09/07/2017
 |<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|Enthält die Schnittstelle, mit der die Vorgänge definiert werden, die durch den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst aufgerufen werden können.|  
   
   
-

@@ -3,7 +3,7 @@ title: Filter- und RecordCount Eigenschaften Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c0214769a09f0a7a2e572082d7972cd7606c27f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6f2580fbc522049cff2e271dde0f99ed2245027
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter- und RecordCount Eigenschaften Beispiel (VB)
 In diesem Beispiel Öffnen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Herausgeber-Tabelle in der ***Pubs*** Datenbank. Es verwendet dann die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die Anzahl der sichtbaren Datensätze auf diesen Verlegern in einem bestimmten Land/Region einzuschränken. Die **RecordCount** Eigenschaft wird verwendet, um den Unterschied zwischen der gefilterten und ungefilterten Recordsets anzeigen.  
@@ -126,4 +125,3 @@ Attribute VB_Name = "Filter"
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

@@ -3,27 +3,28 @@ title: Numerische Funktionen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-functions"></a>Numerische Funktionen
 Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Durch Aufrufen von **SQLGetInfo** mit einem *Informationstyp* von SQL_NUMERIC_FUNCTIONS, kann eine Anwendung ermitteln, welche numerischen Funktionen von einem-Treiber unterstützt werden.  
@@ -64,4 +65,3 @@ Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skala
 |**SQRT (** *Float_exp* **)** (ODBC 1.0)|Gibt die Quadratwurzel von *Float_exp*.|  
 |**TAN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Tangens des *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
 |**TRUNCATE (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gekürzt *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* auf abgeschnitten &#124; *Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|
-

@@ -2,9 +2,12 @@
 title: '&lt;Alias&gt; Eigenschaften (Registerkarte Alias) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - aliases [SQL Server], <Alias> properties
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 79ff20cdb03305824f4c5766412ca0733a82f642
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9187c476f9ee7196d169905ec7ffc5fcc0a87f6e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; Eigenschaften (Registerkarte Alias)
-  Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Verwenden Sie die Seite **Alias** im Dialogfeld **\<**Aliasname**> Eigenschaften** zum Anzeigen oder Angeben der Elemente einer Verbindungszeichenfolge eines Alias.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Verwenden Sie die Seite **Alias** im Dialogfeld **\<**Aliasname**> Eigenschaften** zum Anzeigen oder Angeben der Elemente einer Verbindungszeichenfolge eines Alias.  
   
 ## <a name="options"></a>enthalten  
  **Alias Name**  
@@ -46,4 +49,3 @@ ms.lasthandoff: 08/02/2017
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
-

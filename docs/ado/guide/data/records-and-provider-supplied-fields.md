@@ -3,7 +3,7 @@ title: "Datensätze und Felder Anbieter bereitgestellte | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und Felder Anbieter bereitgestellte
 Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt geöffnet ist, werden seine Quelle kann die aktuelle Zeile eines geöffneten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt .  
@@ -85,6 +84,5 @@ Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objek
 |RESOURCE_ISROOT|AdBoolean|Schreibgeschützt. "True", wenn die Ressource der Stamm einer Auflistung oder strukturierte Dokument ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

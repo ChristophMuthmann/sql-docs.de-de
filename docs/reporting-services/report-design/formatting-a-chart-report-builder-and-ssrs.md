@@ -2,12 +2,13 @@
 title: Formatieren eines Diagramms (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -52,17 +53,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc669d43fc5331a1ce161b0c1c2098a38c5224fb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3d38b2ce46120e435ac1b94623587816ff20307d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formatieren eines Diagramms (Berichts-Generator und SSRS)
   Nachdem Sie die Daten für das Diagramm definiert und die gewünschte Darstellung ausgewählt haben, können Sie das Diagramm formatieren. So können Sie die Gesamtdarstellung verbessern und wichtige Datenpunkte hervorheben. Die meisten allgemeinen Formatierungsoptionen können im Dialogfeld Eigenschaften geändert werden. Zum Auswählen dieses Dialogfelds klicken Sie mit der rechten Maustaste auf ein Diagrammelement, und zeigen Sie das Kontextmenü an. Jedes Diagrammelement hat ein eigenes Dialogfeld. Weitere Informationen zu Diagrammelementen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -93,11 +93,10 @@ ms.lasthandoff: 08/09/2017
  [Hinzufügen eines Rahmens zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)  
  Erläutert das Hinzufügen eines Rahmens zu einem Diagramm.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette (Berichts-Generator und SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   
-

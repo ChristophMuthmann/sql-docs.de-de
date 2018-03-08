@@ -3,27 +3,28 @@ title: SQLSetDescField und SQLSetDescRec (Cursorbibliothek) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a2270562c702ab309f505f37de91aeef24518c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField und SQLSetDescRec (Cursor Library)
 > [!IMPORTANT]  
@@ -70,4 +71,3 @@ ms.lasthandoff: 09/09/2017
  Die Cursorbibliothek unterstützt nicht das SQL_DESC_BIND_TYPE-Feld in einem APD oder ARD ändern, wenn ein Cursor geöffnet ist. Das Feld SQL_DESC_BIND_TYPE kann geändert werden, nur, nachdem der Cursor geschlossen ist, und bevor Sie ein neuer Cursor geöffnet wird. Sind die einzige deskriptorfelder, dass die Cursorbibliothek ändern unterstützt, wenn ein Cursor geöffnet ist, SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_ROWS_PROCESSED_ PTR-WERT.  
   
  Die Cursorbibliothek unterstützt nicht das SQL_DESC_COUNT Feld von der ARD nach dem Ändern **SQLExtendedFetch** oder **SQLFetchScroll** aufgerufen wurde und bevor der Cursor geschlossen wurde.
-

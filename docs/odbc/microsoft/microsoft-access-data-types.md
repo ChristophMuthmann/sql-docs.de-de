@@ -3,10 +3,12 @@ title: Microsoft Access-Datentypen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - access data types [ODBC]
 - data types [ODBC], Access driver
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: bee1801eb581272762b2f80d25eeb64d0220a256
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d158cd0646f276d278b66427e3f44b661493e695
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access-Datentypen
 Die folgende Tabelle zeigt die Microsoft Access-Datentypen, die Datentypen, die zum Erstellen von Tabellen verwendet und die ODBC-SQL-Datentypen.  
@@ -75,4 +76,3 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |NUMERIC|Beschränkt auf Microsoft Access 4.0 Datentyp.|  
   
  Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).
-

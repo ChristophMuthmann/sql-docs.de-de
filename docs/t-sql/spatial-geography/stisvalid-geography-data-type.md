@@ -3,8 +3,11 @@ title: STIsValid (Geography-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - STIsValid method (geography)
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2149008613cf38f1d4e3ac138afd776e16f4250b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9fb26b3d975a3fb0e1ca25f0c23e9ff2a4e89ff1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt true zurück, wenn eine **geography** -Instanz wohlgeformt ist und anhand des Open Geospatial Consortium (OGC)-Typs als gültiges geography-Objekt erkannt wird. Gibt false zurück, wenn eine **geography** -Instanz nicht wohlgeformt ist. Diese Methode ist exakt.  
   
@@ -62,7 +64,6 @@ DECLARE @g geography
 ## <a name="see-also"></a>Siehe auch  
  [STGeometryType &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
  [MakeValid &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
- [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

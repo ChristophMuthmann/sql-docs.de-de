@@ -3,24 +3,25 @@ title: 'PDO:: __construct | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c615bf11081ee791a6a3a700c4c7bae514fe4fae
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 71404af3dfbcc0599d53bdb719f4150c77cac332
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -95,4 +96,3 @@ Dieses Beispiel zeigt, wie Sie eine Verbindung mit einem Server herstellen und s
 [PDO-Klasse](../../connect/php/pdo-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

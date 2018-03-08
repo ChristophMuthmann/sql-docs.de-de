@@ -1,26 +1,27 @@
 ---
-title: Paginierung in Reporting Services (Berichts-Generator und SSRS) | Microsoft Docs
+title: Paginierung in Reporting Services (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: dfaf5fec90d334ef19dcf3b5de715322164253e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginierung in Reporting Services (Berichts-Generator und SSRS)
   Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen.  
@@ -50,14 +51,14 @@ ms.lasthandoff: 08/09/2017
   
  Der Bereich der physischen Seite, der nach Zuweisen von Raum für Ränder, Spaltenabstände und Seitenkopf- und Seitenfußzeile verbleibt, wird als *verwendbarer Seitenbereich*bezeichnet. Ränder werden nur übernommen, wenn Sie Berichte in Renderingformaten mit harten Seitenumbrüchen rendern und drucken. Das folgende Bild gibt den Rand und verwendbaren Seitenbereich einer physischen Seite an.  
   
- ![Physische Seite mit Rändern und verwendbarem Bereich. ] (../../reporting-services/report-design/media/rspagemargins.gif "Physische Seite mit Rändern und verwendbarem Bereich.")  
+ ![Physische Seite mit Rändern und verwendbarem Bereich](../../reporting-services/report-design/media/rspagemargins.gif "Physical page with margins and usable area")  
   
 ### <a name="newsletter-style-columns"></a>Spalten im Zeitungsformat  
  Ihr Bericht kann in Spalten, wie Spalten in einer Zeitung, unterteilt werden, die als logische Seiten behandelt und auf derselben physischen Seite gerendert werden. Sie sind von links nach rechts und von oben nach unten angeordnet und werden durch Leerraum zwischen den einzelnen Spalten abgetrennt. Wird der Bericht in mehr als eine Spalte unterteilt, wird jede physische Seite vertikal in Spalten unterteilt. Jede Spalte wird als eine logische Seite behandelt. Angenommen, es sind zwei Spalten auf einer physischen Seite vorhanden. Dann füllt der Inhalt des Berichts zunächst die erste und anschließend die zweite Spalte aus. Wenn der Bericht nicht vollständig in die ersten beiden Spalten passt, füllt der Bericht die erste Spalte und anschließend die zweite Spalte auf der nächsten Seite aus. Die Spalten werden weiter von links nach rechts und oben nach unten ausgefüllt, bis alle Berichtselemente gerendert sind. Wenn Sie Spaltengrößen angeben, durch die die horizontale oder vertikale Breite null ergibt, wird der Spaltenabstand standardmäßig auf null gesetzt.  
   
  Spalten werden im Bereich **Berichtseigenschaften** , im Dialogfeld **Seite einrichten** oder durch Ändern der Eigenschaften TopMargin, BottomMargin, LeftMargin und RightMargin im Bereich **Eigenschaften** festgelegt. Wenn Sie eine nicht definierte Seitenrandgröße verwenden möchten, können Sie die Randgröße in den Geräteinformationseinstellungen für den entsprechenden Renderer angeben, mit dem Sie den Bericht exportieren. Spalten werden nur übernommen, wenn Sie Berichte im PDF- oder in Bildformaten rendern und drucken. Das folgende Bild gibt den verwendbaren Seitenbereich einer Seite mit Spalten an.  
   
- ![Physische Seite mit gezeichneten Spalten. ] (../../reporting-services/report-design/media/rspagecolumns.gif "Physische Seite mit gezeichneten Spalten.")  
+ ![Physische Seite mit dargestellten Spalten](../../reporting-services/report-design/media/rspagecolumns.gif "Physical page with columns depicted")  
   
 ## <a name="page-breaks-and-page-names"></a>Seitenumbrüche und Seitennamen  
  Durch die Verwendung von Seitennamen ist ein Bericht u. U. besser zu lesen, und die darin enthaltenen Daten sind einfacher zu überwachen und zu exportieren. Reporting Services stellen Eigenschaften für Berichte und Tablix-Datenbereiche (Tabelle, Matrix und Liste), Gruppen und Rechtecke im Bericht bereit, mit denen die Paginierung gesteuert, Seitenzahlen zurückgesetzt und bei Seitenumbrüchen neue Namen für Berichtsseiten angegeben werden können. Mit diesen Funktionen können Berichte unabhängig vom Format optimiert werden, in dem sie gerendert werden, sie sind jedoch insbesondere beim Exportieren von Berichten in Excel-Arbeitsmappen hilfreich.  
@@ -78,16 +79,16 @@ ms.lasthandoff: 08/09/2017
   
  Sie können die BreakLocation-Eigenschaft in den Dialogfeldern **Tablix-Eigenschaften**, **Rechteckeigenschaften**oder **Gruppeneigenschaften** festlegen, Sie müssen jedoch die Eigenschaften Disabled, ResetPageNumber und PageName im Eigenschaftenbereich von Berichts-Generator festlegen. Wenn die Eigenschaften im Eigenschaftenbereich nach Kategorie organisiert werden, befinden sich die Eigenschaften in der Kategorie **Seitenumbruch** . Für Gruppen befindet sich die Kategorie **Seitenumbruch** in der Kategorie **Gruppe** .  
   
- Sie können den Wert der Eigenschaften Disabled und ResetPageNumber mithilfe von Konstanten und einfachen oder komplexen Ausdrücken festlegen. Für die BreakLocation-Eigenschaft kann jedoch kein Ausdruck verwenden. Weitere Informationen zum Schreiben und Verwenden von Ausdrücken finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Sie können den Wert der Eigenschaften Disabled und ResetPageNumber mithilfe von Konstanten und einfachen oder komplexen Ausdrücken festlegen. Für die BreakLocation-Eigenschaft kann jedoch kein Ausdruck verwenden. Weitere Informationen zum Schreiben und Verwenden von Ausdrücken finden Sie unter [Ausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
  Im Bericht können Sie Ausdrücke schreiben, die anhand der **Globals** -Auflistung auf die aktuellen Seitennamen oder die Seitenzahlen verweisen. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Benennen von Registerkarten in Excel-Arbeitsblättern  
  Diese Eigenschaften sind nützlich, wenn Sie Berichte in Excel-Arbeitsmappen exportieren. Verwenden Sie die InitialPage-Eigenschaft, um einen Standardnamen für den Registerkartennamen des Arbeitsblatts anzugeben, wenn Sie den Bericht exportieren, und verwenden Sie Seitenumbrüche und die PageName-Eigenschaft, um andere Namen für jedes Arbeitsblatt bereitzustellen. Jede neue von einem Seitenumbruch definierte Berichtsseite wird in ein anderes vom Wert der PageName-Eigenschaft benanntes Arbeitsblatt exportiert. Wenn PageName leer ist, der Bericht jedoch einen ursprünglichen Seitennamen enthält, wird in allen Arbeitsblättern in der Excel-Arbeitsmappe der gleiche Name verwendet – der ursprüngliche Seitenname.  
   
- Weitere Informationen zur Funktion dieser Eigenschaften beim Exportieren von Berichten nach Excel finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Weitere Informationen zur Funktion dieser Eigenschaften beim Exportieren von Berichten nach Excel finden Sie unter [Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Seitenlayout und Rendering &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

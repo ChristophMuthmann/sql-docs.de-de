@@ -2,29 +2,30 @@
 title: Tabellenzeilen filtern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.filtertablerows.f1
+f1_keywords: sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 610fb6065c2261ae6f1e2c8627656b193cb5d456
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7917c67c302800a23ed20c974115641f644b513f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-table-rows"></a>Tabellenzeilen filtern
-  Mithilfe der Seite **Tabellenzeilen filtern** können Sie:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe der Seite **Tabellenzeilen filtern** können Sie:  
   
 -   Statische Zeilenfilter auf Tabellenartikel in Momentaufnahme-, Transaktions- und Mergeveröffentlichungen anwenden  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  Ein Filter muss die von der Replikation verwendete **rowguidcol** nicht einschließen, um Zeilen zu identifizieren. Standardmäßig ist dies die Spalte, die zum Zeitpunkt hinzugefügt wurde, als Sie die Mergereplikation eingerichtet haben, und sie heißt **rowguid**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Gefilterte Tabellen**  
  Dieser Bereich wird mit Filtern aufgefüllt, während Sie den Tabellenartikeln in der Veröffentlichung Filter hinzufügen. Tabellen mit Zeilenfiltern werden im Bereich als Knoten der obersten Ebene angezeigt. Für Mergeveröffentlichungen werden Tabellen, auf die das Filtern durch einen Joinfilter erweitert wurde, als untergeordnete Knoten angezeigt.  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 06/22/2017
  **Filter**  
  Enthält die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Definition für die im Filterbereich ausgewählten Filter.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)   

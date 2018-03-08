@@ -3,33 +3,30 @@ title: SQLAllocHandle-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLAllocHandle
-apilocation:
-- sqlsrv32.dll
+apiname: SQLAllocHandle
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLAllocHandle
-helpviewer_keywords:
-- SQLAllocHandle function [ODBC]
+f1_keywords: SQLAllocHandle
+helpviewer_keywords: SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 434b3b42c4e48724b42bdb1ed517b11b25e10db7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle-Funktion
 **Konformität**  
@@ -39,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  **SQLAllocHandle** reserviert ein Handle Umgebung, Verbindung, Anweisung oder Deskriptor.  
   
 > [!NOTE]  
->  Diese Funktion ist eine generische Funktion für die Zuordnung von Handles, die die ODBC 2.0-Funktionen ersetzt **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Damit Anwendungen Aufrufen **SQLAllocHandle** zum Arbeiten mit ODBC 2.* X* -Treiber, die einen Aufruf von **SQLAllocHandle** zugeordnet ist, in der Treiber-Manager **SQLAllocConnect**, **SQLAllocEnv**, oder ** SQLAllocStmt:**je nach Bedarf. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3. *x* Anwendung arbeitet mit einer ODBC 2.* X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Diese Funktion ist eine generische Funktion für die Zuordnung von Handles, die die ODBC 2.0-Funktionen ersetzt **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Damit Anwendungen Aufrufen **SQLAllocHandle** zum Arbeiten mit ODBC 2. *X* -Treiber, die einen Aufruf von **SQLAllocHandle** zugeordnet ist, in der Treiber-Manager **SQLAllocConnect**, **SQLAllocEnv**, oder  **SQLAllocStmt:**je nach Bedarf. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3. *x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,9 +78,9 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>Aufgrund von Zuordnungsfehlern der Umgebung Handle  
  Umgebung Zuordnung tritt auf, in der Treiber-Manager und in jeden Treiber. Der zurückgegebene Fehler **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV auf, hängt von der Ebene, in dem der Fehler aufgetreten ist.  
   
- Wenn der Treiber-Manager Speicher zuordnen können * \*OutputHandlePtr* beim **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV aufgerufen wird, oder die Anwendung enthält einen null-Zeiger für *OutputHandlePtr*, **SQLAllocHandle** gibt SQL_ERROR zurück. Der Treiber-Manager setzt **OutputHandlePtr* auf SQL_NULL_HENV (sofern die Anwendung einen null-Zeiger, die SQL_ERROR zurückgibt). Es ist kein Handle, mit dem zusätzliche Diagnoseinformationen zugeordnet werden soll.  
+ Wenn der Treiber-Manager Speicher zuordnen können  *\*OutputHandlePtr* beim **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV aufgerufen wird, oder die Anwendung enthält einen null-Zeiger für *OutputHandlePtr*, **SQLAllocHandle** gibt SQL_ERROR zurück. Der Treiber-Manager setzt **OutputHandlePtr* auf SQL_NULL_HENV (sofern die Anwendung einen null-Zeiger, die SQL_ERROR zurückgibt). Es ist kein Handle, mit dem zusätzliche Diagnoseinformationen zugeordnet werden soll.  
   
- Der Treiber-Manager wird nicht die Umgebung auf Treiberebene Handle Allocation-Funktion aufgerufen, bis die Anwendung ruft **SQLConnect**, **SQLBrowseConnect**, oder **SQLDriverConnect**. Bei einem in der Treiber-Ebene Fehler **SQLAllocHandle** -Funktion, und klicken Sie dann auf der Treiber-Manager – Ebene **SQLConnect**, **SQLBrowseConnect**, oder ** SQLDriverConnect** -Funktion gibt SQL_ERROR zurück. Die Diagnosedaten-Struktur enthält SQLSTATE IM004 (des Treibers **SQLAllocHandle** fehlgeschlagen). Der Fehler wird für ein Verbindungshandle zurückgegeben.  
+ Der Treiber-Manager wird nicht die Umgebung auf Treiberebene Handle Allocation-Funktion aufgerufen, bis die Anwendung ruft **SQLConnect**, **SQLBrowseConnect**, oder **SQLDriverConnect**. Bei einem in der Treiber-Ebene Fehler **SQLAllocHandle** -Funktion, und klicken Sie dann auf der Treiber-Manager – Ebene **SQLConnect**, **SQLBrowseConnect**, oder  **SQLDriverConnect** -Funktion gibt SQL_ERROR zurück. Die Diagnosedaten-Struktur enthält SQLSTATE IM004 (des Treibers **SQLAllocHandle** fehlgeschlagen). Der Fehler wird für ein Verbindungshandle zurückgegeben.  
   
  Weitere Informationen über den Fluss von Funktionsaufrufen zwischen der Treiber-Manager und einem Treiber finden Sie unter [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
@@ -102,7 +99,7 @@ SQLRETURN SQLAllocHandle(
 |HY014|Das Limit für die Anzahl von Handles wurde überschritten|Das treiberdefinierten Limit für die Anzahl der Handles, die für den Typ des Handle zugeordnet werden kann, angegeben durch die *HandleType* Argument wurde erreicht.|  
 |HY092|Ungültiger Attribut-/Optionsbezeichner|(DM) die *HandleType* wurde Argument: SQL_HANDLE_ENV auf SQL_HANDLE_DBC auf, SQL_HANDLE_STMT oder SQL_HANDLE_DESC.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert|Die *HandleType* Argument SQL_HANDLE_DESC und der Treiber wurde eine ODBC 2.* X* Treiber.|  
+|HYC00|Optionales Feature nicht implementiert|Die *HandleType* Argument SQL_HANDLE_DESC und der Treiber wurde eine ODBC 2. *X* Treiber.|  
 |HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird im Treiber nicht unterstützt.|(DM) die *HandleType* Argument SQL_HANDLE_STMT auf, und der Treiber nicht wurde eine gültige ODBC-Treiber.<br /><br /> (DM) die *HandleType* Argument wurde SQL_HANDLE_DESC und der Treiber unterstützt nicht das Zuordnen einer Deskriptorhandles.|  
   
@@ -111,16 +108,16 @@ SQLRETURN SQLAllocHandle(
   
  Mehr als eine Umgebung, Verbindung oder Anweisung Handle kann von einer Anwendung zu einem Zeitpunkt zugeordnet werden, wenn mehrere Zuordnungen vom Treiber unterstützt werden. In ODBC wird keine Beschränkung definiert, auf die Anzahl der Umgebung, Verbindung, Anweisung oder Deskriptorhandles, die gleichzeitig zugeordnet werden kann. Treiber können es sich um eine Grenze für die Anzahl der Handles verursachen, die zu einem Zeitpunkt zugeordnet werden können; Weitere Informationen finden Sie unter der Treiberdokumentation.  
   
- Wenn die Anwendung aufruft, **SQLAllocHandle** mit * \*OutputHandlePtr* legen auf eine Umgebung, Verbindung, Anweisung oder Deskriptorhandles, die bereits vorhanden ist, der Treiber überschreibt die zugeordnete Informationen der *behandeln*, es sei denn, die Anwendung Connection pooling (siehe "Zuordnen von einer Umgebung Attribut für Verbindungs-Pooling" weiter unten in diesem Abschnitt) verwendet wird. Der Treiber-Manager überprüft nicht, um festzustellen, ob die *behandeln* in eingegeben * \*OutputHandlePtr* wird bereits verwendet wird, noch wird die bisherigen Inhalte der ein Handle überprüfen, bevor diese überschrieben werden .  
+ Wenn die Anwendung aufruft, **SQLAllocHandle** mit  *\*OutputHandlePtr* legen auf eine Umgebung, Verbindung, Anweisung oder Deskriptorhandles, die bereits vorhanden ist, der Treiber überschreibt die zugeordnete Informationen der *behandeln*, es sei denn, die Anwendung Connection pooling (siehe "Zuordnen von einer Umgebung Attribut für Verbindungs-Pooling" weiter unten in diesem Abschnitt) verwendet wird. Der Treiber-Manager überprüft nicht, um festzustellen, ob die *behandeln* in eingegeben  *\*OutputHandlePtr* wird bereits verwendet wird, noch wird die bisherigen Inhalte der ein Handle überprüfen, bevor diese überschrieben werden .  
   
 > [!NOTE]  
->  Falsche ODBC-anwendungsprogrammierung aufrufen ist **SQLAllocHandle** zweimal mit der gleichen Anwendungsvariablen für definiert * \*OutputHandlePtr* ohne Aufruf ** SQLFreeHandle** , bevor Sie es erneut zugewiesen werden, das Freigeben des Handles. Überschreiben von ODBC können Handles auf solche Weise Fehler seitens der ODBC-Treiber zu inkonsistentem Verhalten führen.  
+>  Falsche ODBC-anwendungsprogrammierung aufrufen ist **SQLAllocHandle** zweimal mit der gleichen Anwendungsvariablen für definiert  *\*OutputHandlePtr* ohne Aufruf  **SQLFreeHandle** , bevor Sie es erneut zugewiesen werden, das Freigeben des Handles. Überschreiben von ODBC können Handles auf solche Weise Fehler seitens der ODBC-Treiber zu inkonsistentem Verhalten führen.  
   
  Unter Betriebssystemen, die mehrere Threads zu unterstützen, können Anwendungen in verschiedenen Threads dasselbe Handle Umgebung, Verbindung, Anweisung oder Deskriptor. Treiber müssen daher sicheren, multithread-Zugriff auf diese Informationen unterstützen; eine Möglichkeit, dies zu erreichen, z. B. ist mithilfe eines kritischen Abschnitts oder eine Semaphore. Weitere Informationen zu threading, finden Sie unter [Multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
  **SQLAllocHandle** SQL_ATTR_ODBC_VERSION-Umgebung-Attribut wird nicht festgelegt, wenn sie aufgerufen wird, ein Umgebungshandle; muss das Attribut für die Umgebung von der Anwendung oder SQLSTATE HY010 festgelegt werden (Funktionsreihenfolge) werden. zurückgegeben, wenn **SQLAllocHandle** aufgerufen, um ein Verbindungshandle zuzuweisen.  
   
- Mit Standards kompatible Anwendungen **SQLAllocHandle** zugeordnet **SQLAllocHandleStd** zum Zeitpunkt der Kompilierung. Der Unterschied zwischen diesen beiden Funktionen ist, dass **SQLAllocHandleStd** wird das SQL_ATTR_ODBC_VERSION-Umgebung-Attribut auf SQL_OV_ODBC3 fest, wenn beim Aufruf der *HandleType* -Argument auf SQL festgelegt _HANDLE_ENV. Dies geschieht, da mit Standards kompatible Anwendungen immer ODBC 3 sind. *x* Anwendungen. Darüber hinaus benötigen den Standards keine Version der Anwendung registriert werden. Dies ist der einzige Unterschied zwischen dieser zwei Funktionen. Andernfalls sind sie identisch. **SQLAllocHandleStd** zugeordnet **SQLAllocHandle** innerhalb der Treiber-Manager. Aus diesem Grund Drittanbieter-Treiber keine implementieren **SQLAllocHandleStd**.  
+ Mit Standards kompatible Anwendungen **SQLAllocHandle** zugeordnet **SQLAllocHandleStd** zum Zeitpunkt der Kompilierung. Der Unterschied zwischen diesen beiden Funktionen ist, dass **SQLAllocHandleStd** wird das SQL_ATTR_ODBC_VERSION-Umgebung-Attribut auf SQL_OV_ODBC3 fest, wenn beim Aufruf der *HandleType* -Argument auf SQL festgelegt _HANDLE_ENV. Dies geschieht, da mit Standards kompatible Anwendungen immer ODBC 3. sind. *x* Anwendungen. Darüber hinaus benötigen den Standards keine Version der Anwendung registriert werden. Dies ist der einzige Unterschied zwischen dieser zwei Funktionen. Andernfalls sind sie identisch. **SQLAllocHandleStd** zugeordnet **SQLAllocHandle** innerhalb der Treiber-Manager. Aus diesem Grund Drittanbieter-Treiber keine implementieren **SQLAllocHandleStd**.  
   
  Es sollten ODBC 3.8-Anwendungen verwenden:  
   
@@ -131,7 +128,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>Zuordnen eines Umgebungshandles  
  Ein Umgebungshandle ermöglicht den Zugriff auf globale Informationen wie gültige Verbindungshandles und aktiver Verbindungshandles. Allgemeine Informationen zu Umgebungshandles, finden Sie unter [Umgebungshandles](../../../odbc/reference/develop-app/environment-handles.md).  
   
- Um ein Umgebungshandle anzufordern, eine Anwendung ruft **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV auf, und ein *InputHandle* von SQL_NULL_HANDLE. Der Treiber belegt Speicher für die Umgebungsinformationen und übergibt der Wert des zugeordneten Handles wieder in die * \*OutputHandlePtr* Argument. Die Anwendung übergibt die * \*OutputHandle* Wert bei allen nachfolgenden Aufrufen, die Umgebung Handle Argument erforderlich. Weitere Informationen finden Sie unter [Reservieren der Umgebung behandelt](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+ Um ein Umgebungshandle anzufordern, eine Anwendung ruft **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV auf, und ein *InputHandle* von SQL_NULL_HANDLE. Der Treiber belegt Speicher für die Umgebungsinformationen und übergibt der Wert des zugeordneten Handles wieder in die  *\*OutputHandlePtr* Argument. Die Anwendung übergibt die  *\*OutputHandle* Wert bei allen nachfolgenden Aufrufen, die Umgebung Handle Argument erforderlich. Weitere Informationen finden Sie unter [Reservieren der Umgebung behandelt](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
  Unter Umgebungshandle ein Treiber-Manager, wenn es bereits vorhanden ein Treiber Umgebungshandle, klicken Sie dann ist **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV auf, wird in diesem Treiber nicht aufgerufen beim ein Verbindung hergestellt wird, nur **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_DBC auf. Wenn ein Treiber Umgebungshandle unter der Treiber-Manager-Umgebungshandle nicht vorhanden ist, SQLAllocHandle mit einem HandleTyp SQL_HANDLE_ENV auf, und mit einem HandleType SQL_HANDLE_DBC SQLAllocHandle heißen im Treiber bei der ersten Verbindung Handle der Umgebung ist für den Treiber verbunden.  
   
@@ -151,7 +148,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>Zuordnen eines Verbindungshandles  
  Ein Verbindungshandle ermöglicht den Zugriff auf Informationen, z. B. gültige Anweisung ein, und öffnen Sie Deskriptorhandles auf die Verbindung und gibt an, ob eine Transaktion aktuell ist. Allgemeine Informationen zu Verbindungshandles, finden Sie unter [Verbindungshandles](../../../odbc/reference/develop-app/connection-handles.md).  
   
- Um ein Verbindungshandle zu beantragen, eine Anwendung ruft **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_DBC auf. Die *InputHandle* Argument wird festgelegt, um das Umgebungshandle, die durch den Aufruf zurückgegeben wurde **SQLAllocHandle** , die dieses Handle zugeordnet. Der Treiber belegt Speicher für die Verbindungsinformationen und übergibt der Wert des zugeordneten Handles wieder * \*OutputHandlePtr*. Die Anwendung übergibt die * \*OutputHandlePtr* Wert bei allen nachfolgenden Aufrufen, die ein Verbindungshandle zu erfordern. Weitere Informationen finden Sie unter [zuzuordnen, eine Verbindung zu behandeln](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
+ Um ein Verbindungshandle zu beantragen, eine Anwendung ruft **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_DBC auf. Die *InputHandle* Argument wird festgelegt, um das Umgebungshandle, die durch den Aufruf zurückgegeben wurde **SQLAllocHandle** , die dieses Handle zugeordnet. Der Treiber belegt Speicher für die Verbindungsinformationen und übergibt der Wert des zugeordneten Handles wieder  *\*OutputHandlePtr*. Die Anwendung übergibt die  *\*OutputHandlePtr* Wert bei allen nachfolgenden Aufrufen, die ein Verbindungshandle zu erfordern. Weitere Informationen finden Sie unter [zuzuordnen, eine Verbindung zu behandeln](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
   
  Der Treiber-Manager verarbeitet die **SQLAllocHandle** -Funktion und des Treibers ruft **SQLAllocHandle** -Funktion, wenn die Anwendung aufruft, **SQLConnect**, **SQLBrowseConnect**, oder **SQLDriverConnect**. (Weitere Informationen finden Sie unter [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).)  
   
@@ -164,7 +161,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>Zuordnen eines Anweisungshandles  
  Ein Anweisungshandle ermöglicht den Zugriff auf die Anweisungsinformationen, z. B. Fehlermeldungen, die Cursornamen und Statusinformationen für die Verarbeitung der SQL-Anweisung. Allgemeine Informationen zu Anweisungshandles, finden Sie unter [Anweisungshandles](../../../odbc/reference/develop-app/statement-handles.md).  
   
- Um ein Anweisungshandle anzufordern, eine Anwendung eine Verbindung mit einer Datenquelle her und ruft dann **SQLAllocHandle** , bevor sie SQL-Anweisungen übermittelt. In diesem Aufruf *HandleType* sollte auf SQL_HANDLE_STMT festgelegt werden und *InputHandle* sollte festgelegt werden, um das Verbindungshandle, die durch den Aufruf zurückgegeben wurde **SQLAllocHandle** Dieses Handle reserviert. Der Treiber belegt Speicher für die Anweisungsinformationen, ordnet die angegebene Verbindung, und übergibt der Wert des zugeordneten Handles wieder in das Anweisungshandle * \*OutputHandlePtr*. Die Anwendung übergibt die * \*OutputHandlePtr* Wert bei allen nachfolgenden Aufrufen, die ein Anweisungshandle erfordern. Weitere Informationen finden Sie unter [ein Anweisungshandle zuordnen](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
+ Um ein Anweisungshandle anzufordern, eine Anwendung eine Verbindung mit einer Datenquelle her und ruft dann **SQLAllocHandle** , bevor sie SQL-Anweisungen übermittelt. In diesem Aufruf *HandleType* sollte auf SQL_HANDLE_STMT festgelegt werden und *InputHandle* sollte festgelegt werden, um das Verbindungshandle, die durch den Aufruf zurückgegeben wurde **SQLAllocHandle** Dieses Handle reserviert. Der Treiber belegt Speicher für die Anweisungsinformationen, ordnet die angegebene Verbindung, und übergibt der Wert des zugeordneten Handles wieder in das Anweisungshandle  *\*OutputHandlePtr*. Die Anwendung übergibt die  *\*OutputHandlePtr* Wert bei allen nachfolgenden Aufrufen, die ein Anweisungshandle erfordern. Weitere Informationen finden Sie unter [ein Anweisungshandle zuordnen](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
   
  Wenn das Anweisungshandle zugeordnet ist, der Treiber automatisch ordnet einen Satz von vier Deskriptoren und weist die Handles für diese Deskriptoren der SQL_ATTR_APP_ROW_DESC, SQL_ATTR_APP_PARAM_DESC SQL_ATTR_IMP_ROW_DESC und SQL_ATTR_IMP_PARAM_DESC Anweisungsattribute. Diese werden als bezeichnet *implizit* Deskriptoren zugeordnet. Um eine Anwendungsdiensts explizit zu reservieren, finden Sie unter den folgenden Abschnitt "Zuweisen einer Deskriptorhandles."  
   
@@ -196,4 +193,3 @@ SQLRETURN SQLAllocHandle(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

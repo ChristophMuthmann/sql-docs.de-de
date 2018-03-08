@@ -2,29 +2,30 @@
 title: MSSQLSERVER_207 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 207 (Database Engine error)
+helpviewer_keywords: 207 (Database Engine error)
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba320288a06dd8498d9699712a6e53e34ae93c09
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bb5dd99ae08c46b689353ddd07d83e040b41418f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -128,4 +129,3 @@ Dieser Abfragefehler kann durch eines der folgenden Probleme verursacht werden.
 [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  
   
-

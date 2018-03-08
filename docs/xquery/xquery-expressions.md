@@ -3,8 +3,11 @@ title: "XQuery-Ausdrücke | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - expressions [XQuery]
 - expressions [XQuery], listed
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
-caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 26450ecc254bf883cff8bfaf865831f797eebdbb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 219b531dbdb79a338863787ba055a49ef6844a52
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-expressions"></a>XQuery-Ausdrücke
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Themen, in denen die XQuery-Ausdrücke beschrieben.  
   
@@ -77,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

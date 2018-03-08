@@ -2,9 +2,12 @@
 title: "Ereignisablaufverfolgung für Windows-Ziel | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -15,19 +18,19 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 74ba5c0435a64cbeb6271967c4ca37c4a5ac1d86
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Bevor Sie die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) als Ziel verwenden, sollten Sie über ausreichende Kenntnisse der ETW verfügen. ETW wird entweder in Verbindung mit erweiterten Ereignissen oder als Ereignisconsumer für erweiterte Ereignisse verwendet. Über die folgenden externen Links erhalten Sie erste Hintergrundinformationen zur ETW:  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des ETW-Ziels beschrieben.  
   
-|Option|Zulässige Werte|Beschreibung|  
+|Option|Zulässige Werte|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Name der Sitzung für erweiterte Ereignisse. Standardmäßig ist dies XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Pfad der Protokolldatei für die Sitzung für erweiterte Ereignisse. Standardmäßig ist dies %TEMP%\XEEtw.etl.|  
@@ -93,7 +96,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  Weitere Informationen zu einem vollständigen Beispiel, das zeigt, wie das ETW-Ziel verwendet wird und wie die Daten angezeigt werden, finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ziele für erweiterte Ereignisse von SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   

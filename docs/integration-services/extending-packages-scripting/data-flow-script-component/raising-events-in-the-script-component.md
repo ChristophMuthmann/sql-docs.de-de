@@ -1,12 +1,14 @@
 ---
-title: "Auslösen von Ereignissen in der Skriptkomponente | Microsoft Docs"
+title: "Auslösen von Ereignissen in der Skriptkomponente | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -14,20 +16,19 @@ applies_to:
 helpviewer_keywords:
 - Script component [Integration Services], raising events
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 505855e82b683fc15ca00073f58e1f9cb348f830
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d7a6cd25d6c0e3d86c943b1d247be3d4a7acc66c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-events-in-the-script-component"></a>Auslösen von Ereignissen in der Skriptkomponente
-  Ereignisse bieten eine Möglichkeit, Fehler, Warnungen und andere Informationen, wie z. B. den Fortschritt oder Status eines Tasks, an das entsprechende Paket zu melden. Das Paket stellt Ereignishandler zum Verwalten von Ereignisbenachrichtigungen bereit. Die Skriptkomponente Ereignisse auslösen kann, durch Aufrufen von Methoden für die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> Eigenschaft von der **ScriptMain** Klasse. Weitere Informationen dazu, wie [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Pakete Ereignisse behandeln, finden Sie unter [Integration Services &#40; SSIS &#41; Ereignishandler](../../../integration-services/integration-services-ssis-event-handlers.md).  
+  Ereignisse bieten eine Möglichkeit, Fehler, Warnungen und andere Informationen, wie z. B. den Fortschritt oder Status eines Tasks, an das entsprechende Paket zu melden. Das Paket stellt Ereignishandler zum Verwalten von Ereignisbenachrichtigungen bereit. Die Skriptkomponente kann Ereignisse durch Aufrufen der Methoden in der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der **ScriptMain**-Klasse auslösen. Weitere Informationen zum Umgang von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen mit Ereignissen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
   
  Ereignisse können in jedem Protokollanbieter protokolliert werden, der im Paket aktiviert wird. Protokollanbieter speichern Informationen über Ereignisse in einem Datenspeicher. Die Skriptkomponente kann ebenfalls die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>-Methode verwenden, um Informationen in einem Protokollanbieter zu protokollieren, ohne ein Ereignis auszulösen. Weitere Informationen zur Verwendung der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>-Methode finden Sie im folgenden Abschnitt.  
   
@@ -49,9 +50,8 @@ ms.lasthandoff: 08/03/2017
   
  `myMetaData.FireError(...)`  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Ereignishandler](../../../integration-services/integration-services-ssis-event-handlers.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services-Ereignishandler &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Hinzufügen eines Ereignishandlers zu einem Paket](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

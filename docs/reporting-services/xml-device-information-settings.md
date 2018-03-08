@@ -1,30 +1,30 @@
 ---
-title: "XML-Geräteinformationseinstellungen | Microsoft Docs"
+title: "XML-Geräteinformationseinstellungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-caps.latest.revision: 43
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "43"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a5af7c3ba8de8f3134e40850524ecfd397faebd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3f0600b91d43e8449fc00eac14a699e07121fb52
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="xml-device-information-settings"></a>XML-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das XML-Format aufgeführt.  
@@ -41,11 +41,10 @@ ms.lasthandoff: 08/09/2017
 |**FileExtension**|Die Dateierweiterung für die generierte Datei.||  
 |**Schema**|Der Wert **true** gibt an, dass ein XML-Schema gerendert wird. Der Standardwert ist **false**.|Gibt an, ob die XML-Schemadefinition (XSD) gerendert wird oder ob die tatsächlichen XML-Daten gerendert werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in "rsreportserver.config"](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Filtern von veröffentlichten Daten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], filtering published data
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "50"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b789fc6033b70608ca30cfa3895442be44ce1e40
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c33c6903f664437076c06f12fb2be3b231f7e0f1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
-  Das Filtern von Tabellenartikeln ermöglicht es Ihnen, Datenpartitionen zu erstellen, die veröffentlicht werden können. Das Filtern von veröffentlichten Daten bietet folgende Möglichkeiten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Filtern von Tabellenartikeln ermöglicht Ihnen, Datenpartitionen zu erstellen, die veröffentlicht werden können. Das Filtern von veröffentlichten Daten bietet folgende Möglichkeiten:  
   
 -   Minimieren der über das Netzwerk gesendeten Datenmenge.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Parametrisierte Zeilenfilter, die nur bei der Mergereplikation verfügbar sind.  
   
-     Wenn Sie parametrisierte Zeilenfilter verwenden, können Sie eine Teilmenge von Zeilen auswählen, die veröffentlicht werden. Im Unterschied zu statischen Filtern, bei denen dieselbe Teilmenge von Zeilen an jeden Abonnenten gesendet wird, verwenden parametrisierte Zeilenfilter einen vom Abonnenten bereitgestellten Datenwert, um den Abonnenten unterschiedliche Teilmengen von Zeilen zu senden. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Wenn Sie parametrisierte Zeilenfilter verwenden, können Sie eine Teilmenge von Zeilen auswählen, die veröffentlicht werden. Im Unterschied zu statischen Filtern, bei denen dieselbe Teilmenge von Zeilen an jeden Abonnenten gesendet wird, verwenden parametrisierte Zeilenfilter einen vom Abonnenten bereitgestellten Datenwert, um den Abonnenten unterschiedliche Teilmengen von Zeilen zu senden. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Joinfilter, die nur bei der Mergereplikation verfügbar sind.  
   
@@ -136,8 +137,7 @@ ms.lasthandoff: 06/22/2017
   
  Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von **sp_replcmds** (für Filter) mit Absicht auf den Datenbankbesitzer (**dbo**). Der **dbo** besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** -Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen schränkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Ausführung dieser Logik ein, damit dieser Ausführungspfad nicht von einem böswilligen **dbo** missbräuchlich verwendet werden kann. Beispielsweise könnte ein böswilliger **dbo** Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer **sp_replcmds**aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige **dbo** seine Berechtigungen ausweiten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

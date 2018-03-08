@@ -3,8 +3,11 @@ title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - last-inserted identity values
 - identity values [SQL Server], last-inserted
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-caps.latest.revision: 36
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1950d65a35d6fab52025d069e0338493ee7c639d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f566fba44cce8d942bd28d13001d2778f9976578
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den letzten Identitätswert zurück, der in eine Identitätsspalte im selben Gültigkeitsbereich eingefügt wurde. Ein Gültigkeitsbereich ist ein Modul: eine gespeicherte Prozedur, ein Trigger, eine Funktion oder ein Batch. Wenn zwei Anweisungen in der gleichen gespeicherten Prozedur, Funktion oder -Batches befinden, sind sie daher im selben Bereich.  
   
@@ -184,4 +186,3 @@ GO
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   
-

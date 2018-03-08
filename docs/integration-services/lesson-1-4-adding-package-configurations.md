@@ -1,10 +1,13 @@
 ---
-title: "Schritt 4: Hinzufügen von Paketkonfigurationen | Microsoft Docs"
+title: "Schritt 4: Hinzufügen von Paketkonfigurationen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5dc54fff85b068f6ef494bb242949abcc598cfb3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4 - Hinzufügen von Paketkonfigurationen
+# <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4: Hinzufügen von Paketkonfigurationen
 In diesem Schritt fügen Sie jedem Paket eine Konfiguration hinzu. Konfigurationen aktualisieren die Werte von Paketeigenschaften und Paketobjekten zur Laufzeit.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt eine Vielzahl von Konfigurationstypen bereit. Sie können Konfigurationen in Umgebungsvariablen, Registrierungseinträgen, benutzerdefinierten Variablen, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen und XML-Dateien speichern. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt die Verwendung von indirekten Konfigurationen und bietet damit zusätzliche Flexibilität. Das bedeutet, dass Sie eine Umgebungsvariable verwenden, um den Speicherort der Konfiguration anzugeben, die wiederum die eigentlichen Werte angibt. Bei den Paketen im Deployment Tutorial-Projekt wird eine Kombination aus XML-Konfigurationsdateien und indirekten Konfigurationen verwendet. Eine XML-Konfigurationsdatei kann Konfigurationen für mehrere Eigenschaften enthalten, und gegebenenfalls können mehrere Pakete darauf verweisen. In diesem Lernprogramm verwenden Sie eine separate Konfigurationsdatei für jedes Paket.  
@@ -135,11 +137,10 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 12. Überprüfen Sie im Dialogfeld **Paketkonfigurationsplaner** , ob „LoadXMLData EV Configuration“ als Erstes und „LoadXMLData Configuration“ als Zweites aufgeführt wird, und klicken Sie anschließend auf **Schließen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 5: Testen der aktualisierten Pakete](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Paketkonfigurationen](../integration-services/packages/package-configurations.md)  
 [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md)  
 [Zugriff auf Dateien, die von Paketen verwendet werden](../integration-services/security/security-overview-integration-services.md#files)  
-

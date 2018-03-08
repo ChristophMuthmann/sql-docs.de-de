@@ -2,35 +2,32 @@
 title: RangeMin (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RangeMin
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMin function
+f1_keywords: RangeMin
+dev_langs: DMX
+helpviewer_keywords: RangeMin function
 ms.assetid: 64159bbe-7016-4f67-91d9-5c5f6ceb6c25
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 16d56170a3b4c995a7c93c3f9acf699e3f4e3071
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 03595b718b2381bd9cb8849d57c2e68400a6db82
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt das untere Ende des vorhergesagten Buckets zurück, der für eine diskretisierte Spalte ermittelt wird.  
   
@@ -71,4 +68,3 @@ FROM [TM Decision Tree]
  [RangeMid &#40; DMX &#41;](../dmx/rangemid-dmx.md)  
   
   
-

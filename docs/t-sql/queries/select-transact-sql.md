@@ -1,10 +1,13 @@
 ---
 title: "Wählen Sie (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,32 +27,31 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b8cca7419cce15dcbb83b4aa72dc551e5eb89eb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ruft Zeilen aus der Datenbank ab und ermöglicht die Auswahl einer oder vieler Zeilen oder Spalten aus einem oder mehreren Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die vollständige Syntax der SELECT-Anweisung ist komplex, die Hauptklauseln können jedoch wie folgt zusammengefasst werden:  
   
 [Mit {[XMLNAMESPACES,] [ \<Common_table_expression >]}]
   
- Wählen Sie *Select_list* [INTO *New_table* ]  
+ SELECT *select_list* [ INTO *new_table* ]  
   
- [Aus *Table_source* ] [, in denen *Search_condition* ]  
+ [ FROM *table_source* ] [ WHERE *search_condition* ]  
   
  [GROUP BY *Group_by_expression* ]  
   
- [Müssen *Search_condition* ]  
+ [ HAVING *search_condition* ]  
   
  [ORDER BY *Order_expression* [ASC | "DESC"]]  
   
@@ -138,7 +140,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. NACH OBEN  
-  
+
+> [!WARNING]
+> Die oben dargestellten Reihenfolge ist in der Regel "true". Es gibt jedoch ungewöhnliche Fälle, in die Reihenfolge abweichen.
+>
+> Nehmen wir beispielsweise an einen gruppierten Index für eine Sicht, stehen Ihnen die Ansicht schließt einige Tabellenzeilen und SELECT-Spaltenliste der Ansicht verwendet eine Konvertierung, die einen Datentyp aus ändert *Varchar* auf *Ganzzahl*. In diesem Fall kann die CONVERT führen Sie vor die WHERE-Klausel ausgeführt wird. Tatsächlich ungewöhnlich. Es ist häufig eine Möglichkeit, die Ansicht, um die verschiedenen Sequenz zu vermeiden zu ändern, wenn diese in Ihrem Fall so wichtig ist. 
+
 ## <a name="permissions"></a>Berechtigungen  
  Die Auswahl von Daten erfordert die Berechtigung **SELECT** für die Tabelle oder Sicht, die über einen höheren Bereich, beispielsweise über die Berechtigung **SELECT** für das Schema oder die Berechtigung **CONTROL** für die Tabelle, vererbt werden kann. Oder die Mitgliedschaft in der **"db_datareader"** oder **Db_owner** festen Datenbankrollen oder der **Sysadmin** festen Serverrolle "". Erstellen einer neuen Tabelle mit **SELECTINTO** erfordert auch die **CREATETABLE** Berechtigung und die **ALTERSCHEMA** -Berechtigung für das Schema, das die neue Tabelle besitzt.  
   
@@ -264,7 +271,6 @@ ORDER BY OrderDateKey;
   
 ## <a name="see-also"></a>Siehe auch  
  [Wählen Sie die Beispiele &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [Tabellenhinweise &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

@@ -1,36 +1,33 @@
 ---
-title: 'DatabaseLogonTimeout-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'DatabaseLogonTimeout-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseLogonTimeout Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseLogonTimeout Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseLogonTimeout property
+helpviewer_keywords: DatabaseLogonTimeout property
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
-caps.latest.revision: 38
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "38"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a8c1747fa53376dbe088f358cc47a13664d90bff
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3d475158fd8235245cb512ad733473b949cfcd1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---databaselogontimeout"></a>ConfigurationSetting Eigenschaft - DatabaseLogonTimeout
+# <a name="configurationsetting-property---databaselogontimeout"></a>ConfigurationSetting-Eigenschaft: DatabaseLogonTimeout
   Gibt die Anzahl von Sekunden an, die gewartet wird, ehe ein Anmeldeversuch bei der Berichtsserver-Datenbank fehlschlägt. Der Wert **0** gibt einen unbegrenzten Wartezeitraum an. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -52,8 +49,7 @@ public Int32 DatabaseLogonTimeout;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

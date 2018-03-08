@@ -2,9 +2,12 @@
 title: "Nachverfolgen von Datenänderungen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,18 +22,19 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43a09d1469e62f83b699ca1f4062f0cc2d556427
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt zwei Funktionen bereit, mit denen Änderungen in einer Datenbank nachverfolgt werden: [Change Data Capture](#Capture) und [Änderungsnachverfolgung](#Tracking). Mit diesen Funktionen können Anwendungen die DML-Änderungen (Einfüge-, Aktualisierungs- und Löschvorgänge) ermitteln, die an Benutzertabellen in einer Datenbank vorgenommen wurden. Change Data Capture und die Änderungsnachverfolgung können auf derselben Datenbank aktiviert werden, d. h., es sind keine zusätzlichen Überlegungen erforderlich. Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Change Data Capture und die Änderungsnachverfolgung unterstützen, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Änderungsnachverfolgung wird von [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]unterstützt.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Vorteile der Verwendung von Change Data Capture oder der Änderungsnachverfolgung  
@@ -58,11 +62,11 @@ ms.lasthandoff: 06/22/2017
 |Funktion|Change Data Capture|Änderungsnachverfolgung|  
 |-------------|-------------------------|---------------------|  
 |**Nachverfolgte Änderungen**|||  
-|DML-Änderungen|Ja|Ja|  
+|DML-Änderungen|ja|ja|  
 |**Nachverfolgte Informationen**|||  
-|Verlaufsdaten|Ja|Nein|  
-|Ob Spalte geändert wurde|Ja|Ja|  
-|DML-Typ|Ja|Ja|  
+|Verlaufsdaten|ja|nein|  
+|Ob Spalte geändert wurde|ja|ja|  
+|DML-Typ|ja|ja|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
@@ -90,11 +94,11 @@ ms.lasthandoff: 06/22/2017
   
 |Typ der Spalte|In Änderungstabellen aufgezeichnete Änderungen|Einschränkungen|  
 |--------------------|---------------------------------------|-----------------|  
-|Spalten mit geringer Dichte|Ja|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
-|Berechnete Spalten|Nein|Änderungen an berechneten Spalten werden nicht nachverfolgt. Die Spalte wird in der Änderungstabelle mit dem entsprechenden Typ angezeigt, hat aber einen Wert von NULL.|  
-|XML|Ja|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
-|timestamp|Ja|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
-|BLOB-Datentypen|Ja|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
+|Spalten mit geringer Dichte|ja|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
+|Berechnete Spalten|nein|Änderungen an berechneten Spalten werden nicht nachverfolgt. Die Spalte wird in der Änderungstabelle mit dem entsprechenden Typ angezeigt, hat aber einen Wert von NULL.|  
+|XML|ja|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
+|timestamp|ja|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
+|BLOB-Datentypen|ja|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen  
  In diesem Abschnitt wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  
@@ -173,7 +177,7 @@ ms.lasthandoff: 06/22/2017
 |Beschreibt die Vorgehensweisen zum Verwalten der Änderungsnachverfolgung, zum Konfigurieren der Sicherheit und zum Ermitteln der Auswirkungen der Änderungsnachverfolgung auf Speicherung und Leistung.|[Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
 |Beschreibt, wie Anwendungen, die die Änderungsnachverfolgung verwenden, Überarbeitungen abrufen, diese auf einen anderen Datenspeicher anwenden und die Quelldatenbank aktualisieren können. In diesem Thema wird beschrieben, welche Rolle die Änderungsnachverfolgung spielt, wenn ein Failover auftritt und eine Datenbank von einer Sicherung wiederhergestellt werden muss.|[Verwenden der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Change Data Capture-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [Änderungsnachverfolgungsfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Gespeicherte Prozeduren für Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
@@ -181,5 +185,4 @@ ms.lasthandoff: 06/22/2017
  [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
-
 

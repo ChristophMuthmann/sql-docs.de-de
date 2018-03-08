@@ -3,7 +3,7 @@ title: AllowNullsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - AllowNullsEnum enumeration [ADOX]
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 75bb6aa82ec26e74675a2ccf6ff803abd9d24f6c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b9bb610e1b3f4a31e29ddee31e569c34528e243
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Gibt an, ob Datensätze mit null-Werte indiziert werden.  
@@ -42,4 +41,3 @@ Gibt an, ob Datensätze mit null-Werte indiziert werden.
   
 ## <a name="applies-to"></a>Gilt für  
  [IndexNulls-Eigenschaft (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
-

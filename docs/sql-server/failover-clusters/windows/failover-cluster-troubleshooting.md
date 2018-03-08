@@ -1,13 +1,14 @@
 ---
 title: Problembehandlung bei Failoverclustern | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/21/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 5c68c3b282241cfe56e60762e70d2d22e4a64d7b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
-  In diesem Thema finden Sie Informationen zu den folgenden Punkten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema finden Sie Informationen zu den folgenden Punkten:  
   
 -   Grundlegende Schritte bei der Problembehandlung.  
   
@@ -93,11 +94,11 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
  **Lösung 1:**Verwenden Sie anstelle des **/qn** -Schalters den **/qb** -Schalter. Wenn Sie den **/qb** -Schalter verwenden, wird bei jedem Schritt die Standardbenutzeroberfläche mit allen Fehlermeldungen angezeigt.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problem: SQL Server kann sich nach der Migration auf einen anderen Knoten nicht am Netzwerk anmelden  
- **Problem 1:** Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkonten kann kein Kontakt mit einem Domänencontroller hergestellt werden.  
+ **Problem 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten kann kein Kontakt mit einem Domänencontroller hergestellt werden.  
   
  **Lösung 1:**Überprüfen Sie die Ereignisprotokolle in Hinblick auf Netzwerkprobleme wie Adapterfehler oder DNS-Probleme. Überprüfen Sie, ob Sie Ihren Domänencontroller pingen können.  
   
- **Problem 2:** Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontokennwörter stimmen nicht auf allen Clusterknoten überein, oder vom Knoten wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst, der von einem fehlerhaften Knoten migriert wurde, nicht neu gestartet.  
+ **Problem 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontokennwörter stimmen nicht auf allen Clusterknoten überein, oder vom Knoten wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst, der von einem fehlerhaften Knoten migriert wurde, nicht neu gestartet.  
   
  **Lösung 2:** Ändern Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontokennwörter mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Managers. Andernfalls müssen Sie nach dem Ändern der Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten auf einem Knoten auch die Kennwörter auf allen anderen Knoten ändern. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Konfigurations-Manager führt dies automatisch aus.  
   
@@ -195,4 +196,3 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
  [Ausführungsmerkmale erweiterter gespeicherter Prozeduren](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
   
   
-

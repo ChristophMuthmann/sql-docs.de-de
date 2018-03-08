@@ -2,30 +2,32 @@
 title: "Planen und Ausführen von Wiederherstellungssequenzen (vollständiges Wiederherstellungsmodell) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - restore sequences [SQL Server], planning for
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
-caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 92fca3a74586d7c7adbe135422283342db36a204
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: df70e2b5fce0983fa3501b6bd53376f75d10d900
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planen und Ausführen von Wiederherstellungssequenzen (vollständiges Wiederherstellungsmodell)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird erläutert, wie eine Wiederherstellungssequenz für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank geplant und ausgeführt wird, für die normalerweise das vollständige Wiederherstellungsmodell verwendet wird. Eine *Wiederherstellungssequenz* ist eine Sequenz einer oder mehrerer [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisungen. Normalerweise werden von einer Sequenz der Inhalt der Datenbank, Dateien und/oder Seiten, der bzw. die wiederhergestellt werden sollen, initialisiert (Datenkopierphase), und es wird ein Rollforward für protokollierte Transaktionen (Rollforwardphase) und ein Rollback für Transaktionen ohne Commit (Rollbackphase) ausgeführt.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="restarting-a-restore-sequence"></a>Neustarten einer Wiederherstellungssequenz  
  Wenn im Rahmen einer Wiederherstellungssequenz ein Problem auftritt, können Sie die Wiederherstellungssequenz beenden und von Anfang an neu starten. Wenn Sie beispielsweise versehentlich zu viele Protokollsicherungen wiederhergestellt und den gewünschten Wiederherstellungspunkt überschritten haben, müssen Sie die Wiederherstellungssequenz neu starten und bis zu der Protokollsicherung wiederherstellen, die den Zielwiederherstellungspunkt enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

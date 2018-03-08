@@ -3,7 +3,7 @@ title: "Adresse Buch Navigationsschaltflächen | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 211e05c548d38ad364e8a7daa85f280e8ca62414
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f8e7c2a6b16b8190a86f2c656fcb0a76b2e6984a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="address-book-navigation-buttons"></a>Behandeln von Buch Navigationsschaltflächen
 Die Adressbuch-Anwendung zeigt die Navigationsschaltflächen am unteren Rand der Webseite. Sie können die Navigationsschaltflächen verwenden, Navigieren durch die Daten in der Anzeige des HTML-Raster durch Auswählen von entweder die erste oder letzte Zeile der Daten oder Zeilen, die neben der aktuellen Auswahl.  
@@ -71,8 +70,7 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
+ [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 
 
 

@@ -3,10 +3,12 @@ title: Auswirkungen von Transaktionen auf Cursor und vorbereitete Anweisungen | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - prepared statements [ODBC]
 - transactions [ODBC], cursors
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 836cef9465c2ee935628e92168b9ace7650b8e66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Auswirkungen von Transaktionen auf Cursor und vorbereitete Anweisungen
 Ein Commit oder Rollback wurde eine Transaktion folgende Auswirkungen auf den Cursor und Access-Pläne:  
@@ -63,4 +64,3 @@ Ein Commit oder Rollback wurde eine Transaktion folgende Auswirkungen auf den Cu
  Anwendungen, vor allem Bildschirm basierende Anwendungen in der der Benutzer einen Bildlauf durchführt, um das Resultset und Updates oder löscht Zeilen, muss Sie vorsichtig, um Code, um dieses Verhalten.  
   
  Um zu bestimmen, wie eine Datenquelle verhält, wenn eine Transaktion ein Commit oder Rollback ist, eine Anwendung ruft **SQLGetInfo** mit den Optionen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR.
-

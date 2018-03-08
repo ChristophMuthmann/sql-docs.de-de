@@ -3,7 +3,7 @@ title: SaveToFile-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 64fa2093400ac9c003397659be3d9d6f4251eee2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2326257da632839c9b60d630f25adb604018272d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="savetofile-method"></a>SaveToFile-Methode
 Speichert den binären Inhalt von einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in eine Datei.  
@@ -59,9 +58,8 @@ Stream.SaveToFile FileName, SaveOptions
  Nach einem **SaveToFile** Vorgang, der aktuellen Position ([Position](../../../ado/reference/ado-api/position-property-ado.md)) im Datenstrom an den Anfang des Datenstroms (0) festgelegt ist.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Open-Methode (ADO-Datenstrom)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)
-

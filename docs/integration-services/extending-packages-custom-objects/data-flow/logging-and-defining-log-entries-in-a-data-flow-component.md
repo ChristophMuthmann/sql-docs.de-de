@@ -1,12 +1,14 @@
 ---
-title: "Protokollieren und Definieren von Protokolleinträgen in einer Datenflusskomponente | Microsoft Docs"
+title: "Protokollieren und Definieren von Protokolleinträgen in einer Datenflusskomponente | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a0cbdbb818c7299221172f5ceb9b4ee5c54bddcb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f7d00316246ed4e12a70cd9f488c578dc29e21fe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Protokollieren und Definieren von Protokolleinträgen in einer Datenflusskomponente
   Benutzerdefinierte Datenflusskomponenten können mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle Nachrichten an einen vorhandenen Protokolleintrag senden. Darüber hinaus können sie auch mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A>-Methode oder ähnlichen Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle Informationen für den Benutzer anzeigen. Bei dieser Vorgehensweise entsteht jedoch durch das Auslösen und Behandeln zusätzlicher Ereignisse Arbeitsaufwand, und die Benutzer sind dazu gezwungen, ausführliche Informationsmeldungen zu durchsuchen, um schließlich zu den für sie relevanten Nachrichten zu gelangen. Um für die Benutzer Ihrer Komponente benutzerdefinierte Protokollinformationen mit einer eindeutigen Bezeichnung bereitzustellen, können Sie, wie nachstehend beschrieben, einen benutzerdefinierten Protokolleintrag verwenden.  
@@ -74,7 +75,7 @@ End Sub
   
  Das oben stehende Beispiel verwendet <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>, da die Komponente erwartet, jeweils einen Eintrag pro Ausführung zu protokollieren.  
   
- Nach der Registrierung des benutzerdefinierten Protokolleintrags und das Hinzufügen einer Instanz Ihrer benutzerdefinierten Komponente auf die Daten Datenfluss-Designer-Oberfläche, die **Protokollierung** Dialogfeld im Designer zeigt einen neuen Protokolleintrag mit dem Namen "Meine benutzerdefinierte Component Log Entry" in der Liste der verfügbaren Protokolleinträge.  
+ Nach der Registrierung des benutzerdefinierten Protokolleintrags und dem Hinzufügen einer Instanz Ihrer benutzerdefinierten Komponente zur Oberfläche des Datenfluss-Designers zeigt das Dialogfeld **Protokollierung** im Designer einen neuen Protokolleintrag mit dem Namen „My Custom Component Log Entry“ (Protokolleintrag meiner benutzerdefinierten Komponente) in der Liste der verfügbaren Protokolleinträge an.  
   
 ### <a name="logging-to-a-custom-log-entry"></a>Protokollieren eines benutzerdefinierten Protokolleintrags  
  Nach der Registrierung des benutzerdefinierten Protokolleintrags kann die Komponente jetzt benutzerdefinierte Meldungen protokollieren. Das folgende Beispiel schreibt während der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A>-Methode, die den Text einer von der Komponente verwendeten SQL-Anweisung enthält, einen benutzerdefinierten Protokolleintrag.  
@@ -102,10 +103,9 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- Jetzt bei der Benutzer führt das Paket nach der Auswahl der "My Custom Component Log Entry" in der **Protokollierung** (Dialogfeld), dann enthält das Protokoll einen Eintrag eindeutig mit "Entry Custom Component Log Entry". Dieses neue Protokoll enthält den Text der SQL-Anweisung, den Zeitstempel und alle zusätzlichen Daten, die vom Entwickler protokolliert wurden.  
+ Wenn der Benutzer jetzt das Paket nach Auswählen von „My Custom Component Log Entry“ (Protokolleintrag meiner benutzerdefinierten Komponente) im Dialogfeld **Protokollierung** ausführt, dann enthält das Protokoll einen Eintrag, der eindeutig mit „User::My Custom Component Log Entry“ (Benutzer::Protokolleintrag meiner benutzerdefinierten Komponente) gekennzeichnet ist. Dieses neue Protokoll enthält den Text der SQL-Anweisung, den Zeitstempel und alle zusätzlichen Daten, die vom Entwickler protokolliert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Protokollierung](../../../integration-services/performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services-Protokollierung &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

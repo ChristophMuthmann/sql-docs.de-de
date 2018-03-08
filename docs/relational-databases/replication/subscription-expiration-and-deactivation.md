@@ -2,11 +2,13 @@
 title: Abonnementablauf und -deaktivierung | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +22,19 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], deactivation
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 628f62dd5c3d28c42128d7a21285208065c6ddbc
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ebf798f5575af888afa8dc3935174d9a6d916d6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Abonnementablauf und -deaktivierung
-  Abonnements können deaktiviert werden oder ablaufen, wenn sie nicht innerhalb einer angegebenen *Beibehaltungsdauer*synchronisiert werden. Die stattfindende Aktion hängt vom Typ der Replikation und der überschrittenen Beibehaltungsdauer ab.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Abonnements können deaktiviert werden oder ablaufen, wenn sie nicht innerhalb einer angegebenen *Beibehaltungsdauer* synchronisiert werden. Die stattfindende Aktion hängt vom Typ der Replikation und der überschrittenen Beibehaltungsdauer ab.  
   
  Weitere Informationen zum Festlegen von Beibehaltungsdauern finden Sie unter [Festlegen des Ablaufdatums für Abonnements](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md), und [Verleger- und Verteilereigenschaften](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 06/22/2017
      Wenn ein Pushabonnement abläuft, wird es vollständig entfernt. Bei Pullabonnements ist dies nicht der Fall. Sie müssen einen Cleanup der Pullabonnements auf dem Abonnenten ausführen. Weitere Informationen finden Sie unter [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Mergereplikation  
- Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die **@retention** und **@retention_period_unit**-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Beispiel:  
+ Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die **@retention** und **@retention_period_unit**-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Zum Beispiel:  
   
 -   Wenn eine Veröffentlichung eine Beibehaltungsdauer von 14 Tagen aufweist, kann ein Abonnement ablaufen, wenn es nicht innerhalb von 14 Tagen synchronisiert wurde.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Wenn die Beibehaltungsdauer der Veröffentlichung nach einem Cleanup erhöht wird und für ein Abonnement ein Mergevorgang mit dem Verleger versucht wird (auf dem die Metadaten bereits gelöscht wurden), dann läuft das Abonnement nicht ab, weil die Beibehaltungsdauer erhöht wurde. Allerdings verfügt der Verleger nicht über ausreichende Metadaten zum Herunterladen der Änderungen auf den Abonnenten. Dies führt zu mangelnder Konvergenz der Daten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)  

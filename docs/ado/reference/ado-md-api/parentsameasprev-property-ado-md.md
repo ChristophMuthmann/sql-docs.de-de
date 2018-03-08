@@ -1,9 +1,9 @@
 ---
-title: ParentSameAsPrev-Eigenschaft (ADO MD) | Microsoft Docs
+title: ParentSameAsPrev Property (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,19 +19,18 @@ f1_keywords:
 helpviewer_keywords:
 - ParentSameAsPrev property [ADO MD]
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3fef78fc9764a98f6cf2f2cb19e72816926480d0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cecbb86b26acea2e6674d10a2f8d0af1325d9e77
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev-Eigenschaft (ADO MD)
+# <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev Property (ADO MD)
 Gibt an, ob das übergeordnete Element von dieser Position [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) ist das übergeordnete Element des unmittelbar vorangehenden Elements entspricht.  
   
 ## <a name="return-values"></a>Rückgabewerte  
@@ -45,4 +44,3 @@ Gibt an, ob das übergeordnete Element von dieser Position [Member](../../../ado
   
 ## <a name="see-also"></a>Siehe auch  
  [DrilledDown-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)
-

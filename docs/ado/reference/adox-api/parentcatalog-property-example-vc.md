@@ -3,7 +3,7 @@ title: ParentCatalog-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b98423b519809f94d1956971c9613bc4747632b3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3a024a29cb1e84adfb7116807fd275484a3386a2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog-Eigenschaft (VC++-Beispiel)
 Der folgende Code veranschaulicht, wie die [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) Eigenschaft auf eine anbieterspezifische Eigenschaft vor dem Anfügen einer Tabellenstatus mit einem Katalog zuzugreifen. Die Eigenschaft ist **AutoIncrement**, die einem AutoIncrement-Feld in einer Microsoft Jet-Datenbank erstellt.  
@@ -109,4 +108,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

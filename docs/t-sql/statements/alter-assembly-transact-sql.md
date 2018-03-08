@@ -3,8 +3,11 @@ title: "Das Ändern der ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4b69c3ea4cc94c6b0b318cc13453d9d04b57df0b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert eine Assembly durch Ändern der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Katalogeigenschaften der Assembly. ALTER ASSEMBLY Aktualisierung auf die letzte Kopie der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Module, die ihre Implementierung enthalten und hinzugefügt oder entfernt Dateien, die mit ihm verknüpft sind. Assemblys werden erstellt, mit [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -73,10 +75,10 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *AssemblyName*  
+ *assembly_name*  
  Der Name der Assembly, die Sie ändern möchten. *Assembly_name* muss bereits in der Datenbank vorhanden sein.  
   
- VON \<Client_assembly_specifier > | \<Assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  Aktualisiert eine Assembly auf die letzte Kopie der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Module, die ihre Implementierung enthalten. Diese Option kann nur verwendet werden, wenn der angegebenen Assembly keine Dateien zugeordnet sind.  
   
  \<Client_assembly_specifier > Gibt an, das Netzwerk oder den lokalen Speicherort die Assembly aktualisiert wird. Der Netzwerkspeicherort enthält den Computernamen, den Freigabenamen und einen Pfad innerhalb dieser Freigabe. *Manifest_file_name* gibt den Namen der Datei, die das Manifest der Assembly enthält.  
@@ -115,13 +117,13 @@ ALTER ASSEMBLY assembly_name
   
  Weitere Informationen finden Sie unter [Assemblys implementieren](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *File_name*[ **,***.. ...n*] | ALLE}]  
+ [DROP FILE { *File_name*[**, ***.. ...n*] | ALLE}]  
  Entfernt den dieser Assembly zugeordneten Dateinamen oder alle dieser Assembly zugeordneten Dateien aus der Datenbank. Falls gefolgt von ADD FILE, wird zuerst DROP FILE ausgeführt. Dadurch können Sie eine Datei mit demselben Dateinamen ersetzen.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- [ADD FILE FROM { *Client_file_specifier* [AS *File_name*] | *File_bits*AS *File_name*}  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  Lädt eine Datei mit der Assembly, z. B. Quellcode, verbunden sein, Debugdateien oder andere zugehörige Informationen, auf dem Server und in sichtbar gemacht werden, die **Sys. assembly_files** -Katalogsicht angezeigt. *Client_file_specifier* gibt den Speicherort, von dem die Datei hochladen. *File_bits* kann stattdessen verwendet werden, um die Liste der Binärwerte anzugeben, aus denen die Datei besteht. *File_name* gibt den Namen, unter dem die Datei soll, in der Instanz von gespeichert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *File_name* muss angegeben werden, wenn *File_bits* angegeben ist, und optional Wenn *Client_file_specifier* angegeben ist. Wenn *File_name* nicht angegeben wird, der "File_name"-Teil des *Client_file_specifier* dient als *File_name*.  
   
 > [!NOTE]  
@@ -222,9 +224,8 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie die ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

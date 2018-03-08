@@ -3,7 +3,7 @@ title: GetPermissions und SetPermissions-Methoden (Beispiel) (VB) | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], Visual Basic example
 - GetPermissions method [ADOX], Visual Basic example
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ee63ac0feb7a9338dab06020b31594237b26a092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62317dc1c72da63769b85be83a97663858e57e73
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions und SetPermissions-Methoden (Beispiel) (VB)
 Dieses Beispiel zeigt die [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) Methoden. Der folgende Code bietet vollständigen Zugriff auf die Orders-Tabelle für den Admin-Benutzer.  
@@ -108,4 +107,3 @@ End Sub
  [SetPermissions-Methode (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
  [User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-

@@ -3,10 +3,12 @@ title: "Funktion Konformität | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb178c2359ee9b1df4754615316f80b8284e84a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-conformance"></a>Funktion Konformität
 In der folgenden Tabelle gibt an, dem Konformitätsgrad für jede ODBC-Funktion, in denen dies gut definiert ist.  
@@ -96,4 +97,3 @@ In der folgenden Tabelle gibt an, dem Konformitätsgrad für jede ODBC-Funktion,
  [1] wichtige Features dieser Funktion sind nur zur höheren Übereinstimmungsebenen verfügbar.  
   
  [2] bestimmte Attribute auf benutzerdefinierte Werte festlegen, hängt von den Konformitätsgrad ab. Weitere Informationen finden Sie im nächsten Abschnitt [Attribut Konformität](../../../odbc/reference/develop-app/attribute-conformance.md).
-

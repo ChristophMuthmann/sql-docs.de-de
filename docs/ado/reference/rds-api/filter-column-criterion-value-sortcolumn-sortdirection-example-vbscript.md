@@ -3,7 +3,7 @@ title: Legen Sie RDS. DataControl-Server und binden Sie HTML-Tabelle (VBScript) 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - SortColumn property [RDS], VBScript example
 - FilterValue property [ADO], VBScript example
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 476c75653f06699d7d3fdcb0167e49fdf616a37a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83021d7a5f350d33c5ecd55f464c8bc3a596a20b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection Eigenschaften und Reset-Methode (Beispiel) (VBScript)
 > [!IMPORTANT]
@@ -218,7 +217,6 @@ End Sub
  [FilterValue-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
  [Reset-Methode (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
  [SortColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Sortdirections-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
+ [SortDirection-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 

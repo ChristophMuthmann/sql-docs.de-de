@@ -2,11 +2,13 @@
 title: Problembehandlung bei verwaisten Benutzern (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 1780f563d2e4f9533ebe1f82deefe7b785b6ec8c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Verwaiste Benutzer treten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn ein Datenbankbenutzer auf einem Anmeldenamen in der **Masterdatenbank** basiert, aber der Anmeldename nicht mehr in **Master**vorhanden ist. Dies kann auftreten, wenn der Anmeldename gelöscht wird, oder wenn die Datenbank auf einen anderen Server verschoben wird, auf dem der Anmeldename nicht existiert. Dieses Thema beschreibt, wie Sie verwaiste Benutzer finden und sie den Anmeldenamen erneut zuordnen können.  
   
@@ -135,8 +137,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_password &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)   
  [sys.sysusers &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md)   
- [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)
- [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+ [sys. sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) [sys.syslogins (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
-

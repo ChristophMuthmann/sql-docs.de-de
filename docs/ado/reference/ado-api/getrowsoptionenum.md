@@ -3,7 +3,7 @@ title: GetRowsOptionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetRowsOptionEnum enumeration [ADO]
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b6c1d87e60dbe79298ed107a84a9e213833665ac
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b56f092cfe368fbbc8b5e325f1ac4ddd7b3b2978
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Gibt an, wie viele Datensätze zum Abrufen von aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -46,4 +45,3 @@ Gibt an, wie viele Datensätze zum Abrufen von aus einer [Recordset](../../../ad
   
 ## <a name="applies-to"></a>Gilt für  
  [GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
-

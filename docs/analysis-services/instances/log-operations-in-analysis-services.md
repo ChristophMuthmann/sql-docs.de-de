@@ -2,30 +2,30 @@
 title: "Vorgänge in Analysis Services protokolliert | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e23d96e675fba4ed740b8adbb8402d3ae7fd06e2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
-  Eine Analysis Services-Instanz protokolliert Serverbenachrichtigungen, Fehler und Warnungen in der Datei "msmdsrv.log" – eine Datei für jede Instanz, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](http://support.microsoft.com/kb/2965035)einsehen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine Analysis Services-Instanz protokolliert Serverbenachrichtigungen, Fehler und Warnungen in der Datei "msmdsrv.log" – eine Datei für jede Instanz, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](http://support.microsoft.com/kb/2965035)einsehen.  
   
  Neben dem integrierten Protokollierungsfeature verwenden viele Administratoren und Entwickler auch die von der Analysis Services-Community bereitgestellten Tools zum Sammeln von Daten zu Servervorgängen, wie z.B. **ASTrace**. Die Download-Links finden Sie unter [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Microsoft SQL Server-Community-Beispiele: Analysis Services).  
   
@@ -51,9 +51,9 @@ ms.lasthandoff: 09/01/2017
   
 |Dateiname oder Speicherort|Typ|Syntaxelemente|Standardmäßig ein|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|Ja|  
-|OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|Nein|  
-|SQLDmp\<Guid > .mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|Nein|  
+|Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|ja|  
+|OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|nein|  
+|SQLDmp\<Guid > .mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|nein|  
   
  Es wird dringend empfohlen, den folgenden Link für zusätzliche Informationsquellen zu nutzen, die in diesem Thema nicht behandelt werden: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Tipps vom Microsoft Support zur anfänglichen Datensammlung).  
   
@@ -192,4 +192,3 @@ ms.lasthandoff: 09/01/2017
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

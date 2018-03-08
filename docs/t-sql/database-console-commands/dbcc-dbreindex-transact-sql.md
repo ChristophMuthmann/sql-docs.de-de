@@ -3,8 +3,11 @@ title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - dynamic index rebuilding [SQL Server]
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 16f1fb5a028efe879c1059f079b3d611b26616e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Erstellt ein oder mehrere Indizes einer Tabelle in der angegebenen Datenbank neu.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Erstellt ein oder mehrere Indizes einer Tabelle in der angegebenen Datenbank neu.
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwendung [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) stattdessen.  
@@ -62,7 +64,7 @@ DBCC DBREINDEX
  *index_name*  
  Der Name des neu zu erstellenden Indexes. Indexnamen müssen den Regeln für Bezeichner entsprechen. Wenn *index_name* angegeben wird, muss auch *table_name* angegeben werden. Wenn *index_name* nicht oder als " " angegeben wird, werden alle Indizes für die Tabelle neu erstellt.  
   
- *FILLFACTOR*  
+ *fillfactor*  
  Der Prozentsatz an Speicherplatz auf jeder Indexseite, der beim Erstellen oder Neuerstellen des Indexes zum Speichern von Daten verwendet werden soll. *fillfactor* ersetzt den ursprünglichen Füllfaktor als neuer Standardwert für den Index und für alle nicht gruppierten Indizes, die neu erstellt werden, weil ein gruppierter Index neu erstellt wird.  
  Wenn *fillfactor* 0 ist, verwendet DBCC DBREINDEX den für den Index zuletzt angegebenen Füllfaktorwert. Dieser Wert wird in der **sys.indexes** -Katalogsicht gespeichert.   
  Wenn *fillfactor* angegeben wird, müssen auch *table_name* und *index_name* angegeben werden. Wenn *fillfactor* nicht angegeben wird, wird der Standardfüllfaktor, 100, verwendet. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -125,5 +127,4 @@ GO
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-
 

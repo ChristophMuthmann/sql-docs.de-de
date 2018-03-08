@@ -3,7 +3,7 @@ title: RDS-Verwendung und Sicherheit | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f4bf63dba64d4c30ca29629a1a385df45a9f79b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d75e71f66415fa7bec3b0496064321da3f312e6e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-usage-and-security"></a>RDS-Verwendung und Sicherheit
 Verwenden Sie die Informationen in diesem Abschnitt zum Einrichten des Servers und RDS schnell zu verwenden. Dieser Abschnitt enthält spezifische Konfigurationsschritte, die möglicherweise an, die bei der Implementierung von RDS, beschreibt einige der wichtigsten Beziehungen zwischen RDS und anderen Technologien und Lösungen für Probleme, die auftreten können, bei der Einrichtung der Bestimmung einer RDS-Lösung.  
@@ -48,6 +47,5 @@ Verwenden Sie die Informationen in diesem Abschnitt zum Einrichten des Servers u
  [RDS-Grundlagen](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
 
 

@@ -2,11 +2,13 @@
 title: "Konflikterkennung und -lösung beim verzögerten Update über eine Warteschlange | Microsoft.Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Aktualisierbare Abonnements – Konfliktlösungsoptionen für das verzögerte Update über eine Warteschlange
-  Da die verzögerte Aktualisierung von Abonnements über eine Warteschlange Änderungen an denselben Daten an mehreren Standorten zulässt, können Konflikte auftreten, wenn die Daten auf dem Verleger synchronisiert werden. Die Replikation erkennt alle Konflikte, wenn Änderungen mit dem Verleger synchronisiert werden, und löst die Konflikte anhand der Richtlinie zur Konfliktlösung, die Sie beim Erstellen der Veröffentlichung ausgewählt haben. Die folgenden Konflikte sind möglich:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Da die verzögerte Aktualisierung von Abonnements über eine Warteschlange Änderungen an denselben Daten an mehreren Standorten zulässt, können Konflikte auftreten, wenn die Daten auf dem Verleger synchronisiert werden. Die Replikation erkennt alle Konflikte, wenn Änderungen mit dem Verleger synchronisiert werden, und löst die Konflikte anhand der Richtlinie zur Konfliktlösung, die Sie beim Erstellen der Veröffentlichung ausgewählt haben. Die folgenden Konflikte sind möglich:  
   
 -   Update- und Einfügekonflikte. Diese Konflikte treten auf, wenn dieselben Daten an zwei verschiedenen Speicherorten geändert werden. Eine Änderung setzt sich dabei unbeabsichtigt gegen eine andere durch.  
   
@@ -82,8 +83,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="subscriber-wins"></a>Abonnent gewinnt  
  Die Konflikterkennung unter der Richtlinie Abonnent gewinnt bedeutet, dass die letzte Abonnententransaktion gewinnt, die den Verleger aktualisiert. Wird ein Konflikt erkannt, wird in diesem Fall die vom Abonnenten gesendete Transaktion weiterhin verwendet, und der Verleger wird aktualisiert. Diese Vorgehensweise eignet sich für Anwendungen, in denen die Datenintegrität durch diese Änderungen nicht gefährdet wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   
-

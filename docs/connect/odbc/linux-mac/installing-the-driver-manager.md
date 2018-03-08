@@ -1,10 +1,13 @@
 ---
-title: Installing the Driver Manager | Microsoft Docs
+title: Installieren des Treiber-Managers (Odbcdriver for SQLServer) | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -12,28 +15,27 @@ ms.topic: article
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 36f432e883b56759d46304239715a00c06334d3a
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ca46eb4fbb6203191a7aace3946daad8361b224
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="installing-the-driver-manager"></a>Installieren des Treiber-Managers
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Dieses Thema enthält Anweisungen zur Installation des UnixODBC Treiber-Manager für die Verwendung mit Microsoft Odbcdriver 11, 13 oder 13.1 for SQL Server für Linux und MacOS.  
+Dieser Artikel enthält Anweisungen zur Installation des UnixODBC Treiber-Manager für die Verwendung mit allen Versionen von Microsoft ODBC Driver für SQL Server unter Linux und MacOS.  
 
 > [!IMPORTANT]  
 > Löschen Sie alle Treiber-Manager-Pakete, die auf Ihrem Computer installiert sind, bevor Sie den unixODBC Treiber-Manager installieren. Die Installation des unixODBC Treiber-Managers kann einen Fehler eines vorhandenen Treiber-Managers verursachen.  
 
-## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-130-and-131"></a>Installieren des Treiber-Managers für Microsoft ODBC Driver 13.0 und 13.1
-Die Abhängigkeit der Treiber-Manager wird durch die paketverwaltungssystem automatisch aufgelöst, bei der Installation von Microsoft ODBC-Treiber-13.0 oder 13.1 for SQL Server unter Linux oder MacOS anhand der Anweisungen in [Installieren des Microsoft ODBC Driver für SQL Server unter Linux oder MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>Installieren des Treiber-Managers für Microsoft ODBC Driver 13 13.1 und 17
+Die Abhängigkeit der Treiber-Manager wird durch die paketverwaltungssystem automatisch aufgelöst, bei der Installation von Microsoft Odbcdriver 13, 13.1 oder 17 für SQL Server unter Linux oder MacOS, anhand der Anweisungen in [Installieren des Microsoft ODBC Driver für SQL Server unter Linux oder MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>Installieren des Treiber-Managers für Microsoft ODBC Driver 11 (Preview) for SQL Server.  
 
@@ -58,13 +60,13 @@ Installieren des Treiber-Managers:
 
 Wenn Ihr Computer eine externe Website über FTP zugreifen kann, erhalten `unixODBC-2.3.0.tar.gz`. Sie erhalten `unixODBC-2.3.0.tar.gz` aus [http://www.unixodbc.org](http://www.unixodbc.org/). Klicken Sie auf die **herunterladen** Link auf der linken Seite der Seite, um zur Downloadseite zu wechseln. Klicken Sie dann auf den entsprechenden Link, um unixODBC-2.3.0 (nicht unixODBC-2.3.1) herunterzuladen. UnixODBC-2.3.1 wird nicht unterstützt, mit dieser Version von den [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Führen Sie den folgenden Befehl aus, um den UnixODBC Treiber-Manager-Installation zu beginnen: **./build_dm.sh – Download-Url = file://unixODBC-2.3.0.tar.gz**.  
 
-6.  Typ **Ja** zu fortfahren mit dem Entpacken der Dateien. In diesem Teil des Prozesses kann bis zu 5 Minuten in Anspruch nehmen.  
+6.  Typ **Ja** zu fortfahren mit dem Entpacken der Dateien. In diesem Teil des Prozesses kann bis zu fünf Minuten in Anspruch nehmen.  
 
 7.  Nachdem das Skript beendet ist, befolgen Sie die Anweisungen auf dem Bildschirm, um den unixODBC Treiber-Manager zu installieren.
 
-Sie können nun den Treiber installieren. Finden Sie unter [Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) für Weitere Informationen.  
+Sie können nun den Treiber installieren. Weitere Informationen finden Sie unter [Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
 
-**Manuelle Installation**
+Manuelle Installation
 
 Wenn das Skript für die Installation nicht abgeschlossen werden konnte, konfigurieren und erstellen Sie selbst den richtigen Treiber-Manager.
 
@@ -86,12 +88,11 @@ Wenn das Skript für die Installation nicht abgeschlossen werden konnte, konfigu
   
 9. Führen Sie den Befehl an einer Eingabeaufforderung (angemeldet als Root): **stellen installieren**.  
 
-Sie können nun den Treiber installieren. Finden Sie unter [Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) für Weitere Informationen.  
+Sie können nun den Treiber installieren. Weitere Informationen finden Sie unter [Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Siehe auch
 [Installieren von Microsoft ODBC Driver für SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [Bekannte Probleme in dieser Version des Treibers](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)
-
+[Anmerkungen zu dieser Version](../../../connect/odbc/linux-mac/release-notes.md)

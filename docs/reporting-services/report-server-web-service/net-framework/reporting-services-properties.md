@@ -1,17 +1,17 @@
 ---
-title: Reporting Services-Eigenschaften | Microsoft Docs
+title: Eigenschaften von Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - properties [Reporting Services], about properties
@@ -22,22 +22,21 @@ helpviewer_keywords:
 - Web service [Reporting Services], properties
 - properties [Reporting Services]
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 1e6abe6453acbe4102de8a2973668b6cf59dfcc1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 549758db179aa2709149fd85bf91157449dfbb76
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties"></a>Eigenschaften von Reporting Services
   Der Berichtsserver definiert eine Reihe von Systemeigenschaften, die global für den Berichtsserver gelten, und eine Reihe von Elementeigenschaften, die zu einem in der Berichtsserver-Datenbank gespeicherten Einzelelement gehören. Vom Berichtsserver definierte Eigenschaften können nicht gelöscht werden, und in einigen Fällen sind sie schreibgeschützt. In einer Anwendung können die System- und Elementeigenschaften erweitert werden, indem zusätzliche benutzerdefinierte Eigenschaften zu den System- und den Elementeigenschaften hinzugefügt werden.  
   
- Die folgenden Webdienstmethoden abzurufen und festzulegen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Eigenschaften.  
+ Die folgenden Webdienstmethoden rufen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Eigenschaften ab und legen diese fest.  
   
 |Methode|Aktion|  
 |------------|------------|  
@@ -53,10 +52,9 @@ ms.lasthandoff: 08/12/2017
 |[Eigenschaften der Berichtsserverelemente](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md)|Beschreibt die elementspezifischen Eigenschaften in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Berichtsserver-Systemeigenschaften](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)|Beschreibt die systemspezifischen Eigenschaften in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technische Referenz &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Technische Referenz (SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

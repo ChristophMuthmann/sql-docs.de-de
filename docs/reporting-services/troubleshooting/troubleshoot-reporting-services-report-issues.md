@@ -1,27 +1,27 @@
 ---
-title: Problembehandlung bei Reporting Services-Berichtsprobleme | Microsoft Docs
+title: Problembehandlung bei Problemen mit Berichten in Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a8c5f76c0d2cd35f0ef52b77b79b13cc8b5efbe
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9546aaea0b177552fa83095c342a24a2e0f954e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Problembehandlung bei Reporting Services-Problemen mit Berichten
 In diesem Thema erhalten Sie Informationen zum Behandeln von Problemen mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] -Berichtsentwurf, dem Anzeigen der Vorschau eines Berichts, dem Veröffentlichen eines Berichts auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus, dem Anzeigen eines Berichts auf dem Berichtsserver oder dem Exportierten eines Berichts in ein anderes Dateiformat.  
@@ -61,12 +61,11 @@ Um zu steuern, dass [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudioful
 ```  
 Solange der Wert auf 1 festgelegt ist, werden nur zwischengespeicherte Berichtsdaten verwendet. Achten Sie darauf, diesen Abschnitt zu entfernen, wenn das Debuggen des Berichts abgeschlossen ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 

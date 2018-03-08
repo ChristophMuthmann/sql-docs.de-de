@@ -1,27 +1,27 @@
 ---
-title: Abrufen von Daten, die Problembehandlung bei Reporting Services-Berichten | Microsoft Docs
+title: Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "4"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e58fa865cfa0465e6256bda88819ad2a73253cc4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten
 Der erste Schritt bei der Berichtsverarbeitung ist das Abrufen der Berichtsdaten für jedes Dataset durch Ausführen der Datasetabfrage. Wenn Sie einen Bericht lokal in der Vorschau anzeigen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Computer verwendet werden. Wenn Sie einen Bericht auf dem Berichtsserver ausführen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Berichtsserver verwendet werden. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Abrufen von Berichtsdaten helfen.   
@@ -67,13 +67,12 @@ Gehen Sie zum Auffüllen der Datasetfeldauflistung wie folgt vor:
 * Führen Sie die Abfrage im Abfragebereich des Dialogfelds **Dataseteigenschaften** aus. Weitere Informationen finden Sie im Artikel über [Berichtsdatasets (Berichts-Generator 3.0 und SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Fügen Sie manuell Felder hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator 3.0 und SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

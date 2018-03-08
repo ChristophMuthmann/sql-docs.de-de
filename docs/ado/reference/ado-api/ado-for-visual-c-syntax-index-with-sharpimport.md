@@ -3,7 +3,7 @@ title: "ADO für Visual C++-Syntax Index mit #import | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8829dcf3f55d7281ee2db8f3f09b474e95bc26a7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 911abc9ecb9cd17f4f69479a2de9fa7f498303e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++-Syntax Index mit #import
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++ und die **#import** Richtlinie.  
@@ -41,7 +40,7 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsof
   
  Methoden- und Syntax in Visual C++ mit den **#import** Richtlinie ist für die folgenden Elemente aufgeführt:  
   
--   [ADO-Auflistungen](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
+-   [ADO-Collections](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Command-Objekt](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -66,5 +65,4 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsof
 -   [Recordsetereignisse](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO für Visual C++-Syntax Index für COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
-
+ [ADO für Visual C++ – Syntaxindex für COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

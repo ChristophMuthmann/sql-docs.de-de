@@ -1,14 +1,14 @@
 ---
-title: "Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften (SSAS – tabellarisch) | Microsoft Docs"
+title: Modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,20 +17,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50c41697a0197261be8ef1b60b469a28bd331248
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften (SSAS – tabellarisch)
-  In diesem Thema wird die Konfiguration der Einstellungen für die Eigenschaften Standardkompatibilitätsgrad, Bereitstellung und Arbeitsbereichsdatenbank beschrieben, die für jedes neue Projekt für tabellarische Modelle, das Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen, vorab definiert werden können. Auch nachdem ein neues Projekt erstellt wurde, können diese Eigenschaften abhängig von Ihren speziellen Anforderungen geändert werden.  
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>Modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In diesem Artikel wird beschrieben, wie so konfigurieren Sie den Standardkompatibilitätsgrad, Bereitstellung und im arbeitsbereichseinstellungen für die Eigenschaften, vorab definiert werden können, für jeden neues tabellarisches Modell Projekt Sie erstellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auch nachdem ein neues Projekt erstellt wurde, können diese Eigenschaften abhängig von Ihren speziellen Anforderungen geändert werden.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>So konfigurieren Sie die Einstellung der Eigenschaft "Standardkompatibilitätsgrad" für neue Modellprojekte  
   
@@ -78,9 +78,8 @@ ms.lasthandoff: 09/01/2017
 >  Änderungen an Standardmodelleigenschaften wirken sich nicht auf die Eigenschaften vorhandener Modelle aus, die vor der Änderung erstellt wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Projekteigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Modelleigenschaften &#40; SSAS – tabellarisch &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
- [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Projekteigenschaften](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [Modelleigenschaften](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Kompatibilitätsgrad](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

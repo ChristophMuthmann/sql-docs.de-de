@@ -2,31 +2,32 @@
 title: "In der Datenbank Python Analytics für SQL-Entwickler | Microsoft Docs"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 725d69f4c0799cf5911cb8764aa7d0f3b6cbc48d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>In der Datenbank Python-Analyse für SQL-Entwickler
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Das Ziel dieser exemplarischen Vorgehensweise ist bereitzustellen, SQL-Programmierer praktische Beispiele zum Erstellen eines Machine learning-Projektmappe mithilfe von Python, die in SQL Server ausgeführt wird. In dieser exemplarischen Vorgehensweise erfahren Sie, wie gespeicherte Prozeduren Python-Code hinzu, und führen Sie gespeicherte Prozeduren zum Erstellen und Vorhersagen von Modellen.
 
@@ -46,7 +47,7 @@ Der Vorgang der Erstellung einer Machine Learning-Lösung ist ein komplexes, die
 
 Die Daten stammen aus bekannten NYC Taxi DataSet. Um dieser exemplarischen Vorgehensweise schnell und einfach zu gestalten, werden die Daten als Stichprobe genommen. Erstellen Sie ein binäres klassifizierungsmodell, das vorhersagt, ob einem bestimmten Vorgang wahrscheinlich einen Tipp oder nicht abrufen wird basierend auf Spalten, z. B. den Zeitpunkt der Tag, Abstand und Abholung Speicherort.
 
-Alle Aufgaben können ausgeführt werden, mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozeduren in der vertrauten Umgebung von[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Alle Aufgaben können ausgeführt werden, mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [Schritt 1: Herunterladen der Beispieldaten](sqldev-py1-download-the-sample-data.md)
 
@@ -125,4 +126,3 @@ Verwenden Sie die folgenden Ressourcen helfen Ihnen beim Planen und führen Sie 
 ## <a name="get-started"></a>Erste Schritte
 
   [Schritt 1: Herunterladen der Beispieldaten](sqldev-py1-download-the-sample-data.md)
-

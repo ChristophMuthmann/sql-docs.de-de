@@ -2,33 +2,33 @@
 title: 'Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "17"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6271d97901c8508802300fce5d040549d265edda
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae72070feb083068eb173bd551773727d4a3528f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Lernprogramm: Verwalten von Servern mit der richtlinienbasierten Verwaltung
-Willkommen beim Lernprogramm zum Verwalten von Servern mit richtlinienbasierten Verwaltungsrichtlinien. Dieses Lernprogramm richtet sich an Benutzer, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vertraut sind, die richtlinienbasierte Verwaltung jedoch noch nicht kennen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Willkommen beim Tutorial zum Verwalten von Servern mit richtlinienbasierten Verwaltungsrichtlinien. Dieses Lernprogramm richtet sich an Benutzer, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vertraut sind, die richtlinienbasierte Verwaltung jedoch noch nicht kennen.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Lernprogramm wird eine Richtlinie für das Verwalten Ihres Servers erstellt. Außerdem wird eine Richtlinie erstellt, die für eine einzelne Datenbank gilt. Eine Richtlinie wird bedarfsgesteuert ausgeführt, um die Einhaltung der Richtlinie zu testen. Die andere Richtlinie erzwingt die zukünftige Einhaltung dieser Richtlinie.  
@@ -49,9 +49,8 @@ Um das Lernprogramm verwenden zu können, muss auf Ihrem System [!INCLUDE[ssManS
 ## <a name="start-the-tutorial"></a>Lernprogramm starten  
 [Lektion 1: Erstellen und Anwenden einer Richtlinie 'Standardmäßig aus'](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
   
-

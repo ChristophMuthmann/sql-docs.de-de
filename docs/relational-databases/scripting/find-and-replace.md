@@ -2,9 +2,12 @@
 title: Suchen und Ersetzen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,27 +19,26 @@ f1_keywords:
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5d3e50dcc4dd901255992d5aeea8c818f498de2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fe528cb691bfff2d46f01470477fe602ee91c410
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-and-replace"></a>Suchen und Ersetzen
-  Mithilfe des Dialogfelds **Suchen und Ersetzen** können Sie Texte innerhalb von Dateien finden und ggf. ersetzen. Es können verschiedene Versionen des Dialogfelds **Suchen und Ersetzen** mit leicht unterschiedlichen Optionen angezeigt werden, abhängig davon, auf welche Weise das Dialogfeld geöffnet wurde. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellsuche** , um das Dialogfeld mit Such- aber ohne Ersetzungsoptionen zu öffnen. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellersetzung** , um das Dialogfeld mit Such- und Ersetzungsoptionen zu öffnen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Dialogfelds **Suchen und Ersetzen** können Sie Texte innerhalb von Dateien finden und ggf. ersetzen. Es können verschiedene Versionen des Dialogfelds **Suchen und Ersetzen** mit leicht unterschiedlichen Optionen angezeigt werden, abhängig davon, auf welche Weise das Dialogfeld geöffnet wurde. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellsuche** , um das Dialogfeld mit Such- aber ohne Ersetzungsoptionen zu öffnen. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellersetzung** , um das Dialogfeld mit Such- und Ersetzungsoptionen zu öffnen.  
   
  Das Dialogfeld **Suchen und Ersetzen** kann auch über Symbolleistenschaltflächen und Tastenkombinationen geöffnet werden.  
   
 ## <a name="find-what"></a>Suchen nach  
  Diese Steuerelemente ermöglichen Ihnen, die Zeichenfolge oder den Ausdruck anzugeben, nach dem gesucht werden soll.  
   
- **Find what**  
+ **Suchen nach**  
  Geben Sie den Suchtext ein. Im Dialogfeld wird ein wahrscheinlicher Suchtext eingetragen. Dabei wird entweder auf den Text zurückgegriffen, der vor dem Öffnen des Dialogfelds mit dem Cursor markiert wurde, oder auf in der Nähe befindlichen Text oder auf zuvor verwendeten Suchtext. Sie können aus der Dropdownliste eine der letzten 20 Suchzeichenfolgen zur Wiederverwendung auswählen.  
   
  **[Zeichenfolge mit Platzhaltern]**  
@@ -129,8 +131,7 @@ ms.lasthandoff: 06/22/2017
  **In Dateien ersetzen**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **In Dateien ersetzen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

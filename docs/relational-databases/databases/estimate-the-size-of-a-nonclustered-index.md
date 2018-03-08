@@ -2,11 +2,12 @@
 title: "Schätzen der Größe eines nicht gruppierten Index | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,21 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "40"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 03eaa651f6184c9dc1dc53913e1662798664b983
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
-ms.openlocfilehash: 28b5c5dbf4ab85b11818648e2daf62621df64219
-ms.contentlocale: de-de
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Befolgen Sie diese Schritte, um abzuschätzen, wie viel Speicherplatz zum Speichern eines nicht gruppierten Index erforderlich ist.  
   
 1.  Berechnen Sie die Variablen zur Verwendung in Schritt 2 und 3.  
@@ -258,9 +261,9 @@ ms.lasthandoff: 08/31/2017
   
 -   Spalten mit geringer Dichte  
   
-     Informationen zu den Speicherplatzanforderungen von Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
+     Informationen zu den Speicherplatzanforderungen von Sparsespalten finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   
@@ -270,4 +273,3 @@ ms.lasthandoff: 08/31/2017
  [Schätzen der Größe einer Datenbank](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   
   
-

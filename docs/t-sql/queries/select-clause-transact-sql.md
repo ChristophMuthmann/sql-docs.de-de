@@ -3,8 +3,11 @@ title: SELECT-Klausel (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: 54
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die Spalten von der Abfrage zurückgegeben werden sollen.  
   
@@ -85,10 +87,10 @@ SELECT [ ALL | DISTINCT ]
  \*  
  Gibt an, dass alle Spalten aus allen Tabellen und Sichten in der FROM-Klausel zurückgegeben werden sollen. Die Spalten werden wie in der FROM-Klausel angegeben nach Tabellen oder Sichten sortiert sowie in der Reihenfolge zurückgegeben, in der sie in der Tabelle vorhanden sind.  
   
- *TABLE_NAME* | *View_name* | *Tabelle*_*Alias*. *  
+ *table_name* | *view_name* | *table*_*alias*.*  
  Beschränkt den Bereich der \* an der angegebenen Tabelle oder Sicht.  
   
- *Spaltenname*  
+ *column_name*  
  Dies ist der Name einer Spalte, die zurückgegeben werden soll. Qualifizieren *Column_name* um einen mehrdeutigen Verweis zu verhindern, wie z. B. tritt auf, wenn zwei Tabellen erstellt in der FROM-Klausel Spalten mit doppelten Namen haben. Z. B. die Tabellen SalesOrderHeader und SalesOrderDetail in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank beide haben eine Spalte mit dem Namen ModifiedDate. Wenn beide Tabellen in einer Abfrage zusammengeführt werden, kann das modifizierte Datum der Einträge in SalesOrderDetail in der Auswahlliste als SalesOrderDetail.ModifiedDate angegeben werden.  
   
  *expression*  
@@ -113,13 +115,13 @@ SELECT [ ALL | DISTINCT ]
  { . | :: }  
  Gibt eine Methode, Eigenschaft oder ein Feld eines CLR-benutzerdefinierten Typs an. Verwenden. für eine (nicht statische) Instanzmethode, Eigenschaft oder ein Feld. Verwenden Sie :: für eine statische Methode, Eigenschaft oder ein Feld. Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
   
- *Eigenschaftsname*  
+ *property_name*  
  Ist eine öffentliche Eigenschaft des *Udt_column_name*.  
   
- *Feldname*  
+ *field_name*  
  Ist ein öffentlicher Datenmember eines *Udt_column_name*.  
   
- *keine Variablenargumentlisten verwenden*  
+ *method_name*  
  Ist eine öffentliche Methode *Udt_column_name* , die ein oder mehrere Argumente annimmt. *keine Variablenargumentlisten verwenden* eine Mutatormethode darf nicht sein.  
   
  Im folgenden Beispiel werden die Werte für die `Location`-Spalte ausgewählt, für die der Typ `point` definiert ist. Die Auswahl erfolgt aus der `Cities`-Tabelle durch Aufruf einer Methode des Typs mit dem Namen `Distance`:  
@@ -136,7 +138,7 @@ SELECT Location.Distance (@p)
 FROM Cities;  
 ```  
   
- *Column_ alias*  
+ *column_ alias*  
  Dies ist ein alternativer Name, der den Spaltennamen im Abfrageresultset ersetzt. Für eine Spalte mit dem Namen quantity könnte z. B. ein Alias wie Quantity, Quantity to Date oder Qty angegeben werden.  
   
  Aliasnamen werden auch verwendet, um Namen für die Ergebnisse von Ausdrücken anzugeben, beispielsweise:  
@@ -163,8 +165,7 @@ FROM Cities;
   
 ## <a name="see-also"></a>Siehe auch  
  [Wählen Sie die Beispiele &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-

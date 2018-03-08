@@ -3,8 +3,11 @@ title: Anzeigen von Informationen zu einer Warnung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssms
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - displaying alerts
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 69ce81f865d3b01d2316f913317fe63505b49aa9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5bfe05dde95b8fdb47893ea17802b0798de9762a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In diesem Thema wird beschrieben, wie Sie Infodermationen in Bezug auf [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Warnungen in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] oder [!INCLUDE[tsql](../../includes/tsql_md.md)]anzeigen können.  
   
 **In diesem Thema**  
@@ -62,7 +65,7 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Infor
   
 4.  Klicken Sie mit der rechten Maustaste auf die Warnung mit den von Ihnen gewünschten Informationen, die Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-    Weitere Informationen zu den im Dialogfeld *Eigenschaften von Warnung***Warnungsname** enthaltenen verfügbaren Optionen finden Sie unter:  
+    Weitere Informationen zu den im Dialogfeld *Warnungsname***Warnungseigenschaften** enthaltenen verfügbaren Optionen finden Sie unter:  
   
     -   [Warnungseigenschaften – Neue Warnung &#40;Seite „Allgemein“&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
@@ -96,4 +99,3 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Infor
   
 Weitere Informationen finden Sie unter [p_help_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/850cef4e-6348-4439-8e79-fd1bca712091).  
   
-

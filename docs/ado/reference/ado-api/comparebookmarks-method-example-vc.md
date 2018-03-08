@@ -3,7 +3,7 @@ title: CompareBookmarks-Methode (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 763348579fb243de90352a17145cd546c42c38fc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5752afa9af088848a0f33e3cda8baf259cb05e3c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks-Methode (VC++-Beispiel)
 Dieses Beispiel zeigt die [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) Methode. Der relative Wert von Lesezeichen ist nur selten erforderlich, es sei denn, ein bestimmtes Lesezeichens aus irgendeinem Grund spezielle.  
@@ -180,4 +179,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [CompareBookmarks-Methode (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

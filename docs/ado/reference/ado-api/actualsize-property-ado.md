@@ -3,7 +3,7 @@ title: ActualSize-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActualSize property [ADO]
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9c588dbf76996173dbc309ac30ef5413edc9cc5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d66019d7a71dd480f1a88a28fe94d72a176497c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="actualsize-property-ado"></a>ActualSize-Eigenschaft (ADO)
 Gibt die tatsächliche Länge eines Felds an??? s-Wert in Bytes.  
@@ -48,4 +47,3 @@ Gibt die tatsächliche Länge eines Felds an??? s-Wert in Bytes.
  [ActualSize und DefinedSize Eigenschaften Beispiel (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize und DefinedSize Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [DefinedSize-Eigenschaft](../../../ado/reference/ado-api/definedsize-property.md)
-

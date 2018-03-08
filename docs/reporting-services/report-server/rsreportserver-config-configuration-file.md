@@ -2,27 +2,28 @@
 title: RSReportServer.config-Konfigurationsdatei | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>RSReportServer.config-Konfigurationsdatei
+# <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 In der Datei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** werden Einstellungen gespeichert, die vom Berichtsserver-Webdienst und der Hintergrundverarbeitung verwendet werden. Alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen werden innerhalb eines einzelnen Prozesses ausgeführt, der die in der Datei RSReportServer.config gespeicherten Konfigurationseinstellungen liest. Sowohl der Berichtsserver im einheitlichen als auch der Berichtsserver im SharePoint-Modus verwenden "Rsreportserver.config". Die zwei Modi verwenden jedoch nicht alle gleichen Einstellungen in der Konfigurationsdatei. Die SharePoint-Modusversion der Datei ist kleiner, da viele der Einstellungen für den SharePoint-Modus in den SharePoint-Konfigurationsdatenbanken und nicht in der Datei gespeichert werden. In diesem Thema werden die für den einheitlichen und den SharePoint-Modus installierte Standardkonfigurationsdatei sowie einige wichtige Einstellungen und Verhaltensweisen beschrieben, die von der Konfigurationsdatei gesteuert werden.  
 
 Im SharePoint-Modus enthält die Konfigurationsdatei die Einstellungen, die für alle Dienstanwendungsinstanzen gelten, die auf diesem Computer ausgeführt werden. Die SharePoint-Konfigurationsdatenbank enthält Konfigurationseinstellungen, die für bestimmte Dienstanwendungen gelten. Die Einstellungen, die in der Konfigurationsdatenbank gespeichert und über die SharePoint-Verwaltungsseiten verwaltet werden, können bei jeder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung variieren.  
@@ -71,13 +72,13 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 |**Dsn**|Gibt die Verbindungszeichenfolge für die Verbindung zum Datenbankserver an, der die Berichtsserver-Datenbank hostet. Dieser Wert ist verschlüsselt und wird der Konfigurationsdatei beim Erstellen der Berichtsserver-Datenbank hinzugefügt. Für SharePoint werden die Informationen zur Datenbankverbindung aus der SharePoint-Konfigurationsdatenbank verwendet.|N,S|  
 |**ConnectionType**|Gibt den Anmeldeinformationstyp an, der vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet wird. Gültige Werte sind **Standard** und **Identität annehmen**. **Standard** wird angegeben, wenn der Berichtsserver zur Verwendung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder des Dienstkontos konfiguriert ist, um eine Verbindung mit der Berichtsserver-Datenbank herzustellen. **Identität annehmen** wird angegeben, wenn der Berichtsserver ein Windows-Konto verwendet, um eine Verbindung mit der Berichtsserver-Datenbank herzustellen.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Speichert die Domäne, den Benutzernamen und das Kennwort eines Domänenkontos, das von einem Berichtsserver für die Verbindung zu einer Berichtsserver-Datenbank verwendet wird. Die Werte für **LogonUser**, **LogonDomain**und **LogonCred** werden erstellt, wenn die Berichtsserververbindung für die Verwendung eines Domänenkontos konfiguriert wird. Weitere Informationen zu einer Berichtsserver-Datenbankverbindung finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|Ein Bezeichner für die Berichtsserverinstanz. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Dieser Wert gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen an. Der Standardwert ist **MSRS12***\<Instanzname>*. Ändern Sie diese Einstellung nicht. Folgendes ist ein Beispiel für den vollständigen Wert: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> Nachfolgend finden Sie eine Beispiel des SharePoint-Modus:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|Ein Bezeichner für die Berichtsserverinstanz. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Dieser Wert gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen an. Standardmäßig lautet dieser Wert **MSRS12***\<Instanzname>*. Ändern Sie diese Einstellung nicht. Folgendes ist ein Beispiel für den vollständigen Wert: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> Nachfolgend finden Sie eine Beispiel des SharePoint-Modus:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|Ein Bezeichner für die von Setup erstellte Berichtsserverinstallation. Dieser Wert ist auf eine GUID festgelegt. Ändern Sie diese Einstellung nicht.|N|  
-|**SecureConnectionLevel**|Gibt den Grad an, zu dem Webdienstaufrufe Secure Sockets Layer (SSL) verwenden müssen. Diese Einstellung wird sowohl für den Berichtsserver-Webdienst als auch für das Webportal verwendet. Dieser Wert wird festgelegt, wenn Sie eine URL für die Verwendung von HTTP oder HTTPS im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool konfigurieren. Gültige Werte sind 0 bis 3, wobei 0 die geringste Sicherheit bietet. Weitere Informationen finden Sie unter [Verwenden von sicheren Webdienstmethoden](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) und [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
+|**SecureConnectionLevel**|Gibt den Grad an, zu dem Webdienstaufrufe Secure Sockets Layer (SSL) verwenden müssen. Diese Einstellung wird sowohl für den Berichtsserver-Webdienst als auch für das Webportal verwendet. Dieser Wert wird festgelegt, wenn Sie eine URL für die Verwendung von HTTP oder HTTPS im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool konfigurieren. In SQL Server 2008 R2 wird SecureConnectionLevel zu einer ON/OFF-Option. Bei früheren Versionen als SQL Server 2008 R2 liegt der Bereich der gültigen Werte zwischen 0 und 3, wobei 0 die geringste Sicherheit darstellt. Weitere Informationen finden Sie unter [ConfigurationSetting-Methode: SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Verwenden von sicheren Webdienstmethoden](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) und [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im nativen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
 |**DisableSecureFormsAuthenticationCookie**|Der Standardwert ist False.<br /><br /> Gibt an, ob der Vorgang deaktiviert wird, durch den erzwungen wird, dass das für Formular- und benutzerdefinierte Authentifizierungen verwendete Cookie als sicher gekennzeichnet wird. Ab SQL Server 2012 werden die mit benutzerdefinierten Authentifizierungserweiterungen verwendeten Formularauthentifizierungscookies beim Senden an den Client von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] automatisch als sichere Cookies gekennzeichnet. Indem diese Eigenschaft geändert wird, können Berichtsserveradministratoren und Autoren von benutzerdefinierten Sicherheitserweiterungen wieder zum früheren Verhalten zurückkehren, bei dem der Autor der benutzerdefinierten Sicherheitserweiterung bestimmen konnte, ob das Cookie als sicheres Cookie gekennzeichnet werden soll. Es wird empfohlen, für die Formularauthentifizierung sichere Cookies zu verwenden, um die Netzwerkermittlung und Wiederholungsangriffe zu verhindern.|N|  
 |**CleanupCycleMinutes**|Gibt die Anzahl von Minuten an, nach der alte Sitzungen und abgelaufene Momentaufnahmen aus den Berichtsserver-Datenbanken entfernt werden. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 10. Wenn Sie den Wert 0 festlegen, wird der Cleanupprozess der Datenbank deaktiviert.|N,S|  
 |**MaxActiveReqForOneUser**|Gibt die maximale Anzahl von Berichten an, die gleichzeitig von einem Benutzer verarbeitet werden können. Bei Erreichen dieses Grenzwerts werden weitere Berichtsverarbeitungsanforderungen abgelehnt. Gültige Werte sind 1 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 20.<br /><br /> Beachten Sie, dass die meisten Anforderungen sehr schnell verarbeitet werden. Von daher ist es unwahrscheinlich, dass ein einzelner Benutzer mehr als 20 Verbindungen gleichzeitig geöffnet hat. Falls Benutzer mehr als 15 verarbeitungsintensive Berichte gleichzeitig öffnen, müssen Sie diesen Wert möglicherweise erhöhen.<br /><br /> Diese Einstellung wird für Berichtsserver ignoriert, die im integrierten SharePoint-Modus ausgeführt werden.|N,S|  
-|**MaxActiveReqForAnonymous**|Gibt die maximale Anzahl der anonymen Anforderungen, die gleichzeitig im Prozess sein kann. Sobald der Grenzwert erreicht ist, werden weitere verarbeitungsanforderungen abgelehnt. Gültige Werte sind 1 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 200.
+|**MaxActiveReqForAnonymous**|Gibt die maximale Anzahl von anonymen Anforderungen an, die gleichzeitig verarbeitet werden können. Bei Erreichen dieses Grenzwerts werden weitere Verarbeitungsanforderungen abgelehnt. Gültige Werte sind 1 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 200.
 |**DatabaseQueryTimeout**|Gibt die Anzahl von Sekunden an, nach der für eine Verbindung zur Berichtsserver-Datenbank ein Timeout auftritt. Dieser Wert wird an die System.Data.SQLClient.SQLCommand.CommandTimeout-Eigenschaft übergeben. Gültige Werte reichen von 0 bis 2147483647. Der Standardwert lautet 120. Ein Wert von 0 gibt eine unbegrenzte Wartezeit an und wird deshalb nicht empfohlen.|N|  
 |**AlertingCleanupCycleMinutes**|Der Standardwert ist 20.<br /><br /> Bestimmt, wie häufig die in der Warnungsdatenbank gespeicherten temporären Daten bereinigt werden.|S|  
 |**AlertingDataCleanupMinutes**|Der Standardwert ist 360.<br /><br /> Bestimmt, wie lange Sitzungsdaten, die zum Erstellen oder Bearbeiten einer Warnungsdefinition verwendet werden, in der Warnungsdatenbank beibehalten werden. Der Standardwert ist 6 Stunden.|S|  
@@ -259,7 +260,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 |**EmbeddedRenderFormats, RenderingExtension**|Gibt das Renderingformat zum Einschließen eines Berichts in den Textkörper einer E-Mail-Nachricht an. Bilder im Bericht werden anschließend in den Bericht eingebettet. Gültige Werte sind MHTML und HTML4.0.|  
 |**PrivilegedUserRenderFormats**|Gibt die Renderingformate an, die ein Benutzer für ein Berichtsabonnement auswählen kann, wenn das Abonnieren über den Task "Alle Abonnements verwalten" aktiviert ist. Wenn dieser Wert nicht festgelegt wird, stehen alle nicht ausdrücklich ausgeschlossenen Renderingformate zur Verfügung.|  
 |**ExcludedRenderFormats, RenderingExtension**|Schließt ausdrücklich Formate aus, die nicht für eine bestimmte Übermittlungserweiterung geeignet sind. Es können nicht mehrere Instanzen derselben Renderingerweiterung ausgeschlossen werden. Durch das Ausschließen mehrerer Instanzen wird ein Fehler ausgelöst, wenn der Berichtsserver die Konfigurationsdatei liest. Standardmäßig werden die folgenden Erweiterungen für die E-Mail-Übermittlung ausgeschlossen:<br /><br /> HTMLOWC<br /><br /> NULL<br /><br /> RGDI|  
-|**SendEmailToUserAlias**|Dieser Wert wird zusammen mit **DefaultHostName**verwendet.<br /><br /> Wenn **SendEmailToUserAlias** auf **True**festgelegt ist, werden Benutzer, die einzelne Abonnements definieren, automatisch als Empfänger des Berichts angegeben. Das Feld **An** ist ausgeblendet. Ist dieser Wert auf **False**festgelegt, ist das Feld **An** sichtbar. Legen Sie für diesen Wert **True** fest, wenn Sie die volle Kontrolle über die Berichtsverteilung wünschen. Folgende Werte sind gültig:<br /><br /> **TRUE**= Die E-Mail-Adresse des Benutzers, der das Abonnement erstellt, wird verwendet. Dies ist der Standardwert.<br /><br /> **FALSE**= Eine beliebige E-Mail-Adresse kann angegeben werden.|  
+|**SendEmailToUserAlias**|Dieser Wert wird zusammen mit **DefaultHostName**verwendet.<br /><br /> Wenn **SendEmailToUserAlias** auf **True**festgelegt ist, werden Benutzer, die einzelne Abonnements definieren, automatisch als Empfänger des Berichts angegeben. Das Feld **An** ist ausgeblendet. Ist dieser Wert auf **False**festgelegt, ist das Feld **An** sichtbar. Legen Sie für diesen Wert **True** fest, wenn Sie die volle Kontrolle über die Berichtsverteilung wünschen. Gültige Werte sind:<br /><br /> **TRUE**= Die E-Mail-Adresse des Benutzers, der das Abonnement erstellt, wird verwendet. Dies ist der Standardwert.<br /><br /> **FALSE**= Eine beliebige E-Mail-Adresse kann angegeben werden.|  
 |**DefaultHostName**|Dieser Wert wird zusammen mit **SendEmailToUserAlias**verwendet.<br /><br /> Gibt einen Zeichenfolgenwert für den Hostnamen an, der an den Benutzeralias angefügt werden soll, wenn **SendEmailToUserAlias** auf true festgelegt ist. Bei diesem Wert kann es sich um einen DNS-Namen (Domain Name System) oder eine IP-Adresse handeln.|  
 |**PermittedHosts**|Beschränkt die Berichtsverteilung, indem explizit die Hosts angegeben werden, die die E-Mail-Übermittlung empfangen können. Bei **PermittedHosts**wird jeder Host als **HostName** -Element angegeben. Der Wert ist eine IP-Adresse oder ein DNS-Name.<br /><br /> Nur E-Mail-Konten, die für den Host definiert sind, sind gültige Empfänger. Wenn Sie **DefaultHostName**angegeben haben, müssen Sie sicherstellen, dass dieser Host als **HostName** -Element von **PermittedHosts**angegeben wurde. Bei diesem Wert muss es sich um mindestens einen DNS-Namen oder eine IP-Adressen handeln. Standardmäßig ist dieser Wert nicht festgelegt. Wenn dieser Wert nicht festgelegt ist, gibt es keine Einschränkungen, wer per E-Mail gesendete Berichte empfangen kann.|  
   
@@ -840,14 +841,13 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Haben Sie dazu Fragen? [Wiederholen Sie den Reporting Services-forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

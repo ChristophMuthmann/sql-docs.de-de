@@ -1,28 +1,28 @@
 ---
-title: Arbeiten mit paginierten Berichten (Webportal) | Microsoft Docs
+title: Arbeiten mit paginierten Berichten (Webportal) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0f8ff65614eac486e11fc907c42737eb330c8b83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>Arbeiten mit paginierten Berichten (Webportal)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -50,7 +50,7 @@ Beim Verwalten eines vorhandenen paginierten Berichts haben Sie verschiedene Mö
 > [!NOTE]
 > Wenn im jeweiligen Ordner keine paginierten Berichte angezeigt werden, sollten Sie sich vergewissern, dass Sie paginierte Berichte anzeigen. Sie können **Ansicht** aus der Menüleiste in der oberen rechten Ecke des Webportals auswählen. Stellen Sie sicher, dass das Kontrollkästchen **Paginierte Berichte** aktiviert ist.  
   
-1.  Wählen Sie die **mit den Auslassungszeichen (...)**  für das Dataset, die Sie verwalten möchten.  
+1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset aus, das Sie verwalten möchten.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +127,12 @@ Durch Auswahl dieser Option haben Sie die Möglichkeit, keinerlei Anmeldeinforma
 Bevor Sie diese Option verwenden können, müssen Sie für den Berichtsserver das Konto für die unbeaufsichtigte Ausführung konfigurieren. Das Konto für die unbeaufsichtigte Ausführung wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn auf anderen Wegen keine Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet. Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Abonnements  
-Ein Reporting Services-Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, und zwar in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren. Weitere Informationen finden Sie unter [arbeiten mit Abonnements](working-with-subscriptions-web-portal.md).
+Ein Reporting Services-Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, und zwar in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren. Weitere Informationen finden Sie unter [Arbeiten mit Abonnements](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Abhängige Elemente  
-Verwenden Sie die Seite „Abhängige Elemente“, um eine Liste der Elemente anzuzeigen, die auf diesen Bericht verweisen. Das Symbol für den jeweiligen Elementtyp gibt an, worum es sich dabei handelt. Sie können dann auswählen, die **mit den Auslassungszeichen (...)**  weiter auf jedes Element, um diese Elemente verwalten.  
+Verwenden Sie die Seite „Abhängige Elemente“, um eine Liste der Elemente anzuzeigen, die auf diesen Bericht verweisen. Das Symbol für den jeweiligen Elementtyp gibt an, worum es sich dabei handelt. Sie können für jedes Element auf die **Auslassungspunkte (…)** klicken, um das entsprechende Element zu verwalten.  
   
 ## <a name="caching"></a>Caching  
 Zum Zwischenspeichern von Daten für einen paginierten Bericht stehen Ihnen mehrere Optionen zur Verfügung. Sie beginnen mit einer einfachen Auswahl.  
@@ -149,7 +149,7 @@ Wenn Sie **Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit ve
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-Weitere Informationen finden Sie unter [arbeiten mit Momentaufnahmen](working-with-snapshots-web-portal.md).
+Weitere Informationen finden Sie unter [Arbeiten mit Momentaufnahmen](working-with-snapshots-web-portal.md).
   
 ### <a name="cache-expiration"></a>Cacheablauf  
   
@@ -187,7 +187,7 @@ Wenn Sie eine Momentaufnahme generieren möchten, muss der Bericht unbeaufsichti
   
 Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Die im Berichtsverlauf angezeigten Momentaufnahmen unterscheiden sich nur durch das Datum und die Uhrzeit ihrer Erstellung. Es gibt keinen grafischen Hinweis, ob eine Momentaufnahme als Folge eines Zeitplans oder durch einen manuellen Vorgang generiert wurde.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
 Mithilfe der Eigenschaftenseite „Sicherheit“ können Sie die Sicherheitseinstellungen für den Zugriff auf den Bericht anzeigen und ändern. Diese Seite steht für Elemente zur Verfügung, für die Sie die Berechtigung zur Änderung der Sicherheitseinstellungen besitzen.  
   
 Der Zugriff auf Elemente wird durch Rollenzuweisungen definiert, in denen die Aufgaben angegeben sind, die eine Gruppe oder ein Benutzer ausführen kann. Eine Rollenzuweisung besteht aus einem Benutzer- oder Gruppennamen und einer oder mehreren Rollendefinitionen, die eine Sammlung von Aufgaben angeben.  
@@ -198,8 +198,7 @@ Wählen Sie diese Option aus, um die Definition der Sicherheit für das aktuelle
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Web portal (Webportal)](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Work with shared datasets (Arbeiten mit freigegebenen Datasets)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,43 +1,43 @@
 ---
-title: Die Datenerfassung im ReportViewer-Steuerelement 2016 | Microsoft Docs
+title: Datensammlung im ReportViewer-Steuerelement 2016 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-caps.latest.revision: 2
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "2"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e8b0226c27380bd2089acf8d2d6c8d7b27c7c5b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: adc70b015a9691061f3e33ecb9889b2b4789690b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integrieren von Reporting Services mithilfe von ReportViewer-Steuerelementen - Datensammlung
-Standardmäßig erfasst das ReportViewer-Steuerelement Nutzungsinformationen damit Microsoft besser nachvollziehen, wie Kunden werden mithilfe des Steuerelements. Erstellen Sie ein besseres Verständnis der wie Kunden bereitstellen und die Viewer-Steuerelement verwenden, kann künftige Entwicklungen auf Verbesserungen konzentrieren, die den größten Nutzen für Kunden bereitstellen.
+# <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: Datensammlung
+Standardmäßig erfasst das ReportViewer-Steuerelement anonyme Nutzungsinformationen, damit Microsoft besser nachvollziehen kann, wie die Steuerelemente von den Kunden verwendet werden. Durch ein besseres Verständnis darüber, wie die Kunden Bereitstellungen durchführen und das Viewer-Steuerelement verwenden, können zukünftige Entwicklungen so verbessert werden, dass für den Kunden der größtmögliche Nutzen erzielt wird.
 
 Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server 2016-Releases sowie anderer Produkte und Dienste finden Sie in diesen [Datenschutzbestimmungen von Microsoft](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx).
 
-## <a name="opting-out-of-telemetry"></a>Wenn Sie keine Telemetrie
+## <a name="opting-out-of-telemetry"></a>Deaktivieren der Telemetrie
 
-Telemetrie kann programmgesteuert über die "EnableTelemetry" deaktiviert werden. Dies kann erfolgen durch Bearbeiten der ASPX-Seite, die das Steuerelement hostet
+Die Telemetrie kann programmgesteuert über „EnableTelemetry“ deaktiviert werden. Dies kann durch Bearbeiten der ASPX-Seite erfolgen, die das Steuerelement hostet,
 
 ```
 \<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 \</rsweb:ReportViewer>
 ```
 
-Oder pragmatically, bevor das Steuerelement etwa wie in der Hostseite Page_Load Aufruf gerendert wird.
+oder bevor das Steuerelement gerendert wird, z.B. durch einen Aufruf der Page_Load-Methode der Hostingseite.
     
 ```
 protected void Page_Load(object sender, EventArgs e)
@@ -47,9 +47,8 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden das WebForms-ReportViewer-Steuerelement](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[Integrieren von Reporting Services, die mit den ReportViewer-Steuerelementen](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
-
+[Verwenden des ReportViewer-Steuerelements in WebForms](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
+[Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
 
 
 

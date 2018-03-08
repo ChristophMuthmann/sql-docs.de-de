@@ -1,10 +1,13 @@
 ---
-title: "Schritt 2: Erstellen einer beschädigten Datei | Microsoft Docs"
+title: "Schritt 2: Erstellen einer beschädigten Datei | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7760a481839ec7bd33aeeefd4b066f3d7750020d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 62350fd26606de512d982b66ff7f114addc3eb39
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>Lektion 4-2: Erstellen einer beschädigten Datei
 Um die Konfiguration und die Behandlung von Transformationsfehlern zu demonstrieren, müssen Sie eine Beispielflatfile erstellen, die beim Verarbeiten für eine Komponente einen Fehler erzeugt.  
@@ -67,9 +69,8 @@ In dieser Aufgabe erstellen Sie eine Kopie einer vorhandenen Beispielflatfile. A
     > [!NOTE]  
     > Die Zahl 27 ist die ID der Komponente. Dieser Wert wird zugewiesen, wenn Sie den Datenfluss erstellen. Der Wert in Ihrem Paket kann sich von diesem Wert unterscheiden.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 [Schritt 3: Hinzufügen von Fehlerflussumleitungen](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   
   
-

@@ -2,32 +2,33 @@
 title: "Ändern der Eigenschaften eines Miningmodells | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: 38
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 84259428c78b013577d50b6f48818bb2cd0dc554
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4319c2394df0e2edae0e037c14305dae09968fb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Ändern der Eigenschaften eines Miningmodells
-  Einige Miningmodelleigenschaften gelten für das gesamte Modell, wohingegen andere Modelleigenschaften für einzelne Spalten gelten. Beispiele von Eigenschaften, die für das gesamte Modell gelten, sind die **Drillthrough** -Eigenschaft, die angibt, ob die Falldaten für Abfragen verfügbar sein sollen, und die **Description** -Eigenschaft. Eigenschaften, die für die Spalte gültig sind, schließen **Usage** und **ModelingFlags**ein, die steuern, wie Daten in der Spalte im Modell verwendet werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Einige Miningmodelleigenschaften gelten für das gesamte Modell, wohingegen andere Modelleigenschaften für einzelne Spalten gelten. Beispiele von Eigenschaften, die für das gesamte Modell gelten, sind die **Drillthrough** -Eigenschaft, die angibt, ob die Falldaten für Abfragen verfügbar sein sollen, und die **Description** -Eigenschaft. Eigenschaften, die für die Spalte gültig sind, schließen **Usage** und **ModelingFlags**ein, die steuern, wie Daten in der Spalte im Modell verwendet werden.  
   
  Die folgenden Modelleigenschaften besitzen erweiterte Editor-Programme, mit denen Ausdrücke erstellt oder komplexe Modelleigenschaften konfiguriert werden können. Funktionen der folgenden Eigenschaften:  
   
@@ -57,7 +58,6 @@ ms.lasthandoff: 09/01/2017
      Der neue Wert wird wirksam, wenn Sie ein anderes Element im Designer auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

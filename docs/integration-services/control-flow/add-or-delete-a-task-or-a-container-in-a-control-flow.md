@@ -1,10 +1,13 @@
 ---
-title: "Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung | Microsoft Docs"
+title: "Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 648e58e6b8f86648d1e3bf1d80ff02916c4276be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
   Wenn Sie im Ablaufsteuerungs-Designer arbeiten, werden in der Toolbox im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die Tasks aufgeführt, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Erstellen einer Ablaufsteuerung in einem Paket bereitstellt. Weitere Informationen über die Toolbox finden Sie unter [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -36,7 +38,7 @@ ms.lasthandoff: 09/26/2017
   
  Im Folgenden wird beschrieben, wie ein Task oder Container zur Ablaufsteuerung eines Pakets hinzugefügt oder in dieser gelöscht wird.  
   
-## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Fügen Sie einen Task oder Container zu einer ablaufsteuerung  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Hinzufügen eines Tasks oder Containers zu einer Ablaufsteuerung  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>Löschen Sie einen Task oder Container aus einer ablaufsteuerung  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>Löschen eines Tasks oder Containers aus einer Ablaufsteuerung  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -66,12 +68,12 @@ ms.lasthandoff: 09/26/2017
   
 3.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
 
-## <a name="set-the-properties-of-a-task-or-container"></a>Legen Sie die Eigenschaften eines Tasks oder container
+## <a name="set-the-properties-of-a-task-or-container"></a>Festlegen der Eigenschaften eines Tasks oder Containers
 Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eigenschaften** festlegen. Eine Ausnahme sind Eigenschaften von Taskauflistungen und Eigenschaften, die zu komplex sind, als dass sie im Fenster **Eigenschaften** festgelegt werden könnten. Beispielsweise können Sie nicht den Enumerator konfigurieren, der vom Foreach-Schleifencontainer im Fenster **Eigenschaften** verwendet wird. Sie müssen einen Task- oder Container-Editor verwenden, um diese komplexen Eigenschaften festzulegen. Die meisten Task- und Container-Editoren weisen mehrere Knoten auf, und jeder Knoten enthält zugehörige Eigenschaften. Der Name des Knotens weist auf die Art der Eigenschaften hin, die der Knoten enthält.  
   
  Im Folgenden wird beschrieben, wie die Eigenschaften eines Tasks oder Containers entweder mit dem Fenster **Eigenschaften** oder dem entsprechenden Task- oder Container-Editor festgelegt werden.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Legen Sie die Eigenschaften eines Tasks oder Container mit dem Eigenschaftenfenster  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Festlegen der Eigenschaften eines Tasks oder Containers mithilfe des Eigenschaftenfensters  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -90,7 +92,7 @@ Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eige
   
 7.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Legen Sie die Eigenschaften eines Tasks oder Container in einem Task oder Container-editor  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Festlegen der Eigenschaften eines Tasks oder Containers mithilfe eines Task- oder Container-Editors  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -115,10 +117,9 @@ Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eige
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   
   
-

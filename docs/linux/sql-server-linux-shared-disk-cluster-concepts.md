@@ -3,22 +3,27 @@ title: Failoverclusterinstanzen - SQLServer on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Failoverclusterinstanzen - SQLServer on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieser Artikel beschreibt die Konzepte im Zusammenhang mit SQL Server Failoverclusterinstanzen (FCI) unter Linux. 
 
@@ -33,17 +38,17 @@ Zum Erstellen einer SQL Server-FCI für Linux finden Sie unter [Konfigurieren vo
 
 * In SLES, basiert die clustering-Ebene unter SUSE Linux Enterprise [hohe Verfügbarkeit Erweiterung (HAE)](https://www.suse.com/products/highavailability).
 
-    Weitere Informationen zur Clusterkonfiguration, Ressourcenoptionen-Agent, Management, best Practices und Empfehlungen, finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+    Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 Das Add-on RHEL mit hoher Verfügbarkeit und die SUSE HAE basieren auf [Schrittmacher](http://clusterlabs.org/).
 
-Speicher wird als im nachfolgenden Diagramm veranschaulicht zwei Servern angezeigt. Komponenten - Corosync "und" Schrittmacher - Kommunikation und ressourcenverwaltung koordiniert werden. Einer der Server hat die aktive Verbindung mit der Speicherressourcen und SQL Server. Wenn Schrittmacher einen Fehler erkennt verwalten die Clusterkomponenten, die Ressourcen auf den anderen Knoten verschoben.  
+Wie das folgende Diagramm zeigt, wird der Speicher auf zwei Servern angezeigt. Komponenten - Corosync "und" Schrittmacher - Kommunikation und ressourcenverwaltung koordiniert werden. Einer der Server hat die aktive Verbindung mit der Speicherressourcen und SQL Server. Wenn Schrittmacher einen Fehler erkennt verwalten die Clusterkomponenten, die Ressourcen auf den anderen Knoten verschoben.  
 
 ![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Aus SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Es wird erwartet, @@servername und sys.servers des Knotennamens zurückgegeben, während der Cluster Dmvs Sys. dm_os_cluster_nodes und dm_os_cluster_properties keine Datensätze werden. Zum Verwenden einer Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist, und die IP-Adresse verwenden, müssen sie in ihrer DNS-Server die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie nachstehend beschrieben) mit den ausgewählten Servernamen registrieren.
+> SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Aus SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Es wird erwartet, @@servername und sys.servers des Knotennamens zurückgegeben, während der Cluster Dmvs Sys. dm_os_cluster_nodes und dm_os_cluster_properties keine Datensätze werden. Zum Verwenden einer Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist, und die IP-Adresse verwenden, müssen sie in ihrer DNS-Server die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert wird) mit dem ausgewählten Server registrieren.
 
 ## <a name="number-of-instances-and-nodes"></a>Anzahl der Instanzen und Knoten
 
@@ -54,7 +59,7 @@ Einen Schrittmacher Cluster kann nur bis zu 16 Knoten haben Wenn Corosync beteil
 In einer SQL Server-FCI ist SQL Server-Instanz auf einem "Node" oder anderen aktiv.
 
 ## <a name="ip-address-and-name"></a>IP-Adresse und den Namen
-In einem Cluster mit Linux Schrittmacher benötigen jede SQL Server-FCI eigene eindeutige IP-Adresse und den Namen. Wenn die FCI-Konfiguration über mehrere Subnetze erstreckt, wird eine IP-Adresse pro Subnetz erforderlich. Der eindeutige Name und IP-Adressen werden verwendet, um der FCI zuzugreifen, sodass Anwendungen und Endbenutzern nicht wissen, welche zugrunde liegenden Schrittmacher Cluster-Server müssen.
+In einem Cluster mit Linux Schrittmacher benötigt jede SQL Server-FCI eigene eindeutige IP-Adresse und den Namen. Wenn die FCI-Konfiguration über mehrere Subnetze erstreckt, wird eine IP-Adresse pro Subnetz erforderlich. Der eindeutige Name und IP-Adressen werden verwendet, um der FCI zuzugreifen, sodass Anwendungen und Endbenutzern nicht wissen, welche zugrunde liegenden Schrittmacher Cluster-Server müssen.
 
 Der Name der FCI in DNS muss identisch mit den Namen der FCI-Ressource, die im Cluster Schrittmacher erstellt wird.
 Der Name und die IP-Adresse müssen in DNS registriert werden.
@@ -87,4 +92,3 @@ In den folgenden Themen wird erläutert, wie so konfigurieren Sie unterstützten
 - [Konfigurieren der Failover-Clusterinstanz - iSCSI - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [Konfigurieren Sie Failoverclusterinstanz – NFS - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [Konfigurieren der Failover-Clusterinstanz - SMB - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
-

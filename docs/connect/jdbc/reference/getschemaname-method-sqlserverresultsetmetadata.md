@@ -3,29 +3,28 @@ title: GetSchemaName-Methode (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSetMetaData.getSchemaName
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSetMetaData.getSchemaName
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 89291e2c92656dad0a45e2c10521582dcc6b3f51
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22181dbd0d5132e9c7a86ea0e0db76346d20022f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getschemaname-method-sqlserverresultsetmetadata"></a>getSchemaName-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,4 +58,3 @@ public java.lang.String getSchemaName(int column)
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   
-

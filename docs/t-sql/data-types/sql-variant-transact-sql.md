@@ -3,8 +3,11 @@ title: Sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - sql_variant data type
 - storage [SQL Server], sql_variant
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 014cf6a2859bc60b4366418363681b1cd53dc5c6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 01a11cca67bbf24afa7d74d5e776a969d62920dc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Ein Datentyp, der Werte verschiedener von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützter Datentypen speichert.
   
@@ -157,4 +159,3 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 [SQL_VARIANT_PROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
   
   
-

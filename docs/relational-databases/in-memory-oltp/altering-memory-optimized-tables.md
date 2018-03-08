@@ -1,30 +1,31 @@
 ---
 title: "Ändern von speicheroptimierten Tabellen | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 89709d63c40233091fe01688e655ff5b53145711
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
-ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Änderungen des Schemas und des Indizes in speicheroptimierten Tabellen können mithilfe der Anweisung ALTER TABLE durchgeführt werden. In SQL Server 2016 und Azure SQL-Datenbank sind ALTER TABLE-Vorgänge mit speicheroptimierte Tabellen OFFLINE, d.h., dass die Tabelle während des Vorgangs nicht abgefragt werden kann. Die Datenbankanwendung kann weiterhin ausgeführt werden, und jeder Vorgang, der auf die Tabellen zugreift, wird blockiert bis der Änderungsprozess abgeschlossen ist. Es ist mögliche, mehrere ADD-, DROP- und ALTER-Vorgänge in einer einzigen ALTER TABLE-Anweisung zu kombinieren.
   
@@ -108,7 +109,7 @@ Die Singlethreadvorgänge schreiben in diesem Fall den gesamten Inhalt der geän
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ändert sich die Bucketanzahl eines vorhandenen Hashindexes. Dadurch wird der Hashindex mit der neuen Bucketanzahl neu erstellt, während andere Eigenschaften des Hashindexes unverändert bleiben.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem   
        ALTER INDEX imPK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID  
               REBUILD WITH (BUCKET_COUNT=67108864);  
@@ -117,7 +118,7 @@ GO
   
  Im folgenden Beispiel wird eine Spalte mit der Einschränkung NOT NULL und einer DEFAULT-Definition hinzugefügt, und WITH VALUES wird verwendet, um Werte für jede vorhandene Zeile der Tabelle bereitzustellen. Ohne WITH VALUES hat jede Zeile in der neuen Spalte den Wert NULL.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD Comment NVARCHAR(100) NOT NULL DEFAULT N'' WITH VALUES;  
 GO
@@ -125,7 +126,7 @@ GO
   
  Im folgenden Beispiel wird einer vorhandenen Spalte eine Primärschlüsseleinschränkung hinzugefügt.  
   
-```tsql
+```sql
 CREATE TABLE dbo.UserSession (   
    SessionId int not null,   
    UserId int not null,   
@@ -143,7 +144,7 @@ GO
   
  Im folgenden Beispiel wird ein Index entfernt.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        DROP INDEX ix_ModifiedDate;  
 GO
@@ -151,7 +152,7 @@ GO
   
  Im folgenden Beispiel wird ein Index hinzugefügt.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD INDEX ix_ModifiedDate (ModifiedDate);  
 GO  
@@ -159,7 +160,7 @@ GO
   
  Im folgenden Beispiel werden mehrere Spalten hinzugefügt, mit einem Index und Einschränkungen.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD    CustomerID int NOT NULL DEFAULT -1 WITH VALUES,  
               ShipMethodID int NOT NULL DEFAULT -1 WITH VALUES,  
@@ -171,9 +172,8 @@ GO
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
 [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
-
 

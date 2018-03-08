@@ -2,30 +2,31 @@
 title: Verwenden von R-Funktionen mit SQL Server-Daten (R in SQL-Schnellstart) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 8
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 93fb7d90ab6d1f387fe50dd63a29eda7a2ecc764
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db97b781e0206144e94a9ca22030c47bc2f7a7b8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Verwenden von R-Funktionen mit SQL Server-Daten (R in SQL-Schnellstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Da Sie nun mit grundlegenden Vorgängen vertraut sind, ist es an der Zeit, R richtig zu nutzen. Zum Beispiel sind viele erweiterte statistische Funktionen mit T-SQL möglicherweise schwierig zu implementieren, erfordern jedoch nur eine einzige Zeile R-Code.  Mit R Services ist es einfach, Skripts für R-Hilfsprogramme in eine gespeicherte Prozedur einzubetten.
 
@@ -115,4 +116,3 @@ Ein Beispiel finden Sie im Tutorial [Erstellen von Datenfunktionen](../tutorials
 Als Nächstes erstellen Sie mithilfe von R in SQL Server ein Vorhersagemodell.
 
 [Erstellen eines Vorhersagemodells](../tutorials/rtsql-create-a-predictive-model-r.md)
-

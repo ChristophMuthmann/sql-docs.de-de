@@ -3,7 +3,7 @@ title: ConnectComplete und Disconnect-Ereignisse (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7ca521c0e850dd7fdacee6cd594b5c9f23a289d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ebd4363f166a67a6e48fee41c2585b68de93bc98
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete und Disconnect-Ereignisse (ADO)
 Die **ConnectComplete** Ereignis wird aufgerufen, nachdem eine Verbindung gestartet wird. Die **trennen** Ereignis wird aufgerufen, nachdem eine Verbindung beendet.  
@@ -61,5 +60,4 @@ Disconnect adStatus, pConnection
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Ereignisse Modell (VC++-Beispiel)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)

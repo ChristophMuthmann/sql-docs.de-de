@@ -3,10 +3,12 @@ title: "Abstimmen der Änderungen von mehreren Benutzern (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 356f09be20f11e2ec701e4e98d92cb1fbbd12b63
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Abstimmen der Änderungen von mehreren Benutzern (Visual Database Tools)
-In einer Mehrbenutzerumgebung können mehrere Benutzer gleichzeitig Änderungen an ein und demselben Objekt vornehmen. Diese Situation kann auftreten, wenn Sie an der Struktur des Objekts im Tabellen-Designer oder im Datenbankdiagramm-Designer arbeiten, oder bei Ergebniswerten, die im Ergebnisbereich des Abfrage- und Sicht-Designers zurückgegeben werden. Dies kann Konflikte verursachen, die aufgelöst werden sollten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In einer Mehrbenutzerumgebung können mehrere Benutzer gleichzeitig Änderungen an ein und demselben Objekt vornehmen. Diese Situation kann auftreten, wenn Sie an der Struktur des Objekts im Tabellen-Designer oder im Datenbankdiagramm-Designer arbeiten, oder bei Ergebniswerten, die im Ergebnisbereich des Abfrage- und Sicht-Designers zurückgegeben werden. Dies kann Konflikte verursachen, die aufgelöst werden sollten.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Konflikte im Tabellen-Designer oder im Datenbankdiagramm-Designer  
 Beispielsweise kann ein Benutzer eine Tabelle löschen oder umbenennen, während Sie gerade an derselben Tabelle oder einer verknüpften Tabelle im Tabellen-Designer arbeiten. Wenn Sie versuchen, die Tabelle zu speichern, werden Sie vom [Es wurden Änderungen in der Datenbank festgestellt (Dialogfeld) &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) darüber benachrichtigt, dass die Datenbank nach dem Öffnen der Tabelle aktualisiert wurde.  
@@ -35,7 +37,7 @@ In diesem Dialogfeld finden Sie auch eine Liste der Datenbankobjekte, die durch 
   
 -   Wählen Sie **Ja** aus, um die Tabelle zu speichern und die Datenbank mit allen Änderungen in der Liste zu aktualisieren.  
   
-    Diese Aktion kann sich auch auf Tabellen auswirken, die dieselben Datenbankobjekte nutzen. Angenommen, Sie ändern in der Tabelle `au`die Spalte`id` _ `titleauthors` , und ein anderer Benutzer arbeitet an der Tabelle `authors` , die über die Spalte `titleauthors` mit der Tabelle `au`\_`id` verknüpft ist. Wenn Sie Ihre Tabelle speichern, wirkt sich dies auf die Tabelle des anderen Benutzers aus. Ein ähnlicher Fall liegt vor, wenn ein anderer Benutzer in der Tabelle `qty` eine CHECK-Einschränkung für die Spalte `sales` definiert hat. Wenn Sie die Spalte `qty` löschen und die Tabelle `sales` speichern, wirkt sich dies auf die CHECK-Einschränkung des anderen Benutzers aus.  
+    Diese Aktion kann sich auch auf Tabellen auswirken, die dieselben Datenbankobjekte nutzen. Angenommen, Sie ändern beispielsweise in der Tabelle`titleauthors` die Spalte `au_id` während ein anderer Benutzer an der Tabelle `authors` arbeitet, die über die Spalte `au_id` mit der Tabelle `titleauthors` verknüpft ist. Wenn Sie Ihre Tabelle speichern, wirkt sich dies auf die Tabelle des anderen Benutzers aus. Ein ähnlicher Fall liegt vor, wenn ein anderer Benutzer in der Tabelle `qty` eine CHECK-Einschränkung für die Spalte `sales` definiert hat. Wenn Sie die Spalte `qty` löschen und die Tabelle `sales` speichern, wirkt sich dies auf die CHECK-Einschränkung des anderen Benutzers aus.  
   
 -   Wählen Sie **Nein** aus, um den Speichervorgang abzubrechen.  
   
@@ -62,7 +64,6 @@ Beispielsweise führen Sie und ein Kollege jeweils eine Abfrage aus, um die gesa
   
     In diesem Fall können Sie Ihre Änderungen nicht in die Datenbank übernehmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Es wurden Änderungen in der Datenbank festgestellt (Dialogfeld) &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

@@ -2,9 +2,12 @@
 title: Konfigurieren von IntelliSense (SQL Server Management Studio) | Microsoft Dokumentation
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 11849de0164d10de523450897b7a106078b8f2be
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a459fbc5ba1c1891d3583821b64d634a44fab859
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Konfigurieren von IntelliSense (SQL Server Management Studio)
-  Die meisten [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen sind standardmäßig aktiviert. Sie können eine IntelliSense-Option deaktivieren und stattdessen über einen Menübefehl oder eine Tastenkombination aufrufen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die meisten [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen sind standardmäßig aktiviert. Sie können eine IntelliSense-Option deaktivieren und stattdessen über einen Menübefehl oder eine Tastenkombination aufrufen.  
   
 > [!IMPORTANT]  
 >  Einige Änderungen werden in Ihrer aktuellen Editor-Sitzung nicht wirksam.  Sie müssen eine neue Transact-SQL-Editor-Sitzung öffnen, um die Änderung anzeigen zu können.
@@ -55,4 +57,3 @@ ms.lasthandoff: 06/22/2017
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
   
-

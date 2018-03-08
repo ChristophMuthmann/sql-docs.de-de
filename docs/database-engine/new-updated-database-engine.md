@@ -1,26 +1,20 @@
 ---
 title: Aktualisierte Dokumentation zu Datenbankmodulen | Microsoft-Dokumentation
 description: "Anzeigen von Codeausschnitten aktualisierter Inhalte in der zuletzt geänderten Dokumentation für Datenbankmodule."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: barbkess
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: database-engine
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 09/27/2017
 ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: database-engine
+ms.date: 02/03/2018
+ms.openlocfilehash: d01d9fa13342709a74d98033d093d9856ab5d680
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: dc4a5516662b200b4224facbb4c9cf4588c1b42e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Neue und kürzlich aktualisierte Dokumentation zu Datenbankmodulen
 
@@ -34,7 +28,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **11.9.2017** &nbsp; bis &nbsp; **27.9.2017**
+- *Datumsbereich des Updates:* &nbsp; **3.12.2017** &nbsp; bis &nbsp; **3.2.2018**
 - *Themenbereich:* &nbsp; **Datenbankmodul**.
 
 
@@ -47,10 +41,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
-2. [Installieren von SQL Server von der Eingabeaufforderung](install-windows/install-sql-server-from-the-command-prompt.md)
-3. [Installieren von SQL Server mithilfe einer Konfigurationsdatei](install-windows/install-sql-server-using-a-configuration-file.md)
-4. [Business continuity and database recovery - SQL Server (Geschäftskontinuität und Datenbankwiederherstellung mit SQL Server)](sql-server-business-continuity-dr.md)
+***Dieses Mal sind keine neuen Artikel aufgeführt.***
 
 
 
@@ -76,7 +67,7 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Installieren von Updates an der Eingabeaufforderung](#TitleNum_1)
+1. [Durchführen eines Upgrades von Always On-Verfügbarkeitsgruppen-Replikatinstanzen](#TitleNum_1)
 
 
 
@@ -87,80 +78,88 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-installing-updates-from-the-command-promptinstall-windowsinstalling-updates-from-the-command-promptmd"></a>1. &nbsp; [Installieren von Updates an der Eingabeaufforderung](install-windows/installing-updates-from-the-command-prompt.md)
+### <a name="1-nbsp-upgrading-always-on-availability-group-replica-instancesavailability-groupswindowsupgrading-always-on-availability-group-replica-instancesmd"></a>1. &nbsp; [Durchführen eines Upgrades von Always On-Verfügbarkeitsgruppen-Replikatinstanzen](availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)
 
-*Aktualisiert: 12.9.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Aktualisiert: 29.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 48.  ms.author= "mikeray".  -->
+<!-- Source markdown line 174.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
+<!-- git diff --ignore-all-space --unified=0 20ca282e8965889a7a530fb67e125cc876410e41 9f27d0f9a74333b291c1cdc1529edc13960fae29  (PR=4741  ,  Filename=upgrading-always-on-availability-group-replica-instances.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
 
 
 
-- Aktualisieren Sie alle Instanzen von ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], alle freigegebenen Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools auf Ihrem Computer:
-
-```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
-```
-
-- Entfernen Sie ein Update für eine einfache Instanz von ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], alle freigegebenen Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools:
-
-```
-    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
-```
-
-- Entfernen Sie ein Update für ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], nur für freigegebene Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools:
-
-```
-    <package_name>.exe /qs /Action=RemovePatch
-```
+**Spezielle Schritte für Change Data Capture oder Replikation**
 
 
+Abhängig vom angewendeten Update können zusätzliche Schritte für Replikatdatenbanken von Verfügbarkeitsgruppen erforderlich sein, die für Change Data Capture oder die Replikation aktiviert sind. Lesen Sie die Anmerkungen zu dieser Version des Updates, um zu bestimmen, ob folgende Schritte erforderlich sind:
+
+1. Upgraden Sie jedes sekundäre Replikat.
+
+1. Führen Sie ein Failover der Verfügbarkeitsgruppe auf eine upgegradete Instanz durch, nachdem alle sekundären Replikate upgegradet wurden.
+
+1. Führen Sie folgenden Transact-SQL-Befehl auf der Instanz aus, die das primäre Replikat hostet:
+
+   ```
+   EXECUTE [master].[sys].[sp_vupgrade_replication];
+   ```
+
+   >[!NOTE]
+   >Die Ausführung dieses Befehls kann einige Minuten in Anspruch nehmen.
+
+1. Führen Sie ein Upgrade für die Instanz aus, bei der es sich um das ursprüngliche primäre Replikat handelt.
+
+Weitere Informationen finden Sie unter [CDC functionality may break after upgrading to the latest CU (Die CDC-Funktion funktioniert nach dem Upgrade auf das aktuelle kumulative Update nicht mehr)](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 
 
 
 
-## <a name="similar-articles"></a>Ähnliche Artikel
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
--->
+
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>Ähnliche Artikel zu neuen oder aktualisierten Artikeln
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [New + Updated (0+1): **Advanced Analytics for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Advanced Analytics für SQL)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (4+1): **Database Engine for SQL** docs (Neu + Aktualisiert (4+1): Dokumentation zum Datenbankmodul für SQL)](../database-engine/new-updated-database-engine.md)
-- [New + Updated (17+0):  **Integration Services for SQL** docs (Neu + Aktualisiert (17+0):Dokumentation zu Integration Services für SQL)](../integration-services/new-updated-integration-services.md)
-- [New + Updated (3+0): **Linux for SQL** docs (Neu + Aktualisiert (3+0): Dokumentation zu Linux für SQL)](../linux/new-updated-linux.md)
-- [New + Updated (1+1): **Relational Databases for SQL** docs (Neu + Aktualisiert (1+1): Dokumentation zu relationalen Datenbanken für SQL)](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Reporting Services für SQL](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS) Dokumentation](../ssms/new-updated-ssms.md)
-- [New + Updated (0+1): **Transact-SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Transact-SQL](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die *über* neue oder kürzlich aktualisierte Artikel verfügen
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Connect to SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zum Herstellen einer Verbindung mit SQL](../connect/new-updated-connect.md)
-- [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
-- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **Microsoft SQL Server** docs (Neu + Aktualisiert: Dokumentation zu Microsoft SQL Server)](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Tools for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Tools für SQL)](../tools/new-updated-tools.md)
-- [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
+- [Neu und aktualisiert (1+3):&nbsp;Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Analytics Platform System für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zur **Datenbank-Engine für SQL**](../database-engine/new-updated-database-engine.md)
+- [Neu und aktualisiert (12+1): Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
+- [Neu und aktualisiert (6+2):&nbsp;Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
+- [Neu und aktualisiert (15+0): Dokumente zu **PowerShell für SQL**](../powershell/new-updated-powershell.md)
+- [Neu und aktualisiert (2+9):&nbsp;Dokumente zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Neu und aktualisiert (1+0):&nbsp;Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zu **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Neu und aktualisiert (1+2):&nbsp;Dokumente zu **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Neu und aktualisiert (0+2):&nbsp;Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Themenbereiche, die *nicht* über neue oder kürzlich aktualisierte Artikel verfügen
+
+
+- [Neu und aktualisiert (0+0): Dokumente zum **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **ActiveX Data Objects (ADO) für SQL**](../ado/new-updated-ado.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Analysis Services für SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Data Quality Services für SQL**](../data-quality-services/new-updated-data-quality-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Data Mining-Erweiterungen für SQL**](../dmx/new-updated-dmx.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Master Data Services (MDS) für SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **mehrdimensionalen Ausdrücken (MDX) für SQL**](../mdx/new-updated-mdx.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **ODBC (Open Database Connectivity) für SQL**](../odbc/new-updated-odbc.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Beispielen für SQL**](../sample/new-updated-sample.md)
+- [Neu und aktualisiert (0+0): Dokumente zum **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Tools für SQL**](../tools/new-updated-tools.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **XQuery für SQL**](../xquery/new-updated-xquery.md)
 
 

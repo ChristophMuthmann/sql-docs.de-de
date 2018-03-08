@@ -2,40 +2,35 @@
 title: Verfolgt-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Traces Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Traces Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Traces
-helpviewer_keywords:
-- Traces element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Traces
+helpviewer_keywords: Traces element
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 62ab54a42de332507921156b5da5955f5be4bbc9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2d74291c2e0aa239bd57df56dd6f8e827783a9c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="traces-element-assl"></a>Traces-Element (ASSL)
-  Enthält die Auflistung der [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) -Elemente, die zu einem [Server](../../../analysis-services/scripting/objects/server-element-assl.md) -Element gehören.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md) Elemente, die zu einem [Server](../../../analysis-services/scripting/objects/server-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,11 +47,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

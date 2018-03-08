@@ -1,12 +1,14 @@
 ---
-title: Codieren eines benutzerdefinierten Verbindungs-Managers | Microsoft Docs
+title: Codieren eines benutzerdefinierten Verbindungs-Managers | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -14,22 +16,21 @@ applies_to:
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe3f9823cfb1b84c0ea3d80a5f2917632b2829f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codieren eines benutzerdefinierten Verbindungs-Managers
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  
   
- Beispiele für benutzerdefinierte Verbindungs-Manager, finden Sie unter [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Die in diesem Thema dargestellten Codebeispiele stammen aus dem SQL Server Custom Connection Manager-Beispiel.  
+ Beispiele für benutzerdefinierte Verbindungs-Manager finden Sie unter [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Die in diesem Thema dargestellten Codebeispiele stammen aus dem SQL Server Custom Connection Manager-Beispiel.  
   
 > [!NOTE]  
 >  Die meisten Tasks, Quellen und Ziele, die in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] integriert wurden, können nur mit bestimmten Typen integrierter Verbindungs-Manager verwendet werden. Daher können diese Beispiele nicht mit den integrierten Tasks und Komponenten getestet werden.  
@@ -193,13 +194,13 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### <a name="persisting-the-connection-manager"></a>Beibehalten des Verbindungs-Managers  
- In der Regel müssen Sie keine benutzerdefinierte Persistenz für einen Verbindungs-Manager implementieren. Die benutzerdefinierte Persistenz ist nur erforderlich, wenn die Eigenschaften eines Objekts komplexe Datentypen verwenden. Weitere Informationen finden Sie unter [Entwickeln von benutzerdefinierten Objekten für Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ In der Regel müssen Sie keine benutzerdefinierte Persistenz für einen Verbindungs-Manager implementieren. Die benutzerdefinierte Persistenz ist nur erforderlich, wenn die Eigenschaften eines Objekts komplexe Datentypen verwenden. Weitere Informationen finden Sie unter [Developing Custom Objects for Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) (Entwickeln von benutzerdefinierten Objekten für Integration Services).  
   
 ## <a name="working-with-the-external-data-source"></a>Arbeiten mit der externen Datenquelle  
  Die Methoden, die eine Verbindung zu einer externen Datenquelle unterstützen, sind die wichtigsten Methoden eines benutzerdefinierten Verbindungs-Managers. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>-Methode und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>-Methode werden zu unterschiedlichen Zeitpunkten während des Entwurfs und der Ausführung aufgerufen.  
   
 ### <a name="acquiring-the-connection"></a>Abrufen der Verbindung  
- Sie müssen entscheiden, welcher Objekttyp für die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>-Methode geeignet ist, um vom benutzerdefinierten Verbindungs-Manager zurückgegeben zu werden. Ein Dateiverbindungs-Manager gibt beispielsweise nur eine Zeichenfolge zurück, die einen Pfad und einen Dateinamen enthält, ein ADO.NET-Verbindungs-Manager gibt hingegen ein verwaltetes Verbindungsobjekt, das bereits offen ist, zurück. Ein OLE DB-Verbindungs-Manager gibt ein systemeigenes OLE DB-Verbindungsobjekt zurück, das nicht vom verwalteten Code verwendet werden kann. Der benutzerdefinierte SQL Server Verbindungs-Manager, auf dem die Codeausschnitte in diesem Thema werden erstellt, gibt ein offenes **SqlConnection** Objekt.  
+ Sie müssen entscheiden, welcher Objekttyp für die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>-Methode geeignet ist, um vom benutzerdefinierten Verbindungs-Manager zurückgegeben zu werden. Ein Dateiverbindungs-Manager gibt beispielsweise nur eine Zeichenfolge zurück, die einen Pfad und einen Dateinamen enthält, ein ADO.NET-Verbindungs-Manager gibt hingegen ein verwaltetes Verbindungsobjekt, das bereits offen ist, zurück. Ein OLE DB-Verbindungs-Manager gibt ein systemeigenes OLE DB-Verbindungsobjekt zurück, das nicht vom verwalteten Code verwendet werden kann. Der benutzerdefinerte SQL Server-Verbindungs-Manager, dem die Codeabschnitte in diesem Themen entnommen wurden, gibt ein offenes **SqlConnection**-Objekt zurück.  
   
  Benutzer Ihres Verbindungs-Managers müssen vorab wissen, welche Objekttypen verwendet werden, sodass sie das zurückgegebene Objekt in den entsprechenden Typ umwandeln können und auf dessen Methoden und Eigenschaften zugreifen können.  
   
@@ -265,9 +266,8 @@ public override void ReleaseConnection(object connection)
 }  
 ```  
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines benutzerdefinierten Verbindungs-Managers](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

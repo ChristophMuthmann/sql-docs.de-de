@@ -2,25 +2,26 @@
 title: Python | Microsoft Docs
 ms.custom: 
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ff0022d673cfc368e988e009452d23a989b8eb7f
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9c1d945831fc77bd003ac17e94d4969164bbe04d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python"></a>Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Abschnitt enthält Links zu API-Referenz zu Machine Learning Services in SQL Server-2017 bestimmten.
 
@@ -36,6 +37,5 @@ Dieser Abschnitt enthält Links zu API-Referenz zu Machine Learning Services in 
 + [Ausführen von Python von T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Veröffentlichen und Nutzen von Python-Modelle](publish-consume-python-code.md)
 + [Verwenden Sie zum Erstellen eines Modells revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
-
 
 

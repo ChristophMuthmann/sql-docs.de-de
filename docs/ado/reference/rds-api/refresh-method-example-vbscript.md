@@ -1,12 +1,14 @@
 ---
 title: Aktualisieren Sie die Methodenbeispiel (VBScript) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADO], VBScript example
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: db4a823a0b16ba4a02112d0ff9ca8df4cf4958b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1aae3098a51ed56dcdc6af1a6c4faebe997f970
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-example-vbscript"></a>Aktualisieren Sie die Methodenbeispiel (VBScript)
 > [!IMPORTANT]
@@ -185,6 +186,5 @@ End Sub
  [FetchOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-
 
 

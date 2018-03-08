@@ -1,10 +1,13 @@
 ---
-title: Datenquellen | Microsoft Docs
+title: Datenquellen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: eccbd3683393dfd27665fe827af74100cef415db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-sources"></a>Datenquellen
+# <a name="data-sources"></a>Projektmappen-Explorer
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] umfasst ein Entwurfszeitobjekt, das Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen verwenden können: die Datenquelle.  
   
  Ein Datenquellenobjekt ist ein Verweis auf eine Verbindung und enthält zumindest eine Verbindungszeichenfolge und einen Datenquellenbezeichner. Außerdem können zusätzliche Metadaten enthalten sein, wie z. B. eine Beschreibung, ein Name, ein Benutzername und ein Kennwort.  
@@ -49,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  Es gibt keine Abhängigkeit zwischen einer Datenquelle und den Verbindungs-Managern, die darauf verweisen. Falls eine Datenquelle nicht mehr zum Projekt gehört, sind die Pakete weiterhin gültig, weil Informationen zur Datenquelle, wie z. B. der Verbindungstyp und die Verbindungszeichenfolge, in der Paketdefinition enthalten sind.  
   
   
-

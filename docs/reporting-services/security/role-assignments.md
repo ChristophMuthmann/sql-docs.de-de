@@ -1,13 +1,14 @@
 ---
-title: Rollenzuweisungen | Microsoft Docs
+title: Rollenzuweisungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - groups [Reporting Services]
 - security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a54506ab1a105ec9b6d949dafca1499312250923
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-assignments"></a>Rollenzuweisungen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bestimmen *Rollenzuweisungen* den Zugriff auf gespeicherte Elemente und auf den Berichtsserver selbst. Eine Rollenzuweisung besteht aus den folgenden Teilen:  
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
  Das folgende Diagramm veranschaulicht eine Rollenzuweisung, die einer Gruppe und einem bestimmten Benutzer die **Verleger** -Rolle für den Ordner B zuordnet.  
   
- ![Rollenzuweisungsdiagramm](../../reporting-services/security/media/report-securityarch.gif "rollenzuweisungsdiagramm")  
+ ![Rollenzuweisungsdiagramm](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
 Rollenzuweisungsdiagramm  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Rollenzuweisungen auf System- und Elementebene  
@@ -66,12 +66,11 @@ Rollenzuweisungsdiagramm
   
  Weitere Informationen zu den vordefinierten Rollenzuweisungen, die Standardsicherheit bereitstellen, finden Sie unter [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie, löschen Sie oder ändern Sie einer Rolle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40; Berichts-Manager &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Ändern Sie oder löschen Sie einer Rollenzuweisung &#40; Berichts-Manager &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40; Reporting Services in SharePoint integrierten Modus &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

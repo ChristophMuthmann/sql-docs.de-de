@@ -2,42 +2,41 @@
 title: Datamining-Erweiterungen (DMX)-Funktion Referenz | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - functions [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b5aa5b45c71d32f711e3facecd3846d32b70a769
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1871de9ebb81ef5bd88063a3a26067e86b32ad3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Data Mining-Erweiterungen (DMX) - Funktionsreferenz
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden mehrere Funktionen in der Sprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) unterstützt. Die Funktionen erweitern die Ergebnisse einer Vorhersageabfrage, sodass diese Informationen enthalten, die die Vorhersage näher beschreiben. Darüber hinaus steuern die Funktionen, wie die Ergebnisse der Vorhersage zurückgegeben werden. In der folgenden Tabelle werden Links zu Ressourcen bereitgestellt, die erläutern, wie Funktionen in DMX verwendet werden.  
   
 |Funktion|Description|  
 |--------------|-----------------|  
 |[Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|Listet Funktionen auf, die mit allen Modelltypen verwendet werden können, und stellt Links zu weiteren Informationen bereit, wie bestimmte Typen von Miningmodellen abgefragt werden.|  
-|[Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Stellt eine Übersicht bereit, wie eine Vorhersageabfrage unter Verwendung von DMX erstellt wird.|  
+|[Structure and Usage of DMX Prediction Queries (Struktur und Verwendung von DMX-Vorhersageabfragen)](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Stellt eine Übersicht bereit, wie eine Vorhersageabfrage unter Verwendung von DMX erstellt wird.|  
 |[BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)|Gibt eine Tabelle zurück, die eine bestimmte Anzahl von untersten Zeilen in aufsteigender Rangreihenfolge auf der Grundlage eines Rangausdrucks enthält.|  
   
  In der folgenden Tabelle sind die Funktionen aufgeführt, die DMX unterstützt.  
@@ -82,7 +81,6 @@ ms.lasthandoff: 08/02/2017
  [Datamining-Erweiterungen &#40; DMX &#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Grundlegendes zur Select-Anweisung von DMX](../dmx/understanding-the-dmx-select-statement.md)  
+ [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

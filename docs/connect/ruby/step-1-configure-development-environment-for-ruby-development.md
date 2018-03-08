@@ -3,24 +3,25 @@ title: "Schritt 1: Konfigurieren der Entwicklungsumgebung für Ruby-Entwicklung 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ruby
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d722d1eed21162d5e076f5dfdfc3a2f18787f42e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für Ruby-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung mit den Voraussetzungen zu konfigurieren, um die Entwicklung einer Anwendung mithilfe der Ruby-Treiber für SQL Server.    
@@ -113,4 +114,3 @@ Beachten Sie, dass die Mac OS X wurde bereits vorinstalliert, Ruby, wie das Betr
 ```  
 > gem install tiny_tds  
 ```
-

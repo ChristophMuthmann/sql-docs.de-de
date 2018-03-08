@@ -2,29 +2,31 @@
 title: "Ziele für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Dieser Artikel erläutert Zweck und Art der Verwendung von package0-Zielen für erweiterte Ereignisse in SQL Server. Der vorliegende Artikel erläutert für jedes Ziel:
@@ -39,7 +41,7 @@ Dieser Artikel erläutert Zweck und Art der Verwendung von package0-Zielen für 
 Der [ring_buffer-Abschnitt](#h2_target_ring_buffer) enthält ein Beispiel zur Verwendung von [XQuery in Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) zum Kopieren einer XML-Zeichenfolge in ein relationales Rowset.
 
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 
 - Allgemeine Kenntnisse der Grundlagen von erweiterten Ereignissen, wie in [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)beschrieben.
@@ -120,7 +122,7 @@ sqlserver      checkpoint_begin   4
 Der nächste Punkt ist die CREATE EVENT SESSION, die zu den vorstehenden Ergebnissen geführt hat. Für diesen Test wurde in der EVENT...WHERE-Klausel das Feld **package0.counter** verwendet, um die Zählung abzubrechen, nachdem die Anzahl auf 4 angestiegen ist.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -158,7 +160,7 @@ Das Ziel **event_file** schreibt Ereignissitzungsausgaben vom Puffer in eine Dat
 Nun folgt die CREATE EVENT SESSION, die wir für den Test verwendet haben. Eine der ADD TARGET-Klauseln gibt eine event_file-Datei an.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -290,7 +292,7 @@ Im aktuellen Beispiel bietet die Klausel EVENT...ACTION dem Ziel zufällig nur e
 - Um mehr als eine Quellaktion nachzuverfolgen, können Sie der CREATE EVENT SESSION-Anweisung ein zweites histogram-Ziel hinzufügen.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -356,7 +358,7 @@ Im folgenden Beispiel ist **source_type=0**festgelegt. Der **source=** zugewiese
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -449,7 +451,7 @@ Die folgende CREATE EVENT SESSION-Anweisung gibt zwei Ereignisse und zwei Ziele 
 Um die Ergebnisse einzuschränken, haben wir zuerst in sys.objects per SELECT ausgewählt, um die object_id unserer Testtabelle zu ermitteln. Wir haben der EVENT...WHERE-Klausel einen Filter für die betreffende ID hinzugefügt.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -553,7 +555,7 @@ In diesem ring_buffer-Abschnitt zeigen wir Ihnen außerdem, wie Sie die Transact
 Diese CREATE EVENT SESSION-Anweisung, die das ring_buffer-Ziel verwendet, hat nichts Bemerkenswertes.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -666,7 +668,7 @@ Wenn er mithilfe einer SELECT-Anweisung abgerufen wird, liegt der Inhalt in Form
 Um den vorstehenden XML-Code anzuzeigen, können Sie die folgende SELECT-Anweisung ausgeben, während die Ereignissitzung aktiv ist. Die aktiven XML-Daten werden aus der Systemansicht **sys.dm_xe_session_targets**abgerufen.
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -698,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 Um den vorstehenden XML-Code als relationales Rowset darzustellen, fahren Sie nach der vorstehenden SELECT-Anweisung durch Ausgeben der folgenden T-SQL-Anweisung fort. In den kommentierten Zeilen ist jede Verwendung von XQuery erläutert.
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',
@@ -787,7 +789,6 @@ Wenn er auftritt, bedeutet Fehler **25726** , dass der Ereignisstream sich schne
 - [Microsoft.SqlServer.Management.XEvent Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
 
 
 

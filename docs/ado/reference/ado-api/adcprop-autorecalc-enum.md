@@ -3,7 +3,7 @@ title: ADCPROP_AUTORECALC_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_AUTORECALC_ENUM [ADO]
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: febcd58f0ae5fb96f40708712520ea8d0bcd7d0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f5639a1e86ce6b9e46b3583c8e092e389dfa422e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 Gibt an, wann die [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) Anbieter neu berechnet, aggregierte und berechnete Spalten in einem hierarchischen Recordset.  
@@ -42,4 +41,3 @@ Gibt an, wann die [MSDataShape](../../../ado/guide/appendixes/microsoft-data-sha
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Diese Konstanten keine ADO/WFC-Entsprechungen.
-

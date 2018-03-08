@@ -3,7 +3,7 @@ title: MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (ADO) | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e6f36322b7e966d48d8ebd7094154646ee51eb20
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cda6c82147648f35adb80012d0810d514d08de86
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (ADO)
 Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt und macht, die zum aktuellen Datensatz.  
@@ -75,4 +74,3 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [MoveRecord-Methode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

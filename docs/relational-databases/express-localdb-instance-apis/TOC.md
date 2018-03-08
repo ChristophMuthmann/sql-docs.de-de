@@ -1,6 +1,6 @@
-# [SQLServer Express LocalDB-Verweis - Instanz-APIs](sql-server-express-localdb-reference-instance-apis.md)
+# [Referenz für SQL Server Express LocalDB: Instanz-APIs](sql-server-express-localdb-reference-instance-apis.md)
 # [Verwaltungstool für Befehlszeilen: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
-# [SQL Server Express LocalDB-Header und Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)
+# [SQL Server Express LocalDB-Header und -Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)
 
 # LocalDB-Funktionen
 ## [LocalDBCreateInstance-Funktion](localdbcreateinstance-function.md)

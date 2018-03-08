@@ -3,26 +3,28 @@ title: "SQL Server Data Tools – Lizenzbedingungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.suite: sql
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0ac5aa53-cdc3-4ced-9ab9-690be02aa951
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8f84afd80acae08e3fdd0bd3c0ae27dc25df32de
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 97241e3e51f4abf174e57e579933a6001316858e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools – Lizenzbedingungen
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN  
   
 **MICROSOFT SQL SERVER DATA TOOLS**  
@@ -144,4 +146,3 @@ les réclamations au titre de violation de contrat ou de garantie, ou au titre d
 Elle s’applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
 EFFET JURIDIQUE. Le présent contrat décrit certains droits juridiques. Vous pourriez avoir d’autres droits prévus par les lois de votre pays. Le présent contrat ne modifie pas les droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.
-

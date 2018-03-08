@@ -2,25 +2,26 @@
 title: Aufbau einer Wissensdatenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "10"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2c40fcf9fb82db4a56e8d2985fab67190df8b1f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8fe15c5c9313fee10edbd7a9ebc3fd282dafa5f8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-knowledge-base"></a>Aufbau einer Wissensdatenbank
   Eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist ein Repository des Wissens zu den Daten. Sie ermöglicht es Ihnen, die Daten zu verstehen und ihre Integrität aufrechtzuerhalten. Eine Wissensdatenbank besteht aus Domänen, die jeweils die Daten in einem Datenfeld darstellen. Die Wissensdatenbank wird von DQS zur Datenbereinigung und Deduplizierung in einer Datenbank verwendet. Um die Wissensdatenbank für die Datenbereinigung vorzubereiten, können Sie eine computergestützte Analyse eines Datenbeispiels ausführen und die Werte in den Domänen interaktiv verwalten. Mithilfe von DQS können Sie Wissen importieren, Regeln und Beziehungen erstellen, Datenwerte direkt ändern und eine Standarddatenbank verwenden.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 |Sie können Wissen zur Wissensdatenbank wie folgt hinzufügen: durch die Wissensermittlung oder Domänenwertverwaltung, durch das Hinzufügen einer Abgleichsrichtlinie, durch das Importieren von Wissen, Domänen oder Werten oder indem Sie die Standardwissensdatenbank, DQS-Daten, verwenden.|[Hinzufügen von Wissen zur Wissensdatenbank](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Sie können ein Datenbeispiel in Bezug auf Kriterien, die für die Qualität der Daten gelten, analysieren.|[Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -45,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 |Erstellen einer Verbunddomäne und Hinzufügen von Wissen zur Domäne.|[Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md)|  
   
   
-

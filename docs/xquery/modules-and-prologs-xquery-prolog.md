@@ -3,8 +3,11 @@ title: XQuery-Prolog | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - namespaces [XQuery]
 - default namespace declarations
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bb14308461be8c13e8a683ae842a63647191c9e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38b0c622448c2a46e9b7ecbe38c01b7e522c4ec6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Module und Prologe - XQuery-Prolog
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Eine XQuery-Abfrage besteht aus einem Prolog und einem Hauptteil (Body). Der XQuery-Prolog besteht aus einer Reihe von Deklarationen und Definitionen, die gemeinsam die für die Verarbeitung der Abfrage erforderliche Umgebung erstellen. In SQL Server kann der XQuery-Prolog Namespacedeklarationen enthalten. Der XQuery-Hauptteil besteht aus einer Sequenz von Ausdrücken, die das beabsichtigte Abfrageergebnis angeben.  
   
@@ -111,4 +113,3 @@ WHERE ProductModelID=19
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   
-

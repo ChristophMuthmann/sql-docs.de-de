@@ -1,12 +1,14 @@
 ---
-title: "Ausführungsplan und Pufferzuordnung | Microsoft Docs"
+title: "Ausführungsplan und Pufferzuordnung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,27 +24,26 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 80531a48b65578c296d79318735e60d7fb203840
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Ausführungsplan und Pufferzuordnung
   Vor der Ausführung überprüft der Datenflusstask seine Komponenten und erstellt einen Ausführungsplan für jede Komponentensequenz. Dieser Abschnitt enthält Einzelheiten zum Ausführungsplan, zur Anzeige des Plans und zur Zuweisung von Eingabe- und Ausgabepuffern anhand des Plans.  
   
 ## <a name="understanding-the-execution-plan"></a>Grundlegendes zum Ausführungsplan  
- Ein Ausführungsplan enthält Quell- und Arbeitsthreads. Diese umfassen jeweils Arbeitslisten, die bei Quellthreads Ausgabearbeitslisten und bei Arbeitsthreads Eingabe- und Ausgabearbeitslisten festlegen. Die Quellthreads eines Ausführungsplans stellen die Quellkomponenten im Datenfluss dar und werden im Ausführungsplan von identifiziert *SourceThread**n*, wobei  *n*  die nullbasierte Nummer des Quellthreads ist.  
+ Ein Ausführungsplan enthält Quell- und Arbeitsthreads. Diese umfassen jeweils Arbeitslisten, die bei Quellthreads Ausgabearbeitslisten und bei Arbeitsthreads Eingabe- und Ausgabearbeitslisten festlegen. Die Quellthreads eines Ausführungsplans stellen die Quellkomponenten im Datenfluss dar. Sie sind im Ausführungsplan durch *SourceThread**n* gekennzeichnet, wobei *n* die nullbasierte Nummer des Quellthreads ist.  
   
  Jeder Quellthread erstellt einen Puffer, legt eine Überwachung fest und ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Methode der Quellkomponente auf. Dies ist der Punkt, an dem die Ausführung beginnt und von dem die Daten stammen. Die Quellkomponente beginnt, den Ausgabepuffern Zeilen hinzuzufügen, die vom Datenflusstask bereitgestellt werden. Sobald die Quellthreads ausgeführt werden, wird die Arbeitslast auf die Arbeitsthreads aufgeteilt.  
   
- Ein Arbeitsthread kann sowohl Eingabe- und Ausgabespalten Arbeitslisten enthalten und wird im Ausführungsplan als identifiziert *WorkThread**n*, wobei  *n*  ist die nullbasierte Nummer des Threads Arbeit. Diese Threads enthalten Ausgabearbeitslisten, wenn das Diagramm eine Komponente mit asynchronen Ausgaben enthält.  
+ Ein Arbeitsthread kann sowohl Eingabe- als auch Ausgabearbeitslisten enthalten und wird im Ausführungsplan mit *WorkThread**n* gekennzeichnet, wobei *n* die nullbasierte Nummer des Arbeitsthreads ist. Diese Threads enthalten Ausgabearbeitslisten, wenn das Diagramm eine Komponente mit asynchronen Ausgaben enthält.  
   
  Das folgende Beispiel eines Ausführungsplans zeigt einen Datenfluss, der eine Quellkomponente umfasst, die mit einer Transformation mit einer asynchronen Ausgabe verbunden ist, die über eine Verbindung mit einer Zielkomponente verfügt. In diesem Beispiel enthält WorkThread0 eine Ausgabearbeitsliste, da die Transformationskomponente über eine asynchrone Ausgabe verfügt.  
   
@@ -80,7 +81,7 @@ End WorkThread1
 ```  
   
 > [!NOTE]  
->  Der Ausführungsplan generiert jedes Mal, wenn ein Paket ausgeführt wird und aufgezeichnet werden kann, durch Hinzufügen eines Protokollanbieters für das Paket, die Protokollierung aktivieren, und wählen die **PipelineExecutionPlan** Ereignis.  
+>  Der Ausführungsplan wird bei jeder Ausführung eines Pakets generiert. Er kann aufgezeichnet werden, indem Sie dem Paket einen Protokollanbieter hinzufügen, die Protokollierung aktivieren und das **PipelineExecutionPlan**-Ereignis auswählen.  
   
 ## <a name="understanding-buffer-allocation"></a>Grundlegendes zur Pufferzuordnung  
  Der Datenflusstask erstellt anhand des Ausführungsplans Puffer, in denen die in den Ausgaben der Datenflusskomponenten definierten Spalten enthalten sind. Wenn der Datenfluss die Komponentensequenz durchläuft, wird der Puffer wiederverwendet, bis eine Komponente mit asynchroner Ausgabe auftritt. In diesem Fall wird ein neuer Puffer erstellt, der die Ausgabespalten der asynchronen Ausgabe sowie diejenigen der Downstreamkomponenten umfasst.  
@@ -89,6 +90,5 @@ End WorkThread1
   
  Transformationskomponenten mit asynchronen Ausgaben erhalten den vorhandenen Eingabepuffer von der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode sowie den neuen Ausgabepuffer von der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Methode. Transformationskomponenten mit asynchronen Ausgaben sind der einzige Datenflusskomponententyp, der sowohl Eingabe- als auch Ausgabepuffer erhält.  
   
- Ist der Puffer bereitgestellt, um eine Komponente enthalten wahrscheinlich mehr Spalten als die Komponente hat, in ihren Eingabe-oder Ausgabespalte Auflistungen, Komponentenentwickler rufen die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> Methode zum Suchen einer Spalteninhalts im Puffer durch Angabe seiner **LineageID**.  
+ Da der Puffer, der einer Komponente bereitgestellt wird, meist über mehr Spalten verfügt als die Komponente in ihren Eingabe- oder Ausgabespaltenauflistungen, können Komponentenentwickler die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A>-Methode aufrufen, um eine Spalte im Puffer durch Angabe ihrer **LineageID** zu suchen.  
   
-

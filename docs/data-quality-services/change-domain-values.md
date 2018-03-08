@@ -2,27 +2,27 @@
 title: "Ändern von Domänenwerten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.values.f1
+f1_keywords: sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "31"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d5425678270fb224b0a55e70c5f7928545ffaa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-domain-values"></a>Ändern von Domänenwerten
   In diesem Thema wird beschrieben, wie die Metadaten in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) geändert und erweitert werden. Nachdem Sie Wissen durch die Wissensermittlung generiert haben, Wissen in die Wissensdatenbank oder Domänen importiert haben, oder eine Wissensdatenbank basierend auf einer anderen Wissensdatenbank erstellt haben, können Sie die Datenwerte interaktiv ändern. Die Generierung der Wissensdatenbank nutzt nicht nur computerunterstützte Prozesse, sondern ermöglicht Ihnen,, eigenes Wissen zu verwenden, um die Datenwerte zu überprüfen und sie wie folgt zu ändern:  
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Importieren von Domänenwerten aus einer Excel-Datei  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um einen Domänenwert zu ändern, müssen Sie eine Wissensdatenbank und eine Domäne in der Domänenverwaltungsaktivität geöffnet haben.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  Wählen Sie aus der **Domänenliste** auf der Seite **Domänenverwaltung** die Domäne aus, in der Sie Werte ändern möchten, oder erstellen Sie eine neue Domäne. Wenn Sie eine neue Domäne erstellen müssen, finden Sie unter [Domäne erstellen](../data-quality-services/create-a-domain.md)weitere Informationen. Klicken Sie auf die Registerkarte **Domänenwerte** .  
   
-4.  Zeigen Sie die zu ändernden Werte in der Tabelle **Wert** an. Weitere Informationen finden Sie weiter unten unter [So zeigen Sie die entsprechenden Werte an](#Display) .  
+4.  Zeigen Sie die zu ändernden Werte in der Tabelle **Wert** an. Weitere Informationen finden Sie weiter unten unter [How to Display the Appropriate Values](#Display) .  
   
 5.  Um den Status eines Werts zu ändern, gehen Sie wie folgt vor:  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 09/09/2017
   
  Wenn Sie eine interaktive Datenbereinigung auf der Seite **Ergebnisse verwalten und anzeigen** der Aktivität **Bereinigung** ausführen, werden sowohl ungültige als auf fehlerhafte Werte auf der Registerkarte **Ungültig** der Seite **Ergebnisse verwalten und anzeigen** angezeigt.  
   
-##  <a name="Display"></a> So zeigen Sie die entsprechenden Werte an  
+##  <a name="Display"></a> How to Display the Appropriate Values  
  Sie können die Anzeige wie folgt ändern:  
   
 -   **Filtern** Sie die Ergebnisse, die in der Tabelle angezeigt werden sollen, basierend auf deren Status, indem Sie in der Dropdownliste **Filter** den Status auswählen.  
@@ -140,4 +140,3 @@ ms.lasthandoff: 09/09/2017
  Jede Werttabelle auf der Registerkarte **Domänenwerte** enthält einen DQS_NULL-Wert. Ein NULL-Wert in einer Datenquelle wird in der Werttabelle als SQL_NULL angezeigt. Sie können eine oder mehrere NULL-Entsprechungen als Synonyme für DQS_NULL festlegen. In diesem fall werden alle NULL-Werte und NULL-Entsprechungen als DQS_NULL verarbeitet.  
   
   
-

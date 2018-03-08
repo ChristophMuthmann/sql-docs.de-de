@@ -3,27 +3,28 @@ title: "Erstellen von interoperablen SQL­Anweisungen | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34636d9ead963cf9548d8ff1345424f4283fd1fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 070b42e5350471ec86fbc256f2005dd7c0385002
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Erstellen von interoperablen SQL­Anweisungen
 Wie in den vorherigen Abschnitten erwähnt, sollten interoperable Anwendungen ausführen können, die ODBC-SQL-Grammatik verwenden. Hinter dieser Grammatik verwendet wird, muss jedoch eine Reihe von weiteren Problemen von interoperablen Anwendungen Datenwachstums. Beispielsweise vorgehen eine Anwendung, um eine Funktion, z. B. äußeren Joins zu verwenden, die nicht von allen Datenquellen unterstützt wird?  
@@ -34,19 +35,18 @@ Wie in den vorherigen Abschnitten erwähnt, sollten interoperable Anwendungen au
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Katalog und Schema-Verwendung](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
+-   [Katalog- und Schemaverwendung](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   
 -   [Katalogposition](../../../odbc/reference/develop-app/catalog-position.md)  
   
 -   [Bezeichner in Anführungszeichen](../../../odbc/reference/develop-app/quoted-identifiers.md)  
   
--   [Bezeichner Groß-/Kleinschreibung](../../../odbc/reference/develop-app/identifier-case.md)  
+-   [Groß-/Kleinschreibung von Bezeichnern](../../../odbc/reference/develop-app/identifier-case.md)  
   
 -   [Escapesequenzen](../../../odbc/reference/develop-app/escape-sequences.md)  
   
--   [Literal-Präfixe und Suffixe](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
+-   [Literalpräfixe und -suffixe](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
   
 -   [Parametermarkierungen in Prozeduraufrufen](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
 -   [DDL-Anweisungen](../../../odbc/reference/develop-app/ddl-statements.md)
-

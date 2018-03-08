@@ -2,29 +2,30 @@
 title: MSSQLSERVER_10520 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 10520 (Database Engine error)
+helpviewer_keywords: 10520 (Database Engine error)
 ms.assetid: cc8799f1-5b90-4248-b209-e1d5087f9529
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 57ba200cf6381ddc6d100d516bcf5f0168bb7262
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 92ec45949632fb9c820da5979c5b119105662fdc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver10520"></a>MSSQLSERVER_10520
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -47,4 +48,3 @@ Geben Sie NULL für den Parameter an, oder ändern Sie den Typ in einen Typ, der
 [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
 [Planhinweislisten](~/relational-databases/performance/plan-guides.md)  
   
-

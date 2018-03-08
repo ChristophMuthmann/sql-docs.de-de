@@ -2,36 +2,33 @@
 title: DMSCHEMA_MINING_MODEL_CONTENT-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT
+apiname: DMSCHEMA_MINING_MODEL_CONTENT
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7d48b47cc0ded0541380a4a9997b1cab13bd21a0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT-Rowset
-  Ermöglicht es der Clientanwendung, den Inhalt eines Data Mining-Modells zu durchsuchen. Clientanwendungen können spezielle Strukturvorgangseinschränkungen verwenden, die am Ende dieses Themas erläutert werden, um zum Inhalt des Miningmodells zu navigieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ermöglicht es die Clientanwendung, die den Inhalt eines Datamining-Modells zu durchsuchen. Clientanwendungen können spezielle Strukturvorgangseinschränkungen verwenden, die am Ende dieses Themas erläutert werden, um zum Inhalt des Miningmodells zu navigieren.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_MODEL_CONTENT** Rowset enthält die folgenden Spalten.  
@@ -78,7 +75,7 @@ ms.lasthandoff: 09/01/2017
   
  Die Einschränkung **TREE_OPERATION**, befindet sich nicht auf eine bestimmte Spalte des der **DMSCHEMA_MINING_MODEL_CONTENT** Rowsets, sondern gibt einen strukturoperator. Der Consumer festlegbaren eine **NODE_UNIQUE_NAME** Einschränkung und den strukturoperator (**VORGÄNGER**, **Kinder**, **gleichgeordnete Elemente**,  **ÜBERGEORDNETE**, **Nachfolger**, **SELF**) auf die angeforderte Menge von Elementen abzurufen. Die **SELF** -Operator fügt die Zeile für den Knoten selbst in der Liste der zurückgegebenen Zeilen. Die folgende Tabelle beschreibt die Konstanten, aus denen die bitmapdefinition für die **TREE_OPERATION** Einschränkung. Kombiniert werden mit dem logischen **oder** Operator.  
   
-|Konstante|Wert|  
+|Konstante|value|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0 x 00000020**|  
 |**DMTREEOP_CHILDREN**|**0 x 00000001**|  
@@ -88,7 +85,6 @@ ms.lasthandoff: 09/01/2017
 |**DMTREEOP_DESCENDANTS**|**0 x 00000010**|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Ansichten, von Auflistungseigenschaften, Methoden und Ereignisse | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Views collection [ADOX], members
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3e7820c6e7c608f44b40b665adb083ad55e3e797
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e44a226140ee1cdf191633cba96f984d91313f68
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Ansichten Auflistungseigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-

@@ -2,9 +2,12 @@
 title: Upgrade der Volltextsuche | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: 106
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 74e12e9e4b1d6379a0dc8954b2c99d77c99faa55
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
-  Das Aktualisieren der Volltextsuche auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfolgt während des Setups und beim Anfügen, Wiederherstellen und Kopieren von Datenbankdateien und Volltextkatalogen aus einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Assistenten zum Kopieren von Datenbanken.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Das Aktualisieren der Volltextsuche auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfolgt während des Setups und beim Anfügen, Wiederherstellen und Kopieren von Datenbankdateien und Volltextkatalogen aus einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Assistenten zum Kopieren von Datenbanken.  
   
   
 ##  <a name="Upgrade_Server"></a> Upgrade einer Serverinstanz  
@@ -187,4 +190,3 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   
-

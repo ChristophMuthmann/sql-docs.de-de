@@ -3,8 +3,11 @@ title: Effektiver boolescher Wert (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - XQuery, effective Boolean values
 - EBV
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93c3ecaf4a4ded90a4b65aed08c6112fd9b670f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b80d848571d645e6d12e512455ecaa3d66be32ce
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="effective-boolean-value-xquery"></a>Effektiver boolescher Wert (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Folgende Werte sind effektive boolesche Werte:  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Bedingte Ausdrücke](../xquery/conditional-expressions-xquery.md)  
   
--   [Quantifizierte Ausdrücke](../xquery/quantified-expressions-xquery.md)  
+-   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
  Das folgende Beispiel zeigt einen effektiven booleschen Wert. Wenn die **Wenn** -Ausdruck verarbeitet wird, wird der effektive boolesche Wert der Bedingung bestimmt. Da `/a[1]` eine leere Sequenz zurückgibt, ist der effektive boolesche Wert False. Das Ergebnis wird als XML mit einem Textknoten (false) zurückgegeben.  
   
@@ -100,4 +102,3 @@ go
  [FLWOR-Anweisung und Iteration &#40; XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   
-

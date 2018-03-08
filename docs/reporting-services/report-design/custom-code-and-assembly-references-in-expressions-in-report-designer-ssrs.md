@@ -1,13 +1,14 @@
 ---
-title: "Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS) | Microsoft Docs"
+title: "Benutzerdefinierter Code und Assemblyverweise in Ausdrücken im Berichts-Designer (SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,23 +21,22 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "77"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e17e5820a54eb2328edc9efe31239ca31a1fef09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
   Sie können in einem Bericht eingebettetem, benutzerdefiniertem Code oder benutzerdefinierten Assemblys, die Sie erstellen und auf dem Computer speichern und auf dem Berichtsserver bereitstellen. Verwenden Sie eingebetteten Code für benutzerdefinierte Konstanten, komplexe Funktionen oder für Funktionen, die mehrfach in demselben Bericht verwendet werden. Verwenden Sie benutzerdefinierte Codeassemblys, um Code an einer einzelnen Stelle zu verwalten und ihn zur Verwendung in mehreren Berichten freizugeben. In benutzerdefiniertem Code können neue benutzerdefinierte Konstanten, Variablen, Funktionen oder Unterroutinen eingeschlossen werden. Sie können schreibgeschützte Verweise in integrierte Auflistungen, wie die Parameter-Auflistung, einbeziehen. An benutzerdefinierte Funktionen können jedoch keine Sätze von Berichtsdatenwerten übergeben werden, insbesondere werden keine benutzerdefinierten Aggregate unterstützt.  
   
 > [!IMPORTANT]  
->  Für zeitempfindliche Berechnungen, die einmal zur Laufzeit ausgewertet werden und während der Berichtsverarbeitung denselben Wert behalten sollen, bietet sich eventuell die Verwendung einer Berichts- oder Gruppenvariablen an. Weitere Informationen finden Sie unter [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
+>  Für zeitempfindliche Berechnungen, die einmal zur Laufzeit ausgewertet werden und während der Berichtsverarbeitung denselben Wert behalten sollen, bietet sich eventuell die Verwendung einer Berichts- oder Gruppenvariablen an. Weitere Informationen finden Sie unter [Verweise auf Berichts- und Gruppenvariablenauflistungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  Berichts-Designer ist die bevorzugte Erstellungsumgebung für das Hinzufügen von benutzerdefiniertem Code zu einem Bericht. Berichts-Generator unterstützt das Verarbeiten von Berichten, die über gültige Ausdrücke verfügen, oder die Verweise auf benutzerdefinierte Assemblys auf einem Berichtsserver einschließen. Berichts-Generator bietet keine Möglichkeit, einen Verweis auf eine benutzerdefinierte Assembly hinzuzufügen.  
   
@@ -196,13 +196,12 @@ End Function
   
  Da sich der Inhalt der *Fields* - und *ReportItems* -Sammlung zur Laufzeit dynamisch ändern kann, sollten Sie über die Aufrufe in der benutzerdefinierten Assembly hinaus nicht daran festhalten (z.B. in einer Elementvariablen). Die gleiche Empfehlung gilt im Allgemeinen für alle integrierten Auflistungen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Fügen Sie Code hinzu, um einen Bericht &#40; SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [Verwenden von benutzerdefinierten Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Hinzufügen eines Assemblyverweises zu einem Bericht &#40; SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services-Lernprogramme &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Hinzufügen eines Assemblyverweises zu einem Bericht (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services-Tutorials (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   
-

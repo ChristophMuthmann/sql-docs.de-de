@@ -1,10 +1,13 @@
 ---
-title: "Schritt 2: Ausführen des Paketinstallations-Assistenten | Microsoft Docs"
+title: "Schritt 2: Ausführen des Paketinstallations-Assistenten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lektion 3-2-Ausführen des Paketinstallations-Assistenten
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lektion 3-2: Ausführen des Paketinstallations-Assistenten
 In diesem Schritt führen Sie den Paketinstallations-Assistenten aus, um die Pakete aus dem Deployment Tutorial-Projekt auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitzustellen. In der sysssispackages-Tabelle der msdb-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können nur Pakete installiert werden. Die unterstützenden Dateien, die das Bereitstellungspaket enthält, werden im Dateisystem bereitgestellt.  
   
 Vom Paketinstallations-Assistenten werden Sie durch die Schritte der Paketinstallation und -konfiguration geführt. Sie installieren die Pakete auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem Zielcomputer (der Computer, auf den Sie das Bereitstellungspaket kopiert haben). Weiterhin erstellen Sie den Ordner C:\DeploymentTutorialInstall, in dem der Assistent die Nichtpaketdateien installieren wird.  
@@ -72,14 +74,14 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
   
 16. Klicken Sie in der Liste **Konfigurationsdatei** auf **datatransferconfig.dtsconfig**, erweitern Sie Eigenschaft in der **Pfad** -Spalte des Felds **Konfigurationen** , und aktualisieren Sie die **Wert** -Spalte mit den folgenden Werten:  
   
-    |Eigenschaft|Wert|Aktualisierter Wert|  
+    |Eigenschaft|value|Aktualisierter Wert|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Klicken Sie in der Liste **Konfigurationsdatei** auf loadxmldataconfig.dtsconfig, erweitern Sie Eigenschaft in der **Pfad** -Spalte des Felds **Konfigurationen** , und aktualisieren Sie die **Wert** -Spalte mit den folgenden Werten:  
   
-    |Eigenschaft|Wert|Aktualisierter Wert|  
+    |Eigenschaft|value|Aktualisierter Wert|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -105,9 +107,8 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
     > [!NOTE]  
     > Es wird eine temporäre Protokolldatei erstellt, die für die Paketüberprüfung verwendet wird. Diese Datei wird bei der Ausführung des Pakets nicht verwendet.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 3: Testen der bereitgestellten Pakete](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
-

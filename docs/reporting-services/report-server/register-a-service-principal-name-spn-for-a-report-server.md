@@ -1,27 +1,27 @@
 ---
-title: "Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver | Microsoft Docs"
+title: "Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9518d1bd3ee166a0f21292ca08130214afc841be
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8f339aea53a9da7ee183bb2a6efee25bc603c13
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver
   Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in einem Netzwerk bereitstellen, in dem das Kerberos-Protokoll zur gegenseitigen Authentifizierung verwendet wird, müssen Sie einen Dienstprinzipalnamen (SPN) für den Berichtsserverdienst erstellen, wenn Sie diesen als Domänenbenutzerkonto konfigurieren.  
@@ -48,7 +48,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **HTTP** ist die Dienstklasse. Der Report Server-Webdienst wird in HTTP.SYS ausgeführt. Wenn Sie einen SPN für HTTP erstellen, werden allen Webanwendungen auf dem gleichen Computer, die in HTTP.SYS ausgeführt werden (einschließlich der Anwendungen, die in IIS gehostet werden), Tickets auf der Basis des Domänenbenutzerkontos zugewiesen. Wenn diese Dienste unter einem anderen Konto ausgeführt werden, können Authentifizierungsanforderungen nicht ordnungsgemäß verarbeitet werden. Konfigurieren Sie deshalb alle HTTP-Anwendungen zur Ausführung unter dem gleichen Konto, oder erstellen Sie Hostheader für jede Anwendung und anschließend je einen SPN pro Hostheader. Wenn Sie Hostheader konfigurieren, sind DNS-Änderungen unabhängig von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration erforderlich.  
   
- Die Werte, die Sie, für die angeben \< *Computername*>, \< *Domainname*>, und \< *Port*> bezeichnen die eindeutige Netzwerkadresse des Computers, der den Berichtsserver hostet. Dies kann ein lokaler Hostname oder ein vollqualifizierter Domänenname (FQDN) sein. Wenn Sie nur über eine Domäne verfügen und Port 80 verwenden, können Sie auslassen \< *Domainname*> und \< *Port*> in der Befehlszeile. \<*Domain-User-Account*> ist das Benutzerkonto, unter dem der Report Server-Dienst ausgeführt wird und für das der SPN registriert sein muss.  
+ Die Werte für \<*Computername*>, \<*Domänenname*> und \<*Port*> bezeichnen die eindeutige Netzwerkadresse des Computers, der den Berichtsserver hostet. Dies kann ein lokaler Hostname oder ein vollqualifizierter Domänenname (FQDN) sein. Wenn Sie nur über eine Domäne verfügen und Port 80 verwenden, ist die Angabe von \<*Domänenname*> und \<*Port*> in der Befehlszeile nicht erforderlich. \<*domäne-benutzer-konto*> ist das Benutzerkonto, unter dem der Berichtsserverdienst ausgeführt wird und für das der SPN registriert werden muss.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Registrieren eines SPNs für ein Domänenbenutzerkonto  
   
@@ -74,10 +74,9 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
 7.  Fügen Sie `<RSWindowsNegotiate/>` als ersten Eintrag in diesem Abschnitt hinzu, um NTLM zu aktivieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren eines Dienstkontos &#40; SSRS-Konfigurations-Manager &#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
- [Konfigurieren Sie die Berichtsserver-Dienstkontos &#40; SSRS-Konfigurations-Manager &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Verwalten eines Berichtsservers der Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Konfigurieren eines Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
-

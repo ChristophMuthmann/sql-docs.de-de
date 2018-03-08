@@ -1,49 +1,39 @@
 ---
-title: Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS) | Microsoft Docs
+title: Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="connect-to-a-tabular-model-database-ssas"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS)
-  Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. Dieses Thema erläutert die Vorgehensweise bei Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
+# <a name="connect-to-a-tabular-model-database"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. In diesem Artikel wird erläutert, wie Sie Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
   
 > [!NOTE]  
 >  Remoteverbindungen mit Analysis Services sind standardmäßig erst dann verfügbar, wenn Sie die Firewall konfiguriert haben. Stellen Sie sicher, dass Sie den entsprechenden Port geöffnet haben, wenn Sie eine benannte oder eine Standardinstanz für Clientverbindungen konfigurieren. Weitere Informationen finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Dieses Thema enthält folgende Abschnitte:  
-  
- [Benutzerberechtigungen für die Datenbank](#bkmk_userpermissions)  
-  
- [Administratorberechtigungen für den Server](#bkmk_admin)  
-  
- [Herstellen einer Verbindung von Excel oder SharePoint aus](#bkmk_excelconn)  
-  
- [Beheben von Verbindungsproblemen](#bkmk_Tshoot)  
-  
 ##  <a name="bkmk_userpermissions"></a> Benutzerberechtigungen für die Datenbank  
  Benutzer, die eine Verbindung mit Tabellendatenbanken herstellen, müssen die Mitgliedschaft in einer Datenbankrolle besitzen, die einen Lesezugriff festlegt.  
   
- Rollen, und gelegentlich auch die Rollenmitgliedschaft, werden definiert, wenn ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird, oder über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Falle von bereitgestellten Modellen. Weitere Informationen zum Erstellen von Rollen mithilfe des Rollen-Managers in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Weitere Informationen zum Erstellen und Verwalten von Rollen für ein bereitgestelltes Modell finden Sie unter [Rollen tabellarischer Modelle &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Rollen, und gelegentlich auch die Rollenmitgliedschaft, werden definiert, wenn ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird, oder über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Falle von bereitgestellten Modellen. Weitere Informationen zum Erstellen von Rollen mithilfe von Rollen-Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], finden Sie unter [erstellen und Verwalten von Rollen](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Weitere Informationen zum Erstellen und Verwalten von Rollen für ein bereitgestelltes Modell finden Sie unter [Rollen für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 > [!CAUTION]  
 >  Wenn ein tabellarisches Modellprojekt, dessen Rollen mithilfe des Rollen-Managers in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] definiert wurden, erneut bereitgestellt wird, dann werden die in einem bereitgestellten tabellarischen Modell definierten Rollen überschrieben.  
@@ -96,7 +86,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  Wählen Sie die Datenbank aus. Eine gültige Auswahl zeigt einen einzelnen **Modell** -Cube für die Datenbank an. Klicken Sie auf **Weiter** und anschließend auf **Fertig stellen**.  
   
- Nachdem die Verbindung hergestellt wurde, können Sie mithilfe der Daten eine PivotTable oder ein PivotChart erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)definieren.  
+ Nachdem die Verbindung hergestellt wurde, können Sie mithilfe der Daten eine PivotTable oder ein PivotChart erstellen. Weitere Informationen finden Sie unter [in Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Herstellen einer Verbindung von SharePoint aus  
  Wenn Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwenden, können Sie eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen, die die Umleitung zu einer Datenbank ermöglicht, die auf einem Analysis Services-Server im tabellarischen Modus ausgeführt wird. Eine BI-Semantikmodell-Verbindung stellt einen HTTP-Endpunkt für eine Datenbank bereit. Sie vereinfacht auch den Tabellenmodell-Zugriff für Wissensarbeiter, die routinemäßig Dokumente auf einer SharePoint-Website verwenden. Wissensarbeiter müssen nur den Speicherort der BI-Semantikmodell-Verbindungsdatei oder die URL kennen, um auf Tabellenmodell-Datenbanken zuzugreifen. Details zum Serverspeicherort oder Datenbanknamen werden in der BI-Semantikmodell-Verbindung gekapselt. Weitere Informationen zum Erstellen und Verwenden von BI-Semantikmodell-Verbindungsdateien finden Sie unter [PowerPivot-BI-Semantikmodell-Verbindung &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) und [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -106,7 +96,7 @@ ms.lasthandoff: 09/01/2017
   
  **Der Datenverbindungs-Assistent kann keine Liste von Datenbanken aus der angegebenen Datenquelle abrufen.**  
   
- Beim Importieren von Daten tritt dieser Microsoft Excel-Fehler auf, wenn Sie versuchen, mithilfe des Assistenten eine Verbindung mit einer Tabellenmodell-Datenbank auf einem Analysis Services-Remoteserver herzustellen und Sie nicht über ausreichende Berechtigungen verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
+ Beim Importieren von Daten tritt dieser Microsoft Excel-Fehler auf, wenn Sie versuchen, den Assistenten zum Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank auf einem Analysis Services-Remoteserver verwenden und Sie verfügen nicht über ausreichende Berechtigungen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
  **Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: \<Modellname >-Sandbox**  
   
@@ -121,7 +111,6 @@ ms.lasthandoff: 09/01/2017
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da der Benutzer nicht über ausreichende SharePoint-Berechtigungen für die Arbeitsmappe verfügt. Der Benutzer muss mindestens über **Leseberechtigungen** verfügen. **Nur anzeigen** -Berechtigungen sind für den Datenzugriff nicht ausreichend.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Tabellenmodelllösungsbereitstellung](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "Mithilfe von Syntax in einem Pfadausdruck abgekürzt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - axis step [XQuery]
 - abbreviated syntax [XQuery]
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2882ee4082e29ce4d4ad41f3347feb7eca4a0a46
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cd4ed101bc96fb8c5c417ec1c47063d747af29df
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Path-Ausdrücken - verwenden abgekürzter Syntax
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In allen Beispielen in [Understanding the Path Expressions in XQuery](../xquery/path-expressions-xquery.md) verwenden abgekürzte Syntax für Path-Ausdrücken. Die ungekürzte Syntax für einen Achsenschritt in einem Pfadausdruck umfasst den Achsennamen und den Knotentest, getrennt durch einen Doppelpunkt und gefolgt von null oder mehr Schrittqualifizierern.  
   
@@ -74,4 +76,3 @@ child::ProductDescription[attribute::ProductModelID=19]
 -   Die **Parent::node()** in einem Schritt kann zu einem zwei Punkten (..) abgekürzt werden.  
   
   
-

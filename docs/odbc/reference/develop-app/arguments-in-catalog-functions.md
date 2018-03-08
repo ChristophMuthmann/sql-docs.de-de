@@ -3,10 +3,12 @@ title: Argumente im Katalogfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bb973a525b5a978d16566edc02fb4d4651e11406
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f8939b2e1ae81c3eb171e78753e7fc3b6cc17ae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments-in-catalog-functions"></a>Argumente im Katalogfunktionen
 Alle Katalogfunktionen unterstützen Argumente, mit denen eine Anwendung den Bereich der zurückgegebenen Daten einschränken kann. Beispielsweise die ersten und zweiten Aufrufe **SQLTables** Zurückgeben von Resultsets mit den Informationen zu allen Tabellen während der dritte Aufruf gibt Informationen über die Orders-Tabelle zurück in den folgenden Code:  
@@ -55,9 +56,8 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
 -   [Normale Argumente](../../../odbc/reference/develop-app/ordinary-arguments.md)  
   
--   [Muster Value-Argumenten](../../../odbc/reference/develop-app/pattern-value-arguments.md)  
+-   [Argumente des Musterwerts](../../../odbc/reference/develop-app/pattern-value-arguments.md)  
   
--   [Identifier-Argumente](../../../odbc/reference/develop-app/identifier-arguments.md)  
+-   [Bezeichnerargumente](../../../odbc/reference/develop-app/identifier-arguments.md)  
   
--   [Auflisten von Argumenten Wert](../../../odbc/reference/develop-app/value-list-arguments.md)
-
+-   [Argumente der Wertliste](../../../odbc/reference/develop-app/value-list-arguments.md)

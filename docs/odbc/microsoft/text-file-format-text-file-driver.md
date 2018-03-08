@@ -3,10 +3,12 @@ title: Dateiformat "Text" (Text-Datei-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7d111fee1ae82fc3dbb1fff3eec2dd9dff53465
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb3505a7750bf2b538078139cf84b9e88a7e23bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-file-format-text-file-driver"></a>Dateiformat "Text" (Text-Datei-Treiber)
 Der Text der ODBC-Treiber unterstützt beide Textdateien mit Trennzeichen und fester Breite an. Eine Textdatei besteht aus einer optionalen Kopfzeile und NULL oder mehr Textzeilen.  
@@ -126,4 +127,3 @@ fixed-width-null ::= <SPACE>...
   
 > [!NOTE]  
 >  Für Dateien mit fester Breite wird ein NULL-Wert, durch Leerzeichen dargestellt.
-

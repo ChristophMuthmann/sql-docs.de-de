@@ -1,27 +1,28 @@
 ---
-title: 'Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft Docs'
+title: 'Tutorial: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 06/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
 Dieses Tutorial zeigt Ihnen die Erstellung eines [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichts mit einer Matrix von Beispielumsatzdaten in geschachtelten Zeilen- und Spaltengruppen. 
@@ -57,7 +58,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Informationen zum Erstellen einer eingebetteten Datenquelle, finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -162,7 +163,7 @@ Standardmäßig wird in den Zusammenfassungsdaten für das Feld Sales eine allge
   
 2.  Drücken Sie die STRG-TASTE, und wählen Sie dann die neun Zellen aus, die `[Sum(Sales)]`enthalten.  
   
-3.  Auf der **Home** Registerkarte "> **Anzahl** > **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
+3.  Klicken Sie auf der Registerkarte **Start** unter **Number** (Zahl) auf  > **Currency** (Währung). Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
   
     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
     
@@ -170,7 +171,7 @@ Standardmäßig wird in den Zusammenfassungsdaten für das Feld Sales eine allge
   
 4.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-5.  In der **Anzahl** Gruppe > **Datum**.  
+5.  Klicken Sie in der Gruppe **Number** (Zahl) auf **Date** (Datum).  
   
     In der Zelle wird das Beispieldatum **[31.01.2000]**angezeigt. Falls kein Beispieldatum angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** und anschließend auf **Beispielwerte**.  
   
@@ -268,7 +269,7 @@ Der Eckenbereich befindet sich oben links in der Matrix. Abhängig von der Anzah
   
 5.  Klicken Sie mit der rechten Maustaste auf die zusammengeführte Zelle und anschließend auf **Textfeldeigenschaften**.  
   
-6.  Auf der **Rahmen** Registerkarte "> **Voreinstellungen** > **keine**.
+6.  Legen Sie auf der Registerkarte **Rahmen** für **Voreinstellungen** die Option  > **Keine** fest.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +286,7 @@ Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel 
   
 2.  Wählen Sie das Textfeld am Anfang des Berichtstexts, das **Zum Hinzufügen eines Titels klicken**enthält, und drücken Sie anschließend die ENTF-TASTE.  
   
-3.  Auf der **einfügen** Registerkarte "> **Header** > **Header hinzufügen**.  
+3.  Klicken sie auf der Registerkarte **Einfügen** auf **Kopfzeile** > **Kopfzeile hinzufügen**.  
   
     Am Anfang des Berichtstexts wird eine Kopfzeile hinzugefügt.  
   
@@ -335,7 +336,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 ## <a name="RotateTextBox"></a>9. (Optional) Drehen des Textfelds um 270 Grad  
 Ein Bericht mit Matrizen kann bei der Ausführung horizontal und vertikal erweitert werden. Durch vertikales Drehen der Textfelder oder um 270 Grad können Sie in horizontaler Richtung Platz sparen. Der gerenderte Bericht ist in diesem Fall schmäler und passt beim Exportieren in ein Format wie Microsoft Word mit einer höheren Wahrscheinlichkeit auf eine gedruckte Seite.  
   
-In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) angezeigt werden. Weitere Informationen finden Sie unter [Textfelder &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) angezeigt werden. Weitere Informationen finden Sie unter [Textfelder (Berichts-Generator und SSRS)](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>So drehen Sie das Textfeld um 270 Grad  
   
@@ -360,16 +361,15 @@ In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) a
   
 Der Gebietsname wird vertikal geschrieben (von unten nach oben). Die Höhe der Zeilengruppe "Territory" ändert sich abhängig von der Länge des Gebietsnamens.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Hiermit ist das Lernprogramm für die Erstellung eines Matrixberichts abgeschlossen. Weitere Informationen zu Matrizen finden Sie unter: 
 -    [Tabellen, Matrizen und Listen](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Erstellen einer Matrix (Berichts-Generator und SSRS)](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Zonen des Tablix-Datenbereichs](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Zellen, Zeilen und Spalten des Tablix-Datenbereichs](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

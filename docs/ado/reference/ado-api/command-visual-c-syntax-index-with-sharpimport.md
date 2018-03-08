@@ -3,7 +3,7 @@ title: 'Befehl (Visual C++-Syntax Index mit #import) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 61afd9aa8eaf18e5154ec2279d87c0cccb58c547
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 212c4698286fccb4baf6764f26af263419f7078d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Befehl (Visual C++-Syntax Index mit #import)
 ## <a name="methods"></a>Methoden  
@@ -69,4 +68,3 @@ __declspec(property(get=GetState)) long State;
   
 ## <a name="see-also"></a>Siehe auch  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
-

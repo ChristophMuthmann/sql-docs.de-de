@@ -1,13 +1,14 @@
 ---
-title: "Seitenkopf-und Seitenfußzeilen (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,29 +25,28 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)
   Ein Bericht kann eine Kopf- und Fußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Kopf- und Fußzeilen können statischen Text, Bilder, Linien, Rechtecke, Rahmen, Hintergrundfarbe, Hintergrundbilder und Ausdrücke enthalten. Ausdrücke enthalten Verweise auf Datasetfelder für Berichte mit genau einem Dataset und Aggregatfunktionsaufrufen mit dem Dataset als Bereich.  
   
 > [!NOTE]  
->  Jede Renderingerweiterung verarbeitet Seiten unterschiedlich. Weitere Informationen zur Berichtspaginierung und zu Renderingerweiterungen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+>  Jede Renderingerweiterung verarbeitet Seiten unterschiedlich. Weitere Informationen zur Berichtspaginierung und zu Renderingerweiterungen finden Sie unter [Paginierung in Reporting Services (Berichts-Generator und SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
- Standardmäßig haben Berichte Seitenfußzeilen, jedoch keine Seitenkopfzeilen. Weitere Informationen dazu, wie Sie diese hinzufügen oder entfernen, finden Sie unter [Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
+ Standardmäßig haben Berichte Seitenfußzeilen, jedoch keine Seitenkopfzeilen. Weitere Informationen dazu, wie Sie diese hinzufügen oder entfernen, finden Sie unter [Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
- Kopf- und Fußzeilen enthalten im Allgemeinen Seitennummern, Berichtstitel und andere Berichtseigenschaften. Weitere Informationen dazu, wie Sie diese Elemente der Kopf- bzw. Fußzeile Ihres Berichts hinzufügen, finden Sie unter [Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md).  
+ Kopf- und Fußzeilen enthalten im Allgemeinen Seitennummern, Berichtstitel und andere Berichtseigenschaften. Weitere Informationen dazu, wie Sie diese Elemente der Kopf- bzw. Fußzeile Ihres Berichts hinzufügen, finden Sie unter [Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS)](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md).  
   
- Nachdem Sie eine Seitenkopfzeile oder -fußzeile erstellt haben, wird diese auf jeder Berichtsseite angezeigt. Weitere Informationen zum Unterdrücken von Kopf- und Fußzeilen auf der ersten und letzten Seite finden Sie unter [Ausblenden einer Seitenkopf- oder Seitenfußzeile auf der ersten oder letzten Seite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md).  
+ Nachdem Sie eine Seitenkopfzeile oder -fußzeile erstellt haben, wird diese auf jeder Berichtsseite angezeigt. Weitere Informationen zum Unterdrücken von Kopf- und Fußzeilen auf der ersten und letzten Seite finden Sie unter [Ausblenden einer Seitenkopf- oder Seitenfußzeile auf der ersten oder letzten Seite (Berichts-Generator und SSRS)](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,9 +63,9 @@ ms.lasthandoff: 08/09/2017
   
 |Unterstützt im Ausdruck|ReportItems-Aggregate|Dataset-Aggregate (Bereich muss Datasetname sein)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Textfelder im Berichtstext|Ja|Nein|  
-|&PageNumber|Ja|Nein|  
-|&TotalPages|Ja|Nein|  
+|Textfelder im Berichtstext|ja|nein|  
+|&PageNumber|ja|nein|  
+|&TotalPages|ja|nein|  
 |Aggregate-Funktion|Ja. Beispiel:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Ja. Beispiel:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Feldauflistung für Elemente auf der Seite|Indirekt. Beispiel:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Ja. Beispiel:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Datengebundenes Bild|Indirekt. Beispiel: `=ReportItems!TXT_Photo.Value`|Ja. Beispiel:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/09/2017
   
      `=First(ReportItems!TXT_LastName.Value)`  
   
- Sie können keine Aggregatfunktionen für Felder im Seitenkopf oder -fuß verwenden. Aggregatfunktionen können nur für Berichtselemente im Hauptteil des Berichts verwendet werden. Allgemeine Ausdrücke in Kopf- und Fußzeilen finden Sie unter [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
+ Sie können keine Aggregatfunktionen für Felder im Seitenkopf oder -fuß verwenden. Aggregatfunktionen können nur für Berichtselemente im Hauptteil des Berichts verwendet werden. Allgemeine Ausdrücke in Kopf- und Fußzeilen finden Sie unter [Beispiele für Ausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
 #### <a name="adding-a-data-bound-image-to-a-header-or-footer"></a>Hinzufügen eines datengebundenen Bilds zu Kopf- oder Fußzeilen  
  Sie können in einer Datenbank gespeicherte Bilddaten in einer Kopf- oder Fußzeile verwenden. Sie können jedoch nicht direkt vom Bildberichtselement aus auf Datenbankfelder verweisen. Sie müssen stattdessen ein Textfeld im Hauptteil des Berichts hinzufügen und das Textfeld dann auf das Datenfeld festlegen, das das Bild enthält (der Wert muss base64-codiert sein). Sie können das Textfeld im Hauptteil des Berichts ausblenden, um die Anzeige des base64-codierten Bilds zu verhindern. Dann können Sie vom Bildberichtselement im Seitenkopf oder -fuß aus auf den Wert des ausgeblendeten Textfelds verweisen.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="designing-reports-with-page-headers-and-footers-for-specific-renderers"></a>Entwerfen von Berichten mit Seitenkopfzeilen und -fußzeilen für bestimmte Renderer  
  Bei der Verarbeitung eines Berichts werden die Berichtsdaten mit den Layoutinformationen kombiniert. Wenn Sie einen Bericht anzeigen, werden die kombinierten Informationen an einen Renderer übergeben, der den Umfang der Berichtsdaten festlegt, die auf den einzelnen Seiten angezeigt werden.  
   
- Wenn Sie einen Bericht auf dem Berichtsserver mithilfe eines Browsers anzeigen, wird der auf den einzelnen Seiten angezeigte Inhalt vom HTML-Renderer gesteuert. Wenn Sie Berichte in einem anderen Format als dem Anzeigeformat übermitteln möchten, oder wenn Sie Berichte in einem spezifischen Format drucken möchten, können Sie das Berichtslayout für den Renderer optimieren, der für das abschließende Berichtsformat verwendet werden soll. Weitere Informationen zur Berichtspaginierung finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Wenn Sie einen Bericht auf dem Berichtsserver mithilfe eines Browsers anzeigen, wird der auf den einzelnen Seiten angezeigte Inhalt vom HTML-Renderer gesteuert. Wenn Sie Berichte in einem anderen Format als dem Anzeigeformat übermitteln möchten, oder wenn Sie Berichte in einem spezifischen Format drucken möchten, können Sie das Berichtslayout für den Renderer optimieren, der für das abschließende Berichtsformat verwendet werden soll. Weitere Informationen zur Berichtspaginierung finden Sie unter [Paginierung in Reporting Services (Berichts-Generator und SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ### <a name="working-with-page-headers-and-footers-in-excel"></a>Arbeiten mit Seitenköpfen und -füßen in Excel  
  Befolgen Sie beim Definieren von Seitenköpfen und -füßen für Berichte, die auf die Excel-Renderingerweiterung abzielen, diese Richtlinien, um optimale Ergebnisse zu erhalten:  
@@ -130,11 +130,10 @@ ms.lasthandoff: 08/09/2017
   
  Eine genauere Seitenanzahl basiert auf logischen Seiten, die mit den Abmessungen einer gedruckten Seite korrelieren. In Excel verwendet der Seitenfuß automatisch logische Seitenzahlen. Um die logische Seitenanzahl in den Seitenkopf einzufügen, müssen Sie die Geräteinformationseinstellungen für die Verwendung einfacher Kopfzeilen konfigurieren. Denken Sie daran, dass durch die Verwendung einfacher Kopfzeilen die Möglichkeit verloren geht, komplexes Berichtslayout im Kopfzeilenbereich zu verwenden.  
   
- Weitere Informationen finden Sie unter [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
+ Weitere Informationen finden Sie unter [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41; (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS))](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einbetten eines Bilds in einen Bericht &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rechtecke und Linien &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

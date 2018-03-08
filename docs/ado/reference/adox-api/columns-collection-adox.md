@@ -3,7 +3,7 @@ title: Columns-Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: afacdd2d86d25382c6026dba8d3deda55d05c99a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 21bf59bef5782c63a272fb16ba1a07889c6fad67
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="columns-collection-adox"></a>Columns-Auflistung (ADOX)
 Enthält alle [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte von einer Tabelle, Index oder Schlüssel.  
@@ -56,7 +55,7 @@ Enthält alle [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Ob
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Spalten Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
+-   [Columns Collection Properties, Methods, and Events (Columns-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Append-Methode, Beispiel für Name-Eigenschaft (VB) Spalten und Tabellen](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -65,4 +64,3 @@ Enthält alle [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Ob
  [Beispiel für ParentCatalog-Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [SortOrder-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-

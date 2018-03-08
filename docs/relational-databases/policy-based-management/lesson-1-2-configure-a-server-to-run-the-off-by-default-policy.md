@@ -2,9 +2,12 @@
 title: "Konfigurieren eines Servers für das Ausführen der Richtlinie „Standardmäßig aus“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-query-tuning
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: efc87d23faa17dca299560764b0e26bdbb05ff9a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b92cd0c1cebaacca432cb45422682f12423f67ea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>Lektion 1-2 – Konfigurieren eines Servers für das Ausführen der Richtlinie „Standardmäßig aus“
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Nun verfügen Sie über eine Richtlinie mit dem Namen Standardmäßig aus. In dieser Aufgabe überprüfen Sie, ob Ihr Server die Anforderungen dieser Richtlinie einhält.  
   
 ### <a name="to-run-the-off-by-default-policy"></a>So führen Sie die Richtlinie 'Standardmäßig aus' aus  
@@ -54,4 +57,3 @@ Nun verfügen Sie über eine Richtlinie mit dem Namen Standardmäßig aus. In di
   
   
   
-

@@ -3,24 +3,25 @@ title: PDOStatement::getAttribute | Microsoft Docs
 ms.custom: 
 ms.date: 07/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41d0cca3-8556-4573-bb90-8e9402d9379f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01332bc8166f2f242e4daffdd7204bbd5efe11de
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ef6cddea6637104695435db5ba429d08faf38050
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,4 +50,3 @@ Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../in
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

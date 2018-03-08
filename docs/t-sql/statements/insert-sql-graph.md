@@ -2,9 +2,13 @@
 title: INSERT (SQL-Diagramm) | Microsoft Docs
 description: "Fügen Sie die Syntax für das Diagramm der SQL-Knoten oder Edge-Tabellen."
 ms.date: 05/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,21 +19,19 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], SQL graph
 - SQL graph, INSERT statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e694d89efef130d2abcd5cd6424e2be576ef09de
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-
 # <a name="insert-sql-graph"></a>INSERT (SQL-Diagramm)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Fügt eine oder mehrere Zeilen auf einer `node` oder `edge` in Tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -166,8 +168,7 @@ Bevor die masseneinfügung in eine Rahmentabelle eingefügt müssen die Knoten T
 
   
 ## <a name="see-also"></a>Siehe auch  
- [INSERT-Tabelle &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Diagramm mit SQL Server-2017 verarbeiten](../../relational-databases/graphs/sql-graph-overview.md)  
-
 
 

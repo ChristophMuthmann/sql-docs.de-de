@@ -3,8 +3,11 @@ title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Führt für eine explizite oder implizite Transaktion ein Rollback zum Anfang der Transaktion oder auf einen Sicherungspunkt innerhalb der Transaktion aus. Mit ROLLBACK TRANSACTION können Sie alle Datenänderungen löschen, die seit dem letzten Start der Transaktion oder bis zu einem Sicherungspunkt vorgenommen wurden. Die Anweisung gibt auch Ressourcen frei, die von der Transaktion beansprucht werden.  
   
@@ -57,13 +59,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  Der bei BEGIN TRANSACTION der Transaktion zugewiesene Name. *Transaction_name* muss den Regeln für Bezeichner entsprechen, aber nur die ersten 32 Zeichen des Transaktionsnamens verwendet werden. Wenn Transaktionen geschachtelt *Transaction_name* muss der Name der äußersten BEGIN TRANSACTION-Anweisung sein. *Transaction_name* wird immer Groß-/Kleinschreibung beachtet, selbst wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht in der Groß-/Kleinschreibung beachtet.  
   
- **@***Tran_name_variable*  
+ **@** *tran_name_variable*  
  Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Transaktionsnamen enthält. Die Variable muss deklariert werden, mit einem **Char**, **Varchar**, **Nchar**, oder **Nvarchar** -Datentyp.  
   
  *savepoint_name*  
  Ist *Savepoint_name* aus einer SAVE TRANSACTION-Anweisung. *Savepoint_name* muss den Regeln für Bezeichner entsprechen. Verwendung *Savepoint_name* Wann sollte ein bedingtes Rollback nur einen Teil der Transaktion auswirken.  
   
- **@***Savepoint_variable*  
+ **@** *savepoint_variable*  
  Dies ist der Name einer benutzerdefinierten Variablen, die einen gültigen Sicherungspunktnamen enthält. Die Variable muss deklariert werden, mit einem **Char**, **Varchar**, **Nchar**, oder **Nvarchar** -Datentyp.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
@@ -141,9 +143,8 @@ value
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [COMMIT WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   
-

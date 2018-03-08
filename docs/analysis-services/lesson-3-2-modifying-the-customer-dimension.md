@@ -2,29 +2,32 @@
 title: "Ändern die Customer-Dimension | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ba21519d0ea16952d3aa4cc086fc78309a2108
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lektion 3-2-ändern die Customer-Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Es gibt viele verschiedene Möglichkeiten zum Verbessern der Benutzerfreundlichkeit und Funktionalität der Dimensionen in einem Cube. Mit den Schritten in diesem Thema ändern Sie die Customer-Dimension.  
   
 ## <a name="renaming-attributes"></a>Umbenennen von Attributen  
@@ -97,7 +100,7 @@ Sie können eine benannte Berechnung, bei der es sich um einen SQL-Ausdruck hand
   
     Beachten Sie, dass die **FullName** -Spalte in der Datenquellensicht angezeigt wird, wobei Daten aus verschiedenen Spalten aus der zugrunde liegenden Datenquelle ohne Änderung der ursprünglichen Datenquelle ordnungsgemäß verkettet werden.  
   
-8.  Schließen Sie die Registerkarte **Customer-Tabelle durchsuchen** .  
+8.  Schließen Sie die Registerkarte **Customer-Tabelle durchsuchen**.  
   
 ## <a name="using-the-named-calculation-for-member-names"></a>Verwenden der benannten Berechnung für Elementnamen  
 Nachdem Sie eine benannte Berechnung in der Datenquellensicht erstellt haben, können Sie sie als Eigenschaft eines Attributs verwenden.  
@@ -227,11 +230,11 @@ Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie auch Attribu
   
 2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **City** -Attribut, und wählen Sie anschließend **Neue Attributbeziehung**aus.  
   
-3.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut** **City**. Legen Sie den Wert **Verknüpftes Attribut** auf **State-Province**fest.  
+3.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut** **City**. Legen Sie den Wert **Verknüpftes Attribut** auf **State-Province** fest.  
   
 4.  Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
   
-    Der Beziehungstyp ist **Fest** , da sich Beziehungen zwischen den Elementen nicht im Laufe der Zeit ändern. Ein Ort wird beispielsweise normalerweise nicht Teil eines anderen Bundeslands oder Kantons.  
+    Der Beziehungstyp ist **Fest**, da sich Beziehungen zwischen den Elementen nicht im Laufe der Zeit ändern. Ein Ort wird beispielsweise normalerweise nicht Teil eines anderen Bundeslands oder Kantons.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -277,4 +280,3 @@ Nach dem Ändern von Attributen und Hierarchien müssen Sie die Änderungen bere
 [Umbenennen eines Attributs](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  
 [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
-

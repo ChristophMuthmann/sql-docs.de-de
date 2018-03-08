@@ -2,11 +2,13 @@
 title: "Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
-caps.latest.revision: 55
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "55"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b52630036d499deb0c125a9c6d8512a2edc48a4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -145,8 +147,7 @@ ms.lasthandoff: 06/22/2017
   
  Werden logische Datensätzen verwendet, muss der Merge-Agent die Änderungen für jeden vollständigen logischen Datensatz auf einmal verarbeiten. Das wirkt sich auf die Dauer aus, die der Merge-Agent zum Replizieren der Zeilen benötigt. Darüber hinaus können sich die Sperranforderungen erhöhen, da der Agent eine separate Transaktion für jeden logischen Datensatz öffnet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Artikeloptionen für die Mergereplikation](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   
-

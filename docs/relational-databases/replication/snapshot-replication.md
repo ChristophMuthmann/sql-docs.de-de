@@ -2,31 +2,32 @@
 title: Momentaufnahmereplikation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshot replication [SQL Server], about snapshot replication
 - snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b5bf729ba6d120a21bfcdbccf1095aab57153f65
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-replication"></a>Momentaufnahmereplikation
-  Die Momentaufnahmereplikation verteilt Daten exakt wie angezeigt zu einem bestimmten Zeitpunkt, ohne Aktualisierungen an den Daten zu überwachen. Bei der Synchronisierung wird die gesamte Momentaufnahmen generiert und an Abonnenten gesendet.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die Momentaufnahmereplikation verteilt Daten exakt wie angezeigt zu einem bestimmten Zeitpunkt, ohne Aktualisierungen an den Daten zu überwachen. Bei der Synchronisierung wird die gesamte Momentaufnahmen generiert und an Abonnenten gesendet.  
   
 > [!NOTE]  
 >  Die Momentaufnahmereplikation wird üblicherweise verwendet, um den Ausgangsdatensatz und die Ausgangsdatenobjekte für Transaktions- und Mergeveröffentlichungen bereitzustellen, da der Momentaufnahmeprozess eine Kopie aller von einer Veröffentlichung angegebenen Objekte und Daten erstellt. Die Momentaufnahmereplikation kann aber auch als eigenständiger Replikationstyp verwendet werden.  
@@ -109,4 +110,3 @@ ms.lasthandoff: 06/22/2017
 3.  Wenn eine neue Momentaufnahme verfügbar ist, wendet der Merge-Agent die Momentaufnahmedateien aus dem in **sysmergeschemachange**angegebenen Speicherort auf die Abonnementdatenbank an.  
   
   
-

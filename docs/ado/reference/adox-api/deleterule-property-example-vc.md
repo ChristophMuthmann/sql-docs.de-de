@@ -3,7 +3,7 @@ title: DeleteRule-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 263a6d420d29925a48b467eab12ecb7f36676ed6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41c740653886e95a8ee8cc949b5b2fe7190ddb85
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) Eigenschaft eine [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekt. Der Code Fügt eine neue [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und definiert dann einen neuen Primärschlüssel festlegen **DeleteRule** auf **AdRICascade**.  
@@ -117,5 +116,4 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [DeleteRule-Eigenschaft (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [Schlüsselobjekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-
+ [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

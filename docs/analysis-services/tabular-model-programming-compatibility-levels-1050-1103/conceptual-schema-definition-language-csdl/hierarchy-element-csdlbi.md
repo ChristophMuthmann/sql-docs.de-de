@@ -2,31 +2,32 @@
 title: Hierarchy-Element (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f3ff3c0bd93b75384b53e1f386a14196bcc803c3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy-Element (CSDLBI)
-  Das Hierarchy-Element ist ein logischer Container für Felder in einer Tabelle, die miteinander verknüpft werden können, um eine Hierarchie zu bilden. Das Hierarchy-Element wird vom CSDL-Member-Element abgeleitet und wurde zur Unterstützung der in Business Intelligence-Datenmodellen erstellten Hierarchien erweitert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Das Hierarchy-Element ist ein logischer Container für Felder in einer Tabelle, die miteinander verknüpft werden können, um eine Hierarchie zu bilden. Das Hierarchy-Element wird vom CSDL-Member-Element abgeleitet und wurde zur Unterstützung der in Business Intelligence-Datenmodellen erstellten Hierarchien erweitert.  
   
 ## <a name="elements-and-attributes"></a>Elemente und Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, die das Hierarchy-Element definieren.  
@@ -37,10 +38,10 @@ ms.lasthandoff: 09/01/2017
 |Ebene|Ja|Eines oder mehrere Level-Elemente, mit denen die Spalten in der Hierarchie definiert werden.<br /><br /> Weitere Informationen finden Sie unter [Level-Element &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md).|  
   
 ## <a name="remarks"></a>Hinweise  
- In Tabellenmodellen werden Hierarchien erstellt, indem Beziehungen zwischen über- und untergeordneten Elementen in Spalten derselben Tabelle angegeben werden. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+ In Tabellenmodellen werden Hierarchien erstellt, indem Beziehungen zwischen über- und untergeordneten Elementen in Spalten derselben Tabelle angegeben werden. Weitere Informationen finden Sie unter [Hierarchien](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
 ## <a name="example"></a>Beispiel  
- **Tabellarisch**  
+ **Tabellarische**  
   
  Im folgenden Beispiel wird in CSDLBI, Version 1.0, eine Hierarchie im AdventureWorks-Beispielmodell veranschaulicht, die der Tabelle Products hinzugefügt wurde.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Multidimensional**  
+ **Mehrdimensionale**  
   
  Im folgenden Beispiel wird in CSDLBI, Version 1.1, eine Hierarchie aus dem RetailOperations-Cube von Contoso veranschaulicht.  
   
@@ -94,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Konfigurieren der &#40; Alle &#41; Ebene für Attributhierarchien](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   
-

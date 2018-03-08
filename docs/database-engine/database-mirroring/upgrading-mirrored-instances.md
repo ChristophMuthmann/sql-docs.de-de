@@ -2,11 +2,13 @@
 title: Upgrade von gespiegelten Instanzen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb81c72c3640df10334bcdb108150e755e49695f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Upgrade von gespiegelten Instanzen
-  Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -gespiegelte Instanz auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows-Service Pack oder ein kumulatives Update upgegradet wird, können Sie die Downtime für jede gespiegelte Datenbank auf ein einziges manuelles Failover reduzieren, indem Sie ein paralleles Upgrade ausführen (oder zwei manuelle Failover, falls Sie ein Failback auf das ursprüngliche primäre Replikat ausführen). Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz aktualisiert, anschließend ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, die vorherige prinzipale [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Betriebsmodus und der Anzahl sowie dem Layout der Spiegelungssitzung auf den zu aktualisierenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanzen ab.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-gespiegelte Instanz auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives Update upgegradet wird, können Sie die Downtime für jede gespiegelte Datenbank auf ein einziges manuelles Failover reduzieren, indem Sie ein paralleles Upgrade ausführen (oder zwei manuelle Failover, falls Sie ein Failback auf das ursprüngliche primäre Replikat ausführen). Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz aktualisiert, anschließend ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, die vorherige prinzipale [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Betriebsmodus und der Anzahl sowie dem Layout der Spiegelungssitzung auf den zu aktualisierenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanzen ab.  
   
 > [!NOTE]  
 >  Für Informationen zur Verwendung von Datenbankspiegelung mit Protokollversand während der Migration verwenden, laden Sie dieses [Whitepaper zur Datenbankspiegelung und zum Protokollversand](https://t.co/RmO6ruCT4J)herunter.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  Führen Sie zu Übungszwecken ein manuelles Failover für mindestens eine der Spiegelungssitzungen aus:  
   
-    -   [Manuelles Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Manueller Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
     -   [Manuelles Failover für eine Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 08/02/2017
   
     -   [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [ALTER DATABASE-Datenbankspiegelung &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
@@ -170,4 +171,3 @@ ms.lasthandoff: 08/02/2017
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

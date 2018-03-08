@@ -2,13 +2,13 @@
 title: Erstellen von berechneten Elementen | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
-  Sie können benutzerdefinierte Measures oder Dimensionselemente (so genannte berechnete Elemente) erstellen, indem Sie Cubedaten, arithmetische Operatoren, Zahlen und Funktionen kombinieren. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können benutzerdefinierte Measures oder Dimensionselemente (so genannte berechnete Elemente) erstellen, indem Sie Cubedaten, arithmetische Operatoren, Zahlen und Funktionen kombinieren. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
   
  Definitionen berechneter Elemente werden zwar gespeichert, ihre Werte sind jedoch nur im Arbeitsspeicher vorhanden. Im vorherigen Beispiel werden die Werte für Euros für Endbenutzer angezeigt, aber nicht als Cubedaten gespeichert.  
   
@@ -91,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Berechnungen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

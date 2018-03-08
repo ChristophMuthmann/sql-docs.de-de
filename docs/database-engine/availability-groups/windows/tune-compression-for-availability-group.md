@@ -3,28 +3,28 @@ title: "Optimieren der Komprimierung für die Verfügbarkeitsgruppe | Microsoft-
 ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 36179f5848f1e5bd78176fc4dd508de5c31f70bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d7eed64649188267eafb4a555fa811d8c9d27f0e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tune-compression-for-availability-group"></a>Optimieren der Komprimierung für die Verfügbarkeitsgruppe
-
-Standardmäßig werden Datenströme für Verfügbarkeitsgruppen gegebenenfalls von SQL Server komprimiert. Die Komprimierung reduziert den Netzwerkverkehr, steigert die CPU-Auslastung und kann die Latenz erhöhen. Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um die Komprimierung zu aktivieren. Die folgende Tabelle zeigt, wann SQL Server Protokolldatenströme von Verfügbarkeitsgruppen komprimiert:
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Standardmäßig werden Datenströme für Verfügbarkeitsgruppen gegebenenfalls von SQL Server komprimiert. Die Komprimierung reduziert den Netzwerkverkehr, steigert die CPU-Auslastung und kann die Latenz erhöhen. Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um die Komprimierung zu aktivieren. Die folgende Tabelle zeigt, wann SQL Server Protokolldatenströme von Verfügbarkeitsgruppen komprimiert:
 
 | Szenario | Komprimierungseinstellung
 | ---- | ----
@@ -53,4 +53,3 @@ Ablaufverfolgungsflag | Description
 [Automatisches Seeding](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [Voraussetzungen für Always On](prereqs-restrictions-recommendations-always-on-availability.md) 
-

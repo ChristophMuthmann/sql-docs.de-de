@@ -1,29 +1,32 @@
 ---
-title: Bereitstellen ein SSIS-Projekts mit PowerShell | Microsoft Docs
+title: Bereitstellen eines SSIS-Projekts mit PowerShell | Microsoft- Dokumentation
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: quick-start
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: 37fe358eb7e11cb878ebd9b0c8356ac2295ca7e9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: d23639aa98492228fdec5d45799718f59b809425
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Bereitstellen eines SSIS-Projekts mit PowerShell
-Dieser Schnellstart-Lernprogramm veranschaulicht, wie ein PowerShell-Skript verwenden, um eine Verbindung mit einem Datenbankserver und einem SSIS-Projekt im SSIS-Katalog bereitstellen.
+In diesem Schnellstarttutorial wird dargestellt, wie ein PowerShell-Skript verwendet wird, um eine Verbindung mit einem Datenbankserver herzustellen und ein SSIS-Projekt im SSIS-Katalog bereitzustellen.
 
 ## <a name="powershell-script"></a>PowerShell-Skript
-Geben Sie geeignete Werte für die Variablen am Anfang das folgende Skript aus, und führen Sie das Skript zum Bereitstellen des SSIS-Projekts.
+Geben Sie am Anfang des folgenden Skripts geeignete Werte für die Variablen an, und führen Sie das Skript aus, um das SSIS-Projekt bereitzustellen.
 
 > [!NOTE]
-> Im folgenden Beispiel wird die Windows-Authentifizierung. Um SQL Server-Authentifizierung verwenden, ersetzen die `Integrated Security=SSPI;` Argument mit `User ID=<user name>;Password=<password>;`.
+> In diesem Beispiel wird die Windows-Authentifizierung verwendet. Ersetzen Sie das Argument `Integrated Security=SSPI;` durch `User ID=<user name>;Password=<password>;`, um die SQL Server-Authentifizierung zu verwenden.
 
 ```powershell
 # Variables
@@ -63,17 +66,16 @@ Write-Host "Done."
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Erwägen Sie andere Verfahren zum Bereitstellen eines Pakets aus.
-    - [Bereitstellen eines SSIS-Pakets mit SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Bereitstellen eines SSIS-Pakets mit Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Bereitstellen eines SSIS-Pakets mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-deploy-tsql-vscode.md)
-    - [Bereitstellen eines SSIS-Pakets von der Befehlszeile aus](./ssis-quickstart-deploy-cmdline.md)
-    - [Bereitstellen eines SSIS-Pakets mit c#](./ssis-quickstart-deploy-dotnet.md) 
-- Führen Sie ein bereitgestelltes Paket. Um ein Paket auszuführen, können Sie über mehrere Tools und Sprachen auswählen. Weitere Informationen finden Sie unter den folgenden Artikeln:
-    - [Führen Sie ein SSIS-Paket mit SSMS](./ssis-quickstart-run-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Führen Sie ein SSIS-Paket von der Befehlszeile aus](./ssis-quickstart-run-cmdline.md)
-    - [Führen Sie ein SSIS-Paket mit PowerShell](ssis-quickstart-run-powershell.md)
-    - [Führen Sie ein SSIS-Paket mit c#](./ssis-quickstart-run-dotnet.md) 
-
+- Erfahren Sie mehr über weitere Möglichkeiten, ein Paket bereitzustellen.
+    - [Deploy an SSIS package with SSMS (Bereitstellen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-deploy-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS) (Bereitstellen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (VS Code) (Bereitstellen eines SSIS-Pakets mit Transact-SQL [VS Code])](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md) (Bereitstellen eines SSIS-Pakets von der Befehlszeile aus)
+    - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) (Bereitstellen eines SSIS-Pakets mit C#) 
+- Führen Sie ein bereitgestelltes Paket aus. Für die Ausführung eines Pakets können Sie aus mehreren Tools und Sprachen auswählen. Weitere Informationen finden Sie in den folgenden Artikeln:
+    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ausführen eines SSIS-Pakets mit PowerShell)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

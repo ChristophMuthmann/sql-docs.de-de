@@ -1,41 +1,40 @@
 ---
-title: Servereigenschaften (Seite Allgemein) | Microsoft Docs
+title: "Servereigenschaften (Seite „Allgemein“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 974897a7498eb9032bbe43933b9e9931f5969449
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-server-properties-general-page"></a>Berichtsserver-Eigenschaften (Seite Allgemein)
+# <a name="report-server-properties-general-page"></a>Eigenschaften des Berichtsservers (Seite „Allgemein“)
   Verwenden Sie diese Seite, um den im Berichts-Manager verwendeten Titel anzuzeigen oder zu ändern, um den Ordner Meine Berichte zu aktivieren oder zu deaktivieren, um eine Rollendefinition für die Sicherheit des Ordners Meine Berichte auszuwählen und um das Client-Drucksteuerelement zu aktivieren oder zu deaktivieren.  
   
  **So öffnen Sie diese Seite:**
  1) Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
- 2) Stellen Sie eine Verbindung mit einer Berichtsserverinstanz in her.
+ 2) Stellen Sie eine Verbindung mit einer Berichtsserverinstanz her.
  3) Klicken Sie mit der rechten Maustaste auf den Berichtsservernamen, und wählen Sie die Option **Eigenschaften**aus.  
   
  Der Servermodus bestimmt, welche Servereigenschaften Sie festlegen können. Wenn Sie einen Berichtsserver verwalten, der so konfiguriert ist, dass er im integrierten SharePoint-Modus ausgeführt wird, können Sie „Meine Berichte“ nicht aktivieren und auch den Titel für das Webportal nicht festlegen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen Namen ein, der ganz oben im Webportal angezeigt wird. Der Standardwert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Der von Ihnen angegebene Name wird nur im Berichts-Manager angezeigt.  
   
@@ -58,13 +57,12 @@ ms.lasthandoff: 08/09/2017
  Geben Sie eine für die Sicherheit des Ordners Meine Berichte zu verwendende Rollendefinition an. Die Rollendefinition identifiziert die Aufgaben, die im jeweiligen Ordner Meine Berichte unterstützt werden.  
 
   
-## <a name="see-also"></a>Siehe auch  
- [Festlegen der Berichtsserver-Eigenschaften &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Aktivieren und Deaktivieren von "Meine Berichte"](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Berichtsserver im Management Studio F1-Hilfe](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Aktivieren und Deaktivieren von „Meine Berichte“](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Secure My Reports (Sichern von Meine Berichte)](../../reporting-services/security/secure-my-reports.md)  
   
   
-
 

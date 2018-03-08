@@ -2,30 +2,31 @@
 title: Erstellen ein Vorhersagemodells (R in SQL-Schnellstart) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d957b05c9bc964a3da1c7e177d9413e0c73aa9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Erstellen eines Vorhersagemodells (R in SQL-Schnellstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Schritt erfahren Sie, wie Sie ein Modell mithilfe von R trainieren und das Modell später in einer Tabelle in SQL Server speichern. Beim Modell handelt es sich um ein einfaches Regressionsmodell, das den Bremsweg eines Autos basierend auf dessen Geschwindigkeit vorhersagt. Verwenden Sie die `cars` Dataset mit R, eingeschlossen werden, da sie klein und einfach zu verstehen ist.
 
@@ -159,7 +160,6 @@ Beachten Sie diese Regeln für die Arbeit mit SQL-Parametern und Variablen von R
 
 Da Sie nun über ein Modell verfügen, lernen Sie im letzten Schritt, wie man darauf basierende Vorhersagen trifft und die Ergebnisse darstellt.
 
-[Vorhersagen und Zeichnen von Modell](../tutorials/rtsql-predict-and-plot-from-model.md)
-
+[Vorhersagen und Zeichnen ausgehend vom Modell](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

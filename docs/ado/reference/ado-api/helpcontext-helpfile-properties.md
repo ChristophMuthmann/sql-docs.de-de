@@ -3,7 +3,7 @@ title: HelpFile-Eigenschaften, HelpContext | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - HelpContext property [ADO]
 - HelpFile property [ADO]
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1d93d8f16d828892e8e5c11ca1036f7dc83b75fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0474b7b80eebb70e181df58d22f293c388a628bb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext HelpFile-Eigenschaften
 Gibt an, die Hilfedatei sowie zugeordnete Thema ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt.  
@@ -56,5 +55,4 @@ Gibt an, die Hilfedatei sowie zugeordnete Thema ein [Fehler](../../../ado/refere
  [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description-Eigenschaft](../../../ado/reference/ado-api/description-property.md)   
  [Number-Eigenschaft (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source-Eigenschaft (ADO-Fehler)](../../../ado/reference/ado-api/source-property-ado-error.md)
-
+ [Source-Eigenschaft (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)

@@ -2,30 +2,30 @@
 title: "Konfigurieren der Sammlung von Verwendungsdaten für (PowerPivot für SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint
-  Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwendet und erweitert dieses System, um Berichte im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard bereitzustellen, die zeigen, wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten und -Dienste verwendet werden. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit die Verwendungsdaten für die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard erstellt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwendet und erweitert dieses System, um Berichte im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard bereitzustellen, die zeigen, wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten und -Dienste verwendet werden. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit die Verwendungsdaten für die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard erstellt werden.  
   
  Informationen zu den Verwendungsdaten im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard finden Sie unter [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
@@ -166,7 +166,7 @@ ms.lasthandoff: 09/01/2017
   
     -   Der Standardwert beträgt 300 Sekunden (oder fünf Minuten). Dieser Wert wird für dynamische Farmumgebungen empfohlen, in denen eine Vielzahl von Anwendungen und Diensten ausgeführt wird.  
   
-     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
+     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
   
 3.  Klicken Sie auf **OK**.  
   
@@ -201,4 +201,3 @@ ms.lasthandoff: 09/01/2017
  [Sammlung von Power Pivot-Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   
-

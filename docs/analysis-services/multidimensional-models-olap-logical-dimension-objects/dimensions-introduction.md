@@ -2,12 +2,13 @@
 title: "Einführung in Dimensionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,20 +20,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], dimensions
 - storage [Analysis Services]
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9320eebfc25964e5e751e2d93ffc8cb7503861e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimensions---introduction"></a>Dimensionen – Einführung
-  Alle Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Dimensionen sind Gruppen von Attributen basierend auf Spalten aus Tabellen oder Sichten in einer Datenquellensicht. Dimensionen sind unabhängig von einem Cube vorhanden, können sowohl in mehreren Cubes als auch mehrfach in einem einzelnen Cube verwendet und zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanzen verknüpft werden. Eine unabhängig von einem Cube vorhandene Dimension wird als Datenbankdimension bezeichnet und eine innerhalb eines Cubes verwendete Instanz einer Datenbankdimension als Cubedimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Alle Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Dimensionen sind Gruppen von Attributen basierend auf Spalten aus Tabellen oder Sichten in einer Datenquellensicht. Dimensionen sind unabhängig von einem Cube vorhanden, können sowohl in mehreren Cubes als auch mehrfach in einem einzelnen Cube verwendet und zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanzen verknüpft werden. Eine unabhängig von einem Cube vorhandene Dimension wird als Datenbankdimension bezeichnet und eine innerhalb eines Cubes verwendete Instanz einer Datenbankdimension als Cubedimension.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimension auf Basis eines Sternschemaentwurfs  
  Die Struktur einer Dimension hängt größtenteils von der Struktur der zugrunde liegenden Dimensionstabellen ab. Die einfachste Struktur ist das Sternschema, bei dem jede Dimension auf einer einzelnen Dimensionstabelle basiert, die über einen Primärschlüssel direkt mit der Faktentabelle verknüpft ist - Fremdschlüsselbeziehung.  
@@ -69,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

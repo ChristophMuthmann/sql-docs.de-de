@@ -2,9 +2,12 @@
 title: Verwenden des nativen Formats zum Importieren oder Exportieren von Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 889a414674b3b87ca528f1af2a54261c723c4555
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Das systemeigene Format wird für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei empfohlen, die keinen erweiterten oder Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) enthält.  
 
 > [!NOTE]
@@ -89,7 +92,7 @@ Sie können Daten im nativen Format importieren, unter Verwendung von [BCP](../.
 
 Das native Format wird durch die folgenden Befehlsoptionen unterstützt:  
 
-|Befehl|Option|Beschreibung|  
+|Befehl|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Veranlasst das Hilfsprogramm „bcp“, die nativen Datentypen der Daten zu verwenden.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Verwendet die systemeigenen Datentypen (native oder widenative) der Daten. Beachten Sie, dass DATAFILETYPE nicht erforderlich ist, wenn eine Formatdatei die Datentypen angibt.|  
@@ -246,7 +249,7 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
   
 -   [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
@@ -256,4 +259,3 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
  [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   
-

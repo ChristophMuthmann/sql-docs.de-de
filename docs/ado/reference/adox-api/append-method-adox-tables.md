@@ -3,7 +3,7 @@ title: Append-Methode (ADOX-Tabellen) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0da2252e54696f8473319572b6c7c8e534f8257b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f350249377a89e70ebd8e21313032e02826d184e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-tables"></a>Append-Methode (ADOX-Tabellen)
 Fügt ein neues [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) -Objekt an die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung.  
@@ -60,5 +59,4 @@ Tables.Append Table
  [Append-Methode (ADOX-Schlüssel)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append-Methode (ADOX Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

@@ -3,7 +3,7 @@ title: Dimension-Objekt (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad282fee080d57546335029eceff5475fe6aecc1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimension-object-ado-md"></a>Dimensionsobjekt (ADO MD)
 Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder mehrere Hierarchien von Elementen enthält.  
@@ -50,14 +49,14 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder me
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|Standardhierarchie|Der eindeutige Name der Standardhierarchie.|  
+|DefaultHierarchy|Der eindeutige Name der Standardhierarchie.|  
 |Description|Eine aussagekräftige Beschreibung des Cubes.|  
 |DimensionCaption|Eine Bezeichnung oder Beschriftung, die der Dimension zugeordnet werden soll.|  
 |DimensionCardinality|Die Anzahl der Elemente in der Dimension.|  
 |DimensionGUID|Die GUID der Dimension.|  
 |DimensionName|Der Name der Dimension.|  
 |DimensionOrdinal|Die Ordinalzahl der Dimension innerhalb dieser Gruppe von Dimensionen, die den Cube zu bilden.|  
-|Von DimensionType|Die Dimension-Datentyp.|  
+|DimensionType|Die Dimension-Datentyp.|  
 |DimensionUniqueName|Der eindeutige Name der Dimension.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
   
@@ -69,6 +68,5 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder me
  [CubeDef-Beispiel (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Auflistung von Dimensionen (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Hierarchies-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Hierarchies Collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

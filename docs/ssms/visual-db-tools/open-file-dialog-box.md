@@ -3,30 +3,31 @@ title: "Datei öffnen (Dialogfeld) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aeb2660571f6eff735bf9936be3d4243fb797149
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b410bc86b35e2cacc83e9a367a9609e271c34290
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
-Verwenden Sie das Dialogfeld **Datei öffnen** , um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Datei öffnen**, um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **Öffnen** und dann **Datei**aus. Dieses Dialogfeld wird auch angezeigt, wenn Sie Dateien von anderen Elementen aus öffnen, z. B. dem Dialogfeld **Externe Tools** . Um das ähnliche Dialogfeld **Projekt öffnen** zu öffnen, wählen Sie im Menü **Datei**den Befehl **Öffnen** und dann **Projekt/Projektmappe** aus.  
   
@@ -34,7 +35,7 @@ Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option 
 > Überprüfen Sie vor dem Öffnen eines Projekts oder einer Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]die Vertrauenswürdigkeit des zugehörigen Codes. Durch das Öffnen des Projekts oder der Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] wird möglicherweise der Code des Projekts bzw. der Komponente in einem vertrauenswürdigen Prozess auf dem lokalen Computer ausgeführt.  
   
 ## <a name="option"></a>Option  
-**Suchen in**  
+**Look in**  
 Suchen Sie den vorhandenen Projektordner aus dieser Dropdownliste aus. Nach der Auswahl eines Ordners aus dieser Liste wird der Inhalt im primären Bereich angezeigt.  
   
 ## <a name="my-places-bar"></a>Meine Umgebung (Leiste)  
@@ -85,7 +86,7 @@ Zeigt Dateien und Ordner als große Symbole an.
 **Symbole**  
 Zeigt Dateien und Ordner als kleine Symbole an.  
   
-**Listee**  
+**Liste**  
 Zeigt Dateien und Ordner in einem Listenformat an.  
   
 **Details**  
@@ -103,4 +104,3 @@ Löscht die ausgewählte Datei bzw. den ausgewählten Ordner aus dem Speicher.
 **Netzlaufwerk verbinden**  
 Öffnet das Dialogfeld **Netzlaufwerk verbinden** .  
   
-

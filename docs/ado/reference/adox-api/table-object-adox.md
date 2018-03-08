@@ -3,7 +3,7 @@ title: Table-Objekt (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: da9c76799df8983b50298ee7005f5a357905e4d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 198b59d624b2daa2e2451b8dbb61ae5868f7eb7d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="table-object-adox"></a>Table-Objekt (ADOX)
 Stellt eine Datenbanktabelle, einschließlich Spalten, Indizes und Schlüssel dar.  
@@ -65,7 +64,7 @@ Dim obj As New Table
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Tabelle-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
+-   [Table-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für Katalog ActiveConnection-Eigenschaft (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -78,4 +77,3 @@ Dim obj As New Table
  [Die Auflistung der Schlüssel (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-

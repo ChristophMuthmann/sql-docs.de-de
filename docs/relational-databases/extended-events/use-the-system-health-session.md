@@ -2,9 +2,12 @@
 title: Verwenden der system_health-Sitzung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -16,24 +19,23 @@ helpviewer_keywords:
 - system_health session [SQL Server extended events]
 - system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c64a0a128576a4bbf38f10b70514dbc4def84d11
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5ebc3bfc6f6094036189db1c8fd697997b0ad469
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-the-systemhealth-session"></a>Verwenden der system_health-Sitzung
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Bei der system_health-Sitzung handelt es sich um eine standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltene Sitzung für erweiterte Ereignisse. Diese Sitzung wird automatisch beim Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gestartet und ohne merkliche Auswirkungen auf die Leistung ausgeführt. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beheben können. Daher empfiehlt es sich, die Sitzung nicht zu beenden oder zu löschen.  
   
- In der Sitzung werden u. a. folgende Informationen erfasst:  
+ In der Sitzung werden u. a. folgende Informationen erfasst:  
   
 -   „sql_text“ und „session_id“ aller Sitzungen, in denen ein Fehler mit einem Schweregrad >= 20 aufgetreten ist.  
   
@@ -82,8 +84,7 @@ Um die Sitzungsdaten aus der Ereignisdatei anzuzeigen, verwenden Sie die in Mana
   
  Wenn Sie die Sitzung wiederhergestellt haben, müssen Sie die Sitzung mit der ALTER EVENT SESSION-Anweisung oder über den Knoten **Erweiterte Ereignisse** im Objekt-Explorer starten. Andernfalls wird die Sitzung beim nächsten Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts automatisch gestartet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tools für erweiterte Ereignisse](../../relational-databases/extended-events/extended-events-tools.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: Always On-Failoverclusterinstanzen (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,22 +22,21 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a5de42512c1b7f5372e96f53b6332145fb99a3d8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bfe05c5095d83cdf0963a6e3a7c04687462e4092
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn-Failoverclusterinstanzen (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Als Teil des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn-Angebots nutzen AlwaysOn-Failoverclusterinstanzen die Funktionalität Windows Server-Failoverclustering (WSFC), um eine hohe lokale Verfügbarkeit durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* (FCI)) zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.  
+  Als Teil des Always On-Angebots von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nutzen Always On-Failoverclusterinstanzen die Funktionalität des Windows Server-Failoverclustering (WSFC), um durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* [FCI]) lokale Hochverfügbarkeit zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.  
   
  Eine FCI kann [Availability Groups (Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) nutzen, um die Remotewiederherstellung im Notfall auf Datenbankebene bereitzustellen. Weitere Informationen finden Sie unter [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41; (Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server))](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
  
@@ -59,7 +60,7 @@ ms.lasthandoff: 06/22/2017
 -   [Verwandte Themen](#RelatedTopics)  
   
 ##  <a name="Benefits"></a> Vorteile einer Failoverclusterinstanz  
- Wenn bei einem Server Hardware- oder Softwarefehler auftreten, kommt es bei den mit dem Server verbundenen Anwendungen oder Clients zu Ausfallzeiten. Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz konfiguriert wird, um eine FCI (statt einer eigenständigen Instanz) zu sein, wird die hohe Verfügbarkeit dieser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz vom Vorhandensein redundanter Knoten in der FCI geschützt. Nur jeweils einer der Knoten in der FCI kann die WSFC-Ressourcengruppe besitzen. Bei einem Fehler (Hardwarefehler, Betriebssystemfehler, Anwendungs- oder Dienstfehler) oder einem geplanten Upgrade wird der Ressourcengruppenbesitz zu einem anderen WSFC-Knoten verschoben. Dieser Prozess ist für den Client oder die Anwendung transparent, der bzw. die eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt. Dadurch werden die Ausfallzeiten der Anwendung oder des Clients bei einem Fehler minimiert. Die folgende Liste enthält einige wichtige Vorteile, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen bieten:  
+ Wenn bei einem Server Hardware- oder Softwarefehler auftreten, kommt es bei den mit dem Server verbundenen Anwendungen oder Clients zu Ausfallzeiten. Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz konfiguriert wird, um eine FCI (statt einer eigenständigen Instanz) zu sein, wird die Hochverfügbarkeit dieser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz vom Vorhandensein redundanter Knoten in der FCI geschützt. Nur jeweils einer der Knoten in der FCI kann die WSFC-Ressourcengruppe besitzen. Bei einem Fehler (Hardwarefehler, Betriebssystemfehler, Anwendungs- oder Dienstfehler) oder einem geplanten Upgrade wird der Ressourcengruppenbesitz zu einem anderen WSFC-Knoten verschoben. Dieser Prozess ist für den Client oder die Anwendung transparent, der bzw. die eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt. Dadurch werden die Ausfallzeiten der Anwendung oder des Clients bei einem Fehler minimiert. Die folgende Liste enthält einige wichtige Vorteile, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen bieten:  
   
 -   Schutz auf Instanzebene durch Redundanz  
   
@@ -166,4 +167,3 @@ ms.lasthandoff: 06/22/2017
 |Beschreibt die Unterschiede der Konzepte zwischen Knoten in einer FCI und Replikaten innerhalb einer Verfügbarkeitsgruppe. Zudem werden Überlegungen zum Hosten mithilfe einer FCI für eine Verfügbarkeitsgruppe eines Replikats dargelegt.|[Failoverclustering und Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   
-

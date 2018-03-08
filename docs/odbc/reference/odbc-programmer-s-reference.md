@@ -3,26 +3,26 @@ title: ODBC-Programmierer &#39; s Verweis | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], reference
+helpviewer_keywords: ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC Programmer &#39; s-Referenz
 Die *ODBC Programmer's Reference* enthält folgende Abschnitte.  
@@ -60,7 +60,7 @@ Die *ODBC Programmer's Reference* enthält folgende Abschnitte.
 |**SQLEndTran**|Fett formatierte gibt an, dass die Syntax genau wie dargestellt, einschließlich Funktionsnamen, eingegeben werden muss.|  
 |&#124;|Ein senkrechter Strich trennt zwei sich gegenseitig ausschließende Optionen in einer Syntaxzeile.|  
 |...|Ellipsen gibt an, dass Argumente mehrmals wiederholt werden können.|  
-|zugreifen. . zugreifen.|Eine Spalte mit den drei Punkten gibt die Fortsetzung des vorherigen Codezeilen an.|  
+|zugreifen. zugreifen. zugreifen.|Eine Spalte mit den drei Punkten gibt die Fortsetzung des vorherigen Codezeilen an.|  
   
 ## <a name="about-the-code-examples"></a>Informationen zu den Codebeispielen  
  Die Codebeispiele in diesem Handbuch dienen nur zur Veranschaulichung. Da sie in erster Linie in ODBC-Prinzipien veranschaulichen geschrieben werden, wurde Effizienz reserviert manchmal Klarheit festgelegt. Darüber hinaus wurden ganze Bereiche des Codes in einigen Fällen aus Gründen der Übersichtlichkeit ausgelassen. Dazu gehören die Definitionen von nicht-ODBC-Funktionen (diese Funktionen nicht, deren Namen mit "SQL starten") und die meisten Fehlerbehandlung.  
@@ -127,4 +127,3 @@ Die *ODBC Programmer's Reference* enthält folgende Abschnitte.
 -   Welch, Keith: *mithilfe von ODBC 2* (Que, 1994).  
   
 -   Wittling, Bill: *bringen Sie sich selbst ODBC in 21 Tage* (Howard W. Sams & Unternehmen, 1994).
-

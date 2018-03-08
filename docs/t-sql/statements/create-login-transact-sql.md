@@ -3,8 +3,11 @@ title: ANMELDUNGSERSTELLUNG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: e0b84743a9c3c578954560613c69f2863af8aa01
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Erstellt eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Anmeldung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -177,7 +179,7 @@ ASYMMETRISCHE Schlüssel *Asym_key_name*
   
  Gibt den Namen eines asymmetrischen Schlüssels an, der diesem Anmeldenamen zugeordnet werden soll. Dieser Schlüssel muss bereits in der master-Datenbank auftreten.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.  
   
  Das vorherige Erstellen von Hashwerten für Kennwörter wird nur unterstützt, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen erstellen.  
@@ -196,6 +198,8 @@ ASYMMETRISCHE Schlüssel *Asym_key_name*
  Ein Skript zum Übertragen von Anmeldungen, finden Sie unter [zum Übertragen von Benutzernamen und Kennwörter zwischen Instanzen von SQL Server 2005 und SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  Automatisch beim Erstellen eines Anmeldenamens ermöglicht es den neuen Anmeldenamen und erteilt ihm die Serverebene **CONNECT SQL** Berechtigung.  
+ 
+ Des Servers [Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) den Anmeldetyp für den jeweiligen Zugriff müssen übereinstimmen.
   
  Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -219,7 +223,7 @@ ASYMMETRISCHE Schlüssel *Asym_key_name*
   
  Wenn die **Anmeldeinformationen** Option verwendet wird, erfordert auch **ALTER ANY CREDENTIAL** Berechtigung auf dem Server.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Nach dem Erstellen einer Anmeldung, die Anmeldung kann eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aber nur über die Berechtigungen für die **öffentlichen** Rolle. Ziehen Sie das Ausführen einiger der folgenden Aktivitäten in Betracht.  
   
 -   Erstellen Sie zum Herstellen einer Verbindung mit einer Datenbank einen Datenbankbenutzer für den Anmeldenamen. Weitere Informationen finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
@@ -228,7 +232,7 @@ ASYMMETRISCHE Schlüssel *Asym_key_name*
   
 -   Verwendung **Sp_addsrvrolemember** so der Anmeldename einer festen Serverrolle hinzu. Weitere Informationen finden Sie unter [Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md) und [Sp_addsrvrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   Verwenden der **GRANT** Anweisung ein, um Berechtigungen auf Serverebene mit dem neuen Anmeldenamen oder einer Rolle mit der Anmeldung zu gewähren. Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
+-   Verwenden der **GRANT** Anweisung ein, um Berechtigungen auf Serverebene mit dem neuen Anmeldenamen oder einer Rolle mit der Anmeldung zu gewähren. Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)konfigurieren.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -314,7 +318,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. Erstellen eine SQL Server-authentifizierungsanmeldung mit einem Kennwort  
  Im folgenden Beispiel wird die Anmeldung `Mary7` mit Kennwort `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
@@ -335,7 +339,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Kennwortrichtlinie](../../relational-databases/security/password-policy.md)   
@@ -345,4 +349,3 @@ GO
  [Erstellen eines Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   
-

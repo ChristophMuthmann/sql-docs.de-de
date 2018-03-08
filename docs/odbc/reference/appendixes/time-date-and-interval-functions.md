@@ -3,10 +3,12 @@ title: Uhrzeit-, Datums- und Intervallfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: de-de
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen
 Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Eine Anwendung kann bestimmen, welche Funktionen für Datum und Uhrzeit durch Aufrufen von einem-Treiber unterstützt werden **SQLGetInfo** mit einem *Informationstyp* von SQL_TIMEDATE_FUNCTIONS.  
@@ -63,4 +64,3 @@ Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skal
 |**TIMESTAMPDIFF (** *Intervall*, *timestamp_exp1*, *timestamp_exp2* **)** (ODBC 2.0)|Gibt die ganze Zahl der Intervalle des Typs *Intervall* nach dem *timestamp_exp2* ist größer als *timestamp_exp1*. Gültige Werte für *Intervall* sind die folgenden Schlüsselwörter:<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> wobei Sekundenbruchteile milliardste Teil einer Sekunde ausgedrückt werden. Die folgende SQL-Anweisung gibt z. B. den Namen der einzelnen Mitarbeiter und die Anzahl von Jahren, die er Ausgabeblöcke hat:<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> Wenn entweder Timestamp-Ausdruck einen Uhrzeitwert ist und *Intervall* Tage, Wochen, Monate, Quartale oder Jahre Datumsteil dieser Zeitstempel wird festgelegt, auf das aktuelle Datum vor dem Berechnen der Differenz zwischen dem Zeitstempel angibt.<br /><br /> Wenn entweder Timestamp-Ausdruck ein Datumswert ist und *Intervall* angegeben Sekundenbruchteile Sekunden Sekunden, Minuten oder Stunden, die Teil dieser Zeitstempel auf 0 festgelegt ist vor dem Berechnen der Differenz zwischen dem Zeitstempel.<br /><br /> Eine Anwendung bestimmt, welche Intervallen eine Datenquelle, durch den Aufruf unterstützt **SQLGetInfo** mit der Option SQL_TIMEDATE_DIFF_INTERVALS.|  
 |**Woche (** *"date_exp"* **)** (ODBC 1.0)|Gibt die Woche des Jahres basierend auf dem wochenfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 53.|  
 |**Jahr (** *"date_exp"* **)** (ODBC 1.0)|Gibt die Jahresangabe basierend auf dem Feld "Year" in *"date_exp"* als ganze Zahl. Der Bereich ist datenquellenabhängig.|
-

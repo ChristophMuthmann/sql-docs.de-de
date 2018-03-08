@@ -1,40 +1,33 @@
 ---
 title: "Aktualisiert – Advanced Analytics für SQL Server-Dokumentation | Microsoft Docs"
 description: "Codeausschnitte anzeigen aktualisierter Inhalt in zuletzt geänderten Dokumentation für Advanced Analytics für Microsoft SQL Server."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 09/27/2017
 ms.author: genemi
-ms.workload: advanced-analytics
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: advanced-analytics
+ms.date: 02/03/2018
+ms.openlocfilehash: a40a991abe8f82b553ae621c24f9d4e81a92f8f6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: d5ff13a510a9eba3518e3d40768b03a355d6fb1e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>Neue und kürzlich aktualisierte: Advanced Analytics für SQLServer
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Beinahe jeden Tag Microsoft updates einige vorhandene Artikel auf dessen [Docs.Microsoft.com](http://docs.microsoft.com/) Dokumentationswebsite. Dieser Artikel zeigt Auszüge aus den zuletzt aktualisierten Artikel. Links zu den neuen Artikel, möglicherweise ebenfalls aufgeführt.
+
+In diesem Artikel wird von einem Programm generiert, die in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug aus dem Quellartikel mit sich Formatierung oder als Markdown angezeigt. Bilder werden hier nicht angezeigt.
+
+Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 
 
-Beinahe jeden Tag aktualisiert Microsoft einige der vorhandenen Artikel auf der Dokumentationswebsite [Docs.Microsoft.com](http://docs.microsoft.com/). In diesem Artikel werden Auszüge aus den zuletzt aktualisierten Artikeln wiedergegeben. Links zu den neuen Artikel werden ggf. ebenfalls aufgeführt.
-
-Dieser Artikel wurde im Rahmen eines Programms erstellt, das in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug mit falscher Formatierung oder als Markdown aus dem Quellartikel angezeigt werden. Bilder werden hier nie wiedergegeben.
-
-Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeldet:
-
-
-
-- *Datumsbereich des Updates:* &nbsp; **2017-09-11** &nbsp; - zu - &nbsp; **2017-09-27**
+- *Datumsbereich des Updates:* &nbsp; **2017-12-03** &nbsp; - zu - &nbsp; **2018-02-03**
 - *Bereich für die Themenbereichsdatenbank:* &nbsp; **Advanced Analytics für SQL Server**.
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -43,24 +36,24 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt wurden
+## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt
 
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-***Dieses Mal sind keine neuen Artikel aufgeführt.***
+1. [Installieren neuer Python-Pakete unter SQL Server](python/install-additional-python-packages-on-sql-server.md)
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszügen
+## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszüge
 
 In diesem Abschnitt werden die Auszüge der Updates aus den Artikeln dargestellt, die vor Kurzem umfassend aktualisiert wurden.
 
-Die Auszüge hier werden getrennt vom richtigen semantischen Kontext angezeigt. Darüber hinaus wird ein Auszug manchmal getrennt von der wichtigen Markdownsyntax wiedergegeben, die ihn im ursprünglichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Anhand dieser Auszüge sollen Sie nur entscheiden können, ob Sie sich die Zeit nehmen und den eigentlichen Artikel besuchen möchten.
+Die hier angezeigten Auszüge werden getrennt vom richtigen semantische kontextabhängig angezeigt. Darüber hinaus wird manchmal ein Auszug vom wichtige Markdown-Syntax getrennt, die sie in den tatsächlichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Die Auszüge können nur Sie wissen, ob Ihre Interessen dauert rechtfertigen, klicken Sie auf, und besuchen den tatsächlichen Artikel.
 
-Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen Auszügen, und gehen Sie bei keinem Textauszug von einer 100-prozentigen Richtigkeit der Informationen aus. Besuchen Sie stattdessen den eigentlichen Artikel.
+Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und nehmen Sie nicht als genaue Wahrheit alle Textauszug. Besuchen Sie stattdessen den tatsächlichen Artikel aus.
 
 
 
@@ -70,11 +63,13 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
+### <a name="compact-list-of-articles-updated-recently"></a>Compact Liste von Artikeln, die vor kurzem aktualisiert
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Machine Learning-Komponenten ohne Internetzugang installieren](#TitleNum_1)
+1. [Bekannte Probleme in Machine Learning-Diensten](#TitleNum_1)
+2. [Konvertieren von R-Code für die Ausführung in Datenbank](#TitleNum_2)
+3. [Bestimmen Sie, welche R-Pakete auf SQL Server installiert sind](#TitleNum_3)
 
 
 
@@ -85,51 +80,149 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-installing-machine-learning-components-without-internet-accessrinstalling-ml-components-without-internet-accessmd"></a>1. &nbsp;[Machine Learning-Komponenten ohne Internetzugang installieren](r/installing-ml-components-without-internet-access.md)
+### <a name="1-nbsp-known-issues-in-machine-learning-servicesknown-issues-for-sql-server-machine-learning-servicesmd"></a>1. &nbsp;[Bekannte Probleme in Machine Learning-Diensten](known-issues-for-sql-server-machine-learning-services.md)
 
-*Aktualisiert: 2017-09-26* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+*Aktualisiert: 2018-02-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
-<!-- Source markdown line 116.  ms.author= "jeannt".  -->
+<!-- Source markdown line 163.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 043eb3d6f461f276fb85b50f77acb40c5de6c884 3d4f13c1184b4fe7432f6ed39310c5ac5590b1c8  (PR=0  ,  Filename=installing-ml-components-without-internet-access.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
+<!-- git diff --ignore-all-space --unified=0 c6f46adcf795c43f818120b88407a3a89304cb27 c781562605f5cd77f6c43bfe5e89810cb72ceae0  (PR=4789  ,  Filename=known-issues-for-sql-server-machine-learning-services.md  ,  Dirpath=docs\advanced-analytics\  ,  MergeCommitSha40=386bfb688843bac7fa4d83dc1cfef94dd19db110) -->
 
 
 
-Release  |Downloadlink  |
----------|---------|
-**SQL Server 2016 RTM**     |
-Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)
-Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)
-**SQL Server 2016 CU 1**     |
-Microsoft R Open     |[SRO_3.2.2.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808803)
-Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)
-**SQL Server 2016 CU 2**     |
-Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)
-Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)
-**SQL Server 2016 CU 3**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     | keine Änderung; Vorheriges verwenden |
-**SQL Server 2016 CU 4**     |
-Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
-Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
-**SQL Server 2016 CU 5**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |keine Änderung; Vorheriges verwenden|
-**SQL Server 2016 CU 6**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |[SRS_8.0.3.14000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850316)  |
-**SQL Server 2016 CU 7**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |keine Änderung; Vorheriges verwenden |
-**SQL Server 2016 SP 1**     |
-Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
-Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
-**SQL Server 2016 SP 1 CU1**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |keine Änderung; Vorheriges verwenden|
+Weitere bekannte Probleme, die R-Lösungen beeinträchtigen können, finden Sie unter der [Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) Standort.
+
+**"Zugriff verweigert" Warnung bei der Ausführung von R-Skripts an SQL Server auf einem Nichtstandard-Speicherort**
+
+
+Wenn z. B. SQL Server-Instanz an einen nicht standardmäßigen Speicherort installiert wurde außerhalb der `Program Files` Ordner, der die Warnung ACCESS_DENIED ausgelöst wird, wenn Sie versuchen, Skripts auszuführen, die ein Paket zu installieren. Beispiel:
+
+> *In normalizePath(path.expand(path), Winslash, MustWork): der Pfad [2] = "~ExternalLibraries/R/8/1": Zugriff wurde verweigert*
+
+Der Grund hierfür ist, dass eine R-Funktion versucht, den Pfad zu lesen, und schlägt fehl, wenn die integrierte Benutzergruppe **SQLRUserGroup**, hat keinen Lesezugriff. Die Warnung, die ausgelöst wird, blockiert die Ausführung des aktuellen R-Skripts nicht, aber die Warnung möglicherweise mehrmals wiederholt werden, wenn der Benutzer alle R-Skript ausführt.
+
+Wenn Sie SQL Server am Standardspeicherort installiert haben, dieser Fehler tritt nicht auf, da alle Windows-Benutzer auf über Leseberechtigungen verfügen die `Program Files` Ordner.
+
+Dieses Problem wird in einer bevorstehenden Dienstversion behandelt werden. Dieses Problem zu umgehen, geben Sie der Gruppe "" **SQLRUserGroup**, mit Lesezugriff für alle übergeordneten Ordner der `ExternalLibraries`.
+
+**Serialisierungsfehler zwischen den alten und neuen Versionen von "revoscaler"**
+
+
+Wenn Sie ein Modell mit einem serialisierten Format mit einer Remoteinstanz von SQL Server übergeben, wird möglicherweise die Fehlermeldung angezeigt:
+
+> *Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2).*
+
+Dieser Fehler wird ausgelöst, wenn Sie das Modell über eine aktuelle Version von die Serialisierungsfunktion gespeichert [RxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), aber SQL Server-Instanz, in dem Sie das Modell deserialisieren, hat eine ältere Version der APIs "revoscaler" von SQL Server 2017 CU2 oder früher.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-converting-r-code-for-execution-in-databaserconverting-r-code-for-use-in-sql-servermd"></a>2. &nbsp;[Konvertieren von R-Code für die Ausführung in Datenbank](r/converting-r-code-for-use-in-sql-server.md)
+
+*Aktualisiert: 2018-01-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_1) | [Weiter](#TitleNum_3))
+
+<!-- Source markdown line 136.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 a1d156fac1af5813ef75965071686b177e2aede7 fc8beff0aa0d7ea298e493b90984875e81e9143e  (PR=4493  ,  Filename=converting-r-code-for-use-in-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f486d12078a45c87b0fcf52270b904ca7b0c7fc8) -->
+
+
+
+**Verpacken von R-Code in einer gespeicherten Prozedur**
+
++ Wenn Ihr Code relativ einfach ist, können Sie es in einer T-SQL eine benutzerdefinierte Funktion ohne Änderung einbetten, wie in diesen Beispielen beschrieben:
+
+    + [Erstellen Sie eine R-Funktion, die im RxExec ausgeführt wird](r/../tutorials/deepdive-create-a-simple-simulation.md)
+    + [Feature Engineering mit T-SQL und R](r/../tutorials/sqldev-create-data-features-using-t-sql.md)
+
++ Wenn der Code komplexer ist, verwenden Sie das R-Paket **Sqlrutils** Code zu konvertieren. Dieses Paket soll erfahrene Benutzer von R gute gespeicherte Prozedurcode schreiben zu helfen.
+
+    Der erste Schritt ist die R-Code umschreiben müssen, als einzelne Funktion mit klar definierten Eingaben und Ausgaben.
+
+    Verwenden Sie dann die **Sqlrutils** Paket im richtigen Format der Eingaben und Ausgaben zu generieren. Die **Sqlrutils** Paket der vollständigen gespeicherte Prozedur-Code für Sie generiert, und können auch die gespeicherte Prozedur in der Datenbank registrieren.
+
+    Weitere Informationen und Beispiele finden Sie unter [SqlRUtils](r/../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
+
+**Integration mit anderen workflows**
+
++ T-SQL-Tools und ETL-Prozessen genutzt werden. Führen Sie namens Feature Engineering merkmalsextraktion und DatenBereinigung als Teil des Datenworkflows im voraus.
+
+    Bei der Arbeit in einer dedizierten R-Entwicklungsumgebung wie z. B. R-Tools für Visual Studio oder RStudio Sie möglicherweise Abrufen von Daten auf Ihrem Computer, die Daten analysieren, iterativ, und klicken Sie dann auszuschreiben oder zeigen die Ergebnisse.
+
+    Jedoch wenn eigenständigen R-Code zu SQL Server migriert wird, kann Großteil dieser Prozess werden vereinfacht oder automatisiert an andere SQL Server-Tools zu delegieren.
+
++ Verwenden Sie sichere, asynchrone Visualisierung Strategien.
+
+    Häufig Benutzer von SQL Server können nicht auf Dateien auf dem Server zugreifen, und in der Regel führen Sie R-Grafikgerät SQL Clienttools nicht unterstützt. Wenn Sie grafische Darstellungen oder andere Grafik als Teil der Lösung generieren, sollten Sie die Darstellungen als binäre Daten exportieren und in einer Tabelle speichern, oder schreiben.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-determine-which-r-packages-are-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>3. &nbsp;[Zu bestimmen, welche R-Pakete auf SQL Server installiert sind](r/determine-which-packages-are-installed-on-sql-server.md)
+
+*Aktualisiert: 2018-01-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_2))
+
+<!-- Source markdown line 78.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 9a065066398843a4bed318fa46d4982d712915a9 7a1df11f57e7bbf0abc37d3aa240dedd2b88c45f  (PR=4715  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=9e6a029456f4a8daddb396bc45d7874a43a47b45) -->
+
+
+
+
+**Speicherort der Bibliothek und Version abrufen**
+
+
+Im folgenden Beispiel wird der Speicherort von "revoscaler" im lokalen rechenkontext und die Paketversion.
+
+```
+rxFindPackage(RevoScaleR, "local")
+packageVersion("RevoScaleR")
+```
+
+**Bestimmen der Bibliothek, die von SQL Server verwendeten Pfad**
+
+
+Wenn Sie Machine learning-Komponenten mithilfe von Bindung aktualisiert haben, kann der Pfad zum R-Bibliothek ändern. In diesem Fall möglicherweise vorherigen Verknüpfungen zu R-Tools mit eine frühere Version verweisen. Der Pfad und der Paket-Version von SQL Server verwendet, können Sie sicherstellen, dass einen Befehl wie folgt ausführen:
+
+```
+EXEC sp_execute_external_script
+    @language =N'R',
+    @script=N'
+    sql_r_path <- rxSqlLibPaths("local")
+      print(sql_r_path)
+    version_info <-packageVersion("RevoScaleR")
+      print(version_info)'
+```
+
+**Ergebnisse**
+
+```
+STDOUT message(s) from external script:
+[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
+[1] '9.2.1'
+```
 
 
 
@@ -137,43 +230,45 @@ Microsoft R Server     |keine Änderung; Vorheriges verwenden|
 
 
 
-## <a name="similar-articles"></a>Ähnliche Artikel
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Ähnliche Artikel Informationen zu neuen oder aktualisierten Artikeln
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neue und aktualisierte (0 + 1): **Advanced Analytics für SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Neue und aktualisierte (0 + 1): **Analysis Services für SQL** Docs](../analysis-services/new-updated-analysis-services.md)
-- [Neue und aktualisierte (4 + 1): **für SQL-Datenbank-Engine** Docs](../database-engine/new-updated-database-engine.md)
-- [Neue und aktualisierte (17 + 0): **Integration Services für SQL** Docs](../integration-services/new-updated-integration-services.md)
-- [Neue und aktualisierte (3 + 0): **Linux für SQL** Docs](../linux/new-updated-linux.md)
-- [Neue und aktualisierte (1 + 1): **relationale Datenbanken für SQL** Docs](../relational-databases/new-updated-relational-databases.md)
-- [Neue und aktualisierte (2 + 0): **Reporting Services für SQL** Docs](../reporting-services/new-updated-reporting-services.md)
-- [Neue und aktualisierte (0 + 1): **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
-- [Neue und aktualisierte (0 + 1): **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Bereiche für die Themenbereichsdatenbank, *führen* wurden neue oder vor kurzem aktualisiert Artikel
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [Neue und aktualisierte (0 + 0): **Herstellen einer Verbindung mit SQL** Docs](../connect/new-updated-connect.md)
-- [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
-- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
+- [Neue und aktualisierte (1 + 3):&nbsp; **Advanced Analytics für SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **Analyseplattformsystem für SQL** Docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **Herstellen einer Verbindung mit SQL** Docs](../connect/new-updated-connect.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **für SQL-Datenbank-Engine** Docs](../database-engine/new-updated-database-engine.md)
+- [Neue und aktualisierte (12 + 1): **Integration Services für SQL** Docs](../integration-services/new-updated-integration-services.md)
+- [Neue und aktualisierte (6 + 2):&nbsp; **Linux für SQL** Docs](../linux/new-updated-linux.md)
+- [Neue und aktualisierte (15 + 0): **PowerShell für SQL** Docs](../powershell/new-updated-powershell.md)
+- [Neue und aktualisierte (2 + 9):&nbsp; **relationale Datenbanken für SQL** Docs](../relational-databases/new-updated-relational-databases.md)
+- [Neue und aktualisierte (1 + 0):&nbsp; **Reporting Services für SQL** Docs](../reporting-services/new-updated-reporting-services.md)
+- [Neue und aktualisierte (1 + 1):&nbsp; **SQL Operations Studio** Docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neue und aktualisierte (1 + 1):&nbsp; **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
+- [Neue und aktualisierte (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
+- [Neue und aktualisierte (0 + 2):&nbsp; **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Bereiche, die für die Themenbereichsdatenbank *nicht* haben eine neue oder vor kurzem aktualisiert Artikel
+
+
+- [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
+- [Neue und aktualisierte (0 + 0): **ActiveX Data Objects (ADO) für SQL** Docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [Neue und aktualisierte (0 + 0): **Data Quality Services für SQL** Docs](../data-quality-services/new-updated-data-quality-services.md)
+- [Neue und aktualisierte (0 + 0): **Data Mining Extensions (DMX) für SQL** Docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
-- [Neue und aktualisierte (0 + 0): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
-- [Neue und aktualisierte (0 + 0): **-Tools für SQL** Docs](../tools/new-updated-tools.md)
-- [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
-
+- [Neue und aktualisierte (0 + 0): **MDX (Multidimensional Expressions) für SQL** Docs](../mdx/new-updated-mdx.md)
+- [Neue und aktualisierte (0 + 0): **ODBC (Open Database Connectivity) für SQL** Docs](../odbc/new-updated-odbc.md)
+- [Neue und aktualisierte (0 + 0): **Samples for SQL** Docs](../sample/new-updated-sample.md)
+- [Neue und aktualisierte (0 + 0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
+- [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
+- [Neue und aktualisierte (0 + 0): **XQuery für SQL** Docs](../xquery/new-updated-xquery.md)
 
 

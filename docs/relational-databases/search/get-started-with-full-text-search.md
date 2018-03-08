@@ -1,9 +1,13 @@
 ---
 title: Erste Schritte mit der Volltextsuche | Microsoft-Dokumentation
 ms.date: 08/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -14,19 +18,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e87ac827013d4aa9abff8a0fb66ac3c8fc9bce62
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Bei SQL Server-Datenbanken werden die Volltexte standardmäßig aktiviert. Bevor Sie Volltextabfragen jedoch ausführen können, müssen Sie einen Volltextkatalog und einen Volltextindex für die Tabellen oder indizierten Sichten, die Sie suchen möchten, erstellen.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>Volltextsuche in zwei Schritten einrichten
@@ -48,7 +52,7 @@ Zum Einrichten der Volltextsuche mithilfe eines Assistenten finden Sie unter [Ve
   
 1.  Im Beispiel wird eine `AdvWksDocFTCat`CREATE FULLTEXT CATALOG [-Anweisung verwendet, um einen Volltextkatalog mit dem Namen](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) zu erstellen:  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -57,13 +61,13 @@ Zum Einrichten der Volltextsuche mithilfe eines Assistenten finden Sie unter [Ve
  
 2.  Bevor Sie einen Volltextindex für die Document-Tabelle erstellen können, müssen Sie sicherstellen, dass die Tabelle über einen eindeutigen, einspaltigen Index verfügt, der keine NULL-Werte zulässt. Die folgende [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) -Anweisung erstellt in der DocumentID-Spalte der Document-Tabelle den eindeutigen `ui_ukDoc`-Index:  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  Nachdem Sie einen eindeutigen Schlüssel erstellt haben, können Sie in der `Document` -Tabelle einen Volltextindex erstellen, indem Sie die folgende [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) -Anweisung verwenden.  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -106,14 +110,14 @@ Wählen Sie stets den kleinsten eindeutigen Index, der verfügbar ist, als einde
   
  Die folgende [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erstellt z.B. durch Kopieren aus der Systemstoppliste eine neue Volltext-Stoppliste mit dem Namen „myStoplist3“:  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  Die folgende [-Anweisung](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ändert eine Stoppliste mit dem Namen „myStoplist“, indem zuerst für Spanisch und dann für Französisch das Wort „en“ hinzugefügt wird:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  
@@ -129,4 +133,3 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie die SQL Server-Volltextsuche eingerichtet haben, können Sie mit dem Ausführen von Volltextabfragen beginnen. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).
-

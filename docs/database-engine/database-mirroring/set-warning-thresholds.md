@@ -2,9 +2,12 @@
 title: Festlegen von Warnungsschwellenwerten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: 28
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b82e8ee22179c71ef30475ff3ac9d0fd3fdcbe38
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>Schwellenwerte für Warnung festlegen
-  Mithilfe dieses Dialogfelds können Sie einen oder mehrere Warnungsschwellenwerte für die in der Navigationsstruktur des Dialogfelds **Datenbankspiegelungs-Monitor** ausgewählte Datenbank aktivieren und konfigurieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Mithilfe dieses Dialogfelds können Sie einen oder mehrere Warnungsschwellenwerte für die in der Navigationsstruktur des Dialogfelds **Datenbankspiegelungs-Monitor** ausgewählte Datenbank aktivieren und konfigurieren.  
   
  Mit dem Dialogfeld wird versucht, eine Verbindung mit beiden Serverinstanzen herzustellen. Diese Verbindungen werden asynchron hergestellt. Das Dialogfeld zeigt den Verbindungsstatus von jedem Partner an. Wenn der Partner nicht verbunden ist, können Sie auf **Verbinden**klicken.  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  *Serverinstanz und zugehöriger Verbindungsstatus*  
  Name einer Partnerserverinstanz in der Form *SYSTEM***\\***INSTANZNAME*. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, lautet dieser Statuts **Verbunden mit** *Name der Serverinstanz* **(Begrenzte Berechtigungen)**.  
   
- Der Name jeder der Partnerserverinstanzen wird in einem separaten Feld für die Serverinstanz und den zugehörigen Verbindungsstatus ** angezeigt. Das oberste Feld listet den Prinzipalserver auf, wenn die Ausführung des Monitors gestartet wurde.  
+ Der Name jeder der Partnerserverinstanzen wird in einem separaten Feld für die *Serverinstanz und den zugehörigen Verbindungsstatus* angezeigt. Das oberste Feld listet den Prinzipalserver auf, wenn die Ausführung des Monitors gestartet wurde.  
   
  **Verbinden**/**Abbrechen**  
  Eine Schaltfläche **Verbinden**/**Abbrechen** ist jedem Feld für die *Serverinstanz und den zugehörigen Verbindungsstatus* zugeordnet. Der Status der Schaltfläche ist abhängig vom Verbindungsstatus:  
@@ -70,7 +73,7 @@ ms.lasthandoff: 08/02/2017
  **Warnungen**  
  Listet die unterstützten Warnungen auf:  
   
-|Warnung|Beschreibung|  
+|Warnung|Description|  
 |-------------|-----------------|  
 |**Warnhinweis anzeigen, wenn das nicht gesendete Protokoll den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl der Kilobytes (KB) des nicht gesendeten Protokolls in der Sendewarteschlange auf dem Prinzipal an.|  
 |**Warnhinweis anzeigen, wenn das nicht wiederhergestellte Protokoll den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl an KB der Wiederholungswarteschlange auf der Spiegelserverinstanz an.|  
@@ -88,15 +91,14 @@ ms.lasthandoff: 08/02/2017
  **OK**  
  Wenn Sie auf **OK** klicken, wird das Dialogfeld geschlossen, und die aktuell angegebenen Warnungsschwellenwerte werden im Raster **Schwellenwerte** auf der Seite **Warnungen**angezeigt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Schwellenwert gilt jeweils nur auf einem Partner. Es ist jedoch empfehlenswert, einen Schwellenwert für ein bestimmtes Ereignis auf beiden Partnern festzulegen, um sicherzustellen, dass die Warnung weiterhin angezeigt wird, wenn ein Failover der Datenbank erfolgt. Der geeignete Schwellenwert für jeden Partner ist abhängig von der Leistungsfähigkeit des Systems des betreffenden Partners.  
   
  Ein Ereignis wird nur dann in das Ereignisprotokoll für eine Leistung geschrieben, sofern der Wert seinen Schwellenwert erreicht oder überschreitet, wenn die Statustabelle aktualisiert wird. Wenn ein Spitzenwert den Schwellenwert vorübergehend zwischen zwei Statusupdates erreicht, wird dieser Spitzenwert nicht erkannt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
-

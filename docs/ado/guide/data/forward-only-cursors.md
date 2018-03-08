@@ -3,7 +3,7 @@ title: "Vorwärtscursor | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b84ab8335e94adecf130fd2301f697a02eceee37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 121e8eec0b95f66b6e034f1f77d78c7d88fd5184
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="forward-only-cursors"></a>Vorwärtscursor
 Der übliche Standardnamespace Cursortyp, bezeichnet einen Cursor Vorwärtscursor (oder nicht scrollfähige) kann über das Resultset nur vorwärts bewegen. Ein Vorwärtscursor unterstützt keine Bildläufe (die Möglichkeit, im Resultset vorwärts und rückwärts zu bewegen); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Mit einigen Vorwärtscursor (z. B. mit der SQL Server-Cursorbibliothek), werden alle INSERT-, Update- und Delete-Anweisungen, die aktuelle Benutzer (oder anderer Benutzer ausgeführt werden), dass Zeilen im Resultset auswirken angezeigt werden, wenn die Zeilen abgerufen werden. Da sich der Cursor nicht rückwärts gescrollt werden kann, sind jedoch Änderungen an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde nicht über den Cursor sichtbar.  
@@ -41,4 +40,3 @@ Der übliche Standardnamespace Cursortyp, bezeichnet einen Cursor Vorwärtscurso
  [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
  [KEYSET-Cursor](../../../ado/guide/data/keyset-cursors.md)   
  [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)
-

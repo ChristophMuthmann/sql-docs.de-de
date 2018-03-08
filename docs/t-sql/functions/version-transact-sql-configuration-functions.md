@@ -3,8 +3,11 @@ title: '@@VERSION (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - versions [SQL Server], @@VERSION
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: c9fc3634abc5ca23c96f46adf2a52881ee15c40c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: 9f2a03af933d739760944f72aaea935e8bb3e682
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40version---transact-sql-configuration-functions"></a>& #x 40; & #x 40; Version - Transact-SQL-Konfigurationsfunktionen
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Transact-SQL-Konfigurationsfunktionen
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt System- und Buildinformationen für die aktuelle Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
@@ -98,5 +100,4 @@ SELECT @@VERSION AS 'SQL Server PDW Version';
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
   
-
 

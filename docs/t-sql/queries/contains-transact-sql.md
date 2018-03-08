@@ -3,8 +3,11 @@ title: "ENTHÄLT (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,20 +37,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 81b231ce95ae1b87bbda2f2fd786d12cb709e9fe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Sucht nach genauen oder ungenauen (Fuzzy-)Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für innerhalb einer bestimmten Entfernung angrenzende Wörter sowie für gewichtete Übereinstimmungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS ist ein Prädikat, das verwendet wird, der [WHERE-Klausel](../../t-sql/queries/where-transact-sql.md) von einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche für die Volltext-volltextindizierte Spalten mit zeichenbasierten Datentypen.  
   
@@ -145,7 +147,7 @@ CONTAINS (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Spaltenname*  
+ *column_name*  
  Der Name einer volltextindizierten Spalte der in der FROM-Klausel angegebenen Tabelle. Die Spalten des Typs sein **Char**, **Varchar**, **Nchar**, **Nvarchar**, **Text**, **Ntext**, **Image**, **Xml**, **Varbinary**, oder **varbinary(max)**.  
   
  *column_list*  
@@ -162,7 +164,7 @@ CONTAINS (
 > [!IMPORTANT]  
 >  Für die Abfrage keine Zeilen zurückgeben *Property_name* muss angegeben werden, in der sucheigenschaftenliste Liste von Volltextindex- und der Volltextindex muss eigenschaftenspezifische Einträge für enthalten *Property_name*. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- Sprache *Language_term*  
+ LANGUAGE *language_term*  
  Ist der zu verwendenden Sprache für wörtertrennung, wortstammerkennung, thesauruserweiterungen und-Ersetzungen und Füllwörtern (oder [Stoppwort](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) als Teil der Abfrage entfernen. Dieser Parameter ist optional.  
   
  Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, bestimmt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache. Angeben der Sprache beim Abfragen einer solchen Spalte *Language_term* kann die Wahrscheinlichkeit einer hohen Übereinstimmung erhöhen.  
@@ -178,7 +180,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Gibt den Text im zu suchende *Column_name* und die Bedingungen für eine Übereinstimmung.  
   
-*\<Contains_search_condition >* ist **Nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `CONTAINS`-Prädikat.
+*\<Contains_search_condition >* ist **Nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Große Zeichenfolge Datentypen nvarchar(max)-Datentyp und varchar(max)-Datentyp können nicht verwendet werden. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `CONTAINS`-Prädikat.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -204,26 +206,26 @@ WHERE CONTAINS(Description, @SearchWord);
   
  In Fällen, in denen ein nicht optimaler Plan generiert wird, können Sie auch den OPTIMIZE FOR-Abfragehinweis verwenden.  
   
- *Word*  
+ *word*  
  Eine Zeichenfolge ohne Leerzeichen oder Satzzeichen.  
   
- *Ausdruck*  
+ *phrase*  
  Ein Wort oder mehrere Wörter, die durch Leerzeichen getrennt sind.  
   
 > [!NOTE]  
 >  Einige Sprachen, wie z. B. die in einigen Teilen von Asien verwendeten Sprachen, können Ausdrücke besitzen, die aus mehreren Wörtern ohne Leerzeichen bestehen.  
   
-\<Simple_term >  
+\<simple_term>  
 Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an. Beispiele für gültige einfache Begriffe sind "blue berry", blueberry und "Microsoft SQL Server". Ausdrücke müssen in doppelte Anführungszeichen ("") gesetzt werden. Wörter eines Ausdrucks angezeigt werden müssen, in der gleichen Reihenfolge entsprechend den Angaben in  *\<Contains_search_condition >* wie sie in der Spalte angezeigt werden. Die Suche nach Zeichen in einem Wort oder Ausdruck ist nicht in der Groß-/Kleinschreibung beachtet. Füllwörter (oder [Stoppwörter](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (z. B. ein, und, oder die) in den volltextindizierten Spalten werden nicht in den Volltextindex gespeichert. Wenn das einzige gesuchte Wort ein Füllwort ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, die angibt, dass lediglich Füllwörter als Suchbegriffe übergeben wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Standardliste der Füllwörter im Verzeichnis \Mssql\Binn\FTERef für jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Satzzeichen werden nicht beachtet. Mit `CONTAINS(testing, "computer failure")` wird daher auch eine Zeile mit dem Wert "Where is my computer? Failure to find it would be expensive." gefunden. Weitere Informationen zu wörtertrennungen Verhalten, finden Sie unter [konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- \<Prefix_term >  
+ \<prefix_term>  
  Gibt eine Suche nach Wörtern oder Ausdrücken an, die mit dem angegebenen Text beginnen. Setzen Sie einen in doppelte Anführungszeichen ("") und fügen Sie ein Sternchen (\*) vor das schließende Anführungszeichen, sodass vor dem gesamten Text mit dem einfachen Ausdruck beginnen angegeben das Sternchen abgeglichen wird. Die Klausel sollte wie folgt angegeben werden: `CONTAINS (column, '"text*"')` Das Sternchen entspricht keinem, einem oder mehreren Zeichen (des Hauptworts bzw. der Hauptwörter im Ausdruck). Wenn der Text und das Sternchen nicht in doppelten Anführungszeichen stehen, sodass das Prädikat als `CONTAINS (column, 'text*')` gelesen wird, wird das Sternchen bei der Volltextsuche als Zeichen behandelt, und es wird nach exakten Übereinstimmungen mit `text*` gesucht. Das Volltextmodul findet keine Wörter durch ein Sternchen (\*) Zeichen, da wörtertrennungen in der Regel um solche Zeichen ignoriert.  
   
  Wenn  *\<Prefix_term >* im Falle ein Ausdrucks wird jedes Wort im Satz gilt als separates Präfix. Daher werden bei einer Abfrage des Präfixbegriffs "local wine*" als Übereinstimmung alle Zeilen mit dem Text "local winery", "locally wined and dined" usw. ausgegeben.  
   
- \<Generation_term >  
+ \<generation_term>  
  Gibt eine Suche nach Wörtern an, wenn die enthaltenen einfachen Begriffe Varianten des ursprünglichen Worts enthalten, nach dem gesucht werden soll.  
   
  INFLECTIONAL  
@@ -234,7 +236,7 @@ Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an.
  THESAURUS  
  Gibt an, dass der Thesaurus verwendet wird, der der Volltext-Spaltensprache oder der in der Abfrage angegebenen Sprache entspricht. Die längsten Muster oder Muster aus der  *\<Simple_term >* mit dem Thesaurus verglichen werden und weitere Begriffe, die zum Erweitern oder Ersetzen Sie das ursprüngliche Muster generiert werden. Wenn eine Übereinstimmung für ganz oder teilweise nicht gefunden wird die  *\<Simple_term >*, die nicht übereinstimmende Teil wird behandelt, als eine *Simple_term*. Weitere Informationen zu den Thesaurus der Volltextsuche, finden Sie unter [konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
- \<Generic_proximity_term >  
+ \<generic_proximity_term>  
  Legt eine Übereinstimmung für Wörter oder Ausdrücke fest, die im durchsuchten Dokument vorhanden sein müssen.  
   
 > [!IMPORTANT]  
@@ -249,7 +251,7 @@ Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an.
   
  Weitere Informationen zu generischen NEAR-Begriffen finden Sie unter [Suchen nach Wörtern in der Nähe eines anderen Worts mit NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<Custom_proximity_term >  
+ \<custom_proximity_term>  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Gibt eine Übereinstimmung von Wörtern oder Ausdrücken sowie optional den maximalen Abstand zwischen den Suchbegriffen an. Sie können auch angeben, dass Suchbegriffe in der exakten Reihenfolge gefunden werden müssen, in dem Sie anzugeben (\<Match_order >).  
@@ -264,7 +266,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  Die optionalen Parameter lauten wie folgt:  
   
- \<Maximum_distance >  
+ \<maximum_distance>  
  Gibt den maximal zulässigen Abstand zwischen den Suchbegriffen am Anfang und Ende einer Zeichenfolge an, damit diese als Übereinstimmung gilt.  
   
  *integer*  
@@ -291,7 +293,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  Gibt alle Zeilen zurück, die die angegebenen Begriffe enthalten, unabhängig von der Entfernung dazwischen. Dies ist die Standardeinstellung.  
   
- \<Match_order >  
+ \<match_order>  
  Gibt an, ob die Begriffe in der angegebenen Reihenfolge auftreten müssen, um von einer Suchabfrage zurückgegeben zu werden. An \<Match_order >, müssen Sie auch angeben \<Maximum_distance >.  
   
  \<Match_order > akzeptiert einen der folgenden Werte:  
@@ -299,7 +301,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **"TRUE"**  
  Erzwingt die angegebene Reihenfolge in Begriffen. Beispielsweise würde `NEAR(A,B)` nur `A … B` entsprechen.  
   
- **"FALSE"**  
+ **FALSE**  
  Ignoriert die angegebene Reihenfolge. Beispielsweise würde `NEAR(A,B)` sowohl `A … B` als auch `B … A` entsprechen.  
   
  Dies ist die Standardeinstellung.  
@@ -312,7 +314,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  Weitere Informationen zum Verwenden von benutzerdefinierten NEAR-Begriffen finden Sie unter [Suchen nach Wörtern in der Nähe eines anderen Worts mit NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<Weighted_term >  
+ \<weighted_term>  
  Gibt an, dass die übereinstimmenden Zeilen (die von der Abfrage zurückgegeben werden) mit einer Liste von Wörtern und Ausdrücken übereinstimmen müssen, die optional jeweils mit einem Gewichtungswert versehen sind.  
   
  ISABOUT  
@@ -552,8 +554,7 @@ GO
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
  [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  [Erstellen von Volltextsuchabfragen &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

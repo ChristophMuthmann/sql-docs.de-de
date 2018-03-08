@@ -3,29 +3,28 @@ title: RegisterOutParameter-Methode (Int, Int, Int) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.registerOutParameter (int, int, int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.registerOutParameter (int, int, int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: d902d4e0-881f-4182-814c-0ede9a8da7fd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3d59b50e1f5ad220a40bad10fdeb203571382cec
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc998caa09187be277765d32d95d666986674ea2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="registeroutparameter-method-int-int-int"></a>registerOutParameter-Methode (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -70,4 +69,3 @@ public void registerOutParameter(int index,
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

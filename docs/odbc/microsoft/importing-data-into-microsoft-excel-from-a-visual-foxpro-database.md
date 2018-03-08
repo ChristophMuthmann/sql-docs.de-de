@@ -3,10 +3,12 @@ title: Importieren von Daten in Microsoft Excel aus einer Visual FoxPro-Datenban
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], importing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c1c452e99e0da8b000163c50643b8ce93efe73e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Importieren von Daten in Microsoft Excel aus einer Visual FoxPro-Datenbank
 Sie können Visual FoxPro-Daten in Microsoft Excel-Arbeitsblatt importieren, wenn Sie eine Datenquelle für sie definiert haben. Informationen zum Erstellen einer Visual FoxPro-Datenquelle finden Sie unter [Zugriff auf eine Visual FoxPro-Datenquelle aus Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md).  
@@ -47,4 +48,3 @@ Sie können Visual FoxPro-Daten in Microsoft Excel-Arbeitsblatt importieren, wen
 5.  Wählen Sie Felder für die Abfrage durch Ziehen sie aus der Tabelle auf der unteren Hälfte des Designers.  
   
 6.  Schließen Sie Microsoft-Abfrage. Die Daten, die Sie ausgewählt haben, werden in Microsoft Excel-Arbeitsblatt importiert.
-

@@ -2,25 +2,27 @@
 title: Automatische Codeerstellung (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
-caps.latest.revision: 8
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 71f49623abe25581d9bdf5e53f0a208384b2aca7
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9eba993695071796b6f9a4dfb4b05a1d1382be5a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Automatische Codeerstellung (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können numerische Werte für das Codeattribut oder andere numerische Attributwerte automatisch generiert werden. Wenn Codes automatisch generiert werden, können Sie trotzdem andere Werte für Codes eingeben; es wird nur ein Anfangswert automatisch festgelegt.  
@@ -35,7 +37,7 @@ ms.lasthandoff: 09/07/2017
   
  Wenn Sie Attributwerte in MDS entweder in einem der Tools oder mit dem Stagingprozess eingeben, können Sie den Attributwert leer lassen. Wenn Geschäftsregeln angewendet werden, werden die Werte auf Grundlage des höchsten vorhandenen Werts inkrementiert. Wenn die Regel z. B. "Standardattribut für einen generierten Wert, der bei 1 startet und um 4 inkrementiert wird" lautet und der höchste aktuelle Wert für das Attribut 700 ist, beträgt der Wert für das nächste Element, das hinzugefügt wird, 704.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -51,4 +53,3 @@ ms.lasthandoff: 09/07/2017
 -   [Entitäten &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   
-

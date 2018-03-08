@@ -3,22 +3,26 @@ title: "Feedback von Kunden für SQLServer on Linux | Microsoft Docs"
 description: Beschreibt, wie SQL Server Feedback von Kunden aufgelistet und auf Linux konfiguriert ist.
 author: annashres
 ms.author: anshrest
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 25772bd0ad7b2994e732e97fd264bef0e951eea9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2736223d2a333738ca17b3b3307034c6744512d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Feedback von Kunden für SQLServer on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Microsoft SQL Server erfasst standardmäßig Informationen darüber, wie Kunden die Anwendung verwenden. Dies bedeutet, dass SQL Server Informationen zur Installationserfahrung, Nutzung und Leistung sammelt. Mit diesen Informationen kann Microsoft besser an die Bedürfnisse der Kunden anpassen. Microsoft erfasst z.B. Informationen zu Fehlercodes von Kunden, sodass wir damit verknüpfte Probleme beheben, die Dokumentation zu SQL Server verbessern und bestimmen können, ob wir dem Produkt weitere Funktionen hinzufügen müssen, um die Benutzererfahrung zu optimieren.
 
@@ -140,4 +144,3 @@ Zum Aktivieren der lokalen Überwachung auf Docker benötigen Sie Docker [behäl
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu SQL Server unter Linux finden Sie unter der [Übersicht über die von SQL Server on Linux](sql-server-linux-overview.md).
-

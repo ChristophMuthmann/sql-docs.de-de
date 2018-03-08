@@ -2,11 +2,13 @@
 title: Bereinigen von Daten mit (internem) DQS-Wissen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +17,16 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "26"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21e837002fb9060fa87bdd2588e8c72570687345
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8aa5b0fdf2771d83310e503f2fdd8770bf9cf324
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
   In diesem Thema wird beschrieben, wie die Daten mithilfe eines Data Quality-Projekts in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) gereinigt werden. Die Datenbereinigung wird mithilfe einer Wissensdatenbank, die in DQS gegen ein hochwertiges Dataset erstellt wurde, für die Quelldaten ausgeführt. Weitere Informationen finden Sie unter [Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md).  
@@ -108,7 +109,7 @@ ms.lasthandoff: 09/09/2017
   
  Abhängig vom Vertrauensgrad werden die Werte auf einer der folgenden fünf Registerkarten angezeigt:  
   
-|Registerkarte|Beschreibung|  
+|Registerkarte|Description|  
 |---------|-----------------|  
 |**Vorgeschlagen**|Zeigt die Domänenwerte an, für die DQS die vorgeschlagenen Werte gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *automatisch vorgeschlagene Schwellenwert* , aber niedriger als der *Schwellenwert für die automatische Korrektur* ist.<br /><br /> Die vorgeschlagenen Werte werden in der Spalte **Korrigieren in** im Vergleich zum ursprünglichen Wert angezeigt. Sie können auf das Optionsfeld in der Spalte **Genehmigen** oder **Ablehnen** für einen Wert im oberen Raster klicken, um den Vorschlag für alle Instanzen des Wertes anzunehmen oder abzulehnen. In diesem Fall wird der angenommene Wert auf die Registerkarte **Korrigiert** verschoben, und der abgelehnte Wert wird auf die Registerkarte **Ungültig** verschoben.|  
 |**Neu**|Zeigt die gültige Domäne an, für die DQS nicht genug Informationen aufweist, und die daher keiner anderen Registerkarte zugeordnet werden kann. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.<br /><br /> Wenn Sie glauben, dass der Wert richtig ist, klicken Sie auf das Optionsfeld in der Spalte **Genehmigen** . Klicken Sie andernfalls auf das Optionsfeld in der Spalte **Ablehnen** . Der angenommene Wert wird auf die Registerkarte **Richtig** verschoben, und der abgelehnte Wert wird auf die Registerkarte **Ungültig** verschoben. Sie können den richtigen Wert auch manuell als Ersatz für den ursprünglichen Wert in der Spalte **Korrigieren in** eingeben und dann auf das Optionsfeld in der Spalte **Genehmigen** klicken, um die Änderung anzunehmen. In diesem Fall wird der Wert auf die Registerkarte **Korrigiert** verschoben.|  
@@ -232,4 +233,3 @@ ms.lasthandoff: 09/09/2017
  Weitere Informationen zur Profilerstellung finden Sie unter [Datenprofilerstellung und Benachrichtigungen in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

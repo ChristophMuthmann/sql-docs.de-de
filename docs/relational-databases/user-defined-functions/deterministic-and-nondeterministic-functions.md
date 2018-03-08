@@ -2,9 +2,12 @@
 title: Deterministische und nicht deterministische Funktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0ed8857c6a48193a31aacf948efbcf3cedbf4db7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Deterministische und nicht deterministische Funktionen
-  Deterministische Funktionen geben bei jedem Aufrufen dasselbe Ergebnis zurück, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden und die Datenbank denselben Status aufweist. Nicht deterministische Funktionen können bei jedem Aufrufen unterschiedliche Ergebnisse zurückgeben, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden – selbst wenn die Datenbank, auf die zugegriffen wird, immer denselben Status aufweist. Beispielsweise gibt die AVG-Funktion immer dasselbe Ergebnis zurück, sofern die zuvor genannten Bedingungen erfüllt sind. Die GETDATE-Funktion hingegen, die den aktuellen datetime-Wert liefert, gibt immer ein anderes Ergebnis zurück.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Deterministische Funktionen geben bei jedem Aufrufen dasselbe Ergebnis zurück, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden und die Datenbank denselben Status aufweist. Nicht deterministische Funktionen können bei jedem Aufrufen unterschiedliche Ergebnisse zurückgeben, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden – selbst wenn die Datenbank, auf die zugegriffen wird, immer denselben Status aufweist. Beispielsweise gibt die AVG-Funktion immer dasselbe Ergebnis zurück, sofern die zuvor genannten Bedingungen erfüllt sind. Die GETDATE-Funktion hingegen, die den aktuellen datetime-Wert liefert, gibt immer ein anderes Ergebnis zurück.  
   
  Benutzerdefinierte Funktionen weisen eine Reihe von Eigenschaften auf, mit denen festgelegt wird, ob das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Lage ist, die Ergebnisse der Funktion zu indizieren – entweder durch Indizes für berechnete Spalten, die die Funktion aufrufen, oder durch indizierte Sichten, die auf die Funktion verweisen. Der Determinismus einer Funktion ist eine solche Eigenschaft. Für eine Sicht kann z. B. kein gruppierter Index erstellt werden, falls die Sicht auf nicht deterministische Funktionen verweist. Weitere Informationen zu Eigenschaften von Funktionen, einschließlich Determinismus, finden Sie unter [Benutzerdefinierte Funktionen](../../relational-databases/user-defined-functions/user-defined-functions.md).  
   
@@ -73,19 +76,19 @@ ms.lasthandoff: 10/17/2017
   
 |||  
 |-|-|  
-|@@CONNECTIONS |GETDATE|  
-|@@CPU_BUSY |GETUTCDATE|  
-|@@DBTS |GET_TRANSMISSION_STATUS|  
-|@@IDLE |LAG|  
-|@@IO_BUSY |LAST_VALUE|  
-|@@MAX_CONNECTIONS |LEAD|  
-|@@PACK_RECEIVED |MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT |NEWID|  
-|@@PACKET_ERRORS |NEWSEQUENTIALID|  
-|@@TIMETICKS |NEXT VALUE FOR|  
-|@@TOTAL_ERRORS |NTILE|  
-|@@TOTAL_READ |PARSENAME|  
-|@@TOTAL_WRITE |PERCENTILE_CONT|  
+|@@CONNECTIONS|GETDATE|  
+|@@CPU_BUSY|GETUTCDATE|  
+|@@DBTS|GET_TRANSMISSION_STATUS|  
+|@@IDLE|LAG|  
+|@@IO_BUSY|LAST_VALUE|  
+|@@MAX_CONNECTIONS|LEAD|  
+|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
+|@@PACK_SENT|NEWID|  
+|@@PACKET_ERRORS|NEWSEQUENTIALID|  
+|@@TIMETICKS|NEXT VALUE FOR|  
+|@@TOTAL_ERRORS|NTILE|  
+|@@TOTAL_READ|PARSENAME|  
+|@@TOTAL_WRITE|PERCENTILE_CONT|  
 |AT TIME ZONE|PERCENTILE_DISC|
 |CUME_DIST|PERCENT_RANK|  
 |CURRENT_TIMESTAMP|RAND|  
@@ -103,4 +106,3 @@ ms.lasthandoff: 10/17/2017
  Wie bei Aufrufen von einem Batch oder einer gespeicherten Prozedur aus wird die erweiterte gespeicherte Prozedur im Kontext des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheitskontos ausgeführt, unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Der Besitzer der erweiterten gespeicherten Prozedur sollte diese Berechtigungen dieses Sicherheitskontexts berücksichtigen, wenn er anderen Benutzern Berechtigungen zum Ausführen der Prozedur erteilt.  
   
   
-

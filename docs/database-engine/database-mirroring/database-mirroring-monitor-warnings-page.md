@@ -2,9 +2,12 @@
 title: Datenbankspiegelungs-Monitor (Seite Warnungen) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -12,26 +15,26 @@ ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: 31
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c67c02e3e06ccf7617ebd33356290d2c2f632d36
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Datenbankspiegelungs-Monitor (Seite Warnungen)
-  Zeigt eine schreibgeschützte Liste mit Warnungen an, die für Datenbank-Spiegelungsereignisse unterstützt werden, sowie (falls verfügbar) die angegebenen Warnungsschwellenwerte.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Zeigt eine schreibgeschützte Liste mit Warnungen an, die für Datenbank-Spiegelungsereignisse unterstützt werden, sowie (falls verfügbar) die angegebenen Warnungsschwellenwerte.  
   
  **So verwenden Sie SQL Server Management Studio zum Überwachen der Datenbankspiegelung**  
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="columns"></a>Spalten  
+## <a name="columns"></a>Spalte  
  **Warnung**  
  Für folgende Warnungen können Sie einen Schwellenwert definieren:  
   
@@ -52,8 +55,8 @@ ms.lasthandoff: 08/02/2017
   
  Weitere Informationen finden Sie unter "Hinweise" weiter unten in diesem Thema.  
   
-## <a name="remarks"></a>Hinweise  
- Falls Informationen zum jetzigen Zeitpunkt für eine Serverinstanz nicht verfügbar sind, zeigen die Zellen der entsprechenden Spalte **Schwellenwert auf** einen grauen Hintergrund und Wasserzeichentext an. Wenn der Monitor nicht mit der Serverinstanz verbunden ist, zeigt das Raster in jeder Zelle, abhängig davon, ob es sich bei der Instanz um die Standardinstanz oder um eine benannte Instanz handelt, entweder **Nicht verbunden mit** *<SYSTEM_NAME>* oder **Nicht verbunden mit** *<SYSTEM_NAME>***\\***<Instanzname>* an. Wenn der Monitor auf die Rückgabe einer Abfrage wartet, zeigt das Raster in jeder Zelle **Auf Daten wird gewartet…** an.  
+## <a name="remarks"></a>Remarks  
+ Falls Informationen zum jetzigen Zeitpunkt für eine Serverinstanz nicht verfügbar sind, zeigen die Zellen der entsprechenden Spalte **Schwellenwert auf** einen grauen Hintergrund und Wasserzeichentext an. Wenn der Monitor nicht mit der Serverinstanz verbunden ist, zeigt das Raster in jeder Zelle, abhängig davon, ob es sich bei der Instanz um die Standardinstanz oder um eine benannte Instanz handelt, entweder **Nicht verbunden mit** *<SYSTEMNAME>* oder **Nicht verbunden mit** *<SYSTEMNAME>***\\***<Instanzname>* an. Wenn der Monitor auf die Rückgabe einer Abfrage wartet, zeigt das Raster in jeder Zelle **Auf Daten wird gewartet…** an.  
   
  Wenn Informationen verfügbar sind, zeigt die Zelle für jede Warnung entweder einen angegebenen Schwellenwert (und eine Maßeinheit) oder **Nicht aktiviert**an.  
   
@@ -78,10 +81,9 @@ ms.lasthandoff: 08/02/2017
   
  Die Mitgliedschaft in der **dbm_monitor** -Rolle ermöglicht Ihnen lediglich das Anzeigen der neuesten Statuszeile auf der Seite **Warnungen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
-

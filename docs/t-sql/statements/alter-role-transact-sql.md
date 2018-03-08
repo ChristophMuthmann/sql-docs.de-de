@@ -3,8 +3,11 @@ title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - database roles [SQL Server], modifying
 - names [SQL Server], database roles
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-caps.latest.revision: 64
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3eaee2d346eda964545caa60cd7168b531f47ad9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 897e8017965e71f345a93550e9af0c138d80b3b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Fügt Elemente an, oder aus einer Datenbankrolle entfernt oder ändert den Namen einer benutzerdefinierten Datenbankrolle.  
   
@@ -126,7 +128,7 @@ So ändern Sie die Mitgliedschaft in einer festen Datenbankrolle müssen Sie dar
   
  Im folgenden Beispiel wird der Name der `buyers`-Rolle in `purchasing` geändert. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
@@ -135,7 +137,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
   
  Dieses Beispiel erstellt eine Datenbankrolle mit dem Namen `Sales`. Es fügt einen Datenbankbenutzer mit dem Namen "Barry", um die Mitgliedschaft, und anschließend wird gezeigt, wie das Element "Barry" zu entfernen. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  
@@ -150,4 +152,3 @@ ALTER ROLE Sales DROP MEMBER Barry;
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   
-

@@ -2,28 +2,31 @@
 title: Selektive XML-Indizes (SXI) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3e845dd3ae91488060e72ad75c3f60d7dc0c7977
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>Selektive XML-Indizes (SXI)
-  Selektive XML-Indizes sind ein weiterer Typ von XML-Index, der Ihnen zusätzlich zu den herkömmlichen XML-Indizes zur Verfügung steht. Die Ziele der selektiven XML-Indexfunktion sind Folgende:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Selektive XML-Indizes sind ein weiterer Typ von XML-Index, der Ihnen zusätzlich zu den herkömmlichen XML-Indizes zur Verfügung steht. Die Ziele der selektiven XML-Indexfunktion sind Folgende:  
   
 -   Verbessern der Leistung von Abfragen zu XML-Daten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert sind.  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
  Wenn Sie diese Daten nur über den `/book/title` -Pfad und den `/book/subjects` -Pfad abfragen müssen, können Sie den folgenden selektiven XML-Index erstellen:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -170,7 +173,7 @@ FOR
   
  **Auf Speicher bezogene Einschränkungen**  
   
- Die Anzahl der Knoten aus dem XML-Dokument, die dem Index hinzugefügt werden können, ist beschränkt. Ein selektiver XML-Index ordnet XML-Dokumente einer einzelnen relationalen Tabelle zu. Daher kann er nicht mehr als 1024 Spalten mit Nicht-NULL-Werten in den Spalten der Tabelle aufweisen. Weiterhin gelten viele der Einschränkungen von Spalten mit geringer Dichte auch für selektive XML-Indizes, da die Indizes Spalten mit geringer Dichte zum Speichern verwenden.  
+ Die Anzahl der Knoten aus dem XML-Dokument, die dem Index hinzugefügt werden können, ist beschränkt. Ein selektiver XML-Index ordnet XML-Dokumente einer einzelnen relationalen Tabelle zu. Daher kann er nicht mehr als 1024 Spalten mit Nicht-NULL-Werten in den Spalten der Tabelle aufweisen. Weiterhin gelten viele der Einschränkungen von Sparsespalten auch für selektive XML-Indizes, da die Indizes Sparsespalten zum Speichern verwenden.  
   
  Die maximale Anzahl von Nicht-NULL-Spalten, die in einer Zeile unterstützt werden, hängt von der Größe der Daten in den Spalten ab:  
   
@@ -206,4 +209,3 @@ FOR
   
   
   
-

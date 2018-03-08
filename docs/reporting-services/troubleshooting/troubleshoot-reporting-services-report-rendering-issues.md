@@ -1,27 +1,27 @@
 ---
-title: Problembehandlung bei Reporting Services-Bericht, die Probleme beim Rendern | Microsoft Docs
+title: 'Reporting Services-Problembehandlung: Probleme beim Rendern von Berichten | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "4"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91629c6d86f1616b19026cbc0e670fff51553dda
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e95e444172974de41cfea15bc651ddfae9a5cabb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services-Problembehandlung, Probleme beim Rendern von Berichten
 Nach dem Kombinieren der Berichtsdaten und der Layoutinformationen wird der kompilierte Bericht an einen Berichtsrenderer gesendet. Wenn Sie z. B. lokal eine Vorschau eines Berichts anzeigen, verwenden Sie den HTML-Renderer zum Anzeigen des kompilierten Berichts. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Rendern von Berichten helfen.   
@@ -70,9 +70,9 @@ Wenn die Datenquelle für einen Microsoft SharePoint-Listenverbindungstyp konfig
   
 **Dieses Problem betrifft:** Browser, die so konfiguriert wurden, dass Anmeldeinformationen angefordert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Troubleshoot Data Retrieval issues with Reporting Services Reports (Problembehandlung: Probleme beim Abrufen von Daten in Reporting Services-Berichten)](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
@@ -80,5 +80,4 @@ Wenn die Datenquelle für einen Microsoft SharePoint-Listenverbindungstyp konfig
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

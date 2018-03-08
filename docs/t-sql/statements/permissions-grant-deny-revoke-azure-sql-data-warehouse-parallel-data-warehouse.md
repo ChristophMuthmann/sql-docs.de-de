@@ -3,8 +3,11 @@ title: "GRANT DENY REVOKE Perms – Azure SQL-Daten und Parallel Datawarehouses 
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c4beb3881b983c0af3add7671dc4c7155649497
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY oder REVOKE (Azure SQL Datawarehouse, Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Verwendung [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** und **DENY** Anweisungen zu erteilen oder Verweigern einer Berechtigung (z. B. **UPDATE**) für ein sicherungsfähiges Element (z. B. eine Datenbank, Tabelle, Sicht usw..) können einem Sicherheitsprinzipal (eine Anmeldung, ein Datenbankbenutzer oder eine Datenbankrolle). Verwendung **widerrufen** zum Entfernen der erteilen oder Verweigern einer Berechtigung.  
   
@@ -86,9 +88,9 @@ REVOKE
   
  ON [ \<Class_type >::] *sicherungsfähigen* der **ON** -Klausel beschreibt die sicherungsfähigen Parameter für das erteilen, verweigern oder widerrufen von Berechtigungen.  
   
- \<Class_type > den Klassentyp des sicherungsfähigen Elements. Dies kann **Anmeldung**, **Datenbank**, **Objekt**, **SCHEMA**, **Rolle**, oder **Benutzer** . Berechtigungen können auch erteilt werden, um die **SERVER***Class_type*, aber **SERVER** für diese Berechtigungen nicht angegeben ist. **Datenbank** ist nicht angegeben, wenn die Berechtigung für das Wort enthält **Datenbank** (z. B. **ALTER ANY DATABASE**). Wenn kein *Class_type* angegeben ist und der Berechtigungstyp ist nicht beschränkt auf den Server oder Datenbankklasse, die Klasse wird davon ausgegangen, dass werden **Objekt**.  
+ \<Class_type > den Klassentyp des sicherungsfähigen Elements. Dies kann **Anmeldung**, **Datenbank**, **Objekt**, **SCHEMA**, **Rolle**, oder **Benutzer** . Berechtigungen können auch erteilt werden, um die **SERVER *** Class_type*, aber **SERVER** für diese Berechtigungen nicht angegeben ist. **Datenbank** ist nicht angegeben, wenn die Berechtigung für das Wort enthält **Datenbank** (z. B. **ALTER ANY DATABASE**). Wenn kein *Class_type* angegeben ist und der Berechtigungstyp ist nicht beschränkt auf den Server oder Datenbankklasse, die Klasse wird davon ausgegangen, dass werden **Objekt**.  
   
- *sicherungsfähiges Element*  
+ *securable*  
  Der Name der Anmeldung, Datenbank, Tabelle, Sicht, Schema, Prozedur, Funktion oder Benutzer, auf denen erteilt, verweigert oder widerrufen von Berechtigungen. Der Objektname kann angegeben werden, mit den dreiteiligen Benennungsregeln, die in beschriebenen [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  UM *principal* [ **,**... *n* ]  
@@ -230,7 +232,7 @@ REVOKE
   
 -   DELETE  
   
--   EXECUTE  
+-   Führen Sie  
   
 -   INSERT  
   
@@ -324,5 +326,4 @@ GRANT UPDATE ON dbo.StatusTable TO [Ted];
 ```  
   
   
-
 

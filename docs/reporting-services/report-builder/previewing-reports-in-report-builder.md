@@ -1,26 +1,27 @@
 ---
-title: Anzeigen einer Berichtsvorschau im Berichts-Generator | Microsoft Docs
+title: Anzeigen einer Berichtsvorschau im Berichts-Generator | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anzeigen einer Berichtsvorschau in Berichts-Generator
   Während Sie einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstellen, sollten Sie ihn häufig in der Vorschau anzuzeigen, um zu überprüfen, ob die gewünschten Daten angezeigt werden. Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen. Der Bericht wird im Seitenansichtsmodus gerendert.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
  Andere Vorteile von Bearbeitungssitzungen sind die Möglichkeit, Berichte zu bearbeiten, in denen eingebettete Datenquellen oder Verweiselemente wie z. B. Bilder oder Unterberichte verwendet werden, die auf dem Berichtsserver gespeichert sind.  
   
 > [!NOTE]  
-> Es gibt einige Unterschiede zwischen Vorschau im Berichts-Generator und in einem Browser anzeigen. Beispielsweise unterscheidet sich ein Monatskalender-Steuerelement, die zu einem Bericht hinzugefügt wird, wenn Sie einen Datum/Uhrzeit-Parameter angeben, im Berichts-Generator und in einem Browser. 
+> Zwischen der Vorschau im Berichts-Generator und der Anzeige in einem Browser bestehen einige Unterschiede. Ein Kalendersteuerelement, das zu einem Bericht hinzugefügt wird, wenn Sie einen Datum/Uhrzeit-Typparameter angeben, unterschiedet sich im Berichts-Generator und in einem Browser. 
   
 ## <a name="improving-preview-performance"></a>Verbessern der Vorschauleistung  
  Wie Sie einen Bericht erstellen und aktualisieren, hat Auswirkungen darauf, wie schnell der Bericht in der Vorschau gerendert wird. Wenn Sie einen Bericht, der auf einem Serververweis basiert, zum ersten Mal in der Vorschau anzeigen, wird eine Bearbeitungssitzung erstellt, und die bei der Ausführung des Berichts verwendeten Daten werden einem auf dem Berichtsserver gespeicherten Datencache hinzugefügt. Wenn Sie Änderungen am Bericht vornehmen, die sich nicht auf die Daten auswirken, wird für den Bericht die zwischengespeicherte Kopie der Daten verwendet. Dies bedeutet, dass nicht jedes Mal, wenn Sie den Bericht in der Vorschau anzeigen, geänderte Daten angezeigt werden. Wenn Sie neue Daten anzeigen möchten, klicken Sie im Menüband auf die Schaltfläche **Aktualisieren** .  
@@ -80,13 +81,12 @@ ms.lasthandoff: 08/09/2017
   
  Wenn ein vom Bericht verwendeter Unterbericht nach der Erstellung der Bearbeitungssitzung geändert wird, wird der Bericht nicht in der Vorschau gerendert. Um den Bericht erfolgreich in der Vorschau anzuzeigen, müssen Sie den Bericht speichern oder auf **Aktualisieren** klicken, um neue Daten abzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Formatieren von Berichtselementen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Speichern Berichte &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Speichern von Berichten &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

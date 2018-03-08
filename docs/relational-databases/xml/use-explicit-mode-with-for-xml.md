@@ -2,9 +2,12 @@
 title: Verwenden des EXPLICIT-Modus mit FOR XML | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: a5d96f28856360f9a57b29d28086cc487f156320
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
-  Wie im Thema [Erstellen von XML mithilfe von FOR XML](../../relational-databases/xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Wie im Thema [Erstellen von XML mithilfe von FOR XML](../../relational-databases/xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
   
  Die Abfrage im EXPLICIT-Modus muss so geschrieben werden, dass die zusätzlichen Informationen zu der erforderlichen XML-Ausgabe, wie z. B. die erwartete Schachtelung, explizit als Teil der Abfrage angegeben werden. Das Schreiben von Abfragen im EXPLICIT-Modus kann jedoch aufwendig sein, je nachdem, welche XML-Daten erforderlich sind. Möglicherweise ist das [Verwenden des PATH-Modus](../../relational-databases/xml/use-path-mode-with-for-xml.md) mit Schachtelung dem Schreiben von Abfragen im EXPLICIT-Modus als einfachere Alternative vorzuziehen.  
   
@@ -171,7 +175,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Beispiel: Angeben der XMLTEXT-Direktive](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

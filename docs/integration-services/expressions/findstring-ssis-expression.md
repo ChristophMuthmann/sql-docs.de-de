@@ -1,10 +1,13 @@
 ---
-title: FINDSTRING (SSIS-Ausdruck) | Microsoft Docs
+title: FINDSTRING (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abadf6c9ce8d97a6aa1d1c4e649ccbdf69f4f8f4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c2787fdb4663ea8c1495a811b44f878b896498eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS-Ausdruck)
   Gibt den Speicherort für das angegebene Auftreten einer Zeichenfolge innerhalb eines Zeichenausdrucks zurück. Das Ergebnis ist der einsbasierte Index für das Auftreten. Der string-Parameter muss zu einem Zeichenausdruck und der occurrence-Parameter zu einer ganzen Zahl ausgewertet werden. Wenn die Zeichenfolge nicht gefunden wird, wird 0 zurückgegeben. Wenn die Zeichenfolge weniger auftritt als im occurrence-Argument angegeben, wird ebenfalls 0 zurückgegeben.  
@@ -47,7 +49,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  FINDSTRING kann nur mit dem DT_WSTR-Datentyp verwendet werden.  Das*character_expression* -Argument und das *searchstring* -Argument, die Zeichenfolgenliterale oder Datenspalten mit dem DT_STR-Datentyp sind, werden implizit in den DT_WSTR-Datentyp umgewandelt, bevor FINDSTRING die Operation ausführt. Andere Datentypen müssen explizit in den DT_WSTR-Datentyp umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md) und [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  FINDSTRING gibt NULL zurück, wenn *character_expression* oder *searchstring* NULL sind.  
@@ -81,9 +83,8 @@ FINDSTRING(Name,"n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ersetzen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
- [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [REPLACE &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/replace-ssis-expression.md)   
+ [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

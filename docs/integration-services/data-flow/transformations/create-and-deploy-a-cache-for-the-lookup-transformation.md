@@ -1,10 +1,13 @@
 ---
-title: "Erstellen und Bereitstellen eines Cache für die Transformation für Suche | Microsoft Docs"
+title: "Erstellen und Bereitstellen eines Caches für die Transformation für Suche | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 76b6c9efffe9f87dc9bae67958b8ccf85a79bd76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Erstellen und Bereitstellen eines Cache für die Transformation für Suche
   Sie können eine Cachedatei (.caw) erstellen und für die Transformation zur Suche bereitstellen. Das Verweisdataset wird in der Cachedatei gespeichert.  
@@ -91,12 +93,11 @@ ms.lasthandoff: 08/03/2017
   
 4.  Konfigurieren Sie das Projekt, um ein Bereitstellungshilfsprogramm zu erstellen, und erstellen Sie anschließend das Projekt. Weitere Informationen finden Sie unter [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Eine Manifestdatei \< *Projektname*>. SSISDeploymentManifest.xml, wird erstellt, die der verschiedenen Dateien im Projekt, Pakete und der Paketkonfigurationen.  
+     Die Manifestdatei „\<*Projektname*>.SSISDeploymentManifest.xml“ wird erstellt. Diese Datei enthält eine Auflistung der verschiedenen Dateien im Projekt, der Pakete und der Paketkonfigurationen.  
   
 5.  Stellen Sie das Paket für das Dateisystem bereit. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Bereitstellungshilfsprogramms](../../../integration-services/packages/create-a-deployment-utility.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

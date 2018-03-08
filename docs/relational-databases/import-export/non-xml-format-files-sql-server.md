@@ -2,9 +2,12 @@
 title: Nicht-XML-Formatdateien (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5248b62f5b027dcfa99a9bc5028cc88b3f6ef633
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden zwei Typen von Formatdateien zum Massenexportieren und -importieren unterstützt: *Nicht-XML-Formatdateien* und *XML-Formatdateien*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden zwei Typen von Formatdateien zum Massenexportieren und -importieren unterstützt: *Nicht-XML-Formatdateien* und *XML-Formatdateien*.  
   
  **In diesem Thema:**  
   
@@ -61,14 +64,14 @@ ms.lasthandoff: 10/13/2017
   
  Die Felder **Version** und **Anzahl der Spalten** kommen nur einmal vor. Die Bedeutung dieser Felder wird in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|Beschreibung|  
+|Feld in der Formatdatei|Description|  
 |------------------------|-----------------|  
-|Version|Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Hinweis: Die Version des zum Lesen der Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] **bcp** generiert wurden.|  
+|Versionsoptionen|Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Hinweis: Die Version des zum Lesen der Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] **bcp** generiert wurden.|  
 |Anzahl der Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  
   
  Die anderen Felder der Formatdatei beschreiben die Datenfelder, die massenimportiert bzw. exportiert werden sollen. Jedes Datenfeld nimmt eine eigene Zeile in der Formatdatei ein. Jede Zeile der Formatdatei enthält Werte für die Felder der Formatdatei. Diese Felder werden in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|Beschreibung|  
+|Feld in der Formatdatei|Description|  
 |------------------------|-----------------|  
 |**Reihenfolge der Felder der Hostdatei**|Eine Zahl, die die Position jedes Felds in der Datendatei angibt. Das erste Feld in der Zeile ist 1 usw.|  
 |**Datentyp in der Hostdatei**|Gibt den Datentyp an, der in einem bestimmten Feld der Datendatei gespeichert wird. Bei ASCII-Datendateien verwenden Sie SQLCHAR, bei Datendateien im systemeigenen Format verwenden Sie Standarddatentypen. Weitere Informationen finden Sie unter [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -111,11 +114,10 @@ ms.lasthandoff: 10/13/2017
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   
  [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
-

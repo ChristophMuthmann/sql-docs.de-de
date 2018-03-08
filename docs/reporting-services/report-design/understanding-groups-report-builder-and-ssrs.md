@@ -1,30 +1,30 @@
 ---
-title: Grundlegendes zu Gruppen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Grundlegendes zu Gruppen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6972387a10c596256f0eef54e14054ae5adc9b38
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ist eine Gruppe ein benannter Satz von Daten aus dem Berichtsdataset, der an einen Datenbereich gebunden ist. Im Grunde wird mit einer Gruppe eine Sicht eines Berichtsdatasets organisiert. Alle Gruppen in einem Datenbereich geben unterschiedliche Sichten desselben Berichtsdatasets an.  
@@ -42,10 +42,10 @@ ms.lasthandoff: 08/09/2017
  Eine Gruppe besitzt einen Namen und einen Satz von Gruppierungsausdrücken, den Sie festlegen. Der Satz von Gruppierungsausdrücken kann ein Verweis auf ein einzelnes Datasetfeld oder eine Kombination mehrerer Ausdrücke sein. Zur Laufzeit werden Gruppenausdrücke kombiniert, wenn die Gruppe mehrere Ausdrücke enthält, und für Daten in einer Gruppe angewendet. Angenommen, Sie verfügen über eine Gruppe, die die Daten im Datenbereich mithilfe eines Datumsfelds organisiert. Zur Laufzeit werden die Daten nach Datum angeordnet und dann mit dem Gesamtwerten anderer Datasetwerte für jedes Datum angezeigt.  
   
 ## <a name="when-do-i-create-groups"></a>Wann sollten Gruppen erstellt werden?  
- In den meisten Fällen erstellen Berichts-Generator und Berichts-Designer eine Gruppe automatisch, wenn Sie einen Datenbereich entwerfen. Für eine Tabelle, Matrix oder Liste werden Gruppen erstellt, wenn Sie Felder im Gruppierungsbereich ablegen. Für ein Diagramm werden Gruppen erstellt, wenn Sie Felder in den Diagrammablagezonen ablegen. Für ein Messgerät müssen Sie das Dialogfeld für die Messgeräteigenschaften verwenden. Für eine Tabelle, Matrix oder Liste können Sie eine Gruppe auch manuell erstellen. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Ein Beispiel zum Hinzufügen von Gruppen beim Erstellen eines Berichts finden Sie im [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) oder unter [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ In den meisten Fällen erstellen Berichts-Generator und Berichts-Designer eine Gruppe automatisch, wenn Sie einen Datenbereich entwerfen. Für eine Tabelle, Matrix oder Liste werden Gruppen erstellt, wenn Sie Felder im Gruppierungsbereich ablegen. Für ein Diagramm werden Gruppen erstellt, wenn Sie Felder in den Diagrammablagezonen ablegen. Für ein Messgerät müssen Sie das Dialogfeld für die Messgeräteigenschaften verwenden. Für eine Tabelle, Matrix oder Liste können Sie eine Gruppe auch manuell erstellen. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Ein Beispiel zum Hinzufügen von Gruppen beim Erstellen eines Berichts finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) oder unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Wie kann eine Gruppe geändert werden?  
- Wenn Sie eine Gruppe erstellt haben, können Sie die datenbereichsspezifischen Eigenschaften festlegen, z. B. Filter- und Sortierungsausdrücke, Seitenumbrüche und Gruppierungsvariablen für bereichsspezifische Daten. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Wenn Sie eine Gruppe erstellt haben, können Sie die datenbereichsspezifischen Eigenschaften festlegen, z. B. Filter- und Sortierungsausdrücke, Seitenumbrüche und Gruppierungsvariablen für bereichsspezifische Daten. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
  Um eine vorhandene Gruppe zu ändern, öffnen Sie das entsprechende Dialogfeld für Gruppeneigenschaften. Sie können den Namen der Gruppe ändern. Außerdem können Sie anhand eines einzelnen Felds, mehrerer Felder oder anhand eines Berichtsparameters, der zur Laufzeit einen Wert angibt, Gruppierungsausdrücke angeben. Zudem kann eine Gruppe auf einem Satz von Ausdrücken beruhen, z. B. dem Satz von Ausdrücken, mit denen Altersgruppen für demografische Daten angegeben werden. Weitere Informationen finden Sie unter [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
  Gruppen sind intern als Elemente einer oder mehrerer Hierarchien für jeden Datenbereich organisiert. Eine Gruppenhierarchie enthält übergeordnete/untergeordnete Gruppen, die geschachtelt sind und angrenzende Gruppen aufweisen können.  
   
- Wenn Sie sich übergeordnete/untergeordnete Gruppen als Baumstruktur vorstellen, entspricht jede Gruppenhierarchie einer Gesamtstruktur von Baumstrukturen. Tablix-Datenbereiche enthalten eine Hierarchie von Zeilengruppen und eine Hierarchie von Spaltengruppen. Zeilengruppenelementen zugeordnete Daten werden horizontal über die Seite erweitert, und Spaltengruppenelementen zugeordnete Daten werden vertikal die Seite hinunter erweitert. Im Gruppierungsbereich werden Zeilengruppen- und Spaltengruppenelemente für den derzeit ausgewählten Tablix-Datenbereich auf der Entwurfsoberfläche angezeigt. Weitere Informationen finden Sie unter [Gruppierungsbereich &#40;Berichts-Generator&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+ Wenn Sie sich übergeordnete/untergeordnete Gruppen als Baumstruktur vorstellen, entspricht jede Gruppenhierarchie einer Gesamtstruktur von Baumstrukturen. Tablix-Datenbereiche enthalten eine Hierarchie von Zeilengruppen und eine Hierarchie von Spaltengruppen. Zeilengruppenelementen zugeordnete Daten werden horizontal über die Seite erweitert, und Spaltengruppenelementen zugeordnete Daten werden vertikal die Seite hinunter erweitert. Im Gruppierungsbereich werden Zeilengruppen- und Spaltengruppenelemente für den derzeit ausgewählten Tablix-Datenbereich auf der Entwurfsoberfläche angezeigt. Weitere Informationen finden Sie unter [Gruppierungsbereich (Berichts-Generator)](../../reporting-services/report-design/grouping-pane-report-builder.md).  
   
  Diagrammdatenbereiche enthalten eine Hierarchie von Kategoriegruppen und eine Hierarchie von Reihengruppen. Kategoriegruppenelemente werden auf der Kategorieachse und Reihengruppenelemente auf der Reihenachse angezeigt.  
   
@@ -95,21 +95,20 @@ ms.lasthandoff: 08/09/2017
   
 -   **Liste** Unterstützt standardmäßig die Detailgruppe. Wird meist für die Unterstützung einer Gruppierungsebene verwendet. Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in den Gruppierungsbereich für eine ausgewählte Liste ziehen.  
   
- Wenn Sie eine Gruppe hinzugefügt haben, werden die Zeilen- und Spaltenhandles des Datenbereichs so geändert, dass sie die Gruppenmitgliedschaft wiedergeben. Beim Löschen einer Gruppe können Sie entweder nur die Gruppendefinition oder die Gruppe und alle zugeordneten Zeilen und Spalten löschen. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Wenn Sie eine Gruppe hinzugefügt haben, werden die Zeilen- und Spaltenhandles des Datenbereichs so geändert, dass sie die Gruppenmitgliedschaft wiedergeben. Beim Löschen einer Gruppe können Sie entweder nur die Gruppendefinition oder die Gruppe und alle zugeordneten Zeilen und Spalten löschen. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Zum Einschränken der Daten, die angezeigt oder in Berechnungen für Detail- oder Gruppendaten verwendet werden sollen, legen Sie für die Gruppe Filter fest. Weitere Informationen finden Sie unter [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
  Wenn Sie eine Gruppe erstellen, ist der Sortierungsausdruck für die Gruppe mit dem Gruppierungsausdruck identisch. Um die Sortierreihenfolge zu ändern, ändern Sie den Sortierungsausdruck. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 #### <a name="understanding-group-membership-for-tablix-cells"></a>Grundlegendes zur Gruppenmitgliedschaft für Tablix-Zellen  
- Zellen in einer Zeile oder Spalte eines Tablix-Datenbereichs können zu mehreren Zeilen- und Spaltengruppen gehören. Wenn Sie einen Ausdruck im Textfeld einer Zelle definieren, für die eine Aggregatfunktion verwendet wird (z. B. `=Sum(Fields!FieldName.Value`), ist der Standardgruppenbereich für eine Zelle die innerste untergeordnete Gruppe, zu der dieser gehört. Wenn eine Zelle zu Zeilen- und zu Spaltengruppen gehört, besteht der Bereich aus beiden innersten Gruppen. Sie können auch Ausdrücke erstellen, mit denen Aggregatteilergebnisse berechnet werden, die relativ zu einer anderen Datenmenge zu einer Gruppe zusammengefasst werden. Beispielsweise können Sie den Prozentsatz einer Gruppe relativ zur Spaltengruppe oder zu allen Daten für den Datenbereich berechnen (z. B. `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Weitere Informationen finden Sie unter [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) und [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Zellen in einer Zeile oder Spalte eines Tablix-Datenbereichs können zu mehreren Zeilen- und Spaltengruppen gehören. Wenn Sie einen Ausdruck im Textfeld einer Zelle definieren, für die eine Aggregatfunktion verwendet wird (z. B. `=Sum(Fields!FieldName.Value`), ist der Standardgruppenbereich für eine Zelle die innerste untergeordnete Gruppe, zu der dieser gehört. Wenn eine Zelle zu Zeilen- und zu Spaltengruppen gehört, besteht der Bereich aus beiden innersten Gruppen. Sie können auch Ausdrücke erstellen, mit denen Aggregatteilergebnisse berechnet werden, die relativ zu einer anderen Datenmenge zu einer Gruppe zusammengefasst werden. Beispielsweise können Sie den Prozentsatz einer Gruppe relativ zur Spaltengruppe oder zu allen Daten für den Datenbereich berechnen (z. B. `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Weitere Informationen finden Sie unter [Tablix-Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) und [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [Sortieren von Daten in einem Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Drilldownaktion &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

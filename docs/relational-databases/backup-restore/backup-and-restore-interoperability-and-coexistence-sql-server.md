@@ -2,9 +2,12 @@
 title: "Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d1045fc2174cc299e5122306289c92df0ded602d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema werden Überlegungen im Zusammenhang mit der Sicherung und Wiederherstellung für mehrere Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]beschrieben. Diese Funktionen sind: Dateiwiederherstellung und Datenbankstart, Onlinewiederherstellung und deaktivierte Indizes, Datenbankspiegelung sowie schrittweise Wiederherstellung und Volltextindizes.  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 06/22/2017
  Dieser Abschnitt betrifft nur Datenbanken mit mehreren Dateigruppen, für die das vollständige Wiederherstellungsmodell verwendet wird.  
   
 > [!NOTE]  
->  Die Datenbankspiegelungsfunktion wird in zukünftigen Versionen von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr bereitgestellt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  Die Datenbankspiegelungsfunktion wird in zukünftigen Versionen von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr bereitgestellt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
  Die Datenbankspiegelung ist eine Lösung zum Verbessern der Datenbankverfügbarkeit. Die Datenbankspiegelung wird auf Datenbankbasis implementiert und ist nur für Datenbanken mit dem vollständigen Wiederherstellungsmodell geeignet. Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -118,7 +121,7 @@ ms.lasthandoff: 06/22/2017
  Sobald sowohl die Tabellendateigruppe als auch die Volltextindex-Dateigruppe online sind, wird eine ggf. angehaltene Volltextauffüllung fortgesetzt.  
   
 ##  <a name="FileBnRandCompression"></a> Dateisicherung und -wiederherstellung und die Komprimierung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die NTFS-Dateisystemkomprimierung schreibgeschützter Dateigruppen und Datenbanken.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die NTFS-Dateisystemkomprimierung schreibgeschützter Dateigruppen und Datenbanken unterstützt.  
   
  Das Wiederherstellen von Dateien in einer schreibgeschützten Dateigruppe wird für komprimierte NTFS-Dateien unterstützt. Das Sichern und Wiederherstellen dieser Dateigruppen erfolgt im Prinzip wie bei jeder anderen schreibgeschützten Dateigruppe, jedoch mit folgenden Ausnahmen:  
   
@@ -135,10 +138,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten \(Always On-Verfügbarkeitsgruppen\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
-

@@ -3,7 +3,7 @@ title: InternetTimeout-Eigenschaft (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,19 +16,18 @@ apitype: COM
 helpviewer_keywords:
 - InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7961cf7594df99caa6f8aa4c8ba0ef6cd94696dc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2320ba200cf8343a32e2a0d00589a80014517260
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="internettimeout-property-rds"></a>InternetTimeout-Eigenschaft (RDS)
+# <a name="internettimeout-property-rds"></a>InternetTimeout Property (RDS)
 Gibt die Anzahl der Millisekunden, die gewartet wird, bevor eine Anforderung ein Timeout eintritt.  
   
 > [!IMPORTANT]
@@ -46,11 +45,10 @@ Gibt die Anzahl der Millisekunden, die gewartet wird, bevor eine Anforderung ein
   
 |||  
 |-|-|  
-|[RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
+|[DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel-InternetTimeout-Eigenschaft (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
- [InternetTimeout-Eigenschaft (VC++-Beispiel)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
+ [InternetTimeout-Eigenschaft – Beispiel (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  
-
 

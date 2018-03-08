@@ -3,29 +3,28 @@ title: GetDate-Methode (java.lang.String) Spalte | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getDate (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getDate (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b20e134b918592f563d1e0630e25454635c46ac
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ad613b2e31b7e0da6384bd430b006e751aea124
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>GetDate-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public java.sql.Date getDate(java.lang.String columnName)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

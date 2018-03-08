@@ -3,8 +3,11 @@ title: END CONVERSATION-Anweisung (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - conversations [Service Broker], ending
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 60923cb3ad494aacc9d39653a2462da3fe27b46a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Beendet eine bestehende Konversation auf einer Seite.  
   
@@ -61,7 +63,7 @@ END CONVERSATION conversation_handle
  Fehler =*Failure_code*  
  Bezeichnet den Fehlercode. Die *Failure_code* ist vom Typ **Int**. Beim Fehlercode handelt es sich um einen benutzerdefinierten Code, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird. Der Fehlercode muss größer als 0 sein.  
   
- DESCRIPTION =*Failure_text*  
+ DESCRIPTION =*failure_text*  
  Bezeichnet die Fehlermeldung. Die *Failure_text* ist vom Typ **nvarchar(3000)**. Beim Fehlertext handelt es sich um benutzerdefinierten Text, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird.  
   
  WITH CLEANUP  
@@ -137,7 +139,6 @@ END CONVERSATION @dialog_handle WITH CLEANUP ;
 ## <a name="see-also"></a>Siehe auch  
  [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Sys. conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   
-

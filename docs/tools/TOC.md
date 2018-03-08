@@ -1,12 +1,17 @@
 
 # [Übersicht über SQL Server-Tools und -Dienstprogramme](../tools/overview-sql-tools.md)
-# [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-tools.md)
+# [Neue und aktualisierte Artikel](new-updated-tools.md)
+
+# [SQL Operations Studio (Vorschau)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql-cli (Abfragetool auf der Befehlszeile)](mssql-cli.md)
+
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [Datenbankoptimierungsratgeber (DTA)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
@@ -18,7 +23,7 @@
 ## [osql (Hilfsprogramm)](osql-utility.md)  
 ## [Profiler-Hilfsprogramm](profiler-utility.md)  
 ## [sqlagent90 (Anwendung)](sqlagent90-application.md)  
-## [sqlcmd (Hilfsprogramm)](sqlcmd-utility.md)  
+## [sqlcmd Utility](sqlcmd-utility.md)  
 ## [SQLdiag (Hilfsprogramm)](sqldiag-utility.md)  
 ## [sqlmaint (Hilfsprogramm)](sqlmaint-utility.md)  
 ## [Anwendung sqllogship](sqllogship-application.md)  

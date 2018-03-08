@@ -2,33 +2,36 @@
 title: "Ändern der Datendimension | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2241d24c13fa2d31a6789387f165d8285903fa0b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c514356aeabd59525fdab80e6e1c03f93d9ae34f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lektion 3 und 4-Ändern der Datendimension
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In den Aufgaben dieses Themas erstellen Sie eine benutzerdefinierte Hierarchie und ändern die Elementnamen, die für die Attribute Date, Month, Calendar Quarter und Calendar Semester angezeigt werden. Außerdem definieren Sie zusammengesetzte Schlüssel für Attribute, steuern die Sortierreihenfolge von Dimensionselementen und definieren Attributbeziehungen.  
   
 ## <a name="adding-a-named-calculation"></a>Hinzufügen einer benannten Berechnung  
-Sie können eine benannte Berechnung, bei der es sich um einen SQL-Ausdruck handelt, der als eine berechnete Spalte dargestellt wird, zu einer Tabelle in einer Datenquellensicht hinzufügen. Der Ausdruck wird als Spalte in der Tabelle angezeigt und verhält sich auch so. Mithilfe von benannten Berechnungen können Sie das relationale Schema vorhandener Tabellen in einer Datenquellensicht erweitern, ohne die Tabelle in der zugrunde liegenden Datenquelle zu ändern. Weitere Informationen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+Sie können eine benannte Berechnung, bei der es sich um einen SQL-Ausdruck handelt, der als eine berechnete Spalte dargestellt wird, zu einer Tabelle in einer Datenquellensicht hinzufügen. Der Ausdruck wird als Spalte in der Tabelle angezeigt und verhält sich auch so. Mithilfe von benannten Berechnungen können Sie das relationale Schema vorhandener Tabellen in einer Datenquellensicht erweitern, ohne die Tabelle in der zugrunde liegenden Datenquelle zu ändern. Weitere Informationen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>So fügen Sie eine benannte Berechnung hinzu  
   
@@ -111,7 +114,7 @@ Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie auch Attribu
   
 3.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut** **English Month Name**. Legen Sie den Wert für **Verknüpftes Attribut** auf **Calendar Quarter**fest.  
   
-4.  Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
+4.  Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest** ein.  
   
     Der Beziehungstyp ist **Fest** , da sich Beziehungen zwischen den Elementen nicht im Laufe der Zeit ändern.  
   
@@ -215,7 +218,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-3.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
+3.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten** aus, und klicken Sie anschließend auf die Schaltfläche **>**.  
   
     Die Spalten **CalendarQuarter** und **CalendarYear** werden jetzt in der Liste **Schlüsselspalten** angezeigt.  
   
@@ -309,4 +312,3 @@ In dieser Aufgabe ändern Sie die Sortierreihenfolge, indem Sie die Reihenfolge 
 ## <a name="see-also"></a>Siehe auch  
 [Dimensionen in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
-

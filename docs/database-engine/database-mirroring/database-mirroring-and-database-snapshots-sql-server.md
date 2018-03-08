@@ -2,11 +2,13 @@
 title: Datenbankspiegelung und Datenbankmomentaufnahmen (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: db1c0902b2de0a761e1a7558e9bbb71c946afe5b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 32381132f193eae0c3ecae20247d36dcefb8f658
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Datenbankspiegelung und Datenbankmomentaufnahmen (SQL Server)
-  Sie können die Vorteile einer Spiegeldatenbank, die aus Gründen der Verfügbarkeit verwaltet wird, auch für die ausgelagerte Berichterstellung ausnutzen. Wenn Sie für die Berichterstellung eine Spiegeldatenbank verwenden möchten, können Sie eine Datenbankmomentaufnahme für die Spiegeldatenbank erstellen und die Clientverbindungsanforderungen an die zuletzt erstellte Momentaufnahme weiterleiten. Eine Datenbankmomentaufnahme ist eine statische, schreibgeschützte, hinsichtlich der Transaktionen konsistente Momentaufnahme des Zustands einer Quelldatenbank, in dem sich diese zum Zeitpunkt der Erstellung der Momentaufnahme befand. Zum Erstellen einer Datenbankmomentaufnahme für die Spiegeldatenbank muss sich die Datenbank im synchronisierten Spiegelungsstatus befinden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können die Vorteile einer Spiegeldatenbank, die aus Gründen der Verfügbarkeit verwaltet wird, auch für die ausgelagerte Berichterstellung ausnutzen. Wenn Sie für die Berichterstellung eine Spiegeldatenbank verwenden möchten, können Sie eine Datenbankmomentaufnahme für die Spiegeldatenbank erstellen und die Clientverbindungsanforderungen an die zuletzt erstellte Momentaufnahme weiterleiten. Eine Datenbankmomentaufnahme ist eine statische, schreibgeschützte, hinsichtlich der Transaktionen konsistente Momentaufnahme des Zustands einer Quelldatenbank, in dem sich diese zum Zeitpunkt der Erstellung der Momentaufnahme befand. Zum Erstellen einer Datenbankmomentaufnahme für die Spiegeldatenbank muss sich die Datenbank im synchronisierten Spiegelungsstatus befinden.  
   
  Im Gegensatz zur eigentlichen Spiegeldatenbank ist eine Datenbankmomentaufnahme auch für Clients zugreifbar. Solange der Spiegelserver mit dem Prinzipalserver kommuniziert, können Sie Berichtsclients an eine Verbindung mit einer Momentaufnahme weiterleiten. Da Datenbankmomentaufnahmen statisch sind, sind neue Daten nicht verfügbar. Sie müssen in regelmäßigen Abständen eine neue Datenbankmomentaufnahme erstellen und sicherstellen, dass Anwendungen eingehende Clientverbindungen an die neueste Momentaufnahme weiterleiten, um den Benutzern relativ neue Daten zur Verfügung zu stellen.  
   
@@ -83,9 +84,8 @@ ms.lasthandoff: 08/02/2017
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   
-

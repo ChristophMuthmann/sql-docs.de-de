@@ -2,31 +2,32 @@
 title: DISCOVER_CSDL_METADATA-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94f4cf7687c8e1469ea5f3a4260b69224e0ddbc0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA-Rowset
-  Gibt Informationen über ein (tabellarisches oder mehrdimensionales) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenmodell zurück, und stellt die Definition des Modells im CSDLBI (Conceptual Schema Definition Language)-Format mit BI-Anmerkungen bereit. CSDLBI basiert auf CSDL, einem vom Entity Data Framework verwendeten XML-Schema, das für die Kommunikation zwischen einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server und dem [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] -Client verwendet wird. Die Business Intelligence (BI)-Anmerkungen stellen zusätzliche Metadaten zu Tabellenmodellen und den darin enthaltenen Objekten bereit. Weitere Informationen zu Tabellendatenmodellen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Gibt Informationen über ein (tabellarisches oder mehrdimensionales) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenmodell zurück, und stellt die Definition des Modells im CSDLBI (Conceptual Schema Definition Language)-Format mit BI-Anmerkungen bereit. CSDLBI basiert auf CSDL, einem vom Entity Data Framework verwendeten XML-Schema, das für die Kommunikation zwischen einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server und dem [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] -Client verwendet wird. Die Business Intelligence (BI)-Anmerkungen stellen zusätzliche Metadaten zu Tabellenmodellen und den darin enthaltenen Objekten bereit. Weitere Informationen zu Tabellendatenmodellen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  Der Sicherheitskontext des Befehls wirkt sich auf das Rowset aus, das zurückgegeben wird. Leseberechtigungen auf der Analysis Services-Instanz sind erforderlich, um die CSDL-Definition vom Server abzurufen.  
   
@@ -35,12 +36,12 @@ ms.lasthandoff: 09/01/2017
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_CSDL_METADATA** -Rowset enthält die folgenden Spalten.  
   
-|**Spaltenname**|**Typindikator**|**Einschränkung**|**Description**|  
+|**Spaltenname**|**Typindikator**|**Einschränkung**|**Beschreibung**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|ja|Gibt den Namen der Datenbank an, für die die CSDLBI-Beschreibung angefordert wurde. Bei Auslassung wird die aktuelle Datenbank verwendet.<br /><br /> Diese Einschränkung ist für alle Modelltypen erforderlich.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|ja|Gibt die ID einer auf dem Modell definierten Perspektive an, die anhand von CATALOG_NAME angegeben wurde.<br /><br /> Eine optionale Einschränkung. Gilt für alle Modelltypen.|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|ja|Gibt den Namen einer auf dem Modell definierten Perspektive an, die anhand von CATALOG_NAME angegeben wurde.<br /><br /> Diese Einschränkung ist erforderlich, wenn das tabellarische Modell Perspektiven enthält oder wenn eine mehrdimensionale Lösung mehrere Cubes oder Perspektiven enthält.|  
-|**METADATEN**|**DBTYPE_WSTR**|Nein|Eine Zeichenfolge, die die XML-Definition einer Datenquelle und ihre Eigenschaften enthält, nach dem CSDLBI-Schema.|  
+|**METADATA**|**DBTYPE_WSTR**|nein|Eine Zeichenfolge, die die XML-Definition einer Datenquelle und ihre Eigenschaften enthält, nach dem CSDLBI-Schema.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|ja|Ein Zeichenfolgenbezeichner.<br /><br /> Diese Einschränkung ist für mehrdimensionale Datenbanken optional. Wenn mehrere Cubes verfügbar sind und die Einschränkung nicht angegeben wird, wird der Standardcube zurückgegeben.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -71,7 +72,7 @@ ms.lasthandoff: 09/01/2017
 -   IsRightToLeft  
   
 ## <a name="example"></a>Beispiel  
- **Tabellarisch**  
+ **Tabellarische**  
   
  Die folgende XMLA-Abfrage gibt die CSDL-Darstellung des tabellarischen AdventureWorks 2012-Modellbeispiels zurück. Jede tabellarische Lösung kann nur ein Modell enthalten; PERSPECTIVE_NAME-Einschränkung kann daher leer gelassen werden. Dieses Modell enthält jedoch mehrere Perspektiven.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Multidimensional**  
+ **Mehrdimensionale**  
   
  Die folgende XMLA-Abfrage gibt die CSDLBI-Darstellungen des Contoso-Vorgangscubes zurück. Die Einschränkung der VERSION ist erforderlich, um eine mehrdimensionale Datenbank abzufragen. Die Contoso Retail-Datenbank enthält zwei Cubes. Daher wird mit der PERSPECTIVE_NAME-Einschränkung auf den Vorgangscube verwiesen.  
   
@@ -133,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [CSDL-Anmerkungen für Business Intelligence &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

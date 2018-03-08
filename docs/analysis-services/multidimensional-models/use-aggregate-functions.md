@@ -2,32 +2,30 @@
 title: Verwenden von Aggregatfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
+helpviewer_keywords: aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
-  Wird eine Dimension zum Segmentieren eines Measures verwendet, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion **Sum**. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn eine Dimension zum Segmentieren eines Measures verwendet wird, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion **Sum**. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
   
  In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Zu den vordefinierten Aggregationstypen zählen **Sum**, **Min**, **Max**, **Count**, **Distinct Count**und einige andere, spezialisiertere Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**Min**|Semiadditiv|Ruft den niedrigsten Wert für alle untergeordneten Elemente ab.|  
 |**Max**|Semiadditiv|Ruft den höchsten Wert für alle untergeordneten Elemente ab.|  
 |**DistinctCount**|Nicht additiv|Ruft die Zahl aller eindeutigen untergeordneten Elemente ab. Weitere Informationen finden Sie unter [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) im nächsten Abschnitt.|  
-|**InclusionThresholdSetting**|Nicht additiv|Es wird keine Aggregation durchgeführt. Alle Werte für Blatt- und Nichtblattelemente in einer Dimension werden direkt von der Faktentabelle für die Measuregruppe bereitgestellt, die das Measure enthält. Wenn kein Wert aus der Faktentabelle für ein Element gelesen werden kann, wird der Wert für dieses Element auf NULL gesetzt.|  
+|**Keine**|Nicht additiv|Es wird keine Aggregation durchgeführt. Alle Werte für Blatt- und Nichtblattelemente in einer Dimension werden direkt von der Faktentabelle für die Measuregruppe bereitgestellt, die das Measure enthält. Wenn kein Wert aus der Faktentabelle für ein Element gelesen werden kann, wird der Wert für dieses Element auf NULL gesetzt.|  
 |**ByAccount**|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Ist keine Kontodimension in der Measuregruppe vorhanden, wird der Wert als **None** -Aggregationsfunktion behandelt.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**AverageOfChildren**|Semiadditiv|Berechnet den Durchschnitt der Werte für alle nicht leeren, untergeordneten Elemente.|  
 |**FirstChild**|Semiadditiv|Ruft den Wert des ersten untergeordneten Elements ab.|  
@@ -76,7 +74,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [Measures und Measuregruppen](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
  [MDX-Funktionsreferenz &#40; MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
- [Erweiterung auswählen](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [Definieren des semiadditiven Verhaltens](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   
-

@@ -3,8 +3,11 @@ title: SQLDriverConnect (Paradox-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLDriverConnect
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d793210924377863970461fa1c18a39246a10e73
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9265657327f71e41c124707ab66c8ad621bda55
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox-Treiber)
 > [!NOTE]  
@@ -45,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 |Treiber|Schlüsselwörter, die erforderlich sind|Beispiel|  
 |------------|-----------------------|-------------|  
 |Paradox|DriverID-Treiber|Driver = {Microsoft Paradox-Treiber (*.DB)}; DBQ = "c:\Temp"; DriverID = 26|
-

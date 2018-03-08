@@ -2,10 +2,12 @@
 title: "Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/14/2017
-ms.prod:
-- sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: 34
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 9df48b3e6fb769543e7b5e4248b00c5a4ec2a88c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
-ms.openlocfilehash: bd8372397bb6e33250456a8a617aa4f8e4cf45be
-ms.contentlocale: de-de
-ms.lasthandoff: 08/15/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe (SQL Server)
-  In [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]können Sie eine AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder mit PowerShell für schreibgeschütztes Routing konfigurieren. *Schreibgeschütztes Routing* bezeichnet die Fähigkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , schreibgeschützte Verbindungsanforderungen an ein verfügbares [lesbares sekundäres AlwaysOn-Replikat](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) weiterzuleiten (das heißt, an ein Replikat, das unter der sekundären Rolle für schreibgeschützte Arbeitsauslastungen konfiguriert ist). Um schreibgeschütztes Routing zu unterstützen, muss die Verfügbarkeitsgruppe einen [Verfügbarkeitsgruppenlistener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)besitzen. Schreibgeschützte Clients müssen die eigenen Verbindungsanforderungen an diesen Listener weiterleiten, und in den Verbindungszeichenfolgen des Clients muss die Anwendungsabsicht als "schreibgeschützt" angeben sein. Es muss sich also um *Verbindungsanforderungen für beabsichtigte Lesevorgänge*handeln.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]können Sie eine AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder mit PowerShell für schreibgeschütztes Routing konfigurieren. *Schreibgeschütztes Routing* bezeichnet die Fähigkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , schreibgeschützte Verbindungsanforderungen an ein verfügbares [lesbares sekundäres AlwaysOn-Replikat](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) weiterzuleiten (das heißt, an ein Replikat, das unter der sekundären Rolle für schreibgeschützte Arbeitsauslastungen konfiguriert ist). Um schreibgeschütztes Routing zu unterstützen, muss die Verfügbarkeitsgruppe einen [Verfügbarkeitsgruppenlistener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)besitzen. Schreibgeschützte Clients müssen die eigenen Verbindungsanforderungen an diesen Listener weiterleiten, und in den Verbindungszeichenfolgen des Clients muss die Anwendungsabsicht als "schreibgeschützt" angeben sein. Es muss sich also um *Verbindungsanforderungen für beabsichtigte Lesevorgänge*handeln.  
 
 Schreibgeschütztes Routing ist in [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] und höher verfügbar.
 
@@ -43,7 +45,7 @@ Schreibgeschütztes Routing ist in [!INCLUDE[sssql15](../../../includes/sssql15-
   
      [Welche Replikateigenschaften müssen Sie konfigurieren, um schreibgeschütztes Routing zu unterstützen?](#RORReplicaProperties)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Konfigurieren des schreibgeschützten Routings mit:**  
   
@@ -60,7 +62,7 @@ Schreibgeschütztes Routing ist in [!INCLUDE[sssql15](../../../includes/sssql15-
   
 -   [Verwandte Inhalte](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -104,7 +106,7 @@ Schreibgeschütztes Routing ist in [!INCLUDE[sssql15](../../../includes/sssql15-
   
     -   Geben Sie zum Konfigurieren des schreibgeschützten Routings für die sekundäre Rolle in der ADD REPLICA- bzw. MODIFY REPLICA WITH-Klausel die SECONDARY_ROLE-Option wie folgt an:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***Systemadresse***:***Port***')**  
   
          Die URL für das schreibgeschützte Routing verfügt über die folgenden Parameter:  
   
@@ -122,7 +124,7 @@ Schreibgeschütztes Routing ist in [!INCLUDE[sssql15](../../../includes/sssql15-
   
     -   Geben Sie zum Konfigurieren des schreibgeschützten Routings für die primäre Rolle in der ADD REPLICA- bzw. MODIFY REPLICA WITH-Klausel die PRIMARY_ROLE-Option wie folgt an:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***server***’** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***Server***’** [ **,**...*n* ] **))**  
   
          wobei *server* eine Serverinstanz identifiziert, die ein schreibgeschütztes sekundäres Replikat in der Verfügbarkeitsgruppe hostet.  
   
@@ -136,13 +138,13 @@ Schreibgeschütztes Routing ist in [!INCLUDE[sssql15](../../../includes/sssql15-
   
  Die folgende Routingliste führt beispielsweise einen Lastenausgleich für Verbindungsanfragen mit Leseabsicht über zwei schreibgeschützte Replikate, `Server1` und `Server2`, hinweg aus. Die geschachtelten Klammern, die diese Server umgeben, identifizieren den Satz mit Lastenausgleich. Wenn keines der Replikate in diesem Satz verfügbar ist, wird versucht, sequenziell eine Verbindung zu den anderen Replikaten ( `Server3` und `Server4`) in der schreibgeschützten Routingliste herzustellen.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), 'Server3', 'Server4')  
 ```  
   
  Beachten Sie, dass jeder Eintrag in der Routingliste selbst ein Satz mit schreibgeschützten Lastenausgleichsreplikaten sein kann. Das wird im folgenden Beispiel veranschaulicht.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5'), 'Server6')  
 ```  
   
@@ -188,7 +190,7 @@ GO
 ### <a name="configure-a-read-only-routing-list"></a>Konfigurieren einer schreibgeschützten Routingliste  
  Verwenden Sie die folgenden Schritte, um schreibgeschütztes Routing mit PowerShell zu konfigurieren. Ein Codebeispiel finden Sie weiter unten in diesem Abschnitt unter [Beispiel (PowerShell)](#PSExample).  
   
-1.  Legen Sie mit**cd**die Serverinstanz als Standard fest, auf der das primäre Replikat gehostet wird.  
+1.  Legen Sie mit (**cd**) die Serverinstanz als Standard fest, die das primäre Replikat hostet.  
   
 2.  Verwenden Sie zum Hinzufügen eines Verfügbarkeitsreplikats zu einer Verfügbarkeitsgruppe das Cmdlet **New-SqlAvailabilityReplica** . Verwenden Sie zum Ändern eines vorhandenen Verfügbarkeitsreplikats das Cmdlet **Set-SqlAvailabilityReplica** . Die relevanten Parameter lauten wie folgt:  
   
@@ -198,13 +200,13 @@ GO
   
          Weitere Informationen finden Sie unter [Berechnen von read_only_routing_url für AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   Um den Verbindungszugriff für die primäre Rolle zu konfigurieren, geben Sie **ReadonlyRoutingList"***server***"** [ **,**...*n* ] an, wobei *server* eine Serverinstanz identifiziert, die ein schreibgeschütztes sekundäres Replikat in der Verfügbarkeitsgruppe hostet. Beispiel:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Um den Verbindungszugriff für die primäre Rolle zu konfigurieren, geben Sie **ReadonlyRoutingList"***Server***"** [ **,**...*n* ] an, wobei *Server* eine Serverinstanz identifiziert, die ein schreibgeschütztes sekundäres Replikat in der Verfügbarkeitsgruppe hostet. Beispiel:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Sie müssen die URL für das schreibgeschützte Routing für ein Replikat festlegen, bevor Sie dessen schreibgeschützte Routingliste festlegen.  
   
     > [!NOTE]  
-    >  Verwenden Sie das Cmdlet **Get-Help** in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -PowerShell-Umgebung, um die Syntax eines Cmdlets anzuzeigen. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ### <a name="set-up-and-use-the-sql-server-powershell-provider"></a>Einrichten und Verwenden des SQL Server PowerShell-Anbieters  
   
@@ -278,7 +280,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [Berechnen von read_only_routing_url für AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
--    [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-    [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 -    [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
   
@@ -290,13 +292,12 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 
 **Zusätzliche Inhalte**
 
-- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
 
 - [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
 
 - [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  
-- [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+- [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - articles [SQL Server replication], download-only
 - download-only articles
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b82a117316022f7c30920d9174855522d374f1b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7cf9009385126a41283ce8044acba2bd35d08867
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel
-  Die Mergereplikation bietet zwei Artikeltypen, um die verschiedenen Anwendungsanforderungen zu erfüllen. Veröffentlichungen können der Anwendung entsprechend einen oder mehrere der Artikeltypen enthalten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Mergereplikation bietet zwei Artikeltypen, um die verschiedenen Anwendungsanforderungen zu erfüllen. Veröffentlichungen können der Anwendung entsprechend einen oder mehrere der Artikeltypen enthalten:  
   
 -   Standardartikel  
   
@@ -50,8 +52,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="using-different-article-types-in-your-applications"></a>Verwenden unterschiedlicher Artikeltypen in den Anwendungen  
  Wenn Sie die Anforderungen Ihrer Anwendung kennen, können Sie die Vor- und Nachteile zwischen einer maximalen Flexibilität und einer optimalen Leistung abwägen. Wenn z. B. bei einer Anwendung zahlreiche Konflikte und Änderungen auf dem Verleger und den Abonnenten auftreten, wird hier eine aus Standardartikeln bestehende Veröffentlichung verwendet. Einige Anwendungen, z. B. SFA-Anwendungen (Sales Force Automation), enthalten möglicherweise Artikel mit potenziellen Konflikten sowie weitere Artikel, die als Nachschlagetabellen fungieren und nur herunterladbar sind. In Anwendungen zur Dateneingabe, wie Point-of-Sale-Systeme und FFA-Anwendungen (Field Force Automation), werden Daten häufig streng partitioniert, damit keine Konflikte auftreten, und es werden in keinem Fall Daten zwischen Abonnenten ausgetauscht. In diesen Fällen bietet eine Kombination aus nicht überlappenden Partitionen, nur herunterladbare Artikeln und vorausberechneten Partitionen ein Maximum an Leistung und Skalierbarkeit. Weitere Informationen zu nicht überlappenden Partition und vorausberechneten Partitionen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Artikeloptionen für die Mergereplikation](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

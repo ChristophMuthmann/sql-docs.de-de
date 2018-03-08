@@ -1,12 +1,14 @@
 ---
-title: Programmgesteuertes Speichern von Paketen | Microsoft Docs
+title: Programmgesteuertes Speichern von Paketen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -15,25 +17,24 @@ helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: f6b99377f6eaf720b9511b560e5cf563ede2b869
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe0df5129ab0ca7b1b6e89501dbf6007997249f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="saving-a-package-programmatically"></a>Programmgesteuertes Speichern von Paketen
   Nachdem Sie ein neues Paket programmgesteuert erstellt oder ein vorhandenes geändert haben, sollten Sie Ihre Änderungen speichern.  
   
- Alle in diesem Thema erläuterten Methoden zum Speichern von Paketen erfordern einen Verweis auf die **Microsoft.SqlServer.ManagedDTS** -Assembly. Nachdem Sie den Verweis in einem neuen Projekt hinzugefügt haben, importieren die <xref:Microsoft.SqlServer.Dts.Runtime> Namespace mit einem **mit** oder **Importe** Anweisung.  
+ Alle in diesem Thema erläuterten Methoden zum Speichern von Paketen erfordern einen Verweis auf die **Microsoft.SqlServer.ManagedDTS** -Assembly. Nachdem Sie den Verweis in einem neuen Projekt hinzugefügt haben, importieren Sie den <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace mit einer **using**- oder **Imports**-Anweisung.  
   
 ## <a name="saving-a-package-programmatically"></a>Programmgesteuertes Speichern von Paketen  
- Um ein Paket programmgesteuert zu speichern, rufen Sie eine der folgenden Methoden von der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> Klasse:  
+ Rufen Sie eine der folgenden Methoden der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse auf, um ein Paket programmgesteuert zu speichern:  
   
 |Speicherort|Aufzurufende Methode|  
 |----------------------|--------------------|  
@@ -44,8 +45,7 @@ ms.lasthandoff: 08/03/2017
 > [!IMPORTANT]  
 >  Die Methoden der <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse zum Arbeiten mit dem SSIS-Paketspeicher unterstützen nur "." oder den Namen des lokalen Servers. "(local)" oder "localhost" können nicht verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speichern von Paketen](../../integration-services/save-packages.md)  
   
   
-

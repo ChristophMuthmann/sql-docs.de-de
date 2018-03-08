@@ -1,10 +1,13 @@
----
+﻿---
 title: Prinzipale (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,20 +31,19 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 57
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ab67ccf5240ad3797bf744b56e615a92fa95d9bd
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals richtet sich nach dem Definitionsbereich des Prinzipals (Windows, Server, Datenbank) und danach, ob der Prinzipal unteilbar ist oder es sich um eine Auflistung handelt. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf. Dieses Thema gilt für alle Versionen von SQL Server, jedoch gibt es bei Prinzipalen auf Serverebene in der SQL-Datenbank oder SQL Data Warehouse eine Reihe von Einschränkungen. 
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo-Benutzer und dbo-Schema
 
-Der `dbo`-Benutzer ist ein bestimmter Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, `sa`-Anmeldenamen und Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer ein. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank und kann nicht beschränkt oder gelöscht werden. `dbo` steht für Datenbankbesitzer. Doch das `dbo`-Benutzerkonto ist nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank aufgezeichnet ist.     
+Der `dbo`-Benutzer ist ein spezieller Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, der `sa`-Anmeldename und die Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer auf. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank; er unterliegt keinen Beschränkungen und kann nicht gelöscht werden. Zwar steht `dbo` für Datenbankbesitzer, doch ist das `dbo`-Benutzerkonto nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank vermerkt ist.     
 Der `dbo`-Benutzer besitzt das `dbo`-Schema. Das `dbo`-Schema ist das Standardschema für alle Benutzer, sofern kein anderes Schema angegeben wird.  Das `dbo`-Schema kann nicht gelöscht werden.
   
 ## <a name="public-server-role-and-database-role"></a>Serverrolle und Datenbankrolle „public“  
@@ -114,4 +116,3 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
  [Rollen auf Datenbankebene](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   
-

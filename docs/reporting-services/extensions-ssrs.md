@@ -1,30 +1,30 @@
 ---
-title: Erweiterungen (SSRS) | Microsoft Docs
+title: Erweiterungen (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fbd752c6da1b706eb2d9e7327ae042e9173f9377
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extensions-ssrs"></a>Erweiterungen (SSRS)
-  Der Berichtsserver in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwendet Erweiterungen, um die Eingabe- und Ausgabetypen zu modularisieren, die für die Authentifizierung, die Datenverarbeitung, das Berichtsrendering und die Berichtsübermittlung akzeptiert werden. Dadurch wird für vorhandene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installationen die Verwendung neuer Softwarestandards in der Branche erleichtert, z. B. ein neues Authentifizierungsschema, oder ein benutzerdefinierter Datenquellentyp. Der Berichtsserver unterstützt benutzerdefinierte Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen, und die Erweiterungen, die den Benutzern zur Verfügung stehen, sind in der Konfigurationsdatei "RSReportServer.config" konfigurierbar. Sie können z. B. die Exportformate, die der Berichts-Viewer verwenden darf, einschränken. Ein Berichtsserver erfordert mindestens eine Authentifizierungserweiterung, Datenverarbeitungserweiterung und Renderingerweiterung. Übermittlungserweiterungen und Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten.  
+  Der Berichtsserver in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwendet Erweiterungen, um die Eingabe- und Ausgabetypen zu modularisieren, die für die Authentifizierung, die Datenverarbeitung, das Berichtsrendering und die Berichtsübermittlung akzeptiert werden. Dadurch wird für vorhandene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installationen die Verwendung neuer Softwarestandards in der Branche erleichtert, z. B. ein neues Authentifizierungsschema, oder ein benutzerdefinierter Datenquellentyp. Der Berichtsserver unterstützt benutzerdefinierte Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen, und die Erweiterungen, die den Benutzern zur Verfügung stehen, sind in der Konfigurationsdatei "RSReportServer.config" konfigurierbar. Sie können z. B. die Exportformate, die der Berichts-Viewer verwenden darf, einschränken. Ein Berichtsserver erfordert mindestens eine Authentifizierungserweiterung, Datenverarbeitungserweiterung und Renderingerweiterung. Übermittlungserweiterungen und Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten.  
   
  In diesem Thema werden die Erweiterungen beschrieben, die in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]unmittelbar verfügbar sind.  
   
@@ -61,9 +61,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="rendering-extensions"></a>Renderingerweiterungen  
  Durch Renderingerweiterungen werden Daten und Layoutinformationen aus dem Berichtsprozessorformat in ein gerätespezifisches Format umgewandelt. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stehen sieben Renderingerweiterungen zur Verfügung: HTML, Excel, CSV, XML, Image, PDF und [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
--   **HTML-Renderingerweiterung** Wenn Sie einen Bericht von einem Berichtsserver über einen Webbrowser anfordern, verwendet der Berichtsserver die HTML-Renderingerweiterung, um den Bericht zu rendern. Die HTML-Renderingerweiterung generiert HTML stets mit UTF-8-Codierung. Weitere Informationen finden Sie unter [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) und [Browserunterstützung für Reporting Services und Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **HTML-Renderingerweiterung** Wenn Sie einen Bericht von einem Berichtsserver über einen Webbrowser anfordern, verwendet der Berichtsserver die HTML-Renderingerweiterung, um den Bericht zu rendern. Die HTML-Renderingerweiterung generiert HTML stets mit UTF-8-Codierung. Weitere Informationen finden Sie unter [Rendern in das HTML-Format (Berichts-Generator und SSRS)](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) und [Browserunterstützung für Reporting Services und Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
--   **Excel-Renderingerweiterung** Die Excel-Renderingerweiterung rendert Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 oder höher angezeigt und geändert werden können. Diese Renderingerweiterung erstellt Dateien in BIFF (Binary Interchange File Format). BIFF ist das ursprüngliche Dateiformat für Excel-Daten. Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] gerendert werden, unterstützen alle für ein beliebiges Arbeitsblatt verfügbaren Funktionen. Weitere Informationen finden Sie unter [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
+-   **Excel-Renderingerweiterung** Die Excel-Renderingerweiterung rendert Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 oder höher angezeigt und geändert werden können. Diese Renderingerweiterung erstellt Dateien in BIFF (Binary Interchange File Format). BIFF ist das ursprüngliche Dateiformat für Excel-Daten. Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] gerendert werden, unterstützen alle für ein beliebiges Arbeitsblatt verfügbaren Funktionen. Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
   
 -   **CSV-Renderingerweiterung** Die durch Trennzeichen getrennte CSV-Renderingerweiterung (Comma-Separated Value) rendert Berichte in durch Komma getrennte Nur-Text-Dateien ohne jede Formatierung. Benutzer können diese Dateien im Anschluss mit einer Tabellenkalkulationsanwendung, wie [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], oder einem anderen Programm zum Lesen von Textdateien öffnen. Weitere Informationen finden Sie unter [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
@@ -82,4 +82,3 @@ ms.lasthandoff: 08/09/2017
  In der Anwendung für die Hintergrundverarbeitung kommen Übermittlungserweiterungen zur Bereitstellung von Berichten an unterschiedlichen Orten zum Einsatz. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verfügt über eine Übermittlungserweiterung für E-Mails und eine für die Dateifreigabe. Mit der E-Mail-Übermittlungserweiterung kann über SMTP (Simple Mail Transport Protocol) eine E-Mail-Nachricht gesendet werden, die entweder den Bericht selbst oder eine URL zum Bericht enthält. Kurznachrichten ohne eine URL oder Bericht können auch an Pager, Telefone oder andere Geräte gesendet werden. Die Dateifreigabe-Übermittlungserweiterung speichert Berichte in einem freigegebenen Ordner im Netzwerk. Sie können einen Speicherort, ein Renderingformat, einen Dateinamen und Optionen zum Überschreiben für die erstellte Datei angeben. Sie können die Dateifreigabeübermittlung zum Archivieren von gerenderten Berichten verwenden und im Rahmen einer Strategie zum Arbeiten mit sehr umfangreichen Berichten. Übermittlungserweiterungen werden in Zusammenhang mit Abonnements verwendet. Beim Erstellen eines Abonnements kann der Benutzer eine der verfügbaren Übermittlungserweiterungen auswählen, um die Art der Berichtsübermittlung zu bestimmen.  
   
   
-

@@ -2,11 +2,13 @@
 title: "Websynchronisierung für die Mergereplikation | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - Web synchronization, about
 - Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6cc2d5200c154a9857f2e634dcf91aef57c278c2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 95942267f871946f402f2261d4a5dc0cd1873256
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation
-  Durch die Websynchronisierung für die Mergereplikation können Sie Daten mithilfe des HTTPS-Protokolls replizieren. Sie ist für die folgenden Szenarien hilfreich:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durch die Websynchronisierung für die Mergereplikation können Sie Daten mithilfe des HTTPS-Protokolls replizieren. Sie ist für die folgenden Szenarien hilfreich:  
   
 -   Synchronisieren von Daten mobiler Benutzer über das Internet.  
   
@@ -84,8 +86,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  Der Merge-Agent auf dem Abonnenten akzeptiert anschließend die HTTPS-Antwort und wendet die Downloadänderungen auf die Abonnementdatenbank an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

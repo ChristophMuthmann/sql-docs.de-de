@@ -1,10 +1,13 @@
 ---
-title: 'Schritt 3: Testen des Lektion 3-Lernprogrammpakets | Microsoft Docs'
+title: 'Schritt 3: Testen des Lektion 3-Tutorialpakets | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da9d8f8f1ec3977d559aae8941c311f9602e1c04
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lektion 3 – 3: Testen des Lektion 3-Lernprogrammpakets
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lektion 3-3: Testen des Lektion 3-Tutorialpakets
 In dieser Aufgabe führen Sie das Paket Lesson 3.dtsx aus. Beim Ausführen des Pakets werden im Fenster Protokollereignisse die Protokolleinträge aufgelistet, die in die Protokolldatei geschrieben werden. Nachdem vom Paket die Ausführung abgeschlossen wurde, überprüfen Sie den Inhalt der Protokolldatei, die vom Protokollanbieter generiert worden ist.  
   
 ## <a name="checking-the-package-layout"></a>Überprüfen des Paketlayouts  
@@ -57,4 +59,3 @@ Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Dat
   
   
   
-

@@ -3,8 +3,11 @@ title: EINIGE | Alle (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a67801d62cb05cdb0b589548e8bd3f9676d5840a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Vergleicht einen Skalarwert mit Werten, die sich in einer einzelnen Spalte befinden. SOME und ANY sind identisch.  
   
@@ -52,7 +54,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *"scalar_expression"*  
+ *scalar_expression*  
  Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
@@ -61,14 +63,14 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  Legt fest, dass ein Vergleich durchgeführt werden soll.  
   
- *Unterabfrage*  
+ *subquery*  
  Ist eine Unterabfrage mit einem Resultset, das aus einer Spalte besteht. Der Datentyp der zurückgegebenen Spalte muss denselben Datentyp wie *"scalar_expression"*.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- SOME oder ANY gibt **"true"** Wenn der angegebene Vergleich "true" ist für ein beliebiges Paar (*"scalar_expression"***,***x*), in denen *x* ist ein Wert in der einspaltigen Resultset ist, andernfalls **"false"**.  
+ SOME oder ANY gibt **"true"** Wenn der angegebene Vergleich "true" ist für ein beliebiges Paar (*"scalar_expression"***,***x*), in denen *x* ist ein Wert in der einspaltigen Resultset; andernfalls gibt **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
  SOME erfordert, dass die *"scalar_expression"* auf mindestens ein von der Unterabfrage zurückgegebenen Wert positiv verglichen. Für Anweisungen, benötigen die *"scalar_expression"* positiv zu den einzelnen Werten verglichen, die von der Unterabfrage zurückgegeben wird, finden Sie unter [alle &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Für die Instanz, wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* = SOME (Unterabfrage) für "true" ausgewertet einen *Scalar_express* von 2. Wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* = ALL (Unterabfrage) als "false" ausgewertet, da einige der Werte der Unterabfrage (der Wert von 3) die Kriterien des Ausdrucks nicht erfüllen.  
@@ -148,13 +150,12 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alle &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [Groß-/KLEINSCHREIBUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [SOF &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   
-

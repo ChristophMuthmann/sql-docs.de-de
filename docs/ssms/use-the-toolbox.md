@@ -3,10 +3,12 @@ title: Verwenden der Toolbox | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f63a3a6b06e0b76e603e1cce094e5fb17ae32db
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 44ad54ed01f16b55f4930292348d0277655c137c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-the-toolbox"></a>Verwenden der Toolbox
-Sie können Elemente, Text und Steuerelemente aus der Toolbox markieren und auf Formulare, Seiten und Designer ziehen sowie Elemente von diesen Quellen zur späteren Wiederverwendung zurück in die Toolbox ziehen. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] können Sie z. B. einen Task auf einen Wartungsplan ziehen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können Elemente, Text und Steuerelemente aus der Toolbox markieren und auf Formulare, Seiten und Designer ziehen sowie Elemente von diesen Quellen zur späteren Wiederverwendung zurück in die Toolbox ziehen. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] können Sie z. B. einen Task auf einen Wartungsplan ziehen.  
   
 Die Elemente in der Toolbox sind in Abschnitte unterteilt, die als Registerkarten bezeichnet werden. Im Folgenden finden Sie eine Liste der häufigsten Toolboxtasks und wie sie ausgeführt werden.  
   
@@ -46,7 +48,6 @@ Die Elemente in der Toolbox sind in Abschnitte unterteilt, die als Registerkarte
 |Ändern der Position eines Elements auf einer erweiterten Toolboxregisterkarte|Ziehen Sie das Element an die neue Stelle, und lassen Sie die Maustaste los.|  
 |Umbenennen eines Toolboxelements|Klicken Sie mit der rechten Maustaste auf das Toolboxelement, und klicken Sie im Kontextmenü auf **Element umbenennen** .|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  
   
-

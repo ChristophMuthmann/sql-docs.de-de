@@ -3,10 +3,12 @@ title: "SQL in \"c:\" Binärdaten | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], binary
 - binary data transfers [ODBC]
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 293c18d2206d1b034eadc532f8850c6599e904e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ccb6114eab57030d6555931f0bfcdbe469326442
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-binary"></a>SQL in das Binärformat "c:"
 Der Bezeichner für die binäre ODBC SQL-Datentypen sind:  
@@ -50,4 +51,3 @@ Der Bezeichner für die binäre ODBC SQL-Datentypen sind:
   
 > [!NOTE]  
 >  Anwendungsentwickler sind aus binären SQL Binden von Daten in einem C-Zeichendatentyp abgeraten. Diese Konvertierung ist in der Regel ineffizient und zeitaufwändig.
-

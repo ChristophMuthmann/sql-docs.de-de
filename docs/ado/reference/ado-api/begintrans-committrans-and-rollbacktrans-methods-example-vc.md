@@ -3,7 +3,7 @@ title: BeginTrans, CommitTrans und RollbackTrans Methoden (VC++-Beispiel) | Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - RollbackTrans method [ADO], VC++ example
 - CommitTrans method [ADO], VC++ example
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8308c891ec2732a84c48216b91f04b03caccaece
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80a319b5d3edd7f8b2c901b928e1321e068ac46e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans und RollbackTrans Methoden (VC++-Beispiel)
 In diesem Beispiel ändert die Buchtyp alle Psychologiebücher in der ***Titel*** Tabelle der Datenbank. Nach der [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode startet eine Transaktion, die alle Änderungen an isoliert die ***Titel*** Tabelle, die [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode speichert die Änderungen. Können Sie die [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode, um die Änderungen rückgängig machen, die Sie mit gespeichert die [Update](../../../ado/reference/ado-api/update-method.md) Methode.  
@@ -277,4 +276,3 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ## <a name="see-also"></a>Siehe auch  
  [BeginTrans, CommitTrans und RollbackTrans-Methoden (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)
-

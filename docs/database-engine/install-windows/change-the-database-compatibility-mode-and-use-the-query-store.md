@@ -2,11 +2,12 @@
 title: "Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -16,53 +17,42 @@ helpviewer_keywords:
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 19
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 2701a951f0c8847b028e3a87717ad9ac3a965529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 514fe566dd9a26d4a6244e8fb067f97678d2dbc7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers
-In SQL Server 2016 und SQL Server 2017 treten einige Änderungen erst in Kraft, nachdem der DATABASE_COMPATIBILITY-Grad für eine Datenbank geändert wurde. Dies hat verschiedene Gründe:  
-  
-- Da das Upgraden einen unidirektionalen Vorgang darstellt (ein Downgrade des Dateiformats ist nicht möglich), ist es sinnvoll, das Aktivieren neuer Funktionen als separaten Datenbankvorgang durchzuführen.  Es ist möglich, eine Einstellung auf einen früheren DATABASE_COMPATIBILITY-Grad zurückzusetzen.  Das neue Modell reduziert die Anzahl von Vorgängen, die während einer Ausfallzeit durchgeführt werden müssen.  
-  
-- Änderungen am Abfrageprozessor können komplexe Auswirkungen haben.  Obwohl eine „positive“ Systemänderung, die für die meisten Kunden möglicherweise sehr gut ist, könnte an anderer Stelle für eine wichtige Abfrage eine unzulässige Regression verursachen.  Durch die Trennung dieser Logik vom Upgradevorgang können Funktionen, wie z.B. der Abfragespeicher, Planauswahlregressionen auf Produktionsservern schnell abschwächen oder sogar komplett vermeiden.  
-  
-> [!NOTE]  
->  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht. Der Kompatibilitätsgrad der Datenbanken „tempdb“, „model“, „msdb“ und „Resource“ wird nach dem Upgrade auf den aktuellen Kompatibilitätsgrad festgelegt. Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei. 
-  
- Der Upgradevorgang zum Aktivieren neuer Abfrageprozessorfunktionen steht im Zusammenhang mit dem Wartungsmodell des Produkts nach der Einführung.  Einige dieser Fixes werden unter dem Ablaufverfolgungsflag 4199 zur Verfügung gestellt.  Kunden, die Fixes benötigen, können diese abonnieren, ohne unerwartete Regressionen für andere Kunden zu verursachen.  Das Wartungsmodell für Abfrageprozessor-Hotfixes nach der Einführung ist [hier](https://support.microsoft.com/en-us/kb/974006)dokumentiert. Ab SQL Server 2016 bedeutet das Verschieben in einen neuen Kompatibilitätsgrad, dass das Ablaufverfolgungsflag 4199 nicht mehr benötigt wird, da diese Fixes nun standardmäßig im aktuellsten Kompatibilitätsgrad aktiviert sind.  Im Rahmen des Upgradevorgangs ist es daher wichtig, sich zu vergewissern, dass 4199 nicht aktiviert ist, sobald der Upgradevorgang abgeschlossen ist.  
-  
- Der empfohlene Workflow für die Aktualisierung des Abfrageprozessors auf die neueste Version des Codes sieht folgendermaßen aus:  
-  
-1.  Führen Sie für eine Datenbank ein Upgrade auf SQL Server 2016 durch, ohne den Datenbank-Kompatibilitätsgrad zu ändern (behalten Sie den bisherigen Kompatibilitätsgrad bei).  
-  
-2.  Aktivieren Sie den Abfragespeicher auf der Datenbank. Weitere Informationen zum Aktivieren und Verwenden des Abfragespeichers finden Sie unter [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
-  
-3.  Warten Sie ausreichend lange, um repräsentative Daten der Arbeitsauslastung zu sammeln.  
-  
-4.  Ändern Sie den Kompatibilitätsgrad der Datenbank in den aktuellen Kompatibilitätsgrad. 
 
-   >[!NOTE]
-   >Der letzte Kompatibilitätsgrad hängt von der SQL Server-Version ab.
-   >- SQL Server 2016: 130
-   >- SQL Server 2017: 140
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-5. Werten Sie mithilfe von SQL Server Management Studio aus, ob nach dem Ändern des Kompatibilitätsgrads Leistungsregressionen für bestimmte Abfragen aufgetreten sind
+In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] werden einige Änderungen erst wirksam, nachdem der [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) geändert wurde. Dies hat verschiedene Gründe:  
   
-6.  Erzwingen Sie für alle Fälle, in denen Regressionen aufgetreten sind, im Abfragespeicher den vorherigen Plan.  
+- Da das Upgraden einen unidirektionalen Vorgang darstellt (ein Downgrade des Dateiformats ist nicht möglich), ist es sinnvoll, das Aktivieren neuer Funktionen als separaten Datenbankvorgang durchzuführen. Es ist möglich, eine Einstellung auf einen früheren Datenbank-Kompatibilitätsgrad zurückzusetzen.  Das neue Modell reduziert die Anzahl von Vorgängen, die während einer Ausfallzeit durchgeführt werden müssen.  
   
-7.  Falls Abfragepläne nicht erzwungen werden können oder die Leistung weiterhin unzureichend ist, ziehen Sie in Betracht, die vorherige Einstellung des Kompatibilitätsgrads wiederherzustellen und sich anschließend an den Microsoft-Kundensupport zu wenden.  
+- Änderungen am Abfrageprozessor können komplexe Auswirkungen haben. Obwohl eine „positive“ Änderung am System für die meisten Workloads sehr gut sein kann, könnte sie an anderer Stelle für eine wichtige Abfrage eine unzulässige Regression verursachen. Durch die Trennung dieser Logik vom Upgradevorgang können Features, wie z. B. der Abfragespeicher, Planauswahlregressionen auf Produktionsservern schnell abschwächen oder sogar komplett vermeiden.  
   
-## <a name="see-also"></a>Siehe auch  
+> [!IMPORTANT]  
+> War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten.    
+> War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht.    
+> Der Kompatibilitätsgrad der Datenbanken „tempdb“, „model“, „msdb“ und „Resource“ wird nach dem Upgrade auf den aktuellen Kompatibilitätsgrad festgelegt.   
+> Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.    
+  
+Der Upgradevorgang zum Aktivieren neuer Abfrageprozessorfunktionen steht im Zusammenhang mit dem Wartungsmodell des Produkts nach der Einführung.  Einige dieser Fixes werden unter dem [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) zur Verfügung gestellt.  Kunden, die Fixes benötigen, können diese abonnieren, ohne unerwartete Regressionen für andere Kunden zu verursachen. Das Wartungsmodell für Abfrageprozessor-Hotfixes nach der Einführung ist [hier](http://support.microsoft.com/kb/974006)dokumentiert. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bedeutet das Verschieben in einen neuen Kompatibilitätsgrad, dass das Ablaufverfolgungsflag 4199 nicht mehr benötigt wird, da diese Problembehebungen (Fixes) nun standardmäßig im aktuellsten Kompatibilitätsgrad aktiviert sind. Im Rahmen des Upgradevorgangs ist es daher wichtig, sich zu vergewissern, dass 4199 nicht aktiviert ist, sobald der Upgradevorgang abgeschlossen ist.  
+
+> [!NOTE]
+> Das Ablaufverfolgungsflag 4199 ist jedoch weiterhin erforderlich, um alle neuen Abfrageprozessor-Problembehebungen zu aktivieren, die nach RTM freigegeben wurden (sofern zutreffend).
+  
+Der empfohlene Workflow für eine Aktualisierung des Abfrageprozessors auf die neueste Version des Codes ist in den „Verwendungsszenarien für den Abfragespeicher“ unter [Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) dokumentiert (siehe weiter unten).  
+  
+![Abfrage-Store-Nutzung-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+ 
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
+ [Verwendungsszenarios für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md) 
   
-  
-

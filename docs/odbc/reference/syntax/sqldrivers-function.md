@@ -3,33 +3,30 @@ title: SQLDrivers-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDrivers
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDrivers
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDrivers
-helpviewer_keywords:
-- SQLDrivers function [ODBC]
+f1_keywords: SQLDrivers
+helpviewer_keywords: SQLDrivers function [ODBC]
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad4afa4a54b63b759b03774f77ed7ec0371ff931
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d6aee9cf7260d4bc21cc66d39f8845c3d7df97
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers-Funktion
 **Konformität**  
@@ -129,4 +126,3 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

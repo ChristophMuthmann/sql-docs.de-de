@@ -1,10 +1,13 @@
 ---
-title: Manage a CDC Instance | Microsoft Docs
+title: Verwalten einer CDC-Instanz | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>Verwalten einer CDC-Instanz
   Sie können die CDC Designer Console zum Anzeigen von Informationen zu den erstellten Instanzen und zum Verwalten des Betriebs der Instanzen verwenden.  
@@ -75,7 +77,7 @@ ms.lasthandoff: 08/03/2017
     |||  
     |-|-|  
     |![Fehler](../../integration-services/change-data-capture/media/error.gif "Fehler")|**Fehler**: Die Oracle CDC-Instanz wird nicht ausgeführt, da ein nicht wiederholbarer Fehler aufgetreten ist. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Misconfigured**: Es ist ein Konfigurationsfehler aufgetreten, der einen manuellen Eingriff erfordert.<br /><br /> **Kennwort erforderlich**: Für die Oracle CDC-Instanz wurde kein Kennwort festgelegt, oder das Kennwort ist nicht gültig.<br /><br /> **Unerwartet**: Alle anderen nicht behebbaren Fehler.|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "OK")|**Wird ausgeführt:**Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Im Leerlauf**: Alle Änderungsdatensätze wurden verarbeitet und in den Zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Processing**: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Änderungstabellen geschrieben wurden.|  
+    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**Wird ausgeführt:**Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Im Leerlauf**: Alle Änderungsdatensätze wurden verarbeitet und in den Zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Processing**: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Änderungstabellen geschrieben wurden.|  
     |![Beenden](../../integration-services/change-data-capture/media/stop.gif "Beenden")|**Beendet**: Die CDC-Instanz wird nicht ausgeführt. Der Status Beendet gibt an, dass die CDC-Instanz auf normale Weise beendet wurde.|  
     |![Angehalten](../../integration-services/change-data-capture/media/paused.gif "Angehalten")|**Angehalten**: Die CDC-Instanz wird ausgeführt, aber die Verarbeitung wurde aufgrund eines wiederholbaren Fehlers angehalten. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Getrennt**: Die Verbindung zur Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> **Speicher**: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn zusätzlicher Speicher verfügbar wird.<br /><br /> **Logger**: Die Protokollierung ist mit Oracle verbunden, kann aber die Oracle-Transaktionsprotokolle aufgrund eines vorübergehenden Problems nicht lesen, weil z. B. ein erforderliches Transaktionsprotokoll nicht verfügbar ist.|  
   
@@ -108,25 +110,24 @@ ms.lasthandoff: 08/03/2017
     -   **Written changes**: Die Anzahl der Änderungen, die in die SQL Server-Änderungstabellen geschrieben werden.  
   
  **Oracle**  
- Zeigt Informationen zur CDC-Instanz und zu ihrer Verbindung mit der Oracle-Datenbank an. Diese Registerkarte ist schreibgeschützt. Um diese Eigenschaften zu bearbeiten, mit der rechten Maustaste in der Instanz im linken Bereich, und wählen Sie **Eigenschaften** oder klicken Sie auf **Eigenschaften** im rechten Bereich zu öffnen die \<Instanz > Eigenschaften (Dialogfeld).  
+ Zeigt Informationen zur CDC-Instanz und zu ihrer Verbindung mit der Oracle-Datenbank an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tabellen**  
- Zeigt Informationen zu den in der CDC-Instanz enthaltenen Tabellen an. Spalteninformationen sind ebenfalls verfügbar. Diese Registerkarte ist schreibgeschützt. Um diese Eigenschaften zu bearbeiten, mit der rechten Maustaste in der Instanz im linken Bereich, und wählen Sie **Eigenschaften** oder klicken Sie auf **Eigenschaften** im rechten Bereich zu öffnen die \<Instanz > Eigenschaften (Dialogfeld).  
+ Zeigt Informationen zu den in der CDC-Instanz enthaltenen Tabellen an. Spalteninformationen sind ebenfalls verfügbar. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
- **Erweitert**  
- Zeigt die erweiterten Eigenschaften für die CDC-Instanz und die Eigenschaftswerte an. Diese Registerkarte ist schreibgeschützt. Um diese Eigenschaften zu bearbeiten, mit der rechten Maustaste in der Instanz im linken Bereich, und wählen Sie **Eigenschaften** oder klicken Sie auf **Eigenschaften** im rechten Bereich zu öffnen die \<Instanz > Eigenschaften (Dialogfeld).  
+ **Erweitert:**  
+ Zeigt die erweiterten Eigenschaften für die CDC-Instanz und die Eigenschaftswerte an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen von SQL Server Change-Datenbankinstanz](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Gewusst wie: Anzeigen der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
- [Gewusst wie: Bearbeiten der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Anzeigen der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
+ [Bearbeiten der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Verwenden des Assistenten für neue Instanzen](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

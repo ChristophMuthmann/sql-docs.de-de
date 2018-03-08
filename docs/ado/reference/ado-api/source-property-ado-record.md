@@ -3,7 +3,7 @@ title: Source-Eigenschaft (ADO-Datensatz) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -23,17 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1ea9472275b0dbaa8a1a88ba70c21e8b6576af14
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 524845f59338a483df89586847157e6d9eaa598c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-record"></a>Source-Eigenschaft (ADO-Datensatz)
 Gibt an, die Datenquelle oder das Objekt dargestellt wird, indem die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -56,9 +55,8 @@ Gibt an, die Datenquelle oder das Objekt dargestellt wird, indem die [Datensatz]
 >  URLs, die mit dem HTTP-Schema werden automatisch aufgerufen. der [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absoluten und relativen URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Source-Eigenschaft (ADO-Fehler)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Source-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-
+ [Source-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

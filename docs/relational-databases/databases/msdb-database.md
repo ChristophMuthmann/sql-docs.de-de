@@ -2,11 +2,13 @@
 title: msdb-Datenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - jobs [SQL Server], msdb database
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "46"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="msdb-database"></a>msdb-Datenbank
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Die **msdb** -Datenbank wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Planen von Warnungen und Aufträgen sowie von weiteren Funktionen (z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] und Datenbank-E-Mail) verwendet.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Nein|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|nein|  
 |ANSI_NULL_DEFAULT|OFF|ja|  
 |ANSI_NULLS|OFF|ja|  
 |ANSI_PADDING|OFF|ja|  
@@ -65,20 +66,20 @@ ms.lasthandoff: 06/22/2017
 |AUTO_SHRINK|OFF|ja|  
 |AUTO_UPDATE_STATISTICS|ON|ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
-|CHANGE_TRACKING|OFF|Nein|  
+|CHANGE_TRACKING|OFF|nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
 |CURSOR_DEFAULT|GLOBAL|ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> ja<br /><br /> ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> ja<br /><br /> ja|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
 |DB_CHAINING|ON|ja|  
-|ENCRYPTION|OFF|Nein|  
-|MIXED_PAGE_ALLOCATION|ON|Nein|  
+|ENCRYPTION|OFF|nein|  
+|MIXED_PAGE_ALLOCATION|ON|nein|  
 |NUMERIC_ROUNDABORT|OFF|ja|  
 |PAGE_VERIFY|CHECKSUM|ja|  
 |PARAMETERIZATION|SIMPLE|ja|  
 |QUOTED_IDENTIFIER|OFF|ja|  
-|READ_COMMITTED_SNAPSHOT|OFF|Nein|  
+|READ_COMMITTED_SNAPSHOT|OFF|nein|  
 |RECOVERY|SIMPLE|ja|  
 |RECURSIVE_TRIGGERS|OFF|ja|  
 |Service Broker-Optionen|ENABLE_BROKER|ja|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
  Die folgenden Operationen können an der **msdb** -Datenbank nicht ausgeführt werden:  
   
 -   Ändern der Sortierung. Die Standardsortierung entspricht der Serversortierung.  
@@ -121,4 +122,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
-

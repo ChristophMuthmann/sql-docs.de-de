@@ -1,26 +1,27 @@
 ---
-title: Erstellen eine Matrix (Berichts-Generator und SSRS) | Microsoft Docs
+title: Erstellen einer Matrix (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: a608539635d00b07ba001e37172f3f71b6fc3465
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Erstellen einer Matrix (Berichts-Generator und SSRS)
   Mithilfe einer Matrix können Sie gruppierte Daten und Zusammenfassungsinformationen anzeigen. Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Matrizen stellen ähnliche Funktionen wie Kreuztabellen und Pivottabellen bereit. Wenn zur Laufzeit die Berichtsdaten und Datenbereiche kombiniert werden, wächst die Matrix auf der Seite horizontal und vertikal. Werte in Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Sie können die Zeilen und Spalten formatieren, um die Daten zu markieren, die Sie hervorheben möchten. Sie können auch Drilldownschalter einfügen, mit denen die Detaildaten anfänglich ausgeblendet werden. Benutzer können dann auf die Schalter klicken, um nach Bedarf ausführlichere bzw. weniger Details anzuzeigen.  
@@ -40,11 +41,11 @@ ms.lasthandoff: 08/09/2017
   
  Für die Beschreibung der Konfiguration einer Tabelle von Anfang bis Ende wird in diesem Thema die Matrixvorlage verwendet.  Anfänglich enthält die Matrix eine Zeilengruppe, eine Spaltengruppe, eine Eckzelle und eine Datenzelle, wie in der folgenden Abbildung dargestellt.  
   
- ![Leere Matrix mit 1 Zeilen- und 1 Spaltengruppe](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "leere Matrix mit 1 Zeilen- und 1 Spaltengruppe")  
+ ![Leere Matrix mit einer Zeilen- und einer Spaltengruppe](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Blank Matrix with 1 row and 1 column group")  
   
  Wenn Sie auf der Entwurfsoberfläche eine Matrix auswählen, werden Zeilen- und Spaltenhandles angezeigt, wie in der folgenden Abbildung dargestellt.  
   
- ![Neue Matrix aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "neue Matrix aus Toolbox hinzugefügt, ausgewählt")  
+ ![Neue Matrix aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "New Matrix added from Toolbox, selected")  
   
  Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in die Bereiche für Zeilengruppen und Spaltengruppen des Gruppierungsbereichs ziehen. Das erste Feld, das Sie in den Bereich für Zeilengruppen bzw. Spaltengruppen ziehen, ersetzt die anfängliche leere Standardgruppe. Sie können dann auf jede einzelne Zelle von den Daten abhängige Formatierungen anwenden.  
   
@@ -72,33 +73,33 @@ ms.lasthandoff: 08/09/2017
   
  Bei der Ausführung des Berichts werden dynamische Spaltenköpfe für so viele Spalten, wie eindeutige Gruppenwerte vorhanden sind, nach rechts erweitert (bzw. nach links, wenn die Direction-Eigenschaft der Matrix auf RTL festgelegt ist). Dynamische Zeilen werden auf der Seite nach unten erweitert. Die Daten, die in den Zellen des Tablix-Texts angezeigt werden, stellen auf den Schnittpunkten von Zeilen- und Spaltengruppen basierende Aggregate dar, wie in der folgenden Abbildung dargestellt.  
   
- ![Matrix, geschachtelte Zeilen- und Spaltengruppen mit Gesamtergebnissen](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matrix, geschachtelte Zeilen- und Spaltengruppen mit dem Gesamtwerten")  
+ ![Matrix, geschachtelte Zeilen- und Spaltengruppen mit Gesamtergebnissen](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matrix, nested row and column groups with totals")  
   
  In der Vorschau wird der Bericht wie in der folgenden Abbildung angezeigt.  
   
- ![Geschachtelte Gruppen in der Vorschau](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "geschachtelte Gruppen in der Vorschau")  
+ ![Geschachtelte Gruppen in Vorschau](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "Nested Groups in Preview")  
   
  Zum Erstellen von Ausdrücken, die einen anderen als den Standardbereich angeben, müssen Sie im Aggregatfunktionsaufruf den Namen eines Datasets, eines Datenbereichs oder einer Gruppe angeben. Um den Prozentsatz der einzelnen Unterkategorien zu berechnen, den diese zu den Werten der Kategoriegruppe "Clothing" beitragen, fügen Sie in der Gruppe "Category" neben der Spalte "Total" eine Spalte hinzu, formatieren Sie das Textfeld, um den Prozentsatz anzuzeigen, und fügen Sie wie im folgenden Beispiel dargestellt im Zähler einen Ausdruck, der den Standardbereich verwendet, und im Nenner den Gruppenbereich "Category" hinzu.  
   
  `=SUM(Fields!Linetotal.Value)/SUM(Fields! Linetotal.Value,"Category")`  
   
- Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
   
   
 ##  <a name="AddingAdjacentGroup"></a> Hinzufügen einer angrenzenden Gruppe zu einer Matrix  
  Wenn Sie anhand eines einzelnen Datasetfelds eine angrenzende Gruppe hinzufügen möchten, verwenden Sie das Kontextmenü im Gruppierungsbereich. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Die folgende Abbildung zeigt eine auf der Geografie basierende Gruppe und eine auf dem Jahr basierende angrenzende Gruppe.  
   
- ![Angrenzende Spaltengruppen für Geography und Jahr](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "angrenzende Spaltengruppen für Geography und Jahr")  
+ ![Angrenzende Spaltengruppen für Geography und Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Adjacent Column Groups for Geography and Year")  
   
  In diesem Beispiel wurden die Datenwerte in der Abfrage so gefiltert, dass nur Werte für Europa und für die Jahre 2003 und 2004 enthalten sind. Sie können Filter jedoch für jede Gruppe einzeln festlegen. In der Vorschau wird der Bericht wie in der folgenden Abbildung angezeigt.  
   
- ![Vorschau der angrenzenden Spaltengruppen](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "Vorschau der angrenzenden Spaltengruppen")  
+ ![Vorschau der angrenzenden Spaltengruppen](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "Preview of adjacent column groups")  
   
  Wenn Sie eine Ergebnisspalte für eine angrenzende Spaltengruppe hinzufügen möchten, klicken Sie in die Zelle mit der Definition der Spaltengruppe, und verwenden Sie den Befehl **Gesamtergebnis hinzufügen** . Neben der Spaltengruppe wird eine neue statische Spalte mit einer Standardaggregatsumme für jedes numerische Feld in den vorhandenen Zeilen hinzugefügt. Bearbeiten Sie das Standardaggregat (z. B. `Avg([Sales])`) manuell, um den Ausdruck zu ändern. Weitere Informationen finden Sie unter [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
- [Aggregatfunktionsreferenz &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

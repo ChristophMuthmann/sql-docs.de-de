@@ -1,10 +1,13 @@
 ---
-title: ODBC-Ziel | Microsoft Docs
+title: ODBC-Ziel | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
   Das ODBC-Ziel führt für die Daten einen Massenladevorgang in Datenbanktabellen mit ODBC-Unterstützung durch. Das ODBC-Ziel verwendet einen ODBC-Verbindungs-Manager, um eine Verbindung mit der Datenquelle herzustellen.  
@@ -67,11 +69,11 @@ ms.lasthandoff: 08/17/2017
   
  Weitere Informationen finden Sie in einem der folgenden Themen:  
   
--   [Ziel-Editor für ODBC &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für ODBC &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite Zuordnungen&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für ODBC &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können.  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Laden von Daten mithilfe des ODBC-Ziels](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
--   [Benutzerdefinierte Eigenschaften des ODBC-Ziels](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
+-   [Benutzerdefinierte Eigenschaften von ODBC-Zielen](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
 ## <a name="odbc-destination-editor-connection-manager-page"></a>Ziel-Editor für ODBC (Verbindungs-Manager-Seite)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für ODBC** können Sie den ODBC-Verbindungs-Manager für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
@@ -100,18 +102,18 @@ ms.lasthandoff: 08/17/2017
   
 -   Klicken Sie im **Ziel-Editor für ODBC**auf **Verbindungs-Manager**.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
   
-#### <a name="connection-manager"></a>Verbindungs-Manager  
+#### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf Neu, um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
   
-#### <a name="new"></a>Neu  
+#### <a name="new"></a>eine neue  
  Klicken Sie auf **Neu**. Das Dialogfeld **ODBC-Verbindungs-Manager konfigurieren** , in dem Sie einen neuen Verbindungs-Manager erstellen können, wird geöffnet.  
   
 #### <a name="data-access-mode"></a>Datenzugriffsmodus  
  Wählen Sie die Methode zum Laden von Daten in das Ziel aus. Die Optionen sind in der folgenden Tabelle aufgeführt:  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |Tabellenname - Batch|Wählen Sie diese Option aus, um das ODBC-Ziel im Batchmodus zu konfigurieren. Bei Auswahl dieser Option sind die folgenden Optionen verfügbar:|  
 ||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus.<br /><br /> Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (\*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.<br /><br /> **Batchgröße**: Geben Sie die Größe des Batches für das Massenladen ein. Dies ist die Anzahl von Zeilen, die als Batch geladen werden.|  
@@ -124,7 +126,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="odbc-destination-editor-mappings-page"></a>Ziel-Editor für ODBC (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für ODBC** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="available-input-columns"></a>Verfügbare Eingabespalten  
  Die Liste der verfügbaren Eingabespalten. Ordnen Sie die Eingabespalten per Drag & Drop den verfügbaren Zielspalten zu.  
@@ -133,7 +135,7 @@ ms.lasthandoff: 08/17/2017
  Die Liste der verfügbaren Zielspalten. Ordnen Sie die Zielspalten per Drag & Drop den verfügbaren Eingabespalten zu.  
   
 #### <a name="input-column"></a>Eingabespalte  
- Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie auswählen  **\<ignorieren >** um Spalten aus der Ausgabe auszuschließen.  
+ Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie **\<ignore>** auswählen, um Spalten aus der Ausgabe auszuschließen.  
   
 #### <a name="destination-column"></a>Zielspalte  
  Zeigt alle verfügbaren Zielspalten an, sowohl die zugeordneten als auch die nicht zugeordneten.  
@@ -151,12 +153,12 @@ ms.lasthandoff: 08/17/2017
   
 -   Klicken Sie im **Ziel-Editor für ODBC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
   
-#### <a name="column"></a>Column  
+#### <a name="column"></a>Spalte  
  Wird nicht verwendet.  
   
 #### <a name="error"></a>Fehler  
@@ -186,4 +188,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>Zeile umleiten  
  Die Zeile, die den Fehler oder die Kürzung verursacht, wird an die Fehlerausgabe des ODBC-Ziels umgeleitet. Weitere Informationen finden Sie unter "ODBC-Ziel".  
   
-

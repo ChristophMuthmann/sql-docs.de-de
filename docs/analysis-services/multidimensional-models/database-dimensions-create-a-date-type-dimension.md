@@ -2,13 +2,13 @@
 title: Erstellen eine datumstypdimension | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 38
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52470e4818d24aeb2288d41f60114f040e669cd6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Datenbankdimensionen – Erstellen einer datumstypdimension
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Zeitdimension ein Dimensionstyp, dessen Attribute Zeiträume darstellen, z. B. Jahre, Semester, Quartale, Monate und Tage. Die in einer Zeitdimension enthaltenen Zeiträume stellen zeitbasierte Granularitätsebenen für Analysen und Berichte bereit. Die Attribute sind in Hierarchien organisiert, und die Granularität der Zeitdimension wird weitgehend durch die Anforderungen des Geschäfts und des Berichtswesens an historische Daten bestimmt. So verwenden beispielsweise die meisten Finanz- und Verkaufsdaten in Business Intelligence-Anwendungen eine monatliche oder quartalsweise Granularität.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Zeitdimension ein Dimensionstyp, dessen Attribute Zeiträume darstellen, z. B. Jahre, Semester, Quartale, Monate und Tage. Die in einer Zeitdimension enthaltenen Zeiträume stellen zeitbasierte Granularitätsebenen für Analysen und Berichte bereit. Die Attribute sind in Hierarchien organisiert, und die Granularität der Zeitdimension wird weitgehend durch die Anforderungen des Geschäfts und des Berichtswesens an historische Daten bestimmt. So verwenden beispielsweise die meisten Finanz- und Verkaufsdaten in Business Intelligence-Anwendungen eine monatliche oder quartalsweise Granularität.  
   
  In der Regel beeinhalten Cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Zeitdimension in irgendeiner Form. Ein Cube kann mehrere Zeitdimensionen oder mehrere Hierarchien derselben Zeitdimension enthalten. Diese hängen von der Granularität der Daten und den Berichtsanforderungen ab. Es benötigen jedoch nicht alle Cubes eine Zeitdimension. Manche OLAP-Anwendungen, wie z. B. eine aktivitätsbasierte Kostenrechnung, benötigen keine Zeitdimension, weil die Kostenrechnung in einer aktivitätsbasierten Dimension auf einer Aktivität und nicht auf Zeit basiert.  
   
@@ -80,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensionstypen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   
-

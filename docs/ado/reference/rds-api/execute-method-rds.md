@@ -3,7 +3,7 @@ title: Execute-Methode (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 68796c4fa28d3ee553ccf7c44e9bbd9850f32fb7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-rds"></a>Execute-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO, 2.5 und höher.  
@@ -42,13 +41,13 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *"ConnectionString"*  
+ *ConnectionString*  
  Eine Zeichenfolge verwendet, um mit dem OLE DB-Anbieter hergestellt, in dem die Anforderung für die Ausführung gesendet werden. Wenn ein Ereignishandler mithilfe des Parameters *HandlerString* es bearbeiten oder die Verbindungszeichenfolge ersetzen kann.  
   
  *HandlerString*  
  Eine zweiteilige-Zeichenfolge, die identifiziert den Handler, die mit dieser Ausführung verwendet werden. Die Zeichenfolge besteht aus zwei Teilen. Der erste Teil enthält den Namen (ProgID) des Handlers verwendet werden. Der zweite Teil enthält Argumente, die an den Ereignishandler übergeben werden. Die Details der Interpretation der Argumentzeichenfolge sind spezifisch für jeden Handler. Die beiden Teile werden durch die erste Instanz eines Kommas in der Zeichenfolge getrennt. Die Argumentzeichenfolge kann zusätzliche Kommas enthalten. Die Argumente sind optional.  
   
- *Abfragezeichenfolge*  
+ *QueryString*  
  Ein Befehl in der Befehlssprache unterstützt die OLE DB-Anbieter, die in der Verbindungszeichenfolge angegeben wird. Für SQL-basierte Anbieter *QueryString* möglicherweise eine Transact-SQL Command-Anweisung enthalten, jedoch für nicht-SQL-Anbieter (z. B. MSDataShape) dies u. u. keine [!INCLUDE[tsql](../../../includes/tsql_md.md)] abfrageanweisung.  
   
  Wenn ein Ereignishandler verwendet wird, kann der Handler ändern oder Ersetzen Sie den hier angegebenen Wert. Der Ereignishandler beispielsweise in der Regel ersetzt *QueryString* mit einer Abfragezeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "Msdfmap.ini" verwendet.  
@@ -90,6 +89,5 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
 ## <a name="applies-to"></a>Gilt für  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

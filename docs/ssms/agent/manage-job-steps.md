@@ -3,10 +3,12 @@ title: Verwalten von Auftragsschritten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +26,19 @@ helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f9ecad6fcec2596f26351839311cc8b647e094e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8d31e9cb313171a5364de00a97ff80a33d32d305
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
-Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder einem Server ausführt. Jeder Auftrag muss mindestens einen Auftragsschritt aufweisen. Folgende Auftragsschritte sind möglich:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder einem Server ausführt. Jeder Auftrag muss mindestens einen Auftragsschritt aufweisen. Folgende Auftragsschritte sind möglich:  
   
 -   Ausführbare Programme und Betriebssystembefehle.  
   
@@ -110,7 +112,7 @@ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent PowerShell-S
 ## <a name="activex-scripting-job-steps"></a>ActiveX-Skript-Auftragsschritte  
   
 > [!IMPORTANT]  
-> Der ActiveX-Skript-Auftragsschritt wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] aus dem [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.  
+> Der ActiveX-Skript-Auftragsschritt wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] aus dem [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.  
   
 Wenn Sie einen ActiveX-Skriptauftragsschritt erstellen, ist Folgendes notwendig:  
   
@@ -198,11 +200,11 @@ Hinweis: Wenn Sie das Paket im SSIS-Katalog bereitgestellt und Sie **SSIS-Katalo
   
 Informationen zum Erstellen von Auftragsschritten, von denen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] -Pakete ausgeführt werden, finden Sie unter [Aufträge des SQL Server-Agents für Pakete](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Auftragsschritt mit einem ausführbaren Programm erstellt wird.|[Erstellen eines CmdExec-Auftragsschritts](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Berechtigungen zurückgesetzt werden.|[Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Beschreibt, wie ein [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschritt erstellt wird.|[Erstellen eines Transact-SQL-Auftragsschritts](../../ssms/agent/create-a-transact-sql-job-step.md)|  
@@ -213,9 +215,8 @@ Informationen zum Erstellen von Auftragsschritten, von denen [!INCLUDE[ssISnover
 |Beschreibt, wie Auftragsschrittdetails im Dialogfeld Auftragsschritt-Eigenschaften angezeigt werden.|[Anzeigen von Auftragsschrittinformationen](../../ssms/agent/view-job-step-information.md)|  
 |Beschreibt, wie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents gelöscht wird.|[Löschen eines Auftragsschrittprotokolls](../../ssms/agent/delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Erstellen von Aufträgen](../../ssms/agent/create-jobs.md)  
 [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   
-

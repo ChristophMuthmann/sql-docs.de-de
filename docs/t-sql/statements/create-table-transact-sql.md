@@ -1,11 +1,13 @@
 ---
 title: Erstellen der Tabelle (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,20 +49,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -366,7 +367,7 @@ column_name <data_type>
  
  Erstellt die neue Tabelle als FileTable. Sie geben keine Spalten an, da eine FileTable über ein festes Schema verfügt. Weitere Informationen zu FileTables finden Sie unter [FileTables &#40; SQLServer &#41; ](../../relational-databases/blob/filetables-sql-server.md).  
   
- *Spaltenname*  
+ *column_name*  
  *computed_column_expression*  
  Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, es sei denn, die Spalte wurde (mit PERSISTED) als persistente Spalte markiert. Die Spalte wird anhand eines Ausdrucks berechnet, der andere Spalten in derselben Tabelle verwendet. Beispielsweise kann eine berechnete Spalte die Definition besitzen: **Kosten** AS **Preis** \* **Qty**. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine Funktion, eine Variable oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck darf keine Unterabfrage sein oder Aliasdatentypen enthalten.  
   
@@ -587,7 +588,7 @@ Gibt an, um einen Index für die Tabelle zu erstellen. Dies kann ein gruppierter
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  SPARSE  
- Gibt an, dass die Spalte eine Spalte mit geringer Dichte ist. Der Speicher für Spalten mit geringer Dichte ist für NULL-Werte optimiert. Spalten mit geringer Dichte können nicht als NOT NULL festgelegt werden. Zusätzliche Einschränkungen und Weitere Informationen zu Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
+ Gibt an, dass die Spalte eine Sparsespalte ist. Der Speicher für Sparsespalten ist für NULL-Werte optimiert. Spalten mit geringer Dichte können nicht als NOT NULL festgelegt werden. Zusätzliche Einschränkungen und Weitere Informationen zu Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
  MASKIERTE mit (Funktion = " *Mask_function* ")  
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -717,7 +718,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *Logical_Expression*  
  Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt. Aliasdatentypen können nicht Teil des Ausdrucks sein.  
   
- *Spalte*  
+ *column*  
  Eine Spalte oder Liste von Spalten in Klammern, die in Tabelleneinschränkungen verwendet wird, um anzuzeigen, welche Spalten in der Einschränkungsdefinition verwendet werden.  
   
  [ **ASC** | "DESC"]  
@@ -739,7 +740,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
 >  Dokumentieren mit FILLFACTOR = *Fillfactor* als einzige Indexoption, für die PRIMARY KEY- oder UNIQUE-Einschränkungen gilt wird aus Gründen der Abwärtskompatibilität beibehalten, jedoch nicht auf diese Weise in Zukunft dokumentiert wird frei.  
   
  *spaltensatzname* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
- Der Name des Spaltensatzes. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Tabellenspalten mit geringer Dichte in einer strukturierten Ausgabe kombiniert. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
+ Der Name des Spaltensatzes. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
   
  PERIOD FOR SYSTEM_TIME (*System_start_time_column_name* , *System_end_time_column_name* )  
    
@@ -1020,7 +1021,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1031,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1070,7 @@ Azure SQL-Datenbank unterstützt globale temporäre Tabellen, die auch in Tempdb
 Globale temporäre Tabellen für Azure SQL-Datenbank führen Sie die gleichen Syntax und Semantik, die SQL Server für temporäre Tabellen verwendet.  Auf ähnliche Weise sind globale temporäre gespeicherte Prozeduren auch auf Datenbankebene in Azure SQL-Datenbank beschränkt. Lokale temporäre Tabellen (eingeleitet mit # Tabellennamen) auch für Azure SQL-Datenbank unterstützt werden, und folgen Sie der gleichen Syntax und Semantik, die SQL Server verwendet.  Finden Sie im obigen Abschnitt [temporäre Tabellen](#temporary-tables).  
 
 > [!IMPORTANT]
-> Dieses Feature ist in der öffentlichen Vorschau und steht für die Azure SQL-Datenbank.
+> Diese Funktion ist nur verfügbar für Azure SQL-Datenbank.
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Problembehandlung bei globalen temporären Tabellen für Azure SQL-Datenbank 
@@ -1084,7 +1085,7 @@ Die Problembehandlung der Tempdb, finden Sie unter [nicht genügend Speicherplat
 
 - Sitzung A erstellt eine globale temporäre Tabelle ##test in Azure SQL-Datenbank testdb1 und fügt die Zeile 1
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1102,7 +1103,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Sitzung B testdb1 Azure SQL-Datenbank her und kann auf die Tabelle erstellt, indem die Sitzung ein ##test zugreifen
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1110,7 +1111,7 @@ SELECT * FROM ##test
 
 - C-Sitzung in eine andere Datenbank in Azure SQL-Datenbank testdb2 her und erstellt in testdb&#1;#test zugreifen möchte. Wählen Sie diese ein Fehler auftritt, aufgrund des Datenbankbereichs für die globalen temporären Tabellen 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1119,7 +1120,7 @@ Invalid object name '##test'
 
 - Systemobjekt in Azure SQL-Datenbank Tempdb vom aktuellen Benutzer Datenbank testdb1 Adressierung
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1238,7 +1239,7 @@ SELECT * FROM tempdb.sys.database_files
   
  Wenn die NULL-Zulässigkeit der Spalte nicht explizit angegeben ist, wird sie gemäß den in der folgenden Tabelle aufgeführten Regeln hergeleitet.  
   
-|Spaltendatentyp|Rule|  
+|Spaltendatentyp|Regel|  
 |----------------------|----------|  
 |Alias-Datentyp|Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet die NULL-Zulässigkeit, die beim Erstellen des Datentyps angegeben wurde. Um die standardmäßige NULL-Zulässigkeit des Datentyps zu bestimmen, verwenden Sie **Sp_help**.|  
 |CLR-benutzerdefinierter Typ|Die NULL-Zulässigkeit wird gemäß der Spaltendefinition bestimmt.|  
@@ -1469,10 +1470,10 @@ WITH (DATA_COMPRESSION = ROW);
   
  Zusätzliche Beispiele zur datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>O. Erstellen einer Tabelle mit Spalten mit geringer Dichte und einem Spaltensatz  
- Anhand der folgenden Beispiele wird gezeigt, wie Sie eine Tabelle mit einer Spalte mit geringer Dichte und eine Tabelle mit zwei Spalten mit geringer Dichte und einem Spaltensatz erstellen. In den Beispielen wird die grundlegende Syntax verwendet. Komplexere Beispiele finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
+### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>O. Erstellen einer Tabelle mit Sparsespalten und einem Spaltensatz  
+ Anhand der folgenden Beispiele wird gezeigt, wie Sie eine Tabelle mit einer Sparsespalte und eine Tabelle mit zwei Sparsespalten und einem Spaltensatz erstellen. In den Beispielen wird die grundlegende Syntax verwendet. Komplexere Beispiele finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
   
- In diesem Beispiel wird eine Tabelle erstellt, die eine Spalte mit geringer Dichte enthält.  
+ In diesem Beispiel wird eine Tabelle erstellt, die eine Sparsespalte enthält.  
   
 ```  
 CREATE TABLE dbo.T1  
@@ -1480,7 +1481,7 @@ CREATE TABLE dbo.T1
     c2 varchar(50) SPARSE NULL ) ;  
 ```  
   
- In diesem Beispiel wird eine Tabelle erstellt, die zwei Spalten mit geringer Dichte und einen Spaltensatz mit dem Namen `CSet` enthält.  
+ In diesem Beispiel wird eine Tabelle erstellt, die zwei Sparsespalten und einen Spaltensatz mit dem Namen `CSet` enthält.  
   
 ```  
 CREATE TABLE T1  
@@ -1660,6 +1661,5 @@ GO
  [Sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

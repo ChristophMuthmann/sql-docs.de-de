@@ -2,9 +2,12 @@
 title: Heaps (Tabellen ohne gruppierte Indizes) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cae45be3e215c24dd437502f81a870f14d453f3d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7ce633bb25db174bc9484e92deef399b45483387
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabellen ohne gruppierte Indizes)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Ein Heap ist eine Tabelle ohne gruppierten Index. Ein oder mehrere nicht gruppierte Indizes können für Tabellen erstellt werden, die als Heap gespeichert sind. Daten werden ohne bestimmte Reihenfolge im Heap gespeichert. Normalerweise werden Daten anfänglich in der Reihenfolge gespeichert, in der die Zeilen in die Tabelle eingefügt werden. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann die Daten jedoch im Heap verschieben, um die Zeilen effizienter zu speichern; daher kann die Reihenfolge der Daten nicht vorhergesagt werden. Um die von einem Heap zurückgegebene Zeilenreihenfolge zu garantieren, müssen Sie die **ORDER BY** -Klausel verwenden. Um die Reihenfolge zum Speichern der Zeilen anzugeben, erstellen Sie für eine Tabelle einen gruppierten Index, damit es sich bei der Tabelle nicht um einen Heap handelt.  
   
@@ -33,7 +35,7 @@ ms.lasthandoff: 06/22/2017
 >  In bestimmten Fällen gibt es gute Gründe, eine Tabelle als einen Heap zu belassen, statt einen gruppierten Index zu erstellen. Die effektive Verwendung von Heaps ist jedoch Benutzern mit fortgeschrittenen Kenntnissen vorbehalten. Die meisten Tabellen sollten über einen sorgfältig ausgewählten gruppierten Index verfügen, es sei denn, es gibt gute Gründe, die Tabelle als Heap beizubehalten.  
   
 ## <a name="when-to-use-a-heap"></a>Verwendungsbereiche für Heaps  
- Wenn eine Tabelle ein Heap ist und nicht über ungruppierte Indizes verfügt, muss die ganze Tabelle überprüft werden (mit einem Tabellenscan), um eine Zeile zu finden. Dies ist durchaus denkbar, wenn es sich um eine kleine Tabelle handelt, wie z. B. eine Liste der zwölf Niederlassungen eines Unternehmens.  
+ Wenn eine Tabelle ein Heap ist und nicht über ungruppierte Indizes verfügt, muss die ganze Tabelle überprüft werden (mit einem Tabellenscan), um eine Zeile zu finden. Dies ist durchaus denkbar, wenn es sich um eine kleine Tabelle handelt, wie z. B. eine Liste der zwölf Niederlassungen eines Unternehmens.  
   
  Wenn eine Tabelle als Heap gespeichert wird, werden einzelne Zeilen durch einen Zeilenbezeichner (RID, Row Identifier) gekennzeichnet, der aus der Dateinummer, der Datenseitennummer und einem Slot auf der Seite besteht. Die Zeilen-ID ist eine kleine und effiziente Struktur. In einigen Fällen verwenden Datenarchitekten Heaps, wenn immer über nicht gruppierte Indizes auf Daten zugegriffen wird und die RID kleiner als ein Schlüssel des gruppierten Indexes ist.  
   
@@ -83,4 +85,3 @@ Die folgende Abbildung zeigt, wie das SQL Server-Datenbankmodul die IAM-Seiten z
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
-

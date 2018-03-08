@@ -2,11 +2,13 @@
 title: Replikations-Agent-Verwaltung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "48"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee0ddd687702068508c54ea60a533fc3c5c75b10
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-administration"></a>Replikations-Agent-Verwaltung
-  Die Replikations-Agents führen viele der der Replikation zugeordneten Aufgaben aus. Zu diesen Aufgaben gehören das Erstellen von Kopien des Schemas und der Daten, das Ermitteln von Aktualisierungen auf dem Verleger oder dem Abonnenten und das Weitergeben von Änderungen zwischen Servern. Standardmäßig werden die Replikations-Agents unter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentauftragsschritten ausgeführt. Bei den Agents handelt es sich einfach nur um ausführbare Dateien, d. h., sie können auch direkt von der Befehlszeile und von Batchskripts aus aufgerufen werden. Jeder Replikations-Agent unterstützt einen Satz von Laufzeitparametern, mit denen gesteuert wird, wie der Agent ausgeführt wird. Diese Parameter werden in einem Agentprofil oder auf der Befehlszeile angegeben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Replikations-Agents führen viele der der Replikation zugeordneten Aufgaben aus. Zu diesen Aufgaben gehören das Erstellen von Kopien des Schemas und der Daten, das Ermitteln von Aktualisierungen auf dem Verleger oder dem Abonnenten und das Weitergeben von Änderungen zwischen Servern. Standardmäßig werden die Replikations-Agents unter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentauftragsschritten ausgeführt. Bei den Agents handelt es sich einfach nur um ausführbare Dateien, d. h., sie können auch direkt von der Befehlszeile und von Batchskripts aus aufgerufen werden. Jeder Replikations-Agent unterstützt einen Satz von Laufzeitparametern, mit denen gesteuert wird, wie der Agent ausgeführt wird. Diese Parameter werden in einem Agentprofil oder auf der Befehlszeile angegeben.  
   
 > [!IMPORTANT]  
 >  Standardmäßig ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst bei der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deaktiviert, es sei denn, Sie haben den automatischen Start des Diensts während der Installation explizit ausgewählt.  
@@ -44,10 +46,10 @@ ms.lasthandoff: 08/03/2017
 |Ausführbare Agent-Dateien|Dateiname|  
 |----------------------|---------------|  
 |[Replikationsmomentaufnahme-Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
-|[Replikationsverteilungs-Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
+|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Replikationsprotokolllese-Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[Warteschlangenlese-Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[Replikationsmerge-Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  Zusätzlich zu den Replikations-Agents besitzt die Replikation eine Reihe von Aufträgen, die geplante und Bedarfswartungen ausführen.  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="replication-maintenance-jobs"></a>Aufträge zur Replikationswartung  
  Die Replikation verwendet die folgenden Aufträge zum Ausführen von geplanten und Bedarfswartungen.  
   
-|Cleanupauftrag|Beschreibung|Standardzeitplan|  
+|Cleanupauftrag|Description|Standardzeitplan|  
 |------------------|-----------------|----------------------|  
 |Agentverlaufscleanup: Verteilung|Entfernt Verlaufseinträge des Replikations-Agents aus der Verteilungsdatenbank.|Wird alle zehn Minuten ausgeführt.|  
 |Verteilungscleanup: Verteilung|Entfernt replizierte Transaktionen aus der Verteilungsdatenbank. Deaktiviert Abonnements, die innerhalb der maximalen Beibehaltungsdauer für Verteilung nicht synchronisiert wurden.|Wird alle zehn Minuten ausgeführt.|  
@@ -98,8 +100,7 @@ ms.lasthandoff: 08/03/2017
 |Überprüfung des Replikations-Agents|Ermittelt Replikations-Agents, die keinen Verlauf protokollieren. Schreibt in das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Ereignisprotokoll, wenn ein Auftragsschritt einen Fehler erzeugt.|Wird alle zehn Minuten ausgeführt.|  
 |Aktualisierung für die Replikationsüberwachung für die Verteilung|Aktualisiert die vom Replikationsmonitor verwendeten zwischengespeicherten Abfragen.|Wird fortlaufend ausgeführt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

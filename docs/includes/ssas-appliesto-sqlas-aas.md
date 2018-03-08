@@ -1,0 +1,1 @@
+**GILT FÜR:**![Ja](media/yes.png)SQL Server 2017 Analysis Services![Ja](media/yes.png)Azure Analysis Services

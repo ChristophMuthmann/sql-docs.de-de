@@ -1,10 +1,13 @@
 ---
-title: '&amp;= (Bitweises AND EQUALS) (Transact-SQL) | Microsoft Docs'
+title: '&amp;= (Bitweises AND-Zuweisung) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,22 +19,24 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - compound operators, &=
+- assignment operators, &=
+- augmented operators, &=
 - '&= (bitwise AND equals)'
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f5c52444f3ba653db65c5ad700dd8d11704466c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 933555582a035d6db79c1f0676fd2befc2fd70d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="amp-bitwise-and-equals-transact-sql"></a>&amp;= (Bitweises AND EQUALS) (Transact-SQL)
+# <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (Bitweises AND-Zuweisung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
   Führt eine bitweise logische AND-Operation zwischen zwei ganzzahligen Werten durch und legt einen Wert auf das Ergebnis der Operation fest.  
   
@@ -55,9 +60,8 @@ expression &= expression
   
 ## <a name="see-also"></a>Siehe auch  
  [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Bitweise Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

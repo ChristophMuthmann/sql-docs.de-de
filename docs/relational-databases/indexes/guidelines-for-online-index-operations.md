@@ -15,23 +15,23 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: "64"
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
-ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: On Demand
+ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Für das Ausführen von Onlineindexvorgängen gelten die folgenden Richtlinien:  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
 -   Nicht eindeutige, nicht gruppierte Indizes können online erstellt werden, wenn die Tabelle LOB-Datentypen enthält, keine dieser Spalten jedoch in der Indexdefinition als Schlüssel- oder Nichtschlüsselspalte (eingeschlossene Spalte) verwendet wird.  
   
 -   Indizes für lokale temp-Tabellen können nicht online erstellt, neu erstellt oder gelöscht werden. Diese Einschränkung gilt nicht für Indizes globaler temporärer Tabellen.
-- Indizes können von dort fortgesetzt werden, wo nach einem unerwarteten Fehler, einem Datenbank-Failover oder einem **PAUSE**-Befehl angehalten wurde. Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
+- Indizes können von dort fortgesetzt werden, wo nach einem unerwarteten Fehler, einem Datenbank-Failover oder einem **PAUSE**-Befehl angehalten wurde. Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -76,7 +76,7 @@ ms.lasthandoff: 07/31/2017
 
 Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## <a name="performance-considerations"></a>Leistungsaspekte  
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Zwar ermöglichen Onlineindexvorgänge gleichzeitige Benutzerupdateaktivitäten, die Indexvorgänge benötigen jedoch mehr Zeit, wenn die Updateaktivitäten umfangreich sind. In der Regel sind Onlineindexvorgänge langsamer als die entsprechenden Offlineindexvorgänge, und zwar unabhängig davon, in welchem Umfang gleichzeitige Updateaktivitäten ausgeführt werden.  
   
  Da sowohl die Quell- als auch die Zielstrukturen während des Onlineindexvorgangs verwaltet werden, kann die Ressourcenverwendung für Einfüge-, Update- und Löschtransaktionen bis um das Doppelte zunehmen. Dieser Vorgang kann einen Leistungsabfall und erhöhte Ressourcenverwendung (insbesondere CPU-Zeit) während des Indexvorgangs bewirken. Onlineindexvorgänge werden vollständig protokolliert.  
@@ -95,20 +95,18 @@ Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Op
 ## <a name="resumable-index-rebuild-considerations"></a>Überlegungen zur fortsetzbaren Neuerstellung von Indizes
 
 > [!NOTE]
-> Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
->
+> Die fortsetzbare Indexoption kann für SQL Server (ab SQL Server 2017) und SQL-Datenbank angewendet werden. Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). 
 
 Für das Ausführen einer fortsetzbaren Neuerstellung eines Onlineindex gelten die folgenden Richtlinien:
 -   Verwalten, Planen und Erweitern von Indexwartungsfenstern. Sie können einen Vorgang zur Neuerstellung eines Index mehrmals anhalten und neu starten, um Ihr Wartungsfenster anzupassen.
 - Wiederherstellen nach Fehlern bei der Indexneuerstellung (z.B. Datenbank-Failover oder wenn kein Speicherplatz mehr verfügbar war).
 - Wenn ein Indexvorgang angehalten wird, wird sowohl für den ursprünglichen Index als auch für den neu erstellten Index Speicherplatz benötigt, und beide müssen während des DML-Vorgangs aktualisiert werden.
 
-- Ermöglicht das Abschneiden von Abschneideprotokollen während eines Vorgangs zur Neuerstellung eines Index (dieser Vorgang kann für einen regulären Onlineindexvorgang nicht durchgeführt werden).
+- Ermöglicht das Abschneiden von Transaktionsprotokollen während einer Indexneuerstellung (dieser Vorgang kann nicht für einen regulären Onlineindexvorgang durchgeführt werden).
 - Die Option SORT_IN_TEMPDB=ON wird nicht unterstützt.
 
 > [!IMPORTANT]
-> Für die fortsetzbare Neuerstellung muss kein Abschneiden mit langer Ausführungsdauer geöffnet bleiben. Deswegen kann das Protokoll während dieses Vorgangs gekürzt werden, was eine bessere Verwaltung des Protokollspeicherplatzes gestattet. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
->
+> Für die fortsetzbare Neuerstellung muss keine Transaktion mit langer Ausführungsdauer geöffnet bleiben. Deswegen kann das Protokoll während dieses Vorgangs gekürzt werden, was eine bessere Verwaltung des Protokollspeicherplatzes gestattet. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
 
 Im Allgemeinen besteht kein Leistungsunterschied zwischen fortsetzbaren und nicht fortsetzbaren Neuerstellungen von Onlineindizes. Wenn Sie einen fortsetzbaren Index aktualisieren, während ein Vorgang zur Indexneuerstellung unterbrochen ist:
 - Bei Arbeitsauslastungen, die meistens nur gelesen werden, ist die Leistungsauswirkung unbedeutend. 
@@ -126,4 +124,3 @@ Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwisc
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

@@ -3,31 +3,31 @@ title: "Operatoreigenschaften – Neuer Operator (Seite „Benachrichtigungen“
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.operator.notifications.f1
+f1_keywords: sql13.ag.operator.notifications.f1
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a8d182c3e434bfc05831922f0a214b58efbecd48
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9602398493c0e24d23d56b603da0bbc0c02af1af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Operatoreigenschaften – Neuer Operator (Seite „Benachrichtigungen“)
-Mithilfe dieser Seite können Sie Warnungen und Aufträge zum Benachrichtigen des Operators festlegen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie Warnungen und Aufträge zum Benachrichtigen des Operators festlegen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Warnungen**  
 Zeigt die Warnungen in der Instanz an.  
   
@@ -48,10 +48,9 @@ Benachrichtigt den Operator per E-Mail.
 **Pager**  
 Benachrichtigt den Operator, indem eine E-Mail-Nachricht an die Pageradresse gesendet wird.  
   
-**NET SEND**  
+**Net send**  
 Benachrichtigt diesen Operator per **net send**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Operatoren](../../ssms/agent/operators.md)  
   
-

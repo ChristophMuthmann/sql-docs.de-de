@@ -2,36 +2,39 @@
 title: Aktualisieren von Data Quality Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: d18fdc2c65408898ed5faacc255e74b7a6261d57
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
-Dieses Thema enthält Informationen dazu, wie Sie die vorhandene [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality Services-Installation (DQS) aktualisieren. Während des Upgrades des [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers muss auch das DQS-Datenbankschema aktualisiert werden.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Dieser Artikel enthält Informationen dazu, wie Sie ein Upgrade der vorhandenen Installation von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS) durchführen. Während des Upgrades des [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers muss auch das DQS-Datenbankschema aktualisiert werden.  
   
 > [!IMPORTANT]  
 >  -   Sie müssen die DQS-Datenbanken sichern, bevor Sie DQS aktualisieren, um versehentliche Datenverluste während des Schemaupgrades zu verhindern. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Um eine Verbindung mit dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers herzustellen und Data Quality-Aufgaben auszuführen, können Sie die aktuelle oder eine frühere Version des Data Quality-Clients oder die [DQS-Bereinigungstransformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services verwenden.  
 > -   Nachdem Data Quality Services und Master Data Services aktualisiert wurden, wird keine frühere Version des Master Data Services-Add-Ins für Excel mehr funktionieren. Sie können die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version des Master Data Services-Add-Ins für Excel [hier](http://go.microsoft.com/fwlink/?LinkID=506665)herunterladen.  
   
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Sie müssen als Mitglied der Administratorgruppe auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Computer angemeldet sein.  
   
@@ -94,12 +97,12 @@ Dieses Thema enthält Informationen dazu, wie Sie die vorhandene [!INCLUDE[ssnov
   
 3.  In der Ausgabe wird ein Eintrag für jedes Upgrade zusammen mit dem Upgradedatum angezeigt. Der höchste VERSION_ID- und ASSEMBLY_VERSION-Wert zum letzten angegebenen Datum entspricht der aktuellen Version. Der Wert 2 in der STATUS-Spalte gibt die erfolgreiche Ausführung an. Falls ein Fehler aufgetreten ist, wird dieser in der ERROR-Spalte aufgeführt. Beispiel für eine Ausgabe:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |im Elementknoten &lt;Customer ID="1"|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|Fehler|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMÄNE\Benutzername>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMÄNE\Benutzername>|2||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Entfernen von Data Quality Server-Objekten](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  

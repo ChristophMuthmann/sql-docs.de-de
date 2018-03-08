@@ -3,7 +3,7 @@ title: CopyTo-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e929ff331d1bc99aac75018fa28e0da200f7f529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0dd6b935b73ee6841118533d322eb092e77b7cb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
 Kopiert die angegebene Anzahl von Zeichen oder Bytes (je nach [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in eine andere **Stream** Objekt.  
@@ -59,5 +58,4 @@ Stream.CopyTo DestStream, NumChars
  **CopyTo** sollte verwendet werden, um Daten in ein Ziel kopiert **Stream** desselben Typs als Quelle **Stream** (ihre **Typ** eigenschafteneinstellungen werden beide **AdTypeText** oder beides **AdTypeBinary**). Für Text **Stream** Objekte aufweist, können Sie ändern die [Charset](../../../ado/reference/ado-api/charset-property-ado.md) eigenschafteneinstellung des Ziels **Stream** Übersetzen von einem Zeichen in eine andere festgelegt. Außerdem Text **Stream** Objekte können in binären erfolgreich kopiert werden **Stream** Objekte aber binäre **Stream** Objekte können nicht kopiert werden, in Text **Stream**  Objekte.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

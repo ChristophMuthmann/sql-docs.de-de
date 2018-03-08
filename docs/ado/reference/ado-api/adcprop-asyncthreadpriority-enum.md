@@ -3,7 +3,7 @@ title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f5bba0650c82873fc38aea57285dfdc63c4c3658
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf0f8e2f68eccceecbbe7fe3b2c17039b55d2887
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Für eine RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, gibt die Ausführungspriorität des asynchronen Threads, die Daten abruft.  
@@ -53,4 +52,3 @@ Für eine RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md
 |AdoEnums.AdcPropAsyncThreadPriority.HIGHEST|  
 |AdoEnums.AdcPropAsyncThreadPriority.LOWEST|  
 |AdoEnums.AdcPropAsyncThreadPriority.NORMAL|
-

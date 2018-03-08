@@ -1,10 +1,13 @@
 ---
-title: Legen Sie die Eigenschaften einer Datenflusskomponente | Microsoft Docs
+title: Festlegen der Eigenschaften einer Datenflusskomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e3dc5886a1328d8262a35d01cd5a1301ee3ffd56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Festlegen der Eigenschaften einer Datenflusskomponente
   Die Eigenschaften von Datenflusskomponenten, z. B. Quellen, Ziele und Transformationen, können Sie mithilfe eine der folgenden Funktionen festlegen:  
@@ -33,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Das Dialogfeld **Erweiterter Editor** ermöglicht den Zugriff auf benutzerdefinierte Eigenschaften für jede Komponente. Das Dialogfeld **Erweiterter Editor** ermöglicht außerdem den Zugriff auf benutzerdefinierte Eigenschaften für die einzelnen Komponenten sowie auf die für alle Datenflusskomponenten gemeinsamen Eigenschaften – die Eigenschaften von Eingaben, Ausgaben, Fehlerausgaben, Spalten und externen Spalten.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Legen Sie die Eigenschaften einer Datenflusskomponente mit eines Komponenten-Editors  
+## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Festlegen der Eigenschaften einer Datenflusskomponente mit einem Komponenten-Editor  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
   
-## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>Legen Sie die Eigenschaften einer Datenflusskomponente im Eigenschaftenfenster  
+## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>Festlegen der Eigenschaften einer Datenflusskomponente im Eigenschaftenfenster  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Legen Sie die Eigenschaften einer Datenflusskomponente mithilfe des erweiterten Editors  
+## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Festlegen der Eigenschaften einer Datenflusskomponente mit dem erweiterten Editor  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -130,40 +132,40 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|ComponentClassID|String|Die CLSID der Komponente.|  
-|ContactInfo|String|Kontaktinformationen für den Entwickler einer Komponente.|  
-|Description|String|Die Beschreibung der Datenflusskomponente. Der Standardwert dieser Eigenschaft entspricht dem Namen der Datenflusskomponente.|  
-|ID|Integer|Ein Wert, der diese Instanz der Komponente eindeutig identifiziert.|  
-|IdentificationString|String|Identifiziert die Komponente.|  
+|ComponentClassID|Zeichenfolge|Die CLSID der Komponente.|  
+|ContactInfo|Zeichenfolge|Kontaktinformationen für den Entwickler einer Komponente.|  
+|Description|Zeichenfolge|Die Beschreibung der Datenflusskomponente. Der Standardwert dieser Eigenschaft entspricht dem Namen der Datenflusskomponente.|  
+|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der diese Instanz der Komponente eindeutig identifiziert.|  
+|IdentificationString|Zeichenfolge|Identifiziert die Komponente.|  
 |IsDefaultLocale|Boolean|Gibt an, ob die Komponente das Gebietsschema des Datenflusstasks verwendet, zu dem es gehört.|  
 |LocaleID|Integer|Das Gebietsschema, das die Datenflusskomponente verwendet, wenn das Paket ausgeführt wird. Alle Windows-Gebietsschemas sind zur Verwendung in Datenflusskomponenten verfügbar.|  
-|Name|String|Der Name der Datenflusskomponente.|  
+|Name|Zeichenfolge|Der Name der Datenflusskomponente.|  
 |PipelineVersion|Integer|Die Version des Datenflusstasks, innerhalb derer eine Komponente zur Ausführung entworfen wird.|  
 |UsesDispositions|Boolean|Gibt an, ob eine Komponente über eine Fehlerausgabe verfügt.|  
 |ValidateExternalMetadata|Boolean|Gibt an, ob die Metadaten externer Spalten überprüft werden. Der Standardwert dieser Eigenschaft ist **True**.|  
-|Version|Integer|Die Version einer Komponente.|  
+|Versionsoptionen|Integer|Die Version einer Komponente.|  
   
-###  <a name="inputs"></a>Eingabeeigenschaften  
+###  <a name="inputs"></a> Eingabeeigenschaften  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verfügen Transformationen und Ziele über Eingaben. Eine Eingabe einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  Die folgende Tabelle beschreibt die Eigenschaften der Eingaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|Description|String|Die Beschreibung der Eingabe.|  
-|ErrorOrTruncationOperation|String|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
+|Description|Zeichenfolge|Die Beschreibung der Eingabe.|  
+|ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
 |HasSideEffects|Boolean|Gibt an, ob eine Komponente aus dem Ausführungsplan des Datenflusses entfernt werden kann, wenn diese nicht an eine Downstreamkomponente angefügt ist und **RunInOptimizedMode** auf **true**gesetzt ist.|  
-|ID|Integer|Ein Wert, der die Eingabe eindeutig identifiziert.|  
-|IdentificationString|String|Eine Zeichenfolge, die die Eingabe identifiziert.|  
+|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Eingabe eindeutig identifiziert.|  
+|IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Eingabe identifiziert.|  
 |IsSorted|Boolean|Gibt an, ob die Daten in der Eingabe sortiert werden.|  
-|Name|String|Der Name der Eingabe.|  
+|Name|Zeichenfolge|Der Name der Eingabe.|  
 |SourceLocale|Integer|Die Gebietsschema-ID (Locale ID, LCID) der Eingabedaten.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. . Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. zugreifen. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
   
  Ziele und einige Transformationen unterstützen keine Fehlerausgaben, und die Eigenschaften ErrorRowDisposition und TruncationRowDisposition dieser Komponenten sind schreibgeschützt.  
   
-###  <a name="inputcolumns"></a>Eigenschaften der Eingabespalten  
+###  <a name="inputcolumns"></a> Eigenschaften der Eingabespalten  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell enthält eine Eingabe eine Auflistung von Eingabespalten. Eine Eingabespalte einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Die folgende Tabelle beschreibt die Eigenschaften der Eingabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
@@ -171,23 +173,23 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Eine Gruppe von Flags, die den Vergleich von Spalten angeben, die über einen Zeichendatentyp verfügen. Weitere Informationen finden Sie unter [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Description|String|Beschreibt die Eingabespalte.|  
-|ErrorOrTruncationOperation|String|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
+|Description|Zeichenfolge|Beschreibt die Eingabespalte.|  
+|ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|Die ID der externen Metadatenspalte, die einer Eingabespalte zugewiesen ist.|  
-|ID|Integer|Ein Wert, der die Eingabespalte eindeutig identifiziert.|  
-|IdentificationString|String|Eine Zeichenfolge, die die Eingabespalte identifiziert.|  
+|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Eingabespalte eindeutig identifiziert.|  
+|IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Eingabespalte identifiziert.|  
 |LineageID|Integer|Die ID der Upstreamspalte.|  
-|LineageIdentificationString|String|Die Identifikationszeichenfolge, die den Namen der Upstreamspalte enthält.|  
-|Name|String|Der Name der Eingabespalte.|  
+|LineageIdentificationString|Zeichenfolge|Die Identifikationszeichenfolge, die den Namen der Upstreamspalte enthält.|  
+|Name|Zeichenfolge|Der Name der Eingabespalte.|  
 |SortKeyPosition|Integer|Ein Wert, der anzeigt, ob eine Spalte sortiert ist, und der die zugehörige Sortierreihenfolge und die Reihenfolge, in der mehrere Spalten sortiert werden, angibt. Der Wert **0** weist darauf hin, dass die Spalte nicht sortiert ist.  Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
-|UpstreamComponentName|String|Der Name der Upstreamkomponente.|  
+|UpstreamComponentName|Zeichenfolge|Der Name der Upstreamkomponente.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|Ein Wert, der bestimmt, wie eine Eingabespalte von der Komponente verwendet wird.|  
   
  Eingabespalten verfügen auch über die Datentypeigenschaften, die unter "Datentypeigenschaften" beschrieben sind.  
   
-###  <a name="outputs"></a>Ausgabeeigenschaften  
+###  <a name="outputs"></a> Ausgabeeigenschaften  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verfügen Quellen und Transformationen über Ausgaben. Eine Ausgabe einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  Die folgende Tabelle beschreibt die Eigenschaften der Ausgaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
@@ -195,20 +197,20 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|Ein Wert, der bestimmt, ob ein Datenflussmodul die Ausgabe löscht, wenn sie von einem Pfad getrennt wird.|  
-|Description|String|Beschreibt die Ausgabe.|  
-|ErrorOrTruncationOperation|String|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
+|Description|Zeichenfolge|Beschreibt die Ausgabe.|  
+|ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
 |ExclusionGroup|Integer|Ein Wert, der eine Gruppe sich gegenseitig ausschließender Ausgaben identifiziert.|  
 |HasSideEffects|Boolean|Ein Wert, der angibt, ob eine Komponente aus dem Ausführungsplan des Datenflusses entfernt werden kann, wenn diese nicht an eine Upstreamkomponente angefügt ist und **RunInOptimizedMode** auf **true**gesetzt ist.|  
-|ID|Integer|Ein Wert, der die Ausgabe eindeutig identifiziert.|  
-|IdentificationString|String|Eine Zeichenfolge, die die Ausgabe identifiziert.|  
+|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Ausgabe eindeutig identifiziert.|  
+|IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Ausgabe identifiziert.|  
 |IsErrorOut|Boolean|Gibt an, ob es sich bei der Ausgabe um eine Fehlerausgabe handelt.|  
-|IsSorted|Boolean|Gibt an, ob die Ausgabe sortiert wird. Der Standardwert ist **False**.<br /><br /> **\*\*Wichtige \* \***  Festlegen des Werts der **IsSorted** Eigenschaft, um **"true"** werden die Daten nicht sortiert. Diese Eigenschaft ist lediglich ein Hinweis für die Downstreamkomponenten, dass die Daten vorher sortiert wurden. Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Name|String|Der Name der Ausgabe.|  
+|IsSorted|Boolean|Gibt an, ob die Ausgabe sortiert wird. Der Standardwert ist **False**.<br /><br /> **\*\* Wichtig \*\*** Durch die Festlegung des Werts für die Eigenschaft **IsSorted** auf **TRUE** werden keine Daten sortiert. Diese Eigenschaft ist lediglich ein Hinweis für die Downstreamkomponenten, dass die Daten vorher sortiert wurden. Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|Name|Zeichenfolge|Der Name der Ausgabe.|  
 |SynchronousInputID|Integer|Die ID einer Eingabe, die zur Ausgabe synchron ist.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
   
-###  <a name="outputcolumns"></a>Eigenschaften der Ausgabespalten  
+###  <a name="outputcolumns"></a> Eigenschaften der Ausgabespalten  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell enthält eine Ausgabe eine Auflistung von Ausgabespalten. Eine Ausgabespalte einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Die folgende Tabelle beschreibt die Eigenschaften der Ausgabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
@@ -216,15 +218,15 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Eine Gruppe von Flags, die den Vergleich von Spalten angeben, die über einen Zeichendatentyp verfügen. Weitere Informationen finden Sie unter [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Description|String|Beschreibt die Ausgabespalte.|  
-|ErrorOrTruncationOperation|String|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
+|Description|Zeichenfolge|Beschreibt die Ausgabespalte.|  
+|ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**. Der Standardwert lautet **Fehler bei Komponente**.|  
 |ExternalMetadataColumnID|Integer|Die ID der externen Metadatenspalte, die einer Eingabespalte zugewiesen ist.|  
-|ID|Integer|Ein Wert, der die Ausgabespalte eindeutig identifiziert.|  
-|IdentificationString|String|Eine Zeichenfolge, die die Ausgabespalte identifiziert.|  
+|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Ausgabespalte eindeutig identifiziert.|  
+|IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Ausgabespalte identifiziert.|  
 |LineageID|Integer|Die ID der Ausgabespalte. Downstreamkomponenten verweisen auf die Spalte, indem sie diesen Wert verwenden.|  
-|LineageIdentificationString|String|Die Identifikationszeichenfolge, die den Namen der Spalte enthält.|  
-|Name|String|Der Name der Ausgabespalte.|  
+|LineageIdentificationString|Zeichenfolge|Die Identifikationszeichenfolge, die den Namen der Spalte enthält.|  
+|Name|Zeichenfolge|Der Name der Ausgabespalte.|  
 |SortKeyPosition|Integer|Ein Wert, der anzeigt, ob eine Spalte sortiert ist, und der die zugehörige Sortierreihenfolge und die Reihenfolge, in der mehrere Spalten sortiert werden, angibt. Der Wert **0** weist darauf hin, dass die Spalte nicht sortiert ist. Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Integer|Ein Wert, der die speziellen Flags der Ausgabespalte enthält.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**. Der Standardwert lautet **Fehler bei Komponente**.|  
@@ -238,10 +240,10 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|Description|String|Beschreibt die externe Spalte.|  
-|ID|Integer|Ein Wert, der die Spalte eindeutig identifiziert.|  
-|IdentificationString|String|Eine Zeichenfolge, die die Spalte identifiziert.|  
-|Name|String|Der Name der externen Spalte.|  
+|Description|Zeichenfolge|Beschreibt die externe Spalte.|  
+|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Spalte eindeutig identifiziert.|  
+|IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Spalte identifiziert.|  
+|Name|Zeichenfolge|Der Name der externen Spalte.|  
   
  Externe Metadatenspalten schließen auch eine Gruppe von Datentypeigenschaften ein.  
   
@@ -259,7 +261,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |Dezimalstellen|Integer|Die Dezimalstellen einer numerischen Spalte.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>Benutzerdefinierte Eigenschaften von Datenflusskomponenten
-Informationen zu benutzerdefinierten Eigenschaften finden Sie unter den folgenden Themen  
+Informationen zu benutzerdefinierten Eigenschaften finden Sie unter den folgenden Themen.  
   
 -   [Benutzerdefinierte Eigenschaften von ADO.NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -332,7 +334,7 @@ In diesem Verfahren wird beschrieben, wie ein Ausdruck der Transformation für b
     > [!NOTE]  
     >  Wenn der Ausdruck ungültig ist, wird eine Warnung angezeigt, die die Syntaxfehler im Ausdruck beschreibt.  
 
-## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>Data Flow-Eigenschaften, die Sie mit einem Ausdruck festlegen können
+## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>Datenflusseigenschaften, die Sie mit einem Ausdruck festlegen können
 Die Werte mancher Eigenschaften von Datenflussobjekten können mithilfe von Eigenschaftsausdrücken festgelegt werden, die im Datenflusstask-Container verfügbar sind.  
   
  Weitere Informationen zum Verwenden von Eigenschaftsausdrücken finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
@@ -375,7 +377,6 @@ Die Werte mancher Eigenschaften von Datenflussobjekten können mithilfe von Eige
 |----------------------|--------------|  
 |ADO NET-Ziel|TableOrViewName-Eigenschaft<br /><br /> BatchSize-Eigenschaft<br /><br /> CommandTimeout-Eigenschaft|  
 |Flatfileziel|Header-Eigenschaft|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact-Ziel|TableName-Eigenschaft|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Ziel|BulkInsertTableName-Eigenschaft<br /><br /> BulkInsertFirstRow-Eigenschaft<br /><br /> BulkInsertLastRow-Eigenschaft<br /><br /> BulkInsertOrder-Eigenschaft<br /><br /> Timeout-Eigenschaft|  
-
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Ziel|TableName-Eigenschaft|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel|BulkInsertTableName-Eigenschaft<br /><br /> BulkInsertFirstRow-Eigenschaft<br /><br /> BulkInsertLastRow-Eigenschaft<br /><br /> BulkInsertOrder-Eigenschaft<br /><br /> Timeout-Eigenschaft|  
 

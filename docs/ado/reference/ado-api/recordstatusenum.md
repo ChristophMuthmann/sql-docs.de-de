@@ -3,7 +3,7 @@ title: RecordStatusEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2315d18add9b25aab826d47346d8725aaa2af6e7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bf2413bed1bbdf96b83b7e805aac90529a721c9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) eines Datensatzes in Bezug auf BatchUpdates und andere Massenvorgänge.  
@@ -81,5 +80,4 @@ Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-records
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Status-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
-
+ [Status-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

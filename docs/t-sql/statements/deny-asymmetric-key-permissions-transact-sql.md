@@ -3,8 +3,11 @@ title: "Verweigern von Berechtigungen für asymmetrische Schlüssel (Transact-SQ
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - DENY statement, asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
-caps.latest.revision: 14
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 386db84b88813109e10d951689868a5c3931cff9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0bb7e6f9b92c7fc241f8fcc1b947f76151f1cbc3
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY-Berechtigungen für asymmetrischen Schlüssel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Verweigert Berechtigungen für einen asymmetrischen Schlüssel.  
    
@@ -121,4 +123,3 @@ DENY { permission  [ ,...n ] }
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

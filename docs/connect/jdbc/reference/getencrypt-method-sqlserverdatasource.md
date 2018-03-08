@@ -3,29 +3,28 @@ title: GetEncrypt-Methode (SQLServerDataSource) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- getEncrypt Method (SQLServerDataSource)
-apilocation:
-- getEncrypt Method (SQLServerDataSource)
+apiname: getEncrypt Method (SQLServerDataSource)
+apilocation: getEncrypt Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cb76a00e1fdf8b2999675bc1949e8cc06ff25d9b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8edaf27e2c08b1738d8dedc3e059c0fecb5043b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>getEncrypt-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,4 +51,3 @@ public boolean getEncypt()
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

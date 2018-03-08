@@ -3,7 +3,7 @@ title: 'RecordsetEvents (Visual C++-Syntax Index mit #import) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - RecordsetEvents collection [ADO]
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7b30117acb4aa0a621b7bb1b2361b09b58912d99
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5970d6b6b3bb4ed5cca023628e0f52f4dc09c082
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (Visual C++-Syntax Index mit #import)
 ## <a name="events"></a>Ereignisse  
@@ -74,4 +73,3 @@ HRESULT FetchProgress( long Progress, long MaxProgress,
 HRESULT FetchComplete( struct Error * pError, enum  
     EventStatusEnum *     adStatus, struct _Recordset * pRecordset );  
 ```
-

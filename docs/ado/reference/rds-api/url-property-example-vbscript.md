@@ -1,12 +1,14 @@
 ---
 title: Die URL-Eigenschaft-Beispiel (VBScript) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - URL property [ADO], VBScript example
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f0e52c9d5d1c303c742afceb0b6e47049e649d41
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1acc05ce21e4d187745a326744be96d3c4b43fc0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="url-property-example-vbscript"></a>Die URL-Eigenschaft-Beispiel (VBScript)
 > [!IMPORTANT]
@@ -145,6 +146,5 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [URL-Eigenschaft (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
-
 
 

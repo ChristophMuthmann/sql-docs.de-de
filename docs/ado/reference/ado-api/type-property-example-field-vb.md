@@ -3,7 +3,7 @@ title: Geben Sie die Beispiel-Eigenschaft (Feld) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9741763935e0c9bafc68402c2898ee1278fec5f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7499b482e01272d0307de4d5daf6f785946b525
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-example-field-vb"></a>Beispiel für Eigenschaft (Feld) (VB)
 In diesem Beispiel wird veranschaulicht, die [Typ](../../../ado/reference/ado-api/type-property-ado.md) durch Anzeigen der Namen der Konstanten entspricht, die auf den Wert der Eigenschaft der [Typ](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft aller der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Mitarbeiter*** Tabelle. Die FieldType-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
@@ -116,4 +115,3 @@ Attribute VB_Name = "TypeField"
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-

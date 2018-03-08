@@ -2,9 +2,12 @@
 title: GeometryCollection | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad3b942675c879183f8be2fe8bc8b82effee8bf2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 30eca98c9f63563e5556cb7db440f9a9f472abe2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  Ein **GeometryCollection** -Objekt ist eine Auflistung von null oder mehr **geometry** - oder **geography** -Instanzen. Eine **GeometryCollection** kann leer sein.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Ein **GeometryCollection** -Objekt ist eine Auflistung von null oder mehr **geometry** - oder **geography** -Instanzen. Eine **GeometryCollection** kann leer sein.  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection-Instanzen  
   
@@ -68,8 +71,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
-

@@ -2,13 +2,13 @@
 title: Grundlegendes zur inkrementellen Generierung | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8527382a85e1e85fb7981e69ea02304d2a7a940c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
-  Nach der Generierung des Anfangsschemas können Sie Cube- und Dimensionsdefinitionen mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern und dann den Schemagenerierungs-Assistenten erneut ausführen. Der Assistent aktualisiert das Schema in der Themenbereichsdatenbank und in der zugehörigen Datenquellensicht, um die Änderungen wiederzugeben. Dabei werden die aktuell in den erneut zu generierenden Tabellen vorhandenen Daten so weit wie möglich beibehalten. Wenn Sie die Tabellen nach der Anfangsgenerierung geändert haben, werden diese Änderungen, falls möglich, vom Schemagenerierungs-Assistenten unter Berücksichtigung folgender Regeln beibehalten:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Nach der Generierung des Anfangsschemas können Sie Cube- und Dimensionsdefinitionen mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern und dann den Schemagenerierungs-Assistenten erneut ausführen. Der Assistent aktualisiert das Schema in der Themenbereichsdatenbank und in der zugehörigen Datenquellensicht, um die Änderungen wiederzugeben. Dabei werden die aktuell in den erneut zu generierenden Tabellen vorhandenen Daten so weit wie möglich beibehalten. Wenn Sie die Tabellen nach der Anfangsgenerierung geändert haben, werden diese Änderungen, falls möglich, vom Schemagenerierungs-Assistenten unter Berücksichtigung folgender Regeln beibehalten:  
   
 -   Wurde eine Tabelle vorher vom Assistenten generiert, wird die Tabelle überschrieben. Sie können verhindern, dass eine vom Assistenten erstellte Tabelle überschrieben wird, indem Sie die **AllowChangesDuringGeneration** -Eigenschaft für die Tabelle in der Datenquellensicht in **false**ändern. Wenn Sie die Steuerung einer Tabelle übernehmen, wird die Tabelle wie jede andere benutzerdefinierte Tabelle behandelt und bleibt von der erneuten Generierung unberührt. Wenn Sie eine Tabelle aus der Generierung entfernen, können Sie die **AllowChangesDuringGeneration** -Eigenschaft für die Tabelle später in der Datenquellensicht in **true** ändern und die Tabelle für Änderungen durch den Assistenten erneut öffnen. Weitere Informationen finden Sie unter [Ändern von Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   
@@ -92,7 +92,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Änderungen an Datenquellensichten und Datenquellen](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [Schemagenerierungs-Assistent &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   
-

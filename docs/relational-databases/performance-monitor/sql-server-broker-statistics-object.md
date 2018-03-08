@@ -2,32 +2,34 @@
 title: SQL Server, Broker-Statistik-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "32"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4dfb78d1b381649353ef872ed22e0bb4725d65cc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker-Statistik-Objekt
-  Das SQLServer:Broker-Leistungsobjekt enthält Leistungsindikatoren mit allgemeinen Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In der folgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das SQLServer:Broker-Statistik-Leistungsobjekt enthält Leistungsindikatoren mit allgemeinen Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In der folgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet:  
   
-|Broker-Statistik-Leistungsindikatoren in SQL Server|Beschreibung|  
+|Broker-Statistik-Leistungsindikatoren in SQL Server|Description|  
 |-------------------------------------------|-----------------|  
 |**Aktivierungsfehler gesamt**|Die Häufigkeit, mit der eine gespeicherte [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Aktivierungsprozedur mit einem Fehler beendet wurde.|  
 |**Broker-Transaktionsrollbacks**|Die Anzahl von Transaktionen, die auf [!INCLUDE[ssSB](../../includes/sssb-md.md)]bezogene DML-Anweisungen enthalten, für die ein Rollback ausgeführt wurde, z. B. SEND und RECEIVE.|  
@@ -67,7 +69,7 @@ ms.lasthandoff: 06/22/2017
 |**SQL SEND-Befehle gesamt**|Die Gesamtzahl der ausgeführten [!INCLUDE[tsql](../../includes/tsql-md.md)] -SEND-Anweisungen.|  
 |**SQL SEND-Befehle/Sekunde**|Die Anzahl der pro Sekunde ausgeführten [!INCLUDE[tsql](../../includes/tsql-md.md)] -SEND-Anweisungen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

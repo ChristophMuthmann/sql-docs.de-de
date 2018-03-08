@@ -3,26 +3,28 @@ title: "Häufige Probleme mit der externen skriptausführung in SQL Server | Mic
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Häufige Probleme mit der externen skriptausführung in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel enthält eine Liste der bekannten Probleme und allgemeine Probleme im Zusammenhang mit R oder Python-Code in SQL Server.
 
@@ -191,9 +193,9 @@ Wenn Sie installiert und aktiviert dann Machine Learning, aber Sie diesen Fehler
 
 4. Neustarten des Diensts in der Regel wird das Problem behebt, sodass Machine Learning-Skripts ausgeführt werden können. Wenn der Neustart nicht das Problem behoben wird, beachten Sie den Pfad und den Argumenten in der **Binärpfad** -Eigenschaft, und führen Sie folgende Schritte:
 
-    a. Überprüfen Sie das Startprogramm config-Datei, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
+    A. Überprüfen Sie das Startprogramm config-Datei, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
 
-    b. Stellen Sie sicher, dass die Windows-Gruppe, die vom Launchpad verwendet SQL Server-Instanz herstellen kann wie in beschrieben die [vorherigen Abschnitt](#bkmk_LaunchpadTS).
+    B. Stellen Sie sicher, dass die Windows-Gruppe, die vom Launchpad verwendet SQL Server-Instanz herstellen kann wie in beschrieben die [vorherigen Abschnitt](#bkmk_LaunchpadTS).
 
     c. Wenn Sie die Diensteigenschaften nicht ändern, starten Sie den Launchpad-Dienst neu.
 
@@ -335,4 +337,3 @@ Um das Problem zu beheben, müssen Sie das Paket in der Bibliothek der SQL Serve
 [Häufig gestellte Fragen zu Upgrade und Installation](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Problembehandlung bei Datenbank-Engine-Verbindungen](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
-

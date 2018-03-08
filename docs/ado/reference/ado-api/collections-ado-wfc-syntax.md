@@ -3,7 +3,7 @@ title: Auflistungen (ADO - WFC-Syntax) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - collections [ADO], ADO/WFC syntax
 - ADO/WFC syntax index [ADO]
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 81a6c1f1c7ad0827b605e8e63c85a16efc1b51b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f373056679c001244f6566bb85cb203806215883
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="collections-ado---wfc-syntax"></a>Auflistungen (ADO - WFC-Syntax)
-**Paket com.ms.wfc.data**  
+**package com.ms.wfc.data**  
   
 ## <a name="parameters"></a>Parameter  
   
@@ -93,5 +92,4 @@ public int getCount()
 ## <a name="see-also"></a>Siehe auch  
  [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
-
+ [Parameters-Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

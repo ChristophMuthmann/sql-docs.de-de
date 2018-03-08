@@ -3,26 +3,26 @@ title: Operatoren (Knoten der F1-Hilfe des SQL Server-Agents) | Microsoft-Dokume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f3665edc-b030-4c83-9ce7-2dfd39c6b398
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 30cbb7fdfa42c543187fadea82785261801ef7cc
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 54d3f24d8459fb69717b1e6cfbddd7a39a1316b1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>Operatoren (Knoten der F1-Hilfe des SQL Server-Agents)
-Dieser Abschnitt enthält die F1-Hilfe zum Knoten **Operatoren** des Objekt-Explorers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält die F1-Hilfe zum Knoten **Operatoren** des Objekt-Explorers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-

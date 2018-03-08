@@ -2,32 +2,36 @@
 title: Deinstallieren und Entfernen von Master Data Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9d936f9a9726a5d7dd5a214cdc813a8634119600
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bf5fe32060d6026c6a62b589fbdd991ef561eda6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Deinstallieren und Entfernen von Master Data Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Um die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Funktion von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu deinstallieren, befolgen Sie die Schritte unter [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) und geben auf der Seite **Funktionen auswählen** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] als zu entfernende Funktion an. Durch den Deinstallationsvorgang werden [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Ordner und -Dateien entfernt und [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] vom lokalen Computer deinstalliert.  
   
  Um Datenverluste oder Auswirkungen auf andere Computer im System zu verhindern, werden bestimmte Elemente vom Deinstallationsvorgang nicht entfernt oder geändert. Überprüfen Sie anhand der folgenden Tabelle, welche Elemente beibehalten und welche Elemente entfernt werden sollten.  
   
-|Element|Beschreibung|  
+|Element|Description|  
 |----------|-----------------|  
 |Ordner und Dateien|Beim Deinstallationsvorgang werden die meisten Ordner und Dateien aus dem Installationspfad entfernt.<br /><br /> Die Ordner Master Data Services und MDSTempDir werden durch den Deinstallationsvorgang jedoch nicht aus dem Installationspfad gelöscht. Nach Abschluss der Deinstallation können Sie diese Ordner manuell aus dem Dateisystem löschen. Weitere Informationen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Assemblys|Der Deinstallationsvorgang entfernt [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Assemblys aus dem Global Assembly Cache (GAC).|  
@@ -37,8 +41,7 @@ ms.lasthandoff: 06/22/2017
 |Gruppe**MDS_ServiceAccounts** |Nach Abschluss des Deinstallationsvorgangs bleiben die Windows-Gruppe **MDS_ServiceAccounts** und alle Dienstkonten, die der Gruppe hinzugefügt wurden, erhalten. Wenn Sie die Gruppe und die Konten nicht mehr benötigen, können Sie sie entfernen.|  
 |Registrierung|Der Deinstallationsvorgang entfernt alle [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Registrierungsschlüssel aus der Windows-Registrierung.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

@@ -3,7 +3,7 @@ title: ADO-Fehler | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 06fc6433f6f1d5f00b7b6d619dce9169e1fb67c3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 54a44c69afd01647c5dca1cab97993f890d81c21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-run-time-errors"></a>ADO-Laufzeitfehler
 ADO-Fehler werden in Ihrem Programm als Laufzeitfehler gemeldet. Das Abfangen von Fehlern-Mechanismus von der Programmiersprache können zum Abfangen und behandeln. In Visual Basic verwenden, z. B. die **On Error** Anweisung. In Visual C++ hängt von der Methode, die Sie verwenden, um die ADO-Bibliotheken zugreifen. #Import verwenden eine **Try-Catch-** Block. Andernfalls müssen C++-Programmierer das Fehlerobjekt explizit durch den Aufruf abrufen **GetErrorInfo**. Die folgenden Visual Basic-Unterprozedur veranschaulicht Auffangen einen ADO-Fehler:
@@ -105,5 +104,4 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 
  Das folgende Thema enthält Informationen zum ADO-Fehler.
 
--   [ADO-Fehlerreferenz](../../../ado/guide/data/ado-error-reference.md)
-
+-   [ADO Error Reference (ADO-Fehlerreferenz)](../../../ado/guide/data/ado-error-reference.md)

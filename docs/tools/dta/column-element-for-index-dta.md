@@ -2,32 +2,31 @@
 title: "Column-Element für Index (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Column element
+dev_langs: XML
+helpviewer_keywords: Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ec9be70ff9d3605159bd47c4a4fd77f5bb1c6111
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7aaf1a73356f2e5a2732e12e49b7e618c3bf1f0e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-element-for-index-dta"></a>Column-Element für Index (DTA)
-  Gibt die Spalten an, für die der Index für eine benutzerspezifische Konfiguration erstellt wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die Spalten, auf denen der Index für eine benutzerspezifische Konfiguration erstellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -93,4 +92,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

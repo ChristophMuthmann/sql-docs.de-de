@@ -1,12 +1,14 @@
 ---
-title: Erstellen einer benutzerdefinierten Datenflusskomponente | Microsoft Docs
+title: Erstellen einer benutzerdefinierten Datenflusskomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - data flow components [Integration Services]
 - data flow components [Integration Services], developing
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 565a2b8e48537cea20a8e509cf5b6d7b59cc12f0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9a30545a60e028a4d2e1027ba139cee9e461f64d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Erstellen einer benutzerdefinierten Datenflusskomponente
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], die vom Datenflusstask ein Objektmodell, das Entwicklern das Erstellen von benutzerdefinierten Datenflusskomponenten kann zur Verfügung – Quellen, Transformationen und Ziele – mithilfe der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] und verwaltetem Code.  
+  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt der Datenflusstask ein Objektmodell zur Verfügung, das Entwicklern das Erstellen von benutzerdefinierten Datenflusskomponenten (Quellen, Transformationen und Ziele) anhand von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] und verwaltetem Code ermöglicht.  
   
  Ein Datenflusstask besteht aus Komponenten, die eine <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle und eine Auflistung von <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>-Objekten enthalten, die die Verschiebung von Daten zwischen Komponenten definieren.  
   
@@ -89,8 +90,7 @@ Public Class BasicComponent
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
   
   
-

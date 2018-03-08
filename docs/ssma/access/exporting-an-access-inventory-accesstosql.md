@@ -1,12 +1,14 @@
 ---
 title: Exportieren eine Access-Inventur (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +24,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55f91e6b5e83b3a317f74b71e591de7e08009413
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren eine Access-Inventur (AccessToSQL)
 Wenn Sie mehrere Access-Datenbanken verfügen und Sie nicht sicher, welche Informationen zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können anschließend überprüfen und Fragen Sie die Metadaten Inventar, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Diese Inventur können Sie schnell beantwortet Fragen, wie die folgenden:  
@@ -238,4 +239,3 @@ Wenn Sie den Spaltennamen nicht kennen, können Sie eine Abfrage aus, um alle Sp
 ## <a name="see-also"></a>Siehe auch  
 [Access-Datenbanken vorbereitet für die Migration.](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
-

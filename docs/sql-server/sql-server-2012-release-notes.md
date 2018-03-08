@@ -1,30 +1,31 @@
 ---
 title: Versionsanmerkungen zu SQL Server 2012 | Microsoft-Dokumentation
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
-In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in Microsoft SQL Server 2012 ([zum Herunterladen hier klicken](http://go.microsoft.com/fwlink/?LinkId=238647)) beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in Microsoft SQL Server 2012 beginnen ([zum Herunterladen hier klicken](http://go.microsoft.com/fwlink/?LinkId=238647)). Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
   
 Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2012 erhalten Sie in der SQL Server 2012-Infodatei. Die Infodatei steht auf den Installationsmedien und auf der [Infodatei](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) -Downloadseite zur Verfügung. Weitere Informationen finden Sie auch in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=190948) und in den [SQL Server-Foren](http://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -505,9 +506,9 @@ In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbark
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|ja|ja|ja|ja|ja|  
 |SQL Native Client 11.0 OLEDB|Nein|Ja|ja|Nein|Nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|ja|ja|ja|ja|ja|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|ja|ja|ja|ja|ja|  
-|Microsoft JDBC Driver 4.0 für SQL Server|ja|ja|ja|ja|ja|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|Benutzerkontensteuerung|ja|ja|ja|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Benutzerkontensteuerung|ja|ja|ja|ja|  
+|Microsoft JDBC Driver 4.0 für SQL Server|ja|ja|ja|ja|Benutzerkontensteuerung|  
   
 **\&#42;** Laden Sie das Konnektivitätspatch für ADO.NET mit .NET Framework 4.0 herunter: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
@@ -637,4 +638,3 @@ Problem: Beim Versuch, Upgrade Advisor auf einer unterstützten Windows-Version 
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
-

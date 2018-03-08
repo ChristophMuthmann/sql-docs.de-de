@@ -1,29 +1,30 @@
 ---
 title: Konvertierungseinstellungen (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d19688f630a71ff111a755b6810379b06fd129d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b83e86ce201343d624974244a9d551fb1016d3e7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversion-settings-mysqltosql"></a>Konvertierungseinstellungen (MySQLToSQL)
 Die **"Einstellungen"** Registerkarte kann der Benutzer knoteneinstellungen festgelegt. Die Registerkarte "an den folgenden Knoten der Metabasis zur Verfügung:  
@@ -75,7 +76,7 @@ Diese Einstellungen werden basierend auf den Typ des Metabase-Knotens. Beispiels
   
         -   ja  
   
-        -   Nein  
+        -   nein  
   
         -   Konvertieren Sie gemäß den Einstellungen für Projektdateien  
   
@@ -86,4 +87,3 @@ Diese Einstellungen werden basierend auf den Typ des Metabase-Knotens. Beispiels
 ## <a name="see-also"></a>Siehe auch  
 [Projekteinstellungen (Konvertierung) (MySQL zu SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   
-

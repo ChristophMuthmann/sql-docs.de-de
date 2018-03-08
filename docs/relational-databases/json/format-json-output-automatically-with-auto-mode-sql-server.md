@@ -1,11 +1,12 @@
 ---
 title: Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus (SQL Server) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -13,20 +14,19 @@ ms.topic: article
 helpviewer_keywords:
 - FOR JSON AUTO
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: a2992cb4066c08fc27656bc95e600052c71a5429
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 0a1219eb4dac8621ef678cf309ef36b4b039536b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Wenn die Ausgabe der **FOR JSON**-Klausel automatisch entsprechend der Struktur der **SELECT**-Anweisung formatiert werden soll, geben Sie die Option **AUTO** an.  
   
@@ -43,7 +43,7 @@ Nachstehend finden Sie einige Beispiele für die **FOR JSON** -Klausel mit der O
 ## <a name="examples"></a>Beispiele
 
 ### <a name="example-1"></a>Beispiel 1
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 Die Ergebnisse der FOR JSON AUTO-Klausel ähneln den Ergebnissen von FOR JSON PATH, wenn nur eine Tabelle in der Abfrage verwendet wird. In diesem Fall erstellt FOR JSON AUTO keine geschachtelten Objekte. Der einzige Unterschied besteht darin, dass FOR JSON AUTO durch Punkt getrennte Aliase (z.B. `Info.MiddleName` im folgenden Beispiel) als Schlüssel mit Punkten ausgibt, nicht als geschachtelte Objekte.  
   
@@ -89,7 +89,7 @@ SELECT TOP 5
 
 ### <a name="example-2"></a>Beispiel 2
 
-**Abfrage**  
+**Dataseteigenschaften**  
   
 Wenn Sie Tabellen verknüpfen, werden die Spalten der ersten Tabelle als Eigenschaften des Stammobjekts generiert. Die Spalten der zweiten Tabelle werden als Eigenschaften eines geschachtelten Objekts generiert. Der Tabellenname oder Alias der zweiten Tabelle (z.B. `D` im folgenden Beispiel) wird als Name des geschachtelten Arrays verwendet.  
   
@@ -127,7 +127,7 @@ FOR JSON AUTO
 
 ### <a name="example-3"></a>Beispiel 3
  
-**Abfrage**  
+**Dataseteigenschaften**  
 Statt FOR JSON AUTO zu verwenden, können Sie eine FOR JSON PATH-Unterabfrage in der SELECT-Anweisung schachteln, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird das gleiche Ergebnis ausgegeben wie im vorherigen Beispiel.  
   
 ```sql  
@@ -160,9 +160,21 @@ FOR JSON PATH
 }]
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
 
-## <a name="see-also"></a>Siehe auch  
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
-

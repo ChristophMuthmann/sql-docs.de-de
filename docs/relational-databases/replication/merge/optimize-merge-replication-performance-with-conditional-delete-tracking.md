@@ -2,11 +2,13 @@
 title: "Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,18 +16,19 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], conditional delete tracking
 - articles [SQL Server replication], conditional delete tracking
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61f3c832be62fb53a82713182dc026d7a6fc3fb5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: aeba53d29f3a038e16d6b99ba5ffdd383fea913f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -52,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41; (Angeben, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen &#40;Replication Transact-SQL Programming&#41;)](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Artikeloptionen für die Mergereplikation](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   

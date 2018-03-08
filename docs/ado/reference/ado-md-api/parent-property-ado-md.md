@@ -3,7 +3,7 @@ title: Parent-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Parent property [ADO MD]
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7079b2e3c5871c8f048632fd854266a08dcf672e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: baee402a130847f732583db8de376c120acb1bfb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parent-property-ado-md"></a>Parent-Eigenschaft (ADO MD)
 Gibt das Element, das das übergeordnete Element des aktuellen [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) in einer Hierarchie.  
@@ -45,4 +44,3 @@ Gibt das Element, das das übergeordnete Element des aktuellen [Member](../../..
   
 ## <a name="see-also"></a>Siehe auch  
  [Children-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)
-

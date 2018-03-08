@@ -2,12 +2,13 @@
 title: Microsoft Neural Network-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,20 +25,20 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53869c8e03d3b4c289872351e59579d49aa193e2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus ist eine Implementierung der beliebten und anpassbaren Architektur für neuronale Netzwerke für das Machine Learning.  Der Algorithmus testet jeden möglichen Status des Eingabeattributs mit jedem möglichen Status des vorhersagbaren Attributs und nutzt die Trainingsdaten für die Berechnung der Wahrscheinlichkeiten für jede Kombination. Sie können diese Wahrscheinlichkeiten später für Klassifizierungs- oder Regressionstasks und für die Vorhersage eines Ergebnisses auf Basis einiger Eingabeattribute verwenden. Ein neuronales Netzwerk kann auch für die Zuordnungsanalyse verwendet werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus ist eine Implementierung der beliebten und anpassbaren Architektur für neuronale Netzwerke für das Machine Learning.  Der Algorithmus testet jeden möglichen Status des Eingabeattributs mit jedem möglichen Status des vorhersagbaren Attributs und nutzt die Trainingsdaten für die Berechnung der Wahrscheinlichkeiten für jede Kombination. Sie können diese Wahrscheinlichkeiten später für Klassifizierungs- oder Regressionstasks und für die Vorhersage eines Ergebnisses auf Basis einiger Eingabeattribute verwenden. Ein neuronales Netzwerk kann auch für die Zuordnungsanalyse verwendet werden.  
   
  Beim Erstellen eines Miningmodells mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus können Sie mehrere Ausgaben einschließen – der Algorithmus erstellt dann mehrere Netzwerke. Die Anzahl der Netzwerke in einem einzelnen Miningmodell ist abhängig von der Anzahl der Status (oder Attributwerte) in den Eingabespalten sowie die Anzahl der vorhersagbaren Spalten, die das Miningmodell verwendet, und der Anzahl der Status in diesen Spalten.  
   
@@ -95,10 +96,9 @@ ms.lasthandoff: 09/01/2017
 -   Unterstützt nicht die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Technische Referenz für den Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Technische Referenz zu Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Miningmodellinhalt, neuronale Netzwerkmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Neural Network-Abfragebeispiele](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   
-

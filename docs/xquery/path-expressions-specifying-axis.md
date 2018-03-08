@@ -3,8 +3,11 @@ title: Angeben einer Achse in einem Pfadausdrucksschritt | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c34c230f6df65610466e087da5707622c3911e42
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Path-Ausdrücken - Achse angeben
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Ein Achsenschritt in einem Pfadausdruck besteht aus den folgenden Komponenten:  
   
@@ -52,12 +54,12 @@ ms.lasthandoff: 09/01/2017
   
 |Axis|Description|  
 |----------|-----------------|  
-|**untergeordnetes Element**|Gibt die untergeordneten Elemente des Kontextknotens zurück.|  
-|**abhängiges Element**|Gibt alle nachfolgenden Elemente des Kontextknotens zurück.|  
-|**übergeordnete**|Gibt das übergeordnete Element des Kontextknotens zurück.|  
-|**Attribut**|Gibt die Attribute des Kontextknotens zurück.|  
-|**Self-Service**|Gibt den Kontextknoten selbst zurück.|  
-|**Descendant-or-self**|Gibt den Kontextknoten und alle nachfolgenden Elemente des Kontextknotens zurück.|  
+|**child**|Gibt die untergeordneten Elemente des Kontextknotens zurück.|  
+|**descendant**|Gibt alle nachfolgenden Elemente des Kontextknotens zurück.|  
+|**parent**|Gibt das übergeordnete Element des Kontextknotens zurück.|  
+|**attribute**|Gibt die Attribute des Kontextknotens zurück.|  
+|**self**|Gibt den Kontextknoten selbst zurück.|  
+|**descendant-or-self**|Gibt den Kontextknoten und alle nachfolgenden Elemente des Kontextknotens zurück.|  
   
  Alle diese Achsen, mit Ausnahme der **übergeordneten** Achse sind vorwärtsgerichtete Achsen. Die **übergeordneten** Achse ist eine rückwärtsgerichtete Achse, da er rückwärts in der Dokumenthierarchie sucht. Beispiel: Der relative Pfadausdruck `child::ProductDescription/child::Summary` enthält zwei Schritte, von denen jeder eine `child`-Achse angibt. Der erste Schritt Ruft die \<ProductDescription >-Elemente des Kontextknotens. Für jede \<ProductDescription > Elementknoten, der zweite Schritt Ruft die \<Zusammenfassung > untergeordneten Elementknoten.  
   
@@ -246,4 +248,3 @@ WHERE ProductModelID=19
  Beachten Sie, dass dem Pfadausdruck das Prädikat `[1]` hinzugefügt wird, um sicherzustellen, dass ein Singleton-Wert zurückgegeben wird.  
   
   
-

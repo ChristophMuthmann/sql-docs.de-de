@@ -1,10 +1,13 @@
 ---
-title: Lastenausgleich Pakete auf Remoteservern mithilfe von SQL Server-Agent | Microsoft Docs
+title: Lastenausgleich von Paketen auf Remoteservern mithilfe des SQL Server-Agents | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8a7b7c2d7abf766ea94cd74064292e17f1100f87
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Lastenausgleich von Paketen auf Remoteservern mithilfe des SQL Server-Agents
   Müssen viele Pakete ausgeführt werden, ist es praktisch, hierfür andere verfügbare Server zu verwenden. Diese Methode, bei der zum Ausführen von Paketen andere Server verwendet werden, während die Steuerung der Pakete über ein übergeordnetes Paket erfolgt, wird als Lastenausgleich bezeichnet. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]wird der Lastenausgleich manuell ausgeführt, wobei die Struktur des Verfahrens von den Besitzern der Pakete festgelegt werden muss. Dabei wird der Lastenausgleich nicht automatisch von den Servern ausgeführt. Des Weiteren müssen die auf den Remoteservern ausgeführten Pakete vollständige Pakete sein. Einzelne Tasks anderer Pakete sind dabei nicht zulässig.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>Abbildung des Lastenausgleichs  
  Im folgenden Diagramm wird ein übergeordnetes Paket auf einem Server angezeigt. Das übergeordnete Paket enthält mehrere Tasks Auftrag des SQL Server-Agents ausführen. Mit jedem Task des übergeordneten Pakets wird ein SQL Server-Agent auf einem Remoteserver aufgerufen. Diese Remoteserver enthalten SQL Server-Agent-Aufträge, die einen Schritt für den Aufruf eines Pakets auf diesem Server beinhalten.  
   
- ![Übersicht über die Architektur für SSIS-Lastenausgleich](../../integration-services/packages/media/loadbalancingoverview.gif "Lastenausgleich (Übersicht) des SSIS-Architektur")  
+ ![Übersicht über die SSIS-Architektur mit Lastenausgleich](../../integration-services/packages/media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
   
  Die in dieser Architektur für den Lastenausgleich erforderlichen Schritte stellen keine neuen Konzepte dar. Der Lastenausgleich wird nämlich erreicht, indem vorhandene Konzepte und allgemeine SSIS-Objekte auf neue Art und Weise verwendet werden.  
   
@@ -107,7 +109,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>Auflisten untergeordneter Pakete  
  Wenn Sie ein Projekt, das ein übergeordnetes Paket und untergeordnete Pakete enthält, über den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen, können Sie eine Liste der untergeordneten Pakete anzeigen lassen, die von den übergeordneten Paketen ausgeführt werden. Wenn Sie das übergeordnete Paket ausführen, wird automatisch für das übergeordnete Paket ein Bericht **Übersicht** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellt. Der Bericht führt die untergeordneten Pakete auf, die vom Task "Paket ausführen" ausgeführt wurden, der sich im übergeordneten Paket befindet. Dies wird im folgenden Bild gezeigt.  
   
- ![Übersichtsbericht mit Liste der untergeordneten Pakete](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Übersichtsbericht mit Liste der untergeordneten Pakete")  
+ ![Übersichtsbericht mit einer Liste von untergeordneten Paketen](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
   
  Weitere Informationen zum Zugreifen auf den Bericht **Übersicht** finden Sie unter [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -129,10 +131,9 @@ ms.lasthandoff: 08/03/2017
   
  Zum Anzeigen der Protokolldateien muss sich der Administrator lediglich bei einem einzigen Server anmelden, um die Protokolldateien aller untergeordneten Pakete anzuzeigen.  
   
- Informationen zum Aktivieren der Protokollierung in einem Paket finden Sie unter [Integration Services (SSIS)-Protokollierung](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Informationen zum Ermöglichen der Protokollierung in einem Paket finden Sie unter [Integration Services-Protokollierung (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Aufträge des SQL Server-Agents für Pakete](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

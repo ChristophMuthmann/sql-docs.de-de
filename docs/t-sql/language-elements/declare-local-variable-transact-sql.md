@@ -3,8 +3,11 @@ title: Deklarieren Sie @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: 76
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70decceb0fb5bc34f5ac7a32c64ca80cb0977de2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6e56a4895dc5ec1ba03489ffc60e9f9e7b441d18
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>Deklarieren Sie @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Variablen werden im Hauptteil eines Batchs oder einer Prozedur mit einer DECLARE-Anweisung deklariert. Die Werte werden mithilfe einer SET- oder SELECT-Anweisung zugewiesen. Cursorvariablen können mit dieser Anweisung deklariert und mit anderen cursorspezifischen Anweisungen verwendet werden. Nach der Deklaration werden alle Variablen mit NULL initialisiert, es sei denn, ein Wert wurde als Teil der Deklaration angegeben.  
   
@@ -95,7 +97,7 @@ DECLARE
   
  Weitere Informationen zu Systemdatentypen finden Sie unter [Datentypen &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu benutzerdefinierten CLR-Typen oder Aliasdatentypen finden Sie unter [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*Wert*  
+ =*value*  
  Weist der Variablen inline einen Wert zu. Der Wert kann eine Konstante oder ein Ausdruck sein; auf jeden Fall muss er mit dem Typ der Variablendeklaration übereinstimmen oder implizit in diesen Typ konvertiert werden können. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
@@ -115,7 +117,7 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  *n*  
  Ein Platzhalter, der angibt, dass mehrere Variablen angegeben und ihnen Werte zugewiesen werden können. Beim Deklarieren von **Tabelle** Variablen, die **Tabelle** Variable muss die einzige Variable in der DECLARE-Anweisung deklariert wird.  
   
- *Spaltenname*  
+ *column_name*  
  Der Name der Spalte in der Tabelle.  
   
  *scalar_data_type*  
@@ -138,10 +140,10 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  IDENTITY  
  Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn die Tabelle eine neue Zeile hinzugefügt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereitstellt. Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft zugewiesen werden kann **"tinyint"**, **"smallint"**, **Int**, **decimal(p,0)**, oder **numeric(p,0)** Spalten. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder den Ausgangswert und den Schrittweitenwert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
- *Startwert*  
+ *seed*  
  Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.  
   
- *Inkrement*  
+ *increment*  
  Der Schrittweitenwert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
   
  ROWGUIDCOL  
@@ -159,7 +161,7 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  CHECK  
  Eine Einschränkung, die Domänenintegrität erzwingt, indem die möglichen Eingabewerte für eine oder mehrere Spalten beschränkt wird.  
   
- *Logical_Expression*  
+ *logical_expression*  
  Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -321,11 +323,10 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   
-
 
 
 

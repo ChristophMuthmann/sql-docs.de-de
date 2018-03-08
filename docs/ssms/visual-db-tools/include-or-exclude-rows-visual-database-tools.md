@@ -3,10 +3,12 @@ title: "Einschließen oder Ausschließen von Zeilen (Visual Database Tools) Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - row included in search [SQL Server]
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 020bbbcbae62267966e9fb020e3dc0f668cc977f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa0017d2b84109c6a40276d2853e3f06e005b845
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Einschließen oder Ausschließen von Zeilen (Visual Database Tools)
-Wenn Sie die Anzahl von durch eine SELECT-Abfrage zurückgegebenen Zeilen einschränken möchten, erstellen Sie Suchbedingungen oder Filterkriterien. In SQL werden Suchbedingungen entweder in die WHERE-Klausel der Anweisung eingefügt oder – wenn Sie eine Aggregatabfrage erstellen – in die HAVING-Klausel.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie die Anzahl von durch eine SELECT-Abfrage zurückgegebenen Zeilen einschränken möchten, erstellen Sie Suchbedingungen oder Filterkriterien. In SQL werden Suchbedingungen entweder in die WHERE-Klausel der Anweisung eingefügt oder – wenn Sie eine Aggregatabfrage erstellen – in die HAVING-Klausel.  
   
 > [!NOTE]  
 > Sie können auch Suchbedingungen definieren, welche die von einer UPDATE-, INSERT RESULTS-, INSERT VALUES-, DELETE- oder MAKE TABLE-Abfrage betroffenen Zeilen angeben.  
@@ -108,9 +109,8 @@ Es folgen einige Beispiele für Abfragen mit verschiedenen Operatoren und Zeilen
     WHERE sales_price > (prod_cost * 2)  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Erstellen von Abfragen mit Parametern &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
   
-

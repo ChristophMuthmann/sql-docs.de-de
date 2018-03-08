@@ -1,11 +1,13 @@
 ---
 title: "Übersicht über Master Data Services (MDS) | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 28
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Übersicht über Master Data Services (MDS)
   In diesem Thema werden die Organisations- und Verwaltungsfunktionen von Schlüsseldaten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]beschrieben. 
@@ -54,7 +55,7 @@ ms.lasthandoff: 09/07/2017
   
  Sobald Sie eine grundlegende Struktur für Ihre Daten definiert haben, können Sie damit beginnen, Datensätze (Elementen) mithilfe der Importfunktion hinzuzufügen. Sie laden Daten in Stagingtabellen, überprüfen sie mithilfe von Geschäftsregeln, und laden die Daten in MDS-Tabellen.  Geschäftsregeln können auch zum Festlegen von Attributwerden verwendet werden.  
   
- Die folgende Tabelle beschreibt die wichtigsten Aufgaben in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in Grundzügen. Wenn nichts anderes angegeben ist, müssen Sie für alle nachfolgenden Prozeduren Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ Die folgende Tabelle beschreibt die wichtigsten Aufgaben in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in Grundzügen. Wenn nichts anderes angegeben ist, müssen Sie für alle nachfolgenden Prozeduren Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 > [!NOTE]  
 >  Sie können die folgenden Tasks in einer Testumgebung ausführen und die bei der Installation von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]bereitgestellten Beispieldaten verwenden. Weitere Informationen finden Sie unter [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
@@ -80,5 +81,4 @@ ms.lasthandoff: 09/07/2017
  Anschließend können Sie das Modell mit oder ohne Daten in der Produktionsumgebung bereitstellen. Weitere Informationen finden Sie unter [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
   
   
-
 

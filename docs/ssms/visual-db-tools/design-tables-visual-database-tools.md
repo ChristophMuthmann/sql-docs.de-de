@@ -3,10 +3,12 @@ title: Erstellen und Aktualisieren von Tabellen (SSMS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +19,19 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: ca37946fadb30837e21255ae67b862a61bd6f68e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-update-database-tables"></a>Erstellen und Aktualisieren von Datenbanktabellen
-
-Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../relational-databases/tables/tables.md) entworfen und visualisiert werden können. Mit dem Tabellen-Designer von SQL Server Management Studio (SSMS) können Sie Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../relational-databases/tables/tables.md) entworfen und visualisiert werden können. Mit dem Tabellen-Designer von SQL Server Management Studio (SSMS) können Sie Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen.  
 
   
 ## <a name="create-a-table"></a>Erstellen einer Tabelle  
@@ -58,7 +58,7 @@ Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../r
 
 1. Schließen Sie den Designer, und speichern Sie die Änderungen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Tabellen](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
 [Tabelleneigenschaften &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
@@ -68,4 +68,3 @@ Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../r
 [Indizes](../../relational-databases/indexes/indexes.md)  
 [Data types (Transact-SQL) (Datentypen (Transact-SQL))](../../t-sql/data-types/data-types-transact-sql.md)  
 [Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
-

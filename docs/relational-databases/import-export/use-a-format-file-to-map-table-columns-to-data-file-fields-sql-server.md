@@ -2,9 +2,12 @@
 title: Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - mapping columns to fields during import [SQL Server]
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 238bde9c0928554b38c0f7411cf29863d6f17019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9d5d0f33d21e61741bd021dc012c70a43207a13f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Eine Datendatei kann Felder in einer anderen Reihenfolge als die der entsprechenden Spalten in der Tabelle aufweisen. In diesem Thema werden Nicht-XML-Formatdateien und XML-Formatdateien dargestellt, die zum Anpassen an eine Datendatei, deren Felder eine andere Reihenfolge als die Tabellenspalten aufweisen, geändert wurden. Die geänderte Formatdatei ordnet die Datenfelder den entsprechenden Tabellenspalten zu.  Weitere Informationen finden Sie unter [Erstellen einer Formatdatei (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
 
 |Outline|
@@ -165,7 +168,7 @@ Die geänderte Formatdatei entspricht nun Folgendem:
 
 
 ## Importieren von Daten mit einer Formatdatei, um Tabellenspalten zu Datendateifeldern zuzuordnen<a name="import_data"></a>
-In den folgenden Beispielen werden die Datenbank, die Datendatei und die Formatdateien verwendet, die oben erstellt wurden.
+Die nachstehenden Beispiele verwenden die oben erstellte Datenbank, Datendatei und Formatdatei.
 
 ### Verwenden von [bcp](../../tools/bcp-utility.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
@@ -251,10 +254,9 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [bcp Utility](../../tools/bcp-utility.md)   
  [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   
-

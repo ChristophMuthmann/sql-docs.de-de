@@ -1,29 +1,30 @@
 ---
 title: Projekteinstellungen (Migration) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Projekteinstellungen (Migration) (MySQLToSQL)
 Die Seite "Migration", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA Daten aus MySQL zu SQL Server migriert.  
@@ -34,7 +35,7 @@ Der Bereich für die Migration finden Sie in der **Projekteinstellungen** und **
   
 -   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand der linken Bereich, und klicken Sie dann auf **Migration**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 ### <a name="bulk-copy"></a>Massenkopieren  
   
@@ -88,7 +89,6 @@ Der Bereich für die Migration finden Sie in der **Projekteinstellungen** und **
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Behandeln von Fehlern**|Gibt an, wie Fehler bei der Migration der Werte der Typen von räumlichen Daten behandelt werden. Wenn 'Ersetzen durch NULL' angegeben ist, werden alle räumlichen Werte, die Fehler verursachen durch NULL ersetzt. Kein Ersatz andernfalls erfolgt.<br /><br />**Standardmodus**: ein Fehler generiert<br /><br />**Vollständige**: ein Fehler generiert<br /><br />**Vollständige Modus**: ein Fehler generiert|  
+|**Behandlung von Fehlern**|Gibt an, wie Fehler bei der Migration der Werte der Typen von räumlichen Daten behandelt werden. Wenn 'Ersetzen durch NULL' angegeben ist, werden alle räumlichen Werte, die Fehler verursachen durch NULL ersetzt. Kein Ersatz andernfalls erfolgt.<br /><br />**Standardmodus**: ein Fehler generiert<br /><br />**Vollständige**: ein Fehler generiert<br /><br />**Vollständige Modus**: ein Fehler generiert|  
 |**Wert-Überprüfung**|Gibt an, wie ungültige räumliche Werte behandelt werden. Wenn "Versuchen stellen gültige" angegeben ist, wird ein Versuch unternommen wird, so ändern Sie ungültige Werte um gültig zu machen.<br /><br />**Standardmodus**: gültig<br /><br />**Vollständige**: nicht ändern<br /><br />**Vollständige Modus**: gültig|  
   
-

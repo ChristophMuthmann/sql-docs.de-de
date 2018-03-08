@@ -3,26 +3,26 @@ title: Aktivieren der Ablaufverfolgung | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tracing options [ODBC], enabling
+helpviewer_keywords: tracing options [ODBC], enabling
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21f9d8b3d96f2860ed532279acc74ac3f7c717dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d80f7e70915c11a3a45f90d2821b9c1bd137d9dd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enabling-tracing"></a>Aktivieren der Ablaufverfolgung
 Ablaufverfolgung kann in der folgenden drei Arten aktiviert werden:  
@@ -32,4 +32,3 @@ Ablaufverfolgung kann in der folgenden drei Arten aktiviert werden:
 -   Rufen Sie **SQLSetConnectAttr** SQL_ATTR_TRACE-Verbindungsattribut auf SQL_OPT_TRACE_ON festgelegt. Dies aktiviert oder deaktiviert die Ablaufverfolgung für die Dauer der Verbindung. Weitere Informationen finden Sie unter der [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) funktionsbeschreibung.  
   
 -   Verwendung **ODBCSharedTraceFlag** zu aktivieren oder deaktivieren Sie die Protokollierung dynamisch. (Weitere Informationen finden Sie im nächste Thema [dynamische Tracing](../../../odbc/reference/develop-app/dynamic-tracing.md).)
-

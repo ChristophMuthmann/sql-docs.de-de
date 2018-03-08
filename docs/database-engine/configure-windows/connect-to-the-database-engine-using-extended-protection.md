@@ -2,11 +2,13 @@
 title: "Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von „Erweiterter Schutz“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 894f04fe8bf8df95bb288acab897f3274fbacb18
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. **Erweiterter Schutz für die Authentifizierung** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** wird in Windows 7 und Windows Server 2008 R2 unterstützt. **Erweiterter Schutz** ist in Service Packs für ältere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Betriebssystemen enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Erweiterter Schutz** wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] unterstützt. **Erweiterter Schutz für die Authentifizierung** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** wird in Windows 7 und Windows Server 2008 R2 unterstützt. **Erweiterter Schutz** ist in Service Packs für ältere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Betriebssystemen enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden.  
   
 > [!IMPORTANT]  
 >  **Erweiterter Schutz** ist in Windows standardmäßig nicht aktiviert. Informationen zum Aktivieren von **Erweiterter Schutz** in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](http://support.microsoft.com/kb/968389).  
@@ -105,11 +106,10 @@ ms.lasthandoff: 08/02/2017
   
  Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(möglicherweise auf Englisch).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)   
  [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](http://go.microsoft.com/fwlink/?LinkID=177943)   
  [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz"](http://go.microsoft.com/fwlink/?LinkId=179922)  
   
   
-

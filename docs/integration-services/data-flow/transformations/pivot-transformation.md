@@ -1,10 +1,13 @@
 ---
-title: "Die Transformation für Pivot | Microsoft Docs"
+title: "Transformation für Pivot | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a12bf64f2ec27306a5ca8776b33acdb79ca82d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 41e027c10bfdb1e9309c6ee1226694c1c9601837
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="pivot-transformation"></a>Transformation für Pivot
   Die Transformation für Pivot macht aus einem normalisierten Dataset eine weniger normalisierte, aber kompaktere Version, indem die Eingabedaten nach einem Spaltenwert pivotiert werden. Beispielsweise weist ein normalisiertes **Orders** -Dataset, das den Kundennamen, das Produkt und die gekaufte Menge auflistet, in der Regel mehrere Zeilen für jeden Kunden auf, der mehrere Produkte gekauft hat. Dabei zeigt jede Zeile für den betreffenden Kunden Bestelldetails für ein anderes Produkt an. Durch Pivotieren des Datasets nach der Produktspalte kann mit der Transformation für Pivot ein Dataset mit einer einzigen Zeile pro Kunde ausgegeben werden. In dieser Zeile werden alle Einkäufe des Kunden aufgelistet, wobei die Produktnamen als Spaltennamen und die Menge als Wert in der Produktspalte angezeigt werden. Da nicht jeder Kunde jedes Produkt kauft, können viele Spalten NULL-Werte enthalten.  
@@ -131,17 +133,16 @@ ms.lasthandoff: 08/03/2017
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Informationen zum Festlegen der Eigenschaften dieser Komponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Entpivotierungstransformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

@@ -3,29 +3,29 @@ title: "Festlegen von Optionen für Projekt (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Project Options Setting
+helpviewer_keywords: Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 750be041907417b0683633fbe59f88fdb5b53ead
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40c2bffdb58fadfa3a9c7da58cf68b8c4390cd16
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-sybasetosql"></a>Einstellungsoptionen für Projekt (SybaseToSQL)
 Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben Objekt Konvertierung, Objekt laden, SQL Azure, Benutzeroberfläche und Einstellungen für die Migration von Daten. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
@@ -47,7 +47,7 @@ SSMA verfügt über fünf Mengen von projekteinstellungen:
   
 Es sind auch vier Modi für diese Einstellungen konfigurieren:  
   
-1.  Standardwert  
+1.  Default  
   
 2.  Optimistisch  
   
@@ -102,7 +102,7 @@ Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Ein
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
   
 -   An benutzerdefinierte die Zuordnung der Quell- und Datentypen, finden Sie unter [Zuordnung Sybase ASE und SQL Server-Datentypen &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
@@ -112,4 +112,3 @@ Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

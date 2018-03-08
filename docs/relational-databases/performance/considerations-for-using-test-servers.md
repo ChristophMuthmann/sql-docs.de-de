@@ -2,11 +2,13 @@
 title: Gesichtspunkte bei der Verwendung von Testservern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "27"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d23b44d09b5b1b38a1020ba9a04388f92119c28d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bb2515163afb01ece59d6d1dc7d681e67dfbbbd4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="considerations-for-using-test-servers"></a>Gesichtspunkte bei der Verwendung von Testservern
-  Die Verwendung eines Testservers zur Optimierung einer Datenbank auf einem Produktionsserver ist ein wesentlicher Vorteil des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers. Mit dieser Funktion können Sie den Verarbeitungsaufwand für die Optimierung auf einen Testserver auslagern, ohne die tatsächlichen Daten vom Produktionsserver auf den Testserver zu kopieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Verwendung eines Testservers zur Optimierung einer Datenbank auf einem Produktionsserver ist ein wesentlicher Vorteil des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgebers. Mit dieser Funktion können Sie den Verarbeitungsaufwand für die Optimierung auf einen Testserver auslagern, ohne die tatsächlichen Daten vom Produktionsserver auf den Testserver zu kopieren.  
   
 > [!NOTE]  
 >  Die Funktion der Optimierung mit einem Testserver wird auf der grafischen Benutzeroberfläche (Graphical User Interface, GUI) des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers nicht unterstützt.  
@@ -82,4 +83,3 @@ ms.lasthandoff: 06/22/2017
      Wählen Sie die **is_date_correlation_view** -Spalte der [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) -Katalogsicht aus, um zu bestimmen, ob eine Sicht auf Korrelationsstatistiken basiert.  
   
   
-

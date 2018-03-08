@@ -1,10 +1,13 @@
----
+﻿---
 title: Enthaltene Datenbanksortierungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 777ff52e5670d97b6dfe3813d8e05dfcccf00103
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
-  Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u. a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u.a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Sortierungen gelten nicht nur für in Benutzertabellen gespeicherte Daten, sondern für jeden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behandelten Text, einschließlich Metadaten, temporäre Objekte, Variablennamen usw. Deren Behandlung variiert in eigenständigen und abhängigen Datenbanken Diese Änderung wirkt sich nicht auf viele Benutzer aus. Stattdessen trägt sie zu Unabhängigkeit von Instanzen und Einheitlichkeit bei. Dies verursacht jedoch möglicherweise auch etwas Verwirrung sowie Probleme bei Sitzungen, in denen sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
@@ -37,13 +39,13 @@ ms.lasthandoff: 06/22/2017
 ### <a name="example-1"></a>Beispiel 1  
  Wenn Sie z. B. in Peking arbeiten, kann eine chinesische Sortierung verwendet werden:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Wenn nun eine Spalte erstellt wird, ist deren Standardsortierung diese chinesische Sortierung. Gegebenenfalls kann jedoch eine andere Sortierung ausgewählt werden:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -56,7 +58,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -68,7 +70,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Beispiel 2  
  Betrachten Sie beispielsweise die obige (chinesische) Datenbank, wenn diese in einer Instanz mit der Sortierung **Latin1_General** verwendet wird:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -92,7 +94,7 @@ JOIN #T2
   
  Dies kann durch das explizite Sortieren der temporären Tabelle korrigiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erleichtert diesen Vorgang etwas, indem das **DATABASE_DEFAULT** -Schlüsselwort für die **COLLATE** -Klausel bereitgestellt wird.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -142,7 +144,7 @@ END;
   
  Im zuvor beschriebenen Beispiel für eine temporäre Tabelle ist ersichtlich, dass dieses Sortierverhalten bei den meisten Verwendungen temporärer Tabellen eine explizite **COLLATE** -Klausel überflüssig macht. In einer enthaltenen Datenbank wird dieser Code nun ohne Fehler ausgeführt, selbst wenn sich die Datenbanksortierung und die Instanzsortierung unterscheiden:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -283,8 +285,7 @@ GO
 ## <a name="conclusion"></a>Fazit  
  Das Sortierungsverhalten enthaltener Datenbanken unterscheidet sich leicht von dem nicht enthaltener Datenbanken. Dieses Verhalten ist im Allgemeinen vorteilhaft und trägt zu Unabhängigkeit von Instanzen sowie Einfachheit bei. Für einige Benutzer können Probleme auftreten, insbesondere dann, wenn in einer Sitzung sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)  
   
   
-

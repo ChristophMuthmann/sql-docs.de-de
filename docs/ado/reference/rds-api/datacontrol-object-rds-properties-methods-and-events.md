@@ -3,7 +3,7 @@ title: RDS (RDS)-Eigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - DataControl object [ADO], members
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 10dfef2df10149f49623911986d51850bc34f81c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae933633bedf31dd14bd953ff6acdb2240adedc8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>RDS (RDS)-Eigenschaften, Methoden und Ereignisse
 > [!IMPORTANT]
@@ -44,19 +43,19 @@ ms.lasthandoff: 09/09/2017
   
  [FilterValue-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)  
   
- [Handlereigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)  
+ [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)  
   
  [InternetTimeout-Eigenschaft (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)  
   
  [ReadyState-Eigenschaft (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)  
   
- [Recordset SourceRecordset-Eigenschaft (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)  
+ [Recordset, SourceRecordset-Eigenschaft (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)  
   
  [Servereigenschaft (RDS)](../../../ado/reference/rds-api/server-property-rds.md)  
   
  [SortColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)  
   
- [Sortdirections-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)  
+ [SortDirection-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)  
   
  [SQL-Eigenschaft](../../../ado/reference/rds-api/sql-property.md)  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 09/09/2017
   
  [CreateRecordset-Methode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
   
- [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)  
+ [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)  
   
  [Refresh-Methode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)  
   
@@ -78,12 +77,11 @@ ms.lasthandoff: 09/09/2017
  [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
   
 ## <a name="events"></a>Ereignisse  
- [OnError-Ereignis (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
+ [onError-Ereignis (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
   
- ["onreadystatechange" Ereignis (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
+ [onReadyStateChange-Ereignis (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

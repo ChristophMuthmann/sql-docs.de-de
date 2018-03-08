@@ -3,8 +3,11 @@ title: TRY_CAST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CAST function
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-caps.latest.revision: 10
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09c5b6060798f28541f61e763954ed44920cf83d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 38958007757b3bc2d4016946a918982eba91251b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
@@ -68,7 +70,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ### <a name="a-trycast-returns-null"></a>A. TRY_CAST gibt NULL zurück.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CAST NULL zurückgibt, wenn die Umwandlung fehlerhaft ist.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CAST('test' AS float) IS NULL   
     THEN 'Cast failed'  
@@ -89,7 +91,7 @@ Cast failed
   
  Im folgenden Beispiel wird veranschaulicht, dass der Ausdruck das erwartete Format aufweisen muss.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  
@@ -108,7 +110,7 @@ NULL
 ### <a name="b-trycast-fails-with-an-error"></a>B. Bei TRY_CAST tritt ein Fehler auf.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CAST einen Fehler zurückgibt, wenn die Umwandlung explizit nicht zulässig ist.  
   
-```tsql  
+```sql  
 SELECT TRY_CAST(4 AS xml) AS Result;  
 GO  
 ```  
@@ -143,4 +145,3 @@ Result
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

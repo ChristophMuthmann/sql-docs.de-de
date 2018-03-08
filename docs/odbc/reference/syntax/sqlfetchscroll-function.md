@@ -3,33 +3,30 @@ title: SQLFetchScroll-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLFetchScroll
-apilocation:
-- sqlsrv32.dll
+apiname: SQLFetchScroll
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLFetchScroll
-helpviewer_keywords:
-- SQLFetchScroll function [ODBC]
+f1_keywords: SQLFetchScroll
+helpviewer_keywords: SQLFetchScroll function [ODBC]
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79224469fe1e6e4f0840eceb394b30cec63fcd2a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll-Funktion
 **Konformität**  
@@ -336,7 +333,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll und ODBC 2.x-Treiber  
  Wenn eine Anwendung ruft **SQLFetchScroll** in einem ODBC 2.x-Treiber ordnet der Treiber-Manager diesen Aufruf an **SQLExtendedFetch**. Übergibt die folgenden Werte für die Argumente der **SQLExtendedFetch**.  
   
-|SQLExtendedFetch-argument|Wert|  
+|SQLExtendedFetch-argument|value|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle in **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation in **SQLFetchScroll**.|  
@@ -371,4 +368,3 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

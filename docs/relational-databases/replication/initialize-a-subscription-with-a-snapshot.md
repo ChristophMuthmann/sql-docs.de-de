@@ -2,30 +2,32 @@
 title: Initialisieren eines Abonnements mit einer Momentaufnahme | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85768c39b282ccfda1df1e68d42a1f6b3985bc46
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "32"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 6655989242beb16950da560df85c4955b4b0f41c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Initialisieren eines Abonnements mit einer Momentaufnahme
-  Nachdem eine Veröffentlichung erstellt wurde, wird normalerweise eine Anfangsmomentaufnahme erstellt und in den Momentaufnahmeordner kopiert (dies erfolgt standardmäßig bei Mergeveröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden). Die Momentaufnahme wird dann während der Erstsynchronisierung des Abonnements vom Verteilungs-Agent (für Transaktions- und Snapshotveröffentlichungen) oder vom Merge-Agent (für Mergeveröffentlichungen) auf den Abonnenten angewendet. Der Momentaufnahmeprozess hängt vom Veröffentlichungstyp ab:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nachdem eine Veröffentlichung erstellt wurde, wird normalerweise eine Anfangsmomentaufnahme erstellt und in den Momentaufnahmeordner kopiert (dies erfolgt standardmäßig bei Mergeveröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden). Die Momentaufnahme wird dann während der Erstsynchronisierung des Abonnements vom Verteilungs-Agent (für Transaktions- und Snapshotveröffentlichungen) oder vom Merge-Agent (für Mergeveröffentlichungen) auf den Abonnenten angewendet. Der Momentaufnahmeprozess hängt vom Veröffentlichungstyp ab:  
   
 -   Handelt es sich um eine Momentaufnahme für eine Momentaufnahmeveröffentlichung, eine Transaktionsveröffentlichung oder eine Mergeveröffentlichung, die keine parametrisierte Filter verwendet, enthält die Momentaufnahme das Schema und die Daten in BCP-Dateien (Bulk Copy Program, Massenkopierprogramm) sowie Einschränkungen, erweiterte Eigenschaften, Indizes, Trigger und die für die Replikation erforderlichen Systemtabellen. Weitere Informationen zum Erstellen und Anwenden einer Momentaufnahme finden Sie unter [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
   
@@ -51,8 +53,8 @@ ms.lasthandoff: 06/22/2017
   
 -   Übertragen Sie Momentaufnahmedateien über FTP (File Transfer Protocol). Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Initialisieren eines Abonnements](../../relational-databases/replication/initialize-a-subscription.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   
  [Sichern des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

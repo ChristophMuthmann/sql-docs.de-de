@@ -3,7 +3,7 @@ title: Filter- und RecordCount Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2432adfdd2a4d4a66a3ccf0379a653ad4bb95f50
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9b92232ff44db431bf7b6f05a7f61da100dc556
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter- und RecordCount Eigenschaften (VC++-Beispiel)
 Dieses Beispiel verwendet die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um ein neues öffnen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf Grundlage einer angegebenen Bedingung auf ein vorhandenes angewendet **Recordset**. Er verwendet die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) Eigenschaft, um die Anzahl der Datensätze in den beiden anzeigen **Recordsets**. Die FilterField-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
@@ -314,4 +313,3 @@ Scootney Books, USA
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

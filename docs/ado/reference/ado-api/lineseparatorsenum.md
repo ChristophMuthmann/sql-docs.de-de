@@ -3,7 +3,7 @@ title: LineSeparatorsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - LineSeparatorsEnum enumeration [ADO]
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40afe6c8350356a59725e503b20fb65b1b93c1c9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ebab43836ed3e933bfcee9fd75804ab7c6f2360b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Gibt an, das als Zeilentrennzeichen in Text verwendete Zeichen [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte.  
@@ -43,5 +42,4 @@ Gibt an, das als Zeilentrennzeichen in Text verwendete Zeichen [Stream](../../..
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Zeilentrennzeichen-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
-
+ [LineSeparator-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)

@@ -3,7 +3,7 @@ title: Errors-Auflistung (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 011d5956b7d2f9d752f15028ce0b09e3a35a0c71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 27ca46528314f34b769d505269ade0c73fb1b051
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="errors-collection-ado"></a>Errors-Auflistung (ADO)
 Enthält alle der [Fehler](../../../ado/reference/ado-api/error-object.md) in Reaktion auf einen einzelnen anbieterbezogenen Fehler erstellten Objekte.  
@@ -55,5 +54,4 @@ Enthält alle der [Fehler](../../../ado/reference/ado-api/error-object.md) in Re
   
 ## <a name="see-also"></a>Siehe auch  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

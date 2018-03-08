@@ -3,24 +3,25 @@ title: GetCharacterStream-Methode (SQLServerNClob) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 835e9cb8-5fd5-4a05-aa47-59ae3ed1ae6d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b1c587d38961a2ad4bd97117473b04c3c3b2803
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc5fb68d1c29bd51174dc659c9253925d2801a63
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcharacterstream-method-sqlservernclob"></a>getCharacterStream-Methode (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  [SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)  
   
   
-

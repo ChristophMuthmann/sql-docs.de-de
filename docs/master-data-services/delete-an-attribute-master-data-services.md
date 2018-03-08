@@ -1,11 +1,13 @@
 ---
-title: "Löschen eines Attributs (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Löschen eines Attributs (Master Data Services) | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -14,26 +16,26 @@ helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 698b641fdfed99e4d1fcad0609e140977e63cf33
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Löschen eines Attributs (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie ein Attribut löschen, wenn Sie das Attribut und alle zugehörigen Attributwerte dauerhaft entfernen möchten.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 ### <a name="to-delete-an-attribute"></a>So löschen Sie ein Attribut  
   
@@ -62,10 +64,10 @@ ms.lasthandoff: 09/01/2017
   
 8.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Attribute &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)   
- [Domänenbasierte Attribute &#40; Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Erstellen Sie ein Textattribut &#40; Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Erstellen Sie ein domänenbasiertes Attribut &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
+ [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [Erstellen eines Textattributs &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

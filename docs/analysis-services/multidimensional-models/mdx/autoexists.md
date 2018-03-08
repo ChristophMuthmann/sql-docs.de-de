@@ -1,32 +1,31 @@
 ---
 title: Autoexists | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 655041c87d4cf9009692025f9396a94dd41a2cf1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="autoexists"></a>Autoexists
-  Das *Autoexists* -Konzept beschränkt den Cuberaum auf Zellen, die tatsächlich im Cube enthalten sind, anstatt alle Zellen einzubeziehen, die durch die Erstellung aller potenziellen Kombinationen von Attributhierarchieelementen in der gleichen Hierarchie vorhanden sein könnten. Dies liegt daran, dass Elemente einer Attributhierarchie nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden sein können. Wenn zwei oder mehr Attributhierarchien der gleichen Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß beschränkt werden, so dass sie die Kriterien aller anderen Attribute erfüllen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Das *Autoexists* -Konzept beschränkt den Cuberaum auf Zellen, die tatsächlich im Cube enthalten sind, anstatt alle Zellen einzubeziehen, die durch die Erstellung aller potenziellen Kombinationen von Attributhierarchieelementen in der gleichen Hierarchie vorhanden sein könnten. Dies liegt daran, dass Elemente einer Attributhierarchie nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden sein können. Wenn zwei oder mehr Attributhierarchien der gleichen Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß beschränkt werden, so dass sie die Kriterien aller anderen Attribute erfüllen.  
   
  Angenommen, Sie arbeiten mit Attributen der Geography-Dimension. Wenn ein Ausdruck alle Elemente des City-Attributs zurückgibt und ein anderer Ausdruck die Elemente des Country-Attributs auf alle Länder Europas beschränkt, sind als City-Elemente nur Orte in europäischen Ländern möglich. Dies ist auf das Autoexists-Merkmal von Analysis Services zurückzuführen. Autoexists gilt nur für Attribute der gleichen Dimension, denn es versucht zu verhindern, dass die in einem Attributausdruck ausgeschlossenen Dimensionsdatensätze von den anderen Attributausdrücken eingeschlossen werden. Autoexists kann auch als resultierende Schnittmenge der unterschiedlichen Attributausdrücke in den Dimensionszeilen bezeichnet werden.  
   
@@ -70,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Beachten Sie, dass 0 hier für die Spaltenachse steht (als Kurzform für axis(0)).  
   
- Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch mithilfe der neuen * -Variante der [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) -Funktion formuliert werden.  
+ Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch mithilfe der neuen * Variante der [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) Funktion formuliert werden.  
   
 ```  
 SELECT   
@@ -328,4 +327,3 @@ WHERE (Measures.[Internet Sales Amount],
  [Multidimensional Expressions &#40;MDX&#41; – Referenz](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

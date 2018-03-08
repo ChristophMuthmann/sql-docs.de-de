@@ -2,27 +2,29 @@
 title: SQL Server Management Studio | Microsoft-Dokumentation
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.custom: 
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 1319f45b9a41cf32357f4c92c3088e5dc18ade25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 91f6659896282f5c64a2b3d2c931f2b7dee635a3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) ist eine integrierte Umgebung für die Verwaltung jeder SQL-Infrastruktur. Verwenden Sie SSMS, um auf alle Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)], Azure SQL-Datenbank und SQL Data Warehouse zuzugreifen und diese zu konfigurieren, zu verwalten und zu entwickeln. SSMS bietet ein einzelnes, umfassendes Hilfsprogramm, das eine Vielzahl grafischer Tools mit einer Reihe von Skript-Editoren mit großem Funktionsumfang kombiniert, um Entwicklern und Datenbankadministratoren mit unterschiedlichem Kenntnisstand den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] zu ermöglichen.
 
 
@@ -47,4 +49,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="next-steps"></a>Nächste Schritte  
 [Lernprogramm: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
-

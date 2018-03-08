@@ -1,29 +1,31 @@
 ---
-title: Catalog. environment_references (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.environment_references (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee6f15af7a5384fea850aa67c7b5a95483530740
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9d2cd88918e6cb5968727d2355ef2005a4718284
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogenvironmentreferences-ssisdb-database"></a>catalog.environment_references (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Umgebungsverweise für alle Projekte im **SSISDB** -Katalog an.  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 09/26/2017
 |validation_status|**char(1)**|Der Status der Überprüfung.|  
 |last_validation_time|**datatimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jeden Umgebungsverweis im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -52,8 +54,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Wenn Sie über die READ-Berechtigung für ein Projekt verfügen, verfügen Sie auch über die READ-Berechtigung für alle Pakete und Umgebungsverweise, die diesem Projekt zugeordnet sind. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Projekt kann über relative oder absolute Umgebungsverweise verfügen. Relative Verweise verweisen mit dem Namen auf die Umgebung und erfordern, dass sich diese im gleichen Ordner wie das Projekt befindet. Absolute Verweise verweisen mit Name und Ordner auf die Umgebung und verweisen möglicherweise auf Umgebungen, die sich in einem anderen Ordner als das Projekt befinden. Ein Projekt kann auf mehrere Umgebungen verweisen.  
   
   
-

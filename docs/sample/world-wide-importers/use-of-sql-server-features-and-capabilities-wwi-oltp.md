@@ -1,30 +1,31 @@
 ---
 title: Verwendung von SQL Server-Features und Funktionen | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Verwendung von SQL Server-Features und Funktionen
-"Wideworldimporters" Verwenden von SQL Server-Features und Funktionen in der OLTP-Datenbank.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]"Wideworldimporters" Verwenden von SQL Server-Features und Funktionen in der OLTP-Datenbank.
 
 "Wideworldimporters" dient zur Veranschaulichung viele der wichtigsten Funktionen von SQL Server, einschließlich der neuesten Funktionen in SQL Server 2016 eingeführt. Im folgenden finden eine Liste von SQL Server-Funktionen, Funktionen und eine Beschreibung, wie sie in "wideworldimporters" verwendet werden.
 
@@ -51,4 +52,3 @@ ms.lasthandoff: 08/02/2017
 |Abfragespeicher|Der Abfragespeicher ist für die Datenbank aktiviert. Öffnen Sie nach einigen Abfragen ausführen die Datenbank in Management Studio aus, öffnen Sie den Knoten Abfragespeicher, d. h. unter der Datenbank, und öffnen Sie den Bericht Abfragen mit höchstem Ressourcenverbrauch, finden in der abfrageausführungen und die Pläne für Abfragen, die Sie soeben ausgeführt haben.|
 |STRING_SPLIT|Die Spalte `DeliveryInstructions` in der Tabelle `Sales.Invoices`verfügt über eine durch Trennzeichen getrennte-Wert, der verwendet werden kann, um STRING_SPLIT zu veranschaulichen.|
 |Überwachung|SQL Server Audit können für diese Beispieldatenbank aktiviert werden, indem Sie die folgende Anweisung in der Datenbank ausführen:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>In Azure SQL-Datenbank, Aktivierung der Überwachung über die [Azure-Portal](https://portal.azure.com/).<br/><br/>Sicherheitsvorgänge im Zusammenhang mit Anmeldungen, werden Rollen und Berechtigungen auf allen Systemen protokolliert, Überwachung (einschließlich standard Edition-Systeme) aktiviert ist. Überwachung wird in das Anwendungsprotokoll umgeleitet werden, da dies auf allen Systemen verfügbar ist und keine zusätzliche Berechtigungen erfordert. Eine Warnung handelt, davon ausgehend, dass zum Erhöhen der Sicherheit, es in das Sicherheitsprotokoll oder in eine Datei in einem sicheren Ordner umgeleitet werden sollen. Ein Link wird bereitgestellt, um die erforderliche zusätzliche Konfiguration beschreiben.<br/><br/>Für Systeme Evaluierung, Developer, Enterprise Edition wird den Zugriff auf alle finanzielle Transaktionsdaten überwacht.|
-

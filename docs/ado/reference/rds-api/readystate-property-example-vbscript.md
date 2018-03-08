@@ -1,12 +1,14 @@
 ---
 title: Eigenschaft ReadyState-Beispiel (VBScript) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 49aac89e8d209582ac461080a02bfd3e2d3db397
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db0e4d0c450f358f704709bc81a744fd5c092deb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="readystate-property-example-vbscript"></a>Eigenschaft ReadyState-Beispiel (VBScript)
 > [!IMPORTANT]
@@ -117,6 +118,5 @@ body {
 ## <a name="see-also"></a>Siehe auch  
  [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ReadyState-Eigenschaft (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
 
 

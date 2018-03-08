@@ -3,7 +3,7 @@ title: Der ParentRow-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ParentRow property [ADO]
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1305304afaa06f8e96dc4160b466d87271f537d9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52b23aa90e3a2e0998547849d71c3c10a3e0552d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentrow-property-ado"></a>Der ParentRow-Eigenschaft (ADO)
 Legt den Container eines OLE DB- **Zeile** -Objekt, auf ein **ADORecordConstruction** Objekt, sodass das übergeordnete Element der Zeile, in eine ADO aktiviert ist **Datensatz** Objekt.  
@@ -52,4 +51,3 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
-

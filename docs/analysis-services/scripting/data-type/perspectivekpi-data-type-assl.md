@@ -2,40 +2,35 @@
 title: PerspectiveKpi-Datentyp (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PerspectiveKpi Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PerspectiveKpi Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- PerspectiveKpi
-helpviewer_keywords:
-- PerspectiveKpi data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: PerspectiveKpi
+helpviewer_keywords: PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cb52f4a963d39db3b3b4ac93f00f61615e5235d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ccfedeadddb5cdaa96d640f7a253016619c88bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="perspectivekpi-data-type-assl"></a>PerspectiveKpi-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der Informationen über einen Key Performance Indicator (KPI) darstellt, in eine [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der Informationen über einen Key Performance Indicator (KPI) darstellt, in eine [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,16 +44,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|Keine|  
-|Abgeleitete Datentypen|Keine|  
+|Basisdatentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Anmerkungen](../../../analysis-services/scripting/collections/annotations-element-assl.md), [KpiID](../../../analysis-services/scripting/properties/kpiid-element-assl.md)|  
 |Abgeleitete Elemente|[KPI](../../../analysis-services/scripting/objects/kpi-element-assl.md) ([Kpis](../../../analysis-services/scripting/collections/kpis-element-assl.md) Auflistung von [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   
@@ -69,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

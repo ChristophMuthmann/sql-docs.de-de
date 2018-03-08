@@ -2,11 +2,13 @@
 title: "Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7b11b969602aaa5a300b38b943b29cd9f374a5b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)
-  Verwenden Sie einen Geschäftslogikhandler, um eine benutzerdefinierte Geschäftslogik aufzurufen, wenn ein Mergeabonnement synchronisiert wird. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie einen Geschäftslogikhandler, um eine benutzerdefinierte Geschäftslogik aufzurufen, wenn ein Mergeabonnement synchronisiert wird. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
  Die Mergereplikationssynchronisierung (replrec.dll) ruft die Assembly mit verwaltetem Code auf, die die Geschäftslogik enthält. In den meisten Fällen werden die Datei replrec.dll und die benutzerdefinierte Geschäftslogik auf dem Computer ausgeführt, auf dem der Merge-Agent ausgeführt wird (bei einem Pullabonnement auf dem Abonnenten und bei einem Pushabonnement auf dem Verteiler). Bei der Websynchronisierung oder bei einem [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten werden die Synchronisierung und die benutzerdefinierte Geschäftslogik auf dem Webserver ausgeführt.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Erstellen Sie ein RMO-Projekt (Replication Management Objects, Replikationsverwaltungsobjekte) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, das den Merge-Agent programmgesteuert synchron startet. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-4.  Legen Sie, entweder in der zu debuggenden Methode oder im Klassenkonstruktor, einen Breakpoint im Code des Geschäftslogikhandlers fest. Weitere Informationen zu den Methoden, die in einem Geschäftslogikhandler implementiert werden können, finden Sie im Thema zu den <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>-Methoden.  
+4.  Legen Sie, entweder in der zu debuggenden Methode oder im Klassenkonstruktor, einen Breakpoint im Code des Geschäftslogikhandlers fest. Weitere Informationen zu den Methoden, die in einem Geschäftslogikhandler implementiert werden können, finden Sie in den Themen zu den <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> -Methoden.  
   
 5.  Erstellen Sie den Geschäftslogikhandler im Debugmodus, und stellen Sie die Assembly und die Debugsymboldatei (PDB-Datei) an dem Speicherort bereit, der in Schritt 1 registriert wurde.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Erstellen und registrieren Sie einen Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Legen Sie, entweder in der zu debuggenden Methode oder im Klassenkonstruktor, einen Breakpoint im Code des Geschäftslogikhandlers fest. Weitere Informationen zu den Methoden, die in einem Geschäftslogikhandler implementiert werden können, finden Sie im Thema zu den <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>-Methoden.  
+3.  Legen Sie, entweder in der zu debuggenden Methode oder im Klassenkonstruktor, einen Breakpoint im Code des Geschäftslogikhandlers fest. Weitere Informationen zu den Methoden, die in einem Geschäftslogikhandler implementiert werden können, finden Sie in den Themen zu den <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> -Methoden.  
   
 4.  Erstellen Sie den Geschäftslogikhandler im Debugmodus, und stellen Sie die Assembly und die Debugsymboldatei (PDB-Datei) auf dem Webserver an dem Speicherort bereit, der in Schritt 1 registriert wurde.  
   
@@ -86,8 +87,7 @@ ms.lasthandoff: 06/22/2017
   
 11. Die Ausführung stoppt, wenn sie den Breakpoint im Geschäftslogikhandler erreicht, falls keine anderen Breakpoints festgelegt und die richtigen Befehle repliziert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
-

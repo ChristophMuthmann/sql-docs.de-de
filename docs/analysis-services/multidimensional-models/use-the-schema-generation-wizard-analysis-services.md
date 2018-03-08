@@ -2,33 +2,33 @@
 title: Verwenden der Schemagenerierungs-Assistent (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Verwenden des Schemagenerierungs-Assistenten (Analysis Services)
-  Beim Schemagenerierungs-Assistenten müssen während der Generierungsphase nur wenige Informationen eingegeben werden. Die meisten Informationen, die der Schemagenerierungs-Assistent zum Generieren relationaler Schemas benötigt, werden aus den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen extrahiert, die Sie bereits im Projekt erstellt haben. Darüber hinaus können Sie anpassen, wie das Schema der Themenbereichsdatenbank generiert wird und wie Objekte im Schema benannt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Beim Schemagenerierungs-Assistenten müssen während der Generierungsphase nur wenige Informationen eingegeben werden. Die meisten Informationen, die der Schemagenerierungs-Assistent zum Generieren relationaler Schemas benötigt, werden aus den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen extrahiert, die Sie bereits im Projekt erstellt haben. Darüber hinaus können Sie anpassen, wie das Schema der Themenbereichsdatenbank generiert wird und wie Objekte im Schema benannt werden.  
   
 ## <a name="start-the-wizard"></a>Starten des Assistenten  
  Es gibt mehrere Möglichkeiten, den Schemagenerierungs-Assistenten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] zu öffnen:  
@@ -67,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  Auf der Seite **Benennungskonventionen angeben** des Assistenten können Sie die Benennungskonventionen angeben, die der Schemagenerierungs-Assistent beim Generieren bestimmter Objekte in der Themenbereichsdatenbank verwendet. Weitere Informationen über die verfügbaren Optionen auf der Seite **Benennungskonventionen angeben** finden Sie unter [Benennungskonventionen angeben &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b).  
   
   
-

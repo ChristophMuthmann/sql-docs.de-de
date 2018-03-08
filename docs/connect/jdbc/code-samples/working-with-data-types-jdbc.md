@@ -3,23 +3,24 @@ title: Arbeiten mit Datentypen (JDBC) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 669ce17e79da30344a33e8c44b4e548099c4bae1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90071bd6010de6a5fa149187d50a86e166e3ef5f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="working-with-data-types-jdbc"></a>Arbeiten mit Datentypen (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

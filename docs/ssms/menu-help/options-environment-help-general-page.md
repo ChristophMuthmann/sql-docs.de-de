@@ -3,29 +3,29 @@ title: "Optionen (Umgebung – Hilfe – Seite „Allgemein“) | Microsoft-Doku
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.General
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c81d9fefe5e4e7b8bc41f1a3df26d43a79f8226b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---general-page"></a>Optionen (Umgebung – Hilfe – Seite „Allgemein“)
-Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  
   
 > [!NOTE]  
 > Änderungen an den Optionen auf dieser Seite werden erst wirksam, wenn die Umgebung neu gestartet wurde.  
@@ -52,4 +52,3 @@ Gibt an, welche Sprache in der Ergebnisliste einer Suche, bei der Ergebnisse in 
 **Auch Themen in englischer Sprache anzeigen**  
 Gibt an, dass neben der im Feld **Onlinethemensprache** angegebenen Sprache immer auch Themen in englischer Sprache zurückgegeben werden.  
   
-

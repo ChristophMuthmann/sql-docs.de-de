@@ -1,11 +1,13 @@
 ---
 title: SQL Server-Konfigurations-Manager | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - tools [SQL Server], SQL Server Configuration Manager
 - configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
-caps.latest.revision: 58
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 81c3fc1a8bc1b582fd4f8d696f1382e5a88bd706
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Informationen zu früheren Versionen von SQL Server finden Sie unter [SQL Server-Konfigurations-Manager](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Clientcomputern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Snap-In, auf das Sie über das Startmenü zugreifen können. Er lässt sich auch einer beliebigen anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Anzeige hinzufügen. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) verwendet die Datei **SQLServerManager\<Version>.msc** (z.B. **SQLServerManager13.msc** für [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]), um den Konfigurations-Manager zu öffnen. Nachfolgend sind die Pfade der letzten vier Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert wurde).  
@@ -90,7 +91,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="available-network-protocols"></a>Verfügbare Netzwerkprotokolle  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die Protokolle Shared Memory, TCP/IP und Named Pipes. Informationen zur Auswahl eines Netzwerkprotokolls finden Sie unter [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt nicht die Netzwerkprotokolle VIA, Banyan VINES Sequenced Packet Protocol (SSP), Multiprotocol, AppleTalk oder NWLink IPX/SPX. Clients, die zuvor Verbindungen mit diesen Protokollen hergestellt haben, müssen zum Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ein anderes Protokoll auswählen. Sie können den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager nicht zum Konfigurieren des Winsockproxy verwenden. Informationen zum Konfigurieren des Winsockproxys finden Sie in der ISA Server-Dokumentation.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
@@ -102,4 +103,3 @@ ms.lasthandoff: 07/31/2017
  [Verhindern des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
   
-

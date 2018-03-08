@@ -2,13 +2,13 @@
 title: Erstellen von Analysis Services-Skripts in Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - objects [Analysis Services], scripts
 - scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
-caps.latest.revision: 36
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24fffa56991e411dfae93321bbe238c1bbcb4db3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Erstellen von Analysis Services-Skripts in Management Studio
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] schließt Skriptgenerierungsfunktionen, Vorlagen und Editoren ein, mit denen Sie Analysis Services-Objekte und Tasks schreiben können.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Script Analysis Services-Tasks in Management Studio  
@@ -75,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [XMLA-Abfrage-Editor &#40; Analysis Services – mehrdimensionale Daten &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   
-

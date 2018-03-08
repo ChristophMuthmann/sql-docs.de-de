@@ -3,28 +3,28 @@ title: Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank | Microsoft
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 023641a1c7f298af6a946e3d9746bc8fe29145a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
-
-Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verbindung mit dem Server herstellen. Eine Verbindung zu mehreren Servern gleichzeitig ist jedoch nicht möglich.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verbindung mit dem Server herstellen. Eine Verbindung zu mehreren Servern gleichzeitig ist jedoch nicht möglich.
 
 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) unterstützt verschiedene Typen von Verbindungen. In diesem Artikel finden Sie Informationen zum Herstellen einer Verbindung mit SQL Server und Azure SQL-Datenbank (Herstellen einer Verbindung mit einem logischen Azure SQL-Server). Informationen zu den anderen Verbindungsoptionen finden Sie unter den [Links](#see-also) unten auf dieser Seite.
   
@@ -52,11 +52,11 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 
    ![Verbunden](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Next Steps
 
 [Entwerfen, Erstellen und Aktualisieren von Tabellen](../visual-db-tools/design-tables-visual-database-tools.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
@@ -65,4 +65,3 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 [Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
 [Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
 [Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
-

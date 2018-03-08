@@ -1,30 +1,30 @@
 ---
 title: "Basis-Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 09/27/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 02/01/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
-ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Basis-Verfügbarkeitsgruppen (AlwaysOn-Verfügbarkeitsgruppen)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Always On-Basis-Verfügbarkeitsgruppen stellen eine Hochverfügbarkeitslösung für SQL Server 2016 und SQL Server 2017 Standard Edition zur Verfügung. Eine Basis-Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für eine einzelne Datenbank. Sie wird mit Enterprise Edition erstellt und verwaltet, ähnlich wie traditionelle (erweiterte) [AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md). Die Unterschiede und Einschränkungen zwischen und für Basis-Verfügbarkeitsgruppen werden in diesem Dokument zusammengefasst.  
   
@@ -43,9 +43,7 @@ ms.lasthandoff: 09/28/2017
 - Keine Integritätsüberprüfungen der sekundären Replikate 
 
 - Keine Unterstützung für Replikate, die auf Servern gehostet werden, die eine Version von SQL Server vor SQL Server 2016 Community Technology Preview 3 (CTP3) ausführen.  
-  
-- Keine Unterstützung für das Hinzufügen oder Entfernen eines Replikats an oder von einer vorhandenen Basis-Verfügbarkeitsgruppe.  
-  
+
 - Unterstützung für eine Verfügbarkeitsdatenbank.  
   
 - Basis-Verfügbarkeitsgruppen können nicht zu erweiterten Verfügbarkeitsgruppen upgegradet werden. Die Gruppe muss gelöscht und erneut einer Gruppe hinzugefügt werden, die nur Server enthält, die SQL Server 2016 Enterprise Edition ausführen.  
@@ -62,8 +60,7 @@ ms.lasthandoff: 09/28/2017
 > [!NOTE]  
 >  Die Einschränkungen von Basis-Verfügbarkeitsgruppen gelten für den Befehl **CREATE AVAILABILITY GROUP** wenn **WITH BASIC** angegeben ist. Beispielsweise erhalten Sie einen Fehler, wenn Sie versuchen, eine Basis-Verfügbarkeitsgruppe zu erstellen, die Lesezugriff zulässt. Andere Einschränkungen gelten in der gleichen Weise. Weitere Informationen finden Sie im Abschnitt „Einschränkungen“ dieses Themas.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

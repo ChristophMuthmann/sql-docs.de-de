@@ -3,10 +3,12 @@ title: Binden von Arrays von Parametern | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049414080c3594a873f17c3e8eed8fdc876fedf0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-arrays-of-parameters"></a>Binden von Arrays von Parametern
 Anwendungen, die Arrays von Parametern verwenden, binden die Arrays an die Parameter in der SQL-Anweisung. Es gibt zwei Bindung Formate ein:  
@@ -215,4 +216,3 @@ for (i = 0; i < ParamsProcessed; i++) {
   
    }  
 ```
-

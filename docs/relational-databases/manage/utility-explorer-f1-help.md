@@ -2,11 +2,13 @@
 title: "Hilfsprogramm-Explorer „F1-Hilfe“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
-  In den folgenden Abschnitten werden die Funktionalität und die zugehörigen Vorgänge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hilfsprogramms dokumentiert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In den folgenden Abschnitten werden die Funktionalität und die zugehörigen Vorgänge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramms dokumentiert.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Dashboard des Hilfsprogramms (SQL Server-Hilfsprogramm)
  Um Daten im Dashboard des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramms anzuzeigen, wählen Sie den obersten Knoten in der Struktur des Hilfsprogramm-Explorers aus: Hilfsprogramm<UCP_Name>\\(ComputerName\UCP). Das Dashboard enthält Zusammenfassungs- und Detaildaten aus allen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und allen Datenebenenanwendungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm. Zum Aktualisieren der Dashboarddaten klicken Sie mit der rechten Maustaste auf den obersten Knoten in der Struktur des Hilfsprogramm-Explorers und wählen dann **Aktualisieren**aus.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Keine Daten verfügbar – Für Datenebenenanwendungen sind keine Daten verfügbar, weil die verwaltete Instanz von SQL Server, die die Datenebenenanwendung enthält, keine Daten übermittelt.  
   
- Der ausführliche Status für Zustandsparameter kann an verschiebbaren Indikatoren abgelesen werden. Der Teil rechts neben den verschiebbaren Indikatoren zeigt an, wie viele Datenebenenanwendungen in jeder Statuskategorie enthalten sind. Weitere Informationen zum Anzeigen des Zustands einzelner Datenebenenanwendungen bzw. zum Anzeigen oder Ändern der Richtlinienkonfigurationseinstellungen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &amp;#40;SQL Server-Hilfsprogramm&amp;#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Der ausführliche Status für Zustandsparameter kann an verschiebbaren Indikatoren abgelesen werden. Der Teil rechts neben den verschiebbaren Indikatoren zeigt an, wie viele Datenebenenanwendungen in jeder Statuskategorie enthalten sind. Weitere Informationen zum Anzeigen des Zustands einzelner Datenebenenanwendungen bzw. zum Anzeigen oder Ändern der Richtlinienkonfigurationseinstellungen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Verlauf der Auslastung des Hilfsprogrammspeichers  
  Der Verlauf der Auslastung wird in einem Zeitdiagramm unten im Dashboard des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms angezeigt. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
@@ -127,11 +128,11 @@ ms.lasthandoff: 08/03/2017
  Listenansicht  
  In der Listenansicht im oberen Bereich werden Daten zu einzelnen Datenebenenanwendungen angezeigt. Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Datenebenenanwendungen nach Auslastungskategorie an:  
   
--   Grünes Häkchen – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") : Anzahl der Datenebenenanwendungen, die nicht gegen Richtlinien zur Ressourcennutzung verstoßen. Die Ressourcen sind normal ausgelastet.  
+-   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Normal ausgelastet"): Zahl der Datenschichtanwendungen, die gegen keine Richtlinien zur Ressourcenverwendung verstoßen. Die Ressourcen sind normal ausgelastet.  
   
--   Grüner Pfeil nach unten – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") : Die Ressourcen sind unterausgelastet.  
+-   Grüner Abwärtspfeil ![](../../relational-databases/manage/media/utility-down-arrow.gif "Hilfsprogramm_Abwärtspfeil"): Die Ressourcen sind unterausgelastet.  
   
--   Roter Pfeil nach oben – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") : Die Ressourcen sind überausgelastet.  
+-   Roter Aufwärtspfeil ![](../../relational-databases/manage/media/utility-up-arrow.gif "Hilfsprogramm_Aufwärtspfeil"): Die Ressourcen sind überausgelastet.  
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
@@ -269,11 +270,11 @@ ms.lasthandoff: 08/03/2017
   
  Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Auslastungskategorie an:  
   
--   Grünes Häkchen – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") : Anzahl der verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die nicht gegen Richtlinien zur Ressourcennutzung verstoßen. Die Ressourcen sind normal ausgelastet.  
+-   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Normal ausgelastet"): Die Anzahl verwalteter Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die gegen keine Richtlinien zur Ressourcenverwendung verstoßen. Die Ressourcen sind normal ausgelastet.  
   
--   Grüner Pfeil nach unten – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") : Die Ressourcen sind unterausgelastet.  
+-   Grüner Abwärtspfeil ![](../../relational-databases/manage/media/utility-down-arrow.gif "Hilfsprogramm_Abwärtspfeil"): Die Ressourcen sind unterausgelastet.  
   
--   Roter Pfeil nach oben – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") : Die Ressourcen sind überausgelastet.  
+-   Roter Aufwärtspfeil ![](../../relational-databases/manage/media/utility-up-arrow.gif "Hilfsprogramm_Aufwärtspfeil"): Die Ressourcen sind überausgelastet.  
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
@@ -513,9 +514,8 @@ Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von R
   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Problembehandlung beim SQL Server-Hilfsprogramm](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

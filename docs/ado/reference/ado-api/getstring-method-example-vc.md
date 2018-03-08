@@ -3,7 +3,7 @@ title: GetString-Methode (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5ccc57c2dbaf1c1cbeead9a3fc9d8b8dfd89dbbd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 828ebf957c72e8b36b93ab3afb3db08b1fb824b1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getstring-method-example-vc"></a>GetString-Methode (VC++-Beispiel)
 Dieses Beispiel zeigt die [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) Methode.  
@@ -194,4 +193,3 @@ Sylvia   Panteley   1956 Arlington Pl.   Rockville
 ## <a name="see-also"></a>Siehe auch  
  [GetString-Methode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

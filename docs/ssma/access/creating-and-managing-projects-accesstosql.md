@@ -1,12 +1,14 @@
 ---
 title: Erstellen und Verwalten von Projekten (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +23,16 @@ helpviewer_keywords:
 - saving metadata
 - saving projects
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 89cab1239b3465f4add8ceb265a621e2ebac5d87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc89d40afd125aef5c874c4578bb153cdfcf6993
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Erstellen und Verwalten von Projekten (AccessToSQL)
 Zum Migrieren von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, müssen Sie zuerst eine SSMA-Projekt erstellen. Das Projekt ist eine Datei mit Metadaten über die Access-Datenbanken, die Sie zum migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Metadaten zu der Zielinstanz von SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die die migrierten Objekte und Daten, erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Verbindungs- und Einstellungen für Projektdateien.  
@@ -124,4 +125,3 @@ Der nächste Schritt des Migrationsvorgangs besteht darin [eine oder mehrere Acc
 [Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-

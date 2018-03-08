@@ -1,35 +1,35 @@
 ---
-title: Exportieren nach Microsoft Word (Berichts-Generator und SSRS) | Microsoft Docs
+title: Exportieren nach Microsoft Word (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 9c725ae731867a57e36bc80a8a1cbac3d11953c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 
   Die Word-Renderingerweiterung rendert paginierte Berichte Format von  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.  
   
  Der Inhaltstyp von Dateien, die vom Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , und die Dateinamenerweiterung lautet „.docx“.  
   
- Finden Sie unter [Exportieren von Berichten &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) Weitere Informationen zum Exportieren nach Word.  
+ Weitere Informationen zum Exportieren nach Word finden Sie unter [Exportieren von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
  Nachdem Sie den Bericht in ein Word-Dokument exportiert haben, können Sie den Inhalt bearbeiten und dokumentartige Berichte wie Adressetiketten, Bestellungen oder Serienbriefe entwerfen.  
   
@@ -161,13 +161,13 @@ ms.lasthandoff: 08/09/2017
   
  Die frühere Version der Word-Renderingerweiterung, die kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ist, wird in Word 2003 umbenannt. Nur die Word-Renderingerweiterung ist standardmäßig verfügbar. Sie müssen die Reporting Services-Konfigurationsdateien aktualisieren, um die Word 2003-Renderingerweiterung verfügbar zu machen. Der Inhaltstyp von Dateien, die vom Word 2003-Renderer generiert werden, ist **application/vnd.ms-word** , und die Dateinamenerweiterung der Dateien lautet „.doc“.  
   
- In SQL Server Reporting Services ist der standardmäßige Word-Renderer der Version, die für rendert die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Format (.docx). Dies ist die **Word** -Option, die in den Menüs **Exportieren** in eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal- und SharePoint-Liste aufgeführt ist. Die frühere, nur mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 kompatible Version heißt jetzt Word 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Die Menüoption **Word 2003** ist standardmäßig nicht sichtbar, ein Administrator kann sie jedoch sichtbar machen, indem er die RSReportServer-Konfigurationsdatei aktualisiert. Um Berichte aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit dem Word 2003-Renderer zu exportieren, aktualisieren Sie die RSReportDesigner-Konfigurationsdatei. Aber auch wenn der Word 2003-Renderer sichtbar gemacht wird, steht er nicht in allen Szenarien zur Verfügung. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen. Wenn Sie Tools oder Produkte im getrennten oder lokalen Modus verwenden, hat das Sichtbarmachen des Word 2003-Renderers keine Auswirkungen. Die Menüoption **Word 2003** ist weiterhin nicht verfügbar. Wenn Sie den Word 2003-Renderer in der RSReportDesigner-Konfigurationsdatei sichtbar machen, ist die Menüoption **Word 2003** in der [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Berichtsvorschau immer verfügbar.  
+ In SQL Server Reporting Services entspricht der Word-Standardrenderer der Version, die im Format von [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx) rendert. Dies ist die **Word** -Option, die in den Menüs **Exportieren** in eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal- und SharePoint-Liste aufgeführt ist. Die frühere, nur mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 kompatible Version heißt jetzt Word 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Die Menüoption **Word 2003** ist standardmäßig nicht sichtbar, ein Administrator kann sie jedoch sichtbar machen, indem er die RSReportServer-Konfigurationsdatei aktualisiert. Um Berichte aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit dem Word 2003-Renderer zu exportieren, aktualisieren Sie die RSReportDesigner-Konfigurationsdatei. Aber auch wenn der Word 2003-Renderer sichtbar gemacht wird, steht er nicht in allen Szenarien zur Verfügung. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen. Wenn Sie Tools oder Produkte im getrennten oder lokalen Modus verwenden, hat das Sichtbarmachen des Word 2003-Renderers keine Auswirkungen. Die Menüoption **Word 2003** ist weiterhin nicht verfügbar. Wenn Sie den Word 2003-Renderer in der RSReportDesigner-Konfigurationsdatei sichtbar machen, ist die Menüoption **Word 2003** in der [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Berichtsvorschau immer verfügbar.  
   
  Die Menüoption **Word 2003** ist in den folgenden Szenarien nie sichtbar:  
   
 -   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an.  
   
--   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen finden Sie unter [lokaler Modus VS. Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich zu Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Wenn der **Word 2003** -Renderer für Sichtbarkeit konfiguriert ist, ist in den folgenden Szenarien sowohl die **Word** - als auch die **Word 2003** -Menüoption verfügbar:  
   
@@ -203,4 +203,4 @@ ms.lasthandoff: 08/09/2017
 [Rendern von Berichtselementen](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [Tables, Matrices, and Lists (Tabellen, Matrizen und Listen)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

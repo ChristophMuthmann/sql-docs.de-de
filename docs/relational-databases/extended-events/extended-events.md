@@ -2,9 +2,12 @@
 title: Erweiterte Ereignisse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -14,21 +17,21 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: 48
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e067f99cb78b96c4a20938b3fb60842bd91b2931
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 12c46e8d5a1496d21f2f4b0ab40956020a8ac612
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="extended-events"></a>Erweiterte Ereignisse
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Die Funktion Erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzt eine sehr stark skalierbare und konfigurierbare Architektur, mit der Benutzer je nach Bedarf eine entsprechende Menge an Informationen sammeln können, die zum Beheben oder Identifizieren eines Leistungsproblems notwendig ist.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzt eine sehr stark skalierbare und konfigurierbare Architektur, mit der Benutzer je nach Bedarf eine entsprechende Menge an Informationen sammeln können, die zum Beheben oder Identifizieren eines Leistungsproblems notwendig ist.  
 
 Weitere Informationen zu erweiterten Ereignissen finden Sie hier:
 
@@ -40,7 +43,7 @@ Weitere Informationen zu erweiterten Ereignissen finden Sie hier:
  Erweiterte Ereignisse ist ein Lightweight-Leistungsüberwachungssystem, das sehr wenige Leistungsressourcen verwendet. Die Funktion „Erweiterte Ereignisse“ stellt zwei grafische Benutzeroberflächen (**Assistent für neue Sitzungen** und **Neue Sitzung**) zum Erstellen, Ändern, Anzeigen und Analysieren der Sitzungsdaten bereit.  
   
 ## <a name="extended-events-concepts"></a>Konzepte für erweiterte Ereignisse  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Die Funktion „Erweiterte Ereignisse“ basiert auf vorhandenen Konzepten, z.B. einem Ereignis oder einem Ereignisconsumer, verwendet Konzepte aus der Ereignisablaufverfolgung für Windows und führt neue Konzepte ein.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Funktion „Erweiterte Ereignisse“ basiert auf vorhandenen Konzepten, z.B. einem Ereignis oder einem Ereignisconsumer, verwendet Konzepte aus der Ereignisablaufverfolgung für Windows und führt neue Konzepte ein.  
   
  In der folgenden Tabelle werden die Konzepte von "Erweiterte Ereignisse" beschrieben.  
   
@@ -105,11 +108,11 @@ Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] od
 |Beschreibt, wie Sie ein vorhandenes SQL-Ablaufverfolgungsskript in eine Sitzung für erweiterte Ereignisse konvertieren.|[Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Beschreibt die Ermittlung der gesperrten Abfragen, des Plans der Abfrage und des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Stapels zum Zeitpunkt der Sperrung.|[Feststellen, welche Abfragen Sperren enthalten](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Beschreibt, wie Sie die Quelle von Sperren identifizieren, die die Datenbankleistung beeinträchtigen.|[Suchen der Objekte, die über die meisten Sperren verfügen](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
-|Beschreibt, wie Sie anhand von erweiterten Ereignissen mit der Ereignisablaufverfolgung für Windows die Systemaktivität überwachen.|[Überwachen der Systemaktivität mit erweiterten Ereignisses](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
+|Beschreibt, wie Sie anhand von erweiterten Ereignissen mit der Ereignisablaufverfolgung für Windows die Systemaktivität überwachen.|[Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | Verwenden der Katalogsichten und dynamischen Verwaltungssichten für erweiterte Ereignisse | [SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
@@ -118,4 +121,3 @@ Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] od
  [Katalogsichten für erweiterte Ereignisse &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
   
   
-

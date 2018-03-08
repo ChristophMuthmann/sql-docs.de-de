@@ -3,7 +3,7 @@ title: Seek-Methode und Index-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a69c31406aa87ac0dc79d7b44a0f471bf7c8c392
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c47cd5616a5a8d093eaeb9d72b74377a4adb23a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek-Methode und Index-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [Seek](../../../ado/reference/ado-api/seek-method.md) Methode und [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft in Verbindung mit einer bestimmten ***Mitarbeiter-ID***, um zu suchen der Name des Mitarbeiters in der ***Mitarbeiter*** Tabelle der Datenbank Nwind.mdb.  
@@ -237,4 +236,3 @@ void PrintComError(_com_error &e) {
  [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)
-

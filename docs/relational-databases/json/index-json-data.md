@@ -1,11 +1,12 @@
 ---
 title: Indizieren von JSON-Daten | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -14,22 +15,21 @@ helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0b6df549ab64edfcc766b4839cf17cc1814efa36
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 2d618b486f61f2e25a221517eb0efdaed70f582d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="index-json-data"></a>Indizieren von JSON-Daten
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-In SQL Server 2016 ist JSON kein integrierter Datentyp, und SQL Server verfügt nicht über benutzerdefinierte JSON-Indizes. Sie können jedoch Ihre Abfragen über JSON-Dokumente optimieren, indem Sie Standardindizes verwenden. 
+In SQL Server und SQL-Datenbank ist JSON kein integrierter Datentyp, und SQL Server verfügt nicht über benutzerdefinierte JSON-Indizes. Sie können jedoch Ihre Abfragen über JSON-Dokumente optimieren, indem Sie Standardindizes verwenden. 
 
 Datenbankindizes verbessern die Leistung von Filter- und Sortierungsvorgängen. Ohne Indizes muss SQL Server bei jeder Datenabfrage einen vollständigen Tabellenscan durchführen.  
   
@@ -68,9 +68,9 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="more-info-about-the-computed-column"></a>Weitere Informationen über die berechnete Spalte 
 Die Spalte wird nicht permanent berechnet. Sie wird nur berechnet, wenn der Index erneut erstellt werden muss. Sie beansprucht keinen zusätzlichen Platz in der Tabelle.   
   
-Es ist wichtig, die berechnete Spalte mit dem gleichen Ausdruck zu erstellen, den Sie in Ihren Abfragen verwenden möchten – in diesem Beispiel handelt es sich dabei um den Ausdruck `JSON_VALUE(Info, '$.Customer.Name')`.  
+Es ist wichtig, dass Sie die berechnete Spalte mit dem gleichen Ausdruck erstellen, den Sie in Ihren Abfragen verwenden möchten – in diesem Beispiel handelt es sich dabei um den Ausdruck `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie Ausdrücke mit der `JSON_VALUE`-Funktion verwenden, wie in der Beispielfrage oben dargestellt, erkennt SQL Server, dass es eine gleichwertige berechnete Spalte mit dem gleichen Ausdruck gibt und wendet dann, falls möglich, einen Index darauf an.
+Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie wie in der vorherigen Beispielabfrage dargestellt Ausdrücke mit der `JSON_VALUE`-Funktion verwenden, erkennt SQL Server, dass es eine gleichwertig berechnete Spalte mit dem gleichen Ausdruck gibt und wendet dann, falls möglich, einen Index darauf an.
 
 ### <a name="execution-plan-for-this-example"></a>Ausführungsplan für dieses Beispiel
 Hier finden Sie den Ausführungsplan für die Abfrage in diesem Beispiel.  
@@ -80,7 +80,7 @@ Hier finden Sie den Ausführungsplan für die Abfrage in diesem Beispiel.
 Statt eines vollständigen Tabellenscans verwendet SQL Server eine Indexsuche im nicht gruppierten Index, und findet so die Zeilen, die die angegebenen Bedingungen erfüllen. Er verwendet dann eine Schlüsselsuche in der Tabelle `SalesOrderHeader`, um die anderen Spalten abzurufen, auf die die Abfrage verweist – in diesem Beispiel `SalesOrderNumber` und `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Weiteres Optimieren des Index mit enthaltenen Spalten
-Diese zusätzliche Suche können Sie umgehen, indem Sie die geforderten Spalten dem Index hinzufügen. Sie können diese Spalten als standardmäßig enthaltene Spalten hinzufügen, wie im folgenden Beispiel gezeigt, das eine Erweiterung des oben gezeigten `CREATE INDEX`-Beispiels darstellt.  
+Diese zusätzliche Suche können Sie umgehen, indem Sie die geforderten Spalten dem Index hinzufügen. Sie können diese Spalten als standardmäßig enthaltene Spalten hinzufügen. Dies wird im folgenden Beispiel dargestellt, das eine Erweiterung des vorherigen `CREATE INDEX`-Beispiels darstellt.  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -88,12 +88,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-In diesem Fall muss SQL Server keine zusätzlichen Daten aus der Tabelle `SalesOrderHeader` lesen, da alle benötigten Informationen im nicht gruppierten JSON-Index enthalten sind. Das ist eine gute Möglichkeit, um JSON- und Spaltendaten in Abfragen zu kombinieren nd optimale Indizes für Ihre Arbeitsauslastung zu erstellen.  
+In diesem Fall muss SQL Server keine zusätzlichen Daten aus der Tabelle `SalesOrderHeader` lesen, da alle benötigten Informationen im nicht gruppierten JSON-Index enthalten sind. Dieser Index ist eine gute Möglichkeit, um JSON- und Spaltendaten in Abfragen zu kombinieren und optimale Indizes für Ihre Arbeitsauslastung zu erstellen.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON-Indizes sind Indizes mit Sortierungserkennung  
 Eine wichtige Funktion von Indizes für JSON-Daten ist, dass die Indizes über eine Sortierungserkennung verfügen. Das Ergebnis der Funktion `JSON_VALUE`, die Sie beim Erstellen der berechneten Spalte verwenden, ist ein Textwert, der seine Sortierung vom Eingabeausdruck erbt. Die Werte im Index sind daher nach den Sortierungsregeln geordnet, die in den Quellspalten definiert sind.  
   
-Um dies zu demonstrieren, erstellt das folgende Beispiel eine einfache Sammlungstabelle mit einem Primärschlüssel und JSON-Inhalt.  
+Im folgenden Beispiel wird eine einfache Sammlungstabelle mit einem Primärschlüssel und JSON-Inhalten erstellt, um zu demonstrieren, dass die Indizes über eine Sortierungserkennung verfügen.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -147,12 +147,24 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Obwohl die Abfrage eine `ORDER BY`-Klausel hat, verwendet der Ausführungsplan keinen Sort-Operator. Der JSON-Index ist bereits nach den Regeln für serbisches Kyrillisch geordnet. Daher kann SQL Server den nicht gruppierten Index verwenden, in dem die Ergebnisse bereits sortiert sind.  
   
- Falls wir jedoch die Reihenfolge des Ausdrucks `ORDER BY` ändern – falls wir beispielsweise `COLLATE French_100_CI_AS_SC` hinter die `JSON_VALUE`-Funktion platzieren –, erhalten wir einen anderen Ausführungsplan für die Abfrage.  
+ Falls Sie jedoch die Sortierung des `ORDER BY`-Ausdrucks ändern, indem Sie beispielsweise `COLLATE French_100_CI_AS_SC` an die `JSON_VALUE`-Funktion anhängen, erhalten Sie einen anderen Ausführungsplan für die Abfrage.  
   
  ![Ausführungsplan](../../relational-databases/json/media/jsonindexblog3.png "Ausführungsplan")  
   
  Da die Anordnung der Werte im Index nicht mit den französischen Sortierungsregeln übereinstimmt, kann SQL Server den Index nicht verwenden, um Ergebnisse zu ordnen. Daher wird ein Sort-Operator hinzugefügt, der Ergebnisse nach den französischen Sortierungsregeln sortiert.  
  
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
 
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

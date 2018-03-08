@@ -1,13 +1,14 @@
 ---
-title: "Veröffentlichen von Berichten auf einem Berichtsserver | Microsoft Docs"
+title: "Veröffentlichen von Berichten auf einem Berichtsserver | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +25,16 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Veröffentlichen von Berichten auf einem Berichtsserver
   Nachdem Sie einen Bericht oder eine Reihe von Berichten entworfen und getestet haben, können Sie die Bereitstellungsfunktionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, um die Berichte auf einem Berichtsserver zu veröffentlichen. Sie können einzelne Berichte oder ein Berichtsserverprojekt veröffentlichen, das mehrere Berichte und Datenquellen enthalten kann. Die einfachste Möglichkeit zum Veröffentlichen mehrerer Berichte ist die Veröffentlichung eines Berichtsserverprojekts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet den Begriff *Bereitstellen*anstelle von *Veröffentlichen*. Die beiden Begriffe sind austauschbar.  
@@ -58,7 +58,7 @@ Die Berechtigung wird durch rollenbasierte Sicherheit bestimmt, die vom Berichts
   
 ## <a name="to-publish-all-reports-in-a-project"></a>So veröffentlichen Sie alle Berichte in einem Projekt  
   
-Auf der **erstellen** Menü klicken Sie auf **bereitstellen \<berichtsprojektname >**. Sie können auch im Projektmappen-Explorer mit der rechten Maustaste auf das Berichtsobjekt klicken. Klicken Sie dann auf **Bereitstellen**. Den Status des Veröffentlichungsvorgangs sehen Sie im Ausgabefenster.  
+Klicken Sie im Menü **Erstellen** auf **Berichtsprojektname>\< bereitstellen**. Sie können auch im Projektmappen-Explorer mit der rechten Maustaste auf das Berichtsobjekt klicken. Klicken Sie dann auf **Bereitstellen**. Den Status des Veröffentlichungsvorgangs sehen Sie im Ausgabefenster.  
   
 Wenn Sie ein Berichtsserverprojekt bereitstellen, werden die freigegebenen Datenquellen im Berichtsprojekt ebenfalls bereitgestellt. Alle Berichte werden mithilfe derselben Projektkonfiguration bereitgestellt: auf demselben Berichtsserver, im selben Ordner auf dem Server usw. Zur Veröffentlichung von Berichten auf verschiedenen Servern veröffentlichen Sie sie entweder nacheinander oder schließen nur die gewünschten Berichte in das Berichtsserverprojekt ein. Eine Projektmappe kann mehrere Berichtsserverprojekte enthalten. Die Verwendung mehrerer Projekte erleichtert zudem die Verwaltung der Berichtsbereitstellung, weil Sie zur Bereitstellung unterschiedlicher Projekte jeweils eine andere Konfiguration verwenden können. 
   
@@ -74,10 +74,9 @@ Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Bericht,
  Die Zielserver-URL des Berichtsservers muss angegeben werden. Zudem können Sie die Standardordner ändern, in denen Berichte und freigegebene Datenquellen bereitgestellt werden.  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Berichtsinhaltsverwaltung für Server &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Upgrade Reports (Aktualisieren von Berichten)](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

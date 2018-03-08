@@ -2,29 +2,30 @@
 title: "Assistent für neue Abonnements (Referenz zur Benutzeroberfläche) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- New Subscription Wizard
+helpviewer_keywords: New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d33bcc230d395b405ce3a2daf72bac286c4bbb1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "18"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 3dfa511ecb0302be2417dbffb0c4b794261b4668
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistent für neue Abonnements (Referenz zur Benutzeroberfläche)
-  Dieser Abschnitt enthält Informationen zu den folgenden Seiten des Assistenten für neue Abonnements:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zu den folgenden Seiten des Assistenten für neue Abonnements:  
   
 -   [&#60;AgentName&#62; Speicherort des Agents](../../relational-databases/replication/agentname-agent-location.md)  
   
@@ -46,10 +47,10 @@ ms.lasthandoff: 06/22/2017
   
 -   [HOST_NAME-Werte](../../relational-databases/replication/host-name-values.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [Eigenschaftenreferenz &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Eigenschaftenreferenz &#40;Replikation&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

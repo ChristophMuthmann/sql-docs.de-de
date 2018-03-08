@@ -3,23 +3,24 @@ title: Arbeiten mit umfangreichen Daten | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: c8195decee231a628599e42d2f44109ff0452ed8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 11a8f89d8e61a656f9328d83c8fd154351981718
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="working-with-large-data"></a>Arbeiten mit umfangreichen Daten
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

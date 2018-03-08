@@ -3,7 +3,7 @@ title: Append-Methode (ADOX-Benutzer) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 00652a3051d817c779fd45f546228163c72656fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 616000cfb53d9c3178aa6fa9adbd0ac7f8437efc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-users"></a>Append-Methode (ADOX-Benutzer)
 Fügt ein neues [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) -Objekt an die [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Auflistung.  
@@ -67,5 +66,4 @@ Users.Append User[,Password]
  [Append-Methode (ADOX-Schlüssel)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append-Methode (ADOX Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append-Methode (ADOX Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

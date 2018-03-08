@@ -3,7 +3,7 @@ title: RDS-Beispiel (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - DataControl object [ADO], VBScript example
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 341abbfbd2c7d70726c9cd368c41ebd1382ecc53
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3b654fcf925562c45960cbeeeb7a4a789922cd5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datacontrol-object-example-vbscript"></a>RDS-Beispiel (VBScript)
 > [!IMPORTANT]
@@ -191,7 +190,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

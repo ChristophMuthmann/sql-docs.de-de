@@ -3,7 +3,7 @@ title: Datenabschnitt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8da8004ffc31efb53db196e37f48ae0942a872f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62eb026fac4588cc159afec1714a6aa51903aa8a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Datenabschnitt definiert die Daten des Schemarowsets zusammen mit allen ausstehenden Updates, einfügungen oder löschungen. Der Datenabschnitt kann NULL oder mehr Zeilen enthalten. Es kann nur Daten aus einem Rowset enthalten, in die Zeile durch das Schema definiert ist. Darüber hinaus können wie bereits erwähnt, Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Datenabschnitt verwendet wird, und das Konstrukt nicht im Schema-Abschnitt definiert wurde, wird es ignoriert.  
@@ -42,7 +41,7 @@ Der Datenabschnitt definiert die Daten des Schemarowsets zusammen mit allen auss
 ## <a name="binary"></a>Binär (Binary)  
  Binärdaten sind bin.hex codiert werden (d. h. ein Byte sind zwei Zeichen zugeordnet, ein Zeichen pro Nibble).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>datetime  
  Variante VT_DATE-Format wird von XML-Data-Datentypen nicht direkt unterstützt. Das richtige Format für Datumsangaben, mit der Komponente eine Daten und die Uhrzeit lautet jjjj-mm-ddTHH.  
   
  Weitere Informationen zu Datumsformaten gemäß XML finden Sie unter der [W3C XML-Data-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=5692).  
@@ -94,4 +93,3 @@ Der Datenabschnitt definiert die Daten des Schemarowsets zusammen mit allen auss
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

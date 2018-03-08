@@ -2,12 +2,13 @@
 title: "Miningmodellinhalt bei Zeitreihenmodellen (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d399cf55c957ed129e0f37e821f23eb9379b1e5b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
-  Zur Speicherung des Inhalts wird für alle Miningmodelle die gleiche Struktur verwendet. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Zur Speicherung des Inhalts wird für alle Miningmodelle die gleiche Struktur verwendet. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
   
  Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 09/01/2017
   
  Wenn der Knoten keine untergeordneten Elemente hat, bedeutet dies, dass keine signifikanten Bedingungen gefunden wurden, die die weitere Unterteilung der Fälle rechtfertigen würden. Die Verzweigung endet an diesem Punkt, und der Knoten wird als *Blattknoten*bezeichnet. Der Blattknoten enthält die Attribute, Koeffizienten und Werte, aus denen sich die ARTXP-Formel zusammensetzt.  
   
- Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten geben detailliertere Informationen an: den Wert des Attributs (z. B. Verkäufe > 10.000 oder Verkäufe < 10.000), die Anzahl der Fälle, die die einzelnen Bedingungen erfüllen, und die ARTXP-Formel.  
+ Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten geben detailliertere Informationen an: den Wert des Attributs (z. B. Verkäufe > 10.000 oder Verkäufe < 10.000), die Anzahl der Fälle, die die einzelnen Bedingungen erfüllen, und die ARTXP-Formel.  
   
 > [!NOTE]  
 >  Sie finden die komplette Regressionsformel auf Blattknotenebene, jedoch nicht in Stamm- oder Zwischenebenenknoten.  
@@ -377,7 +378,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>Zeitreihenformel für ARIMA  
  Verwenden Sie zur Anzeige der kompletten Formel für einen ARIMA-Knoten die **Mininglegende** im [Microsoft Time Series-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), in der die autoregressive Reihenfolge, der gleitende Durchschnitt und andere Elemente der Formel in einem konsistenten und lesbaren Format dargestellt werden.  
   
--   [Anzeigen der Formel für ein Zeitreihenmodell &#40;Data Mining&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Anzeigen der Formel für ein Zeitreihenmodell Modell &#40; Datamining &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Dieser Abschnitt enthält eine Beispielformel sowie Erläuterungen zu den grundlegenden Begriffen.  
   
@@ -443,10 +444,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  Die Abfrage von Informationen aus einer ARTXP-Struktur kann kompliziert sein, da sich die Informationen für jede Teilung innerhalb der Struktur an einer anderen Position befinden. Wenn Sie mit einem ARTXP-Modell arbeiten, müssen Sie aus diesem Grund alle Teile abrufen und dann einige Verarbeitungsvorgänge ausführen, um die vollständige Formel wieder zusammenzusetzen. Das Abrufen einer Formel aus einem ARIMA-Modell ist einfacher, da die Formel strukturweit verfügbar gemacht wird. Informationen zum Erstellen einer Abfrage zum Abrufen dieser Informationen finden Sie unter [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Miningmodellinhalt &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Technische Referenz für den Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   
-

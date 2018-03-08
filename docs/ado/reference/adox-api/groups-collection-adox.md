@@ -3,7 +3,7 @@ title: Groups-Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2a19ec44a3d6bbea3477d64ff7618c6a5d4ad57c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3dfb8a9e2f75fb11caf64b06e34016474d7b9fa7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="groups-collection-adox"></a>Groups-Auflistung (ADOX)
 Enthält alle gespeicherten [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) Objekte eines Katalogs oder Benutzers.  
@@ -57,9 +56,8 @@ Enthält alle gespeicherten [Gruppe](../../../ado/reference/adox-api/group-objec
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Gruppen Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
+-   [Groups Collection Properties, Methods, and Events (Groups-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Gruppenobjekts (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)
-
+ [Group-Objekt (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

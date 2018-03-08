@@ -2,9 +2,12 @@
 title: Transact-SQL-Debugger | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e3c6f549295b5e97a9a6b83a9db4160934c3ff76
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL-Debugger
-  Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ist bei der Fehlersuche in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code hilfreich, da sich mit ihm das Laufzeitverhalten des Codes untersuchen lässt. Nachdem Sie das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster in den Debugmodus geschaltet haben, können Sie die Ausführung bei bestimmten Codezeilen anhalten und die Informationen und Daten untersuchen, die von diesen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet oder zurückgegeben werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger ist bei der Fehlersuche in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code hilfreich, da sich mit ihm das Laufzeitverhalten des Codes untersuchen lässt. Nachdem Sie das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster in den Debugmodus geschaltet haben, können Sie die Ausführung bei bestimmten Codezeilen anhalten und die Informationen und Daten untersuchen, die von diesen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet oder zurückgegeben werden.  
   
 ## <a name="stepping-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code  
  Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger stellt die folgenden Optionen bereit, die Sie zum Navigieren durch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code verwenden können, wenn sich das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster im Debugmodus befindet:  
@@ -70,8 +72,7 @@ ms.lasthandoff: 06/22/2017
 |Beschreibt die Verwendung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers, um Code in Einzelschritten auszuführen.|[Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Beschreibt die Verwendung des Debuggers, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Daten, z. B. Parameter und Variablen, und Systeminformationen anzuzeigen.|[Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: Hochladen von Dateien in einem Ordner | Microsoft Docs
+title: Hochladen von Dateien in einen Ordner | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 42
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "42"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4d095fa72856edf7d28f067620940fcafe824d6d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upload-files-to-a-folder"></a>Hochladen von Dateien in einen Ordner
   Sie können Dateien vom Dateisystem hochladen und in einer Berichtsserver-Datenbank als verwaltete Elemente speichern. Vom Dateityp hängt es ab, was beim Hochladen einer Datei passiert.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
  ![Berichtsymbol](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 Berichtssymbol  
   
- ![Symbol "Modell"](../../reporting-services/report-server/media/model-icon.gif "Modell (Symbol)")  
+ ![Modellsymbol](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 Berichtsmodellsymbol  
   
  ![Symbol allgemeine Ressource](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
@@ -64,11 +64,10 @@ allgemeines Ressourcensymbol
 |Eine beliebige Datei als binäres Objekt hochladen|Ressourcen verwalten|  
 |Die Inhalte eines Ordners anzeigen|Ressourcen anzeigen, Berichte anzeigen|  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   
- [Hochladen einer Datei oder eines Berichts &#40; Berichts-Manager &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Hochladen einer Datei oder eines Berichts (Berichts-Manager)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   
-

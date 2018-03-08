@@ -2,36 +2,36 @@
 title: Spalteneigenschaften (Registerkarte Allgemein) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.columnproperties.general.f1
+f1_keywords: sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "27"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3087497e8c3757002bc6b80556499ad7c096d51c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="column-properties-general-page"></a>Spalteneigenschaften (Registerkarte Allgemein)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Zeigen Sie mithilfe dieser Seite die Eigenschaften der ausgewählten Spalte an.  
   
  Die Informationen auf dieser Seite sind schreibgeschützt. Zum Ändern der Spalte schließen Sie das Dialogfeld **Spalteneigenschaften** , erweitern Sie im Objekt-Explorer die Tabelle und die Spalten, klicken Sie mit der rechten Maustaste auf die Spalte, und klicken Sie dann auf **Entwurf**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Name der Spalte.  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
 >  Es gibt eine Reihe häufig verwendeter, jedoch unterschiedlicher Bedeutungen des Begriffs Schema. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein Schema zum Organisieren von Datenbankobjekten verwendet. Ähnliches gilt für den Begriff Besitz. XML verwendet das Schema zum Definieren der Organisation von XML-Informationen in einer Reihe von Namespaces. Es stellt eine Möglichkeit dar, miteinander in Beziehung stehenden XML-Code zu gruppieren.  
   
  **Ist von geringer Dichte**  
- Gibt an, ob die Spalte eine Spalte mit geringer Dichte ist. Mögliche Werte sind **True** und **False**. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).  
+ Gibt an, ob die Spalte eine Sparsespalte ist. Mögliche Werte sind **True** und **False**. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).  
   
  **Ist ein Spaltensatz**  
  Gibt an, ob es sich bei der Spalte um einen Spaltensatz handelt. Mögliche Werte sind **True** und **False**. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
@@ -114,4 +114,3 @@ ms.lasthandoff: 06/22/2017
  Gibt an, ob die Spalte zur Replizierung zur Verfügung steht. Mögliche Werte sind **True** und **False**.  
   
   
-

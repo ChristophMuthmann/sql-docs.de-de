@@ -3,27 +3,28 @@ title: Binden von Parametern anhand des Namens (Parameter genannt) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9548f671ce082d41423c1f85eb543c55b6194a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3047d17ff1e9785e203b6be0ab48c7c27fd88d1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Binden von Parametern anhand des Namens (benannten Parametern)
 Bestimmte Datenbankmanagementsysteme ermöglichen eine Anwendung, die Parameter an eine gespeicherte Prozedur nach Namen anstelle von anhand der Position im Aufruf Prozedur anzugeben. Solche Parameter heißen *benannte Parameter*. ODBC unterstützt die Verwendung benannter Parameter. In ODBC benannte Parameter werden nur in Aufrufen von gespeicherten Prozeduren verwendet und können nicht in anderen SQL­Anweisungen verwendet werden.  
@@ -62,4 +63,3 @@ SQLSetDescField(hIpd, 1, SQL_DESC_NAME, "@quote", SQL_NTS);
 // execute.  
 SQLExecute(hstmt);  
 ```
-

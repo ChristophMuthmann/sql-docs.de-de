@@ -1,38 +1,36 @@
 ---
-title: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements | Microsoft Docs'
+title: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, deploying
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: 26
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "26"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 742e80b96e6887188620b4f2a7ab3808475ceda2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: cbbd9a7fc05e7149dcb03eab3ed3c522500b7e0a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements
   Zum Bereitstellen eines benutzerdefinierten Berichtselements in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] müssen Sie die Konfigurationsdateien des Berichtsservers ändern und die Entwurfszeit- und die Laufzeitkomponentenassemblys in die entsprechenden Anwendungsordner für den Berichts-Designer und den Berichtsserver kopieren.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>So stellen Sie ein benutzerdefiniertes Berichtselement bereit  
   
-1.  Bearbeiten Sie die Datei Rsreportdesigner.config, um die Laufzeit- und Entwurfszeitkomponenten für ein benutzerdefiniertes Berichtselement für die Verwendung im Designer zu konfigurieren. Beachten Sie, dass die **ReportItemName** Eintrag übereinstimmen der **CustomReportItemAttribute** Attribut verwendet, die Ihrer **CustomReportItemDesigner** Klasse. Beispiel:  
+1.  Bearbeiten Sie die Datei Rsreportdesigner.config, um die Laufzeit- und Entwurfszeitkomponenten für ein benutzerdefiniertes Berichtselement für die Verwendung im Designer zu konfigurieren. Beachten Sie, dass der **ReportItemName**-Eintrag mit dem **CustomReportItemAttribute**-Attribut, das in Ihrer **CustomReportItemDesigner**-Klasse verwendet wird, übereinstimmen muss. Zum Beispiel:  
   
     ```  
     <ReportItems>  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItemConverter>  
     ```  
   
-2.  Bearbeiten Sie die Datei Rsreportserver.config, um die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement zu registrieren. Beispiel:  
+2.  Bearbeiten Sie die Datei Rsreportserver.config, um die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement zu registrieren. Zum Beispiel:  
   
     ```  
     <ReportItems>  
@@ -54,7 +52,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItems>  
     ```  
   
-3.  Bearbeiten Sie die Datei Rsssrvpolicy.config, Hinzufügen einer **CodeGroup** , die das benutzerdefinierte Berichtselement die richtigen Berechtigungen gewährt. Beispiel:  
+3.  Bearbeiten Sie die Datei „Rsssrvpolicy.config“, um eine **CodeGroup** hinzuzufügen, die dem benutzerdefinierten Berichtselement die richtigen Berechtigungen gewährt. Zum Beispiel:  
   
     ```  
     <CodeGroup   
@@ -73,9 +71,8 @@ ms.lasthandoff: 08/12/2017
   
 5.  Kopieren Sie die Entwurfszeitkomponenten-DLL für ein benutzerdefiniertes Berichtselement in das Verzeichnis %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Klassenbibliotheken für benutzerdefinierten Berichts-Element](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
+ [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   
-

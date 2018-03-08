@@ -3,10 +3,12 @@ title: "Regeln für das Eingeben von Suchwerten (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - text value searches [SQL Server]
 - numeric value searches [SQL Server]
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 979bc40803391e773624d9d7f2b9e43e3bad5ee6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 96cd179445fcab211321ccf4e89f6fbce5792230
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Regeln für das Eingeben von Suchwerten (Visual Database Tools)
-In diesem Thema werden die Konventionen erläutert, die beim Eingeben der folgenden Arten von Literalwerten für eine Suchbedingung beachtet werden müssen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema werden die Konventionen erläutert, die beim Eingeben der folgenden Arten von Literalwerten für eine Suchbedingung beachtet werden müssen:  
   
 -   Textwerte  
   
@@ -149,7 +150,6 @@ Das Format logischer Daten ist in den einzelnen Datenbanken unterschiedlich. In 
     WHERE contract <> 0  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

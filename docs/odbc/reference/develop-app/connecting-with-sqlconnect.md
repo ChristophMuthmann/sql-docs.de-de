@@ -3,10 +3,12 @@ title: Herstellen einer Verbindung mit SQLConnect | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd3644acb609a041c53232a757fa27fc5b5a4bf1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e3ebe247996127ca1aae6559ece4bdd3f281efc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-with-sqlconnect"></a>Herstellen einer Verbindung mit SQLConnect
 **SQLConnect** ist die einfachste Verbindungsfunktion. Erfordert einen Datenquellennamen und eine optionale Benutzer-ID und Kennwort akzeptiert. Dies funktioniert gut für Anwendungen, hartcodieren Daten Datenquellennamen und nicht, eine Benutzer-ID oder ein Kennwort erforderlich ist. Es funktioniert auch gut für Anwendungen, die möchten steuern ihre eigenen "Aussehen und Verhalten" oder gar keine Benutzeroberflächen haben. Solche Anwendungen können eine Liste der Datenquellen mit erstellen **SQLDataSources**zur Datenquelle, Benutzer-ID und Kennwort auffordern und rufen dann **SQLConnect**.  
@@ -141,4 +142,3 @@ int main () {
    x.sqldisconn();   // Free handles and disconnect  
 }  
 ```
-

@@ -1,10 +1,13 @@
 ---
-title: Lookup Transformation Full Cache Mode - OLE DB-Verbindungs-Manager | Microsoft Docs
+title: "Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e038db8132d3c57a16af2a68ba9e6b57e890a444
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Lookup Transformation Full Cache Mode - OLE DB-Verbindungs-Manager
+# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein OLE DB-Verbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
   
  Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in einem Verweisdataset verknüpft werden. Weitere Informationen finden Sie unter [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -86,10 +88,9 @@ ms.lasthandoff: 08/03/2017
   
 13. Klicken Sie auf **OK** , um die Änderungen an der Suchtransformation zu speichern, und führen Sie dann das Paket aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementieren einer Suche ohne Cache oder partiellem Cache-Modus](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
- [Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

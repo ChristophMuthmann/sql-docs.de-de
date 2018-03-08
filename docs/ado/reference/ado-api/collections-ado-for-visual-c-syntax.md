@@ -3,7 +3,7 @@ title: "Auflistungen (ADO für Visual C++-Syntax) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 65f6f9875705fee8ea5bcb6adf045ea51ebb7ca7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d16122393fb3a81f90b6e8d708377745a2ef1236
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Auflistungen (ADO für Visual C++-Syntax)
 ## <a name="parameters"></a>Parameter  
@@ -47,7 +46,7 @@ Refresh(void);
   
 -   [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Delete-Methode (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete-Methode (Parameters-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
 -   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -78,7 +77,7 @@ Refresh(void);
   
 -   [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Delete-Methode (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete-Methode (Parameters-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
 -   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -152,5 +151,4 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
  [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

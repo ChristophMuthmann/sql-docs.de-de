@@ -2,9 +2,12 @@
 title: Sicherungsmedien (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -25,19 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 93
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49a10147e48ece974a5ac64bead3b626556ad29c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
-  Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  
    
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  Sicherungsdatenträger  
@@ -69,9 +73,9 @@ ms.lasthandoff: 06/22/2017
   
  BACKUP DATABASE *Name der Datenbank*  
   
- TO DISK **=** { **'***Name des physischen Sicherungsmediums***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -83,7 +87,7 @@ GO
   
  RESTORE { DATABASE | LOG } *Name der Datenbank*  
   
- FROM DISK **=** { **'***Name des physischen Sicherungsmediums***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
  Beispiel:  
   
@@ -119,9 +123,9 @@ GO
     > **WICHTIG!** Da es bei Vorliegen von Netzwerkfehlern beim Sichern von Daten über ein Netzwerk zu Störungen kommen kann, sollten Sie bei Verwendung eines Remotedatenträgers den Sicherungsvorgang am Ende überprüfen. Weitere Informationen finden Sie unter [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Angeben eines UNC-Namen (Universal Naming Convention)  
- Zum Angeben einer Netzwerkfreigabe in einem Sicherungs- oder Wiederherstellungsbefehl verwenden Sie den vollqualifizierten UNC-Namen der Datei für das Sicherungsmedium. Ein UNC-Name weist das Format **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName*.  
+ Zum Angeben einer Netzwerkfreigabe in einem Sicherungs- oder Wiederherstellungsbefehl verwenden Sie den vollqualifizierten UNC-Namen der Datei für das Sicherungsmedium. Ein UNC-Name weist das Format **\\\\***Systemname***\\***Freigabename***\\***Pfad***\\***Dateiname* auf.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -132,7 +136,7 @@ GO
  
 ##  <a name="TapeDevices"></a> Verwenden von Bandgeräten  
   
-> **HINWEIS:** Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.  
+> **HINWEIS:** Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.  
    
  Zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten auf Band ist mindestens ein Bandlaufwerk erforderlich, das vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem unterstützt wird. Verwenden Sie für diese Laufwerke nur die vom Hersteller des Laufwerks empfohlenen Bänder. Weitere Informationen zum Installieren eines Bandlaufwerks finden Sie in der Dokumentation zum Windows-Betriebssystem.  
   
@@ -149,9 +153,9 @@ GO
   
  BACKUP { DATABASE | LOG } *Name der Datenbank*  
   
- TO TAPE **=** { **'***Name des physischen Sicherungsmediums***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 BACKUP LOG AdventureWorks2012   
@@ -163,7 +167,7 @@ GO
   
  RESTORE { DATABASE | LOG } *Name der Datenbank*  
   
- FROM TAPE **=** { **'***Name des physischen Sicherungsmediums***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
 ###  <a name="TapeOptions"></a> Bandspezifische BACKUP- und RESTORE-Optionen (Transact-SQL)  
  Zur Vereinfachung der Bandverwaltung bietet die BACKUP-Anweisung die folgenden bandspezifischen Optionen:  
@@ -181,7 +185,7 @@ GO
 ###  <a name="OpenTapes"></a> Verwalten von offenen Bändern  
  Führen Sie eine Abfrage auf die dynamische Verwaltungssicht [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) aus, um eine Liste der offenen Bandmedien und den Status von Einbindungsanforderungen anzuzeigen. In dieser Sicht werden alle offenen Bänder angezeigt. Dies umfasst auch die gerade verwendeten Bänder, die sich bis zum nächsten BACKUP- oder RESTORE-Vorgang vorübergehend im Leerlauf befinden.  
   
- Wenn ein Band versehentlich offen geblieben ist, kann es am schnellsten mithilfe des folgenden Befehls freigegeben werden: RESTORE REWINDONLY FROM TAPE **=***Name des Sicherungsmediums*. Weitere Informationen finden Sie unter [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Wenn ein Band versehentlich offen geblieben ist, kann es am schnellsten mithilfe des folgenden Befehls freigegeben werden: RESTORE REWINDONLY FROM TAPE **=**Name_des_Sicherungsgeräts*. Weitere Informationen finden Sie unter [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Verwenden des Windows Azure-BLOB-Speicherdiensts  
@@ -280,4 +284,3 @@ GO
  [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)  
   
   
-

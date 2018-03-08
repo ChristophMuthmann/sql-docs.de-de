@@ -3,8 +3,11 @@ title: HasM (Geography-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - HasM geography
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
-caps.latest.revision: 7
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71e9abf7fa2bd8f313dc913b995e21a7cf01befb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bad79780c74f3fe512eb394c7fc997d962594e12
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hasm-geography-data-type"></a>HasM (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt 1 (true) zurück, wenn ein räumliches Objekt mindestens einen M-Wert enthält. Andernfalls wird 0 (false) zurückgegeben.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="examples"></a>Beispiele  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  
 SELECT @p.HasM   
 --Returns: 1 (true)  
@@ -61,4 +63,3 @@ SELECT @p.HasM
  [Übe &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
   
-

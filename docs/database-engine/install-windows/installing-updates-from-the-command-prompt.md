@@ -2,28 +2,31 @@
 title: Installieren von Updates an der Eingabeaufforderung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/08/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: ba512e9f78ab42ddcfd46d0945c4763e02e1f39e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 1fe67da5b3be2804b802e68927a6e7b48090de7f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installieren von Updates an der Eingabeaufforderung
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Testen und ändern Sie die Installationsskripts, um die Anforderungen Ihrer Organisation zu erfüllen. 
  
 ## <a name="sample-syntax-for-installation"></a>Beispielsyntax zur Installation 
@@ -42,7 +45,7 @@ Der Name des Updatepakets kann variieren und enthält möglicherweise Komponente
 - Setup ist in der Lage, die neuesten Produktupdates in die Installation des Hauptprodukts zu integrieren, sodass das Hauptprodukt und geeignete Updates gleichzeitig installiert werden. Sie können eine Installation der Datenbankmodulinstanz dafür vorbereiten, ein Produktupdate einzuschließen: 
 
     ```
-    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
+    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
     ```
 
 - Aktualisieren Sie nur freigegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und Verwaltungstools: 
@@ -77,7 +80,7 @@ Der Name des Updatepakets kann variieren und enthält möglicherweise Komponente
 > [!IMPORTANT] 
 > Anmeldeinformationen sollten nach Möglichkeit zur Laufzeit angegeben werden. Wenn Sie Anmeldeinformationen in einer Skriptdatei speichern müssen, sollten Sie die Datei schützen, um nicht autorisierten Zugriff zu verhindern. 
  
-|Schalter|Beschreibung| 
+|Schalter|Description| 
 |------------|-----------------| 
 |**/?**|Zeigt Hilfe zur unbeaufsichtigten Installation an der Eingabeaufforderung an.| 
 |**/action=Patch oder /action=RemovePatch**|Gibt die Installationsaktion an: Patch oder RemovePatch.| 

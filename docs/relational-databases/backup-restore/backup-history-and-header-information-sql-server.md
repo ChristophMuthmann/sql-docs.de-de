@@ -2,11 +2,13 @@
 title: Sicherungsverlauf und Headerinformationen (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,19 +35,19 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "54"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
-  Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb** -Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb**-Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  
   
 > [!IMPORTANT]  
 >  Sichern Sie **msdb** häufig, um das Risiko des Verlusts der aktuellen Änderungen am Sicherungs- und Wiederherstellungsverlauf zu minimieren. Informationen darüber, welche der Systemdatenbanken Sie sichern müssen, finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
@@ -71,7 +73,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="BnRHistoryTables"></a> Tabellen mit Sicherungs- und Wiederherstellungsverlauf  
  In diesem Abschnitt werden die Verlaufstabellen der **msdb** -Datenbank vorgestellt, in denen die Metadaten für die Sicherung und Wiederherstellung gespeichert werden.  
   
-|Verlaufstabelle|Beschreibung|  
+|Verlaufstabelle|Description|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Enthält eine Zeile für jede Daten- oder Protokolldatei, die gesichert wird.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Enthält eine Reihe für jede Dateigruppe in einem Sicherungssatz.|  
@@ -91,7 +93,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Die Transact-SQL-Anweisungen RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY und RESTORE VERIFYONLY erfordern die CREATE DATABASE-Berechtigung. Dadurch werden Ihre Sicherungsdateien und Sicherungsinformationen umfassender geschützt als in vorherigen Versionen. Informationen über diese Berechtigung finden Sie unter [GRANT (Datenbankberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Informationsanweisung|Tabelle mit Sicherungsverläufen|Beschreibung|  
+|Informationsanweisung|Tabelle mit Sicherungsverläufen|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Gibt ein Resultset mit einer Liste mit Datenbank- und Protokolldateien zurück, die im angegebenen Sicherungssatz enthalten sind.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Auflisten der Datenbank- und Transaktionsprotokolldateien" weiter unten in diesem Thema.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Ruft alle Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium ab. Das Ergebnis der Ausführung von RESTORE HEADERONLY ist ein Resultset.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Sicherungsheaderinformationen" weiter unten in diesem Thema.|  
@@ -221,7 +223,7 @@ ms.lasthandoff: 06/22/2017
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

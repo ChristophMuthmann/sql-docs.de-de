@@ -2,11 +2,13 @@
 title: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: 
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: 
@@ -14,12 +16,11 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: kfile
+ms.openlocfilehash: 51ffec7f5fc4d5d6d44ff1dbab0e4a20827f6718
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14bc3755dcbb92af2f75ed47a4df6843fe4782b4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Ergänzende Lektion - Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -34,7 +35,7 @@ In dieser ergänzenden Lektion führen Sie eine Reihe von Aufgaben durch. Aufgab
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Dieses ergänzende Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Hinzufügen der dimSalesTerritory-Tabelle zum Projekt 'AW Internet Sales Tabular Model'  

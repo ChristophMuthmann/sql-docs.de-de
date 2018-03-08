@@ -2,30 +2,30 @@
 title: Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle
-  Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung ist eine freigegebene Dienstinstanz des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdiensts. Jede Dienstanwendung verfügt über eine eigene Anwendungsidentität, Konfigurationseinstellungen, Eigenschaften und einen internen Datenspeicher.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung ist eine freigegebene Dienstinstanz des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdiensts. Jede Dienstanwendung verfügt über eine eigene Anwendungsidentität, Konfigurationseinstellungen, Eigenschaften und einen internen Datenspeicher.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="AssignGSA"></a> Zuweisen einer PowerPivot-Dienstanwendung zu einer Webanwendung  
  Nachdem Sie eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung konfiguriert haben, können Sie sie einer Webanwendung zuweisen, indem Sie sie der Liste der Dienstanwendungsverbindungen der jeweiligen Webanwendung hinzufügen. Hierfür gibt es zwei Möglichkeiten:  
   
--   Fügen Sie die Anwendung der Standardverbindungsgruppe ****  hinzu. Die *Standardverbindungsgruppe* ist eine Sammlung von Dienstanwendungsverbindungen, die jeder Webanwendung zur Verfügung stehen, die darauf verweist. Sie müssen dieser Liste eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung hinzufügen.  
+-   Fügen Sie die Anwendung der **Standardverbindungsgruppe** hinzu. Die *Standardverbindungsgruppe* ist eine Sammlung von Dienstanwendungsverbindungen, die jeder Webanwendung zur Verfügung stehen, die darauf verweist. Sie müssen dieser Liste eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung hinzufügen.  
   
 -   Erstellen Sie für eine bestimmte Webanwendung eine **benutzerdefinierte** Verbindungsliste. Wenn Sie mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungen erstellt haben, können Sie die zu verwendende Anwendung aus einer benutzerdefinierten Liste auswählen.  
   
@@ -160,7 +160,6 @@ ms.lasthandoff: 09/01/2017
 3.  Klicken Sie im Menüband auf **Eigenschaften** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Power Pivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

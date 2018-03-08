@@ -3,31 +3,32 @@ title: Format der Verbindungszeichenfolge und Attribute | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c3bc1fc7fcefb034b30c604c358b15ae1db6353e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79d5cabb884262b052429da53cf19c360048dd21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-string-format-and-attributes"></a>Format der Verbindungszeichenfolge und Attribute
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Anstatt ein Dialogfeld zu verwenden, erfordern einige Anwendungen möglicherweise eine Verbindungszeichenfolge, die Datenquellen-Verbindungsinformationen angibt. Die Verbindungszeichenfolge besteht aus einer Anzahl von Attributen, die angeben, wie ein Treiber eine Verbindung mit einer Datenquelle herstellt. Ein Attribut identifiziert eine bestimmte Information, die der Treiber muss wissen, kann er die entsprechenden datenquellenverbindung treffen. Jeder Treiber möglicherweise einen anderen Satz von Attributen, aber das Verbindungszeichenfolgenformat ist immer gleich. Eine Verbindungszeichenfolge weist das folgende Format:  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 09/09/2017
   
  Die Attribute für die Verbindungszeichenfolge sind wie folgt aus:  
   
-|Attribut|Description|Standardwert|  
+|attribute|Description|Standardwert|  
 |---------------|-----------------|-------------------|  
 |DSN|Der Name der Datenquelle aufgeführt, in der Registerkarte "Treiber" der **ODBC-Datenquellenadministrator** (Dialogfeld).|""|  
 |PWD|Das Kennwort für den Oracle-Server, die Sie zugreifen möchten. Dieser Treiber unterstützt die Einschränkungen, die Oracle auf Kennwörter ablegt.|""|  
@@ -67,4 +68,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 "DSN=MyOtherDataSource;UID=/;PWD=;SERVER=MyOtherOracleServer"  
 ```
-

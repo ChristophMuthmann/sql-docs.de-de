@@ -2,25 +2,27 @@
 title: "Aktualisieren von Daten (MDS-Add-In für Excel) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a9fc25e1a301616c530953ce43d4950cba5a680a
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: ac5d258c4c59154bbf03528cd81ac53a6901f15f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Aktualisieren von Daten (MDS-Add-In für Excel)
   Aktualisieren Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Daten, wenn Sie die aktuellsten Informationen aus dem MDS-Repository ohne Öffnen eines neuen Arbeitsblatts abrufen möchten. Sie können entweder alle Zellen oder eine Auswahl von Zellen aktualisieren. Dies kann nützlich sein, wenn Sie Spalten mit benutzerdefinierten Formeln oder anderen Daten eingefügt haben, die nicht in MDS verwaltet werden, und Sie diese Daten beibehalten möchten.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/07/2017
 ## <a name="how-to-refresh-mds-managed-data"></a>Vorgehensweise: Aktualisieren der von MDS verwalteten Daten  
  In der Gruppe **Verbinden und laden** auf dem Menüband hat die Schaltfläche **Aktualisieren** zwei Optionen: **Alle aktualisieren** und **Auswahl aktualisieren**. Die Standardaktion der Menübandschaltfläche lautet **Alle aktualisieren**. Um das ganze Blatt mit Werten vom Server zu aktualisieren, klicken Sie auf die Schaltfläche **Aktualisieren** , oder wählen Sie die Option **Alle aktualisieren** aus. Sie müssen zusammenhängende Zellen auswählen und die Option **Auswahl aktualisieren** auswählen, um nur einige der Zellen in einem Blatt zu aktualisieren.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -63,4 +65,3 @@ ms.lasthandoff: 09/07/2017
 -   [Master Data Services-Add-In für Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Andere dBASE Treiberdetails Programmierung | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac6f47763f562d22325dee8502b447715f7664e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f0a09a7af11cf2f8d446906b9c093d5cb1cab57
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-dbase-driver-programming-details"></a>Andere Programmierung dBASE Treiberdetails
 > [!NOTE]  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [SQLColumns (dBASE-Treiber)](../../odbc/microsoft/sqlcolumns-dbase-driver.md)  
   
--   [SQLConfigDataSource (dBASE-Treiber)](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)  
+-   [SQLConfigDataSource (Access-Treiber)](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)  
   
 -   [SQLDriverConnect (dBASE-Treiber)](../../odbc/microsoft/sqldriverconnect-dbase-driver.md)  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [SQLGetTypeInfo (dBASE-Treiber)](../../odbc/microsoft/sqlgettypeinfo-dbase-driver.md)  
   
--   [SQLSetConnectOption (dBASE-Treiber)](../../odbc/microsoft/sqlsetconnectoption-dbase-driver.md)  
+-   [SQLSetConnectOption (Access-Treiber)](../../odbc/microsoft/sqlsetconnectoption-dbase-driver.md)  
   
 -   [SQLStatistics (dBASE-Treiber)](../../odbc/microsoft/sqlstatistics-dbase-driver.md)  
   
@@ -53,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTransact (dBASE-Treiber)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
 -   [dBASE-Indizes (dBASE-Treiber)](../../odbc/microsoft/dbase-indexes.md)
-

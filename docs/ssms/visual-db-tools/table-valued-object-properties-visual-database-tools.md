@@ -3,29 +3,29 @@ title: Tabellenwertobjekt-Eigenschaften (Visual Database Tools) | Microsoft-Doku
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.TVO
+f1_keywords: vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e1a3aab7fc71e38e5383b8adad799ba3c2a01e4f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Tabellenwertobjekt-Eigenschaften (Visual Database Tools)
-Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im **Abfrage- und Sicht-Designer** ein Tabellenwertobjekt auswählen. Das Tabellenwertobjekt kann eine Sicht, ein Synonym, eine abgeleitete Tabelle oder eine Tabellenwertfunktion sein. Soweit nicht anders angegeben, sind die Eigenschaften im Fenster **Eigenschaften** schreibgeschützt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im **Abfrage- und Sicht-Designer** ein Tabellenwertobjekt auswählen. Das Tabellenwertobjekt kann eine Sicht, ein Synonym, eine abgeleitete Tabelle oder eine Tabellenwertfunktion sein. Soweit nicht anders angegeben, sind die Eigenschaften im Fenster **Eigenschaften** schreibgeschützt.  
   
 > [!NOTE]  
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  
@@ -57,4 +57,3 @@ Zeigt den Namen des ausgewählten Tabellenwertobjekts mitsamt Zusatzinformatione
 **Parameterliste**  
 Zeigt die für die ausgewählte Tabellenwertfunktion definierten Parameter an. Um Werte für die Parameter zu definieren, klicken Sie auf die Parameterliste und dann rechts neben der Eigenschaft auf die Schaltfläche mit den drei Punkten (...). Geben Sie im Dialogfeld Funktionsparameter die entsprechenden Werte ein. Diese Eigenschaft ist nur verfügbar, wenn eine Tabellenwertfunktion ausgewählt ist.  
   
-

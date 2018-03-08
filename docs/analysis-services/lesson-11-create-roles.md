@@ -2,27 +2,27 @@
 title: 'Lektion 12: Erstellen von Rollen | Microsoft Docs'
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 12a11fce82fbb0ec3e75ee9908f07372e5cbb086
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 659b8bb8af4d759367d81bb3e8828360fd2b1f28
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-11-create-roles"></a>Lektion 11: Erstellen von Rollen
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -44,7 +44,7 @@ Da Windows-Benutzer- und -Gruppenkonten in der Organisation eindeutig sind, kön
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 10: Erstellen von Partitionen](../analysis-services/lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Erstellen von Rollen  
@@ -98,4 +98,3 @@ Wechseln Sie zur nächsten Lektion: [Lektion 12: Analysieren in Excel](../analys
 
   
   
-

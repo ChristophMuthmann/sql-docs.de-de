@@ -3,10 +3,12 @@ title: Automatisierte Verwaltung in einem Unternehmen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - multiple instances of SQL Server
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 618e199812a39ec29e032f8371419ec6184c713f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2ca5b76bba976430cb3ad4fa14f6f455c2dd339e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Automatisierte Verwaltung in einem Unternehmen
-Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] hinweg wird *Multiserververwaltung* genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] hinweg wird *Multiserververwaltung* genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
   
 -   Verwalten von zwei oder mehr Servern.  
   
@@ -83,7 +84,7 @@ Enthält Informationen zur Weiterleitung von Ereignissen von den Zielservern auf
 [Optimieren der automatischen Verwaltung in einem Unternehmen](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
 Enthält Informationen dazu, wie die automatisierte Verwaltung in einer Multiserverumgebung die Selbstoptimierungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]nutzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Abwärtskompatibilität zum Installieren des SQL Server-Datenbankmoduls](http://msdn.microsoft.com/en-us/10de5ec6-d3cf-42ef-aa62-1bdf3fbde841)  
 [Registrieren von Servern](http://msdn.microsoft.com/en-us/c2a2513e-fa09-419c-99e7-a12d57c5a0db)  
 [sp_add_targetservergroup](http://msdn.microsoft.com/en-us/acb69343-d766-46ff-b771-0c7655c5231a)  
@@ -98,4 +99,3 @@ Enthält Informationen dazu, wie die automatisierte Verwaltung in einer Multiser
 [syslogins](http://msdn.microsoft.com/en-us/4cb34f17-a4bb-469f-a218-71f074e6308f)  
 [systargetservers](http://msdn.microsoft.com/en-us/479d1314-be37-4d19-ac9c-419fc9110e53)  
   
-

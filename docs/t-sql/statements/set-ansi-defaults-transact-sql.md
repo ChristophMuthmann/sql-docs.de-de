@@ -1,10 +1,13 @@
 ---
 title: SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,39 +23,38 @@ helpviewer_keywords:
 - ANSI_DEFAULTS option
 - SET ANSI_DEFAULTS statement
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-caps.latest.revision: 30
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 170fb1f5a95b9f6fe4fbe596906595475175b1a2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 53cf9bcaa8ca044ea53becea4d1bf0bb701f62f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Steuert eine Gruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Einstellungen, die zusammen einen bestimmten Teil des Standardverhaltens von ISO angeben.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_DEFAULTS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_DEFAULTS ON;  
-```  
-  
+
+## <a name="syntax"></a>Syntax
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_DEFAULTS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_DEFAULTS ON
+```
+
 ## <a name="remarks"></a>Hinweise  
  SET ANSI_DEFAULTS ist eine serverseitige Einstellung, die vom Client nicht verändert wird. Der Client verwaltet eigene Einstellungen. Diese Einstellungen sind standardmäßig das Gegenstück zur Servereinstellung. Benutzer sollten die Servereinstellung nicht ändern. Zum Ändern des Clientverhaltens sollten Benutzer SQL_COPT_SS_PRESERVE_CURSORS verwenden. Weitere Informationen finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
@@ -109,4 +111,3 @@ GO
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Escape-Zeichensequenzen in ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72884da8498b5e0ccb3533c353e676dee2517795
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92fd9745bccacad3d7487c3ed9f1bee58eeb4411
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>Escape-Zeichensequenzen in ODBC
 Eine Anzahl von Funktionen der Programmiersprache, z. B. äußere Joins und Aufrufe von Skalarfunktionen werden häufig von DBMS implementiert. Allerdings sind tendenziell die Syntax für diese Funktionen DBMS-spezifische, selbst wenn der standard-Syntax von verschiedenen normungsinstitutionen definiert sind. Aus diesem Grund definiert ODBC-Escapesequenzen, die standard-Syntax für die folgenden Sprachfunktionen enthalten:  
@@ -63,13 +64,12 @@ Eine Anzahl von Funktionen der Programmiersprache, z. B. äußere Joins und Aufr
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
+-   [Datums-, Zeit- und Timestampliterale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   
 -   [Aufrufe von Skalarfunktionen](../../../odbc/reference/develop-app/scalar-function-calls.md)  
   
--   [WIE Prädikat Escape-Zeichen](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
+-   [Escapezeichen des LIKE-Prädikats](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
   
 -   [Äußere Joins](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [Prozeduraufrufe](../../../odbc/reference/develop-app/procedure-calls.md)
-

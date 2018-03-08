@@ -2,30 +2,30 @@
 title: "Konfigurationseinstellungsverweis (PowerPivot für SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4f3b5a6b1a90d22889c4cd935abaf94f5172cfd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (Power Pivot für SharePoint)
-  Dieses Thema enthält die Referenzdokumentation zu den, von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungen in einer SharePoint-Farm verwendeten Konfigurationseinstellungen. Wenn Sie einen Server mithilfe von PowerShell-Skripts konfigurieren oder Informationen zu einer bestimmten Einstellung suchen möchten, finden Sie in den Informationen in diesem Thema ausführliche Beschreibungen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dieses Thema enthält die Referenzdokumentation zu den, von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungen in einer SharePoint-Farm verwendeten Konfigurationseinstellungen. Wenn Sie einen Server mithilfe von PowerShell-Skripts konfigurieren oder Informationen zu einer bestimmten Einstellung suchen möchten, finden Sie in den Informationen in diesem Thema ausführliche Beschreibungen.  
   
  Konfigurationseinstellungen werden für jede [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung festgelegt. Innerhalb einer Farm können Sie mehrere Serveranwendungen erstellen, um so unabhängige logische Instanzen der gleichen physischen Dienstinstanz zu konfigurieren. Konfigurationseinstellungen werden in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Anwendungsdatenbank gespeichert, die für jede von Ihnen konfigurierte Dienstanwendung erstellt wird.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 09/01/2017
 |----------|-------------|------------------|-----------------|  
 |Startzeit|04:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Untergrenze eines Geschäftstags fest.|  
 |Beendigungszeit|20:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Obergrenze eines Geschäftstags fest.|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konto für die unbeaufsichtigte Datenaktualisierung|InclusionThresholdSetting|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konto für die unbeaufsichtigte Datenaktualisierung|Keine|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
 |Ermöglichen Sie Benutzern, benutzerdefinierte Windows-Anmeldeinformationen einzugeben|Aktiviert|Boolean|Legt fest, ob die Seite für die Konfiguration geplanter Datenaktualisierungen eine Option anzeigt, die einem Zeitplanbesitzer ermöglicht, Windows-Benutzerkonto und Kennwort anzugeben, um einen Datenaktualisierungsauftrag auszuführen.<br /><br /> Secure Store Service muss aktiviert werden, damit diese Option funktioniert. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
 |Maximale Verarbeitungsverlaufslänge|365|1 bis 5000 Tage|Bestimmt, wie lange der Datenaktualisierungsverlauf in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungs-Datenbank beibehalten wird. Weitere Informationen finden Sie unter [PowerPivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).|  
   
@@ -107,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: "Konstanten in Eigenschaftsausdrücken | Microsoft Docs"
+title: "Aufgezählte Konstanten in Eigenschaftsausdrücken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
   Wenn Eigenschaftsausdrücke Werte aus einer Liste von Enumeratorelementen enthalten, müssen die Ausdrücke den numerischen Wert des Enumeratorelements anstelle des Anzeigenamens des Elements verwenden. Wenn z. B. ein Ausdruck die **LoggingMode** -Eigenschaft festlegt, müssen Sie den numerischen Wert 2 anstelle des Anzeigenamens Disabled verwenden.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 08/03/2017
   
 |Anzeigename in DTSPackageType|Numerischer Wert|  
 |-------------------------------------|-------------------|  
-|Standardwert|0|  
+|Default|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -74,7 +76,7 @@ ms.lasthandoff: 08/03/2017
   
 |Anzeigename in DTSPriorityClass|Numerischer Wert|  
 |---------------------------------------|-------------------|  
-|Standardwert|0|  
+|Default|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
@@ -210,7 +212,7 @@ ms.lasthandoff: 08/03/2017
 |----------------------------------------------|-------------------|  
 |Normal|0|  
 |Archive|1|  
-|Hidden|2|  
+|Ausgeblendet|2|  
 |ReadOnly|4|  
 |System|8|  
   
@@ -228,7 +230,7 @@ ms.lasthandoff: 08/03/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>Nachrichtenwarteschlange (Task)  
+### <a name="message-queue-task"></a>Message Queue Task  
  **MessageType** -Eigenschaft – Festlegung mithilfe von Werten der **MQMessageType** -Enumeration.  
   
 |Anzeigename in MQMessageType|Numerischer Wert|  
@@ -476,8 +478,8 @@ ms.lasthandoff: 08/03/2017
   
 |Anzeigename in DTSXMLDiffAlgorithm|Numerischer Wert|  
 |------------------------------------------|-------------------|  
-|Automatisch|0|  
-|Fast|1|  
+|Auto|0|  
+|Schnell|1|  
 |Precise|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> Wartungsplantasks  
@@ -493,7 +495,7 @@ ms.lasthandoff: 08/03/2017
 |Anzeigename in DatabaseSelection|Numerischer Wert|  
 |----------------------------------------|-------------------|  
 |InclusionThresholdSetting|0|  
-|Alle|1|  
+|All|1|  
 |System|2|  
 |Benutzer|3|  
 |Specific|4|  
@@ -503,7 +505,7 @@ ms.lasthandoff: 08/03/2017
 |Anzeigename in TableSelection|Numerischer Wert|  
 |-------------------------------------|-------------------|  
 |InclusionThresholdSetting|0|  
-|Alle|1|  
+|All|1|  
 |Specific|2|  
   
  **ObjectTypeSelection** -Eigenschaft – Festlegung mithilfe von Werten der **ObjectType** -Enumeration.  
@@ -511,7 +513,7 @@ ms.lasthandoff: 08/03/2017
 |Anzeigename in ObjectType|Numerischer Wert|  
 |---------------------------------|-------------------|  
 |Tabelle|0|  
-|Sicht|1|  
+|Anzeigen|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Datenbank sichern (Task)  
@@ -519,7 +521,7 @@ ms.lasthandoff: 08/03/2017
   
 |Anzeigename in DestinationType|Numerischer Wert|  
 |--------------------------------------|-------------------|  
-|Automatisch|0|  
+|Auto|0|  
 |Manuell|1|  
   
  **ExistingBackupsAction** -Eigenschaft – Festlegung mithilfe von Werten der **ActionForExistingBackups** -Enumeration.  
@@ -569,9 +571,9 @@ ms.lasthandoff: 08/03/2017
   
 |Anzeigename in StatisticsTarget|Numerischer Wert|  
 |---------------------------------------|-------------------|  
-|Column|1|  
+|Spalte|1|  
 |Index|2|  
-|Alle|3|  
+|All|3|  
   
 ##  <a name="CommonProperties"></a> Allgemeine Eigenschaften  
  Pakete, Tasks, die Foreach-Schleife, die For-Schleife und Sequenzcontainer können die folgenden Enumerationen verwenden, um die angegebenen Eigenschaften festzulegen.  
@@ -603,15 +605,14 @@ ms.lasthandoff: 08/03/2017
 |Supported|1|  
 |Required|2|  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integrationsservices &#40; SSIS &#41; Pakete](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md)  
   
   
-

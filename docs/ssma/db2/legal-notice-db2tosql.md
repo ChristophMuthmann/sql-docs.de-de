@@ -1,29 +1,30 @@
 ---
 title: Rechtliche Hinweise (DB2toSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2da049a8a0230abe43b690ee53c3faa678c1718
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc9ae0412621d5ceaee4fd31941f0a4b33cacd13
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="legal-notice-db2tosql"></a>Rechtliche Hinweise (DB2toSQL)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  
@@ -51,4 +52,3 @@ Kunden sollten keine nicht dokumentierten APIs nutzen, was u. a. für folgende E
   
 Server- und Datenbankupgrades auf zukünftige Versionen von SQL Server werden nicht für Anwendungen und Datenbanken garantiert, die nicht dokumentierte Einstiegspunkte nutzen und verwenden. Die Verwendung von SQL Server-Features und -Funktionen muss auf solche beschränkt sein, die in der Microsoft SQL Server-Dokumentation enthalten sind. Wenn eine Funktion nicht in der Microsoft SQL Server-Dokumentation erfasst ist, zählt sie nicht zum unterstützten Teil von SQL Server.  
   
-

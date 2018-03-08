@@ -2,25 +2,28 @@
 title: Importieren von Daten aus Excel in SQL | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: ab792aed71ab2e7837da9cf0073d4ff191ce5184
-ms.openlocfilehash: ce462c238c81a4a9fc82869a856ac13e9f112aee
-ms.contentlocale: de-de
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Es gibt verschiedene Möglichkeiten, Daten aus Excel in SQL Server oder Azure SQL-Datenbank zu importieren. Dieser Artikel fasst jede dieser Optionen zusammen und stellt Links für detailliertere Informationen bereit.
 -   Sie können Daten in einem einzigen Schritt von Excel nach SQL importieren, indem Sie eines der folgenden Tools verwenden:
     -   Der Assistent für SQL Server-Import und -Export
@@ -209,4 +212,3 @@ Informationen zum Kopieren von Daten mit Azure Data Factory finden Sie in folgen
 ## <a name="next-steps"></a>Nächste Schritte
 
 Um mehr über die Lösung zu erfahren, für die Sie sich interessieren, folgen Sie den Links zu weiteren Informationen.
-

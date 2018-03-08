@@ -3,7 +3,7 @@ title: "Aktivieren eine DLL für die Ausführung auf DCOM | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 65401d1e0f3da015982d27aa7608cba4046313a2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d67a595c97547934b04794f036d58445e8c282
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Aktivieren einer DLL zur Ausführung auf DCOM
 > [!IMPORTANT]
@@ -50,6 +49,5 @@ ms.lasthandoff: 09/09/2017
      Um die DLL-Datei über DCOM und IIS auf demselben Computer zugänglich zu machen, müssen Sie die Komponente Aktivierungsattribut in das Komponentendienste-MMC-Snap-in festgelegt. Nachdem Sie das Attribut, um festlegen **im Prozess des Erstellers**, werden Sie feststellen, dass ein **Inproc** Serverschlüssel in der Registrierung wurde hinzugefügt, verweist auf eine Komponentendienste DLL Ersatzzeichen enthalten.  
   
  Weitere Informationen zu den Komponentendiensten (oder Microsoft Transaction-Dienst, bei Verwendung von Windows NT) und wie Sie diese Schritte ausführen, finden Sie auf der Website von Microsoft Transaction Server.
-
 
 

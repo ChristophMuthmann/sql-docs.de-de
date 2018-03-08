@@ -1,11 +1,13 @@
 ---
 title: Serverkonfigurationsoptionen (SQL Server) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,20 +32,19 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 128
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4bf8c88d19d6b23f1cae11cc32c048e50a2d6b2f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5fd7bae9ba05669af1b21a931b39aba3132e25e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="server-configuration-options-sql-server"></a>Serverkonfigurationsoptionen (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Sie können die Ressourcen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über Konfigurationsoptionen verwalten und optimieren, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder die gespeicherte Systemprozedur sp_configure verwenden. Die am häufigsten verwendeten Serverkonfigurationsoptionen stehen über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zur Verfügung. Mit sp_configure kann auf alle Konfigurationsoptionen zugegriffen werden. Sie sollten vor dem Festlegen dieser Optionen die Auswirkungen auf Ihr System sorgfältig überdenken. Weitere Informationen finden Sie unter [Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
   
@@ -67,7 +68,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
 ## <a name="configuration-options-table"></a>Tabelle der Konfigurationsoptionen  
  In der folgenden Tabelle werden alle verfügbaren Konfigurationsoptionen, der Bereich der möglichen Einstellungen und die Standardwerte aufgelistet. Konfigurationsoptionen sind wie folgt mit Buchstabencodes gekennzeichnet:  
   
--   A (Advanced) = Erweiterte Optionen, die nur von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden sollten und das Festlegen von Erweiterte Optionen anzeigen auf 1 erfordern.  
+-   A (Advanced) = Erweiterte Optionen, die nur von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden sollten und das Festlegen von „Erweiterte Optionen anzeigen“ auf 1 erfordern.  
   
 -   RR (Restart Required) = Optionen, die den Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erfordern.  
   
@@ -75,7 +76,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
   
 -   SC (Self-Configuring) = Selbstkonfigurierende Optionen.  
   
-    |Konfigurationsoption|Mindestwert|Höchstwert|Standardwert|  
+    |Konfigurationsoption|Mindestwert|Höchstwert|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[AccessCheckCache-Bucketanzahl](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[AccessCheckCache-Kontingent](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -92,7 +93,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[Schwellenwert für blockierte Prozesse](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[C2-Überwachungsmodus](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). |0|1|0|  
+    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[Common Criteria-Kompatibilität aktiviert](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[Kostenschwellenwert für Parallelität](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -104,7 +105,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[Standardablaufverfolgung aktiviert](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[Ergebnisse von Triggern nicht zulassen](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[Füllfaktor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |Maximale Bandbreite für Volltextdurchforstung, siehe [Bandbreite für Volltextdurchforstung](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -119,7 +120,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[Max. Bereich für Volltextdurchforstung](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[Max. Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[Max. Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 ist der empfohlene Höchstwert für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.)|0<br /><br /> 0 konfiguriert automatisch die maximale Anzahl der Arbeitsthreads abhängig von der Anzahl der Prozessoren nach der Formel (256+(*\<Prozessoren>* -4) × 8) für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Doppelte für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.)|  
+    |[Max. Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 ist der empfohlene Höchstwert für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Hinweis:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.|0<br /><br /> 0 (null) konfiguriert automatisch die maximale Anzahl der Arbeitsthreads, abhängig von der Anzahl der Prozessoren nach der Formel (256+(*\<Prozessoren>*–4) × 8) für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und (512+(*\<Prozessoren>*–4)× 8)für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Hinweis:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.|  
     |[Medienbeibehaltung](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[Min. Arbeitsspeicher pro Abfrage](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[Min. Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -129,7 +130,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[Geöffnete Objekte](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, veraltet)|0|2147483647|0|  
     |[Für Ad-hoc-Arbeitsauslastungen optimieren](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH-Timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop- und Azure-BLOB-Speicher](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|0|7|0|   
+    |[PolyBase Hadoop- und Azure-BLOB-Speicher](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
     |[Rang vorausberechnen](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[Prioritätserhöhung](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[Kostenbeschränkung der Abfragekontrolle](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
@@ -159,4 +160,3 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
  [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
   
   
-

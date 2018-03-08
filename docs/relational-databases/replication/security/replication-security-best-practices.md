@@ -2,11 +2,13 @@
 title: "Bewährte Methoden für die Replikationssicherheit | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - authentication [SQL Server replication]
 - Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a14c884fd9abac0488a2a1cbf2744f52aee34770
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "42"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 85ab9523752bc1f72c1535cc00e51e50dbac946e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-security-best-practices"></a>Bewährte Methoden für die Replikationssicherheit
-  Bei der Replikation werden Daten in verteilten Umgebungen verschoben, diese reichen von Intranets auf einer einzelnen Domäne bis hin zu Anwendungen, die auf Daten zwischen nicht vertrauenswürdigen Domänen und über das Internet zugreifen. Es ist wichtig, die beste Methode für die Sicherung der Replikationsverbindungen unter diesen verschiedenen Voraussetzungen zu kennen und zu verstehen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei der Replikation werden Daten in verteilten Umgebungen verschoben. Diese reichen von Intranets auf einer einzelnen Domäne bis hin zu Anwendungen, die auf Daten zwischen nicht vertrauenswürdigen Domänen und über das Internet zugreifen. Es ist wichtig, die beste Methode für die Sicherung der Replikationsverbindungen unter diesen verschiedenen Voraussetzungen zu kennen und zu verstehen.  
   
  Folgende Informationen sind für die Replikation in sämtlichen Umgebungen relevant:  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Führen Sie jeden Replikations-Agent unter einem anderen Windows-Konto aus, und verwenden Sie die Windows-Authentifizierung für sämtliche Verbindungen des Replikations-Agents. Weitere Informationen zum Angeben von Konten finden Sie unter [Verwalten von Anmeldenamen und Kennwörtern bei der Replikation](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
     -   In Situationen, für die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung erforderlich ist, ist der Zugriff auf die UNC-Momentaufnahmefreigabe oft nicht verfügbar (der Zugriff kann z. B. durch eine Firewall gesperrt sein). In diesem Fall können Sie die Momentaufnahme über das Dateiübertragungsprotokoll (FTP, File Transfer Protokoll) auf Abonnenten übertragen. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replikation über das Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
  [Sichern des Abonnenten](../../../relational-databases/replication/security/secure-the-subscriber.md)   

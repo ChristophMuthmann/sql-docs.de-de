@@ -3,29 +3,28 @@ title: UpdateCharacterStream-Methode (SQLServerResultSet) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateCharacterStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateCharacterStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0b78180d69433abeea60e90869cb27644d576392
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5bc695cdd01a8337196aa14b43c2d9de8b7d073d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

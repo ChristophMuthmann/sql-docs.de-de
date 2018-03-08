@@ -3,37 +3,41 @@ title: "RHEL Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Micro
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7930fd8cee6f6fabe00a711f9109573e42550563
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von Cluster RHEL für SQL Server-Verfügbarkeitsgruppe
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Dokument erläutert das Erstellen eines drei Knoten Availability Group für SQL Server unter Red Hat Enterprise Linux. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe unter Linux erfordert drei Knoten?: Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Schrittmacher](http://clusterlabs.org/). 
 
 > [!NOTE] 
 > Zugriff auf Red Hat eine vollständige Dokumentation ist kein gültiges Abonnement erforderlich. 
 
-Weitere Informationen zur Clusterkonfiguration, Agents Ressourcenoptionen und Verwaltung, finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server ist nicht als eng mit Schrittmacher unter Linux integriert, unverändert in Windows Server-Failoverclustering. SQL Server-Instanz ist keine des Clusters bekannt. Schrittmacher stellt Cluster Ressource Orchestrierung bereit. Darüber hinaus Name des virtuellen Netzwerks bezieht sich auf Windows Server Failover clustering - es gibt keine Entsprechung in Schrittmacher. Verfügbarkeit Gruppe dynamische Verwaltungssichten (DMVs), die Clusterinformationen Abfragen geben leere Zeilen auf Schrittmacher Cluster zurück. Um einen Listener für transparente wiederverbindung nach einem Failover zu erstellen, müssen registrieren Sie den Listenernamen manuell in DNS mit der IP-Adresse, die zum Erstellen der virtuellen IP-Adressressource verwendet. 
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten eines Clusters Schrittmacher und fügen Sie einer verfügbarkeitsgruppe als Ressource im Cluster für hohe Verfügbarkeit.
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 
@@ -125,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Festlegen Sie Clustereigenschaft auf "false" Start-Fehler-ist--Schwerwiegender
 
-`start-failure-is-fatal`Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem primären ehemaligen, sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
+`start-failure-is-fatal` Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem primären ehemaligen, sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
 
 Aktualisieren Sie den Eigenschaftswert an `false` ausführen:
 
@@ -147,7 +151,7 @@ Informationen zu Schrittmacher Clustereigenschaften finden Sie unter [Schrittmac
 Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` Befehl, und legen Sie die Ressourceneigenschaften. Der folgende Befehl erstellt eine `ocf:mssql:ag` Master/Slave Typ der Ressource für die verfügbarkeitsgruppe mit dem Namen `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -156,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>Erstellen der virtuellen IP-Adressressource
 
-Führen Sie den folgenden Befehl auf einem Knoten, um die virtuelle IP-Adressressource zu erstellen. Verwenden Sie eine verfügbare statische IP-Adresse aus dem Netzwerk. Ersetzen Sie die IP-Adresse zwischen `**<10.128.16.240>**` mit einer gültigen IP-Adresse.
+Führen Sie den folgenden Befehl auf einem Knoten, um die virtuelle IP-Adressressource zu erstellen. Verwenden Sie eine verfügbare statische IP-Adresse aus dem Netzwerk. Ersetzen Sie die IP-Adresse zwischen `<10.128.16.240>` mit einer gültigen IP-Adresse.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Es ist keine virtuellen Servernamen Schrittmacher äquivalent. Um eine Verbindungszeichenfolge zu verwenden, die auf einen Servernamen Zeichenfolge anstelle einer IP-Adresse verweist, registrieren Sie die Adresse der virtuellen IP-Ressource und die gewünschten virtuellen Servernamen in DNS. Registrieren Sie für die DR-Konfigurationen den gewünschten virtuellen Servernamen und die IP-Adresse mit DNS-Server sowohl primäre als auch DR-Standort.
@@ -206,4 +210,3 @@ Ausführen des manuellen Failovers der verfügbarkeitsgruppe mit `pcs`. Failover
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Betreiben HA-verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md)
-

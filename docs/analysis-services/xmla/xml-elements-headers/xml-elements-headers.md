@@ -2,36 +2,35 @@
 title: Header (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XMLA, headers
 - SOAP headers [XML for Analysis]
 - XML for Analysis, headers
 - headers [XML for Analysis]
 ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2006ca27d9a11924e053087b6a35d3d4df26d7d8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b12c8b2b22d51069998b4b49d1c9aceb43f063a5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---headers"></a>XML-Elemente - Header
-  Das XMLA-Protokoll (XML for Analysis) verwendet XML-Elemente innerhalb des SOAP-Headers, um Funktionen auf Protokollebene zu verwalten, wie Sitzungsunterstützung und die Aushandlung von unterstützten Funktionen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Die XML for Analysis (XMLA)-Protokoll verwendet XML-Elemente innerhalb des SOAP-Headers zum Protokoll-Level-Funktionen, z. B. sitzungsunterstützung und die Aushandlung von unterstützten Funktionen zu verwalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die folgenden Themen beschreiben die XMLA-Header-Elemente von implementiert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [XML-Elemente &#40; XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Datenbankspiegelung: Verwenden von Zertifikaten für ausgehende Verbindungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - outbound connections [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b2f2b52243f94686b1132988d588bf901db09c7c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 48570e422fb1e3751f10f7d42c09a850bdad35b0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Datenbankspiegelung: Verwenden von Zertifikaten für ausgehende Verbindungen
-  In diesem Thema werden die Schritte beschrieben, um Serverinstanzen so zu konfigurieren, dass bei der Datenbankspiegelung Zertifikate zur Authentifizierung von ausgehenden Verbindungen verwendet werden können. Die ausgehende Verbindung muss konfiguriert werden, bevor eingehende Verbindungen eingerichtet werden können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema werden die Schritte beschrieben, um Serverinstanzen so zu konfigurieren, dass bei der Datenbankspiegelung Zertifikate zur Authentifizierung von ausgehenden Verbindungen verwendet werden können. Die ausgehende Verbindung muss konfiguriert werden, bevor eingehende Verbindungen eingerichtet werden können.  
   
 > [!NOTE]  
 >  Alle Spiegelungsverbindungen auf einer Serverinstanz verwenden einen gemeinsamen Datenbankspiegelungsendpunkt. Sie müssen beim Erstellen dieses Endpunktes die Authentifizierungsmethode der Serverinstanz angeben.  
@@ -175,12 +176,12 @@ GO
   
  Ein Transact-SQL-Beispiel zum Einrichten einer Sitzung im Hochleistungsmodus finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Sofern Sie nicht garantieren können, dass Ihr Netzwerk sicher ist, wird das Verschlüsseln bei Verbindungen zur Datenbankspiegelung empfohlen.  
   
  Verwenden Sie zum Kopieren eines Zertifikats zu einem anderen System eine sichere Kopiermethode.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
@@ -190,4 +191,3 @@ GO
  [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
   
-

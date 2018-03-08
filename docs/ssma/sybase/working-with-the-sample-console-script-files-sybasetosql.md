@@ -3,29 +3,29 @@ title: Arbeiten mit der Konsole-Skriptdateien (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Sample Console Script Files
+helpviewer_keywords: Sybase Console,Sample Console Script Files
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd9859a3292d7cb9ec00f22f695be9aaa25b59f0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cb3c0f4f2e9f57b10527b9e524eae10563efebe
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Arbeiten mit der Konsole-Skriptdateien (SybaseToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer-Verweis und die Verwendung bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts, sodass die Endbenutzer Bedürfnissen problemlos anzupassen.  
@@ -135,4 +135,3 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
 [Erstellen die Server-Connection-Dateien &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [Generieren von Berichten &#40; SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   
-

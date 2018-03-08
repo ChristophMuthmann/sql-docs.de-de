@@ -2,34 +2,32 @@
 title: LinRegPoint (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LINREGPOINT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinRegPoint function
+f1_keywords: LINREGPOINT
+dev_langs: kbMDX
+helpviewer_keywords: LinRegPoint function
 ms.assetid: 28298d7c-2b8a-4423-ae52-9c2d6f0f0064
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 37c0f4b4ef73ff14d8c0f46208b94d1b96d995e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a95fced157905334b80e2422fad82d3d96ec2ec
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Berechnet die lineare Regression einer Menge und gibt den Wert der *y-Intercept* in der regressionsgleichung y = Ax + b für einen bestimmten Wert von X.  
   
@@ -76,4 +74,3 @@ LinRegPoint([Measures].[Unit Sales],LastPeriods(10),[Measures].[Unit Sales],[Mea
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

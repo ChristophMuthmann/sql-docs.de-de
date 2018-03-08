@@ -2,33 +2,35 @@
 title: "Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: 8
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b558ecb78086123cff3c65ae95446fb1a30f9cf4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dieser Artikel enthält die Schritte zum Festlegen der Always Encrypted-Zielkonfiguration für Datenbankspalten mithilfe des Cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (im PowerShell-Modul *SqlServer* ). Das Cmdlet **Set-SqlColumnEncryption** ändert sowohl das Schema der Zieldatenbank sowie die in den ausgewählten Spalten gespeicherten Daten. Die in einer Spalte gespeicherten Daten können verschlüsselt, erneut verschlüsselt oder entschlüsselt werden, je nachdem, welche Zielverschlüsselungseinstellungen für die Spalten angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration aussieht.
 Weitere Informationen zur Unterstützung von Always Encrytped im PowerShell-Modul „SqlServer“ finden Sie unter [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie Folgendes sicher, um die Zielverschlüsselungskonfiguration festzulegen:
 - Ein Spaltenverschlüsselungsschlüssel muss in der Datenbank konfiguriert sein (wenn Sie eine Spalte ver- oder entschlüsseln). Weitere Informationen finden Sie unter [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
@@ -54,17 +56,17 @@ Verwenden Sie den Offlineansatz:
 Verwenden Sie den Onlineansatz:
 - Um die Ausfallzeit/Nichtverfügbarkeit der Datenbank für die Anwendungen zu minimieren.
 
-## <a name="security-considerations"></a>Sicherheitsüberlegungen
+## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
 Das Cmdlet **Set-SqlColumnEncryption** , das zum Konfigurieren der Verschlüsselung von Datenbankspalten verwendet wird, verarbeitet sowohl Always Encrypted-Schlüssel als auch die in Datenbankspalten gespeicherten Daten. Es ist daher wichtig, dass Sie das Cmdlet auf einem sicheren Computer ausführen. Wenn sich Ihre Datenbank in SQL Server befindet, führen Sie das Cmdlet auf einem anderen Computer als dem Computer aus, der die SQL Server-Instanz hostet. Der primäre Zweck von Always Encrypted ist, sicherzustellen, dass verschlüsselte sensible Daten sicher sind, wenn das Datenbanksystem kompromittiert wird. Daher kann das Ausführen eines PowerShell-Skripts, das Schlüssel und/oder sensible Daten auf dem SQL Server-Computer verarbeitet, die Vorteile der Funktion einschränken oder zunichte machen.
 
 Task  |Artikel  |Greift auf Klartextschlüssel/-schlüsselspeicher zu  |Greift auf Datenbank zu   
 ---|---|---|---
-Schritt 1: Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer-Modul. | [Importieren des SqlServer-Moduls](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Nein | Nein
-Schritt 2: Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Nein | ja
-Schritt 3: Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel (der den Spaltenverschlüsselungsschlüssel schützt, der rotiert werden soll) in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | ja | Nein
-Schritt 4. Erstellen Sie ein Array von SqlColumnEncryptionSettings-Objekten – eines für jede Datenbankspalte, die Sie verschlüsseln, erneut verschlüsseln oder entschlüsseln möchten. SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Es gibt das Zielverschlüsselungsschema für eine Spalte an. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Nein | Nein
-Schritt 5. Legen Sie die gewünschte Verschlüsselungskonfiguration fest, die in dem Array von SqlColumnMasterKeySettings-Objekten angegeben ist, das Sie im vorherigen Schritt erstellt haben. Eine Spalte wird verschlüsselt, erneut verschlüsselt oder entschlüsselt, je nachdem, welche Zieleinstellungen angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration der Spalte aussieht.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Hinweis:** Dieser Schritt kann lange dauern. Je nach gewähltem Ansatz (online oder offline) können Ihre Anwendungen während des gesamten Vorgangs oder nur teilweise nicht auf die Tabellen zugreifen. | Ja | ja
+Schritt 1: Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer-Modul. | [Importieren des SqlServer-Moduls](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | nein | nein
+Schritt 2: Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | nein | ja
+Schritt 3: Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel (der den Spaltenverschlüsselungsschlüssel schützt, der rotiert werden soll) in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | ja | nein
+Schritt 4. Erstellen Sie ein Array von SqlColumnEncryptionSettings-Objekten – eines für jede Datenbankspalte, die Sie verschlüsseln, erneut verschlüsseln oder entschlüsseln möchten. SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Es gibt das Zielverschlüsselungsschema für eine Spalte an. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | nein | nein
+Schritt 5. Legen Sie die gewünschte Verschlüsselungskonfiguration fest, die in dem Array von SqlColumnMasterKeySettings-Objekten angegeben ist, das Sie im vorherigen Schritt erstellt haben. Eine Spalte wird verschlüsselt, erneut verschlüsselt oder entschlüsselt, je nachdem, welche Zieleinstellungen angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration der Spalte aussieht.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Hinweis:** Dieser Schritt kann lange dauern. Je nach gewähltem Ansatz (online oder offline) können Ihre Anwendungen während des gesamten Vorgangs oder nur teilweise nicht auf die Tabellen zugreifen. | ja | ja
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Verschlüsseln von Spalten mithilfe des Offlineansatzes: Beispiel
 
@@ -156,7 +158,6 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
 
 
 

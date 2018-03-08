@@ -3,7 +3,7 @@ title: NumericScale-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d24bb11f0bc8cad13b53fd418b799a40dab13f16
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5f943223be304de56e52f54510bd6d27bac6d15
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-property-adox"></a>NumericScale-Eigenschaft (ADOX)
 Gibt die Dezimalstellen eines numerischen Werts in der Spalte an.  
@@ -50,5 +49,4 @@ Gibt die Dezimalstellen eines numerischen Werts in der Spalte an.
   
 ## <a name="see-also"></a>Siehe auch  
  [ADOX-Codebeispiel: NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Type-Eigenschaft (Spalte) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
-
+ [Type-Eigenschaft (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

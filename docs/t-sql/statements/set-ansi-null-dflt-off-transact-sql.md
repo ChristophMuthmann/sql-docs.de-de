@@ -1,10 +1,13 @@
 ---
 title: SET ANSI_NULL_DFLT_OFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,39 +26,38 @@ helpviewer_keywords:
 - overriding default nullability
 - SET ANSI_NULL_DFLT_OFF statement
 ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
-caps.latest.revision: 27
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1eeb95a4fdeb8e0db5ed08f3f5728a38f512bc2f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 93677ffee0b86f342d07b8a129b6a1e0b2676d28
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulldfltoff-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ändert das Verhalten der Sitzung, um die standardmäßige NULL-Zulässigkeit neuer Spalten überschrieben wird, wenn die Option ANSI null Default für die Datenbank ist **"true"**. Weitere Informationen zum Festlegen des Werts für ANSI null Default finden Sie unter [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>Syntax
+
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-## <a name="syntax"></a>Syntax  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET ANSI_NULL_DFLT_OFF { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULL_DFLT_OFF OFF  
-```  
-  
+SET ANSI_NULL_DFLT_OFF { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULL_DFLT_OFF OFF
+```
+
 ## <a name="remarks"></a>Hinweise  
  Diese Einstellung betrifft die NULL-Zulässigkeit für neue Spalten nur, wenn die NULL-Zulässigkeit der Spalte nicht in den CREATE TABLE- und ALTER TABLE-Anweisungen angegeben wurde. Wenn für SET ANSI_NULL_DFLT_OFF die Einstellung ON festgelegt ist und mit ALTER TABLE- und CREATE TABLE-Anweisungen neue Spalten erstellt werden, sind diese standardmäßig NOT NULL, falls der NULL-Zulässigkeitsstatus der Spalte nicht explizit angegeben ist. SET ANSI_NULL_DFLT_OFF wirkt sich nicht auf Spalten aus, die mit einer expliziten Angabe von NULL oder NOT NULL erstellt wurden.  
   
@@ -156,4 +158,3 @@ DROP TABLE t1, t2, t3, t4, t5, t6;
  [SET ANSI_NULL_DFLT_ON &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)  
   
   
-

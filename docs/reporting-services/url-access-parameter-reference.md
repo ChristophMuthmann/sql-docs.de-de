@@ -1,33 +1,32 @@
 ---
-title: URL Access Parameter Reference | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: "Referenz für URL-Zugriffsparameter | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 09/09/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "48"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterverweis
+# <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
   Sie können die folgenden Parameter als Teil einer URL verwenden, um das Aussehen und Verhalten Ihrer [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Berichte zu konfigurieren. In diesem Abschnitt sind die am häufigsten verwendeten Parameter aufgeführt. Bei Parametern muss keine Groß- und Kleinschreibung beachtet werden. Sie beginnen mit dem Präfix *rs:* , wenn sie an den Berichtsserver weitergeleitet werden, und mit *rs:* , wenn sie zu einem HTML-Viewer weitergeleitet werden. Sie können außerdem Parameter angeben, die für Geräte oder Renderingerweiterungen spezifisch sind. Weitere Informationen zu gerätespezifischen Parametern finden Sie unter [Angeben von Geräteinformationseinstellungen in einer URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
@@ -233,7 +232,7 @@ ms.lasthandoff: 08/09/2017
   
      Der Standardwert ist **HTML5**. Weitere Informationen finden Sie unter [Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md).  
   
-     Eine vollständige Liste finden Sie unter der  **\<Rendern >** -Abschnitt der Datei "rsreportserver.config" der Berichtsserver.  Weitere Informationen zum Auffinden der Datei finden Sie unter [RSReportServer.config-Konfigurationsdatei](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Eine vollständige Liste finden Sie im Abschnitt **\<Render>**-Erweiterung der Datei „rsreportserver.config“ auf dem Berichtsserver.  Weitere Informationen zum Auffinden der Datei finden Sie unter [RSReportServer.config-Konfigurationsdatei](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Um beispielsweise von einem im **einheitlichen** Modus ausgeführten Berichtsserver direkt eine PDF-Kopie eines Berichts abzurufen, geben Sie Folgendes an:  
   
@@ -379,9 +378,8 @@ ms.lasthandoff: 08/09/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [URL-Zugriff &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md)  
+ [Export a Report Using URL Access (Exportieren von Berichten über URL-Zugriff)](../reporting-services/export-a-report-using-url-access.md)  
   
   
-

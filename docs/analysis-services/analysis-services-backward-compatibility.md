@@ -1,13 +1,14 @@
 ---
 title: "Abwärtskompatibilität von SQL Server 2016 Analysis Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services, Abwärtskompatibilität (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -54,7 +54,7 @@ Die folgenden Features sind in dieser Version veraltet:
 |Tabellarisch|Kompatibilitätsgrade für die Tabellenmodelle 1100 und 1103 werden in einer zukünftigen Version nicht unterstützt. Der Ersatz erfolgt durch Modelle mit Kompatibilitätsgrad 1200 oder höher, Konvertieren von Modelldefinitionen zu tabellarischen Metadaten festgelegt. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Tools|SQL Server Profiler für die Ablaufverfolgungssammlung<br /><br /> Der Ersatz verwendet den in SQL Server Management Studio eingebetteten Profiler für erweiterte Ereignisse.  <br /> Weitere Informationen finden Sie unter [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Tools|Server Profiler für die Ablaufverfolgungswiedergabe <br />Ersatz. Es gibt keinen Ersatz.|  
-|Verwaltungsobjekte für die Ablaufverfolgung und Ablaufverfolgungs-APIs|Microsoft.AnalysisServices.Trace-Objekte (enthält die APIs für Analysis Services Ablauf-und Wiedergabeobjekte). Der Ersatz ist mehrteilig:<br /><br /> - Ablaufverfolgungskonfiguration: Microsoft.SqlServer.Management.XEvent<br />- Ablaufverfolgungslesevorgänge: Microsoft.SqlServer.XEvent.Linq<br />- Ablaufverfolgungswiedergabe: keine Angabe|  
+|Verwaltungsobjekte für die Ablaufverfolgung und Ablaufverfolgungs-APIs|Microsoft.AnalysisServices.Trace-Objekte (enthält die APIs für Analysis Services Ablauf-und Wiedergabeobjekte). Der Ersatz ist mehrteilig:<br /><br /> -Ablaufverfolgungskonfiguration: Microsoft.SqlServer.Management.XEvent<br />-Ablaufverfolgungslesevorgänge: Microsoft.SqlServer.XEvent.Linq<br />- Ablaufverfolgungswiedergabe: keine Angabe|  
   
 > [!NOTE]  
 >  Zuvor als veraltet markierte Ankündigungen von Funktionen aus [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bleiben wirksam. Da der Code, der diese Funktionen unterstützt, noch nicht aus dem Produkt-entfernt wurde, sind viele dieser Funktionen in dieser Version weiterhin vorhanden. Bei der zuvor als veraltet markierte Funktionen möglicherweise zugegriffen werden kann, sie weiterhin ausmachen, als veraltet markiert und ist möglicherweise physisch aus dem Produkt jederzeit entfernt werden.  
@@ -129,4 +129,3 @@ Funktionsverhalten, die in diesem Release geändert werden, die jedoch kein vorh
 
 ## <a name="see-also"></a>Siehe auch
 [Analysis Services, Abwärtskompatibilität (SQL Server-2017)](analysis-services-backward-compatibility-sql2017.md)
-

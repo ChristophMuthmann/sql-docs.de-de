@@ -2,27 +2,32 @@
 title: Deinstallieren von Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 89bd9331c7e4d8d89bdd617200dbce2664f00074
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-reporting-services"></a>Deinstallieren von Reporting Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Bei der Deinstallation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden nicht der Inhalt, den Sie erstellt haben, bzw. die von Ihnen vorgenommenen Konfigurationsänderungen entfernt. Wenn es jedoch Inhalt gibt, den Sie nach der Deinstallation benötigen, sollten Sie Kopien des Inhalts erstellen, bevor Sie den Deinstallationsprozess starten.  
   
 ## <a name="uninstall-sharepoint-mode"></a>Deinstallation im SharePoint-Modus  
@@ -54,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in der Windows-Systemsteuerung auf **Programme und Funktionen**.  
   
-2.  Wählen Sie unter **Programme und Funktionen** die Option **Microsoft SQL Server 2012**aus.  
+2.  Wählen Sie unter **Programme und Funktionen** die Option **Microsoft SQL Server 2016** aus.  
   
 3.  Wählen Sie im Deinstallations-Assistenten die Instanz aus, die die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanzfunktion **RS**enthält.  
   
@@ -66,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Schließen Sie den Assistenten ab.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

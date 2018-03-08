@@ -1,11 +1,13 @@
 ---
 title: "Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -14,20 +16,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz
-  Die Volltextverwaltung für eine Serverinstanz enthält Folgendes:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die Volltextverwaltung für eine Serverinstanz enthält Folgendes:  
   
 -   Die Systemverwaltungsaufgaben wie z. B. das Verwalten des FDHOST-Startprogrammdiensts (MSSQLFDLauncher), das Neustarten des Filterdaemonhost-Prozesses nach dem Ändern der Dienstkontoinformationen, das Konfigurieren der serverweiten Volltexteigenschaften und das Sichern des Volltextkatalogs. Auf der Serverebene können Sie beispielsweise eine Standardvolltextsprache festlegen, die sich vollständig von der Standardsprache der Serverinstanz unterscheidet.  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 06/22/2017
   
  In der folgenden Tabelle werden die Volltexteigenschaften einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverinstanz und die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen aufgeführt.  
   
-|Eigenschaft|Beschreibung|Funktion|  
+|Eigenschaft|Description|Funktion|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|Gibt an, ob die Volltextkomponente mit der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert wurde.|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  
@@ -117,4 +119,3 @@ ms.lasthandoff: 06/22/2017
 -   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md)  
   
   
-

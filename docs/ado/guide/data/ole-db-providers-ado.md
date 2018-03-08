@@ -3,7 +3,7 @@ title: OLE DB-Anbieter (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2d00df80315489c2579646aa4faeafff2b57d8f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ef1c85f55928c266fb88f1639d5ccd53450fe59
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB-Anbieter (ADO)
 OLE DB definiert einen Satz von COM-Schnittstellen für Anwendungen mit einheitlichen Zugriff auf Daten bereitzustellen, die in verschiedenen Datenquellen gespeichert sind. Dieser Ansatz ermöglicht eine Datenquelle, die Daten über die Schnittstellen freizugeben, die Menge des DBMS-Funktionen, die die Datenquelle zu unterstützen. Programmbedingt die hohe Leistung Architektur von OLE DB Verwendungsmöglichkeiten eines Modells für flexible und komponentenbasierter Services basiert. Anstatt eine vorgegebene Anzahl von Zwischenkomponenten zwischen der Anwendung und die Daten erfordert OLE DB-nur, wenn viele Komponenten, wie die an eine bestimmte Aufgabe auszuführen.  
@@ -52,4 +51,3 @@ OLE DB definiert einen Satz von COM-Schnittstellen für Anwendungen mit einheitl
 -   [Datenanbieter](../../../ado/guide/data/data-providers.md)  
   
 -   [Dienstanbieter und Komponenten](../../../ado/guide/data/service-providers-and-components.md)
-

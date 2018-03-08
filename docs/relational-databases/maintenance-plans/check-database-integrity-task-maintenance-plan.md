@@ -2,37 +2,37 @@
 title: "Task „Datenbankintegrität überprüfen“ (Wartungsplan) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.integrity.f1
 - sql13.swb.maint.integrity.f1
-helpviewer_keywords:
-- Check Database Integrity Task dialog box
+helpviewer_keywords: Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad37935a63e55d949aaad8b3792e3180e78be5c3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 60f26433932c754a5aadbd79d9527d4e2638f75d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Task 'Datenbankintegrität überprüfen' (Wartungsplan)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Verwenden Sie das Dialogfeld **Task „Datenbankintegrität überprüfen“** , um die Zuordnung und die strukturelle Integrität von Benutzer- und Systemtabellen sowie Indizes in der Datenbank zu überprüfen, indem Sie die `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausführen. Durch die Ausführung von `DBCC` wird sichergestellt, dass etwaige Integritätsprobleme in der Datenbank gemeldet werden und später vom Systemadministrator oder Datenbankbesitzer behoben werden können.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
@@ -95,14 +95,13 @@ ms.lasthandoff: 06/22/2017
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
  Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her. Diese Option ist nicht verfügbar.  
   
- **Benutzername**  
+ **User name**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
  **Kennwort**  
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
   
-

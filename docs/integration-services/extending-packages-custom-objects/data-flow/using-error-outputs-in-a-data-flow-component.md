@@ -1,12 +1,14 @@
 ---
-title: Verwenden von Fehlerausgaben in einer Datenflusskomponente | Microsoft Docs
+title: Verwenden von Fehlerausgaben in einer Datenflusskomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,25 +27,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f51b9d3dfcfab48a18536be0d15ff28ef7833b03
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Verwenden von Fehlerausgaben in einer Datenflusskomponente
   Spezielle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>-Objekte, die als Fehlerausgaben bezeichnet werden, können zu Komponenten hinzugefügt werden, sodass die Komponente Zeilen, die bei der Ausführung nicht verarbeitet werden können, umleiten kann. Die Probleme, die bei einer Komponente auftreten können, lassen sich meist in Fehler oder abgeschnittene Daten einteilen und sind komponentenspezifisch. Komponenten, die Fehlerausgaben bereitstellen, bieten den Benutzern der Komponente die Flexibilität, Fehlerbedingungen durch Herausfiltern von Fehlerzeilen aus dem Resultset, durch Behandeln der Komponente als fehlerhaft, wenn ein Problem auftritt, oder durch Ignorieren von Fehlern und Fortsetzen des Vorgangs zu behandeln.  
   
- Sie müssen zunächst festlegen, um zu implementieren und unterstützen Fehlerausgaben in einer Komponente, die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> Eigenschaft der Komponente **"true"**. Und Sie eine Ausgabe an die Komponente hinzufügen müssen, ist dessen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> -Eigenschaftensatz auf **"true"**. Zuletzt muss die Komponente Code enthalten, der Zeilen an die Fehlerausgabe umleitet, wenn Fehler auftreten oder Daten abgeschnitten werden. In diesem Thema werden diese drei Schritte beschrieben und die Unterschiede zwischen synchronen und asynchronen Fehlerausgaben erklärt.  
+ Um Fehlerausgaben in einer Komponente zu implementieren oder zu unterstützen müssen Sie zunächst die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A>-Eigenschaft der Komponente auf **true** festlegen. Dann müssen Sie eine Ausgabe zu der Komponente hinzufügen, bei der die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>-Eigenschaft auf **true** festgelegt ist. Zuletzt muss die Komponente Code enthalten, der Zeilen an die Fehlerausgabe umleitet, wenn Fehler auftreten oder Daten abgeschnitten werden. In diesem Thema werden diese drei Schritte beschrieben und die Unterschiede zwischen synchronen und asynchronen Fehlerausgaben erklärt.  
   
 ## <a name="creating-an-error-output"></a>Erstellen einer Fehlerausgabe  
- Erstellen Sie eine Fehlerausgabe durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>, festlegen und anschließend die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> -Eigenschaft der neuen Ausgabe auf **"true"**. Wenn die Ausgabe asynchron ist, müssen keine weiteren Schritte für die Ausgabe durchgeführt werden. Wenn die Ausgabe synchron ist und wenn eine andere Ausgabe vorhanden ist, die mit dieser Eingabe synchron ist, müssen Sie auch die Eigenschaften <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> festlegen. Beide Eigenschaften müssen dieselben Werte wie die andere Ausgabe aufweisen, die mit dieser Eingabe synchron ist. Wenn diese Eigenschaften nicht auf einen Wert ungleich null festgelegt werden, werden die von der Eingabe bereitgestellten Zeilen an die beiden Ausgaben gesendet, die mit der Eingabe synchron sind.  
+ Sie erstellen eine Fehlerausgabe, indem Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>-Eigenschaft aufrufen und dann die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>-Eigenschaft der neuen Ausgabe auf **true** festlegen. Wenn die Ausgabe asynchron ist, müssen keine weiteren Schritte für die Ausgabe durchgeführt werden. Wenn die Ausgabe synchron ist und wenn eine andere Ausgabe vorhanden ist, die mit dieser Eingabe synchron ist, müssen Sie auch die Eigenschaften <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> festlegen. Beide Eigenschaften müssen dieselben Werte wie die andere Ausgabe aufweisen, die mit dieser Eingabe synchron ist. Wenn diese Eigenschaften nicht auf einen Wert ungleich null festgelegt werden, werden die von der Eingabe bereitgestellten Zeilen an die beiden Ausgaben gesendet, die mit der Eingabe synchron sind.  
   
  Wenn bei einer Komponente während der Ausführung Fehler auftreten oder Daten abgeschnitten werden, setzt die Komponente den Vorgang anhand der Einstellungen der Eigenschaften <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> der Eingabe oder Ausgabe oder Eingabe- oder Ausgabespalte fort, an der der Fehler aufgetreten ist. Der Wert dieser Eigenschaften muss standardmäßig auf <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed> festgelegt werden. Wenn die Fehlerausgabe der Komponente mit einer Downstreamkomponente verbunden ist, wird diese Eigenschaft vom Benutzer der Komponente festgelegt, sodass der Benutzer bestimmen kann, wie die Komponente den Fehler oder die abgeschnittenen Daten behandelt.  
   
@@ -280,7 +281,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>Umleiten einer Zeile mit asynchronen Ausgaben  
- Komponenten mit asynchronen Ausgaben senden Zeilen anders als Komponenten mit synchronen Fehlerausgaben an eine Fehlerausgabe, indem sie eine Zeile explizit zur Ausgabe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> hinzufügen. Beim Implementieren einer Komponente, die asynchrone Fehlerausgaben verwendet, müssen Spalten, die Downstreamkomponenten bereitgestellt werden, zur Fehlerausgabe hinzugefügt werden. Zudem muss der Ausgabepuffer für die Fehlerausgabe, die der Komponente während der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Methode bereitgestellt wird, im Cache gespeichert werden. Informationen zum Implementieren einer Komponente mit asynchronen Ausgaben finden Sie im Thema [Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Wenn der Fehlerausgabe Spalten nicht explizit hinzugefügt werden, enthält die dem Ausgabepuffer hinzugefügte Pufferzeile nur die beiden Fehlerspalten.  
+ Komponenten mit asynchronen Ausgaben senden Zeilen anders als Komponenten mit synchronen Fehlerausgaben an eine Fehlerausgabe, indem sie eine Zeile explizit zur Ausgabe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> hinzufügen. Beim Implementieren einer Komponente, die asynchrone Fehlerausgaben verwendet, müssen Spalten, die Downstreamkomponenten bereitgestellt werden, zur Fehlerausgabe hinzugefügt werden. Zudem muss der Ausgabepuffer für die Fehlerausgabe, die der Komponente während der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Methode bereitgestellt wird, im Cache gespeichert werden. Die Einzelheiten zur Implementierung einer Komponente mit asynchronen Ausgängen werden im Thema [Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md) ausführlich behandelt. Wenn der Fehlerausgabe Spalten nicht explizit hinzugefügt werden, enthält die dem Ausgabepuffer hinzugefügte Pufferzeile nur die beiden Fehlerspalten.  
   
  Um eine Zeile an eine asynchrone Fehlerausgabe zu senden, müssen Sie eine Zeile zum Fehlerausgabepuffer hinzufügen. Es kann vorkommen, dass eine Zeile bereits zum Nichtfehlerausgabepuffer hinzugefügt wurde. In diesem Fall müssen Sie diese Zeile mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A>-Methode entfernen. Als Nächstes legen Sie die Werte der Ausgabepufferspalten fest. Abschließend rufen Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A>-Methode auf, um den komponentenspezifischen Fehlercode und den Fehlerspaltenwert bereitzustellen.  
   
@@ -437,9 +438,8 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehlerbehandlung in Daten](../../../integration-services/data-flow/error-handling-in-data.md)   
- [Verwenden von Fehlerausgaben](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [Using Error Outputs](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md) (Verwenden von Fehlerausgaben)  
   
   
-

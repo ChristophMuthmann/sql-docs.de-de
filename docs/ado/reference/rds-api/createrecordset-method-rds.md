@@ -3,7 +3,7 @@ title: CreateRecordset-Methode (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f5a273957b03cfb26e0f6d3f1b4aa563f9079e2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
 Erstellt ein leeres getrennt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -87,7 +86,7 @@ object.CreateRecordset(ColumnInfos)
 |Fest|**adDouble**|5||  
 |Fest|**adCurrency**|6||  
 |Fest|**adDecimal**|14||  
-|Fest|**Type**|131||  
+|Fest|**adNumeric**|131||  
 |Fest|**adBoolean**|11||  
 |Fest|**adError**|10||  
 |Fest|**adGuid**|72||  
@@ -110,13 +109,12 @@ object.CreateRecordset(ColumnInfos)
   
 |||  
 |-|-|  
-|[RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
+|[DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [CreateRecordset-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset-Methode (Beispiel (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [CreateObject-Methode (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)
-
 
 
 

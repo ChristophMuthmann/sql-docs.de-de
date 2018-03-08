@@ -2,9 +2,12 @@
 title: Synonyme (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: synonyms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 31
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09336539a812ddf6c28e81344299750ba3177361
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbankmodul)
-  Ein Synonym ist ein Datenbankobjekt, das zu folgenden Zwecken dient:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Ein Synonym ist ein Datenbankobjekt, das zu folgenden Zwecken dient:  
   
 -   Ein Synonym stellt einen alternativen Namen für ein anderes Datenbankobjekt bereit, das als Basisobjekt bezeichnet wird und auf einem lokalen Server oder Remoteserver gespeichert sein kann.  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 |Replikationsfilterprozedur|Erweiterte gespeicherte Prozedur|  
 |SQL-Skalarfunktion|SQL-Tabellenwertfunktion|  
 |SQL-Inline-Tabellenwertfunktion|Gespeicherte SQL-Prozedur|  
-|Sicht|Tabelle* (benutzerdefiniert)|  
+|Anzeigen|Tabelle* (benutzerdefiniert)|  
   
  *Enthält lokale und globale temporäre Tabellen  
   
@@ -69,8 +72,8 @@ ms.lasthandoff: 06/22/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|INSERT|  
+|CONTROL|Delete|  
+|Führen Sie|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
@@ -80,8 +83,8 @@ ms.lasthandoff: 06/22/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
-|EXECUTE|Untergeordnete SELECT-Anweisungen|  
+|UPDATE|Delete|  
+|Führen Sie|Untergeordnete SELECT-Anweisungen|  
   
  Wenn Sie Synonyme in den vorher beschriebenen Kontexten verwenden, ist das Basisobjekt davon betroffen. Angenommen, ein Synonym verweist auf ein Basisobjekt, das eine Tabelle darstellt, und Sie fügen eine Zeile in das Synonym ein. In Wirklichkeit fügen Sie dann eine Zeile in die Tabelle ein, auf die verwiesen wird.  
   
@@ -155,4 +158,3 @@ GO
  [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)  
   
   
-

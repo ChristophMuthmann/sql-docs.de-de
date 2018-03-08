@@ -1,10 +1,13 @@
 ---
-title: "Schrägstrich Stern Kommentar (Transact-SQL) | Microsoft Docs"
+title: "Schrägstrich Stern (Blockkommentar) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,20 @@ helpviewer_keywords:
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e617c6f0108906046d6c6ea983d1bbc26082709
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4d7181070cb0524b31364a915040307198054780
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-comment-transact-sql"></a>Slash Star Comment (Transact-SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>Schrägstrich Stern (Blockkommentar) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   Gibt vom Benutzer bereitgestellten Text an. Der Text zwischen den / * und \*/ wird vom Server nicht ausgewertet.  
   
@@ -106,9 +109,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [--&#40; Kommentar &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
-
 

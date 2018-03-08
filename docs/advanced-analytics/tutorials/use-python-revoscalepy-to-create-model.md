@@ -3,25 +3,26 @@ title: Verwenden von Python mit Revoscalepy zum Erstellen eines Modells | Micros
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+mms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: 4
+ms.topic: tutorial
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 1ced0d05a74f43c6b80be6717826ab288ee25374
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Verwenden von Python mit Revoscalepy zum Erstellen eines Modells
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Beispiel wird veranschaulicht, wie ein lineares Regressionsmodell in SQL Server mithilfe eines Algorithmus aus können die **Revoscalepy** Paket.
 
@@ -143,4 +144,3 @@ Diese Python-Beispiele und Lernprogramme für erweiterte Tipps und End-to-End-De
 + [In der Datenbank Python für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md)
 + [Erstellen eines Vorhersagemodells über Python- und SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 + [Bereitstellen und Nutzen von Python-Modelle](../python/publish-consume-python-code.md)
-

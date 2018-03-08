@@ -2,33 +2,33 @@
 title: Erstellen die Abfrage Zellberechnungen (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8c2d0cffb212b062f1c1ff8f39929e201dc642c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX-Zellenberechnungen - Zellenberechnungen im Bereich einer Abfrage
-  Sie verwenden das **WITH** -Schlüsselwort in MDX (Multidimensional Expressions) dazu, berechnete Zellen im Kontext einer Abfrage zu beschreiben. Das **WITH** -Schlüsselwort hat die folgende Syntax:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Sie verwenden das **WITH** -Schlüsselwort in MDX (Multidimensional Expressions) dazu, berechnete Zellen im Kontext einer Abfrage zu beschreiben. Das **WITH** -Schlüsselwort hat die folgende Syntax:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -61,7 +61,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Andererseits verarbeitet MDX die Berechnungsformel immer dann, wenn eine MDX-Abfrage für den Cube ausgegeben wird, bei der Zellen aus der Definition berechneter Zellen betroffen sind. Diese Verarbeitung erfolgt unabhängig vom Gültigkeitsbereich bei der Erstellung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Erstellen Sie CELL CALCULATION-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   
-

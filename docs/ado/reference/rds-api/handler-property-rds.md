@@ -3,7 +3,7 @@ title: Handlereigenschaft (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fa363b9fa9761eb764a7bf2aa7b9d4eb992ec65b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25ac7c676fbab1e8b5899a3502fab2199b0afd22
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handler-property-rds"></a>Handlereigenschaft (RDS)
 Gibt den Namen eines Programms serverseitige Anpassung (Ereignishandler), die die Funktionalität des erweitert die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), und alle Parameter verwendet, die *Handler*.  
@@ -57,15 +56,14 @@ DataControl.Handler = String
   
  Der Name der Standardhandler ist **MSDFMAP. Handler**, und der Standardparameter ist eine Anpassungsdatei namens **MSDFMAP. INI**. Verwenden Sie diese Eigenschaft, um alternative Anpassungsdateien erstellt vom Serveradministrator aufzurufen.  
   
- Die Alternative zur Einstellung der **Handler** Eigenschaft ist die Angabe eines Handlers und Parameter in der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft; d. h. "**Handler =**  *HandlerName, parameter1, parameter2,* ".  
+ Die Alternative zur Einstellung der **Handler** Eigenschaft ist die Angabe eines Handlers und Parameter in der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschafts-, also "**Handler = *** HandlerName parameter1 Parameter2...;* ".  
   
 ## <a name="applies-to"></a>Gilt für  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für Dateneigenschaften Handler (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

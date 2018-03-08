@@ -2,28 +2,31 @@
 title: "Ändern einer Sitzung für erweiterte Ereignisse | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9330ef01cb491fef9307149e0cc774fa2b042c52
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f49c65d2f5ae55e2dfc0b6a884a376abcbc4a3d2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="alter-an-extended-events-session"></a>Ändern einer Sitzung für erweiterte Ereignisse
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Nachdem Sie eine Sitzung für erweiterte Ereignisse erstellt haben, können Sie diese je nach Bedarf mithilfe des **SQL Server-Assistenten für erweiterte Ereignisse**ändern.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  Folgende zusätzliche Änderungen sind für eine inaktive Ereignissitzung möglich:  
   
--   Aktivieren Sie die Option zum **Nachverfolgen der Beziehung zwischen Ereignissen** .  
+-   Aktivieren Sie die Option zum **Nachverfolgen der Beziehung zwischen Ereignissen**.  
   
 -   Ändern Sie die Konfiguration für erweiterte Eigenschaften.  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Nehmen Sie im Dialogfeld **Eigenschaften** die entsprechenden Änderungen vor, und klicken Sie dann auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor](http://msdn.microsoft.com/library/cba0e02b-b201-4863-bf1b-9164e68e5fa8)  
   

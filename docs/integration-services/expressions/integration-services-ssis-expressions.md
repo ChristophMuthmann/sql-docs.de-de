@@ -1,10 +1,13 @@
 ---
-title: "Integration Services-Ausdrücke (SSIS) | Microsoft Docs"
+title: "Integration Services-Ausdrücke (SSIS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7dedaa6d36fb0618b6124b1d2b1014c32fb2f44c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
   Ein Ausdruck ist eine Kombination aus Symbolen (Bezeichner, Literale, Funktionen und Operatoren), die einen einzelnen Datenwert ergeben. Einfache Ausdrücke können aus einer einzelnen Konstante, Variable oder Funktion bestehen. Meist sind Ausdrücke jedoch komplex, verwenden mehrere Operatoren und Funktionen und verweisen auf mehrere Spalten und Variablen. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Ausdrücke zum Definieren von Bedingungen für CASE-Anweisungen, Erstellen und Aktualisieren von Werten in Datenspalten, Zuweisen von Werten zu Variablen, Aktualisieren oder Auffüllen von Eigenschaften zur Laufzeit, Definieren von Einschränkungen in Rangfolgeneinschränkungen sowie zum Bereitstellen von Ausdrücken für den For-Schleifencontainer verwendet werden.  
@@ -48,9 +50,9 @@ ms.lasthandoff: 08/03/2017
   
 -   Variablen, deren Wert mit einem Ausdruck festgelegt werden kann. Die Variable GETDATE() legt z. B. den Wert der Variablen auf das aktuelle Datum fest.  
   
--   Rangfolgeneinschränkungen, bei denen mithilfe von Ausdrücken die Bedingungen angegeben werden können, die festlegen, ob der eingeschränkte Task oder Container eines Pakets ausgeführt wird. In einer Rangfolgeneinschränkung verwendete Ausdrücke müssen zu **true** oder **false**ausgewertet werden. Z. B. der Ausdruck @A > @B vergleicht zwei benutzerdefinierte Variablen, um zu bestimmen, ob der eingeschränkte Task ausgeführt wird.  
+-   Rangfolgeneinschränkungen, bei denen mithilfe von Ausdrücken die Bedingungen angegeben werden können, die festlegen, ob der eingeschränkte Task oder Container eines Pakets ausgeführt wird. In einer Rangfolgeneinschränkung verwendete Ausdrücke müssen zu **true** oder **false**ausgewertet werden. Der Ausdruck @A > @B z.B. vergleicht zwei benutzerdefinierte Variablen, um zu bestimmen, ob der eingeschränkte Task ausgeführt wird.  
   
--   For-Schleifen-Container, bei denen mithilfe von Ausdrücken Initialisierungs-, Auswertungs- und Inkrementanweisungen erstellt werden können, die von der Schleifenstruktur verwendet werden. Z. B. der Ausdruck @Counter = 1 initialisiert den Schleifenzähler.  
+-   For-Schleifen-Container, bei denen mithilfe von Ausdrücken Initialisierungs-, Auswertungs- und Inkrementanweisungen erstellt werden können, die von der Schleifenstruktur verwendet werden. Der Ausdruck @Counter = 1 z.B. initialisiert den Schleifenzähler.  
   
  Ausdrücke können auch zum Aktualisieren der Werte von Paketeigenschaften, Containern wie dem For- und dem Foreach-Schleifencontainer, Tasks, Verbindungs-Managern auf Paket- und Projektebene, Protokollanbietern und Foreach-Enumeratoren verwendet werden. Mithilfe eines Eigenschaftsausdrucks kann z.B. die Zeichenfolge „Localhost.AdventureWorks“ der ConnectionName-Eigenschaft des Tasks „SQL ausführen“ zugewiesen werden. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -67,14 +69,13 @@ ms.lasthandoff: 08/03/2017
   
  Variablen verfügen über einen Gültigkeitsbereich, und im Ordner **Variablen** im Ausdrucks-Generator werden nur die Variablen aufgeführt, die im Gültigkeitsbereich enthalten sind und verwendet werden können. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Verwenden eines Ausdrucks in einer Datenflusskomponente](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

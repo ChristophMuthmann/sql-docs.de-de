@@ -6,23 +6,26 @@ ms.author: erickang
 manager: jroth
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: On Demand
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden Sie Visual Studio zum Erstellen von Datenbanken für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Entwicklungs- und Datenbank Lifecycle Management (DLM)-Umgebung, für die SQL Server on Linux. Sie können entwickeln, erstellen, testen und Ihre Datenbank aus einem Projekt quellcodeverwaltete veröffentlichen, wie Sie den Anwendungscode entwickeln.
+SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Entwicklungs- und Datenbank Lifecycle Management (DLM)-Umgebung, für die SQL Server on Linux. Sie können entwickeln, erstellen, testen und veröffentlichen Ihre Datenbank aus einem quellcodeverwalteten Projekt so, wie Sie den Anwendungscode entwickeln.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio und SQL Server Datatools installieren
 
@@ -100,11 +103,11 @@ SQL Server-2017 unter Linux wird von SSDT-Version 17,0 RC oder höher unterstüt
 
 5. Überprüfen des Veröffentlichungsstatus der **Datentoolvorgänge** Fenster.
 
-6. Klicken Sie auf **Ansicht Reulst** oder **Skript anzeigen** auf Details zu den Editions veröffentlichen Ergebnis auf dem SQL Server unter Linux finden Sie unter.
+6. Klicken Sie auf **Ansicht Reulst** oder **Skript anzeigen** auf Details zu der Datenbank veröffentlichen Ergebnis auf dem SQL Server unter Linux finden Sie unter.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-Sie haben erfolgreich eine neue Datenbank auf SQL Server-Instanz unter Linux erstellt und die Grundlagen des Entwickelns von einer Datenbank mit einem Datenbankprojekt quellcodeverwaltete gelernt.
+Sie haben erfolgreich eine neue Datenbank auf SQL Server-Instanz unter Linux erstellt und die Grundlagen des Entwickelns von einer Datenbank mit einem quellcodeverwaltete Datenbankprojekt gelernt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -117,4 +120,3 @@ Weitere Informationen zum Entwickeln von einer Datenbank mit SQL Data Tools find
 [SSDT MSDN-Dokumente]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL-Referenz (Datenbankmodul)]:https://msdn.microsoft.com/library/bb510741.aspx
-

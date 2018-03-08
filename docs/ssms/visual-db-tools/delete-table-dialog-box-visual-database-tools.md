@@ -3,37 +3,37 @@ title: "Tabelle löschen (Dialogfeld) (Visual Database Tools) | Microsoft-Dokume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.deletetable
 - vdtsql.chm:69644
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9faedaacdacf9d2722ca1ae335d8f43af86d455f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c6485a4d7020bf63b4650ec70d6eb20c9ccf714f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Tabelle löschen (Dialogfeld) (Visual Database Tools)
-Mithilfe dieses Dialogfelds können Sie die Tabelle angeben, aus der Datensätze gelöscht werden sollen. Dieses Dialogfeld wird angezeigt, wenn beim Ändern eines Abfragetyps in eine DELETE-Abfrage im Diagrammbereich mehr als eine Tabelle angezeigt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe dieses Dialogfelds können Sie die Tabelle angeben, aus der Datensätze gelöscht werden sollen. Dieses Dialogfeld wird angezeigt, wenn beim Ändern eines Abfragetyps in eine DELETE-Abfrage im Diagrammbereich mehr als eine Tabelle angezeigt werden.  
   
 Wählen Sie die Tabelle aus, aus der Datensätze gelöscht werden sollen, und klicken Sie auf **OK**.  
   
 > [!NOTE]  
-> Durch eine DELETE-Abfrage werden vollständige Zeilen aus der Tabelle entfernt. Wenn Sie Werte aus einzelnen Datenspalten löschen möchten, verwenden Sie eine UPDATE-Abfrage. Wenn Sie Spalten aus einer Tabellendefinition oder die ganze Tabelle löschen möchten, verwenden Sie den Tabellen-Designer oder die Datenbank-Entwurfstools für die Datenbank.  
+> A DELETE query removes entire rows from the table. Wenn Sie Werte aus einzelnen Datenspalten löschen möchten, verwenden Sie eine UPDATE-Abfrage. If you want to delete columns from a table definition, or delete the table itself, use Table Designer or the database design tools for your database.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Entfernen von Tabellen aus Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
   
-

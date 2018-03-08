@@ -3,7 +3,7 @@ title: Type-Eigenschaft (Spalte) (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 351f97881ab3fc50fe9caf2218ca832845db511a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: befa7b0bd4a42391440d63ef4314337c91bedb88
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-column-adox"></a>Type-Eigenschaft (Spalte) (ADOX)
 Gibt den Datentyp einer Spalte an.  
@@ -50,4 +49,3 @@ Gibt den Datentyp einer Spalte an.
  [Beispiel für ParentCatalog-Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Type-Eigenschaft (Schlüssel) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-

@@ -2,9 +2,12 @@
 title: Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,19 +29,19 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: dcaa37454f30618c42c3cce8bf9f61b896303e90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren möchten oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -171,7 +174,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen **TuningOptions** - und **Configuration** -Elemente. Geben Sie im **TuningOptions** -Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im **Configuration** -Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Weitere Informationen darüber, welche Attribute und untergeordneten Elemente Sie mit den übergeordneten Elementen **TuningOptions** und **Configuration** verwenden können, finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
-4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML** .  
+4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML**.  
   
 5.  Überprüfen Sie die in Schritt 4 gespeicherte XML-Eingabedatei mit dem XML-Schema des Datenbankoptimierungsratgebers. Bei der Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird dieses Schema unter dem folgenden Pfad installiert:  
   
@@ -260,7 +263,7 @@ ms.lasthandoff: 06/22/2017
  Datenbank mit den Objekten, für die Änderungen empfohlen wurden.  
   
  **Empfehlung**  
- Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind Create und Drop.  
+ Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind <localizedText>Create</localizedText> und <localizedText>Drop</localizedText>.  
   
  **Empfehlungsziel**  
  Die von der Empfehlung betroffene Partitionsfunktion oder das Partitionsschema. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel** zu löschen oder hinzuzufügen, und dafür, ob es sich um eine Partitionsfunktion oder ein Partitionsschema handelt.  
@@ -275,14 +278,14 @@ ms.lasthandoff: 06/22/2017
  Die Definition für den Wert unter **Empfehlungsziel**. Klicken Sie auf die Spalte, um das Dialogfeld SQL-Skriptvorschau mit einem Skript für die empfohlene Aktion zu öffnen.  
   
 ##### <a name="index-recommendations"></a>Indexempfehlungen  
- **Datenbankname**  
+ **Database Name**  
  Datenbank mit den Objekten, für die Änderungen empfohlen wurden.  
   
- **Objektname**  
+ **Objektnamen**  
  Mit der Empfehlung verbundene Tabelle.  
   
  **Empfehlung**  
- Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind Create und Drop.  
+ Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind <localizedText>Create</localizedText> und <localizedText>Drop</localizedText>.  
   
  **Empfehlungsziel**  
  Der Index oder die Sicht, auf den/die sich die Empfehlung bezieht. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel**zu löschen oder hinzuzufügen.  
@@ -392,7 +395,7 @@ ms.lasthandoff: 06/22/2017
  **Select Report**  
  Zeigt die Details des ausgewählten Berichts an. Die Spalten des Rasters sind in jedem Bericht unterschiedlich.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)  
   

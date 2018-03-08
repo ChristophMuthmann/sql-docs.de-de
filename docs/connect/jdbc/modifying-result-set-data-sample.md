@@ -3,24 +3,25 @@ title: "Ändern von Resultsetdaten-Beispiel festlegen | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8f0cc4e1a8758557a84c065f9143b7c8753e1e4
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28d0c574b9666853ee2ed78ae3666a312208e240
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="modifying-result-set-data-sample"></a>Ändern von Resultsetdaten - Beispiel
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -130,4 +131,3 @@ public class updateRS {
  [Arbeiten mit Resultsets](../../connect/jdbc/working-with-result-sets.md)  
   
   
-

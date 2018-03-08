@@ -2,28 +2,29 @@
 title: Richtlinienverwaltungsknoten (Objekt-Explorer) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 075e44b9b50eb356a4eabdebf8524f186db3d527
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bbd70e3bcb3e64e485d1a2a2c917e8e38a92c442
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="policy-management-node-object-explorer"></a>Richtlinienverwaltungsknoten (Objekt-Explorer)
-  Dieser Abschnitt enthält die folgenden F1-Hilfethemen zum Knoten **Richtlinienverwaltung** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält die folgenden F1-Hilfethemen zum Knoten **Richtlinienverwaltung** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Allgemein'](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   
@@ -59,8 +60,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Dialogfeld 'Richtlinien importieren'](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

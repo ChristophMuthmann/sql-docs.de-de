@@ -3,8 +3,11 @@ title: "ÜBERSETZEN (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ f1_keywords:
 helpviewer_keywords:
 - TRANSLATE function
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-caps.latest.revision: 5
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 583c414206a0acc79d1abdfff34728c38711a855
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e7ea679043b83d8cee26f431602450d023516647
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="translate-transact-sql"></a>Übersetzen Sie (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+# <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Gibt die Zeichenfolge als erstes Argument bereitgestellt werden, nachdem einige im zweiten Argument angegebenen Zeichen in eine Zielsatz von Zeichen übersetzt werden.
 
@@ -77,7 +79,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. GeoJSON-Punkte in WKT konvertieren    
 GeoJSON ist ein Format für eine Vielzahl von geografischen Datenstrukturen-Codierung. Mit der `TRANSLATE` Funktion Entwickler können einfach GeoJSON-Punkte WKT-Format und umgekehrt zu konvertieren. Die folgende Abfrage ersetzt Square und geschweifte Klammern in der Eingabe durch reguläre geschweiften Klammern an:   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
@@ -91,8 +93,14 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 
 ## <a name="see-also"></a>Siehe auch
-
-[Zeichenfolgenfunktionen (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
-
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [Zeichenfolgenfunktionen (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

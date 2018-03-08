@@ -1,29 +1,30 @@
 ---
 title: SQL-Modi (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3f9271008c9633a5266d2171e7724d259ebae37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 175e135f99f8ed96754ff255cbad7f32cc202479
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL-Modi (MySQLToSQL)
 SSMA für MySQL kann in verschiedenen SQL-Modi betrieben werden, und diese Modi für verschiedene Clients unterschiedlich anwenden zu kann.  
@@ -85,4 +86,3 @@ Effektive SQL Modi können auf verschiedenen Ebenen auf folgende Weise definiert
   
     3.  Die gültigen SQL-Modus, der explizit festgelegt wird nicht als SQL-Modus vererbt vorgenommen und schließlich auf das Objekt angewendet wird.  
   
-

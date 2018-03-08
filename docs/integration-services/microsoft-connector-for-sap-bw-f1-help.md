@@ -1,10 +1,13 @@
 ---
-title: "Microsoft Connector für SAP BW-F1-Hilfe | Microsoft Docs"
+title: "F1-Hilfe zum Microsoft Connector für SAP BW | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: reference
 f1_keywords:
 - sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51b1f3bfd75179ec1a66d31d167a1827e8bf8d5c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4d60639c30dd871de100b83908f3b3c3fb341a5c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>F1-Hilfe zum Microsoft Connector for SAP BW
   Dieser Abschnitt enthält die F1-Hilfethemen für die drei Komponenten von [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. Diese Themen können auch über die Benutzeroberfläche abgerufen werden, indem Sie die F1-TASTE drücken oder in den Seiten des Assistenten sowie in den Dialogfeldern auf Hilfe klicken.  
@@ -38,13 +40,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-source-f1-help"></a>F1-Hilfe zur SAP BW-Quelle  
   
--   [Quellen-Editor für SAP BW &#40; Seite Verbindungs-Manager &#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für SAP BW &#40; Seite "Spalten" &#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Quellen-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite Fehlerausgabe&#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Quellen-Editor für SAP BW &#40; Seite "Erweitert" &#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite Erweitert&#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [RFC-Ziel suchen](../integration-services/data-flow/look-up-rfc-destination.md)  
   
@@ -56,15 +58,15 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-destination-f1-help"></a>F1-Hilfe zum SAP BW-Ziel  
   
--   [Ziel-Editor für SAP BW &#40; Seite Verbindungs-Manager &#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für SAP BW &#40; Seite "Zuordnungen" &#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Zuordnungen“&#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Ziel-Editor für SAP BW &#40; Seite "Erweitert" &#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [Infopackage suchen](../integration-services/data-flow/look-up-infopackage.md)  
+-   [InfoPackage suchen](../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [Neues InfoObject erstellen](../integration-services/data-flow/create-new-infoobject.md)  
   
@@ -80,8 +82,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [InfoPackage erstellen](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Komponenten von Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

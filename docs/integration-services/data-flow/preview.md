@@ -1,26 +1,28 @@
 ---
-title: Vorschau | Microsoft Docs
+title: Vorschau | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f51bbd1d818a8ffd20e5124180947846c58f98c3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1f5663e964426da513af40e3184e9ab3af81e5c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="preview"></a>Vorschau
   Verwenden Sie das Dialogfeld **Vorschau** , um die von der SAP BW-Quelle extrahierten Daten in der Vorschau anzuzeigen.  
@@ -51,14 +53,13 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Durch Klicken auf die Schaltfläche **Vorschau** öffnen Sie auch das Dialogfeld **Anforderungsprotokoll** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Request Log](../../integration-services/data-flow/request-log.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Im Dialogfeld **Vorschau** werden die Zeilen angezeigt, die vom SAP NetWeaver BW-System angefordert werden. Die angezeigten Spalten entsprechen den in den Quelldaten definierten Spalten.  
   
  Das Dialogfeld verfügt über keinen weiteren Optionen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

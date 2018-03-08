@@ -2,9 +2,12 @@
 title: Abfrage- und Text-Editoren (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,20 +30,19 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ff32d77b3e1503bd23e4ac0ecf040653265f141
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e57fd3d81be5bdacbdce4d237e5240a52321e29a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Abfrage- und Text-Editoren (SQL Server Management Studio)
-  Mit den Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lassen sich [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- oder XML/A-Skripts interaktiv bearbeiten und testen sowie XML- oder einfache Textdateien bearbeiten. Die einzelnen Editoren werden durch einen sprachspezifischen Dienst unterstützt, der Schlüsselwörter farblich kennzeichnet und den Code auf Syntaxfehler überprüft. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor enthält einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger, mit dem Sie Probleme in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code beheben können.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit den Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lassen sich [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- oder XML/A-Skripts interaktiv bearbeiten und testen sowie XML- oder einfache Textdateien bearbeiten. Die einzelnen Editoren werden durch einen sprachspezifischen Dienst unterstützt, der Schlüsselwörter farblich kennzeichnet und den Code auf Syntaxfehler überprüft. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor enthält einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger, mit dem Sie Probleme in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code beheben können.  
   
 ## <a name="sql-server-management-studio-editors"></a>Editoren in SQL Server Management Studio  
  Die vier Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] weisen die gleiche Architektur auf. Der Text-Editor implementiert die Basisfunktionalitätsstufe und kann als grundlegender Editor für Textdateien verwendet werden. Die anderen drei Editoren oder Abfrage-Editoren bieten erweiterte Funktionalität, indem sie einen Sprachdienst einschließen, der die Syntax von einer der in SQL Server unterstützten Sprachen definiert. Die Abfrage-Editoren implementieren darüber hinaus verschiedene Ebenen der Unterstützung für Editor-Funktionen, z. B. IntelliSense und Debugging. Die Abfrage-Editoren beinhalten den Abfrage-Editor des Datenbankmoduls zur Verwendung bei der Erstellung von Skripts mit Transact-SQL- und XQuery-Anweisungen, den MDX-Editor für die MDX-Sprache, den DMX-Editor für die DMX-Sprache sowie den XML/A-Editor für die XML for Analysis-Sprache.  
@@ -120,7 +122,7 @@ ms.lasthandoff: 06/22/2017
 |Beschreibt, wie die grundlegenden Funktionen im XML/A-Abfrage-Editor angezeigt und verwendet werden.|[XML-Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |Beschreibt, wie Optionen für die verschiedenen Editoren konfiguriert werden, z. B. Zeilennummerierung und IntelliSense-Optionen.|[Konfigurieren von Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Beschreibt die verschiedenen Methoden zum Öffnen der Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Öffnen eines Editors &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
-|Beschreibt, wie der Anzeigemodus, z. B. Zeilenumbruch, Aufteilen eines Fensters oder Registerkarten, verwaltet wird.|[Verwalten des Editors und des Ansichtsmodus](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
+|Beschreibt, wie der Anzeigemodus, z. B. Zeilenumbruch, Aufteilen eines Fensters oder Registerkarten, verwaltet wird.|[Verwalten des Editors und des Ansichtsmodus](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
 |Beschreibt, wie Formatierungsoptionen festgelegt werden, z. B. ausgeblendeter Text oder Einzug.|[Verwalten der Codeformatierung](../../relational-databases/scripting/manage-code-formatting.md)|  
 |Beschreibt, wie Sie mit Funktionen wie der inkrementellen Suche oder "Gehe zu" durch den Text in einem Editor-Fenster navigieren.|[Navigieren in Code und Text](../../relational-databases/scripting/navigate-code-and-text.md)|  
 |Beschreibt, wie Farbcodierungsoptionen für verschiedene Syntaxklassen festgelegt werden, wodurch das Lesen komplexer Anweisungen vereinfacht wird.|[Farbcodierung im Abfrage-Editor](../../relational-databases/scripting/color-coding-in-query-editors.md)|  
@@ -135,8 +137,7 @@ ms.lasthandoff: 06/22/2017
 |Beschreibt, wie der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger verwendet wird, um Code in Einzelschritten auszuführen und Debuggininformationen anzuzeigen, z. B. die Werte in Variablen und Parametern.|[Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Beschreibt, wie benutzerdefinierte Farben für verschiedene Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und diese Farben als Hintergrund der Statusleiste in [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenstern festgelegt werden.|[Statusleiste &#40;Abfrage-Editor des Datenbankmoduls&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

@@ -2,36 +2,36 @@
 title: "Dialogfeld „Bedingung öffnen“, Seite „Abhängige Richtlinien“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.condition.referencingpolicies.f1
+f1_keywords: sql13.swb.dmf.condition.referencingpolicies.f1
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0261d3c48f434eeeb8a494939a058cb83f817bb5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 946ceab0604c116ded08cfd2c0aa096ead20867e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Dialogfeld 'Bedingung öffnen', Seite 'Abhängige Richtlinien'
-  Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf diese richtlinienbasierte Verwaltungsbedingung verweisen. Weitere Informationen darüber, wie Bedingungen mit Facets und Richtlinien zusammenhängen, finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf diese Bedingung der richtlinienbasierten Verwaltung verweisen. Weitere Informationen darüber, wie Bedingungen mit Facets und Richtlinien zusammenhängen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Listet den Namen jeder Richtlinie auf, die auf diese aktuelle Bedingung verweist.  
   
- **Aktiviert**  
+ **Enabled**  
  Ein Häkchen gibt an, dass die Richtlinie derzeit aktiviert ist. Ist leer, wenn die Richtlinie nicht aktiviert ist.  
   
  **Verlauf**  
@@ -40,8 +40,7 @@ ms.lasthandoff: 06/22/2017
  **Erstellt**  
  Datum, an dem die Richtlinie erstellt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

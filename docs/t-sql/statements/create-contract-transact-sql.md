@@ -3,8 +3,11 @@ title: Vertrag (Transact-SQL) erstellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - contracts [Service Broker], creating
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 962ce2d6568a597bd580f7fc9bcd2e9243e44dc4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 26a8d2c2826e091322a1cec35d6ffe1d9ca379e0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt einen neuen Vertrag. Ein Vertrag definiert die in einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversation verwendeten Nachrichtentypen und legt fest, welche Seite der Konversation Nachrichten eines bestimmten Typs senden kann. Jede Konversation folgt einem Vertrag. Der initiierende Dienst gibt beim Start der Konversation den Vertrag für die Konversation an. Der Zieldienst gibt die Verträge an, für die der Zieldienst Konversationen annimmt.  
   
@@ -128,8 +130,7 @@ CREATE CONTRACT
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Löschen Sie Vertrag &#40; Transact-SQL &#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
+ [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

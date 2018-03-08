@@ -2,28 +2,31 @@
 title: SQL Server-Eigenschaften (Registerkarte Dienst) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: af6abd37fa23a4bfd77695296118896f27e8f3b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17df1facd3c4c3f9035017c0156e6e3aed910d33
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL-Server-Eigenschaften (Registerkarte Dienst)
-  Verwenden Sie im Dialogfeld **MSSQLSERVER-Eigenschaften**die Registerkarte **Dienst** , um die folgenden Optionen anzuzeigen oder anzugeben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Verwenden Sie im Dialogfeld **MSSQLSERVER-Eigenschaften**die Registerkarte **Dienst** , um die folgenden Optionen anzuzeigen oder anzugeben.  
   
 ## <a name="options"></a>enthalten  
  **Binärpfad**  
@@ -60,4 +63,3 @@ ms.lasthandoff: 08/02/2017
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. "**…**" gibt einen ausstehenden Statuswechsel an.  
   
   
-

@@ -2,30 +2,30 @@
 title: Berechnungskontext | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
-caps.latest.revision: 5
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fde665f7dea3efe26d61d6d183f8ca35834f732e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6101305123e48bf5194313c852f2a24e45e5847a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculation-context"></a>Berechnungskontext
-  Als Berechnungskontext wird der bekannte Teilbereich des Cubes bezeichnet, in dem ein Ausdruck ausgewertet wird und in dem alle Koordinaten entweder explizit bekannt sind oder vom Ausdruck abgeleitet werden können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Als Berechnungskontext wird der bekannte Teilbereich des Cubes bezeichnet, in dem ein Ausdruck ausgewertet wird und in dem alle Koordinaten entweder explizit bekannt sind oder vom Ausdruck abgeleitet werden können.  
   
 ## <a name="determining-the-calculation-context"></a>Bestimmen des Berechnungskontexts  
  Alle Mengen, Elemente, Tupel und numerischen Funktionen werden im Kontext des gesamten MDX-Ausdrucks bzw. der gesamten MDX-Anweisung ausgeführt. Beim Übergeben eines Arguments, z. B. eines Tupels, an eine Funktion werden nur einige Koordinaten im Cuberaum explizit bereitgestellt. Die anderen Koordinaten werden basierend auf dem aktuellen Berechnungskontext ermittelt.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  Die Cube- oder die Teilcubezellen auf jeder Achse unter Entfernung leerer Tupel von der Achse und Anwendung der HAVING-Klausel  
   
-6.  Weitere Informationen finden Sie unter [Festlegen des Cubekontexts in einer Abfrage &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
+6.  Weitere Informationen finden Sie unter [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
   
  In der folgenden Abfrage ist der Berechnungskontext für die Zeilenachse durch die in der WHERE-Klausel angegebenen Attributelemente Country und Calendar Year eingeschränkt.  
   
@@ -77,9 +77,8 @@ WHERE (Customer.Country.France,
 >  Zur Verbesserung der Abfrageleistung sollten Elemente und Tupel beim Auflösungsvorgang so früh wie möglich entfernt werden. Auf diese Weise werden komplexe Abfragezeitberechnungen für die endgültige Menge der Elemente mit minimaler Zellenanzahl durchgeführt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen des Cubekontexts in einer Abfrage &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [Des Cubekontexts in einer Abfrage &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [Grundlegendes zu MDX-Abfrage &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Schlüsselkonzepte in MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   
-

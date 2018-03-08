@@ -2,9 +2,12 @@
 title: Verwenden von XML in berechneten Spalten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eb0cca121576000f3f7c5ba42eb4161c7d38f207
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>Verwenden von XML in berechneten Spalten
-  XML-Instanzen können als Quelle für eine berechnete Spalte oder als Typ einer berechneten Spalte auftreten. In den Beispielen in diesem Thema wird gezeigt, wie XML mit berechneten Spalten verwendet wird.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+XML-Instanzen können als Quelle für eine berechnete Spalte oder als Typ einer berechneten Spalte auftreten. In den Beispielen in diesem Thema wird gezeigt, wie XML mit berechneten Spalten verwendet wird.  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>Erstellen berechneter Spalten aus XML-Spalten  
  In der folgenden `CREATE TABLE` -Anweisung wird eine Spalte vom Typ `xml` (`col2`) aus `col1`berechnet:  
@@ -90,9 +93,8 @@ FROM T
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Beschreibt, wie die Eigenschaftenhöherstufung mit berechneten Spalten und Eigenschaftentabellen verwendet wird.|  
   
   
-

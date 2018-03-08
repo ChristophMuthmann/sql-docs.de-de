@@ -2,29 +2,30 @@
 title: Datamining-Dienste und Datenquellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0207dac1835ae9e478802d2f3d501642d4866454
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
-  Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modul bereitgestellte Komponenten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modul bereitgestellte Komponenten.  
   
  Dieses Thema enthält Informationen, die erforderlich sind, wenn Sie eine Verbindung zu einer lokalen oder Remoteinstanz von SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] herstellen, um Data Mining-Modelle zu erstellen, zu verarbeiten, bereitzustellen oder abzufragen.  
   
@@ -130,8 +131,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Physische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Physische Architektur &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Verwaltung von Datamining-Lösungen und-Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
-

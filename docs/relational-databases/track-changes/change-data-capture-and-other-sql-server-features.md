@@ -2,9 +2,12 @@
 title: Change Data Capture und andere SQL Server-Funktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a41e2138b3b2cc0768dacd0fca4e6363ee18e8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 62ad0bdefa2264f69cddb2ad60ca408e5e91b6a1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen
-  In diesem Thema wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  
   
 -   [Änderungsnachverfolgung](#ChangeTracking)  
   
@@ -81,8 +84,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="change-data-capture-and-always-on"></a>Change Data Capture und AlwaysOn  
  Bei Verwendung von AlwaysOn sollte die Änderungsenumeration auf dem sekundären Replikat erfolgen, um die Datenträgerlast auf dem primären Replikat zu verringern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten und Überwachen von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Source-Eigenschaft (ADO-Fehler) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5a4b3e69feaada6c11504a1c5c2c834060be5b04
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 86c95ebdbacfffcee3e1be83c33ff3c5261352a6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-error"></a>Source-Eigenschaft (ADO-Fehler)
 Gibt den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert.  
@@ -39,7 +38,7 @@ Gibt den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler gene
  Gibt eine **Zeichenfolge** Wert, der den Namen eines Objekts oder einer Anwendung angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Quelle** Eigenschaft auf eine [Fehler](../../../ado/reference/ado-api/error-object.md) Objekts bestimmen, den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert. Dies könnte Klassennamen oder die ProgID des Objekts sein. Bei Fehlern in ADO den Wert der Eigenschaft werden **ADODB.** *ObjectName*, wobei *ObjectName* ist der Name des Objekts, das den Fehler ausgelöst hat. ADOX und ADO MD, wird der Wert **ADOX.** *ObjectName* und **ADOMD.** *ObjectName,* bzw.  
+ Verwenden der **Quelle** Eigenschaft auf eine [Fehler](../../../ado/reference/ado-api/error-object.md) Objekts bestimmen, den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert. Dies könnte Klassennamen oder die ProgID des Objekts sein. Bei Fehlern in ADO den Wert der Eigenschaft werden **ADODB. *** ObjectName*, wobei *ObjectName* ist der Name des Objekts, das den Fehler ausgelöst hat. ADOX und ADO MD, wird der Wert **ADOX. *** ObjectName* und **ADOMD. *** ObjectName,* bzw.  
   
  Basierend auf der Fehlerdokumentation aus der **Quelle**, [Anzahl](../../../ado/reference/ado-api/number-property-ado.md), und [Beschreibung](../../../ado/reference/ado-api/description-property.md) Eigenschaften des **Fehler** Objekte aufweist, können Sie Code schreiben die wird den Fehler entsprechend behandelt.  
   
@@ -55,5 +54,4 @@ Gibt den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler gene
  [HelpContext HelpFile-Eigenschaften](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Number-Eigenschaft (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)   
- [Source-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-
+ [Source-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

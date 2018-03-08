@@ -1,27 +1,28 @@
 ---
 title: "Master Data Services-Add-In für Microsoft Excel | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 30
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8f1e34eb5bb7992661f79e2c524b660442a6df35
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
   Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] können Sie gefilterte Listen der Daten von MDS in Excel laden, wo Sie damit genauso arbeiten können, wie Sie es mit beliebigen anderen Daten auch tun würden. Wenn Sie fertig sind, können Sie die Daten in MDS veröffentlichen, wo sie zentral gespeichert werden. Mit Sicherheit wird festgelegt, welche Daten Sie anzeigen und aktualisieren können.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 09/07/2017
   
 -   Ein *attribute* ist eine Spalte mit Daten. Jedes Element verfügt über Attribute. Das Attrribut **Code** für das Element **Blau** ist z.B. **B**. Weitere Informationen zu Attributen finden Sie unter [Attribute &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -89,4 +90,3 @@ ms.lasthandoff: 09/07/2017
 -   [Sicherheit &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
   
   
-

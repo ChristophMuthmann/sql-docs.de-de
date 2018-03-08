@@ -3,27 +3,28 @@ title: Unicode | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC]
 - Unicode [ODBC], about Unicode
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b66efb11afce77a878451b767c1a6db000185f41
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ec40cc841c073fe66f9537687516f044048a0fc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode"></a>Unicode
 Unicode definiert die Codierung für Zeichen in vielen Sprachen.  
@@ -45,4 +46,3 @@ Unicode definiert die Codierung für Zeichen in vielen Sprachen.
 -   [Unicode-Funktionsargumente](../../../odbc/reference/develop-app/unicode-function-arguments.md)  
   
 -   [Unicode-Daten](../../../odbc/reference/develop-app/unicode-data.md)
-

@@ -3,8 +3,11 @@ title: DATEADD (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: 71
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a90b51a1ef2156a2a05b8d3dd4e15111872edf6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt ein angegebenes *Datum* mit dem angegebenen *Anzahl* Intervall (Ganzzahl mit Vorzeichen) hinzugefügt, die mit einem angegebenen *Datepart* , *Datum*.
   
@@ -54,23 +56,23 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argumente  
 *datepart*  
-Ist der Teil des *Datum* , der eine **Ganzzahl***Anzahl* hinzugefügt wird. Die folgende Tabelle enthält alle gültigen *Datepart* Argumente. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
+Ist der Teil des *Datum* , der eine **Ganzzahl *** Anzahl* hinzugefügt wird. Die folgende Tabelle enthält alle gültigen *Datepart* Argumente. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
   
 |*datepart*|Abkürzungen|  
 |---|---|
-|**Jahr**|**Yy**, **JJJJ**|  
-|**Quartal**|**Qq**, **q**|  
+|**Jahr**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
 |**Monat**|**mm**, **m**|  
-|**DayOfYear**|**dy**, **y**|  
-|**Tag**|**Dd**, **d**|  
-|**Woche**|**wk**, **weltweit**|  
-|**Wochentag**|**DW**, **w**|  
-|**Stunde**|**hh**|  
-|**Minute**|**Mi**,**n**|  
-|**Sekunde**|**ss**, **s**|  
-|**Millisekunde**|**MS**|  
-|**in Mikrosekunden**|**MCS**|  
-|**Nanosekunden**|**Notification Services**|  
+|**dayofyear**|**dy**, **y**|  
+|**Tag**|**dd**, **d**|  
+|**Woche**|**wk**, **ww**|  
+|**Wochentag**|**dw**, **w**|  
+|**hour**|**hh**|  
+|**Minute**|**mi**, **n**|  
+|**second**|**ss**, **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 Ist ein Ausdruck, der in aufgelöst werden kann ein [Int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) , hinzugefügt wird eine *Datepart* von *Datum*. Benutzerdefinierte Variablen sind gültig.  
@@ -93,24 +95,24 @@ Jede *Datepart* und zugehörigen Abkürzungen geben denselben Wert zurück.
 Wenn *Datepart* ist **Monat** und *Datum* Monat mehr Tage umfasst als der rückgabemonat und der *Datum* Tag im Monat zurück, nicht vorhanden letzte Tag des rückgabemonats zurückgegeben. Beispiel: Der September hat 30 Tage. Daher geben die beiden folgenden Anweisungen 2006-09-30 00:00:00.000 zurück:
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number-Argument  
 Die *Anzahl* Argument darf nicht den Bereich der überschreiten **Int**. In den folgenden Anweisungen, die das Argument für *Anzahl* überschreitet den Bereich der **Int** um 1. Die folgende Fehlermeldung wird zurückgegeben: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>date-Argument  
 Die *Datum* Argument kann nicht auf einen Wert außerhalb des Bereichs seines Datentyps inkrementiert werden. In den folgenden Anweisungen die *Anzahl* -Wert, der hinzugefügt wird die *Datum* Wert überschreitet den Bereich von der *Datum* -Datentyp. Die folgende Fehlermeldung wird zurückgegeben: "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Rückgabewerte für ein Datum vom Typ smalldatetime und einen datepart-Wert in Sekunden oder Sekundenbruchteilen  
@@ -352,5 +354,4 @@ GO
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-
 

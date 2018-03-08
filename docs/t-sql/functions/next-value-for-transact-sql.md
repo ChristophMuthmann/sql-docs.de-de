@@ -3,8 +3,11 @@ title: "NEBEN dem Wert für (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-caps.latest.revision: 37
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aab8020fa04b978d7ec1b657fe0a1084123dfb48
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a4e6ca2ce4c89e1e608d9762d1562a78f7908c23
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Generiert eine Sequenznummer aus dem angegebenen Sequenzobjekt.  
   
@@ -311,4 +313,3 @@ GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   
-

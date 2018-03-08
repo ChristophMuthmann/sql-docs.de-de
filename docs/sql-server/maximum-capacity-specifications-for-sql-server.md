@@ -1,11 +1,14 @@
 ---
 title: "Spezifikationen der maximalen Kapazität für SQL Server | Microsoft-Dokumentation"
-ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9ec628362449c449d26005797e806e47b4614a79
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Inhalte, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Maximum Capacity Specifications for SQL Server (Spezifikationen für maximale Kapazität für SQL Server)](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
 
   Die folgenden Tabellen geben die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten definierter Objekte an. Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
@@ -81,12 +83,12 @@ ms.lasthandoff: 08/11/2017
 |Dateien pro Datenbank||32.767||  
 |Dateigröße (Daten)||16 Terabytes||  
 |Dateigröße (Protokoll)||2 Terabytes||  
-|Datendateien für speicheroptimierte Daten pro Datenbank||4.096||  
+|Datendateien für speicheroptimierte Daten pro Datenbank||4.096 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Bei späteren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind die Grenzwerte flexibler.||  
 |Änderungsdatei pro Datendatei für speicheroptimierte Daten||1||  
 |Verweise auf Fremdschlüsseltabellen pro Tabelle||Ausgehend = 253. Eingehend = 10.000.|Einschränkungen finden Sie unter [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Bezeichnerlänge (in Zeichen)||128||  
 |Instanzen pro Computer||50 Instanzen auf einem eigenständigen Server.<br /><br /> 25 Instanzen auf einem Failovercluster, wenn Sie für die Clusterinstallation einen freigegebenen Clusterdatenträger als Speicheroption verwenden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt 50 Instanzen auf einem Failovercluster, wenn Sie für die Clusterinstallation SMB-Dateifreigaben als Speicheroption verwenden.||  
-|Indizes pro speicheroptimierter Tabelle||8||  
+|Indizes pro speicheroptimierter Tabelle||999 ab [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] und in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] und [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
 |Länge einer Zeichenfolge, die SQL-Anweisungen enthält (Batchgröße)||65.536 * Netzwerkpaketgröße|Die Netzwerk-Paketgröße entspricht der Größe der TDS-Pakete (Tabular Data Stream), die für die Kommunikation zwischen Anwendungen und relationalem [!INCLUDE[ssDE](../includes/ssde-md.md)]verwendet werden. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.|  
 |Sperren pro Verbindung||Maximale Anzahl Sperren pro Server||  
 |Sperren pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Begrenzung nur durch Arbeitsspeicher|Dieser Wert dient der statischen Sperrenzuordnung. Dynamische Sperren sind nur durch den Arbeitsspeicher beschränkt.|  
@@ -159,4 +161,3 @@ ms.lasthandoff: 08/11/2017
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

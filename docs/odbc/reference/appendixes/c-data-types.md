@@ -3,10 +3,12 @@ title: C-Datentypen | Microsoft Docs
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe266052c52b46b7f206869bdf89ff5377daf3b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types"></a>C-Datentypen
 ODBC C-Datentypen angeben, den Datentyp der C-Puffer zum Speichern von Daten in der Anwendung verwendet wird.  
@@ -44,7 +45,7 @@ ODBC C-Datentypen angeben, den Datentyp der C-Puffer zum Speichern von Daten in 
 |SQL_C_USHORT [j]|SQLUSMALLINT|short Int ohne Vorzeichen|  
 |SQL_C_SLONG [j]|SQLINTEGER|Long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|unsigned long int|  
-|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|ohne Vorzeichen|  
 |SQL_C_STINYINT [j]|SQLSCHAR|Char mit Vorzeichen|  
@@ -138,7 +139,7 @@ struct tagSQLGUID {
   
  [c] ' ist in ODBC 2. *x*, die C-Date, Time und Timestamp-Datentypen sind SQL_C_DATE, SQL_C_TIME und SQL_C_TIMESTAMP.  
   
- [d] ODBC 3.*.x* Anwendungen SQL_C_VARBOOKMARK nicht SQL_C_BOOKMARK sollte verwendet werden. Wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2..* X* -Treiber verwenden, die ODBC 3.*.x* Treibermanager SQL_C_BOOKMARK SQL_C_VARBOOKMARK ordnen.  
+ [d] ODBC 3.*.x* Anwendungen SQL_C_VARBOOKMARK nicht SQL_C_BOOKMARK sollte verwendet werden. Wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.. *X* -Treiber verwenden, die ODBC 3.*.x* Treibermanager SQL_C_BOOKMARK SQL_C_VARBOOKMARK ordnen.  
   
  [e] ein Anzahl wird gespeichert, der *Val* -Feld der Struktur SQL_NUMERIC_STRUCT als skalierte eine ganze Zahl im little-endian-Modus (das am weitesten links stehende Byte wird das unwichtigste Byte). Beispielsweise ist die Anzahl 10,001 Basis-10, mit einer Skala von 4, auf eine ganze Zahl des 100010 skaliert. Da dies 186AA im Hexadezimalformat angegeben ist, wäre der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00", mit der Anzahl von Bytes, die durch die SQL_MAX_NUMERIC_LEN definierten **#define**.  
   
@@ -152,7 +153,7 @@ struct tagSQLGUID {
   
  [i] _SQL_C_BOOKMARK ist in ODBC 3. veraltet*.x*.  
   
- [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC durch ersetzt mit und ohne Vorzeichen Typen: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. arbeiten sollten.* X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützt, da bei der sie aufgerufen werden, der Treiber-Manager über den Treiber übergibt.  
+ [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC durch ersetzt mit und ohne Vorzeichen Typen: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. arbeiten sollten. *X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützt, da bei der sie aufgerufen werden, der Treiber-Manager über den Treiber übergibt.  
   
  [k] SQL_C_GUID kann nur für SQL_CHAR oder SQL_WCHAR konvertiert werden.  
   
@@ -162,4 +163,3 @@ struct tagSQLGUID {
   
 ## <a name="see-also"></a>Siehe auch  
  [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)
-

@@ -3,33 +3,30 @@ title: SQLSetDescRec-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetDescRec
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetDescRec
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetDescRec
-helpviewer_keywords:
-- SQLSetDescRec function [ODBC]
+f1_keywords: SQLSetDescRec
+helpviewer_keywords: SQLSetDescRec function [ODBC]
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b0702448c1252db57d47dfaf265c2f0b83192b3d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec-Funktion
 **Konformität**  
@@ -167,4 +164,3 @@ SQLRETURN SQLSetDescRec(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

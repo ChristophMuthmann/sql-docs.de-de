@@ -2,30 +2,30 @@
 title: Konfigurieren eines Oracle-Verlegers | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Oracle publishing [SQL Server replication], configuring
+helpviewer_keywords: Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 60
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "60"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 674e78687e89e01126205971a3a070924c6e664f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>Konfigurieren eines Oracle-Verlegers
-  Veröffentlichungen von Oracle-Verlegern werden auf dieselbe Weise erstellt wie gängige Momentaufnahme- und Transaktionsveröffentlichungen. Vor der Erstellung einer Veröffentlichung eines Oracle-Verlegers müssen jedoch folgende Schritte ausgeführt werden (die Schritte eins, drei und vier werden in diesem Thema ausführlich beschrieben):  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Veröffentlichungen von Oracle-Verlegern werden auf dieselbe Weise erstellt wie gängige Momentaufnahmen- und Transaktionsveröffentlichungen. Vor der Erstellung einer Veröffentlichung eines Oracle-Verlegers müssen jedoch folgende Schritte ausgeführt werden (die Schritte eins, drei und vier werden in diesem Thema ausführlich beschrieben):  
   
 1.  Erstellen Sie innerhalb der Oracle-Datenbank mit dem angegebenen Skript einen administrativen Replikationsbenutzer.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 09/05/2017
   
  Im Oracle Universal Installer müssen Sie folgende Informationen angeben:  
   
-|Informationen|Beschreibung|  
+|Information|Description|  
 |-----------------|-----------------|  
 |Oracle-Homeverzeichnis|Der Pfad zum Installationsverzeichnis für die Oracle-Software. Übernehmen Sie die Standardeinstellung (C:\oracle\ora90 oder Ähnliches), oder geben Sie einen anderen Pfad ein. Weitere Informationen zum Oracle-Homeverzeichnis finden Sie im Abschnitt zu Überlegungen zum Oracle-Homeverzeichnis weiter unten in diesem Thema.|  
 |Oracle-Homeverzeichnisname|Alias für den Pfad zum Oracle-Homeverzeichnis.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 09/05/2017
   
  Wenn der Oracle Universal Installer abgeschlossen ist, konfigurieren Sie die Netzwerkkonnektivität mit Net Configuration Assistant. Zur Konfiguration der Netzwerkkonnektivität müssen Sie vier Informationen eingeben. Der Oracle-Datenbankadministrator, der die Netzwerkkonfiguration beim Einrichten der Datenbank und der Überwachung (Listener) konfiguriert, kann Ihnen diese Informationen geben, falls Sie sie nicht selbst besitzen. Führen Sie folgende Schritte aus:  
   
-|Aktion|Beschreibung|  
+|Aktion|Description|  
 |------------|-----------------|  
 |Identifizieren Sie die Datenbank.|Es gibt zwei Methoden, mit denen Sie die Datenbank identifizieren können. Die erste Methode besteht darin, die Oracle SID (System Identifier) zu verwenden. Die SID ist in jeder Oracle-Version verfügbar. Die zweite Methode besteht darin, den Dienstnamen zu verwenden, der ab Oracle Version 8.0 verfügbar ist. Beide Methoden basieren auf einem Wert, der beim Erstellen der Datenbank konfiguriert wird. Wichtig ist dabei, dass Sie bei der Clientnetzwerkkonfiguration dieselbe Benennungsmethode verwenden wie der Administrator beim Konfigurieren des Listeners der Datenbank.|  
 |Identifizieren Sie den Datenbankalias.|Für den Zugriff auf die Oracle-Datenbank müssen Sie einen Netzwerkalias angeben. Dieser Alias muss auch angegeben werden, wenn Sie die Oracle-Datenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger identifizieren. Der Netzwerkalias ist im Wesentlichen ein Zeiger auf die während der Erstellung der Datenbank konfigurierte Remote-SID bzw. den Service Name. In manchen Oracle-Versionen und -Produkten wird er u. a. auch als "Net Service Name" oder "TNS Alias" bezeichnet. SQL*Plus fordert bei der Anmeldung zur Eingabe dieses Netzwerkalias als Parameter "Host String" auf.|  
@@ -146,11 +146,10 @@ ms.lasthandoff: 09/05/2017
   
  Informationen zum Konfigurieren eines Oracle-Verlegers und zum Erstellen einer Veröffentlichung finden Sie unter [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Datentypzuordnung für Oracle-Verleger](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
-

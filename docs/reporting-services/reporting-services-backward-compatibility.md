@@ -1,13 +1,14 @@
 ---
-title: "Abwärtskompatibilität | Reporting Services | Microsoft Docs"
+title: "Abwärtskompatibilität: Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 56d5565743d458312d197670f4304d3b06374fde
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d4924fee006b0e40eb60a0525e80c71cefe558ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Abwärtskompatibilität von Reporting Services
 Erfahren Sie mehr zu Verhaltensänderungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Hier werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt werden.
@@ -42,8 +42,7 @@ Es werden außerdem grundlegende Änderungen am Produkt beschrieben, die bekannt
 |[Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/en-us/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)|Beschreibt Probleme, die beim Aktualisieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]auftreten können.|  
 |[Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/en-us/2a767f0f-84f2-4099-8784-1e37790f858e)|Beschreibt Funktionen, die in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]geändert wurden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abwärtskompatibilität | Analysis Services](http://msdn.microsoft.com/en-us/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   
-

@@ -3,10 +3,12 @@ title: Unicode-Treiber | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 195dc99394d8708e4895fce746ca13bbf724782c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-drivers"></a>Unicode-Treiber
 Ob ein Treiber, einen Unicode-Treiber oder eine ANSI-Treiber sein soll hängt ausschließlich die Art der Datenquelle. Wenn die Datenquelle Unicode-Daten unterstützt, muss der Treiber einen Unicode-Treiber. Wenn die Datenquelle nur ANSI-Daten unterstützt, sollte der Treiber eine ANSI-Treiber bleiben.  
@@ -37,4 +38,3 @@ Ob ein Treiber, einen Unicode-Treiber oder eine ANSI-Treiber sein soll hängt au
   
 > [!NOTE]  
 >  Wenn den Treibertyp ermittelt wurde, wird der Treiber-Manager aufrufen **SQLSetConnectAttr** und legen Sie das Attribut SQL_ATTR_ANSI_APP beim Herstellen der Verbindung. Wenn die Anwendung die ANSI-APIs verwendet wird, wird SQL_ATTR_ANSI_APP auf SQL_AA_TRUE festgelegt werden, und wenn Unicode verwendet wird, wird er auf einen Wert von SQL_AA_FALSE festgelegt sein. Dieses Attribut wird verwendet, damit der Treiber anderes Verhalten basierend auf den Anwendungstyp aufweisen kann. Das Attribut kann nicht direkt von der Anwendung festgelegt werden, und es wird nicht von **SQLGetConnectAttr**. Wenn ein Treiber für ANSI- und Unicode-Anwendungen das gleiche Verhalten aufweist, sollte er SQL_ERROR für dieses Attribut zurück. Wenn der Treiber gibt SQL_SUCCESS zurück, wird der Treiber-Manager ANSI- und Unicode-Verbindungen trennen, wenn Verbindungspooling verwendet wird.
-

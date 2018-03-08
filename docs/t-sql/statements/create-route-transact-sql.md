@@ -3,8 +3,11 @@ title: Erstellen Sie die ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7268b5c9b43505d3c66fb6573a9a41c3cd62e3a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fügt der Routingtabelle der aktuellen Datenbank eine neue Route hinzu. Bei ausgehenden Nachrichten bestimmt [!INCLUDE[ssSB](../../includes/sssb-md.md)] das Routing durch eine Prüfung der Routingtabelle in der lokalen Datenbank. Nachrichten in Konversationen, die in einer anderen Instanz stammen, darunter Nachrichten weitergeleitet werden, [!INCLUDE[ssSB](../../includes/sssb-md.md)] überprüft die Routen **Msdb**.  
   
@@ -70,7 +72,7 @@ WITH
  mit  
  Führt die Klauseln ein, über die die zurzeit erstellte Route definiert wird.  
   
- SERVICE_NAME = **"***Service_name***"**  
+ SERVICE_NAME = **'***service_name***'**  
  Gibt den Namen des Remotediensts an, auf den diese Route zeigt. Die *Service_name* müssen genau übereinstimmen, die den Namen der Remotedienst verwendet. [!INCLUDE[ssSB](../../includes/sssb-md.md)]Führt einen Byte-pro-Byte-Vergleich mit der *Service_name*. Anders ausgedrückt: Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Wenn SERVICE_NAME weggelassen wird, stimmt die Route mit jedem Dienstnamen überein, weist jedoch eine niedrigere Übereinstimmungspriorität als eine Route auf, die SERVICE_NAME angibt. Eine Route mit dem Dienstnamen **' SQL/ServiceBroker/BrokerConfiguration'** ist eine Route zu einem Broker-Konfigurationsdienst. Eine Route zu diesem Dienst kann keine Broker-Instanz angeben.  
   
  BROKER_INSTANCE = **"***Broker_instance_identifier***"**  
@@ -84,13 +86,13 @@ WHERE database_id = DB_ID()
   
  Wenn die BROKER_INSTANCE-Klausel weggelassen wird, stimmt diese Route mit jeder Broker-Instanz überein. Eine Route, die mit jeder Broker-Instanz übereinstimmt, weist eine höhere Übereinstimmungspriorität auf als Routen mit einer expliziten Broker-Instanz, wenn die Konversation keine Broker-Instanz angibt. Bei Konversationen, in denen eine Broker-Instanz angegeben wird, weist eine Route mit einer Broker-Instanz eine höhere Priorität auf als eine Route, die mit jeder Broker-Instanz übereinstimmt.  
   
- Lebensdauer  **=**  *Route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wenn diese Klausel weggelassen wird, die *Route_lifetime* NULL ist und die Route läuft nie ab.  
   
  Adresse **= "***Next_hop_address***"**  
  Gibt die Netzwerkadresse für diese Route an. Die *Next_hop_address* gibt eine TCP/IP-Adresse in folgendem Format an:  
   
- **TCP: / /**{ *Dns_name* | *Netbios_name* | *Ip_address* } **:**  *Portnummer*  
+ **TCP: / /**{ *Dns_name* | *Netbios_name* | *Ip_address* } **: *** Port_number*  
   
  Das angegebene *Port_number* übereinstimmen, dass die Portnummer für die [!INCLUDE[ssSB](../../includes/sssb-md.md)] Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
@@ -227,9 +229,8 @@ CREATE ROUTE TransportRoute
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
- [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

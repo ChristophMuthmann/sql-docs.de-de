@@ -3,7 +3,7 @@ title: AddNew-Methode (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], VC++ example
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f0d21735e8def12818c037e554aaab4050fb7be4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67ae165ea28ec1bc7a62451e9734a882f16566b9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-example-vc"></a>AddNew-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um einen neuen Eintrag mit dem angegebenen Namen zu erstellen.  
@@ -224,4 +223,3 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ## <a name="see-also"></a>Siehe auch  
  [AddNew-Methode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

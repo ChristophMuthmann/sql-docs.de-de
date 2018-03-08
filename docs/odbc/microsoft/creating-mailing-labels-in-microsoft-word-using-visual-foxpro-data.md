@@ -3,10 +3,12 @@ title: Erstellen in Microsoft Word, die mithilfe der Visual FoxPro-Daten Adresse
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c159bfdc9e6c7c9e6cb50a8197110391723c6a62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Erstellen von Adressetiketten in Microsoft Word, die mithilfe der Visual FoxPro-Daten
 Sie können Visual FoxPro-Daten in einem Microsoft Word für Windows 95 oder Windows 98-Dokument verwenden. Beispielsweise empfiehlt es sich um Etiketten aus die Kundeninformationen in einer Visual FoxPro-Tabelle gespeichert zu erstellen.  
@@ -62,4 +63,3 @@ Sie können Visual FoxPro-Daten in einem Microsoft Word für Windows 95 oder Win
 14. Klicken Sie in das Hilfsobjekt Seriendruckelement unter das Zusammenführen der Daten mit dem Dokument zusammenführen aus.  
   
 15. Wählen Sie im Dialogfeld "Merge" die Optionen werden soll, und klicken Sie dann auf Verbinden.
-

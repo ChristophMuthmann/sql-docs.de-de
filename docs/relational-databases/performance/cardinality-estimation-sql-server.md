@@ -2,9 +2,12 @@
 title: "Kardinalitätsschätzung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 11
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c87819c3d2802e6ded39885e540b0a3fd050aae8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
-ms.contentlocale: de-de
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Dieser Artikel veranschaulicht, wie Sie die beste Konfiguration für die Kardinalitätsschätzung (Cardinality Estimation, CE) für Ihr SQL-System bewerten und auswählen. Die meisten Systeme profitieren von der neuesten Kardinalitätsschätzung, da sie die genaueste ist. Die Kardinalitätsschätzung sagt vorher, wie viele Zeilen eine Abfrage wahrscheinlich zurückgibt. Die Vorhersage der Kardinalität wird vom Abfrageoptimierer verwendet, um einen optimalen Abfrageplan zu generieren. Mit genaueren Schätzungen kann der Abfrageoptimierer in der Regel einen besseren Abfrageplan erzeugen.  
@@ -46,7 +48,7 @@ Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der ne
   
  **Kompatibilitätsgrad:** Sie können sicherstellen, dass ein bestimmter Grad für Ihre Datenbank gilt, indem Sie den folgenden Transact-SQL-Code für [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)ausführen.  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -64,7 +66,7 @@ go
   
  **Ältere Kardinalitätsschätzung**: In einer SQL Server-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, kann Version 70 der Kardinalitätsschätzung aktiviert werden. Verwenden Sie dazu [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) auf Datenbankebene.
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -77,7 +79,7 @@ SELECT name, value
  
  Oder ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -86,7 +88,7 @@ SELECT CustomerId, OrderAddedDate
  
  **Abfragespeicher:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist der Abfragespeicher ein praktisches Tool zum Untersuchen der Leistung Ihrer Abfragen. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] wird im **Objekt-Explorer** unterhalb des Knotens Ihrer Datenbank ein Knoten **Abfragespeicher** angezeigt, wenn der Abfragespeicher aktiviert ist.  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -108,7 +110,7 @@ ALTER DATABASE <yourDatabase>
   
  Eine andere Option zum Nachverfolgen des Prozesses der Kardinalitätsschätzung ist die Verwendung des erweiterten Ereignisses **query_optimizer_estimate_cardinality**. Das folgende T-SQL-Codebeispiel wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt. Es schreibt eine XEL-Datei in C:\Temp\ (Sie können den Pfad ändern). Wenn Sie die XEL-Datei in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] öffnen, werden die detaillierten Daten in einer von Benutzern gut lesbaren Weise angezeigt.  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -233,10 +235,10 @@ Dieser Abschnitt enthält Beispielabfragen, die von den Erweiterungen der Kardin
   
 Angenommen, die Statistiken für OrderTable wurden zuletzt am 30.4.2016 erfasst – der Maximalwert für OrderAddedDate war „2016-04-30“. Bei der Kardinalitätsschätzung für Kompatibilitätsgrad 120 (und höher) wird berücksichtigt, dass Spalten in OrderTable mit *ansteigenden* Daten Werte aufweisen können, die über dem von der Statistik aufgezeichneten Maximalwert liegen. Dies verbessert den Abfrageplan für SQL-SELECT-Anweisungen wie die folgende.  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01';  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Beispiel B. Die Kardinalitätsschätzung berücksichtigt, dass gefilterte Prädikate in der gleichen Tabelle häufig korrelieren.  
@@ -245,33 +247,29 @@ Die folgende SELECT-Anweisung zeigt gefilterte Prädikate für „Model“ und �
   
 Bei der Kardinalitätsschätzung mit Kompatibilitätsgrad 120 wird berücksichtigt, dass eine Korrelation zwischen den beiden Spalten „Model“ und „ModelVariant“ existieren kann, die sich in der gleichen Tabelle befinden. Die Kardinalitätsschätzung kann genauer einschätzen, wie viele Zeilen von der Abfrage zurückgegeben werden, und der Abfrageoptimierer generiert einen besseren Plan.  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
-    FROM dbo.Hardware  
-    WHERE  
-        Model  = 'Xbox'  AND  
-        ModelVariant = 'One';  
+FROM dbo.Hardware  
+WHERE Model  = 'Xbox'  AND  
+      ModelVariant = 'One';  
 ```  
   
-### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Beispiel C. Die Kardinalitätsschätzung geht nicht mehr von einer Korrelation zwischen gefilterten Prädikaten aus verschiedenen Tabellen aus. 
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Beispiel C. Die Kardinalitätsschätzung geht nicht mehr von einer Korrelation zwischen gefilterten Prädikaten aus verschiedenen Tabellen aus 
 Umfangreiche neue Untersuchungen moderner Arbeitslasten und tatsächlicher Geschäftsdaten haben ergeben, dass Prädikatfilter aus unterschiedlichen Tabellen üblicherweise nicht korrelieren. In der folgenden Abfrage nimmt die Kardinalitätsschätzung an, dass zwischen „s.type“ und „r.date“ kein Zusammenhang besteht. Daher wird die Anzahl der zurückgegebenen Zeilen niedriger eingeschätzt.  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
-    FROM  
-                   dbo.Sales    AS s  
-        CROSS JOIN dbo.Returns  AS r  
-    WHERE  
-        s.ticket = r.ticket  AND  
-        s.type   = 'toy'     AND  
-        r.date   = '2016-05-11';  
+FROM dbo.Sales    AS s  
+CROSS JOIN dbo.Returns  AS r  
+WHERE s.ticket = r.ticket  AND  
+      s.type   = 'toy'     AND  
+      r.date   = '2016-05-11';  
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
- [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)  
- [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)
-
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)    
+ [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)   

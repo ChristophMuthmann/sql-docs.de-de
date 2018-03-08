@@ -3,10 +3,12 @@ title: Typen von Abfragen (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - View Designer, query creation
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 71a0f7fbd4edf00b9f2eb8f84807f0fb2baa6318
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 14a314fc77534de5378a38de50e1768d25dc5bda
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Typen von Abfragen (Visual Database Tools)
-Der Abfrage- und Sicht-Designer verfügt über integrierte Funktionen für einige Abfragetypen: Auswählen, Ergebnisse einfügen, Werte einfügen, Aktualisieren, Löschen und Tabelle erstellen. Er unterstützt außerdem UNION, Volltextsuche und Abfragen mit CASE-Ausdrücken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Abfrage- und Sicht-Designer verfügt über integrierte Funktionen für einige Abfragetypen: Auswählen, Ergebnisse einfügen, Werte einfügen, Aktualisieren, Löschen und Tabelle erstellen. Er unterstützt außerdem UNION, Volltextsuche und Abfragen mit CASE-Ausdrücken.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Unterstützte Abfragetypen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
@@ -64,4 +65,3 @@ Beschreibt die Eigenschaften, die Ihnen beim Entwerfen von Abfragen zur Verfügu
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Beschreibt, wie Abfragen und Sichten entworfen und bearbeitet werden.  
   
-

@@ -3,7 +3,7 @@ title: ADO-API-Referenz | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ca0e6125f9e6f2288156698a15ec434be5a5ff59
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-api-reference"></a>ADO-API-Referenz
 Dieser Abschnitt der ADO-Dokumentation enthält Themen, die für jede ADO-Objekt, Sammlung, Eigenschaft, dynamische Eigenschaft, Methode, Ereignis und Enumeration. Darüber hinaus enthält es eine Liste von ADO Syntaxindizes, die mit Microsoft Visual C++ und Windows Foundation Classes (WFC) verwendet werden.  
@@ -34,21 +33,21 @@ Dieser Abschnitt der ADO-Dokumentation enthält Themen, die für jede ADO-Objekt
   
 -   [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)  
   
--   [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
+-   [ADO-Objekte und -Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
   
--   [ADO-Auflistungen](../../../ado/reference/ado-api/ado-collections.md)  
+-   [ADO-Collections](../../../ado/reference/ado-api/ado-collections.md)  
   
--   [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)  
+-   [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)  
   
--   [Dynamische Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-dynamic-properties.md)  
+-   [ADO – dynamische Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md)  
   
 -   [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)  
   
 -   [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)  
   
--   [ADO--Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)  
+-   [ADO – Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)  
   
--   [Indizes für ADO-Syntax](../../../ado/reference/ado-api/ado-syntax-indexes.md)  
+-   [ADO – Syntaxindizes](../../../ado/reference/ado-api/ado-syntax-indexes.md)  
   
 -   [ADO-Codebeispiele](../../../ado/reference/ado-api/ado-code-examples.md)  
   
@@ -58,4 +57,3 @@ Dieser Abschnitt der ADO-Dokumentation enthält Themen, die für jede ADO-Objekt
  [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)
-

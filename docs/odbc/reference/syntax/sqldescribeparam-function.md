@@ -3,33 +3,30 @@ title: SQLDescribeParam-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDescribeParam
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDescribeParam
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDescribeParam
-helpviewer_keywords:
-- SQLDescribeParam function [ODBC]
+f1_keywords: SQLDescribeParam
+helpviewer_keywords: SQLDescribeParam function [ODBC]
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df8d1653e158f19abf92eb1a650425213cbe393d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3fe2d46f0a8e27b6e20673fc04615598469bc9aa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam-Funktion
 **Konformität**  
@@ -61,9 +58,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem den SQL-Datentyp des Parameters zurückgegeben. Dieser Wert wird aus der SQL_DESC_CONCISE_TYPE-Datensatzfeld vom die IPD gelesen. Dadurch wird einer der Werte in der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt Anhang D: Datentypen oder treiberspezifischen SQL-Datentyp.  
   
- In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP im zurückgegeben * \*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten bzw.; in ODBC 2..* X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben. Der Treiber-Manager führt die erforderlichen Zuordnungen, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3.* X* Treiber oder wenn eine ODBC 3..* X* Anwendung arbeitet mit einer ODBC 2..* X* Treiber.  
+ In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP im zurückgegeben  *\*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten bzw.; in ODBC 2.. *X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben. Der Treiber-Manager führt die erforderlichen Zuordnungen, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* Treiber oder wenn eine ODBC 3.. *X* Anwendung arbeitet mit einer ODBC 2.. *X* Treiber.  
   
- Wenn *ColumnNumber* entspricht 0 (für eine Lesezeichenspalte), wird im SQL_BINARY zurückgegeben * \*DataTypePtr* für Lesezeichen variabler Länge. (SQL_INTEGER wird zurückgegeben, wenn von einer ODBC 3. Lesezeichen verwendet werden. *x* Anwendung arbeiten mit einer ODBC 2..* X* Treiber oder von einer ODBC 2..* X* Anwendung arbeiten mit einem ODBC 3..* X* Treiber.)  
+ Wenn *ColumnNumber* entspricht 0 (für eine Lesezeichenspalte), wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* für Lesezeichen variabler Länge. (SQL_INTEGER wird zurückgegeben, wenn von einer ODBC 3. Lesezeichen verwendet werden. *x* Anwendung arbeiten mit einer ODBC 2.. *X* Treiber oder von einer ODBC 2.. *X* Anwendung arbeiten mit einem ODBC 3.. *X* Treiber.)  
   
  Weitere Informationen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie unter der Treiber-Dokumentation.  
   
@@ -94,10 +91,10 @@ SQLRETURN SQLDescribeParam(
 |07009|Ungültiger Deskriptorindex|(DM) der Wert für das Argument angegebene *ParameterNumber* ist kleiner als 1.<br /><br /> Der Wert für das Argument angegebene *ParameterNumber* war größer als die Anzahl von Parametern in der zugeordneten SQL-Anweisung.<br /><br /> Die parametermarkierung ist Teil einer nicht-DML-Anweisung.<br /><br /> Die parametermarkierung war Bestandteil einer **wählen** Liste.|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |21S01|Die Liste einzufügender Werte stimmt nicht mit Spaltenliste überein.|Die Anzahl von Parametern in der **einfügen** Anweisung entsprach nicht der Anzahl der Spalten in der Tabelle mit dem Namen in der Anweisung.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
 |HY008|Der Vorgang wurde abgebrochen|Asynchroner Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* aus einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler bei Funktionssequenz|(DM) die Funktion aufgerufen wurde vor dem Aufruf **SQLPrepare** oder **SQLExecDirect** für die *StatementHandle*.<br /><br /> (DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn die **SQLDescribeParam** Funktion aufgerufen wurde.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die * StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler bei Funktionssequenz|(DM) die Funktion aufgerufen wurde vor dem Aufruf **SQLPrepare** oder **SQLExecDirect** für die *StatementHandle*.<br /><br /> (DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn die **SQLDescribeParam** Funktion aufgerufen wurde.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -185,4 +182,3 @@ free(LenOrIndArray);
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -2,11 +2,13 @@
 title: Konfigurieren der Sichtbarkeit von Metadaten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - database metadata [SQL Server]
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "51"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 10d93d94543bca50d57aee2647e28fadd16064a4
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
-  Die Sichtbarkeit von Metadaten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Beispielsweise gibt die folgende Abfrage eine Zeile zurück, wenn dem Benutzer eine Berechtigung, wie etwa SELECT, für die `myTable`-Tabelle erteilt wurde.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Sichtbarkeit von Metadaten ist auf sicherungsfähige Elemente beschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Beispielsweise gibt die folgende Abfrage eine Zeile zurück, wenn dem Benutzer eine Berechtigung, wie etwa SELECT, für die `myTable`-Tabelle erteilt wurde.  
   
 ```  
 SELECT name, object_id  
@@ -47,7 +49,7 @@ GO
   
 |||  
 |-|-|  
-|Katalogsichten|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures|  
+|Katalogsichten|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** -Prozeduren|  
 |Metadaten ausgebende integrierte Funktionen|Informationsschemasichten|  
 |Kompatibilitätssichten|Erweiterte Eigenschaften|  
   
@@ -200,4 +202,3 @@ GO
  [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Status-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: efdf9d280a499832c2995a44000b227e17deb4fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 850e4087e9937a2031f8761a1d6573a9747199f1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-example-vc"></a>Status-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel verwendet die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft, um anzuzeigen, welche Datensätze in einem Batchvorgang geändert wurden, bevor eine Batchaktualisierung aufgetreten ist.  
@@ -195,5 +194,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Status-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
-
+ [Status-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

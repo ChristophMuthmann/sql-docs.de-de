@@ -2,28 +2,31 @@
 title: SQL Server-Dienste | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b932a110e49ededd17a3895eb7aeb3efee3e106c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01a7ac13f4e42f9b6af26f4c802be5031a0cfd99
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-services"></a>SQL Server-Dienste
-  Dieser Abschnitt enthält die F1-Hilfethemen zu den Dialogfeldern der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Dieser Abschnitt enthält die F1-Hilfethemen zu den Dialogfeldern der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager.  
   
 > [!NOTE]  
 >  Wenn Sie den **SQL Server-Konfigurations-Manager** auf einem Knoten eines Clusters öffnen, der die Ressourcen nicht hostet, werden die Dienste als beendet angezeigt.  
@@ -35,4 +38,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server-Konfigurations-Manager-Hilfe](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   
-

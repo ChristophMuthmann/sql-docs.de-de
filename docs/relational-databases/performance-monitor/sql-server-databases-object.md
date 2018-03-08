@@ -2,11 +2,13 @@
 title: SQL Server, Datenbanken-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,25 +17,25 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "40"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Datenbanken-Objekt
-  Das **SQLServer:Datenbanken** -Objekt in SQL Server stellt Leistungsindikatoren bereit, mit denen Sie Massenkopiervorgänge, den Durchsatz von Sicherungs- und Wiederherstellungsvorgängen sowie Transaktionsprotokollaktivitäten überwachen können. Überwachen Sie Transaktionen und das Transaktionsprotokoll, um ermitteln zu können, wie viel Benutzeraktivität in der Datenbank auftritt und in welchem Umfang das Transaktionsprotokoll aufgefüllt wird. Durch den Umfang der Benutzeraktivität kann die Leistung der Datenbank bestimmt werden. Protokollgröße, Sperren und die Replikation können davon betroffen sein. Das Überwachen der Protokollaktivität auf niedriger Ebene zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:Datenbanken**-Objekt in SQL Server stellt Leistungsindikatoren bereit, mit denen Sie Massenkopiervorgänge, den Durchsatz von Sicherungs- und Wiederherstellungsvorgängen sowie Transaktionsprotokollaktivitäten überwachen können. Überwachen Sie Transaktionen und das Transaktionsprotokoll, um ermitteln zu können, wie viel Benutzeraktivität in der Datenbank auftritt und in welchem Umfang das Transaktionsprotokoll aufgefüllt wird. Durch den Umfang der Benutzeraktivität kann die Leistung der Datenbank bestimmt werden. Protokollgröße, Sperren und die Replikation können davon betroffen sein. Das Überwachen der Protokollaktivität auf niedriger Ebene zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen.  
   
  Es können mehrere Instanzen des **Datenbanken** -Objekts überwacht werden, von denen jede eine einzelne Datenbank darstellt.  
   
  In dieser Tabelle werden die **Datenbanken** -Leistungsindikatoren von SQL Server beschrieben.  
   
-|Datenbanken-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Datenbanken-Leistungsindikatoren von SQL Server|Description|  
 |-----------------------------------|-----------------|  
 |**Aktive Transaktionen**|Anzahl von aktiven Transaktionen für die Datenbank.|  
 |**Durchschn. Abstand von EOL/LP-Anforderung**|Durchschnittlicher Abstand in Byte vom Ende des Protokolls nach Protokollpoolanforderung für Anforderungen in der letzten VLF.| 
@@ -86,7 +88,7 @@ ms.lasthandoff: 06/22/2017
 |**Verarbeitete XTP-Controllerprotokolle/Sekunde**|Die Anzahl von Protokollbytes, die pro Sekunde vom XTP-Controllerthread verarbeitet werden.|
 |**Verwendeter XTP-Speicher (KB)**|Die von XTP in der Datenbank verwendete Speichermenge.| 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Datenbankreplikat](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

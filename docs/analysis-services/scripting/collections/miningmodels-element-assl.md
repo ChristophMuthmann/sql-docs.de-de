@@ -2,40 +2,35 @@
 title: MiningModels-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningModels Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningModels Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningModels
-helpviewer_keywords:
-- MiningModels element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningModels
+helpviewer_keywords: MiningModels element
 ms.assetid: 19824d92-2e23-4e5e-b329-e46baf709c4a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a23d361c9b3b71a158f67944e3eb8797af03447
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ff5347430cec82b78f70849c82416944114cfd3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="miningmodels-element-assl"></a>MiningModels-Element (ASSL)
-  Enthält die Auflistung der [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) Elemente, die zu einem [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) Elemente, die zu einem [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,11 +47,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

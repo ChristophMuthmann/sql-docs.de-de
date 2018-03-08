@@ -2,9 +2,12 @@
 title: 'Beispiele: Verwenden von OPENXML | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -26,19 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a559fe0e900d3c4e0ffd70b454f995292169880
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
-  In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Beispiele  
  Beim Abrufen der Daten wird *rowpattern* zur Identifizierung der Knoten im XML-Dokument, die die Zeilen bestimmen, verwendet. *rowpattern* wird in der XPath-Sprache ausgedrückt, die in der MSXML XPath-Implementierung verwendet wird. Wenn z. B. das Muster mit einem Element oder Attribut endet, wird eine Zeile für jeden von *rowpattern*ausgewählten Element- oder Attributknoten erstellt.  
@@ -54,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   *rowpattern* (/ROOT/Customer) identifiziert die zu verarbeitenden <`Customer`>-Knoten.  
   
--   Der Wert des *flags*-Parameters wird auf **1** festgelegt, was die attributzentrierte Zuordnung anzeigt. Folglich werden die XML-Attribute den Spalten im Rowset, das in *SchemaDeclaration*definiert ist, zugeordnet.  
+-   Der Wert des *flags* -Parameters wird auf **1** festgelegt, was die attributzentrierte Zuordnung anzeigt. Folglich werden die XML-Attribute den Spalten im Rowset, das in *SchemaDeclaration*definiert ist, zugeordnet.  
   
 -   In *SchemaDeclaration*(in der WITH-Klausel) stimmen die angegebenen Werte für *ColName* mit den entsprechenden XML-Attributnamen überein. Deshalb wird der *ColPattern* -Parameter nicht in *SchemaDeclaration*angegeben.  
   
@@ -804,7 +808,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

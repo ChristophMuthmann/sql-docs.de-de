@@ -2,32 +2,29 @@
 title: Attach-Befehl (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d19093c8030e9faf909168cd4707cf5b3e8759ef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>Attach-Befehl (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Fügt eine Analysis Services-Datei an einen Server an.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Fügt eine Analysis Services-Datei an einen Server an.  
   
   
 ## <a name="request"></a>Anforderung  
@@ -46,9 +43,9 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Eigenschaft**|**Default**|**Description**|  
-|database|[Erforderlich]|Der Name des Datenbankobjekts angefügt werden.|  
-|Ordner|[Erforderlich]|Der Ordner, der die angefügte Datenbank enthält.|  
+|**Eigenschaft**|**Default**|**Beschreibung**|  
+|Datenbank|[Erforderlich]|Der Name des Datenbankobjekts angefügt werden.|  
+|folder|[Erforderlich]|Der Ordner, der die angefügte Datenbank enthält.|  
 |Kennwort|Empty|Das Kennwort zum Verschlüsseln geheimer Schlüssel in die angefügte Datenbank verwendet werden soll.|  
 |readWriteMode|ReadWrite|Ein Enumerationswert, der Zugriffsmodi darf die Datenbank angibt.<br /><br /> **Enumerationswerte werden wie folgt aus:**<br /><br /> ReadWrite – ist Lese-/ Schreib-Zugriff zulässig.<br /><br /> ReadOnly – ist nur-Lese-Zugriff zulässig.<br /><br /> ReadOnlyExclusive – ist nur-Lese exklusiver Zugriff zulässig.|  
   
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   
-

@@ -3,7 +3,7 @@ title: IsolationLevel und Modus Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dfb9da4ee435ef3ebbf6980f6d9dfd9822c3450d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e4d8d23a4f9ffb09ca7f2048ec429752502da8b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel und Modus Eigenschaften (VC++-Beispiel)
 Dieses Beispiel verwendet die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft, um eine exklusive Verbindung öffnen und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) Eigenschaft öffnen Sie eine Transaktion, die durchgeführt wird, von anderen Transaktionen isoliert.  
@@ -254,4 +253,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [IsolationLevel-Eigenschaft](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode-Eigenschaft (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
-

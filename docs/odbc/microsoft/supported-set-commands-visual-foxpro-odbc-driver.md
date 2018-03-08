@@ -3,10 +3,12 @@ title: "\"SET\"-Befehlen (Visual FoxPro-ODBC-Treiber) unterstützt | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b73d45bc940b47d99cf8777db01dacb12484bf3f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db557f215db12f95c2dd0a44a8448a138dac3856
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Unterstützte SET-Befehle (Visual FoxPro-ODBC-Treiber)
 Die Anwendung kann die folgenden Visual FoxPro senden **festgelegt** Befehle mit einer Datenquelle:  
@@ -52,4 +53,3 @@ Die Anwendung kann die folgenden Visual FoxPro senden **festgelegt** Befehle mit
  [SET VERARBEITUNG WIEDERHOLEN](../../odbc/microsoft/set-reprocess-command.md)  
   
  [EINDEUTIGE FESTLEGEN](../../odbc/microsoft/set-unique-command.md)
-

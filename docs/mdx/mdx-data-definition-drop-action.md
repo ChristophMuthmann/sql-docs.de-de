@@ -2,11 +2,13 @@
 title: DROP ACTION-Anweisung (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DROP ACTION
 - Action
 - DROP_ACTION
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - DROP ACTION statement
 - deleting actions
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - actions [MDX]
 - dropping actions
 ms.assetid: 74b3cfee-dea8-4968-a54c-1754d52ee1bd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 13d2ee822aaa50c58f64446dc3c21bf89a0ab824
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 99866db174208e4d041e69cae3d3b520eefb8dba
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---drop-action"></a>MDX-Datendefinition - DROP-Aktion
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Löscht eine angegebene Aktion aus einem angegebenen Cube.  
   
@@ -60,4 +60,3 @@ DROP ACTION CURRENTCUBE | Cube_Name
  [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

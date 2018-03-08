@@ -1,28 +1,32 @@
 ---
 title: "Atomic-Blöcke | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 13
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40d88b09043e3b21326dde6cb85ced071f2b89b5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ATOMIC-Blöcke in nativen Prozeduren
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **BEGIN ATOMIC** ist Teil des ANSI SQL-Standards. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt ATOMIC-Blöcke auf der obersten Ebene der nativ kompilierten gespeicherten Prozeduren sowie für nativ kompilierte, skalare benutzerdefinierte Funktionen. Weitere Informationen zu diesen Funktionen finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 -   Jede systemintern kompilierte gespeicherte Prozedur enthält genau einen Block mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Dies ist ein ATOMIC-Block.  
@@ -40,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
  Das folgende Beispiel veranschaulicht das Fehlerbehandlungsverhalten bei ATOMIC-Blöcken und systemintern kompilierten gespeicherten Prozeduren:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -128,7 +132,7 @@ ORDER BY c1
 GO  
 ```  
   
- Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332 und 41333.  
+ Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332, 41333, und 41839.  
   
 ## <a name="session-settings"></a>Sitzungseinstellungen  
  Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können mit **BEGIN ATOMIC** angegeben werden, während andere immer denselben festen Wert aufweisen.  
@@ -146,7 +150,7 @@ GO
 |----------------------|-----------------|  
 |**DATEFORMAT**|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt **DATEFORMAT** das Standarddatumsformat, das **LANGUAGE**zugeordnet ist.|  
 |**DATEFIRST**|Falls angegeben, überschreibt **DATEFIRST** den Standardwert, der **LANGUAGE**zugeordnet ist.|  
-|**DELAYED_DURABILITY**|Unterstützte Werte sind **OFF** und **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionscommits können entweder vollständig dauerhaft (Standardeinstellung) oder verzögert dauerhaft sein. Weitere Informationen finden Sie unter [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|Unterstützte Werte sind **OFF** und **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktionscommits können entweder vollständig dauerhaft (Standardeinstellung) oder verzögert dauerhaft sein. Weitere Informationen finden Sie unter [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Die folgenden SET-Optionen verfügen für alle ATOMIC-Blöcke in allen systemintern kompilierten gespeicherten Prozeduren über denselben Systemstandardwert:  
   
@@ -166,8 +170,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Nicht abgefangene Ausnahmen bewirken ein Rollback für den ATOMIC-Block, führen jedoch nicht zu einem Abbruch der Transaktion, solange die Transaktion durch den Fehler nicht fehlschlägt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

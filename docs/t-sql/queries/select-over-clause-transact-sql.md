@@ -3,8 +3,11 @@ title: Die OVER-Klausel (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: 75
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: db58418025c1659d42c4f1b76a06af8b08ff2ea6
-ms.openlocfilehash: 9e6dad4cbd3e3b64b35f859986b4b7b9928babd5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 1144e82253c5e9d2988ec9ff4a8aa47bb3cb2fb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bestimmt die Partitionierung und Reihenfolge eines Rowsets vor der Anwendung der zugehörigen Fensterfunktion. Demnach definiert die OVER-Klausel ein Fenster oder eine benutzerdefinierte Reihe von Zeilen innerhalb eines Abfrageresultsets. Eine Fensterfunktion berechnet dann einen Wert für jede Zeile im Fenster. Sie können die OVER-Klausel mit Funktionen verwenden, um aggregierte Werte wie gleitende Durchschnitte, kumulierte Aggregate, laufende Gesamtbeträge oder Ergebnisse vom Typ "Erste n pro Gruppe" berechnen.  
   
@@ -127,7 +129,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  COLLATE *Collation_name*  
  Gibt an, dass die ORDER BY-Vorgang soll, entsprechend der im angegebenen Sortierung ausgeführt werden *Collation_name*. *Collation_name* kann entweder ein Windows-Sortierungsname oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **Char**, **Varchar**, **Nchar**, und **Nvarchar**.  
   
- **ASC** | "DESC"  
+ **ASC** | DESC  
  Gibt an, dass die Werte in der angegebenen Spalte in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. ASC ist die Standardsortierreihenfolge. NULL-Werte werden als die niedrigsten Werte behandelt, die möglich sind.  
   
  ROWS | RANGE  
@@ -195,7 +197,7 @@ Wenn ROWS/RANGE angegeben wird und \<Fensterrahmen vorangehenden > wird zum \<Fe
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Verwenden der OVER-Klausel mit der ROW_NUMBER-Funktion  
  Das folgende Beispiel zeigt die Verwendung der OVER-Klausel mit der ROW_NUMBER-Funktion, um eine Zeilennummer für jede Zeile innerhalb einer Partition anzuzeigen. Durch die ORDER BY-Klausel in der OVER-Klausel werden die Zeilen in jeder Partition nach der Spalte `SalesYTD` sortiert. Die ORDER BY-Klausel in der SELECT-Anweisung bestimmt die Reihenfolge, in der das gesamte Abfrageresultset zurückgegeben wird.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +237,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Verwenden der OVER-Klausel mit Aggregatfunktionen  
  Im folgenden Beispiel wird die `OVER`-Klausel mit Aggregatfunktionen für alle von der Abfrage zurückgegebenen Zeilen verwendet. In diesem Beispiel ist die Verwendung der `OVER`-Klausel effizienter als die Verwendung von Unterabfragen, um die Aggregatwerte abzuleiten.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +280,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  Im folgenden Beispiel wird die Verwendung der `OVER`-Klausel mit einer Aggregatfunktion in einem berechneten Wert dargestellt.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +324,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. Erzeugen eines gleitenden Durchschnitts und kumulierten Gesamtbetrags  
  Im folgenden Beispiel werden die AVG- und SUM-Funktion mit der OVER-Klausel verwendet, um einen gleitenden Durchschnitt und kumulierten Gesamtbetrag von jährlichen Verkäufen für jedes Gebiet in der `Sales.SalesPerson`-Tabelle bereitzustellen. Die Daten werden nach `TerritoryID` partitioniert und logisch nach `SalesYTD` sortiert. Folglich wird die AVG-Funktion auf Grundlage des Verkaufsjahres für jedes Gebiet berechnet. Beachten Sie, dass für `TerritoryID` 1 zwei Zeilen für das Verkaufsjahr 2005 vorhanden sind, die die beiden Vertriebsmitarbeiter mit dem Umsatz aus diesem Jahr darstellen. Der durchschnittliche Umsatz für diese zwei Zeilen wird berechnet, und anschließend wird die dritte Zeile, die den Umsatz für das Jahr 2006 darstellt, in die Berechnung einbezogen.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +363,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  In diesem Beispiel ist PARTITION BY nicht in der OVER-Klausel enthalten. Folglich wird die Funktion auf alle von der Abfrage zurückgegebenen Zeilen angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, auf die die AVG-Funktion angewendet wird. Die Abfrage gibt einen gleitenden Durchschnitt der Jahresumsätze für alle Vertriebsgebiete zurück, die in der WHERE-Klausel angegeben sind. Die in der SELECT-Anweisung angegebene ORDER BY-Klausel bestimmt die Reihenfolge, in der die Zeilen der Abfrage angezeigt werden.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -398,7 +400,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  Im folgenden Beispiel wird die ROWS-Klausel, um ein Fenster, die die Zeilen berechnet werden, als die aktuelle Zeile zu definieren und die *N* Anzahl von Zeilen, die (1 Zeile in diesem Beispiel) folgen.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +430,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  Im folgenden Beispiel wird die ROWS-Klausel mit UNBOUNDED PRECEDING angegeben. Das Ergebnis ist, dass das Fenster bei der ersten Zeile der Partition startet.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +464,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Verwenden der OVER-Klausel mit der ROW_NUMBER-Funktion  
  Im folgende Beispiel gibt die ROW_NUMBER für Vertriebsmitarbeiter, die basierend auf ihren zugewiesenen sollvorgaben zurück.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +491,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. Verwenden der OVER-Klausel mit Aggregatfunktionen  
  Die folgenden Beispiele zeigen die OVER-Klausel mit Aggregatfunktionen verwenden. In diesem Beispiel ist die Verwendung der OVER-Klausel effizienter als die Verwendung von Unterabfragen.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +523,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  Im folgende Beispiel wird gezeigt, mit der OVER-Klausel mit einer Aggregatfunktion in einem berechneten Wert. Beachten Sie, die die Aggregate, indem berechnet werden `SalesOrderNumber` und der Prozentsatz des gesamten Auftrags berechnet für jede Zeile von `SalesOrderNumber`.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
@@ -553,4 +555,3 @@ ORDER BY SalesOrderNumber,ProductKey;
  [Ausgezeichnete Blogbeitrag zu Fensterfunktionen und OVER, auf sqlmag.com Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   
-

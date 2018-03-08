@@ -2,9 +2,12 @@
 title: LineString | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9132c20fb46f36511a781c934026ebf01503375d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 03586825ed75c715ddcfe17ce2086a2b33386e80
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="linestring"></a>LineString
-  Ein **LineString** ist ein eindimensionales Objekt, das eine Sequenz aus Punkten und die sie verbindenden Liniensegmente darstellt.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Ein **LineString** ist ein eindimensionales Objekt, das eine Sequenz aus Punkten und die sie verbindenden Liniensegmente darstellt.  
   
 ## <a name="linestring-instances"></a>LineString-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für **LineString** -Instanzen.  
@@ -107,7 +111,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  Im folgenden Beispiel wird veranschaulicht, wie eine `geometry LineString` -Instanz mit zwei Punkten erstellt wird, die identisch sind. Ein Aufruf von `IsValid` gibt an, dass die **LineString** -Instanz nicht gültig ist, und durch einen Aufruf von `MakeValid` wird die **LineString** -Instanz in einen **Point**konvertiert.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  
@@ -130,7 +134,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [STLength &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

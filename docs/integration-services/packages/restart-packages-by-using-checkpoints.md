@@ -1,10 +1,13 @@
 ---
-title: "Neustarten von Paketen mit Prüfpunkten | Microsoft Docs"
+title: "Neustarten von Paketen mit Prüfpunkten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5630458cf4f925ad1cce7cfab27cedbcf66bf3eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] können fehlerhafte Pakete an dem Punkt neu gestartet werden, an dem der Fehler aufgetreten ist. Sie brauchen also nicht noch einmal vollständig ausgeführt werden. Wenn ein Paket zum Verwenden von Prüfpunkten konfiguriert ist, werden Informationen zur Ausführung des Pakets in eine Prüfpunktdatei geschrieben. Wenn das fehlerhafte Paket erneut ausgeführt wird, wird die Prüfpunktdatei verwendet, um das Paket von dem Punkt aus, an dem der Fehler aufgetreten ist, auszuführen. Wenn das Paket erfolgreich ausgeführt wird, wird die Prüfpunktdatei gelöscht und beim nächsten Ausführen des Pakets neu erstellt.  
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="checkpoint-usage"></a>Syntax von Prüfpunkten  
  Die CheckpointUsage-Eigenschaft kann auf die folgenden Werte festgelegt werden:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Never**|Gibt an, dass die Prüfpunktdatei nicht verwendet wird und dass das Paket vom Beginn des Paketworkflows aus ausgeführt wird.|  
 |**Always**|Gibt an, dass die Prüfpunktdatei immer verwendet wird und dass das Paket von dem Punkt aus neu gestartet wird, an dem bei der letzten Ausführung ein Fehler aufgetreten ist. Wenn die Prüfpunktdatei nicht gefunden wird, schlägt das Paket fehl.|  
@@ -120,4 +122,3 @@ ms.lasthandoff: 08/03/2017
 -   Technischer Artikel [Automatischer Neustart von SSIS-Paketen nach Failover oder Fehler](http://go.microsoft.com/fwlink/?LinkId=200407)auf social.technet.microsoft.com.  
   
 -   Support-Artikel [SSIS-Prüfpunkte werden bei Elementen von For- und Foreach-Schleifencontainern nicht berücksichtigt](http://go.microsoft.com/fwlink/?LinkId=241633)auf support.microsoft.com.  
-

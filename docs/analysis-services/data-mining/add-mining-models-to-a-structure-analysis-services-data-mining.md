@@ -2,12 +2,13 @@
 title: "Hinzufügen von Miningmodellen zu einer Struktur (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30fab0ce534bc76456f6876c1432feeb3de2de03
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Hinzufügen von Miningmodellen zu einer Struktur (Analysis Services - Data Mining)
-  Eine Miningstruktur ist für die Unterstützung mehrerer Miningmodelle bestimmt. Nachdem Sie den Assistenten beendet haben, können Sie die Struktur öffnen und neue Miningmodelle hinzufügen. Jedes Mal, wenn Sie ein Modell erstellen, können Sie einen anderen Algorithmus verwenden, die Parameter ändern oder Filter anwenden, um eine andere Teilmenge der Daten zu verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine Miningstruktur ist für die Unterstützung mehrerer Miningmodelle bestimmt. Nachdem Sie den Assistenten beendet haben, können Sie die Struktur öffnen und neue Miningmodelle hinzufügen. Jedes Mal, wenn Sie ein Modell erstellen, können Sie einen anderen Algorithmus verwenden, die Parameter ändern oder Filter anwenden, um eine andere Teilmenge der Daten zu verwenden.  
   
 ## <a name="adding-new-mining-models"></a>Hinzufügen von neuen Miningmodellen  
  Wenn Sie den Data Mining-Assistenten zur Erstellung eines neuen Miningmodells verwenden, müssen Sie standardmäßig zunächst immer eine Miningstruktur erstellen. Mithilfe des Assistenten ist die Option verfügbar, der Struktur ein ursprüngliches Miningmodell hinzuzufügen. Sie müssen jedoch nicht sofort ein Modell erstellen. Wenn Sie nur die Struktur erstellen, müssen Sie nicht entscheiden, welche Spalte als vorhersagbares Attribut verwendet werden soll oder wie die Daten in einem bestimmten Modell verwendet werden sollen. Stattdessen richten Sie nur die allgemeine Datenstruktur ein, die Sie künftig verwenden möchten. Später können Sie mit [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) neue Miningmodelle hinzufügen, die auf der Struktur basieren.  
@@ -64,10 +65,9 @@ ms.lasthandoff: 09/01/2017
  Für einige Spalten müssen Sie gegebenenfalls auch den *Spalteninhalt*angeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining weist die Eigenschaft Content Type der einzelnen Datenspalten den Algorithmus an, wie die Daten in der entsprechenden Spalte zu verarbeiten sind. Wenn Ihre Daten eine Spalte Income beinhalten, müssen Sie angeben, dass die Spalte fortlaufende Nummern enthält, indem Sie den Content Type auf Continuous festlegen. Sie können jedoch auch angeben, dass die Nummern in der Spalte Income in Buckets gruppiert werden. Legen Sie dazu die Eigenschaft Content Type auf Discretized fest, und geben Sie wahlweise die genaue Zahl der Buckets an. Sie können verschiedene Modelle erstellen, die die Spalten auf unterschiedliche Weise verarbeiten. Beispielsweise können Sie ein Modell ausprobieren, das Kunden in drei Altersgruppen einteilt, und ein anderes Modell mit zehn Altersgruppen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Erstellen einer relationalen Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [Miningstrukturen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Erstellen Sie eine relationale Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Miningmodelleigenschaften](../../analysis-services/data-mining/mining-model-properties.md)   
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

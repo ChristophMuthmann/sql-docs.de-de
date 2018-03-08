@@ -1,36 +1,37 @@
 ---
 title: Globale Einstellungen (Dialogfelder) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4493656a3b7e86a9d023edc7cbed1a5387ddf760
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2e86cfce8a8a963a283422ce334c8c2472b8720
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>Globale Einstellungen (Dialogfelder) (AccessToSQL)
 Mithilfe der Dialogfelder Seite der **globale Einstellungen** (Dialogfeld), um die Standardaktion für Benutzer und die Warnung-Einstellungen für SSMA anzugeben.  
   
 Die Einstellungen des Dialogfelds für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Dialoge**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Migrations-Assistent beim Start anzeigen**  
 In SSMA für Access, haben Sie eine Option zum Aktivieren oder deaktivieren Sie **Paketmigrations-Assistent** beim Start von SSMA-Anwendung. Standardmäßig ist diese Option **"true"**.  
   
@@ -56,4 +57,3 @@ Verwenden Sie diese Option, um anzugeben, das Standardobjekt überschreiben Verh
   
 -   Bei Auswahl des **"false"**, SSMA Objektmetadaten während der Konvertierung wird nicht überschrieben werden.  
   
-

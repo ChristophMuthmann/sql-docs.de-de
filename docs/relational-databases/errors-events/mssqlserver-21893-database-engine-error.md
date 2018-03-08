@@ -2,29 +2,30 @@
 title: MSSQLSERVER_21893 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21893 (Database Engine error)
+helpviewer_keywords: 21893 (Database Engine error)
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c4bd7053dc90563f163b2e53ee96d8bb72aa1b46
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 048170f35458690fae297ed6ced66c1d913411ab
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver21893"></a>MSSQLSERVER_21893
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -45,4 +46,3 @@ Dies wird jedoch nicht als schwerwiegender Fehler angesehen. Agents, in denen di
 ## <a name="user-action"></a>Benutzeraktion  
 Führen Sie **sp_addlinkedserver** für jeden identifizierten Abonnenten auf dem umgeleiteten Verleger aus, um diese Abonnenten als Remoteserver hinzuzufügen. Führen Sie anschließend **sp_serveroption** aus, um das Abonnentenbit für den Server festzulegen.  
   
-

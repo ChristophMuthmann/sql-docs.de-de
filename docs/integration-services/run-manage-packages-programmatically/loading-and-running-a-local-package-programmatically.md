@@ -1,12 +1,14 @@
 ---
-title: "Laden und Ausführen eines lokalen Pakets programmgesteuert | Microsoft Docs"
+title: "Programmgesteuertes Laden und Ausführen eines lokalen Pakets | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: run-manage-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,28 +24,27 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 604c25de1d6ca478612bd3a83f79e35b969e5d8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines lokalen Pakets
-  Sie können ausführen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete Bedarf oder zu vorbestimmten Zeiten mit den Methoden, die in beschriebenen [ausgeführte Pakete](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Mit nur wenigen Codezeilen können Sie ein Paket jedoch auch mit einer benutzerdefinierten Anwendung wie einer Windows Forms-Anwendung, einer Konsolenanwendung, einem Webformular oder Webdienst von ASP.NET oder einem Windows-Dienst ausführen.  
+  Sie können [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete mit einer der unter [Ausführen von Paketen](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx) beschriebenen Methoden bei Bedarf oder zu vorbestimmten Zeiten ausführen. Mit nur wenigen Codezeilen können Sie ein Paket jedoch auch mit einer benutzerdefinierten Anwendung wie einer Windows Forms-Anwendung, einer Konsolenanwendung, einem Webformular oder Webdienst von ASP.NET oder einem Windows-Dienst ausführen.  
   
- In diesem Thema erläutert:  
+ In diesem Thema wird Folgendes erläutert:  
   
 -   Programmgesteuertes Laden eines Pakets  
   
 -   Programmgesteuertes Ausführen eines Pakets  
   
- Alle Methoden in diesem Thema verwendet, um zu laden und Ausführen von Paketen erfordern einen Verweis auf die **Microsoft.SqlServer.ManagedDTS** Assembly. Nach dem Hinzufügen des Verweises in einem neuen Projekt importieren der <xref:Microsoft.SqlServer.Dts.Runtime> Namespace mit einem **mit** oder **Importe** Anweisung.  
+ Alle in diesem Thema erläuterten Methoden zum Laden und Ausführen von Paketen erfordern einen Verweis auf die **Microsoft.SqlServer.ManagedDTS**-Assembly. Nachdem Sie den Verweis in einem neuen Projekt hinzugefügt haben, importieren Sie den <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace mit einer **using**- oder **Imports**-Anweisung.  
   
 ## <a name="loading-a-package-programmatically"></a>Programmgesteuertes Laden eines Pakets  
  Rufen Sie unabhängig davon, ob ein Paket lokal oder remote gespeichert ist, zum programmgesteuerten Laden des Pakets auf dem lokalen Computer eine der folgenden Methoden auf:  
@@ -64,16 +65,16 @@ ms.lasthandoff: 08/03/2017
   
 1.  Starten Sie die Visual Studio-Entwicklungsumgebung, und erstellen Sie eine neue Anwendung in der gewünschten Entwicklungssprache. In diesem Beispiel wird eine Konsolenanwendung verwendet. Sie können ein Paket jedoch auch mit einer Windows Forms-Anwendung, einem Webformular oder Webdienst von ASP.NET oder einem Windows-Dienst ausführen.  
   
-2.  Auf der **Projekt** Menü klicken Sie auf **Verweis hinzufügen** und Hinzufügen eines Verweises auf **Microsoft.SqlServer.manageddts.dll entspricht**. Klicken Sie auf **OK**.  
+2.  Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**, und fügen Sie einen Verweis auf **Microsoft.SqlServer.ManagedDTS.dll** hinzu. Klicken Sie auf **OK**.  
   
-3.  Mithilfe der Visual Basic **Importe** -Anweisung oder die C#- **mit** -Anweisung zum Importieren der **Microsoft.SqlServer.Dts.Runtime** Namespace.  
+3.  Verwenden Sie die **Imports**-Anweisung in Visual Basic oder die **using**-Anweisung in C#, um den **Microsoft.SqlServer.Dts.Runtime**-Namespace zu importieren.  
   
 4.  Fügen Sie den folgenden Code in der Hauptroutine hinzu. Die abgeschlossene Konsolenanwendung sollte wie im folgenden Beispiel dargestellt aussehen.  
   
     > [!NOTE]  
-    >  Im Beispielcode wird das Laden des Pakets aus dem Dateisystem mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>-Methode veranschaulicht. Aber auch Laden des Pakets aus der MSDB-Datenbank durch Aufrufen kann die <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> -Methode, oder aus der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketspeicher durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> Methode.  
+    >  Im Beispielcode wird das Laden des Pakets aus dem Dateisystem mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>-Methode veranschaulicht. Sie können das Paket jedoch auch aus der MSDB-Datenbank durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A>-Methode oder aus dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketspeicher durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>-Methode laden.  
   
-5.  Führen Sie das Projekt aus. Der Beispielcode führt das CalculatedColumns-Beispielpaket, die mit installiert wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Beispiele. Das Ergebnis der Paketausführung wird im Konsolenfenster angezeigt.  
+5.  Führen Sie das Projekt aus. Der Beispielcode führt das CalculatedColumns-Beispielpaket aus, das mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Beispielen installiert wird. Das Ergebnis der Paketausführung wird im Konsolenfenster angezeigt.  
   
 ### <a name="sample-code"></a>Beispielcode  
   
@@ -133,7 +134,7 @@ namespace RunFromClientAppCS
 ```  
   
 ## <a name="capturing-events-from-a-running-package"></a>Aufzeichnen von Ereignissen aus einem ausgeführten Paket  
- Wenn Sie ein Paket wie im vorhergehenden Beispiel dargestellt programmgesteuert ausführen, sollten Sie auch zum Erfassen von Fehlern und anderen Ereignissen, die auftreten, da das Paket ausgeführt wird. Sie können dies erreichen, indem Sie eine Klasse hinzufügen, die von der <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>-Klasse erbt, und beim Laden des Pakets einen Verweis auf diese Klasse übergeben. Auch wenn im folgenden Beispiel nur die <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents.OnError%2A>-Ereignisse aufgezeichnet werden, gibt es noch viele weitere Ereignisse, die mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>-Klasse aufgezeichnet werden können.  
+ Wenn ein Paket wie im vorigen Beispiel dargestellt programmgesteuert ausgeführt wird, sollten auch Fehler und andere Ereignisse aufgezeichnet werden, die bei der Ausführung des Pakets auftreten. Sie können dies erreichen, indem Sie eine Klasse hinzufügen, die von der <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>-Klasse erbt, und beim Laden des Pakets einen Verweis auf diese Klasse übergeben. Auch wenn im folgenden Beispiel nur die <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents.OnError%2A>-Ereignisse aufgezeichnet werden, gibt es noch viele weitere Ereignisse, die mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>-Klasse aufgezeichnet werden können.  
   
 #### <a name="to-run-a-package-on-the-local-computer-programmatically-and-capture-package-events"></a>So führen Sie ein Paket auf dem lokalen Computer programmgesteuert aus und zeichnen Paketereignisse auf  
   
@@ -141,7 +142,7 @@ namespace RunFromClientAppCS
   
 2.  Fügen Sie den folgenden Code in der Hauptroutine hinzu. Die abgeschlossene Konsolenanwendung sollte wie im folgenden Beispiel dargestellt aussehen.  
   
-3.  Führen Sie das Projekt aus. Der Beispielcode führt das CalculatedColumns-Beispielpaket, die mit installiert wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Beispiele. Das Ergebnis der Paketausführung wird zusammen mit den aufgetretenen Fehlern im Konsolenfenster angezeigt.  
+3.  Führen Sie das Projekt aus. Der Beispielcode führt das CalculatedColumns-Beispielpaket aus, das mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Beispielen installiert wird. Das Ergebnis der Paketausführung wird zusammen mit den aufgetretenen Fehlern im Konsolenfenster angezeigt.  
   
 ### <a name="sample-code"></a>Beispielcode  
   
@@ -230,10 +231,9 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu den Unterschieden zwischen lokalen und Remote-Ausführung](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Programmgesteuerten laden und Ausführen eines Remotepakets](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Programmgesteuertes Laden und Ausführen eines Remotepakets](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Laden der Ausgabe eines lokalen Pakets](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

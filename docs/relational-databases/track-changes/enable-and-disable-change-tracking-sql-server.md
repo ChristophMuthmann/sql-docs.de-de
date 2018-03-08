@@ -2,9 +2,12 @@
 title: "Aktivieren und Deaktivieren der Änderungsnachverfolgung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,26 +20,26 @@ helpviewer_keywords:
 - change tracking [SQL Server], configuring
 - data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: a8ebd0d24e5c3e52d469342ed8fe6d23cc96a215
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Aktivieren und Deaktivieren der Änderungsnachverfolgung (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie die Änderungsnachverfolgung für Datenbanken und Tabellen aktivieren und deaktivieren können.  
   
 ## <a name="enable-change-tracking-for-a-database"></a>Aktivieren der Änderungsnachverfolgung für eine Datenbank  
  Bevor Sie die Änderungsnachverfolgung verwenden können, müssen Sie die Änderungsnachverfolgung auf Datenbankebene aktivieren. Im folgenden Beispiel wird gezeigt, wie die Änderungsnachverfolgung mit [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)aktiviert werden kann.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -61,7 +64,7 @@ SET CHANGE_TRACKING = ON
   
  Im folgenden Beispiel wird gezeigt, wie die Änderungsnachverfolgung für eine Tabelle mit [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)aktiviert werden kann.  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -76,19 +79,19 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  Wenn für keine Tabelle einer Datenbank Änderungen nachverfolgt werden, können Sie die Änderungsnachverfolgung für die Datenbank deaktivieren. Im folgenden Beispiel wird gezeigt, wie die Änderungsnachverfolgung für eine Datenbank mit [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)deaktiviert werden kann.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  Im folgenden Beispiel wird gezeigt, wie die Änderungsnachverfolgung für eine Tabelle mit [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)deaktiviert werden kann.  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40;Seite Änderungsnachverfolgung&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
@@ -99,4 +102,3 @@ DISABLE CHANGE_TRACKING;
  [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
-

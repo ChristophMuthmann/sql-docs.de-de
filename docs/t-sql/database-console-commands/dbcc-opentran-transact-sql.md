@@ -1,10 +1,13 @@
 ---
 title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - checking open transactions
 - oldest transactions [SQL Server]
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f3d3b47d9bc553edd49f6f401d1a1c7a857d0a7d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3c4166a34b06531389b4f8ad57f6c826bfbb664d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Mithilfe von DBCC OPENTRAN können aktive Transaktionen identifiziert werden, die die Protokollkürzung möglicherweise verhindern. DBCC OPENTRAN zeigt Informationen zur ältesten aktiven Transaktion sowie zu den ältesten verteilten und nicht verteilten replizierten Transaktionen (sofern vorhanden) im Transaktionsprotokoll der angegebenen Datenbank an. Ergebnisse werden nur angezeigt, wenn im Protokoll eine aktive Transaktion vorhanden ist oder die Datenbank Replikationsinformationen enthält. Wenn keine aktiven Transaktionen im Protokoll enthalten sind, wird eine Informationsmeldung angezeigt.
   
@@ -60,7 +62,7 @@ DBCC OPENTRAN
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* | *Database_id*| 0  
+ *database_name* | *database_id*| 0  
  Der Name oder die ID der Datenbank, für die Informationen zur ältesten Transaktion angezeigt werden sollen. Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  TABLERESULTS  
@@ -137,10 +139,9 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
-[COMMIT der Transaktion &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Db_id &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[ROLLBACK TRANSACTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   
-

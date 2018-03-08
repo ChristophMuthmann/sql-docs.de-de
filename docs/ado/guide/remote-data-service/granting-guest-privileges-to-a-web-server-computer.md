@@ -3,7 +3,7 @@ title: "Gewähren von Gastberechtigungen für einen Webservercomputer | Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4c9e1f3dace4916b7d8044a5b21f480bacb04238
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9027a8e8adead5801a27465bda36a347472e383
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Gewähren von Gastberechtigungen für eine Web-Server-Computer
 Das anonyme Konto der Web-Server (IUSR_*ComputerName*) muss zur lokalen Gruppe Gäste auf dem Webservercomputer RDS verwendet hinzugefügt werden  
@@ -46,6 +45,5 @@ Das anonyme Konto der Web-Server (IUSR_*ComputerName*) muss zur lokalen Gruppe G
 5.  Wenn das anonyme Konto der Web-Server nicht in der Liste angezeigt wird der **Benutzer oder Gruppen auswählen** Dialogfeld Feld, geben Sie seinen Namen (IUSR_*ComputerName*) in das leere Feld unten ein, und klicken Sie dann auf **hinzufügen** .  
   
 6.  Klicken Sie auf **OK**.
-
 
 

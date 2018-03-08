@@ -2,9 +2,12 @@
 title: "Verwalten und Überwachen der semantischen Suche | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6749d7f7db6e6e76cd940c166180a7ccd206aaf9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f4a2a8b7d3dff23fe580da64ec083815b897b947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Verwalten und Überwachen der semantischen Suche
-  In diesem Thema werden der Prozess der semantischen Indizierung sowie die Tasks im Zusammenhang mit der Verwaltung und Überwachung der Indizes beschrieben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Thema werden der Prozess der semantischen Indizierung sowie die Tasks im Zusammenhang mit der Verwaltung und Überwachung der Indizes beschrieben.  
   
 ##  <a name="HowToMonitorStatus"></a> Überprüfen des Status der semantischen Indizierung  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>Ist die erste Phase der semantischen Indizierung abgeschlossen?
@@ -34,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Die erste Phase der Indizierung umfasst die Auffüllung des Volltextschlüsselwortindexes und des semantischen Schlüsselausdruckindexes sowie die Extraktion der Dokumentähnlichkeitsdaten.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -61,7 +64,7 @@ GO
   
  Die logische Größe wird in Anzahl von Indexseiten angezeigt.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -72,7 +75,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Wie groß sind die Volltext- und die semantischen Indizes für einen Volltextkatalog insgesamt?  
  Fragen Sie die Eigenschaft **IndexSize** der Metadatenfunktion [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) ab.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -80,7 +83,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Wie viele Elemente werden in den Volltext- und den semantischen Indizes für einen Volltextkatalog indiziert?  
  Fragen Sie die Eigenschaft **ItemCount** der Metadatenfunktion [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) ab.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -108,7 +111,7 @@ GO
   
  Wenn die semantische Indizierung deaktiviert und angehalten wurde, funktionieren Abfragen über semantische Daten weiterhin und geben zuvor indizierte Daten zurück. Dieses Verhalten ist nicht konsistent mit dem Verhalten der Volltextsuche.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  
@@ -149,4 +152,3 @@ GO
  Weitere Informationen finden Sie unter [Behandeln von Problemen mit der Volltextindizierung](../../relational-databases/search/troubleshoot-full-text-indexing.md).  
   
   
-

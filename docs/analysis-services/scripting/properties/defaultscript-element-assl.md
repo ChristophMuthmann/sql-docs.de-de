@@ -2,40 +2,35 @@
 title: DefaultScript-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DefaultScript Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DefaultScript Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DefaultScript
-helpviewer_keywords:
-- DefaultScript element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DefaultScript
+helpviewer_keywords: DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7560b3ce0fe03700f73be4d0ef34817c03619950
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 163c57ea60a832547a69d9e4c5ec1e6e21bb2f51
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defaultscript-element-assl"></a>DefaultScript-Element (ASSL)
-  Identifiziert das Standard- [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) Element in der [MdxScripts](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md) Auflistung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifiziert das Standard- [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) Element in der [MdxScripts](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md) Auflistung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Boolean|  
 |Standardwert|**Wahr**|  
@@ -61,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[MdxScript-Objekt](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Einrichten des Werts für **DefaultScript** auf **True** für ein Skript setzt den Wert für **DefaultScript** auf **False** für alle anderen **MdxScript** -Elemente in der **MdxScripts** -Auflistung.  
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

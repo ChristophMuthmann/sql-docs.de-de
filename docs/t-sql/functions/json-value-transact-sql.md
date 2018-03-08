@@ -1,11 +1,13 @@
 ---
 title: JSON_VALUE (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - JSON, extracting
 - JSON, querying
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebb940035e4cad1ef898cfe83e1932db573848ab
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Extrahiert einen skalaren Wert aus einer JSON-Zeichenfolge.  
   
@@ -107,10 +108,13 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="example-1"></a>Beispiel 1  
- Das folgende Beispiel verwendet die Werte der JSON-Eigenschaften `town` und `state` in den Abfrageergebnissen. Da **JSON_VALUE** behält die Sortierung der Quelle, die Sortierreihenfolge der Ergebnisse hängt von der Sortierung der `jsonInfo` Spalte.  
+ Das folgende Beispiel verwendet die Werte der JSON-Eigenschaften `town` und `state` in den Abfrageergebnissen. Da **JSON_VALUE** behält die Sortierung der Quelle, die Sortierreihenfolge der Ergebnisse hängt von der Sortierung der `jsonInfo` Spalte. 
+
+> [!NOTE]
+> (In diesem Beispiel wird davon ausgegangen, dass eine Tabelle namens `Person.Person` enthält eine `jsonInfo` -Spalte der JSON-Text und, dass diese Spalte die Struktur, die weiter oben in der Erläuterung der lax und strict-Modus aufweist. In der AdventureWorks-Beispieldatenbank die `Person` Tabelle enthält keine tatsächlich eine `jsonInfo` Spalte.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
@@ -148,4 +152,3 @@ CREATE TABLE dbo.Store
  [JSON-Daten &#40; SQLServer &#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   
-

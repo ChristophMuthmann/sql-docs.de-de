@@ -3,7 +3,7 @@ title: Name-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -25,17 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 91c6c966079e2a802922c18e1d754ef9ef21fb76
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d898b2e478b9a5dfccb431d0d29088c9e8d9286
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="name-property-ado-md"></a>Name-Eigenschaft (ADO MD)
 Gibt den Namen eines Objekts an.  
@@ -50,8 +49,8 @@ Gibt den Namen eines Objekts an.
   
 ||||  
 |-|-|-|  
-|[Achsenobjekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[Katalogobjekt (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
-|[Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Ebenenobjekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
+|[Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[Katalogobjekt (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
+|[Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
 |[Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -59,4 +58,3 @@ Gibt den Namen eines Objekts an.
  [Caption-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
-

@@ -3,8 +3,11 @@ title: "SequenceType-Ausdrücke (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ac481d608106e5ce787ffe737d8d11fda67af3fb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType-Ausdrücke (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In XQuery ist jeder Wert eine Sequenz. Der Typ des Werts wird als Sequenztyp bezeichnet. Der Sequenztyp kann verwendet werden, eine **Instanz** XQuery-Ausdruck. Die in der XQuery-Spezifikation beschriebene SequenceType-Syntax wird verwendet, wenn in einem XQuery-Ausdruck auf einen Typ verwiesen werden muss.  
   
@@ -418,4 +420,3 @@ select @x.query('xs:date("2000-01-01Z")')
  [Typsystem &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
   
   
-

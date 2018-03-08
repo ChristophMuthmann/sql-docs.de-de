@@ -2,35 +2,32 @@
 title: UND (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- AND
-dev_langs:
-- DMX
-helpviewer_keywords:
-- AND, DMX
+f1_keywords: AND
+dev_langs: DMX
+helpviewer_keywords: AND, DMX
 ms.assetid: d337b20c-f80e-48be-9354-371367e53735
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4acd3c33863e8e8c198480e4cc90e4661f7acf94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bcb67e3b5c16a9bee84271eebc2083a065e924d9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="and-dmx"></a>AND (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Führt eine logische Konjunktion zweier numerischer Ausdrücke aus.  
   
@@ -67,4 +64,3 @@ Expression1 AND Expression2
  [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

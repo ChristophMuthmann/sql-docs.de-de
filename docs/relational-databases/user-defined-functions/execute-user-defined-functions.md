@@ -2,9 +2,12 @@
 title: "Ausführen von benutzerdefinierten Funktionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - invoking user-defined functions
 - user-defined functions [SQL Server], executing
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
-caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: fae9e40f60d6841b075b870550a0f74f8fe9908d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-user-defined-functions"></a>Ausführen von benutzerdefinierten Funktionen
-  Ausführen einer benutzerdefinierten Funktion mit Transact-SQL
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Ausführen einer benutzerdefinierten Funktion mit Transact-SQL
   
 
 > **Hinweis:** Weitere Informationen zu benutzerdefinierten Funktionen finden Sie unter  [Benutzerdefinierte Funktion](user-defined-functions.md) und [CREATE FUNCTION (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) . 
@@ -67,4 +70,3 @@ SELECT N'Order Status: ' + @ret;
   
   
   
-

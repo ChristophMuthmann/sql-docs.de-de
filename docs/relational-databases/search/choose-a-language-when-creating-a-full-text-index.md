@@ -2,9 +2,11 @@
 title: "Auswählen einer Sprache beim Erstellen eines Volltextindexes | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -19,18 +21,21 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 72f8dcb0e0426d8e37ae7284163f841caa478570
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text vom Volltextmodul in Token zerlegt und anschließend indiziert wird.  
   
 > [!NOTE]  
@@ -51,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
      Tests haben gezeigt, dass die neuen Wörtertrennungen in anspruchsvollen Abfrageumgebungen stabil arbeiten.  
   
--   Sicherheit  
+-   Security  
   
      Die neuen Wörtertrennungen sind in SQL Server standardmäßig aktiviert. Dies ist aufgrund von Sicherheitsverbesserungen der linguistischen Komponenten möglich. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von SQL Server zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
   
@@ -76,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ##  <a name="breaking"></a> Worttrennung  
- Bei der Wörtertrennung wird der zu indizierende Text an den sprachspezifischen Wortgrenzen zerlegt. Aus diesem Grund unterscheidet sich das Wörtertrennungsverhalten für die einzelnen Sprachen. Wenn Sie eine Sprache "x" verwenden, um mehrere Sprachen {x, y und z} zu indizieren, kann es ggf. zu unerwartetem Verhalten und Ergebnissen kommen. Ein Bindestrich (-) oder ein Komma (,) kann z. B. ein Wörtertrennungselement sein, das in einer Sprache verworfen wird, in einer anderen Sprache jedoch beibehalten wird. Außerdem kann ggf. auch unerwartetes Verhalten bei der Wortstammerkennung auftreten, da ein Wort für verschiedene Sprachen unterschiedliche Stämme aufweisen kann. Im Englischen sind Wortgrenzen z.&nbsp;B. meist Leerzeichen oder Satzzeichen. In anderen Sprachen, z.&nbsp;B. Deutsch, können dabei Wörter oder Zeichen kombiniert werden. Daher sollte die gewählte Spaltensprache die Sprache sein, die voraussichtlich in den Zeilen der Spalte gespeichert wird.  
+ Bei der Wörtertrennung wird der zu indizierende Text an den sprachspezifischen Wortgrenzen zerlegt. Aus diesem Grund unterscheidet sich das Wörtertrennungsverhalten für die einzelnen Sprachen. Wenn Sie eine Sprache „x“ verwenden, um mehrere Sprachen {x, y und z} zu indizieren, kann es ggf. zu unerwartetem Verhalten und Ergebnissen kommen. Ein Bindestrich (-) oder ein Komma (,) kann z. B. ein Wörtertrennungselement sein, das in einer Sprache verworfen wird, in einer anderen Sprache jedoch beibehalten wird. Außerdem kann ggf. auch unerwartetes Verhalten bei der Wortstammerkennung auftreten, da ein Wort für verschiedene Sprachen unterschiedliche Stämme aufweisen kann. Im Englischen sind Wortgrenzen z.&nbsp;B. meist Leerzeichen oder Satzzeichen. In anderen Sprachen, z.&nbsp;B. Deutsch, können dabei Wörter oder Zeichen kombiniert werden. Daher sollte die gewählte Spaltensprache die Sprache sein, die voraussichtlich in den Zeilen der Spalte gespeichert wird.  
   
 ### <a name="western-languages"></a>Westliche Sprachen  
  Wenn Sie bei den westlichen Sprachen unsicher sein sollten, welche Sprachen in einer Spalte gespeichert werden, oder wenn in Spalten mehr als eine Sprache gespeichert werden soll, können Sie als Lösung die Wörtertrennung für die komplexeste Sprache verwenden, die voraussichtlich in der Spalte gespeichert wird. Es kann z.&nbsp;B. sein, dass Sie englischen, spanischen und deutschen Text in einer Spalte speichern möchten. Diese drei westlichen Sprachen weisen sehr ähnliche Wörtertrennungsmuster auf, wobei die Muster von Deutsch am komplexesten sind. In diesem Fall wäre also die Wörtertrennung für Deutsch eine gute Wahl, weil auch der englische und spanische Text weitestgehend richtig verarbeitet werden würde. Im Gegensatz dazu würde die Wörtertrennung für Englisch den deutschen Text ggf. nicht richtig verarbeiten, weil im Deutschen viele Komposita verwendet werden.  
@@ -117,7 +122,7 @@ ms.lasthandoff: 06/22/2017
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]analysiert eine Volltextsuche standardmäßig die Abfrageausdrücke, indem die Sprache verwendet wird, die für die einzelnen Spalten angegeben ist, die in der Volltextklausel enthalten sind. Um dieses Verhalten zu überschreiben, geben Sie zur Abfragezeit eine nicht standardmäßige Sprache an. Für unterstützte Sprachen mit installierten Ressourcen können Sie die LANGUAGE *language_term* Klausel einer [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-, [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-, [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)- oder [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) -Abfrage verwenden, um die Sprache anzugeben, die für die Abfrageausdrücke in Bezug auf Wörtertrennung, Wortstammerkennung, Thesaurus und Stoppwörter genutzt wird.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

@@ -3,27 +3,28 @@ title: Datensuche und Vorhersagemodellierung mit R | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 20
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 563266ba60fd9ef4a9514d14e7549934b8cebd07
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Datensuche und Vorhersagemodellierung mit R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, Verbesserungen an den Data Science-Prozess, die durch die Integration mit SQL Server möglich sind.
 
@@ -112,4 +113,3 @@ Normalerweise beginnt der Bereitstellungsprozess mit dem Bereinigen Ihres Skript
 [Comparison of Base R and ScaleR Functions (Grundlegende R- und ScaleR-Funktionen im Vergleich)](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
 [ScaleR Functions for Working with SQL Server (ScaleR-Funktionen für das Arbeiten mit SQL Server)](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
-

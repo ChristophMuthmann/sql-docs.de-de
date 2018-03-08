@@ -1,10 +1,13 @@
 ---
-title: "Erstellen der SQL Server-Änderungsdatenbank | Microsoft Docs"
+title: "Erstellen der SQL Server-Änderungsdatenbank | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: df49b30dafe7593d4ac5c27cd17051e6c575b9a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-the-sql-server-change-database"></a>Erstellen der SQL Server-Änderungsdatenbank
   Wenn Sie den Assistenten für neue Instanzen starten, wird die Seite Create CDC Database geöffnet. Verwenden Sie die Seite Create CDC Database, um Informationen zur neuen CDC-Instanz bereitzustellen und eine neue Änderungsdatenbank zu erstellen.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
  Informationen zum Eingeben der Daten im Dialogfeld Verbindung mit SQL Server herstellen finden Sie unter [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Oracle CDC-Instanz**  
  Geben Sie die folgenden Informationen zur CDC-Instanz an, die Sie erstellen.  
   
@@ -55,9 +57,8 @@ ms.lasthandoff: 08/03/2017
   
      Nachdem Sie die Datenbank erstellt haben, können Sie auf **Weiter** klicken, um den Schritt [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen von SQL Server Change-Datenbankinstanz](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Der Oracle CDC Service](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Oracle CDC Service](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
   
-

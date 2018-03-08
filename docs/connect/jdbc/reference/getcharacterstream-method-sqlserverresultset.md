@@ -3,29 +3,28 @@ title: GetCharacterStream-Methode (SQLServerResultSet) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getCharacterStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getCharacterStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: c70e210f-0288-47cc-9268-a29c45979729
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0d68acfc24ddacfccbdb2f0b6d032d8cf327074
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d504384075932e278288a365583349f5ce49e62
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcharacterstream-method-sqlserverresultset"></a>GetCharacterStream-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,4 +43,3 @@ ms.lasthandoff: 09/09/2017
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

@@ -2,32 +2,30 @@
 title: "Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data feeds [Analysis Services with SharePoint]
+helpviewer_keywords: data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3c9b2b0c9ed6a70ce6e596bd1afe8bd2b49fc3a4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 31457f6abb88dff525bd19609b8dd552adadfeb8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek (PowerPivot für SharePoint)
-  Ein Datenfeed ist ein XML-Datenstrom, der von einem Dienst oder einer Anwendung generiert wird, der bzw. die Daten im Atom-Übertragungsformat verfügbar macht. Datenfeeds werden zunehmend verwendet, um Daten zwischen Anwendungen und zu clientseitigen Viewern zu transportieren. In einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung werden Datenfeeds verwendet, um eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle mit Daten aus Atom-fähigen Anwendungen oder Diensten aufzufüllen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Datenfeed ist ein XML-Datenstrom, der generiert wird, von einem Dienst oder Anwendung, die Daten im Atom-Übertragungsformat verfügbar macht. Datenfeeds werden zunehmend verwendet, um Daten zwischen Anwendungen und zu clientseitigen Viewern zu transportieren. In einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung werden Datenfeeds verwendet, um eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle mit Daten aus Atom-fähigen Anwendungen oder Diensten aufzufüllen.  
   
  Wenn Sie bereits eine Kombination Atom-fähiger Anwendungen verwenden, benötigen Sie u. U. gar keine Kenntnisse in der Generierung und Nutzung von Feeds, da die Daten nahtlos zwischen den Anwendungen übertragen werden. Organisationen, die benutzerdefinierte Lösungen zum Veröffentlichen von Atom-Feeds verwenden, benötigen jedoch oft eine Möglichkeit, Feeds für Information-Worker verfügbar zu machen. Eine Möglichkeit besteht im Erstellen und Freigeben von Datendienstdokumenten (ATOMSVC-Dateien), die Verbindungen mit den Onlinequellen bereitstellen, die Feeds erzeugen. Das Erstellen und Freigeben von Datendienstdokumenten in einer SharePoint-Webanwendung wir durch eine spezielle Bibliothek, die so genannte Datenfeedbibliothek, unterstützt.  
   
@@ -123,4 +121,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot-Datenfeeds](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
-

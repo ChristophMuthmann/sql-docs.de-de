@@ -2,27 +2,31 @@
 title: Vergleichen von Optionen zum Speichern von Blobs (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98538bd77f81cd6a1f16857b70a866ee3f6d171a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Vergleichen von Optionen zum Speichern von Blobs (SQL Server)
-  Erläutert und vergleicht die Optionen, die zum Speichern von Dateien und Dokumenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar sind.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Erläutert und vergleicht die Optionen, die zum Speichern von Dateien und Dokumenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar sind.  
   
 ##  <a name="Expectations"></a> Speichern von Dateien in der Datenbank – Vorteile und Erwartungen  
  Ein großer Prozentsatz der Unternehmensdaten ist unstrukturiert und wird in der Regel als Dateien und Dokumente in Dateisystemen gespeichert. Der Großteil dieser Daten wird von Anwendungen generiert, verwaltet und benötigt, die über Windows-APIs auf die Dateien zugreifen. Unternehmen speichern diese Daten in der Regel im Dateisystem, wohingegen die verwandten Metadaten für die Dateien in einer relationalen Datenbank gespeichert werden.  
@@ -51,13 +55,13 @@ ms.lasthandoff: 06/22/2017
   
 |Funktion|Dateiserver und Datenbanklösung|FILESTREAM-Lösung|FileTable-Lösung|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Einzelne Story für Verwaltungstasks**|Nein|Ja|**Ja**|  
-|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|Nein|Ja|**Ja**|  
-|**Integriertes Sicherheitsmodell**|Nein|Ja|**Ja**|  
-|**Direkte Updates der FILESTREAM-Daten**|Ja|Nein|**Ja**|  
-|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|Nein|Nein|**Ja**|  
-|**Windows-Anwendungskompatibilität**|Ja|Nein|**Ja**|  
-|**Relationaler Zugriff auf Dateiattribute**|Nein|Nein|**Ja**|  
+|**Einzelne Story für Verwaltungstasks**|nein|ja|**ja**|  
+|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|nein|ja|**ja**|  
+|**Integriertes Sicherheitsmodell**|nein|ja|**Ja**|  
+|**Direkte Updates der FILESTREAM-Daten**|ja|nein|**ja**|  
+|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|nein|nein|**ja**|  
+|**Windows-Anwendungskompatibilität**|ja|nein|**Ja**|  
+|**Relationaler Zugriff auf Dateiattribute**|nein|nein|**ja**|  
   
 ##  <a name="CompareRBS"></a> Vergleichen von FILESTREAM und Remote BLOB-Speicher (RBS)  
  Einen Vergleich dieser beiden Funktionen finden Sie in diesem Blogbeitrag vom RBS-Team: [SQL Server Remote BLOB-Speicher und FILESTREAM-Funktion – Vergleich](http://go.microsoft.com/fwlink/?LinkId=210317).  

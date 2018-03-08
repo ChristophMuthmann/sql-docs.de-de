@@ -2,40 +2,35 @@
 title: DSVTableBinding-Datentyp (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DSVTableBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DSVTableBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DSVTableBinding
-helpviewer_keywords:
-- DSVTableBinding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: DSVTableBinding
+helpviewer_keywords: DSVTableBinding data type
 ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 235a6953404e1d421ea777fe3320fceeeae05f57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c1f5ed577ec746a5938ce7a97ca116ce555ea49f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>DSVTableBinding-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der die Bindung zwischen einer Tabelle darstellt und einen [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen abgeleiteten Datentyp, der die Bindung zwischen einer Tabelle darstellt und einen [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,16 +45,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[TabularBinding](../../../analysis-services/scripting/data-type/tabularbinding-data-type-assl.md)|  
-|Abgeleitete Datentypen|Keine|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[DataSourceViewID](../../../analysis-services/scripting/properties/datasourceviewid-element-assl.md), [TableID](../../../analysis-services/scripting/properties/tableid-element-assl.md)|  
 |Abgeleitete Elemente|Finden Sie unter [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

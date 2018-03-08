@@ -3,7 +3,7 @@ title: "Beispiel für Version-Eigenschaft (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c6ecf18b7bd750297e481fe29ca391904bf6cc4c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9eff4d790e78fc96cd9922b29cbcd6248f81e44
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="version-property-example-vb"></a>Beispiel für Version-Eigenschaft (VB)
 Dieses Beispiel verwendet die [Version](../../../ado/reference/ado-api/version-property-ado.md) Eigenschaft eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, das die aktuelle ADO-Version angezeigt. Es verwendet auch mehrere dynamische Eigenschaften angezeigt:  
@@ -87,5 +86,4 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Versionseigenschaft (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
-
+ [Version-Eigenschaft (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

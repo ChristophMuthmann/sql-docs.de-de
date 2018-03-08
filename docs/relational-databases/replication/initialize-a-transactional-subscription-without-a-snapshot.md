@@ -2,11 +2,13 @@
 title: Initialisieren eines Transaktionsabonnements ohne Momentaufnahme | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - replication [SQL Server], initializing
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialisieren eines Transaktionsabonnements ohne Momentaufnahme
-  Standardmäßig wird ein Abonnement für eine Transaktionsveröffentlichung mithilfe einer Momentaufnahme initialisiert, die vom Momentaufnahme-Agent generiert und vom Verteilungs-Agent angewendet wird. In einigen Szenarien, wenn z. B. große Anfangsdatasets eine Rolle spielen, ist es vorteilhafter, ein Abonnement mit einer anderen Methode zu initialisieren. Folgende weitere Methoden stehen zum Initialisieren eines Abonnements zur Verfügung:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Standardmäßig wird ein Abonnement für eine Transaktionsveröffentlichung mithilfe einer Momentaufnahme initialisiert, die vom Momentaufnahmen-Agent generiert und vom Verteilungs-Agent angewendet wird. In einigen Szenarien, wenn z. B. große Anfangsdatasets eine Rolle spielen, ist es vorteilhafter, ein Abonnement mit einer anderen Methode zu initialisieren. Folgende weitere Methoden stehen zum Initialisieren eines Abonnements zur Verfügung:  
   
 -   Angeben einer Sicherung. Stellen Sie die Sicherung auf dem Abonnenten her. Der Verteilungs-Agent kopiert dann alle erforderlichen Replikationsmetadaten und gespeicherten Prozeduren. Mit der Initialisierung über eine Sicherung können Daten am schnellsten und bequemsten auf den Abonnenten übertragen werden. Das liegt daran, dass jede neuere Sicherung verwendet werden kann, die nach dem Aktivieren einer Veröffentlichung für das Initialisieren mit einer Sicherung vorgenommen wurde.  
   
@@ -78,8 +79,7 @@ ms.lasthandoff: 07/31/2017
   
  Informationen zum Initialisieren eines Abonnements mit einer alternativen Methode finden Sie unter [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Initialisieren eines Abonnements](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
-

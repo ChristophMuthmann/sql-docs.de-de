@@ -2,30 +2,32 @@
 title: Implementierung von Seitenkomprimierung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: compression
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-compression
+ms.suite: sql
+ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page compression [Database Engine]
 - compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20038dcaae2d0d33e2a38e1d0fcd1567b2520c03
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 88c9afd04b30360316f6476364831a35e23638a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="page-compression-implementation"></a>Implementierung von Seitenkomprimierung
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird zusammengefasst, wie [!INCLUDE[ssDE](../../includes/ssde-md.md)] Seitenkomprimierung implementiert. Diese Zusammenfassung enthält grundlegende Informationen, die Ihnen bei der Planung des Speicherplatzes helfen, den Sie für Ihre Daten benötigten.  
   
@@ -72,9 +74,8 @@ ms.lasthandoff: 06/22/2017
   
  Wenn auf eine vorhandene Tabelle, die Daten enthält, Seitenkomprimierung angewendet wird, wird jede Seite neu erstellt und bewertet. Das Neuerstellen aller Seiten hat die Neuerstellung der Tabelle, des Indexes oder der Partition zur Folge.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)   
  [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)  
   
   
-

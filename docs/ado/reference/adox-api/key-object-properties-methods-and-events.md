@@ -3,7 +3,7 @@ title: "Schlüssel Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2acc8421dc62a0ce0b5d0f0cbc7534a6c619eb72
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25d182cc90460580c02b4d44fa99c2a95153edbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="key-object-properties-methods-and-events"></a>Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -48,5 +47,4 @@ ms.lasthandoff: 09/09/2017
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselobjekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-
+ [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

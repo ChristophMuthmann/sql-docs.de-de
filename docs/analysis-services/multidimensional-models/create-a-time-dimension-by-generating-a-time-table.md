@@ -2,13 +2,13 @@
 title: Erstellen eine Zeitdimension durch Generieren einer Zeittabelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7c437b381faae56438376a93355adec76b28d7e9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c4302e55bd6b91daf8d3d1073be96fe35501af
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Erstellen einer Zeitdimension durch Generieren einer Zeittabelle
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Zeitdimension erstellen, auch wenn keine Zeittabelle in der Quelldatenbank vorhanden ist. Sie können dies ausführen, indem Sie eine der folgenden Optionen auf der Seite **Erstellungsmethode auswählen** auswählen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Zeitdimension erstellen, auch wenn keine Zeittabelle in der Quelldatenbank vorhanden ist. Sie können dies ausführen, indem Sie eine der folgenden Optionen auf der Seite **Erstellungsmethode auswählen** auswählen:  
   
 -   **Zeittabelle in der Datenquelle generieren** Wählen Sie diese Option, wenn Sie zum Erstellen von Objekten in der zugrunde liegenden Datenquelle berechtigt sind. Der Assistent generiert dann eine Zeittabelle und speichert diese Tabelle in der Datenquelle. Der Assistent erstellt anschließend die Zeitdimension basierend auf dieser Zeittabelle.  
   
@@ -68,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
-

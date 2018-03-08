@@ -2,30 +2,32 @@
 title: "Informationsskript für Verleger und Verteiler | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Publishers [SQL Server replication], information scripts
 - Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dec278a7a34d1e6f3c056dcd6ea8ec65d0acdfc5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 875ed870e28e1a3ff0822a677905282f1fbd87ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-and-publisher-information-script"></a>Informationsskript für Verleger und Verteiler
-  Dieses Skript verwendet Tabellen und gespeicherte Prozeduren für die Replikation zur Beantwortung allgemeiner Fragen in Bezug auf Objekte auf dem Verteiler und dem Verleger. Das Skript kann, so wie es ist, verwendet werden, oder es kann als Basis für benutzerdefinierte Skripts dienen. Das Skript erfordert möglicherweise zwei Änderungen, damit es in Ihrer Umgebung ausgeführt werden kann:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Skript verwendet Tabellen und gespeicherte Prozeduren für die Replikation zur Beantwortung allgemeiner Fragen in Bezug auf Objekte auf dem Verteiler und dem Verleger. Das Skript kann, so wie es ist, verwendet werden, oder es kann als Basis für benutzerdefinierte Skripts dienen. Das Skript erfordert möglicherweise zwei Änderungen, damit es in Ihrer Umgebung ausgeführt werden kann:  
   
 -   Ändern Sie die Zeile `use AdventureWorks2012` so, dass sie den Namen Ihrer Veröffentlichungsdatenbank enthält.  
   
@@ -99,7 +101,7 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [sp_get_distributor &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

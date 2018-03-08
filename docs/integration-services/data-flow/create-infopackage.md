@@ -1,26 +1,28 @@
 ---
-title: InfoPackage erstellen | Microsoft Docs
+title: InfoPackage erstellen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fae3a5c0b43d90fcc85b48db97e23fc444aaf7f2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4e893ddd6b0461a3f6b3e20146a79e63c7fcc1c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infopackage"></a>InfoPackage erstellen
   Verwenden Sie das Dialogfeld **InfoPackage erstellen** , um ein neues InfoPackage im SAP NetWeaver BW-System zu erstellen.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoPackage**aus, und klicken Sie dann auf **Erstellen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **InfoSource**  
  Geben Sie den Namen der InfoSource ein, auf der das neue InfoPackage basieren soll.  
   
@@ -62,8 +64,7 @@ ms.lasthandoff: 08/03/2017
  **Speichern und aktivieren**  
  Speichern und aktivieren Sie das neue InfoPackage.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

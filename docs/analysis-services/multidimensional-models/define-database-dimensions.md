@@ -2,32 +2,30 @@
 title: Definieren von Datenbankdimensionen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], defining
+helpviewer_keywords: dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cc42f36439973607f4f0d45ea7a18c0160de5ced
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d57a877e5d332dfffc24ed6d3df14143ecae3442
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
-  Verwenden Sie den Dimensions-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , um eine vorhandene Datenbankdimension in einem Projekt bzw. in einer Datenbank von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu konfigurieren. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mithilfe des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] so konfigurieren Sie eine vorhandene Datenbankdimension in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt oder einer Datenbank. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
   
 -   Konfigurieren der Eigenschaften der Dimensionsebenen.  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/01/2017
   
  In den folgenden Themen werden die Aufgaben beschrieben, die Sie im Dimensions-Designer ausführen können.  
   
- [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren und Konfigurieren eines Dimensionsattributs.  
   
  [Erstellen von benutzerdefinierten Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  Beschreibt das Verwenden des Business Intelligence-Assistenten zum Optimieren einer Dimension.  
   
   
-

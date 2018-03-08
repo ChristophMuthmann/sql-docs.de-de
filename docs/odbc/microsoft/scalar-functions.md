@@ -3,10 +3,12 @@ title: Skalare Funktionen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - scalar functions [ODBC], desktop database drivers
 - SQL grammar [ODBC], scalar functions
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17127148e364494859a23e1f2f535419a9ca1d8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41a1e5e42de608f1a67de40d8071af6d3b395f9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalar-functions"></a>Skalarfunktionen
 Microsoft ODBC-Desktop-Datenbanktreiber unterstützen die folgenden skalaren Funktionen:  
@@ -41,4 +42,3 @@ Microsoft ODBC-Desktop-Datenbanktreiber unterstützen die folgenden skalaren Fun
 |TAGDERWOCHE|MONTH||  
   
  Informationen zu den Argumenten und Rückgabewerten von Skalarfunktionen finden Sie im Anhang F des der *ODBC Programmer's Reference.*
-

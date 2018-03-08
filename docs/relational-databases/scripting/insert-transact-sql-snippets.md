@@ -2,9 +2,12 @@
 title: "Einfügen von Transact-SQL-Ausschnitten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-caps.latest.revision: 7
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f431402a937407f00d054e6ad488ea92f0b5a647
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0086861b57793457f8a8d2bd735f808b1587759e
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="insert-transact-sql-snippets"></a>Einfügen von Transact-SQL-Ausschnitten
-  Ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codeausschnitt ist eine Vorlage, die Sie als Ausgangspunkt beim Schreiben von neuen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor verwenden können.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Codeausschnitt ist eine Vorlage, die Sie als Ausgangspunkt beim Schreiben von neuen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor verwenden können.  
   
 ## <a name="inserting-snippets"></a>Einfügen von Ausschnitten  
  Sie können das Menü **Ausschnitt einfügen** verwenden, um eine kategorisierte Liste von Ausschnitten zu öffnen, die Sie auswählen können.  
@@ -48,8 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Doppelklicken Sie auf den Ausschnitt, oder wählen Sie in der Ausschnittauswahl den Ausschnitt aus, und drücken Sie dann TAB oder die EINGABETASTE.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einfügen von Transact-SQL-Umschließungsausschnitten](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   
-

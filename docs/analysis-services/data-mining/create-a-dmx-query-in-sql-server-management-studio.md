@@ -2,12 +2,13 @@
 title: Erstellen Sie eine DMX-Abfrage in SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Erstellen einer DMX-Abfrage in SQL Server Management Studio
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von Funktionen bereit, um Sie bei der Erstellung von Vorhersage-, Inhalts- und Datendefinitionsabfragen gegen Miningmodelle und Miningstrukturen zu unterstützen.  
   
 -   Der grafische Generator für Vorhersageabfragen ist sowohl über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar, um den Prozess des Schreibens von Vorhersageabfragen und des Zuordnens von Datasets zu Modellen zu vereinfachen.  
@@ -86,13 +87,12 @@ ms.lasthandoff: 09/01/2017
   
  Beispiele hinsichtlich des Erstellens spezieller Typen von Abfragen aus Vorlagen finden Sie unter den folgenden Themen:  
   
- [Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [Erstellen Sie eine Singleton-Abfrage aus einer Vorlage](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
- [Erstellen einer Miningmodell-Inhaltsabfrage](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [Eine Inhaltsabfrage für ein Miningmodell erstellen](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

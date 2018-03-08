@@ -14,17 +14,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2ad1f280a51c061621145e9c3e3f1d656a4eca80
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28fa2c279cfd7964d8516514a3caed129e335692
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -56,9 +55,9 @@ Jeder Abschnitt in diesem Artikel wird beschrieben, eine Komponente von ADO.
  ADOX ist eine Begleit-Bibliothek in der wichtigsten Objekte im ADO. Er stellt zusätzliche Objekte zum Erstellen, ändern und Löschen von Schemaobjekten, z. B. Tabellen und Prozeduren bereit. Darüber hinaus Sicherheitsobjekte, um Benutzer und Gruppen verwalten und zu erteilen und Widerrufen von Berechtigungen für Objekte.  
   
 ## <a name="documentation"></a>Dokumentation  
- [Entwurfsaspekte für ADO-Sicherheit](../ado/guide/ado-security-design-issues.md)  
+ [ADO Security Design Issues (Entwurfsaspekte für die ADO-Sicherheit)](../ado/guide/ado-security-design-issues.md)  
   
- [ADO Handbuch für Programmierer](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../ado/guide/ado-programmer-s-guide.md)  
   
  Eine Einführung zur Verwendung von ADO, RDS, ADO MD und ADOX.  
   
@@ -72,6 +71,5 @@ Jeder Abschnitt in diesem Artikel wird beschrieben, eine Komponente von ADO.
  Kostenlos mit ADO Probleme helfen, versuchen Sie es bereitstellen für die öffentliche ADO-Newsgroup. Diese Newsgroup wird überwacht, indem Microsoft Product Support Services (PSS) Supportspezialisten, die ADO abdecken und andere erfahrenen Entwicklern von ADO.  
   
  Weitere Informationen zu Supportoptionen finden Sie auf der Website Microsoft Help und unterstützen.
-
 
 

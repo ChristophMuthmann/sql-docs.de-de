@@ -2,30 +2,30 @@
 title: SQL Server XTP-Datenbanken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server 2016 XTP Databases
+helpviewer_keywords: SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fa4b8d6262311f68e0833366c4f0f2c5b6d71c53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP-Datenbanken
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Das Leistungsobjekt **SQL Server XTP-Datenbanken** spezifische In-Memory-OLTP-Datenbanken bereit.
 
@@ -70,6 +70,5 @@ Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken** -Leistungsindikatore
 |**Spitzenwert der Seitenanzahl im Endsegmentcache**|Größte Anzahl Seiten, die im Endsegmentcache zugewiesen wurden. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
-

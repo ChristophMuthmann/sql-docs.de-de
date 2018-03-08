@@ -3,29 +3,28 @@ title: Execute-Methode (SQLServerStatement) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.execute
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.execute
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1367f39-23d7-4e26-b160-6d988d7e6988
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85f6068f09a2a80c40ab0e01763e307420a21b42
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 82559ae7d9229b95b6c8fb8cde95f9ed1c85ea38
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="execute-method-sqlserverstatement"></a>execute-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

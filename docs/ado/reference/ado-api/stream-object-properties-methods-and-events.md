@@ -3,7 +3,7 @@ title: Streamen von Objekteigenschaften, Methoden und Ereignisse | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1052a70c05641b41694c19ee399531bba1f41b00
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f65f612a0175ac59cc2f7be99498d7c295fe0dd3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -39,11 +38,11 @@ ms.lasthandoff: 09/09/2017
   
  [Position-Eigenschaft](../../../ado/reference/ado-api/position-property-ado.md)  
   
- [Eigenschaft "Größe" (ADO-Datenstrom)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
+ [Size-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
  [State-Eigenschaft](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Type-Eigenschaft (ADO-Datenstrom)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
+ [Type-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Methoden  
  [Cancel-Methode](../../../ado/reference/ado-api/cancel-method-ado.md)  
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/09/2017
   
  [LoadFromFile-Methode](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
- [Open-Methode (ADO-Datenstrom)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+ [Open-Methode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
  [Read-Methode](../../../ado/reference/ado-api/read-method.md)  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 09/09/2017
   
  [SkipLine-Methode](../../../ado/reference/ado-api/skipline-method.md)  
   
- [STAT-Methode](../../../ado/reference/ado-api/stat-method.md)  
+ [Stat-Methode](../../../ado/reference/ado-api/stat-method.md)  
   
  [Write-Methode](../../../ado/reference/ado-api/write-method.md)  
   
@@ -78,5 +77,4 @@ ms.lasthandoff: 09/09/2017
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

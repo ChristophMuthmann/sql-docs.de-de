@@ -2,28 +2,30 @@
 title: "Aktivieren, Deaktivieren und Löschen von Breakpoints | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-caps.latest.revision: 5
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0133a419971cfdeeaadbc3a68b79452c20d0dafc
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2c78a83bbf85641580f05d08af7272bce554bff2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Aktivieren, Deaktivieren und Löschen von Breakpoints
-  Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **Breakpoints** verwenden. Mithilfe des Fensters können Sie Informationen zu Breakpoints anzeigen und Aktionen ausführen, z. B. Löschen, Deaktivieren und Aktivieren von Breakpoints.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **Breakpoints** verwenden. Mithilfe des Fensters können Sie Informationen zu Breakpoints anzeigen und Aktionen ausführen, z. B. Löschen, Deaktivieren und Aktivieren von Breakpoints.  
   
 ## <a name="the-breakpoints-window"></a>Fenster "Breakpoints"  
  Das Fenster **Breakpoints** enthält Informationen, z. B. auf welcher Codezeile sich der Breakpoint befindet. Außerdem können Sie im Fenster **Breakpoints** Breakpoints löschen, deaktivieren und aktivieren. Weitere Informationen zum Fenster **Breakpoints** finden Sie unter [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
@@ -97,8 +99,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints löschen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ein- und Ausschalten eines Breakpoints](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   
-

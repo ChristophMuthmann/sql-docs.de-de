@@ -3,29 +3,28 @@ title: UpdateBoolean-Methode (java.lang.String, Boolean) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateBoolean (java.lang.String, boolean)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateBoolean (java.lang.String, boolean)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 823182c05831c710f98714a7d0fd58c90c81fa01
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e4086985862b81f4de818d46f0640243ac236cc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updateboolean-method-javalangstring-boolean"></a>updateBoolean-Methode (java.lang.String, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public void updateBoolean(java.lang.String columnName,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

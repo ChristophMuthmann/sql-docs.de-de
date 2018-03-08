@@ -3,8 +3,11 @@ title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - status information [SQL Server], FETCH
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 61e209f7cf2a3a654b33979129e9500d3734fe64
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: 9bc4027eb6be9d79599cb06f7935bd2d052bb2a2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>& #x 40; & #x 40; Sp_describe_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;Sp_describe_cursor (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Status der letzten Cursor-FETCH-Anweisung zurück, die für einen beliebigen der aktuell von der Verbindung geöffneten Cursor ausgegeben wurde.  
   
@@ -87,4 +89,3 @@ GO
  [Abrufen von Daten &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   
-

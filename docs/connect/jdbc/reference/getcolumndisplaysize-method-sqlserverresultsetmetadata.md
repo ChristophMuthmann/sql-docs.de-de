@@ -3,29 +3,28 @@ title: GetColumnDisplaySize-Methode (SQLServerResultSetMetaData) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSetMetaData.getColumnDisplaySize
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSetMetaData.getColumnDisplaySize
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 71daaceaa0372840fdcc47ad12587d6d3b1ef58b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 10eb09f395c661e7cc46629662d62e43bd937f05
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,4 +59,3 @@ public int getColumnDisplaySize(int column)
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   
-

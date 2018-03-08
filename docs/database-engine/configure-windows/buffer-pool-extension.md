@@ -2,28 +2,29 @@
 title: Pufferpoolerweiterung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b4c2b33ef0dcdee0ac79340760790ba8938b431
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
-  Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]ermöglicht die Pufferpoolerweiterung die nahtlose Integration einer NVRAM (Non-Volatile Random Access Memory)-Erweiterung, d. h. Solid State Drive, in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Pufferpool, um den E/A-Durchsatz deutlich zu verbessern. Die Pufferpoolerweiterung ist nicht in jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ermöglicht die Pufferpoolerweiterung die nahtlose Integration einer NVRAM (Non-Volatile Random Access Memory)-Erweiterung, d. h. Solid State Drive, in den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Pufferpool, um den E/A-Durchsatz deutlich zu verbessern. Die Pufferpoolerweiterung ist nicht in jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Vorteile der Pufferpoolerweiterung  
  Der Hauptzweck einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist das Speichern und Abrufen von Daten. Daher stellt eine hohe Ein-/Ausgabe auf dem Datenträger ein Hauptmerkmal des Datenbankmoduls dar. Datenträger-E/A-Vorgänge beanspruchen ggf. viele Ressourcen und benötigen relativ viel Zeit für die Ausführung. Daher ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konzipiert, dass E/A-Vorgänge möglichst effizient gestaltet werden. Der Pufferpool ist eine primäre Speicherbelegungsquelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Pufferverwaltung ist eine zentrale Komponente zum Erreichen dieser Effizienz. Die Pufferverwaltungskomponente weist zwei Mechanismen auf: den Puffer-Manager, mit dem auf Datenbankseiten zugegriffen wird und mit dem sie aktualisiert werden, und den Pufferpool, mit dem Datenbankdatei-E/A-Vorgänge reduziert werden.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Die Pufferpoolerweiterungsgröße kann maximal das 32fache des max_server_memory-Werts betragen.  Es wird empfohlen, ein Verhältnis von 1:16 oder kleiner zwischen der Größe des physischen Arbeitsspeichers (max_server_memory) und der Größe der Pufferpoolerweiterung beizubehalten. Ein niedrigeres Verhältnis im Bereich von 1:4 bis 1:8 kann optimal sein. Informationen zum Einrichten der max_server_memory-Option finden Sie unter [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
--   Testen Sie die Pufferpoolerweiterung gründlich, bevor Sie sie in einer Produktionsumgebung implementieren. Vermeiden Sie in der Produktionsumgebung, Konfigurationsänderungen an der Datei vorzunehmen oder die Funktion zu deaktivieren. Diese Aktivitäten können negative Auswirkungen auf die Serverleistung haben, da die Größe des Pufferpools erheblich reduziert wird, wenn die Funktion deaktiviert ist. Wenn sie deaktiviert ist, wird der zur Unterstützung der Funktion verwendete Arbeitsspeicher erst wieder freigegeben, wenn die Instanz von SQL Server neu gestartet wird. Beim erneuten Aktivieren der Funktion wird der Arbeitsspeicher jedoch sofort wiederverwendet, ohne dass ein Neustart der Instanz erforderlich ist.  
+-   Testen Sie die Pufferpoolerweiterung gründlich, bevor Sie sie in einer Produktionsumgebung implementieren. Vermeiden Sie in der Produktionsumgebung, Konfigurationsänderungen an der Datei vorzunehmen oder die Funktion zu deaktivieren. Diese Aktivitäten können negative Auswirkungen auf die Serverleistung haben, da die Größe des Pufferpools erheblich reduziert wird, wenn die Funktion deaktiviert ist. Wenn sie deaktiviert ist, wird der zur Unterstützung der Funktion verwendete Arbeitsspeicher erst wieder freigegeben, wenn die Instanz von SQL Server neu gestartet wird. Beim erneuten Aktivieren der Funktion wird der Arbeitsspeicher jedoch sofort wiederverwendet, ohne dass ein Neustart der Instanz erforderlich ist.  
   
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Rückgabeinformationen zur Pufferpoolerweiterung  
  Sie können die folgenden dynamischen Verwaltungssichten verwenden, um die Konfiguration der Pufferpoolerweiterung anzuzeigen und Informationen über die Datenseiten in der Erweiterung zurückzugeben.  
@@ -92,14 +93,14 @@ ms.lasthandoff: 08/02/2017
   
  Die folgenden XEvents sind verfügbar.  
   
-|XEvent|Beschreibung|Parameter|  
+|XEvent|Description|Parameter|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|Wird ausgelöst, wenn eine Seite oder eine Gruppe von Seiten aus dem Pufferpool in die Pufferpoolerweiterungsdatei geschrieben werden.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|Wird ausgelöst, wenn eine Seite aus der Pufferpoolerweiterungsdatei in den Pufferpool gelesen wird.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_evicted|Wird ausgelöst, wenn eine Seite aus der Pufferpoolerweiterungsdatei entfernt wird.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|Wird ausgelöst, wenn der Entfernungsschwellenwert berechnet wird.|*warm_threshold*<br /><br /> *cold_threshold*<br /><br /> *pages_bypassed_eviction*<br /><br /> *eviction_bypass_reason*<br /><br /> *eviction_bypass_reason_description*|  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -110,4 +111,3 @@ ms.lasthandoff: 08/02/2017
 |Überwachen der Pufferpoolerweiterung|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Leistungsindikatoren](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   
-

@@ -2,34 +2,32 @@
 title: Rang (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RANK
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Rank function [MDX]
+f1_keywords: RANK
+dev_langs: kbMDX
+helpviewer_keywords: Rank function [MDX]
 ms.assetid: 3cea35ed-57c4-4b47-a736-cee00275509b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: cb61eefec8d262d2955e3383c2e0a24b8380be2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 89983af39b21ee508a0ddea06bbe953c1cb68b5a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt den einsbasierten Rang eines angegebenen Tupels in einer angegebenen Menge zurück.  
   
@@ -50,7 +48,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion bestimmt den einsbasierten Rang für das angegebene Tupel durch das Auswerten des angegebenen numerischen Ausdrucks für das Tupel. Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion Tupeln mit doppelten Werten in der Menge denselben Rang zugewiesen. Die Zuweisung desselben Ranges an doppelte Werte wirkt sich auf die Rangwerte nachfolgender Tupel in der Menge aus. Eine Menge besteht beispielsweise aus folgenden Tupeln: `{(a,b), (e,f), (c,d)}`. Das Tupel `(a,b)` weist denselben Wert auf wie das Tupel `(c,d)`. Wenn das Tupel `(a,b)` den Rang "1" aufweist, liegt für `(a,b)` und `(c,d)` der Rang "1" vor. Das Tupel `(e,f)` verfügt jedoch über den Rang "3". In diesem Satz kann kein Tupel mit dem Rang "2" vorhanden sein.  
   
  Wenn ein numerischer Ausdruck nicht angegeben wird, die **Rang** Funktion gibt die einsbasierte Ordnungsposition des angegebenen Tupels zurück.  
@@ -93,9 +91,8 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reihenfolge &#40; MDX &#41;](../mdx/order-mdx.md)   
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

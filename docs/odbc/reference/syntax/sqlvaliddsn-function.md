@@ -3,33 +3,30 @@ title: SQLValidDSN Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLValidDSN
-apilocation:
-- sqlsrv32.dll
+apiname: SQLValidDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLValidDSN
-helpviewer_keywords:
-- SQLValidDSN [ODBC]
+f1_keywords: SQLValidDSN
+helpviewer_keywords: SQLValidDSN [ODBC]
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c745b7ac285f09ff80478dab911b3cd3a9fc94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 473670a87ede935267c91537f301589b94666acf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN-Funktion
 **Konformität**  
@@ -73,4 +70,3 @@ BOOL SQLValidDSN(
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (in der Setup-DLL)|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Schreiben einen Datenquellennamen ein, in die Systeminformationen|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

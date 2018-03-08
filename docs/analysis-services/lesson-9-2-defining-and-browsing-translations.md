@@ -2,29 +2,32 @@
 title: "Definieren und Durchsuchen von Übersetzungen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ac86f038e382be591b8974f36cd03fee6a80144d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7d55390b1d27fb595b139c06d9dd45b24737522
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lektion 9 – 2: definieren und Durchsuchen von Übersetzungen
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Eine Übersetzung ist eine Darstellung der Namen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekten in einer bestimmten Sprache. Objekte schließen Measuregruppen, Measures, Dimensionen, Attribute, Hierarchien, KPIs, Aktionen und berechnete Elemente ein. Übersetzungen bieten Serverunterstützung für Clientanwendungen, die mehrere Sprachen unterstützen können. Bei Verwendung eines solchen Clients übergibt der Client den Gebietsschemabezeichner (Locale Identifier, LCID) an die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die mithilfe des Gebietsschemabezeichners bestimmt, welche Übersetzungen beim Bereitstellen von Metadaten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte verwendet werden sollen. Enthält ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt keine Übersetzung für diese Sprache oder keine Übersetzung für ein angegebenes Objekt, wird die Standardsprache zur Rückgabe der Objektmetadaten an den Client verwendet. Wenn z. B. ein Anwender des Produkts im geschäftlichen Bereich in Frankreich von einer Arbeitsstation mit einer französischen Gebietsschemaeinstellung auf einen Cube zugreift, sieht er die Elementbeschriftungen und die Werte der Elementeigenschaften auf Französisch, sofern eine französische Übersetzung vorhanden ist. Wenn jedoch ein Anwender des Produkts im geschäftlichen Bereich in Deutschland von einer Arbeitsstation mit einer deutschen Gebietsschemaeinstellung auf denselben Cube zugreift, sieht er die Elementbeschriftungen und die Werte der Elementeigenschaften auf Deutsch. Weitere Informationen finden Sie unter [Dimensionsübersetzungen](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Cubeübersetzungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)und [Unterstützung für Übersetzungen in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
 Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für eine begrenzte Gruppe von Dimensionsobjekten in den Date-Dimensions- und Cubeobjekten im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube. Sie durchsuchen dann diese Dimensions- und Cubeobjekte, um die Metadatenübersetzungen zu überprüfen.  
@@ -47,7 +50,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für 
   
     Es wird eine weitere Sprachspalte angezeigt, in der Sie französische Übersetzungen definieren können.  
   
-5.  Geben Sie in der Zeile des **Caption** -Objekts der **Date** -Dimension **Fecha** in die Übersetzungsspalte für **Spanisch (Spanien)** und **Temps** in die Übersetzungsspalte für **Französisch (Frankreich)** ein.  
+5.  Geben Sie in der Zeile des **Caption**-Objekts der **Date**-Dimension **Fecha** in die Übersetzungsspalte für **Spanisch (Spanien)** und **Temps** in die Übersetzungsspalte für **Französisch (Frankreich)** ein.  
   
 6.  Geben Sie in der Zeile des **Caption** -Objekts des **Month Name** -Attributs **Mes del Año** in die Übersetzungsspalte für **Spanisch (Spanien)** und **Mois d'Année** in die Übersetzungsspalte für **Französisch (Frankreich)** ein.  
   
@@ -139,4 +142,3 @@ Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für 
   
   
   
-

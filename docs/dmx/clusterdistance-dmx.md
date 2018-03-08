@@ -2,35 +2,32 @@
 title: ClusterDistance (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ClusterDistance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterDistance function
+f1_keywords: ClusterDistance
+dev_langs: DMX
+helpviewer_keywords: ClusterDistance function
 ms.assetid: a13152b3-4cd1-4c79-8a3e-207624198330
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ba8bb17dbd5e443a56b4eb218fae814f8fbcff4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Die **ClusterDistance** -Funktion gibt den Abstand des eingabefalls von dem angegebenen Cluster, oder wenn kein Cluster, den Abstand des eingabefalls von dem wahrscheinlichsten Cluster angegeben wurde.  
   
@@ -47,7 +44,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>Rückgabetyp  
  Ein Skalarwert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die **ClusterDistance** Funktion gibt den Abstand zwischen dem Eingabefall und dem Cluster, die für die höchste Wahrscheinlichkeit hat, den Eingabefall zurück.  
   
  Im Fall von K-Means-Clustering, bei dem jeder Fall nur zu einem Cluster gehören kann und die Mitgliedschaftsgewichtung 1,0 beträgt, ist der Clusterabstand immer 0. In K-Means wird jedoch davon ausgegangen, dass jeder Cluster einen Schwerpunkt besitzt. Sie können den Wert des Schwerpunkts abrufen, indem Sie im Miningmodellinhalt die geschachtelte Tabelle NODE_DISTRIBUTION abfragen oder durchsuchen. Weitere Informationen zu diesem Algorithmus finden Sie unter [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
@@ -138,11 +135,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Miningmodellinhalt, für das Clustering-Modelle &#40; Analysis Services – Datamining &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   
-

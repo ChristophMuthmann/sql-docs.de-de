@@ -1,32 +1,31 @@
 ---
 title: "Hinzufügen von Beispieldaten zu einem DirectQuery-Modell im Entwurfsmodus | Microsoft Docs"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 068366df63bbe37d658345c1157a9d02eb7e5187
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c470244cfbf90ba7f2c65395a9a0c39064a55bb1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Hinzufügen von Beispieldaten zu einem DirectQuery-Modell im Entwurfsmodus
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
- Im DirectQuery-Modus werden Tabellenpartitionen entweder zum Erstellen von Beispieldatenteilmengen verwenden, die während des Modellentwurfs genutzt werden, oder zum Erstellen von Alternativen einer vollständigen Datenansicht.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Im DirectQuery-Modus werden Tabellenpartitionen entweder zum Erstellen von Beispieldatenteilmengen verwenden, die während des Modellentwurfs genutzt werden, oder zum Erstellen von Alternativen einer vollständigen Datenansicht.
  
  Bei der Bereitstellung eines DirectQuery-Tabellenmodells ist nur eine Partition pro Tabelle erlaubt, und diese Partition muss bei Bedarf eine vollständige Datenansicht sein. Bei jeder zusätzlichen Partition handelt es sich entweder um einen Ersatz für eine vollständige Datenansicht oder um Beispieldaten. In diesem Thema wird das Erstellen einer Beispielpartition mit einer Teilmenge von Daten beschrieben.
  
@@ -50,7 +49,7 @@ Sie können jedoch eine kleinere Menge an Beispieldaten der Arbeitsdatenbank Ihr
 
     Dadurch wird eine Kopie der Standardpartition erstellt. Diese Kopie enthält jedoch Beispieldaten, die Sie in einer Abfrage angeben. Beispiel:
   
-     ![Ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "Ssas_tabularproject_copypartition")  
+     ![ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "ssas_tabularproject_copypartition")  
   
 5.  Wählen Sie die kopierte Partition aus, und klicken Sie anschließend auf die Schaltfläche **SQL-Abfrage-Editor** , um einen Filter hinzuzufügen. Reduzieren Sie die Größe Ihrer Beispieldaten während der Erstellung des Modells. Wenn Sie z.B. **FactInternetSales** aus AdventureWorksDW auswählen, kann Ihr Filter wie Folgt aussehen:  
   
@@ -73,4 +72,3 @@ Sie können jedoch eine kleinere Menge an Beispieldaten der Arbeitsdatenbank Ihr
 
   
   
-

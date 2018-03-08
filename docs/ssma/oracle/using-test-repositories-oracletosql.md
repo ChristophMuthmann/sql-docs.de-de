@@ -1,29 +1,30 @@
 ---
 title: Mithilfe von Test-Repositorys (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Test Cases Repository
 - Test Results Repository
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 4412d7de5cd86071f2d1c25354e85266f33bccc7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c3d2c6665c6d1852b291e69d2494343b5000ac06
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-test-repositories-oracletosql"></a>Mithilfe von Test-Repositorys (OracleToSQL)
 Die SSMA testen Repository-Speicher SSMA Tester Testfälle und die Testergebnisse für die spätere Verwendung. Die Repository-Daten werden in der SQL Server-Tabellen gespeichert **TestCaseRepository** und **RunTestCaseResultRepository** im Schema **Ssma_oracle_utilities** von **Ssmatesterdb** Datenbank.  
@@ -84,4 +85,3 @@ Die folgenden Schaltflächen stehen auf der Seite "Testergebnis" zur Verfügung:
 [Ausführen von Testfällen &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testen von migriert Datenbankobjekte &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

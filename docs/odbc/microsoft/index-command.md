@@ -3,26 +3,26 @@ title: Befehl "INDEX" | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- index command [ODBC]
+helpviewer_keywords: index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e1a3cd65cf38079a6d6c23cd08f371841a0463f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdec619d99c610c75b9b27de710cd4e5913602f6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-command"></a>Befehl "INDEX"
 Erstellt eine Indexdatei zum Anzeigen und Zugreifen auf Tabellendatensätze in einer logischen Reihenfolge.  
@@ -124,5 +124,4 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  [ALTER TABLE - SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
  [Löschen Sie die TAG-Befehl](../../odbc/microsoft/delete-tag-command.md)   
  [SET COLLATE-Befehl](../../odbc/microsoft/set-collate-command.md)   
- [EINDEUTIGE SET-Befehl](../../odbc/microsoft/set-unique-command.md)
-
+ [Befehl SET UNIQUE](../../odbc/microsoft/set-unique-command.md)

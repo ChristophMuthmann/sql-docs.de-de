@@ -1,31 +1,31 @@
 ---
-title: Konfigurieren der Standardauthentifizierung auf dem Berichtsserver | Microsoft Docs
+title: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 28
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "28"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 722fd9bb97ee8fc3dc5ec618467b9ce028a0bf8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Standardauthentifizierung auf dem Berichtsserver
+# <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   Standardmäßig akzeptiert Reporting Services Anforderungen, die Negotiate- und NTLM-Authentifizierung angeben. Wenn Ihre Bereitstellung Client-Anwendungen oder Browser umfasst, die die Standardauthentifizierung verwenden, müssen Sie die Standardauthentifizierung in die Liste der unterstützten Typen aufnehmen. Zusätzlich müssen Sie den anonymen Zugriff auf die Dateien des Berichts-Generators aktivieren, wenn Sie mit dem Berichts-Generator arbeiten möchten.  
   
  Um die Standardauthentifizierung auf dem Berichtsserver zu konfigurieren, bearbeiten Sie die XML-Elemente und -werte in der Datei RSReportServer.config. Sie können die Beispiele in diesem Thema kopieren und einfügen, um die Standardwerte zu ersetzen.  
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-     Die Datei befindet sich unter  *\<Laufwerk >:*\Programme\Microsoft SQL Server\MSRS13. MSSQLSERVER\Reporting Services\ReportServer.  
+     Die Datei befindet sich im Ordner *\<Laufwerk>:*\Programme\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Suchen \< **Authentifizierung**>.  
+2.  Suchen Sie nach \<**Authentifizierung**>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Die erste XML-Struktur stellt Platzhalter bereit, über die Sie alle im nächsten Abschnitt beschriebenen Elemente angegeben können:  
   
@@ -70,13 +70,13 @@ ms.lasthandoff: 08/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  Fügen Sie ihn über die vorhandenen Einträge für \< **Authentifizierung**>.  
+4.  Ersetzen Sie damit die vorhandenen Einträge für <\<**Authentifizierung**>.  
   
      Wenn Sie mehrere Authentifizierungstypen verwenden, fügen Sie lediglich das **RSWindowsBasic** -Element ein, löschen Sie jedoch die Einträge für **RSWindowsNegotiate**, **RSWindowsNTLM**oder **RSWindowsKerberos**nicht.  
   
      Beachten Sie, dass Sie **Custom** nicht mit anderen Authentifizierungstypen verwenden können.  
   
-5.  Ersetzen Sie leere Werte für \< **Bereich**> oder \< **DefaultDomain**> mit Werten, die für Ihre Umgebung gültig sind.  
+5.  Ersetzen Sie leere Werte für \<**Bereich**> oder \<**Standarddomäne**> durch Werte, die für Ihre Umgebung gültig sind.  
   
 6.  Speichern Sie die Datei.  
   
@@ -89,13 +89,12 @@ ms.lasthandoff: 08/09/2017
   
 |Element|Required|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|**2** = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> **3** = Klartextanmeldung, wobei die Anmeldeinformationen aus dem mit jeder HTTP-Anforderung gesendeten Authentifizierungspaket beibehalten werden. Dadurch kann der Server beim Herstellen von Verbindungen zu anderen Servern im Netzwerk die Identität des Benutzers annehmen. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in ****  nicht [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]unterstützt.|  
+|LogonMethod|ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|**2** = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> **3** = Klartextanmeldung, wobei die Anmeldeinformationen aus dem mit jeder HTTP-Anforderung gesendeten Authentifizierungspaket beibehalten werden. Dadurch kann der Server beim Herstellen von Verbindungen zu anderen Servern im Netzwerk die Identität des Benutzers annehmen. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in **nicht** [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]unterstützt.|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anwendungsdomänen für Berichtsserveranwendungen](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
- [Reporting Services-Sicherheit und Schutz](../../reporting-services/security/reporting-services-security-and-protection.md)  
+ [Sicherheit und Schutz für Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Erstellen Sie mit der CreateObject (VBScript) RDSServer.DataFactory-Objek
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - CreateObject method [ADO], VBScript example
 - Query method [ADO], VBScript example
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b512a92d236e3c11a23674ce49f5311049079f03
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6f84053573cf42a35b47c2aae251ad4f2f6f479
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory-Objekt, Abfragemethode und CreateObject-Methode (Beispiel (VBScript)
 > [!IMPORTANT]
@@ -148,7 +147,6 @@ to bring back a Recordset. </H4>
  [CreateObject-Methode (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Query-Methode (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
-
+ [Abfragemethode (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

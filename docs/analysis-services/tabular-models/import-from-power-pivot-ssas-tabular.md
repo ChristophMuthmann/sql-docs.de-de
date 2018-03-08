@@ -1,33 +1,33 @@
 ---
-title: "Importieren aus PowerPivot (SSAS – tabellarisch) | Microsoft Docs"
+title: Importieren aus PowerPivot | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85ae04b00034decd7390f86db1ee7e00c496434
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="import-from-power-pivot-ssas-tabular"></a>Importieren aus PowerPivot (SSAS – tabellarisch)
-  In diesem Thema wird beschrieben, wie Sie ein neues Projekt für tabellarische Modelle erstellen können, indem Sie die Metadaten und Daten aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe mithilfe der Projektvorlage „Aus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] importieren“ in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importieren.  
+# <a name="import-from-power-pivot"></a>Importieren aus PowerPivot 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In diesem Artikel wird beschrieben, wie ein neues tabellarisches Modellprojekt erstellt, durch das Importieren von Metadaten und Daten aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappe mithilfe des Imports von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Projektvorlage in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Erstellen eines neuen tabellarischen Modells aus einer PowerPivot für Excel-Datei  
  Wenn Sie ein neues Projekt für tabellarische Modelle erstellen, indem Sie Daten aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe importieren, werden die Metadaten zur Definition der Arbeitsmappenstruktur verwendet, um die Struktur des tabellarischen Modellprojekts in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]zu erstellen und zu definieren. Objekte wie Tabellen, Spalten, Measures und Beziehungen werden beibehalten und im tabellarischen Modellprojekt genauso dargestellt wie in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe. An der XLSX-Arbeitsmappendatei werden keine Änderungen vorgenommen.  
@@ -54,8 +54,7 @@ ms.lasthandoff: 09/01/2017
 4.  Wählen Sie im Dialogfeld **Öffnen** die [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] -Datei aus, die die zu importierenden Modellmetadaten und -daten enthält, und klicken Sie dann auf **Öffnen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [Kopieren und Einfügen von Daten &#40; SSAS – tabellarisch &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+ [Arbeitsbereichsdatenbank](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [Kopieren und Einfügen von Daten](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   
-

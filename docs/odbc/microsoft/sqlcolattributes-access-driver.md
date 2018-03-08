@@ -3,33 +3,34 @@ title: SQLColAttributes (Access-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], Access Driver
 - Access driver [ODBC], SQLColAttributes
 ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: de4d676a7e0f1f56c2803225986e592860a00e5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2531bbc58e55c3c58452701f1dd66ac6702a535
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattributes-access-driver"></a>SQLColAttributes (Access-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält die Access-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Attribut|Kommentare|  
+|attribute|Kommentare|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|Für "LONGVARBINARY"-Daten ist SQL_COLUMN_DISPLAY_SIZE die maximale Länge der Spalte, nicht die maximale Länge der Spalte multipliziert 2.|  
 |SQL_OWNER_NAME|Eine leere Zeichenfolge ("") wird in dieser Spalte zurückgegeben, weil der Name des Besitzers nicht unterstützt wird.|  
@@ -38,4 +39,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Oben ist keine vollständige Liste der Attribute zurückgegebenes **SQLColAttributes**.
-

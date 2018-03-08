@@ -3,8 +3,11 @@ title: FILE_IDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 9a65a49a1e6d8c23a28b117fc90b0276ce185556
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 75882e2c74b6a432f49b9b7e14b83af05e961af7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Gibt die Datei-ID für den angegebenen logischen Dateinamen der Daten-, Protokoll- oder Volltextdatei in der aktuellen Datenbank zurück.  
   
@@ -66,7 +68,7 @@ FILE_IDEX ( file_name )
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Abrufen der Datei-ID einer angegebenen Datei  
 Im folgenden Beispiel wird die Datei-ID für die Datei `AdventureWorks_Data` zurückgegeben.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
@@ -85,7 +87,7 @@ File ID
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Abrufen der Datei-ID, wenn der Dateiname nicht bekannt ist  
 Das folgende Beispiel gibt die Datei-ID, der die `AdventureWorks` Protokolldatei durch Auswahl aus den logischen Dateinamen der `sys.database_files` -Katalogsicht angezeigt, wobei der Dateityp gleich ist `1` (Protokoll).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
@@ -103,7 +105,7 @@ File ID
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Abrufen der Datei-ID einer Volltextkatalogdatei  
 Das folgende Beispiel gibt die Datei-ID einer Volltext-Datei durch Auswahl aus den logischen Dateinamen der `sys.database_files` -Katalogsicht angezeigt, wobei der Dateityp gleich ist `4` (Volltextsuche). Dieses Beispiel gibt NULL zurück, wenn ein Volltextkatalog nicht vorhanden ist.  
   
-```tsql  
+```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  
@@ -114,4 +116,3 @@ AS 'File_ID';
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
-

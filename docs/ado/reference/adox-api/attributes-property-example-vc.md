@@ -3,7 +3,7 @@ title: Attribute-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3b3b34098f0530cc9bf6b986a9f477e7075c4a98
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 555f4545d7d54ce5b7ee37b19aa049461f00c969
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-example-vc"></a>Attribute-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Bei der Einstellung **eine** ermöglicht es dem Benutzer zum Festlegen des Werts von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Feld](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge. In diesem Fall kann der Benutzer unterscheiden, zwischen einer, in dem Daten nicht bekannt ist, und ein Datensatz, in dem die Daten nicht gilt.  
@@ -213,4 +212,3 @@ int main() {
 ## <a name="see-also"></a>Siehe auch  
  [Attribute-Eigenschaft (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-

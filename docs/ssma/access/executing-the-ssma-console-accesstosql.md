@@ -1,29 +1,30 @@
 ---
 title: "Ausführen der Konsole SSMA (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76f31cffc8f947449d6825a6659b1bb22e0c0b1d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Ausführen der Konsole SSMA (AccessToSQL)
 Microsoft stellt Ihnen eine Reihe robuster Skriptbefehle für die Datei und Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. In den folgenden Abschnitten ausführlich identisch.  
@@ -733,4 +734,3 @@ Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:
   
 -   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; AccessToSQL &#41; ](../../ssma/access/troubleshooting-accesstosql.md).  
   
-

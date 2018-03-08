@@ -3,7 +3,7 @@ title: "Weitere Möglichkeiten zum Verschieben in einem Recordset | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8fb1557723421cefa94a14de420d1f4619de65a7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Weitere Möglichkeiten zum Verschieben in einem Recordset
 Die folgenden vier Methoden werden zum Verschieben oder einen Bildlauf in der **Recordset**: [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Einige dieser Methoden sind für Vorwärtscursor nicht verfügbar.)  
@@ -63,4 +62,3 @@ If oRs.BOF Then oRs.MoveFirst
  Ein weiteres Beispiel: Wenn Sie auf eine bestimmte Zeile in der Mitte des positioniert sind eine **Recordset** und rufen Sie **löschen** und rufen Sie anschließend **MoveNext**, Sie sind jetzt im Datensatz unmittelbar nach der gelöschte Datensatz. Aber aufrufenden **MovePrevious** wird der Datensatz, der vor dem Sie den aktuellen Datensatz gelöscht, da der gelöschte Datensatz nicht mehr in der aktiven Mitgliedschaft gezählt wird die **Recordset**.  
   
  Es ist besonders schwierig, konsistente Move-Semantik für alle Anbieter für Methoden definieren, die relativ zum aktuellen Datensatz wechseln – **MovePrevious**, **MoveNext**, und **Verschieben** – beim Ändern von Daten im aktuellen Datensatz. Wenn Sie mit einer sortierten arbeiten, z. B. gefiltert **Recordset**, und ändern Sie die Daten im aktuellen Datensatz, sodass sich alle Datensätze davor würde jedoch die geänderten Daten auch nicht mehr dem Filter entspricht, wo nicht eindeutig eine **MoveNext** Vorgang sollte Sie dauern. Die sicherste Schlussfolgerung ist diese relative Bewegung innerhalb einer **Recordset** risikoreicher als absolute Bewegung ist (z. B. mit **MoveFirst** oder **MoveLast**) Wenn die Daten enthalten Ändern von während Datensätze bearbeitet werden, hinzugefügt oder gelöscht werden. Sortieren und Filtern sollte auf einen Primärschlüssel oder eine ID, basieren, da dieser Typ des Werts nicht geändert werden sollte.
-

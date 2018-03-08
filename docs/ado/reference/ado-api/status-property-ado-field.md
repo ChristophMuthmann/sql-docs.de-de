@@ -3,7 +3,7 @@ title: Status-Eigenschaft (ADO-Feld) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cb695fae69ace4e65fea116ad125bb79f414a820
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65acf492f0364b26fa6a12240fbbd49c7d1dfed3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-ado-field"></a>Status-Eigenschaft (ADO-Feld)
 Gibt den Status einer [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
@@ -57,5 +56,4 @@ Gibt den Status einer [Feld](../../../ado/reference/ado-api/field-object.md) Obj
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel der Status-Eigenschaft (Feld) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
- [Status-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/status-property-example-vc.md)   
-
+ [Status-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

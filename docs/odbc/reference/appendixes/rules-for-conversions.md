@@ -3,10 +3,12 @@ title: "Regeln für Konvertierungen | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 441f65fabad5894d1277a9c42ecd6c4a6d9e5fff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-conversions"></a>Regeln für Konvertierungen
 Die Regeln in diesem Abschnitt gelten für Konvertierungen, die im Zusammenhang mit numerischen Literalen. Für die Zwecke dieser Regeln können sind die folgenden Begriffe definiert:  
@@ -107,4 +108,3 @@ Die Regeln in diesem Abschnitt gelten für Konvertierungen, die im Zusammenhang 
          (2) der Treiber rundet die Zeichenfolge in Y, die eine passende Skalierung (die auch 0 (null) sein kann) und schreibt das Ergebnis in CT  
   
          (3) der Treiber weder schneidet noch rundet aber kopiert nur die ersten Zeichen der LT von Y in CT
-

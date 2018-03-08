@@ -3,8 +3,11 @@ title: ID-Funktion (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 341693aa368bc92e5176570711541ab6c217cb88
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 963e5eb2c2b0ddaec5674f2f7c5f930ed6c34806
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-sequences---id"></a>Funktionen für Sequenzen - Id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Sequenz der Elementknoten mit xs: ID-Werte, die die Werte aus einem oder mehreren der xs: IDREF-Werte, die im angegebenen entsprechen *$arg*.  
   
@@ -183,12 +185,11 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt nicht die Version der zwei Argumente des **id()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt nicht die Version der zwei Argumente des **id()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Der Argumenttyp von erfordert **id()** einen Untertyp von xs: IDREF * sein.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Der Argumenttyp von erfordert **id()** einen Untertyp von xs: IDREF * sein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen für Sequenzen](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   
-

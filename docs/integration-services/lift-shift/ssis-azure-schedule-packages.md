@@ -1,77 +1,116 @@
 ---
-title: "Planen von SSIS-paketausführung in Azure | Microsoft Docs"
-ms.date: 09/25/2017
+title: "Planen der Ausführung von SSIS-Paketen in Azure | Microsoft-Dokumentation"
+ms.date: 01/16/2018
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planen der Ausführung eines SSIS-Pakets in Azure
-Sie können die Ausführung von Paketen, die in der Datenbank SSISDB-Katalog auf einer Azure SQL-Datenbankserver gespeichert werden, durch Auswahl einer der folgenden Planungsoptionen planen:
+# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planen der Ausführung von SSIS-Paketen in Azure
+Sie können die Ausführung von Paketen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbankserver gespeichert sind, mithilfe einer der folgenden Planungsoptionen planen:
 -   [SQL Server-Agent](#agent)
--   [Elastischer SQL-Datenbank-Aufträge](#elastic)
--   [Azure Data Factory SQL Server Stored Procedure-Aktivität](#sproc)
+-   [SQL-Datenbank für elastische Aufträge](#elastic)
+-   [Die Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren](#sproc)
 
-## <a name="agent"></a>Planen eines Pakets mit SQL Server-Agent
+## <a name="agent"></a> Planen eines Pakets mit SQL Server-Agent
 
-### <a name="prerequisite"></a>Voraussetzung
+### <a name="prerequisite---create-a-linked-server"></a>Voraussetzung: Erstellen Sie einen Verbindungsserver
 
-Bevor Sie SQL Server-Agent lokal so planen Sie die Ausführung auf einer Azure SQL-Datenbank-Server gespeicherten Pakete verwenden können, müssen Sie die SQL-Datenbankserver als Verbindungsserver hinzufügen. Weitere Informationen finden Sie unter [Verbindungsserver erstellen](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) und [Verbindungsserver](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Bevor Sie SQL Server-Agent lokal zum Planen der Ausführung von auf einem Azure SQL-Datenbankserver gespeicherten Paket verwenden können, müssen Sie SQL-Datenbankserver als Verbindungsserver zu Ihrem lokalen SQL Server hinzufügen.
 
-### <a name="create-a-sql-server-agent-job"></a>Erstellen eines SQL Server-Agent-Auftrags
-
-Planen eines Pakets mit SQL Server-Agent lokal, Erstellen eines Auftrags mit eines Auftragsschritts ausgeführt, die aufruft, SSIS-Katalog gespeicherte Prozeduren `[catalog].[create_execution]` und dann `[catalog].[start_execution]`. Weitere Informationen finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../packages/sql-server-agent-jobs-for-packages.md).
-
-1.  Verbinden Sie in SQL Server Management Studio mit einer lokalen SQL Server-Datenbank auf der Sie den Auftrag erstellen möchten.
-
-2.  Mit der rechten Maustaste auf die **SQL Server-Agent** Knoten **neu**, und wählen Sie dann **Auftrag** So öffnen die **neuer Auftrag** (Dialogfeld).
-
-3.  In der **neuer Auftrag** wählen Sie im Dialogfeld die **Schritte** Seite, und wählen Sie dann **neu** So öffnen die **Neuer Auftragsschritt** (Dialogfeld).
-
-4.  In der **Neuer Auftragsschritt** wählen Sie im Dialogfeld `SSISDB` als die **Datenbank.**
-
-5.  Geben Sie im Befehlfeld ein Transact-SQL-Skript, das ähnlich wie das Skript im folgenden Beispiel gezeigt:
+1.  **Einrichten des Verbindungsservers**
 
     ```sql
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',     
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location=‘’,
+        @provstr=‘’,
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **Einrichten der Anmeldeinformationen für den Verbindungsserver**
+
+    ```sql
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer’,
+        @useself = 'false’,
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **Einrichten der Verbindungsserveroptionen**
+
+    ```sql
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+Weitere Informationen finden Sie unter [Erstellen von Verbindungsservern](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) und [Linked Servers (Verbindungsserver)](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+
+### <a name="create-a-sql-server-agent-job"></a>Erstellen eines Auftrags für SQL Server-Agent
+
+Erstellen Sie mithilfe eines Auftragsschritts einen Auftrag, der die gespeicherten SSIS-Katalog-Prozeduren `[catalog].[create_execution]` und `[catalog].[start_execution]` aufruft, um ein Paket lokal mit SQL Server-Agent zu planen. Weitere Informationen finden Sie unter [SQL Server Agent Jobs for Packages (Aufträge für SQL Server-Agent für Pakete)](../packages/sql-server-agent-jobs-for-packages.md).
+
+1.  Stellen Sie in SQL Server Management Studio eine Verbindung mit der lokalen SQL Server-Datenbank her, auf der Sie den Auftrag erstellen möchten.
+
+2.  Klicken Sie mit der rechten Maustaste auf den Knoten **SQL Server-Agent**, wählen Sie **Neu** aus, und klicken Sie anschließend auf **Auftrag**, damit das Dialogfeld **Neuer Auftrag** geöffnet wird.
+
+3.  Wählen Sie im Dialogfeld **Neuer Auftrag** die Seite **Schritte** aus, und klicken Sie dann auf **Neu**, um das Dialogfeld **Neuer Auftragsschritt** zu öffnen.
+
+4.  Wählen Sie im Dialogfeld **Neuer Auftragsschritt** `SSISDB` als **Datenbank** aus.
+
+5.  Geben Sie im Feld **Befehl** ein Transact-SQL-Skript ein, das dem im folgenden Beispiel dargestellten Skript gleicht:
+
+    ```sql
+    -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
     DECLARE @return_value int, @exe_id bigint 
 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-    @folder_name=N'folderName', @project_name=N'projectName', 
-    @package_name=N'packageName', @use32bitruntime=0, 
-    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
- 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
-    GO
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
+        @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
-6.  Fertig stellen, konfigurieren und planen den Auftrag.
+6.  Stellen Sie die Konfiguration und die Planung des Auftrags fertig.
 
-## <a name="elastic"></a>Planen eines Pakets mit elastischen Aufträge des SQL-Datenbank
+## <a name="elastic"></a> Planen eines Pakets mit SQL-Datenbank für elastische Aufträge
 
-Weitere Informationen zur elastischen Aufträge für SQL-Datenbank finden Sie unter [Verwalten von horizontaler Cloud-Datenbanken](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unter [Verwalten von Scale Out-Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
-Bevor Sie elastischen Aufträge so planen Sie SSIS-Pakete, die in der Datenbank SSISDB-Katalog auf einer Azure SQL-Datenbankserver gespeichert verwenden können, müssen Sie folgende Schritte auszuführen:
+Sie müssen zunächst folgende Schritte ausführen, damit Sie elastische Aufträge verwenden können, um SSIS-Pakete zu planen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbankserver gespeichert sind:
 
-1.  Installieren Sie und konfigurieren Sie die Komponenten der elastischen Datenbank Aufträge. Weitere Informationen finden Sie unter [elastischen Datenbank installieren Aufträge (Übersicht)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Installieren und Konfigurieren Sie die Komponenten für Aufträge für die elastische Datenbank. Informationen dazu finden Sie unter [Installieren von Aufträgen für die elastische Datenbank – Übersicht](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
-2. Erstellen Sie die datenbankbezogenen Anmeldeinformationen, die Aufträge zum Senden von Befehlen, die SSIS-Katalogdatenbank verwenden können. Weitere Informationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+2. Erstellen Sie datenbankbezogene Anmeldeinformationen, die Aufträge nutzen können, um Befehle an die SSIS-Katalogdatenbank zu senden. Informationen dazu finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) (Erstellen von datenbankbezogenen Anmeldeinformationen (Transact-SQL))](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-### <a name="create-an-elastic-job"></a>Elastische-Auftrag erstellen
+### <a name="create-an-elastic-job"></a>Erstellen eines elastischen Auftrags
 
-Erstellen Sie den Auftrag mithilfe eines Transact-SQL-Skripts, die ähnlich wie das Skript im folgenden Beispiel gezeigt:
+Sie können den Auftrag erstellen, indem Sie ein Transact-SQL-Skript verwenden, das dem im folgenden Beispiel dargestellten Skript gleicht:
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -103,129 +142,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>Planen eines Pakets mit der Azure Data Factory SQL Server Stored Procedure-Aktivität
+## <a name="sproc"></a> Planen eines Pakets mithilfe der Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren
 
-> [!IMPORTANT]
-> Verwenden Sie die JSON-Skripts im folgenden Beispiel mit der Azure Data Factory Version 1 gespeicherte Prozedur-Aktivität.
+Informationen zum Planen eines SSIS-Pakets mithilfe der Azure Data Factory-Aktivität „Gespeicherte Prozedur“ finden Sie in den folgenden Artikeln:
 
-Informationen zum Planen eines Pakets mit der Azure Data Factory SQL Server Stored Procedure-Aktivität führen Sie folgende Schritte aus:
+-   Für Data Factory Version 2: [Invoke an SSIS package using stored procedure activity in Azure Data Factory (Aufrufen eines SSIS-Pakets mithilfe der Aktivität „Gespeicherte Prozedur“ in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
-1.  Erstellen einer Data Factory an.
-
-2.  Erstellt einen verknüpften Dienst für die SQL-Datenbank, die von SSISDB gehostet.
-
-3.  Erstellen Sie eine ausgabedataset, das die Planung Laufwerke.
-
-4.  Erstellen Sie eine Data Factory-Pipeline, die die SQL Server Stored Procedure-Aktivität zum Ausführen des SSIS-Pakets verwendet.
-
-Dieser Abschnitt enthält einen Überblick über die folgenden Schritte aus. Ein umfassendes Lernprogramm der Data Factory ist nicht Gegenstand dieses Artikels. Weitere Informationen finden Sie unter [SQL Server gespeicherte Prozedur-Aktivität](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
-
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Erstellt einen verknüpften Dienst für die SQL-Datenbank, der als Host SSISDB
-Der verknüpfte Dienst kann Data Factory SSISDB herstellen.
-
-```json
-{
-    "name": "AzureSqlLinkedService",
-    "properties": {
-        "description": "",
-        "type": "AzureSqlDatabase",
-        "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
-        }
-    }
-}
-```
-
-### <a name="create-an-output-dataset"></a>Erstellen Sie eine ausgabedataset
-Das ausgabedataset enthält die Planung Informationen.
-
-```json
-{
-    "name": "sprocsampleout",
-    "properties": {
-        "type": "AzureSqlTable",
-        "linkedServiceName": "AzureSqlLinkedService",
-        "typeProperties": {
-            "tableName": "sampletable"
-        },
-        "availability": {
-            "frequency": "Hour",
-            "interval": 1
-        }
-    }
-}
-```
-### <a name="create-a-data-factory-pipeline"></a>Erstellen Sie eine Data Factory-pipeline
-Die Pipeline verwendet die SQL Server Stored Procedure-Aktivität zum Ausführen des SSIS-Pakets.
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [{
-            "name": "SprocActivitySample",
-            "type": "SqlServerStoredProcedure",
-            "typeProperties": {
-                "storedProcedureName": "sp_executesql",
-                "storedProcedureParameters": {
-                    "stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
-                }
-            },
-            "outputs": [{
-                "name": "sprocsampleout"
-            }],
-            "scheduler": {
-                "frequency": "Hour",
-                "interval": 1
-            }
-        }],
-        "start": "2017-10-01T00:00:00Z",
-        "end": "2017-10-01T05:00:00Z",
-        "isPaused": false
-    }
-}
-```
-
-Sie müssen eine neue gespeicherte Prozedur zum kapseln die Transact-SQL-Befehle zum Erstellen und starten die SSIS-paketausführung erstellen. Sie können das gesamte Skript bereitstellen, als Wert für die `stmt` Parameter im vorhergehenden Beispiel JSON. Hier ist ein Beispielskript:
-
-```sql
--- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
-DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
-
--- Create the exectuion
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-
--- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
-EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
-
--- Start the execution                                                         
-EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
-                                          
--- Raise an error for unsuccessful package execution
--- Execution status values include the following:
--- created (1)
--- running (2)
--- canceled (3)
--- failed (4)
--- pending (5)
--- ended unexpectedly (6)
--- succeeded (7)
--- stopping (8)
--- completed (9) 
-IF(SELECT [status]
-   FROM [SSISDB].[catalog].[executions]
-   WHERE execution_id=@exe_id)<>7
-BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
-    RAISERROR(@err_msg,15,1)
-END
-GO
-```
-
-Weitere Informationen über den Code in diesem Skript finden Sie unter [bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+-   Für Data Factory Version 1: [Invoke an SSIS package using stored procedure activity in Azure Data Factory (Aufrufen eines SSIS-Pakets mithilfe der Aktivität „gespeicherte Prozedur“ in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zu SQL Server-Agent, finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../packages/sql-server-agent-jobs-for-packages.md).
+Weitere Informationen zu SQL Server-Agent finden Sie unter [SQL Server Agent Jobs for Packages (Aufträge für SQL Server-Agent für Pakete)](../packages/sql-server-agent-jobs-for-packages.md).
 
-Weitere Informationen zur elastischen Aufträge für SQL-Datenbank finden Sie unter [Verwalten von horizontaler Cloud-Datenbanken](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
-
+Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unter [Verwalten von Scale Out-Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).

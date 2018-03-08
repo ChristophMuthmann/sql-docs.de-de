@@ -1,12 +1,14 @@
 ---
-title: Beim Codieren und Debuggen der Skriptkomponente | Microsoft Docs
+title: Programmieren und Debuggen der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,56 +25,55 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-caps.latest.revision: 66
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ff6c9814547a83439717f8a88d3bd52be80c4ca5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7dfd7428a390d3526897d32791103f6c55683c99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codieren und Debuggen der Skriptkomponente
-  Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer weist die Skriptkomponente zwei Modi auf: Metadatenentwurfsmodus und Codeentwurfsmodus. Beim Öffnen der **Skript Transformations-Editor**, die Komponente wird im metadatenentwurfsmodus, in dem Metadaten konfiguriert und Komponenteneigenschaften festlegen. Nachdem Sie die Eigenschaften der Skriptkomponente festgelegt und die Eingaben und Ausgaben im Metadatenentwurfsmodus konfiguriert haben, können Sie zum Schreiben des benutzerdefinierten Skripts in den Codeentwurfsmodus wechseln. Weitere Informationen zum metadatenentwurfsmodus und codeentwurfsmodus finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
+  Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer weist die Skriptkomponente zwei Modi auf: Metadatenentwurfsmodus und Codeentwurfsmodus. Wenn Sie den **Transformations-Editor für Skripterstellung** öffnen, befindet sich die Komponente im Metadatenentwurfsmodus, in dem Metadaten konfiguriert und Komponenteneigenschaften festgelegt werden. Nachdem Sie die Eigenschaften der Skriptkomponente festgelegt und die Eingaben und Ausgaben im Metadatenentwurfsmodus konfiguriert haben, können Sie zum Schreiben des benutzerdefinierten Skripts in den Codeentwurfsmodus wechseln. Weitere Informationen zum Metadatenentwurfsmodus und zum Codeentwurfsmodus finden Sie unter [Configuring the Script Component in the Script Component Editor (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor)](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
   
 ## <a name="writing-the-script-in-code-design-mode"></a>Schreiben des Skripts im Codeentwurfsmodus  
   
 ### <a name="script-component-development-environment"></a>Skriptkomponenten-Entwicklungsumgebung  
- Zum Schreiben des Skripts klicken Sie auf **Bearbeitungsskript** auf die **Skript** auf der Seite der **Skript Transformations-Editor** So öffnen die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE. Die VSTA IDE enthält alle Standardfunktionen der [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET-Umgebung wie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Editor mit Farbcodierung, IntelliSense und den Objektkatalog.  
+ Klicken Sie zum Schreiben des Skripts im **Transformations-Editor für Skripterstellung** auf der Seite **Skript** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen. Die VSTA IDE enthält alle Standardfunktionen der [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET-Umgebung wie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Editor mit Farbcodierung, IntelliSense und den Objektkatalog.  
   
- Skriptcode wird in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben. Geben Sie die Skriptsprache aus, durch Festlegen der **ScriptLanguage** Eigenschaft in der **Skript Transformations-Editor**. Falls Sie lieber eine andere Programmiersprache verwenden möchten, können Sie in Ihrer bevorzugten Sprache eine benutzerdefinierte Assembly entwickeln und ihre Funktionen aus dem Code in der Skriptkomponente aufrufen.  
+ Skriptcode wird in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben. Sie geben die Skriptsprache an, indem Sie die **ScriptLanguage**-Eigenschaft im **Transformations-Editor für Skripterstellung** festlegen. Falls Sie lieber eine andere Programmiersprache verwenden möchten, können Sie in Ihrer bevorzugten Sprache eine benutzerdefinierte Assembly entwickeln und ihre Funktionen aus dem Code in der Skriptkomponente aufrufen.  
   
  Das in der Skriptkomponente erstellte Skript wird in der Paketdefinition gespeichert. Es gibt keine separate Skriptdatei. Deshalb hat die Verwendung der Skriptkomponente keinen Einfluss auf die Paketbereitstellung.  
   
 > [!NOTE]  
->  Beim Entwurf des Pakets wird der Skriptcode vorübergehend in eine Projektdatei geschrieben. Da das Speichern vertraulicher Informationen in einer Datei ein potenzielles Sicherheitsrisiko ist, wird empfohlen, dass Sie vertraulichen Informationen wie Kennwörter nicht in den Skriptcode enthalten.  
+>  Beim Entwurf des Pakets wird der Skriptcode vorübergehend in eine Projektdatei geschrieben. Da das Speichern vertraulicher Informationen in einer Datei ein Sicherheitsrisiko darstellt, sollte der Skriptcode keine vertraulichen Daten wie Kennwörter enthalten.  
   
- Standardmäßig **Option Strict** ist in der IDE deaktiviert.  
+ Standardmäßig ist **Option Strict** in der IDE deaktiviert.  
   
 ### <a name="script-component-project-structure"></a>Skriptkomponenten-Projektstruktur  
  Die Leistungsfähigkeit der Skriptkomponente rührt daher, dass Infrastrukturcode erstellt werden kann, mit dem der erforderliche Codeumfang reduziert werden kann. Für diese Funktion ist es erforderlich, dass Eingaben und Ausgaben mit den zugehörigen Spalten und Eigenschaften festgelegt und im Voraus bekannt sind. Aus diesem Grund können nachträgliche Änderungen an den Metadaten der Komponente dazu führen, dass der von Ihnen geschriebene Code ungültig wird. Dies verursacht während der Ausführung des Pakets Kompilierungsfehler.  
   
 #### <a name="project-items-and-classes-in-the-script-component-project"></a>Projektelemente und -klassen im Skriptkomponentenprojekt  
- Wenn Sie zum codeentwurfsmodus wechseln, wird die VSTA IDE wird geöffnet und zeigt die **ScriptMain** -Projektelement. Die **ScriptMain** Projektelement enthält die bearbeitbare **ScriptMain** Klasse dient als Eintrag für das Skript verwenden und die, in dem Sie Code schreiben. Die Codeelemente in der Klasse variieren abhängig davon, welche Programmiersprache Sie für den Skripttask gewählt haben.  
+ Wenn Sie in den Codeentwurfsmodus wechseln, wird die VSTA-IDE geöffnet und zeigt das **ScriptMain**-Projektelement an. Das **ScriptMain**-Projektelement enthält die bearbeitbare **ScriptMain**-Klasse, die als Einstiegspunkt für das Skript dient und in die der Code geschrieben wird. Die Codeelemente in der Klasse variieren abhängig davon, welche Programmiersprache Sie für den Skripttask gewählt haben.  
   
  Das Skriptprojekt enthält zwei zusätzliche, automatisch generierte und schreibgeschützte Projektelemente:  
   
--   Die **ComponentWrapper** -Projektelement enthält drei Klassen:  
+-   Das **ComponentWrapper**-Projektelement enthält drei Klassen:  
   
-    -   Die **UserComponent** -Klasse, die erbt <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> und enthält die Methoden und Eigenschaften, die Sie zum Verarbeiten von Daten und für die Interaktion mit dem Paket verwenden. Die **ScriptMain** Klasse erbt von der **UserComponent** Klasse.  
+    -   Die **UserComponent**-Klasse, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> erbt und die Methoden und Eigenschaften enthält, die Sie verwenden, um Daten zu verarbeiten und mit dem Paket zu interagieren. Die **ScriptMain**-Klasse erbt von der **UserComponent**-Klasse.  
   
-    -   Ein **Verbindungen** -Auflistungsklasse mit Verweisen auf die Verbindungen, die auf der Seite Verbindungs-Manager den Skript-Transformations-Editor ausgewählt.  
+    -   Eine **Connections**-Collectionklasse mit Verweisen zu den Verbindungen, die im Transformations-Editor für Skripterstellung auf der Seite „Verbindungs-Manager“ ausgewählt wurden.  
   
-    -   Ein **Variablen** -Auflistungsklasse mit Verweisen zu den Variablen, die eingegeben werden, der **ReadOnlyVariable** und **ReadWriteVariables** Eigenschaften auf der **Skript** auf der Seite der **Skript Transformations-Editor**.  
+    -   Eine **Variables**-Collectionklasse mit Verweisen zu den Variablen, die im **Transformations-Editor für Skripterstellung** auf der Seite **Skript** in den Eigenschaften **ReadOnlyVariable** und **ReadWriteVariables** eingegeben wurden.  
   
--   Die **BufferWrapper** Projektelement enthält eine Klasse, die von erben <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> für jede konfigurierte Eingabe und Ausgabe auf die **Eingaben und Ausgaben** auf der Seite der **Skript Transformations-Editor**. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.  
+-   Das **BufferWrapper**-Projektelement enthält eine Klasse, die für jede auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skripterstellung** konfigurierte Eingabe und Ausgabe von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> erbt. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.  
   
- Informationen zur Verwendung dieser Objekte, Methoden und Eigenschaften finden Sie unter [Grundlegendes zu den Script Component Object Model](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md). Informationen dazu, wie die Methoden und Eigenschaften dieser Klassen in einem bestimmten Typ von Skriptkomponente verwenden, finden Sie im Abschnitt [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Die Beispielthemen enthalten auch vollständige Codebeispiele.  
+ Weitere Informationen zur Verwendung dieser Objekte, Methoden und Eigenschaften finden Sie unter [Understanding the Script Component Object Model (Grundlegendes zum Objektmodell der Skriptkomponente)](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md). Informationen darüber, wie die Methoden und Eigenschaften dieser Klassen in einem bestimmten Skriptkomponententyp zu verwenden sind, finden Sie unter [Additional Script Component Examples (Zusätzliche Skriptkomponentenbeispiele)](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Die Beispielthemen enthalten auch vollständige Codebeispiele.  
   
- Beim Konfigurieren der Skriptkomponente als Transformation, die **ScriptMain** Projektelement enthält die folgenden automatisch generierten Code. Die Codevorlage bietet auch eine Übersicht über die Skriptkomponente und zusätzliche Informationen über das Abrufen und Bearbeiten von SSIS-Objekten, z. B. Variablen, Ereignisse und Verbindungen.  
+ Bei der Konfiguration der Skriptkomponente als Transformation enthält das **ScriptMain**-Projektelement den folgenden automatisch generierten Code. Die Codevorlage bietet auch eine Übersicht über die Skriptkomponente und zusätzliche Informationen über das Abrufen und Bearbeiten von SSIS-Objekten, z. B. Variablen, Ereignisse und Verbindungen.  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Component  
@@ -158,15 +159,15 @@ public class ScriptMain : UserComponent
 ```  
   
 #### <a name="additional-project-items-in-the-script-component-project"></a>Zusätzliche Projektelemente im Skriptkomponentenprojekt  
- Das skriptkomponentenprojekt kann Elemente der Standardnummer enthalten **ScriptMain** Element. Sie können dem Projekt Klassen, Module, Codedateien und Ordner hinzufügen und die Ordner zum Organisieren von Elementgruppen verwenden.  
+ Das Skriptkomponentenprojekt kann neben dem **ScriptMain**-Standardelement noch weitere Elemente enthalten. Sie können dem Projekt Klassen, Module, Codedateien und Ordner hinzufügen und die Ordner zum Organisieren von Elementgruppen verwenden.  
   
  Alle Elemente, die Sie hinzufügen, werden im Paket beibehalten.  
   
 #### <a name="references-in-the-script-component-project"></a>Verweise im Skriptkomponentenprojekt  
- Sie können Verweise auf verwaltete Assemblys hinzufügen, indem Sie mit der rechten Maustaste im skripttaskprojekt **Projektexplorer**, und klicken Sie dann auf **Verweis hinzufügen**. Weitere Informationen finden Sie unter [verweisen auf andere Assemblys in Projektmappen Scripting](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
+ Sie können Verweise auf verwaltete Assemblys hinzufügen, indem Sie im **Projektexplorer** mit der rechten Maustaste auf das Skripttaskprojekt und anschließend auf **Verweis hinzufügen** klicken. Weitere Informationen finden Sie unter [Verweisen auf andere Assemblys in Skriptlösungen](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
->  Sie können Projektverweise anzeigen, in die VSTA IDE in **Klassenansicht** oder im **Projektexplorer**. Öffnen Sie diese Fenster über das **Ansicht** Menü. Sie können über einen neuen Verweis hinzufügen der **Projekt** im Menü aus **Projektexplorer**, oder aus **Klassenansicht**.  
+>  Sie können Projektverweise in der VSTA-IDE in der **Klassenansicht** oder im **Projektexplorer** anzeigen. Diese Fenster öffnen Sie über das Menü **Ansicht**. Einen neuen Verweis können Sie über das Menü **Projekt**, den **Projektexplorer** oder die **Klassenansicht** hinzufügen.  
   
 ## <a name="interacting-with-the-package-in-the-script-component"></a>Interagieren mit Paketen in der Skriptkomponente  
  Das benutzerdefinierte Skript, das in der Skriptkomponente geschrieben wird, kann mithilfe von stark typisierten  Accessoren in automatisch generierten Basisklassen auf Variablen und Verbindungs-Manager aus dem entsprechenden Paket zugreifen und diese verwenden. Die Variablen und Verbindungs-Manager müssen vor dem Wechseln in den Codeentwurfsmodus konfiguriert werden, wenn sie für das Skript zur Verfügung stehen sollen. Sie können auch Ereignisse auslösen und die Protokollierung von Ihrem Skriptkomponentencode ausführen.  
@@ -175,10 +176,10 @@ public class ScriptMain : UserComponent
   
 |Funktion des Pakets|Zugriffsmethode|  
 |---------------------|-------------------|  
-|Variablen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Variablen** -Auflistungsklasse im die **ComponentWrapper** Projektelement, verfügbar gemacht werden, über die **Variablen** Eigenschaft von der **ScriptMain** Klasse.<br /><br /> Die **PreExecute** Methode kann nur für schreibgeschützte Variablen zugreifen. Die **"PostExecute"** Methode kann Zugriff auf beide schreibgeschützten und Lese-/schreibvariablen.|  
-|Verbindungen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Verbindungen** -Auflistungsklasse im die **ComponentWrapper** Projektelement, verfügbar gemacht werden, über die **Verbindungen** Eigenschaft von der **ScriptMain** Klasse.|  
-|Ereignisse|Lösen Ereignisse mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> Eigenschaft von der **ScriptMain** Klasse und die **auslösen\<X >** Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> Schnittstelle.|  
-|Protokollierung|Protokollierungen werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> Methode der **ScriptMain** Klasse.|  
+|Variablen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Variables**-Collectionklasse im **ComponentWrapper**-Projektelement, die über die **Variables**-Eigenschaft der **ScriptMain**-Klasse bereitgestellt werden.<br /><br /> Die **PreExecute**-Methode kann nur auf schreibgeschützte Variablen zugreifen. Die **PostExecute**-Methode kann sowohl auf schreibgeschützte Variablen als auch auf Lese-/Schreibvariablen zugreifen.|  
+|Verbindungen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Connections**-Collectionklasse im **ComponentWrapper**-Projektelement, die über die **Connections**-Eigenschaft der **ScriptMain**-Klasse bereitgestellt werden.|  
+|Ereignisse|Ereignisse werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der **ScriptMain**-Klasse und den **Fire\<X>**-Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle ausgelöst.|  
+|Protokollierung|Protokollierungen werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>-Methode der **ScriptMain**-Klasse ausgeführt.|  
   
 ## <a name="debugging-the-script-component"></a>Debuggen der Skriptkomponente  
  Legen Sie zum Debuggen des Codes in der Skriptkomponente mindestens einen Breakpoint fest, und schließen Sie dann die VSTA IDE, um das Paket in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] auszuführen. Wenn die Ausführung der Skriptkomponente beginnt, wird die VSTA IDE erneut geöffnet und der Code schreibgeschützt angezeigt. Nachdem die Ausführung den Breakpoint erreicht hat, können Sie die Variablenwerte untersuchen und den übrigen Code schrittweise durchgehen.  
@@ -191,18 +192,18 @@ public class ScriptMain : UserComponent
   
  Sie können die Ausführung der Skriptkomponente auch mit den folgenden Methoden überwachen:  
   
--   Unterbrechen Sie die Ausführung und eine modale Meldung angezeigt, mit der **MessageBox.Show** Methode in der **"System.Windows.Forms"** Namespace. (Entfernen Sie diesen Code, nachdem der Debugprozess abgeschlossen wurde.)  
+-   Unterbrechen Sie die Ausführung, und zeigen Sie mit der **MessageBox.Show**-Methode im **System.Windows.Forms**-Namespace eine modale Meldung an. (Entfernen Sie diesen Code, nachdem der Debugprozess abgeschlossen wurde.)  
   
--   Lösen Sie Ereignisse für Informationsmeldungen, Warnungen und Fehler aus. Die Methoden FireInformation FireWarning und FireError zeigen die Ereignisbeschreibung in Visual Studio **Ausgabe** Fenster. Allerdings FireProgress-Methode, die Console.Write-Methode und Console.WriteLine Methode zeigen keine Informationen in den **Ausgabe** Fenster. Nachrichten aus dem FireProgress-Ereignis angezeigt wird, auf die **Status** Registerkarte [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer. Weitere Informationen finden Sie unter [Auslösen von Ereignissen in der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md).  
+-   Lösen Sie Ereignisse für Informationsmeldungen, Warnungen und Fehler aus. Die Methoden FireInformation, FireWarning und FireError zeigen die Ereignisbeschreibung im Fenster **Ausgabe** von Visual Studio an. Die Methoden FireProgress, Console.Write und Console.WriteLine zeigen hingegen keine Informationen im Fenster **Ausgabe** an. Meldungen des FireProgress-Ereignisses werden auf der Registerkarte **Status** des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers angezeigt. Weitere Informationen finden Sie unter [Raising Events in the Script Component (Auslösen von Ereignissen in der Skriptkomponente)](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md).  
   
--   Protokollieren Sie Ereignisse oder benutzerdefinierte Meldungen an aktivierte Protokollanbieter. Weitere Informationen finden Sie unter [Logging in the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md).  
+-   Protokollieren Sie Ereignisse oder benutzerdefinierte Meldungen an aktivierte Protokollanbieter. Weitere Informationen finden Sie unter [Logging in the Script Component (Protokollieren in der Skriptkomponente)](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md).  
   
- Wenn Sie nur die Ausgabe einer Skriptkomponente als Quelle oder Transformation, ohne Speichern der Daten an ein Ziel konfiguriert untersuchen möchten kann, beenden Sie den Datenfluss mit einer [Row Count Transformation](../../../integration-services/data-flow/transformations/row-count-transformation.md) , und fügen Sie einen Daten-Viewer an die Ausgabe der Skriptkomponente. Informationen zu den Daten-Viewer finden Sie unter [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
+ Wenn Sie lediglich die Ausgabe einer Skriptkomponente überprüfen möchten, die als Quelle oder Transformation konfiguriert ist, und die Daten nicht in einem Ziel speichern möchten, können Sie den Datenfluss mit einer [Transformation für Zeilenanzahl](../../../integration-services/data-flow/transformations/row-count-transformation.md) unterbrechen und der Ausgabe der Skriptkomponente einen Daten-Viewer anfügen. Informationen zu Daten-Viewern finden Sie unter [Debugging Data Flow (Debuggen des Datenflusses)](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Weitere Informationen zum Codieren der Skriptkomponente finden Sie in den folgenden Themen in diesem Abschnitt.  
   
- [Grundlegendes zu den Script Component Object Model](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)  
+ [Grundlegendes zum Skript-Komponentenobjektmodell](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)  
  Erklärt, wie die von der Skriptkomponente bereitgestellten Objekte, Methoden und Eigenschaften verwendet werden.  
   
  [Verweisen auf andere Assemblys in Skriptlösungen](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)  
@@ -213,10 +214,9 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Blogeintrag, [VSTA Setup und Konfiguration Troubles für SSIS 2008 and R2 Installationen](http://go.microsoft.com/fwlink/?LinkId=215661), auf blogs.msdn.com.  
+-   Blogeintrag: [VSTA setup and configuration troubles for SSIS 2008 and R2 installations (Probleme mit der VSTA-Einrichtung und -Konfiguration bei SSIS 2008- und R2-Installationen)](http://go.microsoft.com/fwlink/?LinkId=215661) (auf blogs.msdn.com).  
   
-## <a name="see-also"></a>Siehe auch  
- [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
   
   
-

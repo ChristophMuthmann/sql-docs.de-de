@@ -2,9 +2,12 @@
 title: "Fenster „Suchergebnisse“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 52589dedfb673f299f63d12c2381be04019a78bb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cda243b10834a4c131acf5b71448a19c2856d5d1
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-results-windows"></a>Fenster Suchergebnisse
-  In den beiden Fenstern mit der Bezeichnung Suchergebnisse werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **In Dateien suchen** oder **In Dateien ersetzen** des Dialogfelds **Suchen und Ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In den beiden Fenstern mit der Bezeichnung „Suchergebnisse“ werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **In Dateien suchen** oder **In Dateien ersetzen** des Dialogfelds **Suchen und Ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  
   
  Wenn Übereinstimmungen gefunden werden, wird das ausgewählte Fenster Suchergebnisse immer automatisch geöffnet. Wenn Sie ein Fenster mit der Bezeichnung Suchergebnisse manuell öffnen möchten, klicken Sie im Menü **Ansicht** auf **Weitere Fenster** , und klicken Sie anschließend auf **Suchergebnisse 1** oder **Suchergebnisse 2**.  
   
@@ -103,4 +105,3 @@ ms.lasthandoff: 06/22/2017
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
   
   
-

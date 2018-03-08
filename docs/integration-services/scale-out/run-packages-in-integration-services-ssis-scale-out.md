@@ -1,81 +1,89 @@
 ---
-title: "Horizontales Skalieren Ausführen von Paketen in SQL Server Integration Services (SSIS) | Microsoft Docs"
+title: "Ausführen von Paketen in SSIS Scale Out (SQL Server Integration Services) | Microsoft-Dokumentation"
+ms.description: This article describes how to run SSIS packages in Scale Out
 ms.custom: 
-ms.date: 07/18/2017
-ms.prod: sql-server-2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 12/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
+ms.reviewer: douglasl
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ausführen von Paketen in SSIS Scale Out (SQL Server Integration Services)
+Nachdem Sie Pakete auf dem Integration Services-Server bereitgestellt haben, können Sie sie über eine der folgenden Methoden in Scale Out ausführen:
 
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ausführen von Paketen in Integration Services (SSIS) horizontal skalieren
-Sobald die Pakete auf dem Integration Services-Server bereitgestellt sind, können Sie diese in horizontaler Hochskalierung ausführen.
+-   [Dialogfeld „Paket in Scale Out ausführen“](#scale_out_dialog)
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Ausführen von Paketen mit ausführen Paket In horizontal skalieren Dialogfeld 
+-   [Gespeicherte Prozeduren](#stored_proc)
 
-1. Öffnen des Dialogfelds „Paket in horizontaler Hochskalierung ausführen“
+-   [Aufträge des SQL Server-Agents](#sql_agent)
+
+## <a name="scale_out_dialog"></a> Ausführen von Paketen über das Dialogfeld „Paket in Scale Out ausführen“
+
+1. Öffnen Sie das Dialogfeld „Paket in Scale Out ausführen“.
 
     Stellen Sie in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Integration Services-Server her. Erweitern Sie im Objekt-Explorer die Struktur, um die Knoten unter **Integration Services-Kataloge**anzuzeigen. Klicken Sie mit der rechten Maustaste auf den **SSISDB** -Knoten oder auf das Projekt oder Paket, das Sie ausführen möchten, und klicken Sie dann auf **In horizontaler Hochskalierung ausführen**.
 
-2. Auswählen von Paketen und Festlegen der Optionen
+2. Wählen Sie Pakete aus, und legen Sie die Optionen fest.
 
-    Auf der Seite **Paketauswahl** wählen Sie mehrere auszuführende Pakete aus, und legen Sie für jedes Paket die Umgebung, die Parameter, die Verbindungs-Manager und die erweiterten Optionen fest. Klicken Sie auf ein Paket, um diese Optionen festzulegen.
+    Wählen Sie auf der Seite **Paketauswahl** mindestens ein Paket aus, das ausgeführt werden soll. Legen Sie für jedes Paket die Umgebung, Parameter, Verbindungs-Manager und erweiterte Optionen fest. Klicken Sie auf ein Paket, um diese Optionen festzulegen.
     
-    Auf der Registerkarte **Erweitert** legen Sie die für horizontale Hochskalierung verwendete Option **Wiederholungsanzahl**fest. Hiermit wird festgelegt, wie oft das Ausführen eines Pakets versucht wird, wenn ein Fehler auftritt.
+    Legen Sie auf der Registerkarte **Erweitert** die Scale Out-Option **Wiederholungsanzahl** fest, um zu bestimmen, wie oft versucht werden soll, ein Paket auszuführen, wenn ein Fehler auftritt.
 
-    > [!Note]
-    > Die **speichern bei Fehlern** Option wird nur wirksam, wenn das Scale-Out-Worker-Dienst-Konto ein Administrator des lokalen Computers ist.
+    > [!NOTE]
+    > Die Option **Bei Fehler Abbild sichern** funktioniert nur, wenn das Konto, unter dem der Scale Out-Workerdienst ausgeführt wird, einem Administrator auf dem lokalen Computer zugeordnet ist.
 
-3. Auswählen von Computern
+3. Wählen Sie Workercomputer aus.
 
-    Auf der Seite **Computerauswahl** wählen Sie die Computer mit Worker für horizontales Hochskalieren aus, auf denen die Pakete ausgeführt werden sollen. Standardmäßig können die Pakete auf jedem Computer ausgeführt werden. 
+    Wählen Sie auf der Seite **Computerauswahl** die Scale Out-Workercomputer aus, auf denen die Pakete ausgeführt werden sollen. Standardmäßig können die Pakete auf jedem Computer ausgeführt werden. 
 
-   > [!Note] 
-   > Die Pakete werden mit den Anmeldeinformationen der Benutzerkonten der Dienste für Worker für horizontales Hochskalieren ausgeführt, die auf der Seite **Computerauswahl** angezeigt werden. Standardmäßig ist dies das Konto „NT-Dienst\SSISScaleOutWorker140“. Es bietet sich an, dass Sie zu Ihren entsprechenden eigenen Konten wechseln.
+   > [!NOTE] 
+   > Die Pakete werden mit den Anmeldeinformationen der Benutzerkonten der Dienste für Scale Out-Worker ausgeführt. Diese Anmeldeinformationen finden Sie auf der Seite **Computerauswahl**. Standardmäßig lautet das Konto `NT Service\SSISScaleOutWorker140`.
 
-   >[!WARNING]
-   >Ausgelöst von verschiedenen Benutzern auf der gleichen Arbeitsthread paketausführungen werden mit demselben Konto ausgeführt. Es gibt keine Sicherheitsgrenze zwischen ihnen. 
+   > [!WARNING]
+   > Die von verschiedenen Benutzern im selben Worker ausgelösten Paketausführungen werden mit denselben Anmeldeinformationen ausgeführt. Es gibt keine Sicherheitsbegrenzung zwischen diesen. 
 
-4. Ausführen der Pakete und Anzeigen von Berichten 
+4. Führen Sie die Pakete aus, und zeigen Sie Berichte an.
 
     Klicken Sie auf **OK** , um die Paketausführungen zu starten. Um den Ausführungsbericht für ein Paket anzuzeigen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf das Paket, klicken Sie auf **Berichte**, klicken Sie auf **Alle Ausführungen**, und suchen Sie nach der Ausführung.
     
-## <a name="run-packages-with-stored-procedures"></a>Ausführen von Paketen mit gespeicherten Prozeduren
+## <a name="stored_proc"></a> Ausführen von Paketen mit gespeicherten Prozeduren
 
-1. Erstellen von Ausführungen
+1.  Erstellen Sie Ausführungen.
 
-    Rufen Sie [catalog].[create_execution] für jedes Paket auf. Legen Sie den Parameter **@runinscaleout** auf „true“ fest. Sind nicht alle Computer mit Worker für horizontales Hochskalieren berechtigt, das Paket auszuführen, legen Sie den Parameter **@useanyworker** auf „false“ fest.   
+    Rufen Sie für jedes Paket `[catalog].[create_execution]` auf. Legen Sie den Parameter **@runinscaleout** auf `True` fest. Sind nicht alle Scale Out-Workercomputer berechtigt, das Paket auszuführen, legen Sie den Parameter **@useanyworker** auf `False` fest. Weitere Informationen zu dieser gespeicherten Prozedur und dem Parameter **@useanyworker** finden Sie unter [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
-2. Festlegen von Ausführungsparametern
+2. Legen Sie Ausführungsparameter fest.
 
-    Rufen Sie [catalog].[set_execution_parameter_value] für jede Ausführung auf.
+    Rufen Sie für jede Ausführung `[catalog].[set_execution_parameter_value]` auf.
 
-3. Festlegen von Workern für horizontales Hochskalieren
+3. Legen Sie die Scale Out-Worker fest.
 
-    Rufen Sie [catalog].[add_execution_worker] auf. Sind alle Computer berechtigt, das Paket auszuführen, müssen Sie diese gespeicherte Prozedur nicht aufrufen. 
+    Rufen Sie `[catalog].[add_execution_worker]` auf. Sind alle Computer berechtigt, das Paket auszuführen, müssen Sie diese gespeicherte Prozedur nicht aufrufen. 
 
-4. Starten der Ausführungen
+4. Starten Sie die Ausführungen.
 
-    Rufen Sie [catalog].[start_execution] auf. Legen Sie den Parameter **@retry_count** fest, um anzugeben, wie oft das Ausführen eines Pakets versucht wird, wenn ein Fehler auftritt.
+    Rufen Sie `[catalog].[start_execution]` auf. Legen Sie den Parameter **@retry_count** fest, um anzugeben, wie oft versucht werden soll, ein Paket auszuführen, wenn ein Fehler auftritt.
     
-#### <a name="example"></a>Beispiel
-Im folgenden Beispiel werden zwei Pakete („package1.dtsx“ und „package2.dtsx“) in horizontaler Hochskalierung mit einem Worker für horizontales Hochskalieren ausgeführt.  
+### <a name="example"></a>Beispiel
+Im folgenden Beispiel werden zwei Pakete in Scale Out mit einem Scale Out-Worker ausgeführt: `package1.dtsx` und `package2.dtsx`.  
 
 ```sql
 Declare @execution_id bigint
@@ -98,7 +106,7 @@ GO
 ```
 
 ### <a name="permissions"></a>Berechtigungen
-Für ein Ausführen von Paketen in horizontaler Hochskalierung ist eine der folgenden Berechtigungen erforderlich:
+Eine der folgenden Berechtigungen ist erforderlich, um die Pakete in Scale Out auszuführen:
 
 -   Mitgliedschaft in der Datenbankrolle **ssis_admin**  
 
@@ -106,16 +114,21 @@ Für ein Ausführen von Paketen in horizontaler Hochskalierung ist eine der folg
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
 
-## <a name="set-default-execution-mode"></a>Set-Standard-Ausführungsmodus
-Zum Festlegen der Standardmodus für die Ausführung auf "Horizontal skalieren" Maustaste die **SSISDB** Knoten im Objekt-Explorer von SSMS, und wählen Sie **Eigenschaften**.
-In der **Katalog Eigenschaften** Dialog, Set **Ausführungsmodus für den serverweiten Standardwert** auf **horizontal skalieren**.
+## <a name="set-default-execution-mode"></a>Festlegen des Standardausführungsmodus
+Führen Sie die folgenden Schritte aus, um den Standardausführungsmodus für Pakete auf **Scale Out** festzulegen:
 
-Nach dieser Einstellung ist nicht erforderlich, geben Sie die  **@runinscaleout**  -Parameter für [Catalog]. [ Create_execution]. Ausführungen werden in horizontal skalieren automatisch ausgeführt. 
+1.  Klicken Sie in SSMS in Objekt-Explorer mit der rechten Maustaste auf den Knoten **SSISDB**, und wählen Sie **Eigenschaften** aus.
 
-![EXE-Modus](media\exe-mode.PNG)
+2.  Legen Sie im Dialogfeld **Katalogeigenschaften** für den **serverweiten Standardausführungsmodus** die Option **Scale Out** fest.
 
-Um Standardausführungsmodus wieder in den nicht - horizontal skalieren Modus zu wechseln, legen Sie nur **Ausführungsmodus für den serverweiten Standardwert** auf **Server**.
+Nachdem Sie diesen Standardausführungsmodus festgelegt haben, müssen Sie den **@runinscaleout**-Parameter nicht mehr angeben, wenn Sie die gespeicherte Prozedur `[catalog].[create_execution]` aufrufen. Pakete werden in Scale Out automatisch ausgeführt. 
 
-## <a name="run-package-in-sql-agent-job"></a>Ausführen des Pakets in SQL-Agent-Auftrag
-In Sql-Agent-Auftrag können Sie auswählen, um ein SSIS-Paket als einen Schritt des Auftrags auszuführen. Zum Ausführen des Pakets in horizontal skalieren, können Sie die oben genannten Standardausführungsmodus nutzen. Nach der Einstellung der Standard-Ausführungsmodus auf "Horizontal skalieren" werden Pakete in Sql-Agent-Aufträge in horizontal skalieren ausgeführt werden.
+![Ausführungsmodus](media\exe-mode.PNG)
 
+Um den Standardausführungsmodus wieder auf den Modus ohne Scale Out zurückzusetzen, damit die Pakete nicht mehr standardmäßig im Scale Out-Modus ausgeführt werden, legen Sie den **serverweiten Standardausführungsmodus** auf **Server** fest.
+
+## <a name="sql_agent"></a> Ausführen eines Pakets in einem SQL Server-Agent-Auftrag
+In einem SQL Server-Agent-Auftrag können Sie im Rahmen des Auftrags ein SSIS-Paket ausführen. Legen Sie den Standardausführungsmodus auf **Scale Out** fest, um das Paket in Scale Out auszuführen. Nachdem der Standardausführungsmodus auf **Scale Out** festgelegt wurde, werden Pakete in SQL-Agent-Aufträgen in Scale Out ausgeführt.
+
+## <a name="next-steps"></a>Nächste Schritte
+-   [Problembehandlung in Scale Out](troubleshooting-scale-out.md)

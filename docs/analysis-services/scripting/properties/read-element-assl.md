@@ -2,38 +2,34 @@
 title: Lesen-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Read Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Read Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Read element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1ad0d9332c302a11163ee195c851e34059a3b9b8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aff524460850c6e875f5e703f5bbc065fc5ad50a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="read-element-assl"></a>Read-Element (ASSL)
-  Bestimmt, ob Daten oder Metadaten für gelesen werden, kann eine bestimmte [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) oder [Berechtigung](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bestimmt, ob Daten oder Metadaten für gelesen werden, kann eine bestimmte [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) oder [Berechtigung](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +44,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|*Keine*|  
@@ -59,12 +55,12 @@ ms.lasthandoff: 09/01/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[CubeDimensionPermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md), [Berechtigung](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |*Keine*|Das übergeordnete Objekt lässt keinen Zugriff auf Daten oder Metadaten zu.|  
 |*Zulässig*|Das übergeordnete Objekt lässt Lesezugriff auf Daten und Metadaten zu.|  
@@ -80,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

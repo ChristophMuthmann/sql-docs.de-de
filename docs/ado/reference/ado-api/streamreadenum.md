@@ -3,7 +3,7 @@ title: StreamReadEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - StreamReadEnum enumeration [ADO]
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6bd88a62a46bae523904b308d011ebe956e02497
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a781fb44d547237dab71c81a99a14ef0f2694b1a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Gibt an, ob der gesamte Datenstrom oder die nächste Zeile aus gelesen werden soll eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -46,4 +45,3 @@ Gibt an, ob der gesamte Datenstrom oder die nächste Zeile aus gelesen werden so
 |||  
 |-|-|  
 |[Read-Methode](../../../ado/reference/ado-api/read-method.md)|[ReadText-Methode](../../../ado/reference/ado-api/readtext-method.md)|
-

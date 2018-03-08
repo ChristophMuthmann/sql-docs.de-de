@@ -1,12 +1,14 @@
 ---
-title: "Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager | Microsoft Docs"
+title: "Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9d48e70032b2022e8dc0359b5cf23bd42440f54f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager
   Nachdem Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschrieben haben, um benutzerdefinierte Funktionen bereitzustellen, möchten Sie vielleicht eine benutzerdefinierte Oberfläche für den Verbindungs-Manager erstellen. Wenn Sie keine individuelle Benutzeroberfläche erstellen, können die Benutzer den Verbindungs-Manager nur über das Eigenschaftenfenster konfigurieren.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 08/03/2017
  In einem individuellen Benutzeroberflächenprojekt oder einer entsprechenden Assembly gibt es im Allgemeinen zwei Klassen: eine Klasse, die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> implementiert, und das Windows Form, in dem diese angezeigt wird, um Informationen vom Benutzer zu erfassen.  
   
 > [!IMPORTANT]  
->  Nach dem Signieren und Erstellen der benutzerdefinierten Oberfläche und im globalen Assemblycache zu installieren, wie in beschrieben [Codieren eines benutzerdefinierten Verbindungs-Managers](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), denken Sie daran, geben Sie den vollqualifizierten Namen dieser Klasse in der <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> Eigenschaft von der <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
+>  Nach dem Signieren und Erstellen der benutzerdefinierten Oberfläche und der Installation im globalen Assemblycache (siehe [Codieren eines benutzerdefinierten Verbindungs-Managers](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)) müssen Sie den vollqualifizierten Namen dieser Klasse in der <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> bereitstellen.  
   
 > [!NOTE]  
 >  Die meisten Tasks, Quellen und Ziele, die in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] integriert wurden, können nur mit bestimmten Typen integrierter Verbindungs-Manager verwendet werden. Daher können diese Beispiele nicht mit den integrierten Tasks und Komponenten getestet werden.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 08/03/2017
 >  Für die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A>-Methode müssen Sie möglicherweise keinen Code schreiben, wenn beim Löschen einer Instanz des Verbindungs-Managers durch einen Benutzer kein Cleanup erforderlich ist.  
   
 ### <a name="initializing-the-user-interface"></a>Initialisieren der Benutzeroberfläche  
- In der <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>-Methode stellt der Designer einen Verweis auf den Verbindungs-Manager, der konfiguriert wird, bereit, damit die Benutzeroberflächenklasse die Eigenschaften des Verbindungs-Managers ändern kann. Wie im folgenden Code dargestellt, Code muss den Verweis auf den Verbindungs-Manager für cache später verwenden.  
+ In der <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>-Methode stellt der Designer einen Verweis auf den Verbindungs-Manager, der konfiguriert wird, bereit, damit die Benutzeroberflächenklasse die Eigenschaften des Verbindungs-Managers ändern kann. Wie im folgenden Beispiel dargestellt, muss der Code den Verweis auf den Verbindungs-Manager zur späteren Verwendung zwischenspeichern.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -167,7 +168,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  Nachdem Sie die Benutzeroberflächenklasse erstellt haben, die die Methoden der <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>-Schnittstelle implementiert, müssen Sie ein Windows Form erstellen, in dem der Benutzer die Eigenschaften des Verbindungs-Managers konfigurieren kann.  
   
 ### <a name="initializing-the-user-interface-form"></a>Initialisieren des Benutzeroberflächenformulars  
- Wenn Sie das benutzerdefinierte Formular zum Bearbeiten anzeigen, können Sie einen Verweis an den Verbindungs-Manager übergeben, der bearbeitet wird. Sie können dieser Verweis übergeben, entweder durch einen benutzerdefinierten Konstruktor für die Formularklasse verwenden oder Erstellung Ihres eigenen **initialisieren** Methode wie hier gezeigt.  
+ Wenn Sie das benutzerdefinierte Formular zum Bearbeiten anzeigen, können Sie einen Verweis an den Verbindungs-Manager übergeben, der bearbeitet wird. Dazu können Sie entweder einen benutzerdefinierten Konstruktor für die Formularklasse verwenden oder, wie hier gezeigt, eine eigene **Initialize**-Methode erstellen.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -291,9 +292,8 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines benutzerdefinierten Verbindungs-Managers](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
  [Codieren eines benutzerdefinierten Verbindungs-Managers](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

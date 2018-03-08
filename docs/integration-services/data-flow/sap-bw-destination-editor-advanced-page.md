@@ -1,10 +1,13 @@
 ---
-title: SAP BW Ziel-Editor (Seite erweitert) | Microsoft Docs
+title: "Ziel-Editor für SAP BW (Seite „Erweitert“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.advanced.f1
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e15c7e770bc46c3ddc3a9f58ae99a5440617720d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4923bb1fb081c630b910ec5047d8aca5eafcd2fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>Ziel-Editor für SAP BW (Seite Erweitert)
   Auf der Seite **Erweitert** im **Ziel-Editor für SAP BW** legen Sie erweiterte Einstellungen wie Paketgröße und Timoutinformationen fest.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Erweitert** , um die Seite **Erweitert** des Editors zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -60,11 +62,10 @@ ms.lasthandoff: 08/03/2017
  **InfoPackage nicht starten (nur warten)**  
  Geben Sie an, dass vom Ziel kein InfoPackage ausgelöst, sondern nur auf eine Benachrichtigung gewartet wird, dass das SAP NetWeaver BW-System mit dem Laden der Daten begonnen hat.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ziel-Editor für SAP BW &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für SAP BW &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Ziel-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ziel-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für SAP BW &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Ziel-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

@@ -1,28 +1,30 @@
 ---
 title: Anmerkungen zur Version von SQL Server 2012 SP4 | Microsoft-Dokumentation
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7aed12a3e687ab4c8b42b8f07c29d252e0d6acad
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 1d637aa3e820f1acd6dc283030d2cdfa1e6ca074
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>Anmerkungen zur Version von SQL Server 2012 SP4
-Im Folgenden werden die Verbesserungen zusammengefasst, die in der Version SQL Server 2012 P4 enthalten sind. Außerdem werden Probleme beschrieben, die Sie prüfen sollten, bevor Sie SP4 installieren oder Probleme bei der Installation beheben. Versionsanmerkungen sind nur online verfügbar, nicht auf dem Installationsmedium. Diese Seite wird regelmäßig aktualisiert, wenn neue Probleme auftreten. Eine detaillierte Auflistung der Problembehebungen für SP4 finden Sie unter [SQL Server 2012 SP4 Release](https://go.microsoft.com/fwlink/?linkid=846937).  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Im Folgenden werden die Verbesserungen zusammengefasst, die in der Version SQL Server 2012 P4 enthalten sind. Außerdem werden Probleme beschrieben, die Sie prüfen sollten, bevor Sie SP4 installieren oder Probleme bei der Installation beheben. Versionsanmerkungen sind nur online verfügbar, nicht auf dem Installationsmedium. Diese Seite wird regelmäßig aktualisiert, wenn neue Probleme auftreten. Eine detaillierte Auflistung der Problembehebungen für SP4 finden Sie unter [SQL Server 2012 SP4 Release](https://go.microsoft.com/fwlink/?linkid=846937).  
 
 > Das Service Pack 4 enthält alle kumulativen Updates der Version SQL Server 2012 SP3.
   
@@ -60,4 +62,3 @@ Unter den folgenden Links finden Sie die Hauptdownloadpakete für SQL Server 201
 - [So identifizieren Sie die SQL Server-Version und -Edition](https://support.microsoft.com/en-us/help/321185)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

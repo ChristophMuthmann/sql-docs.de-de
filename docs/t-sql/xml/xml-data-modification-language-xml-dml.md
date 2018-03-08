@@ -3,8 +3,11 @@ title: XML-Datenbearbeitungssprache (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,26 +24,25 @@ helpviewer_keywords:
 - XQuery, XML DML
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18fb5825297754c59f2824b6f05150ddaed7bb9c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 74f591801b50df0bacf3c873f73d6cc9ee28f4d8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML (Data Modification Language)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XML DML (Data Modification Language) ist eine Erweiterung der XQuery-Sprache. Gemäß der Definition durch W3C fehlt der XQuery-Sprache der DML-Anteil (Data Manipulation). XML DML eingeführt, die in diesem Thema und auch die XQuery-Sprache bietet eine voll funktionsfähige Abfrage- und Datenbearbeitungssprache, mit denen Sie anhand der **Xml** -Datentyp.  
   
  XML DML fügt XQuery die folgenden Schlüsselwörter hinzu, für die zwischen Groß- und Kleinschreibung unterschieden wird:  
   
--   **Einfügen**  
+-   **insert**  
   
 -   **Löschen**  
   
@@ -77,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [xml Data Type Methods (xml-Datentypmethoden)](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

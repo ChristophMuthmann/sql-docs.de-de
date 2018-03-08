@@ -1,164 +1,165 @@
 ---
-title: Erste Schritte mit diesem einfachen Beispiel des Import / Export-Assistenten | Microsoft Docs
+title: Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import / Export-Assistenten
-Erfahren Sie, was Sie erwartet in der SQL Server-Import / Export-Assistenten, indem ein häufiges Szenario – Importieren von Daten aus einem Excel-Arbeitsblatt mit einer SQL Server-Datenbank durchlaufen. Auch wenn Sie eine andere Quelle und ein anderes Ziel verwenden möchten, in diesem Thema werden die meisten der gesuchte kennen, den Assistenten ausführen.
+# <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
+Erfahren Sie, was Sie von dem Import/Export-Assistenten von SQL Server im Hinblick auf alltägliche Szenarios erwarten können. In diesem Artikel geht es um das Importieren von Daten aus einem Excel-Arbeitsblatt in eine SQL Server-Datenbank. Selbst wenn Sie planen, eine andere Quelle und ein anderes Ziel zu verwenden, werden Ihnen trotzdem in diesem Artikel nützliche Informationen zum Ausführen des Assistenten zur Verfügung gestellt.
 
-## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Voraussetzung - ist der Assistent auf dem Computer installiert werden?
+## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Voraussetzung: Installation des Assistenten auf dem Computer
 Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
-## <a name="heres-the-excel-source-data-for-this-example"></a>Hier wird die Excel-Quelldaten für dieses Beispiel
-So sieht die Quelldaten, die Sie die offensichtlichen kopieren - eine kleine zweispaltige Tabelle im Arbeitsblatt WizardWalkthrough der WizardWalkthrough.xlsx Excel-Arbeitsmappe aus.
+## <a name="heres-the-excel-source-data-for-this-example"></a>In diesem Beispiel verwendete Excel-Quelldaten
+In der folgenden Abbildung werden die Quelldaten dargestellt, die kopiert werden sollen. Dabei handelt es sich um eine kleine Tabelle mit zwei Spalten im WizardWalkthrough-Arbeitsblatt der Excel-Arbeitsmappe „WizardWalkthrough.xlsx“.
 
 ![Excel-Quelldaten](../../integration-services/import-export-data/media/excel-source-data.jpg)
 
-## <a name="heres-the-sql-server-destination-database-for-this-example"></a>Hier ist die SQL Server-Zieldatenbank für dieses Beispiel
-Hier ist (in SQL Server Management Studio) die SQL Server-Zieldatenbank zu der Sie also die Quelldaten zu kopieren. Die Zieltabelle nicht vorhanden ist – Sie sind im Begriff, die der Assistent die Tabelle für Sie erstellen können.
+## <a name="heres-the-sql-server-destination-database-for-this-example"></a>In diesem Beispiel verwendete SQL Server-Zieldatenbank
+In der folgenden Abbildung wird die SQL Server-Zieldatenbank (in SQL Server Management Studio) dargestellt, in die die Quelldaten kopiert werden sollen. Zu diesem Zeitpunkt gibt es noch keine Zieltabelle, da der Assistent diese für Sie erstellen soll.
 
 ![SQL Server-Zieldatenbank](../../integration-services/import-export-data/media/sql-server-destination-database.jpg)
 
 ## <a name="step-1---start-the-wizard"></a>Schritt 1: Starten des Assistenten
-Sie können den Assistenten starten, aus der Microsoft SQL Server 2016-Gruppe auf Windows-Startmenü.
+Starten Sie den Assistenten über die Microsoft SQL Server 2016-Gruppe im Windows-Startmenü.
 
 ![Starten des Assistenten](../../integration-services/import-export-data/media/start-wizard.jpg)
 
 > [!NOTE]
-> In diesem Beispiel wählen Sie den 32-Bit-Assistenten aus, da Sie die 32-Bit-Version von Microsoft Office installiert haben. Daher müssen Sie die 32-Bit-Datenanbieter für die Verbindung in Excel verwenden. Für viele andere Datenquellen können Sie in der Regel die 64-Bit-Assistenten auswählen.
+> In diesem Beispiel wird der 32-Bit-Assistent ausgewählt, da die 32-Bit-Version von Microsoft Office installiert ist. Aus diesem Grund muss auch der 32-Bit-Datenanbieter verwendet werden, um eine Verbindung mit Excel herzustellen. Für viele andere Datenquellen kann in der Regel auch der 64-Bit-Assistent ausgewählt werden.
 >
-> Um die 64-Bit-Version von den SQL Server-Import / Export-Assistenten verwenden zu können, müssen Sie SQL Server installieren. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen, und nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten installieren.
+> Sie müssen SQL Server installieren, um die 64-Bit-Version des Import/Export-Assistenten von SQL Server verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
 
 Weitere Informationen finden Sie unter [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
-## <a name="step-2---view-the-welcome-page"></a>Schritt 2: Anzeigen der Seite "Willkommen"
-Die erste Seite des Assistenten ist die **Willkommen** Seite. 
+## <a name="step-2---view-the-welcome-page"></a>Schritt 2: Anzeigen der Startseite
+Die erste Seite des Assistenten ist die **Startseite**. 
 
-Wahrscheinlich möchten finden auf dieser Seite erneut, also fahren Sie fort und klicken Sie auf **nicht diese Anfangsseite nicht mehr anzeigen**.
+Wenn Sie diese Seite nicht mehr anzeigen lassen möchten, klicken Sie einfach auf **Diese Anfangsseite nicht mehr anzeigen**.
 
 ![Willkommen beim Assistenten](../../integration-services/import-export-data/media/welcome-to-the-wizard.jpg)
 
 ## <a name="step-3---pick-excel-as-your-data-source"></a>Schritt 3: Auswählen von Excel als Datenquelle
-Auf der nächsten Seite **wählen Sie eine Datenquelle**, Sie Microsoft Excel als Datenquelle auswählen. Klicken Sie dann durchsuchen Sie die Excel-Datei und wählen Sie aus. Geben Sie Sie schließlich die Excel-Version, mit denen Sie die Datei zu erstellen.
+Wählen Sie auf der nächsten Seite (**Datenquelle auswählen**) Microsoft Excel als Ihre Datenquelle aus. Suchen Sie dann die Excel-Datei, die Sie auswählen möchten. Geben Sie dann die Excel-Version an, die Sie zum Erstellen der Datei verwendet haben.
 
-![Wählen Sie die Excel-Datenquelle](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
+![Auswählen der Excel-Datenquelle](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-Weitere Informationen zum Verbinden mit Excel finden Sie unter [Herstellen einer Verbindung mit einer Excel-Datenquelle](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [wählen Sie eine Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
+Weitere Informationen zum Herstellen einer Verbindung mit Excel finden Sie unter [Connect to an Excel Data Source (Herstellen einer Verbindung mit einer Excel-Datenquelle)](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Choose a Data Source (Auswählen einer Datenquelle)](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
-## <a name="step-4---pick-sql-server-as-your-destination"></a>Schritt 4 – SQL-Server als Ziel auswählen
-Auf der nächsten Seite **wählen Sie ein Ziel**, Sie Microsoft SQL Server auswählen, wie Ihr Ziel von Kommissionierung an einem der Datenanbieter in der Liste, eine Verbindung mit SQL Server herstellt. Wählen Sie in diesem Beispiel wird die **.Net Framework-Datenanbieter für SQL Server**.
+## <a name="step-4---pick-sql-server-as-your-destination"></a>Schritt 4: Auswählen von SQL Server als Ziel
+Wählen Sie auf der nächsten Seite (**Ziel auswählen**) Microsoft SQL Server als Ziel aus, indem Sie einen der Datenanbieter aus der Liste auswählen, die eine Verbindung mit SQL Server herstellen. Wählen Sie für dieses Beispiel **.NET Framework-Datenanbieter für SQL Server** aus.
 
-Die Seite zeigt eine Liste von Anbietereigenschaften. Viele davon werden ungeeignete Namen und Einstellungen nicht vertraut. Zum Enterprise-Datenbank herstellen, müssen Sie Glücklicherweise in der Regel nur drei Arten von Informationen bereitstellen. Sie können die Standardwerte für die anderen Einstellungen ignorieren.
+Auf der Seite wird eine Liste mit Anbietereigenschaften angezeigt. Darunter befinden sich viele ungeeignete Namen und ungewöhnliche Einstellungen. Damit Sie eine Verbindung mit einer Unternehmensdatenbank herstellen können, benötigen Sie in der Regel nur drei Informationen. Die Standardwerte für die anderen Einstellungen können Sie ignorieren.
 
-|Erforderliche Informationen|.NET Framework-Datenanbieter für SQL Server-Eigenschaft|
+|Erforderliche Informationen|Eigenschaft „.NET Framework-Datenanbieter für SQL Server“|
 |---|---|
 |Servername|**Datenquelle**|
-|Authentifizierungsinformationen (Anmeldenamen)|**Integrierte Sicherheit von**; oder **Benutzer-ID** und **Kennwort**<br/>Wenn Sie eine Dropdownliste mit Datenbanken auf dem Server anzeigen möchten, müssen Sie zunächst gültige Anmeldeinformationen bereitstellen.|
+|Authentifizierungsinformationen (Anmeldung)|**Integrierte Sicherheit**, oder **Benutzer-ID** und **Kennwort**<br/>Wenn eine Dropdownliste mit den Datenbanken auf dem Server angezeigt werden soll, müssen Sie zunächst gültige Anmeldeinformationen eingeben.|
 |Datenbankname|**Anfangskatalog**|
 
-![Wählen Sie das SQL Server-Ziel](../../integration-services/import-export-data/media/choose-the-sql-server-destination.jpg)
+![Auswählen des SQL Server-Ziels](../../integration-services/import-export-data/media/choose-the-sql-server-destination.jpg)
 
-Weitere Informationen zum Verbinden mit SQL Server finden Sie unter [Herstellen einer Verbindung mit einer SQL Server-Datenquelle](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md). Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [wählen Sie ein Ziel](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
+Weitere Informationen zum Herstellen einer Verbindung mit SQL Server finden Sie unter [Connect to an SQL Server Data Source (Herstellen einer Verbindung mit einer SQL Server-Datenquelle)](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md). Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Choose a Destination (Auswählen eines Ziels)](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
 
-## <a name="step-5---copy-a-table-instead-of-writing-a-query"></a>Schritt 5: anstatt das Schreiben einer Abfrage eine Tabelle kopieren
-Auf der nächsten Seite **geben Tabelle kopieren oder Datenbank Abfragen**, Sie angeben, dass die gesamte Tabelle der Datenquelle kopiert werden soll. Sie möchten nicht in der SQL-Sprache zur Auswahl der Daten so kopieren Sie eine Abfrage schreiben.
+## <a name="step-5---copy-a-table-instead-of-writing-a-query"></a>Schritt 5: Kopieren einer Tabelle anstelle des Schreibens einer Abfrage
+Geben Sie auf der nächsten Seite (**Tabelle kopieren oder Datenbank abfragen**) an, dass Sie die ganze Tabelle aus der Datenquelle kopieren möchten. So können Sie es vermeiden, eine Abfrage in der SQL-Sprache schreiben zu müssen, um die Daten auszuwählen, die kopiert werden sollen.
 
-![Gibt an, dass eine Tabelle kopieren](../../integration-services/import-export-data/media/specify-to-copy-a-table.jpg)
+![Angeben zum Kopieren einer Tabelle](../../integration-services/import-export-data/media/specify-to-copy-a-table.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [geben Tabelle kopieren oder Datenbank Abfragen](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Specify Table Copy or Query (Angeben einer Tabellenkopie oder Abfrage)](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md).
 
-## <a name="step-6---pick-the-table-to-copy"></a>Schritt 6: Wählen Sie die zu kopierende Tabelle
-Auf der nächsten Seite **wählen Quelltabellen und-Sichten**, Sie wählen Sie die Tabelle oder Tabellen, die aus der Datenquelle kopiert werden sollen. Anschließend ordnen Sie jeder ausgewählten Quelltabelle in einer neuen oder vorhandenen Zieltabelle.
+## <a name="step-6---pick-the-table-to-copy"></a>Schritt 6: Auswählen der Tabelle, die kopiert werden soll
+Wählen Sie auf der nächsten Seite (**Quelltabellen und -sichten auswählen**) die Tabelle(n) aus, die Sie aus der Datenquelle kopieren möchten. Anschließend ordnen Sie jede ausgewählte Quelltabellen einer neuen oder vorhandenen Zieltabelle zu.
 
-In diesem Beispiel wird standardmäßig der Assistent wurde zugeordnet der **WizardWalkthrough$** Arbeitsblatt in der **Quelle** Spalte in eine neue Tabelle mit demselben Namen beim SQL Server-Ziel. (Die Excel-Arbeitsmappe enthält nur ein einzelnes Arbeitsblatt).
--   Das Dollarzeichen ($) auf den Namen der Quelltabelle gibt ein Excel-Arbeitsblatt an. (Einen benannten Bereich in Excel wird nur mit dem Namen dargestellt.)
--   Der Stern auf das Symbol "Tabelle Ziel" gibt an, dass der Assistent zum Erstellen einer neuen Zieltabelle abgelaufen ist.
+In diesem Beispiel ist das **WizardWalkthrough$**-Arbeitsblatt in der **Quellspalte** standardmäßig einer neuen Tabelle mit demselben Namen im SQL Server-Ziel zugeordnet. (Die Excel-Arbeitsmappe enthält nur ein einziges Arbeitsblatt.)
+-   Das Dollarzeichen ($) im Namen der Quelltabelle deutet auf ein Excel-Arbeitsblatt hin. (In Excel wird ein benannter Bereich nur mit seinem Namen dargestellt.)
+-   Der Stern auf dem Symbol der Zieltabelle deutet darauf hin, dass der Assistent eine neue Zieltabelle erstellen wird.
 
-![Wählen Sie die Tabelle (vor dem Umbenennen)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)
+![Wählen Sie die Tabelle aus (bevor Sie sie umbenennen)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)
 
-Sie möchten möglicherweise so entfernen Sie das Dollarzeichen ($) nicht mit dem Namen der neuen Zieltabelle.
+Wahrscheinlich möchten Sie das Dollarzeichen ($) aus dem Namen der neuen Zieltabelle löschen.
 
-![Wählen Sie die Tabelle (nach dem Umbenennen)](../../integration-services/import-export-data/media/select-the-table-after-renaming.jpg)
+![Wählen Sie die Tabelle aus (nachdem Sie sie umbenennen)](../../integration-services/import-export-data/media/select-the-table-after-renaming.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [wählen Quelltabellen und-Sichten](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Select Source Tables and Views (Auswählen von Quelltabellen und -sichten)](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).
 
-## <a name="optional-step-7---review-the-column-mappings"></a>Optionaler Schritt 7: Überprüfen Sie die spaltenzuordnungen
-Bevor Sie lassen die **Quelltabellen und Sichten auswählen** Seite klicken Sie optional auf die **Zuordnungen bearbeiten** zu öffnen die **Spaltenzuordnungen** (Dialogfeld). Hier in der **Zuordnungen** Tabelle sehen Sie, wie der Assistent Spalten im Quellarbeitsblatt den Spalten in die neue Zieltabelle zuordnen soll.
+## <a name="optional-step-7---review-the-column-mappings"></a>Schritt 7 (optional): Überprüfen der Spaltenzuordnungen
+Bevor Sie die Seite **Quelltabellen und -sichten auswählen** verlassen, können Sie auf die Schaltfläche **Zuordnungen bearbeiten** klicken, um das Dialogfeld **Spaltenzuordnungen** zu öffnen. In der Tabelle **Zuordnungen** können Sie dabei sehen, wie der Assistent Spalten im ursprünglichen Arbeitsblatt Spalten in der neuen Zieltabelle zuordnet.
 
-![Anzeigen von spaltenzuordnungen](../../integration-services/import-export-data/media/view-column-mappings.jpg)
+![Ansicht der Spaltenzuordnungen](../../integration-services/import-export-data/media/view-column-mappings.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Spaltenzuordnungen](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Column Mappings (Spaltenzuordnungen)](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
 
-## <a name="optional-step-8---review-the-create-table-statement"></a>Optionaler Schritt 8: Überprüfen Sie die CREATE TABLE-Anweisung
-Während der **Spaltenzuordnungen** Dialogfeld geöffnet ist, klicken Sie optional auf die **SQL bearbeiten** zu öffnen die **SQL-Anweisung für Create Table** (Dialogfeld). Hier sehen Sie die **CREATE TABLE** Anweisung, die vom Assistenten zum Erstellen der neuen Zieltabelle generiert. In der Regel müssen Sie die Anweisung zu ändern.
+## <a name="optional-step-8---review-the-create-table-statement"></a>Schritt 8 (optional): Überprüfen der CREATE TABLE-Anweisung
+Wenn das Dialogfeld **Spaltenzuordnungen** geöffnet ist, können Sie auf die Schaltfläche **SQL bearbeiten** klicken, um das Dialogfeld **SQL-Anweisung CREATE TABLE** zu öffnen. Dann wird die Anweisung **CREATE TABLE** angezeigt, die der Assistent generiert hat, um die neue Zieltabelle zu erstellen. In der Regel müssen Sie die Anweisung nicht ändern.
 
-![View, CREATE TABLE-Anweisung](../../integration-services/import-export-data/media/view-create-table-statement.jpg)
+![Ansicht der CREATE TABLE-Anweisung](../../integration-services/import-export-data/media/view-create-table-statement.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [SQL-Anweisung für Create Table](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Create Table SQL Statement (Erstellen einer SQL-Tabellenanweisung)](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
 
-## <a name="optional-step-9---preview-the-data-to-copy"></a>Optionaler Schritt 9 – Vorschau anzeigen, die zu kopierenden Daten
-Nachdem Sie auf **OK** zu schließen die **Table SQL-Anweisung erstellen** Dialogfeld Feld, und klicken Sie auf **OK** zu schließen die **Spaltenzuordnungen** (Dialogfeld), Sie sind, wieder auf die **wählen Quelltabellen und-Sichten** Seite. Klicken Sie optional auf die **Vorschau** Schaltfläche, um eine Stichprobe der Daten anzuzeigen, die wird der Assistent zum kopieren soll. In diesem Beispiel sucht sie OK.
+## <a name="optional-step-9---preview-the-data-to-copy"></a>Schritt 9 (optional): Überprüfen der Daten, die kopiert werden sollen
+Nachdem Sie auf **OK** geklickt haben, um das Dialogfeld **SQL-Anweisung CREATE TABLE** zu schließen, klicken Sie erneut auf **OK**, um das Dialogfeld **Spaltenzuordnungen** zu schließen. So gelangen Sie zurück auf die Seite **Quelltabellen und -sichten auswählen**. Sie können auf die Schaltfläche **Vorschau** klicken, damit ein Beispiel der Daten angezeigt wird, die vom Assistenten kopiert werden. In diesem Beispiel scheinen die Daten in Ordnung zu sein.
 
-![Die zu kopierenden Vorschaudaten.](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
+![Vorschau der Daten, die kopiert werden sollen](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Vorschaudaten](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Preview Data (Vorschau der Daten)](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).
 
-## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>Schritt von 10 – Ja, den Import / Export-Vorgang ausgeführt werden soll
-Auf der nächsten Seite **speichern und Paket ausführen**, lassen Sie **sofort ausführen** aktiviert, um die Daten zu kopieren, sobald Sie klicken Sie auf **Fertig stellen** auf der nächsten Seite. Sie können die nächste Seite überspringen, indem Sie auf **Fertig stellen** auf die **speichern und Paket ausführen** Seite.
+## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>Schritt 10: Ausführen des Import/Export-Vorgangs
+Die Aktivierung von **Sofort ausführen** auf der nächsten Seite (**Paket speichern und ausführen**) sollte bestehen bleiben, damit die Daten kopiert werden, sobald Sie auf der nächsten Seite auf **Fertig stellen** klicken. Stattdessen können Sie diesen Schritt auch überspringen, indem Sie auf der Seite **Paket speichern und ausführen** auf **Fertig stellen** klicken.
 
-![Führen Sie das Paket](../../integration-services/import-export-data/media/run-the-package.jpg)
+![Ausführen des Pakets](../../integration-services/import-export-data/media/run-the-package.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [speichern und Paket ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Save and Run Package (Paket speichern und ausführen)](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
 
-## <a name="step-11---finish-the-wizard-and-run-the-import-export-operation"></a>Schritt 11: Beenden Sie den Assistenten, und führen Sie den Import / Export-Vorgang
-Wenn Sie geklickt haben **Weiter** anstelle von **Fertig stellen** auf die **speichern und Paket ausführen** Seite klicken Sie dann auf die nächste Seite **Abschließen des Assistenten**, daraufhin einen Überblick darüber, was der Assistent führen soll. Klicken Sie auf **Fertig stellen** beim Ausführen des Import / Export-Vorgangs.
+## <a name="step-11---finish-the-wizard-and-run-the-import-export-operation"></a>Schritt 11: Beenden des Assistenten und Ausführen des Import/Export-Vorgangs
+Wenn Sie anstatt auf **Fertig stellen** auf der Seite **Paket speichern und ausführen** auf **Weiter** geklickt haben, wird auf der nächsten Seite (**Assistenten abschließen**) eine Zusammenfassung der Aufgaben des Assistenten angezeigt. Klicken Sie auf **Fertig stellen**, um den Import/Export-Vorgang auszuführen.
 
 ![Assistenten abschließen](../../integration-services/import-export-data/media/complete-the-wizard.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Abschließen des Assistenten](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Complete the Wizard (Abschließen des Assistenten)](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).
 
-## <a name="step-12---review-what-the-wizard-did"></a>Schritt 12: Überprüfen Sie, welche Schritte des Assistenten ausgeführt wurden
-Klicken Sie auf der letzten Seite sehen Sie sich beim Abschließen jeder Aufgabe durch des Assistenten, und überprüfen Sie die Ergebnisse. Die hervorgehobene Zeile zeigt an, dass der Assistent die Daten erfolgreich kopiert. Sie sind fertig!
+## <a name="step-12---review-what-the-wizard-did"></a>Schritt 12: Überprüfen der Ergebnisse
+Sehen Sie auf der letzten Seite dabei zu, wie der Assistent seine Aufgaben fertig stellt, und prüfen Sie dann die Ergebnisse. In der hervorgehobenen Zeile wird darauf hingedeutet, dass der Assistent Ihre Daten erfolgreich kopiert hat. Sie sind jetzt fertig!
 
-![Der Assistent wurde erfolgreich abgeschlossen](../../integration-services/import-export-data/media/the-wizard-succeeded.jpg)
+![Der Assistent war erfolgreich](../../integration-services/import-export-data/media/the-wizard-succeeded.jpg)
 
-Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [ausführen](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Performing Operation (Ausführen eines Vorgangs)](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md).
 
-## <a name="heres-the-new-table-of-data-copied-to-sql-server"></a>Hier wird die neue Tabelle mit Daten, die in SQL Server kopiert
-Hier sehen (in SQL Server Management Studio) die neue Zieltabelle, die der Assistent in SQL Server erstellt.
+## <a name="heres-the-new-table-of-data-copied-to-sql-server"></a>Die neue Tabelle von Daten, die in SQL Server kopiert wurden
+An dieser Stelle wird (in SQL Server Management Studio) die neue Zieltabelle angezeigt, die der Assistent in SQL Server erstellt hat.
 
-![Daten, die in SQL Server kopiert](../../integration-services/import-export-data/media/data-copied-to-sql-server.jpg)
+![In SQL Server kopierte Daten](../../integration-services/import-export-data/media/data-copied-to-sql-server.jpg)
 
-Hier sehen (erneut in SSMS) die Daten, die der Assistent in SQL Server kopiert.
+An dieser Stelle (wieder in SQL Server Management Studio) werden die Daten angezeigt, die der Assistent in SQL Server kopiert hat.
 
-![Daten, die in SQL Server 2 kopiert](../../integration-services/import-export-data/media/data-copied-to-sql-server-2.jpg)
+![In SQL Server kopierte Daten 2](../../integration-services/import-export-data/media/data-copied-to-sql-server-2.jpg)
 
 ## <a name="learn-more"></a>Weitere Informationen  
-Weitere Informationen zur Funktionsweise des Assistenten.
--   **Erfahren Sie mehr über den Assistenten.** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu den Funktionen des Assistenten.
+-   **Weitere Informationen zum Assistenten:** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
--   **Weitere Informationen Sie zu den Schritten im Assistenten.** Wenn Sie Informationen zu den Schritten im Assistenten suchen, wählen Sie die gewünschte Seite aus der Liste hier - [Schritte in der SQL Server-Import / Export-Assistenten](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Es gibt auch eine separate Seite der Dokumentation für jede Seite des Assistenten.
+-   **Weitere Informationen zu den Schritten des Assistenten:** Wählen Sie für weitere Informationen zu den einzelnen Schritten des Assistenten die Seite aus der Liste aus, die Sie besonders interessiert: [Steps in the SQL Server Import and Export Wizard (Schritte des SQL Server Import/Export-Assistenten)](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Es ist außerdem eine eigene Dokumentationsseite für jede Seite des Assistenten verfügbar.
 
--   **Informationen Sie zur Verbindung mit Datenquellen und Ziele.** Wenn Sie Informationen zum Herstellen einer Verbindung mit Ihren Daten suchen, wählen Sie die gewünschte Seite aus der Liste hier - [Herstellen einer Verbindung mit Datenquellen mit der SQL Server-Import / Export-Assistenten](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Es gibt eine separate Seite der Dokumentation für jede der verschiedenen häufig verwendeten Datenquellen.
-
+-   **Weitere Informationen zum Herstellen einer Verbindung zwischen Datenquellen und -zielen:** Wählen Sie für weitere Informationen zum Herstellen einer Verbindung mit Ihren Daten die Seite aus der Liste aus, die Sie besonders interessiert: [Connect to data sources with the SQL Server Import and Export Wizard (Herstellen einer Verbindung mit Datenquellen mit dem SQL Server Import/Export-Assistenten)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Es sind separate Dokumentationsseiten für verschiedene, häufig verwendete Datenquellen verfügbar.
 
 

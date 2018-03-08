@@ -1,10 +1,13 @@
 ---
-title: ADO NET-Ziels | Microsoft Docs
+title: ADO NET-Ziel | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: de-de
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 29e1fd8ede6cc943b1ee41a3b0030b2942169abc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-destination"></a>ADO NET-Ziel
   Das ADO NET-Ziel lädt Daten in eine Reihe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-kompatible Datenbanken, die eine Datenbanktabelle oder -sicht verwenden. Sie haben die Möglichkeit, diese Daten in eine vorhandene Tabelle oder Sicht zu laden, oder Sie können eine neue Tabelle erstellen und die Daten in die neue Tabelle laden.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/08/2017
  Ein ADO NET-Ziel enthält Zuordnungen zwischen Eingabespalten und Spalten in der Zieldatenquelle. Sie müssen nicht allen Zielspalten eine Eingabespalten zuordnen. Die Eigenschaften einiger Zielspalten können jedoch die Zuordnung von Eingabespalten erfordern. Andernfalls könnten Fehler auftreten. Wenn z. B. eine Zielspalte keine NULL-Werte zulässt, muss dieser Zielspalte eine Eingabespalte zugeordnet werden. Darüber hinaus müssen die Datentypen zugeordneter Spalten kompatibel sein. Beispielsweise können Sie eine Eingabespalte mit einem string-Datentyp nicht einer Zielspalte mit einem numerischen Datentyp zuordnen, wenn der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Anbieter diese Zuordnung nicht unterstützt.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt das Einfügen von Text in Spalten nicht mit dem Datentyp auf image festgelegt ist. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht das Einfügen von Text in Spalten mit dem Datentyp „image“. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 > [!NOTE]  
 >  Die Zuordnung einer Eingabespalte, deren Typ auf DT_DBTIME festgelegt ist, zu einer Datenbankspalte, deren Typ auf datetime festgelegt ist, wird vom ADO NET-Ziel nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/08/2017
   
 ### <a name="static-options"></a>Statische Optionen  
  **Connection manager**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **ADO.NET-Verbindungs-Manager konfigurieren** einen neuen Verbindungs-Manager.  
@@ -101,12 +103,12 @@ ms.lasthandoff: 11/08/2017
  Wenn Sie **Masseneinfügung verwenden, falls verfügbar**auswählen und für **Zeile umleiten** die Option **Fehler**festlegen, enthält der Datenbatch, der vom Ziel an die Fehlerausgabe umgeleitet wird, möglicherweise intakte Zeilen. Weitere Informationen zur Behandlung von Fehlern in Massenvorgängen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md). Weitere Informationen zur Option **Zeile umleiten** finden Sie unter [Ziel-Editor für ADO.NET &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Wenn eine SQL Server oder Sybase-Quelltabelle eine Identitätsspalte enthält, müssen Sie "SQL ausführen"-Tasks verwenden, um IDENTITY_INSERT vor der ADO NET-Ziel zu aktivieren und deaktivieren Sie es danach erneut. (Die identitätsspalteneigenschaft gibt einen inkrementellen Wert für die Spalte an. Die SET IDENTITY_INSERT-Anweisung kann die expliziten Werte aus der Quelltabelle in die Identitätsspalte in der Zieltabelle eingefügt werden.)  
+>  Wenn eine SQL Server- oder Sybase-Quelltabelle eine Identitätsspalte enthält, müssen Sie SQL ausführen-Tasks zum Aktivieren von IDENTITY_INSERT vor dem ADO NET-Ziel und zum Deaktivieren danach verwenden. (Die Identitätsspalteneigenschaft gibt einen inkrementellen Wert für die Spalte an. Die SET IDENTITY_INSERT-Anweisung ermöglicht das Einfügen expliziter Werte aus der Quelltabelle in die Identitätsspalte der Zieltabelle.)  
 >   
->   Um die SET IDENTITY_INSERT-Anweisungen und erfolgreich Laden der Daten auszuführen, müssen Sie folgende Schritte auszuführen. 
->       1. Verwenden Sie den gleichen ADO.NET-Verbindungs-Manager aus, für die SQL ausführen-Tasks und die ADO.NET-Ziel. 
->       2. Legen Sie auf den Verbindungs-Manager die **RetainSameConnection** Eigenschaft und die **MultipleActiveResultSets** Eigenschaft auf "true". 
->       3. Legen Sie die ADO.NET-Ziel die **UseBulkInsertWhenPossible** Eigenschaft auf "false". 
+>   Um die SET IDENTITY_INSERT-Anweisungen und das Laden der Daten erfolgreich auszuführen, müssen Sie mit den folgenden Schritten vorgehen.  
+>       1. Verwenden Sie den gleichen ADO.NET-Verbindungs-Manager für die „SQL ausführen“-Tasks und das ADO.NET-Ziel.  
+>       2. Legen Sie auf dem Verbindungs-Manager die Eigenschaft **RetainSameConnection** und die Eigenschaft **MultipleActiveResultSets** auf „true“ fest.  
+>       3. Legen Sie auf dem ADO.NET-Ziel die Eigenschaft **UseBulkInsertWhenPossible** auf „false“ fest.   
 >
 >  Weitere Informationen finden Sie unter [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) und [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 11/08/2017
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Zuordnungen**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -132,7 +134,7 @@ ms.lasthandoff: 11/08/2017
  Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
   
  **Eingabespalte**  
- Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie auswählen  **\<ignorieren >** um Spalten aus der Ausgabe auszuschließen.  
+ Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie **\<ignore>** auswählen, um Spalten aus der Ausgabe auszuschließen.  
   
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, ganz gleich, ob sie zugeordnet sind oder nicht.  
@@ -148,7 +150,7 @@ ms.lasthandoff: 11/08/2017
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -163,7 +165,7 @@ ms.lasthandoff: 11/08/2017
  **Abschneiden**  
  Wird nicht verwendet.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Vorgangs an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -173,4 +175,3 @@ ms.lasthandoff: 11/08/2017
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
   
-

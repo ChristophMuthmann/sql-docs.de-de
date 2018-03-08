@@ -1,11 +1,13 @@
 ---
 title: 'Lektion 7: Wiederherstellen des Standes einer Datenbank zu einem bestimmten Zeitpunkt | Microsoft-Dokumentation'
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -13,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a25788a3b7eda518aeff01329eb5e207d9092bd6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f2341db7864a6122ae9bb182afe664f10fd73359
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Lektion 7: Wiederherstellen des Standes einer Datenbank zu einem bestimmten Zeitpunkt
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In dieser Lektion stellen Sie eine AdventureWorks2014-Datenbank zu einem Zeitpunkt zwischen zwei Transaktionsprotokollsicherungen wieder her.  
   
 Um bei herkömmlichen Sicherungen einen bestimmten Zeitpunkt wiederherzustellen zu können, müssen Sie über eine vollständige Sicherung der Datenbank, z.B. eine differenzielle Sicherung, sowie über alle Transaktionsprotokolldateien bis zu diesem und direkt nach diesem Zeitpunkt verfügen, den Sie wiederherstellen möchten. Mit Dateimomentaufnahme-Sicherungen benötigen Sie nur die zwei angrenzenden Protokollsicherungsdateien als Zeitrahmen, den Sie wiederherstellen möchten. Sie benötigen nur zwei Momentaufnahmesicherungssätze, weil jede Momentaufnahmesicherung einer Protokolldatei eine Dateimomentaufnahme jeder Datenbankdatei (jede Datendatei und die Protokolldatei) erstellt.  
@@ -75,4 +77,3 @@ Zum Wiederherstellen einer Datenbank bis zu einem bestimmten Zeitpunkt per Datei
   
   
   
-

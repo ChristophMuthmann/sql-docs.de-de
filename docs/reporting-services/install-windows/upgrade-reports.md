@@ -1,13 +1,14 @@
 ---
-title: Aktualisieren von Berichten | Microsoft Docs
+title: Aktualisieren von Berichten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +21,18 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 70
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "70"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 2b4cf65845edd7a67d52bc3c593a341823f5e0c8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
-# <a name="upgrade-reports"></a>Aktualisieren von Berichten
+# <a name="upgrade-reports"></a>Upgrade Reports
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -45,9 +44,9 @@ ms.lasthandoff: 09/27/2017
   
  Berichte werden nicht aktualisiert, wenn Sie eine Berichtsdefinitionsdatei direkt auf den Berichtsserver oder auf eine SharePoint-Website hochladen. Das Upgrade einer Berichtsdefinition in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist die einzige Möglichkeit, die RDL-Datei zu aktualisieren.  
   
- Nachdem ein Bericht lokal oder auf dem Berichtsserver aktualisiert wurde, werden möglicherweise weitere Fehler, Warnungen und Meldungen angezeigt. Das ist das Ergebnis der Änderungen am internen Berichtsobjektmodell und an Verarbeitungskomponenten, die das Anzeigen von Meldungen bewirken, sobald zugrunde liegende Probleme im Bericht erkannt werden. Weitere Informationen finden Sie unter [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "Abwärtskompatibilität | Reporting Services").  
+ Nachdem ein Bericht lokal oder auf dem Berichtsserver aktualisiert wurde, werden möglicherweise weitere Fehler, Warnungen und Meldungen angezeigt. Das ist das Ergebnis der Änderungen am internen Berichtsobjektmodell und an Verarbeitungskomponenten, die das Anzeigen von Meldungen bewirken, sobald zugrunde liegende Probleme im Bericht erkannt werden. Weitere Informationen finden Sie unter [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md).  
   
- Weitere Informationen zu neuen Funktionen für [! UMFASSEN[SsRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Weitere Informationen zu neuen Funktionen für [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Vom Upgrade unterstützte Versionen  
  Berichte, die in einer vorherigen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt wurden, können aktualisiert werden. Dazu gehören die folgenden Versionen:  
@@ -67,7 +66,7 @@ ms.lasthandoff: 09/27/2017
   
  Die von Ihnen festgelegten Bereitstellungseigenschaften können das Schema beeinflussen, in dem die Berichtsdefinitionsdatei gespeichert wird. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
   
- Sie können eine RDL-Datei, die in einer früheren Version erstellten hochladen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] an der neuen Version und es wird bei der ersten Verwendung automatisch aktualisiert. Der Berichtsserver speichert die Berichtsdefinitionsdatei im ursprünglichen Format. Der Bericht wird automatisch aktualisiert, wenn er zum ersten Mal angezeigt wird. Die gespeicherte Berichtsdefinitionsdatei wird jedoch nicht verändert.  
+ Sie können eine mit einer früheren Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellte RDL-Datei auf die neue Version hochladen. Die Datei wird automatisch aktualisiert, wenn sie zum ersten Mal verwendet wird. Der Berichtsserver speichert die Berichtsdefinitionsdatei im ursprünglichen Format. Der Bericht wird automatisch aktualisiert, wenn er zum ersten Mal angezeigt wird. Die gespeicherte Berichtsdefinitionsdatei wird jedoch nicht verändert.  
   
  Informationen zum Ermitteln des aktuellen RDL-Schemas für einen Bericht, einen Berichtsserver oder den Berichts-Designer finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
@@ -109,7 +108,7 @@ ms.lasthandoff: 09/27/2017
   
      Weitere Informationen hierzu finden Sie unter [Öffnen eines Berichts mit CRIs im Berichts-Designer](#OpeningaReport) weiter hinten in diesem Thema  
   
- Weitere Informationen zum Identifizieren des aktuellen RDL-Namespaces für einen Berichtsserver [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], oder zu einem Bericht finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion &#40; SSRS &#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Weitere Informationen zum Identifizieren des aktuellen RDL-Namespace für einen Berichtsserver, für [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder für einem Bericht finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Aktualisieren eines Berichts auf einem Berichtsserver  
  Wenn ein [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstmals auf einem Berichtsserver ausgeführt wird, der auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver aktualisiert wurde, wird der Bericht automatisch auf den aktuellen, vom Berichtsserver unterstützten Berichtsdefinitionsnamespace aktualisiert. Der Bericht kann vor dem Upgrade auf dem Berichtsserver vorhanden gewesen sein, oder der Bericht kann mit dem Berichts-Manager hochgeladen oder vom Berichts-Designer in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf dem Berichtsserver veröffentlicht worden sein.  
@@ -121,7 +120,7 @@ ms.lasthandoff: 09/27/2017
 |CRIs von Drittanbietern|Es wird kein Upgrade durchgeführt.<br /><br /> Verarbeitung erfolgt durch den [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessor.|  
   
 ###  <a name="OpeningaReport"></a> Öffnen eines Berichts mit CRIs im Berichts-Designer  
- Beim Öffnen einer [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht mit CRIs im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], der Bericht auf dem neuen berichtsdefinitionsschema aktualisiert. Abhängig von den im Bericht enthaltenen CRIs wird eine der folgenden Aktionen ausgeführt:  
+ Wenn Sie einen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht mit CRIs im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] öffnen, wird der Bericht auf das neue Berichtsdefinitionsschema aktualisiert. Abhängig von den im Bericht enthaltenen CRIs wird eine der folgenden Aktionen ausgeführt:  
   
 -   Es wurden CRIs von Drittanbietern erkannt. Wenn die auf dem Computer zur Berichtserstellung installierte CRI-Version nicht mit dem neuen RDL-Schema kompatibel ist, wird in der Entwurfsoberfläche ein Textfeld mit einem roten X angezeigt. Sie müssen sich an Ihren Systemadministrator wenden, um neue Versionen der CRIs von Drittanbietern zu installieren, die mit dem neuen RDL-Schema kompatibel sind.  
   
@@ -139,9 +138,9 @@ ms.lasthandoff: 09/27/2017
   
 -   **Nein** Wählen Sie **Nein** aus, wenn die CRIs im Bericht nicht konvertiert werden sollen. Diese CRIs können vom Berichtsprozessor nicht in ihrer aktuellen Version angezeigt werden. Wenn der Systemadministrator die Installation einer neuen CRI-Version von einem Softwaredrittanbieter plant, die mit dem neuen Berichtsdefinitionsformat kompatibel ist, sollten Sie **Nein**auswählen. Bis neue Versionen zur Verfügung stehen, werden die CRIs im Bericht als leere Textfelder mit einem roten X dargestellt.  
   
- In beiden Fällen wird der Bericht auf das neue Berichtsdefinitionsformat aktualisiert, und eine Sicherungskopie des ursprünglichen Berichts wird als gespeichert  *\<Berichtsname >* `-` Backup.rdl. Wenn Sie den Bericht im Berichterstellungstool speichern, wird der aktualisierte Bericht im neuen Berichtsdefinitionsformat gespeichert. Beim Veröffentlichen des Berichts wird dieser zuerst auf Ihrem Computer gespeichert und dann auf dem Berichtsserver veröffentlicht. Sie veröffentlichen die aktualisierte Version des Berichts auf dem Berichtsserver.  
+ In beiden Fällen wird der Bericht auf das neue Berichtsdefinitionsformat aktualisiert, und eine Sicherungskopie des ursprünglichen Berichts wird als „*\<Berichtsname>* `-` Backup.rdl“ gespeichert. Wenn Sie den Bericht im Berichterstellungstool speichern, wird der aktualisierte Bericht im neuen Berichtsdefinitionsformat gespeichert. Beim Veröffentlichen des Berichts wird dieser zuerst auf Ihrem Computer gespeichert und dann auf dem Berichtsserver veröffentlicht. Sie veröffentlichen die aktualisierte Version des Berichts auf dem Berichtsserver.  
   
- Wenn Sie den Bericht nicht speichern, bleibt der ursprüngliche Bericht unverändert. Sie können nicht jedoch bearbeiten dieses Berichts in der SQL Server 2016-Version von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder einer berichterstellungsumgebung, die ein neueres berichterstellungsformat verwendet. Sie können weiterhin die ursprüngliche Version des Berichts durch Hochladen zu einem [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Berichtsserver über das Webportal. Weitere Informationen finden Sie unter [Webportal](../../reporting-services/web-portal-ssrs-native-mode.md).  
+ Wenn Sie den Bericht nicht speichern, bleibt der ursprüngliche Bericht unverändert. Sie können diesen Bericht jedoch nicht in der SQL Server 2016-Version von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder in einer Berichterstellungsumgebung bearbeiten, für die ein neueres Berichterstellungsformat verwendet wird. Die ursprüngliche Version des Berichts kann weiterhin ausgeführt werden, indem Sie diese mithilfe des Webportals auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]-Berichtsserver hochladen. Weitere Informationen finden Sie unter [Webportal](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
  Bei Berichten, die Sie hochladen, statt sie auf einem Berichtsserver zu veröffentlichen, bestimmt der Berichtsprozessor, ob der Bericht bei der ersten Verwendung aktualisiert werden kann. Berichte, die nicht aktualisiert werden können, werden im Abwärtskompatibilitätsmodus verarbeitet und weiterhin wie in der früheren Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]angezeigt.  
 
@@ -155,4 +154,3 @@ ms.lasthandoff: 09/27/2017
 [Upgrade a Report Server Database (Aktualisieren der Berichtsserver-Datenbank)](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

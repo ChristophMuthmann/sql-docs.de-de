@@ -1,10 +1,13 @@
 ---
-title: "Lädt Daten mithilfe des OLE DB-Ziels | Microsoft Docs"
+title: Laden von Daten mithilfe des OLE DB-Ziels | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 692bc6f90cee09f2bff680fe3e19ed3c433f8707
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Laden von Daten mithilfe des OLE DB-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie ein OLE DB-Ziel hinzufügen und konfigurieren können.  
@@ -66,11 +68,10 @@ ms.lasthandoff: 08/03/2017
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [OLE DB-Zieles](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)   
+ [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

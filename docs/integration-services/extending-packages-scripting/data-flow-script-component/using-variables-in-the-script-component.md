@@ -1,12 +1,14 @@
 ---
-title: Verwenden von Variablen in der Skriptkomponente | Microsoft Docs
+title: Verwenden von Variablen in der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -14,37 +16,35 @@ applies_to:
 helpviewer_keywords:
 - Script component [Integration Services], using variables
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bac1e6d96e872be0355282c3e12fc81054ca41cd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4a43a6903e78630211e1cc6bd7959fbca520b11a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-variables-in-the-script-component"></a>Verwenden von Variablen in der Skriptkomponente
   Variablen speichern Werte, die von einem Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Weitere Informationen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  
   
- Sie können vorhandene Variablen verfügbar machen für schreibgeschützten oder Lese-/Schreibzugriff mittels eines benutzerdefinierten Skripts durch Eingabe von durch Trennzeichen getrennte Listen von Variablen in der **ReadOnlyVariables** und **ReadWriteVariables** Felder auf der **Skript** auf der Seite der **Skript Transformations-Editor**. Beachten Sie, dass bei Variablennamen nach Groß-/Kleinschreibung unterschieden wird. Verwenden der **Wert** Eigenschaft Lese-und Schreibzugriff auf einzelne Variablen. Die Skriptkomponente führt erforderliche Sperrungen im Hintergrund aus, da das Skript die Variablen zur Laufzeit verarbeitet.  
+ Sie können vorhandene Variablen für schreibgeschützten oder Lese-/Schreibzugriff mittels eines benutzerdefinierten Skripts zur Verfügung stellen, indem Sie kommagetrennte Listen von Variablen in die Felder **ReadOnlyVariables** und **ReadWriteVariables** auf der Seite **Skript** des **Transformations-Editors für Skripterstellung** eingeben. Beachten Sie, dass bei Variablennamen nach Groß-/Kleinschreibung unterschieden wird. Mithilfe der **Value**-Eigenschaft erhalten Sie Lese- und Schreibzugriff auf einzelne Variablen. Die Skriptkomponente führt erforderliche Sperrungen im Hintergrund aus, da das Skript die Variablen zur Laufzeit verarbeitet.  
   
 > [!IMPORTANT]  
->  Die Auflistung der **ReadWriteVariables** steht nur in der **"PostExecute"** Methode, um die Leistung zu maximieren und das Risiko von Sperrkonflikten minimieren. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Inkrementieren Sie stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paketvariablen auf den Wert der lokalen Variablen in der **"PostExecute"** Methode auf, nachdem alle Daten wurden verarbeitet. Sie können auch die Eigenschaft <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> verwenden, um diese Einschränkung zu umgehen, wie später in diesem Thema beschrieben ist. Wenn Sie jedoch direkt in eine Paketvariable schreiben, während jede Zeile verarbeitet wird, wird die Leistung beeinträchtigt und das Risiko von Sperrkonflikten erhöht.  
+>  Die Auflistung von **ReadWriteVariables** ist nur in der **PostExecute**-Methode verfügbar, um das Risiko von Sperrkonflikten zu vermindern und die Leistung zu maximieren. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Inkrementieren Sie stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paketvariablen auf den Wert der lokalen Variablen in der **PostExecute**-Methode fest, nachdem alle Daten verarbeitet wurden. Sie können auch die Eigenschaft <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> verwenden, um diese Einschränkung zu umgehen, wie später in diesem Thema beschrieben ist. Wenn Sie jedoch direkt in eine Paketvariable schreiben, während jede Zeile verarbeitet wird, wird die Leistung beeinträchtigt und das Risiko von Sperrkonflikten erhöht.  
   
- Weitere Informationen zu den **Skript** auf der Seite der **Skript Transformations-Editor**, finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) und [Skript Transformations-Editor &#40; Seite "Skript" &#41; ](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor) und [Script Transformation Editor &#40;Script Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md) (Transformations-Editor für Skripterstellung [Seite „Skript“]).  
   
- Die Skriptkomponente erstellt eine **Variablen** Auflistungsklasse in der **ComponentWrapper** Projektelement mit stark typisierten Accessoreigenschaft für den Wert jeder vorkonfigurierten Variable, in dem die Eigenschaft den gleichen Namen wie die Variable selbst hat. Diese Auflistung abgelesen der **Variablen** Eigenschaft von der **ScriptMain** Klasse. Die Accessoreigenschaft bietet entsprechend Lese- oder Lese-/Schreibberechtigung für den Wert der Variable. Angenommen, wenn Sie eine ganzzahlige Variable mit dem Namen hinzugefügt haben `MyIntegerVariable` auf die **ReadOnlyVariables** Liste können Sie dessen Wert abrufen in Ihrem Skript mithilfe des folgenden Codes:  
+ Die Skriptkomponente erstellt eine **Variables**-Auflistungsklasse im **ComponentWrapper**-Projektelement mit einer Accessoreigenschaft mit starker Typbindung für den Wert jeder vorkonfigurierten Variable, wobei die Eigenschaft denselben Namen wie die Variable selbst hat. Diese Auflistung wird von der **Variables**-Eigenschaft der **ScriptMain**-Klasse verfügbar gemacht. Die Accessoreigenschaft bietet entsprechend Lese- oder Lese-/Schreibberechtigung für den Wert der Variable. Wenn Sie beispielsweise eine Ganzzahlvariable namens `MyIntegerVariable` der Liste **ReadOnlyVariables** hinzugefügt haben, können Sie ihren Wert mit dem folgenden Code in das Skript abrufen:  
   
  `Dim myIntegerVariableValue As Integer = Me.Variables.MyIntegerVariable`  
   
  Für die Arbeit mit Variablen in der Skriptkomponente können Sie auch die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A>-Eigenschaft (Aufruf mit `Me.VariableDispenser`) verwenden. In diesem Fall verwenden Sie nicht die benannten, typisierten Accessoreigenschaften für Variablen, sondern greifen direkt auf die Variablen zu. Bei der Verwendung von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> müssen Sie die Sperrsemantik und die Umwandlung von Datentypen für variable Werte in Ihrem Code berücksichtigen. Wenn Sie mit Variablen arbeiten möchten, die zur Entwurfszeit nicht zur Verfügung stehen, sondern programmgesteuert zur Laufzeit erstellt werden, müssen Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A>-Eigenschaft statt der benannten, typisierten Accessoreigenschaften verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Variablen](../../../integration-services/integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services-Variablen &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

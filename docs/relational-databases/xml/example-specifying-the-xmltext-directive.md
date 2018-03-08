@@ -2,9 +2,12 @@
 title: 'Beispiel: Angeben der XMLTEXT-Direktive | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54ada9bad44e2cd8410fe3a70fd022769febc960
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Direktive
-  Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der **XMLTEXT** -Direktive in einer `SELECT` -Anweisung im EXPLICIT-Modus verarbeitet werden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der **XMLTEXT** -Direktive in einer `SELECT` -Anweisung im EXPLICIT-Modus verarbeitet werden.  
   
  Sie sehen hier die `Person` -Tabelle. In dieser Tabelle speichert die `Overflow` -Spalte den unverbrauchten Teil des XML-Dokuments.  
   
@@ -156,7 +159,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Wenn die Daten der `XMLTEXT` -Spalte Attribute für das Stammelement enthalten, werden diese Attribute nicht im XML-Datenschema angezeigt, und der MSXML-Parser führt keine Überprüfung des resultierenden XML-Dokumentfragments aus. Beispiel:  
+ Wenn die Daten der `XMLTEXT` -Spalte Attribute für das Stammelement enthalten, werden diese Attribute nicht im XML-Datenschema angezeigt, und der MSXML-Parser führt keine Überprüfung des resultierenden XML-Dokumentfragments aus. Zum Beispiel:  
   
 ```  
 SELECT 1 AS Tag,  
@@ -178,8 +181,7 @@ FOR XML EXPLICIT, xmldata;
  </overflow>
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

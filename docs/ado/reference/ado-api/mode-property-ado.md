@@ -3,7 +3,7 @@ title: Mode-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 032780415e0869c5994b4630546131b4ad51e8c4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee4463749e231b6ecd48a1fa24af1a72b3766ef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mode-property-ado"></a>Mode-Eigenschaft (ADO)
 Gibt an, die verfügbaren Berechtigungen zum Ändern von Daten in einem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -52,9 +51,8 @@ Gibt an, die verfügbaren Berechtigungen zum Ändern von Daten in einem [Verbind
   
 ||||  
 |-|-|-|  
-|[Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
+|[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [IsolationLevel und Eigenschaften-Beispiel für Modus (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel und Modus Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
-

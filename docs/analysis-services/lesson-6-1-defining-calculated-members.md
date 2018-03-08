@@ -2,29 +2,32 @@
 title: Definieren von berechneten Elementen | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52b7fc07496a7b3890b323bc63ce488194b3538b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lektion 6-1: Definieren von berechneten Elementen
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Berechnete Elemente sind Elemente einer Dimension oder Measuregruppe, die auf Basis einer Kombination aus Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen definiert werden. Sie können beispielsweise ein berechnetes Element erstellen, das die Summe zweier physischer Measures im Cube berechnet. Die Definitionen berechneter Elemente werden in Cubes gespeichert, ihre Werte werden jedoch erst zum Zeitpunkt der Abfrage berechnet.  
   
 Mithilfe des Befehls **Neues berechnetes Element** auf der Registerkarte **Berechnungen** des Cube-Designers können Sie ein berechnetes Element erstellen. Sie können ein berechnetes Element in jeder beliebigen Dimension erstellen, einschließlich der Measuredimension. Sie können ein berechnetes Element auch innerhalb eines Anzeigeordners im Dialogfeld **Berechnungseigenschaften** platzieren. Weitere Informationen finden Sie unter [Berechnungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Berechnungen in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)und [Erstellen von berechneten Elementen](../analysis-services/multidimensional-models/create-calculated-members.md).  
@@ -303,4 +306,3 @@ Im Rahmen der Tasks in diesem Thema definieren Sie berechnete Measures, damit Be
   
   
   
-

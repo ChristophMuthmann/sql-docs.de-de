@@ -2,31 +2,32 @@
 title: "Löschen von Statistiken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-statistics
+ms.suite: sql
+ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - statistics [SQL Server], deleting
 - deleting statistics
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51349f58a29f7a0702e719f83e5f60632fb8d7c5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3adb0891686a6742378debe105b447eba039020f
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-statistics"></a>Löschen von Statistiken
-  Statistiken aus Tabellen und Sichten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie löschen mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Statistiken aus Tabellen und Sichten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] löschen.  
   
  **In diesem Thema**  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So löschen Sie Statistiken aus einer Tabelle oder einer Sicht mit:**  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>So löschen Sie Statistiken aus einer Tabelle oder einer Sicht  
   
@@ -102,4 +103,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md).  
   
   
-

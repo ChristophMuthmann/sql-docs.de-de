@@ -3,24 +3,25 @@ title: PDOStatement::columnCount | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 103eb4ede1fb61b25da00aced780d4a759a042bc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8c9e73b5a1f29c7b16b7cb5e0371dfc451f7b0c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,4 +67,3 @@ print $stmt->columnCount();
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

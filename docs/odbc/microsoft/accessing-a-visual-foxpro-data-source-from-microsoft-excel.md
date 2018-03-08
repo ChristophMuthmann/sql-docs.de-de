@@ -3,10 +3,12 @@ title: Zugriff auf eine Visual FoxPro-Datenquelle aus Microsoft Excel | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], accessing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67f350bf1070e7b35b6538f4d3fb56a866b728c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Zugriff auf eine Visual FoxPro-Datenquelle aus Microsoft Excel
 Wenn Sie Microsoft Query installiert haben, können Sie eine Datenquelle in Microsoft Excel erstellen, die mit Visual FoxPro-Daten verbindet.  
@@ -53,4 +54,3 @@ Wenn Sie Microsoft Query installiert haben, können Sie eine Datenquelle in Micr
 8.  Klicken Sie auf.  
   
  Sie können nun das Öffnen der Abfrage Tabellen hinzufügen. Weitere Informationen zum Erstellen einer Abfrage finden Sie unter [Importieren von Daten in Microsoft Excel aus einer Visual FoxPro-Datenbank](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
-

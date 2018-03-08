@@ -3,32 +3,33 @@ title: "Neuer Auftragszeitplan – Eigenschaften des Auftragszeitplans | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa34dd512a588b02aa30ee1733e037e8b9580d89
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b4ddf72c55ea9dcc3561ea6903f024dc9a071569
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Neuer Auftragszeitplan – Eigenschaften des Auftragszeitplans
-Mithilfe dieser Seite können Sie die Eigenschaften des Zeitplans anzeigen und ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie die Eigenschaften des Zeitplans anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Geben Sie einen neuen Namen für den Zeitplan ein.  
   
@@ -38,7 +39,7 @@ Zeigt die Aufträge an, die diesen Zeitplan verwenden.
 **Zeitplantyp**  
 Wählen Sie den Zeitplantyp aus.  
   
-**Aktiviert**  
+**Enabled**  
 Klicken Sie zum Aktivieren oder Deaktivieren des Zeitplans auf das Kontrollkästchen.  
   
 ## <a name="recurring-schedule-types-options"></a>Zeitplantypoptionen für wiederkehrende Aufträge  
@@ -100,8 +101,7 @@ Wählen Sie das Datum aus, an dem der Auftrag ausgeführt wird.
 **Zeit**  
 Wählen Sie die Uhrzeit aus, zu der der Auftrag ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Planen eines Auftrags](../../ssms/agent/schedule-a-job.md)  
   
-

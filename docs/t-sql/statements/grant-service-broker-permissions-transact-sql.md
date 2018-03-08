@@ -3,8 +3,11 @@ title: GRANT-Service Broker-Berechtigungen (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - message types [Service Broker], permissions
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 185950b1872ca5f11663f3d5051d1a2303cce090
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Berechtigungen von Service Broker) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erteilt Berechtigungen für einen Vertrag, einen Nachrichtentyp, eine Remotebindung, eine Route oder einen Dienst für einen Service Broker.  
   
@@ -57,22 +59,22 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für ein sicherungsfähiges Service Broker-Element erteilt werden kann.  Unten aufgeführt.  
   
- Vertrag **::***Contract_name*  
+ Vertrag **:: *** Contract_name*  
  Gibt den Vertrag an, für den die Berechtigung erteilt wird. Der bereichsqualifizierer "::" ist erforderlich.  
   
- NACHRICHTENTYP **::***Message_type_name*  
+ NACHRICHTENTYP **:: *** Message_type_name*  
  Gibt den Nachrichtentyp an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- REMOTE SERVICE BINDING **::***Remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** Remote_binding_name*  
  Gibt die Remotedienstbindung an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- ROUTE **::***Route_name*  
+ ROUTE **::***route_name*  
  Gibt die Route an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- Dienst **::***Service_name*  
+ Dienst **:: *** Service_name*  
  Gibt den Dienst an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
@@ -176,7 +178,7 @@ GRANT permission  [ ,...n ] ON
   
  Wenn Sie die Option AS verwenden, gelten die folgenden zusätzlichen Anforderungen.  
   
-|AS *Granting_principal*|Zusätzliche Berechtigung erforderlich|  
+|AS *granting_principal*|Zusätzliche Berechtigung erforderlich|  
 |------------------------------|------------------------------------|  
 |Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".|  
 |Einem Windows-Anmeldenamen zugeordneter Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".|  
@@ -198,4 +200,3 @@ GRANT permission  [ ,...n ] ON
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-

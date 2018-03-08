@@ -3,8 +3,11 @@ title: Rowset-Funktionen (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - rowsets [SQL Server], functions
 - rowsets [SQL Server]
 ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
-caps.latest.revision: 24
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 16f842ec37ddb777c1f3ea801c922f52791d5e91
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 665dec7b2e143267fe5964fe3f8d987ddb087d2f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="rowset-functions-transact-sql"></a>Rowsetfunktionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Die folgenden Rowsetfunktionen geben ein Objekt zurück, das anstelle eines Tabellenverweises in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verwendet werden kann.  
   
@@ -45,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-

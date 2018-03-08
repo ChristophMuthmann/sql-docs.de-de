@@ -1,11 +1,13 @@
 ---
 title: "Ratgeber für native Kompilierung | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -14,19 +16,19 @@ f1_keywords:
 - sql13.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6a6107fe8c3b05c31320f90c77df04731e226ba8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d911e357403d2b4145407b1b666eff70b1cf4aa2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-advisor"></a>Ratgeber für native Kompilierung
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Berichte zur Transaktionsleistungsanalyse informieren Sie darüber, welche interpretierten gespeicherten Prozeduren in der Datenbank von einer Portierung zur nativen Kompilierung profitieren. Details finden Sie unter [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
  In einer bestimmten interpretierten gespeicherten Prozedur können Sie mit dem Ratgeber für native Kompilierung alle Features identifizieren, die in nativen Modulen nicht unterstützt werden. Der Ratgeber für native Kompilierung bietet Links zu Problemumgehungen oder Lösungen an.  
   
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für native Kompilierung  
  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die gespeicherte Prozedur, die Sie konvertieren möchten, und wählen Sie **Ratgeber für native Kompilierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die native Kompilierung gespeicherter Prozeduren**angezeigt. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Wie üblich gelten das **FILEGROUP** -Element und die **USE** MyDatabase-Anweisung für Microsoft SQL Server, jedoch nicht für die Azure SQL-Datenbank.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  
@@ -107,7 +109,7 @@ EXECUTE dbo.InsertOrderXTP @id= 11, @date = '1956-01-01 12:01:00', @status = 2;
 SELECT * from SalesOrders;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
  [Anforderungen für die Verwendung von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
   

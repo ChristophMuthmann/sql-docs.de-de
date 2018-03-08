@@ -3,29 +3,28 @@ title: GetObject-Methode (java.lang.String, java.util.Map) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.getObject (java.lang.String, Java.util.Map)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.getObject (java.lang.String, Java.util.Map)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8faffb28aae83859a03f29b5ed0e728d4ac7220a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed49e85c4b4fcd08df293378aca147f05ab280d0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>getObject-Methode (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -81,4 +80,3 @@ public java.lang.Object getObject(java.lang.String sCol,
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

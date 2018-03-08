@@ -1,38 +1,44 @@
 ---
-title: Modulo (Transact-SQL) | Microsoft Docs
+title: '% (Modulo) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - modulo
+- modulus
 - '% (Modulo)'
+- '% (Modulus)'
 - MOD_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - '% (modulo operator)'
+- '% (modulus operator)'
 - remainder of division operation
 - modulo operator (%)
+- modulus operator (%)
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b417bbca6135db2f4ca6279bb9aac75d9d6f328
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 927b993e2b93ef670633ae1594c86178662ebabb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="modulo-transact-sql"></a>Modulo (Transact-SQL)
+# <a name="-modulus-transact-sql"></a>% (Modulus) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den Rest der Division einer Zahl durch eine andere zurück.  
@@ -100,13 +106,12 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
   
 ## <a name="see-also"></a>Siehe auch  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [WIE &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Modulo ist gleich &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [% = &#40; Modulozuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
  [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

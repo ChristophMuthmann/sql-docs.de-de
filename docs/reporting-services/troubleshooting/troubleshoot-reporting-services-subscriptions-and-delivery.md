@@ -1,27 +1,27 @@
 ---
-title: "Problembehandlung bei Reporting Services-Abonnements und Übermittlung | Microsoft Docs"
+title: "Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "16"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c22be9c55c773bb363589b2aea278f2b43ec24f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services
   
@@ -52,7 +52,7 @@ Die Ausführungsprotokolle stellen in der SQL-Server-Datenbank ReportServer Sich
 Wenn Sie eine E-Mail-Anwendung ausführen und dafür Post Office Protocol Version 3 (POP3) unter Microsoft Windows Server 2003 verwenden, ist es eventuell nicht möglich, Berichte mithilfe des lokalen POP3-Servers zu senden. Falls Sie den Berichtsserver so konfiguriert haben, dass E-Mail-Nachrichten über den lokalen POP3-Server gesendet werden, und ein Abonnement erstellen, das einen Bericht sendet, wird möglicherweise die folgende Fehlermeldung angezeigt:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-wobei \<Fehlermeldung > wird ersetzt durch zusätzliche Fehlermeldungsinformationen, die von Collaboration Data Objects (CDO) zurückgegeben.  
+Hierbei steht \<error message> für zusätzliche Fehlermeldungsinformationen, die von Datenobjekten für die Zusammenarbeit (Collaboration Data Objects, CDO) zurückgegeben werden.  
   
 ### <a name="to-resolve-this-problem"></a>So lösen Sie dieses Problem  
 * Legen Sie den Wert des `SendUsing` -Elements in der Datei **Rsreportserver.config** auf 1 fest.  
@@ -84,5 +84,4 @@ Weitere Informationen finden Sie im TechNet-Wiki [Troubleshoot issues and errors
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

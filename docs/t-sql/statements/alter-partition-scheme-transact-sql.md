@@ -3,8 +3,11 @@ title: ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,24 +24,27 @@ helpviewer_keywords:
 - adding filegroups
 - NEXT USED filegroups
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-caps.latest.revision: 17
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 545fe3da48f0d0c98d72b32e5a82d9fd55579d00
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f339a83559e565d5046c721657becd6cf6a5940d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fügt einem Partitionsschema eine Dateigruppe hinzu oder ändert die Bezeichnung der NEXT USED-Dateigruppe für das Partitionsschema.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Fügt einem Partitionsschema eine Dateigruppe hinzu oder ändert die Bezeichnung der NEXT USED-Dateigruppe für das Partitionsschema. 
+
+>[!NOTE]
+>In Azure SQL-Datenbank werden nur primäre Dateigruppen unterstützt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikel Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Artikel Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +71,7 @@ NEXT USED [ filegroup_name ] [ ; ]
  Jede Dateigruppe, die von ALTER PARTITION SCHEME betroffen ist, muss online sein.  
   
 ## <a name="permissions"></a>Berechtigungen  
- %Tdas folgende Berechtigungen kann verwendet werden, um ALTER PARTITION SCHEME auszuführen:  
+ Die folgenden Berechtigungen können verwendet werden, um ALTER PARTITION SCHEME auszuführen:  
   
 -   ALTER ANY DATASPACE-Berechtigung. Diese Berechtigung gilt standardmäßig für Mitglieder der festen Serverrolle **sysadmin** und für Mitglieder der festen Datenbankrollen **db_owner** und **db_ddladmin** .  
   
@@ -101,4 +107,3 @@ NEXT USED test5fg;
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Schema-Abschnitt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f691a4ba9632f40ceb4eb08c33a35135d9a0e7d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>Schema-Abschnitt
 Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, schreibt ADO detaillierter Metadaten zu jeder Spalte auf die Semantik der Datenwerte für die Aktualisierung so weit wie möglich beibehalten. Um in der XML-Code zu laden, erfordert ADO jedoch nur die Namen der Spalten und das Rowset, zu dem sie gehören. Hier ist ein Beispiel für ein minimales Schema:  
@@ -184,4 +183,3 @@ Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, s
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

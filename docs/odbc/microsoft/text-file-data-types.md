@@ -3,10 +3,12 @@ title: Datei-Textdatentypen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad5f3d62138693caae19e51a80b1dd5a49d4072a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-file-data-types"></a>Text-Datei-Datentypen
 In der folgenden Tabelle wird gezeigt, wie Text-Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen von der Text der ODBC-Treiber unterstützt werden.  
@@ -53,4 +54,3 @@ In der folgenden Tabelle wird gezeigt, wie Text-Datentypen in ODBC-SQL-Datentype
 |LONGCHAR|Der theoretische Grenze für die Breite einer Spalte LONGCHAR entweder in eine feste Länge, oder durch Trennzeichen getrennten Tabelle kann 65500K. Text-ISAM ist wahrscheinlicher zuverlässige unterstützen bis zu 32 KB.|  
   
  Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).
-

@@ -1,13 +1,14 @@
 ---
 title: Datenkomprimierung | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: compression
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-compression
+ms.suite: sql
+ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: 60
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "60"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
-ms.openlocfilehash: 22b2a3faf4357a8ac26aabeafe4661a73cbebac0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Datenkomprimierung
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützen die Zeilen- und Seitenkomprimierung für rowstore-Tabellen und -Indizes sowie Columnstore und die Columnstore-Archivierungskomprimierung für Columnstore-Tabellen und -Indizes.  
   
@@ -186,12 +186,12 @@ Die folgende Tabelle enthält Replikationseinstellungen, mit denen die Komprimie
 |Benutzerabsicht|Replizieren des Partitionsschemas für eine Tabelle bzw. einen Index|Replizieren der Komprimierungseinstellungen|Skriptverhalten|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
 |Zur Replikation des Partitionsschemas und zur Aktivierung der Komprimierung auf dem Abonnenten für die Partition.|Wahr|Wahr|Sowohl für das Partitionsschema als auch für die Komprimierungseinstellungen wird ein Skript erstellt.|  
-|Zur Replikation des Partitionsschemas ohne Komprimierung der Daten auf dem Abonnenten.|Wahr|Falsch|Für das Partitionsschema wird ein Skript erstellt, für die Komprimierungseinstellungen der Partition jedoch nicht.|  
-|Keine Replikation des Partitionsschemas und keine Komprimierung der Daten auf dem Abonnenten.|Falsch|Falsch|Weder für die Partition noch für die Komprimierungseinstellungen wird ein Skript erstellt.|  
-|Zur Komprimierung der Tabelle auf dem Abonnenten, wenn alle Partitionen auf dem Verleger komprimiert sind, ohne Replikation des Partitionsschemas.|Falsch|Wahr|Überprüft, ob alle Partitionen für die Komprimierung aktiviert wurden.<br /><br /> Skriptausgabe der Komprimierung auf Tabellenebene.|  
+|Zur Replikation des Partitionsschemas ohne Komprimierung der Daten auf dem Abonnenten.|Wahr|False|Für das Partitionsschema wird ein Skript erstellt, für die Komprimierungseinstellungen der Partition jedoch nicht.|  
+|Keine Replikation des Partitionsschemas und keine Komprimierung der Daten auf dem Abonnenten.|Falsch|False|Weder für die Partition noch für die Komprimierungseinstellungen wird ein Skript erstellt.|  
+|Zur Komprimierung der Tabelle auf dem Abonnenten, wenn alle Partitionen auf dem Verleger komprimiert sind, ohne Replikation des Partitionsschemas.|False|Wahr|Überprüft, ob alle Partitionen für die Komprimierung aktiviert wurden.<br /><br /> Skriptausgabe der Komprimierung auf Tabellenebene.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Auswirkungen der Komprimierung auf andere SQL Server-Komponenten 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  Die Komprimierung erfolgt im Speichermodul, und die Daten werden in den meisten anderen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im unkomprimierten Zustand dargestellt. Hierdurch werden die Auswirkungen der Komprimierung auf die anderen Komponenten auf folgende Punkte beschränkt:  
 -   Massenimport- und -exportvorgänge  
@@ -200,10 +200,10 @@ Die folgende Tabelle enthält Replikationseinstellungen, mit denen die Komprimie
      Beim Massenimport von Daten in einen Heap mit Seitenkomprimierung versucht der Massenimportvorgang die Daten beim Einfügen mit der Seitenkomprimierung zu komprimieren.  
 -   Die Komprimierung hat keine Auswirkungen auf Sicherungs- und Wiederherstellungsvorgänge.  
 -   Die Komprimierung hat keine Auswirkungen auf den Protokollversand.  
--   Die Datenkomprimierung ist nicht kompatibel mit Spalten mit geringer Dichte. Daher können Tabellen mit Spalten geringer Dichte weder komprimiert werden, noch können Spalten mit geringer Dichte einer komprimierten Tabelle hinzugefügt werden.  
+-   Die Datenkomprimierung ist nicht kompatibel mit Sparsespalten. Daher können Tabellen mit Sparsespalten weder komprimiert werden, noch können Sparsespalten einer komprimierten Tabelle hinzugefügt werden.  
 -   Die Aktivierung der Komprimierung kann bewirken, dass sich Abfragepläne ändern, da die Daten mit einer anderen Anzahl von Seiten und Zeilen pro Seite gespeichert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementierung von Zeilenkomprimierung](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementierung von Seitenkomprimierung](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementierung von Unicode-Komprimierung](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -215,5 +215,4 @@ Die folgende Tabelle enthält Replikationseinstellungen, mit denen die Komprimie
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-
 

@@ -1,30 +1,30 @@
 ---
-title: Ausblenden eines Elements (Berichts-Generator und SSRS) | Microsoft Docs
+title: Ausblenden eines Elements (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3135ec02eb0f52e7d5c1155caa7966eb0732329b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ausblenden eines Elements (Berichts-Generator und SSRS)
   Legen Sie die Sichtbarkeit eines Berichtselements fest, wenn Sie ein Element basierend auf einem Berichtsparameter oder einem anderen von Ihnen angegebenen Ausdruck bedingt ausblenden möchten.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
         > [!NOTE]  
         >  Wenn Sie einen Ausdruck für die Sichtbarkeit angeben, legen Sie die Hidden-Eigenschaft des Berichtselements wie im folgenden Bild dargestellt fest. Der ausgewertete Ausdruck zeigt das Berichtselement an, wenn der Wert False lautet, und blendet das Berichtselement aus, wenn der Wert True lautet.   
-        > ![Properties_Visibility Dialogfeld und ausgeblendete Eigenschaft](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility Dialogfeld and Hidden-Eigenschaft")  
+        > ![Properties_Visibility Dialogfeld und ausgeblendete Eigenschaft](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
   
 4.  Klicken Sie zweimal auf **OK** .  
   
@@ -75,10 +75,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  Führen Sie im Dialogfeld **Spaltensichtbarkeit** die Schritte 3 und 4 der ersten Prozedur aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

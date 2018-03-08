@@ -1,10 +1,13 @@
 ---
-title: Transformation zum Zuordnen der Zeichen | Microsoft Docs
+title: Transformation zum Zuordnen der Zeichen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 3ad5ceb9c851baab0ddb229787afc23568239325
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="character-map-transformation"></a>Transformation zum Zuordnen der Zeichen
   Die Transformation zum Zuordnen der Zeichen wendet Zeichenfolgenfunktionen, wie z. B. die Konvertierung von Klein- in Großbuchstaben, auf Zeichendaten an. Diese Transformation betrifft nur Spaltendaten mit einem Zeichenfolgen-Datentyp.  
@@ -86,12 +88,12 @@ ms.lasthandoff: 08/19/2017
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Sortieren von Daten für die Zusammenführung und Join von Transformationen für zusammenführen](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="character-map-transformation-editor"></a>Transformations-Editor für Zeichenzuordnung
   Im Dialogfeld **Transformations-Editor für Zeichenzuordnung** können Sie die auf Spaltendaten anwendbaren Zeichenfolgenfunktionen auswählen und angeben, ob eine Zuordnung direkt geändert oder als neue Spalte hinzugefügt werden soll.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Spalten aus, die mithilfe von Zeichenfolgenfunktionen transformiert werden sollen. Die getroffene Auswahl wird in der nachfolgenden Tabelle angezeigt.  
   
@@ -101,7 +103,7 @@ ms.lasthandoff: 08/19/2017
  **Ziel**  
  Geben Sie an, ob Sie die Ergebnisse der Zeichenfolgenfunktionen direkt in der vorhandenen Spalte speichern möchten, oder ob Sie die geänderten Daten in einer neuen Spalte speichern möchten.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Neue Spalte|Speichern Sie die Daten in einer neuen Spalte. Weisen Sie der Spalte unter **Ausgabealias**einen Namen zu.|  
 |Direkte Änderung|Speichern Sie die geänderten Daten in der vorhandenen Spalte.|  
@@ -109,7 +111,7 @@ ms.lasthandoff: 08/19/2017
  **Vorgang**  
  Wählen Sie in der Liste die Zeichenfolgenfunktionen aus, die auf Spaltendaten angewendet werden sollen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Kleinschreibung|In Kleinschreibung konvertieren.|  
 |Großschreibung|In Großschreibung konvertieren.|  
@@ -129,4 +131,3 @@ ms.lasthandoff: 08/19/2017
  Im Dialogfeld [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie für die Transformation verfügbare Optionen zur Fehlerbehandlung angeben.  
   
   
-

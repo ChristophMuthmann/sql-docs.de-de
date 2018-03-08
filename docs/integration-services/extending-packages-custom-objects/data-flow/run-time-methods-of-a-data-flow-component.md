@@ -1,12 +1,14 @@
 ---
-title: Laufzeitmethoden einer Datenflusskomponente | Microsoft Docs
+title: Runtime-Methoden einer Datenflusskomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 874bc64760b93f2d7757022534c3d25a87d1d62c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Laufzeitmethoden einer Datenflusskomponente
   Zur Laufzeit wird vom Datenflusstask die Reihenfolge von Komponenten überprüft, ein Ausführungsplan vorbereitet und ein Pool von Arbeitsthreads verwaltet, die den Arbeitsplan ausführen. Der Task lädt Datenzeilen aus Quellen, verarbeitet diese durch Transformationen und speichert sie dann in Zielen.  
@@ -164,10 +165,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- Weitere Informationen zum Entwickeln von Komponenten, die Ausgabepuffern Zeilen hinzufügen, finden Sie unter [Entwickeln einer benutzerdefinierten Quellkomponente](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) und [Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
+ Weitere Informationen finden Sie unter [Entwickeln einer benutzerdefinierten Quellkomponente](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) und [Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
 ### <a name="receiving-rows"></a>Empfangen von Zeilen  
- Komponenten empfangen Zeilen von Upstreamkomponenten in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>-Objekten. Der Datenflusstask stellt ein <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>-Objekt, das die dem Datenfluss von Upstreamkomponenten hinzugefügten Zeilen enthält, einer <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode als Parameter bereit. Dieser Eingabepuffer kann verwendet werden, um die Zeilen und Spalten in dem Puffer zu überprüfen und zu ändern, er kann jedoch nicht verwendet werden, um Zeilen hinzuzufügen oder zu entfernen. Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode wird immer wieder aufgerufen, bis keine verfügbaren Puffer mehr vorhanden sind. Das letzte Mal aufgerufen wird, die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> Eigenschaft **"true"**. Sie können eine Iteration durch die Auflistung von Zeilen in dem Puffer mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>-Methode durchführen, durch die der Puffer zur nächsten Zeile bewegt wird. Diese Methode gibt **"false"** Wenn der Puffer ist, auf die letzte Zeile in der Auflistung. Sie müssen die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft nicht überprüfen, außer Sie müssen eine weitere Aktion ausführen, nachdem die letzte Datenzeile verarbeitet wurde.  
+ Komponenten empfangen Zeilen von Upstreamkomponenten in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>-Objekten. Der Datenflusstask stellt ein <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>-Objekt, das die dem Datenfluss von Upstreamkomponenten hinzugefügten Zeilen enthält, einer <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode als Parameter bereit. Dieser Eingabepuffer kann verwendet werden, um die Zeilen und Spalten in dem Puffer zu überprüfen und zu ändern, er kann jedoch nicht verwendet werden, um Zeilen hinzuzufügen oder zu entfernen. Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode wird immer wieder aufgerufen, bis keine verfügbaren Puffer mehr vorhanden sind. Beim letzten Aufruf ist die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft **true**. Sie können eine Iteration durch die Auflistung von Zeilen in dem Puffer mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>-Methode durchführen, durch die der Puffer zur nächsten Zeile bewegt wird. Diese Methode gibt **false** zurück, wenn sich der Puffer in der letzten Zeile der Auflistung befindet. Sie müssen die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft nicht überprüfen, außer Sie müssen eine weitere Aktion ausführen, nachdem die letzte Datenzeile verarbeitet wurde.  
   
  Im folgenden Text wird das korrekte Muster für die Verwendung <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>-Methode und der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft veranschaulicht.  
   
@@ -215,8 +216,7 @@ End Sub
   
  Weitere Informationen zum Entwickeln von Komponenten, die Zeilen in Eingabepuffern empfangen, finden Sie unter [Entwickeln einer benutzerdefinierten Zielkomponente](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) und [Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Entwurfszeitmethoden einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Isolationsstufen von Transaktionen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +23,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1d19973db310faafd97d9ab6c38848395a344100
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
 *Isolationsstufen von Transaktionen* sind ein Maß für den Umfang an, in dem Isolation erfolgreich ausgeführt wird. Insbesondere werden Isolationsstufen von Transaktionen durch das Vorhandensein oder fehlen der folgenden Phänomene definiert:  
@@ -64,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |Serializable|Die Transaktion wird wartet, bis für den Schreibzugriff gesperrt durch andere Transaktionen Zeilen entsperrt werden; Dies verhindert "unsaubere" Daten lesen.<br /><br /> Die Transaktion eine Sperre read (wenn es nur Zeilen gelesen werden) oder Schreibsperre (falls er kann aktualisieren oder Löschen von Zeilen) in den Bereich der Zeilen auswirkt. Z. B., wenn die Transaktion, die SQL-Anweisung enthält **wählen \* FROM Orders**, der Bereich ist die gesamte Tabelle "Orders"; die lesen-Transaktionssperren der Tabelle, jedoch nicht zu, dass alle neuen Zeilen in diese eingefügt werden soll. Wenn die Transaktion, die SQL-Anweisung enthält **Löschen von Aufträgen, in dem Status "Geschlossen" =**, der Bereich liegt, alle Zeilen mit dem Status "Geschlossen"; die Transaktionssperren-Schreibvorgänge aller Zeilen in der Orders Tabelle mit dem Status "Geschlossen", jedoch nicht erlauben Sie keine Zeilen eingefügt oder aktualisiert, sodass die daraus resultierende Zeile den Status "Geschlossen" aufweist.<br /><br /> Da andere Transaktionen nicht aktualisieren oder Löschen von Zeilen in den Bereich, wird die aktuelle Transaktion nicht wiederholbaren Lesevorgängen vermieden. Da andere Transaktionen Zeilen im Bereich einfügen können, wird die aktuelle Transaktion Phantome vermieden. Die Transaktion gibt die Sperre frei, wenn ein Commit oder Rollback.|  
   
  Es ist wichtig zu beachten, dass die Transaktionsisolationsstufe einer Transaktion Möglichkeit zum Anzeigen von eigenen Änderungen nicht beeinträchtigt; Transaktionen können immer alle Änderungen erkennen, die sie vornehmen. Angenommen, eine Transaktion möglicherweise bestehen aus zwei **UPDATE** Anweisungen, die das erste löst die Zahlung aller Mitarbeiter aus, um 10 Prozent und dem zweiten legt das Bezahlen von Mitarbeitern über einige Höchstmenge dieser Menge. Ist der Vorgang erfolgreich als einzelne Transaktion, da die zweite **UPDATE** Anweisung kann die Ergebnisse der ersten angezeigt.
-

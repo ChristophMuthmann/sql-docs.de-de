@@ -3,8 +3,11 @@ title: Reduce (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6e74a2a16806741dda7171ec0327b709fb697cb9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fb6c4a66f3233620ef5d24506d41e7659fc3b82d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt einen N채herungswert der gegebenen **geometry** -Instanz zur체ck. Dieser N채herungswert wird unter Verwendung einer Erweiterung des Douglas-Peucker-Algorithmus mit der angegebenen Toleranz ermittelt.
   
@@ -42,7 +44,7 @@ Gibt einen N채herungswert der gegebenen **geometry** -Instanz zur체ck. Dieser N�
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Fehlertoleranz*  
+ *tolerance*  
  Ein Wert vom Typ **float**. *tolerance* gibt die Toleranz an, die als Eingabe f체r den N채herungsalgorithmus verwendet werden soll.  
   
 ## <a name="return-types"></a>R체ckgabetypen  
@@ -116,8 +118,7 @@ SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte statische Geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

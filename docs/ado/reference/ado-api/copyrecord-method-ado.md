@@ -3,7 +3,7 @@ title: CopyRecord-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,19 +19,18 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f4c31ec2491486c6c2332e32395246db4651f4e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5acc04720b17df0c39203417633332a0f01c2890
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="copyrecord-method-ado"></a>CopyRecord-Methode (ADO)
+# <a name="copyrecord-method-ado"></a>CopyRecord Method (ADO)
 Kopiert eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) an einen anderen Speicherort.  
   
 ## <a name="syntax"></a>Syntax  
@@ -77,5 +76,4 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  URLs, die mit dem HTTP-Schema werden automatisch aufgerufen. der [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absoluten und relativen URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

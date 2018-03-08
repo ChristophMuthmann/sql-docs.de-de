@@ -3,7 +3,7 @@ title: PropertyAttributesEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 57c232c27dc538cbbdc8203855a27ee2ff56b7f8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6614f74546fab23a1e1ce453ac12c10082011a25
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Gibt die Attribute einer [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekt.  
@@ -53,5 +52,4 @@ Gibt die Attribute einer [Eigenschaft](../../../ado/reference/ado-api/property-o
 |AdoEnums.PropertyAttributes.WRITE|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Attribute-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-
+ [Attributes-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

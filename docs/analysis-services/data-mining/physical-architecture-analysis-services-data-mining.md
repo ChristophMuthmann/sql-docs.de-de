@@ -2,31 +2,32 @@
 title: "Physische Architektur (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - server architecture [Analysis Services]
 - architecture [Analysis Services]
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a8a4319e77588c13a06a6c648bcfafa11fb7c92b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b1e79889b8023a94d6f7bbc8d3e9f4ca75c5273
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Physische Architektur (Analysis Services &ndash; Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet sowohl Server- als auch Clientkomponenten zum Bereitstellen von Data Mining-Funktionen für Business Intelligence-Anwendungen:  
   
 -   Die Serverkomponente wird als Microsoft Windows-Dienst implementiert. Sie können mehrere Instanzen auf dem gleichen Computer verwenden, wobei jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als separate Instanzen des Windows-Diensts implementiert.  
@@ -57,7 +58,6 @@ ms.lasthandoff: 09/01/2017
  Die gesamte Kommunikation zwischen einem Client und dem Analysis Services-Server verwendet XMLA. Hierbei handelt es sich um ein plattform- und sprachenunabhängiges Protokoll. Wenn eine Anforderung von einem Client eingeht, wird von Analysis Services bestimmt, ob die Anforderung sich auf OLAP oder Data Mining bezieht, und die Anforderung wird entsprechend weitergeleitet. Weitere Informationen finden Sie unter [OLAP-Modulserverkomponenten](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Logische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Logische Architektur &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   
-

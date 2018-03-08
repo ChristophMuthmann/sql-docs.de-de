@@ -2,12 +2,13 @@
 title: OLE DB-Schemarowsets | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,20 +19,20 @@ helpviewer_keywords:
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6467a1e54dba2ad8a4e88f1d892dfa2f3cd64381
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB-Schemarowsets
-  Die folgenden OLE DB-Schemarowsets werden vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt. Verwenden der **DISCOVER_ENUMERATORS** Rowset mit der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) -Methode überprüft, ob ein bestimmter Datenquellenanbieter ein Rowset unterstützt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Die folgenden OLE DB-Schemarowsets werden vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt. Verwenden der **DISCOVER_ENUMERATORS** Rowset mit der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) -Methode überprüft, ob ein bestimmter Datenquellenanbieter ein Rowset unterstützt.  
   
  Weitere Informationen über diese Rowsets finden Sie im Thema "Schema Rowsets" im Abschnitt "OLE DB Programmer's Reference" der MSDN® Library auf der [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Website.  
   
@@ -81,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services-Schemarowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

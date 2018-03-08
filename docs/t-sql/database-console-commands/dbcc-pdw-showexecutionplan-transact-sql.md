@@ -3,29 +3,30 @@ title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 12
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 461ee87f41692172b31125e36553c0eab0b09772
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: af6b466df18df3df0535a2de8f582f57484255aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Zeigt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ausführungsplan für eine Abfrage ausgeführt wird, bei einer bestimmten [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Compute-Knoten oder Knoten "Zugriffssteuerung". Hiermit können Sie um Leistungsprobleme bei Abfragen zu beheben, während Abfragen auf den Serverknoten und den Knoten "Zugriffssteuerung" ausgeführt werden.
   
@@ -54,7 +55,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *pdw_node_id*  
  Der Bezeichner für den Knoten, der den Abfrageplan ausgeführt wird. Dies ist eine ganze Zahl und kann nicht NULL sein. Verwendet, wenn eine Anwendung abzielt.  
   
- *SPID*  
+ *spid*  
  Bezeichner für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sitzung, die den Abfrageplan ausgeführt wird. Dies ist eine ganze Zahl und kann nicht NULL sein.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -101,6 +102,5 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ```  
 
 ## <a name="see-also"></a>Siehe auch
-[DBCC PDW_SHOWPARTITIONSTATS &#40; Transact-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)
-
+[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

@@ -2,9 +2,12 @@
 title: Erstellen von benutzerdefinierten Vorlagen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 7472e4f1f5284dcae032b057fc6d9d0caf3660b8
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Lektion 3-2: Erstellen von benutzerdefinierten Vorlagen
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kommt mit einer Reihe von Vorlagen für viele häufig ausgeführten Aufgaben. Der größte Vorteil von Vorlagen besteht jedoch darin, dass Sie für ein komplexes Skript, das Sie häufig erstellen müssen, eine benutzerdefinierte Vorlage anlegen können. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
   
 ## <a name="using-custom-templates"></a>Verwenden benutzerdefinierter Vorlagen  
@@ -50,7 +53,7 @@ ms.lasthandoff: 07/31/2017
 7.  Geben Sie im Abfrage-Editor das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, über die Bestellungen für ein bestimmtes Teil gesucht werden. In diesem Fall handelt es sich um Klingen (Blade). (Sie können den Code im Fenster des Lernprogramms kopieren und dann einfügen.)  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -70,11 +73,11 @@ ms.lasthandoff: 07/31/2017
   
 8.  Drücken Sie F5, um das Skript auszuführen. Damit wird die Prozedur **WorkOrdersForBlade** erstellt.  
   
-9. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf Ihren Server und anschließend auf **Neue Abfrage**. Ein neues Abfrage-Editorfenster wird geöffnet.  
+9. Klicken Sie im Objekt-Explorer auf die Datenbank **AdventureWorks2012** und klicken Sie anschließend auf **Neue Abfrage**. Ein neues Abfrage-Editorfenster wird geöffnet.  
   
 10. Geben Sie im Abfrage-Editor **EXECUTE dbo.WorkOrdersForBlade**ein, und drücken Sie anschließend F5, um die Abfrage auszuführen. Überprüfen Sie, ob im Bereich **Ergebnisse** eine Liste mit Bestellungen für Klingen zurückgegeben wird.  
   
-11. Bearbeiten Sie das Vorlagenskript (das Skript von Schritt 7), und ersetzen Sie dabei den Produktnamen Blade an vier Stellen durch den Parameter ***\<*product_name**, **nvarchar(50)**, **name*>***.  
+11. Bearbeiten Sie das Vorlagenskript (aus Schritt 7), und ersetzen Sie dabei den Produktnamen „Blade“ an vier Stellen durch den Parameter **\<product_name, nvarchar(50), name>**.  
   
     > [!NOTE]  
     > Für Parameter sind drei Elemente erforderlich: der Name des zu ersetzenden Parameters, der Datentyp des Parameters und ein Standardwert für den Parameter.  
@@ -82,7 +85,7 @@ ms.lasthandoff: 07/31/2017
 12. Das Skript sollte nun wie folgt aussehen:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -119,4 +122,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

@@ -3,10 +3,12 @@ title: Elemente, die in SQL-Anweisungen verwendet | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f619ebbbc3bb7c0ebbc90025a65c7f0530e3e4e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c29dcd40090a380c124a0c72b07d5993d4295829
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="elements-used-in-sql-statements"></a>Elemente, die in SQL­Anweisungen verwendet werden
 Die folgenden Elemente werden in der SQL-Anweisungen, die zuvor aufgeführten verwendet.  
@@ -109,4 +110,3 @@ Die folgenden Elemente werden in der SQL-Anweisungen, die zuvor aufgeführten ve
  *obere Groß-/Kleinschreibung der Buchstaben* :: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; Ich &#124; J &#124; K &#124; L &#124; Übe &#124; N &#124; O &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; J &#124; Z*  
   
  *Benutzernamen definiert ein* :: = *Buchstaben*[*Ziffer* &#124; *Buchstaben* &#124; *_*]...
-

@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für Oracle | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d92236375a3ac152dbe7f5a2f259ce2a5f2edb79
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB-Anbieter für Oracle (Übersicht)
 > [!IMPORTANT]
@@ -57,7 +56,7 @@ MSDAORA
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt die OLE DB-Anbieter für Oracle.|
+|**Provider**|Gibt die OLE DB-Anbieter für Oracle.|
 |**Datenquelle**|Gibt den Namen eines Servers.|
 |**Benutzer-ID**|Gibt den Benutzernamen an.|
 |**Kennwort**|Gibt das Kennwort des Benutzers an.|
@@ -80,4 +79,3 @@ MSDAORA
 
 ## <a name="see-also"></a>Siehe auch
  [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Anbietereigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

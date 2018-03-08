@@ -2,9 +2,12 @@
 title: "Listener, Clientkonnektivität, Anwendungsfailover | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -17,20 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: 48
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 279fd42d68ae0b2a92a5bb675d1a749bcd3a5ad4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, Clientkonnektivität, Anwendungsfailover
-  Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Clientkonnektivität und Anwendungsfailoverfunktionalität.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Clientkonnektivität und Anwendungsfailoverfunktionalität.  
   
 > [!NOTE]  
 >  Für den Großteil der allgemeinen Listenerkonfigurationen können Sie einfach den ersten Verfügbarkeitsgruppenlistener mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen oder PowerShell-Cmdlets erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verwandte Aufgaben](#RelatedTasks).  
@@ -99,11 +102,11 @@ ms.lasthandoff: 08/02/2017
  Hybride Netzwerkkonfigurationen und DHCP in mehreren Subnetzen werden nicht für Verfügbarkeitsgruppenlistener unterstützt. Das liegt daran, dass im Fall eines Failovers eine dynamische IP abgelaufen sein könnte oder freigegeben wird, wodurch die hohe Verfügbarkeit insgesamt gefährdet wird.  
   
 ###  <a name="SelectListenerPort"></a> Auswählen eines Ports für Verfügbarkeitsgruppenlistener  
- Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
+ Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
   
  Sie können auch einen nicht standardmäßigen Listenerport festlegen. Dies bedeutet jedoch, dass Sie auch in der Verbindungszeichenfolge immer dann explizit einen Zielport angeben müssen, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener herstellen.  Darüber hinaus müssen Sie die Berechtigung für die Firewall für den nicht standardmäßigen Port öffnen.  
   
- Wenn Sie den Standardport 1433 für die virtuellen Netzwerknamen der Verfügbarkeitsgruppenlistener verwenden, müssen Sie dennoch sicherstellen, dass keine anderen Dienste im Clusterknoten diesen Port verwenden. Andernfalls tritt ein Portkonflikt auf.  
+ Wenn Sie den Standardport 1433 für die virtuellen Netzwerknamen der Verfügbarkeitsgruppenlistener verwenden, müssen Sie dennoch sicherstellen, dass keine anderen Dienste im Clusterknoten diesen Port verwenden. Andernfalls tritt ein Portkonflikt auf.  
   
  Wenn eine der Instanzen von SQL Server bereits über den Instanzlistener TCP-Port 1433 überwacht und keine anderen Dienste (einschließlich weitere Instanzen von SQL Server) auf dem Computer Port 1433 überwachen, wird kein Portkonflikt mit dem Verfügbarkeitsgruppenlistener verursacht.  Das liegt daran, dass der Verfügbarkeitsgruppenlistener den selben TCP-Port im gleichen Dienstprozess freigeben kann.  Mehrere Instanzen von SQL Server (parallel) sollten jedoch nicht für die Überwachung desselben Ports konfiguriert werden.  
   
@@ -120,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  *Schreibgeschütztes Routing* bezieht sich auf die Möglichkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , eingehende Verbindungen für einen Verfügbarkeitsgruppenlistener an ein sekundäres Replikat weiterzuleiten, das für schreibgeschützte Arbeitslasten konfiguriert ist. Eine eingehende Verbindung, die auf den Namen eines Verfügbarkeitsgruppenlisteners verweist, kann automatisch an ein schreibgeschütztes Replikat weitergeleitet werden, wenn Folgendes zutrifft:  
   
 -   Mindestens ein sekundäres Replikat wird auf schreibgeschützten Zugriff festgelegt, und jedes schreibgeschützte sekundäre Replikat sowie das primäre Replikat werden konfiguriert, um schreibgeschütztes Routing zu unterstützen. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [So konfigurieren Sie Verfügbarkeitsreplikate für das schreibgeschützte Routing](#ConfigureARsForROR).  
-  
+
+-   Die Verbindungszeichenfolge verweist auf eine Datenbank innerhalb der Verfügbarkeitsgruppe. Eine Alternative dazu ist es, für den Anmeldenamen, der für die Verbindung verwendet wird, die Datenbank als Standarddatenbank zu konfigurieren. Weitere Informationen dazu finden Sie in [diesem Blogbeitrag zur Funktionsweise des Algorithmus mit dem schreibgeschützten Routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/) (in englischer Sprache).
+
 -   Die Verbindungszeichenfolge verweist auf einen Verfügbarkeitsgruppenlistener, und die Anwendungsabsicht der eingehenden Verbindung wird auf schreibgeschützt festgelegt, z. B. mithilfe des Schlüsselworts **Application Intent=ReadOnly** in den ODBC- oder OLEBD-Verbindungszeichenfolgen, -Verbindungsattributen oder -Eigenschaften. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [Schreibgeschützte Anwendungsabsicht und schreibgeschütztes Routing](#ReadOnlyAppIntent).  
   
 ###  <a name="ConfigureARsForROR"></a> So konfigurieren Sie Verfügbarkeitsreplikate für das schreibgeschützte Routing  
@@ -151,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, eine Verbindung mit dem Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 herzustellen. Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener Port 1433 überwacht.  In der Verbindungszeichenfolge wurde die Eigenschaft **ApplicationIntent** auf **ReadOnly**festgelegt, was diese zu einer *Verbindungszeichenfolge für beabsichtige Lesevorgänge*macht.  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
+ In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, über den Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 eine Verbindung mit der AdventureWorks-Datenbank herzustellen (Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener an Port 1433 lauscht).  In der Verbindungszeichenfolge wurde die Eigenschaft **ApplicationIntent** auf **ReadOnly**festgelegt, was diese zu einer *Verbindungszeichenfolge für beabsichtige Lesevorgänge*macht.  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
   
  Die primäre Datenbank der Verfügbarkeitsgruppe verarbeitet die eingehende Anforderung für schreibgeschütztes Routing und versucht, ein schreibgeschütztes Online-Replikat zu suchen, das mit dem primären Replikat verknüpft und für schreibgeschütztes Routing konfiguriert ist.  Der Client empfängt Verbindungsinformationen vom primären Replikatserver und stellt eine Verbindung mit dem ermittelten schreibgeschützten Replikat her.  
   
@@ -245,7 +250,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
@@ -253,4 +258,3 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
  [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   
-

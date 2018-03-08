@@ -3,7 +3,7 @@ title: Achse-Beispiel (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b986eb2f2114f8740a33d139bc8a6ac4d13571c5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c482bf2f54e027075979f2930dc55d31bf6a796
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="axis-example-vbscript"></a>Achse-Beispiel (VBScript)
 Diese Active Server Page zeigt OLAP-Daten aus einer MDX-Abfrage-Zeichenfolge und schreibt den resultierenden Cellset auf ein HTML-Tabellenstruktur.  
@@ -171,4 +170,3 @@ intPC1 = cst.Axes(1).Positions.Count - 1
 </BODY>  
 </HTML>  
 ```
-

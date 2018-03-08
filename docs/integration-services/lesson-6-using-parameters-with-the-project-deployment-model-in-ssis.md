@@ -1,10 +1,13 @@
 ---
-title: 'Lektion 6: Verwenden von Parametern mit dem Projektbereitstellungsmodell in SSIS | Microsoft Docs'
+title: 'Lektion 6: Verwenden von Parametern mit dem Projektbereitstellungsmodell in SSIS | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 547da852d6a52393be8e0adf53b4aa18955a6cad
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 652e2eda22048dc665d56213b53b24c909abbd8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Lesson 6: Using Parameters with the Project Deployment Model in SSIS
 In SQL Server 2012 wird ein neues Bereitstellungsmodell eingeführt, mit dem Sie Projekte auf dem Integration Services-Server bereitstellen können. Der Integration Services-Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie Laufzeitwerte für Pakete zu konfigurieren.  
@@ -34,7 +36,7 @@ Mithilfe des Assistenten zum Konvertieren von Integration Services-Projekten kon
 Wenn Sie das Paket erneut ausführen, verwendet der Integration Services-Dienst den Parameter, um den Wert der Variablen aufzufüllen, und die Variable aktualisiert wiederum die Directory-Eigenschaft. Deshalb durchläuft das Paket die Dateien im neuen, durch den Parameterwert angegebenen Datenordner anstatt in dem Ordner, der in der Paketkonfigurationsdatei festgelegt wurde.  
   
 > [!IMPORTANT]  
-> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung von **AdventureWorksDW2012**finden Sie unter [Überlegungen zum Installieren der SQL Server-Beispiele und -Beispieldatenbanken](http://technet.microsoft.com/en-us/library/ms161556%28v=sql.105%29).  
+> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung von **AdventureWorksDW2012**finden Sie unter [Überlegungen zum Installieren der SQL Server-Beispiele und -Beispieldatenbanken](http://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
 Diese Lektion enthält die folgenden Aufgaben:  
@@ -50,4 +52,3 @@ Diese Lektion enthält die folgenden Aufgaben:
 ## <a name="start-the-lesson"></a>Lektion beginnen  
 [Schritt 1: Kopieren des Pakets aus Lektion 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   
-

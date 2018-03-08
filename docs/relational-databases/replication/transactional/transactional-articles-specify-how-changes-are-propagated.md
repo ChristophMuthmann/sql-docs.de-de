@@ -2,9 +2,12 @@
 title: "Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Transaktionsartikel – Angeben der Weitergabemethode für Änderungen
-  Bei der Transaktionsreplikation können Sie angeben, wie Datenänderungen vom Verleger an den Abonnenten weitergegeben werden. Für jede veröffentlichte Tabelle können Sie eine von vier Methoden angeben, mit der jeder Vorgang (INSERT, UPDATE oder DELETE) an den Abonnenten weitergegeben werden soll:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Bei der Transaktionsreplikation können Sie angeben, wie Datenänderungen vom Verleger an den Abonnenten weitergegeben werden. Für jede veröffentlichte Tabelle können Sie eine von vier Methoden angeben, mit der jeder Vorgang (INSERT, UPDATE oder DELETE) an den Abonnenten weitergegeben werden soll:  
   
 -   Angeben, dass die Transaktionsreplikation eine gespeicherte Prozedur zur Weitergabe von Änderungen an die Abonnenten ausgibt und anschließend aufruft (Standardeinstellung).  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  Standardmäßig gibt die Transaktionsreplikation Änderungen an Abonnenten mithilfe einer Reihe gespeicherter Prozeduren weiter, die auf jedem Abonnenten gespeichert sind. Wenn eine Einfügung, ein Update oder eine Löschung an einer Tabelle auf dem Verleger vorgenommen wird, wird der Vorgang in einen Aufruf an eine gespeicherte Prozedur auf dem Abonnenten übersetzt. Die gespeicherte Prozedur akzeptiert Parameter, die den Spalten in der Tabelle zugeordnet sind, und lässt das Ändern dieser Spalten auf dem Abonnenten zu.  
   
- Informationen zum Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln finden Sie unter [Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ Informationen zum Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln finden Sie unter [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## <a name="default-and-custom-stored-procedures"></a>Standardmäßige und benutzerdefinierte gespeicherte Prozeduren  
  Die folgenden drei Prozeduren werden von der Replikation standardmäßig für jeden Tabellenartikel erstellt:  
@@ -65,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Wenn Sie Schemaänderungen an einer veröffentlichten Tabelle vornehmen, müssen die benutzerdefinierten Prozeduren neu generiert werden. Weitere Informationen finden Sie unter [Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Beispiel:  
+-   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Zum Beispiel:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -218,8 +221,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

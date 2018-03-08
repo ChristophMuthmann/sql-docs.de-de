@@ -1,10 +1,13 @@
 ---
-title: Fenster "Variablen" | Microsoft Docs
+title: "Fenster „Variablen“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a9e602fb4caf9487246e13607f8f925e416a90b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
   Verwenden Sie das Fenster **Variablen** , um benutzerdefinierte Variablen zu erstellen und zu ändern sowie um Systemvariablen anzuzeigen.  
@@ -66,7 +68,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Wenn Sie der Variable einen Ausdruck zuweisen, können Sie den Datentyp nicht ändern.  
   
- **Wert**  
+ **ReplTest1**  
  Zeigt den Wert der Variablen an. Bei benutzerdefinierten Variablen können Sie den Wert aktualisieren. Dieser Wert kann ein Literal oder ein Ausdruck sein, und der Wert kann eine mehrzeilige Zeichenfolge sein. Um der Variable einen Ausdruck zuzuweisen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Spalte **Ausdruck** im Fenster **Variablen** .  
   
  **Namespace**  
@@ -75,7 +77,7 @@ ms.lasthandoff: 09/26/2017
  **Ereignis bei Änderung des Variablenwertes auslösen**  
  Gibt an, ob das **OnVariableValueChanged** -Ereignis ausgelöst werden soll, wenn ein Wert geändert wird. Bei benutzerdefinierten und Systemvariablen können Sie den Wert aktualisieren. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
- **Description**  
+ **Beschreibung**  
  Anzeigen der Variablenbeschreibung. Sie können die Beschreibung für benutzerdefinierte Variablen ändern. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
  **Ausdruck**  
@@ -83,7 +85,7 @@ ms.lasthandoff: 09/26/2017
   
  Wenn Sie einer Variablen einen Ausdruck zuweisen, wird ein spezieller Symbolmarker neben der Variablen angezeigt. Dieser spezielle Symbolmarker wird auch neben Verbindungs-Managern und Tasks angezeigt, für die Ausdrücke festgelegt wurden.  
 
-## <a name="variable-grid-options-dialog-box"></a>Variable Rasteroptionen (Dialogfeld)
+## <a name="variable-grid-options-dialog-box"></a>Dialogfeld „Variable Rasteroptionen“
  Im Dialogfeld **Variable Rasteroptionen** können Sie die Spalten auswählen, die im Fenster **Variablen** angezeigt werden, und die Filter auswählen, die auf die Liste der Variablen angewendet werden sollen. Weitere Informationen über die Eigenschaften der zugehörigen Variablen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 ### <a name="options-for-filter"></a>Optionen für Filter  
@@ -104,21 +106,20 @@ ms.lasthandoff: 09/26/2017
   
 -   **Data type**  
   
--   **Wert**  
+-   **ReplTest1**  
   
 -   **Namespace**  
   
 -   **Ereignis bei Änderung des Variablenwertes auslösen**  
   
--   **Description**  
+-   **Beschreibung**  
   
 -   **Ausdruck**  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integrationsservices &#40; SSIS &#41; Ausdrücke](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generieren von Dumpdateien für die Paketausführung](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

@@ -3,7 +3,7 @@ title: DefaultDatabase-Eigenschaft | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2c4220d8551d7aa9d1bd37f0770474214bc14209
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a95c2f237a47e5908c5218d45c7d1fa74f87dff9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase-Eigenschaft
 Gibt an, die Standarddatenbank für einen [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  
@@ -47,9 +46,8 @@ Gibt an, die Standarddatenbank für einen [Verbindung](../../../ado/reference/ad
 >  **Remote Datendienstnutzung** diese Eigenschaft ist nicht verfügbar für eine clientseitige **Verbindung** Objekt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anbieter und DefaultDatabase-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Anbieter und DefaultDatabase Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)   
-
+ [Provider- und DefaultDatabase-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)   

@@ -3,24 +3,25 @@ title: Grundlegendes zu Transaktionen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: efaa7480d3a42048fe4ba625471383ae0c127034
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64a9539296531bc0d07d79da3613eb953fefa917
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-transactions"></a>Grundlegendes zu Transaktionen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,7 +47,6 @@ ms.lasthandoff: 09/09/2017
  Weitere Informationen zur Verwendung von verteilten Transaktionen finden Sie unter [XA-Transaktionen](../../connect/jdbc/understanding-xa-transactions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von Transaktionen mit der JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+ [Ausführen von Transaktionen mit dem JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   
-

@@ -3,10 +3,12 @@ title: Generieren von Berichten (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - Sybase Console,refresh-from-database report
 - Sybase Console,synchronize-target report
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8fb70116001dddf0995de2aebb836d04d8f56441
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 22c7b87b46064a5de6f5108e4efd850aed7ed650
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-sybasetosql"></a>Generieren von Berichten (SybaseToSQL)
 Berichte über bestimmte Aktivitäten mit Befehlen durchgeführt werden in SSMA-Konsole auf Objektebene-Struktur generiert.  
@@ -156,4 +157,3 @@ Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   
-

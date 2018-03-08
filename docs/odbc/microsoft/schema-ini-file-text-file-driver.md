@@ -3,27 +3,28 @@ title: Datei "Schema.ini" (Text-Datei-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei "Schema.ini" (Text-Datei-Treiber)
 Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schema-Informationsdatei bestimmt. Die Schemadatei für die Informationen ist immer mit dem Namen "Schema.ini" und im selben Verzeichnis wie die Textdatenquelle immer beibehalten. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Spaltennamen und Datentypinformationen und mehrere andere Datenmerkmale. Datei "Schema.ini" ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten die Datei "Schema.ini" verwenden, wenn Ihre Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle werden soll.  
@@ -104,8 +105,8 @@ n=ColumnNametype [#]
 |Parameter|Description|  
 |---------------|-----------------|  
 |*Spaltenname*|Der Textname der Spalte. Wenn der Spaltenname Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen setzen.|  
-|*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
-|**Breite**|Der Wert des Literals `Width`. Gibt an, dass die folgende Anzahl legt die Breite der Spalte fest (optional für Zeichen getrennte Dateien; für Dateien mit fester Länge erforderlich).|  
+|*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> datetime<br /><br /> Textmodus<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
+|**Width**|Der Wert des Literals `Width`. Gibt an, dass die folgende Anzahl legt die Breite der Spalte fest (optional für Zeichen getrennte Dateien; für Dateien mit fester Länge erforderlich).|  
 |*#*|Der ganzzahlige Wert, der die Breite der Spalte bestimmt (erforderlich, wenn **Breite** angegeben ist).|  
   
 ## <a name="selecting-a-character-set"></a>Auswählen eines Zeichensatzes  
@@ -133,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  Wenn Sie einen Eintrag weglassen, wird der Standardwert in der Windows-Systemsteuerung verwendet.
-

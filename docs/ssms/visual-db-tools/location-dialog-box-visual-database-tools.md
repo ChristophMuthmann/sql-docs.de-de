@@ -3,29 +3,29 @@ title: Speicherorte (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentati
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.getdirectoryname
+f1_keywords: vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c55d02a0ccdfd22d1d0b817e362e1faf661c4265
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b813bc94aa5afcd2cb537de0bfc8cba9d925d034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Speicherorte (Dialogfeld) (Visual Database Tools)
-Verwenden Sie dieses Dialogfeld, um den Ordner mit den gewünschten Dateien zu suchen und auszuwählen. Dieses Dialogfeld übergibt den Pfad des ausgewählten Ordners an das aufrufende Dialogfeld. Es gibt folgende Möglichkeiten, um auf dieses Dialogfeld zuzugreifen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie dieses Dialogfeld, um den Ordner mit den gewünschten Dateien zu suchen und auszuwählen. Dieses Dialogfeld übergibt den Pfad des ausgewählten Ordners an das aufrufende Dialogfeld. Es gibt folgende Möglichkeiten, um auf dieses Dialogfeld zuzugreifen:  
   
 -   Wählen Sie im Menü **Datei** die Option **Neu** aus, und wählen Sie **Projekt**aus. Wählen Sie im Dialogfeld **Neues Projekt** die Option **Durchsuchen**aus. Das Dialogfeld **Speicherort** wird mit dem Titel **Projektspeicherort**geöffnet.  
   
@@ -46,7 +46,7 @@ Zeigt den Inhalt des Datenträgers, der Festplatte und des CD-ROM-Laufwerks an.
 **Ordnername**  
 Zeigt den Pfad des ausgewählten Ordners an.  
   
-**Öffnen**  
+**Datei**  
 Gibt den Pfad des ausgewählten Ordners im Feld **Ordnername** an das aufrufende Dialogfeld zurück.  
   
 ## <a name="toolbar"></a>Symbolleiste  
@@ -62,4 +62,3 @@ Löscht die ausgewählten Dateien oder Ordner aus dem Speicher.
 **Neuen Ordner erstellen**  
 Zeigt das Dialogfeld **Neuer Ordner** an. Verwenden Sie diese Option, um unterhalb des Ordners, der in der Liste **Suchen in** ausgewählt wurde, einen untergeordneten Ordner zu erstellen.  
   
-

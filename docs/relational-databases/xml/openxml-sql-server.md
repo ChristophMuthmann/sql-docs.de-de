@@ -2,9 +2,12 @@
 title: OPENXML (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -23,19 +26,20 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47cd6e281772125ee7d424425fb6185623c0afc8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: ab0c04534f730157d6112c2428b0cd2ff4a7277f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-  OPENXML ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Schlüsselwort, das für arbeitsspeicherinterne XML-Dokumente ein Rowset bereitstellt, das mit einer Tabelle oder einer Sicht vergleichbar ist. OPENXML ermöglicht es, auf XML-Daten so zuzugreifen, wie auf ein relationales Rowset. Dies geschieht, indem eine Rowsetsicht der internen Darstellung eines XML-Dokuments bereitgestellt wird. Die Datensätze im Rowset können in Datenbanktabellen gespeichert werden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+OPENXML ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Schlüsselwort, das für arbeitsspeicherinterne XML-Dokumente ein Rowset bereitstellt, das mit einer Tabelle oder einer Sicht vergleichbar ist. OPENXML ermöglicht es, auf XML-Daten so zuzugreifen, wie auf ein relationales Rowset. Dies geschieht, indem eine Rowsetsicht der internen Darstellung eines XML-Dokuments bereitgestellt wird. Die Datensätze im Rowset können in Datenbanktabellen gespeichert werden.  
   
  OPENXML kann immer dann in SELECT- und SELECT INTO-Anweisungen verwendet werden, wenn Rowsetanbieter, eine Sicht oder OPENROWSET als Quelle verwendet werden können. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -141,7 +145,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle beschrieben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
@@ -200,7 +204,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Wenn mehrere Teilelemente denselben Namen besitzen, wird der erste Knoten zurückgeliefert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

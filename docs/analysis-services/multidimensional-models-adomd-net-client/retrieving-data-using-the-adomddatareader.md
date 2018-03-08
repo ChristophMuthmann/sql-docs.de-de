@@ -1,13 +1,14 @@
 ---
 title: Abrufen von Daten mittels AdomdDataReader | Microsoft Docs
 ms.custom: 
-ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a04a25d6bf72a8bacd5af46313982e8ff0197170
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Abrufen von Daten mittels AdomdDataReader
   Beim Abruf von analytischen Daten stellt das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ein ausgewogenes Gleichgewicht zwischen Verwaltung und Interaktivität bereit. Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ruft einen schreibgeschützten, vereinfachten Vorwärtsdatenstrom von einer analytischen Datenquelle ab. Dieser nicht zwischengespeicherte Datenstrom ermöglicht es der prozeduralen Logik, die Ergebnisse von einer analytischen Datenquelle effektiv sequenziell zu verarbeiten. Daher ist <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> eine gute Wahl für das Abrufen großer Datenmengen zu Anzeigezwecken, da die Daten nicht zwischengespeichert werden.  
@@ -129,4 +129,3 @@ foreach (DataRow objRow in schemaTable.Rows)
  [Abrufen von Daten mittels XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   
-

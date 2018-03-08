@@ -3,7 +3,7 @@ title: NumericScale und Genauigkeit Eigenschaften-Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - NumericScale property [ADO], Visual Basic example
 - Precision property [ADO], Visual Basic example
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d24b7d6fa72a8559b8f0e0f1ec3243006be5f0f3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 51c7b958564503382a89c13b39545d4b6e3d0821
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)
 Dieses Beispiel verwendet die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) anzuzeigenden numerischen Dezimalstellen und die Genauigkeit der Felder in Eigenschaften der ***Rabatte*** Tabelle mit den  ***Pubs*** Datenbank.  
@@ -83,7 +82,6 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale-Eigenschaft (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
+ [NumericScale Property (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)   
  [Precision-Eigenschaft (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-

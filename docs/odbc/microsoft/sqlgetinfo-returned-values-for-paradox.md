@@ -3,8 +3,11 @@ title: "SQLGetInfo zurückgegebenen Werte für Paradox | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12760717293ba8ea463ff53b78bfb49838a6eaa6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a02f6896a6c618614a01def439fcbd8a5d2e1aa8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo zurückgegebenen Werte für Paradox
 Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoType* Argument und die entsprechenden Werte zurückgegebenes **SQLGetInfo**. Diese Informationen abgerufen werden kann, durch Übergeben der aufgelisteten Programmiersprache C# defines **SQLGetInfo** in der *fInfoType* Argument. Weitere Informationen zu den Werten zurückgegebenes **SQLGetInfo**, finden Sie unter der *ODBC Programmer's Reference*.  
@@ -34,7 +36,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 > [!NOTE]  
 >  Wobei **SQLGetInfo** gibt eine 32-Bit-Bitmaske, ein senkrechter Strich (&#124;) stellt ein bitweises OR.  
   
-|Infotyp|Rückgabewert|  
+|InfoType|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -173,4 +175,3 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_TXN_ISOLATION_OPTION|0|  
 |SQL_UNION|Mehrere Werte|  
 |SQL_USER_NAME|""|
-

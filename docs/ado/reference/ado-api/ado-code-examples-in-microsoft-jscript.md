@@ -3,7 +3,7 @@ title: ADO-Codebeispiele in Microsoft JScript | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40bbf8b39fb1da60418c43074926b5115e6e1448
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b935c1d355817af0401c1088d366db4af29561f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>ADO-Codebeispiele in Microsoft JScript
 Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden der ADO-Methoden, Eigenschaften und Ereignisse, die beim Schreiben in JScript.  
@@ -68,4 +67,3 @@ Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden der AD
  [ADO Code Beispiele VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [ADO-Codebeispiele in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-

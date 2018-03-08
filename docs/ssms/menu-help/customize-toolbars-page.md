@@ -3,30 +3,31 @@ title: Anpassen (Seite Symbolleisten) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.customize.toolbars
 - sql13.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9d5148aa90988ddfe763a26c1534eb7fd73640f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a9aaa2f4f281a4e41dd90e336c4dd4e39024bb20
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-toolbars-page"></a>Anpassen (Seite Symbolleisten)
-Mithilfe der Registerkarte **Symbolleisten** können Symbolleisten erstellen, umbenennen, entfernen und zurücksetzen. Sie können auf diese Registerkarte zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Symbolleisten**klicken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe der Registerkarte **Symbolleisten** können Symbolleisten erstellen, umbenennen, entfernen und zurücksetzen. Sie können auf diese Registerkarte zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Symbolleisten**klicken.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
 **Symbolleisten**  
@@ -59,4 +60,3 @@ Gibt an, ob Tastenkombinationen in QuickInfos für Befehle auf der Symbolleiste 
 **Tastatur**  
 Zeigt den Bereich **Tastatur** des Dialogfelds **Optionen** an, in dem Sie Tastenkombinationen für Befehle ändern und definieren können.  
   
-

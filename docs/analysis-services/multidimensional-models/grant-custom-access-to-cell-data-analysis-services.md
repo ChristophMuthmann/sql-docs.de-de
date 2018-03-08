@@ -2,17 +2,16 @@
 title: Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.celldata.f1
+f1_keywords: sql13.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
 - user access rights [Analysis Services], cell data
 - permissions [Analysis Services], cells
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7f4c45a7e342a11fa7d235654581cad5b462877a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb753663f77dbe9fae2eb37cce9a654bfa22f483
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services)
-  Zellensicherheit wird verwendet, um den Zugriff auf Measuredaten innerhalb eines Cubes zuzulassen oder zu verweigern. Die folgende Abbildung zeigt eine Kombination zugelassener und verweigerter Measures in einer PivotTable, wenn ein Benutzer angemeldet ist, dessen Rolle nur den Zugriff auf bestimmte Measures erlaubt. In diesem Beispiel sind der **Betrag der Verkäufe des Wiederverkäufers** und die **Gesamtproduktkosten des Wiederverkäufers** die einzigen über diese Rolle verfügbaren Measures. Alle anderen Measures werden implizit abgelehnt (im unten stehenden Abschnitt "Zulassen des Zugriffs auf bestimmte Measures" sind die Schritte zu diesem Ergebnis beschrieben).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Zellensicherheit wird verwendet, zulassen oder Verweigern des Zugriffs auf Daten innerhalb eines Cubes zu messen. Die folgende Abbildung zeigt eine Kombination zugelassener und verweigerter Measures in einer PivotTable, wenn ein Benutzer angemeldet ist, dessen Rolle nur den Zugriff auf bestimmte Measures erlaubt. In diesem Beispiel sind der **Betrag der Verkäufe des Wiederverkäufers** und die **Gesamtproduktkosten des Wiederverkäufers** die einzigen über diese Rolle verfügbaren Measures. Alle anderen Measures werden implizit abgelehnt (im unten stehenden Abschnitt "Zulassen des Zugriffs auf bestimmte Measures" sind die Schritte zu diesem Ergebnis beschrieben).  
   
  ![PivotTable mit zugelassenen und verweigerten Zellen](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "Pivottable mit zugelassenen und verweigerten Zellen")  
   
@@ -112,4 +110,3 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Oberflächenkonfiguration | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ee5522ce1d173dfd979b64d428be2e6e05ded00
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e16dac870c31a7d409189d29b84f88686a71db21
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="surface-area-configuration"></a>Oberflächenkonfiguration
-  Bei neuen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sind viele Funktionen in der Standardkonfiguration nicht aktiviert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Installation selektiv durch und startet nur zentrale Dienste und Funktionen, damit möglichst wenige Funktionen eine Angriffsfläche für böswillige Benutzer bieten. Zum Zeitpunkt der Installation können diese Standardeinstellungen von einem Systemadministrator geändert werden. Ebenso ist es möglich, Funktionen einer laufenden Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]selektiv zu aktivieren oder zu deaktivieren. Darüber hinaus sind einige Komponenten beim Herstellen einer Verbindung von anderen Computern möglicherweise erst verfügbar, wenn Protokolle konfiguriert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei neuen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind viele Funktionen in der Standardkonfiguration nicht aktiviert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Installation selektiv durch und startet nur zentrale Dienste und Funktionen, damit möglichst wenige Funktionen eine Angriffsfläche für böswillige Benutzer bieten. Zum Zeitpunkt der Installation können diese Standardeinstellungen von einem Systemadministrator geändert werden. Ebenso ist es möglich, Funktionen einer laufenden Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]selektiv zu aktivieren oder zu deaktivieren. Darüber hinaus sind einige Komponenten beim Herstellen einer Verbindung von anderen Computern möglicherweise erst verfügbar, wenn Protokolle konfiguriert werden.  
   
 > [!NOTE]  
 >  Im Unterschied zu neuen Installationen werden während eines Upgrades keine bestehenden Dienste oder Funktionen deaktiviert. Es können jedoch nach Abschluss des Upgrades zusätzliche Optionen für die Oberflächenkonfiguration angewendet werden.  
@@ -81,4 +82,3 @@ ms.lasthandoff: 06/22/2017
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

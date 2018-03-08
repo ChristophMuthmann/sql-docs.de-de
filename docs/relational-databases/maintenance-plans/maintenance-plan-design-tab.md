@@ -2,11 +2,13 @@
 title: "Wartungsplan (Registerkarte „Entwurf“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,21 +16,21 @@ f1_keywords:
 - sql13.swb.maint.planeditor.f1
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "27"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: e425cd4e4901b396ae08cc9586381120ab225745
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
-  Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)** , um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)**, um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Unterplan hinzufügen**  
  Mit dieser Option fügen Sie einen Unterplan hinzu, den Sie konfigurieren können.  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 06/22/2017
  **Designeroberfläche**  
  Hiermit können Sie Wartungspläne entwerfen und verwalten. Verwenden Sie die Designeroberfläche, um einem Plan Wartungspläne hinzuzufügen, Tasks aus einem Plan zu entfernen, Rangfolgenlinks zwischen den Tasks anzugeben oder Taskverzweigungen und -parallelausführungen anzuzeigen.  
   
- Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler**oder **Beendigung**. Die Oberfläche des Wartungsplan-Designers basiert auf der Oberfläche des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler**oder **Beendigung**. Die Oberfläche des Wartungsplan-Designers basiert auf der Oberfläche des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
   
  Ein Task zur Defragmentierung des Indexes könnte beispielsweise so festgelegt werden, dass er nur ausgeführt wird, wenn der vorher ausgeführte Task Datenbankintegrität überprüfen erfolgreich abgeschlossen wurde. Mit der Funktion für Rangfolgenlinks werden Fehlerbehandlungen und Vorgehensweisen bei Fehlschlägen in den Plänen ermöglicht. Bei einem Fehler des Tasks Datenbankintegritätsprüfung könnte der Task Operator benachrichtigen beispielsweise einen Benutzer oder Operator über den Fehler benachrichtigen.  
   
@@ -117,7 +119,7 @@ ms.lasthandoff: 06/22/2017
  **Zoom**  
  Ändert die Größe der Tasks auf der Entwurfsoberfläche.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

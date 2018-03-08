@@ -3,8 +3,11 @@ title: CurveToLineWithTolerance (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5120f9c27e6157fd2f19c598ad984e1a3543db94
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9fd46759735549e06a25544ee04a4db356464916
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegmenten zurück.
   
@@ -39,7 +41,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Fehlertoleranz*  
+ *tolerance*  
  Ein **double** -Ausdruck, der die maximalen Fehler zwischen dem ursprünglichen Kreisbogensegment und der linearen Näherung definiert.  
   
  *relative*  
@@ -125,5 +127,4 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  [STCurveToLine &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
-
 

@@ -3,7 +3,7 @@ title: Children-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 39c1ba30aab6f6a972241c0e564a7a0680165828
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c851f06ecd3cec67769f761cb2aea400c5b06d9e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="children-property-ado-md"></a>Children-Eigenschaft (ADO MD)
 Gibt eine [Elemente](../../../ado/reference/ado-md-api/members-collection-ado-md.md) Auflistung, für die aktuelle [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) ist das übergeordnete Element in der Hierarchie.  
@@ -45,4 +44,3 @@ Gibt eine [Elemente](../../../ado/reference/ado-md-api/members-collection-ado-md
   
 ## <a name="see-also"></a>Siehe auch  
  [ChildCount-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)
-

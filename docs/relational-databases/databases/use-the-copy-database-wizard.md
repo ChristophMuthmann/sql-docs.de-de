@@ -2,11 +2,13 @@
 title: Verwenden des Assistenten zum Kopieren von Datenbanken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,19 +27,19 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 26b3c7967d7549f6f192afcac64888dcb68d6c7c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "64"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
-Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken und bestimmte Serverobjekte ohne Serverausfallzeiten problemlos von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu einer anderen. Mit diesem Assistenten können Sie folgende Aktionen ausführen: 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken und bestimmte Serverobjekte ohne Serverausfallzeiten problemlos von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu einer anderen. Mit diesem Assistenten können Sie folgende Aktionen ausführen: 
   
 -   Einen Quell- und Zielserver auswählen.  
   
@@ -119,7 +121,7 @@ Ermöglicht den Benutzern eine Verbindung über ein Microsoft Windows-Benutzerko
 -    **SQL Server-Authentifizierung verwenden**  
 Ermöglicht den Benutzern, mithilfe eines Benutzernamens und eines Kennworts für die SQL Server-Authentifizierung eine Verbindung aufzubauen.
 
-     -    **Benutzername**  
+     -    **User name**  
 Diese Option wurde dazu verwendet, um den Benutzernamen für die Verbindung einzugeben. Diese Option ist nur verfügbar, wenn Sie die **SQL Server-Authentifizierung**für die Verbindungsherstellung ausgewählt haben.
 
      -    **Kennwort**  
@@ -139,7 +141,7 @@ Ermöglicht den Benutzern eine Verbindung über ein Microsoft Windows-Benutzerko
 -    **SQL Server-Authentifizierung verwenden**  
 Ermöglicht den Benutzern, mithilfe eines Benutzernamens und eines Kennworts für die SQL Server-Authentifizierung eine Verbindung aufzubauen.
 
-     -    **Benutzername**  
+     -    **User name**  
 Diese Option wurde dazu verwendet, um den Benutzernamen für die Verbindung einzugeben. Diese Option ist nur verfügbar, wenn Sie die **SQL Server-Authentifizierung**für die Verbindungsherstellung ausgewählt haben.
 
      -    **Kennwort**  
@@ -301,7 +303,7 @@ Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.
 ### <a name="common-steps"></a>**Allgemeine Schritte** 
 Unabhängig davon, ob Sie sich für **Verschieben** oder **Kopieren**, **Trennen und Anfügen** oder **SMO**entscheiden, sind die unten aufgeführten fünf Schritte identisch.  Aus Gründen der Übersichtlichkeit sind die Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 6**.
 
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
 2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Datenbank kopieren...**.
 
@@ -404,5 +406,4 @@ In diesem Beispiel wird die `Sales` -Datenbank als `SalesCopy` auf derselben Ins
  [Erstellen eines Proxys für den SQL Server-Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
   
   
-
 

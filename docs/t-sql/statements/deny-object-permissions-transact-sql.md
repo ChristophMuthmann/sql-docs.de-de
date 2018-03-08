@@ -3,8 +3,11 @@ title: "Verweigern von Berechtigungen für Modellobjekte (Transact-SQL) | Micros
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-caps.latest.revision: 26
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2655a796d6d097cb635576313664ea6bfa7162db
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: dc405b480d063ff6990182f9a66cc6f4e35c3a5a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (Objektberechtigungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Verweigert Berechtigungen für ein Element der OBJECT-Klasse sicherungsfähiger Elemente. Folgende Elemente gehören zur OBJECT-Klasse: Tabellen, Sichten, Tabellenwertfunktionen, gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Skalarfunktionen, Aggregatfunktionen, Dienstwarteschlangen und Synonyme.  
 
@@ -182,4 +184,3 @@ GO
  [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
-

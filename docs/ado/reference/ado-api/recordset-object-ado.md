@@ -3,7 +3,7 @@ title: Recordset-Objekt (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 75e28a7413bc510865e1553e9a548ac1f00d46b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ad07b3aeaa8428bc5c2dee78a061c511893daef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-object-ado"></a>Recordset-Objekt (ADO)
 Stellt die gesamte Gruppe von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Zu jedem Zeitpunkt die **Recordset** Objekt bezieht sich auf nur einen einzelnen Datensatz in der Gruppe als der aktuelle Datensatz.  
@@ -58,7 +57,7 @@ Stellt die gesamte Gruppe von Datensätzen aus einer Basistabelle oder die Ergeb
   
  Sie können die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, und **MovePrevious** Methoden; das [verschieben](../../../ado/reference/ado-api/move-method-ado.md) -Methode. und die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), und [Filter](../../../ado/reference/ado-api/filter-property.md) zu positionieren den aktuellen Datensatz, sofern der Anbieter unterstützt die relevanten Eigenschaften die Funktionalität. Vorwärtscursor **Recordset** Objekte unterstützen nur die [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) Methode. Bei Verwendung der **verschieben** Methoden, um jeden Datensatz besuchen (oder durchlaufen die **Recordset**), können Sie die **BOF** und **EOF** Eigenschaften Bestimmen Sie, ob Sie am Anfang oder Ende überschritten haben die **Recordset**.  
   
- Vor der Verwendung der Funktionen einer **Recordset** -Objekt, rufen Sie die **unterstützt** Methode für das Objekt, um sicherzustellen, dass die Funktionalität unterstützt oder verfügbar ist. Sie müssen nicht die Funktionalität verwenden bei der **unterstützt** Methode "false" zurückgegeben. Beispielsweise können Sie die **MovePrevious** Methode nur, wenn `Recordset.Supports(adMovePrevious)` gibt **"true"**. Andernfalls wird eine Fehlermeldung erhalten, da die **Recordset** -Objekt wurde geschlossen und die Funktionalität für die Instanz nicht verfügbar dargestellt. Wenn eine Funktion, die Sie interessiert sind, nicht unterstützt wird, **unterstützt** wird auch "false" zurückgeben. In diesem Fall sollten Sie die entsprechende Eigenschaft oder Methode aufrufen, auf die **Recrodset** Objekt.  
+ Vor der Verwendung der Funktionen einer **Recordset** -Objekt, rufen Sie die **unterstützt** Methode für das Objekt, um sicherzustellen, dass die Funktionalität unterstützt oder verfügbar ist. Sie müssen nicht die Funktionalität verwenden bei der **unterstützt** Methode "false" zurückgegeben. Beispielsweise können Sie die **MovePrevious** Methode nur, wenn `Recordset.Supports(adMovePrevious)` gibt **"true"**. Andernfalls wird eine Fehlermeldung erhalten, da die **Recordset** -Objekt wurde geschlossen und die Funktionalität für die Instanz nicht verfügbar dargestellt. Wenn eine Funktion, die Sie interessiert sind, nicht unterstützt wird, **unterstützt** wird auch "false" zurückgeben. In diesem Fall sollten Sie die entsprechende Eigenschaft oder Methode aufrufen, auf die **Recordset** Objekt.  
   
  **Recordset** Objekte unterstützen zwei Typen von aktualisieren: sofortige als auch im Batchmodus. In das sofortige Aktualisieren, alle Änderungen an Daten geschrieben werden sofort mit der zugrunde liegenden Datenquelle nach Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) Methode. Sie können Arrays von Werten auch übergeben, als Parameter mit der [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) und **aktualisieren** Methoden und gleichzeitig mehrere Felder in einem Datensatz aktualisieren.  
   
@@ -88,5 +87,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

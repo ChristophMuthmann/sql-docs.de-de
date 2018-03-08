@@ -2,9 +2,12 @@
 title: Semantische Suche (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -15,19 +18,19 @@ helpviewer_keywords:
 - statistical semantic search [SQL Server]
 - statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca60c4ada6bd908d5401784db74a9b8b0c93396b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 962eb4b9356a9c499a55ab2f199ff166e844e8fd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="semantic-search-sql-server"></a>Semantische Suche (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturierte Dokumente, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken gespeichert sind, indem statistisch relevante *Schlüsselausdrücke*extrahiert und indiziert werden. Anschließend werden diese Schlüsselausdrücke verwendet, um *ähnliche oder verwandte Dokumente* zu identifizieren und zu indizieren.  
   
 ##  <a name="whatcanido"></a> Was ist mit der semantischen Suche alles möglich?  
@@ -40,7 +43,7 @@ Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturie
  
  Diese Abfrage ruft die Funktion [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) auf.  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -73,12 +76,12 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Suchen der Schlüsselausdrücke, die Dokumente ähnlich oder verwandt machen  
+###  <a name="find3"></a> Find the key phrases that make documents similar or related  
  Die folgende Abfrage ruft die Schlüsselausdrücke ab, die zwei Beispieldokumente ähnlich oder verwandt machen. Sie präsentiert die Ergebnisse in absteigender Reihenfolge nach dem Grad, der die Gewichtung der einzelnen Schlüsselausdrücke angibt.
  
  Diese Abfrage ruft die Funktion [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) auf.  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   
@@ -120,4 +123,3 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  Führt die zur Unterstützung der semantischen Suche hinzugefügten oder geänderten Transact-SQL-Anweisungen und SQL Server-Datenbankobjekte auf.  
   
   
-

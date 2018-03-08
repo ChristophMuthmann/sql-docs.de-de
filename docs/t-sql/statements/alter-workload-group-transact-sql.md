@@ -1,10 +1,13 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5a5d5650311115edc52866abdd167700438cc1f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert die Konfiguration einer vorhandenen Resource Governor Workload und weist sie optional einen an einen Ressourcenpool der Ressourcenkontrolle.  
   
@@ -39,7 +41,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -58,24 +59,22 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Der Name einer vorhandenen benutzerdefinierten Arbeitsauslastungsgruppe oder der standardmäßigen Ressourcenkontrollen-Arbeitsauslastungsgruppe.  
   
 > [!NOTE]  
->  Die Ressourcenkontrolle erstellt den "Standard" und interne Gruppen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
+> Die Ressourcenkontrolle erstellt den "Standard" und interne Gruppen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
  Die "default"-Option muss in Anführungszeichen ("") oder Klammern ([]) eingeschlossen werden, wenn sie mit ALTER WORKLOAD GROUP verwendet wird, um einen Konflikt mit dem vom System reservierten Wort DEFAULT zu vermeiden. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Verwenden vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich Kleinbuchstabe Namen, z. B. "Default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.  
+> Verwenden vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich Kleinbuchstabe Namen, z. B. "Default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Gibt die relative Wichtigkeit einer Anforderung in der Arbeitsauslastungsgruppe an. Die Wichtigkeit kann einen der folgenden Werte aufweisen:  
   
 -   LOW  
-  
 -   MEDIUM (Standard)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
+> Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
   
  IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen mit verschiedener Wichtigkeit innerhalb desselben Ressourcenpools beeinflussen sich gegenseitig, haben jedoch keine Auswirkungen auf Arbeitsauslastungsgruppen in anderen Ressourcenpools.  
   
@@ -83,7 +82,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. Dieser Prozentwert ist relativ zur Ressourcenpoolgröße, die von MAX_MEMORY_PERCENT festgelegt wird.  
   
 > [!NOTE]  
->  Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
+> Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
   
  *Wert* muss 0 oder eine positive ganze Zahl sein. Der zulässige Bereich für *Wert* liegt zwischen 0 und 100. Die Standardeinstellung für *Wert* ist 25.  
   
@@ -102,13 +101,16 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  Beachten Sie, dass in beiden Fällen der Timeoutfehler 8645 auftreten kann, wenn der Server nicht über ausreichend physischen Arbeitsspeicher verfügt.  
   
- REQUEST_MAX_CPU_TIME_SEC =*Wert*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert* ist 0 (null) bedeutet unbeschränkt.  
   
 > [!NOTE]  
->  Die Ressourcenkontrolle verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Standardmäßig wird Ressourcenkontrolle nicht verhindern, dass eine Anforderung fortgesetzt, wenn die maximale Zeit überschritten wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, und Verwenden von [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Ressourcenkontrolle wird eine Anforderung abgebrochen, wenn die maximale Zeit überschritten wird.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*Wert*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer Arbeitspeicherzuweisung (Arbeitsspeicherpuffer) wartet.  
   
 > [!NOTE]  
@@ -116,7 +118,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *Wert* muss eine positive ganze Zahl sein. Die Standardeinstellung für *Wert*, 0, verwendet eine interne Berechnung basierend auf den Abfragekosten, um die maximale Zeit festlegen.  
   
- MAX_DOP =*Wert*  
+ MAX_DOP =*value*  
  Gibt den maximalen Grad der Parallelität (DOP) für parallele Anforderungen an. *Wert* muss 0 oder eine positive ganze Zahl, 1 und 255. Wenn *Wert* gleich 0 ist, wählt der Server die Max. Grad an Parallelität. Dies ist die Standardeinstellung und die empfohlene Einstellung.  
   
 > [!NOTE]  
@@ -137,7 +139,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Nach der Konfiguration kann DOP nur bei Arbeitsspeicher-Engpässen verringert werden. Die Neukonfiguration der Arbeitsauslastungsgruppe ist während des Wartens in der Speicherzuweisungs-Warteschlange nicht sichtbar.  
   
- GROUP_MAX_REQUESTS =*Wert*  
+ GROUP_MAX_REQUESTS =*value*  
  Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert*0 lässt unbegrenzte Anforderungen. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.  
   
  Mithilfe von { *Pool_name* | "**Standard**"}  
@@ -202,4 +204,3 @@ GO
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-

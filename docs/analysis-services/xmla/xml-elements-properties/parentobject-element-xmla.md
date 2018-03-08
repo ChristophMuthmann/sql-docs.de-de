@@ -2,42 +2,38 @@
 title: ParentObject-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ParentObject Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ParentObject Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#ParentObject
 - http://schemas.microsoft.com/analysisservices/2003/engine#ParentObject
 - microsoft.xml.analysis.parentobject
-helpviewer_keywords:
-- ParentObject element
+helpviewer_keywords: ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c52bc6fd7d4ae414f0c20c7921186115e17d1cea
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a03ecf393780d2960e4d5cb4bf3e2ca15c0d997f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject-Element (XMLA)
-  Enthält den Bezeichner des übergeordneten Objekts, unter denen zum Erstellen der Objekte, die vom übergeordneten Element definiert [erstellen](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält den Bezeichner des übergeordneten Objekts, unter denen zum Erstellen der Objekte, die vom übergeordneten Element definiert [erstellen](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,11 +50,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -197,4 +193,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

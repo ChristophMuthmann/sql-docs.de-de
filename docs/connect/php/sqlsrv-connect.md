@@ -3,14 +3,15 @@ title: Sqlsrv_connect | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_connect
+apiname: sqlsrv_connect
 apitype: NA
 helpviewer_keywords:
 - connecting to the server
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - connection pooling support
 - sqlsrv_connect
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f87b73eee57279a1f3b8bd39abb8f8986076b653
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e9491e2b0721f7c7a2ca6b5ed37c52135a4c760
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -97,4 +97,3 @@ sqlsrv_close( $conn);
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   
-

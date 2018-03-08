@@ -2,9 +2,12 @@
 title: Benutzerkonfigurierbar-Ereigniskategorie | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,26 +17,25 @@ helpviewer_keywords:
 - event classes [SQL Server], User-Configurable event category
 - User-Configurable event category [SQL Server]
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 63ce89349141934c2e4d5cfd5a8507b7d28e2650
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eda51526faf5046b9414e3c7bfd6cddc7a42d354
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="user-configurable-event-category"></a>Benutzerkonfigurierbar-Ereigniskategorie
-  Die Ereigniskategorie **User-Configurable** enthält die **User-Configurable** -Ereignisklassen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die Ereigniskategorie **User-Configurable** enthält die **User-Configurable** -Ereignisklassen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Benutzerkonfigurierbar-Ereignisklasse](../../relational-databases/event-classes/user-configurable-event-class.md)|Zum Überwachen von benutzerdefinierten Ereignissen, die nicht mithilfe der vom System in anderen Ereigniskategorien bereitgestellten Ereignisse überwacht werden können.|  
   
   
-

@@ -2,30 +2,32 @@
 title: Differenzielle Sicherungen (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "60"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 65c3f103ad65c9726be098dde183b1302b4e5645
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="differential-backups-sql-server"></a>Differenzielle Sicherungen (SQL Server)
-  Dieses Thema zu Sicherung und Wiederherstellung ist für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema zu Sicherung und Wiederherstellung ist für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken relevant.  
   
  Eine differenzielle Sicherung basiert auf der aktuellsten, zuvor ausgeführten vollständigen Datensicherung. Mit einer differenziellen Sicherung werden nur die Daten erfasst, die sich seit dieser vollständigen Sicherung geändert haben. Die vollständige Sicherung, auf der eine differenzielle Sicherung basiert wird, wird als *Basis* der differenziellen Sicherung bezeichnet. Vollständige Sicherungen, mit Ausnahme von Kopiesicherungen, können als Basis für eine Reihe differenzieller Sicherungen dienen, einschließlich Datenbanksicherungen, Teilsicherungen und Dateisicherungen. Die Basissicherung für eine differenzielle Dateisicherung kann in einer vollständigen Sicherung, einer Dateisicherung oder einer Teilsicherung enthalten sein.  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 -   [Wiederherstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

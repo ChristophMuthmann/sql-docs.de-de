@@ -3,7 +3,7 @@ title: ADORecordConstruction Schnittstelle | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7bfe02588a73f6c896b8947298483766c6a8a01e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3966038215e1d26828d60b739ac6060859eabd67
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction-Schnittstelle
 Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen **Datensatz** Objekt aus einer OLE DB- **Zeile** Objekt in einer C-/C++-Anwendung.  
@@ -39,7 +38,7 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
   
 |||  
 |-|-|  
-|[Der ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Nur Schreibzugriff.<br />Legt den Container eines OLE DB- **Zeile** dieser ADO-Objekt **Datensatz** Objekt.|  
+|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Nur Schreibzugriff.<br />Legt den Container eines OLE DB- **Zeile** dieser ADO-Objekt **Datensatz** Objekt.|  
 |[Zeile](../../../ado/reference/ado-api/row-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **Zeile** Objekt vom bzw. auf diesen ADO **Datensatz** Objekt.|  
   
 ## <a name="methods"></a>Methoden  
@@ -84,4 +83,3 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
  **Bibliothek:** "MSADO15.dll"  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4
-

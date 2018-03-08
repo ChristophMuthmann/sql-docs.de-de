@@ -2,11 +2,13 @@
 title: SQL Server Profiler-Dialogfelder | Microsoft Docs
 ms.custom: 
 ms.date: 07/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,20 +43,19 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "23"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6075e08d0fd6d5a62c9de00b5f34576459b0ffdc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler-Dialogfelder
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse von einem Server aufzeichnet. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann. Im folgenden sind die verfügbaren Befehle und Einstellungen in den Dialogfeldern der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool zur Erfassung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse von einem Server. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann. Im folgenden sind die verfügbaren Befehle und Einstellungen in den Dialogfeldern der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Ablaufverfolgungseigenschaften
 ### <a name="general-tab"></a>Registerkarte "Allgemein"
 Mithilfe der Registerkarte **Allgemein** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Eigenschaften einer Ablaufverfolgung anzeigen und festlegen.  
@@ -170,7 +171,7 @@ Verwenden Sie das Dialogfeld **Allgemeine Optionen** , um die folgenden Optionen
 |**Schriftartname**|Zeigt den Namen der Schriftart an, die im Ergebnisraster der Ablaufverfolgung verwendet wird.  
 |**Schriftgrad**|Zeigt die Größe der Schrift an, die im Ergebnisraster der Ablaufverfolgung verwendet wird.  
 |**Schriftart auswählen**|Öffnet ein Dialogfeld, in dem die Schriftarteinstellungen geändert werden können.  
-|**Einstellungen für Land/Region zum Anzeigen von Datums- und Uhrzeitwerten verwenden**|Zeigt Datums- und Uhrzeitwerte entsprechend den Einstellungen für das Land/die Region an, die für Ihren Computer konfiguriert sind. Wenn Sie diese Option nicht aktivieren, werden die Datums- und Uhrzeitwerte in dem festgelegten Format anzeigt, das von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird und bei dem auch Millisekunden angezeigt werden. Beachten Sie, dass wenn Sie dieses Kontrollkästchen Umschalten die Zeitspalten ändert Anzeigeformat wie z. B. **StartTime** und **EndTime**. Nicht geändert werden jedoch die **DateTime** -Wertparameter in den Sprachereignissen oder den Remoteprozeduraufrufen (Remote Procedure Calls, RPCs).  
+|**Einstellungen für Land/Region zum Anzeigen von Datums- und Uhrzeitwerten verwenden**|Zeigt Datums- und Uhrzeitwerte entsprechend den Einstellungen für das Land/die Region an, die für Ihren Computer konfiguriert sind. Wenn Sie diese Option nicht aktivieren, werden die Datums- und Uhrzeitwerte in dem festgelegten Format anzeigt, das von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird und bei dem auch Millisekunden angezeigt werden. Beachten Sie, dass wenn Sie dieses Kontrollkästchen Umschalten die Zeitspalten ändert Anzeigeformat wie z. B. **StartTime** und **EndTime**. Nicht geändert werden jedoch die **DateTime**-Wertparameter in den Sprachereignissen oder den Remoteprozeduraufrufen (Remote Procedure Calls, RPCs).  
 |**Werte in der Spalte 'Dauer' in Mikrosekunden anzeigen**|Zeigt die Werte in der **Dauer** -Datenspalte bei Ablaufverfolgungen in Mikrosekunden an. Standardmäßig werden die Werte unter **Dauer** in Millisekunden angezeigt.  
 ### <a name="tracing-options"></a>Ablaufverfolgungsoptionen  
 |Element|Description
@@ -199,7 +200,7 @@ In Microsoft SQL Server Profiler und im Optimierungsratgeber von Microsoft SQL S
 |**SQL Server**|Gibt die Instanz von SQL Server an, mit der aktuell eine Verbindung besteht. Dieses Feld wird automatisch ausgefüllt und kann nicht aktualisiert werden.  
 |**Datenbank**|Geben Sie die Datenbank an, in der die Ablaufverfolgungstabelle gespeichert ist.  
 |**Besitzer**|Specifies the owner of the trace table. Dieses Feld wird automatisch mit **dbo**ausgefüllt.  
-|**Table**|Geben Sie den Namen der Ablaufverfolgungstabelle an, aus der die Ablaufverfolgung gelesen werden soll.  
+|**Tabelle**|Geben Sie den Namen der Ablaufverfolgungstabelle an, aus der die Ablaufverfolgung gelesen werden soll.  
 ## <a name="destination-table"></a>Zieltabelle
 Mithilfe des Dialogfelds **Zieltabelle** können Sie angeben, in welcher Tabelle die Ablaufverfolgung gespeichert werden soll.  
 |Element|Description
@@ -281,4 +282,3 @@ Mit dem Dialogfeld **Vorlagenname auswählen** können Sie eine vorhandene [!INC
 [Überwachen der Serverleistung und -aktivität](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

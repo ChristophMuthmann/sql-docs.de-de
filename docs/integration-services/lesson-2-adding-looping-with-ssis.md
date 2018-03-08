@@ -1,10 +1,13 @@
 ---
-title: "Lektion 2: Hinzufügen von Schleifen mit SSIS | Microsoft Docs"
+title: "Lektion 2: Hinzufügen von Schleifen mit SSIS | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 683a2db5f7af5292051b5ce5c4cec9d49d465c2e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lesson 2: Adding Looping with SSIS
 In [Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)haben Sie ein Paket erstellt, mit dem Daten aus einer einzelnen Flatfilequelle zunächst extrahiert, anschließend mithilfe der Suchtransformationen transformiert und schließlich in die Faktentabelle **FactCurrency** der **AdventureWorksDW2012** -Beispieldatenbank geladen wurden.  
@@ -70,9 +72,8 @@ Diese Lektion enthält die folgenden Aufgaben:
 ## <a name="start-the-lesson"></a>Lektion beginnen  
 [Schritt 1: Kopieren des Pakets aus Lektion 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [For-Schleifencontainer](../integration-services/control-flow/for-loop-container.md)  
   
   
   
-

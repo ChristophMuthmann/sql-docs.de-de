@@ -1,10 +1,13 @@
 ---
-title: Debuggen der Ablaufsteuerung | Microsoft Docs
+title: Debuggen der Ablaufsteuerung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,19 +22,19 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten Funktionen und Tools, mit denen Sie die Ablaufsteuerung in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket behandeln können.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features und tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt Breakpoints für Container und Tasks.  
   
@@ -103,7 +106,7 @@ ms.lasthandoff: 08/03/2017
   
  Im folgenden Diagramm wird die Registerkarte **Status** angezeigt.  
   
- ![Status (Registerkarte) des SSIS-Designers](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Status (Registerkarte) des SSIS-Designers")  
+ ![Registerkarte „Status“ des SSIS-Designers](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Progress tab of SSIS Designer")  
   
 ## <a name="debug-windows"></a>Debugfenster  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält viele Fenster, in denen Sie Breakpoints verwenden und Pakete, die Breakpoints enthalten, debuggen können. Um weitere Informationen zu den einzelnen Fenstern zu erhalten, öffnen Sie das entsprechende Fenster, und drücken Sie F1, um die zugehörige Hilfe anzuzeigen.  
@@ -133,9 +136,9 @@ ms.lasthandoff: 08/03/2017
   
     -   Um Breakpoints in einer Paketablaufsteuerung festzulegen, klicken Sie auf die Registerkarte **Ablaufsteuerung** , klicken mit der rechten Maustaste auf einen Task, einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer und dann auf **Breakpoints bearbeiten**.  
   
-    -   Um Breakpoints in einem Ereignishandler festzulegen, klicken Sie auf die Registerkarte **Ereignishandler**, klicken mit der rechten Maustaste auf einen Task, einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer und dann auf **Breakpoints bearbeiten**.  
+    -   Um Breakpoints in einem Ereignishandler festzulegen, klicken Sie auf die Registerkarte **Ereignishandler** , klicken mit der rechten Maustaste auf einen Task, einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer und dann auf **Breakpoints bearbeiten**.  
   
-4.  In der **Breakpoints festlegen \<Containername >** Dialogfeld wählen die zu aktivierenden Breakpoints.  
+4.  Wählen Sie im Dialogfeld **Breakpoints festlegen \<Containername>** die zu aktivierenden Breakpoints aus.  
   
 5.  Ändern Sie wahlweise den Typ der Trefferanzahl und die Trefferanzahl für jeden Breakpoint.  
   
@@ -144,8 +147,8 @@ ms.lasthandoff: 08/03/2017
 ## <a name="set-breakpoints"></a>Breakpoints festlegen
   Verwenden Sie das Dialogfeld **Breakpoints festlegen** , um die Ereignisse anzugeben, für die Breakpoints aktiviert werden sollen, sowie um das Verhalten der Breakpoints zu steuern.  
   
-### <a name="options"></a>enthalten  
- **Aktiviert**  
+### <a name="options"></a>Tastatur  
+ **Enabled**  
  Wählen Sie diese Option aus, um einen Breakpoint für ein Ergebnis zu aktivieren.  
   
  **Unterbrechungsbedingung**  
@@ -164,7 +167,6 @@ ms.lasthandoff: 08/03/2017
  **Trefferanzahl**  
  Geben Sie die Anzahl der Treffer an, nach denen ein Breakpoint ausgelöst werden soll. Diese Option ist nicht verfügbar, wenn der Breakpoint immer wirksam ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Debuggen eines Skripts durch Festlegen von Breakpoints in einem Skripttask und einer Skriptkomponente](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
-

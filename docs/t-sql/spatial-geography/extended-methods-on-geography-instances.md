@@ -3,8 +3,11 @@ title: "Erweiterte Methoden für Geography-Instanzen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f7af6e687461d9663ca59a6262cbd1ed5c5560f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7f17a6adc4449e0c3e9e1b9e944732a9aa13672b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-methods-on-geography-instances"></a>Erweiterte Methoden für geography-Instanzen
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Reihe von erweiterten Methoden für geography-Instanzen des Open Geospatial Consortium (OGC).  
   
@@ -67,13 +69,13 @@ ms.lasthandoff: 09/01/2017
   
 -   [IsValidDetailed &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/isvaliddetailed-geography-data-type.md)  
   
--   [LAT](../../t-sql/spatial-geography/lat-geography-data-type.md)  
+-   [Lat](../../t-sql/spatial-geography/lat-geography-data-type.md)  
   
--   [Lange](../../t-sql/spatial-geography/long-geography-data-type.md)  
+-   [Long](../../t-sql/spatial-geography/long-geography-data-type.md)  
   
 -   [M](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
--   [Durch ' MakeValid '](../../t-sql/spatial-geography/makevalid-geography-data-type.md)  
+-   [MakeValid](../../t-sql/spatial-geography/makevalid-geography-data-type.md)  
   
 -   [MinDbCompatibilityLevel &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/mindbcompatibilitylevel-geography-data-type.md)  
   
@@ -94,7 +96,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Statische Geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
- [Erweiterte statische Geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

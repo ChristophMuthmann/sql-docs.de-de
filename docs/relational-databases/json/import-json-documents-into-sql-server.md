@@ -2,28 +2,29 @@
 title: Importieren von JSON-Dokumenten in SQL Server | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e88356f3f8de8ba463b945c5806ea3cbed14bf2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importieren von JSON-Dokumenten in SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dieses Thema beschreibt das Importieren von JSON-Dateien in SQL Server. Zurzeit werden viele JSON-Dokumente in Dateien gespeichert. Anwendungen protokollieren Informationen in JSON-Dateien, Sensoren generieren Informationen, die in JSON-Dateien gespeichert werden, usw. Es ist wichtig, in der Lage zu sein, die in Dateien gespeicherten JSON-Daten zu lesen, in SQL Server zu laden und sie zu analysieren.
 
@@ -55,7 +56,7 @@ SELECT BulkColumn
 Nachdem Sie den Inhalt der JSON-Datei geladen haben, können Sie den JSON-Text in einer Tabelle speichern.
 
 ## <a name="import-multiple-json-documents"></a>Importieren mehrerer JSON-Dokumente
-Diese Vorgehensweise kann auch zum aufeinanderfolgenden Laden einer Anzahl von JSON-Dateien aus dem Dateisystem in lokale Variablen verwendet werden. Nehmen wir an, dass die Dateien `book<index>.json` heißen.
+Diese Vorgehensweise kann auch zum Laden eines Satzes von JSON-Dateien aus dem Dateisystem in lokale Variablen (nacheinander) verwendet werden. Nehmen wir an, dass die Dateien `book<index>.json` heißen.
   
 ```sql
 DECLARE @i INT = 1
@@ -102,11 +103,11 @@ Sie können auch wie oben beschrieben OPENROWSET(BULK) zum Lesen von JSON-Dateie
         pages_i int, author nvarchar(100)) AS book
     ```
 
-Weitere Informationen zu Azure File Storage finden Sie unter [File Storage](https://azure.microsoft.com/en-us/services/storage/files/).
+Weitere Informationen zu Azure File Storage finden Sie unter [File Storage](https://azure.microsoft.com/services/storage/files/).
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Importieren von JSON-Dokumenten aus Azure BLOB-Speicher
 
-Sie können Dateien mit dem Befehl T-SQL BULK INSERT oder der OPENROWSET-Funktion direkt aus Azure Blob Storage in Azure SQL-Datenbank laden.
+Sie können Dateien mit dem Befehl T-SQL BULK INSERT oder der OPENROWSET-Funktion direkt aus Azure Blob Storage in die Azure SQL-Datenbank laden.
 
 Erstellen Sie zunächst eine externe Datenquelle, wie im folgenden Beispiel gezeigt.
 
@@ -125,10 +126,10 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Weitere Informationen und ein Beispiel für OPENROWSET finden Sie unter [Loading files from Azure Blob Storage into Azure SQL Database (Laden von Dateien aus Azure Blob Storage in Azure SQL-Datenbank)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
+Weitere Informationen und ein Beispiel für OPENROWSET finden Sie unter [Loading files from Azure Blob Storage into Azure SQL Database (Laden von Dateien aus Azure Blob Storage in die Azure SQL-Datenbank)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analysieren von JSON-Dokumenten in Zeilen und Spalten
-Statt die gesamte JSON-Datei als einzelnen Wert zu lesen, sollten Sie sie analysieren und die Bücher in der Tabelle sowie die Eigenschaften in Reihen und Zeilen zurückgeben. Im folgenden Beispiel wird eine JSON-Datei mit einer Liste von Büchern von [dieser Website](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) verwendet.
+Möglicherweise möchten Sie eine JSON-Datei analysieren und die Bücher in der Tabelle sowie die Eigenschaften in Reihen und Zeilen zurückgeben, anstatt die gesamte JSON-Datei als einzelnen Wert zu lesen. Im folgenden Beispiel wird eine JSON-Datei mit einer Liste von Büchern von [dieser Website](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) verwendet.
 
 ### <a name="example-1"></a>Beispiel 1
 Im einfachsten Beispiel können Sie einfach die gesamte Liste aus der Datei laden. 
@@ -162,7 +163,7 @@ SELECT book.*
 
 In diesem Beispiel liest OPENROWSET(BULK) den Inhalt der Datei und übergibt den Inhalt mit einem definierten Schema für die Ausgabe an die OPENJSON-Funktion. OPENJSON vergleicht Eigenschaften in JSON-Objekten mithilfe der Spaltennamen. Die Eigenschaft `price` wird z.B. als `price`-Spalte zurückgegeben und in den float-Datentyp konvertiert. Dies sind die Ergebnisse:
 
-|ID|Name|Preis|Seiten_i|Autor
+|ID|Name|Preis|Seiten_i|Author
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief (Diebe im Olymp)|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters (Im Bann des Zyklopen)|6.49|304|Rick Riordan| 
@@ -172,10 +173,22 @@ In diesem Beispiel liest OPENROWSET(BULK) den Inhalt der Datei und übergibt den
 
 Jetzt können Sie die Tabelle an den Benutzer zurückgeben oder die Daten in eine andere Tabelle laden.
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
   
-## <a name="see-also"></a>Siehe auch
-[Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
 
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+[Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 

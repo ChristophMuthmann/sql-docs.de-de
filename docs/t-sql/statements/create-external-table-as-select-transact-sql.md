@@ -1,11 +1,13 @@
 ---
-title: Erstellen Sie die externe Tabelle AS SELECT (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-table-as-select-transact-sql"></a>Erstellen Sie die externe Tabelle AS SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Eine externe Tabelle erstellt und dann exportiert, parallel, die Ergebnisse einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung in Hadoop oder Azure-Speicher-Blob.  
   
@@ -78,18 +79,18 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [[ *Database_name* . [ *Schema_name* ]. ] | *Schema_name* . ] *Table_name*  
+ [ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  1 bis 3 - Teilenamens der Tabelle, die in der Datenbank erstellen. Für eine externe Tabelle ist nur die Metadaten der Tabellen in der relationalen Datenbank gespeichert.  
   
- Speicherort = "*Hdfs_folder*"  
+ LOCATION =  '*hdfs_folder*'  
  Gibt an, wo die Ergebnisse der SELECT-Anweisung auf der externen Datenquelle zu schreiben. Der Speicherort ist ein Ordnername und kann optional einen Pfad, der relativ zum Stammordner des Hadoop-Clusters oder des Azure-Speicher-Blob enthalten.  PolyBase wird der Pfad und den Ordner erstellt, wenn sie nicht bereits vorhanden ist.  
   
  Externen Dateien werden geschrieben, um *Hdfs_folder* und benannte *QueryID_date_time_ID.format*, wobei *ID* ein inkrementeller Bezeichner und *Format* ist das Format der exportierten Daten. Zum Beispiel QID776_20160130_182739_0.orc.  
   
- DATA_SOURCE = *External_data_source_name*  
+ DATA_SOURCE = *external_data_source_name*  
  Gibt den Namen des Quellobjekts externe Daten, die den Speicherort enthält, in dem die externen Daten gespeichert werden oder gespeichert werden. Der Speicherort ist ein Hadoop-Cluster oder ein Azure-Blob-Speicher. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
- FILE_FORMAT = *External_file_format_name*  
+ FILE_FORMAT = *external_file_format_name*  
  Gibt den Namen des externen Format Dateiobjekts, das das Format der externen Datendatei enthält. Verwenden Sie zum Erstellen eines externen Dateiformats [CREATE EXTERNAL FILE FORMAT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  Ablehnen von Optionen  
@@ -101,7 +102,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  REJECT_TYPE = **Wert** | Prozentsatz  
  Verdeutlicht, ob die Option "REJECT_VALUE" als ein Literalwert oder als Prozentsatz angegeben wird.  
   
- value  
+ Wert  
  REJECT_VALUE ist ein Literalwert, kein Prozentsatz.  Die Datenbank wird beendet, Zeilen aus der externen Datendatei importieren, wenn die Anzahl der fehlerhaften Zeilen überschreitet *Reject_value*.  
   
  Z. B. wenn REJECT_VALUE = 5 und REJECT_TYPE = Wert, wird die Datenbank beendet wird, importieren Zeilen aus, nachdem 5 Zeilen wurde nicht importiert.  
@@ -184,7 +185,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Externe Partition verschieben  
   
- **GILT für:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]als Voraussetzung für das Erstellen einer externen Tabelle, muss der Administrator Appliance Hadoop-Konnektivität konfigurieren.   Weitere Informationen finden Sie unter Konfigurieren Sie Verbindungen zu externen Daten (Analytics Platform System) in der APS-Dokumentation, das Sie herunterladen können [hier](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **GILT für:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]als Voraussetzung für das Erstellen einer externen Tabelle, muss der Administrator Appliance Hadoop-Konnektivität konfigurieren. Weitere Informationen finden Sie unter Konfigurieren Sie Verbindungen zu externen Daten (Analytics Platform System) in der APS-Dokumentation, das Sie herunterladen können [hier](http://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Da externe Tabellendaten befindet sich außerhalb der Datenbank, Sichern und Wiederherstellen funktionieren Vorgänge nur auf Daten in der Datenbank gespeichert. Dies bedeutet, dass nur die Metadaten gesichert und wiederhergestellt werden.  
@@ -264,6 +265,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

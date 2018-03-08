@@ -3,7 +3,7 @@ title: SeekEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,24 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40c15bd116b4e0a7ba13127dc48ec18421b5924b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 051f4e1c300796e2777e9b06a1514c9ce00b9b02
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seekenum"></a>SeekEnum
 Gibt den Typ des [Seek](../../../ado/reference/ado-api/seek-method.md) ausgeführt.  
   
 |Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
-|**Nordwind.mdb**|1|Sucht den ersten Schlüssel gleich *KeyValues*.|  
+|**adSeekFirstEQ**|1|Sucht den ersten Schlüssel gleich *KeyValues*.|  
 |**adSeekLastEQ**|2|Sucht das letzte Schlüssel gleich *KeyValues*.|  
 |**adSeekAfterEQ**|4|Sucht entweder einen Schlüssel gleich *KeyValues* oder unmittelbar nach entsprechen, in denen stattgefunden hätten.|  
 |**adSeekAfter**|8|Sucht einen Schlüssel direkt hinter Where eine Übereinstimmung mit *KeyValues* würde stattgefunden haben.|  
@@ -56,4 +55,3 @@ Gibt den Typ des [Seek](../../../ado/reference/ado-api/seek-method.md) ausgefüh
   
 ## <a name="applies-to"></a>Gilt für  
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)
-

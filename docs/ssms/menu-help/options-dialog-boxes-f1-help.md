@@ -3,30 +3,31 @@ title: Optionen (Dialogfelder, F1-Hilfe) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 14a3f463d74000c9d7df7d089073f93fa00fc3f4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Optionen (Dialogfelder, F1-Hilfe)
-Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in **im Menü** Extras **auf** Optionen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]klicken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] im Menü **Extras** auf **Optionen** klicken.  
   
 [Optionen &#40;Designer - Analysis Services-Designer – Allgemein&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
@@ -80,4 +81,3 @@ Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, w
   
 [Optionen (Text-Editor – XML – Seite „Registerkarten“)](http://msdn.microsoft.com/en-us/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
   
-

@@ -2,12 +2,13 @@
 title: Mit aktiviertem Schreibzugriff Partitionen | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,20 +21,20 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ca933c004d59a8c2e680d79e9d9499700f7e43
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>Partitionen - Partitionen mit aktiviertem Schreibzugriff
-  Die Daten in einem Cube sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Partition zu aktivieren. Partitionen mit aktiviertem Schreibzugriff werden verwendet, um Benutzern im geschäftlichen Bereich das Untersuchen von Szenarien zu ermöglichen, indem sie Zellenwerte ändern und die Auswirkungen der Änderungen auf die Cubedaten analysieren. Wenn Sie den Schreibzugriff für eine Partition aktivieren, können Clientanwendungen Änderungen an den Daten in der Partition aufzeichnen. Diese Änderungen, so genannte Rückschreibedaten, werden in einer separaten Tabelle gespeichert und überschreiben keine vorhandenen Daten in einer Measuregruppe. Sie werden jedoch als Teil der Cubedaten in Abfrageergebnisse einbezogen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Daten in einem Cube sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Partition zu aktivieren. Partitionen mit aktiviertem Schreibzugriff werden verwendet, um Benutzern im geschäftlichen Bereich das Untersuchen von Szenarien zu ermöglichen, indem sie Zellenwerte ändern und die Auswirkungen der Änderungen auf die Cubedaten analysieren. Wenn Sie den Schreibzugriff für eine Partition aktivieren, können Clientanwendungen Änderungen an den Daten in der Partition aufzeichnen. Diese Änderungen, so genannte Rückschreibedaten, werden in einer separaten Tabelle gespeichert und überschreiben keine vorhandenen Daten in einer Measuregruppe. Sie werden jedoch als Teil der Cubedaten in Abfrageergebnisse einbezogen.  
   
  Sie können den Schreibzugriff für einen gesamten Cube oder nur für bestimmte Partitionen im Cube aktivieren. Dimensionen mit aktiviertem Schreibzugriff unterscheiden sich von diesen Partitionen, aber auf ergänzende Weise. Eine Partition mit aktiviertem Schreibzugriff ermöglicht den Benutzern das Update von Partitionszellen, während eine Dimension mit aktiviertem Schreibzugriff den Benutzern das Update von Dimensionselementen ermöglicht. Sie können diese zwei Funktionen auch zusammen verwenden. So muss ein Cube oder eine Partition mit aktiviertem Schreibzugriff keine Dimensionen mit aktiviertem Schreibzugriff enthalten. **Verwandtes Thema:**[Dimensionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
@@ -64,8 +65,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Aggregationen und Aggregationsentwürfe](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partitionen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Dimensionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

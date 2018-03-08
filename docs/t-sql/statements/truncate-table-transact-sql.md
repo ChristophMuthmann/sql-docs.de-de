@@ -3,8 +3,11 @@ title: TRUNCATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - deleting rows
 - dropping rows
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
-caps.latest.revision: 41
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: 71f05b47a4a070e5d797a6f9ff6b5f4d88e585c5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Entfernt alle Zeilen aus einer Tabelle oder die angegebenen Partitionen einer Tabelle ohne Protokollierung der einzelnen Zeilen löschen. TRUNCATE TABLE entspricht DELETE ohne WHERE-Klausel. TRUNCATE TABLE ist jedoch schneller und verwendet weniger Systemressourcen und Ressourcen für die Transaktionsprotokollierung.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 10/04/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -59,7 +61,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```tsql  
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
@@ -112,7 +114,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Wenn die Tabelle eine Identitätsspalte enthält, wird der Zähler für diese Spalte auf den Ausgangswert zurückgesetzt, der für die Spalte definiert ist. Wenn kein Ausgangswert definiert wurde, wird der Standardwert 1 verwendet. Falls Sie den Wert des Identitätszählers erhalten möchten, verwenden Sie stattdessen DELETE.  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
  Sie können TRUNCATE TABLE nicht für Tabellen verwenden, für die Folgendes gilt:  
   
 -   Auf die Tabelle wird mit einer FOREIGN KEY-Einschränkung verwiesen. (Sie können eine Tabelle abschneiden, die einen Fremdschlüssel mit einem Verweis auf sich aufweist.)  
@@ -142,7 +144,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ### <a name="a-truncate-a-table"></a>A. Abschneiden einer Tabelle  
  Im folgenden Beispiel werden alle Daten aus der `JobCandidate`-Tabelle entfernt. `SELECT`-Anweisungen werden vor und nach der `TRUNCATE TABLE`-Anweisung eingeschlossen, um die Ergebnisse zu vergleichen.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
@@ -161,7 +163,7 @@ GO
   
  Im folgende Beispiel werden die angegebenen Partitionen einer partitionierten Tabelle abgeschnitten. Mit der Syntax `WITH (PARTITIONS (2, 4, 6 TO 8))` werden die Partitionen 2, 4, 6, 7 und 8 abgeschnitten.  
   
-```  
+```sql  
 TRUNCATE TABLE PartitionTable1   
 WITH (PARTITIONS (2, 4, 6 TO 8));  
 GO  
@@ -173,5 +175,4 @@ GO
  [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   
-
 

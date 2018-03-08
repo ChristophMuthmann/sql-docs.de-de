@@ -2,30 +2,32 @@
 title: Angeben der Verarbeitungsreihenfolge von Mergeartikeln | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
 - merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8682c27e9d94410f8ffc902d2c03af491ec758ba
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a4476f6aaa996dff5ed88258a2cb9430a62774cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Angeben der Verarbeitungsreihenfolge von Mergeartikeln
-  Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]haben Sie die Möglichkeit, die Standardreihenfolge zu überschreiben, in der Artikel bei Mergeveröffentlichungen verarbeitet werden. Die Änderung der Standardverarbeitungsreihenfolge ist z. B. dann sinnvoll, wenn Sie für die Definition von referenzieller Integrität Trigger verwenden und diese Trigger in einer bestimmten Reihenfolge ausgelöst werden sollen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] haben Sie die Möglichkeit, die Standardreihenfolge zu überschreiben, in der Artikel bei Mergeveröffentlichungen verarbeitet werden. Die Änderung der Standardverarbeitungsreihenfolge ist z. B. dann sinnvoll, wenn Sie für die Definition von referenzieller Integrität Trigger verwenden und diese Trigger in einer bestimmten Reihenfolge ausgelöst werden sollen.  
   
  **So geben Sie die Verarbeitungsreihenfolge von Artikeln an**  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
  Wenn die referenzielle Integrität durch Trigger oder auf Anwendungsebene gewahrt wird, müssen Sie die Reihenfolge angeben, in der die Artikel verarbeitet werden sollen. Im Beispiel mit den Triggern würden Sie dann angeben, dass die **SalesOrderHeader** -Tabelle vor der **SalesOrderDetail**-Tabelle zu verarbeiten ist, weil die Artikelreihenfolge auf der Einfügereihenfolge basiert. Bei der Mergereplikation wird die Reihenfolge der Löschungen automatisch umgekehrt. Das Nichtfestlegen einer Artikelverarbeitungsreihenfolge führt nicht zu einem Scheitern der Mergereplikation, weil der Merge-Agent mit der Verarbeitung der Artikel fortfährt, wenn es zu einer Einschränkungsverletzung kommt. Wenn die anderen Artikel verarbeitet sind, versucht der Agent, alle Operationen, die fehlgeschlagen sind, erneut auszuführen. Durch das Angeben einer Artikelverarbeitungsreihenfolge werden lediglich solche Neuversuche und die damit verbundene zusätzliche Verarbeitung verhindert. Wenn Sie eine falsche Reihenfolge angeben (z. B. eine, bei der die Detaildatensätze vor den Headerdatensätzen verarbeitet werden), versucht die Mergereplikation die Verarbeitung so lange, bis sie gelingt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)  

@@ -1,34 +1,32 @@
 ---
-title: Zugriff des Reporting Services-WMI-Anbieter | Microsoft Docs
+title: "Auf den WMI-Anbieter für Reporting Services zugreifen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/02/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- Reporting Services WMI Provider
-apilocation:
-- reportingservices.mof
+apiname: Reporting Services WMI Provider
+apilocation: reportingservices.mof
 helpviewer_keywords:
 - WMI provider [Reporting Services]
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-caps.latest.revision: 57
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "57"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aa02df2ee2953c1a3f4b02236cd5203ff08cdc3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 42180a54771653c9749f697de7fdc5876696b172
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Zugreifen auf den Reporting Services-WMI-Anbieter
   Der Reporting Services-WMI-Anbieter macht zwei WMI-Klassen für die Verwaltung von Berichtsserverinstanzen im einheitlichen Modus durch Skripterstellung verfügbar:  
@@ -36,10 +34,10 @@ ms.lasthandoff: 08/09/2017
 > [!IMPORTANT]  
 >  Ab der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Version wird der WMI-Anbieter nur für Berichtsserver im einheitlichen Modus unterstützt. Berichtsserver im SharePoint-Modus können über Seiten der SharePoint-Zentraladministration und PowerShell-Skripts verwaltet werden.  
   
-|Klasse|Namespace|Description|  
+|Class|Namespace|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|Root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13|Stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.|  
-|MSReportServer_ConfigurationSetting|Root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13\Admin|Stellt die Installationsparameter und die Laufzeitparameter einer Berichtsserverinstanz dar. Diese Parameter werden in der Konfigurationsdatei für den Berichtsserver gespeichert.<br /><br /> **\*\* Wichtig \*\*** Für den Zugriffe auf diese Klasse sind Administratorrechte erforderlich.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13|Stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13\Admin|Stellt die Installationsparameter und die Laufzeitparameter einer Berichtsserverinstanz dar. Diese Parameter werden in der Konfigurationsdatei für den Berichtsserver gespeichert.<br /><br /> **\*\* Wichtig \*\*** Für den Zugriffe auf diese Klasse sind Administratorrechte erforderlich.|  
   
  Für jede Berichtsserverinstanz wird eine Instanz von jeder der oben erwähnten Klassen erstellt. Sie können mit jedem Microsoft- oder Drittanbietertool auf die WMI-Objekte zugreifen, die vom Berichtsserver verfügbar gemacht werden, einschließlich WMI-Programmierungsschnittstellen, die von .NET Framework verfügbar gemacht werden. In diesem Thema wird die Verwendung von und der Zugriff auf WMI-Klasseninstanzen mit dem PowerShell-Befehl [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx)beschrieben.  
   
@@ -74,7 +72,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>Abfragen der verfügbaren Methoden und Eigenschaften  
- Um die in einer der Reporting Services-WMI-Klassen verfügbaren Methoden und Eigenschaften anzuzeigen, reichen Sie die Ergebnisse von Get-WmiObject an den Get-Member-Befehl weiter. Beispiel:  
+ Um die in einer der Reporting Services-WMI-Klassen verfügbaren Methoden und Eigenschaften anzuzeigen, reichen Sie die Ergebnisse von Get-WmiObject an den Get-Member-Befehl weiter. Zum Beispiel:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
@@ -89,9 +87,8 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-WMI-Anbieterbibliotheksreferenz &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [RsReportServer.config Configuration File (RSReportServer.config-Konfigurationsdatei)](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

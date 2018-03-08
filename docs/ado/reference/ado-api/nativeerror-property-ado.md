@@ -3,7 +3,7 @@ title: NativeError-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NativeError property [ADO]
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3a21c2f5fb6e4432ecfd5d98156fa8e856243886
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 94a6b8f28a80202f293008c16f40c0eed0730996
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nativeerror-property-ado"></a>NativeError-Eigenschaft (ADO)
 Gibt den anbieterspezifischen Fehlercode für einen bestimmten [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt.  
@@ -47,4 +46,3 @@ Gibt den anbieterspezifischen Fehlercode für einen bestimmten [Fehler](../../..
 ## <a name="see-also"></a>Siehe auch  
  [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
-

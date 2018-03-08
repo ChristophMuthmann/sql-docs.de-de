@@ -3,27 +3,28 @@ title: Datei-Datenquellen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-data-sources"></a>Dateidatenquellen
 *Datei-Datenquellen* werden in einer Datei gespeichert und ermöglichen Sie Verbindungsinformationen wiederholt durch einen einzelnen Benutzer verwendet oder von mehreren Benutzern gemeinsam genutzt werden. Wenn eine Datei als Datenquelle verwendet wird, stellt der Treiber-Manager die Verbindung mit der Datenquelle anhand der Informationen in einem DSN-Datei her. Diese Datei kann wie jede andere Datei bearbeitet werden. Eine Datei als Datenquelle einen Datenquellennamen keinen ist eine Datenquelle für den Computer, und nicht auf einen Benutzer oder Computer registriert ist.  
@@ -33,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  DSN-Datei kann auch Dateidatenquelle sein. Eine Dateidatenquelle DSN-Datei befindet sich auf einem einzelnen Computer und verweist auf eine Computer-Datenquelle. Dateidatenquelle vorhanden hauptsächlich, dass die einfache Konvertierung von Datenquellen für Computer in Dateidatenquellen zulassen, damit eine Anwendung ausschließlich mit Dateidatenquellen entworfen werden kann. Wenn der Treiber-Manager die Informationen in eine Dateidatenquelle gesendet wird, wird eine Verbindung nach Bedarf, um die Computer-Datenquelle, der auf die DSN-Datei verweist.  
   
  Weitere Informationen zu Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), oder die [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.
-

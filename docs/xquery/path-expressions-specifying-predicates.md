@@ -3,8 +3,11 @@ title: "Angeben von Prädikaten in einem Pfadausdrucksschritt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - qualifiers [XQuery]
 - path expressions [XQuery]
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9eafae8a2834073ef6e6db380d074b7e0290f1ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-predicates"></a>Path-Ausdrücken - angeben von Prädikaten
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Im Thema beschriebene [Pfadausdrücke in XQuery](../xquery/path-expressions-xquery.md), ein achsenschritt in einem Pfadausdruck umfasst die folgenden Komponenten:  
   
@@ -230,4 +232,3 @@ WHERE CatalogDescription.exist('
  Die Prädikate können sich auch auf den statisch abgeleiteten Typ eines Ausdrucks auswirken. Integer-Literalwerte und die **last()** -Funktion verringern die Kardinalität des gefilterten schrittausdrucks zumeist auf 1.  
   
   
-

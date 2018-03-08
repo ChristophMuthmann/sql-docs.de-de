@@ -1,10 +1,13 @@
 ---
-title: "Transformation für Ausdrucksextrahierung | Microsoft Docs"
+title: "Transformation für Ausdrucksextrahierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -28,17 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
   Die Transformation für Ausdrucksextrahierung extrahiert Ausdrücke aus Text in einer Transformationseingabespalte und schreibt die Ausdrücke dann in eine Transformationsausgabespalte. Diese Transformation ist nur mit englischem Text kompatibel und verwendet ein eigenes englisches Wörterbuch und linguistische Informationen für Englisch.  
@@ -154,7 +156,7 @@ ms.lasthandoff: 08/19/2017
   
 -   Kombinationen aus Zahlen, Satzzeichen und Buchstaben. Beispielsweise gibt *A23B#99* den Ausdruck *A23B*zurück.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   Die Zeichen %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ und ‘.  
   
     > [!NOTE]  
     >  Akronyme, die mindestens einen Punkt (.) enthalten, werden nicht in mehrere Sätze aufgeteilt.  
@@ -190,7 +192,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausdrucksextrahierung)
   Auf der Registerkarte **Ausdrucksextrahierung** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Textspalte mit dem zu extrahierenden Text angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen eine einzelne Textspalte aus, die für die Ausdrucksextrahierung verwendet wird.  
   
@@ -206,11 +208,11 @@ ms.lasthandoff: 08/19/2017
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Ausschlussausdrücke verwenden**  
  Geben Sie an, ob bei der Ausdrucksextrahierung bestimmte Ausdrücke ausgeschlossen werden sollen, indem eine Spalte mit Ausschlussausdrücken angegeben wird. Wenn Sie bestimmte Ausdrücke ausschließen möchten, müssen Sie folgende Quelleigenschaften angeben.  
   
- **OLE DB-Verbindungs-Manager**  
+ **Teilcache**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -228,7 +230,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie Eigenschaften für die Extrahierung angeben, wie z. B. Häufigkeit, Länge und ob Wörter oder Ausdrücke extrahiert werden sollen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Nomen**  
  Gibt an, dass durch die Transformation nur einzelne Nomen extrahiert werden.  
   
@@ -256,8 +258,7 @@ ms.lasthandoff: 08/19/2017
  **Fehlerausgabe konfigurieren**  
  Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) die Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Fehler- und Meldungsreferenz von Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformation für Ausdruckssuche](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
 

@@ -2,30 +2,32 @@
 title: Speicheroptimierte Tabellen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-caps.latest.revision: 66
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8eae5ffaa89b83055f56bdf192ec07268a5783a8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 35719f81571bd58c96d9f451cab3caf0d09a459a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="memory-optimized-tables"></a>Speicheroptimierte Tabellen
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Mit[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In-Memory OLTP wird die Leistung von OLTP-Anwendungen durch effiziente, speicheroptimierte Datenzugriffe, systeminterne Kompilierung der Geschäftslogik sowie sperr- und latchfreie Algorithmen verbessert. Die In-Memory OLTP-Funktion enthält speicheroptimierte Tabellen und Tabellentypen sowie systeminterne Kompilierung von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren für effizienten Zugriff auf diese Tabellen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mit In-Memory-OLTP wird die Leistung von OLTP-Anwendungen durch effiziente, speicheroptimierte Datenzugriffe, native Kompilierung der Geschäftslogik sowie sperr- und latchfreie Algorithmen verbessert. Die In-Memory OLTP-Funktion enthält speicheroptimierte Tabellen und Tabellentypen sowie systeminterne Kompilierung von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren für effizienten Zugriff auf diese Tabellen.  
   
  Weitere Informationen zu speicheroptimierten Tabellen finden Sie unter:  
   
@@ -45,8 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

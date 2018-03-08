@@ -1,10 +1,13 @@
 ---
-title: "Hinzufügen oder Löschen einer Komponente in einem Datenfluss | Microsoft Docs"
+title: "Hinzufügen oder Löschen einer Komponente im Datenfluss | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 229fd23eb82ff7b6a1139bf1bd00554162cfc038
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d2a061024c6921bdc2feccc9c6372104b4a4c70e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Hinzufügen oder Löschen einer Komponente im Datenfluss
   Bei Datenflusskomponenten handelt es sich um Quellen, Ziele und Transformationen in einem Datenfluss. Bevor Sie einem Datenfluss Komponenten hinzufügen können, muss die Ablaufsteuerung im Paket einen Datenflusstask einschließen.  
@@ -56,10 +58,9 @@ ms.lasthandoff: 08/03/2017
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verbinden von Komponenten in einem Datenfluss](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   
-

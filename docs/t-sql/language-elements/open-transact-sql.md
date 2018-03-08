@@ -3,8 +3,11 @@ title: "Öffnen (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - OPEN statement
 - Transact-SQL cursors, opening
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e065102cd08e12d0e7d80557dfa627f531ec629c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b636b9b57f06f52a7e6535c9c5f06e2164c6d212
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Öffnet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Servercursor und füllt den Cursor durch Ausführen der [!INCLUDE[tsql](../../includes/tsql-md.md)] angegebene auf der DECLARE CURSOR oder SET-Anweisung *Cursor_variable* Anweisung.  
   
@@ -51,7 +53,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  GLOBAL  
  Gibt an, dass *Cursor_name* auf einen globalen Cursor verweist.  
   
- *Cursorname*  
+ *cursor_name*  
  Der Name eines deklarierten Cursors. Wenn sowohl ein globaler als auch ein lokaler Cursor mit vorhanden *Cursor_name* als Buchstabenfolge, *Cursor_name* bezieht sich auf den globalen Cursor, wenn GLOBAL angegeben, andernfalls ist *Cursor_name* bezieht sich auf den lokalen Cursor.  
   
  *cursor_variable_name*  
@@ -87,11 +89,10 @@ DEALLOCATE Employee_Cursor;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schließen &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
- [Aufheben der ZUORDNUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [Abrufen von Daten &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   
-

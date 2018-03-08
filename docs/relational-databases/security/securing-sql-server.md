@@ -2,9 +2,12 @@
 title: Sichern von SQL Server | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,19 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9397a4279a769cc6504c0a37a09f1b42a810cdd0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="securing-sql-server"></a>Sichern von SQL Server
-  Das Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann als eine Reihe von Schritten betrachtet werden, die vier Bereiche betreffen: die Plattform, die Authentifizierung, die Objekte (einschließlich der Daten) und die Anwendungen, die auf das System zugreifen. In den folgenden Themen werden Sie durch das Erstellen und Implementieren eines effektiven Sicherheitsplans geführt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Das Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann als eine Reihe von Schritten betrachtet werden, die vier Bereiche betreffen: die Plattform, die Authentifizierung, die Objekte (einschließlich der Daten) und die Anwendungen, die auf das System zugreifen. In den folgenden Themen werden Sie durch das Erstellen und Implementieren eines effektiven Sicherheitsplans geführt.  
   
  Weitere Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheit finden Sie auf der [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) -Website. Dazu gehören ein Handbuch mit empfohlenen Vorgehensweisen sowie eine Sicherheitsprüfliste. Auf der Site finden Sie außerdem die neuesten Informationen und Downloads zu Service Packs.  
   
@@ -128,7 +132,7 @@ GO
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Herstellen einer Verbindung mit, Konfigurieren und Steuern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Verwenden von SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
-|Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Ausführen von Abfragen an der Eingabeaufforderung|[sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)|  
+|Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Ausführen von Abfragen an der Eingabeaufforderung|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |Netzwerkkonfiguration und Steuerung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)|  
 |Aktivieren und Deaktivieren von Funktionen mit der richtlinienbasierten Verwaltung|[Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Bearbeiten symmetrischer Schlüssel für einen Berichtsserver|[rskeymgmt-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
@@ -148,8 +152,6 @@ GO
 [SQL Server 2012 Security Best Practices - Operational and Administrative Tasks (Bewährte Sicherheitsmethoden in SQL Server 2012 – betriebs- und administrationsbezogene Aufgaben)](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server Security Blog (SQL Server Blog zu Sicherheitsthemen)](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Security Best Practice and Label Security Whitepapers (Bewährte Sicherheitsmethoden und Sicherheitswhitepaper)](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
-[Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md)   
 [Schutz Ihres geistigen SQL Server-Eigentums](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
-

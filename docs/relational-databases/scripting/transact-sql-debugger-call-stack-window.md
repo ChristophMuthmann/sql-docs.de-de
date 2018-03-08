@@ -2,9 +2,12 @@
 title: "Fenster „Aufrufliste“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 15f92d683eb518aba0955c7eb7cc23dcd8521d49
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d9199cb8513afbd02c2cd7e656100b5375ec04e9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL-Debugger – Fenster „Aufrufliste“
-  Im Fenster **Aufrufliste** werden die Module in der Aufrufliste angezeigt sowie die Datentypen und die Werte aller Parameter, die an die Module übergeben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module umfassen gespeicherte Prozeduren, benutzerdefinierte Funktionen und Trigger. Um die Aufrufliste anzuzeigen, müssen Sie sich im Debugmodus befinden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Fenster **Aufrufliste** werden die Module in der Aufrufliste angezeigt sowie die Datentypen und die Werte aller Parameter, die an die Module übergeben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module umfassen gespeicherte Prozeduren, benutzerdefinierte Funktionen und Trigger. Um die Aufrufliste anzuzeigen, müssen Sie sich im Debugmodus befinden.  
   
 ## <a name="task-list"></a>Aufgabenliste  
  **So greifen Sie auf das Fenster Aufrufliste zu**  
@@ -50,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  Alle Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** werden auf Grundlage des aktuellen Stapelrahmens ausgewertet. Im Abfrage-Editor-Fenster wird der Code für den aktuellen Rahmen angezeigt. Standardmäßig ist der aktuelle Stapelrahmen der Rahmen, in dem der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger die Ausführung angehalten hat. Wenn Sie den aktuellen Stapelrahmen zu einem anderen Rahmen ändern, werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** im Kontext des neuen Rahmens neu ausgewertet, und der Quellcode des neuen Rahmens wird im Abfrage-Editor-Fenster angezeigt.  
   
-## <a name="columns"></a>Spalten  
+## <a name="columns"></a>Spalte  
  **Name**  
  Zeigt Informationen über ein Modul in der Aufrufliste an.  
   
@@ -71,7 +74,7 @@ ms.lasthandoff: 06/22/2017
  **Sprache**  
  Zeigt **Transact-SQL** für [!INCLUDE[tsql](../../includes/tsql-md.md)]an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)  

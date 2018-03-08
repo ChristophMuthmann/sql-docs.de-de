@@ -1,13 +1,14 @@
 ---
-title: "Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus | Microsoft Docs"
+title: "Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements erstellen, um Berichte von einer SharePoint-Webanwendung zu übermitteln, die in einem im SharePoint-Modus ausgeführten Berichtsserver integriert ist. Abonnements können Berichte an eine Dokumentbibliothek, einen Dateiordner oder als E-Mail übermitteln. Dieses Thema fasst die Anforderungen und Schritte zum Erstellen eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zusammen.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie ein Abonnement erstellen, können Sie ein Ausgabedateiformat auswählen. Nicht alle Berichte funktionieren in jedem Format optimal. Bevor Sie ein Format in einem Abonnement auswählen, sollten Sie den Bericht öffnen und ihn in verschiedene Formate exportieren, um zu überprüfen, ob er wie erwartet angezeigt wird.  
   
- Benutzer benötigen die Listenberechtigung **Elemente bearbeiten** in SharePoint, wenn sie in der Lage sein sollen, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zu erstellen. Weitere Informationen finden Sie unter [Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ Benutzer benötigen die Listenberechtigung **Elemente bearbeiten** in SharePoint, wenn sie in der Lage sein sollen, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zu erstellen. Weitere Informationen finden Sie unter [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 > [!IMPORTANT]  
 >  Bei einem Abonnement, bei dem ein Bericht an eine Bibliothek oder einen freigegebenen Ordner übermittelt wird, wird eine neue, statische Datei erstellt, die auf dem ursprünglichen Bericht basiert. Es handelt sich jedoch nicht um eine echte Berichtsdefinition, die im Berichts-Viewer-Webpart ausgeführt wird. Wenn der ursprüngliche Bericht über interaktive Funktionen (z. B. Drillthroughlinks) oder dynamischen Inhalt verfügt, sind diese Funktionen in der statischen Datei, die an den Zielspeicherort übermittelt wird, nicht verfügbar. Wenn Sie eine "Webseite" auswählen, können Sie begrenzt Interaktivität beibehalten. Da das Dokument jedoch keine RDL-Datei darstellt, die im Berichts-Viewer ausgeführt wird, werden durch das Durchklicken eines Berichts neue Seiten in der Browsersitzung erstellt, durch die Sie einen Bildlauf durchführen müssen, um zur Website zurückzukehren.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  Geben Sie unter **Optionen für das Überschreiben**eine Option an, mit der bestimmt wird, ob eine Datei bei nachfolgenden Übermittlungen überschrieben werden soll. Wenn Sie vorherige Übermittlungen beibehalten möchten, können Sie **Datei mit eindeutigem Namen erstellen**auswählen. Eine Zahl wird an neue Dateien angefügt, um einen eindeutigen Dateinamen zu erstellen.  
   
-9. Geben Sie unter **Übermittlungsereignis**einen Zeitplan oder ein Ereignis an, mit dem das Abonnement ausgeführt wird. Sie können einen benutzerdefinierten Zeitplan erstellen, einen freigegebenen Zeitplan auswählen (sofern ein solcher verfügbar ist) oder das Abonnement ausführen, sobald die Daten für einen Bericht, der mit Momentaufnahmedaten ausgeführt wird, aktualisiert werden. Weitere Informationen zu Zeitplänen und Datenverarbeitung finden Sie unter [Verarbeitungsoptionen festgelegt &#40; Reporting Services in SharePoint integrierten Modus &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. Geben Sie unter **Übermittlungsereignis**einen Zeitplan oder ein Ereignis an, mit dem das Abonnement ausgeführt wird. Sie können einen benutzerdefinierten Zeitplan erstellen, einen freigegebenen Zeitplan auswählen (sofern ein solcher verfügbar ist) oder das Abonnement ausführen, sobald die Daten für einen Bericht, der mit Momentaufnahmedaten ausgeführt wird, aktualisiert werden. Weitere Informationen zu Zeitplänen und Datenverarbeitung finden Sie unter [Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Geben Sie unter **Parameter**die Werte an, die Sie beim Verarbeiten des Abonnements für den Bericht verwenden möchten, wenn Sie ein Abonnement für einen parametrisierten Bericht erstellen möchten. Der Parameter-Abschnitt ist auf dieser Seite nicht sichtbar, wenn der Bericht, den Sie auswählen, keine Parameter enthält. Weitere Informationen zu Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -112,13 +112,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  Wählen Sie unter **Renderformat**das Anwendungsformat für den Bericht aus.  
   
-8.  Wählen Sie unter **Schreibmodus**zwischen **keiner**Option, der Option zum **automatischen Inkrementieren** oder der Option zum **Überschreiben** aus. Mit diesen Optionen wird bestimmt, ob nachfolgende Übermittlungen eine Datei überschreiben. Wenn Sie vorherige Übermittlungen beibehalten möchten, können Sie die Option zum **automatischen Inkrementieren** auswählen. Eine Zahl wird an neue Dateien angefügt, um einen eindeutigen Dateinamen zu erstellen. Wenn **Sie keine** Option auswählen, wird die Übermittlung nicht ausgeführt, falls bereits eine Datei mit demselben Namen am Zielspeicherort vorhanden ist.  
+8.  Wählen Sie unter **Schreibmodus**zwischen **keiner**Option, der Option zum automatischen **Inkrementieren oder der Option zum** **Überschreiben** aus. Mit diesen Optionen wird bestimmt, ob nachfolgende Übermittlungen eine Datei überschreiben. Wenn Sie vorherige Übermittlungen beibehalten möchten, können Sie die **Option zum automatischen Inkrementieren** auswählen. Eine Zahl wird an neue Dateien angefügt, um einen eindeutigen Dateinamen zu erstellen. Wenn Sie **keine** Option auswählen, wird die Übermittlung nicht ausgeführt, falls bereits eine Datei mit demselben Namen am Zielspeicherort vorhanden ist.  
   
 9. Wählen Sie unter **Dateierweiterung**die Option **Wahr** aus, um eine Dateinamenerweiterung hinzuzufügen, die dem Anwendungsdateiformat entspricht, oder wählen Sie Falsch, um die Datei ohne Erweiterung zu erstellen.  
   
 10. Geben Sie unter **Benutzername** und **Kennwort**Anmeldeinformationen ein, die über Schreibberechtigungen für den freigegebenen Ordner verfügen.  
   
-11. Geben Sie unter **Übermittlungsereignis**einen Zeitplan oder ein Ereignis an, mit dem das Abonnement ausgeführt wird. Sie können einen benutzerdefinierten Zeitplan erstellen, einen freigegebenen Zeitplan auswählen (sofern ein solcher verfügbar ist) oder das Abonnement ausführen, sobald die Daten für einen Bericht, der mit Momentaufnahmedaten ausgeführt wird, aktualisiert werden. Weitere Informationen zu Zeitplänen und Datenverarbeitung finden Sie unter [Verarbeitungsoptionen festgelegt &#40; Reporting Services in SharePoint integrierten Modus &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. Geben Sie unter **Übermittlungsereignis**einen Zeitplan oder ein Ereignis an, mit dem das Abonnement ausgeführt wird. Sie können einen benutzerdefinierten Zeitplan erstellen, einen freigegebenen Zeitplan auswählen (sofern ein solcher verfügbar ist) oder das Abonnement ausführen, sobald die Daten für einen Bericht, der mit Momentaufnahmedaten ausgeführt wird, aktualisiert werden. Weitere Informationen zu Zeitplänen und Datenverarbeitung finden Sie unter [Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 12. Geben Sie unter **Parameter**die Werte an, die Sie beim Verarbeiten des Abonnements für den Bericht verwenden möchten, wenn Sie ein Abonnement für einen parametrisierten Bericht erstellen möchten. Weitere Informationen zu Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
   
      Durch das Renderingformat und den Browser wird festgelegt ob der Bericht eingebettet oder angefügt wird. Falls Ihr Browser HTML 4.0 und MHTML unterstützt und Sie das Webarchiv-Renderingformat auswählen, wird der Bericht in die Nachricht eingebettet. Bei allen anderen Renderingformaten (CSV, PDF usw.) werden Berichte als Anlagen übermittelt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] führt keine Überprüfung der Größe der Anlage oder Nachricht vor dem Senden des Berichts durch. Überschreitet die Anlage oder Nachricht den von Ihrem Mailserver zugelassenen Höchstwert, wird der Bericht nicht übermittelt. Wählen Sie für große Berichte eine der anderen Übermittlungsoptionen (z. B. URL oder Benachrichtigung) aus.  
   
-9. Geben Sie unter **Übermittlungsereignis**einen Zeitplan oder ein Ereignis an, mit dem das Abonnement ausgeführt wird. Sie können einen benutzerdefinierten Zeitplan erstellen, einen freigegebenen Zeitplan auswählen (sofern ein solcher verfügbar ist) oder das Abonnement ausführen, sobald die Daten für einen Bericht, der mit Momentaufnahmedaten ausgeführt wird, aktualisiert werden. Weitere Informationen zu Zeitplänen und Datenverarbeitung finden Sie unter [Verarbeitungsoptionen festgelegt &#40; Reporting Services in SharePoint integrierten Modus &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. Geben Sie unter **Übermittlungsereignis**einen Zeitplan oder ein Ereignis an, mit dem das Abonnement ausgeführt wird. Sie können einen benutzerdefinierten Zeitplan erstellen, einen freigegebenen Zeitplan auswählen (sofern ein solcher verfügbar ist) oder das Abonnement ausführen, sobald die Daten für einen Bericht, der mit Momentaufnahmedaten ausgeführt wird, aktualisiert werden. Weitere Informationen zu Zeitplänen und Datenverarbeitung finden Sie unter [Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Geben Sie unter **Parameter**die Werte an, die Sie beim Verarbeiten des Abonnements für den Bericht verwenden möchten, wenn Sie ein Abonnement für einen parametrisierten Bericht erstellen möchten. Weitere Informationen zu Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -162,12 +162,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  Aktivieren Sie das Kontrollkästchen neben dem Abonnement, und klicken Sie auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [E-Mail Delivery in Reporting Services (E-Mail-Übermittlung in Reporting Services)](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Dateifreigabeübermittlung in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [SharePoint-Bibliotheksübermittlung in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
  [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], data formats
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fbb5caa7623b0571ec724eea74f139ef7387d538
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
     
 ##  <a name="top"></a>
@@ -99,7 +101,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Hinweise  
+#### <a name="remarks"></a>Remarks  
  Indem Sie SINGLE_BLOB verwenden, können Sie vermeiden, dass die Codierung des XML-Dokuments (wie in der XML-Codierungsdeklaration angegeben) und die Codierung der vom Server implizierten Codepage nicht übereinstimmen.  
   
  Wenn beim Verwenden der Datentypen NCLOB oder CLOB Codepage- oder Codierungskonflikte auftreten, führen Sie einen der folgenden Schritte aus:  
@@ -267,7 +269,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die XML-Codierung nicht, wenn XML-Daten in der Datenbank persistent gespeichert werden. Die ursprüngliche Codierung der XML-Felder ist also nicht mehr verfügbar, wenn die XML-Daten exportiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet für den Export von XML-Daten die UTF-16-Codierung.  
   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
@@ -276,4 +278,3 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Beispiel für ActiveCommand-Eigenschaft (JScript) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ActiveCommand property [ADO], JScript example
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: afd176de04dbdc6bbcab64469b3d88b63e156ccc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf140097455dd436fe02618eceb4a4c4f744ab20
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activecommand-property-example-jscript"></a>Beispiel für ActiveCommand-Eigenschaft (JScript)
 Dieses Beispiel zeigt die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) Eigenschaft. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **ActiveCommandJS.asp**.  
@@ -137,4 +136,3 @@ if (strName.length > 0)
  [ActiveCommand-Eigenschaft (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

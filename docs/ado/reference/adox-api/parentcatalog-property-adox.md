@@ -3,7 +3,7 @@ title: ParentCatalog-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -43,17 +43,16 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c255beddbc240f30f51642a0e8fe4fd785cf88bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f5229c37299494ca2b3b31e3ca3e0d091c93d96a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog-Eigenschaft (ADOX)
 Gibt den übergeordneten Katalog eines Objekts Tabellen, Benutzer oder Spalten zum Zugriff auf die anbieterspezifischen Eigenschaften bereitstellen.  
@@ -74,5 +73,4 @@ Gibt den übergeordneten Katalog eines Objekts Tabellen, Benutzer oder Spalten z
 |[User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für ParentCatalog-Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
-
+ [ParentCatalog-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

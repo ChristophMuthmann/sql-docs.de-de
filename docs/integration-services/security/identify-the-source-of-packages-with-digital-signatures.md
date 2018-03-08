@@ -1,10 +1,13 @@
 ---
-title: Identifizieren der Quelle von Paketen mit digitalen Signaturen | Microsoft Docs
+title: Identifizieren der Quelle von Paketen mit digitalen Signaturen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c9356463b29b1a4971ddd336a9b44d47f3983f83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
   Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann mit einem digitalen Zertifikat signiert werden, um seine Quelle zu identifizieren. Nachdem das Paket mit einem digitalen Zertifikat signiert wurde, können Sie die digitale Signatur vor dem Laden des Pakets mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüfen. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signatur prüft, legen Sie eine Option entweder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder im **dtexec** -Hilfsprogramm (dtexec.exe) fest, oder geben Sie einen optionalen Registrierungswert an.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
  In der folgenden Tabelle werden die gültigen Werte der DWORD-Daten und ihre verbundenen Richtlinien aufgelistet.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |0|Keine administrative Einschränkung.|  
 |1|Blockieren von ungültigen Signaturen.<br /><br /> Bei dieser Einstellung werden nicht signierte Pakete nicht blockiert.|  
@@ -138,12 +140,12 @@ ms.lasthandoff: 08/03/2017
   
      Obwohl das Paket signiert wurde, müssen Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nun so konfigurieren, dass die digitale Signatur vor dem Laden des Pakets geprüft oder verifiziert wird.  
 
-## <a name="signing_dialog"></a>Digitale Signatur Dialogfeld Referenz zur Benutzeroberfläche
+## <a name="signing_dialog"></a> Benutzeroberflächen-Verweis zum Dialogfeld „Digitale Signatur“
   Mithilfe des Dialogfelds **Digitale Signatur** können Sie ein Paket mit einer digitalen Signatur signieren oder die Signatur löschen. Das Dialogfeld **Digitale Signatur** steht in **unter der Option** Digitale Signatur **im Menü** SSIS [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]zur Verfügung.  
   
  Weitere Informationen finden Sie unter [Signieren eines Pakets mit einem digitalen Zertifikat](#cert).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Signieren**  
  Klicken Sie auf diese Option, um das Dialogfeld **Zertifikat auswählen** zu öffnen und das zu verwendende Zertifikat auszuwählen.  
   
@@ -152,7 +154,6 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Übersicht über die Sicherheit &#40; Integrationsservices &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

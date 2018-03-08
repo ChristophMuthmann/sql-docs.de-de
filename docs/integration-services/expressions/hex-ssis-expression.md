@@ -1,10 +1,13 @@
 ---
-title: HEX (SSIS-Ausdruck) | Microsoft Docs
+title: HEX (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 97940e3a6c4d5f0d493eacefc9d99943dd15a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS-Ausdruck)
   Gibt eine Zeichenfolge zurück, die den hexadezimalen Wert einer ganzen Zahl darstellt.  
@@ -42,7 +44,7 @@ HEX(integer_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  HEX gibt NULL zurück, wenn *integer_expression* NULL ist.  
   
  Das *integer_expression* -Argument muss zu einer ganzen Zahl ausgewertet werden. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -80,8 +82,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

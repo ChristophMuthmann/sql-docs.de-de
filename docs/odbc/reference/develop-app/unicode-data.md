@@ -3,10 +3,12 @@ title: Unicode-Daten | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3bb3278fe83922aee29aa8348d32b3fbc757511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-data"></a>Unicode-Daten
 SQL-Unicode-Datentypen werden bereitgestellt, um Daten zu beschreiben, die im Unicode-Format, systemintern für das DBMS befindet. Ein C#-Unicode-Datentyp wird bereitgestellt, damit eine Anwendung zum Binden von Daten in einen Unicode-Puffer kann. Der Treiber-Manager können Daten aus einem Unicode-C-Typ (SQL_C_WCHAR) zu erleichtern konvertieren-Funktion mit einer ANSI-Treiber.  
@@ -53,4 +54,3 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Unicode-Treiber müssen dennoch ANSI-Datentypen, einschließlich SQL_CHAR unterstützen. Wenn eine Anwendung, die mit einem Unicode-Treiber arbeiten SQL_CHAR gebunden, wird der Treiber-Manager die SQL_CHAR-Daten nicht SQL_WCHAR zuordnen. Der Unicode-Treiber muss die SQL_CHAR-Daten akzeptieren.  
   
  Der Treiber-Manager speichert Treiber und DSN-Namen im Unicode-Format und ordnet sie ANSI nach Bedarf. Wenn ein Unicode-Zeichen in eine ANSI-Zeichen (wie auftreten können, wenn Zeichen aus einer Codepage, die nicht den systemeigenen Code auf dem Computer ist im DSN-Namen und Treiber verwendet werden) zugeordnet werden kann, werden die Zeichen, die nicht konvertiert werden konnten von einer Standard-Sup Zeichen dargestellt. vom System plied.
-

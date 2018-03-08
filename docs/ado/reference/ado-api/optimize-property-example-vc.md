@@ -3,7 +3,7 @@ title: Optimieren Sie die Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 927448414395ded11b0896b0f0e692ef05c13ce1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae76d9acb1ddf47964bef0c55caf6d029686a223
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-example-vc"></a>Optimieren Sie die Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [Feld](../../../ado/reference/ado-api/field-object.md) Objekt Dynamic **optimieren** Eigenschaft. Die **Zip** Feld der **Autoren** -Tabelle in der **Pubs** Datenbank ist nicht indiziert. Festlegen der [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft **"true"** auf die **Zip** Feld autorisiert ADO zum Erstellen eines Indexes, die die Leistung verbessert die [Suchen](../../../ado/reference/ado-api/find-method-ado.md)Methode.  
@@ -140,8 +139,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 Silber CT Zweigstelle Walnut Creek Zertifizierungsstelle**   
+ **Akiko Yokomoto    3 Silver Ct. Zweigstelle Walnut Creek Zertifizierungsstelle**   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Optimieren Sie die Eigenschaft dynamisch (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Dynamische Eigenschaft Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

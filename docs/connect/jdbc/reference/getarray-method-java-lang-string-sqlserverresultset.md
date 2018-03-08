@@ -3,29 +3,28 @@ title: GetArray-Methode (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getArray java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getArray java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: a98d159b-1fae-482a-9465-5411ce60f901
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73c1ff7110dc4f9a14e3c2090127c9eadbcab6b6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3be182943c5ea6e145b203bbb1bb839c70e61d74
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getarray-method-javalangstring-sqlserverresultset"></a>GetArray-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,4 +58,3 @@ public java.sql.Array getArray(java.lang.String colName)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

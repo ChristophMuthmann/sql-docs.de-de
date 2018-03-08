@@ -2,9 +2,12 @@
 title: Fehler des Stagingprozesses (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: 8
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0560f760a619630bb0ccc9183b30674da89d5f8
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a870a044e3687e4d75b3a48ea44ed11119b3b5e2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="staging-process-errors-master-data-services"></a>Fehler des Stagingprozesses (Master Data Services)
   Nach Abschluss des Stagingprozesses verfügen alle in den Stagingtabellen verarbeitete Datensätze über einen Werte in der Spalte ErrorCode. Diese Werte sind in der folgenden Tabelle aufgeführt.  
@@ -47,9 +49,8 @@ ms.lasthandoff: 09/07/2017
 |210047|Das Element kann kein gleichgeordnetes Element von "Nicht verwendet" sein.|Dieser Fehler tritt auf, wenn **RelationshipType** = **2** (gleichgeordnet) und entweder **ParentCode** oder **ChildCode** **Unused**sind. Elemente können nur untergeordnete Elemente des Knotens "Nicht verwendet" sein.|Beziehung|  
 |210048|**ParentCode** und **ChildCode** können nicht identisch sein.|Der **ParentCode** -Wert ist identisch mit dem **ChildCode** -Wert. Diese Werte müssen unterschiedlich sein.|Beziehung|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen von Fehlern, die während des Stagings auftreten &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   
-

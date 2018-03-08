@@ -3,8 +3,11 @@ title: DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
-caps.latest.revision: 12
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 7cf14c5782a5cdc876b04600447892932f9e9921
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: e29508550528b1f98318bec26676707c72f0b5fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Entfernt eine externe PolyBase-Tabelle aus. Dadurch wird die externen Daten nicht gelöscht.  
   
@@ -40,7 +42,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>Argumente  
- [ *Database_name* . [*Schema_name*]. | *Schema_name* . ] *Table_name*  
+ [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
  Der One - dreiteilige Name der externen Tabelle zu entfernen. Der Tabellenname kann optional das Schema oder die Datenbank und das Schema einschließen.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -78,5 +80,4 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
-
 

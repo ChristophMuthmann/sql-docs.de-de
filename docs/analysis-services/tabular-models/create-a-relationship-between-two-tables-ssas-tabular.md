@@ -1,33 +1,34 @@
 ---
-title: "Erstellen Sie eine Beziehung zwischen zwei Tabellen (SSAS – tabellarisch) | Microsoft Docs"
+title: Erstellen einer Beziehung | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3936d29e4d547db75e7a92020c82d8c5c5854503
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Erstellen einer Beziehung zwischen zwei Tabellen (SSAS – tabellarisch)
-  Wenn die Tabellen in der Datenquelle nicht über vorhandene Beziehungen verfügen oder wenn Sie neue Tabellen hinzufügen, können Sie zum Erstellen neuer Beziehungen die Tools im Modell-Designer verwenden. Weitere Informationen darüber, wie Beziehungen in tabellarischen Modellen verwendet werden, finden Sie unter [Beziehungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+# <a name="create-a-relationship"></a>Erstellen einer Beziehung 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Wenn die Tabellen in der Datenquelle nicht über vorhandene Beziehungen verfügen oder wenn Sie neue Tabellen hinzufügen, können Sie zum Erstellen neuer Beziehungen die Tools im Modell-Designer verwenden. Informationen zur Verwendungsweise von Beziehungen in tabellarischen Modellen finden Sie unter [Beziehungen](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="create-a-relationship-between-two-tables"></a>Erstellen einer Beziehung zwischen zwei Tabellen  
   
@@ -76,8 +77,7 @@ ms.lasthandoff: 09/01/2017
 6.  Klicken Sie auf **Erstellen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Löschen von Beziehungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [Beziehungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+ [Löschen von Beziehungen](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [Beziehungen](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   
-

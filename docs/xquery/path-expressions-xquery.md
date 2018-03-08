@@ -3,8 +3,11 @@ title: "Path-Ausdrücke (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - path expressions [XQuery]
 - expressions [XQuery], path
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e47b66d37e7b43f2921d8d6edf626a6b9178b7e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db503aeb452dbaa096331f7b1df8cb39b2a62f21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions-xquery"></a>Pfadausdrücke (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Über XQuery-Pfadausdrücke werden in einem Dokument enthaltene Knoten gesucht, z. B. Element-, Attribut- und Textknoten. Das Ergebnis eines Pfadausdrucks erscheint immer in der Dokumentreihenfolge ohne Duplikatknoten in der Ergebnissequenz. Beim Angeben eines Pfads können Sie entweder die vollständige oder die abgekürzte Syntax verwenden. Die folgenden Informationen beziehen sich auf die ungekürzte Syntax. Die abgekürzte Syntax wird anschließend beschrieben.  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="axis-step"></a>Achsenschritt  
  Ein Achsenschritt in einem Pfadausdruck besteht aus den folgenden Teilen.  
   
- [Achse](../xquery/path-expressions-specifying-axis.md)  
+ [axis](../xquery/path-expressions-specifying-axis.md)  
  Definiert die Bewegungsrichtung. Ein Achsenschritt in einem Pfadausdruck beginnt beim Kontextknoten und navigiert zu den in der durch die Achse angegebenen Richtung erreichbaren Knoten.  
   
  [Knotentest](../xquery/path-expressions-specifying-node-test.md)  
@@ -102,4 +104,3 @@ id(/a/b)
  Beschreibt das Arbeiten mit einer abgekürzten Syntax in einem Pfadausdruck.  
   
   
-

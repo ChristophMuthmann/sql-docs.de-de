@@ -1,29 +1,30 @@
 ---
 title: Zuordnen von DB2 und SQL Server-Datentypen (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 18ee9dc4b0e646b4eb6bd374af55c1ac0f98bf4b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Zuordnen von DB2 und SQL Server-Datentypen (DB2ToSQL)
 DB2-Datenbank-Datentypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Bei der Konvertierung von DB2-Datenbankobjekte auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, wie Datentypen von DB2 zugeordnet [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen, oder die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
@@ -93,10 +94,9 @@ Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Proje
   
         Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen auf einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Der nächste Schritt des Migrationsvorgangs besteht entweder [Bewertungsbericht &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md) oder [DB2-Schemas konvertieren &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Wenn Sie einen Assessment-Bericht erstellen, werden die DB2-Objekte automatisch während der Bewertung konvertiert.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von DB2-Datenbanken zu SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

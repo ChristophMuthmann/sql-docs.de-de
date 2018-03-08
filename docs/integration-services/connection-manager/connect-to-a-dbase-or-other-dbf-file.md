@@ -1,10 +1,13 @@
 ---
-title: Herstellen einer Verbindung mit einer dBASE- oder einer anderen DBF-Datei | Microsoft Docs
+title: Herstellen einer Verbindung mit einer dBASE- oder einer anderen DBF-Datei | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - dBase files
 - DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a840093c5501dc7d7f91ea3aa0a7b04ed4a42339
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>Herstellen einer Verbindung mit einer dBASE- oder einer anderen DBF-Datei
   Sie können eine Verbindung mit einer dBASE- oder einer anderen DBF-Datenbankdatei in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket herstellen, indem Sie einen OLE DB-Verbindungs-Manager verwenden und Microsoft OLE DB-Anbieter für Jet 4.0 auswählen.  
@@ -48,8 +50,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Wenn Sie den Verbindungs-Manager für den Datenfluss eines Pakets verwenden möchten, wählen Sie eine OLE DB-Quelle oder ein OLE DB-Ziel aus und konfigurieren Quelle bzw. Ziel so, dass der in den vorangegangenen Schritten erstellte Verbindungs-Manager verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   
-

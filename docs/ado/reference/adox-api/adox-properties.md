@@ -3,7 +3,7 @@ title: ADOX-Eigenschaften | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28a29504793d2b4144fa6c01f2f80e486d0f2b90
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
 |||  
@@ -35,8 +34,8 @@ ms.lasthandoff: 09/09/2017
 |[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt die Spaltenmerkmale.|  
 |[Gruppiert](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
 |[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt eine ADO **Befehl** -Objekt, das zum Erstellen oder Ausführen der Prozedur verwendet werden kann.|  
-|[Anzahl](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
-|[Erstellungsdatum](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum, an das Objekt erstellt wurde.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
+|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum, an das Objekt erstellt wurde.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Gibt das Datum, an das Objekt zuletzt geändert wurde.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Gibt die festgelegte maximale Größe der Spalte an.|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Gibt an, die Aktion ausgeführt, wenn ein Primärschlüssel gelöscht wird.|  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Siehe auch  
  [ADOX-API-Referenz](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

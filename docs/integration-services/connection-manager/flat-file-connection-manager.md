@@ -1,10 +1,13 @@
 ---
-title: "Dateiverbindungs-Manager für Flatfiles | Microsoft Docs"
+title: "Verbindungs-Manager für Flatfiles | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -22,17 +25,16 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 2b3f4c303b1d60cbbe23c639c36a6336ca07447f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 73ab1f41223d78f627bd13523bf76eb4ab4d19e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
   Mit einem Verbindungs-Manager für Flatfiles kann ein Paket auf Daten in einer Flatfile zugreifen. Beispielsweise können die Flatfilequellen und -ziele Verbindungs-Manager für Flatfiles zum Extrahieren und Laden von Daten verwenden.  
@@ -86,11 +88,11 @@ ms.lasthandoff: 08/09/2017
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfileverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
- **Description**  
+ **Beschreibung**  
  Beschreiben Sie die Verbindung. Es ist eine bewährte Methode, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
  **Dateiname**  
@@ -111,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  **Format**  
  Gibt an, ob die Datei Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Mit Trennzeichen|Die Trennung von Spalten erfolgt durch Trennzeichen. Welche Trennzeichen dies sind, wird auf der Seite **Spalten** angegeben.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
@@ -126,7 +128,7 @@ ms.lasthandoff: 08/09/2017
  **Kopfzeilentrennzeichen**  
  Wählen Sie aus einer Liste mit Trennzeichen für Kopfzeilen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf.|  
@@ -151,7 +153,7 @@ ms.lasthandoff: 08/09/2017
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfile-Verbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
- **Description**  
+ **Beschreibung**  
  Beschreiben Sie die Verbindung. Es ist eine bewährte Methode, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
 ### <a name="flat-file-format-dynamic-options"></a>Flatfileformat (dynamische Optionen)  
@@ -160,7 +162,7 @@ ms.lasthandoff: 08/09/2017
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -174,7 +176,7 @@ ms.lasthandoff: 08/09/2017
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -221,7 +223,7 @@ ms.lasthandoff: 08/09/2017
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -241,11 +243,11 @@ ms.lasthandoff: 08/09/2017
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager für Flatfiles im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
- **Description**  
+ **Beschreibung**  
  Beschreiben Sie den Verbindungs-Manager. Die bewährte Methode ist hierbei, den Verbindungs-Manager zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
   
  **Konfigurieren Sie die Eigenschaften für jede Spalte.**  
@@ -266,7 +268,7 @@ ms.lasthandoff: 08/09/2017
  **Neu**  
  Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Spalte hinzufügen**|Fügt am Ende der Liste eine neue Spalte hinzu.|  
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  
@@ -282,12 +284,12 @@ ms.lasthandoff: 08/09/2017
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfile-Verbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
- **Description**  
- Beschreiben Sie die Verbindung. Es ist eine bewährte Methode, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
+ **Beschreibung**  
+ Beschreiben Sie die Verbindung. Es ist eine bewährte Methode, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
  **Auszulassende Datenzeilen**  
  Geben Sie an, wie viele Zeilen am Anfang von Flatfiles ausgelassen werden sollen.  
@@ -298,4 +300,3 @@ ms.lasthandoff: 08/09/2017
  **Vorschau der Zeilen**  
  Zeigen Sie Beispieldaten in der Flatfile an, die entsprechend der von Ihnen gewählten Option in Spalten und Zeilen unterteilt sind.  
  
-

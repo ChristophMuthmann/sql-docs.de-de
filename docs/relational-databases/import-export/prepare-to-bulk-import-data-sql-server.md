@@ -2,9 +2,12 @@
 title: Vorbereiten des Massenimports von Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -18,19 +21,19 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 47a9c86d93f4ebf32114fabbbe89011004f7d9e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Vorbereiten des Massenimports von Daten (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Sie können den Befehl **bcp** , die BULK INSERT-Anweisung oder die OPENROWSET(BULK)-Funktion nur für den Massenimport von Daten aus einer Datendatei verwenden.  
   
@@ -72,7 +75,7 @@ ms.lasthandoff: 06/22/2017
   
      Viele Hilfsprogramme und Text-Editoren zeigen ausgeblendete Zeichen an, die sich in der Regel am Ende der Datendatei befinden. Ausgeblendete Zeichen in einer ASCII-Datendatei können während eines Massenimportvorgangs Probleme verursachen. Dies kann zu einer Fehlermeldung führen, in der das Auffinden einer unerwarteten Null gemeldet wird. Sie können das Problem normalerweise lösen, wenn Sie alle ausgeblendeten Zeichen suchen und entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Importieren und Exportieren von Massendaten mithilfe des bcp-Hilfsprogramms &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   

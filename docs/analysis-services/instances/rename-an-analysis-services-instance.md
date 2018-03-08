@@ -1,15 +1,14 @@
 ---
 title: Umbenennen einer Analysis Services-Instanz | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 53
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Umbenennen einer Analysis Services-Instanz
-  Sie können eine vorhandene Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mithilfe des Tools **Instanz umbenennen** umbenennen, das mit Management Studio (Webinstallation) installiert wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können eine vorhandene Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mithilfe des Tools **Instanz umbenennen** umbenennen, das mit Management Studio (Webinstallation) installiert wird.  
   
 > [!IMPORTANT]  
 >  Das Tool zum Umbenennen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen wird beim Umbenennen der Instanz mit erhöhten Rechten ausgeführt und aktualisiert den Windows-Dienstnamen, Sicherheitskonten und Registrierungseinträge, die dieser Instanz zugeordnet sind. Um sicherzustellen, dass diese Aktionen stattfinden, muss das Tool als lokaler Systemadministrator ausgeführt werden.  
@@ -75,7 +74,7 @@ ms.lasthandoff: 09/01/2017
   
      Angenommen, Sie benennen die Instanz jetzt in "TAB2" um. Nach der Namensänderung würde die Konfiguration wie folgt aussehen:  
   
-    1.  Instanzname = \<Server > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  Dienstname = MSOLAP$TAB2  
   
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/01/2017
      Wie Sie sehen können, sind Datenbank- und Dateiberechtigungen, die "NT-Dienst\ MSOLAP$TABULAR" zuvor gewährt wurden, nicht mehr gültig. Um sicherzustellen, dass Tasks und Vorgänge wie zuvor vom Dienst ausgeführt werden, müssen Sie "für NT-Dienst\ MSOLAP$TAB2" neue Datenbank- und Dateiberechtigungen gewähren.  
   
   
-

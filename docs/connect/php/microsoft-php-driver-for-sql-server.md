@@ -3,24 +3,25 @@ title: Microsoft PHP Driver for SQLServer | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 79cd8f0b943c9382d4287369ec9cd21f28976172
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52efa662a131ba78654cf12cac33bafb2dae1d4c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-php-driver-for-sql-server"></a>Microsoft PHP Driver for SQL Server
 
@@ -53,4 +54,3 @@ Der SQL Server-Treiber für PHP ermöglicht die Integration in SQL Server for PH
 * [Erste Schritte mit PHP für Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
 * [Erste Schritte mit PHP unter Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
 * [Erste Schritte mit PHP unter SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
-

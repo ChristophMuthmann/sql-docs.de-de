@@ -2,13 +2,13 @@
 title: Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
-  Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  
   
 -   [Herstellen einer Verbindung mithilfe von SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Herstellen einer Verbindung mithilfe von SQL Server Management Studio (SSMS)  
  Stellen Sie eine Verbindung mit Analysis Services in SSMS her, um Serverinstanzen und Datenbanken interaktiv zu verwalten. Sie können auch XMLA- oder MDX-Abfragen ausführen, um Verwaltungsaufgaben auszuführen oder Daten abzurufen. Im Unterschied zu anderen Tools und Anwendungen, von denen Datenbanken nur beim Senden einer Abfrage geladen werden, lädt SSMS alle Datenbanken, sobald eine Verbindung mit dem Server hergestellt wird. Dies setzt allerdings voraus, dass Sie zur Anzeige der Datenbank berechtigt sind. Wenn Sie also über viele tabellarische Datenbanken auf dem Server verfügen, werden alle Datenbanken in den Systemarbeitsspeicher geladen, sobald Sie über SSMS eine Verbindung herstellen.  
@@ -140,9 +140,8 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Identitätswechsel &#40; SSAS – tabellarisch &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Von Analysis Services Unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Identitätswechsel](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [Erstellen einer Datenquelle &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
-

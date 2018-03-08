@@ -1,10 +1,13 @@
 ---
-title: "Überwachungstransformation | Microsoft Docs"
+title: "Überwachungstransformation | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>Überwachungstransformation
   Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] schließt Systemvariablen ein, die diese Informationen bereitstellen.  
@@ -64,14 +66,14 @@ ms.lasthandoff: 08/19/2017
 ## <a name="audit-transformation-editor"></a>Transformations-Editor für Überwachung
   Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält Systemvariablen, die diese Informationen bereitstellen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der neuen Ausgabespalte an, die die Überwachungsinformationen enthalten soll.  
   
  **Überwachungstyp**  
  Wählen Sie eine verfügbare Systemvariable zum Bereitstellen der Überwachungsinformationen aus.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**GUID der Ausführungsinstanz**|Fügen Sie die GUID ein, die die Ausführungsinstanz des Pakets eindeutig identifiziert.|  
 |**Paket-ID**|Fügen Sie die GUID ein, die das Paket eindeutig identifiziert.|  
@@ -79,9 +81,8 @@ ms.lasthandoff: 08/19/2017
 |**Versions-ID**|Fügen Sie die GUID ein, die die Paketversion eindeutig identifiziert.|  
 |**Startzeit der Ausführung**|Fügen Sie den Zeitpunkt ein, zu dem mit der Ausführung des Pakets begonnen wird.|  
 |**Computername**|Fügen Sie den Namen des Computers ein, auf dem das Paket gestartet wurde.|  
-|**Benutzername**|Fügen Sie den Anmeldenamen des Benutzers ein, der das Paket gestartet hat.|  
+|**User name**|Fügen Sie den Anmeldenamen des Benutzers ein, der das Paket gestartet hat.|  
 |**Taskname**|Fügen Sie den Namen von dem Datenflusstask ein, mit dem die Überwachungstransformation verknüpft ist.|  
 |**Task-ID**|Fügen Sie die GUID ein, die den mit der Überwachungstransformation verknüpften Datenflusstask eindeutig identifiziert.|  
   
   
-

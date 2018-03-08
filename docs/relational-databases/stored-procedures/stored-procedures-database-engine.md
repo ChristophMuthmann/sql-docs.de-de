@@ -2,9 +2,12 @@
 title: Gespeicherte Prozeduren (Datenbankmodul) | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14cb04aa946bed3cace30379ca2d78b3cd045b4b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbankmodul)
-  Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder einem Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder einem Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  
   
 -   Annehmen von Eingabeparametern und Zurückgeben mehrerer Werte in Form von Ausgabeparametern an das aufrufende Programm.  
   
@@ -80,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Erweiterte gespeicherte Prozeduren werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie dieses Feature nicht in einer neuen Entwicklungsarbeit, und ändern Sie Anwendungen, die dieses Feature verwenden, so schnell wie möglich. Erstellen Sie stattdessen CLR-Prozeduren. Diese Methode bietet eine robustere und sicherere Alternative zum Schreiben von erweiterten Prozeduren.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -101,4 +104,3 @@ ms.lasthandoff: 06/22/2017
  [CLR-gespeicherte Prozeduren](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   
-

@@ -3,28 +3,30 @@ title: "SQL Servermanagement Objects-Unterstützung für In-Memory OLTP | Micros
 description: "Beschreibt die Elemente in SQL Server Management Objects (SMO), die In-Memory-OLTP unterstützen."
 ms.custom: 
 ms.date: 08/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-caps.latest.revision: 28
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 723de25c649545751bda5ddd79db47c5c367f478
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>SQL Server Management Objects-Unterstützung für In-Memory OLTP
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 In diesem Thema werden die Elemente in SQL Server Management Objects (SMO) beschrieben, die In-Memory-OLTP unterstützen.  
 
 ## <a name="smo-types-and-members"></a>SMO-Typen und -Member
@@ -170,4 +172,3 @@ public class A {
 
 - [SQL Server-Unterstützung für In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
 - [Overview of SMO(Übersicht über SMO)](../server-management-objects-smo/overview-smo.md)
-

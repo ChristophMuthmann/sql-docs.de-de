@@ -3,7 +3,7 @@ title: User-Objekt (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 70271f780557a7ad63df504f50962e88113348b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3565b06fa33ddf0990b89724639d9538da37e9b6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-object-adox"></a>User-Objekt (ADOX)
 Stellt ein Benutzerkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.  
@@ -52,10 +51,9 @@ Stellt ein Benutzerkonto, das über Zugriffsberechtigungen in einer gesicherten 
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Benutzer-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
+-   [User-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [GetPermissions und SetPermissions-Methoden (Beispiel) (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-

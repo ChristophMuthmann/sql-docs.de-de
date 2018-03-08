@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für Microsoft Indexdienst | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2303810eb0856db07b096927559f2db18ce29838
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Indexing Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst bietet programmgesteuerten nur-Lese Zugriff auf System- und Web-Daten, die vom Microsoft Indexdienst indiziert Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Eigenschaftsinformationen ausgeben.
@@ -54,7 +53,7 @@ MSIDXS
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt den OLE DB-Anbieter für Microsoft Indexdienst. In der Regel ist dies das einzige-Schlüsselwort in der Verbindungszeichenfolge angegeben.|
+|**Provider**|Gibt den OLE DB-Anbieter für Microsoft Indexdienst. In der Regel ist dies das einzige-Schlüsselwort in der Verbindungszeichenfolge angegeben.|
 |**Datenquelle**|Gibt den Namen der Indexdienst-Katalog. Wenn dieses Schlüsselwort nicht angegeben ist, wird der Standardkatalog für das System verwendet.|
 |**Locale Identifier**|Gibt eine eindeutige 32-Bit-Zahl (z. B. 1033), die Einstellungen im Zusammenhang mit der Sprache des Benutzers angibt. Wenn dieses Schlüsselwort nicht angegeben ist, wird das System Standardgebietsschema-ID verwendet.|
 
@@ -80,17 +79,17 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Lese-/Schreibzugriff|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Schreibgeschützt|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
-|[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)*|Lese-/Schreibzugriff|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|Lese-/Schreibzugriff|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AdUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|immer **AdOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **AdEditNone**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lese-/Schreibzugriff|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lese-/Schreibzugriff|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Nicht verfügbar|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Lese-/Schreibzugriff|
-|["PageCount"](../../../ado/reference/ado-api/pagecount-property-ado.md)|Schreibgeschützt|
+|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Schreibgeschützt|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Lese-/Schreibzugriff|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Schreibgeschützt|
 |[Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lese-/Schreibzugriff|
@@ -103,26 +102,25 @@ MSIDXS
 
 |Methode|Verfügbar?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Nein|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|nein|
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|ja|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|nein|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|nein|
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|ja|
 |[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|
-|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|ja|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|
+|[Update](../../../ado/reference/ado-api/update-method.md)|nein|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|nein|
 
  Bestimmte Implementierungsdetails und funktionalen Informationen zu den Microsoft OLE DB-Anbieter für Microsoft Indexdienst finden Sie in der [OLE DB Programmer's Guide](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oder besuchen Sie die Web Services-Seite von den Windows NT Server-Webdienst Standort.
 
 ## <a name="see-also"></a>Siehe auch
  [CommandType-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Anbietereigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [ Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)
-

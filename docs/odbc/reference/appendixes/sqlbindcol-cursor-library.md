@@ -3,26 +3,26 @@ title: SQLBindCol (Cursorbibliothek) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLAllocStmt function [ODBC], Cursor Library
+helpviewer_keywords: SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c9742952c8539dd736bd4b2c79c1b42d63a9b63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (Cursor Library)
 > [!IMPORTANT]  
@@ -39,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  Die Cursorbibliothek unterstützt Aufrufen **SQLBindCol** die Lesezeichenspalte binden.  
   
  Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, gibt die Cursorbibliothek SQLSTATE HY090 zurück (ungültige Zeichenfolgen- oder Pufferlänge.) Wenn **SQLBindCol** wird aufgerufen, um die Pufferlänge für eine Lesezeichenspalte auf einen Wert festgelegt wird, der nicht gleich 4. Bei der Arbeit mit einer ODBC 3.*.x* -Treiber die Cursorbibliothek ermöglicht den Puffer, in beliebiger Größe sein.
-

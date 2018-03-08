@@ -2,20 +2,20 @@
 title: "FÜGEN SIE (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - INSERT INTO
 - INSERT
 - INSERT_INTO
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SKIP (DMX)
 - mapped model columns element
@@ -27,20 +27,19 @@ helpviewer_keywords:
 - training mining models
 - mining structures [DMX], processing
 ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eeb42798d1a095ce08a081144d33961c40ee8dd8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Verarbeitet das angegebene Data Mining-Objekt. Weitere Informationen zum Verarbeiten von Miningmodellen und Miningstrukturen finden Sie unter [Verarbeitung von Anforderungen und Überlegungen &#40; Data Mining &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -146,7 +145,6 @@ AS [Models]
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

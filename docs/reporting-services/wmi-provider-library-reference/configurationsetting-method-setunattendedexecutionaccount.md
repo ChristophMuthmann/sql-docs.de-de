@@ -1,36 +1,33 @@
 ---
-title: 'SetUnattendedExecutionAccount-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'SetUnattendedExecutionAccount-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetUnattendedExecutionAccount method
+helpviewer_keywords: SetUnattendedExecutionAccount method
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-caps.latest.revision: 18
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "18"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1c94627129ed2e6706112aad013a3395c4a1e68a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 21cf31421d581c79b0ed5c4620adad88a74fb33e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---setunattendedexecutionaccount"></a>ConfigurationSetting Methode - SetUnattendedExecutionAccount
+# <a name="configurationsetting-method---setunattendedexecutionaccount"></a>ConfigurationSetting-Methode: SetUnattendedExecutionAccount
   Gibt das Konto an, das verwendet wird, um Berichte unbeaufsichtigt auszuführen  
   
 ## <a name="syntax"></a>Syntax  
@@ -58,7 +55,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Methode „SetUnattendedExecutionAccount“ überprüft nicht, ob sich der Berichtsserver als der angegebene Benutzer anmelden kann.  
   
  Die Methode „SetUnattendedExecutionAccount“ kann nicht für die unbeaufsichtigte Ausführung im Kontext des Report Server-Windows-Diensts verwendet werden.  
@@ -66,8 +63,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

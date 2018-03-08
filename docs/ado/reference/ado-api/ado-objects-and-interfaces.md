@@ -3,7 +3,7 @@ title: ADO-Objekte und Schnittstellen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 76115318e0205c0b0f0bf4746dd482f39f4a8b89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4d0b2c896be1059d999418d1f88053225c5d44a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und Schnittstellen
 Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -46,7 +45,7 @@ Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmode
 |[Feld](../../../ado/reference/ado-api/field-object.md)|Stellt eine Spalte von Daten mit einem gemeinsamen Datentyp.|  
 |[Parameter](../../../ado/reference/ado-api/parameter-object.md)|Stellt einen Parameter oder das zugeordnete Argument eine **Befehl** -Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherte Prozedur.<br /><br /> Die **Parameter** Objekt ist nicht sicher für Skripting.|  
 |[Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)|Stellt ein dynamisches Merkmal eines ADO-Objekts, das vom Anbieter definiert ist.|  
-|[Datensatz](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile mit einem **Recordset**, oder ein Verzeichnis oder eine Datei in einem Dateisystem. Die **Datensatz** Objekt für die Skripterstellung sicher ist.|  
+|[Record](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile mit einem **Recordset**, oder ein Verzeichnis oder eine Datei in einem Dateisystem. Die **Datensatz** Objekt für die Skripterstellung sicher ist.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Stellt den Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Zu jedem Zeitpunkt die **Recordset** Objekt bezieht sich auf nur einen einzelnen Datensatz in der Gruppe als der aktuelle Datensatz.<br /><br /> Die **Recordset** Objekt für die Skripterstellung sicher ist.|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Die **Stream** Objekt für die Skripterstellung sicher ist.|  
   
@@ -59,5 +58,4 @@ Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmode
  [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
- [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
-
+ [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)

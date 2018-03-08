@@ -3,8 +3,11 @@ title: Handbuch zur Thread- und Taskarchitektur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: 3
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1684760951c661e50111028594c576661028da6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
-ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Threads sind eine Funktion des Betriebssystems, mit der Anwendungslogik auf mehrere gleichzeitige Ausführungspfade verteilt werden kann. Diese Funktion ist insbesondere dann hilfreich, wenn komplexe Anwendungen viele Tasks besitzen, die gleichzeitig ausgeführt werden können. 
 
@@ -121,15 +123,14 @@ In der folgenden Tabelle sind SQL Server-Komponenten aufgeführt, und es wird an
 
 |Prozessname   |Ausführbares Programm |Verwenden von mehr als 64 CPUs |  
 |----------|----------|----------|  
-|SQL Server-Datenbankmodul |Sqlserver.exe  |Ja |  
-|Reporting Services |Rs.exe |Nein |  
-|Analysis Services  |As.exe |Nein |  
-|Integration Services   |Is.exe |Nein |  
-|Service Broker |Sb.exe |Nein |  
-|Volltextsuche   |Fts.exe    |Nein |  
-|SQL Server-Agent   |Sqlagent.exe   |Nein |  
-|SQL Server Management Studio   |Ssms.exe   |Nein |  
-|SQL Server-Setup   |Setup.exe  |Nein |  
-
+|SQL Server-Datenbankmodul |Sqlserver.exe  |ja |  
+|Reporting Services |Rs.exe |nein |  
+|Analysis Services  |As.exe |nein |  
+|Integration Services   |Is.exe |nein |  
+|Service Broker |Sb.exe |nein |  
+|Volltextsuche   |Fts.exe    |nein |  
+|SQL Server-Agent   |Sqlagent.exe   |nein |  
+|SQL Server Management Studio   |Ssms.exe   |nein |  
+|SQL Server-Setup   |Setup.exe  |nein |  
 
 

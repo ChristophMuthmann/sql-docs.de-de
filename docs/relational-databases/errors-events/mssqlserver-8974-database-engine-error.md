@@ -2,29 +2,30 @@
 title: MSSQLSERVER_8974 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 8974 (Database Engine error)
+helpviewer_keywords: 8974 (Database Engine error)
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4925997c48892d567cd9d5e28d9a68ecf8bc8fa9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 74c4d27ee68fdb70378785790864de77842b4fdc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -66,4 +67,3 @@ Der Datenknoten außerhalb von Zeilen auf Seite *P_ID1* wird gelöscht, und beid
 > [!CAUTION]  
 > Diese Reparatur führt möglicherweise zu einem Datenverlust.  
   
-

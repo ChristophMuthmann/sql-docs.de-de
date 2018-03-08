@@ -3,23 +3,27 @@ title: Migration von einer SQL Server-Datenbank von Windows, Linux | Microsoft D
 description: Dieses Lernprogramm veranschaulicht die Sicherung einer SQL Server-Datenbank unter Windows und in einem Linux-Computer mit SQL Server-2017 wiederhergestellt werden kann.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migration von einer SQL Server-Datenbank von Windows, Linux mit Sicherung und Wiederherstellung
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server die Sicherung und die Wiederherstellungsfunktion ist die empfohlene Methode zum Migrieren einer Datenbank von SQL Server unter Windows, SQL Server-2017 unter Linux. In diesem Lernprogramm führt Sie durch die erforderlichen Schritte zum Verschieben einer Datenbank auf Linux mit Sicherung und Wiederherstellung von Techniken.
 
@@ -29,6 +33,8 @@ SQL Server die Sicherung und die Wiederherstellungsfunktion ist die empfohlene M
 > * Verschieben Sie die Sicherungsdatei auf Linux von Bash-shell
 > * Stellt die Sicherungsdatei unter Linux mit Transact-SQL
 > * Führen Sie eine Abfrage zum Überprüfen der migration
+
+Sie können auch eine SQL Server AlwaysOn-Verfügbarkeitsgruppe zum Migrieren von SQL Server-Datenbank von Windows, Linux erstellen. Finden Sie unter [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -82,7 +88,7 @@ Um die Datenbank wiederherzustellen, müssen Sie zuerst die Sicherungsdatei aus 
 
 1. Öffnen Sie eine Bash-Sitzung unter Windows.
 
-## <a id="scp"></a>Kopieren Sie die Sicherungsdatei auf Linux
+## <a id="scp"></a> Kopieren Sie die Sicherungsdatei auf Linux
 
 1. Navigieren Sie in der Bash-Sitzung auf das Verzeichnis, das die Sicherungsdatei enthält. Beispiel:
 
@@ -191,9 +197,9 @@ In diesem Lernprogramm haben Sie gelernt, wie Sichern einer Datenbank auf Window
 > * Verschieben Sie die Sicherungsdatei zur Vorbereitung der Wiederherstellung
 > * Verwendung **Sqlcmd** auszuführende Transact-SQL-Befehle
 > * Wiederherstellen der datenbanksicherung durch die **RESTORE DATABASE** Befehl 
+> * Führen Sie die Abfrage zum Überprüfen der migration
 
 Untersuchen Sie anschließend andere Migrationsszenarien für SQL Server unter Linux. 
 
 > [!div class="nextstepaction"]
 >[Migrieren von Datenbanken zu SQL Server on Linux](sql-server-linux-migrate-overview.md)
-

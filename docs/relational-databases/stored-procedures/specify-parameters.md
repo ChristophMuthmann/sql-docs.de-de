@@ -2,9 +2,12 @@
 title: Angeben von Parameter | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 029b4f8eab1af6ebbd26c1d8fe877d38420e7f5c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
-  Aufrufende Programme sind in der Lage, durch die Angabe von Prozedurparametern Werte in den Textkörper der Prozedur zu übergeben. Jene Werte können während der Prozedurausführung zu einer Vielzahl von Zwecken verwendet werden. Prozedurparameter können auch Werte an das aufrufende Programm zurückgeben, wenn der Parameter als OUTPUT-Parameter markiert wird.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Aufrufende Programme sind in der Lage, durch die Angabe von Prozedurparametern Werte in den Textkörper der Prozedur zu übergeben. Jene Werte können während der Prozedurausführung zu einer Vielzahl von Zwecken verwendet werden. Prozedurparameter können auch Werte an das aufrufende Programm zurückgeben, wenn der Parameter als OUTPUT-Parameter markiert wird.  
   
  Eine Prozedur kann über maximal 2100 Parameter verfügen, denen jeweils ein Name, eine Datentyp und eine Richtung zugewiesen wird. Optional können Parametern Standardwerte zugewiesen werden.  
   
@@ -68,10 +71,10 @@ GO
  Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die gespeicherte Prozedur **my_proc** drei Parameter mit den Namen **@first**, **@second**und **@third**erwartet, können die Werte, die an die gespeicherte Prozedur übergeben werden, wie den Parameternamen, wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Wenn ein Parameterwert im Format **@parameter =***value* angegeben wird, dann müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **@parameter =***value* übergeben werden, dann müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
+>  Wenn ein Parameterwert im Format **@parameter =***Wert* angegeben wird, dann müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **@parameter =***Wert* übergeben werden, dann müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
   
 > [!WARNING]  
->  Jeder Parameter, der im Format **@parameter =***value* übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
+>  Jeder Parameter, der im Format **@parameter =***Wert* übergeben wird, aber geschrieben ist, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
   
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen  
  Parameter müssen mit einem Datentyp definiert werden, wann sie in einer CREATE PROCEDURE-Anweisung deklariert werden. Durch den Datentyp eines Parameters werden der Typ und der Wertebereich festgelegt, die beim Aufruf der Prozedur für den Parameter akzeptiert werden. Wenn Sie z. B. einen Parameter mit dem **tinyint** -Datentyp definieren, werden nur numerische Werte im Bereich von 0 bis 255 als Werte für diesen Parameter akzeptiert. Wenn eine Prozedur mit einem Wert ausgeführt wird, der nicht mit dem Datentyp kompatibel ist, wird ein Fehler zurückgegeben.  
@@ -131,7 +134,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht weggelassen werden, solange der fünfte Parameter angegeben wird, außer wenn die Parameter im Format **@parameter =***value* angegeben werden.  
+ Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht weggelassen werden, solange der fünfte Parameter angegeben wird, es sei denn, die Parameter werden im Format **@parameter =***Wert* angegeben.  
   
 ## <a name="specifying-parameter-direction"></a>Angeben der Parameterrichtung  
  Die Parameterrichtung ist entweder Eingabe, d. h. ein Wert wird in den Textkörper der Prozedur übergeben, oder Ausgabe, d. h. die Prozedur gibt einen Wert an das aufrufende Programm zurück. Standardmäßig wird ein Eingabeparameter verwendet.  
@@ -207,8 +210,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
-

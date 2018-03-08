@@ -2,11 +2,13 @@
 title: "Überprüfen von replizierten Daten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], about data validation
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a57d074a1e24ec0d865c2a1be5c6a857ecb68354
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 65c3d00ab7ebdfdf99b6ad52f5b9b5460ef6c29f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
-  Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
   
 -   Nur Zeilenanzahl. Bei diesem Typ wird lediglich überprüft, ob die Tabelle auf dem Abonnenten dieselbe Zeilenanzahl besitzt wie die Tabelle auf dem Verleger. Der Inhalt der Zeilen wird nicht geprüft. Die Überprüfung der Zeilenanzahl bietet einen Überprüfungsansatz, der kaum Ressourcen beansprucht und Sie Probleme bei den Daten erkennen lässt.  
   
@@ -89,8 +90,7 @@ ms.lasthandoff: 06/22/2017
   
  Bei der Überprüfung anhand von binären Prüfsummen werden nicht die physischen Zeilen auf der Datenseite, sondern die einzelnen Spalten einer 32-Bit-Redundanzüberprüfung (Redundancy Check, CRC) unterzogen. Dadurch können die Spalten mit der Tabelle in einer beliebigen physischen Reihenfolge auf der Datenseite dargestellt werden, es wird aber trotzdem dieselbe CRC für die Zeile berechnet. Die Überprüfung anhand von binären Prüfsummen kann verwendet werden, wenn Zeilen- oder Spaltenfilter auf die Veröffentlichung angewendet wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   
-

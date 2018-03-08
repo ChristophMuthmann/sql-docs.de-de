@@ -3,7 +3,7 @@ title: "Lösungen für Remotedatenzugriff | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2377f7a33f8426d7081806980618c432a56bba42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9030af4a02555aac77428ba9490ee72e87b93681
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="solutions-for-remote-data-access"></a>Lösungen für Remotedatenzugriff
 ## <a name="the-issue"></a>Das Problem  
@@ -55,6 +54,5 @@ ms.lasthandoff: 09/09/2017
  [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

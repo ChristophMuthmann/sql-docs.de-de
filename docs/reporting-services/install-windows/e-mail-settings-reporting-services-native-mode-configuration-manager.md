@@ -1,29 +1,29 @@
 ---
-title: "E-Mail-Einstellungen – Reporting Services im einheitlichen Modus (Konfigurations-Manager) | Microsoft Docs"
+title: 'E-Mail-Einstellungen: einheitlicher Modus von Reporting Services (Konfigurations-Manager) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords:
-- SQL11.rsconfigtool.emailsettings.F1
+f1_keywords: SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 84fc2d366101e410f301bf76cbccc8e61eea6b38
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
 Reporting Services enthält eine Erweiterung zur E-Mail-Übermittlung, damit Sie Berichte per E-Mail verteilen können. Je nachdem, wie Sie das Abonnieren von E-Mails definieren, kann eine E-Mail-Übermittlung aus einer Nachricht, einem Link, einem Anhang oder einem eingebetteten Bericht bestehen. Die Erweiterung der E-Mail-Übermittlung arbeitet mit Ihrer vorhandenen E-Mail-Server-Technologie. Der E-Mail-Server muss ein SMTP-Server oder eine Weiterleitung sein. Der Berichtsserver stellt über CDO-Bibliotheken (Collaboration Data Objects, cdosys.dll), die das Betriebssystem stellt, eine Verbindung zu einem SMTP-Server her.
@@ -73,7 +73,7 @@ Gehen Sie wie folgt vor, um einen Berichtsserver für die E-Mail-Übermittlung z
      
      - **Benutzername und Kennwort (Standard)** ermöglicht Ihnen, einen Benutzernamen und ein Kennwort zum Herstellen der Verbindung mit dem Mailserver anzugeben. Sie können außerdem **Sichere Verbindung verwenden** auswählen, damit der Benutzername und das Kennwort über eine verschlüsselte Verbindung an den Mailserver übertragen werden.
      
-          Wenn Sie diese Option auswählen, wird `<SendUsing>` in der Datei „rsreportserver.config“ auf den Wert **2** und `<SMTPAuthenticate>` auf den Wert **1** festgelegt. Wenn Sie **Sichere Verbindung verwenden** auswählen, wird `SMTPUseSSL` auf **True**festgelegt. **Username** wird in `<SendUserName>` als verschlüsselter Wert festgelegt. **Password** wird in `<SendPassword>` als verschlüsselter Wert festgelegt.
+          Wenn Sie diese Option auswählen, wird `<SendUsing>` in der Datei „rsreportserver.config“ auf den Wert **2** und `<SMTPAuthenticate>` auf den Wert **1** festgelegt. Wenn Sie **Sichere Verbindung verwenden** auswählen, wird `SMTPUseSSL` auf **TRUE** festgelegt. **Username** wird in `<SendUserName>` als verschlüsselter Wert festgelegt. **Password** wird in `<SendPassword>` als verschlüsselter Wert festgelegt.
      
      - **Berichtsserver-Dienstkonto (NTLM)** verwendet das Dienstkonto, das Sie für den Berichtsserver angegeben haben. Wenn Sie das Berichtsserver-Dienstkonto für die Authentifizierung verwenden, müssen Sie sicherstellen, dass das Dienstkonto auf dem SMTP-Server über die Berechtigung **Senden als** verfügt.
      
@@ -134,9 +134,9 @@ Sie können die Konfigurationseinstellungen ändern, die Benutzern das Eingeben 
 ## <a name="configuration-options-for-remote-smtp-service"></a>Konfigurationsoptionen für den SMTP-Remotedienst
 Die Verbindung zwischen dem Berichtsserver und einem SMTP-Server oder einer SMTP-Weiterleitung wird durch die folgenden Konfigurationseinstellungen bestimmt:
 
-- `<SendUsing>`Gibt eine Methode zum Senden von Nachrichten. Sie können zwischen einem SMTP-Netzwerkdienst und einem lokalen SMTP-Dienstabholverzeichnis wählen. Um einen SMTP-Remotedienst zu verwenden, muss dieser Wert in der Datei RSReportServer.config auf **2** eingestellt werden.
-- `<SMTPServer>`Gibt den SMTP-Remoteserver oder eine Weiterleitung an. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.
-- `<From>`Legt den Wert, der in der **aus:** Zeile einer e-Mail-Nachricht. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.
+- `<SendUsing>` gibt eine Methode für das Senden von Nachrichten an. Sie können zwischen einem SMTP-Netzwerkdienst und einem lokalen SMTP-Dienstabholverzeichnis wählen. Um einen SMTP-Remotedienst zu verwenden, muss dieser Wert in der Datei RSReportServer.config auf **2** eingestellt werden.
+- `<SMTPServer>` gibt den SMTP-Remoteserver bzw. die SMTP-Weiterleitung an. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.
+- `<From>` legt den Wert fest, der in der **Von:** -Zeile einer E-Mail angezeigt wird. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.
 
 Andere Werte, die für den SMTP-Remotedienst verwendet werden, sind folgende (diese Werte müssen Sie nur angeben, wenn Sie die Standardwerte überschreiben möchten).
 
@@ -226,10 +226,9 @@ Die Verbindung zwischen dem Berichtsserver und einem lokalen SMTP-Server oder ei
      
 17. Speichern Sie die Datei.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Reporting Services-Konfigurations-Manager (einheitlicher Modus)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   
-

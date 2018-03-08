@@ -2,31 +2,32 @@
 title: Beenden einer Ablaufverfolgung (SQL Server Profiler) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], stopping
 - stopping traces
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "22"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2a25d344bb188b457b70baebffcfe70678000007
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23bcec5fe0f4c41f9202400583f2119c4db8cb58
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>Beenden einer Ablaufverfolgung (SQL Server Profiler)
-  In diesem Thema wird das Beenden einer derzeit ausgeführten Ablaufverfolgung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]beschrieben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie eine Ablaufverfolgung beendet wird, die mithilfe von läuft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Durch Beenden einer Ablaufverfolgung wird die Aufzeichnung der Daten abgebrochen. Wenn eine Ablaufverfolgung beendet wurde, kann sie nur dann ohne den Verlust zuvor aufgezeichneter Daten erneut gestartet werden, wenn die Daten in einer Ablaufverfolgungsdatei oder -tabelle aufgezeichnet wurden. Außerdem können Sie die gesammelten Daten in einer Tabelle oder Datei speichern, nachdem eine Ablaufverfolgung beendet wurde. Alle zuvor ausgewählten Ablaufverfolgungseigenschaften bleiben beim Beenden einer Ablaufverfolgung erhalten. Wenn eine Ablaufverfolgung beendet wird, können Sie den Namen, Ereignisse, Spalten und Filter ändern.  
   
@@ -40,4 +41,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

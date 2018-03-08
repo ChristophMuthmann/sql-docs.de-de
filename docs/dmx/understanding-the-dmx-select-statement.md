@@ -2,16 +2,16 @@
 title: Grundlegendes zu DMX Select-Anweisung | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - Data Mining Extensions [Analysis Services], statements
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - copying mining models
 ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 063b94b4229221c998c42691a1c8832ac42be819
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431bc5b84d76725904fff27f63c73121e13fa48
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Grundlegendes zur SELECT-Anweisung (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Die [wählen](../dmx/select-dmx.md) Anweisung bildet die Grundlage für die meisten Abfragen, die Sie mit Data Mining Extensions (DMX) in erstellen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Mit dieser Anweisung können Sie viele unterschiedliche Aufgaben ausführen, so z. B. Durchsuchen von Data Mining-Modellen und Erstellen von Vorhersagen für Data Mining-Modelle.  
   
@@ -112,7 +111,7 @@ ms.lasthandoff: 08/02/2017
   
 |Abfragetyp|Description|  
 |----------------|-----------------|  
-|SELECT FROM  *\<Modell >*. FÄLLE|Gibt die Fälle zurück, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [SELECT FROM &#60; Modell &#62;. Fällen &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Erstellen von Drillthroughabfragen mit DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
+|SELECT FROM  *\<Modell >*. FÄLLE|Gibt die Fälle zurück, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [SELECT FROM &#60; Modell &#62;. Fällen &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Erstellen von Drillthroughabfragen mit der DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<Modell >*. SAMPLE_CASES|Gibt einen Beispielfall zurück, der repräsentativ für die Fälle ist, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [SELECT FROM &#60; Modell &#62;. SAMPLE_CASES &#40; DMX &#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
 |SELECT FROM  *\<Struktur >*. FÄLLE|Gibt die detaillierten Datenzeilen aus der zugrunde liegenden Miningstruktur zurück, auch wenn einige Details nicht zum Trainieren des Miningmodells verwendet wurden.<br /><br /> [SELECT FROM &#60; Struktur &#62;. FÄLLE](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthroughabfragen &#40; Datamining &#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
@@ -124,4 +123,3 @@ ms.lasthandoff: 08/02/2017
  [Datamining-Erweiterungen &#40; DMX &#41; Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   
-

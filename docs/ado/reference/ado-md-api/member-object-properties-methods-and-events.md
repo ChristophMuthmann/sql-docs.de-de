@@ -3,7 +3,7 @@ title: Member-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Member object [ADO MD]
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e860d8d676b82e718271324472fd399261082f6a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c643f245132f1a75e9b3fb9f43d3b8415e045cb2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/09/2017
   
  [Parent-Eigenschaft](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
- [ParentSameAsPrev-Eigenschaft](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [ParentSameAsPrev Property](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
  [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -63,4 +62,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
-

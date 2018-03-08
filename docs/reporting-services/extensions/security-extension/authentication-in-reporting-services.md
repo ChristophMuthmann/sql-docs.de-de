@@ -1,33 +1,33 @@
 ---
-title: Authentifizierung in Reporting Services | Microsoft Docs
+title: Authentifizierung in Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 25
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "25"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 641d257227cbb91421ddcc1929661c39f1fe5f94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6926d7787a715ab9183763939ca78ed192d0e251
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="authentication-in-reporting-services"></a>Authentifizierung in Reporting Services
   Unter Authentifizierung versteht man den Prozess, Benutzerrechte für eine bestimmte Identität einzurichten. Es gibt viele Techniken, die Sie verwenden können, um einen Benutzer zu authentifizieren. Die gängigste Methode ist die Verwendung von Kennwörtern. Wenn Sie beispielsweise die Formularauthentifizierung implementieren, benötigen Sie eine Implementierung, bei der die Benutzer nach den Anmeldeinformationen durchsucht werden (normalerweise über eine Oberfläche, in der Anmeldename und Kennwort angefordert werden) und bei der die Benutzer mit einem Datenspeicher, z. B. einer Datenbanktabelle oder einer Konfigurationsdatei, abgeglichen werden. Wenn die Anmeldeinformationen nicht validiert werden können, schlägt der Authentifizierungsprozess fehl, und der Benutzer nimmt eine anonyme Identität an.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/12/2017
 ## <a name="custom-authentication-in-reporting-services"></a>Benutzerdefinierte Authentifizierung in den Reporting Services  
  In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] behandelt das Windows-Betriebssystem die Benutzerauthentifizierung entweder über integrierte Sicherheitsfunktionen oder über die ausdrückliche Annahme und Validierung der Anmeldeinformationen des Benutzers. Die benutzerdefinierte Authentifizierung kann in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] so entwickelt werden, dass zusätzliche Authentifizierungsschemen unterstützt werden. Dies wird durch die Sicherheitserweiterungsschnittstelle <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> ermöglicht. Alle Erweiterungen erben für jede vom Berichtsserver bereitgestellte und verwendete Erweiterung von der <xref:Microsoft.ReportingServices.Interfaces.IExtension>-Basisschnittstelle. <xref:Microsoft.ReportingServices.Interfaces.IExtension> und <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> sind Elemente des <xref:Microsoft.ReportingServices.Interfaces>-Namespace.  
   
- Die primäre Möglichkeit, auf einem Berichtsserver in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] authentifiziert zu werden, ist die <xref:ReportService2010.ReportingService2010.LogonUser%2A>-Methode. Dieses Element des Reporting Services-Webdiensts kann verwendet werden, um die Benutzeranmeldeinformationen zur Validierung an einen Berichtsserver zu übergeben. Die zugrunde liegende sicherheitserweiterung implementiert **IAuthenticationExtension2.LogonUser** den benutzerdefinierten Authentifizierungscode enthält. Im Beispiel Formularauthentifizierung **LogonUser**, die eine authentifizierungsprüfung der angegebenen Anmeldeinformationen und eines benutzerdefinierten Benutzerspeichers in einer Datenbank durchführt. Ein Beispiel für eine Implementierung der **LogonUser** wie folgt aussieht:  
+ Die primäre Möglichkeit, auf einem Berichtsserver in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] authentifiziert zu werden, ist die <xref:ReportService2010.ReportingService2010.LogonUser%2A>-Methode. Dieses Element des Reporting Services-Webdiensts kann verwendet werden, um die Benutzeranmeldeinformationen zur Validierung an einen Berichtsserver zu übergeben. Die zugrunde liegende Sicherheitserweiterung implementiert **IAuthenticationExtension2.LogonUser**, das den benutzerdefinierten Authentifizierungscode enthält. Im Beispiel zur Formularauthentifizierung wird mit **LogonUser** eine Authentifizierungsprüfung der angegebenen Anmeldeinformationen und eines benutzerdefinierten Benutzerspeichers in einer Datenbank durchgeführt. Ein Beispiel für die Implementierung von **LogonUser** sieht folgendermaßen aus:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -103,19 +103,19 @@ internal static bool VerifyPassword(string suppliedUserName,
 ```  
   
 ## <a name="authentication-flow"></a>Authentifizierungsablauf  
- Der Reporting Services-Webdienst stellt benutzerdefinierte authentifizierungserweiterungen, um die Formularauthentifizierung durch das Webportal und den Berichtsserver ermöglichen.  
+ Der Reporting Services-Webdienst verfügt über benutzerdefinierte Authentifizierungserweiterungen, um eine Formularauthentifizierung durch das Webportal und den Berichtsserver zu ermöglichen.  
   
  Mit der <xref:ReportService2010.ReportingService2010.LogonUser%2A>-Methode des Reporting Services Webdiensts werden dem Berichtsserver die Anmeldeinformationen zur Authentifizierung vorgelegt. Der Webdienst verwendet HTTP-Header, um für validierte Anmeldeanforderungen ein Authentifizierungsticket („Cookie“) vom Server an den Client zu übergeben.  
   
  In folgender Abbildung sehen Sie die Methode, wie Benutzer im Webdienst authentifiziert werden, wenn Ihre Anwendung mit einem Berichtsserver eingesetzt wird, der für die Verwendung einer benutzerdefinierten Authentifizierungserweiterung konfiguriert ist.  
   
- ![Reporting Services-sicherheitsauthentifizierungsfluss](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Reporting Services-sicherheitsauthentifizierungsfluss")  
+ ![Reporting Services-Sicherheitsauthentifizierungsfluss](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Reporting Services security authentication flow")  
   
  Wie in Abbildung 2 gezeigt, sieht der Authentifizierungsprozess folgendermaßen aus:  
   
 1.  Eine Clientanwendung ruft die Webdienstmethode <xref:ReportService2010.ReportingService2010.LogonUser%2A> auf, um einen Benutzer zu authentifizieren.  
   
-2.  Der Webdienst Ruft die <xref:ReportService2010.ReportingService2010.LogonUser%2A> Methode Ihrer sicherheitserweiterung insbesondere die implementierende Klasse **IAuthenticationExtension2**.  
+2.  Der Webdienst ruft die Methode <xref:ReportService2010.ReportingService2010.LogonUser%2A> Ihrer Sicherheitserweiterung auf, genauer gesagt die Klasse, von der **IAuthenticationExtension2** implementiert wird.  
   
 3.  Die Implementierung von <xref:ReportService2010.ReportingService2010.LogonUser%2A> überprüft den Benutzernamen und das Kennwort im Benutzerspeicher oder in der Sicherheitsinstanz.  
   
@@ -153,7 +153,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann Benutzer entweder über die Windows-Authentifizierung oder die benutzerdefinierte Authentifizierung authentifizieren, jedoch nicht über beide. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt nicht die gleichzeitige Verwendung von mehreren Sicherheitserweiterungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementieren von Sicherheitserweiterungen](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
   
   

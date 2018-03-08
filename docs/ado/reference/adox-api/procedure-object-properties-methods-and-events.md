@@ -3,7 +3,7 @@ title: Prozedur-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Procedure object [ADOX], members
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7db36b7b282edae371b0c828ab05d3b31f853a0e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b2b80ebcb4fa089194d3e20d76462dbea7a7f57
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Prozedur-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -44,5 +43,4 @@ ms.lasthandoff: 09/09/2017
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozedurobjekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
-
+ [Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)

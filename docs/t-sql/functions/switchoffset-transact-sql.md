@@ -3,8 +3,11 @@ title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-caps.latest.revision: 26
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 3c81153c233e68d12347dc47ae9c232f4a5ee030
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 56708a638f47aa926228d2d98e4fce5c3de7754b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine **"DateTimeOffset"** Wert, der von der gespeicherten Zeitzonenoffset in einen angegebenen neuen Zeitzonenoffset geändert wird.  
   
@@ -100,6 +102,5 @@ FROM dbo.test;
  [ZEITZONE &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
-
 
 

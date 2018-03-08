@@ -3,8 +3,11 @@ title: Erstellen Sie TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 92
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e7f411871d98fc6854b97478402567017d28222
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 145f60bcec81e8a29761a44146df025f66a21b80
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen Aliasdatentyp oder einen benutzerdefinierten Typ in der aktuellen Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die Implementierung eines Aliasdatentyps basiert auf einem systemeigenen Typ von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein benutzerdefinierten Typ wird durch eine Klasse einer Assembly im implementiert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR). Um einen benutzerdefinierten Typ an seine Implementierung zu binden, muss die CLR-Assembly, die die Implementierung des Typs enthält zunächst in registriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   
@@ -310,4 +312,3 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

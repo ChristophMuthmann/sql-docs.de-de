@@ -2,28 +2,30 @@
 title: "Problembehandlung bei Datensammlung für Machine Learning - SQL Server"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: b9185b1798c638541a5228d9cbe9e675a8de3427
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Problembehandlung bei der Datensammlung für Machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel beschreibt die Art der Daten, die gesammelt werden sollen, wenn Sie versuchen, Behebung von Problemen mit dem Setup, Konfiguration oder Leistung von Machine learning-in SQL Server. Hierzu zählen Protokolle, Fehlermeldungen und Systeminformationen.
 
@@ -345,4 +347,3 @@ Darüber hinaus können Sie die Sqlrutils-Paket verwenden, zum Bündeln von R-Sk
 ## <a name="see-also"></a>Siehe auch
 
 [Problembehandlung bei Machine Learning in der SQL Server](machine-learning-troubleshooting-faq.md)
-

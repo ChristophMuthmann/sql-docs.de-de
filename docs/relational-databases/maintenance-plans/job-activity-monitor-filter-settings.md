@@ -2,30 +2,30 @@
 title: "Auftragsaktivitätsmonitor (Filtereinstellungen) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.jobactivitymon.filter.f1
+f1_keywords: sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5e707f42591b1f2255735e16de9c9eda22ad7f3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Auftragsaktivitätsmonitor (Filtereinstellungen)
-  Mithilfe dieser Seite können Sie die Anzahl der eingeblendeten Zeilen im Auftragsaktivitätsmonitor verringern. Geben Sie die Kriterien in die verfügbaren Felder ein, damit nur die Zeilen angezeigt werden, die den festgelegten Werten entsprechen. Einige der Felder, z. B. **Status** oder **Blockierungstyp** , bieten eine vorgegebene Anzahl von möglichen Werten, die in einer Dropdownliste verfügbar sind. Andere, z. B. **Anwendung** , ermöglichen die Eingabe beliebiger Werte in beliebiger Anzahl in Form einer Liste mit durch Trennzeichen getrennten Angaben. Symbole auf der Symbolleiste ermöglichen das Sortieren der verfügbaren Felder nach Kategorie oder alphabetisch. Klicken Sie auf die Kriterien, um eine kurze Beschreibung zu ihnen anzuzeigen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie die Anzahl der eingeblendeten Zeilen im Auftragsaktivitätsmonitor verringern. Geben Sie die Kriterien in die verfügbaren Felder ein, damit nur die Zeilen angezeigt werden, die den festgelegten Werten entsprechen. Einige der Felder, z. B. **Status** oder **Blockierungstyp** , bieten eine vorgegebene Anzahl von möglichen Werten, die in einer Dropdownliste verfügbar sind. Andere, z. B. **Anwendung** , ermöglichen die Eingabe beliebiger Werte in beliebiger Anzahl in Form einer Liste mit durch Trennzeichen getrennten Angaben. Symbole auf der Symbolleiste ermöglichen das Sortieren der verfügbaren Felder nach Kategorie oder alphabetisch. Klicken Sie auf die Kriterien, um eine kurze Beschreibung zu ihnen anzuzeigen.  
   
  Geben Sie zum Filtern des Auftragsaktivitätsmonitors alle gewünschten Filterkriterien an, klicken Sie auf **Filter anwenden**, und dann auf **OK**.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
  **Ergebnis der letzten Ausführung**  
  Filtert Aufträge nach dem Status, der nach der letzten Ausführung gegeben war.  
   
- **Aktiviert**  
+ **Enabled**  
  Zeigt nur aktivierte bzw. nicht aktivierte Aufträge an.  
   
  **Kategorie**  
@@ -69,8 +69,7 @@ ms.lasthandoff: 06/22/2017
  **Löschen**  
  Setzt die Filtereinstellungen auf die Standardeinstellungen zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Auftragsaktivität](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
   
   
-

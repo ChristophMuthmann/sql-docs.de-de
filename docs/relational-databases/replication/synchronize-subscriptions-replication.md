@@ -2,11 +2,13 @@
 title: Synchronisieren von Abonnements (Replikation) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - replication [SQL Server], synchronization
 ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "35"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dbd10248c5a6c358e6e8e6c64b0db355fc4ed66d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 145ae64c09e0a98a92ff13ddbd6c25d91b74a67e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-subscriptions-replication"></a>Synchronisieren von Abonnements (Replikation)
-  Abonnements werden von Replikations-Agents synchronisiert. Der Verteilungs-Agent synchronisiert Abonnements für Transaktions- und Momentaufnahmeabonnements, und der Merge-Agent synchronisiert Abonnements für Mergeveröffentlichungen. Sie können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], gespeicherten Replikationsprozeduren und Replikationsverwaltungsobjekten (RMO) Abonnements synchronisieren und das Sychronisierungsverhalten steuern. In den folgenden Themen wird beschrieben, wie Sie Abonnements synchronisieren und Synchronisierungsoptionen angeben.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Abonnements werden von Replikations-Agents synchronisiert. Der Verteilungs-Agent synchronisiert Abonnements für Transaktions- und Momentaufnahmeabonnements, und der Merge-Agent synchronisiert Abonnements für Mergeveröffentlichungen. Sie können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], gespeicherten Replikationsprozeduren und Replikationsverwaltungsobjekten (RMO) Abonnements synchronisieren und das Sychronisierungsverhalten steuern. In den folgenden Themen wird beschrieben, wie Sie Abonnements synchronisieren und Synchronisierungsoptionen angeben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -65,8 +66,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md)  
   
   
-

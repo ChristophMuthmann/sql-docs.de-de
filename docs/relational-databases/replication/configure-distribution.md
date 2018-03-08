@@ -2,11 +2,13 @@
 title: Konfigurieren der Verteilung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +22,19 @@ helpviewer_keywords:
 - distribution databases [SQL Server replication]
 - merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc7ddc90a9592cd62c50b31a2d5b8220c85e3f83
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: dfc635f07a64fdb9c4055e402407b7a70bf3329d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distribution"></a>Konfigurieren der Verteilung
-  Bei dem Verteiler handelt es sich um einen Server, der die Verteilungsdatenbank enthält. In der Datenbank sind Metadaten und Verlaufsdaten für alle Replikations- und Transaktionstypen der Transaktionsreplikation gespeichert. Zum Einrichten der Replikation müssen Sie einen Verteiler konfigurieren. Jeder Verleger kann nur einer einzigen Verteilerinstanz zugewiesen werden, es kann jedoch für mehrere ein Verteiler freigegeben werden. Der Verteiler verwendet die folgenden zusätzlichen Ressourcen auf dem Server, auf dem er sich befindet:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei dem Verteiler handelt es sich um einen Server, der die Verteilungsdatenbank enthält. In der Datenbank sind Metadaten und Verlaufsdaten für alle Replikations- und Transaktionstypen der Transaktionsreplikation gespeichert. Zum Einrichten der Replikation müssen Sie einen Verteiler konfigurieren. Jeder Verleger kann nur einer einzigen Verteilerinstanz zugewiesen werden, es kann jedoch für mehrere ein Verteiler freigegeben werden. Der Verteiler verwendet die folgenden zusätzlichen Ressourcen auf dem Server, auf dem er sich befindet:  
   
 -   Zusätzlichen Speicherplatz, falls die Momentaufnahmedateien für die Veröffentlichung auf dem Verteiler gespeichert werden (was in der Regel der Fall ist).  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
  Informationen zum Ändern der Verleger- und Verteilereigenschaften finden Sie unter [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md)  
   

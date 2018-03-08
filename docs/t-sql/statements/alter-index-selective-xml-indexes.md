@@ -3,8 +3,11 @@ title: ALTER INDEX (selektive XML-Indizes) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e7854dd1d9365f97628341c4160c368f97308302
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9f875f7d34c568bc1156c5f8bce60d893fce8039
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (selektive XML-Indizes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Ändert einen vorhandenen selektiven XML-Index. Die ALTER INDEX-Anweisung ändert eines oder mehrere der folgenden Elemente:  
   
@@ -147,7 +149,7 @@ identifier
 > [!IMPORTANT]  
 >  Wenn Sie eine ALTER INDEX-Anweisung ausführen, wird der selektive XML-Index immer neu erstellt. Beachten Sie unbedingt die Auswirkungen dieses Prozesses auf Serverressourcen.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  ALTER-Berechtigung in der Tabelle oder Ansicht ist erforderlich, um ALTER INDEX auszuführen.  
@@ -155,7 +157,7 @@ identifier
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine ALTER INDEX-Anweisung veranschaulicht. Mit dieser Anweisung wird der Pfad `'/a/b/m'` dem XQuery-Teil des Indexes hinzugefügt und der Pfad `'/a/b/e'` vom SQL-Teil des Indexes, der im Beispiel im Thema [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) erstellt wurde, gelöscht. Der zu löschende Pfad ist anhand des Namens zu erkennen, der ihm bei der Erstellung zugewiesen wurde.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -167,7 +169,7 @@ FOR
   
  Im folgenden Beispiel wird eine ALTER INDEX-Anweisung, die Indexoptionen angibt, veranschaulicht. Indexoptionen sind erlaubt, da die Anweisung keine FOR-Klausel verwendet, um Pfade hinzuzufügen oder zu entfernen.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 PAD_INDEX = ON;  
@@ -179,4 +181,3 @@ PAD_INDEX = ON;
  [Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   
-

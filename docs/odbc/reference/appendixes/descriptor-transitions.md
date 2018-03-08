@@ -3,10 +3,12 @@ title: "Der Deskriptor Übergänge | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c762c4276fe236418be07dfe1fe93482d4d9a10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 280d35d8ce03d3d7685441c12d99c05c9ff5f451
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptor-transitions"></a>Der Deskriptor Übergänge
 ODBC-Deskriptoren werden die folgenden drei Status haben.  
@@ -84,4 +85,3 @@ ODBC-Deskriptoren werden die folgenden drei Status haben.
 |D0<br /><br /> Nicht zugeordnet|D1i<br /><br /> Implizit|D1e<br /><br /> Explizit|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|
-

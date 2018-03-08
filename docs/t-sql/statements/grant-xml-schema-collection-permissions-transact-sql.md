@@ -3,8 +3,11 @@ title: GRANT-XML-Auflistung-Schemaberechtigungen (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ae2fdb5dfbeb648264f8d9fe7cfc5dac977bd57d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9bd3cf031a884da51cd15b0e78c8d2c242c3f9e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT (Berechtigungen für XML-Schemaauflistungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erteilt Berechtigungen für eine XML-Schemaauflistung.   
   
@@ -59,10 +61,10 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für eine XML-Schemaauflistung erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- ON XML SCHEMA COLLECTION:: [ *Schema_name*. ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
  Gibt die XML-Schemaauflistung an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer (::) ist erforderlich. Wenn *Schema_name* nicht angegeben ist, wird das Standardschema verwendet werden. Wenn *Schema_name* angegeben ist, ist der schemabereichsqualifizierer (.) ist erforderlich.  
   
  \<Database_principal > Gibt den Prinzipal an, die die Berechtigung erteilt wird.  
@@ -105,7 +107,7 @@ GRANT permission  [ ,...n ] ON
 |--------------------------------------|-------------------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|EXECUTE|CONTROL|EXECUTE|  
+|Führen Sie|CONTROL|Führen Sie|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
@@ -138,11 +140,10 @@ GRANT permission  [ ,...n ] ON
 ## <a name="see-also"></a>Siehe auch  
  [Verweigern von Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
  [WIDERRUFEN Sie Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
- [Sys. xml_schema_collections &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [Erstellen von XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

@@ -2,9 +2,12 @@
 title: "Verwalten der Änderungsnachverfolgung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,19 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 76ab7f38d33ca8940eb9f0c82a7e1279f552364d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>Verwalten der Änderungsnachverfolgung (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie die Änderungsnachverfolgung verwaltet wird. Außerdem werden die Vorgehensweisen zum Konfigurieren der Sicherheit und zum Ermitteln der Auswirkungen der Änderungsnachverfolgung auf Speicherung und Leistung beschrieben.  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
  Zusätzlich werden in der [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) -Katalogsicht die internen Tabellen aufgeführt, die bei aktivierter Änderungsnachverfolgung für eine Benutzertabelle erstellt werden.  
   
-### <a name="security"></a>Sicherheit  
+### <a name="security"></a>Security  
  Für den Zugriff auf Änderungsnachverfolgungsinformationen mit den [Änderungsnachverfolgungsfunktionen](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)muss der Prinzipal über die folgenden Berechtigungen verfügen:  
   
 -   SELECT-Berechtigung mindestens für die wichtigsten Schlüsselspalten der änderungsnachverfolgten Tabelle zur abgefragten Tabelle.  
@@ -102,12 +105,12 @@ ms.lasthandoff: 06/22/2017
   
  Wie bei anderen internen Tabellen auch können Sie den für die Änderungsnachverfolgungstabelle verwendeten Speicher mit der gespeicherten Prozedur [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) festlegen. Die Namen der internen Tabellen können mit der [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) -Katalogsicht abgerufen werden, wie im nachfolgenden Beispiel dargestellt.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Datenbankeigenschaften &#40;ChangeTracking-Seite&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
@@ -119,4 +122,3 @@ sp_spaceused 'sys.syscommittab'
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
-

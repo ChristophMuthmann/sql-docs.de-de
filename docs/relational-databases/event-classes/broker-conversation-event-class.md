@@ -2,9 +2,12 @@
 title: Broker:Conversation-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,45 +15,45 @@ ms.topic: article
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e7161ab04ec24504b6ba0a5f6e7cd304166b7b1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d021508d5b8774e3f3fa0f416819dfee48cc6918
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation-Ereignisklasse
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Conversation** -Ereignis, um den Fortschritt einer Service Broker-Konversation anzugeben.  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Datenspalten der Broker:Conversation-Ereignisklasse  
   
-|Datenspalte|Typ|Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|Typ|Description|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|ja|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|ja|  
 |**DatabaseID**|**int**|Die ID der Datenbank, die mithilfe der USE *database* -Anweisung angegeben wird. Die ID der Standarddatenbank, wenn keine USE *database*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Bestimmen Sie den Wert für eine Datenbank mithilfe der **DB_ID** -Funktion.|3|ja|  
-|**EventClass**|**int**|Der Typ der aufgezeichneten Ereignisklasse. Immer **124** für **Broker:Conversation**.|27|Nein|  
-|**EventSequence**|**int**|Die Sequenznummer für dieses Ereignis.|51|Nein|  
+|**EventClass**|**int**|Der Typ der aufgezeichneten Ereignisklasse. Immer **124** für **Broker:Conversation**.|27|nein|  
+|**EventSequence**|**int**|Die Sequenznummer für dieses Ereignis.|51|nein|  
 |**EventSubClass**|**nvarchar**|Der Typ der Ereignisunterklasse Dieser stellt weitere Informationen zu jeder Ereignisklasse bereit.|21|ja|  
-|**GUID**|**uniqueidentifier**|Die Konversations-ID des Dialogs. Dieser Bezeichner wird als Teil der Nachricht übertragen und von beiden Seiten der Konversation gemeinsam verwendet.|54|Nein|  
+|**GUID**|**uniqueidentifier**|Die Konversations-ID des Dialogs. Dieser Bezeichner wird als Teil der Nachricht übertragen und von beiden Seiten der Konversation gemeinsam verwendet.|54|nein|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Verwenden Sie die **HOST_NAME** -Funktion, um den Hostnamen zu bestimmen.|8|ja|  
-|**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  
+|**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|nein|  
 |**LoginSid**|**image**|Die Sicherheits-ID (SID, Security Identification Number) des angemeldeten Benutzers. Die SID ist für jede Anmeldung beim Server eindeutig.|41|ja|  
-|**MethodName**|**nvarchar**|Die Konversationsgruppe, zu der die Konversation gehört.|47|Nein|  
+|**MethodName**|**nvarchar**|Die Konversationsgruppe, zu der die Konversation gehört.|47|nein|  
 |**NTDomainName**|**nvarchar**|Die Windows-Domäne, der der Benutzer angehört.|7|ja|  
 |**NTUserName**|**nvarchar**|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|ja|  
-|**ObjectName**|**nvarchar**|Das Konversationshandle des Dialogs.|34|Nein|  
+|**ObjectName**|**nvarchar**|Das Konversationshandle des Dialogs.|34|nein|  
 |**Priority**|**int**|Die Prioritätsstufe der Konversation|5|ja|  
-|**RoleName**|**nvarchar**|Die Rolle des Konversationshandles. Dabei handelt es sich um **initiator** oder **target**.|38|Nein|  
-|**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung erfolgt.|26|Nein|  
-|**Severity**|**int**|Wenn dieses Ereignis einen Fehler meldet, ist dies der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schweregrad.|29|Nein|  
+|**RoleName**|**nvarchar**|Die Rolle des Konversationshandles. Dabei handelt es sich um **initiator** oder **target**.|38|nein|  
+|**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung erfolgt.|26|nein|  
+|**Severity**|**int**|Wenn dieses Ereignis einen Fehler meldet, ist dies der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schweregrad.|29|nein|  
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|ja|  
-|**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|14|Ja|  
+|**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|14|ja|  
 |**TextData**|**ntext**|Der aktuelle Status der Konversation. Kann einen der folgenden Werte aufweisen:|1|ja|  
 |||**SO**. Started Outbound (Ausgehend gestartet). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat eine BEGIN CONVERSATION-Anweisung für diese Konversation verarbeitet, es wurden jedoch keine Nachrichten gesendet.|||  
 |||**SI**. Started Inbound (Eingehend gestartet). Eine andere Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hat eine neue Konversation mit der aktuellen Instanz begonnen, die aktuelle Instanz hat den Empfang der ersten Nachricht jedoch noch nicht beendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Konversation in diesem Status starten, wenn die erste Meldung fragmentiert ist oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nachrichten in falscher Reihenfolge empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] könnte die Konversation jedoch im Status CO erstellen, wenn die erste empfangene Übertragung für die Konversation die erste Nachricht vollständig enthält.|||  
@@ -59,11 +62,11 @@ ms.lasthandoff: 06/22/2017
 |||**DO**. Disconnected Outbound (Ausgehend getrennt). Die lokale Seite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation bleibt so lange in diesem Status, bis die Remoteseite der Konversation END CONVERSATION anerkennt. Eine Anwendung kann keine Nachrichten für die Konversation senden oder empfangen. Wenn die Remoteseite der Konversation die END CONVERSATION-Anweisung bestätigt, geht die Konversation in den CD-Status (Geschlossen) über.|||  
 |||**ER**. Error (Fehler). An diesem Endpunkt ist ein Fehler aufgetreten. Die Error-, Severity- und State-Spalten enthalten Informationen zu dem aufgetretenen Fehler.|||  
 |||**CD**. Closed (Geschlossen). Der Konversationsendpunkt wird nicht mehr verwendet.|||  
-|**Transaction ID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
+|**Transaction ID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|nein|  
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgeführt.  
   
-|ID|Unterklasse|Beschreibung|  
+|im Elementknoten &lt;Customer ID="1"|Unterklasse|Description|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **SEND Message** -Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine SEND-Anweisung ausführt.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **END CONVERSATION** -Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine END CONVERSATION-Anweisung ausführt, die keine WITH ERROR-Klausel enthält.|  
@@ -79,8 +82,7 @@ ms.lasthandoff: 06/22/2017
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Dialogfeld Created** -Ereignis, wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] einen Endpunkt für einen Dialog erstellt. [!INCLUDE[ssSB](../../includes/sssb-md.md)] erstellt jedes Mal einen Endpunkt, wenn ein neuer Dialog eingerichtet wird, unabhängig davon, ob die aktuelle Datenbank der Initiator oder das Ziel des Dialogs ist.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein END CONVERSATION WITH CLEANUP-Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine END CONVERSATION-Anweisung ausführt, die eine WITH CLEANUP-Klausel enthält.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
-

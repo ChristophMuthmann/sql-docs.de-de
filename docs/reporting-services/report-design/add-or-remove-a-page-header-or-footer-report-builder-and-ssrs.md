@@ -1,33 +1,33 @@
 ---
-title: "Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e10b015647d513494b6a13d7f690953ca3728533
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS)
   Sie können statischen Text, Bilder, Linien, Rechtecke und Rahmen zu Seitenköpfen und -füßen hinzufügen. Wenn Sie variable oder berechnete Daten in einem Seitenkopf oder -fuß verwenden möchten, können Sie Ausdrücke und datengebundene Bilder in einem Textfeld platzieren.  
   
 > [!NOTE]  
->  Seitenköpfe und -füße werden von den einzelnen Renderingerweiterungen unterschiedlich verarbeitet. Weitere Informationen finden Sie unter [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) und [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+>  Seitenköpfe und -füße werden von den einzelnen Renderingerweiterungen unterschiedlich verarbeitet. Weitere Informationen finden Sie unter [Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) und [Paginierung in Reporting Services (Berichts-Generator und SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,8 +68,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Wenn Sie einen Seitenkopf oder -fuß entfernen, wird er aus dem Bericht gelöscht. Alle Elemente, die Sie zuvor zum Seitenkopf oder -fuß hinzugefügt haben, werden nicht erneut angezeigt, wenn Sie den Seitenkopf oder -fuß anschließend wieder hinzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
-

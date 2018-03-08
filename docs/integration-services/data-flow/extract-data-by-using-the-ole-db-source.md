@@ -1,10 +1,13 @@
 ---
-title: Extrahieren von Daten mithilfe der OLE DB-Quelle | Microsoft Docs
+title: Extrahieren von Daten mithilfe der OLE DB-Quelle | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 06c12224a9117d26d10149698289508edc63567f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extrahieren von Daten mithilfe der OLE DB-Quelle
   Um eine OLE DB-Quelle hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask enthalten.  
@@ -69,11 +71,10 @@ ms.lasthandoff: 08/03/2017
   
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Quelle](../../integration-services/data-flow/ole-db-source.md)   
- [Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
+ [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: "Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung | Microsoft Docs"
+title: "Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 138dc14412f8d0b3f6ea20dbb8fb5bfa09101649
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für Fuzzygruppierung hinzufügen und konfigurieren können.  
@@ -84,11 +86,10 @@ ms.lasthandoff: 08/03/2017
   
 20. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -1,11 +1,13 @@
 ---
 title: "Lektion 4: Wiederherstellen einer Datenbank auf einem virtuellen Computer über URLs | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -13,20 +15,20 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 31d30195b648f48b149021a7bf80aba2543a14ea
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 57394ec4dcc62b6d7e8bdd490fb95bfdcfe30def
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Lektion 4: Wiederherstellen einer Datenbank auf einem virtuellen Computer über URLs
-In dieser Lektion werden Sie die AdventureWorks2014-Datenbank für Ihre Instanz von SQL Server 2016 auf dem virtuellen Computer in Microsoft Azure wiederherstellen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In dieser Lektion werden Sie die AdventureWorks2014-Datenbank für Ihre SQL Server 2016-Instanz auf Ihrem virtuellen Azure-Computer wiederherstellen.
   
 > [!NOTE]  
 > Der Einfachheit halber verwenden wir in diesem Tutorial den gleichen Container für die Daten und Protokolldateien, die wir für die Datenbanksicherung verwenden. In einer Produktionsumgebung würden Sie wahrscheinlich mehrere Container und häufig auch mehrere Datendateien verwenden. Mit SQL Server 2016 könnten Sie auch ein Striping der Sicherung über mehrere Blobs erwägen, um die Backup-Leistung zu steigern, wenn Sie eine große Datenbank sichern.  
@@ -75,4 +77,3 @@ Zum Wiederherstellen einer SQL Server 2014-Datenbank von Azure Blob Storage auf 
   
   
   
-

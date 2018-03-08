@@ -3,27 +3,28 @@ title: "Schritt 3: Erstellen und Ausführen einer SQL­Anweisung | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc0aebc832ff451ab302636c7621b008bec4da1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Schritt 3: Erstellen und Ausführen einer SQL­Anweisung
 Der dritte Schritt ist zum Erstellen und Ausführen einer SQL-Anweisung, wie in der folgenden Abbildung dargestellt. Methoden zum Ausführen dieses Schritts werden wahrscheinlich erheblich variieren. Die Anwendung kann der Benutzer aufgefordert, geben eine SQL-Anweisung ein, und erstellen eine SQL-Anweisung basierend auf Benutzereingaben oder eine hartcodierten SQL-Anweisung verwenden. Weitere Informationen finden Sie unter [SQL-Anweisungen konstruieren](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
@@ -41,6 +42,5 @@ Der dritte Schritt ist zum Erstellen und Ausführen einer SQL-Anweisung, wie in 
 |Typ des SQL-Anweisung|Fahren Sie mit|  
 |---------------------------|----------------|  
 |**Wählen Sie** oder das Katalog-Funktion|[Schritt 4a: Abrufen der Ergebnisse](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**UPDATE**, **löschen**, oder **einfügen**|[Schritt 4 b: die Anzahl der Zeilen abrufen](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|**UPDATE**, **löschen**, oder **einfügen**|[Schritt 4b: Abrufen der Anzahl der Zeilen](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Alle anderen SQL-Anweisungen|Schritt 3: Erstellen und Ausführen einer SQL-Anweisung (dieses Thema) oder [Schritt 5: Commit die Transaktion](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
-

@@ -1,12 +1,14 @@
 ---
-title: Arbeiten mit Bildern mithilfe des Skripttasks | Microsoft Docs
+title: Arbeiten mit Bildern mithilfe des Skripttasks | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,20 +27,19 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 77962f05ede4b2650db4af59fdbde5ec42fdf1d5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
-  Datenbanken von Produkten oder Benutzern enthalten häufig neben Text und numerischen Daten auch Bilder. Die **"System.Drawing"** in Microsoft .NET Framework-Namespace stellt Klassen bereit, zum Bearbeiten von Bildern.  
+  Datenbanken von Produkten oder Benutzern enthalten häufig neben Text und numerischen Daten auch Bilder. Der **System.Drawing**-Namespace in Microsoft .NET Framework stellt Klassen zum Bearbeiten von Bildern bereit.  
   
  [Beispiel 1: Konvertieren von Bildern in das JPEG-Format](#example1)  
   
@@ -47,31 +48,31 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a>Beschreibung zu Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
+##  <a name="example1"></a> Beschreibung zu Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet und mithilfe eines Encoders als komprimierte JPEG-Datei gespeichert. Der Code zum Abrufen der Encoderinformationen wird in einer privaten Funktion gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  
   
 1.  Erstellen Sie eine Zeichenfolgenvariable namens `CurrentImageFile`, und legen Sie ihren Wert auf den Pfad und Dateinamen einer bestehenden Bilddatei fest.  
   
-2.  Auf der **Skript** auf der Seite der **Skripttask-Editor**, Hinzufügen der `CurrentImageFile` -Variablen an die **ReadOnlyVariables** Eigenschaft.  
+2.  Fügen Sie auf der Seite **Skript** im **Skripttask-Editor** die `CurrentImageFile`-Variable der **ReadOnlyVariables**-Eigenschaft hinzu.  
   
-3.  Legen Sie im skriptprojekt einen Verweis auf die **"System.Drawing"** Namespace.  
+3.  Legen Sie im Skriptprojekt einen Verweis auf den **System.Drawing**-Namespace fest.  
   
-4.  Verwenden Sie in Ihrem Code **Importe** Anweisungen zum Importieren der **"System.Drawing"** und **System.IO** Namespaces.  
+4.  Verwenden Sie in Ihrem Code **Imports**-Anweisungen zum Importieren der Namespaces **System.Drawing** und **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit mehreren Bilddateien  
   
 1.  Platzieren Sie den Skripttask in einen Foreach-Schleifencontainer.  
   
-2.  Auf der **Auflistung** auf der Seite der **foreach-Schleifen-Editor**, wählen die **foreach-Dateienumerator** als Enumerator aus, und geben Sie den Pfad und die Dateimaske der Quelle Dateien, z. B. als "*.bmp."  
+2.  Wählen Sie auf der Seite **Auflistung** im **Foreach-Schleifen-Editor** die Option **Foreach-Dateienumerator** als Enumerator aus, und geben Sie den Pfad und die Dateimaske der Quelldateien an, beispielsweise „*.bmp“.  
   
-3.  Auf der **Variablenzuordnungen** Seite, ordnen Sie die `CurrentImageFile` -Variable an Index 0. Die Variable übergibt bei jeder Iteration des Enumerators den aktuellen Dateinamen an den Skripttask.  
+3.  Ordnen Sie auf der Seite **Variablenzuordnungen** dem Index 0 die `CurrentImageFile`-Variable zu. Die Variable übergibt bei jeder Iteration des Enumerators den aktuellen Dateinamen an den Skripttask.  
   
     > [!NOTE]  
     >  Diese Schritte sind zusätzlich zu denen, die in der Vorgehensweise für eine einzelne Bilddatei beschrieben wurden, erforderlich.  
   
-### <a name="example-1-code"></a>Beispiel 1-Code  
+### <a name="example-1-code"></a>Codebeispiel 1  
   
 ```vb  
 Public Sub Main()  
@@ -156,7 +157,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>Beschreibung zu Beispiel 2: Erstellen und Speichern von Miniaturbildern  
+##  <a name="example2"></a> Beschreibung zu Beispiel 2: Erstellen und Speichern von Miniaturbildern  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet, ein Miniaturbild dieses Bilds mit gleichem Seitenverhältnis erstellt und das Miniaturbild mit geändertem Dateinamen gespeichert. Der Code, der Höhe und Breite des Miniaturbilds berechnet und dabei das Seitenverhältnis beibehält, wird in einer privaten Unterroutine gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  
@@ -165,24 +166,24 @@ End Function
   
 2.  Erstellen Sie zudem die ganzzahlige Variable `MaxThumbSize`, und weisen Sie ihr einen Pixelwert, z. B. 100, zu.  
   
-3.  Auf der **Skript** auf der Seite der **Skripttask-Editor**, beide Variablen hinzufügen, die **ReadOnlyVariables** Eigenschaft.  
+3.  Fügen Sie auf der Seite **Skript** im **Skripttask-Editor** beide Variablen der **ReadOnlyVariables**-Eigenschaft hinzu.  
   
-4.  Legen Sie im skriptprojekt einen Verweis auf die **"System.Drawing"** Namespace.  
+4.  Legen Sie im Skriptprojekt einen Verweis auf den **System.Drawing**-Namespace fest.  
   
-5.  Verwenden Sie in Ihrem Code **Importe** Anweisungen zum Importieren der **"System.Drawing"** und **System.IO** Namespaces.  
+5.  Verwenden Sie in Ihrem Code **Imports**-Anweisungen zum Importieren der Namespaces **System.Drawing** und **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit mehreren Bilddateien  
   
 1.  Platzieren Sie den Skripttask in einen Foreach-Schleifencontainer.  
   
-2.  Auf der **Auflistung** auf der Seite der **foreach-Schleifen-Editor**, wählen die **foreach-Dateienumerator** als die **Enumerator**, und geben Sie die Pfad und die Dateimaske der Quelldateien an, z. B. ".jpg".  
+2.  Wählen Sie auf der Seite **Auflistung** im **Foreach-Schleifen-Editor** die Option **Foreach-Dateienumerator** als **Enumerator** aus, und geben Sie den Pfad und die Dateimaske der Quelldateien an, beispielsweise „*.jpg“.  
   
-3.  Auf der **Variablenzuordnungen** Seite, ordnen Sie die `CurrentImageFile` -Variable an Index 0. Die Variable übergibt bei jeder Iteration des Enumerators den aktuellen Dateinamen an den Skripttask.  
+3.  Ordnen Sie auf der Seite **Variablenzuordnungen** dem Index 0 die `CurrentImageFile`-Variable zu. Die Variable übergibt bei jeder Iteration des Enumerators den aktuellen Dateinamen an den Skripttask.  
   
     > [!NOTE]  
     >  Diese Schritte sind zusätzlich zu denen, die in der Vorgehensweise für eine einzelne Bilddatei beschrieben wurden, erforderlich.  
   
-### <a name="example-2-code"></a>Beispiel 2-Code  
+### <a name="example-2-code"></a>Codebeispiel 2  
   
 ```vb  
 Public Sub Main()  
@@ -297,4 +298,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

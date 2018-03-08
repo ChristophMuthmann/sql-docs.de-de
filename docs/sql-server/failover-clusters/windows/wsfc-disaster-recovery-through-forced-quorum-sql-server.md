@@ -2,11 +2,13 @@
 title: WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,24 +16,23 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 16d17e02c0594f3906651b0f270c8a36e891e69d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
-  Quorumfehler werden normalerweise durch eine systemische Katastrophe, einen persistenten Kommunikationsfehler oder eine fehlerhafte Konfiguration, die mehrere Knoten im WSFC-Cluster betreffen, verursacht.  Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quorumfehler werden normalerweise durch eine systemische Katastrophe, einen persistenten Kommunikationsfehler oder eine fehlerhafte Konfiguration, die mehrere Knoten im WSFC-Cluster betreffen, verursacht.  Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  
   
--   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
+-   **WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren** [WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren](#Main)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 06/22/2017
     >   
     >  Ignorieren Sie diese Meldung.  
   
-7.  **Wiederholen Sie Schritt 4 nach Bedarf.** Das Ziel besteht darin, erneut das für einen fehlerfreien Betrieb angemessene Maß an Fehlertoleranz und hoher Verfügbarkeit wiederherzustellen.  
+7.  **Wiederholen Sie Schritt 4 nach Bedarf.** Das Ziel besteht darin, erneut das für einen fehlerfreien Betrieb angemessene Maß an Fehlertoleranz und Hochverfügbarkeit wiederherzustellen.  
   
 8.  **Ausführen einer RPO/RTO-Analyse.** Sie sollten SQL Server-Systemprotokolle, Datenbank-Timestamps und Windows-Ereignisprotokolle analysieren, um die Fehlerursache zu bestimmen und die tatsächlichen Wiederherstellungspunkt- und Wiederherstellungszeitdaten zu dokumentieren.  
   
@@ -130,4 +131,3 @@ ms.lasthandoff: 06/22/2017
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

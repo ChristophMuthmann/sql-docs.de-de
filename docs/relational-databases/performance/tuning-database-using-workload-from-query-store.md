@@ -2,30 +2,30 @@
 title: Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Database Engine Tuning Advisor, Query Store
+helpviewer_keywords: Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "9"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8d43a90f7c4bebef8bb9753dd02b29b46a2f30b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 Die Funktion [Abfragespeicher](../../relational-databases/performance/how-query-store-collects-data.md) in SQL Server erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und speichert diese Informationen in der Datenbank. Der [Datenbankoptimierungsratgeber (Database Engine Tuning Advisor, DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) unterstützt eine neue Option, bei der man den Abfragespeicher verwenden kann, um automatisch eine entsprechende Arbeitsauslastung für die Optimierung auszuwählen. Viele Benutzer müssen dadurch nicht mehr explizit eine Arbeitsauslastung für die Optimierung erfassen. Diese Funktion ist nur verfügbar, wenn in der Datenbank die Abfragespeicherfunktion aktiviert ist. 
@@ -52,10 +52,9 @@ Weitere Informationen finden Sie unter [dta Utility](../../tools/dta/dta-utility
 --- 
 Der Unterschied zwischen den Optionen „Abfragespeicher“ und „Plancache“ liegt darin, dass ersterer einen langen Verlauf von Abfragen enthält, die in der Datenbank ausgeführt wurden und zwischen Serverneustarts beibehalten werden. Der Plancache enthält dagegen nur eine Teilmenge von kürzlich ausgeführten Abfragen, deren Pläne im Arbeitsspeicher zwischengespeichert werden. Wenn der Server neu gestartet wird, werden die Einträge im Plancache gelöscht.
 
-<a name="see-also"></a>Siehe auch 
+<a name="see-also"></a>Weitere Informationen finden Sie unter 
 --- 
 [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)     
 [Tutorial: Datenbankoptimierungsratgeber](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [So werden Daten im Abfragespeicher gesammelt](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Abfragespeicher, bewährte Methoden](../../relational-databases/performance/best-practice-with-the-query-store.md)
-

@@ -3,7 +3,7 @@ title: ADO-Fehlerreferenz | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a25f9697d00a234bb98fe65eaaa2cd85520b45db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-errors"></a>ADO-Fehler
 Die **ErrorValueEnum** Konstante beschreibt die ADO-Fehlerwerte. Eine vollständige Liste dieser Enumerationskonstanten, einschließlich der Werte, finden Sie unter [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In diesem Abschnitt werden einige der interessanteren Fehler untersuchen und erläutern einige bestimmten Situationen, in denen sie oder Lösungen zum Beheben des Problems auslösen können. Sowohl die **ErrorValueEnum** Konstante und die kurze positive Dezimalzahl aufgeführt sind.
@@ -88,4 +87,3 @@ Die **ErrorValueEnum** Konstante beschreibt die ADO-Fehlerwerte. Eine vollständ
 |**3749**|**adErrFieldsUpdateFailed**|Fehler beim Aktualisieren der Felder. Um weitere Informationen zu erhalten, überprüfen Sie die **Status** Eigenschaft der einzelnen Feldobjekte. Dieser Fehler kann in zwei Situationen auftreten: beim Ändern einer **Feld** Objektwerts gerade ändern oder Hinzufügen eines Datensatzes in der Datenbank und beim Ändern der Eigenschaften der **Feld** Objekt selbst.<br /><br /> Die **Datensatz** oder **Recordset** Updatefehler aufgrund eines Problems mit einem der Felder im aktuellen Datensatz. Auflisten der **Felder** Auflistung und Überprüfen der **Status** Eigenschaft vom jeweiligen Feld können Sie die Ursache des Problems zu ermitteln.|
 |**3750**|**adErrDenyNotSupported**|Anbieter unterstützt keine freigabebeschränkungen. Es wurde versucht, die Dateifreigabe einzuschränken, und Ihr Anbieter unterstützt nicht das Konzept.|
 |**3751**|**adErrDenyTypeNotSupported**|Die angeforderte Art der Einschränkung für die Freigabe unterstützt Anbieter nicht. Es wurde versucht, eine bestimmte Art von der Dateifreigabe herstellen Einschränkung, die von Ihrem Anbieter nicht unterstützt wird. Finden Sie die Dokumentation des Anbieters, um zu bestimmen, welche Einschränkungen Dateifreigabe unterstützt werden.|
-

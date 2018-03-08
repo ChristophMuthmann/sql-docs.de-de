@@ -3,7 +3,7 @@ title: State-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO]
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d8f1b832d0af4840bab697cbcd9b62eca4f90496
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efd795c5ae1095a11520215994185987e9cf2b32
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="state-property-ado"></a>State-Eigenschaft (ADO)
 Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder geschlossen ist. Wenn das Objekt eine asynchrone Methode ausgeführt wird, gibt an, ob der aktuelle Zustand des Objekts Herstellen einer Verbindung, ausführen abgerufen wird.  
@@ -47,10 +46,9 @@ Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder 
   
 ||||  
 |-|-|-|  
-|[Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
+|[Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
+|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
 ## <a name="see-also"></a>Siehe auch  
  ["ConnectionString" ConnectionTimeout und State-Eigenschaft (Beispiel) (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  ["ConnectionString" ConnectionTimeout und State-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
-

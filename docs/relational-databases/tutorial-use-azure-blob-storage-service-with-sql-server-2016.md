@@ -1,11 +1,13 @@
 ---
 title: 'Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016 | Microsoft-Dokumentation'
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ae1e9aef727303d55c79463d822c4f62d3cdae0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 26c6376594efc1b34e50f2c058578387b6f8b7f0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Willkommen zum Tutorial über das Arbeiten mit SQL Server 2016 im Dienst Microsoft Azure Blob Storage. Dieses Tutorial hilft Ihnen dabei, zu verstehen, wie der Dienst Microsoft Azure Blob Storage für SQL Server-Datendateien und SQL Server-Sicherungen verwendet wird.  
   
 Die Unterstützung der SQL Server-Integration für den Dienst Microsoft Azure Blob Storage startete als eine Erweiterung von SQL Server 2012 Servicepack 1 CU2 und wurde zudem mit SQL Server 2014 und SQL Server 2016 erweitert. Eine Übersicht der Funktionen und Vorteile finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache).  
@@ -76,12 +78,11 @@ In dieser Lektion löschen Sie nicht benötigte Sicherungssätze und lernen, wie
 ## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
 Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [SQL Server-Datendateien in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server-Sicherung über URLs](../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
   
-
 

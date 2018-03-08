@@ -2,40 +2,35 @@
 title: AttributeHierarchyOptimizedState-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeHierarchyOptimizedState Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeHierarchyOptimizedState Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeHierarchyOptimizedState
-helpviewer_keywords:
-- AttributeHierarchyOptimizedState element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeHierarchyOptimizedState
+helpviewer_keywords: AttributeHierarchyOptimizedState element
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 77d6f65f6214f83b93bd6ba8e5c41a984cc342e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79b7f84f96c9921a0d1fafce4bc0c8604b5fd582
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributehierarchyoptimizedstate-element-assl"></a>AttributeHierarchyOptimizedState-Element (ASSL)
-  Bestimmt die Optimierungsebene, die auf die Attributhierarchie angewendet wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bestimmt die Optimierungsebene, die auf die Attributhierarchie angewendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|*FullyOptimized*|  
@@ -62,12 +57,12 @@ ms.lasthandoff: 09/01/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[CubeAttribute](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |*FullyOptimized*|Durch die Instanz werden Indizes zum Verbessern der Abfrageleistung für die Attributhierarchie erstellt.|  
 |*NotOptimized*|Von der Instanz werden keine zusätzlichen Indizes erstellt.|  
@@ -78,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

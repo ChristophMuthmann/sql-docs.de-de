@@ -2,31 +2,29 @@
 title: Aufrufen ProcessASDatabase | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8e83493ed934a3f9bf32a1cef35969f04996223
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Führt den **Process** -Vorgang für eine bestimmte **Database** mit einem bestimmten **ProcessType** oder **RefreshType** durch, je nach dem zugrunde liegenden Metadatentyp.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Führt die **Prozess** Vorgang für ein bestimmtes **Datenbank** mit einem bestimmten **ProcessType** oder **RefreshType** je nach den zugrunde liegenden Metadatentyp.  
   
  Verwenden Sie **ProcessType** für eine Datenbank mit mehrdimensionalen Metadaten (einschließlich tabellarischer Datenbanken mit Kompatibilitätsgrad 1050, 1100 oder 1103).  
   
@@ -161,4 +159,3 @@ PS  SQL Server >  Invoke-ProcessASDatabase -databasename "AdventureWorks" -serve
   
   
   
-

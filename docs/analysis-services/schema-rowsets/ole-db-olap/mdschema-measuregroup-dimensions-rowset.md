@@ -2,36 +2,33 @@
 title: MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEASUREGROUP_DIMENSIONS
+apiname: MDSCHEMA_MEASUREGROUP_DIMENSIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 62ee9e17d9f53d981e5e44918ec690c9abceddbb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81a5287d38def196a54e6053dd80af6190b34b4a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset
-  Listet die Dimensionen der Measuregruppe auf.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Listet die Dimensionen der Measuregruppe an.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **MDSCHEMA_MEASUREGROUP_DIMENSIONS** -Rowset enthält die folgenden Spalten.  
@@ -39,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Der Name des Katalogs, zu dem diese Measuregruppe gehört. **NULL** , wenn der Anbieter keine Kataloge unterstützt.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**||Wird nicht unterstützt.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**||Nicht unterstützt.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Der Name des Cubes, zu dem diese Measuregruppe gehört.|  
 |**MEASUREGROUP_NAME**|**DBTYPE_WSTR**||Der Name der Measuregruppe.|  
 |**MEASUREGROUP_CARDINALITY**|**DBTYPE_WSTR**||Die Anzahl der Instanzen, die ein Measure in der Measuregruppe für ein einzelnes Dimensionselement haben kann. Zulässige Werte:<br /><br /> **EINE**<br /><br /> **VIELE**|  
@@ -68,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

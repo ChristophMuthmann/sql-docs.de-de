@@ -2,9 +2,12 @@
 title: Transact-SQL-Debuggerinformationen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,19 +20,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 706952bff0744cb88d12a624ba4c68363cb85652
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL-Debuggerinformationen
-  Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen.  
   
 ## <a name="debugger-windows"></a>Debuggerfenster  
  Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Fensters. Der Debugger zeigt alle seine Informationen in diesen zwei Fenstern an. Jedes Debuggerfenster enthält Registerkarten, durch deren Auswahl Sie bestimmen können, welcher Satz von Informationen im Fenster angezeigt wird. Das linke Debuggerfenster enthält die Registerkarten **Lokal**, **Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4** . Das rechte Debuggerfenster enthält die Registerkarten **Aufrufliste**, **Threads**, **Breakpoints**, **Befehlsfenster**und **Ausgabe** .  
@@ -99,7 +102,7 @@ ms.lasthandoff: 06/22/2017
   
  Im Debugmodus sind die Registerkarten **Ergebnisse** und **Meldungen** nach wie vor im Abfrage-Editor aktiv. Auf der Registerkarte **Ergebnisse** werden weiterhin die Resultsets aus den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen angezeigt, die während einer Debuggingsitzung ausgeführt werden. Auf der Registerkarte **Meldungen** werden weiterhin Systemmeldungen angezeigt, wie z. B. „ *xx* Zeilen betroffen“, und die Ausgabe von PRINT- und RAISERROR-Anweisungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Lokal (Fenster)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Überwachung (Fenster)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [Dialogfeld 'Schnellüberwachung'](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   

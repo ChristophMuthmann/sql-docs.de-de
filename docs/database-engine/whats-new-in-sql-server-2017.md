@@ -1,29 +1,30 @@
 ---
 title: "Neues im Datenbankmodul – SQL Server 2017 | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8f6f7d38bf06e453017b48108b5bda5594f0870c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Neues im Datenbankmodul – SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] für [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] beschrieben. Klicken Sie auf die Links, um weitere Informationen zu jedem Element zu erhalten:
 
@@ -36,7 +37,7 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
 - Eine neue DMF, [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), wird eingeführt, um zusammenfassende Ebenenattribute und Informationen zu den Transaktionsprotokolldateien verfügbar zu machen. Dies ist hilfreich für die Überwachung der Integrität des Transaktionsprotokolls.  
 - Fortsetzbare Neuerstellungen von online geschalteten Indizes Mit fortsetzbaren Online-Indexneuerstellung können Sie den Vorgang einer Online-Indexneuerstellung dort fortsetzen, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz). Sie können es aus pausieren und den Vorgang der Online-Indexneuerstellung später fortsetzen. Es kann z.B. notwendig sein, dass Sie vorübergehend Systemressourcen verfügbar machen, um einen Task mit hoher Priorität auszuführen oder Indexneuerstellung in einem anderen Wartungsfenster abzuschließen, wenn das verfügbare Wartungsfenster zu klein für eine große Tabelle ist. Zudem erfordern fortsetzbare Online-Indexneuerstellungen keinen erheblichen Speicherplatz, wodurch Sie eine Protokollkürzung durchführen können, während der Vorgang der fortsetzbaren Erstellung ausgeführt wird. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **IDENTITY_CACHE-Option für ALTER DATABASE SCOPED CONFIGURATION** Die Option IDENTITY_CACHE wurde neue in `ALTER DATABASE SCOPED CONFIGURATION` T-SQL-Anweisungen hinzugefügt. Wenn diese Option auf `OFF` festgelegt ist, kann das Datenbankmodul Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover auf einen sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
--  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] bietet jetzt Graphdatenbank-Funktionen zum Modellieren von m:n-Beziehungen. Dazu zählt [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)-Syntax zum Erstellen von Knoten- und Rahmentabellen und das Schlüsselwort [MATCH](../t-sql/queries/match-sql-graph.md) für Abfragen. Weitere Informationen finden Sie unter [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../relational-databases/graphs/sql-graph-overview.md).   
+-  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] bietet jetzt Graphdatenbank-Funktionen, mit denen aussagekräftigere beziehungsorientierte Daten modelliert werden können. Dazu zählt [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)-Syntax zum Erstellen von Knoten- und Rahmentabellen und das Schlüsselwort [MATCH](../t-sql/queries/match-sql-graph.md) für Abfragen. Weitere Informationen finden Sie unter [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../relational-databases/graphs/sql-graph-overview.md).   
 - Eine neue Generation von Verbesserungen bei der Abfrageverarbeitung wendet Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsarbeitsauslastung an. In dieser ersten Version der Featurefamilie für die **adaptive Abfrageverarbeitung** gibt es drei neue Verbesserungen: **Adaptive Joins im Batchmodus**, **Feedback zur Speicherzuweisung im Batchmodus** und **überlappende Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen.  Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/adaptive-query-processing.md).
 - Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben. Die automatische Optimierung in [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] benachrichtigt Sie, wenn ein mögliches Leistungsproblem erkannt wird. Sie können mit Ihr Korrekturmaßnahme ergreifen. Zudem kann [!INCLUDE[ssde-md](../includes/ssde-md.md)] die Leistungsprobleme automatisch beheben. Weitere Informationen finden Sie unter [Automatic tuning (Automatische Optimierung)](../relational-databases/automatic-tuning/automatic-tuning.md).
 - PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Die Leistung von bwtree-Indexneuerstellung (kein Cluster) für MEMORY_OPTIMIZED-Tabellen während der Datenbankwiederherstellung wurde deutliche optimiert. Diese Verbesserung reduziert die Zeit der Datenbankwiederherstellung deutlich, wenn Nicht-Cluster-Indizes verwendet werden.  
@@ -67,7 +68,7 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
     - `CROSS APPLY` -Operator in nativ kompilierten Modulen.   
 - Die neuen Zeichenfolgenfunktionen [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)und [TRIM](../t-sql/functions/trim-transact-sql.md) wurden hinzugefügt.   
 - Die `WITHIN GROUP` -Klausel wird nun für die [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) -Funktion unterstützt.
-- Es wurden zwei neue japanische Sortierungsfamilien (Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140) hinzugefügt, und die Sortierungsoption „Unterscheidung nach Variierungsauswahlzeichen“ (_VSS) wurde für die Verwendung in japanischen Sortierungen hinzugefügt. Einzelheiten dazu finden Sie unter [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).   
+- Es wurden zwei neue japanische Sortierungsfamilien (Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140) hinzugefügt, und die Sortierungsoption „Unterscheidung nach Variierungsauswahlzeichen“ (_VSS) wurde für die Verwendung in diesen neuen japanischen Sortierungen hinzugefügt. Darüber hinaus unterstützen alle neuen Sortierungen automatisch ergänzende Zeichen, ohne dass die Angabe der _SC-Option notwendig ist. Einzelheiten dazu finden Sie unter [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).   
 - Neue Bulk-Access-Optionen ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) ermöglichen den Zugriff auf Daten direkt aus einer Datei, die als CSV-Format angegeben ist, und über die neue `BLOB_STORAGE` -Option von [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)aus Dateien in Azure Blob Storage.
 - Der Datenbank- **KOMPATIBILITÄTSGRAD** 140 wurde hinzugefügt.   Kunden, die diesen Kompatibilitätsgrad ausführen, können die neuesten Sprachfeatures und Verhaltensweisen des Abfrageoptimierers nutzen. Dies schließt Änderungen in den einzelnen von Microsoft veröffentlichten Vorabversionen ein.
 - Verbesserte Berechnung der Aktualisierungsschwellenwerte für inkrementelle Statistiken (Kompatibilitätsgrad 140 erforderlich).
@@ -86,5 +87,4 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
 - Neue Berechtigungen: `DATABASE SCOPED CREDENTIAL` ist jetzt eine Klasse von sicherungfsähigen, unterstützenden `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`und `VIEW DEFINITION` -Berechtigungen. `ADMINISTER DATABASE BULK OPERATIONS`, das auf SQL-Datenbanken beschränkt ist, ist jetzt in `sys.fn_builtin_permissions` sichtbar.   
 - Die DMV [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) wurde hinzugefügt und stellt Systeminformationen sowohl für Windows als auch für Linux bereit.   
 - Die Datenbankrollen werden mit R Services für das Verwalten von Berechtigungen erstellt, die Paketen zugeordnet sind. Weitere Informationen finden Sie unter [R-Paketverwaltung für SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
 

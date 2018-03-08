@@ -1,29 +1,30 @@
 ---
 title: Bearbeiten der Zuordnung (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8db4278a82968a5bd147f5fcb984af3fa104022e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed31beae92c3453917a2fbcfd8ea1643c26a114c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Bearbeiten der Zuordnung (MySQLToSQL)
 Die **bearbeiten Type Mapping** Dialogfeld können Sie angeben, wie Datentypen zwischen Quelle und Ziel-Datenbankobjekten zugeordnet sind.  
@@ -36,7 +37,7 @@ Sie können dieses Dialogfeld an mehreren Stellen zuzugreifen:
   
 -   Tabelle-spezifische Zuordnungen datentypzuordnungen für Projekte und Datenbank zu überschreiben. Datenbank-spezifische Zuordnungen überschreiben Projekt Zuordnungen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 ##### <a name="source-type"></a>Quelltyp  
 Wählen Sie den Quelltyp für die Daten in einen SQL Server-Datentyp zugeordnet.  
@@ -57,4 +58,3 @@ Wenn der Datentyp mit variabler Länge ist, erscheint das folgende Feld unter **
 ##### <a name="replace-with"></a>Ersetzen durch  
 Geben Sie die Ziellänge für diese Zuordnung. Z. B. für die **Nvarchar** -Datentyp, können Sie 20, um anzugeben, dass die angegebene Quelle-Datentyp zugeordnet werden sollte eingeben **Nvarchar (20).**  
   
-

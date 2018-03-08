@@ -3,7 +3,7 @@ title: Execute-Methode (ADO-Befehl) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 651123d3112ca58c028412bd025325f303f0d637
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-command"></a>Execute-Methode (ADO-Befehl)
 Führt die Abfrage, die SQL-Anweisung oder die gespeicherte Prozedur, die im angegebenen der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaft von der [Befehlsobjekt](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -88,4 +87,3 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
  [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [ExecuteComplete-Ereignis (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)
-

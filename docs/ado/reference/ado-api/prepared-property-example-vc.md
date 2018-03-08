@@ -3,7 +3,7 @@ title: Beispiel-Eigenschaft (VC++) vorbereitet | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 759a516062ea81e173690c2f55364cf32fff72a0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66a54a6af3beff062dac448b345abaa58efae6ae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prepared-property-example-vc"></a>Prepared-Eigenschaft (VC++-Beispiel)
 In diesem Beispiel wird veranschaulicht, die [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft öffnen Sie zwei [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte – ein vorbereitetes und ein nicht vorbereitet.  
@@ -153,5 +152,4 @@ void PrintComError(_com_error &e) {
 **Vorbereitet wird: 0.016 Sekunden**   
 ## <a name="see-also"></a>Siehe auch  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Vorbereitete-Eigenschaft (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
-
+ [Prepared-Eigenschaft (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

@@ -2,27 +2,30 @@
 title: Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
-caps.latest.revision: 24
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca8ec6e27aebf60ba155580e505f0c338ff61348
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1300401509e5f7ced67ba8c9dcb81f9b5d1ae77a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Ein Ressourcenpool stellt eine Teilmenge der physischen Ressourcen dar, die kontrolliert werden können. Standardmäßig sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken an den Standardressourcenpool gebunden und nutzen dessen Ressourcen. Um die Auslastung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen durch eine oder mehrere speicheroptimierte Tabellen und die Auslastung des für speicheroptimierte Tabellen erforderlichen Arbeitsspeichers durch andere Prozesse zu verhindern, wird empfohlen, einen eigenen Ressourcenpool zu erstellen, der die Arbeitsspeichernutzung für die Datenbank mit speicheroptimierten Tabellen verwaltet.  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="bkmk_CreateDatabase"></a> Erstellen der Datenbank  
  Durch folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] wird eine Datenbank mit dem Namen "IMOLTP_DB" erstellt, die mindestens eine speicheroptimierte Tabelle enthält. Der Pfad \<Laufwerk_und_Pfad> muss vor dem Ausführen dieses Befehls vorhanden sein.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -94,7 +97,7 @@ In diesem Beispiel wird davon ausgegangen, dass Sie Ihre Berechnungen ergeben ha
   
  Durch folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code wird ein Ressourcenpool mit dem Namen "Pool_IMOLTP" erstellt. Die Hälfte des verfügbaren Arbeitsspeichers wird dem Pool zur Verfügung gestellt.  Nachdem der Pool erstellt wurde, wird die Ressourcenkontrolle neu konfiguriert, um "Pool_IMOLTP" einzuschließen.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -111,7 +114,7 @@ GO
   
  Mit folgender [!INCLUDE[tsql](../../includes/tsql-md.md)] wird eine Bindung zwischen der IMOLTP_DB-Datenbank und dem Pool_IMOLTP-Ressourcenpool definiert. Die Bindung wird erst wirksam, nachdem die Datenbank online geschaltet wurde.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -121,7 +124,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Bestätigen der Bindung  
  Bestätigen Sie die Bindung, und beachten Sie die Ressourcenpool-ID für IMOLTP_DB. Sie darf nicht NULL sein.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -130,7 +133,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Inkraftsetzen der Bindung  
  Nachdem die Datenbank an den Ressourcenpool gebunden wurde, müssen Sie sie offline und anschließend wieder online schalten, damit die Bindung wirksam wird. Wenn die Datenbank zuvor an einen anderen Pool gebunden war, wird dadurch der zugeordnete Arbeitsspeicher aus dem vorherigen Ressourcenpool entfernt, und die Speicherbelegungen für die speicheroptimierte Tabelle und die Indizes stammen jetzt aus dem neu an die Datenbank gebundenen Ressourcenpool.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -154,7 +157,7 @@ GO
   
  **Beispielcode**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -177,13 +180,13 @@ GO
 |<= 16 GB|75%|  
 |<= 32 GB|80%|  
 |\<= 96 GB|85%|  
-|>96 GB|90%|  
+|>96 GB|90%|  
   
  Wenn der zugesicherte Zielspeicher beispielsweise 100 GB beträgt und Sie schätzen, dass für die speicheroptimierten Tabellen und Indizes 60 GB Arbeitsspeicher benötigt werden, können Sie einen Ressourcenpool mit MAX_MEMORY_PERCENT = 67 erstellen (60 GB erforderlich/0,90 = 66,667 GB – aufgerundet auf 67 GB; 67 GB/100 GB installiert = 67 %). So wird sichergestellt, dass für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekte die erforderlichen 60 GB vorhanden sind.  
   
  Sobald eine Datenbank an einen benannten Ressourcenpool gebunden wurde, können Sie mit der folgenden Abfrage die Speicherbelegungen für unterschiedliche Ressourcenpools anzeigen.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -211,14 +214,13 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Wenn Sie die Datenbank nicht an einen benannten Ressourcenpool binden, wird sie an den Pool "default" gebunden. Da der Standardressourcenpool von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die meisten anderen Zuordnungen verwendet wird, können Sie nicht die DMV "sys.dm_resource_governor_resource_pools" verwenden, um den von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher für die gewünschte Datenbank exakt zu überwachen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Erstellen eines Ressourcenpools](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Ändern der Einstellungen für den Ressourcenpool](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [Löschen eines Ressourcenpools](../../relational-databases/resource-governor/delete-a-resource-pool.md)  
   
   
-

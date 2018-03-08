@@ -2,36 +2,33 @@
 title: MDSCHEMA_SETS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_SETS
+apiname: MDSCHEMA_SETS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_SETS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4820c18992da2aab0ac8e0550a5cadd75ca193bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS-Rowset
-  Beschreibt alle Sätze, die zurzeit in einer Datenbank definiert werden, einschließlich Sätzen im Bereich einer Sitzung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt alle Sätze, die derzeit in einer Datenbank, einschließlich Sätzen im Bereich einer Sitzung definiert sind.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_SETS** Rowset enthält die folgenden Spalten.  
@@ -65,8 +62,7 @@ ms.lasthandoff: 09/01/2017
 |**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Optional.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|Optional.<br /><br /> Hinweis: Nur eine Hierarchie enthalten sein, und nur die benannten Mengen, deren Hierarchien den Einschränkungen exakt zurückgegeben werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

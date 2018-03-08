@@ -1,12 +1,14 @@
 ---
-title: Programmgesteuertes Arbeiten mit Variablen | Microsoft Docs
+title: Programmgesteuertes Arbeiten mit Variablen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -24,17 +26,16 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 5c8968302f42e1b8fde55894810ecb77cf715ab6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43e707fdd05c7716d9b3fe61867bbee67550b577
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-variables-programmatically"></a>Programmgesteuertes Arbeiten mit Variablen
   Variablen bieten die Möglichkeit, Werte dynamisch festzulegen und Prozesse in Paketen, Containern, Tasks und Ereignishandlern zu steuern. Variablen können auch von Rangfolgeneinschränkungen verwendet werden, um die Richtung des Datenflusses an andere Tasks zu steuern. Variablen haben vielerlei Verwendungszwecke:  
@@ -43,17 +44,17 @@ ms.lasthandoff: 08/03/2017
   
 -   Auffüllen von Parameterwerten für Transact-SQL-Anweisungen zur Laufzeit.  
   
--   Kontrollieren des Flusses einer Foreach-Schleife. Weitere Informationen finden Sie unter [Enumeration eine Ablaufsteuerung](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
+-   Kontrollieren des Flusses einer Foreach-Schleife. Weitere Informationen finden Sie unter [Hinzufügen einer Enumeration zu einer Ablaufsteuerung](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
   
 -   Steuern einer Rangfolgeneinschränkung durch ihre Verwendung in einem Ausdruck. Eine Rangfolgeneinschränkung kann Variablen in die Einschränkungsdefinition einschließen. Weitere Informationen finden Sie unter [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
--   Kontrollieren der bedingten Wiederholung eines For-Schleifencontainers. Weitere Informationen finden Sie unter [Iteration eine Ablaufsteuerung](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
+-   Kontrollieren der bedingten Wiederholung eines For-Schleifencontainers. Weitere Informationen finden Sie unter [Hinzufügen einer Iteration zu einer Ablaufsteuerung](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
   
--   Erstellen Sie Ausdrücke, die Variablenwerte einschließen.  
+-   Erstellen von Ausdrücken, die Variablenwerte einschließen.  
   
--   Sie können benutzerdefinierte Variablen für alle Containertypen erstellen: Pakete, **foreach-Schleife** Containern **For-Schleife** Container, **Sequenz** Container, Taskshosts und Ereignishandler. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Sie können benutzerdefinierte Variablen für alle Containertypen erstellen: Pakete, **Foreach-Schleifencontainer**, **For-Schleifencontainer**, **Sequenzcontainer**, TasksHosts und Ereignishandler. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>Bereich  
  Jeder Container weist seine eigene <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung auf. Wenn eine neue Variable erstellt wird, liegt diese innerhalb des Bereichs seines übergeordneten Containers. Da sich der Paketcontainer ganz oben in der Containerhierarchie befindet, funktionieren Variablen mit Paketbereich wie globale Variablen und sind für alle Container innerhalb des Pakets sichtbar. Auf die Auflistung von Variablen für den Container kann über die <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung auch von untergeordneten Elementen des Containers zugegriffen werden, indem entweder der Variablenname oder der Index der Variablen in der Auflistung verwendet wird.  
   
  Da die Sichtbarkeit einer Variablen von oben nach unten verläuft, sind Variablen, die auf der Paketebene deklariert werden, für alle Container in dem Paket sichtbar. Die <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung in einem Container umfasst daher alle Variablen, die neben den eigenen Variablen des Containers auch zu seinem übergeordneten Element gehören.  
@@ -162,23 +163,23 @@ End Module
   
  `Variable: VersionMinor, Int32, 0`  
   
- Beachten Sie, die alle Variablen in der bereichsbezogenen der **System** Namespace für das Paket verfügbar sind. Weitere Informationen finden Sie unter [System Variables](../../integration-services/system-variables.md).  
+ Beachten Sie, dass alle im **System**-Namespace bewerteten Variablen dem Paket zur Verfügung stehen. Weitere Informationen finden Sie unter [System Variables](../../integration-services/system-variables.md).  
   
 ## <a name="namespaces"></a>Namespaces  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) stellt zwei Standardnamespaces Variablen originaldatenseiten; **Benutzer** und **System** Namespaces. Standardmäßig alle benutzerdefinierten Variablen, die vom Entwickler erstellten hinzugefügt wird die **Benutzer** Namespace. Systemvariablen befinden sich in der **System** Namespace. Sie können zusätzliche Namespaces außer erstellen die **Benutzer** Namespace zum Speichern von benutzerdefinierten Variablen, und Sie können den Namen ändern der **Benutzer** Namespace, jedoch keine hinzufügen oder Ändern von Variablen in der **System** -Namespace oder Systemvariablen einem anderen Namespace zuzuweisen.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) stellt zwei Standardnamespaces für Variablen bereit: **User** und **System**. Standardmäßig werden dem **User**-Namespace alle vom Entwickler erstellten benutzerdefinierten Variablen hinzugefügt. Systemvariablen befinden sich im **System**-Namespace. Sie können neben dem **User**-Namespace zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User**-Namespaces ändern. Es ist jedoch nicht möglich, Variablen im **System**-Namespace hinzuzufügen oder zu ändern oder Systemvariablen einem anderen Namespace zuzuweisen.  
   
- Die verfügbaren Systemvariablen sind je nach Containertyp unterschiedlich. Eine Liste der auf Pakete, Container, Tasks und Ereignishandler verfügbaren Systemvariablen, finden Sie unter [Systemvariablen](../../integration-services/system-variables.md).  
+ Die verfügbaren Systemvariablen sind je nach Containertyp unterschiedlich. Eine Liste der für Pakete, Container, Tasks und Ereignishandler verfügbaren Systemvariablen finden Sie unter [System Variables](../../integration-services/system-variables.md) (Systemvariablen).  
   
-## <a name="value"></a>Wert  
+## <a name="value"></a>value  
  Der Wert einer benutzerdefinierten Variablen kann ein Literal oder ein Ausdruck sein:  
   
 -   Wenn die Variable einen Literalwert enthalten soll, legen Sie den Wert seiner <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>-Eigenschaft fest.  
   
--   Wenn die Variable einen Ausdruck enthalten soll, damit Sie die Ergebnisse des Ausdrucks als Wert verwenden können, legen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> Eigenschaft der Variablen, die **"true"**, und geben Sie einen Ausdruck in der <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Expression%2A> Eigenschaft. Zur Laufzeit wird der Ausdruck ausgewertet, und das Ergebnis des Ausdrucks wird als Wert der Variablen verwendet. Wenn z. B. die Ausdruckseigenschaft einer Variablen`"100 * 2""100 * 2"` ist, wird die Variable auf einen Wert von 200 ausgewertet.  
+-   Wenn die Variable einen Ausdruck enthalten soll, sodass Sie die Ergebnisse des Ausdrucks als Wert verwenden können, legen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A>-Eigenschaft der Variablen auf **true** fest, und geben Sie einen Ausdruck in der <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Expression%2A>-Eigenschaft an. Zur Laufzeit wird der Ausdruck ausgewertet, und das Ergebnis des Ausdrucks wird als Wert der Variablen verwendet. Wenn z. B. die Ausdruckseigenschaft einer Variablen`"100 * 2""100 * 2"` ist, wird die Variable auf einen Wert von 200 ausgewertet.  
   
- Für eine Variable kann der Wert ihres <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> nicht explizit festgelegt werden. Der Wert <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> wird aus dem Startwert, der der Variablen zugewiesen ist, abgeleitet und kann nachträglich nicht geändert werden. Weitere Informationen zu Variablen Datentypen, finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Für eine Variable kann der Wert ihres <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> nicht explizit festgelegt werden. Der Wert <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> wird aus dem Startwert, der der Variablen zugewiesen ist, abgeleitet und kann nachträglich nicht geändert werden. Weitere Informationen zu Variablendatentypen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md) (Integration Services-Datentypen).  
   
- Das folgende Codebeispiel erstellt eine neue Variable Sätze <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> auf **"true"**, weist der Ausdruck `"100 * 2"` der Ausdruckseigenschaft der Variablen an, und der Wert der Variablen ausgegeben.  
+ Im folgenden Codebeispiel wird eine neue Variable erstellt, <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> auf **true** festgelegt, der Ausdruck `"100 * 2"` der Ausdruckseigenschaft der Variablen zugewiesen und dann der Wert der Variablen ausgegeben.  
   
 ```csharp  
 using System;  
@@ -233,11 +234,10 @@ End Module
  Der Ausdruck muss ein gültiger Ausdruck sein, der die [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ausdruckssyntax verwendet. Neben den Operatoren und Funktionen, die der Ausdruck bereitstellt, sind Literale in Variablenausdrücke zulässig, Ausdrücke können jedoch nicht auf andere Variablen oder Spalten verweisen. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
- Wenn eine Konfigurationsdatei eine benutzerdefinierte Variable einschließt, kann die Variable zur Laufzeit aktualisiert werden. Dies bedeutet, dass der Wert der ursprünglich in dem Paket enthaltenen Variablen beim Ausführen des Pakets durch einen neuen Wert aus der Konfigurationsdatei ersetzt wird. Diese Ersetzungstechnik ist hilfreich, wenn ein Paket für mehrere Server bereitgestellt wird, die unterschiedliche Variablenwerte erfordern. Eine Variable kann z. B. wie oft angeben einer **foreach-Schleife** -Schleifencontainer zugehörigen Workflow oder die Liste die Empfänger, die ein Ereignishandler sendet per e-mail an, wenn ein Fehler ausgelöst wird, oder ändern die Anzahl von Fehlern, die auftreten können, bevor das Paket fehlschlägt. Diese Variablen werden dynamisch in Konfigurationsdateien für jede Umgebung bereitgestellt. Daher sind nur Lese-/Schreibvariablen in Konfigurationsdateien zulässig. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md).  
+ Wenn eine Konfigurationsdatei eine benutzerdefinierte Variable einschließt, kann die Variable zur Laufzeit aktualisiert werden. Dies bedeutet, dass der Wert der ursprünglich in dem Paket enthaltenen Variablen beim Ausführen des Pakets durch einen neuen Wert aus der Konfigurationsdatei ersetzt wird. Diese Ersetzungstechnik ist hilfreich, wenn ein Paket für mehrere Server bereitgestellt wird, die unterschiedliche Variablenwerte erfordern. In einer Variablen kann beispielsweise angegeben werden, wie oft ein **Foreach-Schleifencontainer** seinen Workflow wiederholt, oder es können die Empfänger aufgelistet werden, an die von einem Ereignishandler eine E-Mail gesendet wird, wenn ein Fehler ausgelöst wird. In einer Variablen kann auch die Anzahl von Fehlern geändert werden, die auftreten können, bevor für das Paket ein Fehler gemeldet wird. Diese Variablen werden dynamisch in Konfigurationsdateien für jede Umgebung bereitgestellt. Daher sind nur Lese-/Schreibvariablen in Konfigurationsdateien zulässig. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Variablen](../../integration-services/integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

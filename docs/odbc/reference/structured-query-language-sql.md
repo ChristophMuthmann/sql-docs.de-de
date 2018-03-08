@@ -3,10 +3,12 @@ title: Structured Query Language (SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-query-language-sql"></a>Structured Query Language (SQL) (Structured Query Language, SQL)
 Eine typische DBMS kann Benutzer speichern, zugreifen und Ändern von Daten in eine strukturierte und effiziente Weise. Die Benutzer des DBMS wurden ursprünglich Programmierer. Zugriff auf die gespeicherten Daten erforderlich, ein Programm in einer Programmiersprache wie z. B. COBOL schreiben. Diese Programme häufig geschrieben wurden, um eine entwicklerfreundliche Oberfläche für einem nicht-technische Benutzer anzuzeigen, jedoch Zugriff auf die Daten selbst die Dienste der erfahrene Programmierer. Einer zufälligen Zugriff auf die Daten war nicht praktikabel.  
@@ -56,5 +57,4 @@ Eine typische DBMS kann Benutzer speichern, zugreifen und Ändern von Daten in e
   
 -   [SQL-Module](../../odbc/reference/sql-modules.md)  
   
--   [Call-Level-Schnittstellen](../../odbc/reference/call-level-interfaces.md)
-
+-   [Call-Level-Interface](../../odbc/reference/call-level-interfaces.md)

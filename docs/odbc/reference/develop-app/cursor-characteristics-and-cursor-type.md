@@ -3,10 +3,12 @@ title: Der Cursormerkmale und Cursortyp | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Der Cursormerkmale und Cursortyp
 Eine Anwendung kann die Merkmale eines Cursors anstelle des Cursor-Datentyps (Vorwärtscursor, statische, keysetgesteuerte oder dynamischen) angeben. Zu diesem Zweck wählt die Anwendung den Cursor scrolloptionen (durch Festlegen der SQL_ATTR_CURSOR_SCROLLABLE-Anweisungsattribut) und die Sensitivität (durch Festlegen der SQL_ATTR_CURSOR_SENSITIVITY-Anweisungsattribut) vor dem Öffnen des Cursors für die Anweisung behandeln. Klicken Sie dann wählt der Treiber dem Cursortyp, der möglichst effizient die Merkmale enthält die Anwendung angefordert.  
@@ -54,4 +55,3 @@ Eine Anwendung kann die Merkmale eines Cursors anstelle des Cursor-Datentyps (Vo
 |SQL_ATTR_CURSOR_TYPE, SQL_CURSOR_FORWARD_ONLY|SQL_ATTR_CURSOR_SCROLLABLE auf SQL_NONSCROLLABLE.|  
 |SQL_ATTR_CURSOR_TYPE, SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE auf SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED oder SQL_SENSITIVE (gemäß den treiberdefinierten Kriterien, wenn SQL_ATTR_CONCURRENCY nicht SQL_CONCUR_READ_ONLY ist).|  
 |SQL_ATTR_CURSOR_TYPE, SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE auf SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY auf SQL_INSENSITIVE (wenn SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY ist).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED oder SQL_SENSITIVE (wenn SQL_ATTR_CONCURRENCY nicht SQL_CONCUR_READ_ONLY ist).|
-

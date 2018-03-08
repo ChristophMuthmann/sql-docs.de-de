@@ -1,13 +1,14 @@
 ---
 title: "Primärschlüssel- und Fremdschlüsseleinschränkungen | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server]
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "20"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 641c3e3916cced8ce6ee995111f75f6865731fdc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
  Wenn Sie eine PRIMARY KEY-Einschränkung für eine Tabelle angeben, erzwingt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Daten, indem automatisch ein eindeutiger Index für die Primärschlüsselspalten erstellt wird. Der Index ermöglicht darüber hinaus den schnellen Zugriff auf Daten, wenn der Primärschlüssel in Abfragen verwendet wird. Wenn eine PRIMARY KEY-Einschränkung für mehrere Spalten definiert wird, können Werte innerhalb einer Spalte dupliziert werden; jede Kombination aus den Werten aller Spalten, die in der Definition der PRIMARY KEY-Einschränkung enthalten sind, muss jedoch eindeutig sein.  
   
- Wie in der nachfolgenden Abbildung dargestellt, müssen die Spalten **ProductID** und **VendorID** in der **Purchasing.ProductVendor** -Tabelle eine zusammengesetzte PRIMARY KEY-Einschränkung für diese Tabelle bilden. Dadurch wird sichergestellt, dass jede Zeile in der **ProductVendor** -Tabelle eine eindeutige Kombination aus **ProductID** und **VendorID**aufweist. Dies verhindert die Einfügung doppelter Zeilen.  
+ Wie in der nachfolgenden Abbildung dargestellt, müssen die Spalten **ProductID** und **VendorID** in der **Purchasing.ProductVendor** -Tabelle eine zusammengesetzte PRIMARY KEY-Einschränkung für diese Tabelle bilden. Dadurch wird sichergestellt, dass jede Zeile in der **ProductVendor**-Tabelle eine eindeutige Kombination aus **ProductID** und **VendorID** aufweist. Dies verhindert die Einfügung doppelter Zeilen.  
   
  ![Zusammengesetzte PRIMARY KEY-Einschränkung](../../relational-databases/tables/media/fund04.gif "Composite PRIMARY KEY constraint")  
   
@@ -139,4 +139,3 @@ ms.lasthandoff: 06/22/2017
 |Beschreibt, wie FOREIGN KEY-Einschränkungen während einer INSERT- oder einer UPDATE-Anweisung deaktiviert werden.|[Deaktivieren von Fremdschlüsseleinschränkungen mit INSERT- und UPDATE-Anweisungen](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
-

@@ -3,10 +3,12 @@ title: Projektmappen-Explorer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], items
 - items [SQL Server]
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f4d77dde666a8fb751e637265333a334075807af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54ac206f363cfdb5698d02d16fdf197933b87a72
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="solution-explorer"></a>Projektmappen-Explorer
-Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] enthält Projekte genannte Container zur Verwaltung von Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] enthält Projekte genannte Container zur Verwaltung von Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  
   
 Eine Projektmappe enthält ein oder mehrere Projekte sowie Dateien und Metadaten, die zur Definition der Projektmappe als Ganzes dienen. Ein Projekt ist eine Gruppe von Dateien und zugehörigen Metadaten, wie Verbindungsinformationen. Projektmappen und Projekte enthalten Elemente, die die Skripts, Abfragen, Verbindungsinformationen und Dateien repräsentieren, die Sie zum Erstellen der Datenbankprojektmappe benötigen.  
   
@@ -52,14 +53,13 @@ Verwenden Sie diese Container zu folgenden Zwecken:
   
 Die Elemente in Projekten hängen vom Projekttyp ab und davon, ob Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]verwenden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
 Erste Schritte mit den SQL Server-Lösungen mithilfe der folgenden Themen:  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Projekt oder mehrere Projekte in einer Projektmappe gesammelt werden.|[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Beschreibt, wie ein Projekt erstellt und Elemente wie Skripts und Verbindungen hinzugefügt werden.|[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Enthält Informationen zu den Dateien, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappen und Dateien verwaltet.|[Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   
-

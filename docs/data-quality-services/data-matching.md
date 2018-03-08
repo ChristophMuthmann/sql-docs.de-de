@@ -2,25 +2,26 @@
 title: Datenabgleich | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "29"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b1785dc0435baf024a68c62e256e54498d1c8d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-matching"></a>Datenabgleich
   Der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Datenabgleichsprozesse ermöglichen es Ihnen, Datenduplizierung zu reduzieren und Datengenauigkeit in einer Datenquelle zu verbessern. Der Abgleich analysiert den Grad der Duplizierung in allen Datensätzen einer einzelnen Datenquelle und gibt gewichtete Wahrscheinlichkeiten einer Übereinstimmung zwischen den einzelnen verglichenen Datensatzgruppen zurück. Sie können dann entscheiden, welche Datensätze Übereinstimmungen sind und die entsprechende Aktion für die Quelldaten ergreifen.  
@@ -82,4 +83,3 @@ ms.lasthandoff: 09/09/2017
 |Ausführen von Abgleichen in einem Data Quality-Projekt|[Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md)|  
   
   
-

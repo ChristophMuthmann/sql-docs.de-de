@@ -1,37 +1,35 @@
 ---
-title: Vorschauansicht | Microsoft Docs
+title: Vorschauansicht | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.previewview.f1
-helpviewer_keywords:
-- Preview view [Reporting Services]
+f1_keywords: sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ff72cb8ca44709cabd38f122c87150f901bb476
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preview-view"></a>Vorschauansicht
 Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] die Ansicht **Vorschau** , um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Mithilfe der Symbolleiste können Sie Vorschaufunktionen verwalten.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -90,9 +88,8 @@ Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)
  **(18) Weitersuchen**  
  Wählen Sie diese Option aus, um nach der nächsten Instanz des Suchtexts zu suchen.  
   
-## <a name="see-also"></a>Siehe auch  
-+ [Ausführen einer Vorschau für Berichte](../../reporting-services/reports/previewing-reports.md)
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
++ [Previewing Reports (Vorschau von Berichten)](../../reporting-services/reports/previewing-reports.md)
 + [Berichts-Designer (F1-Hilfe)](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
-

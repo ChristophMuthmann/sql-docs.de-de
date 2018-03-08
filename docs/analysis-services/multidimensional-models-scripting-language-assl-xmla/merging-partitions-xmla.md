@@ -1,13 +1,14 @@
 ---
 title: "Zusammenführen von Partitionen (XMLA) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], XML for Analysis
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 347c85a1258e43fb1adedcb5546dccae5854d00d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5528a4392eb5e6554cafc179e0ceedc14b26c0c7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="merging-partitions-xmla"></a>Zusammenführen von Partitionen (XMLA)
   Wenn Partitionen denselben Aggregationsentwurf und die Struktur vorhanden sind, können Sie die Partition zusammenführen, mithilfe der [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) -Befehl in XML for Analysis (XMLA). Das Zusammenführen von Partitionen ist ein wichtiger Vorgang, wenn Sie Partitionen verwalten, insbesondere wenn es sich hierbei um Partitionen mit Vergangenheitsdaten handelt, die nach Datum partitioniert sind.  
@@ -93,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

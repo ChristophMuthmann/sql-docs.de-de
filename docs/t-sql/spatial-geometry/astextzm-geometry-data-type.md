@@ -3,8 +3,11 @@ title: AsTextZM (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - AsTextZM (geometry Data Type)
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 91f77bd684d79bbef2530307aa65fc0d92b91c5e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 88403972b53bbefecabde04606f9211c3160ab32
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt die Open Geospatial Consortium (OGC) Well-Known Text (WKT)-Darstellung einer Geometry-Instanz alle getragenen **Z** (Höhe) und **M** (Measure)-Werte, die von der Instanz getragen werden.
   
@@ -66,5 +68,4 @@ SELECT @g.AsTextZM();
  [Z &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
-
 

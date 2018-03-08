@@ -2,13 +2,13 @@
 title: "Erstellen einer Datenquelle (SSAS – mehrdimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 61
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 715f23cb80c0de16697b3aa66a4fb07669ad169e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
-  In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 09/01/2017
  [Hinzufügen mehrerer Datenquellen zu einem Modell](#bkmk_multipleDS)  
   
 ##  <a name="bkmk_provider"></a> Auswählen eines Datenanbieters  
- Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
+ Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
   
  Bei Oracle- und anderen Datenquellen von Drittanbietern überprüfen Sie, ob der Drittanbieter einen systemeigenen OLE DB-Anbieter bereitstellt, mit dem Sie es als Erstes probieren. Bei Fehlern versuchen Sie es mit einem anderen .NET-Anbieter oder systemeigenen OLE DB-Anbieter, der im Verbindungs-Manager aufgeführt wird. Stellen Sie sicher, dass jeder von Ihnen verwendete Datenanbieter auf allen Computern installiert ist, die zum Entwickeln und Ausführen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung verwendet werden.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 09/01/2017
 >  Standardmäßig werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Kennwörter nicht mit der Verbindungszeichenfolge gespeichert. Wenn das Kennwort nicht gespeichert wird, werden Sie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Eingabe des Kennworts aufgefordert, sobald es benötigt wird. Wenn Sie sich für die Speicherung des Kennworts entscheiden, wird es in verschlüsselter Form in der Datenverbindungszeichenfolge gespeichert. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verschlüsselt Kennwortinformationen für Datenquellen mithilfe des Verschlüsselungsschlüssels der Datenbank, die die Datenquelle enthält. Werden verschlüsselte Verbindungsinformationen verwendet, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwenden, um das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkonto oder das zugehörige Kennwort zu ändern; andernfalls können die verschlüsselten Informationen nicht wiederhergestellt werden. Weitere Informationen finden Sie unter [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definieren von Identitätswechselinformationen für Data Mining-Objekte  
- Data Mining-Abfragen können im Kontext des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkontos ausgeführt werden. Es ist jedoch auch möglich, sie im Kontext des Benutzers, der die Abfrage gesendet hat, oder im Kontext eines angegebenen Benutzers auszuführen. Der Kontext, in dem eine Abfrage ausgeführt wird, kann sich auf das Ergebnis der Abfrage auswirken. Bei Data Mining-Vorgängen des Typs **OPENQUERY** kann es sich anbieten, die Data Mining-Abfrage nicht im Kontext des Dienstkontos, sondern im Kontext des aktuellen Benutzers oder im Kontext eines angegebenen Benutzers (unabhängig vom Benutzer, der die Abfrage ausführt) auszuführen. Hierdurch ist es möglich, die Abfrage mit eingeschränkten Sicherheitsanmeldeinformationen auszuführen.. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des aktuellen Benutzers oder eines angegebenen Benutzers annehmen soll, müssen Sie entweder die Option **Bestimmten Benutzernamen und bestimmtes Kennwort** oder **Anmeldeinformationen des aktuellen Benutzers** auswählen.  
+ Data Mining-Abfragen können im Kontext des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkontos ausgeführt werden. Es ist jedoch auch möglich, sie im Kontext des Benutzers, der die Abfrage gesendet hat, oder im Kontext eines angegebenen Benutzers auszuführen. Der Kontext, in dem eine Abfrage ausgeführt wird, kann sich auf das Ergebnis der Abfrage auswirken. Bei Data Mining-Vorgängen des Typs **OPENQUERY** kann es sich anbieten, die Data Mining-Abfrage nicht im Kontext des Dienstkontos, sondern im Kontext des aktuellen Benutzers oder im Kontext eines angegebenen Benutzers (unabhängig vom Benutzer, der die Abfrage ausführt) auszuführen. Hierdurch ist es möglich, die Abfrage mit eingeschränkten Sicherheitsanmeldeinformationen auszuführen. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des aktuellen Benutzers oder eines angegebenen Benutzers annehmen soll, müssen Sie entweder die Option **Bestimmten Benutzernamen und bestimmtes Kennwort** oder **Anmeldeinformationen des aktuellen Benutzers** auswählen.  
   
 ##  <a name="bkmk_steps"></a> Erstellen einer Datenquelle mit dem Datenquellen-Assistent  
   
@@ -183,4 +183,3 @@ ms.lasthandoff: 09/01/2017
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

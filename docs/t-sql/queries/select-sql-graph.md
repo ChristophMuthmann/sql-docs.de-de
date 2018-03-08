@@ -2,9 +2,12 @@
 title: "Wählen Sie (SQL-Diagramm) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/19/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,21 +18,19 @@ helpviewer_keywords:
 - SELECT statement [SQL Server], SQL graph
 - SQL graph, SELECT statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62fcfca1371131e7161454929a57d90212b4269a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d9beaa00df61e0d0cbe17a343fb306b938e1a356
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Wählt Daten aus   
   
@@ -50,5 +51,4 @@ SELECT
 ## <a name="examples"></a>Beispiele  
 
 ## <a name="see-also"></a>Siehe auch  
-
 

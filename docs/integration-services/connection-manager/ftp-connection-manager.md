@@ -1,10 +1,13 @@
 ---
-title: FTP-Verbindungs-Manager | Microsoft Docs
+title: FTP-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,16 +19,16 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 25fa55ddb7dc23df266460732e78712551230b26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ftp-connection-manager"></a>FTP-Verbindungs-Manager
   Mit einem FTP-Verbindungs-Manager kann ein Paket eine Verbindung mit einem FTP-Server (File Transfer Protocol) herstellen. Der FTP-Task von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet diesen Verbindungs-Manager.  
@@ -71,14 +74,14 @@ ms.lasthandoff: 08/09/2017
   
  Weitere Informationen zum FTP-Verbindungs-Manager finden Sie unter [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen des FTP-Servers an.  
   
  **Serverport**  
  Geben Sie die Portnummer des FTP-Servers an, der für die Verbindung verwendet werden soll. Der Standardwert dieser Eigenschaft ist **21**.  
   
- **Benutzername**  
+ **User name**  
  Geben Sie einen Benutzernamen für den Zugriff auf den FTP-Server an. Der Standardwert dieser Eigenschaft ist **anonymous**.  
   
  **Kennwort**  
@@ -99,8 +102,8 @@ ms.lasthandoff: 08/09/2017
  **Verbindung testen**  
  Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [FTP-Task](../../integration-services/control-flow/ftp-task.md)   
- [Integrationsservices &#40; SSIS &#41; Verbindungen](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

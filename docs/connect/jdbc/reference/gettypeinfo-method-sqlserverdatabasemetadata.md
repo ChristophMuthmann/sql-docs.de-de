@@ -3,29 +3,28 @@ title: GetTypeInfo-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getTypeInfo
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getTypeInfo
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2424ec8f3b484272d2311ac7880cc8810561bd2e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cce857630acc646d10da1ede7aa9139d62b6039
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -108,4 +107,3 @@ public static void executeGetTypeInfo(Connection con) {
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

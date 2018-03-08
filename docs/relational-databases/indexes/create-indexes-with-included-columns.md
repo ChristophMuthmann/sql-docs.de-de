@@ -2,9 +2,12 @@
 title: Erstellen von Indizes mit eingeschlossenen Spalten | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Erstellen von Indizes mit eingeschlossenen Spalten
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie eingeschlossene Spalten (oder Nichtschlüsselspalten) hinzugefügt werden, um die Funktionalität von nicht gruppierten Indizes in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]zu erweitern. Indem Sie Nichtschlüsselspalten einschließen, erstellen Sie nicht gruppierte Indizes, die eine größere Anzahl von Abfragen abdecken. Dies ist der Fall, weil Nichtschlüsselspalten die folgenden Vorteile aufweisen:  
   
@@ -44,25 +46,9 @@ ms.lasthandoff: 06/22/2017
  Ein Index mit Nichtschlüsselspalten kann die Abfrageleistung erheblich steigern, wenn alle Spalten in der Abfrage in den Index als Schlüssel- oder Nichtschlüsselspalten eingeschlossen werden. Leistungsvorteile werden erzielt, weil der Abfrageoptimierer alle Spaltenwerte im Index finden kann; auf Daten der Tabelle oder des gruppierten Indexes wird nicht zugegriffen, sodass als Ergebnis weniger Datenträger-E/A-Vorgänge auftreten.  
   
 > [!NOTE]  
->  Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage*bezeichnet.  
-  
- **In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-     [Entwurfsempfehlungen](#DesignRecs)  
-  
-     [Einschränkungen](#Restrictions)  
-  
-     [Sicherheit](#Security)  
-  
--   **So erstellen Sie einen Index mit Nichtschlüsselspalten mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+> Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage*bezeichnet.  
+   
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="DesignRecs"></a> Entwurfsempfehlungen  
   
@@ -93,7 +79,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>So erstellen Sie einen Index mit Nichtschlüsselspalten  
   
@@ -109,13 +95,13 @@ ms.lasthandoff: 06/22/2017
   
 6.  Klicken Sie auf der Registerkarte **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
-7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***table_name* das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index hinzugefügt werden sollen.  
+7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   
 9. Klicken Sie auf der Registerkarte **Eingeschlossene Spalten** auf **Hinzufügen…**.  
   
-10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus***table_name* das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index als Nichtschlüsselspalten hinzugefügt werden sollen.  
+10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index als Nichtschlüsselspalten hinzugefügt werden sollen.  
   
 11. Klicken Sie auf **OK**.  
   
@@ -125,13 +111,13 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>So erstellen Sie einen Index mit Nichtschlüsselspalten  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -142,8 +128,7 @@ ms.lasthandoff: 06/22/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
 
+## <a name="related-content"></a>Verwandte Inhalte  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
+[Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)   

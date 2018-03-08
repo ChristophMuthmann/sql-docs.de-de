@@ -8,22 +8,21 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2be20e46a7ddbf25d0d694618f996a9be8919e0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.  
@@ -54,7 +53,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Bindungseintrag  
  Eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den Visual C++ ADO-Erweiterungen **Recordset** Felder C/C++-Variablen zugeordnet werden.  
   
- Bitmaske  
+ bitmask  
  Ein numerischer Wert vorgesehen für ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel so kennzeichnen Sie die Optionen im Parameter oder Rückgabewerte. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic  **&**  und **&#124;** in C++.  
   
  Zum Beispiel das ADO- **FieldAttributeEnum** Werte können als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen Sie, Sie möchten, um festzustellen, ob ein Feld aktualisiert wurde. Sie können mit dem folgenden Ausdruck in Visual Basic dafür testen:`Field.Attributes AND adFldUpdatable`  
@@ -79,7 +78,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
   
  Kapitelspalten stellen das Definieren einer *über-/* Beziehung, in dem die *übergeordneten* ist die **Recordset** , enthält der Kapitelspalte und die  *untergeordnete* ist die **Recordset** durch das Kapitel dargestellt.  
   
- Kapitel-alias  
+ chapter-alias  
  Ein Alias, der auf die Spalte, angefügt an das übergeordnete Element verweist.  
   
  Zeichensatz  
@@ -108,7 +107,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
   
  Ein Kriterienparameter, der als ausgedrückt werden kann ">" (größer als), "\<" (kleiner als), "=" (gleich), "> =" (größer als oder gleich), "< =" (kleiner oder gleich), "<>" (ungleich) oder "like" (Mustervergleich).  
   
- -Komponente  
+ Komponente  
  Ein Objekt, das sowohl Daten als auch Code kapselt, und bietet eine wohldefinierte Reihe öffentlich verfügbarer Dienste.  
   
  Verbunddatei  
@@ -117,7 +116,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Eine Anzahl von einzelnen Dateien, die zusammen in einer physischen Datei gebunden. Jede einzelne Datei in einer Verbunddatei kann zugegriffen werden, als handele es sich um einen einzelnen physischen Datei.  
   
  Konstante  
- Ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const AdUseClient = 3). Siehe auch *Enumeration*.  
+ Ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const adUseClient = 3). Siehe auch *Enumeration*.  
   
  cursor  
  Ein Datenbankelement, das zum Navigieren in Datensätzen, Updateability der Daten und die Sichtbarkeit von Änderungen an der Datenbank vorgenommen werden, die von anderen Benutzern gesteuert.  
@@ -188,7 +187,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Hierarchie (hierarchy)  
  Eine Hierarchie ist im Allgemeinen eine geordneten Struktur mit einer oberen Ebene und untergeordneten Ebenen. In ADO hierarchische **Recordsets** verwendet, um die über-/ unterordnungsbeziehung zwischen einem Datensatz und einem Kapitel darzustellen. Auch in ADO **Datensatz** und **Stream** Objekte können verwendet werden, z. B. einen Ordner und Dokumente der hierarchischen Struktur auf. ADO MD umfasst auch **Hierarchie** -Objekten zur Darstellung einer Beziehung zwischen den Ebenen einer Dimension in einem OLAP-Cube. Siehe auch hierarchische Recordsets über-/ unterordnungsbeziehung, Kapitel, Struktur.  
   
-## <a name="i-l"></a>ICH-L  
+## <a name="i-l"></a>I-L  
  ISAPI (Internet Server Application Programming Interface)  
  Eine Reihe von Funktionen für Internetserver, z. B. eine Windows NT® Server-Windows 2000 Server, die Microsoft® Internet Information Services (IIS) ausgeführt werden soll.  
   
@@ -235,7 +234,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  parent (parent)  
  Der steuernde Seite einer hierarchischen Beziehung. In einer hierarchischen Struktur besitzt ein übergeordnetes Element ein oder mehrere untergeordnete Knoten direkt unter ihm in der Hierarchie. Siehe auch übergeordneten Alias, über-/ unterordnungsbeziehung, untergeordnetes Element.  
   
- übergeordneten alias  
+ parent-alias  
  Ein Alias, der auf das übergeordnete Element verweist. Siehe auch alias übergeordneten.  
   
  Parent-Child-Beziehung  
@@ -299,4 +298,3 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
   
  Webserver  
  Ein Computer, der Webdienste und Seiten für Intranet- und Internet-Benutzer bereitgestellt.
-

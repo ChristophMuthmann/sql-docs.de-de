@@ -3,8 +3,11 @@ title: SQLDriverConnect (Text-Datei-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -13,19 +16,18 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Text File Driver
 - text file driver [ODBC], SQLDriverConnect
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fffb547846ce9ac3c6c50ac3421b08677cedee66
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 117b619b351e5a8c1e2c0865fe0ed6add5589ecb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (Text-Datei-Treiber)
+# <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (Text File Driver)
 > [!NOTE]  
 >  Dieses Thema enthält die Textdatei treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
@@ -40,5 +42,4 @@ ms.lasthandoff: 09/09/2017
   
 |Treiber|Schlüsselwörter, die erforderlich sind|Beispiele|  
 |------------|-----------------------|--------------|  
-|Text|Treiber|Driver = {Microsoft-Texttreiber (*.txt;\*. Volumes, CSV)}; Wert = "c:\Temp"|
-
+|Text|Treiber|Driver={Microsoft Text Driver (*.txt;\*.csv)}; DefaultDir=c:\temp|

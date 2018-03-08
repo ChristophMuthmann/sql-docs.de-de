@@ -1,30 +1,31 @@
 ---
-title: "Tabellenmodelllösungen (SSAS – tabellarisch) | Microsoft Docs"
+title: "Projektmappen für tabellarische Modelle | Microsoft Docs"
 ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5b84ae0fa5911c0140213583462b20c9054f0f4b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 31c6a32198c4a9aa417ec65fcf85a5455ea53c4a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-tabular-models"></a>Erstellen von tabellarischen Modellen
-  In diesem Abschnitt wird beschrieben, wie Sie tabellarische Modelle mithilfe des Designers für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In diesem Abschnitt wird beschrieben, wie Sie tabellarische Modelle mithilfe des Designers für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Designer für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  
@@ -59,13 +60,12 @@ ms.lasthandoff: 09/27/2017
   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
- [Analysieren in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [In Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Bereitstellung von Tabellenmodelllösungen](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Tabellenmodelllösungsbereitstellung](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [In Analysis Services verwendete Tools und Anwendungen](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   
-

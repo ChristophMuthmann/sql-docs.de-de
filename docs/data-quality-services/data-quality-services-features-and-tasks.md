@@ -2,25 +2,26 @@
 title: "Data Quality Services – Funktionen und Aufgaben | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "5"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a25ca166e540ebc6708f369d2434776242ae6788
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe53d84f336f9070246f586aeb5da01941fd0adc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services-Funktionen und -Tasks
   Suchen Sie Informationen, die alle - Data Steward, Data Quality Services-Administrator oder SQL Server-Administrator - zum vorbereiten und Ausführen eines Quality-Projekts benötigen.  
@@ -46,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [DQS-Sicherheit](../data-quality-services/dqs-security.md)  
   
   
-

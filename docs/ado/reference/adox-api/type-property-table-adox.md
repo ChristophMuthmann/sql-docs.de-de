@@ -3,7 +3,7 @@ title: Type-Eigenschaft (Tabelle) (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4688b88d1bb4397c3e270d868fc0879ec56b5a2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 926de41ebc897235f336eb00cf5754fb0a54e94b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-table-adox"></a>Type-Eigenschaft (Tabelle) (ADOX)
 Gibt den Typ einer Tabelle.  
@@ -50,4 +49,3 @@ Gibt den Typ einer Tabelle.
  [Type-Eigenschaft (Spalte) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Type-Eigenschaft (Schlüssel) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-

@@ -3,8 +3,11 @@ title: "Einträge in der Registrierung (Visual FoxPro-ODBC-Treiber) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Einträge in der Registrierung (Visual FoxPro-ODBC-Treiber)
 Bei der Installation der Visual FoxPro-ODBC-Treiber aktualisiert das Installationsprogramm der Registrierung Ihres Systems, in den Registrierungsschlüssel HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, um einen neuen Schlüssel namens Microsoft Visual FoxPro-Treiber hinzuzufügen. Unter diesem Schlüssel werden in der folgenden Tabelle beschriebenen Werte hinzugefügt.  
@@ -36,7 +38,7 @@ Bei der Installation der Visual FoxPro-ODBC-Treiber aktualisiert das Installatio
 |ConnectFunctions|REG_SZ|"YYN"|  
 |Treiber|REG_SZ|Systempfad zur Datei vfpodbc.dll|  
 |DriverODBCVer|REG_SZ|"02.50"|  
-|FileExtns|REG_SZ|"*.DBF,\*CDX,\*.fpt"|  
+|FileExtns|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
 |FileUsage|REG_SZ|"1"|  
 |Setup|REG_SZ|Systempfad zur Datei vfpodbc.dll|  
 |SQLLevel|REG_SZ|"0"|  
@@ -62,4 +64,3 @@ Bei der Installation der Visual FoxPro-ODBC-Treiber aktualisiert das Installatio
  Sie sollten diese Informationen nicht direkt zugreifen. Verwaltung der Registrierung durch den ODBC-Administrator behandelt, wenn Sie Daten hinzufügen, ändern oder einer Datenquelle löschen.  
   
  Sie können einige dieser Schlüsselwörter und Werte als Parameter in der [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API-Funktion.
-

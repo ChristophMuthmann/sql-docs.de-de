@@ -2,31 +2,30 @@
 title: New-PowerPivotServiceApplication-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Erstellt eine neue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Erstellt eine neue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -46,7 +45,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 ## <a name="parameters"></a>Parameter  
   
-### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<Zeichenfolge >  
+### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<string>  
  Legt den Anzeigenamen der Dienstanwendung fest.  
   
 |||  
@@ -68,7 +67,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-databasename-string"></a>DatabaseName - \<Zeichenfolge >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  Gibt den Namen einer relationalen SQL Server-Datenbank an, in der Anwendungsdaten gespeichert werden. Es ist ratsam, der Anwendung einen aussagekräftigen Namen zu geben, damit ihr Zweck leicht erkennbar ist. Sie können eine neue Datenbank erstellen oder eine vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungsdatenbank für die neue Anwendung angeben, die Sie erstellen.  
   
 |||  
@@ -79,7 +78,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<wechseln >  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<switch>  
  Erstellt in der Standard-Dienstverbindungsgruppe eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstverbindung. Zuordnungen zwischen Webanwendungen und Dienstanwendungen werden von der Mitgliedschaft in dieser Gruppe bestimmt. Alle Webanwendungen, die die Standard-Dienstverbindungsgruppe abonnieren, können die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung verwenden, die Sie der Gruppe hinzufügen. Obwohl Sie in einer Farm mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungen verwenden können, kann nur eine Dienstanwendung Mitglied der Standard-Dienstverbindungsgruppe sein.  
   
  Wenn Sie bereits eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung verwenden, die Mitglied der Standardproxygruppe ist, müssen Sie für die neu zu erstellende Anwendung AddToDefaultProxyGroup:$false festlegen. Sie müssen die neue Dienstanwendung einer benutzerdefinierten Dienstverbindungsgruppe hinzufügen.  Sie können zu diesem Zweck integrierte SharePoint-Cmdlets verwenden.  Get-SPServiceApplicationProxyGroup gibt die Liste der Dienstverbindungsgruppen zurück, die in der Farm definiert sind.  
@@ -92,7 +91,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer und OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
@@ -112,4 +111,3 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  In diesem Beispiel wird eine neue Dienstanwendung erstellt. Die Dienstanwendungsdatenbank wird auf einem Datenbankserver mit dem Namen AdvWorks-SRV01 erstellt, der als benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz installiert wurde. Dies ist eine gängige Konfiguration für viele [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installationen. Sie müssen für die SQL Server-Instanz über dbcreator-Berechtigungen verfügen, um die Datenbank erstellen zu können. Sie müssen db_owner für die SharePoint-Konfigurationsdatenbank sein. Da dies die erste [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung in der Farm ist, muss sie Mitglied der Standardproxygruppe sein.  
   
   
-

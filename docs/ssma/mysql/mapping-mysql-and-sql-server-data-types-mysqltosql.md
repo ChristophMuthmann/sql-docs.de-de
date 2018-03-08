@@ -1,12 +1,14 @@
 ---
 title: Zuordnen von MySQL und SQL Server-Datentypen (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 265030255071cb9292cf5604320d98c447173928
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3dd2adf0b8f6379bd11dc80de4cc2aedf5b3c102
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Zuordnen von MySQL und SQL Server-Datentypen (MySQLToSQL)
 MySQL-Datenbank-Datentypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank-Datentypen. Bei der Konvertierung von MySQL-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte, müssen Sie angeben, Zuordnen von Datentypen von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können die standardmäßigen datentypzuordnungen übernehmen, oder die Zuordnungen können angepasst werden, wie in den folgenden Verfahren gezeigt.  
@@ -93,4 +94,3 @@ Der nächste Schritt des Migrationsvorgangs besteht entweder [Erstellen eines Be
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

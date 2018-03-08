@@ -3,7 +3,7 @@ title: DeleteRecord und MoveRecord-Methoden (Beispiel) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 055d5a093f96c30fe30224996ccfff5905a3a75c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d8bc240a84112df29e3b7fe85d16f721c0da5a5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord und MoveRecord-Methoden (Beispiel) (VB)
 In diesem Beispiel wird veranschaulicht, wie zu kopieren, verschieben, bearbeiten und löschen Sie den Inhalt einer Textdatei in einem Webordner veröffentlicht wird. Andere verwendeten Eigenschaften und Methoden enthalten [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md), und [leeren](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -162,5 +161,4 @@ End Sub
  [GetChildren-Methode (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [MoveRecord-Methode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL-Eigenschaft (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
- [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Source-Eigenschaft (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)

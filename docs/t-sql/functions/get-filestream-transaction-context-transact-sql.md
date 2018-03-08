@@ -3,8 +3,11 @@ title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5ba8077d0df80044a66da4863bba1dd603d369f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1bab9267495b6e5f41507bf058f84ca571f9728e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt ein Token zurück, das den aktuellen Transaktionskontext einer Sitzung darstellt. Eine Anwendung verwendet dieses Token, um FILESTREAM-Dateisystem-Streamingvorgänge an die Transaktion zu binden. Eine Liste der FILESTREAM-Themen finden Sie [Binary Large Object &#40; BLOB &#41; Daten &#40; SQLServer &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -281,8 +283,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [PathName &#40; Transact-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   
-

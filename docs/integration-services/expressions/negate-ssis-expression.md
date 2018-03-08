@@ -1,10 +1,13 @@
 ---
-title: '- (Negation) (SSIS-Ausdruck) | Microsoft Docs'
+title: '- (Negation) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf561a2e4533f47e7bf6219e141c995ad4c2e60e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e2a59d861afa6a7c7b2bd321d431b52f9e63b0d8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--negate-ssis-expression"></a>- (Negation) (SSIS-Ausdruck)
   Negiert einen numerischen Ausdruck.  
@@ -50,9 +52,8 @@ ms.lasthandoff: 08/03/2017
 -@Counter + 50  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

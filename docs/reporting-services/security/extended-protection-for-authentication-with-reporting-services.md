@@ -1,35 +1,34 @@
 ---
-title: "Erweiterter Schutz für die Authentifizierung mit Reporting Services | Microsoft Docs"
+title: "Erweiterter Schutz für die Authentifizierung mit Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Erweiterter Schutz für die Authentifizierung mit Reporting Services
 
   Erweiterter Schutz ist eine Gruppe von Erweiterungen zu den letzten Versionen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Windows-Betriebssystems. Erweiterter Schutz verbessert den Schutz der Anmeldeinformationen und der Authentifizierung durch Anwendungen. Das Feature selbst bietet keinen Schutz gegen bestimmte Angriffe, z.B. die Anmeldeinformationen-Weiterleitung, sie stellt jedoch eine Infrastruktur für Anwendungen wie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bereit, um erweiterten Schutz für die Authentifizierung zu erzwingen.  
   
  Die Hauptauthentifizierungserweiterungen, die Teil des erweiterten Schutzes sind, sind Dienstbindung und Kanalbindung. Die Kanalbindung verwendet ein Kanalbindungstoken (Channel Binding Token oder CBT), um zu überprüfen, ob der zwischen zwei Endpunkten festgelegte Kanal nicht beeinträchtigt wurde. Dienstbindung überprüft das beabsichtigte Ziel von Authentifizierungstokens mithilfe von Dienstprinzipalnamen (Service Principal Names oder SPN). Weitere Hintergrundinformationen zu erweitertem Schutz finden Sie unter [Integrierte Windows-Authentifizierung unter Verwendung von „Erweiterter Schutz“](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
-SQL Server Reporting Services (SSRS) unterstützt und erzwingt erweiterten Schutz, die im Betriebssystem aktiviert und konfiguriert wurden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Standardmäßig akzeptiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen, die Negotiate- oder NTLM-Authentifizierung angeben und daher im Betriebssystem von der Unterstützung des erweiterten Schutzes und der erweiterten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Schutzfunktionen profitieren könnten.  
+SQL Server Reporting Services (SSRS) unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktiviert und in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] konfiguriert wurde. Standardmäßig akzeptiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen, die Negotiate- oder NTLM-Authentifizierung angeben und daher im Betriebssystem von der Unterstützung des erweiterten Schutzes und der erweiterten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Schutzfunktionen profitieren könnten.  
   
 > [!IMPORTANT]  
 >  Windows aktiviert den erweiterten Schutz nicht standardmäßig. Informationen zum Aktivieren des erweiterten Schutzes in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](http://go.microsoft.com/fwlink/?LinkID=178431). Sowohl das Betriebssystem als auch der Clientauthentifizierungsstapel müssen den erweiterten Schutz unterstützen, damit die Authentifizierung erfolgreich ist. Bei älteren Betriebssystemen müssen Sie möglicherweise mehr als ein Update für einen Computer mit vollständigem erweiterten Schutz installieren. Informationen zu aktuellen Entwicklungen mit erweitertem Schutz finden Sie in den [aktualisierten Informationen mit erweitertem Schutz](http://go.microsoft.com/fwlink/?LinkId=183362).  
@@ -39,7 +38,7 @@ SQL Server Reporting Services (SSRS) unterstützt und erzwingt erweiterten Schut
 SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktiviert wurde. Wenn das Betriebssystem keinen erweiterten Schutz unterstützt oder das Feature im Betriebssystem nicht aktiviert wurde, tritt bei der Authentifizierung der Funktion von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für erweiterten Schutz ein Fehler auf. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Erweiterter Schutz erfordert auch ein SSL-Zertifikat. Weitere Informationen finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 > [!IMPORTANT]  
->  Der erweiterte Schutz ist in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] standardmäßig nicht aktiviert. Das Feature kann aktiviert werden, indem Sie die Konfigurationsdatei **rsreportserver.config** bearbeiten oder über die WMI-APIs aktualisieren. SSRS bietet keine, dass erweiterte schutzeinstellungen durch eine Benutzeroberfläche zu ändern oder anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Konfigurationseinstellungen](#ConfigurationSettings) in diesem Thema.  
+>  Der erweiterte Schutz ist in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] standardmäßig nicht aktiviert. Das Feature kann aktiviert werden, indem Sie die Konfigurationsdatei **rsreportserver.config** bearbeiten oder über die WMI-APIs aktualisieren. SSRS stellt keine Benutzeroberfläche bereit, um erweiterte Schutzeinstellungen zu ändern oder anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Konfigurationseinstellungen](#ConfigurationSettings) in diesem Thema.  
   
  Häufige Probleme, die wegen Änderungen in erweiterten Schutzeinstellungen oder falsch konfigurierten Einstellungen auftreten, werden nicht mit offensichtlichen Fehlermeldungen oder Dialogfeldern angezeigt. Probleme mit Bezug auf die erweiterte Schutzkonfiguration und Kompatibilität führen zu Authentifizierungsfehlern und Fehlern in den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Ablaufverfolgungsprotokollen.  
   
@@ -51,9 +50,9 @@ SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktivie
 >   
 >  Die Dokumentation einer Datenzugriffstechnologie sollte Informationen zu Unterstützung des erweiterten Schutzes enthalten.  
   
-### <a name="upgrade"></a>Upgrade  
+### <a name="upgrade"></a>UPGRADE  
   
--   Aktualisieren einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Server auf SQL Server 2016 fügt Konfigurationseinstellungen mit standartwerten der **"rsreportserver.config"** Datei. Wenn die Einstellungen bereits vorhanden waren, wird die SQL Server 2016-Installation beibehalten werden in der **"rsreportserver.config"** Datei.  
+-   Beim Aktualisieren eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Servers auf SQL Server 2016 werden der Datei **rsreportserver.config** Konfigurationseinstellungen mit Standardwerten hinzugefügt. Wenn die Einstellungen bereits vorhanden waren, behält die SQL Server 2016-Installation sie in der Datei **rsreportserver.config** bei.  
   
 -   Wenn der Konfigurationsdatei **rsreportserver.config** die Konfigurationseinstellungen hinzugefügt werden, ist das Standardverhalten für die erweiterte Schutzfunktion von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] der deaktivierte Zustand. Sie müssen die Funktion wie in diesem Thema beschrieben aktivieren. Weitere Informationen finden Sie im Abschnitt [Konfigurationseinstellungen](#ConfigurationSettings) in diesem Thema.  
   
@@ -179,4 +178,4 @@ SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktivie
 [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

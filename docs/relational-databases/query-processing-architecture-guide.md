@@ -1,10 +1,13 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z.B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
 
@@ -34,18 +36,53 @@ ms.lasthandoff: 10/13/2017
 
 Die Verarbeitung einer einzelnen SQL-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
 
+#### <a name="logical-operator-precedence"></a>Rangfolge logischer Operatoren
+
+Wenn mehr als ein logischer Operator in einer Anweisung verwendet wird, wird `NOT` zuerst ausgewertet, dann `AND` und schließlich `OR`. Arithmetische (und bitweise) Operatoren werden vor logischen Operatoren verarbeitet. Weitere Informationen finden Sie unter [Operator Precedence (Operatorrangfolge)](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+Im folgenden Beispiel ist die Color-Bedingung nur für ProductModel 21 anwendbar und nicht für ProductModel 20, weil `AND` Vorrang gegenüber `OR` hat.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+Sie können die Bedeutung der Abfrage ändern, indem Sie durch Hinzufügen von Klammern veranlassen, dass der Operator `OR` zuerst ausgewertet wird. Die folgende Abfrage findet nur Produkte unter den Modellen 20 und 21, deren Farbe „red“ (rot) ist.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+Die Verwendung von Klammern kann auch dann empfehlenswert sein, wenn diese nicht unbedingt erforderlich sind, da sie die Übersichtlichkeit von Abfragen verbessern und zudem die Wahrscheinlichkeit von Flüchtigkeitsfehlern verringern, die sich aus der Rangfolge der Operatorenauswertung ergeben. Die Leistung wird durch den Einsatz von Klammern nicht wesentlich beeinträchtigt. Das folgende Beispiel ist leichter zu lesen als das ursprüngliche Beispiel, obwohl sie syntaktisch übereinstimmen:
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 #### <a name="optimizing-select-statements"></a>Optimieren von SELECT-Anweisungen
 
 Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder einfach nur als Plan bezeichnet wird. Der Inhalt eines Abfrageplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
 
-Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in der folgenden Abbildung gezeigt: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in folgendem Diagramm dargestellt:
 
-Eine `SELECT` -Anweisung definiert lediglich Folgendes:  
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
+
+Eine `SELECT`-Anweisung definiert lediglich Folgendes:  
 * Das Format des Resultsets. Dieses wird meistens in der Auswahlliste angegeben. Das endgültige Format des Resultsets wird jedoch auch von anderen Klauseln, wie z.B. `ORDER BY` und `GROUP BY` , beeinflusst.
 * Die Tabellen, die die Quelldaten enthalten. Dies wird in der `FROM` -Klausel angegeben.
 * Die logischen Beziehungen zwischen den Tabellen, die im Rahmen der `SELECT` -Anweisung relevant sind. Diese werden in den Joinspezifikationen definiert, die in der `WHERE` -Klausel oder in einer `ON` -Klausel, die auf `FROM`folgt, auftreten können.
 * Die Bedingungen, die die Zeilen in den Quelltabellen erfüllen müssen, um für die `SELECT` -Anweisung qualifiziert zu sein. Diese werden in den `WHERE` - und `HAVING` -Klauseln angegeben.
-
 
 In einem Abfrageausführungsplan wird Folgendes definiert: 
 
@@ -102,7 +139,7 @@ Wenn eine SQL-Anweisung auf eine nicht indizierte Sicht verweist, analysieren de
 
 Nehmen Sie z. B. an, dass die folgende Sicht verwendet wird:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -115,7 +152,7 @@ GO
 
 Von dieser Sicht ausgehend führen die beiden folgenden SQL-Anweisungen die gleichen Vorgänge für die Basistabellen aus und erzeugen identische Ergebnisse:
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -139,7 +176,7 @@ Durch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Stud
 
 Hinweise, die für Sichten in einer Abfrage gespeichert werden, können zu Konflikten mit anderen Hinweisen führen, die beim Erweitern der Sicht für den Zugriff auf ihre Basistabellen erkannt werden. Wenn das passiert, gibt die Abfrage einen Fehler zurück. Angenommen, die folgende Sicht enthält einen Tabellenhinweis in ihrer Definition:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -151,7 +188,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 Nehmen Sie nun an, dass die folgende Abfrage eingegeben wird:
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -165,7 +202,7 @@ Hinweise können über die Ebenen geschachtelter Sichten weitergegeben werden. A
 
 Wenn der `FORCE ORDER` -Hinweis in einer Abfrage verwendet wird, die eine Sicht enthält, wird die Joinreihenfolge der Tabellen innerhalb der Sicht durch die Position der Sicht im sortierten Konstrukt festgelegt. Die folgende Abfrage trifft z. B. eine Auswahl aus drei Tabellen und einer Sicht:
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -175,7 +212,7 @@ OPTION (FORCE ORDER);
 
 Außerdem ist `View1` wie im folgenden Beispiel gezeigt definiert:
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -240,13 +277,13 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor opti
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt intelligente, dynamische Pläne, in denen verteilte Abfragen effizient für den Zugriff auf Daten in Remotemitgliedstabellen verwendet werden: 
 
 * Zunächst verwendet der Abfrageprozessor OLE DB, um die Definitionen der CHECK-Einschränkungen aus jeder Mitgliedstabelle abzurufen. Dadurch kann der Abfrageprozessor die Verteilung der Schlüsselwerte auf die Mitgliedstabellen zuordnen.
-* Der Abfrageprozessor vergleicht die in der `WHERE`-Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` -Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
 
 Stellen Sie sich z.B. ein System vor, in dem eine Kundentabelle über Server1 (`CustomerID` von 1 bis 3299999), Server2 (`CustomerID` von 3300000 bis 6599999) und Server3 (`CustomerID` von 6600000 bis 9999999) partitioniert ist.
 
 Stellen Sie sich den Ausführungsplan vor, der für diese auf Server1 ausgeführte Abfrage erstellt wird:
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -256,7 +293,7 @@ Der Ausführungsplan für diese Abfrage extrahiert die Zeilen mit `CustomerID` -
 
 Der Abfrageprozessor von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann zudem eine dynamische Logik in die Abfrageausführungspläne für SQL-Anweisungen integrieren, bei denen die Schlüsselwerte nicht bekannt sind, wenn der Plan erstellt werden muss. Sehen Sie sich z.B. diese gespeicherte Prozedur an:
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -266,7 +303,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann nicht vorhersagen, welcher Schlüsselwert jeweils bei der Ausführung der Prozedur durch den `@CustomerIDParameter`-Parameter zurückgegeben wird. Da der Schlüsselwert nicht vorhergesagt werden kann, kann der Abfrageprozessor auch nicht vorhersagen, auf welche Mitgliedstabelle zugegriffen werden muss. Wegen dieses Aspekts erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen Ausführungsplan mit Bedingungslogik (so genannte dynamische Filter), um zu steuern, auf welche Mitgliedstabelle basierend auf den Eingabeparameterwerten zugegriffen wird. Angenommen die gespeicherte Prozedur `GetCustomer` wurde für Server1 ausgeführt, dann kann die Logik des Ausführungsplans wie folgt dargestellt werden:
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -285,9 +322,9 @@ Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von 
 
 ## <a name="execution-plan-caching-and-reuse"></a>Zwischenspeichern und Wiederverwenden von Ausführungsplänen
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügt über einen Arbeitsspeicherpool, der zum Speichern von Ausführungsplänen und von Datenpuffern verwendet wird. Der Prozentsatz des Pools, der entweder für Ausführungspläne oder für Datenpuffer zugeordnet wird, verändert sich dynamisch in Abhängigkeit vom Status des Systems. Der Teil des Arbeitsspeicherpools, der zum Speichern von Ausführungsplänen verwendet wird, wird Plancache genannt.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügt über einen Arbeitsspeicherpool, der zum Speichern von Ausführungsplänen und Datenpuffern verwendet wird. Der Prozentsatz des Pools, der entweder für Ausführungspläne oder für Datenpuffer zugeordnet wird, verändert sich dynamisch in Abhängigkeit vom Status des Systems. Der Teil des Arbeitsspeicherpools, der zum Speichern von Ausführungsplänen verwendet wird, wird Plancache genannt.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Ausführungspläne weisen die folgenden Hauptkomponenten auf: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ausführungspläne weisen die folgenden Hauptkomponenten auf: 
 
 * Abfrageausführungsplan: Bei dem größten Teil des Ausführungsplans handelt es sich um eine eintrittsinvariante, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl von Benutzern verwendet werden kann. Man bezeichnet diesen Teil als Abfrageplan. Im Abfrageplan wird kein Benutzerkontext gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität. 
 * Ausführungskontext: Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z.B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
@@ -300,7 +337,7 @@ Wenn eine SQL-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Die Algorithmen, die SQL-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Cache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Die erste der folgenden `SELECT` -Anweisungen wird z. B. nicht mit vorhandenen Plänen verglichen. Für die zweite Anweisung wird jedoch ein Vergleich vorgenommen:
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -380,13 +417,13 @@ Durch die Verwendung von Parametern, einschließlich der Parametermarkierungen i
  
 Die zwei folgenden `SELECT` -Anweisungen unterscheiden sich lediglich im Hinblick auf die Werte, die in der `WHERE` -Klausel verglichen werden:
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -398,7 +435,7 @@ Wenn Sie Konstanten mithilfe von Parametern von den SQL-Anweisungen trennen, unt
 
 * Verwenden Sie in Transact-SQL `sp_executesql`: 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -433,7 +470,7 @@ Wenn Sie beim Entwerfen ihrer Anwendungen nicht explizit Parameter in diese einb
 
 Auch wenn die erzwungene Parametrisierung aktiviert ist, kann die einfache Parametrisierung erfolgen. Die folgende Abfrage kann beispielsweise gemäß den Regeln der erzwungenen Parametrisierung nicht parametrisiert werden:
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -451,18 +488,18 @@ Wenn eine SQL-Anweisung ohne Parameter ausgeführt wird, parametrisiert [!INCLUD
 
 Angenommen, die folgende Anweisung wird ausgeführt:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 Der Wert 1 am Ende der Anweisung kann als Parameter angegeben werden. Das relationale Modul erstellt den Ausführungsplan für diesen Batch so, als ob anstelle des Werts 1 ein Parameter angegeben worden wäre. Aufgrund dieser einfachen Parametrisierung erkennt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dass die folgenden beiden Anweisungen im Prinzip den gleichen Ausführungsplan generieren, und verwendet den ersten Plan auch für die zweite Anweisung:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -558,7 +595,7 @@ Das Vorbereiten einer Anweisung ist effizienter, wenn Parametermarkierungen verw
 
 Die erste Möglichkeit besteht darin, dass die Anwendung für jedes angeforderte Produkt eine eigene Abfrage ausführt:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -566,7 +603,7 @@ WHERE ProductID = 63;
 Die zweite Möglichkeit umfasst folgende Schritte: 
 
 1. Die Anwendung bereitet eine Anweisung vor, die die Parametermarkierung (?) enthält:  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -619,7 +656,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ver
   Jeder Abfrage- oder Indexvorgang setzt zu seiner Ausführung eine bestimmte Anzahl von Arbeitsthreads voraus. Das Ausführen eines parallelen Plans erfordert mehr Arbeitsthreads als ein serieller Plan, und die Anzahl der erforderlichen Arbeitsthreads steigt mit dem Grad der Parallelität. Wenn die Arbeitsthreadanforderung des parallelen Plans für einen bestimmten Grad der Parallelität nicht erfüllt werden kann, reduziert [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Grad an Parallelität automatisch oder verwirft den parallelen Plan in dem angegebenen Arbeitsauslastungskontext. Stattdessen wird der serielle Plan (ein Arbeitsthread) ausgeführt. 
 
 3. Welcher Abfragetyp oder Indexvorgangstyp soll ausgeführt werden?  
-  Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts. Mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)können Benutzer den Standardwert 5 ändern; dies wird jedoch nicht empfohlen. 
+  Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts (Kostenschwellenwert für Parallelität). Benutzer können den Standardwert 5 mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ändern, wenn durch einen richtigen Test ermittelt wurde, dass ein anderer Wert besser für die ausgeführte Workload geeignet ist. 
 
 4. Gibt es eine ausreichende Anzahl von zu verarbeitenden Zeilen?  
   Wenn der Abfrageoptimierer ermittelt, dass die Anzahl der Zeilen zu niedrig ist, werden keine Verteilungsoperatoren eingesetzt, um die Zeilen zu verteilen. Demzufolge werden die Operatoren seriell ausgeführt. Durch das Ausführen der Operatoren in einem seriellen Plan werden Situationen vermieden, in denen die Kosten für Start, Verteilung und Koordinierung den Nutzen übersteigen, der durch die parallele Ausführung der Operatoren erzielt würde.
@@ -651,7 +688,7 @@ In der folgenden Abfrage wird die Anzahl der Bestellungen gezählt, die in einem
 
 In diesem Beispiel werden erfundene Tabellen- und Spaltennamen verwendet.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -669,7 +706,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 Nehmen Sie an, dass die folgenden Indizes für die `lineitem`- und die `orders`-Tabelle definiert werden:
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -716,9 +753,9 @@ Im Folgenden sehen Sie einen möglichen parallelen Plan, der für die zuvor besc
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) Abfrageplan mit DOP 4, enthält einen Join zweier Tabellen
+Die folgende Abbildung zeigt einen Abfrageplan, der mit einem Parallelitätsgrad von 4 ausgeführt wird und ein Join von zwei Tabellen einschließt.
 
-Die Abbildung zeigt einen Abfrageoptimiererplan, der mit einem Parallelitätsgrad von 4 ausgeführt wird und ein Join von zwei Tabellen einschließt.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 Der parallele Plan enthält drei Parallelism-Operatoren. Sowohl der „Index Seek“-Operator des `o_datkey_ptr`-Indexes als auch der „Index Scan“-Operator des `l_order_dates_idx`-Indexes werden parallel ausgeführt. Dadurch werden mehrere exklusive Datenströme erzeugt. Dies kann mithilfe der nächsten Parallelism-Operatoren oberhalb der Operatoren „Index Scan“ und „Index Seek“ bestimmt werden. Beide Operatoren nehmen einfach eine Umverteilung der Daten auf die Datenströme vor, sodass dieselbe Anzahl von Datenströmen als Ausgabe erzeugt wird, wie als Eingabe vorlag. Diese Anzahl der Datenströme entspricht dem Grad an Parallelität.
 
@@ -727,6 +764,8 @@ Der „Parallelism“-Operator oberhalb des `l_order_dates_idx` Index Scan-Opera
 Der „Parallelism“-Operator oberhalb des „Index Seek“-Operators nimmt mithilfe des Werts für `O_ORDERKEY` eine Neueinteilung der Eingabedatenströme vor. Da die Eingabe nicht anhand der Werte der `O_ORDERKEY`-Spalte sortiert wird, es sich hierbei aber um die Joinspalte des `Merge Join`-Operators handelt, stellt der „Sort“-Operator zwischen dem „Parallelism“- und dem „Merge Join“-Operator sicher, dass die Eingabe für den `Merge Join`-Operator auf der Basis der Joinspalten sortiert wird. Der `Sort`-Operator wird wie der „Merge Join“-Operator parallel ausgeführt.
 
 Der oberste „Parallelism“-Operator fasst die Ergebnisse von mehreren Datenströmen in einem einzigen Datenstrom zusammen. Teilaggregationen, die vom „Stream Aggregate“-Operator unterhalb des „Parallelism“-Operators vorgenommen werden, werden dann in dem „Stream Aggregate“-Operator oberhalb des „Parallelism“-Operators zu einem einzigen `SUM`-Wert für jeden Wert von `O_ORDERPRIORITY` aufsummiert. Dieser Plan verwendet acht Arbeisthreads, da er zwei Austauschsegmente mit einem Parallelitätsgrad von 4 besitzt.
+
+Weitere Informationen zu den in diesem Beispiel verwendeten Operatoren finden Sie unter [Showplan Logical and Physical Operators Reference (Referenz zu logischen und physischen Showplanoperatoren)](../relational-databases/showplan-logical-and-physical-operators-reference.md).
 
 ### <a name="parallel-index-operations"></a>Parallele Indexvorgänge
 
@@ -760,7 +799,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
 * Verbindungsservernamen  
   Mithilfe der gespeicherten Systemprozeduren `sp_addlinkedserver` und `sp_addlinkedsrvlogin` kann einer OLE DB-Datenquelle ein Servername zugewiesen werden. Auf Objekte in diesen Verbindungsservern kann in Transact-SQL-Anweisungen mithilfe von aus vier Teilen bestehenden Namen verwiesen werden. Wenn z.B. der Verbindungsservername `DeptSQLSrvr` für eine andere Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] definiert wird, verweist die folgende Anweisung auf eine Tabelle auf diesem Server: 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -770,14 +809,14 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
 * Ad-hoc-Konnektornamen  
   Für seltene Verweise auf eine Datenquelle wird die `OPENROWSET` - oder `OPENDATASOURCE` -Funktion zusammen mit den Informationen angegeben, die zum Herstellen einer Verbindung mit dem Verbindungsserver erforderlich sind. Auf das Rowset kann dann auf die gleiche Weise verwiesen werden, wie auf eine Tabelle in Transact-SQL-Anweisungen verwiesen wird: 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen dem relationalen Modul und dem Speichermodul. Das relationale Modul zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch das Speichermodul aus den Basistabellen geöffnet werden. Dies bedeutet, dass das relationale Modul einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen der relationalen Engine und der Speicher-Engine. Das relationale Modul zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch das Speichermodul aus den Basistabellen geöffnet werden. Dies bedeutet, dass das relationale Modul einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Das relationale Modul verwendet die OLE DB-API (Application Programming Interface), um die Rowsets auf Verbindungsservern zu öffnen, die Zeilen abzurufen und Transaktionen zu verwalten.
 
@@ -793,7 +832,7 @@ Wenn möglich, verlagert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes
 
-[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] hat für viele parallele Pläne eine bessere Leistung bei der Verarbeitung von Abfragen in partitionierten Tabellen, eine geänderte Art der Darstellung paralleler und serieller Pläne und bessere Partitionierungsinformationen in Kompilierzeit- und Laufzeitausführungsplänen ermöglicht. In diesem Thema werden diese Verbesserungen vorgestellt. Außerdem erhalten Sie Hinweise zur Interpretation der Abfrageausführungspläne für partitionierte Tabellen und Indizes sowie zu bewährten Methoden zur Verbesserung der Abfrageleistung bei partitionierten Objekten. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] verbessert die Leistung der Abfrageverarbeitung in partitionierten Tabellen für viele parallele Pläne, verändert die Art der Darstellung paralleler und serieller Pläne und erweitert die Partitionierungsinformationen in Kompilierzeit- und Laufzeitausführungsplänen. In diesem Thema werden diese Verbesserungen vorgestellt. Außerdem erhalten Sie Hinweise zur Interpretation der Abfrageausführungspläne für partitionierte Tabellen und Indizes sowie zu bewährten Methoden zur Verbesserung der Abfrageleistung bei partitionierten Objekten. 
 
 > [!NOTE]
 > Partitionierte Tabellen und Indizes werden nur in der Enterprise Edition, Developer Edition und Evaluation Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt.
@@ -806,13 +845,13 @@ Die Partitionsentfernung wird jetzt im Suchvorgang vorgenommen.
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (als logischer führender Spalte) und ggf. für weitere Indexschlüsselspalten durchgeführt werden kann. Anschließend wird dann für jeden eindeutigen Wert, der die Kriterien des Suchvorgangs der ersten Ebene erfüllt hat, ein Suchvorgang der zweiten Ebene mit einer anderen Bedingung in einer oder mehreren zusätzlichen Spalten durchgeführt. Dies bedeutet, dass mit diesem Vorgang, der Skip-Scan genannt wird, der Abfrageoptimierer basierend auf einer Bedingung zunächst einen Such- bzw. Scanvorgang durchführen kann, mit dem die Partitionen ermittelt werden, auf die zugegriffen werden muss, und dann innerhalb dieses Operators einen Indexsuchvorgang der zweiten Ebene, durch den Zeilen in diesen Partitionen zurückgegeben werden, die eine andere Bedingung erfüllen. Sehen Sie sich zum Beispiel die folgende Abfrage an:
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 Gehen Sie nun davon aus, dass die Tabelle T, die als `T(a, b, c)`definiert ist, in Spalte a partitioniert wird und in Spalte b einen gruppierten Index enthält. Die Partitionsgrenzen für Tabelle T werden mit der folgenden Partitionsfunktion definiert:
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -834,7 +873,7 @@ Mit diesen Tools können Sie die folgenden Informationen abrufen:
 
 #### <a name="partition-information-enhancements"></a>Bessere Partitionierungsinformationen
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt verbesserte Partitionierungsinformationen sowohl für Kompilierzeit- als auch für Laufzeitausführungspläne bereit. Die Ausführungspläne enthalten jetzt die folgenden Informationen:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt erweiterte Partitionierungsinformationen sowohl für Kompilierzeit- als auch für Laufzeitausführungspläne bereit. Die Ausführungspläne enthalten jetzt die folgenden Informationen:
 
 * Ein optionales `Partitioned` -Attribut, das anzeigt, dass für eine partitionierte Tabelle ein Operator wie `seek`, `scan`, `insert`, `update`, `merge`oder `delete`ausgeführt wird.  
 * Ein neues `SeekPredicateNew` -Element mit einem `SeekKeys` -Unterelement, das `PartitionID` als führende Indexschlüsselspalte sowie Filterbedingungen enthält, mit denen Bereichssuchen für `PartitionID`festgelegt werden. Das Vorhandensein von zwei `SeekKeys` -Unterelementen zeigt an, dass für `PartitionID` ein Skip-Scan-Vorgang verwendet wird.   
@@ -842,7 +881,7 @@ Mit diesen Tools können Sie die folgenden Informationen abrufen:
 
 Nehmen Sie die folgende Abfrage für die partitionierte Tabelle `fact_sales`als Beispiel zur Veranschaulichung, wie diese Informationen im grafischen Ausführungsplan und in der XML-Showplanausgabe angezeigt werden. Durch diese Abfrage werden Daten in zwei Partitionen aktualisiert. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -971,7 +1010,7 @@ Im folgenden Beispiel wird eine Testdatenbank mit einer Tabelle, die sieben Part
 > [!NOTE]
 > In diesem Beispiel werden über eine Millionen Zeilen in die Tabelle eingefügt. Je nach Hardware kann die Ausführung dieses Beispiels einige Minuten dauern. Stellen Sie vor dem Ausführen dieses Beispiels sicher, dass mehr als 1,5 GB Speicherplatz zur Verfügung stehen. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL
@@ -1039,5 +1078,5 @@ GO
  [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)  
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Kardinalitätsschätzung](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Adaptive Abfrageverarbeitung](../relational-databases/performance/adaptive-query-processing.md)
-
+ [Adaptive Abfrageverarbeitung](../relational-databases/performance/adaptive-query-processing.md)   
+ [Operatorrangfolge](../t-sql/language-elements/operator-precedence-transact-sql.md)

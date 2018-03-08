@@ -2,28 +2,31 @@
 title: Analysis Server-Eigenschaften (Registerkarte "Erweitert") | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b91f70af11fb303d184a30368a3d183549214ba2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Analysis-Server-Eigenschaften (Registerkarte Erweitert)
-  Hierbei handelt es sich um den Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Dienst. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auf dieser Registerkarte angezeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Hierbei handelt es sich um den Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Dienst. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auf dieser Registerkarte angezeigt.  
   
 ## <a name="options"></a>enthalten  
  **Gruppiert**  
@@ -42,4 +45,3 @@ ms.lasthandoff: 08/02/2017
  Zeigt die Instanz an, von der dieser Dienst verwendet wird.  
   
   
-

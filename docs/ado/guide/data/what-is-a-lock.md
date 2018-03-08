@@ -1,9 +1,9 @@
 ---
-title: Was ist eine Sperre? | Microsoft-Dokumentation
+title: Was ist eine Sperre? | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 945416224804a6e3b384981912d2375351012a8c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4975dd903c6d012976f9288b9758e1acab52f1f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what-is-a-lock"></a>Was ist eine Sperre?
 Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer mehrbenutzerumgebung einschränkt. Wenn eine Zeile oder Spalte exklusiv gesperrt ist, sind andere Benutzer nicht zulässig, auf die gesperrten Daten zugreifen, bis die Sperre aufgehoben wird. Dadurch wird sichergestellt, dass zwei Benutzer gleichzeitig derselben Spalte in einer Zeile nicht aktualisieren können.  
@@ -46,4 +45,3 @@ Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer m
  Dieser Abschnitt enthält die folgenden Themen.  
   
 -   [Typen von Sperren](../../../ado/guide/data/types-of-locks.md)
-

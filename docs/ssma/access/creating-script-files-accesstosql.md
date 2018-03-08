@@ -1,29 +1,30 @@
 ---
 title: Erstellen von Skriptdateien (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-accesstosql"></a>Erstellen von Skriptdateien (AccessToSQL)
 Der erste Schritt vor dem Starten SSMA-Konsolenanwendung auf die Skriptdatei erstellt wird und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindung erstellen.  
@@ -404,4 +405,3 @@ Im nächsten Schritt in der Konsole funktioniert [erstellen Variable Wertdateien
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen Variablenwert Dateien &#40; AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-

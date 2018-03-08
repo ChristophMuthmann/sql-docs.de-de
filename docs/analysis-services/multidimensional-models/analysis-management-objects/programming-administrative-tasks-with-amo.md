@@ -1,13 +1,14 @@
 ---
 title: Programmieren von administrativen Tasks mit AMO | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -15,17 +16,16 @@ applies_to:
 helpviewer_keywords:
 - Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 918d65dd0bb6114483515addb3dddcbe02307a96
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55e99f0c8abe8a0527af77d06a2fd4ab863a8491
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Programmieren von administrativen Tasks mit AMO
   Analysis Management Objects (AMO) ist eine Programmierbibliothek, die von Clientanwendungen für die Verwaltung von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwendet wird. In diesem Abschnitt erfahren Sie, wie Sie mithilfe der AMO-Objekte programmieren.  
@@ -49,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankobjekte &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

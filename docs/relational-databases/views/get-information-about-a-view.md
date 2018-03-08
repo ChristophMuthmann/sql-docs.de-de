@@ -2,9 +2,12 @@
 title: Abrufen von Informationen zu einer Sicht | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-views
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - status information [SQL Server], views
 - view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cfbfda8cf3759f89bf2b0f8ae43257e64e82c779
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="get-information-about-a-view"></a>Abrufen von Informationen zu einer Sicht
-  Sie erhalten Informationen zur Definition oder den Eigenschaften einer Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Manchmal ist es erforderlich, die Definition einer Sicht anzuzeigen, um zu verstehen, wie die Daten in der Sicht aus den Quelltabellen abgeleitet werden, oder um die durch die Sicht definierten Daten anzuzeigen.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Sie erhalten Informationen zur Definition oder den Eigenschaften einer Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Manchmal ist es erforderlich, die Definition einer Sicht anzuzeigen, um zu verstehen, wie die Daten in der Sicht aus den Quelltabellen abgeleitet werden, oder um die durch die Sicht definierten Daten anzuzeigen.  
   
 > [!IMPORTANT]  
 >  Wenn Sie den Namen eines Objekts ändern, auf das eine Sicht verweist, müssen Sie die Sicht so ändern, dass ihr Text den neuen Namen wiedergibt. Bevor Sie ein Objekt umbenennen, sollten Sie somit erst die Abhängigkeiten des Objekts anzeigen, um feststellen zu können, ob Sichten von der beabsichtigten Änderung betroffen sind.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Informationen zu einer Sicht rufen Sie ab mit:**  
   
@@ -51,14 +53,14 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Für die Verwendung von `sp_helptext` zum Zurückgeben der Definition einer Sicht ist die Mitgliedschaft in der Rolle **Öffentlich** erforderlich. Für die Verwendung von `sys.sql_expression_dependencies` zur Suche aller Abhängigkeiten von einer Sicht sind die Berechtigung VIEW DEFINITION für die Datenbank und die Berechtigung SELECT auf `sys.sql_expression_dependencies` für die Datenbank erforderlich. Systemobjektdefinitionen, wie die in SELECT OBJECT_DEFINITION zurückgegebenen Systemobjektdefinitionen, sind öffentlich sichtbar.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Abrufen von Sichteigenschaften mit Objekt-Explorer  
   
@@ -114,7 +116,7 @@ ms.lasthandoff: 06/22/2017
      **(Name)**  
      Name der aktuellen Sicht.  
   
-     **Datenbankname**  
+     **Database Name**  
      Name der Datenbank, die diese Sicht enthält.  
   
      **Beschreibung**  
@@ -240,4 +242,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) und [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
   
-

@@ -3,7 +3,7 @@ title: Eigenschaft-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Property object [ADO], members
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 79e785469c382fb114443e90ee115f31517f7beb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 794fd4f4aa1d2d4393c0f66673bbcf26ca7f04fd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-object-properties-methods-and-events"></a>Eigenschaft-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-

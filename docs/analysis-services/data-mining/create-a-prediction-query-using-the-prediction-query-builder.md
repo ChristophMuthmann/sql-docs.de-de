@@ -2,32 +2,33 @@
 title: "Erstellen eine Vorhersageabfrage mithilfe des Generators für Vorhersageabfragen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen
-  Sie können Vorhersageabfragen erstellen, indem Sie entweder eine Data Mining-Projektmappe in BI Development Studio erstellen oder indem Sie mit der rechten Maustaste auf ein bereits vorhandenes Miningmodell in SQL Server Management Studio klicken und anschließend die Option **Vorhersageabfrage erstellen**auswählen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können Vorhersageabfragen erstellen, indem Sie entweder eine Data Mining-Projektmappe in BI Development Studio erstellen oder indem Sie mit der rechten Maustaste auf ein bereits vorhandenes Miningmodell in SQL Server Management Studio klicken und anschließend die Option **Vorhersageabfrage erstellen**auswählen.  
   
  Der **Generator für Vorhersageabfragen** verfügt über die folgenden drei Entwurfsmodi, zwischen denen Sie wechseln können, indem Sie auf die Symbole in der Ecke links oben klicken.  
   
@@ -97,8 +98,7 @@ ms.lasthandoff: 09/01/2017
 8.  Führen Sie die Abfrage aus, indem Sie auf der Symbolleiste der Registerkarte **Miningmodellvorhersage** auf die erste Schaltfläche klicken und dann **Ergebnis**auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
- [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Erstellen einer Singleton-Abfrage im Datamining-Designer](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

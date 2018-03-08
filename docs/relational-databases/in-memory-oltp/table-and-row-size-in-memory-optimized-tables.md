@@ -2,28 +2,30 @@
 title: "Tabellen- und Zeilengröße in speicheroptimierten Tabellen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 28
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6f0bfa6d9cbbcfe33e1817c3c9df4b38b4f686f8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] konnte die Größe von Daten in Zeilen einer speicheroptimierten Tabelle nicht größer als [8.060 Bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx) sein. Jedoch ist es jetzt in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und Azure SQL Database möglich, eine speicheroptimierte Tabelle mit mehreren großen Spalten (z.B. mehreren varbinary(8000)-Spalten) und LOB-Spalten (z.B. varbinary(max), varchar(max) und nvarchar(max)) zu erstellen sowie Vorgänge für sie mithilfe nativ kompilierter T-SQL-Module und Tabellentypen auszuführen. 
   
@@ -105,14 +107,14 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Eine Zeit, die größer als 200 ist, enthält die Tabelle die folgenden Zeilen:  
   
-|Name|City|  
+|Name|Ort|  
 |----------|----------|  
 |John|Beijing (Peking)|  
 |Jane|Prag|  
   
  Allerdings wird jeder aktiven Transaktion mit Anfangszeit 100 die folgende Version der Tabelle angezeigt:  
   
-|Name|City|  
+|Name|Ort|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prag|  
@@ -149,7 +151,7 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Betrachten Sie eine Orders-Tabelle mit folgender Definition:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -231,7 +233,7 @@ GO
   
  Der tatsächliche Arbeitsspeicher, der dieser Tabelle zugeordnet ist und von ihr und den zugehörigen Indizes verwendet wird, kann über die folgende Abfrage abgerufen werden:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
@@ -247,8 +249,7 @@ where object_id = object_id('dbo.Orders')
 
 Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [What's new for In-Memory OLTP in SQL Server 2016 since CTP3 (Neues zu In-Memory OLTP in SQL Server 2016 seit CTP3)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

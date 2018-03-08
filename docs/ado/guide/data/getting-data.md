@@ -3,7 +3,7 @@ title: Abrufen von Daten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADO, getting data
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 482376ad6a44d14112cc476fb855ba9da5864015
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2d97c9d8450cd906def9aae3e386a836d32f4d92
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getting-data"></a>Abrufen von Daten
 [ADO-Grundlagen](../../../ado/guide/data/ado-fundamentals.md), und die [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) Beispiel, insbesondere die vier primären Vorgänge, die beim Erstellen einer ADO-Anwendung eingeführt: Abrufen von Daten, Daten untersuchen, Bearbeiten von Daten und Aktualisieren von Daten. In diesem Abschnitt wird erläutert, Abrufen von Daten im Detail.  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [Vorbereiten und Ausführen von Befehlen](../../../ado/guide/data/preparing-and-executing-commands.md)  
   
 -   [Empfangen von Ergebnissen](../../../ado/guide/data/receiving-results.md)
-

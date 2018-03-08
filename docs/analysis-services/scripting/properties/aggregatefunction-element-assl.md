@@ -2,40 +2,35 @@
 title: AggregateFunction-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregateFunction Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregateFunction Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregateFunction
-helpviewer_keywords:
-- AggregateFunction element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AggregateFunction
+helpviewer_keywords: AggregateFunction element
 ms.assetid: 880b6bd0-d62a-4221-831c-39f748ee84f2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2eb41e7a281d3ee343b8b96c339fb8baa1a5283e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e358143c05b97bce00b84bf7c7464095cfa222e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregatefunction-element-assl"></a>AggregateFunction-Element (ASSL)
-  Definiert den Typ der Aggregatfunktion, die verwendet werden, indem eine [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert den Typ der Aggregatfunktion, die verwendet werden, indem eine [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|*Sum*|  
@@ -61,12 +56,12 @@ ms.lasthandoff: 09/01/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Measure](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |*Sum*|Das Measure wird mit der **Sum** -Funktion aggregiert.|  
 |*Anzahl*|Das Measure wird mit der **Count** -Funktion aggregiert.|  
@@ -83,8 +78,7 @@ ms.lasthandoff: 09/01/2017
   
  Die Enumeration, die den zulässigen Werten für entspricht **AggregateFunction** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

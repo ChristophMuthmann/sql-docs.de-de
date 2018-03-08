@@ -2,26 +2,26 @@
 title: "Überwachung | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 3abd3145f4de3d1e5d0fee4ff2adbc7d965d4d3b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5905db6a151dcb10f893f795ed74f8fbd847d234
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitoring"></a>Überwachung
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!NOTE]
 > Python-Unterstützung ist ein neues Feature in SQL Server-2017 und befindet sich in der Vorabversion.
@@ -35,4 +35,3 @@ Finden Sie weitere Informationen zu diesen verwandten Themen:
 + [Verwalten und Überwachen von R-Lösungen](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 
 + [Ressourcenkontrolle für R](../../advanced-analytics/r/resource-governance-for-r-services.md)
-

@@ -2,11 +2,13 @@
 title: "Ressourcenpool für die Ressourcenkontrolle | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "17"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 575436714273ffc0611fda557381099418e70531
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
-ms.contentlocale: de-de
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resource-governor-resource-pool"></a>Ressourcenpool für die Ressourcenkontrolle
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcenkontrolle stellt ein Ressourcenpool eine Teilmenge der physischen Ressourcen einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s dar. Über die Ressourcenkontrolle können Sie Grenzwerte für die CPU, physische E/A und den Arbeitsspeicher festlegen, d. h. Ressourcen, die eingehenden Anwendungsanforderungen im Ressourcenpool zur Verfügung stehen. Jeder Ressourcenpool kann eine oder mehrere Arbeitsauslastungsgruppen enthalten. Wenn eine Sitzung gestartet wird, weist die Klassifizierungsfunktion der Ressourcenkontrolle die Sitzung einer bestimmten Arbeitsauslastungsgruppe zu, und die Sitzung muss mit den der Arbeitsauslastungsgruppe zugewiesenen Ressourcen ausgeführt werden.  
   
@@ -128,12 +129,11 @@ Benutzerdefinierte Ressourcenpools sind Pools, die Sie für bestimmte Arbeitsaus
 |Beschreibt, wie Ressourcenpooleinstellungen geändert werden.|[Ändern der Einstellungen für den Ressourcenpool](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Beschreibt, wie ein Ressourcenpool gelöscht wird.|[Löschen eines Ressourcenpools](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Arbeitsauslastungsgruppe der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Klassifizierungsfunktion der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
  [Konfigurieren der Ressourcenkontrolle mit einer Vorlage](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
  [Anzeigen der Eigenschaften der Ressourcenkontrolle](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
-

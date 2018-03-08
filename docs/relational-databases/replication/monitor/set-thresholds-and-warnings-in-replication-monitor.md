@@ -2,11 +2,13 @@
 title: Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - Replication Monitor, thresholds and warnings
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: dd30fb239fa8d57609321af659eb461008ca80a4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor
-  Im Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt. Standardmäßig zeigt der Replikationsmonitor Warnungen nur für nicht initialisierte Abonnements an. Sie können Warnungen jedoch auch für andere Bedingungen aktivieren. Sie sollten Warnungen für Ihre Topologie aktivieren, damit Sie rechtzeitig über Status und Leistung informiert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Replikationsmonitor von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt. Standardmäßig zeigt der Replikationsmonitor Warnungen nur für nicht initialisierte Abonnements an. Sie können Warnungen jedoch auch für andere Bedingungen aktivieren. Sie sollten Warnungen für Ihre Topologie aktivieren, damit Sie rechtzeitig über Status und Leistung informiert werden.  
   
  Beim Aktivieren einer Warnung geben Sie einen Schwellenwert an. Wenn dieser Schwellenwert erreicht oder überschritten wird, wird eine Warnung angezeigt (außer es muss ein Problem mit höherer Priorität angezeigt werden). Neben der Warnung im Replikationsmonitor kann bei Erreichen eines Schwellenwerts auch ein Warnhinweis ausgelöst werden. Sie können Warnungen für folgende Bedingungen aktivieren:  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Klicken Sie auf **Schließen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

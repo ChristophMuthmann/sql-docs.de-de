@@ -2,27 +2,27 @@
 title: Lektion 9 Perspektiven erstellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 76fc2643bf8d160b38dbcc1009ad37926051407c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 993cf02a47240c0a74667f6220c6b2dd5d6df86c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-create-perspectives"></a>Lektion 8: Erstellen von Perspektiven
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +35,7 @@ In dieser Lektion wird beschrieben, wie Sie Perspektiven erstellen und sich mit 
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **5 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 7: Erstellen von Key Performance Indicators](../analysis-services/lesson-7-create-key-performance-indicators.md).  
   
 ## <a name="create-perspectives"></a>Erstellen von Perspektiven  
@@ -60,4 +60,3 @@ Wechseln Sie zur nächsten Lektion: [Lektion 9: Erstellen von Hierarchien](../an
   
   
   
-

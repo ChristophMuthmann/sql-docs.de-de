@@ -1,10 +1,13 @@
 ---
-title: SUSER_ID (Transact-SQL) | Microsoft Docs
+title: SUSER_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,25 +25,24 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - user IDs [SQL Server]
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
-caps.latest.revision: 22
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e098c614f4e70cabf718ee4413920e61eb634c1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e4b00485c741857f1e3438c3e50995886900fe29
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="suserid-transact-sql"></a>SUSER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Anmelde-ID des Benutzers zurück.  
   
 > [!NOTE]  
->  Beginnend mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID gibt den Wert, der als **Principal_id** in der **Sys. server_principals** -Katalogsicht angezeigt.  
+>  Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] gibt SUSER_ID den Wert zurück, der als **principal_id** in der **sys.server_principals**-Katalogsicht aufgeführt ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,16 +54,16 @@ SUSER_ID ( [ 'login' ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *Anmeldung* **"**  
- Der Anmeldename des Benutzers. *Anmeldung* ist **Nchar**. Wenn *Anmeldung* angegeben ist, als **Char**, *Anmeldung* wird implizit in konvertiert **Nchar**. *Anmeldung* kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder Windows-Benutzer oder Gruppe mit der Berechtigung zur Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn *Anmeldung* ist nicht angegeben wird, wird die Anmelde-ID für den aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
+ **'** *login* **'**  
+ Der Anmeldename des Benutzers. *login* ist vom Typ **nchar**. Wenn *login* als **char** angegeben ist, wird *login* implizit in **nchar** konvertiert. *login* kann jeder beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder Windows-Gruppen oder jedem Windows-Benutzer entsprechen, die bzw. der die Berechtigung zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat. Falls *login* nicht angegeben wird, wird die Anmelde-ID für den aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- SUSER_ID gibt nur für die Anmeldungen eine ID zurück, die explizit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wurden. Diese ID wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Nachverfolgung des Besitzes und der Berechtigungen verwendet. Diese ID ist nicht gleichbedeutend mit der Sicherheits-ID (SID) der Anmeldung, die von SUSER_SID zurückgegeben wird. Wenn *Anmeldung* ist eine SQL Server-Anmeldung, die SID einem GUID zugeordnet. Wenn *Anmeldung* ist ein Windows-Anmeldename oder Windows-Gruppe, die SID einer Windows-Sicherheits-ID zugeordnet.  
+## <a name="remarks"></a>Remarks  
+ SUSER_ID gibt nur für die Anmeldungen eine ID zurück, die explizit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wurden. Diese ID wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Nachverfolgung des Besitzes und der Berechtigungen verwendet. Diese ID ist nicht gleichbedeutend mit der Sicherheits-ID (SID) der Anmeldung, die von SUSER_SID zurückgegeben wird. Wenn *login* eine SQL Server-Anmeldung ist, ist die SID einem GUID zugeordnet. Wenn *login* eine Windows-Anmeldung oder eine Windows-Gruppe ist, ist die SID einer Windows-Sicherheits-ID zugeordnet.  
   
- SUSER_SID gibt eine SUID nur für eine Anmeldung, das einen Eintrag in der **Syslogins** -Systemtabelle.  
+ SUSER_SID gibt SUIDs nur für einen Anmeldenamen zurück, für den es einen Eintrag in der **syslogins**-Systemtabelle gibt.  
   
  Systemfunktionen können in der Auswahlliste, in der WHERE-Klausel und überall dort, wo ein Ausdruck zulässig ist, verwendet werden. Auf den Funktionsnamen müssen immer Klammern folgen (auch wenn kein Parameter angegeben wird).  
   
@@ -72,10 +74,9 @@ SUSER_ID ( [ 'login' ] )
 SELECT SUSER_ID('sa');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [SUSER_SID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
+ [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
-

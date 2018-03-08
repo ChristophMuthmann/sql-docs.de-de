@@ -3,10 +3,12 @@ title: "Ändern der Größe des Auftragsverlaufsprotokolls | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c04ed3df42c5dc14580e5343b876989144b97d1e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
-ms.openlocfilehash: 77a39273f5fa02bac3255ea0436341db2342c236
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für Agent-Auftragsverlaufsprotokolle in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] festlegen.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent-Auftragsverlaufsprotokolle mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] festlegen.
   
 -   **Vorbereitungen:**  
   
@@ -69,4 +70,3 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 4.  Wählen Sie die entsprechende Anzahl für **Tag(e)**, **Woche(n)**oder **Monat(e)**aus.  
   
-

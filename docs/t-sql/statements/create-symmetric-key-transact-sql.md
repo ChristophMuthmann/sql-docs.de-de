@@ -3,8 +3,11 @@ title: "Erstellen des SYMMETRISCHEN Schlüssels (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 72
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
-ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: f5604a0c32049d274610a600ebf1a2174c40d088
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Generiert einen symmetrischen Schlüssel und gibt seine Eigenschaften in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
   
@@ -125,7 +127,7 @@ Geben Sie den Verschlüsselungsalgorithmus an.
  Beim Erstellen eines symmetrischen Schlüssels muss der symmetrische Schlüssel mithilfe mindestens eines der folgenden Elemente verschlüsselt werden: Zertifikat, Kennwort, symmetrischer Schlüssel, asymmetrischer Schlüssel oder PROVIDER. Der Schlüssel kann mehrere Verschlüsselungen jedes Typs aufweisen. Ein einzelner symmetrischer Schlüssel kann demnach mit mehreren Zertifikaten, Kennwörtern, symmetrischen Schlüsseln und asymmetrischen Schlüsseln gleichzeitig verschlüsselt sein.  
   
 > [!CAUTION]  
->  Wenn ein symmetrischer Schlüssel mit einem Kennwort anstatt mit einem öffentlichen Schlüssel des Datenbank-Hauptschlüssels verschlüsselt ist, wird der TRIPLE_DES-Verschlüsselungsalgorithmus verwendet. Daher werden Schlüssel, die mit einem starken Verschlüsselungsalgorithmus wie z. B. AES erstellt werden, selbst mit einem schwächeren Algorithmus verschlüsselt.  
+>  Wenn ein symmetrischer Schlüssel mit einem Kennwort anstelle eines Zertifikats (oder eines anderen Schlüssels) verschlüsselt ist, wird der TRIPLE DES-Verschlüsselungsalgorithmus zum Verschlüsseln des Kennworts verwendet. Daher werden Schlüssel, die mit einem starken Verschlüsselungsalgorithmus wie z. B. AES erstellt werden, selbst mit einem schwächeren Algorithmus verschlüsselt.  
   
  Mit dem optionalen Kennwort kann der symmetrische Schlüssel verschlüsselt werden, bevor der Schlüssel an mehrere Benutzer verteilt wird.  
   
@@ -207,4 +209,3 @@ GO
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   
-

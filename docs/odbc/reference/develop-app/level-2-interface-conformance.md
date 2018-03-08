@@ -3,10 +3,12 @@ title: "Ebene 2 Schnittstelle Konformität | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4002a7b376a752d4c5d3a2ddd2506bc9357842fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-2-interface-conformance"></a>Ebene 2 Schnittstelle Konformität
 Der Konformitätsgrad des Level 2-Schnittstelle enthält die Funktionen der Ebene 1 Benutzeroberfläche Konformitätsgrad – sowie die folgenden Features:  
@@ -42,4 +43,3 @@ Der Konformitätsgrad des Level 2-Schnittstelle enthält die Funktionen der Eben
 |209|Das SQL_ATTR_CONCURRENCY-Anweisungsattribut auf mindestens ein Wert als SQL_CONCUR_READ_ONLY festgelegt.|  
 |210|Die Fähigkeit zum Timeout anmeldeanforderung und SQL-Abfragen (SQL_ATTR_LOGIN_TIMEOUT und SQL_ATTR_QUERY_TIMEOUT).|  
 |211|Die Fähigkeit, die Standardisolationsstufe zu ändern; die Fähigkeit zum Ausführen von Transaktionen mit der "serializable" Maß an Isolation.|
-

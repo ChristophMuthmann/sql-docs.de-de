@@ -18,6 +18,7 @@
 ### [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite](add-report-viewer-web-part-to-page.md)
 ### [Connect Filter or Documents Web Part (Verbinden eines Filters oder Dokumentwebparts)](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [Customize the Report Viewer Web Part (Anpassen des Berichts-Viewer-Webparts)](customize-the-report-viewer-web-part.md)  
+### [Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart](report-viewer-web-part-sharepoint-site-settings.md)
 # [High Availability (Hohe Verfügbarkeit)](high-availability-reporting-services.md)  
 # [Enable and Disable RDL Sandboxing (Aktivieren und Deaktivieren von RDL-Sandkasten)](enable-and-disable-rdl-sandboxing.md)  
 # [Configure Reporting Services to Use a Subject Alternative Name (Konfigurieren der Reporting Services für die Verwendung eines alternativen Antragstellernamens)](configure-reporting-services-to-use-a-subject-alternative-name.md)  

@@ -2,9 +2,12 @@
 title: "FileTable-Kompatibilität mit anderen SQL Server-Funktionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3ba1eeb760eda46825448d3ba56bae1777c533ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable-Kompatibilität mit anderen SQL Server-Funktionen
-  Beschreibt, wie FileTables mit anderen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arbeiten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt, wie FileTables mit anderen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arbeiten.  
   
 ##  <a name="alwayson"></a> AlwaysOn-Verfügbarkeitsgruppen und FileTables  
  Wenn die Datenbank, die FILESTREAM- oder FileTable-Daten enthält, zu einer AlwaysOn-Verfügbarkeitsgruppe gehört:  
@@ -123,8 +126,7 @@ ms.lasthandoff: 06/22/2017
   
  Sie können den Einschlusstyp der Datenbank auf PARTIAL festlegen, wenn Sie bestimmte Funktionen eigenständiger Datenbanken verwenden möchten, z. B. eigenständige Benutzer. In diesem Fall müssen Sie jedoch beachten, dass einige Datenbankeinstellungen nicht in der Datenbank enthalten sind und nicht automatisch mit der Datenbank verschoben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Servereigenschaften (Seite „Allgemein“) - SQL Server Management Studio | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,20 +16,19 @@ f1_keywords:
 - sql13.swb.serverproperties.activedirectory.f1
 - sql13.swb.serverproperties.prodinfo.f1
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "30"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0209fe2fdf5b3cd71409dcad9bda46446f673bd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 54d262789e62a8abfd70173b05d6125019c91e42
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---general-page"></a>Servereigenschaften (Seite „Allgemein“)
-  Auf dieser Seite können Sie schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation anzeigen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf dieser Seite können Sie schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation anzeigen.  
   
 ## <a name="property-grid"></a>Eigenschaftsraster  
  Zeigt die Eigenschaften des ausgewählten Servers an, z. B. Servername, Betriebssystem des Servers oder Anzahl der Prozessoren.  
@@ -71,8 +72,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="description-field"></a>Beschreibungsfeld  
  Zeigt zusätzliche Informationen zu den Servereigenschaften an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
-

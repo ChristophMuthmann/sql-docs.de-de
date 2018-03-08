@@ -2,36 +2,36 @@
 title: "Dialogfeld „Facet-Eigenschaften“, Seite „Abhängige Richtlinien“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.facet.dependentpolicies.f1
+f1_keywords: sql13.swb.dmf.facet.dependentpolicies.f1
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbc752ab48b3295047876f7957aa83abd166facc
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 59a0ab1f4f7b0c45a9e5e684e043f17e85288e8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Abhängige Richtlinien'
-  Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf dieses Facet der richtlinienbasierten Verwaltung verweisen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf dieses Facet der richtlinienbasierten Verwaltung verweisen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Listet den Namen jeder Richtlinie auf, die auf das aktuelle Facet verweist.  
   
- **Aktiviert**  
+ **Enabled**  
  Ein Häkchen gibt an, dass die Richtlinie derzeit aktiviert ist. Ist leer, wenn die Richtlinie nicht aktiviert ist.  
   
  **Verlauf**  
@@ -40,8 +40,7 @@ ms.lasthandoff: 06/22/2017
  **Erstellt**  
  Das Datum, an dem die Richtlinie erstellt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

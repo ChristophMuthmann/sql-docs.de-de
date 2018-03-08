@@ -2,9 +2,12 @@
 title: "Erstellen eines Kontos für die Datenbank-E-Mail | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,30 +16,30 @@ helpviewer_keywords:
 - Database Mail [SQL Server], accounts
 - accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 603259e6c6d93d5fa92e2680dcc8939e51365033
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6a067e95f873d4d3409fe0a1e4187b01afb999df
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-database-mail-account"></a>Erstellen eines Kontos für Datenbank-E-Mail
-  Verwenden Sie entweder den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um ein Datenbank-E-Mail-Konto zu erstellen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Verwenden Sie entweder den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um ein Datenbank-E-Mail-Konto zu erstellen.  
   
--   **Before you begin:**  [Prerequisites](#Prerequisites)  
+-   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
   
--   **To Create a Database Mail Account, using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Erstellen eines Datenbank-E-Mail-Kontos mit:**  [Assistenten zum Konfigurieren von Datenbank-E-Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
+-   **Nachverfolgung:**  [Nächste Schritte zum Konfigurieren von Datenbank-E-Mail](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Bestimmen Sie den Servernamen und die Portnummer für den SMTP-Server (Simple Mail Transfer Protocol), den Sie zum Senden von E-Mail verwenden. Falls der SMTP-Server eine Authentifizierung erfordert, bestimmen Sie den Benutzernamen und das Kennwort für den SMTP-Server.  
   
@@ -94,4 +97,3 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 -   [Erstellen eines Profils für Datenbank-E-Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   
   
-

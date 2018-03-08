@@ -1,13 +1,14 @@
 ---
-title: "Verwenden eine Office Data Connection (.odc) für Berichte | Microsoft Docs"
+title: Verwenden einer Office Data Connection (.odc) mit Berichten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 68cbb3437a7f994a60e13163a8372f2e5c0a7174
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Verwenden einer Office Data Connection (.odc) mit Berichten
   Bei beschränkten Szenarien können Sie eine vorhandene Office Data Connection (.odc)-Datei verwenden, um Verbindungsinformationen für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht bereitzustellen. Sie können beim Erstellen einer freigegebenen Datenquelle eine ODC-Datei statt einer RSDS-Datei verwenden. Eine ODC-Datei wird vom Berichtsserver auf dieselbe Weise verwendet wie eine RSDS-Datei. Die Datei wird gelesen, um den Datenquellentyp, eine Verbindungszeichenfolge und Anmeldeinformationen abzurufen.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie nicht mit ODC-Dateien vertraut sind, können Sie die folgenden Anweisungen zum Erstellen und Exportieren einer ODC-Datei verwenden. Eine einfache Möglichkeit, eine ODC-Datei für eine OLE DB-Datenquelle zu erstellen, besteht im Verwenden von Excel 2007 und dem Datenverbindungs-Assistenten. Beachten Sie, dass vom Assistenten keine Datenquelle erstellt wird. Sie müssen über eine externe Datenquelle verfügen, die bereits definiert ist.  
   
- Eine vorhandene ODC-Datei sollte nur verwendet werden, wenn sie vollständig mit dem Bericht und den Abfragen kompatibel ist. Wenn Fehler auftreten, die beträchtliche Änderungen am Bericht oder an der ODC-Datei erfordern, sollten Sie eine neue RSDS-Datei für den Bericht erstellen. Weitere Informationen dazu, wie Sie eine freigegebene Datenquelle erstellen, die eine rsds-Datei verwendet, finden Sie unter [erstellen und Verwalten von freigegebenen Datenquellen &#40; Reporting Services in SharePoint integrierten Modus &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Eine vorhandene ODC-Datei sollte nur verwendet werden, wenn sie vollständig mit dem Bericht und den Abfragen kompatibel ist. Wenn Fehler auftreten, die beträchtliche Änderungen am Bericht oder an der ODC-Datei erfordern, sollten Sie eine neue RSDS-Datei für den Bericht erstellen. Weitere Informationen zum Erstellen einer freigegebenen Datenquelle, die eine RSDS-Datei verwendet, finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>So erstellen und exportieren Sie eine ODC-Datei  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 08/09/2017
   
      Wenn Sie versuchen, diese Schritte für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank und -Beispielberichte auszuführen, sollten Sie beachten, dass nur der Bericht Company Sales sofort mit einer ODC-Datei verwendet werden kann. Die anderen Beispielberichte enthalten Abfrageparameter und Funktionen, die den OLE DB-Anbieter nicht unterstützen. Sie können die Berichte jedoch für den OLE DB-Anbieter aufbereiten, wenn Sie sie zuerst im Berichts-Designer ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

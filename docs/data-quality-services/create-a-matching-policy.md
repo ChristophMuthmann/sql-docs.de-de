@@ -2,11 +2,13 @@
 title: Erstellen einer Abgleichsrichtlinie | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,24 +16,23 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "43"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0cffe1699c221e37e353cad1269f675aac89db15
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1fe1c8b25d8309d3984c70c31f5949a9724599a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-matching-policy"></a>Erstellen einer Abgleichsrichtlinie
   In diesem Thema wird beschrieben, wie eine Abgleichsrichtlinie eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Sie bereiten den Abgleichsprozess in DQS vor, indem Sie die Abgleichsrichtlinienaktivität für Beispieldaten ausführen. In dieser Aktivität erstellen und testen Sie eine oder mehrere Abgleichsregeln in der Richtlinie und veröffentlichen dann die Wissensdatenbank, um die Abgleichsregeln zur Verwendung öffentlich verfügbar zu machen. Es kann nur eine Abgleichsrichtlinie in einer Wissensdatenbank geben, aber diese Richtlinie kann mehrere Abgleichsregeln enthalten.  
   
  Die Abgleichsrichtlinienerstellung wird in drei Phasen ausgeführt: ein Zuordnungsprozess, in dem Sie die Datenquelle identifizieren und Domänen zu Spalten zuordnen, ein Abgleichsrichtlinienprozess, in dem Sie eine oder mehrere Abgleichsregeln erstellen und jede Abgleichsregel separat testen, und ein Abgleichsergebnisseprozess, in dem Sie alle Abgleichsregeln zusammen ausführen und die Richtlinie der Wissensdatenbank hinzufügen, wenn Sie mit ihr zufrieden sind. Jeder dieser Prozesse wird auf einer separaten Seite des Abgleichsrichtlinienaktivitäts-Assistenten ausgeführt, sodass Sie zwischen den Seiten hin und her wechseln, den Prozess erneut auszuführen, einen bestimmten Abgleichsrichtlinienprozess schließen und dann zur gleichen Phase des Prozesses zurückkehren können. Nach dem gemeinsamen Testen aller Regeln können Sie, falls erforderlich, zur Seite **Abgleichsrichtlinie** zurückkehren, eine einzelne Regel ändern, sie wieder separat testen und zur Seite **Abgleichsergebnisse** zurückkehren, um alle Regeln erneut gemeinsam auszuführen. DQS stellt Ihnen Statistiken zu den Quelldaten, den Abgleichsregeln und den Abgleichsergebnissen bereit, die es Ihnen ermöglichen, informierte Entscheidungen zur Abgleichsrichtlinie zu treffen, damit Sie sie optimieren können.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, wenn sich die Quelldaten in einer Excel-Datei befinden. Andernfalls sind Sie nicht in der Lage, die Excel-Datei in der Zuordnungsphase auszuwählen. Die von Microsoft Excel erstellten Dateien können die Erweiterung .xlsx, .xls oder .csv haben. Wenn die 64-Bit-Version von Excel verwendet wird, werden nur Excel 2003-Dateien (.xls) unterstützt; Excel 2007- oder 2010-Dateien (.xlsx) werden nicht unterstützt. Wenn Sie die 64-Bit-Version von Excel 2007 oder 2010 verwenden, speichern Sie die Datei als XLS-Datei oder CSV-Datei, oder installieren Sie stattdessen eine 32-Bit-Version von Excel.  
@@ -137,7 +138,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Wenn Sie auf einen Datensatz in der Abgleichsergebnistabelle doppelklicken, zeigt DQS das Popupfenster **Details zur Treffergenauigkeit** an, das den Pivotdatensatz und den Quelldatensatz anzeigt (und die Werte in allen ihren Feldern), das Ergebnis zwischen ihnen und einen Drilldown des Datensatzabgleichs. Der Drilldown zeigt die Werte in jedem Feld des Pivotdatensatzes und Quelldatensatzes an, damit Sie sie vergleichen können, und zeigt die Treffergenauigkeit an, die jedes Feld zur Gesamttreffergenauigkeit für die zwei Datensätze beiträgt.  
   
-14. Zeigen Sie die Statistiken auf den Registerkarten **Profiler** und **Abgleichsergebnisse** an, um sicherzustellen, dass Sie die benötigten Ergebnisse erzielen. Weitere Informationen finden Sie unter [Registerkarten „Profiler“ und „Ergebnisse“](#Tabs).  
+14. Zeigen Sie die Statistiken auf den Registerkarten **Profiler** und **Abgleichsergebnisse** an, um sicherzustellen, dass Sie die benötigten Ergebnisse erzielen. Weitere Informationen finden Sie unter [Profiler and Results Tabs](#Tabs).  
   
 15. Wenn die Regel geändert werden muss, ändern Sie sie im Regel-Editor, und klicken Sie auf **Neustart**.  
   
@@ -194,7 +195,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Abgleichsrichtlinie  
  Nachdem Sie eine Abgleichsrichtlinie erstellt haben, können Sie ein Abgleichsprojekt basierend auf der Wissensdatenbank, die die Abgleichsrichtlinie enthält, ausführen. Weitere Informationen finden Sie unter [Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a> Registerkarten „Profiler“ und „Ergebnisse“  
+##  <a name="Tabs"></a> Profiler and Results Tabs  
  Die Registerkarten „Profiler“ und „Ergebnisse“ enthalten Statistiken für die Abgleichsrichtlinie und die Abgleichsergebnisseiten.  
   
 ###  <a name="Profiler"></a> Registerkarte „Profiler“  
@@ -259,4 +260,3 @@ ms.lasthandoff: 09/09/2017
 -   Die größte Anzahl von Duplikaten in einem Cluster  
   
   
-

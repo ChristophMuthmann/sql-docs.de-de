@@ -2,9 +2,12 @@
 title: "Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,26 +15,27 @@ ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 663627abeb04c63073b43337bfe795ba9bc9cd4d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 78de6a2a9f403c08f30ce72f5db8194563ec318a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen
-  Bei Anwendungen, die SqlOpenFilestream() zum Öffnen von Win32-Dateihandles zum Lesen oder Schreiben von FILESTREAM-BLOB-Daten verwenden, können Konfliktfehler mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auftreten, die in einer gemeinsamen Transaktion verwaltet werden. Dies gilt auch für [!INCLUDE[tsql](../../includes/tsql-md.md)] - oder MARS-Abfragen, bei denen das Beenden der Ausführung viel Zeit in Anspruch nimmt. Anwendungen müssen sorgfältig entworfen werden, wenn diese Art von Konflikten vermieden werden soll.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Bei Anwendungen, die SqlOpenFilestream() zum Öffnen von Win32-Dateihandles zum Lesen oder Schreiben von FILESTREAM-BLOB-Daten verwenden, können Konfliktfehler mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auftreten, die in einer gemeinsamen Transaktion verwaltet werden. Dies gilt auch für [!INCLUDE[tsql](../../includes/tsql-md.md)] - oder MARS-Abfragen, bei denen das Beenden der Ausführung viel Zeit in Anspruch nimmt. Anwendungen müssen sorgfältig entworfen werden, wenn diese Art von Konflikten vermieden werden soll.  
   
  Wenn die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder Anwendungen versuchen, FILESTREAM-BLOBs zu öffnen, überprüft die [!INCLUDE[ssDE](../../includes/ssde-md.md)] den zugeordneten Transaktionskontext. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] lässt die Anforderung zu bzw. verweigert sie in Abhängigkeit davon, ob der geöffnete Vorgang mit DDL-Anweisungen oder DML-Anweisungen arbeitet, Daten abruft oder Transaktionen verwaltet. Die folgende Tabelle zeigt, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] ermittelt, ob eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung basierend auf dem Typ der Dateien, die in der Transaktion geöffnet sind, zugelassen oder verweigert wird.  
   
 |Transact-SQL-Anweisungen|Geöffnet zum Lesen|Geöffnet zum Schreiben|  
 |------------------------------|---------------------|----------------------|  
 |DDL-Anweisungen, die mit Datenbankmetadaten arbeiten, z. B. CREATE TABLE, CREATE INDEX, DROP TABLE und ALTER TABLE.|Zulässig|Werden blockiert und schlagen mit einem Timeout fehl.|  
-|DML-Anweisungen, die mit den Daten arbeiten, die in der Datenbank gespeichert sind, z. B. UPDATE, DELETE und INSERT.|Zulässig|Verweigert|  
+|DML-Anweisungen, die mit den Daten arbeiten, die in der Datenbank gespeichert sind, z. B. UPDATE, DELETE und INSERT.|Zulässig|Verweigert|  
 |SELECT|Zulässig|Zulässig|  
 |COMMIT TRANSACTION|Verweigert*|Verweigert*|  
 |SAVE TRANSACTION|Verweigert*|Verweigert*|  
@@ -144,7 +148,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
   

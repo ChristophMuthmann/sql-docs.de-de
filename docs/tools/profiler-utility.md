@@ -2,11 +2,13 @@
 title: Profiler-Hilfsprogramm | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "42"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>Profiler-Hilfsprogramm
-  Mit dem **Profiler**-Hilfsprogramm wird das [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]-Tool gestartet. Mit den optionalen Argumenten, die weiter unten in diesem Thema aufgeführt sind, können Sie steuern, wie die Anwendung gestartet wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Profiler** Hilfsprogramm startet die [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Tool. Mit den optionalen Argumenten, die weiter unten in diesem Thema aufgeführt sind, können Sie steuern, wie die Anwendung gestartet wird.  
   
 > [!NOTE]  
 >  Das **Profiler** -Hilfsprogramm dient nicht zum Erstellen von Skripts für Ablaufverfolgungen. Weitere Informationen finden Sie unter [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -133,4 +134,3 @@ profiler /S MyServer\MyInstance /T "Standard"
  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

@@ -2,33 +2,33 @@
 title: "Verfügbarkeitsgruppe – Hinzufügen einer Datenbank zum Gruppenassistenten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.adddatabasewizard.f1
+f1_keywords: sql13.swb.adddatabasewizard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e7a24cc777a0b13329c38fe4a276fae1c8b22d36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 414c1f89c590f9d6db74e7458621badc452548e1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>Verfügbarkeitsgruppe – Hinzufügen einer Datenbank zum Gruppenassistenten
-  Verwenden Sie den Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen, um einer vorhandenen AlwaysOn-Verfügbarkeitsgruppe eine oder mehrere Datenbank hinzuzufügen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie den Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen, um einer vorhandenen AlwaysOn-Verfügbarkeitsgruppe eine oder mehrere Datenbanken hinzuzufügen.  
   
 > [!NOTE]  
 >  Informationen zum Hinzufügen einer Datenbank mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell finden Sie unter [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
@@ -39,11 +39,11 @@ ms.lasthandoff: 08/02/2017
   
      [Voraussetzungen und Einschränkungen](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Hinzufügen einer Datenbank mit:**  [Assistent zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen(SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
  Falls Sie einer Verfügbarkeitsgruppe noch nie eine Datenbank hinzugefügt haben, lesen Sie den Abschnitt „Verfügbarkeitsdatenbanken“ unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Voraussetzungen, Einschränkungen und Empfehlungen  
@@ -82,11 +82,11 @@ ms.lasthandoff: 08/02/2017
   
     -   **Full**  
   
-         Aktivieren Sie diese Option, wenn Ihre Umgebung die Anforderungen zum automatischen Starten der anfänglichen Datensynchronisierung erfüllt. Weitere Informationen finden Sie weiter oben in diesen Thema unter [Voraussetzungen, Einschränkungen und Empfehlungen](#Prerequisites).  
+         Aktivieren Sie diese Option, wenn Ihre Umgebung die Anforderungen zum automatischen Starten der anfänglichen Datensynchronisierung erfüllt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen, Einschränkungen und Empfehlungen](#Prerequisites).  
   
          Wenn Sie **Vollständig**auswählen, versucht der Assistent, nach der Erstellung der Verfügbarkeitsgruppe alle primären Datenbanken und ihre Transaktionsprotokolle auf einer Netzwerkfreigabe zu sichern und die Sicherungen auf allen Serverinstanzen wiederherzustellen, die ein sekundäres Replikat hosten. Der Assistent verknüpft anschließend alle sekundären Datenbanken mit der Verfügbarkeitsgruppe.  
   
-         Legen Sie im **Feld zum Angeben eines freigegebenen Netzwerkspeicherorts, auf den von allen Replikaten zugegriffen werden kann** , eine Sicherungsfreigabe fest, für die alle Serverinstanzen, die Replikate hosten, Lese-/Schreibzugriff besitzen. Die Protokollsicherungen sind Teil der Protokollsicherungskette. Speichern Sie die Protokollsicherungsdateien ordnungsgemäß.  
+         Legen Sie im Feld zum **Angeben eines freigegebenen Netzwerkspeicherorts, auf den von allen Replikaten zugegriffen werden kann** , eine Sicherungsfreigabe fest, für die alle Serverinstanzen, die Replikate hosten, Lese-/Schreibzugriff besitzen. Die Protokollsicherungen sind Teil der Protokollsicherungskette. Speichern Sie die Protokollsicherungsdateien ordnungsgemäß.  
   
         > [!IMPORTANT]  
         >  Informationen zu den erforderlichen Dateisystemberechtigungen finden Sie weiter oben in diesem Thema unter [Erforderliche Komponenten](#Prerequisites).  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/02/2017
   
     -   **Anfängliche Datensynchronisierung überspringen**  
   
-         Aktivieren Sie diese Option, wenn Sie eigene Datenbank- und Protokollsicherungen der primären Datenbanken verwenden möchten. Weitere Informationen finden Sie unter [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Aktivieren Sie diese Option, wenn Sie eigene Datenbank- und Protokollsicherungen der primären Datenbanken verwenden möchten. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
      Weitere Informationen finden Sie unter [Seite „Anfängliche Datensynchronisierung auswählen“ &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
      Weitere Informationen finden Sie unter der [Seite „Ergebnisse“ &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
   
-11. Wenn die anfängliche Datensynchronisierung nicht automatisch auf allen sekundären Datenbanken gestartet wurde, müssen Sie noch nicht verknüpfte Datenbanken konfigurieren. Weitere Informationen finden Sie unter [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+11. Wenn die anfängliche Datensynchronisierung nicht automatisch auf allen sekundären Datenbanken gestartet wurde, müssen Sie noch nicht verknüpfte Datenbanken konfigurieren. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -133,12 +133,11 @@ ms.lasthandoff: 08/02/2017
   
 -   [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)   
  [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  
   
   
-

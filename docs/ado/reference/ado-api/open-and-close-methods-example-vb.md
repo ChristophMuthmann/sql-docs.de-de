@@ -3,7 +3,7 @@ title: "Öffnen und schließen Sie die Methoden-Beispiel (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Close method [ADO], Visual Basic example
 - Open method [ADO], Visual Basic example
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1b69303657d88f1ea74f7ff969d8380d0954b886
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ca0bb3c993a830f8c9704570483bf70c952abfb2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-and-close-methods-example-vb"></a>Beispiel für Eröffnungs- und Methoden (VB)
 Dieses Beispiel verwendet die **öffnen** und [schließen](../../../ado/reference/ado-api/close-method-ado.md) Methoden auf beiden [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekte, die geöffnet wurden.  
@@ -115,4 +114,3 @@ End Sub
  [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

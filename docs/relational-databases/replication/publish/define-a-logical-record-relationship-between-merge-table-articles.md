@@ -2,11 +2,13 @@
 title: Definieren einer logischen Datensatzbeziehung zwischen Mergetabellenartikeln | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: baebe314605badced365be3c30212e2f20262737
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
-  In diesem Thema wird beschrieben, wie eine logische Datensatzbeziehung zwischen Mergetabellenartikeln in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) definiert wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie eine logische Datensatzbeziehung zwischen Mergetabellenartikeln in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (Replication Management Objects, RMO) definiert wird.  
   
  Mergereplikation ermöglicht Ihnen, eine Beziehung zwischen verknüpften Zeilen in verschiedenen Tabellen zu definieren. Diese Zeilen können dann während der Synchronisierung als Transaktionseinheit verarbeitet werden. Eine logische Datensatzbeziehung zwischen zwei Artikeln kann unabhängig davon definiert werden, ob sie über eine Joinfilterbeziehung verfügen oder nicht. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
@@ -47,13 +49,13 @@ ms.lasthandoff: 06/22/2017
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn Sie einen logischen Datensatz hinzufügen, ändern oder löschen, nachdem Abonnements für die Veröffentlichung initialisiert wurden, müssen Sie eine neue Momentaufnahme generieren und alle Abonnements nach vorgenommener Änderung erneut initialisieren. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Zum Definieren logischer Datensätze steht Ihnen das Dialogfeld **Join hinzufügen** zur Verfügung, das über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** verfügbar ist. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Logische Datensätze können nur dann im Dialogfeld **Join hinzufügen** definiert werden, wenn sie auf einen Joinfilter in einer Mergeveröffentlichung angewendet werden und die Veröffentlichung die Anforderungen für die Verwendung vorausberechneter Partitionen erfüllt. Wenn Sie logische Datensätze definieren möchten, die nicht auf Joinfilter angewendet werden, und die Konflikterkennung und -lösung auf der Ebene des logischen Datensatzes festlegen möchten, müssen Sie gespeicherte Prozeduren verwenden.  
@@ -160,41 +162,41 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>So definieren Sie eine logische Datensatzbeziehung ohne einen zugeordneten Joinfilter  
   
-1.  Stellen Sie eine Verbindung mit dem Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse, legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaft der Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse, legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft der Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Wenn die <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A>-Eigenschaft auf <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False> festgelegt ist, ändern Sie sie in <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>.  
+4.  Wenn die <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> -Eigenschaft auf <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>festgelegt ist, ändern Sie sie in <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>.  
   
-5.  Wenn die Artikel, die den logischen Datensatz enthalten sollen, nicht vorhanden sind, erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle>-Klasse, und legen Sie die folgenden Eigenschaften fest:  
+5.  Wenn die Artikel, die den logischen Datensatz enthalten sollen, nicht vorhanden sind, erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle> -Klasse, und legen Sie die folgenden Eigenschaften fest:  
   
-    -   Den Namen des Artikels für <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
+    -   Den Namen des Artikels für <xref:Microsoft.SqlServer.Replication.Article.Name%2A>  
   
-    -   Den Namen der Veröffentlichung für <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>.  
+    -   Den Namen der Veröffentlichung für <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>  
   
-    -   (Optional) Wenn der Artikel horizontal gefiltert wird, geben Sie die Zeilenfilterklausel für die <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A>-Eigenschaft an. Verwenden Sie diese Eigenschaft, um einen statischen oder parametrisierten Zeilenfilter anzugeben. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   (Optional) Wenn der Artikel horizontal gefiltert wird, geben Sie die Zeilenfilterklausel für die <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> -Eigenschaft an. Verwenden Sie diese Eigenschaft, um einen statischen oder parametrisierten Zeilenfilter anzugeben. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A>-Methode auf.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A> -Methode auf.  
   
 7.  Wiederholen Sie die Schritte 5 und 6 für jeden Artikel, der den logischen Datensatz umfasst.  
   
-8.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeJoinFilter>-Klasse, um die logische Datensatzbeziehung zwischen Artikeln zu definieren. Legen Sie dann die folgenden Eigenschaften fest:  
+8.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> -Klasse, um die logische Datensatzbeziehung zwischen Artikeln zu definieren. Legen Sie dann die folgenden Eigenschaften fest:  
   
-    -   Den Namen des untergeordneten Artikels in der logischen Datensatzbeziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A>-Eigenschaft.  
+    -   Den Namen des untergeordneten Artikels in der logischen Datensatzbeziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A> -Eigenschaft  
   
-    -   Den Namen des bestehenden übergeordneten Artikels in der logischen Datensatzbeziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A>-Eigenschaft.  
+    -   Den Namen des bestehenden übergeordneten Artikels in der logischen Datensatzbeziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A> -Eigenschaft  
   
-    -   Einen Namen für die logische Datensatzbeziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A>-Eigenschaft.  
+    -   Einen Namen für die logische Datensatzbeziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A> -Eigenschaft  
   
-    -   Den Ausdruck, der die Beziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A>-Eigenschaft definiert.  
+    -   Einen Ausdruck, der die Beziehung für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> -Eigenschaft definiert  
   
-    -   Den Wert <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A>-Eigenschaft. Wenn die logische Datensatzbeziehung auch ein Joinfilter ist, geben Sie den Wert <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> für diese Eigenschaft an. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Den Wert <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> für die <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> -Eigenschaft. Wenn die logische Datensatzbeziehung auch ein Joinfilter ist, geben Sie den Wert <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> für diese Eigenschaft an. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-9. Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A>-Methode für das Objekt auf, das den untergeordneten Artikel in der Beziehung darstellt. Übergeben Sie das <xref:Microsoft.SqlServer.Replication.MergeJoinFilter>-Objekt aus Schritt 8, um die Beziehung zu definieren.  
+9. Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> -Methode für das Objekt auf, das den untergeordneten Artikel in der Beziehung darstellt. Übergeben Sie das <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> -Objekt aus Schritt 8, um die Beziehung zu definieren.  
   
 10. Wiederholen Sie die Schritte 8 und 9 für jede weitere logische Datensatzbeziehung in der Veröffentlichung.  
   
@@ -205,9 +207,9 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Definieren und Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)   

@@ -3,10 +3,12 @@ title: Fehlermeldungen (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ec1cbc18c952c4394f16123c76a32330116d5af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Fehlermeldungen (Visual FoxPro-ODBC-Treiber)
 Wenn ein Fehler auftritt, gibt der Visual FoxPro-Treiber die folgende Informationen an:  
@@ -51,7 +52,7 @@ Wenn ein Fehler auftritt, gibt der Visual FoxPro-Treiber die folgende Informatio
   
  Die Präfixe in Klammern ([]) Identifizieren der Quelle des Fehlers, wie in der folgenden Tabelle definiert.  
   
-|Datenquelle|Präfix|Wert|  
+|Datenquelle|Präfix|value|  
 |-----------------|------------|-----------|  
 |Treiber-Manager|[Hersteller]<br />[ODBC_component]<br />[Data_source]|[Microsoft]<br />[ODBC-Treiber-Manager]<br />–|  
 |Visual FoxPro-Treiber|Hersteller]<br />[ODBC_component]<br />[Data_source]|[Microsoft]<br />[Visual FoxPro-ODBC-Treiber]<br />–|  
@@ -59,4 +60,3 @@ Wenn ein Fehler auftritt, gibt der Visual FoxPro-Treiber die folgende Informatio
  Beispielsweise kann ein der Visual FoxPro-ODBC-Treiber nicht die Datei nützlich finden konnte, die folgende Fehlermeldung zurück:  
   
  "[*Microsoft*] [*ODBC-Treiber für Visual FoxPro*] Datei"nützlich"ist nicht vorhanden."
-

@@ -2,29 +2,30 @@
 title: MSSQLSERVER_17300 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17300 (Database Engine error)
+helpviewer_keywords: 17300 (Database Engine error)
 ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ef809a200d3544e5e24549440506b77d6f1a79e5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a67adfd828c19dfcade777b410dbdb3b7f4e7da8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver17300"></a>MSSQLSERVER_17300
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -58,4 +59,3 @@ Führen Sie die folgenden Tasks entsprechend aus:
 [Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen](~/database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  
 [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md)  
   
-

@@ -3,29 +3,28 @@ title: GetColumns-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getColumns
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getColumns
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75d9ab3fb70f854e56df0c659275a2983a8487ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -83,7 +82,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|Die Dezimalstellen der Spalte.|  
 |NUM_PREC_RADIX|**smallint**|Die Basis der Spalte.|  
 |NULLABLE|**smallint**|Gibt an, ob die Spalte NULL-Werte zulässt. Mögliche Werte:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|Die der Spalte zugeordneten Kommentare.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] gibt immer null für diese Spalte zurück.  |  
+|REMARKS|**String**|Die der Spalte zugeordneten Kommentare.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] gibt immer null für diese Spalte zurück.|  
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte entspricht der DATA_TYPE-Spalte mit Ausnahme des datetime-Datentyps und des SQL-92-Datentyps interval. Diese Spalte gibt immer einen Wert zurück.|  
 |SQL_DATETIME_SUB|**smallint**|Untertypcode für den datetime-Datentyp und den SQL-92-Datentyp interval. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
@@ -91,7 +90,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |ORDINAL_POSITION|**int**|Der Index der Spalte innerhalb der Tabelle.|  
 |IS_NULLABLE|**String**|Gibt an, ob in der Spalte NULL-Werte zulässig sind.|  
 |SS_IS_SPARSE|**smallint**|Wenn die Spalte eine Spalte mit geringer Dichte ist, hat dies den Wert 1; andernfalls 0. <sup>1</sup>|  
-|SS_IS_COLUMN_SET|**smallint**|Besitzt den Wert 1, wenn die Spalte die column_set-Spalte mit geringer Dichte ist, andernfalls 0. <sup>1</sup>|  
+|SS_IS_COLUMN_SET|**smallint**|Besitzt den Wert 1, wenn die Spalte die column_set-Sparsespalte ist, andernfalls 0. <sup>1</sup>|  
 |SS_IS_COMPUTED|**smallint**|Zeigt an, ob eine TABLE_TYPE-Spalte eine berechnete Spalte ist. <sup>1</sup>|  
 |IS_AUTOINCREMENT|**String**|"YES", wenn die Spalte automatisch inkrementiert wird. "NO", wenn die Spalte nicht automatisch inkrementiert wird. "" (leere Zeichenfolge), wenn vom Treiber nicht ermittelt werden kann, ob die Spalte automatisch inkrementiert wird. <sup>1</sup>|  
 |SS_UDT_CATALOG_NAME|**String**|Der Name des Katalogs, der den benutzerdefinierten Typ (UDT) enthält. <sup>1</sup>|  
@@ -215,4 +214,3 @@ public class c1 {
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

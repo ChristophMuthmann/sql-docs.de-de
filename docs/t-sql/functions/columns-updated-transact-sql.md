@@ -3,8 +3,11 @@ title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - column testing [SQL Server]
 - updated columns
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-caps.latest.revision: 53
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8ddb7462ee985ee62efa70455d27c91a51193124
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a64b20ce0d429ccd257c178abdb7c04630e409ec
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt ein **varbinary** -Bitmuster zurück, das anzeigt, welche Spalten der Tabelle eingefügt oder aktualisiert wurden. COLUMNS_UPDATED wird überall innerhalb eines INSERT- oder UPDATE-Triggers von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um zu testen, ob der Trigger bestimmte Aktionen ausführen soll.
   
@@ -70,7 +72,7 @@ WHERE TABLE_NAME = 'Person';
 ## <a name="column-sets"></a>Spaltensätze
 Wenn ein Spaltensatz für eine Tabelle definiert wird, verhält sich die COLUMNS_UPDATED-Funktion wie folgt:
 -   Wenn eine Spalte, die zu dem Spaltensatz gehört, explizit aktualisiert wird, werden das entsprechende Bit für diese Spalte und das Bit für den Spaltensatz auf 1 festgelegt.  
--   Wenn ein Spaltensatz explizit aktualisiert wird, wird das Bit für den Spaltensatz auf 1 festgelegt, und die Bits für alle Spalten mit geringer Dichte in dieser Tabelle werden auf 1 festgelegt.  
+-   Wenn ein Spaltensatz explizit aktualisiert wird, wird das Bit für den Spaltensatz auf 1 festgelegt, und die Bits für alle Sparsespalten in dieser Tabelle werden auf 1 festgelegt.  
 -   Für Einfügevorgänge werden alle Bits auf 1 festgelegt.  
   
      Da bei Änderungen des Spaltensatzes die Bits aller Spalten in diesem Spaltensatz auf 1 festgelegt werden, erscheinen auch die Spalten, an denen keine Änderung vorgenommen wurde, als geändert. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
@@ -214,4 +216,3 @@ GO
 [UPDATE &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   
-

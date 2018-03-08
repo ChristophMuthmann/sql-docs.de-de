@@ -1,10 +1,13 @@
 ---
-title: Azure Data Lake-Speicher-Verbindungs-Manager | Microsoft Docs
+title: Azure Data Lake Store-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: douglasl
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,57 +16,55 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSCM.F1
 - sql14.dts.designer.afpadlscm.f1
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Lingxi-Li
 ms.author: lingxl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
-ms.contentlocale: de-de
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: 9d98d6cf214a4d08e3a617ab19307bfd42b58189
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store-Verbindungsmanager
-Ein SQL Server Integration Services (SSIS)-Paket kann den Azure Data Lake-Speicher-Verbindungs-Manager verwenden, für die Verbindung mit einer Azure Data Lake-Speicher-Dienst mit einem der beiden folgenden Authentifizierungstypen:
+Ein SSIS-Paket (SQL Server Integration Services) kann den Azure Data Lake Store-Verbindungs-Manager verwenden, um einen Azure Data Lake Store-Dienst mit einem der beiden folgenden Authentifizierungstypen zu verbinden:
 -   Azure AD-Benutzeridentität
 -   Azure AD-Dienstidentität 
 
-Der Azure Data Lake-Speicher-Verbindungs-Manager ist eine Komponente von der [SQL Server Integration Services (SSIS) Feature Pack für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+Der Azure Data Lake Store-Verbindungs-Manager ist eine Komponente von [SQL Server Integration Services (SSIS) Feature Pack für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 >   [!NOTE]
 > Um sicherzustellen, dass der Azure Data Lake Store-Verbindungsmanager und die Komponenten, die ihn verwenden – das bedeutet Azure Data Lake Store Source und Azure Data Lake Store Destination – eine Verbindung zu Diensten herstellen können, stellen Sie sicher, dass Sie die neueste Version von Azure Feature Pack [hier](https://www.microsoft.com/download/details.aspx?id=49492)herunterladen. 
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Konfigurieren des Azure Data Lake Store-Verbindungs-Manager
 
-1.  In der **SSIS-Verbindungs-Manager hinzufügen** wählen Sie im Dialogfeld **AzureDataLake**, und wählen Sie dann **hinzufügen**. Die **Azure Data Lake-Speicher-Verbindungs-Manager-Editor** Dialogfeld wird geöffnet.
+1.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** **AzureDataLake** aus, und klicken Sie auf **Hinzufügen**. Das Dialogfeld **Azure Data Lake Store Connection Manager Editor** (Azure Data Lake Store-Verbindungs-Manager-Editor) wird geöffnet.
   
-2.  In der **Azure Data Lake-Speicher-Verbindungs-Manager-Editor** Dialogfeld die **ADLS Host** Feld, geben Sie die URL der Azure Data Lake-Speicher-Host. Zum Beispiel: `https://test.azuredatalakestore.net` oder `test.azuredatalakestore.net`.
+2.  Geben Sie im Dialogfeld **Azure Data Lake Store Connection Manager Editor** (Azure Data Lake Store-Verbindungs-Manager-Editor) im Feld **ADLS Host** (ADLS-Host) die URL des Azure Data Lake Store-Hosts ein. Zum Beispiel: `https://test.azuredatalakestore.net` oder `test.azuredatalakestore.net`.
   
-3.  In der **Authentifizierung** Feld, und wählen Sie den entsprechenden Authentifizierungstyp für den Datenzugriff in Azure Data Lake-Speicher.
+3.  Wählen Sie im Feld **Authentifizierung** den entsprechenden Authentifizierungstyp für den Zugriff auf Daten in Azure Data Lake Store aus.
 
-    1.  Bei Auswahl der **Azure AD-Benutzeridentität** Authentifizierung aktivieren, führen Sie folgende Schritte aus:
-        1. Geben Sie Werte für die **Benutzername** und **Kennwort** Felder. 
+    1.  Wenn Sie die Authentifizierungsoption **Azure AD-Benutzeridentität** ausgewählt haben, gehen Sie wie folgt vor:
+        1. Geben Sie Werte für die Felder **Benutzername** und **Kennwort** an. 
     
-        2. Wählen Sie zum Testen der Verbindung **Verbindung testen**. Wenn Sie oder der mandantenadministrator zuvor stimmen nicht SSIS wählen, um den Zugriff auf Ihre Azure Data Lake-Speicher-Daten zulassen **Accept** Aufforderung. Weitere Informationen über diese Zustimmungsoberfläche finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. Klicken Sie auf **Verbindung testen**, um die Verbindung zu testen. Wenn Sie oder der Mandantenadministrator dem Zugriff von SSIS auf Ihre Azure Data Lake Store-Daten nicht zugestimmt haben, klicken Sie bei Aufforderung auf **Accept** (Zustimmen). Weitere Informationen über diese Zustimmungsoberfläche finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
         >   [!NOTE] 
-        > Bei Auswahl der **Azure AD-Benutzeridentität** Authentifizierungsoption, mehrstufige Authentifizierung und Authentifizierung der Microsoft-Konto werden nicht unterstützt.
+        > Bei Auswahl der Authentifizierungsoption **Azure AD-Benutzeridentität** werden die mehrstufige Authentifizierung und die Authentifizierung mittels Microsoft-Konto nicht unterstützt.
     
-    2. Bei Auswahl der **Azure AD-Dienstidentität** Authentifizierung aktivieren, führen Sie folgende Schritte aus:
-        1. Erstellen Sie ein Azure Active Directory (AAD)-Anwendung und Dienst Dienstprinzipalnamen für den Azure Data Lake-Datenzugriff.
+    2. Wenn Sie die Option **Azure AD Service Identity** (Azure AD-Dienstidentität) ausgewählt haben, gehen Sie wie folgt vor:
+        1. Erstellen Sie eine AAD-Anwendung (Azure Active Directory) und einen Dienstprinzipal für den Zugriff auf Daten in Azure Data Lake.
     
-        2. Weisen Sie die erforderlichen Berechtigungen für diese AAD-Anwendung, die Ihre Azure Data Lake-Ressourcen zugreifen können. Weitere Informationen zu dieser Authentifizierungsoption finden Sie unter [Use portal to create Active Directory application and service principal that can access resources (Verwenden von Portal zum Erstellen von Active Directory-Anwendungen und Dienstprinzipal zum Zugriff auf Ressourcen)](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Weisen Sie der AAD-Anwendung die entsprechenden Berechtigungen zu, damit diese auf Ihre Azure Data Lake-Ressourcen zugreifen kann. Weitere Informationen zu dieser Authentifizierungsoption finden Sie unter [Use portal to create Active Directory application and service principal that can access resources (Verwenden von Portal zum Erstellen von Active Directory-Anwendungen und Dienstprinzipal zum Zugriff auf Ressourcen)](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
-        3. Geben Sie Werte für die **Clientkennung**, **Geheimschlüssel**, und **Mandantenname** Felder.
+        3. Geben Sie Werte für die Felder **Client-ID**, **Geheimer Schlüssel** und **Mandantenname** an.
     
-        4. Wählen Sie zum Testen der Verbindung **Verbindung testen**.  
+        4. Klicken Sie auf **Verbindung testen**, um die Verbindung zu testen.  
   
-6.  Wählen Sie **OK** schließen die **Azure Data Lake-Speicher-Verbindungs-Manager-Editor** (Dialogfeld).  
+6.  Klicken Sie auf **OK**, um das Dialogfeld **Azure Data Lake Store Connection Manager Editor** (Azure Data Lake Store-Verbindungs-Manager-Editor) zu schließen.  
 
-## <a name="view-the-properties-of-the-connection-manager"></a>Zeigen Sie die Eigenschaften des Verbindungs-Managers
+## <a name="view-the-properties-of-the-connection-manager"></a>Anzeigen der Eigenschaften des Verbindungs-Managers
 Die Eigenschaften des Verbindungs-Managers, die Sie im Fenster **Eigenschaften** erstellt haben, werden angezeigt.  
   
   
-

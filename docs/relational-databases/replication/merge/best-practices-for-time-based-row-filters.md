@@ -2,29 +2,30 @@
 title: "Bewährte Methoden für zeitbasierte Zeilenfilter | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- best practices
+helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bewährte Methoden für zeitbasierte Zeilenfilter
-  Benutzer von Anwendungen benötigen häufig eine zeitbasierte Teilmenge der Daten in einer Tabelle. Ein Verkäufer könnte z. B. Daten zu Bestellungen der letzten Woche benötigen und ein Ereignisplaner Daten zu Ereignissen in der kommenden Woche. Anwendungen verwenden in diesen Fällen häufig Abfragen mit der **GETDATE()** -Funktion. Betrachten Sie die folgende Zeilenfilteranweisung:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Benutzer von Anwendungen benötigen häufig eine zeitbasierte Teilmenge der Daten in einer Tabelle. Ein Verkäufer könnte z. B. Daten zu Bestellungen der letzten Woche benötigen und ein Ereignisplaner Daten zu Ereignissen in der kommenden Woche. Anwendungen verwenden in diesen Fällen häufig Abfragen mit der **GETDATE()** -Funktion. Betrachten Sie die folgende Zeilenfilteranweisung:  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
@@ -94,9 +95,9 @@ GO
   
  Die Ereignisse für die nächste Woche sind nunmehr als replikationsbereit markiert. Wird der Merge-Agent das nächste Mal für das Abonnement ausgeführt, das der Ereigniskoordinator 112 verwendet, werden die Zeilen 2, 3 und 4 auf den Abonnenten heruntergeladen, und die Zeile 1 wird vom Abonnenten entfernt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implementieren von Aufträgen](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

@@ -3,7 +3,7 @@ title: Beispiel der Status-Eigenschaft (Recordset) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Recordset], Visual Basic example
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 04f599ee353033b0874a7e7f18ab572d19b225bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47093e6eca66a135034a63bc2f05041555a1481b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-example-recordset-vb"></a>Beispiel der Status-Eigenschaft (Recordset) (VB)
 Dieses Beispiel verwendet die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft, um anzuzeigen, welche Datensätze in einem Batchvorgang geändert wurden, bevor eine Batchaktualisierung aufgetreten ist.  
@@ -106,5 +105,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Status-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
-
+ [Status-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

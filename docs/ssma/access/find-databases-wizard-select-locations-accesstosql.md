@@ -1,38 +1,38 @@
 ---
 title: "Datenbanken-Assistent (Wählen Sie Speicherorte) suchen (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Find Databases Wizard
+helpviewer_keywords: Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c254ca94d75abd78acabc6c008c5d8350ba30cd2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Datenbanken-Assistent (Wählen Sie Speicherorte) suchen (AccessToSQL)
 Auf der Seite Standorte auswählen des Assistenten Datenbanken suchen Geben Sie die Suchparameter zum Suchen von Access-Datenbanken.  
   
 Klicken Sie im Assistenten zum Suchen von Datenbanken zum Öffnen der **Datei** Menü klicken Sie auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Durchsuchen**  
 Klicken Sie auf diese Option, um den Computer oder im Netzwerk zu suchen. Wählen Sie den Ordner oder den Speicherort zu suchen, und klicken Sie dann auf **OK**. Klicken Sie auf **hinzufügen** an diesem Speicherort zur Liste hinzuzufügen.  
   
@@ -70,4 +70,3 @@ Geben Sie den vollständigen Windows-Benutzername des Besitzers. Dadurch werden 
 [Hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

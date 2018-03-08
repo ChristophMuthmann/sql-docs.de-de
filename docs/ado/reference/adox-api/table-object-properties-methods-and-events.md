@@ -3,7 +3,7 @@ title: Tabelle Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Table object [ADOX], members
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 14513ebdb460ab08fb513e5cc0f00fc8e4571240
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd8cc780e9f1152c48f8fb24877d17356433d0d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="table-object-properties-methods-and-events"></a>Tabelle-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -37,13 +36,13 @@ ms.lasthandoff: 09/09/2017
   
  [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
- [Die Auflistung der Schlüssel (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [ParentCatalog-Eigenschaft (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
   
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-

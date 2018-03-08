@@ -1,10 +1,13 @@
 ---
-title: Dateiverbindungs-Manager | Microsoft Docs
+title: Dateiverbindungs-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-caps.latest.revision: 50
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f45869a6a4df80f2051ff52dd5566e6ca2576f3b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="file-connection-manager"></a>Dateiverbindungs-Manager
   Mit einem Dateiverbindungs-Manager kann ein Paket auf eine vorhandene Datei oder einen vorhandenen Ordner verweisen bzw. eine Datei oder einen Ordner zur Laufzeit erstellen. Beispielsweise können Sie auf eine Excel-Datei verweisen. Zur Ausführung bestimmter Komponenten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden in Dateien enthaltene Informationen verwendet. Beispielsweise kann ein Task SQL ausführen auf eine Datei verweisen, die die SQL-Anweisungen enthält, die vom Task ausgeführt werden. Mit anderen Komponenten werden Vorgänge für Dateien ausgeführt. Mit dem Task Dateisystem kann beispielsweise auf eine Datei verwiesen werden, die an einen neuen Ort kopiert werden soll.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  In der folgenden Tabelle sind die Werte von **FileUsageType**aufgeführt.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Der Dateiverbindungs-Manager verwendet eine vorhandene Datei.|  
 |**1**|Der Dateiverbindungs-Manager erstellt eine Datei.|  
@@ -76,11 +78,11 @@ ms.lasthandoff: 08/09/2017
   
  Weitere Informationen zum Dateiverbindungs-Manager finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verwendungstyp**  
  Geben Sie an, ob die Verbindung vom **Dateiverbindungs-Manager** zu einer vorhandenen Datei oder einem vorhandenen Ordner hergestellt werden soll, oder ob dafür eine neue Datei oder ein neuer Ordner erstellt werden soll.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Datei erstellen|Erstellen Sie zur Laufzeit eine neue Datei.|  
 |Vorhandene Datei|Verwenden Sie eine vorhandene Datei.|  
@@ -96,4 +98,3 @@ ms.lasthandoff: 08/09/2017
  Wählen Sie die Datei oder den Ordner mithilfe des Dialogfelds **Datei auswählen** oder des Dialogfelds **Ordner suchen** aus.  
   
   
-

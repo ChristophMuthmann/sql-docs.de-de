@@ -1,12 +1,13 @@
 ---
 title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - DBCC FLUSHAUTHCACHE
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ba6a519ebcdbbc70bf19ec491539a3b07fb6c85
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f3eca7d8191ff7ff7570167c6ec4250258ab2ac5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Leert den Datenbankcache der Authentifizierung mit den Informationen zu Anmeldungen und Firewallregeln für den aktuellen Benutzerdatenbank [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Diese Anweisung gilt nicht für der logischen master-Datenbank, weil der master-Datenbank den physischen Speicher für die Informationen zu Anmeldungen und Firewall-Regeln enthält. Der Benutzer die Anweisung ausführt und andere derzeit verbundene Benutzer bleiben verbunden. (DBCC FLUSHAUTHCACHE wird derzeit nicht unterstützt für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  
@@ -65,4 +65,3 @@ DBCC FLUSHAUTHCACHE;
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
-

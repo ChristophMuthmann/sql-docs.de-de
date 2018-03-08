@@ -3,8 +3,11 @@ title: _ (Platzhalterzeichen-einzelnes zu suchendes Zeichen) (Transact-SQL) | Mi
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 01bc0c4c006ae55395d752a0377575fa680dffaa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (Platzhalterzeichen - einzelnes zu suchendes Zeichen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Verwenden Sie den Unterstrich _ mit jedem beliebigen einzelnes Zeichen in einem Zeichenfolgenvergleich übereinstimmen, den Mustervergleich, z. B. umfasst `LIKE` und `PATINDEX`.  
   
@@ -47,7 +49,7 @@ Verwenden Sie den Unterstrich _ mit jedem beliebigen einzelnes Zeichen in einem 
 
 Das folgende Beispiel gibt alle Datenbank-Name mit dem Buchstaben beginnt `m` und haben den Buchstaben `d` als dritten Buchstaben. Der Unterstrich gibt an, dass das zweite Zeichen des Namens beliebigen Buchstaben kann. Die `model` und `msdb` Datenbanken, die diese Kriterien erfüllen. Die `master` Datenbank nicht vorhanden.
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -65,7 +67,7 @@ Mehrere Unterstriche können Sie mehrere Zeichen darstellen. Ändern der `LIKE` 
 ### <a name="b-more-complex-example"></a>B: Beispiel komplexere
  Im folgenden Beispiel wird den Operator _ finden aller Personen in der `Person` -Tabelle verwendet, die einen drei Buchstaben bestehenden Vornamen haben, die mit enden `an`.  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -76,14 +78,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>"C:" Escapezeichen Unterstrich   
 Das folgende Beispiel gibt die Namen von festen Datenbankrollen wie `db_owner` und `db_ddladmin`, aber sie gibt überdies die `dbo` Benutzer. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 Der Unterstrich in der dritten Zeichenposition stammt als Platzhalter, und ist nicht für nur Prinzipale, die beginnend mit den Buchstaben gefiltert `db_`. Escapezeichen für der Unterstrich Einschließung in Klammern `[_]`. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
@@ -100,10 +102,9 @@ db_securityadmin
 
   
 ## <a name="see-also"></a>Siehe auch  
- [WIE &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (Platzhalterzeichen – zu suchende(s) Zeichen)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Platzhalterzeichen – zu suchende(s) Zeichen)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; (Platzhalterzeichen - nicht zu suchende(s) Zeichen)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   
-

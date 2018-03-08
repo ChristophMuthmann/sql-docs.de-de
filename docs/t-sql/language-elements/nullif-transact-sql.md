@@ -3,8 +3,11 @@ title: NULLIF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - NULLIF function
 - equivalent expressions [SQL Server]
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fe8e4663688ce510d9600ebeba9d3c30703ee3aa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 91037a9e07ade78f3c37dcb11d315d6e88d330ef
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt einen NULL-Wert zurück, wenn die beiden angegebenen Ausdrücke gleich sind. Beispielsweise `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` für die erste Spalte (4 und 4) gibt NULL zurück, da die beiden Eingabewerte identisch sind. Die zweite Spalte gibt den ersten Wert (5) zurück, da die beiden Eingabewerte unterschiedlich sind. 
   
@@ -149,10 +151,9 @@ FROM budgets;
  ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Groß-/KLEINSCHREIBUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Decimal und Numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
-
 

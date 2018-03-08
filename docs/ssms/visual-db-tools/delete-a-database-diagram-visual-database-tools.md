@@ -3,10 +3,12 @@ title: "Löschen eines Datenbankdiagramms (Visual Database Tools) | Microsoft-Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - database diagrams [SQL Server], deleting
 - removing database diagrams
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 909710f164136630826d14d368dc831af03d01f6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Löschen eines Datenbankdiagramms (Visual Database Tools)
-Wenn Sie ein Datenbankdiagramm nicht mehr benötigen, können Sie es löschen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie ein Datenbankdiagramm nicht mehr benötigen, können Sie es löschen.  
   
 ### <a name="to-delete-a-database-diagram"></a>So löschen Sie ein Datenbankdiagramm  
   
@@ -42,7 +43,6 @@ Wenn Sie ein Datenbankdiagramm nicht mehr benötigen, können Sie es löschen.
   
 Das Datenbankdiagramm wird aus der Datenbank gelöscht. Beim Löschen eines Datenbankdiagramms werden die Tabellen im Diagramm nicht gelöscht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

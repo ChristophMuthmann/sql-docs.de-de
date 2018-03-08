@@ -1,10 +1,13 @@
 ---
 title: "\"uniqueidentifier\" (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 7/23/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,26 +22,25 @@ helpviewer_keywords:
 - globally unique identifiers [SQL Server]
 - GUIDs [SQL Server]
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 1450aa86e3f47ef27be5acd5b5410fe40dd5983e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 76f7a3c784c0d05e1a6f94da0b33207bfbb1efec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 Ein 16-Byte-GUID.
   
 ## <a name="remarks"></a>Hinweise  
 Es gibt die folgenden Möglichkeiten, um eine Spalte oder lokale Variable vom Datentyp **uniqueidentifier** zu initialisieren:
--   Mithilfe der NEWID-Funktion.  
+-   Mithilfe der [NEWID](../../t-sql/functions/newid-transact-sql.md) oder [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) Funktionen.    
 -   Durch die Konvertierung einer Zeichenfolgenkonstanten der Form *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, in der jedes *x* für eine hexadezimale Ziffer zwischen 0 und 9 bzw. a und f steht. Beispielsweise ist 6F9619FF-8B86-D011-B42D-00C04FC964FF ein gültiger **uniqueidentifier** -Wert.  
   
 Vergleichsoperatoren können mit **uniqueidentifier** -Werten verwendet werden. Allerdings erfolgt das Sortieren nicht durch Vergleichen der Bitmuster der beiden Werte. Die einzigen Operationen, die gegen erfolgen können eine **"uniqueidentifier"** Wert sind Vergleiche (= <>, \<, >, \<=, > =) und das Überprüfen auf NULL (IS NULL und IS NOT NULL). Es können keine weiteren arithmetischen Operatoren verwendet werden. Alle Spalteneinschränkungen und -eigenschaften, außer der IDENTITY-Eigenschaft, können mit dem **uniqueidentifier** -Datentyp verwendet werden.
@@ -86,9 +88,8 @@ String                                       TruncatedValue
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40; Transact-SQL &#41; ](../../t-sql/functions/newsequentialid-transact-sql.md) 
- [Festgelegt @local_variable &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+[NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   
   
-

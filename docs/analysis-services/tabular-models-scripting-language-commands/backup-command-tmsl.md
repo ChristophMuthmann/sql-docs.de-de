@@ -2,32 +2,29 @@
 title: Backup-Befehl (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 50e6f8e6f5b01fce2eb0bb6a5dbcd84dd631d994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c0e31a8ad1269e6b6d93463f99d39490e6f52b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-command-tmsl"></a>Befehl "Backup" (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Sichert eine Analysis Services-Datenbank in einer ABF-Sicherungsdatei.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Sichert eine Analysis Services-Datenbank in einer ABF-Sicherungsdatei.  
   
 ## <a name="request"></a>Anforderung  
   
@@ -59,8 +56,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Eigenschaft**|**Default**|**Description**|  
-|database|[Erforderlich]|Der Name des Datenbankobjekts gesichert werden soll.|  
+|**Eigenschaft**|**Default**|**Beschreibung**|  
+|Datenbank|[Erforderlich]|Der Name des Datenbankobjekts gesichert werden soll.|  
 |file|[Erforderlich]|Die Sicherungsdatei/Pfad.|  
 |Kennwort|Empty|Das Kennwort zum Verschlüsseln der Sicherungsdatei verwendet werden soll.|  
 |allowOverwrite|False|Ein boolescher Wert, der bei "true", gibt an, dass eine Sicherungsdatei, die bereits vorhanden ist, werden überschrieben; andernfalls "false".|  
@@ -100,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
-

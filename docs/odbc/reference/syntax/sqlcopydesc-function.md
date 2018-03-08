@@ -3,33 +3,30 @@ title: SQLCopyDesc Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCopyDesc
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCopyDesc
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCopyDesc
-helpviewer_keywords:
-- SQLCopyDesc function [ODBC]
+f1_keywords: SQLCopyDesc
+helpviewer_keywords: SQLCopyDesc function [ODBC]
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2df05d157c7079a3b5c1a8ef9286dd2c4c7a633
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8e7383a16b40a966612784e864594588cc37199
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc-Funktion
 **Konformität**  
@@ -202,4 +199,3 @@ while (SQL_SUCCEEDED(rc)) {
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

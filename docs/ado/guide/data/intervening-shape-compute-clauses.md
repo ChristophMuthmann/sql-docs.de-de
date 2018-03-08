@@ -3,7 +3,7 @@ title: Beteiligte Form COMPUTE-Klauseln | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9604b599bb7ce50bb0160553a38f0c002f5e611b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f96448c095c9b2e818e413bcd131d11fa464782
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="intervening-shape-compute-clauses"></a>Beteiligte Form COMPUTE-Klauseln
 Es ist zulässig, betten ein oder mehrere COMPUTE-Klauseln zwischen den übergeordneten und untergeordneten in einem parametrisierten Shape-Befehl, wie im folgenden Beispiel:  
@@ -47,4 +46,3 @@ RELATE state TO PARAMETER 0)
  [Daten strukturiert werden, Beispiel](../../../ado/guide/data/data-shaping-example.md)   
  [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
-

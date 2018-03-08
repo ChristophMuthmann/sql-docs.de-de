@@ -2,28 +2,29 @@
 title: "SQL Server Managed Backup für Microsoft Azure | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 44
-author: MightyPen
-ms.author: genemi
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: bfca544879559953ed3c70d5137edd17ae9d89e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
-ms.contentlocale: de-de
-ms.lasthandoff: 08/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup für Microsoft Azure
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwaltet und automatisiert SQL Server-Sicherungen in Microsoft Azure Blob Storage. Sie können es SQL Server ermöglichen, den Sicherungszeitplan basierend auf der Transaktionsarbeitsauslastung Ihrer Datenbank zu bestimmen. Alternativ können Sie die erweiterten Optionen zum Bestimmen eines Zeitplans verwenden. Die Aufbewahrungseinstellungen bestimmen, wie lange die Sicherungen in Azure Blob Storage gespeichert werden. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] unterstützt die Wiederherstellung zu einem bestimmten Zeitpunkt für den angegebenen Beibehaltungszeitraum.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 08/24/2017
 ##  <a name="Prereqs"></a> Voraussetzungen  
  Microsoft Azure Storage wird von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum Speichern der Sicherungsdateien verwendet. Die folgenden Voraussetzungen gelten:  
   
-|Voraussetzung|Beschreibung|  
+|Voraussetzung|Description|  
 |------------------|-----------------|  
 |**Microsoft Azure-Konto**|Für erste Schritte mit Azure können Sie die [kostenlose Testversion](http://azure.microsoft.com/pricing/free-trial/) verwenden, bevor Sie sich mit den [Kaufoptionen](http://azure.microsoft.com/pricing/purchase-options/)beschäftigen.|  
 |**Azure-Speicherkonto**|Die Sicherungen werden in einem Azure Blob Storage zugeordneten Azure-Speicherkonto gespeichert. Eine Schritt-für-Schritt-Anleitung zum Erstellen eines Speicherkontos finden Sie unter [Informationen zu Azure-Speicherkonten](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 08/24/2017
   
 |||  
 |-|-|  
-|Systemobjekt|Beschreibung|  
+|Systemobjekt|Description|  
 |**MSDB**|Speichert die Metadaten und den Sicherungsverlauf für alle von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]erstellten Sicherungen.|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Aktiviert [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Konfiguriert die erweiterten Einstellungen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], wie z.B. die Verschlüsselung.|  
@@ -130,9 +131,9 @@ ms.lasthandoff: 08/24/2017
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendet die Funktion „Sichern in Blockblob“. Die maximale Größe eines Blockblobs beträgt 200 GB. Die maximale Größe einer einzelnen Sicherung kann durch Verbinden jedoch bis zu 12 TB betragen. Wenn Ihre Sicherungsanforderungen diese Größen überschreiten, ziehen Sie eine Komprimierung in Betracht, und testen Sie die Sicherungsdateigröße vor dem Einrichten von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Sie können diese testen, indem Sie eine Sicherung entweder auf einem lokalen Datenträger oder manuell mithilfe der Transact-SQL-Anweisung **BACKUP TO URL** in einen Microsoft Azure-Speicher durchführen. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gelten ggf. bestimmte Einschränkungen, wenn eine Konfiguration in Kombination mit anderen Technologien erfolgt, die Sicherungen, eine hohe Verfügbarkeit und eine Wiederherstellung im Notfall unterstützen.  
+-   Für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gelten ggf. bestimmte Einschränkungen, wenn eine Konfiguration in Kombination mit anderen Technologien erfolgt, die Sicherungen, Hochverfügbarkeit und eine Wiederherstellung im Notfall unterstützen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 - [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Deaktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
@@ -140,4 +141,3 @@ ms.lasthandoff: 08/24/2017
 - [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
-

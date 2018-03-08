@@ -3,7 +3,7 @@ title: Resync-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 68c8642b778f6fe73f30096101308328b7b46ebc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 392dd82f2b6412c537a86cc68331cffc852069b8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-method"></a>Resync-Methode
 Aktualisiert die Daten in der aktuellen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, oder [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt, aus der zugrunde liegenden Datenbank.  
@@ -76,11 +75,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 |||  
 |-|-|  
-|[Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Resync-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync-(VC++-Methodenbeispiel)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [OriginalValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)
-
+ [UnderlyingValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)

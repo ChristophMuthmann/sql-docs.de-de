@@ -3,22 +3,26 @@ title: Konfigurieren von Failover Instanz Clusterspeicher SMB - SQL Server on Li
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c32c0593df6b40cc76ecafaabc0571090f2907fa
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Konfigurieren der Failover-Clusterinstanz - SMB - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Artikel erläutert die SMB-Speicher für eine Failoverclusterinstanz (FCI) unter Linux konfigurieren. 
  
@@ -77,7 +81,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
     mkdir <TempDir>
     ```
 
-    <TempDir>ist der Name des Ordners. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/tmp.
+    <TempDir> ist der Name des Ordners. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -161,14 +165,14 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
 
    *    Geben Sie beenden, um den Stamm nicht sein.
 
-   *    Starten Sie SqlServer. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
+   *    Start SQL Server. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
  
-   *    Um weitere zu testen, erstellen Sie eine Datenbank, um sicherzustellen, dass die Berechtigungen Ordnung sind. Das folgende Beispiel verwendet Transact-SQL. Sie können SSMS verwenden.
+   *    Um weitere zu testen, erstellen Sie eine Datenbank, um sicherzustellen, dass die Berechtigungen Ordnung sind. Im folgenden Beispiel wird die Transact-SQL; Sie können SSMS verwenden.
 
     ![10_testcreatedb][2] 
   
@@ -205,7 +209,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
     mkdir <FolderName>
     ```
 
-    \<Ordnername > ist der Name des Ordners. Vollständiger Pfad des Ordners müssen angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
+    \<Ordnername > ist der Name des Ordners. Vollständigen Ordnerpfad muss angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -235,7 +239,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
  
    * Geben Sie Exit nicht mehr der Superuser sein.
 
-   * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im Beispiel unten verwendet Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
+   * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im folgenden Beispiel wird Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
  
    * Heben Sie die Bereitstellung der Freigabe 
 
@@ -260,4 +264,3 @@ Sie können nun die FCI konfigurieren.
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 
 [2]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/10-testcreatedb.png 
-

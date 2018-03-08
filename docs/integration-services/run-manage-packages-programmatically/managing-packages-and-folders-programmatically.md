@@ -1,12 +1,14 @@
 ---
-title: Programmgesteuertes Verwalten von Paketen und Ordnern | Microsoft Docs
+title: Programmgesteuerte Verwaltung von Paketen und Ordnern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: run-manage-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,22 +18,21 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a40acf3a586c74119d948291fd179f78833cb37a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4d0213c5ae32099a934daf88c2c60ef12204b86c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Programmgesteuerte Verwaltung von Paketen und Ordnern
-<a name="top"></a>Beim programmgesteuerten arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete, Sie möchten u. u. zu bestimmen, ob ein einzelnes Paket oder ein Ordner vorhanden ist, oder zum Verwalten der Ordner, in denen Pakete gespeichert sind. Die <xref:Microsoft.SqlServer.Dts.Runtime.Application> Klasse von der <xref:Microsoft.SqlServer.Dts.Runtime> Namespace bietet eine Vielzahl von Methoden, um diese Anforderungen zu erfüllen.    
+<a name="top"></a> Beim programmgesteuerten Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen möchten Sie vielleicht feststellen, ob ein einzelnes Paket oder ein einzelner Ordner vorhanden ist, oder Sie möchten die Ordner mit gespeicherten Paketen verwalten. Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt eine Reihe von Methoden bereit, die diese Anforderungen erfüllen.    
     
-##  <a name="exists"></a>Bestimmen, ob ein Paket oder ein Ordner vorhanden ist    
+##  <a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist    
  Um programmgesteuert zu ermitteln, ob ein gespeichertes Paket vorhanden ist, rufen Sie eine der folgenden Methoden auf, bevor Sie versuchen, das Paket zu laden und auszuführen:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -46,12 +47,12 @@ ms.lasthandoff: 09/26/2017
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Zurück nach oben](#top)    
+ [Zurück zum Anfang](#top)    
     
-##  <a name="managing"></a>Verwalten von Paketen und Ordnern    
- Die <xref:Microsoft.SqlServer.Dts.Runtime.Application> Klasse von der <xref:Microsoft.SqlServer.Dts.Runtime> Namespace stellt zusätzliche Methoden zum Verwalten von Paketen und die Ordner, in denen diese gespeichert sind.    
+##  <a name="managing"></a> Verwalten von Paketen und Ordnern    
+ Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt zusätzliche Methoden zum Verwalten von Paketen und den Ordnern, in denen diese gespeichert sind, bereit.    
     
-###  <a name="managing_rempkg"></a>Entfernen eines Pakets    
+###  <a name="managing_rempkg"></a> Entfernen eines Pakets    
  Rufen Sie zum programmgesteuerten Entfernen eines gespeicherten Pakets eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -59,9 +60,9 @@ ms.lasthandoff: 09/26/2017
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [Zurück nach oben](#top)    
+ [Zurück zum Anfang](#top)    
     
-###  <a name="managing_create"></a>Erstellen eines Ordners    
+###  <a name="managing_create"></a> Erstellen eines Ordners    
  Rufen Sie zum programmgesteuerten Erstellen eines Speicherordners eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -69,9 +70,9 @@ ms.lasthandoff: 09/26/2017
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [Zurück nach oben](#top)    
+ [Zurück zum Anfang](#top)    
     
-###  <a name="managing_remfldr"></a>Entfernen eines Ordners    
+###  <a name="managing_remfldr"></a> Entfernen eines Ordners    
  Rufen Sie zum programmgesteuerten Entfernen eines Speicherordners eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -79,9 +80,9 @@ ms.lasthandoff: 09/26/2017
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [Zurück nach oben](#top)    
+ [Zurück zum Anfang](#top)    
     
-###  <a name="managing_rename"></a>Umbenennen eines Ordners    
+###  <a name="managing_rename"></a> Umbenennen eines Ordners    
  Rufen Sie zum programmgesteuerten Umbenennen eines Speicherordners eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -89,11 +90,10 @@ ms.lasthandoff: 09/26/2017
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [Zurück nach oben](#top)    
+ [Zurück zum Anfang](#top)    
     
-## <a name="see-also"></a>Siehe auch    
- [Paketverwaltung &#40; SSIS-Dienst &#41;](../../integration-services/service/package-management-ssis-service.md)     
+## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+ [Paketverwaltung &#40;SSIS-Dienst&#41;](../../integration-services/service/package-management-ssis-service.md)     
  [Programmgesteuertes Auflisten verfügbarer Pakete](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     
   
-

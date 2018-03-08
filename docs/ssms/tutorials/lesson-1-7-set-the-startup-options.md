@@ -2,29 +2,30 @@
 title: Festlegen der Startoptionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "27"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 34887b262ebd1b956b4f9e99b958187c0b7ac224
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c1d447993d3d72272b1e8e6f84c367db4a03f5be
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-7---set-the-startup-options"></a>Lektion 1-7: Festlegen der Startoptionen
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann so konfiguriert werden, dass die Entwurfsoberfläche beim Starten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit der von Ihnen bevorzugten Konfiguration geöffnet wird. Wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] so einstellen, dass es mit der gewünschten Konfiguration geöffnet wird, können Sie Zeit sparen.  
   
 ## <a name="configuring-startup-options"></a>Konfigurieren von Startoptionen  
@@ -49,9 +50,8 @@ ms.lasthandoff: 07/31/2017
   
     Beachten Sie auch die anderen Optionen, die für Sie u. U. interessant sind, wie z. B. **Systemobjekte im Objekt-Explorer ausblenden**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Wiederherstellen der Standardkonfiguration von SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  
   
   
   
-

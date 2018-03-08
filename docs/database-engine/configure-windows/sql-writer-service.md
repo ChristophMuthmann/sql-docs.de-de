@@ -2,11 +2,13 @@
 title: SQL Writer-Dienst | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ee2c7079b0ef44294585c8b8aaa4548fdf12892f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27c61a50efdfd11316b7d31e7f8f3cfd13ca7a7c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-writer-service"></a>SQL Writer-Dienst
-  Der SQL Writer-Dienst bietet zusätzliche Funktionalität zum Sichern und Wiederherstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über dass VSS-Framework (Volume Shadow Copy Service, Volumeschattenkopie-Dienst).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der SQL Writer-Dienst bietet zusätzliche Funktionalität zum Sichern und Wiederherstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über dass VSS-Framework (Volume Shadow Copy Service, Volumeschattenkopie-Dienst).  
   
  Der SQL Writer Service wird automatisch installiert. Er muss ausgeführt werden, wenn die Anwendung des Volumenschattenkopie-Diensts (VSS, Volume Shadow Copy Service) eine Sicherung oder Wiederherstellung anfordert. Verwenden Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Services-Applet, um den Dienst zu konfigurieren. Der SQL Writer-Dienst kann auf allen Betriebssystemen installiert werden.  
   
@@ -78,4 +79,3 @@ ms.lasthandoff: 08/02/2017
 -   Seitenwiederherstellung  
   
   
-

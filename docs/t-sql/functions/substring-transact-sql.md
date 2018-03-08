@@ -3,8 +3,11 @@ title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: 65
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7f36ec82c65e5d52c2186c67033adddbf1700c4d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt einen Teil eines Zeichen-, Binär-, Text- oder Bildausdrucks in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
@@ -52,7 +54,7 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  Ist eine **Zeichen**, **binäre**, **Text**, **Ntext**, oder **Image**[Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *Starten*  
+ *start*  
  Eine ganze Zahl oder **"bigint"** Ausdruck, der angibt, wo die zurückgegebenen Zeichen beginnen. (Die Nummerierung ist 1 basierend, was bedeutet, dass das erste Zeichen im Ausdruck 1 ist). Wenn *starten* ist kleiner als 1 ist, beginnt der zurückgegebene Ausdruck beim ersten Zeichen, die im angegebenen *Ausdruck*. In diesem Fall wird die Anzahl der Zeichen, die zurückgegeben werden den größten Wert der Summe der *starten* + *Länge*– 1 oder 0. Wenn *starten* ist größer als die Anzahl der Zeichen im Wertausdruck, wird ein Ausdruck mit der Länge 0 (null) zurückgegeben.  
   
  *length*  
@@ -63,9 +65,9 @@ SUBSTRING ( expression ,start , length )
   
 |Angegebener Ausdruck|Rückgabetyp|  
 |--------------------------|-----------------|  
-|**Char**/**Varchar**/**Text**|**varchar**|  
-|**NCHAR**/**Nvarchar**/**Ntext**|**nvarchar**|  
-|**binäre**/**Varbinary**/**Bild**|**varbinary**|  
+|**char**/**varchar**/**text**|**varchar**|  
+|**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Werte für *starten* und *Länge* muss angegeben werden, in der Anzahl der Zeichen für **Ntext**, **Char**, oder **Varchar**  Datentypen und Bytes für **Text**, **Image**, **binäre**, oder **Varbinary** Datentypen.  
@@ -91,10 +93,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |St |
-|tempdb  |t  |Management Pack |
+|master  |m  |st |
+|tempdb  |t  |mp |
 |model   |m  |de |
-|msdb    |m  |DB |
+|msdb    |m  |db |
 
 
   
@@ -222,9 +224,14 @@ bcd
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
-
 
 

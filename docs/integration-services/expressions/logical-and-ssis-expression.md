@@ -1,10 +1,13 @@
 ---
-title: '&amp;&amp;(Logisches AND) (SSIS-Ausdruck) | Microsoft Docs'
+title: '&amp;&amp; (Logisches AND) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,19 +17,18 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a52d1a0bf10aba48b1e628a9253c7f2361f58506
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 762ba60573bfcaf08fb9d2c38f1a8ec2e5a08cfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;(Logisches AND) (SSIS-Ausdruck)
+# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (Logisches AND) (SSIS-Ausdruck)
   Führt eine logische AND-Operation aus. Der Ausdruck wird zu TRUE ausgewertet, falls alle Bedingungen TRUE sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,7 +45,7 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle wird das Ergebnis des &&-Operators dargestellt.  
   
 |Ergebnis|expression|expression|  
@@ -68,10 +70,9 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [& &#40; Bitweises AND &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
- [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [& &#40;Bitweises AND&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
+ [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

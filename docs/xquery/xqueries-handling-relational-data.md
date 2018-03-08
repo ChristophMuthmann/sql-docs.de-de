@@ -3,8 +3,11 @@ title: XQuery-Abfragen verarbeiten von relationalen Daten | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,28 +20,27 @@ helpviewer_keywords:
 - relational data [XQuery]
 - XQuery, relational data
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 420caf1620974293f279e72892f0da2cad6a140b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7765f20211ebd1278136f198b6957d674c52871c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xqueries-handling-relational-data"></a>Behandlung relationaler Daten mit XQuery-Abfragen
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Sie XQuery dafür angeben einer **Xml** -Typspalte oder-Variable mithilfe eines der [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md). Dazu gehören **query()**, **value()**, **exist()**, oder **modify()**. Die XQuery wird für die XML-Instanz ausgeführt, die in der XML generierenden Abfrage angegeben ist.  
   
  XML, das durch Ausführen einer XQuery-Abfrage erzeugt wird, kann Werte enthalten, die aus anderen Transact-SQL-Variablen oder aus Rowsetspalten abgerufen werden. Um relationale Nicht-XML-Daten an das XML-Ergebnis zu binden, bietet SQL Server die folgenden Pseudofunktionen als XQuery-Erweiterungen:  
   
--   **SQL:Column()** Funktion  
+-   **sql:column()** function  
   
--   **SQL:Variable()** Funktion  
+-   **sql:variable()** function  
   
  Diese XQuery-Erweiterungen können beim Angeben einer XQuery-Abfrage in der **query()** Methode der **Xml** -Datentyp. Daher die **query()** Methode kann XML, das Daten von XML- und nicht-kombiniert erzeugen-**Xml** -Datentypen.  
   
@@ -52,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [XML-Konstruktion &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
   
   
-

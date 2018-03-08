@@ -3,10 +3,12 @@ title: Spaltendaten | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 36349c0928c690b66a8c3c758a508ba9bfcbb6a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-data"></a>Spaltendaten
 > [!IMPORTANT]  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 >  Die Cursorbibliothek nicht seinem Cache nach einer Spalte aktualisiert, wenn **StrLen_or_IndPtr* im entsprechenden Rowset Puffer SQL_DATA_AT_EXEC oder das Ergebnis des Makros SQL_LEN_DATA_AT_EXEC ist.  
   
  Wenn sie eine Spalte, eine von Datenquellendaten leer füllt Zeichen fester Länge und NULL-Wert fester Länge, binäre Daten nach Bedarf aktualisiert. Beispielsweise speichert eine Datenquelle als "Smith" "Smith" in einer char(10)-Spalte vom Datentyp. Die Cursorbibliothek ist Daten in die Rowset-Puffer nicht mit Leerzeichen aufgefüllt oder mit Nullen aufgefüllt, wenn er diese Daten in den Cache kopiert, nach der Ausführung einer positioniertes Update-Anweisung. Aus diesem Grund, wenn eine Anwendung erfordert, dass die Werte im Cache für die Cursorbibliothek mit Leerzeichen aufgefüllt oder mit Nullen aufgefüllt sind, muss er mit Leerzeichen aufgefüllt oder mit Nullen aufgefüllt die Werte in den Puffern Rowsets vor der Ausführung einer positioniertes Update-Anweisung.
-

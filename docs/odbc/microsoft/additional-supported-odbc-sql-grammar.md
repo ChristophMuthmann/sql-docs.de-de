@@ -3,27 +3,28 @@ title: "Zusätzliche ODBC SQL-Grammatik unterstützt | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 86be4015366a6e18e5a97a2fd719e44298c23465
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Zusätzliche unterstützte ODBC-SQL-Grammatik
 Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden Klauseln vollständig in der Grammatik Core und erweiterte ODBC 2.5. Zusätzliche Informationen kann angezeigt werden, indem springen zu den [ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement.md), [Korrelationsnamen](../../odbc/microsoft/correlation-names.md), und [Prozeduraufruf](../../odbc/microsoft/procedure-invocation.md) Themen.  
@@ -40,21 +41,21 @@ Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden 
   
 -   [ZWISCHEN Prädikat](../../odbc/microsoft/between-predicate.md) (Core)  
   
--   [CREATE Indexanweisung](../../odbc/microsoft/create-index-statement.md)  
+-   [CREATE INDEX-Anweisung](../../odbc/microsoft/create-index-statement.md)  
   
--   [Datum arithmetische Operationen](../../odbc/microsoft/date-arithmetic.md)  
+-   [Datumsarithmetik](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: Date, Time und Timestamp-Literale](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: Datums-, Zeit- und Zeitstempelliterale](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX-Anweisung](../../odbc/microsoft/drop-index-statement.md)  
   
 -   [Textdatei mit fester Breite](../../odbc/microsoft/fixed-width-text-file.md)  
   
--   [GROUP BY-Ausdruck-Liste](../../odbc/microsoft/group-by-expression-list.md)  
+-   [GROUP BY-Ausdrucksliste](../../odbc/microsoft/group-by-expression-list.md)  
   
--   [ORDER BY-Ausdruck-Liste](../../odbc/microsoft/order-by-expression-list.md)  
+-   [ORDER BY-Ausdrucksliste](../../odbc/microsoft/order-by-expression-list.md)  
   
--   [ORDER BY, GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
+-   [ORDER BY mit GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
 -   EXISTS-Prädikat (Core)  
   
@@ -66,7 +67,6 @@ Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden 
   
 -   Unterabfragen (untergeordnete SELECT-Ausdrücke) (Core)  
   
--   [Skalare Funktionen](../../odbc/microsoft/scalar-functions.md)  
+-   [Skalarfunktionen](../../odbc/microsoft/scalar-functions.md)  
   
 -   [Tabellennamen](../../odbc/microsoft/table-names.md)
-

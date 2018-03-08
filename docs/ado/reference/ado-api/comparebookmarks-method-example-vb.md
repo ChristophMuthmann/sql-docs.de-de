@@ -3,7 +3,7 @@ title: CompareBookmarks-Methode (Beispiel) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f018ed177dbf616ce59f088c8960ebab4fbd2c97
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 863480d83a992ef3a32b731b13aad9ef3cb5ea56
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks-Methode (Beispiel) (VB)
 Dieses Beispiel zeigt die [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) Methode. Der relative Wert von Lesezeichen ist nur selten erforderlich, es sei denn, ein bestimmtes Lesezeichens aus irgendeinem Grund spezielle.  
@@ -144,4 +143,3 @@ End Sub
  [CompareBookmarks-Methode (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

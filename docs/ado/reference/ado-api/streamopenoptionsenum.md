@@ -3,7 +3,7 @@ title: StreamOpenOptionsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e234d22e68d90819d73702542f7d3763ddd2f8c3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 268d495d2163d03244a6bec57762b93a26ab32ea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 Gibt Optionen zum Öffnen einer [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt. Die Werte können mit einer OR-Operation kombiniert werden.  
@@ -43,5 +42,4 @@ Gibt Optionen zum Öffnen einer [Stream](../../../ado/reference/ado-api/stream-o
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Open-Methode (ADO-Datenstrom)](../../../ado/reference/ado-api/open-method-ado-stream.md)
-
+ [Open-Methode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)

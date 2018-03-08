@@ -2,32 +2,29 @@
 title: Partitionen-Objekt (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7580d00c4fa5fa35b215fed991c811489c3f5571
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-object-tmsl"></a>Partitionen-Objekt (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Definiert eine Partition oder logische Segmentierung, der das Rowset für die Tabelle. Eine Partition besteht aus einer SQL-Abfrage zum Importieren von Daten für die Beispieldaten in der modellierungsumgebung oder als vollständige Abfrage für Pass-through-Ausführung von Abfragen über DirectQuery verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert eine Partition oder logische Segmentierung, der das Rowset für die Tabelle. Eine Partition besteht aus einer SQL-Abfrage zum Importieren von Daten für die Beispieldaten in der modellierungsumgebung oder als vollständige Abfrage für Pass-through-Ausführung von Abfragen über DirectQuery verwendet.  
   
  Eigenschaften für die Partition wird bestimmt, wie die Daten für die Tabelle als Quelle fungiert.  In der Objekthierarchie ist das übergeordnete Objekt einer Partition ein Table-Objekt.  
   
@@ -245,8 +242,7 @@ ms.lasthandoff: 09/01/2017
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

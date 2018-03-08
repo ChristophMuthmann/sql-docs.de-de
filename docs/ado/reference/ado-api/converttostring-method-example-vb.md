@@ -3,7 +3,7 @@ title: ConvertToString-Methode (Beispiel) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ConvertToString method [ADO], Visual Basic example
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8e0283a8676176343c9d5e02a68ffc41405685f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 94c84810ba74671d27c4ffd98556b6aa2878e660
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="converttostring-method-example-vb"></a>ConvertToString-Methode (Beispiel) (VB)
 ```  
@@ -109,4 +108,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [ConvertToString-Methode (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

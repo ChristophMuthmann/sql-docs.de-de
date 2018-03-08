@@ -3,7 +3,7 @@ title: "IsolationLevel und Eigenschaften-Beispiel für Modus (VB) | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d59b27059ee4249bebbe3d35129a755e91544895
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db959e87da2bb2c9cb8c9aaa4603c6aa865e3826
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel und Eigenschaften-Beispiel für Modus (VB)
 Dieses Beispiel verwendet die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft, um eine exklusive Verbindung öffnen und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) Eigenschaft öffnen Sie eine Transaktion, die durchgeführt wird, von anderen Transaktionen isoliert.  
@@ -127,4 +126,3 @@ End Sub
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel-Eigenschaft](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode-Eigenschaft (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
-

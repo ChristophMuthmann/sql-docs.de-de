@@ -1,10 +1,13 @@
 ---
-title: 'Schritt 3: Testen der bereitgestellten Pakete | Microsoft Docs'
+title: 'Schritt 3: Testen der bereitgestellten Pakete | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e51a4fb96520cd5a887fe27fb5eddd62062f4eae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lektion 3 – 3 – Testen der bereitgestellten Pakete
-In dieser Aufgabe testen Sie die Pakete, die Sie auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellt haben.  
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lektion 3-3: Testen der bereitgestellten Pakete
+In dieser Aufgabe testen Sie die Pakete, die Sie auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitgestellt haben.  
   
 In anderen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials haben Sie Pakete in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], der Entwicklungsumgebung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], mithilfe des Befehls **Debuggen starten** im Menü **Debuggen** ausgeführt. Dieses Mal führen Sie die Pakete auf andere Weise aus.  
   
@@ -36,7 +38,7 @@ Sie verwenden das Paketausführungshilfsprogramm, um die bereitgestellten Pakete
 > [!NOTE]  
 > Sie sollten die Optionen nicht ändern, um sicherzustellen, dass die Pakete im Kontext dieses Lernprogramms erfolgreich ausgeführt werden.  
   
-Bevor Sie Pakete mithilfe des Paketausführungshilfsprogramms in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausführen, stellen Sie sicher, dass der Integration Services-Dienst ausgeführt wird. Der Integration Services-Dienst stellt Unterstützung für das Speichern und Ausführen von Paketen bereit. Wird der Dienst beendet, können Sie keine Verbindung mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen, und die auszuführenden Pakete werden nicht in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aufgelistet. Sie benötigen außerdem Berechtigungen zum Ausführen des Pakets auf der Instanz, auf der das Paket bereitgestellt wurde. Weitere Informationen finden Sie unter [Integration Services-Rollen &#40;SSIS-Dienst&#41;](../integration-services/security/integration-services-roles-ssis-service.md).  
+Bevor Sie Pakete mithilfe des Paketausführungshilfsprogramms in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausführen, stellen Sie sicher, dass der Integration Services-Dienst ausgeführt wird. Der Integration Services-Dienst stellt Unterstützung für das Speichern und Ausführen von Paketen bereit. Wird der Dienst beendet, können Sie keine Verbindung mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen, und die auszuführenden Pakete werden nicht in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aufgelistet. Sie benötigen außerdem Berechtigungen zum Ausführen des Pakets auf der Instanz, auf der das Paket bereitgestellt wurde. Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](../integration-services/security/integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).  
   
 Die Ordner auf der obersten Ebene innerhalb des Ordners Gespeicherte Pakete sind die benutzerdefinierten Ordner, die vom Integration Services-Dienst überwacht werden. Sie können beliebig viele (oder wenige) Ordner in der Datei MsDtsSrvr.ini.xml angeben. In diesem Lernprogramm wird davon ausgegangen, dass Sie die Standarddatei MsDtsSrvr.ini.xml verwenden und dass die Ordner auf der obersten Ebene von Gespeicherte Pakete die Namen Dateisystem und MSDB besitzen.  
   
@@ -49,7 +51,7 @@ Die Ordner auf der obersten Ebene innerhalb des Ordners Gespeicherte Pakete sind
     > [!IMPORTANT]  
     > Wenn Sie keine Verbindung mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]herstellen können, wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst wahrscheinlich nicht ausgeführt. Wenn Sie weitere Informationen zum Status des Diensts erhalten möchten, klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**. Klicken Sie im linken Bereich auf **SQL Server-Dienste**. Suchen Sie im rechten Bereich den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst. Starten Sie den Dienst, wenn er nicht bereits ausgeführt wird.  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]wird geöffnet. Standardmäßig ist das Fenster des Objekt-Explorers geöffnet und in der oberen rechten Ecke des Studios platziert. Ist der Objekt-Explorer nicht geöffnet, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer** .  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird geöffnet. Standardmäßig ist das Fenster des Objekt-Explorers geöffnet und in der oberen rechten Ecke des Studios platziert. Ist der Objekt-Explorer nicht geöffnet, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer** .  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>So führen Sie die Pakete mithilfe des Paketausführungshilfsprogramms aus  
   
@@ -110,9 +112,8 @@ Die Ordner auf der obersten Ebene innerhalb des Ordners Gespeicherte Pakete sind
   
     Die Abfrage gibt 21 Datenzeilen zurück. Das Ergebnis besteht aus den Zeilen der XML-Datendatei orders.xml. Die einzelnen Zeilen sind Zusammenfassungen nach Land bzw. Region. In der Zeile werden der Name eines Landes bzw. einer Region, die Anzahl der Aufträge für jedes Land bzw. für jede Region und die Datumswerte der neuesten und ältesten Aufträge aufgelistet.  
   
-## <a name="see-also"></a>Siehe auch  
-[DTExec (Hilfsprogramm)](../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[dtexec (Hilfsprogramm)](../integration-services/packages/dtexec-utility.md)  
   
   
   
-

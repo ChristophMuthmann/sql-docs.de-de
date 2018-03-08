@@ -1,10 +1,13 @@
 ---
-title: Benutzerdefinierte Eigenschaften der Transformation | Microsoft Docs
+title: Benutzerdefinierte Eigenschaften von Transformationen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -41,18 +44,18 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a69a7252045efacefccfa0847741e76309999ce9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="transformation-custom-properties"></a>Benutzerdefinierte Eigenschaften von Transformationen
+# <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Neben den Eigenschaften, die die meisten Datenflussobjekte im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Objektmodell aufweisen, verfügen zahlreiche Datenflussobjekte über benutzerdefinierte objektspezifische Eigenschaften. Diese benutzerdefinierten Eigenschaften sind nur zur Laufzeit verfügbar und sind nicht in der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Referenz-Dokumentation dokumentiert.  
   
  In diesem Thema werden die benutzerdefinierten Eigenschaften der verschiedenen Datenflusstransformationen aufgelistet und beschrieben. Informationen über die gemeinsamen Eigenschaften der meisten Datenflussobjekte finden Sie unter [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
@@ -116,7 +119,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Überwachungstransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |LineageItemSelected|Ganze Zahl (Enumeration)|Das für die Ausgabe ausgewählte Überwachungsobjekt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **GUID der Ausführungsinstanz** (0)<br /><br /> **Startzeit der Ausführung** (4)<br /><br /> **Computername** (5)<br /><br /> **Paket-ID** (1)<br /><br /> **Paketname** (2)<br /><br /> **Task-ID** (8)<br /><br /> **Taskname** (7)<br /><br /> **Benutzername** (6)<br /><br /> **Versions-ID** (3)|  
   
@@ -131,11 +134,11 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|ConnectionManager|String|Gibt den Namen des Verbindungs-Managers an.|  
+|ConnectionManager|Zeichenfolge|Gibt den Namen des Verbindungs-Managers an.|  
 |ValidateExternalMetadata|Boolean|Gibt an, ob die Cachetransformation zur Entwurfszeit mit externen Datenquellen überprüft wird. Wenn die Eigenschaft auf **False**festgelegt wird, erfolgt zur Laufzeit eine Überprüfung anhand externer Datenquellen.<br /><br /> Der Standardwert lautet **True**.|  
-|AvailableInputColumns|String|Eine Liste der verfügbaren Eingabespalten.|  
-|InputColumns|String|Eine Liste der ausgewählten Eingabespalten.|  
-|CacheColumnName|String|Gibt den Namen der Spalte an, die einer ausgewählten Eingabespalte zugeordnet wird.<br /><br /> Der Name der Spalte in der CacheColumnName-Eigenschaft muss mit dem Namen der entsprechenden Spalte übereinstimmen, die auf der Seite **Spalten** des **Editors für den Cacheverbindungs-Manager**aufgelistet ist.<br /><br /> Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).|  
+|AvailableInputColumns|Zeichenfolge|Eine Liste der verfügbaren Eingabespalten.|  
+|InputColumns|Zeichenfolge|Eine Liste der ausgewählten Eingabespalten.|  
+|CacheColumnName|Zeichenfolge|Gibt den Namen der Spalte an, die einer ausgewählten Eingabespalte zugeordnet wird.<br /><br /> Der Name der Spalte in der CacheColumnName-Eigenschaft muss mit dem Namen der entsprechenden Spalte übereinstimmen, die auf der Seite **Spalten** des **Editors für den Cacheverbindungs-Manager**aufgelistet ist.<br /><br /> Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).|  
   
 ##  <a name="charmap"></a> Benutzerdefinierte Eigenschaften der Transformation zum Zuordnen der Zeichen  
  Die Transformation zum Zuordnen der Zeichen verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
@@ -159,8 +162,8 @@ ms.lasthandoff: 08/03/2017
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |EvaluationOrder|Integer|Ein Wert, der die Position einer Bedingung, die einer Ausgabe zugeordnet ist, in der Liste der Bedingungen angibt, die die Transformation für bedingtes Teilen auswertet. Die Bedingungen werden vom niedrigsten bis zum höchsten Wert ausgewertet.|  
-|expression|String|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch Herkunftsbezeichner dargestellt.|  
-|FriendlyExpression|String|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch ihre Namen dargestellt.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
+|expression|Zeichenfolge|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch Herkunftsbezeichner dargestellt.|  
+|FriendlyExpression|Zeichenfolge|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch ihre Namen dargestellt.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
 |IsDefaultOut|Boolean|Ein Wert, der angibt, ob die Ausgabe die Standardausgabe ist.|  
   
  Die Eingabe, die Eingabespalten und die Ausgabespalten der Transformation für bedingtes Teilen verfügen nicht über benutzerdefinierte Eigenschaften.  
@@ -172,7 +175,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für das Kopieren von Spalten. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |copyColumnId|Integer|Die **LineageID** der Eingabespalte, aus der die Ausgabespalte kopiert wird.|  
   
@@ -187,7 +190,7 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Der Standardwert dieser Eigenschaft ist **False**. Weitere Informationen finden Sie unter [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) und [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
+|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Der Standardwert dieser Eigenschaft ist **False**. Weitere Informationen finden Sie unter [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) und [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). zugreifen.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |SourceInputColumnLineageId|Integer|Die **LineageID** der Eingabespalte, die die Quelle der Ausgabespalte ist.|  
   
  Die Eingabe, die Eingabespalten und die Ausgabe der Transformation für Datenkonvertierung verfügen nicht über benutzerdefinierte Eigenschaften.  
@@ -201,13 +204,13 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|ASConnectionId|String|Der eindeutige Bezeichner des Verbindungsobjekts.|  
-|ASConnectionString|String|Die Verbindungszeichenfolge zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Projekt oder einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank.|  
-|CatalogName|String|Der Name einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank.|  
-|ModelName|String|Der Name des Data Mining-Modells.|  
-|ModelStructureName|String|Der Name der Miningstruktur.|  
-|ObjectRef|String|Ein XML-Tag, das die Data Mining-Struktur identifiziert, die von der Transformation verwendet wird.|  
-|QueryText|String|Die Vorhersageabfrageanweisung, die die Transformation verwendet.|  
+|ASConnectionId|Zeichenfolge|Der eindeutige Bezeichner des Verbindungsobjekts.|  
+|ASConnectionString|Zeichenfolge|Die Verbindungszeichenfolge zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Projekt oder einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank.|  
+|CatalogName|Zeichenfolge|Der Name einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank.|  
+|ModelName|Zeichenfolge|Der Name des Data Mining-Modells.|  
+|ModelStructureName|Zeichenfolge|Der Name der Miningstruktur.|  
+|ObjectRef|Zeichenfolge|Ein XML-Tag, das die Data Mining-Struktur identifiziert, die von der Transformation verwendet wird.|  
+|QueryText|Zeichenfolge|Die Vorhersageabfrageanweisung, die die Transformation verwendet.|  
   
  Die Eingabe, die Eingabespalten, die Ausgabe und die Ausgabespalten der Transformation für Data Mining-Abfragen verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -220,8 +223,8 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|expression|String|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch die **LineageID** -Eigenschaft für die Spalte dargestellt.|  
-|FriendlyExpression|String|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch ihre Namen dargestellt.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
+|expression|Zeichenfolge|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch die **LineageID** -Eigenschaft für die Spalte dargestellt.|  
+|FriendlyExpression|Zeichenfolge|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch ihre Namen dargestellt.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
   
  Die Eingabe und die Ausgabe der Transformation für abgeleitete Spalten verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -264,7 +267,7 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|Trennzeichen|String|Die von der Transformation verwendeten Tokentrennzeichen. Die Standardtrennzeichen umfassen folgende Zeichen: Leerzeichen (), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppelte gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches und-Zeichen (&), Schrägstrich markieren (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnen die Klammer ([]), schließende Klammer (]), öffnende geschweifte Klammer ({}), schließende geschweifte Klammer (}), Pipe (&#124;), Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
+|Trennzeichen|Zeichenfolge|Die von der Transformation verwendeten Tokentrennzeichen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;), Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
 |Exhaustive|Boolean|Ein Wert, der angibt, ob jeder Eingabedatensatz mit jedem anderen Eingabedatensatz verglichen wird. Der Wert von **True** wird meistens zu Debugzwecken verwendet. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MaxMemoryUsage|Integer|Die Höchstmenge an Arbeitsspeicher zur Verwendung durch die Transformation. Der Standardwert dieser Eigenschaft ist **0**, wodurch die dynamische Speicherauslastung aktiviert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MinSimilarity|Double|Der Schwellenwert für die Ähnlichkeit, mit dem die Transformation Duplikate ermittelt, der als ein Wert zwischen 0 und 1 ausgedrückt wird.  Der Standardwert dieser Eigenschaft ist 0.8.|  
@@ -281,7 +284,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Fuzzygruppierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |ColumnType|Ganze Zahl (Enumeration)|Ein Wert, der den Typ der Ausgabespalte identifiziert. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Nicht definiert** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Ähnlichkeit** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Kanonisch**(6)|  
 |InputID|Integer|Die **LineageID** der entsprechenden Eingabespalte.|  
@@ -298,16 +301,16 @@ ms.lasthandoff: 08/03/2017
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Gibt an, ob eine Kopie der Verweistabelle für die Indexerstellung der Fuzzysuche und nachfolgende Suchen erstellt werden soll. Der Standardwert dieser Eigenschaft ist **True**.|  
-|Trennzeichen|String|Die Trennzeichen, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen. Die Standardtrennzeichen umfassen folgende Zeichen: Leerzeichen (), Komma (,), Punkt (.) Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppelte gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches und-Zeichen (&), Schrägstrich markieren (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnen die Klammer ([]), schließende Klammer (]), öffnende geschweifte Klammer ({}), schließende geschweifte Klammer (}), Pipe (&#124;). Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
+|Trennzeichen|Zeichenfolge|Die Trennzeichen, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;). Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
 |DropExistingMatchIndex|Boolean|Ein Wert, der angibt, ob der in MatchIndexName angegebene Übereinstimmungsindex gelöscht wird, wenn MatchIndexOptions nicht auf ReuseExistingIndex festgelegt ist. Der Standardwert dieser Eigenschaft ist **True**.|  
 |Exhaustive|Boolean|Ein Wert, der angibt, ob jeder Eingabedatensatz mit jedem anderen Eingabedatensatz verglichen wird. Der Wert von **True** wird meistens zu Debugzwecken verwendet. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzysuche**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
-|MatchIndexName|String|Der Name des Übereinstimmungsindexes. Der Übereinstimmungsindex ist die Tabelle, in der die Transformation den von ihr verwendeten Index erstellt und speichert. Wenn der Übereinstimmungsindex wiederverwendet wird, gibt MatchIndexName den wiederzuverwendenden Index an. MatchIndexName muss ein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Bezeichnername sein. Wenn der Name z. B. Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.|  
+|MatchIndexName|Zeichenfolge|Der Name des Übereinstimmungsindexes. Der Übereinstimmungsindex ist die Tabelle, in der die Transformation den von ihr verwendeten Index erstellt und speichert. Wenn der Übereinstimmungsindex wiederverwendet wird, gibt MatchIndexName den wiederzuverwendenden Index an. MatchIndexName muss ein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Bezeichnername sein. Wenn der Name z. B. Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.|  
 |MatchIndexOptions|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie die Transformation den Übereinstimmungsindex verwaltet. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **ReuseExistingIndex** (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
 |MaxMemoryUsage|Integer|Die maximale Cachegröße für die Suchtabelle. Der Standardwert dieser Eigenschaft ist **0**. Das bedeutet, dass es kein Limit für die Cachegröße gibt.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzysuche**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MaxOutputMatchesPerInput|Integer|Die maximale Anzahl der Übereinstimmungen, die pro Eingabezeile von der Transformation zurückgegeben werden können. Der Standardwert dieser Eigenschaft ist **1**.<br /><br /> Hinweis: Werte größer als 100 können nur mit dem **Erweiterten Editor**angegeben werden.|  
 |MinSimilarity|Integer|Der Schwellenwert für die Ähnlichkeit, den die Transformation auf der Komponentenebene verwendet und der als ein Wert zwischen 0 und 1 angegeben wird. Nur Zeilen, die größer sind als der Schwellenwert, gelten als Übereinstimmung.|  
-|ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
-|ReferenceTableName|String|Der Name der Suchtabelle. Der Name muss ein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Bezeichnername sein. Wenn der Name z. B. Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.|  
+|ReferenceMetadataXML|Zeichenfolge|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
+|ReferenceTableName|Zeichenfolge|Der Name der Suchtabelle. Der Name muss ein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Bezeichnername sein. Wenn der Name z. B. Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.|  
 |WarmCaches|Boolean|Wenn der Wert "true" ist, lädt die Suche den Index und die Verweistabelle in den Arbeitsspeicher, bevor die Ausführung beginnt. Dadurch kann die Leistung optimiert werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Fuzzysuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
@@ -316,7 +319,7 @@ ms.lasthandoff: 08/03/2017
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Integer|Ein Wert, der angibt, wie die Transformation die Zeichenfolgendaten in einer Spalte vergleicht. Weitere Informationen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |FuzzyComparisonFlagsEx|Ganze Zahl (Enumeration)|Ein Wert, der angibt, welche erweiterten Vergleichsflags die Transformation verwendet. Die Werte können **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**, und **NoMapping**umfassen. **NoMapping** kann nicht mit anderen Flags verwendet werden.|  
-|JoinToReferenceColumn|String|Ein Wert, der den Namen der Spalte in der Verweistabelle angibt, mit der die Spalte verknüpft wird.|  
+|JoinToReferenceColumn|Zeichenfolge|Ein Wert, der den Namen der Spalte in der Verweistabelle angibt, mit der die Spalte verknüpft wird.|  
 |JoinType|Integer|Ein Wert, der angibt, ob die Transformation eine Fuzzyübereinstimmung oder eine genaue Übereinstimmung ausführt. Der Standardwert für diese Eigenschaft ist **Fuzzy**. Der ganzzahlige Wert für den genauen Jointyp ist **1** , und der Wert für den Fuzzyjointyp ist **2**.|  
 |MinSimilarity|Double|Der Schwellenwert für die Ähnlichkeit, den die Transformation auf der Spaltenebene verwendet und der als ein Wert zwischen 0 und 1 angegeben wird. Nur Zeilen, die größer sind als der Schwellenwert, gelten als Übereinstimmung.|  
   
@@ -328,7 +331,7 @@ ms.lasthandoff: 08/03/2017
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |ColumnType|Ganze Zahl (Enumeration)|Ein Wert, der den Typ der Ausgabespalte für Spalten ermittelt, die die Transformation der Ausgabe hinzufügt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Nicht definiert** (0)<br /><br /> **Ähnlichkeit** (1)<br /><br /> **Vertrauen** (2)<br /><br /> **ColumnSimilarity** (3)|  
-|CopyFromReferenceColumn|String|Ein Wert, der den Namen der Spalte in der Verweistabelle angibt, die den Wert in einer Ausgabetabelle bereitstellt.|  
+|CopyFromReferenceColumn|Zeichenfolge|Ein Wert, der den Namen der Spalte in der Verweistabelle angibt, die den Wert in einer Ausgabetabelle bereitstellt.|  
 |SourceInputColumnLineageId|Integer|Ein Wert, der die Eingabespalte identifiziert, die Werte für diese Ausgabespalte bereitstellt.|  
   
  Die Eingabe und die Ausgabe der Transformation für Fuzzysuche verfügen nicht über benutzerdefinierte Eigenschaften.  
@@ -346,24 +349,24 @@ ms.lasthandoff: 08/03/2017
 |DefaultCodePage|Integer|Die zu verwendende Standardcodepage, wenn keine Codepageinformationen aus der Datenquelle verfügbar sind.|  
 |MaxMemoryUsage|Integer|Die maximale Cachegröße für die Suchtabelle. Der Standardwert dieser Eigenschaft ist **25**. Das bedeutet, dass es kein Limit für die Cachegröße gibt.|  
 |MaxMemoryUsage64|Integer|Die maximale Cachegröße für die Suchtabelle auf einem 64-Bit-Computer.|  
-|NoMatchBehavior|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob Zeilen ohne übereinstimmende Einträge im Verweisdataset als Fehler behandelt werden.<br /><br /> Wenn die Eigenschaft auf „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“ festgelegt wird, werden die Zeilen, die keine übereinstimmenden Einträge aufweisen, als Fehler behandelt. Mit der Seite **Fehlerausgabe** im Dialogfeld **Transformations-Editor für Suche** können Sie angeben, welche Aktionen ausgeführt werden sollen, wenn diese Art von Fehler auftritt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Wenn die Eigenschaft auf „**Zeilen ohne übereinstimmende Einträge an die Ausgabe nicht übereinstimmender Einträge senden** (1)“ festgelegt ist, werden die Zeilen nicht als Fehler behandelt.<br /><br /> Der Standardwert ist „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“.|  
-|ParameterMap|String|Eine durch Semikolons getrennte Liste von Herkunfts-IDs, die den in der **SqlCommand** -Anweisung verwendeten Parametern zugeordnet werden.|  
-|ReferenceMetadataXML|String|Metadaten für die Spalten in der Suchtabelle, die die Transformation in ihre Ausgabe kopiert.|  
-|SqlCommand|String|Die SELECT-Anweisung, die Daten in die Suchtabelle lädt.|  
-|SqlCommandParam|String|Die parametrisierte SQL-Anweisung, die Daten in die Suchtabelle lädt.|  
+|NoMatchBehavior|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob Zeilen ohne übereinstimmende Einträge im Verweisdataset als Fehler behandelt werden.<br /><br /> Wenn die Eigenschaft auf „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“ festgelegt wird, werden die Zeilen, die keine übereinstimmenden Einträge aufweisen, als Fehler behandelt. Mit der Seite **Fehlerausgabe** im Dialogfeld **Transformations-Editor für Suche** können Sie angeben, welche Aktionen ausgeführt werden sollen, wenn diese Art von Fehler auftritt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Wenn die Eigenschaft auf „**Zeilen ohne übereinstimmende Einträge an die Ausgabe nicht übereinstimmender Einträge senden** (1)“ festgelegt ist, werden die Zeilen nicht als Fehler behandelt.<br /><br /> Der Standardwert ist „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“.|  
+|ParameterMap|Zeichenfolge|Eine durch Semikolons getrennte Liste von Herkunfts-IDs, die den in der **SqlCommand** -Anweisung verwendeten Parametern zugeordnet werden.|  
+|ReferenceMetadataXML|Zeichenfolge|Metadaten für die Spalten in der Suchtabelle, die die Transformation in ihre Ausgabe kopiert.|  
+|SqlCommand|Zeichenfolge|Die SELECT-Anweisung, die Daten in die Suchtabelle lädt.|  
+|SqlCommandParam|Zeichenfolge|Die parametrisierte SQL-Anweisung, die Daten in die Suchtabelle lädt.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Suche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|CopyFromReferenceColumn|String|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
-|JoinToReferenceColumns|String|Der Name der Spalte in der Verweistabelle, mit der eine Quellspalte verknüpft wird.|  
+|CopyFromReferenceColumn|Zeichenfolge|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
+|JoinToReferenceColumns|Zeichenfolge|Der Name der Spalte in der Verweistabelle, mit der eine Quellspalte verknüpft wird.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Suche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|CopyFromReferenceColumn|String|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
+|CopyFromReferenceColumn|Zeichenfolge|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
   
  Die Eingabe und die Ausgabe der Transformation für Suche verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -383,7 +386,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Zusammenführungsjoin. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |InputColumnID|Integer|Die **LineageID** der Eingabespalte, aus der Daten in diese Ausgabespalte kopiert werden.|  
   
@@ -396,15 +399,15 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für OLE DB-Befehl.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **0**.|  
+|CommandTimeout|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **0**.|  
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn keine Codepageinformationen aus der Datenquelle verfügbar sind.|  
-|SqlCommand|String|Die Transact-SQL-Anweisung, die von der Transformation für jede Zeile im Datenfluss ausgeführt wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
+|SqlCommand|Zeichenfolge|Die Transact-SQL-Anweisung, die von der Transformation für jede Zeile im Datenfluss ausgeführt wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der externen Spalten der Transformation für OLE DB-Befehl. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |DBParamInfoFlag|Ganze Zahl (Bitmaske)|Eine Gruppe von Flags, die Parametereigenschaften beschreiben. Weitere Informationen finden Sie unter DBPARAMFLAGSENUM in der OLE DB-Dokumentation in der MSDN Library.|  
   
@@ -424,7 +427,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgaben der Transformation für Prozentwert-Stichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |Ausgewählt|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist „Ausgewählt“ auf **True**festgelegt, in der nicht ausgewählten Ausgabe auf **False**.|  
   
@@ -449,7 +452,7 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|PivotKeyValue|String|Einer der möglichen Werte aus der Spalte, der durch den Wert seiner PivotUsage-Eigenschaft als Pivotschlüssel markiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
+|PivotKeyValue|Zeichenfolge|Einer der möglichen Werte aus der Spalte, der durch den Wert seiner PivotUsage-Eigenschaft als Pivotschlüssel markiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
 |SourceColumn|Integer|Die **LineageID** einer Eingabespalte, die einen pivotierten Wert oder -1 enthält. Der Wert -1 gibt an, dass die Spalte nicht in einem Pivotvorgang verwendet wird.|  
   
  Weitere Informationen finden Sie unter [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md).  
@@ -459,9 +462,9 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Zeilenanzahl. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|VariableName|String|Der Name der Variablen, die die Zeilenanzahl enthält.|  
+|VariableName|Zeichenfolge|Der Name der Variablen, die die Zeilenanzahl enthält.|  
   
  Die Eingabe, die Eingabespalten, die Ausgabe und die Ausgabespalten der Transformation für Zeilenanzahl verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -479,7 +482,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgaben der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |Ausgewählt|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist „Ausgewählt“ auf **True**festgelegt, in der nicht ausgewählten Ausgabe auf **False**.|  
   
@@ -498,10 +501,10 @@ ms.lasthandoff: 08/03/2017
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Skriptkomponente beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|ReadOnlyVariables|String|Eine durch Trennzeichen getrennte Liste von Variablen für den schreibgeschützten Zugriff durch die Skriptkomponente.|  
-|ReadWriteVariables|String|Eine durch Trennzeichen getrennte Liste von Variablen für den Lese-/Schreibzugriff durch die Skriptkomponente.|  
+|ReadOnlyVariables|Zeichenfolge|Eine durch Trennzeichen getrennte Liste von Variablen für den schreibgeschützten Zugriff durch die Skriptkomponente.|  
+|ReadWriteVariables|Zeichenfolge|Eine durch Trennzeichen getrennte Liste von Variablen für den Lese-/Schreibzugriff durch die Skriptkomponente.|  
   
  Die Eingabe, die Eingabespalten, die Ausgabe und die Ausgabespalten der Skriptkomponente verfügen nicht über benutzerdefinierte Eigenschaften, sofern der Skriptentwickler keine benutzerdefinierten Eigenschaften erstellt.  
   
@@ -514,13 +517,13 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|CurrentRowWhere|String|Die WHERE-Klausel in der SELECT-Anweisung, die die aktuelle Zeile aus Zeilen mit demselben Geschäftsschlüssel auswählt.|  
+|CurrentRowWhere|Zeichenfolge|Die WHERE-Klausel in der SELECT-Anweisung, die die aktuelle Zeile aus Zeilen mit demselben Geschäftsschlüssel auswählt.|  
 |EnableInferredMember|Boolean|Ein Wert, der angibt, ob Updates abgeleiteter Elemente erkannt werden. Der Standardwert dieser Eigenschaft ist **True**.|  
 |FailOnFixedAttributeChange|Boolean|Ein Wert, der angibt, ob die Transformation fehlschlägt, wenn Zeilen oder Spalten mit festen Attributen Änderungen enthalten oder die Suche in der Dimensionstabelle fehlschlägt. Wenn Sie davon ausgehen, dass eingehende Zeilen neue Datensätze enthalten, legen Sie diesen Wert auf **True** fest, damit die Transformation fortgesetzt wird, wenn die Suche fehlgeschlagen ist, da die Transformation den Ausfall verwendet, um neue Datensätze zu ermitteln. Der Standardwert dieser Eigenschaft ist **False**.|  
 |FailOnLookupFailure|Boolean|Ein Wert, der angibt, ob die Transformation fehlschlägt, wenn eine Suche nach einem vorhandenen Datensatz fehlschlägt. Der Standardwert dieser Eigenschaft ist **False**.|  
 |IncomingRowChangeType|Integer|Ein Wert, der angibt, ob alle eingehenden Zeilen neue Zeilen sind oder ob die Transformation die Art der Änderung erkennen sollte.|  
-|InferredMemberIndicator|String|Der Spaltenname für das abgeleitete Element.|  
-|SqlCommand|String|Die SQL-Anweisung, die zum Erstellen eines Schemarowsets verwendet wird.|  
+|InferredMemberIndicator|Zeichenfolge|Der Spaltenname für das abgeleitete Element.|  
+|SqlCommand|Zeichenfolge|Die SQL-Anweisung, die zum Erstellen eines Schemarowsets verwendet wird.|  
 |UpdateChangingAttributeHistory|Boolean|Ein Wert, der angibt, ob Updates historischer Attribute an die Transformationsausgabe für veränderliche Attributupdates weitergeleitet werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für langsam veränderliche Dimensionen. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
@@ -571,8 +574,8 @@ ms.lasthandoff: 08/03/2017
 |IsCaseSensitive|Boolean|Ein Wert, der angibt, ob beim Extrahieren von Nomen und nominalen Ausdrücken die Groß-/Kleinschreibung berücksichtigt wird. Der Standardwert dieser Eigenschaft ist **False**.|  
 |MaxLengthOfTerm|Integer|Ein numerischer Wert, der die maximale Länge eines Ausdrucks angibt. Diese Eigenschaft bezieht sich nur auf Ausdrücke. Der Standardwert dieser Eigenschaft ist **12**.|  
 |NeedRefenceData|Boolean|Ein Wert, der angibt, ob die Transformation eine in einer Verweistabelle gespeicherte Liste mit Ausschlussausdrücken verwendet. Der Standardwert dieser Eigenschaft ist **False**.|  
-|OutTermColumn|String|Der Name der Spalte, die die Ausschlussausdrücke enthält.|  
-|OutTermTable|String|Der Name der Tabelle, die die Spalte mit Ausschlussausdrücken enthält.|  
+|OutTermColumn|Zeichenfolge|Der Name der Spalte, die die Ausschlussausdrücke enthält.|  
+|OutTermTable|Zeichenfolge|Der Name der Tabelle, die die Spalte mit Ausschlussausdrücken enthält.|  
 |ScoreType|Integer|Ein Wert, der den Ergebnistyp angibt, der dem Ausdruck zugeordnet werden soll. Gültige Werte sind 0 für Häufigkeit und 1 für ein TFIDF-Ergebnis. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) \* log( (Anz. Zeilen in der Eingabe) / (Anz. Zeilen mit T) ). Der Standardwert dieser Eigenschaft ist **0**.|  
 |WordOrPhrase|Integer|Ein Wert, der den Ausdruckstyp angibt. Die gültigen Werte sind 0 zur Angabe von Wörtern, 1 zur Angabe von nominalen Ausdrücken und 2 zur Angabe von Wörtern und nominalen Ausdrücken. Der Standardwert dieser Eigenschaft ist **0**.|  
   
@@ -588,8 +591,8 @@ ms.lasthandoff: 08/03/2017
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Boolean|Ein Wert, der angibt, ob ein Vergleich mit Beachtung der Groß-/Kleinschreibung auf die Übereinstimmung des Texts in der Eingabespalte und den Suchbegriff angewendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
-|RefTermColumn|String|Der Name der Spalte, die die Suchausdrücke enthält.|  
-|RefTermTable|String|Der Name der Tabelle, die die Spalte mit Suchausdrücken enthält.|  
+|RefTermColumn|Zeichenfolge|Der Name der Spalte, die die Suchausdrücke enthält.|  
+|RefTermTable|Zeichenfolge|Der Name der Tabelle, die die Spalte mit Suchausdrücken enthält.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
@@ -599,7 +602,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |CustomLineageID|Integer|Die **LineageID** der entsprechenden Eingabespalte, wenn der **InputColumnType** dieser Spalte 0 oder 2 ist.|  
   
@@ -618,11 +621,11 @@ ms.lasthandoff: 08/03/2017
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|Die **LineageID** der Ausgabespalte, der die Eingabespalte zugeordnet wird. Ein Wert von -1 gibt an, dass die Eingabespalte keiner Ausgabespalte zugeordnet wird.|  
-|PivotKeyValue|String|Ein Wert, der in eine Transformationsausgabespalte kopiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> In dem in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)beschriebenen Entpivotierungsszenario sind die Pivotwerte die Textwerte Ham, Coke, Milk, Beer und Chips. Diese werden in der neuen Produktspalte, die durch die **Name der Pivotschlüsselwert-Spalte** -Option festgelegt wird, als Textwerte angezeigt.|  
+|PivotKeyValue|Zeichenfolge|Ein Wert, der in eine Transformationsausgabespalte kopiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> In dem in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)beschriebenen Entpivotierungsszenario sind die Pivotwerte die Textwerte Ham, Coke, Milk, Beer und Chips. Diese werden in der neuen Produktspalte, die durch die **Name der Pivotschlüsselwert-Spalte** -Option festgelegt wird, als Textwerte angezeigt.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Entpivotierungstransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |PivotKey|Boolean|Gibt an, ob die Werte in der **PivotKeyValue** -Eigenschaft von Eingabespalten in diese Ausgabespalte geschrieben werden.<br /><br /> In dem in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)beschriebenen Entpivotierungsszenario lautete der Name der Pivotwertspalte **Product** und bezieht sich auf die neue **Product** -Spalte, in der die Pivotierung der Spalten Ham, Coke, Milk, Beer und Chips aufgehoben wird.|  
   
@@ -630,8 +633,8 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen finden Sie unter [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Pfadeigenschaften](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
  [Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  

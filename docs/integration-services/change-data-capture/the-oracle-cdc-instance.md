@@ -1,26 +1,28 @@
 ---
-title: Die Oracle CDC-Instanz | Microsoft Docs
+title: Oracle CDC-Instanz | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d06d4934318a045fff483e9866a72b929e69850d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC-Instanz
   Die Oracle CDC-Instanz ist ein vom Oracle CDC Service erstellter Prozess zur Verarbeitung der Änderungen, die aus einer einzelnen Oracle-Quelldatenbank aufgezeichnet wurden. Die Oracle CDC-Instanz ruft ihre Konfiguration aus der Tabelle **cdc.xdbcdc_config** ab und verwaltet ihren Status in der Tabelle **cdc.xdbcdc_state** . Diese Tabellen sind Teil der CDC-Datenbank, über die die Oracle CDC-Instanz definiert wird. Weitere Informationen zur Datenbank xdbcdc und zu Tabellen finden Sie unter [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
@@ -47,8 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Durchführen der Wiederherstellung:**Beim Starten einer Oracle CDC-Instanz wird ihr interner Status aus den Tabellen **xdbcdc_state** und **xdbcdc_staged_transactions** wiederhergestellt. Nachdem der Status wiederhergestellt wurde, fährt die CDC-Instanz normal fort.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehlerbehandlung](../../integration-services/change-data-capture/error-handling.md)  
   
   
-

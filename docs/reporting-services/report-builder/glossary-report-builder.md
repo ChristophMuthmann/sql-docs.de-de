@@ -1,27 +1,27 @@
 ---
-title: Glossar (Berichts-Generator) | Microsoft Docs
+title: Glossar (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
 |Farbregeln (color rules)|Der Algorithmus, durch den jedem Kartenelement auf einer Kartenebene automatisch Farben zugewiesen werden.|  
 |Farbskala|Ein Kartenlegendentyp, in dem die Bedeutung der in einer Karte verwendeten Farben erläutert wird.|  
 |Common Language Runtime (common language runtime)|Das Modul, das die zentrale Komponente der Ausführung von verwaltetem Code bildet. Die Runtime stellt verwalteten Code mit Diensten wie sprachübergreifende Integration, Codezugriffssicherheit, Verwaltung der Objektlebensdauer sowie Debug- und Profilerstellungsunterstützung bereit.|  
-|Komplexer Ausdruck (complex expression)|Ein Ausdruck, der nicht als einen einzigen integrierten Feldverweis dargestellt werden, und wird auf der Entwurfsoberfläche als <\<Expr >>.|  
+|Komplexer Ausdruck (complex expression)|Ein Ausdruck, der nicht durch einen einzigen integrierten Feldverweis dargestellt werden kann und auf der Entwurfsoberfläche als <\<Expr>> angezeigt wird.|  
 |Verkettung|Das Kombinieren von mindestens zwei Zeichenfolgen oder -ausdrücken zu einer Zeichenfolge bzw. einem Zeichenausdruck oder das Kombinieren von mindestens zwei Binärzeichenfolgen oder -ausdrücken zu einer Binärzeichenfolge oder einem Binärzeichenausdruck.|  
 |Parallelität (concurrency)|Ein Vorgang, der es ermöglicht, dass mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern. SQL Server verwendet Sperren, damit mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern können, ohne dass Konflikte auftreten.|  
 |CONFIG-Datei|Siehe anderen Begriff: Konfigurationsdatei (configuration file)|  
@@ -105,7 +105,7 @@ ms.lasthandoff: 08/09/2017
 |Datenquellenname (data source name)|In einem Bericht der Name des Datenquellenobjekts.|  
 |Datentyp|Ein Attribut, das die Art der Informationen angibt, die in einer Spalte, einem Parameter oder einer Variablen gespeichert werden können.|  
 |Data Warehouse|Eine Datenbank, die speziell für Abfragen und Analysen strukturiert ist.|  
-|database|Eine Auflistung von Informationen, Tabellen und anderen Objekten, die so strukturiert und dargestellt werden, dass sie einen bestimmten Zweck erfüllen, z. B. um Daten zu suchen, zu sortieren oder neu zusammenzustellen.|  
+|Datenbank|Eine Auflistung von Informationen, Tabellen und anderen Objekten, die so strukturiert und dargestellt werden, dass sie einen bestimmten Zweck erfüllen, z. B. um Daten zu suchen, zu sortieren oder neu zusammenzustellen.|  
 |Datenbankkatalog|Der Teil der Datenbank, der die Definition aller Objekte in der Datenbank sowie die Definition der Datenbank enthält.|  
 |Datenbankmodul|Das Programmmodul oder die Module, die Zugriff auf ein Datenbank-Managementsystem (DBMS) bereitstellen.|  
 |Datenbankdatei|Eine der physischen Dateien, aus denen eine Datenbank besteht.|  
@@ -173,7 +173,7 @@ ms.lasthandoff: 08/09/2017
 |Gruppierung (grouping)|Eine Datenmenge, die zusammen in einem Bericht gruppiert wird.|  
 |Temperaturverteilungskarte|Ein Typ einer Kartendarstellung, bei der die Intensität der Farbe für jedes Polygon den verknüpften analytischen Daten entspricht. Beispielsweise werden niedrige Werte in einem Bereich blau (kalt) und hohe Werte rot (heiß) dargestellt.|  
 |Hierarchie (hierarchy)|Eine logische Baumstruktur, die die Elemente einer Dimension so anordnet, dass jedes Element ein übergeordnetes Element und null oder mehr untergeordnete Elemente aufweist.|  
-|Hohe Verfügbarkeit|Status einer Ressource, die die meiste Zeit funktionstüchtig ist, von Clients genutzt werden kann und dabei einen sehr geringen Prozentsatz an Fehlern aufweist, die den Dienst unterbrechen.|  
+|Hochverfügbarkeit|Status einer Ressource, die die meiste Zeit funktionstüchtig ist, von Clients genutzt werden kann und dabei einen sehr geringen Prozentsatz an Fehlern aufweist, die den Dienst unterbrechen.|  
 |HTML|Siehe anderen Begriff: Hypertext Markup Language|  
 |HTML-Viewer|Eine Benutzeroberfläche, die aus einer Berichtssymbolleiste und anderen Steuerelementen zur Bearbeitung eines Berichts besteht.|  
 |Hypertext Markup Language (HTML)|Eine Textmarkupsprache, die zum Erstellen von Dokumenten für das Web verwendet wird. HTML definiert die Struktur und das Layout eines Webdokuments mittels verschiedener Tags und Attribute.|  
@@ -200,7 +200,7 @@ ms.lasthandoff: 08/09/2017
 |Legende (legend)|Ein Element in einem Berichtsdiagramm, einer Karte oder einem Messgerätdatenbereich, das den Zusammenhang zwischen den dargestellten Daten und den zugrunde liegenden Datenwerten erläutert.|  
 |Linienebene|Eine Ebene in einem Kartenberichtselement, die räumliche Daten als Linien darstellt, z. B. für Wege oder Routen.|  
 |Verknüpfter Bericht (linked report)|Ein Bericht, der mittels unterschiedlicher Parameterwerte oder Eigenschaften auf eine vorhandene Berichtsdefinition verweist. Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.|  
-|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
+|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
 |Lokaler Server (local server)|1. Bei SQL Server-Verbindungen eine Instanz von SQL Server, die auf demselben Computer wie die Anwendung ausgeführt wird. <br />2. Beim Auflösen von Verweisen auf die Datenbankobjekte in einer Transact-SQL-Anweisung ist dies die Instanz von SQL Server, die die Anweisung ausführt. <br />3. Bei verteilten Abfragen von SQL Server ist dies die Instanz von SQL Server, die die verteilte Abfrage ausführt. Der lokale Server greift dann auf die Verbindungsserver zu, auf die in der Abfrage verwiesen wird.|  
 |Gebietsschema|Das Attribut des Windows-Betriebssystems, das bestimmte Verhaltensweisen im Zusammenhang mit der Sprache definiert.|  
 |Gebietsschema-ID (LCID) (locale identifier, LCID)|Eine Nummer, die ein Windows-basiertes Gebietsschema identifiziert.|  
@@ -265,7 +265,7 @@ ms.lasthandoff: 08/09/2017
 |Primäre Tabelle|Die "1"-Seite von zwei verknüpften Tabellen in einer 1:n-Beziehung.|  
 |Projektion (projection)|Eine Zuordnung von Daten aus einem N-dimensionalen Koordinatensystem zu einem (N-1)-dimensionalen Koordinatensystem. Beispielsweise das Zuordnen von dreidimensionalen geografischen Daten zu einer zweidimensionalen Anzeigeoberfläche.|  
 |Eigenschaftenseite|Ein Dialogfeld, das Informationen über ein Objekt in der Schnittstelle anzeigt.|  
-|Eigenschaft|Ein benanntes Attribut eines Steuerelements, eines Felds oder eines Datenbankobjekts, das festgelegt wird, um eines der Merkmale des Objekts (z. B. Größe, Farbe oder Bildschirmposition) oder einen Aspekt seines Verhaltens (z. B. ob es ausgeblendet ist) zu definieren.|  
+|property|Ein benanntes Attribut eines Steuerelements, eines Felds oder eines Datenbankobjekts, das festgelegt wird, um eines der Merkmale des Objekts (z. B. Größe, Farbe oder Bildschirmposition) oder einen Aspekt seines Verhaltens (z. B. ob es ausgeblendet ist) zu definieren.|  
 |Protokoll|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
 |Provider|1. Ein OLE DB-Anbieter. 2. Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
 |Abfrageparameter (query parameters)|Parameter, die in einer Datasetabfrage angegeben werden, z. B. einer Transact-SQL-Abfrage.|  
@@ -356,7 +356,7 @@ ms.lasthandoff: 08/09/2017
 |Systemrollenzuweisung|Rollenzuweisung, die für die gesamte Website gilt.|  
 |Systemrollendefinition|Rollendefinition, die Autorität für die gesamte Website darstellt.|  
 |Gespeicherte Systemprozeduren|Eine Reihe von gespeicherten Prozeduren, die von SQL Server bereitgestellt werden und die für Aktionen, wie beispielsweise das Abrufen von Informationen aus dem Systemkatalog oder das Ausführen von Verwaltungsaufgaben, verwendet werden.|  
-|table|1. Ein zweidimensionales Objekt, das aus Zeilen und Spalten besteht und in dem Daten zu einer Entität gespeichert werden, die in einer relationalen Datenbank erstellt wird. 2. Ein Datenbereich in einem Berichtslayout, der Daten in einem spaltenförmigen Format darstellt.|  
+|-Tabelle|1. Ein zweidimensionales Objekt, das aus Zeilen und Spalten besteht und in dem Daten zu einer Entität gespeichert werden, die in einer relationalen Datenbank erstellt wird. 2. Ein Datenbereich in einem Berichtslayout, der Daten in einem spaltenförmigen Format darstellt.|  
 |Tabellendatenbereich|Ein Berichtselement in einem Berichtslayout, das Daten in einem spaltenförmigen Format darstellt.|  
 |Tablix (tablix)|Ein RDL-Datenbereich von Reporting Services, der Zeilen und Spalten ähnlich einer Tabelle oder Matrix enthält und Merkmale von beiden in sich vereinen kann.|  
 |Task (task)|Eine Auflistung von Berechtigungen, die einen Task bilden (Verwalten von Berichten, Verwalten von Ordnern usw.).|  
@@ -364,10 +364,10 @@ ms.lasthandoff: 08/09/2017
 |Benutzerinstanz|Eine SQL Server Express-Instanz, die im Auftrag eines Benutzers von der übergeordneten Instanz generiert wird.|  
 |Wertachse (y) (value (y) axis)|Die Achse in einem Diagramm, auf der numerische Datenwerte angezeigt werden. Normalerweise die vertikale Achse. Ausnahme: Bei Balkendiagramm sind die Achsen umgekehrt, und Gruppierungsdaten werden auf der y-Achse angezeigt.|  
 |Wertausdruck|Ein MDX-Ausdruck (Multidimensional Expressions), der einen Wert zurückgibt. Wertausdrücke können mit Mengen, Tupeln, Elementen, Ebenen, Zahlen oder Zeichenfolgen arbeiten.|  
-|variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird definiert, mit einem DECLARE@localvariable Anweisung und ein Anfangswert innerhalb des Anweisungsgruppe, in dem sie entweder eine SELECT-Anweisung deklariert ist, zugewiesen oder SET@localvariable Anweisung.|  
+|variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird mit einer DECLARE@localvariable-Anweisung definiert. Innerhalb der Anweisungsgruppe, in der sie deklariert wird, wird ihr mit einer SELECT- oder SET@localvariableAnweisung ein Anfangswert zugewiesen.|  
 |Variables Intervall (variable interval)|Eine Option für ein Reporting Services-Diagramm, die angegeben werden kann, um automatisch anhand der Breite oder der Höhe des Diagramms die optimale Anzahl der Bezeichnungen zu berechnen, die auf einer Achse platziert werden können.|  
 |Visualisierung (visualization)|Die Methode, die ein Benutzer in Karten, Diagrammen und Messgeräten zur visuellen Darstellung von analytischen Daten auswählt.|  
-|Webdienst|Ein Dienst in Reporting Services, der SOAP (Simple Object Access Protocol) über HTTP verwendet und als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver fungiert.|  
+|-Webdienst|Ein Dienst in Reporting Services, der SOAP (Simple Object Access Protocol) über HTTP verwendet und als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver fungiert.|  
 |Windows-Verwaltungsinstrumentation|Eine Oberfläche, die Informationen zu Objekten in einer verwalteten Umgebung bereitstellt.|  
 |WKB (WKB)|Well Known Binary-Datendarstellung gemäß der Spezifikation des Open Geospatial Consortium (OGC).|  
 |WKT (WKT)|Well Known Text-Datendarstellung gemäß der Spezifikation des Open Geospatial Consortium (OGC).|  
@@ -375,8 +375,7 @@ ms.lasthandoff: 08/09/2017
 |x-Achse|Siehe anderen Begriff: Kategorieachse (x)|  
 |y-Achse (y-axis)|Siehe anderen Begriff: Wertachse (y)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

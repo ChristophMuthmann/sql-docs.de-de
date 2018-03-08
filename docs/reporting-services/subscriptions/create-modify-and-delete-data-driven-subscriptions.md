@@ -1,13 +1,14 @@
 ---
-title: "Erstellen, ändern und Löschen von datengesteuerten Abonnements | Microsoft Docs"
+title: "Erstellen, Ändern und Löschen von datengesteuerten Abonnements | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 92aab81d1e8bb487b3cbf671c4e15034abe09341
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Erstellen, Ändern und Löschen von datengesteuerten Abonnements
   Ein datengesteuertes Abonnement ist ein abfragebasiertes Abonnement, das die Datenwerte abfragt, die zum Verarbeiten des Abonnements zur Laufzeit verwendet werden. Wenn das Abonnement ausgelöst wird, wird eine Abfrage verarbeitet, die aktuelle Informationen über Empfänger, Berichtsübermittlungsoptionen, Renderingformate und Parametereinstellungen abruft. Die Abfrageergebnisse werden mit der Abonnementdefinition kombiniert. Dabei wird ein dynamisches Abonnement erstellt, das  Daten verwendet, die bereits in einer Mitarbeiterdatenbank, einer Kundendatenbank oder einer beliebigen Datenbank liegen und Informationen enthalten,  die als Abonnentendaten verwendbar sind.  
   
- Verwenden Sie im Berichts-Manager die Seiten zum Erstellen eines datengesteuerten Abonnements, um ein neues datengesteuertes Abonnement zu erstellen oder ein vorhandenes Abonnement zu ändern. Diese Seiten führen Sie schrittweise durch das Erstellen oder Ändern eines Abonnements. Ein bereits erstelltes Abonnement öffnen Sie mithilfe der Seite Meine Abonnements und der Abonnementliste eines Berichts. Vorgehensweise: erstellen ein datengesteuerten Abonnements finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40; SSRS-Lernprogramm &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Verwenden Sie im Berichts-Manager die Seiten zum Erstellen eines datengesteuerten Abonnements, um ein neues datengesteuertes Abonnement zu erstellen oder ein vorhandenes Abonnement zu ändern. Diese Seiten führen Sie schrittweise durch das Erstellen oder Ändern eines Abonnements. Ein bereits erstelltes Abonnement öffnen Sie mithilfe der Seite Meine Abonnements und der Abonnementliste eines Berichts. Erfahren Sie, wie Sie ein datengesteuertes Abonnement erstellen, indem Sie die Seite [Erstellen eines datengesteuerten Abonnements (SSRS-Tutorial)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md) aufrufen.  
   
  In diesem Thema:  
   
@@ -70,9 +71,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  Navigieren Sie im Berichts-Manager zum Ordner, der den Bericht enthält, zeigen Sie auf den Bericht, öffnen Sie das Menü **Optionen**, und klicken Sie auf Verwalten.  
   
-2.  Wählen Sie die Registerkarte **Abonnements** aus. Klicken Sie alternativ auf den Link **Meine Abonnements** oben im Berichts-Manager  
+2.  Wählen Sie die Registerkarte **Abonnements** aus. Alternativ können Sie auf den Link **Meine Abonnements** oben im Berichts-Manager klicken.  
   
-3.  Wählen Sie das Abonnement aus, das Sie ändern möchten. Das folgende Symbol bezeichnet ein datengesteuertes Abonnement: ![datengesteuerte Abonnement (Symbol)](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "datengesteuerte Abonnement (Symbol)")  
+3.  Wählen Sie das Abonnement aus, das Sie ändern möchten. Das folgende Symbol markiert ein datengesteuertes Abonnement: ![Datengesteuertes Abonnement-Symbol](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>So ändern Sie ein vorhandenes datengesteuertes Abonnement (SharePoint-Modus)  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/09/2017
   
  Bevor Sie ein datengesteuertes Abonnement erstellen können, müssen die folgenden Anforderungen erfüllt sein:  
   
--   **Berichtsanforderungen**. Der Bericht muss gespeicherte oder keine Anmeldeinformationen zum Abrufen des Inhalts zur Laufzeit verwenden. Sie können keine Berichte abonnieren, die angenommene oder delegierte Anmeldeinformationen zum Verbinden mit einer externen Datenquelle verwenden. Die Anmeldeinformationen des Benutzers, der das Abonnement erstellt oder besitzt, sind zum Zeitpunkt der Verarbeitung des Abonnements nicht verfügbar. Bei den gespeicherten Anmeldeinformationen kann es sich um ein Windows-Konto oder ein Datenbank-Benutzerkonto handeln. Weitere Informationen finden Sie unter [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+-   **Berichtsanforderungen**. Der Bericht muss gespeicherte oder keine Anmeldeinformationen zum Abrufen des Inhalts zur Laufzeit verwenden. Sie können keine Berichte abonnieren, die angenommene oder delegierte Anmeldeinformationen zum Verbinden mit einer externen Datenquelle verwenden. Die Anmeldeinformationen des Benutzers, der das Abonnement erstellt oder besitzt, sind zum Zeitpunkt der Verarbeitung des Abonnements nicht verfügbar. Bei den gespeicherten Anmeldeinformationen kann es sich um ein Windows-Konto oder ein Datenbank-Benutzerkonto handeln. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
      Sie können keine mit dem Berichts-Generator erstellten Berichte abonnieren, die ein Modell als Datenquelle verwenden, das Sicherheitseinstellungen für Modellelemente enthält. Diese Einschränkung bezieht sich nur auf Berichte, die Sicherheitseinstellungen für Modellelemente verwenden.  
   
@@ -105,12 +106,12 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_run_subscription"></a> Ausführen eines Abonnements  
  Sie müssen Bedingungen für die Abonnementverarbeitung angeben. Sie können einen Zeitplan angeben oder mit den Updates einer Momentaufnahme zur Berichtsausführung die Verarbeitung des Abonnements auslösen. Das Verarbeiten von datengesteuerten Abonnements ist mit der Verarbeitung von Standardabonnements identisch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Abonnements und Übermittlung &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Seite "Abonnements" &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Meine Abonnements (Seite) &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Abonnements (Seite) (Berichts-Manager)](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Meine Abonnements (Seite) (Berichts-Manager)](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

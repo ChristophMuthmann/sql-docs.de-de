@@ -3,8 +3,11 @@ title: Nchar und Nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar und nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Zeichendatentypen, die entweder fester Länge sind **Nchar**, oder variabler Länge, **Nvarchar**, Unicode-Daten und verwenden den UNICODE UCS-2-Zeichensatz.
   
@@ -37,7 +39,7 @@ Zeichendatentypen, die entweder fester Länge sind **Nchar**, oder variabler Lä
 Unicode-Zeichenfolgendaten mit fester Länge. *n*definiert die Zeichenfolgenlänge und muss ein Wert zwischen 1 und 4.000 sein. Die Speichergröße beträgt zweimal  *n*  Bytes. Wenn die Codeseite der zielsortierung Doppelbytezeichen verwendet, ist immer noch die Speichergröße  *n*  Bytes. Je nach der Zeichenfolge, die Speichergröße der  *n*  Bytes können kleiner sein als der angegebene Wert für  *n* . Die ISO-Synonyme für **Nchar** sind **national Char** und **nationaler Zeichensätze**...
   
 **Nvarchar** [(n | **Max** )]  
-Unicode-Zeichenfolgendaten variabler Länge. *n*definiert die Zeichenfolgenlänge und kann ein Wert zwischen 1 und 4.000 sein. **Max.** gibt an, dass die maximale Speichergröße 2 ^ 31-1 Bytes (2 GB). Die Speichergröße in Bytes beträgt zweimal die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die ISO-Synonyme für **Nvarchar** sind **national Char varying** und **nationaler Zeichensätze varying**.
+Unicode-Zeichenfolgendaten variabler Länge. *n*definiert die Zeichenfolgenlänge und kann ein Wert zwischen 1 und 4.000 sein. **Max.** gibt an, dass die maximale Speichergröße 2 ^ 31-1-Zeichen (2 GB). Die Speichergröße in Bytes beträgt zweimal die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die ISO-Synonyme für **Nvarchar** sind **national Char varying** und **nationaler Zeichensätze varying**.
   
 ## <a name="remarks"></a>Hinweise  
 Wenn  *n*  ist nicht angegeben in einer Datendefinitions- oder variablendeklarationsanweisung, die Standardlänge 1. Wenn  *n*  ist nicht angegeben mit der CAST-Funktion, die Standardlänge ist 30.
@@ -103,4 +105,3 @@ Test data       More test data
 [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

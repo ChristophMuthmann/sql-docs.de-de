@@ -1,29 +1,28 @@
 ---
 title: "Erstellen von Fremdschlüssel-Beziehungen | Microsoft Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- relationships [SQL Server], creating
+helpviewer_keywords: relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "21"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: f6d1acfc492d4d2c37bd4e7cfe66a2b95266a80a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-foreign-key-relationships"></a>Erstellen von Fremdschlüssel-Beziehungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 06/22/2017
     
     -   Auch eine Tabelle mit einem Fremdschlüsselverweis auf sich selbst ist auf 253 Fremdschlüsselverweise beschränkt.    
     
-    -   Für Columnstore-Indizes, speicheroptimierte Tabellen oder Stretch-Datenbanken sind derzeit nicht mehr als 253 Fremdschlüsselverweise möglich.    
+    -   Für Columnstore-Indizes, speicheroptimierte Tabellen oder Stretch Database sind derzeit nicht mehr als 253 Fremdschlüsselverweise möglich.    
     
 -   FOREIGN KEY-Einschränkungen werden nicht auf temporäre Tabellen angewendet.    
     
@@ -70,7 +69,7 @@ ms.lasthandoff: 06/22/2017
        
     
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>Erstellen einer Fremdschlüsselbeziehung im Tabellen-Designer 
-####  <a name="using-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio    
+####  <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio    
     
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, die sich auf der Fremdschlüsselseite der Beziehung befinden soll, und klicken Sie auf **Entwerfen**.    
     
@@ -97,7 +96,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="create-a-foreign-key-in-a-new-table"></a>Erstellen eines Fremdschlüssels in einer neuen Tabelle  
 ####  <a name="using-transact-sql"></a>Verwenden von Transact-SQL   
     
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.    
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.    
     
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.    
     
@@ -119,7 +118,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>Erstellen eines Fremdschlüssels in einer vorhandenen Tabelle 
 #### <a name="using-transasct-sql"></a>Verwenden von Transact-SQL   
     
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.    
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.    
     
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.    
     
@@ -141,4 +140,3 @@ ms.lasthandoff: 06/22/2017
      Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).    
     
   
-

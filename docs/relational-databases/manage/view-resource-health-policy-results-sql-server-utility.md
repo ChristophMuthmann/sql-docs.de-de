@@ -2,27 +2,29 @@
 title: "Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
-caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9059d01d2f47ebbd56af966f45f6832222491930
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "10"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: b640be4a2da49c03c06b69b9e7d9c2ea4971e769
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
-  Verwenden Sie das Dashboard des Hilfsprogramms in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um Ressourcenparameter des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie das Dashboard des -Hilfsprogramms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um Ressourcenparameter des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Hilfsprogramms für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -30,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) auf **Ansicht**und dann auf **Hilfsprogramm-Explorer** , um den Navigationsbereich des Hilfsprogramm-Explorers anzuzeigen. Um den Inhaltsbereich anzuzeigen, klicken Sie auf **Ansicht**und dann auf **Inhalt des Hilfsprogramm-Explorers**.  
   
-2.  Klicken Sie im Navigationsbereich auf ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+2.  Klicken Sie im Navigationsbereich auf ![](../../relational-databases/manage/media/connect-to-utility.gif "Mit_Hilfsprogramm_verbinden")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 3.  Klicken Sie auf den UCP-Knoten, um Zusammenfassungsdaten für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen (zum Aktualisieren mit der rechten Maustaste klicken). Dashboarddaten werden im Inhaltsbereich angezeigt.  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Klicken Sie auf den Knoten **Bereitgestellte Datenebenenanwendungen** , um Listenansichtsdaten für Datenebenenanwendungen anzuzeigen (klicken Sie zum Aktualisieren mit der rechten Maustaste). Listenansichtsdaten werden im Inhaltsbereich angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)   
  [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)   

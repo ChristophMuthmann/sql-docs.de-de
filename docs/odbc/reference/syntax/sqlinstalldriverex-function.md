@@ -3,33 +3,30 @@ title: SQLInstallDriverEx Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallDriverEx
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallDriverEx
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallDriverEx
-helpviewer_keywords:
-- SQLInstallDriverEx function [ODBC]
+f1_keywords: SQLInstallDriverEx
+helpviewer_keywords: SQLInstallDriverEx function [ODBC]
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4179bf04131f256c5a37cb01c079035a569a07af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2eda9fe4e6a5f300f83512f669ad5206f89effe6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Konformität**  
@@ -148,4 +145,3 @@ SQL Server\0Driver=SQLSRVR.DLL\0\0
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Installieren des Treiber-Managers|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|
-

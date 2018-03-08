@@ -3,7 +3,7 @@ title: Clone-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: db5785a40527f4f85558961068d2cb67eeabbfbc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b7586bef017cd4e5f3a89586b8600abfd183f5a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-ado"></a>Clone-Methode (ADO)
 Erstellt ein Duplikat [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus einer vorhandenen **Recordset** Objekt. Optional gibt an, dass der Klon schreibgeschützt ist.  
@@ -77,17 +76,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |Ereignis|Im Klone ausgelöst?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Nein|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Nein|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Nein|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|nein|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|nein|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|nein|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|ja|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Nein|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|nein|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|ja|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Nein|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|nein|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|ja|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|ja|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Nein|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Nein|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|nein|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|nein|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
@@ -95,5 +94,4 @@ rsNew.Filter = rsOriginal.Filter
 ## <a name="see-also"></a>Siehe auch  
  [Clone-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Clone-Methode (Beispiel) (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
- [Clone-Methode (VC++-Beispiel)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
-
+ [Clone-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

@@ -1,28 +1,33 @@
 ---
 title: "Entwickeln von Anwendungen für SQL Server on Linux | Microsoft Docs"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
-ms.date: 10/02/2017
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 11/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.custom: sql-linux
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: H1Hack27Feb2017
 ms.workload: On Demand
+ms.openlocfilehash: fb07628c8818b16709abab07efc1f52248426305
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Erste Schritte Entwickeln von Anwendungen für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Sie können Anwendungen erstellen, die Herstellen einer Verbindung mit und Verwenden von SQL Server-2017 unter Linux aus einer Vielzahl von Programmiersprachen, z. B. c#, Java, Node.js, PHP, Python, Ruby, und C++. Sie können sich auch auf beliebte webframeworks und Frameworks Objekt Relational Mapping (ORM) aus.
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > Diese gleichen Entwicklungsoptionen ermöglichen Ihnen auch in SQL Server auf anderen Plattformen als Ziel. Anwendungen paketaktualisierungen von SQL Server lokal oder in der Cloud auf MacOS unter Linux, Windows oder Docker. Sie können SQL-Zielserver oder Azure SQL-Datenbank und Azure SQL Data Warehouse.
@@ -54,7 +59,7 @@ Finden Sie unter den folgenden Themen Weitere Informationen:
 
 - [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
-- [SQL-PowerShell](sql-server-linux-manage-powershell.md)
+- [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
 > [!Note] 
 > Stellen Sie sicher, dass Sie die neuesten Versionen der Tools für optimale Ergebnisse verwenden.
@@ -67,16 +72,15 @@ Sie können die neue [Mssql-Erweiterung](https://aka.ms/mssql-marketplace) für 
 
 Sie können auch neue Befehlszeilentools verwenden, die für Linux native sind. Diese Tools umfassen Folgendes:
 
-- [Sqlcmd](../tools/sqlcmd-utility.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
-- [MSSQL-conf](sql-server-linux-configure-mssql-conf.md)
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Installieren Sie SQL Server unter Linux mit einer der folgenden Schnellstart-Lernprogrammen, um zu beginnen:
+Installieren Sie SQL Server unter Linux mit einer der folgenden Schnellstarts, um zu beginnen:
 
 - [Installieren Sie auf Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installieren Sie auf Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen Sie auf Docker](quickstart-install-connect-ubuntu.md)
-

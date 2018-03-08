@@ -1,32 +1,31 @@
 ---
 title: ALTER_DATABASE (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 09/25/2017
+ms.custom: 
+ms.date: 02/13/2018
 ms.prod: 
+ms.prod_service: sql-database
 ms.reviewer: 
 ms.service: sql-database
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
-caps.latest.revision: 37
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: f525c0ca01f49be05c1920897951059b126c83e9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Ändert eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ändert den Namen einer Datenbank, die Edition und der Dienst Ziel einer Datenbank, der Join einen elastischen Pool und legt Datenbankoptionen an.  
   
@@ -53,7 +52,7 @@ ALTER DATABASE { database_name }
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | EDITION = { 'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE = 
                  {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -70,8 +69,7 @@ ALTER DATABASE { database_name }
    }  
 
 <service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' }
 
 ```  
   
@@ -80,10 +78,10 @@ ALTER DATABASE { database_name }
 -- Full descriptions of the set options are available in the topic   
 -- ALTER DATABASE SET Options. The supported syntax is listed here.  
 
-<optionspec> ::=   
+<option_spec> ::=   
 {  
     <auto_option>   
-  | <compatibility_level_option>  
+  | <change_tracking_option> 
   | <cursor_option>   
   | <db_encryption_option>  
   | <db_update_option>   
@@ -105,10 +103,23 @@ ALTER DATABASE { database_name }
   | AUTO_UPDATE_STATISTICS { ON | OFF }   
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
-  
-<compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
-  
+
+<change_tracking_option> ::=  
+{  
+  CHANGE_TRACKING   
+   {   
+       = OFF  
+     | = ON [ ( <change_tracking_option_list > [,...n] ) ]   
+     | ( <change_tracking_option_list> [,...n] )  
+   }  
+}  
+
+   <change_tracking_option_list> ::=  
+   {  
+       AUTO_CLEANUP = { ON | OFF }   
+     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
+   }  
+
 <cursor_option> ::=   
 {  
     CURSOR_CLOSE_ON_COMMIT { ON | OFF }   
@@ -164,7 +175,7 @@ COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -190,7 +201,7 @@ COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
  CURRENT  
  Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.  
   
- Ändern von Namen  **=**  *Name der neuen Datenbank*  
+ Ändern von Namen **= *** Name der neuen Datenbank*  
  Benennt die Datenbank mit dem angegebenen als Namen *Name der neuen Datenbank*. Im folgende Beispiel ändert den Namen einer Datenbank `db1` auf `db2`:   
 
 ```  
@@ -198,8 +209,10 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- MODIFY (EDITION  **=**  ['basic' | 'standard' | 'Premium' | 'Premiumrs'])    
- Ändert die Dienstebene der Datenbank an. Im folgende Beispiel ändert die Edition auf `premium`:
+ MODIFY (EDITION  **=**  ['basic' | 'standard' | 'Premium'])    
+ Ändert die Dienstebene der Datenbank an. Unterstützung für "Premiumrs" wurde entfernt. Verwenden Sie Fragen haben, diese e-Mail-Alias: premium-rs@microsoft.com.
+
+Im folgende Beispiel ändert die Edition auf `premium`:
   
 ```  
 ALTER DATABASE current 
@@ -211,7 +224,7 @@ ALTER DATABASE current
  ÄNDERN (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024... 4096] GB)  
  Gibt die maximale Größe der Datenbank an. Die maximale Größe muss dem gültigen Wertsatz für die EDITION-Eigenschaft der Datenbank entsprechen. Eine Änderung der maximalen Datenbankgröße kann auch dazu führen, dass die EDITION-Eigenschaft der Datenbank geändert wird. In der folgenden Tabelle sind die unterstützten MAXSIZE-Werte und die Standardwerte (S) für die Dienstebenen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aufgeführt.  
   
-|**MAXSIZE**|**Standard**|**S0 S2**|**S3-S12**|**P1-P6 und PRS1 PRS6**|**P11-P15**|  
+|**MAXSIZE**|**Standard**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -235,7 +248,7 @@ ALTER DATABASE current
 |1024 GB|–|√|√|√|√ (S)|  
 |Von 1024 GB bis zu 4096 GB in Inkrementen von 256 GB *|–|–|–|–|√|√|  
   
- \*P11 und P15 können Sie MAXSIZE mit 1024 GB wird die standardmäßige Größe bis zu 4 TB.  P11 und P15 können bis zu 4 TB Speicher enthalten Aufpreis verwenden. In der Premium-Dienstebene MAXSIZE größer als 1 TB ist zurzeit in der folgenden Regionen verfügbar: uns East2, USA (Westen), uns Gov Virginia, Westeuropa, Deutschland zentralen, Süd Ostasien, Japan OST, Australien Osten, Kanada zentralen und Kanada Osten. Aktuelle Einschränkungen finden Sie unter [einzelner Datenbanken](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+ \* P11 und P15 können Sie MAXSIZE mit 1024 GB wird die standardmäßige Größe bis zu 4 TB.  P11 und P15 können bis zu 4 TB Speicher enthalten Aufpreis verwenden. In der Premium-Dienstebene MAXSIZE größer als 1 TB ist zurzeit in der folgenden Regionen verfügbar: uns East2, USA (Westen), uns Gov Virginia, Westeuropa, Deutschland zentralen, Süd Ostasien, Japan OST, Australien Osten, Kanada zentralen und Kanada Osten. Aktuelle Einschränkungen finden Sie unter [einzelner Datenbanken](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
 
   
  Die folgenden Regeln gelten für das MAXSIZE-Argument und das EDITION-Argument:  
@@ -254,7 +267,7 @@ ALTER DATABASE current
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- Die verfügbaren Werte für dienstziel sind: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, und `PRS6`. Dienst dienstzielbeschreibungen und Weitere Informationen über die Größe, Editionen und dienstzielkombinationen finden Sie unter [Azure SQL-Datenbank-Dienstebenen und Leistungsstufen](http://msdn.microsoft.com/library/azure/dn741336.aspx). Wenn der angegebene SERVICE_OBJECTIVE von der EDITION nicht unterstützt wird, wird ein Fehler ausgegeben. Zum Ändern des SERVICE_OBJECTIVE-Werts von einer Ebene in eine andere (z. B. von S1 in P1) muss auch der EDITION-Wert geändert werden.  
+ Die verfügbaren Werte für dienstziel sind: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, oder`P15`. Dienst dienstzielbeschreibungen und Weitere Informationen über die Größe, Editionen und dienstzielkombinationen finden Sie unter [Azure SQL-Datenbank-Dienstebenen und Leistungsstufen](http://msdn.microsoft.com/library/azure/dn741336.aspx). Wenn der angegebene SERVICE_OBJECTIVE von der EDITION nicht unterstützt wird, wird ein Fehler ausgegeben. Zum Ändern des SERVICE_OBJECTIVE-Werts von einer Ebene in eine andere (z. B. von S1 in P1) muss auch der EDITION-Wert geändert werden. Unterstützung für PRS dienstziele entfernt wurden. Verwenden Sie Fragen haben, diese e-Mail-Alias: premium-rs@microsoft.com. 
   
  Ändern (SERVICE_OBJECTIVE = ELASTISCHE\_POOL (Name = \<Elastic_pool_name >)  
  Um eine vorhandene Datenbank einem elastischen Pool hinzugefügt haben, legen Sie die SERVICE_OBJECTIVE von der Datenbank auf ELASTIC_POOL, und geben Sie den Namen des elastischen Pools. Diese Option können auch um die Datenbank auf einen anderen elastischen Pool innerhalb desselben Servers zu ändern. Weitere Informationen finden Sie unter [erstellen und verwalten Sie einen SQL-Datenbank elastischen Pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Um eine Datenbank aus einem elastischen Pool entfernen möchten, verwenden Sie ALTER DATABASE für eine einzelne Datenbank-Leistungsstufe der SERVICE_OBJECTIVE festzulegen.  
@@ -265,7 +278,7 @@ ALTER DATABASE current
  MIT ALLOW_CONNECTIONS {ALLE | **KEINE** }  
  Wenn ALLOW_CONNECTIONS nicht angegeben wird, wird er auf keine standardmäßig festgelegt. Wenn sie alle festgelegt ist, ist es eine schreibgeschützte Datenbank, die alle Anmeldenamen mit den entsprechenden Berechtigungen eine Verbindung herstellen kann.  
   
- MIT SERVICE_OBJECTIVE {"S0" | "S1" | "S2" | "S3" | "S4" | "A6" | "S7" | "S9" | "S12" | "P1" | "P2" | "P4" | "P6" | "P11" | "P15" | "PRS1" | "PRS2" | "PRS4" | 'PRS6'}  
+ MIT SERVICE_OBJECTIVE {"S0" | "S1" | "S2" | "S3" | "S4" | "A6" | "S7" | "S9" | "S12" | "P1" | "P2" | "P4" | "P6" | "P11" | 'P15'}  
  Wenn SERVICE_OBJECTIVE nicht angegeben wird, wird die sekundäre Datenbank auf derselben Dienstebene wie die primäre Datenbank erstellt. Wenn SERVICE_OBJECTIVE angegeben wird, wird die sekundäre Datenbank auf der angegebenen Ebene erstellt. Diese Option unterstützt das Erstellen von georeplizierte mit weniger Aufwand Servicelevels. Der angegebene SERVICE_OBJECTIVE muss in die gleiche Edition wie die Quelle sein. Beispielsweise können Sie S0 angeben, wenn die Edition auf Premium ist.  
   
  ELASTIC_POOL (Name = \<Elastic_pool_name)  
@@ -394,11 +407,10 @@ ALTER DATABASE db1 FAILOVER
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys. database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [Sys. data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- ["Sys.FileGroups" &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Systemdatenbanken](../../relational-databases/databases/system-databases.md)  
   
   
-

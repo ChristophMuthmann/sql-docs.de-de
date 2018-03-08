@@ -2,11 +2,13 @@
 title: Verwalten des Datenbankmodul-Dienstes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,20 +26,19 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "43"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5de386c4e2e8525205078627bb2d3e50e0beddd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f3aa60ecd19dc22669cc98915fb853d4480d1fa5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-database-engine-services"></a>Verwalten der Datenbankmoduldienste
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird unter den Betriebssystemen als Dienst ausgeführt. Ein Dienst ist ein Anwendungstyp, der im Hintergrund ausgeführt wird. Dienste stellen gewöhnlich wichtige Betriebssystemfunktionen bereit, wie z. B. Webbereitstellung, Ereignisprotokollierung oder Dateibereitstellung. Dienste können ausgeführt werden, ohne dass auf dem Computerdesktop eine Benutzeroberfläche angezeigt wird. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und mehrere andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten werden als Dienste ausgeführt. Diese Dienste werden in der Regel zusammen mit dem Betriebssystem gestartet. Dies hängt von der Konfiguration während der Installation ab. Manche Dienste werden standardmäßig nicht gestartet. In diesem Abschnitt wird die Verwaltung verschiedener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben. Vor dem Anmelden an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sollten Sie wissen, wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gestartet, beendet, angehalten, fortgesetzt und neu gestartet wird. Nach dem Anmelden können Sie verschiedene Aufgaben ausführen, wie z. B. das Verwalten des Servers oder das Abfragen einer Datenbank.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird unter den Betriebssystemen als Dienst ausgeführt. Ein Dienst ist ein Anwendungstyp, der im Hintergrund ausgeführt wird. Dienste stellen gewöhnlich wichtige Betriebssystemfunktionen bereit, wie z. B. Webbereitstellung, Ereignisprotokollierung oder Dateibereitstellung. Dienste können ausgeführt werden, ohne dass auf dem Computerdesktop eine Benutzeroberfläche angezeigt wird. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und mehrere andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten werden als Dienste ausgeführt. Diese Dienste werden in der Regel zusammen mit dem Betriebssystem gestartet. Dies hängt von der Konfiguration während der Installation ab. Manche Dienste werden standardmäßig nicht gestartet. In diesem Abschnitt wird die Verwaltung verschiedener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben. Vor dem Anmelden an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sollten Sie wissen, wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gestartet, beendet, angehalten, fortgesetzt und neu gestartet wird. Nach dem Anmelden können Sie verschiedene Aufgaben ausführen, wie z. B. das Verwalten des Servers oder das Abfragen einer Datenbank.  
   
 ## <a name="using-the-sql-server-service"></a>Verwenden des SQL Server-Diensts  
  Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst. Nach dem Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts können Benutzer neue Verbindungen mit dem Server herstellen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst kann als Dienst lokal oder remote gestartet und beendet werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst wird als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) bezeichnet, wenn es sich um die Standardinstanz handelt, oder als MSSQL$*\<Instanzname>* bei einer benannten Instanz.  
@@ -79,4 +80,3 @@ ms.lasthandoff: 08/02/2017
  [Anmelden an SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
   
-

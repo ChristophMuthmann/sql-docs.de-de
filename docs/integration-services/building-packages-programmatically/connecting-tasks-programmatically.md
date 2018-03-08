@@ -1,12 +1,14 @@
 ---
-title: Programmgesteuertes Verbinden von Tasks | Microsoft Docs
+title: Programmgesteuertes Verbinden von Tasks | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,17 +21,16 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 27be63f22fda13f0959f28c4ee36cc2b12c66058
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17a0b11519fcf438847c34291ded9e1b43edb090
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>Programmgesteuertes Verbinden von Tasks
   Eine Rangfolgeneinschränkung, die in dem Objektmodell durch die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>-Klasse dargestellt wird, legt die Reihenfolge, in der die <xref:Microsoft.SqlServer.Dts.Runtime.Executable>-Objekte in einem Paket ausgeführt werden, fest. Durch die Rangfolgeneinschränkung kann die Ausführung der Container und Tasks in einem Paket von dem Ergebnis der Ausführung eines vorherigen Tasks oder Containers abhängig gemacht werden. Rangfolgeneinschränkungen werden zwischen <xref:Microsoft.SqlServer.Dts.Runtime.Executable>-Objektpaaren durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints>-Auflistung für das Containerobjekt eingerichtet. Nachdem Sie eine Einschränkung zwischen zwei ausführbaren Objekten erstellt haben, legen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>-Eigenschaft fest, um die Kriterien für die Ausführung des zweiten ausführbaren in der Einschränkung definierten Objekts festzulegen.  
@@ -40,8 +41,8 @@ ms.lasthandoff: 08/03/2017
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|Gibt an, dass das Ausführungsergebnis bestimmt, ob der eingeschränkte Container oder Task ausgeführt wird. Legen Sie für die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>-Eigenschaft von <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> den gewünschten Wert aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Enumeration fest.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|Gibt an, dass der Wert eines Ausdrucks bestimmt, ob der eingeschränkte Container oder Task ausgeführt wird. Legen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A>-Eigenschaft von <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> fest.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Gibt an, dass das Einschränkungsergebnis auftreten und der Ausdruck ausgewertet werden muss, damit der eingeschränkte Container oder Task ausgeführt wird. Setzen Sie beide die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> Eigenschaften der <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, und legen Sie seine <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> Eigenschaft, um **"true"**.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Gibt an, dass entweder das Einschränkungsergebnis auftreten oder der Ausdruck ausgewertet werden muss, damit der eingeschränkte Container oder Task ausgeführt wird. Setzen Sie beide die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> Eigenschaften der <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, und legen Sie seine <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> Eigenschaft, um **"false"**.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Gibt an, dass das Einschränkungsergebnis auftreten und der Ausdruck ausgewertet werden muss, damit der eingeschränkte Container oder Task ausgeführt wird. Legen Sie sowohl die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>- als auch die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A>-Eigenschaften von <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> fest, und legen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>-Eigenschaft als **true** fest.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Gibt an, dass entweder das Einschränkungsergebnis auftreten oder der Ausdruck ausgewertet werden muss, damit der eingeschränkte Container oder Task ausgeführt wird. Legen Sie sowohl die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>- als auch die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A>-Eigenschaften von <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> fest, und legen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>-Eigenschaft als **false** fest.|  
   
  Im folgenden Codebeispiel wird das Hinzufügen von zwei Tasks zu einem Paket veranschaulicht. Zwischen ihnen wird eine <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> erstellt, die verhindert, dass der zweite Task vor Beendung des ersten Tasks ausgeführt wird.  
   
@@ -104,8 +105,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>Siehe auch  
- [Programmgesteuertes Hinzufügen von Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Programmgesteuertes Hinzufügen des Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   
-

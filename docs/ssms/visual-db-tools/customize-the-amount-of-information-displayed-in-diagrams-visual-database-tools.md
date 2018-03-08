@@ -3,10 +3,12 @@ title: Anpassen des Umfangs der in Diagrammen angezeigten Informationen | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - customizing database diagram information [SQL Server]
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8a602df15084244af0b5437726b5a087079112b1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f4f078ac1d04aa8f470ad7479497cc8dfb5c00f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Anpassen des Umfangs der in Diagrammen angezeigten Informationen (Visual Database Tools)
-Wenn Sie eine Tabelle zu einem Datenbankdiagramm hinzufügen, wird eine festgelegte Anzahl von Eigenschaften angezeigt. Sie können in einem Menü den Umfang der angezeigten Informationen auswählen, oder Sie können einen benutzerdefinierten Satz von Eigenschaften erstellen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie eine Tabelle zu einem Datenbankdiagramm hinzufügen, wird eine festgelegte Anzahl von Eigenschaften angezeigt. Sie können in einem Menü den Umfang der angezeigten Informationen auswählen, oder Sie können einen benutzerdefinierten Satz von Eigenschaften erstellen.  
   
 Dabei stehen folgende Möglichkeiten zur Verfügung:  
   
@@ -58,7 +59,6 @@ Dabei stehen folgende Möglichkeiten zur Verfügung:
   
 3.  Wählen Sie im Dialogfeld **Spaltenauswahl** die Eigenschaften aus, die angezeigt werden sollen, wenn im Menü **Tabellensicht** die Option **Benutzerdefiniert** ausgewählt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

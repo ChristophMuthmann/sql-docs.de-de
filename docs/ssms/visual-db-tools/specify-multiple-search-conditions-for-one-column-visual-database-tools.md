@@ -3,10 +3,12 @@ title: "Angeben mehrerer Suchbedingungen für eine Spalte | Microsoft-Dokumentat
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cd90bbb2b7a07ae4cf2c8224a8b299cec7774593
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a7b140acf1b00f31df0d8c948cdeca8ff6703726
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Angeben mehrerer Suchbedingungen für eine Spalte (Visual Database Tools)
-In manchen Fällen kann es sinnvoll sein, mehrere Suchkriterien auf dieselbe Datenspalte anzuwenden. Auf diese Weise können Sie beispielsweise folgende Vorgänge durchführen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In manchen Fällen kann es sinnvoll sein, mehrere Suchkriterien auf dieselbe Datenspalte anzuwenden. Auf diese Weise können Sie beispielsweise folgende Vorgänge durchführen:  
   
 -   Sie können in der Tabelle `employee` nach mehreren verschiedenen Namen oder nach Mitarbeitern in verschiedenen Gehaltsgruppen suchen. Diese Art von Suche erfordert die Verwendung einer OR-Bedingung.  
   
@@ -87,8 +88,7 @@ WHERE (title LIKE '%Cook%') AND
   (title LIKE '%Recipe%')  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

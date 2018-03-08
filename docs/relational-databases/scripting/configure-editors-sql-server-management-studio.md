@@ -2,28 +2,30 @@
 title: Konfigurieren von Editoren (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-caps.latest.revision: 6
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2df9024353df34fc5b7860bae2eaa5b633c06b9f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6085dc6fe12622915eca8f01ff10df020e69bbde
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Konfigurieren von Editoren (SQL Server Management Studio)
-  Sie können die Operation der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren anpassen, indem Sie die Optionen für jeden Editor konfigurieren.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können die Operation der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Editoren anpassen, indem Sie die Optionen für jeden Editor konfigurieren.  
   
 ## <a name="settng-editor-options"></a>Settng-Editor-Optionen  
  Sie können die meisten Editoroptionen einrichten, indem Sie im Menü **Extras** den Eintrag **Optionen…** auswählen und so das Dialogfeld **Optionen** anzeigen. Öffnen Sie im Dialogfeld **Optionen** den Knoten **Text-Editor** im linken Bereich, um die Optionen für Code- und Textbearbeitung festzulegen. Die Knoten unter Text-Editor gelten für bestimmte Editoren:  
@@ -48,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 |Speicherort der F1-Hilfeseiten zu den Dialogfeldern für Editoroptionen.|[Abfrageoptionen (Seiten; F1-Hilfe)](http://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
   
   
-

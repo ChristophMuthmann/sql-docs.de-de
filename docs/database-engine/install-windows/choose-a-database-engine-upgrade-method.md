@@ -2,28 +2,31 @@
 title: "Wählen einer Upgrademethode für das Datenbankmodul | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 418cb013fddfa58783babbee63e00524f411a39c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für das Datenbankmodul
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUDE[ssDE](../../includes/ssde-md.md)] von einer früheren Version von SQL Server, um Ausfallzeiten und Risiken zu minimieren. Sie können ein direktes Upgrade ausführen, zu einer neuen Installation migrieren oder ein paralleles Upgrade vornehmen. Das folgende Diagramm hilft Ihnen, zwischen diesen Ansätzen auszuwählen. Jeder der Ansätze im Diagramm wird außerdem nachstehend erläutert. Informationen zu den Entscheidungskriterien im Diagramm finden Sie auch unter [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Entscheidungsstruktur der Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
@@ -35,10 +38,10 @@ ms.lasthandoff: 08/02/2017
 -   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**, um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition bereits installiert ist.  
   
 > [!NOTE]  
->  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen für diese Thema außerhalb des Gültigkeitsbereich, jedoch haben wir hier einige Links bereitgestellt:
+>  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen außerhalb des Rahmens dieses Artikels, hier finden Sie jedoch einige Links:
 >   - [SQL Server auf virtuellen Azure-Computern – Übersicht](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL-Datenbank](https://azure.microsoft.com/en-us/services/sql-database/) 
->   - [Auswählen einer SQL Server-Option in Azure(https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
+>   - [Selecting a SQL Server option in Azure (Auswählen einer SQL Server-Option in Azure)](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ##  <a name="UpgradeInPlace"></a> Direktes Upgrade  
  Bei diesem Ansatz aktualisiert das SQL Server-Setup-Programm die vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation durch Ersetzen der vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bits durch die neuen [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Bits und aktualisiert anschließend alle System- und Benutzerdatenbanken.  Der Ansatz für ein direktes Upgrade ist am einfachsten, erfordert gewisse Ausfallzeiten, erfordert nötigenfalls ein längeres Fallback und wird nicht für alle Szenarien unterstützt. Weitere Informationen zu unterstützten und nicht unterstützten direkten Aktualisierungsszenarien finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
@@ -80,7 +83,7 @@ ms.lasthandoff: 08/02/2017
  Nach der Migration der Benutzerdatenbanken verweisen Sie neue Benutzer mithilfe verschiedener Methoden (z. B. Umbenennen des Servers, Verwenden eines DNS-Eintrags, Ändern von Verbindungszeichenfolgen) auf die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  Durch diesen neuen Installationsansatz werden Risiken und Ausfallzeiten im Vergleich mit einem direkten Upgrade reduziert und Upgrades von Hardware und Betriebssystem im Zusammenspiel mit dem Upgrade auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erleichtert.  
   
 > [!NOTE]  
->  Falls Sie eine Lösung für hohe Verfügbarkeit oder eine andere Umgebung mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen haben, fahren Sie mit dem [parallelen Upgrade](#RollingUpgrade)fort. Wenn keine Lösung für hohe Verfügbarkeit vorhanden ist, können Sie entweder vorübergehend die [Datenbankspiegelung](http://msdn.microsoft.com/library/ms190941.aspx) konfigurieren, um Ausfallzeiten zu minimieren und dieses Upgrade zu vereinfachen, oder die Chance wahrnehmen, eine [AlwayOn-Verfügbarkeitsgruppe](http://msdn.microsoft.com/library/hh510260.aspx) als dauerhafte Lösung für hohe Verfügbarkeit zu konfigurieren.  
+>  Falls Sie eine Lösung für Hochverfügbarkeit oder eine andere Umgebung mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen haben, fahren Sie mit dem [parallelen Upgrade](#RollingUpgrade)fort. Wenn keine Lösung für Hochverfügbarkeit vorhanden ist, können Sie entweder vorübergehend die [Datenbankspiegelung](http://msdn.microsoft.com/library/ms190941.aspx) konfigurieren, um Ausfallzeiten zu minimieren und dieses Upgrade zu vereinfachen, oder die Chance wahrnehmen, eine [AlwayOn-Verfügbarkeitsgruppe](http://msdn.microsoft.com/library/hh510260.aspx) als dauerhafte Lösung für Hochverfügbarkeit zu konfigurieren.  
   
  Beispielsweise können Sie diesen Ansatz befolgen, um Folgendes zu aktualisieren:  
   
@@ -105,7 +108,7 @@ ms.lasthandoff: 08/02/2017
      ![Neue Installationsupgrademethode mithilfe von Trennen und Anfügen für den SAN-Speicher](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "New installation upgrade method using detach and attach for SAN storage")  
   
 ##  <a name="RollingUpgrade"></a> parallelen Upgrade  
- Ein paralleles Update ist in Umgebungen mit SQL Server-Lösungen mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen erforderlich, die in einer bestimmten Reihenfolge aktualisiert werden müssen, um die Betriebszeit zu maximieren, Risiken zu minimieren und Funktionalität beizubehalten. Ein paralleles Upgrade ist im Wesentlichen die Aktualisierung mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen in einer bestimmten Reihenfolge, wobei entweder ein direktes Upgrade jeder vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder ein Upgrade auf eine neue Installation erfolgt, um die Aktualisierung von Hardware und/oder des Betriebssystems im Rahmen des Upgradeprojekts zu erleichtern. Es gibt eine Reihe von Szenarien, in denen der parallele Upgradeansatz befolgt werden muss. Diese Szenarien sind in den folgenden Themen dokumentiert:  
+ Ein paralleles Update ist in Umgebungen mit SQL Server-Lösungen mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen erforderlich, die in einer bestimmten Reihenfolge aktualisiert werden müssen, um die Betriebszeit zu maximieren, Risiken zu minimieren und Funktionalität beizubehalten. Ein paralleles Upgrade ist im Wesentlichen die Aktualisierung mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen in einer bestimmten Reihenfolge, wobei entweder ein direktes Upgrade jeder vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder ein Upgrade auf eine neue Installation erfolgt, um die Aktualisierung von Hardware und/oder des Betriebssystems im Rahmen des Upgradeprojekts zu erleichtern. Es gibt eine Reihe von Szenarien, in denen der parallele Upgradeansatz befolgt werden muss. Diese Szenarien sind in den folgenden Artikeln dokumentiert:  
   
 -   AlwaysOn-Verfügbarkeitsgruppen: Ausführliche Schritte zum Ausführen eines parallelen Upgrades in dieser Umgebung finden Sie unter [Upgraden von AlwaysOn-Verfügbarkeitsgruppen-Replikatsinstanzen](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   
@@ -124,4 +127,3 @@ ms.lasthandoff: 08/02/2017
  [Abschließen des Datenbankmodul-Upgrades](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
-

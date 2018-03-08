@@ -3,7 +3,7 @@ title: "Steuerelement ändert sich in Basistabelle von Recordsets (ADO) | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f62e184e4a51d82fc0b0369444ce78a9b2619039
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da2f70b0f3d6f1ae3983e44f26191e13cc26f5a2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Eindeutige Tabelle, eindeutiges Schema, eindeutige Catalog (ADO) für das dynamische Eigenschaften
 Ermöglicht es Ihnen zu eng Steuerelement Änderungen an einer bestimmten Basistabelle in eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , die durch eine Joinoperation für mehrere Basistabellen gebildet wurde.  
@@ -60,4 +59,3 @@ Ermöglicht es Ihnen zu eng Steuerelement Änderungen an einer bestimmten Basist
   
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

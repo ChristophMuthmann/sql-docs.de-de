@@ -3,24 +3,25 @@ title: "Programmierhandbuch für den Php_sql-Treiber | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84771a36a7adcaced6ab770edf30a33f0ac542bb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9005a479e8707a62f389da0aac9f7f6f54cac742
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guide-for-php-sql-driver"></a>Programmierhandbuch für den PHP-SQL-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,4 +49,3 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   
-

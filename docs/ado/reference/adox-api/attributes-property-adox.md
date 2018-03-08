@@ -3,7 +3,7 @@ title: Attributes-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5502bb8b4bac9945ec21aa1fc9c4e94c2636156d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4386e0943a9703373e4bec6bb7c6a99c8981e687
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-adox"></a>Attribute-Eigenschaft (ADOX)
 Beschreibt die Spaltenmerkmale.  
@@ -46,4 +45,3 @@ Beschreibt die Spaltenmerkmale.
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für Dateneigenschaften Attribute (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
-

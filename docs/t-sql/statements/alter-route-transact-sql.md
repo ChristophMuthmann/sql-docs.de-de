@@ -3,8 +3,11 @@ title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 39e39b8688e2350d27e664b4a1517584c11df941
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verändert die Routeninformationen für eine vorhandene Route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -81,10 +83,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- Lebensdauer  **=**  *Route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wird die Klausel weggelassen, bleibt die Lebensdauer der Route unverändert.  
   
- Adresse **= "***Next_hop_address'*  
+ ADDRESS **='***next_hop_address'*  
  Gibt die Netzwerkadresse für diese Route an. Die *Next_hop_address* gibt eine TCP/IP-Adresse in folgendem Format an:  
   
  **TCP: / /** { *Dns_name* | *Netbios_name* |*Ip_address* } **:**  *Portnummer*  
@@ -183,8 +185,7 @@ ALTER ROUTE ExpenseRoute
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
- [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

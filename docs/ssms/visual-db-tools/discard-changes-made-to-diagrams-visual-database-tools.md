@@ -3,10 +3,12 @@ title: "Verwerfen von Änderungen an Diagrammen (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - database diagrams [SQL Server], discarding changes
 - diagrams [SQL Server], discarding changes
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ea453dd39647ed7087495a05a6daa0268e0909cc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6bf3f6c31cb92aa86c8e2ac3d04beab51d00db13
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Verwerfen von Änderungen an Diagrammen (Visual Database Tools)
-Änderungen am Datenbankdiagramm, die nicht in der Datenbank gespeichert werden sollen, können verworfen werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Änderungen am Datenbankdiagramm, die nicht in der Datenbank gespeichert werden sollen, können verworfen werden.  
   
 ### <a name="to-discard-pending-modifications"></a>So verwerfen Sie ausstehende Änderungen  
   
@@ -38,8 +39,7 @@ ms.lasthandoff: 08/18/2017
     > [!CAUTION]  
     > Wenn mit dieser Datenbank weitere geöffnete Datenbankdiagramme oder Tabellenentwurfsfenster verbunden sind, schließen Sie sie ebenfalls, ohne zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Verwenden von Tabellen in Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
-

@@ -2,9 +2,12 @@
 title: "Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c9a1505c7ca5e228459d1fbc590d9a60cb52e79
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a45938e5b0c204a59d512d4b4f994832293fa120
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie die serverseitigen Ablaufverfolgungsfunktionen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nutzen, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet. Dieser Vorgang besteht aus zwei Teilen:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie die serverseitigen Ablaufverfolgungsfunktionen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nutzen, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet. Dieser Vorgang besteht aus zwei Teilen:  
   
 1.  Sie erstellen und exportieren eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgung.  
   
@@ -210,4 +213,3 @@ GO
 ```  
   
   
-

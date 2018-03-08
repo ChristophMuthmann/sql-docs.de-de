@@ -2,36 +2,33 @@
 title: DISCOVER_DATASOURCES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_DATASOURCES
+apiname: DISCOVER_DATASOURCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DATASOURCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9c91d5b1d3e0fb7ec972e47079a1bf36d8f9b87
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES-Rowset
-  Gibt eine Liste der XMLA-Anbieterdatenquellen (XML for Analysis) zurück, die auf dem Server oder dem Webdienst verfügbar sind. Die veröffentlichten Datenquellen werden von einer URL des Anwendungswebservers zurückgegeben. Der Client kann eine Verbindung mit einer der Datenquellen in der Liste herstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt eine Liste der XML for Analysis (XMLA)-anbieterdatenquellen, die auf dem Server oder den Webdienst verfügbar sind. Die veröffentlichten Datenquellen werden von einer URL des Anwendungswebservers zurückgegeben. Der Client kann eine Verbindung mit einer der Datenquellen in der Liste herstellen.  
   
  Beim Aufrufen der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode mit der **DISCOVER_DATASOURCES** Enumerationswert in der [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) Element, das **Discover** Methode gibt die **DISCOVER_DATASOURCES** Rowset.  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||Die vom Verleger eingegebene Beschreibung der Datenquelle.<br /><br /> Kann **NULL**zurückgeben.|  
 |**URL**|**DBTYPE_WSTR**|ja|Der eindeutige Pfad, der angibt, wo die XMLA-Methoden (XML for Analysis) für diese Datenquelle aufgerufen werden.<br /><br /> Kann **NULL**zurückgeben.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Eine Zeichenfolge, die alle zusätzlichen Informationen enthält, die erforderlich sind, um eine Verbindung mit der Datenquelle herzustellen.<br /><br /> Kann **NULL**zurückgeben.|  
-|**ProviderName**|**DBTYPE_WSTR**|ja|Der Name des Anbieters für die Datenquelle.<br /><br /> Beispiel:`"MSOLAP"`<br /><br /> Kann **NULL**zurückgeben.|  
+|**ProviderName**|**DBTYPE_WSTR**|ja|Der Name des Anbieters für die Datenquelle.<br /><br /> Beispiel: `"MSOLAP"`<br /><br /> Kann **NULL**zurückgeben.|  
 |**ProviderType**|**DBTYPE_WSTR**|ja|Die vom Anbieter unterstützten Datentypen. Dieses Array kann einen oder mehrere der folgenden Typen enthalten:<br /><br /> **MDP**: multidimensionaler Datenanbieter.<br /><br /> **TDP**: tabellarischer Datenanbieter.<br /><br /> **DMP**: Datamining-Anbieter (implementiert die OLE für DB für Data Mining-Spezifikation).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|ja|Eine Spezifikation, die angibt, welchen Typ des Sicherheitsmodus die Datenquelle verwendet. Folgende Werte sind möglich:<br /><br /> **Nicht authentifizierte**: keine Benutzer-ID oder ungültiges Kennwort gesendet werden muss.<br /><br /> **Authentifizierte**: Benutzer-ID und Kennwort in den für die Verbindung mit der Datenquelle erforderlichen Informationen enthalten sein müssen.<br /><br /> **Integrierte**: die Datenquelle verwendet die zugrundeliegende Sicherheit, um zu bestimmen, Autorisierung, z. B. integrierte Sicherheit von bereitgestellten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (Internet Information Services, IIS).|  
   
@@ -62,13 +59,12 @@ ms.lasthandoff: 09/01/2017
   
  Die folgende Tabelle enthält die GUID und die Zeichenfolgenwerte, die dieses Rowset identifizieren.  
   
-|Argument|Wert|  
+|Argument|value|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

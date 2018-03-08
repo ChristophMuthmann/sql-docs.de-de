@@ -3,7 +3,7 @@ title: Close-Methode (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO MD]
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e0607ee2889b32906968a5948138191d1fc67bb4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55e17b5446e881c1671068c99f8ea03f13dcf82f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="close-method-ado-md"></a>Close-Methode (ADO MD)
 Schließt eine offene Cellset dar.  
@@ -56,4 +55,3 @@ Cellset.Close
  [Open-Methode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
  [Position-Objekt (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
  [State-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)
-

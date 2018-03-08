@@ -3,7 +3,7 @@ title: Property-Objekt (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6e0e5fdf3b949eb95bab26c3bdf4fc98b3f7e616
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4a0c5a1217cb8143a0b275ea3d0c31e16b7d1cd1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-object-ado"></a>Property-Objekt (ADO)
 Stellt ein dynamisches Merkmal eines ADO-Objekts, das vom Anbieter definiert ist.  
@@ -62,4 +61,3 @@ Stellt ein dynamisches Merkmal eines ADO-Objekts, das vom Anbieter definiert ist
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

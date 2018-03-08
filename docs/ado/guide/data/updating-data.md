@@ -3,7 +3,7 @@ title: Aktualisieren von Daten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9d353f4305c91d7c7e84a0ccf9b22c3891e8c579
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8138aeea7e5ea40e659a6fed5f5d5f551b1c69d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updating-data"></a>Aktualisieren von Daten
 Updateverhalten und Funktionalität richtet sich größtenteils nach update-Modus (Sperrtyp), Cursortyp und Cursorposition.  
@@ -39,9 +38,8 @@ Updateverhalten und Funktionalität richtet sich größtenteils nach update-Modu
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Unmittelbarer Modus](../../../ado/guide/data/immediate-mode.md)  
+-   [Immediate Mode (Immediate-Modus)](../../../ado/guide/data/immediate-mode.md)  
   
 -   [Batchmodus](../../../ado/guide/data/batch-mode.md)  
   
 -   [Transaktionsverarbeitung](../../../ado/guide/data/transaction-processing.md)
-

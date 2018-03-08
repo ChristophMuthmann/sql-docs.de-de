@@ -3,10 +3,12 @@ title: Eigenschaftenfenster (Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +17,23 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3210a4c6a69d85eded77017c044f33c9a83dd397
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7a96f9d9eb04873cd18219a65c73e0ae705a5096
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="properties-window-management-studio"></a>Eigenschaftenfenster (Management Studio)
-Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen verwendet. Zudem können Sie mithilfe des Fensters Eiegnschaften Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Eigenschaftenfenster ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen verwendet. Zudem können Sie mithilfe des Fensters Eiegnschaften Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Eigenschaftenfenster ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
   
 Im Eigenschaftenfenster werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 |Element|Description|  
 |-----------|---------------|  
@@ -42,7 +43,6 @@ Im Eigenschaftenfenster werden unterschiedliche Arten der Bearbeitung von Felder
 |**Eigenschaften**|Zeigt die Eigenschaften für ein Objekt an.|  
 |**Beschreibungsbereich**|Der Beschreibungsbereich befindet sich unten im Eigenschaftenfenster und zeigt den Eigenschaftentyp und eine kurze Beschreibung der Eigenschaft an. Sie können die Beschreibung der Eigenschaft ein- und ausschalten, indem Sie den Befehl **Beschreibung** im Kontextmenü verwenden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  
   
-

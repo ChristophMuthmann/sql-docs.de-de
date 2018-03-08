@@ -1,10 +1,13 @@
 ---
-title: "Speichern und Ausführen des Pakets (SQL Server-Import / Export-Assistent) | Microsoft Docs"
+title: "Speichern und Ausführen von Paketen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,50 +15,49 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 40b8677cddf363e8789a2fc15b1c2aab5f49f58c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e4b19aeecea3977b08339989e07e3b553e361372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Speichern Sie und führen Sie des Pakets (SQL Server-Import / Export-Assistent aus)
-  Nachdem Sie die Datenquelle und das Ziel angegeben haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Paket speichern und ausführen**. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration Sie möglicherweise auch zum Speichern der Einstellungen als ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets (SSIS), um ihn anzupassen und späteren Wiederverwendung.
+# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Speichern und Ausführen von Paketen (SQL Server-Import/Export-Assistent)
+  Nachdem Sie die Datenquelle und das Ziel angegeben haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Paket speichern und ausführen**. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie Ihre Einstellungen möglicherweise auch als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket (SSIS) speichern, um es anzupassen und später wiederzuverwenden.
   
 **Was ist ein Paket?** Der Assistent verwendet SQL Server Integration Services (SSIS) zum Kopieren von Daten. In SSIS stellt das Paket die Basiseinheit dar. Der Assistent erstellt ein SSIS-Paket im Arbeitsspeicher, während Sie die Seiten des Assistenten durchlaufen und Optionen festlegen.
   
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>Screenshot der Seite „Paket speichern und ausführen“  
 Die folgende Abbildung zeigt die Seite **Paket speichern und ausführen** des Assistenten. 
    
-![Speichern und Ausführen des Import / Export-Assistenten die Seite "Paket"](../../integration-services/import-export-data/media/save-and-run.png "speichern, und führen Sie die Seite "Paket" des Import / Export-Assistenten") 
+![Speichern und Ausführen der Paketseite des Import/Export-Assistenten](../../integration-services/import-export-data/media/save-and-run.png "Save and run package page of the Import and Export Wizard") 
   
 ## <a name="run-and-save-the-package"></a>Ausführen und Speichern des Pakets 
  Um den Vorgang fortzusetzen, müssen Sie mindestens eine der beiden folgenden Optionen auswählen.  
   
  **Run immediately**  
- Wählen Sie diese Option zum Importieren und exportieren die Daten sofort. Standardmäßig ist dieses Kontrollkästchen aktiviert, und der Vorgang wird sofort ausgeführt.
+ Wählen Sie diese Option aus, um die Daten sofort zu importieren und zu exportieren. Standardmäßig ist dieses Kontrollkästchen aktiviert, und der Vorgang wird sofort ausgeführt.
   
  **SSIS-Paket speichern**  
- Speichern Sie die Einstellungen als ein SSIS-Paket. Später können Sie das Paket optional anpassen und erneut ausführen. Wenn Sie das Paket speichern möchten, gibt es auf der nächsten Seite, **SSIS-Paket speichern**, zusätzliche Optionen.
+ Speichern Sie die Einstellungen als SSIS-Paket. Später können Sie das Paket optional anpassen und erneut ausführen. Wenn Sie das Paket speichern möchten, gibt es auf der nächsten Seite, **SSIS-Paket speichern**, zusätzliche Optionen.
  
 Die Option zum Speichern des Pakets ist nur verfügbar, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition oder eine höhere Edition installiert ist.   
   
 > [!NOTE]
-> Wenn Sie den Assistenten abzuschließen, führen Sie den Vorgang, aber beenden den Vorgang vor dem Abschluss der Ausführung, das Paket wird nicht gespeichert, auch wenn Sie die **SSIS-Paket speichern** Kontrollkästchen.  
+> Wenn Sie den Assistenten beenden, den Vorgang ausführen, diesen jedoch vor Abschluss der Ausführung beenden, wird das Paket nicht gespeichert, auch wenn Sie das Kontrollkästchen **SSIS-Paket speichern** aktiviert haben.  
 
-### <a name="if-you-started-the-wizard-from-visual-studio"></a>Wenn Sie den Assistenten von Visual Studio gestartet
-Wenn Sie den Assistenten aus einem Integration Services-Projekt in Visual Studio mit SQL Server Data Tools (SSDT) gestartet:
--   Sie können keine **ausführen** des Pakets erst nach dem Sie den Assistenten zu beenden. Anschließend können Sie das Paket von Visual Studio ausführen.
--   Der Assistent **speichert** des Pakets in Integration Services-Projekt, von dem Sie den Assistenten gestartet.
+### <a name="if-you-started-the-wizard-from-visual-studio"></a>Vorgehensweise beim Starten des Assistenten über Visual Studio
+Wenn Sie den Assistenten in einem Integration Services-Projekt in Visual Studio mit SQL Server Data Tools (SSDT) gestartet haben, gehen Sie wie folgt vor:
+-   Das Paket kann erst **ausgeführt** werden, wenn Sie den Assistenten beendet haben. Danach können Sie das Paket über Visual Studio ausführen.
+-   Der Assistent **speichert** das Paket im Integration Services-Projekt, in dem Sie den Assistenten gestartet haben.
 
 ## <a name="specify-options-for-saving-the-package"></a>Angeben von Optionen zum Speichern des Pakets
 **SQL Server**  
- Wählen Sie diese Option zum Speichern des Pakets in SQL Server in der **Msdb** -Datenbank in die **Sysssispackages** Tabelle.
+ Wählen Sie diese Option zum Speichern des Pakets unter SQL Server in der **msdb**-Datenbank in der Tabelle **sysssispackages** aus.
  
 > [!IMPORTANT]
 > Mit dieser Option wird das Paket nicht in der SSIS-Katalogdatenbank (SSISDB) gespeichert.  
@@ -63,7 +65,7 @@ Wenn Sie den Assistenten aus einem Integration Services-Projekt in Visual Studio
  Wählen Sie den Zielserver aus, und geben Sie die Anmeldeinformationen zum Herstellen der Verbindung mit dem Server auf der nächsten Seite, **SSIS-Paket speichern**, an. Weitere Informationen finden Sie unter [SSIS-Paket speichern](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
  **File system**  
- Wählen Sie diese Option zum Speichern des Pakets als eine Datei mit der **DTSX** Erweiterung.  
+ Wählen Sie diese Option aus, um das Paket als Datei mit der Erweiterung **DTSX** zu speichern.  
   
  Sie wählen auf der nächsten Seite, **SSIS-Paket speichern**, den Zielordner und Dateinamen für das Paket aus. Weitere Informationen finden Sie unter [SSIS-Paket speichern](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
  
@@ -80,7 +82,7 @@ Wenn Sie den Assistenten aus einem Integration Services-Projekt in Visual Studio
  Geben Sie das Kennwort erneut ein.  
   
 > [!NOTE]
-> Die Kennwortoptionen stehen Geben Sie nur, wenn eine **Schutzebene Paket** , die benötigt ein Kennwort - d. h., wenn Sie entweder angeben **sensible Daten mit einem Kennwort verschlüsseln** oder **alle Daten mit einem Kennwort verschlüsseln**.  
+> Die Kennwortoptionen sind nur verfügbar, wenn Sie eine durch ein Kennwort zu schützende **Paketschutzebene** angeben, d.h., wenn Sie entweder **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** angeben.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Informationen zu den beiden Seiten der Optionen für das Speichern des Pakets  
  Die Seite **Paket speichern und ausführen** ist eine der beiden Seiten, die auf der Sie Optionen für das Speichern des SSIS-Pakets auswählen.  
@@ -98,12 +100,11 @@ Wenn Sie den Assistenten aus einem Integration Services-Projekt in Visual Studio
   
 -   Wenn Sie die Option zum Speichern des Pakets ausgewählt haben, ist die nächste Seite **SSIS-Paket speichern**. Auf dieser Seite geben Sie zusätzliche Optionen für das Speichern des Pakets an. (Dann, nachdem Sie das Paket gespeichert haben, heißt die folgende Seite **Assistenten abschließen**.) Weitere Informationen finden Sie unter [SSIS-Paket speichern](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Speichern von Paketen](../../integration-services/save-packages.md)  
 [Ausführen von Integration Services-Paketen (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-[Erste Schritte mit diesem einfachen Beispiel des Import / Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
   
-
 

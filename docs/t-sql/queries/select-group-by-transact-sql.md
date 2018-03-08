@@ -3,8 +3,11 @@ title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,20 +34,19 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 80
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01e2c02cade5b84f3560fe5cb415cece4f815abf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---group-by--transact-sql"></a>Wählen Sie-GROUP BY - Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Eine SELECT-Anweisung-Klausel, die das Abfrageergebnis in Gruppen von Zeilen, in der Regel für das Ausführen ein oder mehrere Aggregationen für jede Gruppe unterteilt. Die SELECT-Anweisung gibt eine Zeile pro Gruppe zurück.  
   
@@ -100,7 +102,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>Argumente 
  
-### <a name="column-expression"></a>*Ausdruck für die Spalte*  
+### <a name="column-expression"></a>*column-expression*  
 Gibt eine Spalte oder eine nicht-aggregierbare Berechnung für eine Spalte an. Diese Spalte kann auf eine Tabelle, abgeleitete Tabelle oder Sicht gehören. Die Spalte muss in der FROM-Klausel der SELECT-Anweisung angezeigt werden, ist jedoch nicht erforderlich, die in der Auswahlliste angezeigt werden. 
 
 Gültige Ausdrücke finden Sie unter [Ausdruck](~/t-sql/language-elements/expressions-transact-sql.md).    
@@ -151,7 +153,7 @@ Die Sales-Tabelle werden diese Zeilen enthält:
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
 | Canada | British Columbia | 300 |
-| USA | Montana | 100 |
+| United States | Montana | 100 |
 
 Der nächsten Abfrage gruppiert, Land und Region und gibt die aggregierte Summe für jede Kombination von Werten zurück.  
  
@@ -166,7 +168,7 @@ Das Abfrageergebnis enthält 3 Zeilen an, da es sich um 3 Kombinationen von Wert
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| USA | Montana | 100 |
+| United States | Montana | 100 |
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
@@ -176,7 +178,7 @@ Die Spaltenreihenfolge wirkt sich auf die ROLLUP-Ausgabe und die Anzahl der Zeil
 
 Beispielsweise `GROUP BY ROLLUP (col1, col2, col3, col4)` Gruppen für jede Kombination von Spaltenausdrücke in den folgenden Listen erstellt.  
 
-- col1, col2, col3, SP4 
+- col1, col2, col3, col4 
 - col1, col2, col3 NULL
 - col1, col2, NULL, NULL
 - col1, NULL, NULL, NULL
@@ -197,8 +199,8 @@ Das Ergebnis der Abfrage hat die gleichen Aggregationen als das einfache GROUP B
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | Canada | NULL | 600 |
-| USA | Montana | 100 |
-| USA | NULL | 100 |
+| United States | Montana | 100 |
+| United States | NULL | 100 |
 | NULL | NULL | 700 |
 
 ### <a name="group-by-cube--"></a>GROUP BY CUBE)  
@@ -221,11 +223,11 @@ Das Abfrageergebnis enthält Gruppen für eindeutige Werte (Land, Region), (NULL
 | NULL | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | NULL | British Columbia | 500 |
-| USA | Montana | 100 |
+| United States | Montana | 100 |
 | NULL | Montana | 100 |
 | NULL | NULL | 700
 | Canada | NULL | 600 |
-| USA | NULL | 100 |
+| United States | NULL | 100 |
    
  ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS)  
  
@@ -347,16 +349,16 @@ Die GROUP BY-Klausel unterstützt alle GROUP BY-Funktionen, die in der SQL-2006-
 |Funktion|SQL Server Integration Services|SQL Server, Kompatibilitätsgrad 100 oder höher|SQL Server 2008 oder höher, mit Kompatibilitätsgrad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT-Aggregate|Nicht unterstützt für WITH CUBE oder WITH ROLLUP.|Unterstützt für WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE oder ROLLUP.|Wie bei Kompatibilitätsgrad 100|  
-|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|User-defined Function, **dbo.cube (***arg1***,***.. ...argN***)** oder  **dbo.Rollup (***arg1***,**... *ArgN***)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined Function, **dbo.cube (***arg1***,**.. ...argN**)** oder **dbo.rollup (**arg1**,***.. ...argN***)** in der GROUP BY-Klausel nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Die folgende Fehlermeldung wird zurückgegeben: "falsche Syntax in der Nähe von Schlüsselwort 'Cube' &#124;" Rollup "."<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Im folgende Beispiel ist zulässig:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined Function, **dbo.cube (***arg1***,***.. ...argN*) oder **dbo.rollup (** *arg1***,***.. ...argN***)** in der GROUP BY-Klausel ist zulässig<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|Nicht unterstützt|Unterstützt|Unterstützt|  
-|CUBE|Nicht unterstützt|Unterstützt|Nicht unterstützt|  
-|ROLLUP|Nicht unterstützt|Unterstützt|Nicht unterstützt|  
-|Gesamtergebnis, z. B. GROUP BY ()|Nicht unterstützt|Unterstützt|Unterstützt|  
-|GROUPING_ID-Funktion|Nicht unterstützt|Unterstützt|Unterstützt|  
-|GROUPING-Funktion|Unterstützt|Supported|Unterstützt|  
-|WITH CUBE|Unterstützt|Supported|Unterstützt|  
-|WITH ROLLUP|Unterstützt|Supported|Unterstützt|  
-|WITH CUBE- oder WITH ROLLUP-Entfernung "doppelter" Gruppierungen|Unterstützt|Supported|Unterstützt| 
+|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|User-defined Function, **dbo.cube (***arg1***,***.. ...argN***)** oder **dbo.rollup (***arg1***,**... *ArgN ***)* * in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined Function, **dbo.cube (***arg1***,**.. ...argN**)** oder **dbo.rollup (**arg1**,***.. ...argN*** )** in der GROUP BY-Klausel nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Die folgende Fehlermeldung wird zurückgegeben: "falsche Syntax in der Nähe von Schlüsselwort 'Cube' &#124;" Rollup "."<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Im folgende Beispiel ist zulässig:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined Function, **dbo.cube (***arg1***, ***.. ...argN*) oder **dbo.rollup (***arg1***,***.. ...argN***)**in der GROUP BY-Klausel ist zulässig<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|Nicht unterstützt|Supported|Supported|  
+|CUBE|Nicht unterstützt|Supported|Nicht unterstützt|  
+|ROLLUP|Nicht unterstützt|Supported|Nicht unterstützt|  
+|Gesamtergebnis, z. B. GROUP BY ()|Nicht unterstützt|Supported|Supported|  
+|GROUPING_ID-Funktion|Nicht unterstützt|Supported|Supported|  
+|GROUPING-Funktion|Supported|Supported|Supported|  
+|WITH CUBE|Supported|Supported|Supported|  
+|WITH ROLLUP|Supported|Supported|Supported|  
+|WITH CUBE- oder WITH ROLLUP-Entfernung "doppelter" Gruppierungen|Supported|Supported|Supported| 
  
   
 ## <a name="examples"></a>Beispiele  
@@ -468,13 +470,12 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [GROUPING_ID &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
- [Gruppierung &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
+ [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [SELECT-Klausel &#40; Transact-SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+ [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
-
 
 
 

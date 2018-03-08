@@ -2,13 +2,13 @@
 title: Binden eines Attribut an eine Namensspalte | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b17e4ed33f172dd109fdd3aad43269a0daf31b3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 16b5b9f2bcb04c11adae59f9b50f4611c157d604
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Attributeigenschaften: Binden eines Attribut an eine Namensspalte
-  In diesem Verfahren wird beschrieben, wie Sie ein Attribut manuell an eine Namensspalte binden, indem Sie den Bereich **Attribute** im Dimensions-Designer und das Dialogfeld **Objektbindung** verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In diesem Verfahren wird beschrieben, wie Sie ein Attribut manuell an eine Namensspalte binden, indem Sie den Bereich **Attribute** im Dimensions-Designer und das Dialogfeld **Objektbindung** verwenden.  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>So binden Sie ein Attribut an eine Namensspalte  
   
@@ -44,4 +44,3 @@ ms.lasthandoff: 09/01/2017
 5.  Wählen Sie in der Liste **Quellspalte** die Spalte aus, an die das Attribut gebunden wird, und klicken Sie dann auf **OK**.  
   
   
-

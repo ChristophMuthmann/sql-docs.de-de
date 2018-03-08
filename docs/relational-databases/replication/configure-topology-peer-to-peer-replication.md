@@ -2,37 +2,38 @@
 title: Topologie konfigurieren (Peer-zu-Peer-Replikation) | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.p2pwizard.peers.f1
+f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a41d0a93fcee491dad6bc2b310720e65f9ee607
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Topologie konfigurieren (Peer-zu-Peer-Replikation)
-  Auf der Seite **Topologie konfigurieren** können Sie allgemeine Konfigurationsaufgaben ausführen, z. B. neue Knoten hinzufügen, Knoten löschen und neue Verbindungen zwischen vorhandenen Knoten hinzufügen. Auf der Entwurfsoberfläche wird der Knoten angezeigt, den Sie auf der Seite **Veröffentlichung** des Assistenten ausgewählt haben. Zum Angeben von Konfigurationsoptionen klicken Sie mit der rechten Maustaste auf einen Knoten, eine Verbindung oder die Entwurfsoberfläche.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf der Seite **Topologie konfigurieren** können Sie allgemeine Konfigurationsaufgaben ausführen, z.B. neue Knoten hinzufügen, Knoten löschen und neue Verbindungen zwischen vorhandenen Knoten hinzufügen. Auf der Entwurfsoberfläche wird der Knoten angezeigt, den Sie auf der Seite **Veröffentlichung** des Assistenten ausgewählt haben. Zum Angeben von Konfigurationsoptionen klicken Sie mit der rechten Maustaste auf einen Knoten, eine Verbindung oder die Entwurfsoberfläche.  
   
 > [!NOTE]  
 >  Der Assistent zum Konfigurieren der Peer-zu-Peer-Topologie fordert Topologieinformationen an, wenn der Assistent geschlossen wird. Wenn der Assistent geschlossen und erneut geöffnet wird, bevor alle Knoten auf die Anforderung von Informationen reagiert haben, zeigt der Assistent möglicherweise ein Teilnetzwerk an.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Die Seite **Topologie konfigurieren** enthält Oberflächenelemente und Optionen, die verfügbar sind, wenn Sie mit der rechten Maustaste auf ein Element klicken. In der folgenden Tabelle werden die einzelnen Oberflächenelemente beschrieben.  
   
-|Oberflächenelement|Beschreibung|  
+|Oberflächenelement|Description|  
 |-----------------------|-----------------|  
 |Entwurfsoberfläche|Zeigt andere Oberflächenelemente an. Zum Hinzufügen von Elementen klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche.|  
 |![Der erste Knoten in einer Topologie](../../relational-databases/replication/media/p2pwizard-firstnode.gif "The first node in a topology")|Der ursprüngliche Knoten in der Topologie. Neue Knoten werden mit einer Kopie der Veröffentlichungsdatenbank vom ursprünglichen Knoten initialisiert.|  
@@ -84,9 +85,9 @@ ms.lasthandoff: 06/22/2017
  **Peerverbindung entfernen**  
  Entfernt eine Verbindung zwischen zwei Knoten. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B entfernen, werden bei der Replikation zwei Abonnements gelöscht, und zwar das Abonnement, das Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, und das Abonnement, das Knoten B in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten A zu empfangen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-zu-Peer-Transaktionsreplikation](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

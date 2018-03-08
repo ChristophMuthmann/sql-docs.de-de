@@ -1,25 +1,30 @@
 ---
 title: "Leistung bewährte Methoden für SQL Server on Linux | Microsoft Docs"
-description: "Dieses Thema enthält Richtlinien und bewährte Methoden für Leistung für die Ausführung von SQL Server-2017 unter Linux."
+description: "In diesem Artikel bieten Leistung best Practices und Richtlinien für die Ausführung von SQL Server-2017 unter Linux."
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Bewährte Methoden für Leistung und Konfigurationsrichtlinien für SQL Server-2017 unter Linux
 
-Dieses Thema enthält bewährte Methoden und Empfehlungen zur Maximierung der Leistung für datenbankanwendungen, die Verbindung mit SQL Server unter Linux. Diese Empfehlungen gelten nur für auf dem Linux-Plattform ausgeführt wird. Alle normale SQL Server-Empfehlungen, wie z. B. Indexentwurf, gelten weiterhin.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Dieser Artikel enthält bewährte Methoden und Empfehlungen zur Maximierung der Leistung für datenbankanwendungen, die Verbindung mit SQL Server unter Linux. Diese Empfehlungen gelten nur für auf dem Linux-Plattform ausgeführt wird. Alle normale SQL Server-Empfehlungen, wie z. B. Indexentwurf, gelten weiterhin.
 
 Die folgenden Richtlinien enthalten Empfehlungen zum Konfigurieren von SQL Server- und Linux-Betriebssystems.
 
@@ -52,7 +57,6 @@ Die folgenden Empfehlungen sind optionale-Konfigurationseinstellungen, die Sie f
 Erwägen Sie die folgenden Linux-Betriebssystem-Konfigurationseinstellungen, die beste Leistung für eine SQL Server-Installation zur Verfügung.
 
 ### <a name="kernel-settings-for-high-performance"></a>Kernel-Einstellungen für hohe Leistung
-
 Dies sind die empfohlenen Linux-Betriebssystem Einstellungen im Zusammenhang mit hoher Leistung und den Durchsatz für eine SQL Server-Installation. Finden Sie in Ihrem Linux-Betriebssystem-Dokumentation für den Prozess zum Konfigurieren dieser Einstellungen.
 
 
@@ -74,7 +78,7 @@ Die folgende Tabelle enthält Empfehlungen für die datenträgereinstellungen:
 | Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | Datenträger-Read-Aheads | 4096 | Finden Sie unter der **Blockdev** Befehl |
-| Sysctl-Einstellungen | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | Finden Sie unter der **Sysctl** Befehl |
+| Sysctl-Einstellungen | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Finden Sie unter der **Sysctl** Befehl |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel-Einstellung Auto Numa Lastenausgleich für NUMA-Systemen mit mehreren Knoten
 
@@ -89,7 +93,7 @@ sysctl -w kernel.numa_balancing=0
 Die Standardeinstellung von **vm.max_map_count** (dies 65536 ist) möglicherweise nicht hoch genug für eine SQL Server-Installation. Ändern Sie diesen Wert (das eine Obergrenze festgelegt ist), um 256 KB.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Deaktivieren des letzten Zugriffs auf Datum/Uhrzeit auf Dateisystemen, für die SQL Server-Daten und Protokolldateien
@@ -100,7 +104,7 @@ Verwenden der **Noatime** Attribut mit einem beliebigen Dateisystem, der zum Spe
 
 Die meisten Linux-Installationen sollten diese Option standardmäßig befinden sich auf. Es wird empfohlen, die meisten konsistente Leistung zu erzielen, um diese Konfigurationsoption aktiviert zu lassen.
 
-### <a name="swapfile"></a>Auslagerungsdatei
+### <a name="swapfile"></a>swapfile
 
 Stellen Sie sicher, dass Sie auf einer ordnungsgemäß konfigurierten Swapfile zur Vermeidung einer unzureichenden Arbeitsspeicher verfügen. Wenden Sie sich an Ihre Linux-Dokumentation für das Erstellen und streamingbedarf eine Auslagerungsdatei.
 
@@ -113,4 +117,3 @@ Wenn Sie SQL Server on Linux auf einem virtuellen Computer ausführen, stellen S
 Weitere Informationen zu SQL Server-Funktionen, die Leistung verbessern, finden Sie unter [erste Schritte mit Leistungsfunktionen](sql-server-linux-performance-get-started.md).
 
 Weitere Informationen zu SQL Server unter Linux finden Sie unter [Übersicht über die von SQL Server on Linux](sql-server-linux-overview.md).
-

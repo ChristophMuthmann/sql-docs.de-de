@@ -2,29 +2,32 @@
 title: Automatisches Gruppieren von Attributelementen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a20c511000cf9489e817ab5f4da4531205a691f3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lektion 4-3 - automatisch Gruppieren von Attributelementen
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer Attributhierarchie nach den Elementen einer anderen Attributhierarchie. Sie können beispielsweise Kundenverkäufe nach der Stadt, dem erworbenen Produkt oder dem Geschlecht gruppieren. Bei bestimmten Attributtypen ist es allerdings sinnvoll, von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch Gruppierungen von Attributelementen erstellen zu lassen, die auf der Verteilung der Elemente innerhalb einer Attributhierarchie basieren. Sie können beispielsweise von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppen der jährlichen Einkommenswerte für Kunden erstellen lassen. Es werden dann für Benutzer, die die Attributhierarchie durchsuchen, die Namen und Werte der Gruppen anstelle der Elemente selbst angezeigt. Dadurch wird die Anzahl der Ebenen beschränkt, die für Benutzer angezeigt werden, was für die Analyse sinnvoller sein kann.  
   
 Von der Eigenschaft **DiscretizationMethod** wird bestimmt, ob von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppierungen erstellt werden, sowie der Typ der Gruppierung, die durchgeführt wird. Standardmäßig werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] keine Gruppierungen ausgeführt. Es ist beim Aktivieren der automatischen Gruppierungen möglich, von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch die beste Gruppierungsmethode basierend auf der Struktur des Attributs bestimmen zu lassen. Sie können auch einen der Gruppierungsalgorithmen in der folgenden Liste auswählen, um die Gruppierungsmethode anzugeben:  
@@ -133,8 +136,7 @@ In den Aufgaben in diesem Thema aktivieren Sie verschiedene Gruppierungstypen f�
 [Ausblenden und Deaktivieren von Attributhierarchien](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Gruppieren von Attributelementen &#40; Diskretisierung &#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   
-

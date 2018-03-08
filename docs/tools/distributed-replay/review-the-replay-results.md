@@ -2,28 +2,29 @@
 title: "Überprüfen der Wiedergabeergebnisse | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "21"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b5509f22c53e1c285175969964abc4b977f8d9bc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
-  Nachdem die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablaufverfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay**-Option den **-o**-Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nach der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe abgeschlossen hat, die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablaufverfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay** -Option den **-o** -Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  Der Speicherort für die Ergebnisdateien der Ablaufverfolgung wird vom `<ResultDirectory>`-XML-Element in der Clientkonfigurationsdatei `DReplayClient.xml`, die sich auf jedem Client befindet, angegeben. Die Ablaufverfolgungsdateien im Clientergebnisverzeichnis werden bei jeder Wiedergabe überschrieben.  
   
@@ -88,4 +89,3 @@ ms.lasthandoff: 08/02/2017
  [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

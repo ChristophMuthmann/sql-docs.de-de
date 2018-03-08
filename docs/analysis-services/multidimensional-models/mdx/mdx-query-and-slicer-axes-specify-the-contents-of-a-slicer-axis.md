@@ -2,33 +2,33 @@
 title: Angeben des Inhalts einer slicerachse (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 33
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX Abfrage- und Slicerachsen - Geben Sie den Inhalt einer Slicer-Achse
-  Die Slicerachse filtert die von der SELECT-Anweisung von MDX (Multidimensional Expressions) zurückgegebenen Daten, sodass nur die Daten zurückgegeben werden, die sich mit den angegebenen Elementen überschneiden. Sie kann als zusätzliche unsichtbare Achse in einer Abfrage betrachtet werden. Die Slicerachse wird in der WHERE-Klausel der SELECT-Anweisung von MDX definiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Die Slicerachse filtert die von der SELECT-Anweisung von MDX (Multidimensional Expressions) zurückgegebenen Daten, sodass nur die Daten zurückgegeben werden, die sich mit den angegebenen Elementen überschneiden. Sie kann als zusätzliche unsichtbare Achse in einer Abfrage betrachtet werden. Die Slicerachse wird in der WHERE-Klausel der SELECT-Anweisung von MDX definiert.  
   
 ## <a name="slicer-axis-syntax"></a>Slicerachse (Syntax)  
  Zum expliziten Angeben einer Slicerachse verwenden Sie in MDX die folgende `<SELECT slicer axis clause>` -Syntax:  
@@ -89,4 +89,3 @@ WHERE(
  Wie oben erwähnt, werden bei Verwendung einer Menge in der WHERE-Klausel implizit Werte für alle Elemente in der Menge aggregiert. In diesem Fall zeigt die Abfrage aggregierte Werte für die USA und Großbritannien in jeder Zelle.  
   
   
-

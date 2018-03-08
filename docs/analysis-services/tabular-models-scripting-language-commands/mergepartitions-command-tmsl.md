@@ -2,32 +2,30 @@
 title: MergePartitions-Befehl (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 290e5e99219a37a1ff1f6793d640756ba21f7467
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>MergePartitions-Befehl (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Führt die Daten von einem oder mehreren Quellpartitionen zu einer Zielpartition zusammen und löscht dann die Quellpartitionen. Die SQL-Abfrage der Zielpartition wird als Teil der Zusammenführung nicht aktualisiert werden. Um sicherzustellen, dass nachfolgende Verarbeitung der Partition alle Daten abruft, sollten Sie die Abfrage ändern, damit sie alle Daten in der zusammengeführten Partition ausgewählt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Führt die Daten von einem oder mehreren Quellpartitionen zu einer Zielpartition zusammen und löscht dann die Quellpartitionen. Die SQL-Abfrage der Zielpartition wird als Teil der Zusammenführung nicht aktualisiert werden. Um sicherzustellen, dass nachfolgende Verarbeitung der Partition alle Daten abruft, sollten Sie die Abfrage ändern, damit sie alle Daten in der zusammengeführten Partition ausgewählt.  
   
 ## <a name="request"></a>Anforderung  
  Sie müssen die Datenbank, die Tabelle und die Quell-und Zielpartition angeben. Sie können nur aus derselben Tabelle Partitionen zusammenführen.  
@@ -75,7 +73,6 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="see-also"></a>Siehe auch  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Erstellen und Verwalten von Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Erstellen und Verwalten von Tabellenmodellpartitionen](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   
-

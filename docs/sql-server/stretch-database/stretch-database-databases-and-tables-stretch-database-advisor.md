@@ -1,11 +1,13 @@
 ---
-title: "Datenbanken und Tabellen für Stretch-Datenbank – Ratgeber für Stretch-Datenbank | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/14/2016
-ms.prod: sql-server-2016
+title: "Identifizieren von Datenbanken und Tabellen für Stretch Database | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: 
@@ -16,63 +18,63 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c5b4c49b5b2e1c098503bab4e61c8bad0d75f891
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 59608301d353d99eb710a956389fd9f8d8948dfe
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="stretch-database-databases-and-tables---stretch-database-advisor"></a>Datenbanken und Tabellen für Stretch-Datenbank – Ratgeber für Stretch-Datenbank
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identifizieren von Datenbanken und Tabellen für Stretch Database von Data Migration Assistant
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Zum Identifizieren von Datenbanken und Tabellen, die für Stretch-Datenbank in Frage kommen, laden Sie den Aktualisierungsratgeber für SQL Server 2016 herunter, und führen Sie den Ratgeber für Stretch-Datenbank aus. Der Ratgeber für Stretch-Datenbank ermittelt auch Blockierungsprobleme.  
-  
-## <a name="download-and-install-upgrade-advisor"></a>Herunterladen und Installieren von Upgrade Advisor  
- Sie können Upgrade Advisor [hier](https://www.microsoft.com/en-us/download/details.aspx?id=53595)herunterladen und installieren. Dieses Tool ist in den [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Installationsmedien nicht enthalten.  
-  
-## <a name="run-the-stretch-database-advisor"></a>Ausführen des Ratgebers für Stretch-Datenbank  
-  
-1.  Führen Sie den Upgrade Advisor aus.  
-  
-2.  Wählen Sie **Szenarien**und anschließend **RUN STRETCH DATABASE ADVISOR**(Ratgeber für Stretch-Datenbank ausführen) aus.  
-  
-3.  Klicken Sie auf dem Blatt für den **Ratgeber für Stretch-Datenbank ausführen** auf **SELECT DATABASES TO ANALYZE**(Datenbanken zum Analysieren auswählen).  
-  
-4.  Geben Sie auf dem Blatt **Datenbanken auswählen** den Servernamen und die Authentifizierungsinformationen ein, oder wählen Sie diese aus. Klicken Sie auf **Verbinden**.
 
-5.  Eine Liste der Datenbanken auf dem ausgewählten Server wird angezeigt. Wählen Sie die zu analysierenden Datenbanken aus. Klicken Sie auf **Auswählen**.  
+  Laden Sie Microsoft Data Migration Assistant herunter, und führen Sie diesen aus, um Datenbanken und Tabellen, die für Stretch Database in Frage kommen, sowie mögliche Blockierungsprobleme zu ermitteln.
   
-6.  Klicken Sie auf dem Blatt für den **Ratgeber für Stretch-Datenbank ausführen** auf **Ausführen**.  Die Analyse wird ausgeführt.  
+## <a name="get-data-migration-assistant"></a>Abrufen von Data Migration Assistant
+ Laden Sie Data Migration Assistant [hier](https://www.microsoft.com/download/details.aspx?id=53595)herunter, und installieren Sie ihn. Dieses Tool ist in den SQL Server-Installationsmedien nicht enthalten.  
   
+## <a name="run-data-migration-assistant"></a>Ausführen von Data Migration Assistant  
+  
+1.  Führen Sie Microsoft Data Migration Assistant aus.  
+
+2.  Erstellen Sie ein neues Projekt des Typs **Assessment**, und benennen Sie es.
+
+3.  Wählen Sie **SQL Server** sowohl als **Source server type** (Quellservertyp) als auch als **Target server type** (Zielservertyp) aus.
+
+4.  Wählen Sie **Erstellen**aus. 
+
+5. Klicken Sie auf der Seite **Optionen** (Schritt 1) auf **New features recommendation** (Empfehlungen neuer Funktionen). Deaktivieren Sie gegebenenfalls die Auswahl für **Kompatibilitätsprobleme**.
+
+6.  Stellen Sie auf der Seite **Quellen auswählen** (Schritt 2) eine Verbindung zum Server her, wählen Sie eine Datenbank und anschließend **Hinzufügen** aus.
+
+7.  Klicken Sie auf **Start Assessment** (Bewertung starten).
+
 ## <a name="review-the-results"></a>Auswerten der Ergebnisse  
   
-1.  Wählen Sie nach Abschluss der Analyse auf dem Blatt **Analysierte Datenbanken** eine der Datenbanken aus, die Sie analysiert haben, um das Blatt **Analyseergebnisse** anzuzeigen.  
-  
-     Das Blatt **Analyseergebnisse** listet empfohlene Tabellen in der ausgewählten Datenbank auf, die den Standardempfehlungskriterien entsprechen. 
-  
-2.  Wählen Sie auf dem Blatt **Analyseergebnisse** in der Liste der Tabellen eine der empfohlenen Tabellen aus, um das Blatt **Tabellenergebnisse** anzuzeigen.  
-  
-     Das Blatt **Tabellenergebnisse** listet die Blockierungsprobleme der ausgewählten Tabelle auf, sofern entsprechende Probleme vorliegen. Informationen über die vom Ratgeber für Stretch-Datenbank erkannten Blockierungsprobleme finden Sie unter [Einschränkungen (Stretch-Datenbank)](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
-  
-3.  Wählen Sie auf dem Blatt **Tabellenergebnisse** eines der Blockierungsprobleme aus, um weitere Informationen zum ausgewählten Problem anzuzeigen und Schritte zur Behebung vorzuschlagen. Implementieren Sie die vorgeschlagenen Schritte zur Vermeidung, wenn Sie die ausgewählte Tabelle für Stretch-Datenbank konfigurieren möchten.  
+1.  Wenn die Analyse abgeschlossen wurde, wählen Sie auf der Seite **Ergebnisse überprüfen** (Schritt 3) die Option **Featureempfehlungen** aus, und klicken Sie dann auf die Registerkarte **Speicher**.
+
+2.  Sehen Sie sich die Empfehlungen zu Stretch Database an. Jede Empfehlung listet neben den möglichen Blockierungsproblemen die Tabellen auf, für die Stretch Database möglicherweise geeignet ist.
+
+## <a name="historical-note"></a>Hinweis zum Verlauf
+Der Stretch Database-Ratgeber war zuvor eine Komponente des SQL Server 2016-Upgrade Advisors. Zu diesem Zeitpunkt musste der Stretch Database-Advisor als separate Aktion ausgewählt und ausgeführt werden.
+
+Mit der Veröffentlichung von Data Migration Assistant, das den Upgrade Advisor ersetzt und erweitert, werden die Funktionen des Stretch Database Advisor in dieses neue Tool integriert. Sie müssen keinerlei Optionen auswählen, um Empfehlungen im Zusammenhang mit Stretch Database zu erhalten. Wenn Sie in Data Migration Assistant eine Bewertung ausführen, werden die Ergebnisse in der Registerkarte **Speicher** der **Featureempfehlungen** angezeigt, die im Zusammenhang mit der Stretch Database stehen.
   
 ## <a name="next-step"></a>Nächster Schritt  
- Aktivieren Sie Stretch-Datenbank.  
+ Aktivieren Sie Stretch Database.  
   
--   Informationen zum aktivieren von Stretch-Datenbank für eine **Datenbank**finden Sie unter [Aktivieren von Stretch-Datenbank für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
+-   Informationen zum aktivieren von Stretch Database für eine **Datenbank**finden Sie unter [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
--   Informationen darüber, wie Sie Stretch-Datenbank auf einer anderen **Tabelle**aktivieren, wenn Stretch bereits auf der Datenbank aktiviert ist, finden Sie unter [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
+-   Informationen darüber, wie Sie Stretch Database auf einer anderen **Tabelle**aktivieren, wenn Stretch bereits auf der Datenbank aktiviert ist, finden Sie unter [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
   
-## <a name="see-also"></a>Siehe auch  
- [Einschränkungen (Stretch-Datenbank)](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
- [Aktivieren von Stretch-Datenbank für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Einschränkungen für Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
+ [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
-

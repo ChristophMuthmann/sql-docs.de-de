@@ -3,8 +3,11 @@ title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 78
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 901067b9bd9c85887b66ea8d32999cf439873952
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Zeigt Fragmentierungsinformationen für die Daten und Indizes der angegebenen Tabelle oder Sicht an.
   
@@ -71,7 +73,7 @@ DBCC SHOWCONTIG
  *TABLE_NAME* | *Table_id* | *View_name* | *View_id*  
  Die Tabelle oder Sicht, für die die Fragmentierungsinformationen überprüft werden sollen. Falls nicht angegeben, werden alle Tabellen und indizierten Sichten der aktuellen Datenbank überprüft. Um die Tabelle zu erhalten, oder ID anzuzeigen, verwenden Sie die [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) Funktion.  
   
- *Index_name* | *Index_id*  
+ *index_name* | *index_id*  
  Der Index, für den die Fragmentierungsinformationen überprüft werden sollen. Falls nicht angegeben, wird der Basisindex der angegebenen Tabelle oder Sicht von der Anweisung verarbeitet. Um die Index-ID zu erhalten, verwenden die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.  
   
  mit  
@@ -122,7 +124,7 @@ Wenn TABLERESULTS angegeben ist, gibt DBCC SHOWCONTIG die neun in der ersten Tab
 |**ObjectID**|ID des Objektnamens.|  
 |**IndexName**|Der Name des verarbeiteten Indexes. Für einen Heap lautet der Wert NULL.|  
 |**IndexId**|Die ID des Index. Für einen Heap lautet der Wert 0.|  
-|**Level**|Ebene des Indexes. Ebene 0 ist die Blatt- oder Datenebene des Indexes.<br /><br /> Die Ebene für einen Heap ist 0.|  
+|**Ebene**|Ebene des Indexes. Ebene 0 ist die Blatt- oder Datenebene des Indexes.<br /><br /> Die Ebene für einen Heap ist 0.|  
 |**Seiten**|Anzahl von Seiten, die zu dieser Indexebene oder zum gesamten Heap gehören.|  
 |**Zeilen**|Anzahl der Daten- oder Indexdatensätze auf dieser Ebene des Indexes. Für einen Heap ist dies die Anzahl von Datensätzen im gesamten Heap.<br /><br /> Bei einem Heap stimmt die Anzahl der Datensätze, die von dieser Funktion zurückgegeben wird, möglicherweise nicht mit der Anzahl der Zeilen überein, die beim Ausführen von SELECT COUNT(*) für den Heap zurückgegeben werden. Das liegt daran, dass eine Zeile möglicherweise mehrere Datensätze enthält. So kann in bestimmten Updatesituationen eine einzelne Heapzeile möglicherweise über einen Weiterleitungsdatensatz und einen weitergeleiteten Datensatz als Ergebnis des Updates verfügen. Außerdem werden die meisten großen LOB-Zeilen im LOB_DATA-Speicher in mehrere Datensätze geteilt.|  
 |**MinimumRecordSize**|Die minimale Größe der Datensätze in dieser Indexebene oder im gesamten Heap.|  
@@ -357,5 +359,4 @@ GO
 [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
   
   
-
 

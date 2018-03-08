@@ -3,7 +3,7 @@ title: Optimieren Sie die Eigenschaft dynamisch (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1ded694b5bbc332483e2363be6212381f27035af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4aeae41d865e585c4c8b93c86bd6f8e9753eaea1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimieren Sie die Eigenschaft dynamisch (ADO)
 Gibt an, ob ein Index erstellt werden soll, auf eine [Feld](../../../ado/reference/ado-api/field-object.md).  
@@ -63,4 +62,3 @@ fld.Properties("Optimize") = False   'Delete an index
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
  [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)
-

@@ -2,27 +2,28 @@
 title: "Leistung für R Services – datenoptimierung | Microsoft Docs"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df91cedac15da65bee9c9aa38c3c747e04f6d60d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung für R Services – Data-Optimierung
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist die dritte in einer Reihe, die zur leistungsoptimierung für R-Dienste basierend auf zwei Fallstudien beschreibt. Dieser Artikel beschreibt die leistungsoptimierungen für R oder Python-Skripts, die in SQL Server ausgeführt. Es beschreibt auch Methoden, die Sie verwenden können, aktualisieren Sie Ihre R-Code, zur Verbesserung der Leistung und bekannte Probleme zu vermeiden.
 
@@ -136,7 +137,7 @@ Dieser Abschnitt enthält verschiedene Tipps und Ressourcen, die für "revoscale
 
 Viele "revoscaler"-Algorithmus unterstützen die Parameter, um zu steuern, wie das trainierte Modell generiert wird. Während die Genauigkeit und Richtigkeit des Modells ist wichtig, könnte die Leistung des Algorithmus gleichermaßen wichtig sein. Um das richtige Gleichgewicht zwischen Genauigkeit und Zeit für das Training zu erhalten, können Sie Parameter für den erhöhen die Geschwindigkeit der Berechnung und in vielen Fällen verbessern, ohne zu reduzieren, die Genauigkeit oder die Korrektheit ändern.
 
-+ [der rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree`unterstützt die `maxDepth` -Parameter, der die Tiefe der Entscheidungsstruktur steuert. Als `maxDepth` wird erhöht, Leistung kann beeinträchtigt werden, es ist daher wichtig, um die Vorteile der Erhöhen der Tiefe im Vergleich zu beeinträchtigt die Leistung zu analysieren.
 
@@ -193,4 +194,3 @@ Wenn Ihr Szenario beinhaltet schnelle Vorhersagen mithilfe eines Modells mit ges
 [Optimieren der Leistung für R - R Optimierung von Code und Daten](r-and-data-optimization-r-services.md)
 
 [Performance Tuning - Fallstudien](performance-case-study-r-services.md)
-

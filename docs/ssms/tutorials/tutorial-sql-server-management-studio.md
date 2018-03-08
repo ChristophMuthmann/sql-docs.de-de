@@ -3,14 +3,15 @@ title: 'Tutorial: SQL Server Management Studio (SSMS) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.tutorialstart.ssms.f1
+f1_keywords: sql13.tutorialstart.ssms.f1
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - templates [SQL Server], SQL Server Management Studio
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
-ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
-ms.openlocfilehash: dde887f6e0999c5ebc107a300c33981a38ec7034
-ms.contentlocale: de-de
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Lernprogramm: SQL Server Management Studio
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Dieses Tutorial zu SQL Server Management Studio (SSMS) bietet eine Einführung in die integrierte Umgebung zum Verwalten Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über eine grafische Oberfläche zum Konfigurieren, Überwachen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Darüber hinaus vermittelt Ihnen das Tutorial, wie Sie die von Ihren Anwendungen, z.B. Datenbanken, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
   
@@ -65,10 +65,9 @@ Zum Durchlaufen dieses Tutorials muss Folgendes installiert sein:
 -   SQL Server 2016 oder höher mit der AdventureWorks-Beispieldatenbank. Informationen zum Installieren der AdventureWorks-Beispieldatenbank finden Sie unter [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014). Installieren Sie die Datenbank „AdventureWorks2014 (OLTP)“.  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lernprogramme zum Datenbankmodul](../../relational-databases/database-engine-tutorials.md)  
   
   
   
-
 

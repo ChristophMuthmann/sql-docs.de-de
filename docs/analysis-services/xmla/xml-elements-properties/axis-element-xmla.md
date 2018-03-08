@@ -2,41 +2,37 @@
 title: Axis-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Axis Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Axis Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.axis
 - http://schemas.microsoft.com/analysisservices/2003/engine#Axis
-helpviewer_keywords:
-- Axis element
+helpviewer_keywords: Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bb0538869453af24bd432a1d7f995e0007e79ec7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 162c143ed257114ec33851e2b071c093058ca155
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="axis-element-xmla"></a>Axis-Element (XMLA)
-  Enthält eine Menge von Tupeln, die zur Darstellung einer einzelnen Achse in einer enthaltenen mehrdimensionalen Datasets ein [Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Menge von Tupeln, die zur Darstellung einer einzelnen Achse in einer enthaltenen mehrdimensionalen Datasets ein [Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp die [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,11 +52,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -69,7 +65,7 @@ ms.lasthandoff: 09/01/2017
 |Übergeordnete Elemente|[Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)|  
 |Untergeordnete Elemente|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) oder [Tupel](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Den Inhalt des der **Achse** Element hängt vom Wert von der **AxisFormat** XMLA-Eigenschaft, die verwendet werden, indem Sie die **Execute** Methode.  
   
 ## <a name="tupleformat"></a>TupleFormat  
@@ -188,8 +184,7 @@ ms.lasthandoff: 09/01/2017
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

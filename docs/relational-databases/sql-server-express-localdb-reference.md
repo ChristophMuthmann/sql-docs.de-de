@@ -2,28 +2,30 @@
 title: SQL Server Express LocalDB-Verweis | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
-caps.latest.revision: 11
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade0d6ffe0aa14053fe9f4c40fd607d07d9ac4b3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 645a0115ba21c75e21d1f2aeaece4d498b9993b9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB-Verweis
-  Dieser Abschnitt enthält Informationen zu SQL Server Express LocalDB:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dieser Abschnitt enthält Informationen zu SQL Server Express LocalDB:  
   
 -   [SQL Server Express LocalDB-Fehlermeldungsverweis](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
   
@@ -137,4 +139,3 @@ int main() {
 ```  
   
   
-

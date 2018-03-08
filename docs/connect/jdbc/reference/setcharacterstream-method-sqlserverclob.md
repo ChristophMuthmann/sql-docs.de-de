@@ -3,29 +3,28 @@ title: SetCharacterStream-Methode (SQLServerClob) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerClob.setCharacterStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerClob.setCharacterStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0028cef27107027e99d3eaf5c5163ea20015209f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d1a8a81c4e602b756ebf8ba931a76a405eac2e2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream-Methode (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public java.io.Writer setCharacterStream(long pos)
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
-

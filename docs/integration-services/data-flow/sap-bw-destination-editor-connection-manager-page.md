@@ -1,10 +1,13 @@
 ---
-title: SAP BW-Ziel-Editor (Seite Verbindungs-Manager) | Microsoft Docs
+title: "Ziel-Editor für SAP BW (Seite „Verbindungs-Manager“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
   Verwenden Sie die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW** , um den SAP BW-Verbindungs-Manager auszuwählen, der vom SAP BW-Ziel verwendet wird. Auf dieser Seite wählen Sie außerdem die Parameter aus, die zum Laden der Daten in das SAP NetWeaver BW-System verwendet werden.  
@@ -40,13 +42,13 @@ ms.lasthandoff: 08/03/2017
   
 3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
  **SAP BW-Verbindungs-Manager**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **SAP BW-Verbindungs-Manager** einen neuen Verbindungs-Manager.  
@@ -106,7 +108,7 @@ ms.lasthandoff: 08/03/2017
   
 -   InfoPackage  
   
- **Create**  
+ **Erstellen**  
  Erstellen Sie den ausgewählten SAP NetWeaver BW-Objekttyp.  
   
 |Objekttyp|Ergebnis|  
@@ -116,11 +118,10 @@ ms.lasthandoff: 08/03/2017
 |**InfoSource**|Erstellen Sie eine neue InfoSource, indem Sie erst das Dialogfeld **InfoSource erstellen** und dann das Dialogfeld **InfoSource für Transaktionsdaten erstellen** oder **InfoSource für Masterdaten erstellen** verwenden. Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) und [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
 |**InfoPackage**|Erstellen Sie ein neues InfoPackage mithilfe des Dialogfelds **InfoPackage erstellen** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## <a name="see-also"></a>Siehe auch  
- [Ziel-Editor für SAP BW &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Ziel-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Ziel-Editor für SAP BW &#40; Seite "Erweitert" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ziel-Editor für SAP BW &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Ziel-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Ziel-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

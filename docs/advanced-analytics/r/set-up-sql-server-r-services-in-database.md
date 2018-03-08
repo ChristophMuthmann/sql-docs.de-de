@@ -1,115 +1,174 @@
 ---
 title: Einrichten von SQL Server Machine Learning-Services (Datenbankintern) | Microsoft Docs
 ms.custom: 
-ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - Installieren von SQL Server R Services
+- Installieren von SQL Server-Machine Learning-Services
+- Richten Sie R Services
+- Installieren Sie SQL Machine learning
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: 36
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
-ms.contentlocale: de-de
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Einrichten von SQL Server Machine Learning-Services (Datenbankintern)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Thema wird beschrieben, wie zum Einrichten von Machine Learning Services in SQL Server mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup-Assistenten.
+In diesem Thema wird beschrieben, wie zum Installieren und konfigurieren die folgenden Machine learning-Funktionen, die in der Datenbank Analytics in SQL Server unterstützt werden:
 
-**Gilt für:** SQL Server 2016-R Services (nur R) SQL Server 2017 Machine Learning Services (R und Python)
++ **SQL Server 2016 R Services (Datenbankintern)**. Wenn Sie SQL Server 2016 haben, installieren Sie dieses Feature, um die Ausführung von R-Code in SQL Server zu ermöglichen. Erfordert das Datenbankmodul an.
 
-## <a name="machine-learning-options-in-sql-server-setup"></a>Machine learning-Optionen in SQL Server-setup
+    [Einrichten von Machine Learning in der SQL Server 2016](#bkmk_2016top)
 
-SQL Server-Setup bietet die folgenden Optionen für die Installation von Machine Learning:
++ **SQL Server 2017 Machine Learning Services (Datenbankintern)**. Wenn Sie SQL Server-2017 verfügen, installieren Sie diese Option, um Code von R (oder Python) in SQL Server ausgeführt. Erfordert das Datenbankmodul an. 
 
-* Installieren von Machine Learning mit SQL Server-Datenbank
+    [Machine Learning in der SQL Server-2017 einrichten](#bkmk_2017top)
 
-  Diese Option können Sie R oder Python-Skripts ausführen, mit einer gespeicherten Prozedur. Auch können der SQL Server-Computer als remote computekontext für R oder Python-Skripts, die aus einer externen Verbindung ausgeführt werden.
++ Ein Machine Learning-Server mit **keine** SQL Server
 
-  So installieren Sie diese Option aus:
-  
-  * Wählen Sie in SQL Server 2016 **R Services (Datenbankintern)**.
-  * Wählen Sie in SQL Server 2017 **Machine Learning-Services (Datenbankintern)**.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup schließt auch die Möglichkeit, eine "eigenständig"-Version des Machine learning-Komponenten zu installieren, die das Datenbankmodul ist nicht erforderlich und wird von SQL Server nicht ausgeführt.  Im Allgemeinen wird empfohlen, dass Sie diese Option auf einem anderen Computer als dem Computer installieren, auf dem SQL Server gehostet.
+    
+    [Einrichten eines eigenständigen Machine Learning-Servers](create-a-standalone-r-server.md).
 
+Dieser Artikel beschreibt den Prozess der Einrichtung, die verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup-Assistenten. Installation über die Befehlszeile oder Installationsprogramme für die Verwendung in offline-Server herunterladen finden Sie in diesen Artikeln:
 
-* Installieren Sie einen eigenständigen Machine Learning-server
++ [Installieren von R für SQL Server über die Befehlszeile](unattended-installs-of-sql-server-r-services.md)
++ [Installieren Sie Python für SQL Server über die Befehlszeile](../python/unattended-installs-of-sql-server-python-services.md)
++ [Installieren Sie einen eigenständigen Machine Learning-Server über die Befehlszeile](install-microsoft-r-server-from-the-command-line.md)
++ [Installieren von Machine Learning-Komponenten auf einem Server mit keine Aces internet](installing-ml-components-without-internet-access.md)
 
-  Diese Option wird eine Entwicklungsumgebung für Machine learning-Lösungen, die nicht erfordern, oder verwenden Sie SQL Server erstellt. Aus diesem Grund empfehlen wir in der Regel, dass Sie diese Option auf einem anderen Computer als eine SQL-Hostserver installieren. Weitere Informationen zu dieser Option finden Sie unter [erstellen a Standalone R Server](../r/create-a-standalone-r-server.md).
+**Gilt für:** SQLServer 2016, SqlServer 2017
 
-Der Installationsvorgang erfordert mehrere Schritte, von die einige optional sind. Die optionale Aspekte hängen sowohl Verwendungsweise von Machine Learning und den Status Ihrer Umgebung Sicherheit verwenden. 
+## <a name="bkmk_prereqs"></a> Prüfliste vor der Installation
 
-## <a name="bkmk_prereqs"></a> Erforderliche Komponenten
++ Machine Learning in der Datenbank erfordert SQLServer 2016 oder höher. 
 
-*  Installation von R-Server und R-Dienste zur gleichen Zeit zu vermeiden. Sie würden normalerweise R Server (eigenständig) zum Erstellen einer Umgebung, die ein datenanalyst oder Entwickler verwendet werden, die Verbindung mit SQL Server installieren und Bereitstellen von R-Lösungen. Daher besteht keine Notwendigkeit beide auf demselben Computer zu installieren.
++ Unterstützte Sprachen: 
 
-* Wenn Sie alle vorherigen Versionen von Revolution Analytics-Entwicklungsumgebung oder dem "revoscaler"-Pakete verwendet oder wenn Sie alle Vorabversionen von SQL Server 2016 installiert haben, müssen Sie sie deinstallieren. Seite-an-Seite-Installation wird nicht unterstützt. Hilfe zum Entfernen früherer Versionen finden Sie [Upgrade und Installation – häufig gestellte Fragen für SQL Server R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+    + SQL Server 2016 unterstützt nur die R. 
 
-* Sie können keine Machine Learning-Dienste auf einem Failovercluster installieren. Der Grund ist, der Sicherheitsmechanismus, der verwendet wird, zur Isolierung von externen Skriptprozesse nicht mit einer Windows Server Failover Cluster-Umgebung kompatibel ist. Dieses Problem zu umgehen können Sie eine der folgenden Aktionen ausführen:
-    * Mithilfe der Replikation um erforderlichen Tabellen in eine eigenständige SQL Server-Instanz mit R Services zu kopieren.
-    * Installieren Sie [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] auf einem eigenständigen Computer, die AlwaysOn verwendet und ist Teil einer verfügbarkeitsgruppe.
+    + R ist auch verfügbar als Vorschaufunktion in Azure SQL-Datenbank mit einigen Einschränkungen. Weitere Informationen finden Sie unter [mithilfe von R in Azure SQL-Datenbank](using-r-in-azure-sql-database.md)
 
-> [!IMPORTANT]
-> Nachdem Setup abgeschlossen ist, sind einige zusätzliche Schritte erforderlich, um Machine learning-Funktion zu aktivieren. Sie können auch müssen gewähren Sie Benutzerberechtigungen für bestimmte Datenbanken ändern Konten konfigurieren oder Einrichten einer remote Data Science-Client.
+    + Verwendung von Python erfordert SQLServer 2017 oder höher.
 
-##  <a name="bkmk_installExt"></a>Schritt 1: Installieren Sie die Erweiterbarkeitsfunktionen, und wählen Sie ein Machine learning-Sprache
++ Wenn Sie alle vorherigen Versionen von Revolution Analytics-Entwicklungsumgebung oder dem "revoscaler"-Pakete verwendet oder wenn Sie alle Vorabversionen von SQL Server 2016 installiert haben, müssen Sie sie deinstallieren. Seite-an-Seite-Installation wird nicht unterstützt. Hilfe zum Entfernen früherer Versionen finden Sie [Upgrade und Installation – häufig gestellte Fragen für SQL Server-Machine Learning-Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-Um Machine Learning verwenden zu können, müssen Sie SQLServer 2016 oder höher installieren. Mit [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], mindestens eine Instanz des Datenbankmoduls ist erforderlich. Sie können entweder eine Standardinstanz oder eine benannten Instanz verwenden.
++ Sie können keine SQL Server 2016 R Services oder SQL Server 2017 Machine Learning Services auf einem Domänencontroller installieren. Der R-Dienste "oder" Machine Learning-Dienste Teil von Setup schlägt fehl.
 
-1. Führen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup aus.
-  
-    Informationen dazu, wie Sie unbeaufsichtigte Installationen finden Sie unter [unbeaufsichtigt installiert SQL Server R Services](../r/unattended-installs-of-sql-server-r-services.md).
-  
++ Sie können keine Machine learning-Funktionen auf einem Failovercluster installieren. Die Sicherheitsmechanismus, der verwendet wird, zur Isolierung von externen Skriptprozesse ist nicht kompatibel mit einer Windows Server Failover Cluster-Umgebung. Dieses Problem zu umgehen können Sie eine der folgenden Aktionen ausführen:
+    * Mithilfe der Replikation um erforderlichen Tabellen in einer SQL Server-Instanz mit Machine Learning aktiviert zu kopieren.
+    * Installieren Sie Machine Learning auf einem eigenständigen Computer, der AlwaysOn verwendet und ist Teil einer verfügbarkeitsgruppe an.
+
++ Machine Learning-Framework erfordert zusätzliche Konfigurationsschritte, nachdem Setup abgeschlossen ist. Die genauen Schritte hängen von Ihrer Organisation und die Sicherheitsrichtlinien, die Serverkonfiguration und die vorgesehenen Benutzer ab. Es wird empfohlen, dass Sie überprüfen Sie alle Schritte und zusätzliche Konfigurationsschritte, die erforderlich sein könnten in Ihrer Umgebung bestimmen.
+
+## <a name="bkmk2016top"></a>Installieren von SQL Server 2016 R Services (Datenbankintern)
+
+> [!div class="checklist"]
+> * Installieren von Datenbankmodul und Machine learning-Funktionen
+> * Erforderliche Schritte nach der Installation: Aktivieren von Machine Learning und neu starten
+> * Optionale Schritte der nach der Installation: Firewallregeln hinzufügen, fügen Sie Benutzer hinzu, ändern oder Konfigurieren von Dienstkonten, richten Sie eine remote Data Science-Client
+
+**Mithilfe der SQL Server 2016-Setup-Assistenten**
+
+1. Führen Sie den Setup-Assistenten von SQL Server aus.
+
 2. Auf der **Installation** Registerkarte **eigenständige neue SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation**.
-   
-3. Auf der **Funktionsauswahl** Seite, um die Dienste der Datenbank verwendet werden, indem Sie R Installieren von Aufträgen und installiert die Erweiterungen, die externe Skripts und Prozesse zu unterstützen, wählen Sie die folgenden Optionen:
-   
-   **SQL Server 2016**
-   - Wählen Sie **Datenbankmoduldienste**.
-   - Wählen Sie **R Services (Datenbankintern)**.
 
-   **SQL Server 2017**
-   - Wählen Sie **Datenbankmoduldienste**.
-   - Wählen Sie **Machine Learning-Services (Datenbankintern)**.
-   - Wählen Sie mindestens ein Machine learning-Sprache zu aktivieren. Sie können nur R auswählen oder können Sie R und Python hinzufügen.
+    
+     ![Installieren von R Services (Datenbankintern)](media/2016-setup-installation-rsvcs.png "starten Sie die Installation des Datenbankmoduls mit R-Services")
    
-   > [!NOTE]
-   > Wenn Sie nicht die R- oder Python Sprachoptionen auswählen, der Setup-Assistent installiert nur die Erweiterbarkeitsframework, einschließlich SQL Server vertrauenswürdige Launchpad jedoch sprachspezifische Komponenten nicht installiert ist. Diese Option ist für die R oder Python SQL Server-Instanz als Teil der Microsoft moderne Lifecycle-Richtlinie Bindung. Weitere Informationen finden Sie unter [verwenden SqlBindR zum Aktualisieren einer Instanz des R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+3. Auf der **Funktionsauswahl** Seite, wählen Sie die folgenden Optionen:
 
-4.  Auf der **stimmen Sie installiert Microsoft R Open** Seite **Accept**.
+   - Wählen Sie **Datenbankmoduldienste**. Das Datenbankmodul ist in jeder Instanz erforderlich, die Machine Learning verwendet.
+   - Wählen Sie **R Services (Datenbankintern)**. Installiert die Unterstützung für in der Datenbank mithilfe von r
+    
+     ![R Services Funktionsauswahl](media/2016setup-rsvcs-features.png "wählen Sie diese Funktionen für R Services In der Datenbank")
+
+    > [!IMPORTANT]
+    > Installieren Sie R-Server und R Services nicht zur selben Zeit. Sie würden normalerweise R Server (eigenständig) zum Erstellen einer Umgebung, die ein datenanalyst oder Entwickler verwendet werden, die Verbindung mit SQL Server installieren und Bereitstellen von R-Lösungen. Daher besteht keine Notwendigkeit beide auf demselben Computer zu installieren.
+
+4.  Auf der **stimmen Sie installiert Microsoft R Open** auf **Accept**.
   
-     Die Lizenzbedingungen ist erforderlich, um Microsoft R Open, die eine Verteilung der open Source-R-Basispakete und Tools, zusammen mit erweiterten R-Paketen und Konnektivitätsanbietern von Microsoft R-Entwicklungsteam umfasst herunterladen.
+    Die Lizenzbedingungen ist erforderlich, um Microsoft R Open, die eine Verteilung der open Source-R-Basispakete und Tools, zusammen mit erweiterten R-Paketen und Konnektivitätsanbietern von Microsoft R-Entwicklungsteam umfasst herunterladen.
   
-    > [!NOTE]
-    >  Wenn der Computer, die Sie verwenden keinen Zugriff auf das Internet, Sie können Setup an diesem Punkt, um die Installationsprogramme getrennt, wie in beschrieben herunterladen anhalten [Installieren von R-Komponenten ohne Internetzugang](installing-ml-components-without-internet-access.md).
+    Wenn der Computer, die Sie verwenden keinen Zugriff auf das Internet, Sie können Setup an diesem Punkt, um die Installationsprogramme getrennt, wie in beschrieben herunterladen anhalten [Installieren von R-Komponenten ohne Internetzugang](installing-ml-components-without-internet-access.md).
   
-5. Wählen Sie **Weiter**aus.
+5. Nachdem Sie den Lizenzvertrag akzeptiert haben, besteht eine kurze Pause während der Installer vorbereitet wird. Klicken Sie auf **Weiter** Wenn die Schaltfläche wird verfügbar.
 
 6. Auf der **Installationsbereit** Seite, stellen Sie sicher, dass die folgenden Elemente enthalten sind, und Sie dann wählen **installieren**.
 
-   **SQL Server 2017**
+   + Datenbankmoduldienste
+   + R Services (In-Database)
+
+7. Wenn die Installation abgeschlossen ist, starten Sie den Computer neu.
+
+
+## <a name="bkmk2017top"></a>Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern)
+
+> [!div class="checklist"]
+> * Installieren von Datenbankmodul und Machine learning-Funktionen
+> * Erforderliche Schritte nach der Installation: Aktivieren von Machine Learning und neu starten
+> * Optionale Schritte der nach der Installation: Firewallregeln hinzufügen, fügen Sie Benutzer hinzu, ändern oder Konfigurieren von Dienstkonten, richten Sie eine remote Data Science-Client.
+
+**Erste Schritte**
+
+1. Führen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup aus.
+  
+2. Auf der **Installation** Registerkarte **eigenständige neue SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation**.
+
+     ![Installieren von Machine Learning-Services (Datenbankintern)](media/2017setup-installation-page-mlsvcs.png "starten Sie die Installation des Datenbankmoduls mit Machine Learning-Diensten")
+
+3. Auf der **Funktionsauswahl** Seite, wählen Sie die folgenden Optionen:
+   
+    + Wählen Sie **Datenbankmoduldienste**. Das Datenbankmodul ist in jeder Instanz erforderlich, die Machine Learning verwendet.
+
+    + Wählen Sie **Machine Learning-Services (Datenbankintern)**. Diese Option installiert die Unterstützung für in der Datenbank mithilfe von r Nachdem Sie diese Option ausgewählt haben, können Sie Machine learning Sprache auswählen. Sie können nur R auswählen oder können Sie R und Python hinzufügen.
+   
+    ![Funktionsauswahl für Machine Learning Services](media/2017setup-features-page-mls-rpy.png "wählen Sie diese Funktionen für R Services In der Datenbank")
+
+    Wenn Sie nicht die R- oder Python Sprachoptionen auswählen, installiert der Setup-Assistent nur die Erweiterbarkeitsframework, die SQL Server vertrauenswürdige Launchpad enthält und sprachspezifische Komponenten nicht installiert.  Im Allgemeinen wird empfohlen, dass Sie mindestens eine Sprache zu installieren. Allerdings können Sie diese Option verwenden, wenn Sie beabsichtigen, das den Bindungsprozess sofort zu verwenden, um Machine learning-Komponenten zu aktualisieren. Weitere Informationen finden Sie unter [verwenden SqlBindR zum Aktualisieren einer Instanz des R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+    Es wird empfohlen, die Sie **nicht** die Funktionen für eigenständige und In der Datenbank auf demselben Computer installieren, und installieren Sie sie nie zur gleichen Zeit. Beim Bereitstellen von Lösungen, würden Sie normalerweise Machine Learning-Server (eigenständig) zum Erstellen einer Umgebung, die ein datenanalyst oder Entwickler verwendet werden, die Verbindung mit SQL Server installiert. Daher besteht keine Notwendigkeit beide auf demselben Computer zu installieren.
+
+4.  Lizenzverträge für Machine Learning: je nachdem welche Sprachen, die Sie installieren, Sie die Lizenzverträge für R, Python oder beides zustimmen müssen.
+
+    + Lizenzbedingungen für R: die Lizenzbedingungen umfasst Microsoft R zu öffnen, die eine Verteilung der open Source-R-Basispakete und Tools, zusammen mit erweiterten R-Paketen und Konnektivitätsanbietern von Microsoft-Entwicklungsteam enthält.
+  
+    + Lizenzbedingungen für Python. Der Python-open-Source-Lizenzvertrag deckt auch Anaconda und verwandte Tools sowie einige neuen Python-Bibliotheken von Microsoft-Entwicklungsteam.
+
+    Klicken Sie auf **Accept** an, dass Ihr Vertrag. Eine kurze Pause vorhanden ist, während die Komponenten vorbereitet sind, und klicken Sie dann die **Weiter** Schaltfläche ist verfügbar.
+
+    Wenn der Computer, die Sie verwenden keinen Zugriff auf das Internet, Sie können Setup an diesem Punkt, um die Installationsprogramme getrennt, wie hier beschrieben herunterladen anhalten: [Machine Learning-Komponenten ohne Internetzugang installieren](installing-ml-components-without-internet-access.md).
+
+6. Auf der **Installationsbereit** Seite, stellen Sie sicher, dass die folgenden Elemente enthalten sind, und Sie dann wählen **installieren**.
+
    - Datenbankmoduldienste
    - Machine Learning-Dienste (datenbankintern)
    - R, Python oder beides
 
-   **SQL Server 2016**
-   - Datenbankmoduldienste
-   - R Services (In-Database)
+7. Wenn die Installation abgeschlossen ist, notieren Sie sich den Speicherort der Setup-Protokoll, und klicken Sie dann starten Sie den Computer neu.
 
-7. Wenn die Installation abgeschlossen ist, starten Sie den Computer neu.
+###  <a name="bkmk_enableFeature"></a>Schritt nach der Installation erforderlich
 
-##  <a name="bkmk_enableFeature"></a>Schritt 2: Aktivieren von externen Skripts services
+Aus Gründen der Sicherheit wird die Machine Learning-Funktion nicht standardmäßig aktiviert, auch wenn die Funktion installiert wurde. Ein Server-Administrator muss das Feature aktivieren und die Instanz neu gestartet. 
+
+In diesem Abschnitt wird beschrieben, wie die Instanz für Machine Learning neu konfiguriert. Konfiguration richtet externe-Dienstkonten und startet den Launchpad-Dienst.
 
 1. Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn diese Anwendung noch nicht installiert ist, können Sie den Setup-Assistenten für SQL Server erneut ausführen, um einen Link zum Herunterladen zu öffnen und die Anwendung zu installieren.
   
@@ -119,7 +178,7 @@ Um Machine Learning verwenden zu können, müssen Sie SQLServer 2016 oder höher
    sp_configure
    ```
 
-    Der Wert für die **externe Skripts aktiviert** Eigenschaft sollte jetzt **0**. Grund hierfür das Feature ist standardmäßig deaktiviert, um die Angriffsfläche zu verringern und muss explizit von einem Administrator aktiviert ist.
+    Suchen Sie nach dem Wert der **externe Skripts aktiviert** -Eigenschaft, die ausgeführt werden **0**. Ist, dass die Funktion standardmäßig oberflächenreduzierung deaktiviert ist.
      
 3. Um die externe Skriptingfunktion zu aktivieren, führen Sie die folgende Anweisung aus:
   
@@ -132,21 +191,21 @@ Um Machine Learning verwenden zu können, müssen Sie SQLServer 2016 oder höher
 
     Sie können den Dienst neu starten, mit der **Services** Bereich in der Systemsteuerung oder mithilfe von SQL Server-Konfigurations-Manager.
 
-## <a name="bkmk_TestScript"></a>Schritt 3: Stellen Sie sicher, dass die Ausführung des Skripts lokal funktioniert
-
-Stellen Sie sicher, dass die Ausführung externer Skripts-Dienst aktiviert ist.
-
-1. In SQL Server Management Studio, öffnen Sie ein neues **Abfrage** Fenster, und führen Sie den folgenden Befehl aus:
+5. Um sicherzustellen, dass der externes Skript-Ausführung-Dienst, müssen Sie in SQL Server Management Studio aktiviert ist, öffnen Sie ein neues **Abfrage** Fenster, und führen Sie den folgenden Befehl aus:
   
     ```SQL
     EXEC sp_configure  'external scripts enabled'
     ```
     Der Wert **Run_value** sollte jetzt auf 1 festgelegt werden.
     
-2. Öffnen der **Services** Bereich, und stellen Sie sicher, dass das Launchpad-Dienst für die Instanz ausgeführt wird. Wenn Sie mehrere Instanzen installieren, verfügt jede Instanz über einen eigenen Launchpad-Dienst.
-   
-3. Öffnen Sie ein neues **Abfrage** Fenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und führen Sie ein einfaches R-Skript, z. B. die folgenden:
-  
+6. Öffnen der **Services** Bereich, und stellen Sie sicher, dass das Launchpad-Dienst für die Instanz ausgeführt wird. Wenn Sie mehrere Instanzen installieren, verfügt jede Instanz über einen eigenen Launchpad-Dienst.
+
+7. Es ist ratsam, führen Sie ein einfaches Skript aus, um sicherzustellen, dass externe Skripts Laufzeiten mit SQL Server kommunizieren können. 
+
+    Öffnen Sie ein neues **Abfrage** Fenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und führen Sie ein Skript z. B. Folgendes:
+    
+    + For R
+    
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
@@ -156,29 +215,49 @@ Stellen Sie sicher, dass die Ausführung externer Skripts-Dienst aktiviert ist.
     WITH RESULT SETS (([hello] int not null));
     GO
     ```
-  
-    **Ergebnisse**
-  
-    *Hello* *1*
-  
-   Wenn der Befehl ohne Fehler ausgeführt wird, fahren Sie mit den nächsten Schritten. Wenn Sie eine Liste der einige allgemeine Probleme einen Fehler erhalten, finden Sie unter [häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-## <a name="bkmk_FollowUp"></a>Schritt 4: Zusätzliche Konfiguration
+    + For Python
+    
+    ```SQL
+    EXEC sp_execute_external_script  @language =N'Python',
+    @script=N'
+    OutputDataSet = InputDataSet;
+    ',
+    @input_data_1 =N'SELECT 1 AS hello'
+    WITH RESULT SETS (([hello] int not null));
+    GO
+    ```
 
-Je nach Ihrer Anwendungsfall für R oder Python müssen Sie zusätzliche Änderungen vornehmen, auf dem Server, die Firewall, den Dienst bzw. die Datenbankberechtigungen verwendeten Konten. Die Änderungen, die Sie vornehmen müssen, variieren nach Groß-/Kleinschreibung.
+    Das Skript kann etwas dauern, während zum ersten Mal ausführen die externes Skript-Laufzeit geladen wird. Die Ergebnisse sollten etwa wie folgt aussehen:
+
+    | Hello |
+    |----|
+    | 1|
+
+
+8. Wenn Sie Fehlermeldungen erhalten, fahren Sie mit Abschnitt beschreiben Weitere, optionale Änderungen, die Sie möglicherweise vornehmen, nachdem die Installation abgeschlossen ist, oder finden im Handbuch zur Problembehandlung:
+
+    + [Optionale Schritte der nach der Installation: Konfigurieren von Dienst- und Berechtigungen](#bkmk_FollowUp) 
+    + [Problembehandlung bei Machine Learning in der SQL Server](upgrade-and-installation-faq-sql-server-r-services.md)
+
+## <a name="bkmk_FollowUp"></a>Optionale Schritte der nach der installation
+
+Je nach Ihrer Anwendungsfall für maschinelles lernen müssen Sie zusätzliche Änderungen vornehmen, auf dem Server, die Firewall, den Dienst bzw. die Datenbankberechtigungen verwendeten Konten. Die Änderungen, die Sie vornehmen müssen, variieren nach Groß-/Kleinschreibung.
 
 Allgemeine Szenarien, die zusätzliche Änderungen erfordern:
 
 * Ändern die Firewallregeln für eingehende Verbindungen zu SQL Server zu ermöglichen.
 * Aktivieren von zusätzlichen Netzwerkprotokollen.
 * Sicherstellen, dass der Server Remoteverbindungen unterstützt.
-* Aktivieren der *implizite Authentifizierung*, wenn Benutzer Zugriff auf SQL Server-Daten von einem Remotecomputer aus terminal R zum Entwickeln und Ausführen von R-Code mithilfe des RODBC-Pakets oder andere Anbieter von Microsoft Open Database Connectivity (ODBC).
-* Erteilen Benutzerberechtigungen zum Ausführen von R-Skript oder Datenbanken verwenden.
+* Aktivieren der *implizite Authentifizierung*, wenn Benutzer Zugriff auf SQL Server-Daten von einem remote Data Science-Client, und führen Sie Code mithilfe des RODBC-Pakets oder andere ODBC-Datenanbieter.
+* Benutzer Zugriff auf einzelne Datenbanken gewährt.
 * Beheben von Sicherheitsproblemen, die Kommunikation mit dem Launchpad-Dienst zu verhindern.
-* Sicherstellen, dass Benutzer über die Berechtigung zum Ausführen von R-Code oder Pakete installieren.
+* Sicherstellen, dass Benutzer über die Berechtigung zum Ausführen von Code oder Pakete zu installieren.
 
 > [!NOTE]
 > Nicht alle aufgelisteten Änderungen können erforderlich sein. Allerdings wird empfohlen, dass Sie überprüfen, dass alle Elemente, um festzustellen, ob sie für Ihr Szenario anwendbar sind.
+
+Weitere Tipps zur Problembehandlung finden Sie hier: [häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ### <a name="bkmk_configureAccounts"></a>Aktivieren Sie die implizite Authentifizierung für die Kontogruppe Launchpad
 
@@ -205,7 +284,7 @@ Jedoch, wenn Sie, führen Sie R-Skripts von einem remote Data Science-Client mö
 > [!NOTE]
 > Wenn Sie eine SQL-Anmeldung für die Ausführung von R-Skripts in einer SQL Server-computekontext verwenden, ist dieser Schritt nicht erforderlich.
 
-Wenn Sie installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und R-Skripts in eine eigene Instanz ausgeführt werden, sind in der Regel das Ausführen von Skripts als Administrator, oder zumindest ein Datenbankbesitzer und daher verfügen über implizite Berechtigungen für verschiedene Vorgänge, werden alle Daten in der Datenbank und die Möglichkeit zum Installieren der neuen R-Pakete als erforderlich.
+Wenn Sie installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Ihrer eigenen Instanz sind Sie in der Regel Skripts als Administrator ausführen oder zumindest ein Datenbankbesitzer und daher verfügen über implizite Berechtigungen für verschiedene Vorgänge, werden alle Daten in der Datenbank und die Möglichkeit zum Installieren der neuen Pakete nach Bedarf.
 
 Allerdings müssen in einem Enterprise-Szenario können die meisten Benutzer, einschließlich Benutzer, die Zugriff auf die Datenbank mithilfe von SQL-Anmeldungen, diese erhöhten Berechtigungen keine. Aus diesem Grund müssen für jeden Benutzer, die R oder Python-Skripts ausgeführt werden, Sie erteilen die Benutzerberechtigungen zum Ausführen von Skripts in jeder Datenbank, in der externen Skripts verwendet werden.
 
@@ -216,7 +295,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 ```
 
 > [!TIP]
-> Benötigen Sie Hilfe beim Setup? Sind Sie unsicher, ob Sie alle Schritte ausgeführt haben? Verwenden Sie diese benutzerdefinierten Berichte, um den Installationsstatus von R Services zu überprüfen. Weitere Informationen finden Sie unter [Überwachung von R Services mithilfe von benutzerdefinierten Berichten](monitor-r-services-using-custom-reports-in-management-studio.md).
+> Benötigen Sie Hilfe beim Setup? Sind Sie unsicher, ob Sie alle Schritte ausgeführt haben? Verwenden Sie diese benutzerdefinierten Berichte, um Installationsstatus überprüfen und zusätzliche Schritte ausführen. 
+> 
+> [Verwenden von benutzerdefinierten Berichten Machine Learning-Dienste überwachen,](monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ### <a name="ensure-that-the-sql-server-computer-supports-remote-connections"></a>Stellen Sie sicher, dass der Computer mit SQL Server Remoteverbindungen unterstützt
 
@@ -226,9 +307,7 @@ Wenn Sie von einem Remotecomputer herstellen können, überprüfen Sie, ob der S
 
 ### <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>Geben Sie Ihre Benutzer zu lesen, schreiben oder DDL-Berechtigungen für die Datenbank
 
-Während der Ausführung R-Skripts, das entsprechende Benutzerkonto oder SQL-Anmeldung möglicherweise müssen zum Lesen von Daten von anderen Datenbanken, Erstellen von neuen Tabellen zum Speichern von Ergebnissen, und Schreiben von Daten in Tabellen.
-
-Für jedes Benutzerkonto oder SQL-Anmeldung, die R-Skripts ausführen, achten Sie darauf, dass das Konto oder den Anmeldenamen für die Datenbank die entsprechenden Berechtigungen verfügt: *"db_datareader"*, *Db_datawriter*, oder  *Db_ddladmin*.
+Das Benutzerkonto, mit dem Ausführen von R oder Python, möglicherweise müssen zum Lesen von Daten von anderen Datenbanken, Erstellen von neuen Tabellen zum Speichern der Ergebnisse und Schreiben von Daten in Tabellen. Daher müssen Sie für jeden Benutzer, das Ausführen von R oder Python-Skripts, sicherstellen, dass der Benutzer die entsprechenden Berechtigungen für die Datenbank verfügt: *"db_datareader"*, *Db_datawriter*, oder *Db_ Ddladmin*.
 
 Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung erteilt beispielsweise der SQL-Anmeldung *MySQLLogin* die Rechte zum Ausführen von T-SQL-Abfragen in der *RSamples* -Datenbank. Um diese Anweisung auszuführen, muss die SQL-Anmeldung bereits im Sicherheitskontext des Servers vorhanden sein.
 
@@ -254,15 +333,13 @@ Wenn Sie R-Lösungen auf einer Data Science-Clientcomputer erstellen und Code mi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie sichergestellt haben, dass das Feature für die Ausführung von Skripts in SQL Server funktioniert, können Sie R und Python-Befehle ausführen, von SQL Server Management Studio, Visual Studio-Code oder einem anderen Client, der T-SQL-Anweisungen an den Server gesendet werden kann.
+Nachdem Sie sichergestellt haben, dass das Feature für die Ausführung von Skripts in SQL Server funktioniert, können Sie R und Python-Befehle ausführen, von SQL Server Management Studio, Visual Studio-Code oder einem anderen Client, der T-SQL-Anweisungen an den Server gesendet werden kann. Bevor Sie dies tun, empfiehlt es sich um nehmen einige Änderungen an der Systemkonfiguration, zur Unterstützung einer starke Nutzung von Machine Learning, oder fügen neue R-Pakete.
 
-Sie möchten jedoch nehmen einige Änderungen an der Systemkonfiguration, zur Unterstützung einer starke Nutzung von Machine Learning, oder fügen neue R-Pakete.
-
-Dieser Abschnitt enthält einige allgemeine Änderungen, die Sie vornehmen können, um Machine Learning unterstützt.
+Dieser Abschnitt enthält einige allgemeine Optimierungen und Learning Aktivitäten für maschinelles lernen.
 
 ### <a name="add-more-worker-accounts"></a>Weitere Konten hinzufügen
 
-Wenn Sie glauben, dass R intensivsten verwendet werden kann oder wenn Sie davon ausgehen, dass viele Benutzer gleichzeitig ausgeführte Skripts werden, können Sie die Anzahl der Worker Konten erhöhen, die mit dem Launchpad-Dienst zugewiesen sind. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für SQL Server R Services](modify-the-user-account-pool-for-sql-server-r-services.md).
+Wenn Sie glauben, dass R intensivsten verwendet werden kann oder wenn Sie davon ausgehen, dass viele Benutzer gleichzeitig ausgeführte Skripts werden, können Sie die Anzahl der Worker Konten erhöhen, die mit dem Launchpad-Dienst zugewiesen sind. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für SQL Server-Machine Learning-Services](modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ### <a name="bkmk_optimize"></a>Optimieren des Servers für den externen skriptausführung
 
@@ -282,32 +359,28 @@ Wenn Sie verfügen nicht über die Ressourcenkontrolle und Standard Edition verw
 
 Nehmen Sie zusätzliche R-Pakete installieren, die Sie verwenden.
 
-Pakete, die Sie von SQL Server verwenden möchten, müssen in der Standardbibliothek installiert sein, die von der Instanz verwendet wird. Wenn Sie eine separate Installation von R auf dem Computer oder bei Installation von Paketen in benutzerbibliotheken nicht auf diese Pakete von T-SQL verwenden kann. Weitere Informationen finden Sie unter [Installieren zusätzlicher R-Pakete unter SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md).
+Pakete, die Sie von SQL Server verwenden möchten, müssen in der Standardbibliothek installiert sein, die von der Instanz verwendet wird. Wenn Sie eine separate Installation von R auf dem Computer oder bei Installation von Paketen in benutzerbibliotheken nicht auf diese Pakete von T-SQL verwenden kann.
 
-Sie können auch Benutzergruppen zur Freigabe von Paketen auf einer pro-Datenbankebene einrichten oder Konfigurieren von Datenbankrollen, damit Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [Paket Management](r-package-management-for-sql-server-r-services.md).
+In SQL Server 2016 und SQL Server-2017 unterscheidet sich die Verfahren zum Installieren und Verwalten von R-Pakete. Z. B. in SQL Server-2017, können Sie Benutzergruppen zur Freigabe von Paketen auf einer Ebene pro Datenbank einrichten oder konfigurieren Datenbankrollen, damit Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [Paket Management](r-package-management-for-sql-server-r-services.md).
+
+In SQL Server 2016 muss ein Datenbankadministrator R-Pakete installieren, die Benutzer benötigen.
+
+Administratorzugriff ist auch erforderlich, um zusätzliche Python-Pakete in der Bibliothek für die Instanz zu installieren.
 
 ### <a name="upgrade-the-machine-learning-components"></a>Aktualisieren Sie den Computer mit dem Erlernen von Komponenten
 
-Wenn Sie R-Services, die Verwendung von SQL Server 2016 installieren, erhalten Sie die Version der R-Komponenten, die auf dem neuesten Stand war, als die Version oder Service Pack veröffentlicht wurde. Jedes Mal gepatcht oder aktualisieren Sie den Server werden auch die Machine Learning-Komponenten aktualisiert werden.
+Wenn Sie Machine Learning-Funktionen in SQL Server installieren, erhalten Sie die Version der R oder Python-Komponenten, die aktuelle war, als die Version oder Service Pack veröffentlicht wurde. Jedes Mal gepatcht oder aktualisieren Sie den Server werden auch die Machine Learning-Komponenten aktualisiert werden.
 
-Allerdings können Sie Machine learning-Komponenten auf einen schnelleren Zeitplan unterstützt Aktualisieren von SQL Server-Versionen von Microsoft R Server installieren und binden die Instanz. Wenn Sie ein Upgrade durchführen, finden Sie auch die folgenden neuen Features, die in neueren Versionen von Microsoft R Server unterstützt werden:
+Allerdings können Sie Machine learning-Komponenten auf einen schnelleren Zeitplan unterstützt Aktualisieren von SQL Server-Versionen mithilfe der genannten _Bindung_. Wenn Sie eine SQL Server-Instanz binden, Sie sowohl R oder Python-Versionen aktualisieren, und ändern Sie in einer anderen Support-Richtlinie, die häufiger Upgrades unterstützt. 
 
-* Neue R-Pakete, einschließlich [Sqlrutils](https://docs.microsoft.com/r-server/r-reference/sqlrutils/sqlrutils), [OlapR](https://docs.microsoft.com/r-server/r-reference/olapr/olapr), und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package).
+Solche Upgrades können Folgendes umfassen:
+
+* Neue R-Pakete
++ Neue APIs für Microsoft Pakete wie [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package).
 * [Modelle pretrained](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models) für bildanalysen Klassifizierung und Text.
 
-Informationen zum upgrade von einer SQL Server 2016-Instanz finden Sie unter [Upgrade R-Komponenten über Bindung](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Informationen zum upgrade von SQL Server-Instanz finden Sie unter [Aktualisieren des Machine Learning-Komponenten über Bindung](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
-Wenn Sie nicht sicher sind, welche Version von R mit der Instanz verknüpft ist, können Sie einen Befehl wie folgt ausführen:
-
-```SQL
-EXEC sp_execute_external_script  @language =N'R',
-@script=N'
-myvar <- version$version.string
-OutputDataSet <- as.data.frame(myvar);'
-```
-
-> [!NOTE]
-> Upgrades über des Bindungsvorgangs werden auch für SQL Server-2017 unterstützt. Upgrades werden zurzeit jedoch nur für SQL Server 2016-Instanzen unterstützt.
 
 ### <a name="tutorials"></a>Lernprogramme
 
@@ -323,5 +396,4 @@ Sind Probleme aufgetreten? Möchten Sie aktualisieren? Antworten auf häufig ges
 
 Überprüfen Sie den Installationsstatus der Instanz, und beheben Probleme, wiederholen Sie dann diese benutzerdefinierten Berichte.
 
-* [Benutzerdefinierte Berichte für SQL Server R Services](monitor-r-services-using-custom-reports-in-management-studio.md)
-
+* [Benutzerdefinierte Berichte für SQL Server R Services](\r\monitor-r-services-using-custom-reports-in-management-studio.md)

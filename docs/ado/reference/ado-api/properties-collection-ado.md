@@ -3,7 +3,7 @@ title: Properties-Auflistung (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5652eb78750806f916d510e4558f12aa6718b30d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59671deed9a94192f333401c9d66987f75e4a3cb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="properties-collection-ado"></a>Properties-Auflistung (ADO)
 Enthält alle der [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte für eine bestimmte Instanz eines Objekts.  
@@ -49,5 +48,4 @@ Enthält alle der [Eigenschaft](../../../ado/reference/ado-api/property-object-a
   
 ## <a name="see-also"></a>Siehe auch  
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,13 +1,14 @@
 ---
 title: Programmieren von AMO-Sicherheitsobjekten | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - Analysis Management Objects, security
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ee56a1d89bdf9d5712dcdb70043be95b9195d0ba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 450ae3165942cfdf290a074dd637b220e1c740d8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-security-objects"></a>Programmieren von AMO-Sicherheitsobjekten
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], Programmieren von Sicherheitsobjekten und das Ausführen von Anwendungen, die AMO-Sicherheitsobjekte verwenden, Mitglied der Gruppe der Serveradministratoren oder Datenbankadministratoren voraus. Serveradministrator und Datenbankadministrator sind von angegebene Zugriffsebenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]setzt das Programmieren von Sicherheitsobjekten und das Ausführen von Anwendungen, die diese AMO-Sicherheitsobjekte verwenden, die Mitgliedschaft bei der Gruppe der Serveradministratoren oder Datenbankadministratoren voraus. Serveradministrator und Datenbankadministrator sind von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]angegebene Zugriffsebenen.  
   
  In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wird der Benutzerzugriff auf beliebige Objekte durch eine Kombination aus Rollen und Berechtigungen gewährt, die dem jeweiligen Objekt zugewiesen werden. Weitere Informationen finden Sie unter [AMO-Sicherheitsklassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   
@@ -155,4 +155,3 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
  [Datenbankobjekte &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

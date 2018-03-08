@@ -3,30 +3,31 @@ title: "Optionen (Umgebung – Seite „Schriftarten und Farben“) | Microsoft-
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.FONTS_AND_COLORS
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 864b7b243eba260b8f381bc62fc1d915e07c2db1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dce7af8a58cd0cfc486f21846df7a7bcb887b034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Optionen (Umgebung – Seite „Schriftarten und Farben“)
-Im Dialogfeld **Optionen** können Sie ein benutzerdefiniertes Schriftart- und Farbschema für verschiedene Elemente der Benutzeroberfläche in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] erstellen. Klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie den Ordner **Umgebung** , und klicken Sie anschließend auf **Schriftarten und Farben**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Optionen** können Sie ein benutzerdefiniertes Schriftart- und Farbschema für verschiedene Elemente der Benutzeroberfläche in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] erstellen. Klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie den Ordner **Umgebung** , und klicken Sie anschließend auf **Schriftarten und Farben**.  
   
 Änderungen am Farbschema werden nicht in der Sitzung wirksam, in der Sie sie vornehmen. Sie können Farbänderungen auswerten, indem Sie eine andere Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] öffnen und die Bedingungen erstellen, unter denen Sie die Anwendung Ihrer Änderungen erwarten.  
   
@@ -70,7 +71,7 @@ Zu den Anzeigeelementen gehören unter anderem:
 **Elementvordergrund**  
 Führt die verfügbaren Farben auf, die Sie für den Vordergrund des unter **Elemente anzeigen**ausgewählten Elements auswählen können. Weil einige Elemente in Beziehung zueinander stehen, sollte ein einheitliches Anzeigeschema beibehalten werden. Beispielsweise wird bei Änderung der Vordergrundfarbe von Text auch die Vordergrundfarbe für Elemente des Typs Zeichenfolge geändert.  
   
-**Benutzerdefiniert**  
+**Custom**  
 Zeigt das Dialogfeld **Farbe** an, in dem Sie für das in der Liste **Elemente anzeigen** ausgewählte Element eine benutzerdefinierte Farbe festlegen können.  
   
 > [!NOTE]  
@@ -88,8 +89,7 @@ Aktivieren Sie dieses Kontrollkästchen, wenn der Text ausgewählter Anzeigeelem
 **Beispiel**  
 Zeigt ein Beispiel für den Schriftschnitt, den Schriftgrad und das Farbschema für die unter **Einstellungen anzeigen für** und **Elemente anzeigen**ausgewählten Werte an. In diesem Textfeld können Sie beim Ausprobieren der verschiedenen Formatierungsoptionen eine Vorschau der Ergebnisse anzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Farbcodierung in Code-Editoren](http://msdn.microsoft.com/en-us/802882dc-c997-4e3f-8a01-994bb43169ae)  
 [Optionen (Texteditor/Registerkarte 'Editor' und Statusleiste)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
   
-

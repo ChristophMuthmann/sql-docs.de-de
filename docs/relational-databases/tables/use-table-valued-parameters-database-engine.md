@@ -2,11 +2,13 @@
 title: Verwenden von Tabellenwertparameter (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - parameters [SQL Server], table-valued
 - TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "31"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: ed7f2311343668c75a5f2637110385995d838f0a
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Tabellenwertparameter werden mit benutzerdefinierten Tabellentypen deklariert. Mit Tabellenwertparametern können Sie mehrere Datenzeilen an eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder an eine Routine übergeben, z. B. eine gespeicherte Prozedur oder eine Funktion, ohne eine temporäre Tabelle oder viele Parameter erstellen zu müssen.  
   
@@ -122,7 +124,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

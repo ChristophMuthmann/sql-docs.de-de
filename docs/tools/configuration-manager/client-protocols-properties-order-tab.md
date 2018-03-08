@@ -2,9 +2,12 @@
 title: Clientprotokolle-Eigenschaften (Registerkarte Reihenfolge) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
-# Eigenschaften der Clientprotokolle (Registerkarte Reihenfolge)
-  Verwenden Sie die Seite **Reihenfolge**im Dialogfeld **Eigenschaften der Clientprotokolle** , um die Clientprotokolle anzuzeigen und zu aktivieren.  
+# <a name="client-protocols-properties-order-tab"></a>Eigenschaften der Clientprotokolle (Registerkarte Reihenfolge)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Verwenden der **Reihenfolge** Seite auf die **Eigenschaften der Clientprotokolle** Dialogfeld anzuzeigen und die Clientprotokolle zu aktivieren.  
   
  Klicken Sie auf ein Protokoll, und klicken Sie dann auf **Aktivieren** oder **Deaktivieren** , um das ausgewählte Protokoll in die Liste **Deaktivierte Protokolle** oder **Aktivierte Protokolle** zu verschieben.  
   
@@ -34,12 +37,12 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Diese Einstellungen werden nicht von [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient verwendet. In der Protokollreihenfolge für .NET SqlClient steht TCP an der ersten Stelle, dann folgen Named Pipes. Dies kann nicht geändert werden.  
   
-## enthalten  
+## <a name="options"></a>enthalten  
  **Deaktivierte Protokolle**  
- Führt Protokolle auf, die installiert sind, aber zum jetzigen Zeitpunkt nicht verwendet werden.  
+ Listet die Protokolle, die installiert sind, aber derzeit nicht verwendet.  
   
  **Aktivierte Protokolle**  
- Führt Protokolle auf, die für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients auf diesem Computer verfügbar sind.  
+ Listet die Protokolle, die für die verfügbaren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients auf diesem Computer.  
   
  **>**  
  Aktiviert das aktuell hervorgehobene Protokoll im Feld **Deaktivierte Protokolle** und verschiebt es in das Feld **Aktivierte Protokolle** .  
@@ -59,8 +62,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Wenn das Protokoll mithilfe eines Präfix oder als Teil der Verbindungszeichenfolge angegeben ist, wird nur das angegebene Protokoll versucht.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Auswählen eines Netzwerkprotokolls](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

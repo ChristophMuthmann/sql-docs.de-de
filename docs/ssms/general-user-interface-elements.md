@@ -3,30 +3,31 @@ title: "Allgemeine Benutzeroberflächenelemente | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], user interface elements
 - user interface [SQL Server Management Studio]
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ab10f8b0aaab9cc0c967187dea73e10739164f6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="general-user-interface-elements"></a>Allgemeine Benutzeroberflächenelemente
-Der **Editor**, das **Eigenschaftenfenster** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der **Editor**, das Fenster **Eigenschaften** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Info (Dialogfeld)](../ssms/about-dialog-box.md)  
@@ -44,4 +45,3 @@ Ermöglicht das Anzeigen von Eigenschaften und Ereignissen ausgewählter Objekte
 [Verwenden der Toolbox](../ssms/use-the-toolbox.md)  
 Erläutert das Verändern und Verwenden der **Toolbox** , um zu den Designern eines Projekts Steuerelemente hinzuzufügen. So können Sie mit der **Toolbox** beispielsweise Schritte zu einem Wartungstask hinzufügen.  
   
-

@@ -2,9 +2,12 @@
 title: Aktivieren und Konfigurieren von FILESTREAM | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: abc638065f8a8a9201d5dbd37f240e82a5c81a22
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
-ms.contentlocale: de-de
-ms.lasthandoff: 08/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
-  Vor der Verwendung von FILESTREAM müssen Sie FILESTREAM in der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]instanz aktivieren. In diesem Thema erfahren Sie, wie Sie FILESTREAM mit dem SQL Server-Konfigurations-Manager aktivieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vor der Verwendung von FILESTREAM müssen Sie FILESTREAM in der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]instanz aktivieren. In diesem Thema erfahren Sie, wie Sie FILESTREAM mit dem SQL Server-Konfigurations-Manager aktivieren.  
   
 ##  <a name="enabling"></a> Aktivieren von FILESTREAM  
   
@@ -53,7 +56,7 @@ ms.lasthandoff: 08/24/2017
   
 11. Geben Sie im Abfrage-Editor den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ein:  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -82,9 +85,9 @@ ms.lasthandoff: 08/24/2017
   
 ||||||  
 |-|-|-|-|-|  
-|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Hinweise|  
+|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Remarks|  
 |RAID 5|Normal|Normal|Hervorragend|Die Leistung ist besser als bei einem einzelnen Datenträger oder JBOD und geringer als bei RAID 0 oder RAID 5 mit Striping.|  
-|RAID 0|Hervorragend|Hervorragend|Keine||  
+|RAID 0|Hervorragend|Hervorragend|InclusionThresholdSetting||  
 |RAID 5 + Striping|Hervorragend|Hervorragend|Hervorragend|Die aufwendigste Option.|  
   
   
@@ -98,4 +101,3 @@ ms.lasthandoff: 08/24/2017
 -   Speicherplatzverwaltung und Richtlinien werden von FILESTREAM nicht direkt unterstützt. Sie können jedoch indirekt Speicherplatz verwalten und Richtlinien anwenden, indem Sie jede FILESTREAM-Dateigruppe einem separaten Volume zuweisen und die Verwaltungsfunktionen des Volumes verwenden.  
   
   
-

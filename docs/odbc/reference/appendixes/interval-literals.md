@@ -3,10 +3,12 @@ title: Intervall Literale | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0ee22a6f808dd1b97d0d865229c78cbf26808fba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-literals"></a>Intervall-Literale
 ODBC erfordert, dass alle Treiber die Konvertierung von Datentyp SQL_CHAR oder SQL_VARCHAR alle C-Intervall-Datentypen unterstützt. Wenn die zugrunde liegenden Datenquelle Interval-Datentypen nicht unterstützt, allerdings muss der Treiber das richtige Format des Werts im Feld SQL_CHAR kennen, um diese Konvertierungen zu unterstützen. Entsprechend muss ODBC an, dass alle ODBC C Typ SQL_CHAR oder SQL_VARCHAR, konvertiert werden, damit ein Treiber, in welchem Format ein Intervall, in das Zeichenfeld gespeichert wissen muss haben soll. Dieser Abschnitt beschreibt die Syntax für Literale für Intervall, das der Treiber-Writer verwenden, um die Felder SQL_CHAR während der Konvertierung in bzw. aus C-Intervalldatentypen überprüfen muss.  
@@ -99,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{INTERVALL "223.16" ZWEITE}<br /><br /> {INTERVALL "223" YEAR}|Da die führende Genauigkeit nicht angegeben wird, wird standardmäßig auf 2 ist zu klein für das angegebene Literal.|  
 |{INTERVALL "22.1234567" ZWEITE}|Die Genauigkeit für die Sekunden ist nicht vorgegeben, damit bis 6 abzielenden. Das Literal weist sieben Ziffern nach dem Dezimaltrennzeichen an.|  
 |{INTERVALL "163-13' YEAR(3) MONAT}<br /><br /> {INTERVALL 163 ' 65' DAY(3) STUNDE}<br /><br /> {INTERVALL "163 62:39" DAY(3) MINUTE}<br /><br /> {INTERVALL "163 12:125:59.163" DAY(3) ZU SECOND(3)}<br /><br /> {INTERVALL "163:144" HOUR(3) MINUTE}<br /><br /> {INTERVALL "163:567:234.163" HOUR(3) ZU SECOND(4)}<br /><br /> {INTERVALL "163:591.163" MINUTE(3) ZU SECOND(5)}|Das nachfolgende Feld befolgt nicht die Regeln des gregorianischen Kalenders.|
-

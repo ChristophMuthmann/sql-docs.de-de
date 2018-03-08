@@ -2,9 +2,12 @@
 title: "Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a36b99483ece6d73dd94e9f5d218fdcf8ce4c743
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften
-  In diesem Thema wird erläutert, wie Sie die Werte, die Sie vor dem Hinzufügen einer Eigenschaft zu einer Sucheigenschaftenliste benötigen, abrufen und für die Volltextsuche durchsuchbar machen. Zu diesen Werten zählen die Eigenschaftensatz-GUID und der ganzzahlige Eigenschaftsbezeichner einer Dokumenteigenschaft.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In diesem Thema wird erläutert, wie Sie die Werte, die Sie vor dem Hinzufügen einer Eigenschaft zu einer Sucheigenschaftenliste benötigen, abrufen und für die Volltextsuche durchsuchbar machen. Zu diesen Werten zählen die Eigenschaftensatz-GUID und der ganzzahlige Eigenschaftsbezeichner einer Dokumenteigenschaft.  
   
  Dokumenteigenschaften, die von IFilters aus Binärdaten extrahiert werden, d. h. aus Daten, die in einer Spalte vom Datentyp **varbinary**, **varbinary(max)** (einschließlich **FILESTREAM**) oder **image** gespeichert sind, können für die Volltextsuche verfügbar gemacht werden. Um eine extrahierte Eigenschaft durchsuchbar zu machen, muss sie manuell einer Sucheigenschaftenliste hinzugefügt werden. Darüber hinaus muss der Sucheigenschaftenliste mindestens ein Volltextindex zugeordnet werden. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="wellknown"></a> Suchen von Informationen zu häufig verwendeten, bekannten Microsoft-Eigenschaften  
  Microsoft definiert Hunderte von Dokumenteigenschaften, die in vielen Kontexten verwendet werden können. Es wird jedoch nur eine kleine Teilmenge der verfügbaren Eigenschaften für jedes Dateiformat verwendet. Zu den häufig verwendeten Windows-Eigenschaften zählen auch einige wenige generische Eigenschaften. Einige Beispiele für bekannte generische Eigenschaften werden in der folgenden Tabelle aufgelistet. In der Tabelle werden der bekannte Name, der kanonische Windows-Name (aus der von Microsoft veröffentlichten Eigenschaftenbeschreibung), die Eigenschaftensatz-GUID, der ganzzahlige Eigenschaftsbezeichner und eine kurze Beschreibung aufgelistet.  
   
-|Bekannter Name|Kanonischer Windows-Name|Eigenschaftensatz-GUID|Ganzzahlige ID|Beschreibung|  
+|Bekannter Name|Kanonischer Windows-Name|Eigenschaftensatz-GUID|Ganzzahlige ID|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor oder Autoren eines angegebenen Elements.|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Satz von Schlüsselwörtern (die auch als Tags bezeichnet werden), die dem Element zugewiesen sind.|  
@@ -105,7 +109,7 @@ GO
   
  Weitere Informationen zum Erstellen einer Sucheigenschaftenliste und Zuordnen eines Volltextindexes finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

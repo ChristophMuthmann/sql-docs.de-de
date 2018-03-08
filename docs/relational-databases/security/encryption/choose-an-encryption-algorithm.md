@@ -1,13 +1,14 @@
 ---
 title: "Auswählen eines Verschlüsselungsalgorithmus | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b0c946ccc0547e3efadf26f78bb66fcdd3feb517
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 77cee9391335f384c94aa0fa3cf71808baf36056
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choose-an-encryption-algorithm"></a>Auswählen eines Verschlüsselungsalgorithmus
-  Die Verschlüsselung ist eine von mehreren Maßnahmen zum sicheren Schutz, die dem Administrator zur Verfügung stehen, der eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sichern möchte.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Verschlüsselung ist eine von mehreren tiefgreifenden Vorbeugungsmaßnahmen, die dem Administrator zum Schutz einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zur Verfügung stehen.  
   
  Verschlüsselungsalgorithmen definieren Datentransformationen, die von nicht autorisierten Benutzern nicht einfach umgekehrt werden können. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht Administratoren und Entwicklern die Auswahl aus mehreren Algorithmen, einschließlich DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, 128-Bit-RC4, DESX, 128-Bit-AES, 192-Bit-AES und 256-Bit-AES.  
   
@@ -82,4 +82,3 @@ ms.lasthandoff: 08/28/2017
  [Verschlüsselungshierarchie](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

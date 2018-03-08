@@ -1,10 +1,13 @@
 ---
-title: "Analysis Services-Task \"DDL ausführen\" | Microsoft Docs"
+title: "DDL ausführen (Analysis Services-Task) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: aba320cac8593357039ed9ab4977dbb5fda091cc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)
   Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task DDL ausführen führt DLL-Anweisungen (Data Definition Language, Datendefinitionssprache) aus, mit denen Miningmodelle und mehrdimensionale Objekte, wie z. B. Cubes und Dimensionen, erstellt, gelöscht oder geändert werden können. Beispielsweise kann mit einer DDL-Anweisung eine Partition im **Adventure Works** -Cube erstellt oder eine Dimension in [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], der im Lieferumfang von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthaltenen Beispieldatenbank von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gelöscht werden.  
@@ -239,14 +241,14 @@ ms.lasthandoff: 08/11/2017
 ## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie den Namen und eine Beschreibung des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Tasks „DDL ausführen“ angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task „DDL ausführen“ an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Tasks 'DDL ausführen' ein.  
   
 ## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite DDL)
@@ -254,14 +256,14 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>Statische Optionen  
  **Verbindung**  
- Wählen Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt oder eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verbindungs-Manager in der Liste aus, oder klicken Sie \< **neue Verbindung...** > und Verwenden der **Hinzufügen von Analysis Services Connection Manager** (Dialogfeld), um eine neue Verbindung zu erstellen.  
+ Wählen Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt oder einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, und erstellen Sie im Dialogfeld **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
   
  **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Geben Sie den Quelltyp der DDL-Anweisung an. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct Input**|Legen Sie die Quelle der im Textfeld **SourceDirect** gespeicherten DDL-Anweisung fest. Wenn Sie diesen Wert auswählen, werden im folgenden Abschnitt die dynamischen Optionen angezeigt.|  
 |**File Connection**|Legen Sie die Quelle für eine Datei fest, in der die DDL-Anweisung enthalten ist. Wenn Sie diesen Wert auswählen, werden im folgenden Abschnitt die dynamischen Optionen angezeigt.|  
@@ -275,14 +277,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
  **Quelle**  
- Wählen Sie eine dateiverbindung aus der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > und Verwenden der **Dateiverbindungs-Manager** (Dialogfeld), um eine neue Verbindung zu erstellen.  
+ Wählen Sie eine Dateiverbindung aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, und erstellen Sie im Dialogfeld **Dateiverbindungs-Manager** eine neue Verbindung.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Quelle**  
- Wählen Sie eine Variable in der Liste aus, oder klicken Sie auf \< **neue Variable...** > und Verwenden der **Variable hinzufügen** (Dialogfeld), um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf \<**Neue Variable...**>, und erstellen Sie im Dialogfeld **Variable hinzufügen** eine neue Variable.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
-

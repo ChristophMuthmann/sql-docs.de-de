@@ -1,32 +1,35 @@
 ---
 title: Implementieren eines CASE-Ausdrucks in einer nativ kompilierten gespeicherten Prozedur | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 11/21/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur
-[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  CASE-Ausdrücke werden in nativ kompilierten gespeicherten Prozeduren unterstützt. Das folgende Beispiel zeigt, wie Sie den CASE-Ausdruck in einer Abfrage verwenden können. Die beschriebene Problemumgehung für CASE-Ausdrücke in nativ kompilierten Modulen würde nicht mehr benötigt.
+**Gilt für:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+
+CASE-Ausdrücke werden in nativ kompilierten gespeicherten T-SQL-Modulen unterstützt. Das folgende Beispiel zeigt, wie Sie den CASE-Ausdruck in einer Abfrage verwenden können. 
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.
@@ -45,12 +48,11 @@ GO
   
 EXEC dbo.usp_SOHOnlineOrderResult  
 GO  
-```  
+``` 
 
+**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
-
-  In systemintern kompilierten gespeicherten Prozeduren werden *keine* CASE-Ausdrücke unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  
+  CASE-Ausdrücke werden *nicht* in nativ kompilierten T-SQL-Modulen unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  
   
  In den Codebeispielen wird eine Tabellenvariable verwendet, durch die ein einzelnes Resultset erstellt wird. Dies empfiehlt sich nur, wenn die Anzahl der verarbeiteten Zeilen begrenzt ist, da hierbei eine zusätzliche Kopie der Datenzeilen erstellt wird.  
   
@@ -105,9 +107,8 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
-

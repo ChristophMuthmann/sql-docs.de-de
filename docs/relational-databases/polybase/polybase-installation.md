@@ -1,11 +1,13 @@
 ---
 title: PolyBase-Installation | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -13,24 +15,23 @@ ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 25
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>PolyBase-Installation
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Besuchen Sie [SQL Server Evaluierungsversionen](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016), um eine Testversion von SQL Server zu installieren. 
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 -   Eine 64-Bit-Evaluierungs-Edition von SQL Server  
   
@@ -52,7 +53,8 @@ ms.lasthandoff: 07/31/2017
 Planen Sie vor der Installation von PolyBase auf den SQL Server-Instanzen, ob Sie eine Einzelknoteninstallation oder eine PolyBase-Erweiterungsgruppe möchten. Vergewissern Sie sich für eine PolyBase-Gruppe mit horizontaler Skalierung, dass folgende Anforderungen erfüllt sind: 
 - Alle Computer befinden sich in derselben Domäne.
 - Sie verwenden während der Installation dasselbe Dienstkonto und Kennwort.
-- Die SQL Server-Instanzen können über das Netzwerk miteinander kommunizieren.
+- Ihre SQL Server-Instanzen können über das Netzwerk miteinander kommunizieren.
+- Alle SQL Server-Instanzen weisen die gleiche Version von SQL Server auf.
 
 Sobald PolyBase entweder eigenständig oder in einer Gruppe mit horizontaler Skalierung installiert wurde, können Sie dies nicht mehr ändern. Sie müssen die Funktion deinstallieren und wieder neu installieren, um diese Einstellung zu ändern.
 
@@ -117,7 +119,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### <a name="how-to-confirm-installation"></a>So bestätigen Sie die Installation  
  Führen Sie den folgenden Befehl aus. Wenn PolyBase installiert ist, wird 1 zurückgegeben, andernfalls 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -149,4 +151,3 @@ Deinstallieren Sie die PolyBase-Funktion, und installieren Sie sie erneut, um di
  Siehe [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
   
-

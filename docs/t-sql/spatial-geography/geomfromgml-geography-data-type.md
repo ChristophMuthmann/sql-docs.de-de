@@ -3,8 +3,11 @@ title: GeomFromGML (Geography-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - GeomFromGML (geography Data Type)
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec0d21afb92b000f29fb91c4e3b848b4881b99c7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b71e3d10dd2e6aaaca091a7f37eed48392261f5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Erstellt eine **Geography** -Instanz auf Grundlage eine Darstellung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Teilmenge von Geography Markup Language (GML).
   
@@ -85,7 +87,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte statische Geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

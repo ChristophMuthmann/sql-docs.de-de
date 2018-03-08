@@ -3,8 +3,11 @@ title: Isolationsstufen von Transaktionen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,19 +19,18 @@ helpviewer_keywords:
 - isolation levels [SQL Server], metadata access
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0acd70fad20d0ad1c2727f93da52b2e938ee21fd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7afedcca33139a18a54c35e37250d7f893516280
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Sperrhinweise in Abfragen, die über Katalogsichten, Kompatibilitätssichten, Informationsschemasichten oder Metadaten ausgebende integrierte Funktionen auf Metadaten zugreifen, nicht mit Sicherheit berücksichtigt.  
   
@@ -52,12 +54,12 @@ ms.lasthandoff: 09/01/2017
   
  Die folgende Tabelle fasst den Zugriff auf Metadaten bei verschiedenen Isolationsstufen zusammen.  
   
-|Isolationsstufe|Unterstützt|Berücksichtigt|  
+|Isolationsstufe|Supported|Berücksichtigt|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|Nein|Nicht mit Sicherheit berücksichtigt|  
+|READ UNCOMMITTED|nein|Nicht mit Sicherheit berücksichtigt|  
 |READ COMMITTED|ja|ja|  
-|REPEATABLE READ|Nein|Nein|  
-|MOMENTAUFNAHMEN ISOLATION|Nein|Nein|  
-|SERIALIZABLE|Nein|Nein|  
+|REPEATABLE READ|nein|nein|  
+|MOMENTAUFNAHMEN ISOLATION|nein|nein|  
+|SERIALIZABLE|nein|nein|  
   
   

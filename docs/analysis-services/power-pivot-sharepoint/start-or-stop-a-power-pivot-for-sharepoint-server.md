@@ -2,30 +2,29 @@
 title: "Starten oder Beenden eines PowerPivot für SharePoint-Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Starten oder Beenden eines Power Pivot für SharePoint-Servers
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] als Systemdienst unterstützt in Kombination mit einer [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Instanz auf dem gleichen lokalen Anwendungsserver die koordinierte Anforderungs- und Datenverarbeitung in einer SharePoint-Farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst und ein [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz arbeiten zusammen auf dem gleichen lokalen Anwendungsserver, die koordinierte Anforderungs- und Datenverarbeitung in einer SharePoint-Farm zu unterstützen.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -72,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Konfigurieren von Power Pivot-Dienstkonten](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   
-

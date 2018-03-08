@@ -3,7 +3,7 @@ title: "Ausführen, abzufragen und deaktivieren Sie die Methoden (VC++-Beispiel)
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cfff2bf11c7e28291fd34075f0c48c54a92b9c04
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 87fde51ce69aed865eae5ce57511b3d21e32f1cd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Führen Sie Requery und deaktivieren Sie die Methoden (VC++-Beispiel)
 In diesem Beispiel wird veranschaulicht, die **Execute** Methode, die sowohl beim Ausführen einer [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet der [Requery](../../../ado/reference/ado-api/requery-method.md) Methode zum Abrufen von aktuellen Daten in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und die [deaktivieren](../../../ado/reference/ado-api/clear-method-ado.md) Methode, um den Inhalt der Löschen der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)Auflistung. Die Funktionen "ExecuteCommand" und PrintOutput sind erforderlich, damit dieses Beispiel ausführen.  
@@ -203,4 +202,3 @@ void PrintComError(_com_error &e) {
  [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)
-

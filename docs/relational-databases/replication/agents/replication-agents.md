@@ -2,46 +2,46 @@
 title: Replikations-Agents | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "10"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 581d73167e1e2d650c10a47f1e643787da3c589c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 306304e967336f428bece315b0e36651afe1d668
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="replication-agents"></a>Replikations-Agents
-  Von der Replikation werden zahlreiche eigenständige Programme verwendet, die als Agents bezeichnet werden. Diese Agents führen die mit dem Nachverfolgen von Änderungen und Verteilen von Daten verbundenen Aufgaben aus. Dieser Abschnitt der Dokumentation enthält Parameterverweise für die folgenden Replikations-Agents.  
+# <a name="replication-agents"></a>Replication Agents
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Von der Replikation werden zahlreiche eigenständige Programme verwendet, die als Agents bezeichnet werden. Diese Agents führen die mit dem Nachverfolgen von Änderungen und Verteilen von Daten verbundenen Aufgaben aus. Dieser Abschnitt der Dokumentation enthält Parameterverweise für die folgenden Replikations-Agents.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Replikations-Agents (Übersicht)](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
- [Replikationsverteilungs-Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
  [Replikationsprotokolllese-Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
- [Replikationsmerge-Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
- [Warteschlangenlese-Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+ [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [Replikationsmomentaufnahme-Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replikations-Agent-Verwaltung](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

@@ -2,29 +2,30 @@
 title: MSSQLSERVER_611 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 611 (Database Engine error)
+helpviewer_keywords: 611 (Database Engine error)
 ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b96bc69d694f4831086804cec2fe655c113e9d89
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: befd62e1875811092917445068689ed9cb3be62b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver611"></a>MSSQLSERVER_611
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -43,4 +44,3 @@ Die Maximalgröße der Variablenspalte übersteigt die vom Schema zugelassene Gr
 ## <a name="user-action"></a>Benutzeraktion  
 Reduzieren Sie die Größe des Datensatzes.  
   
-

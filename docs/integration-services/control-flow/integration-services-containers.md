@@ -1,10 +1,13 @@
 ---
-title: Integration Services-Container | Microsoft Docs
+title: SQL Server Integration Services-Container | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-containers"></a>SQL Server Integration Services-Container
   Bei Containern handelt es sich um Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , die für Pakete, Dienste sowie Tasks eine Struktur bereitstellen. Sie unterstützen das Wiederholen von Ablaufsteuerungen in Paketen und sie gruppieren Tasks und Container zu sinnvollen Arbeitseinheiten. Container können neben Tasks andere Container einschließen.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 08/03/2017
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|Ein boolescher Wert, der angibt, ob die Überprüfung des Containers bis zur Ausführungszeit ausgesetzt wird. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>ausgewertet wird.|  
-|**Description**|Die Containerbeschreibung. Die Eigenschaft enthält eine Zeichenfolge, die aber möglicherweise leer ist.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>ausgewertet wird.|  
+|**Beschreibung**|Die Containerbeschreibung. Die Eigenschaft enthält eine Zeichenfolge, die aber möglicherweise leer ist.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>ausgewertet wird.|  
 |**Deaktivieren**|Ein boolescher Wert, der angibt, ob der Container ausgeführt wird. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>ausgewertet wird.|  
 |**DisableEventHandlers**|Ein boolescher Wert, der angibt, ob der Ereignishandler mit dem ausgeführten Container verbunden ist. Der Standardwert dieser Eigenschaft ist **False**.|  
 |**FailPackageOnFailure**|Ein boolescher Wert, der angibt, ob ein Paketfehler auftritt, wenn der Container fehlerhaft ist. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>ausgewertet wird.|  
@@ -72,7 +74,7 @@ ms.lasthandoff: 08/03/2017
 |**LoggingMode**|Ein Wert, der das Protokollierungsverhalten des Containers angibt. Mögliche Werte sind **Disabled**, **Enabled**und **UseParentSetting**. Der Standardwert dieser Eigenschaft ist **UseParentSetting**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>ausgewertet wird.|  
 |**MaximumErrorCount**|Die maximal zulässige Anzahl von Fehlern, nach der die Ausführung eines Containers beendet wird. Der Standardwert dieser Eigenschaft ist **1**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>ausgewertet wird.|  
 |**Name**|Der Name des Containers.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>ausgewertet wird.|  
-|**TransactionOption-**|Die Transaktionsteilnahme des Containers. Mögliche Werte sind **NotSupported**, **Supported**und **Required**. Der Standardwert dieser Eigenschaft ist **Supported**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>ausgewertet wird.|  
+|**TransactionOption**|Die Transaktionsteilnahme des Containers. Mögliche Werte sind **NotSupported**, **Supported**und **Required**. Der Standardwert dieser Eigenschaft ist **Supported**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>ausgewertet wird.|  
   
  Weitere Informationen zu Eigenschaften, die in Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer und Taskhostcontainer verfügbar sind, wenn Sie sie programmgesteuert konfigurieren, finden Sie unter dem API-Thema von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
@@ -91,7 +93,7 @@ ms.lasthandoff: 08/03/2017
  Ausführbare Dateien beziehen sich auf die Tasks auf Containerebene und Container innerhalb des Containers. Eine ausführbare Datei kann einer der Tasks und Container sein, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitstellt, oder ein benutzerdefinierter Task. Weitere Informationen finden Sie unter [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
 ### <a name="precedence-constraints"></a>Rangfolgeneinschränkungen  
- Rangfolgeneinschränkungen verlinken Container und Tasks innerhalb desselben übergeordneten Containers zu einer geordneten Ablaufsteuerung. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Rangfolgeneinschränkungen verlinken Container und Tasks innerhalb desselben übergeordneten Containers zu einer geordneten Ablaufsteuerung. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="event-handlers"></a>Ereignishandler  
  Ereignishandler auf Containerebene entsprechen Ereignissen, die vom Container oder den darin enthaltenen Objekten ausgelöst werden. Weitere Informationen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
@@ -102,8 +104,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="break-points"></a>Breakpoints  
  Wenn Sie einen Breakpoint für einen Container festlegen und die Unterbrechungsbedingung **Unterbrechen, wenn der Container das OnVariableValueChanged-Ereignis empfängt**lautet, definieren Sie die Variable im Containerbereich.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -1,35 +1,36 @@
 ---
 title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 11/20/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d58470957ab58085ddd6a733cf30dbc77ce7439a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Benennt eine benutzerdefinierte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Benennt eine vom Benutzer erstellten Tabelle oder Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Umbenennen eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mithilfe der gespeicherten Prozedur [Sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  Umbenennen eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verwenden Sie die gespeicherte Prozedur [Sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,12 +57,12 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>Argumente  
  BENENNEN SIE OBJEKT [:]   
-          [[*Database_name* . [ *Schema_name* ]. ] | [ *Schema_name* . []]*Table_name* TO *New_table_name*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *Schema_name* . []]*Table_name* TO *New_table_name*  
  **GILT FÜR:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Ändern Sie den Namen einer benutzerdefinierten Tabelle. Geben Sie die Tabelle mit einer ein-, zwei- oder dreiteiligen Namen umbenannt werden soll.    Geben Sie die neue Tabelle *New_table_name* als einteiliger Name.  
   
- BENENNEN SIE DIE DATENBANK [:]   
+ RENAME DATABASE [::]   
           [ *Database_name* TO *Name der neuen Datenbank*  
  **GILT FÜR:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -110,7 +111,7 @@ Sie können eine externe Tabelle, Indizes oder Sichten nicht umbenennen. Anstell
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-rename-a-database"></a>A. Umbenennen einer Datenbank  
- **GILT für:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nur    
+ **GILT für:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nur  
   
  In diesem Beispiel benennt die Datenbank eine benutzerdefinierte Zeichenfolge adworks ein, um AdWorks2.  
   
@@ -162,4 +163,3 @@ KILL 'SID1234';
 ```  
   
   
-

@@ -1,43 +1,41 @@
 ---
-title: "Übersicht über die Datenverarbeitung | Microsoft Docs"
+title: "Übersicht über Datenverarbeitungserweiterungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data processing extensions [Reporting Services], about extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "39"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 08e8a1c640a837d91e22e4c533d84dec59510486
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-processing-extensions-overview"></a>Übersicht über Datenverarbeitungserweiterungen
-  Mithilfe von Datenverarbeitungserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie eine Verbindung zu einer Datenquelle herstellen und Daten abrufen. Sie dienen außerdem als Verbindung zwischen einer Datenquelle und einem Dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]datenverarbeitungserweiterungen werden nach einer Untermenge der modelliert die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] .NET-datenanbieterschnittstellen nachgebildet.  
+  Mithilfe von Datenverarbeitungserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie eine Verbindung zu einer Datenquelle herstellen und Daten abrufen. Sie dienen außerdem als Verbindung zwischen einer Datenquelle und einem Dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterungen sind einer Teilmenge der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Datenanbieterschnittstellen nachgebildet.  
   
  In folgender Tabelle finden Sie eine Liste der Datenverarbeitungserweiterungen, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten sind.  
   
 |Datenverarbeitungserweiterung|Description|  
 |-------------------------------|-----------------|  
-|Datenverarbeitungserweiterung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Verwendet die .NET Framework-Datenanbieter für SQL Server herstellen und Abrufen von Daten aus der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
-|Datenverarbeitungserweiterung für OLE DB|Verwendet die .NET Framework-Datenanbieter für OLE DB. Mit dieser Erweiterung kann der Berichtsserver jede Datenquelle abfragen, die über einen OLE DB-Anbieter verfügt.|  
-|Datenverarbeitungserweiterung für Oracle|Der .NET Framework-Datenanbieter verwendet für Oracle. Mit dieser Erweiterung kann der Berichtsserver über die Oracle-Clientkonnektivitätssoftware auf Oracle-Datenquellen zugreifen.|  
-|Datenverarbeitungserweiterung für ODBC|Verwendet die .NET Framework-Datenanbieter für ODBC. Mit dieser Erweiterung kann der Berichtsserver auf Daten in jeder Datenbank zugreifen, für die ein ODBC-Treiber vorhanden ist.|  
+|Datenverarbeitungserweiterung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Verwendet den .NET Framework-Datenanbieter für SQL Server, um eine Verbindung zu [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] herzustellen und Daten daraus abzurufen|  
+|Datenverarbeitungserweiterung für OLE DB|Verwendet den .NET Framework-Datenanbieter für OLE DB. Mit dieser Erweiterung kann der Berichtsserver jede Datenquelle abfragen, die über einen OLE DB-Anbieter verfügt.|  
+|Datenverarbeitungserweiterung für Oracle|Verwendet den .NET Framework-Datenanbieter für Oracle. Mit dieser Erweiterung kann der Berichtsserver über die Oracle-Clientkonnektivitätssoftware auf Oracle-Datenquellen zugreifen.|  
+|Datenverarbeitungserweiterung für ODBC|Verwendet den .NET Framework-Datenanbieter für ODBC. Mit dieser Erweiterung kann der Berichtsserver auf Daten in jeder Datenbank zugreifen, für die ein ODBC-Treiber vorhanden ist.|  
   
  Sie können die [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]-Datenverarbeitungs-API verwenden, um benutzerdefinierte Datenverarbeitungen zu Ihrem Berichtsserver hinzuzufügen.  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/12/2017
   
  Sie können Datenverarbeitungserweiterungen für Ihre eigenen Datenquellen entwickeln, oder Sie können die Schnittstellen verwenden, um den allgemeinen Datenbankinfrastrukturen eine weitere Datenverarbeitungsebene hinzuzufügen. Sie können Ihre benutzerdefinierten Datenverarbeitungserweiterungen so bereitstellen, dass sie eine nahtlose Integration der Daten in die bestehenden Berichtsserver in Ihrer Organisation ermöglichen. Sie können Sie auch als Teil einer benutzerdefinierten Berichtssuite verwenden, die Sie Ihren Consumern anbieten.  
   
- ![Architektur von datenverarbeitungserweiterungen](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Architektur von datenverarbeitungserweiterungen")  
+ ![Architektur von Datenverarbeitungserweiterungen](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
 Architektur für Berichtsserver-Datenverarbeitungserweiterungen  
   
  Die Implementierung einer benutzerdefinierten [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung hat folgende Vorteile:  
@@ -62,7 +60,7 @@ Architektur für Berichtsserver-Datenverarbeitungserweiterungen
 ## <a name="data-extension-process-flow"></a>Verarbeitungsablauf für Datenerweiterungen  
  Bevor Sie Ihre benutzerdefinierte Datenerweiterung bereitstellen, sollten Sie wissen, wie der Berichtsserver Datenerweiterungen zur Verarbeitung von Daten verwendet. Sie sollten auch die Konstruktoren und Verfahren kennen, die vom Berichtsserver aufgerufen werden.  
   
- ![Prozessfluss für datenverarbeitungserweiterung](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Prozessfluss für datenverarbeitungserweiterung")  
+ ![Prozessfluss in Datenverarbeitungserweiterungen](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
 Der schrittweise Verarbeitungsablauf einer Datenerweiterung, die vom Berichtsserver aufgerufen wird  
   
  Die Abbildung stellt die folgende Abfolge von Ereignissen dar:  
@@ -78,17 +76,16 @@ Der schrittweise Verarbeitungsablauf einer Datenerweiterung, die vom Berichtsser
   
 -   Einen Bereitstellungscomputer, auf dem Berichts-Designer oder ein Berichtsserver installiert ist.  
   
--   Einen Entwicklungscomputer mit [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] oder höher, oder die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installiert.  
+-   Einen Entwicklungscomputer, auf dem [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] oder höher bzw. das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK (Software Development Kit) installiert ist  
   
 -   Sehr gute Kenntnisse der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Funktionen und -Möglichkeiten.  
   
--   Eine sehr gute Kenntnisse der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Architektur verteilter Transaktionen, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Datenanbieter, ADO.NET DataSet-Objekte sowie die allgemeinen [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Schnittstellen.  
+-   Sehr gute Kenntnisse der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]-Architektur, der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Datenanbieter, ADO.NET Dataset-Objekte und der allgemeinen [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]-Schnittstellen  
   
--   Entwicklungserfahrung in einer [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sprache, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#- oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Entwicklungserfahrung in einer [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Sprache, z.B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
-## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Erweiterungen](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterungen für Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

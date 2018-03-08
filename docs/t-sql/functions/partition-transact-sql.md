@@ -3,8 +3,11 @@ title: $PARTITION (transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - $PARTITION function
 - partitions [SQL Server], numbers
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 88c9a82038aacb1cc2cda01e8172f856bd02c4e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7fb60ef43ba359bef366a113704a784ce0f73902
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Nummer der Partition zurück, der eine Gruppe von Partitionierungsspaltenwerten für eine beliebige angegebene Partitionsfunktion in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zugeordnet würde.  
   
@@ -107,4 +109,3 @@ WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
   
-

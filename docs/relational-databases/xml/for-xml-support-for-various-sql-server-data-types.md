@@ -2,9 +2,12 @@
 title: "FOR XML-Unterstützung für verschiedene SQL Server-Datentypen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,24 +16,24 @@ helpviewer_keywords:
 - FOR XML clause, data type support
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 205c5c6b31926ac1cbffa967bd1b57a7c9866c5c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>FOR XML-Unterstützung für verschiedene SQL Server-Datentypen
-  In den Themen in diesem Abschnitt wird die Unterstützung von FOR XML für Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In den Themen in diesem Abschnitt wird die Unterstützung von FOR XML für Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[FOR XML-Unterstützung für den xml-Datentyp](../../relational-databases/xml/for-xml-support-for-the-xml-data-type.md)|Beschreibt, wie FOR XML in Verbindung mit dem **XML** -Datentyp funktioniert.|  
 |[FOR XML-Unterstützung für Zeichenfolgen-Datentypen](../../relational-databases/xml/for-xml-support-for-string-data-types.md)|Beschreibt, wie FOR XML in Verbindung mit String-Datentypen wie beispielsweise **varchar** und **nvarchar**funktioniert.|  
@@ -38,4 +41,3 @@ ms.lasthandoff: 06/22/2017
 |[FOR XML-Unterstützung für den timestamp-Datentyp](../../relational-databases/xml/for-xml-support-for-the-timestamp-data-type.md)|Beschreibt, wie FOR XML in Verbindung mit dem **timestamp** -Datentyp funktioniert.|  
   
   
-

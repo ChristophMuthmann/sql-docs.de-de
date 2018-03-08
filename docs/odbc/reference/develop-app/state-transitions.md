@@ -3,10 +3,12 @@ title: "Statusübergänge | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-transitions"></a>Statusübergänge
 ODBC definiert diskrete *Zustände* für jede Umgebung, jede Verbindung und jede Anweisung. Die Umgebung verfügt beispielsweise über drei mögliche Zustände: verfügbaren (in dem keine Umgebung zugeordnet ist), zugewiesenem (in der eine Umgebung erhält jedoch keine Verbindungen zugeordnet sind) und die Verbindung (in der Umgebung und eine oder mehrere Verbindungen sind reserviert). Verbindungen werden sieben mögliche Zustände aufweisen; -Anweisungen verfügen über 13 mögliche Zustände.  
@@ -42,4 +43,3 @@ ODBC definiert diskrete *Zustände* für jede Umgebung, jede Verbindung und jede
  Aus Sicht der Anwendung Statusübergänge sind in der Regel einfach: rechtliche Statusübergänge tendenziell als Hand in Hand wechseln mit den Fluss einer gut geschriebene Anwendung. Statusübergänge sind komplexer für den Treiber-Manager und die Treiber, da sie den Status der Umgebung, jede Verbindung und jede Anweisung nachverfolgen müssen. Größte Teil dieser Arbeit erfolgt vom Treiber-Manager; Die meisten Aufgaben, die vom Treiber ausgeführt werden müssen, tritt bei-Anweisungen mit noch Ergebnisse ausstehen.  
   
  Teil 1 und 2 dieses Handbuchs ("Einführung in ODBC" und "Entwickeln von Anwendungen und-Treiber") eher nicht explizit Statusübergänge erwähnen. Stattdessen beschreiben sie die Reihenfolge, in der Funktionen aufgerufen werden müssen. "Ausführen von Anweisungen" gibt z. B. an, dass eine Anweisung vorbereitet sein muss, mit **SQLPrepare** , bevor sie mit ausgeführt werden kann **SQLExecute**. Eine vollständige Beschreibung der Zustände und Zustandsübergänge, z. B. die Übergänge vom Treiber-Manager überprüft werden und die durch Treiber, geprüft werden muss finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
-

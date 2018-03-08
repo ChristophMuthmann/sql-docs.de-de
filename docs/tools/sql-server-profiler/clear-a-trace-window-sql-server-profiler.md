@@ -2,31 +2,32 @@
 title: "Löschen ein Ablaufverfolgungsfensters (SQL Server Profiler) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - trace window [SQL Server]
 - clearing trace window
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "23"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c65b3a3c27fa815eef14f91c6225a32f413e75e4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f79af0999691de3936d5b3eaa1771148bf9073d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Löschen des Inhalts eines Ablaufverfolgungsfensters (SQL Server Profiler)
-  In diesem Thema wird beschrieben, wie Sie den Inhalt des Ablaufverfolgungsfensters für eine derzeit ausgeführte Ablaufverfolgung mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]löschen können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie das Ablaufverfolgungsfenster für eine Ablaufverfolgung zu entfernen, die mithilfe von ausgeführt wird [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-clear-a-trace-window"></a>So löschen Sie den Inhalt eines Ablaufverfolgungsfensters  
   
@@ -40,4 +41,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

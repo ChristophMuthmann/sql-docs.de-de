@@ -2,28 +2,30 @@
 title: "Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 09/05/2017"
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 08f93380356d54659d9e851ed124e8c257c10c8e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Überblick des Anfangsbereichs in In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Dieser Artikel ist für Entwickler konzipiert, die schnell die Grundlagen der In-Memory-OLTP-Leistungsmerkmale von Microsoft SQL Server und der Azure SQL-Datenbank lernen möchten.  
@@ -413,30 +415,25 @@ Im Rest dieses Abschnitts werden einige der wichtigsten Aspekte hinsichtlich Pla
 - [Partitionierung auf Anwendungsebene](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### <a name="trade-offs-of-native-procs"></a>Vor-und Nachteile von nativen Prozeduren  
   
-  
 - Eine nativ kompilierte gespeicherte Prozedur kann nicht auf datenträgerbasierte Tabellen zugreifen. Eine native Prozedur kann nur auf speicheroptimierte Tabellen zugreifen.  
 - Wenn eine native Prozedur zum ersten Mal ausgeführt wird, nachdem der Server oder die Datenbank zuletzt wieder online geschaltet wurde, muss die native Prozedur einmalig neu kompiliert werden. Dies führt zu einer Verzögerung, bevor die native Prozedur mit der Ausführung beginnt.  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## <a name="advanced-considerations-for-memory-optimized-tables"></a>Zusätzliche Überlegungen zu speicheroptimierten Tabellen  
   
-  
-[Indizes für speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) unterscheiden sich in einigen Punkten von Indizes in Tabellen auf herkömmlichen Datenträgern.  
-  
-- [Hashindizes](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) sind nur für speicheroptimierte Tabellen verfügbar.  
-  
+[Indizes für speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) unterscheiden sich in einigen Punkten von Indizes in Tabellen auf herkömmlichen Datenträgern. Hashindizes sind nur für speicheroptimierte Tabellen verfügbar.
+    
+- [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [Nicht gruppierter Index für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 Sie müssen planen, um sicherzustellen, dass genügend aktiver Speicher für Ihre geplante speicheroptimierte Tabelle und ihre Indizes vorhanden sein wird. Weitere Informationen:  
   
 - [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 Eine speicheroptimierte Tabelle kann mit DURABILITY = SCHEMA_ONLY deklariert werden:  
   
@@ -444,17 +441,13 @@ Eine speicheroptimierte Tabelle kann mit DURABILITY = SCHEMA_ONLY deklariert wer
 - Wenn die Datenbank wieder online geschaltet wird, wird die speicheroptimierte Tabelle ohne Daten zurück in den aktiven Arbeitsspeicher geladen.  
 - SCHEMA_ONLY-Tabellen können eine übergeordnete [Alternative zu #temporären Tabellen](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) in tempdb darstellen, wenn tausende Zeilen involviert sind.  
   
-  
 Tabellenvariablen können auch als speicheroptimiert deklariert werden. Weitere Informationen:  
   
 - [Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## <a name="advanced-considerations-for-natively-compiled-modules"></a>Zusätzliche Überlegungen zu nativ kompilierten Modulen  
-  
   
 Die Typen von nativ kompilierten Modulen, die über Transact-SQL verfügbar sind, sind:  
   
@@ -464,7 +457,6 @@ Die Typen von nativ kompilierten Modulen, die über Transact-SQL verfügbar sind
   - Nur Trigger, die nativ kompiliert werden, sind für speicheroptimierte Tabellen zulässig.  
 - Nativ kompilierte [Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   - [Improving temp table and table variable performance using memory optimization (Verbesserung der temporären Tabelle und Tabellenvariablenleistung mithilfe der Speicheroptimierung)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 Eine nativ kompilierte benutzerdefinierte Funktion (UDF) wird schneller ausgeführt als eine interpretierte UDF. Hier sind einige Punkte, die bei UDFs zu beachten sind:  
   
@@ -476,17 +468,15 @@ Eine nativ kompilierte benutzerdefinierte Funktion (UDF) wird schneller ausgefü
 Testdaten und Erläuterung zur Leistung von nativen UDFs finden Sie unter:  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016 (Weichzeichnen der RBAR Wirkung mit nativ kompilierten UDFs in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - Der [tolle Blogbeitrag von Gail Shaw](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)von Januar 2016.  
-  
+  - [Natively Compiled User Defined Functions (Nativ kompilierte benutzerdefinierte Funktionen)](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/), ein Blogbeitrag von Gail Shaw vom Januar 2016.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## <a name="documentation-guide-for-memory-optimized-tables"></a>Dokumentationshandbuch für speicheroptimierte Tabellen  
   
+Weitere Informationen finden Sie in diesen Artikeln, in denen spezielle Überlegungen zu speicheroptimierten Tabellen erläutert werden:  
   
-Hier sind Links zu anderen Artikeln über spezielle Überlegungen zu speicheroptimierten Tabellen:  
-  
-- [Migrieren zu In-Memory-OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory-OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Der Transaktionsleistungs-Analysebericht in SQL Server Management Studio hilft Ihnen zu bewerten, ob In-Memory-OLTP die Leistung Ihrer Datenbankanwendungen verbessern wird.  
   - Verwenden Sie den [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) , um die datenträgerbasierte Datenbanktabelle zu In-Memory-OLTP zu migrieren.   
@@ -497,9 +487,7 @@ Hier sind Links zu anderen Artikeln über spezielle Überlegungen zu speicheropt
 - [Transact-SQL-Unterstützung für In-Memory-OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Unterstützte und nicht unterstützte T-SQL-Funktionen und Datentypen für speicheroptimierte Tabellen und native Prozeduren.  
 - Der Artikel[Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)(eine Datenbank mithilfe speicheroptimierter Tabellen an einen Ressourcenpool binden) erläutert einen optionalen erweiterten Aspekt.  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>Dokumentationshandbuch für native Prozeduren  
@@ -513,10 +501,8 @@ Im folgenden Artikel und dessen untergeordneten Artikel im Inhaltsverzeichnis si
 ## <a name="related-links"></a>Verwandte Links  
   
 - Ursprünglicher Artikel: [In-Memory-OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+    
 Hier finden Sie Artikel, die Code zum Veranschaulichen der Leistungsverbesserungen bieten, die Sie mit In-Memory-OLTP erreichen können.  
   
 - [Demo: Leistungsverbesserungen von In-Memory-OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) bietet eine kleine Demonstration der größeren potenziellen Leistungsgewinne.  
 - [Sample Database for In-Memory-OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (Beispieldatenbank für In-Memory-OLTP) bietet eine genauere Erläuterung.  
-

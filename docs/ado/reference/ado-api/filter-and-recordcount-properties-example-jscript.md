@@ -3,7 +3,7 @@ title: Filter- und RecordCount Eigenschaften Beispiel (JScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5347f486c516a131f9dc2103ecd5a037a916f8eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b1601aae7a80146e4c3b878ea4a9f72541d0cc9d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter- und RecordCount Eigenschaften Beispiel (JScript)
 In diesem Beispiel öffnet ein **Recordset** für die Firmen-Tabelle der Northwind-Datenbank und anschließend verwendet der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die sichtbaren Datensätze einzuschränken, die an das CompanyName-Feld mit dem Buchstaben beginnt D. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **Northwind**.  
@@ -160,4 +159,3 @@ BODY {
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

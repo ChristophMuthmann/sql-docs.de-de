@@ -2,11 +2,13 @@
 title: Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 36f6331a6196e7c7c4bd9e476ae98c56418fad4f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Parametrisierte Filter - Optimierung für vorausberechnete Partitionen
-  Vorausberechnete Partitionen dienen der Leistungsoptimierung und können mit gefilterten Mergeveröffentlichungen verwendet werden. Vorausberechnete Partitionen sind darüber hinaus eine Anforderung für die Verwendung logischer Datensätze bei gefilterten Veröffentlichungen. Weitere Informationen zu logischen Datensätzen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vorausberechnete Partitionen dienen der Leistungsoptimierung und können mit gefilterten Mergeveröffentlichungen verwendet werden. Vorausberechnete Partitionen sind darüber hinaus eine Anforderung für die Verwendung logischer Datensätze bei gefilterten Veröffentlichungen. Weitere Informationen zu logischen Datensätzen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Wenn ein Abonnement eine Synchronisierung mit einem Verleger ausführt, muss der Verleger die Filter des Abonnenten auswerten. Dabei werden die Zeilen ermittelt, die zu dieser Abonnentenpartition oder zum Dataset gehören. Dieses Ermitteln der Partitionsmitgliedschaft von Änderungen auf dem Verleger für jeden Abonnenten, der ein gefiltertes Dataset erhält, wird *Partitionsauswertung*genannt. Ohne vorausberechnete Partitionen muss die Partitionsauswertung für jede Änderung an einer gefilterten Spalte ausgeführt werden, die auf dem Verleger vorgenommen wurde, seit der Merge-Agent zuletzt für einen bestimmten Abonnenten ausgeführt wurde. Außerdem muss dieser Vorgang dann für jeden Abonnenten wiederholt werden, der eine Synchronisierung mit dem Verleger ausführt.  
   
@@ -71,8 +72,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="performance-of-precomputed-partitions"></a>Leistung vorausberechneter Partitionen  
  Bei vorausberechneten Partitionen besteht ein geringfügiger Leistungsabfall, wenn Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Der Großteil der Zeit bei der Mergeverarbeitung wird jedoch für die Auswertung von Partitionen und den Download von Änderungen vom Verleger zum Abonnenten aufgewendet. Deshalb kann der Reingewinn noch immer erheblich sein. Der Leistungsvorteil variiert je nach Anzahl der Abonnenten, die gleichzeitig eine Synchronisierung ausführen, und der Anzahl von Updates pro Synchronisierung, bei denen Zeilen zwischen Partitionen verschoben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   
-

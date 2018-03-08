@@ -2,9 +2,12 @@
 title: 'Beispiel: Abrufen von Informationen zu Mitarbeitern | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01f3d95b92757ba51a7e8466a9c8d9d535a0a773
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c3c7b4150738ac5dbf878014004c3bda20092e33
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-retrieving-employee-information"></a>Beispiel: Abrufen von Informationen zu Mitarbeitern
-  In diesem Beispiel werden die ID und der Name jedes Mitarbeiters abgerufen. In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank kann employeeID aus der BusinessEntityID-Spalte in der Employee-Tabelle abgerufen werden. Die Namen der Mitarbeiter werden aus der Person-Tabelle abgerufen. Die BusinessEntityID-Spalte kann zum Join der Tabellen verwendet werden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Beispiel werden die ID und der Name jedes Mitarbeiters abgerufen. In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank kann employeeID aus der BusinessEntityID-Spalte in der Employee-Tabelle abgerufen werden. Die Namen der Mitarbeiter werden aus der Person-Tabelle abgerufen. Die BusinessEntityID-Spalte kann zum Join der Tabellen verwendet werden.  
   
  Angenommen, Sie möchten mithilfe einer FOR XML EXPLICIT-Transformation ein XML-Dokument generieren, wie im Folgenden gezeigt:  
   
@@ -134,8 +137,7 @@ FOR XML EXPLICIT;
   
  Dieser Prozess wird für die restlichen Zeilen des Rowsets wiederholt. Beachten Sie, dass die Anordnung der Zeilen in der Universaltabelle wichtig ist, damit FOR XML EXPLICIT das Rowset in der richtigen Reihenfolge verarbeitet und die erwünschte XML-Ausgabe generiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

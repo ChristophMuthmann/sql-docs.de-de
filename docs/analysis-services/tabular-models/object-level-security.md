@@ -2,12 +2,13 @@
 title: Sicherheit in tabellarischen Modellen auf Objektebene | Microsoft Docs
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-server-2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: 
@@ -17,18 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed695cd15d9e0622ff28ed449395f0684b2cf9f1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-level-security"></a>Sicherheit auf Nachrichtenebene-Objekt
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-Daten für die modellelementsicherheit wird gestartet, bei der Implementierung von effektiv [Rollen](../../analysis-services/tabular-models/roles-ssas-tabular.md) und Filter auf Zeilenebene Benutzerberechtigungen für Datenmodellobjekte und Daten zu definieren. Tabellenmodelle 1400 ab, Sie können auch Sicherheitsfunktionen auf Objektebene, gehören auf Tabellenebene Sicherheit und die Sicherheit auf Nachrichtenebene Spalte in der [Rollenobjekt](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Daten für die modellelementsicherheit wird gestartet, bei der Implementierung von effektiv [Rollen](../../analysis-services/tabular-models/roles-ssas-tabular.md) und Filter auf Zeilenebene Benutzerberechtigungen für Datenmodellobjekte und Daten zu definieren. Tabellenmodelle 1400 ab, Sie können auch Sicherheitsfunktionen auf Objektebene, gehören auf Tabellenebene Sicherheit und die Sicherheit auf Nachrichtenebene Spalte in der [Rollenobjekt](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
 
 ## <a name="table-level-security"></a>Sicherheit auf Tabellenebene
 
@@ -81,7 +78,7 @@ In diesem Beispiel wird die MetadataPermission-Eigenschaft der Klasse ColumnPerm
   }
 ```
 
-## <a name="restrictions"></a>Einschränkungen
+## <a name="restrictions"></a>Restrictions
 
 *  Sicherheit auf Nachrichtenebene Tabelle kann nicht für ein Modell festgelegt werden, wenn er eine beziehungskette zuwiderläuft. Zur Entwurfszeit wird ein Fehler generiert.
  Z. B. wenn Beziehungen zwischen Tabellen A und B, und B und C vorhanden sind, nicht Tabelle b gesichert werden Wenn Tabelle B gesichert ist, kann keine Abfrage in Tabelle A die Beziehungen zwischen Tabellen A und B, und B und C. Datenübertragung. In diesem Fall kann eine separate Beziehung zwischen Tabellen A und b konfiguriert werden
@@ -98,11 +95,10 @@ In diesem Beispiel wird die MetadataPermission-Eigenschaft der Klasse ColumnPerm
 
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
-[Rollenobjekt (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
+[Roles-Objekt (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
 [Tabular Model Scripting Language (TMSL) (Skriptsprache für tabellarische Modelle (TMSL))](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
 [Tabellarischen Objektmodell (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md).
 
   
-

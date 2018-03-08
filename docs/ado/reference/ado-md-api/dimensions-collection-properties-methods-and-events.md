@@ -3,7 +3,7 @@ title: Dimensionen, von Auflistungseigenschaften, Methoden und Ereignisse | Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Dimensions collection [ADO MD], members
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dea7692c69e3da32d716c5a260953cb7d7e1cbdc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0303042e14f015f217c3d22e23d0f4576e2dfd07
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Dimensionen Auflistungseigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -41,4 +40,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Auflistung von Dimensionen (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)
-

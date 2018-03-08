@@ -2,32 +2,29 @@
 title: Sequence-Befehl (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d628482a5d7c2efb9c7611af1d024ad6b644512a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e7fc7f1541131ac6a8e7249940a31104e50f0b09
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sequence-command-tmsl"></a>Sequence-Befehls (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Verwenden der **Sequenz** Befehl aus, um einen aufeinander folgenden Satz von Vorgängen in einer Instanz von Analysis Services im Batchmodus ausgeführt.  Der gesamte Befehl und aller seiner Komponenten müssen in der Reihenfolge für die Transaktion erfolgreich abschließen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Verwenden der **Sequenz** Befehl aus, um einen aufeinander folgenden Satz von Vorgängen in einer Instanz von Analysis Services im Batchmodus ausgeführt.  Der gesamte Befehl und aller seiner Komponenten müssen in der Reihenfolge für die Transaktion erfolgreich abschließen.  
   
  Die folgenden Befehle können ausgeführt werden sequenziell, mit Ausnahme von der **aktualisieren** Befehl die parallel auf mehrere Objekte gleichzeitig zu verarbeiten ausgeführt wird.  
   
@@ -122,4 +119,3 @@ ms.lasthandoff: 09/01/2017
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

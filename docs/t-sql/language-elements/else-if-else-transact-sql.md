@@ -3,8 +3,11 @@ title: (WENN... ELSE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - ELSE keyword
 - IF keyword
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18adc4f441fddecdb3cd96c2a253268a16daea46
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ca282df7272f2eeffe1afc50238a41f69c7b615f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Legt Bedingungen für die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung fest. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung (*Sql_statement*) folgenden der *Boolean_expression*wird ausgeführt, wenn die *Boolean_expression* auf "true" ergibt. Das optionale ELSE-Schlüsselwort ist eine alternative [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung, die ausgeführt wird, wenn *Boolean_expression* auf "false" oder NULL ausgewertet wird.  
   
@@ -51,7 +53,7 @@ IF Boolean_expression
  *Boolean_expression*  
  Ein Ausdruck, der TRUE oder FALSE zurückgibt. Wenn die *Boolean_expression* enthält eine SELECT-Anweisung muss die SELECT-Anweisung in Klammern eingeschlossen werden.  
   
- { *Sql_statement* | *Statement_block* }  
+ { *sql_statement* | *statement_block* }  
  Eine beliebige gültige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungsgruppierung, die als Anweisungsblock definiert ist. Um einen Anweisungsblock (Batch) zu definieren, verwenden Sie die Schlüsselwörter BEGIN und END aus den Sprachkonstrukten zur Ablaufsteuerung. Obwohl sämtliche [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem BEGIN...END-Block gültig sind, sollten bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht in demselben Batch (Anweisungsblock) gruppiert werden.  
   
 ## <a name="result-types"></a>Ergebnistypen  
@@ -162,6 +164,5 @@ ELSE
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   
   
-
 
 

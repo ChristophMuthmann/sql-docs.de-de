@@ -2,29 +2,30 @@
 title: Replikationsmonitor (Hauptseite) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.main.f1
+f1_keywords: sql13.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 07be2b5aea20d71430179d475d9bbc6babc7862e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "26"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 384e72c84aedde0ecbeaf88e1345c6e2c175e36e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor-main-page"></a>Replikationsmonitor (Hauptseite)
-  Mithilfe des Replikationsmonitors können Sie den Status und die Leistung von Veröffentlichungen und Abonnements über eine Replikationstopologie hinweg überwachen. Die folgenden Themen stellen weitere Informationen bereit:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe des Replikationsmonitors können Sie den Status und die Leistung von Veröffentlichungen und Abonnements über eine Replikationstopologie hinweg überwachen. Die folgenden Themen stellen weitere Informationen bereit:  
   
 -   Eine Übersicht zum Replikationsmonitor finden Sie unter [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

@@ -1,27 +1,27 @@
 ---
-title: "Ausdrücke (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Ausdrücke (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2f4c95fe680ad295533aba080897e9ad5440b90
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Ausdrücke (Berichts-Generator und SSRS)
   Ausdrücke werden sehr häufig in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Berichten mit Seitenzahlen verwendet, um Daten abzurufen, zu berechnen, anzuzeigen, zu gruppieren, zu sortieren, zu filtern, zu parametrisieren oder zu formatieren. 
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  Während des Berichtsentwurfs werden zahlreiche Berichtselementausdrücke für Sie festgelegt. Wenn Sie ein Feld aus dem Datenbereich in eine Tabellenzelle auf der Berichtsentwurfsoberfläche ziehen, wird z. B. ein einfacher Ausdruck als Textfeldwert für das Feld festgelegt. In der folgenden Abbildung enthält der Berichtsdatenbereich die Datasetfelder ID, Name, SalesTerritory, Code und Sales. Der Tabelle wurden die drei Felder[Name], [Code] und [Sales] hinzugefügt. Die Bezeichnung [Name] auf der Entwurfsoberfläche stellt den zugrunde liegenden `=Fields!Name.Value`-Ausdruck dar.  
   
- ![Rs_DataDesignandPreview](../../reporting-services/report-data/media/rs-datadesignandpreview.gif "Rs_DataDesignandPreview")  
+ ![rs_DatendesignundVorschau](../../reporting-services/report-data/media/rs-datadesignandpreview.gif "rs_DataDesignandPreview")  
   
  Wenn Sie den Bericht in der Vorschau anzeigen, kombiniert der Berichtsprozessor den Tabellendatenbereich mit den tatsächlichen Daten aus der Datenverbindung und zeigt für jede Zeile im Resultset eine Zeile in der Tabelle an.  
   
@@ -52,15 +52,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **Einfach:** Ein einfacher Ausdruck enthält einen Verweis auf ein einzelnes Element in einer integrierten Sammlung, beispielsweise ein Datasetfeld, einen Parameter oder ein integriertes Feld. Auf der Entwurfsoberfläche wird ein einfacher Ausdruck in eckigen Klammern angezeigt. `[FieldName]` entspricht z. B. dem zugrunde liegenden Ausdruck `=Fields!FieldName.Value`. Einfache Ausdrücke werden automatisch erstellt, während Sie das Berichtslayout anlegen und Elemente aus dem Berichtsdatenbereich auf die Entwurfsoberfläche ziehen. Weitere Informationen zu den Symbolen, die unterschiedliche integrierte Sammlungen darstellen, finden Sie unter [Grundlegendes zu Präfixsymbolen in einfachen Ausdrücken](#DisplayText).  
   
--   **Komplex:** Ein komplexer Ausdruck enthält Verweise auf mehrere integrierte Verweise, Operatoren und Funktionsaufrufe. Wird ein komplexer Ausdruck als <\<Expr >> Wenn der Ausdruckswert mehr als einen einfachen Verweis enthält. Zum Anzeigen des Ausdrucks zeigen Sie darauf und lesen die QuickInfo. Um den Ausdruck zu bearbeiten, öffnen Sie ihn im Dialogfeld **Ausdruck** .  
+-   **Komplex:** Ein komplexer Ausdruck enthält Verweise auf mehrere integrierte Verweise, Operatoren und Funktionsaufrufe. Wenn der Ausdruckswert mehrere einfache Verweise enthält, wird ein komplexer Ausdruck als <Expr\<>> dargestellt. Zum Anzeigen des Ausdrucks zeigen Sie darauf und lesen die QuickInfo. Um den Ausdruck zu bearbeiten, öffnen Sie ihn im Dialogfeld **Ausdruck** .  
   
  Die folgende Abbildung enthält typische einfache und komplexe Ausdrücke sowohl für Textfelder als auch für Platzhaltertext.  
   
- ![Rs_ExpressionDefaultFormat](../../reporting-services/report-design/media/rs-expressiondefaultformat.gif "Rs_ExpressionDefaultFormat")  
+ ![rs_Ausdrucksstandardformat](../../reporting-services/report-design/media/rs-expressiondefaultformat.gif "rs_ExpressionDefaultFormat")  
   
  Um in Ausdrücken Beispielwerte anstelle von Text anzuzeigen, formatieren Sie das Textfeld oder den Platzhaltertext. In der folgenden Abbildung wird die Berichtsentwurfsoberfläche auf die Anzeige von Beispielwerten umgeschaltet:  
   
- ![Rs_ExpressionSampleValuesFormat](../../reporting-services/report-design/media/rs-expressionsamplevaluesformat.gif "Rs_ExpressionSampleValuesFormat")  
+ ![rs_ExpressionSampleValuesFormat](../../reporting-services/report-design/media/rs-expressionsamplevaluesformat.gif "rs_ExpressionSampleValuesFormat")  
   
  Weitere Informationen finden Sie unter [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
@@ -93,10 +93,10 @@ ms.lasthandoff: 08/09/2017
 |[Operatoren](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Beschreibt die Operatoren, mit denen Sie Verweise in einem Ausdruck kombinieren können. Der **&** -Operator wird z. B. zum Verketten von Zeichenfolgen verwendet.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Integrierte Auflistungen](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)|Beschreibt die integrierten Auflistungen, die Sie in einen Ausdruck einschließen können, z. B. `Fields`, `Parameters`und `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Integrierte Berichts- und Aggregatfunktionen](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|Beschreibt die integrierten Funktionen, z. B. `Sum` oder `Previous`, auf die Sie von einem Ausdruck aus zugreifen können.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Beschreibt, wie Sie auf die integrierten CLR-Klassen <xref:System.Math> und <xref:System.Convert>, andere CLR-Klassen, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Laufzeitbibliotheksfunktionen oder Methoden aus einer externen Assembly zugreifen können.<br /><br /> Beschreibt, wie Sie auf benutzerdefinierten Code zugreifen können, der in den Bericht eingebettet ist oder der sowohl auf dem Berichtsclient als auch auf dem Berichtsserver als benutzerdefinierte Assembly kompiliert und installiert wird.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Beschreibt, wie Sie auf die integrierten CLR-Klassen <xref:System.Math> und <xref:System.Convert>, andere CLR-Klassen, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliotheksfunktionen oder Methoden aus einer externen Assembly zugreifen können.<br /><br /> Beschreibt, wie Sie auf benutzerdefinierten Code zugreifen können, der in den Bericht eingebettet ist oder der sowohl auf dem Berichtsclient als auch auf dem Berichtsserver als benutzerdefinierte Assembly kompiliert und installiert wird.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
 ##  <a name="Valid"></a> Überprüfen von Ausdrücken  
- Wenn Sie einen Ausdruck für eine bestimmte Berichtselementeigenschaft erstellen, sind die in einem Ausdruck verwendbaren Verweise von den Werten abhängig, die die Berichtselementeigenschaft annehmen kann, sowie vom Bereich, in dem die Eigenschaft ausgewertet wird. Beispiel:  
+ Wenn Sie einen Ausdruck für eine bestimmte Berichtselementeigenschaft erstellen, sind die in einem Ausdruck verwendbaren Verweise von den Werten abhängig, die die Berichtselementeigenschaft annehmen kann, sowie vom Bereich, in dem die Eigenschaft ausgewertet wird. Zum Beispiel:  
   
 -   Der [Sum]-Ausdruck berechnet standardmäßig die Summe der Daten, die sich zum Zeitpunkt der Ausdrucksauswertung im Ausdrucksbereich befinden. Bei einer Tabellenzelle hängt der Bereich von Mitgliedschaften in Zeilen- und Spaltengruppen ab. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 08/09/2017
   
  [Ausdrucksreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
  Weitere Informationen und Beispiele finden Sie in den folgenden Themen:  
   
 -   [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
@@ -125,4 +125,3 @@ ms.lasthandoff: 08/09/2017
 -   [Lernprogramm: Einführung in Ausdrücke](Tutorial:%20Introducing%20Expressions.md)
 -   [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
-

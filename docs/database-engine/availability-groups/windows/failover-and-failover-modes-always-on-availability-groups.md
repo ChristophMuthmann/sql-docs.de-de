@@ -2,11 +2,13 @@
 title: "Failover und Failovermodi (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 54450a69119f344ba40787e7ce076ad84e0b211d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers*ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
   
@@ -86,8 +87,8 @@ ms.lasthandoff: 08/02/2017
   
 ||Asynchroner Commit-Modus|Synchroner Commit-Modus mit manuellem Failovermodus|Synchroner Commit-Modus mit automatischem Failovermodus|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Automatisches Failover|Nein|Nein|ja|  
-|Geplantes manuelles Failover|Nein|Ja|ja|  
+|Automatisches Failover|nein|nein|ja|  
+|Geplantes manuelles Failover|nein|ja|ja|  
 |erzwungenes Failover|ja|ja|Ja**\***|  
   
  **\***Wenn Sie einen Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
@@ -263,9 +264,9 @@ ms.lasthandoff: 08/02/2017
   
 |Verfügbarkeitsmodus des sekundären Replikats|Ist die Datenbank synchronisiert?|Besteht die Möglichkeit eines Datenverlusts?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchroner Commit|ja|Nein|  
-|Synchroner Commit|Nein|ja|  
-|Asynchroner Commit|Nein|ja|  
+|Synchroner Commit|ja|nein|  
+|Synchroner Commit|nein|ja|  
+|Asynchroner Commit|nein|ja|  
   
  Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
   
@@ -357,7 +358,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
@@ -366,4 +367,3 @@ ms.lasthandoff: 08/02/2017
  [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   
-

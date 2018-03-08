@@ -3,24 +3,25 @@ title: 'Dem:: closecursor auf | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf4a899dc14eea3bdf1cb2bf5f2be3ccf26eca89
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f380e7fcd6e5cb13c594877309087979f22844d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,4 +74,3 @@ print_r($result);
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

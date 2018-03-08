@@ -1,27 +1,27 @@
 ---
-title: Exportieren nach XML (Berichts-Generator und SSRS) | Microsoft Docs
+title: Exportieren nach XML (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d87aa313c0bec7dccfd97feaf3e1771633d773ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
   Die XML-Renderingerweiterung gibt einen paginierten Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.  
@@ -84,11 +84,11 @@ ms.lasthandoff: 08/09/2017
   
  XML-Namespacedefinitionen und Schemareferenzattribute sind ebenfalls im Berichtselement enthalten. Variablen werden fett formatiert:  
   
- <**Bericht** Xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" Xsi:**SchemaLocation**= "**SchemaNameReportURL**&amp;Rc % 3aSchema = True" Name = "ReportName" >  
+ <**Bericht** xmlns="**Schemaname**" xmlns:xsi= http://www.w3.org/2001/XMLSchema-instance" xsi:**Schemaspeicherort**="**SchemanameBerichtURL**&amp;rc%3aSchema=true" Name="BerichtName">  
   
  Die Werte für die Variablen lauten wie folgt:  
   
-|Name|Wert|  
+|Name|value|  
 |----------|-----------|  
 |Bericht|Report.DataElementName|  
 |ReportURL|URL-codierte absolute URL zum Bericht auf dem Server.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="rectangles"></a>Rechtecke  
  Ein Rechteck wird als ein Element gerendert. Der Name des Elements wird von der DataElementName-RDL-Eigenschaft abgeleitet.  
   
-### <a name="custom-report-items"></a>Benutzerdefinierte Berichtselemente  
+### <a name="custom-report-items"></a>Custom Report Items  
  CustomReportItems (CRI) sind für die Renderingerweiterung nicht sichtbar. Wenn ein benutzerdefiniertes Berichtselement im Bericht vorhanden ist, rendert die Renderingerweiterung dieses als konventionelles Berichtselement.  
   
 ### <a name="images"></a>Bilder  
@@ -194,12 +194,11 @@ ms.lasthandoff: 08/09/2017
  Weitere Informationen finden Sie unter [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
- [Paginierung in Reporting Services &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Interaktive Funktionalität für verschiedene Bericht Rendern von Erweiterungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern von Berichtselementen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

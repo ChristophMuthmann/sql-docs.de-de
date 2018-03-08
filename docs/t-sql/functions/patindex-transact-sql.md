@@ -3,8 +3,11 @@ title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-caps.latest.revision: 53
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abf357840512c1447f0977a151ca742b148f45d2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 95a86e78aad7ea01a7f57a046b250825c9e37192
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt für alle gültigen Text- und Zeichendatentypen die Startposition des ersten Auftretens eines Musters in einem angegebenen Ausdruck zurück bzw. 0, wenn das Muster nicht gefunden wird.  
   
@@ -47,7 +49,7 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Muster*  
+ *pattern*  
  Ein Zeichenausdruck, der die zu suchende Sequenz enthält. Platzhalterzeichen können verwendet werden. Allerdings muss das Zeichen % ergeben, vor und führen Sie *Muster* (außer wenn Sie nach der ersten oder letzten Zeichen suchen). *Muster* ist ein Ausdruck der Datentypkategorie der Zeichen-Zeichenfolge. *Muster* ist auf 8000 Zeichen beschränkt.  
   
  *expression*  
@@ -147,6 +149,8 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## <a name="see-also"></a>Siehe auch  
+ [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [&#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
@@ -155,6 +159,5 @@ WHERE DocumentNode = 0x7B40;
  [Prozentzeichen &#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
-
 
 

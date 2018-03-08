@@ -3,8 +3,11 @@ title: Erstellen von EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 64
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 82d4f844c44f92232c8ac9bebd5841460f93051c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt ein Objekt, das Informationen über eine Datenbank oder ein Serverereignis an einen Service Broker-Dienst sendet. Ereignisbenachrichtigungen werden nur mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen erstellt.  
   
@@ -140,7 +142,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Erstellen einer Ereignisbenachrichtigung mit dem Server als Bereich  
  Im folgenden Beispiel werden die zum Einrichten eines Zieldiensts mit [!INCLUDE[ssSB](../../includes/sssb-md.md)] erforderlichen Objekte erstellt. Der Zieldienst verweist auf den Nachrichtentyp und den Vertrag des initiierenden Diensts speziell für Ereignisbenachrichtigungen. Dann wird auf dem Zieldienst eine Ereignisbenachrichtigung erstellt, die eine Benachrichtigung sendet, sobald ein `Object_Created`-Ablaufverfolgungsereignis auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorliegt.  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +169,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. Erstellen einer Ereignisbenachrichtigung mit der Datenbank als Bereich  
  Im folgenden Beispiel wird eine Ereignisbenachrichtigung für denselben Zieldienst wie im vorherigen Beispiel erstellt. Die Ereignisbenachrichtigung wird ausgelöst, nachdem ein `ALTER_TABLE`-Ereignis in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Beispieldatenbank aufgetreten ist.  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,7 +188,7 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. Abrufen von Informationen zu einer Ereignisbenachrichtigung mit der Datenbank als Bereich  
  Im folgenden Beispiel wird die `sys.event_notifications`-Katalogsicht für Metadaten zur Ereignisbenachrichtigung `Notify_ALTER_T1` abgefragt, die mit dem Datenbankbereich erstellt wurde.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  
@@ -201,4 +203,3 @@ WHERE name = 'Notify_ALTER_T1';
  [Sys. server_events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)  
   
   
-

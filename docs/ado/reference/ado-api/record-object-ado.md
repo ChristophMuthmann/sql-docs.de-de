@@ -3,7 +3,7 @@ title: Record-Objekt (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aa00ab893549eee36bc1d1b0e858c7bc326fb83b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26840ff89f61bc3c37cee2fd88c1f53e393528bf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="record-object-ado"></a>Das Datensatzobjekt (ADO)
 Stellt eine Zeile aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder der Datenanbieter oder ein Objekt, das von einem Anbieter von teilweise strukturierten Daten, z. B. einer Datei oder eines Verzeichnisses zurückgegeben.  
@@ -87,11 +86,10 @@ Stellt eine Zeile aus einer [Recordset](../../../ado/reference/ado-api/recordset
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Aufzeichnen von Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
+-   [Record-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Datensätze und Datenströme](../../../ado/guide/data/records-and-streams.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

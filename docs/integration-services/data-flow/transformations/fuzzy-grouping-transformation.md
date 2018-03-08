@@ -1,10 +1,13 @@
 ---
-title: "Transformation für Fuzzygruppierung | Microsoft Docs"
+title: "Transformation für Fuzzygruppierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -28,17 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 58
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
   Die Transformation für Fuzzygruppierung führt Datenbereinigungsaufgaben durch, indem Datenzeilen identifiziert werden, die wahrscheinlich Duplikate sind, und eine kanonische Datenzeile ausgewählt wird, die zum Standardisieren der Daten verwendet wird.  
@@ -95,7 +97,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum Festlegen der Eigenschaften dieses Tasks anzuzeigen:  
   
 -   [Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
@@ -108,8 +110,8 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  Auf dem von der Verbindung angegebenen Server muss [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt werden. Die Transformation für Fuzzygruppierung erstellt temporäre Datenobjekte in tempdb, die so groß sein können wie die gesamte Eingabe der Transformation. Während die Transformation ausgeführt wird, werden Abfragen für diese temporären Objekte ausgegeben. Dadurch kann die Gesamtleistung des Servers beeinträchtigt werden.  
   
-### <a name="options"></a>enthalten  
- **OLE DB-Verbindungs-Manager**  
+### <a name="options"></a>Tastatur  
+ **Teilcache**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   
  **Neu**  
@@ -118,7 +120,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Transformations-Editor für Fuzzygruppierung (Registerkarte Spalten)
   Mithilfe der Registerkarte **Spalten** des Dialogfelds **Transformations-Editor für Fuzzygruppierung** können Sie die Spalten angeben, die zum Gruppieren von Zeilen mit doppelten Werten verwendet werden sollen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie aus dieser Liste die Eingabespalten, mit denen Zeilen mit doppelten Werten gruppiert werden sollen.  
   
@@ -149,7 +151,7 @@ ms.lasthandoff: 08/19/2017
  **Zahlen**  
  Gibt die Bedeutung führender und nachfolgender Zahlen beim Vergleichen der Spaltendaten an. Wenn beispielsweise führende Zahlen von Bedeutung sind, wird "123 Main Street" nicht mit "456 Main Street" gruppiert.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Neither**|Weder führende noch nachfolgende Zahlen sind von Bedeutung.|  
 |**Leading**|Nur führende Zahlen sind von Bedeutung.|  
@@ -165,7 +167,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  Die **Exhaustive** - und **MaxMemoryUsage** -Eigenschaften der Transformation für Fuzzgruppierung sind im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, können jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzgruppierung von [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name der Eingabeschlüsselspalte**  
  Geben Sie den Namen einer Ausgabespalte an, die den eindeutigen Bezeichner für jede Eingabezeile enthält. Die **_key_in** -Spalte enthält einen für jede Zeile eindeutigen Wert.  
   
@@ -181,9 +183,8 @@ ms.lasthandoff: 08/19/2017
  **Tokentrennzeichen**  
  Die Transformation bietet einen Standardsatz von Trennzeichen, um Daten mit Tokens zu versehen. Sie können durch Bearbeiten der Liste aber ggf. Trennzeichen hinzufügen oder entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transformation für Fuzzysuche](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

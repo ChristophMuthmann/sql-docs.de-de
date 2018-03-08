@@ -3,7 +3,7 @@ title: ADO-Handler-ereigniszusammenfassung | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8bf7593fb1e8c770edde83e697f5b5be1d1d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO-Verbindung und Recordsetereignisse
 ADO-Objekten, die zwei Ereignisse auslösen können: der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Die **ConnectionEvent** Familie bezieht sich auf Vorgänge auf die **Verbindung** -Objekt, und die **RecordsetEvent** Familie bezieht sich auf Vorgänge auf die  **Recordset** Objekt.
@@ -47,11 +46,10 @@ ADO-Objekten, die zwei Ereignisse auslösen können: der [Verbindung](../../../a
 |RecordsetEvent|Description|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**Status abrufen** – Benachrichtigung über den Fortschritt von einem Vorgang zum Abrufen von Daten, oder dass der Vorgang abgeschlossen wurde. Diese Ereignisse sind nur verfügbar wenn die **Recordset** mit einem clientseitigen Cursor geöffnet wurde.|
-|[WillChangeField FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Feld Change Management** – Benachrichtigung, dass der Wert des aktuellen Felds ändert oder geändert hat.|
+|[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Feld Change Management** – Benachrichtigung, dass der Wert des aktuellen Felds ändert oder geändert hat.|
 |[WillMove, MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**Verwaltung der Navigation** – Benachrichtigung, die die aktuelle Zeile zu positionieren, in einer **Recordset** geändert wird, hat sich geändert oder das Ende erreicht hat die **Recordset**.|
-|[WillChangeRecord RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Change Management Zeile** – Benachrichtigung, dass in der aktuellen Zeile der **Recordset** geändert wird oder wurde geändert.|
+|[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Change Management Zeile** – Benachrichtigung, dass in der aktuellen Zeile der **Recordset** geändert wird oder wurde geändert.|
 |[WillChangeRecordset RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Recordset Change Management** – Benachrichtigung, dass etwas im aktuellen **Recordset** geändert wird oder wurde geändert.|
 
 ## <a name="see-also"></a>Siehe auch
  [ADO-Ereignisinstanziierung von Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md) [Ereignisparameter](../../../ado/guide/data/event-parameters.md) [Zusammenwirken der Ereignishandler](../../../ado/guide/data/how-event-handlers-work-together.md) [Ereignistypen](../../../ado/guide/data/types-of-events.md)
-

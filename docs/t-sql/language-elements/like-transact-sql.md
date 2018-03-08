@@ -3,8 +3,11 @@ title: WIE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,20 +33,19 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 07a8bb8b08120f08cd54e42dcd332459544c206d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator. Wenn eines der Argumente kein Zeichenfolgen-Datentyp ist, wird es ggf. von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in einen Zeichenfolgen-Datentyp konvertiert.  
   
@@ -67,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Zeichendatentyps.  
   
- *Muster*  
+ *pattern*  
  Ist die bestimmte Zeichenfolge von Zeichen im zu suchende *Match_expression*, und Sie können die folgenden gültigen Platzhalterzeichen enthalten. *Muster* kann maximal 8.000 Byte sein.  
   
 |Platzhalter|Description|Beispiel|  
@@ -91,7 +93,7 @@ match_expression [ NOT ] LIKE pattern
   
  Mit einem Muster, die enthält einen Zeichenfolgenvergleich **Char** und **Varchar** Daten möglicherweise keinen Vergleich mit LIKE aufgrund der Art der dateispeicherung übergeben. Verschaffen Sie sich eine Übersicht darüber, wie die einzelnen Datentypen gespeichert werden und wann ein Vergleich mit LIKE fehlschlagen kann. Das folgende Beispiel übergibt eine lokale **Char** -Variablen an eine gespeicherte Prozedur ein, und Mustervergleich sollen alle Mitarbeiter, deren letzten beginnen mit einem angegebenen Satz von Zeichen gefunden.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +111,7 @@ GO
   
  Im folgenden Beispiel wird jedoch erfolgreich ist, da nachfolgende Leerzeichen nicht hinzugefügt werden eine **Varchar** Variable.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +139,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  Die folgenden Beispiele verdeutlichen die Unterschiede der zurückgegebenen Zeilen beim Durchführen von Mustervergleichen mit ASCII- und Unicode-LIKE-Operatoren.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +170,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Mit der folgenden Abfrage werden beispielsweise alle dynamischen Verwaltungssichten in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank angezeigt, da sie alle mit den Buchstaben `dm` beginnen.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -187,7 +189,7 @@ GO
 |Symbol|Bedeutung|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|_N|  
+|LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d oder f|  
 |LIKE '[-acdf]'|-, a, c, d oder f|  
 |LIKE '[ [ ]'|[|  
@@ -207,7 +209,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Im folgenden Beispiel werden alle Telefonnummern gefunden, die die Vorwahl `415` in der `PersonPhone`-Tabelle enthalten.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +243,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Im folgenden Beispiel werden alle Telefonnummern in der `PersonPhone`-Tabelle gefunden, die nicht die Vorwahl `415` aufweisen.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +274,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. Verwenden der ESCAPE-Klausel  
  Im folgenden Beispiel werden die `ESCAPE`-Klausel und das Escapezeichen verwendet, um die exakte Zeichenfolge `10-15%` in der `c1`-Spalte der `mytbl2`-Tabelle zu suchen.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +299,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. Verwenden des []-Platzhalterzeichens  
  Im folgende Beispiel werden Mitarbeiter ermittelt, auf die `Person` Tabelle mit den ersten Vornamen des `Cheryl` oder `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +310,7 @@ GO
   
  Im folgenden Beispiel werden in der `Person`-Tabelle Zeilen für Mitarbeiter mit den Nachnamen `Zheng` oder `Zhang` gesucht.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +325,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Das folgende Beispiel findet alle Mitarbeiter in der `DimEmployee` Tabelle mit Telefonnummern, die mit beginnt `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -333,9 +335,9 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
- Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee` Tabelle, die nicht mit beginnen `612`.  zugreifen.  
+ Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee` Tabelle, die nicht mit beginnen `612`.  aus.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +349,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Verwenden von NOT LIKE mit dem Platzhalterzeichen _  
  Das folgende Beispiel findet alle Telefonnummern Ortsvorwahl ab, mit denen `6` und Endziffern `2` in der `DimEmployee` Tabelle. Beachten Sie, dass es sich bei das Platzhalterzeichen % auch am Ende das Suchmuster enthalten ist, da die Ortskennzahl der erste Teil der Rufnummer ist und zusätzliche Zeichen nach dem in der Wert der Spalte vorhanden sein.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -357,9 +359,8 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  
-

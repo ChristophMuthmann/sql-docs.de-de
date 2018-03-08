@@ -3,7 +3,7 @@ title: FetchProgress-Ereignis (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FetchProgress event [ADO]
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3bd5284c35e51a8cc711fe7612d1176241c00ac7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 606e91ca69d981cf4c1396109f0114ce0244dc3b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress-Ereignis (ADO)
 Die **FetchProgress**Ereignis wird aufgerufen, in regelmäßigen Abständen während eines längeren asynchronen Vorgangs gemeldet wird, wie viele weitere Zeilen derzeit in abgerufen wurden die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,7 +50,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *adStatus*  
  Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert.  
   
- *pCommand*  
+ *pRecordset*  
  Ein **Recordset** -Objekt, das das Objekt ist für das die Einträge abgerufen werden.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -62,5 +61,4 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Ereignisse Modell (VC++-Beispiel)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)

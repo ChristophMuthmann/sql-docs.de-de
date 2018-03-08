@@ -3,7 +3,7 @@ title: CancelUpdate-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cd858ec4d40f307027a75fa657c4e4d2b0539064
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a85b135d743b356f5e4f5bd28e6bb2f2bb1eec0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate-Methode (ADO)
 Bricht alle Änderungen an der aktuellen oder neue Zeile ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, oder die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt, vor dem Aufruf der [Update ](../../../ado/reference/ado-api/update-method.md) Methode.  
@@ -56,7 +55,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
 |||  
 |-|-|  
-|[Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Update- und CancelUpdate Methoden Beispiel (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
@@ -68,4 +67,3 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  [CancelUpdate-Methode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [EditMode-Eigenschaft](../../../ado/reference/ado-api/editmode-property.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)
-

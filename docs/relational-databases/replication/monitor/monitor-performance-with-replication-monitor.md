@@ -2,11 +2,13 @@
 title: "Überwachen der Leistung mit dem Replikationsmonitor | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - Distribution Agent, monitoring
 - monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae1be084b689f760b6d10db4d7d975b0489048f7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f21560e068dab73097f517bce249724e391a6701
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
-  Der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor ermöglicht es Ihnen, die Leistung bei Transaktions- und Mergereplikationen zu überwachen. Zu diesem Zweck können die folgenden Aktionen ausgeführt werden:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikationsmonitor ermöglicht Ihnen, die Leistung bei Transaktions- und Mergereplikationen zu überwachen. Zu diesem Zweck können die folgenden Aktionen ausgeführt werden:  
   
 -   Festlegen von Warnungen und Schwellenwerten  
   
@@ -100,8 +102,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Anzeigen von Transaktions- und Bereitstellungszeiten bei der Transaktionsreplikation  
  Bei Transaktionsreplikationen zeigt der Replikationsmonitor Informationen zur Anzahl der Transaktionen in der Verteilungsdatenbank an, die noch nicht an einen Abonnenten verteilt wurden, und er gibt an, wie lange die Verteilung dieser Transaktionen schätzungsweise dauert. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Überwachen (Replikation)](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

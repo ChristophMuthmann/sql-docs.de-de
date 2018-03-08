@@ -3,27 +3,28 @@ title: "ODBC-API-Funktionen unterstützt | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f898533861d389336da3aafa6f839f8a66a340a1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-odbc-api-functions"></a>Unterstützte ODBC-API-Funktionen
 Der Zweck der Abgleich ist auf die Anwendung darüber zu informieren, welche Funktionen, aus dem Treiber verfügbar sind. Microsoft ODBC-Desktop-Datenbanktreiber unterstützen alle Core und Level 1-Funktionen.  
@@ -79,4 +80,3 @@ Transact] (.. / Topic/SQLTransact%20Function.md)|[Zugriff](../../odbc/microsoft/
 -   [SQLSetStmtOption (Desktop-Datenbanktreiber)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
 -   [SQLSpecialColumns (Desktop-Datenbanktreiber)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-

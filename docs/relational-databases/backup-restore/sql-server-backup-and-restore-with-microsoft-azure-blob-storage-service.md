@@ -2,28 +2,29 @@
 title: SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 16c41c9d1898303b58a40f6acce36968b571b299
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Sicherung in Azure Blob Grafik](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Kostenvorteile: Sie zahlen nur für den genutzten Dienst. Die Option kann genauso kosteneffizient wie eine externe Sicherungs-/Archivierungslösung sein. Weitere Informationen und Links finden Sie im Abschnitt [Überlegungen zur Abrechnung in Microsoft Azure](#Billing) .  
   
-##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
+##  <a name="Billing"></a> Überlegungen zur Abrechnung in Microsoft Azure:  
  Auf Grundlage der Speicherkosten für Microsoft Azure können Sie die Kosten für die Erstellung und Speicherung von Sicherungen in Microsoft Azure ableiten.  
   
  Der [Microsoft Azure-Preisrechner](http://go.microsoft.com/fwlink/?LinkId=277060) unterstützt Sie bei der Kostenschätzung.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
  **Datenübertragungen:** In Microsoft Azure eingehende Datenübertragungen sind kostenlos. Ausgehende Übertragungen werden nach Bandbreitennutzung und einer regionsspezifischen Staffelung berechnet. Weitere Informationen finden Sie im Abschnitt [Datenübertragungen](http://go.microsoft.com/fwlink/?LinkId=277061) des Artikels zu Preisdetails.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
 [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
@@ -77,4 +78,3 @@ ms.lasthandoff: 06/22/2017
 [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
-

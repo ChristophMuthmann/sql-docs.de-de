@@ -3,26 +3,28 @@ title: "SQL Server Management Studio – Lizenzbestimmungen | Microsoft-Dokument
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio – Lizenzbestimmungen
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>Verfügbare Sprachen:  
 [Chinesisch (Volksrepublik China)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinesisch (Taiwan)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Englisch (Vereinigte Staaten)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Französisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [Deutsch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italienisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Japanisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Koreanisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portugiesisch (Brasilien)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spanisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
@@ -124,4 +126,3 @@ Diese Einschränkung gilt für
   
 Sie gilt auch dann, wenn Microsoft von der Möglichkeit der Schäden wusste oder hätte wissen müssen. Die obige Einschränkung oder Ausschlussbestimmung gilt möglicherweise nicht für Sie, weil Ihr Land den Ausschluss oder die Einschränkung von zufälligen, Folge- oder anderen Schäden nicht zulässt.  
   
-

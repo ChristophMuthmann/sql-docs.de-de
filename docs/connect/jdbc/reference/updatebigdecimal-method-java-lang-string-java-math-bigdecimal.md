@@ -3,29 +3,28 @@ title: UpdateBigDecimal-Methode (java.lang.String, java.math.BigDecimal) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateBigDecimal (java.lang.String, java.math.BigDecimal)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateBigDecimal (java.lang.String, java.math.BigDecimal)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0debe120166662bd8855d19ee53cc5f239d02ffe
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c8a53f6ea682f899a5d99c9016664002ef9bcf2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updatebigdecimal-method-javalangstring-javamathbigdecimal"></a>updateBigDecimal-Methode (java.lang.String, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public void updateBigDecimal(java.lang.String columnName,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

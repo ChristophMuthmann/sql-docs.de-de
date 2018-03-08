@@ -1,32 +1,31 @@
 ---
-title: "Reporting Services-Funktionen, die von den Editionen von SQLServer 2016 unterstützt | Microsoft Docs"
+title: "Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
-caps.latest.revision: 3
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "3"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ef2e6405ce01442ca8a9709db2f1aa61a4934dc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen
 
-Dieses Thema enthält Details zu Features, die von den verschiedenen Editionen von SQL Server 2016 unterstützt.  
+Dieses Thema bietet detaillierte Informationen zu den von verschiedenen Versionen von SQL Server 2016 unterstützten Funktionen.  
   
  SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zur Verfügung.  
   
@@ -34,7 +33,7 @@ Dieses Thema enthält Details zu Features, die von den verschiedenen Editionen v
     
  **SQL Server 2016 R2 ausprobieren!**    
     
- > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
 > ![Virtueller Azure-Computer (klein)](../analysis-services/media/azure-virtual-machine-small.png) **[Starten eines virtuellen Computers, auf dem SQL Server 2016 bereits installiert ist](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
@@ -78,7 +77,7 @@ Um zur Tabelle für eine SQL Server-Technologie zu navigieren, klicken Sie auf d
 |Warnungen<sup>2</sup>|ja||||||ja|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|ja||||||ja|  
   
- <sup>1</sup> Weitere Informationen zu unterstützten Datenquellen in SQL Server 2016 Reporting Services (SSRS) finden Sie unter [von Reporting Services &#40; unterstützte Datenquellen SSRS &#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> Weitere Informationen zu unterstützten Datenquellen in SQL Server 2016 Reporting Services (SSRS) finden Sie unter [Von Reporting Services unterstützte Datenquellen (SSRS)](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> Erfordert Reporting Services im SharePoint-Modus. Weitere Informationen finden Sie unter [Installieren des SharePoint-Modus von Reporting Services](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
@@ -113,5 +112,4 @@ Um zur Tabelle für eine SQL Server-Technologie zu navigieren, klicken Sie auf d
 [Produktspezifikationen für SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [Installation für SQLServer 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

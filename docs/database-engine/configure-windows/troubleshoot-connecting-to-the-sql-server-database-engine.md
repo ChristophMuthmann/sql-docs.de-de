@@ -2,31 +2,32 @@
 title: Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dies ist eine Liste der Problembehandlungstechniken, die verwendet werden, wenn Sie keine Verbindung mit dem SQL Server-Datenbankmodul herstellen können. Diese Schritte beginnen nicht mit den häufigsten Problemen, auf die Sie sicher schon geprüft haben. Stattdessen beginnen sie mit den grundlegendsten Problemen und arbeitet sich vor bis hin zu komplexeren Problemen. Diese Schritte sind in der Reihenfolge von den grundlegendsten Problemen bis hin zu den komplexeren. Diese Schritte setzen voraus, dass Sie von einem anderen Computer aus eine Verbindung mit SQL Server herstellen, indem Sie das TCP/IP-Protokoll verwenden was am weit verbreitetsten ist. Diese Schritte wurden für SQL Server 2016 geschrieben, wobei jeweils der SQL Server als auch die Clientanwendungen unter Windows 10 laufen. Jedoch können Sie die Schritte in der Regel mit anderen Versionen von SQL Server und anderen Betriebssystemen ausführen. Dafür sind nur kleine Änderungen notwendig.
 
@@ -110,7 +111,7 @@ Wenn Sie zu diesem Zeitpunkt eine Fehlermeldung erhalten, müssen Sie den Fehler
 >    [!NOTE] 
 >    Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. Wenn Sie den Fehler **18456 Fehler bei der Anmeldung für den Benutzer**erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) in der Onlinedokumentation an, um weitere Informationen über Fehlercodes zu erhalten. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Problembehandlung von Error 18456) finden Sie ebenso eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
-4.   Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung durch Angabe von **tcp:** vor dem Namen erzwingen. Beispiel:
+4.   Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung durch Angabe von **tcp:** vor dem Namen erzwingen. Zum Beispiel:
 
 |Verbinden mit:|Typ:|Beispiel:|
 |-----------------|---------------|-----------------|
@@ -157,5 +158,4 @@ Beide Probleme beziehen sich auf den SQL Server-Browserdienst, der die Portnumme
     1. Erweitern Sie auf dem Clientcomputer im linken Bereich des SQL Server-Konfigurations-Managers **SQL Native Client** *Version* **Configuration**, and then select **Client Protocols**.
     2. Überprüfen Sie, ob TCP/IP im rechten Bereich aktiviert ist. Falls TCP/IP nicht aktiviert ist, klicken Sie mit der rechten Maustaste auf **TCP/IP** und anschließend auf **Aktivieren**.
     3. TC/IP muss in der Reihenfolge der Protokolle vor „Named Pipes“ (oder „VIA“ für ältere Versionen) stehen. Im Allgemeinen sollten Sie Shared Memory als Reihenfolge 1 und TCP/IP als Reihenfolge 2 lassen. Shared Memory wird nur verwendet, wenn der Client und SQL Server auf dem gleichen Computer ausgeführt werden. Alle aktivierten Protokolle werden in dieser Reihenfolge getestet, bis eine Verbindung hergestellt ist, es sei denn, gemeinsam genutzter Speicher wird übersprungen, wenn die Verbindung nicht auf demselben Computer vorhanden ist. 
-
 

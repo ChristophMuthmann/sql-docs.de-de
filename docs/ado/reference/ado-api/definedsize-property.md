@@ -3,7 +3,7 @@ title: DefinedSize-Eigenschaft | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 44c44b0dd7528634cc6db88b3d5bb04a8a1237e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 650eb80c6d4301c1a5881b3348dc2bbef9269fb3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property"></a>DefinedSize-Eigenschaft
 Gibt die Datenkapazität von einem [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
@@ -56,4 +55,3 @@ Gibt die Datenkapazität von einem [Feld](../../../ado/reference/ado-api/field-o
  [ActualSize und DefinedSize Eigenschaften Beispiel (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize und DefinedSize Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [ActualSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)
-

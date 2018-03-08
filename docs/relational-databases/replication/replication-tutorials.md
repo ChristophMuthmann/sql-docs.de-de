@@ -2,34 +2,34 @@
 title: Tutorials zur Replikation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b25cb76e77fd59e63e3700ea418925bc37dd95e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e081c0e361ac7c52a4afc52adcdd2207f3465781
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-tutorials"></a>Lernprogramme zur Replikation
-Zur Replikation stehen Lernprogramme zur Verfügung, in denen Sie lernen können, wie Replikationstopologien mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eingerichtet und ausgeführt werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zur Replikation stehen Tutorials zur Verfügung, in denen Sie lernen können, wie Replikationstopologien mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eingerichtet und ausgeführt werden.  
   
 In den Lernprogrammen zur Replikation bezieht sich "Verleger" auf den Server, der die zu replizierenden Quelldaten enthält, und "Abonnent" bezieht sich auf den Zielserver. Verleger und Abonnent können dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam verwenden; dies ist jedoch keine Anforderung. Weitere Informationen finden Sie unter [Das Replikationsveröffentlichungsmodell (Übersicht)](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
   
@@ -46,9 +46,8 @@ Hier erfahren Sie, wie Daten mithilfe der Transaktionsreplikation zwischen volls
 [Replizieren von Daten mit mobilen Clients](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
 Hier erfahren Sie, wie Daten mithilfe der Mergereplikation zwischen einem Server und einem oder mehreren Clients ausgetauscht werden, die nur gelegentlich verbunden sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Sicherheit und Schutz &#40;Replikation&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   
   
-

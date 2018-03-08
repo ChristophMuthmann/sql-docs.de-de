@@ -3,10 +3,12 @@ title: Sortieren und Gruppieren von Abfrageergebnissen (Visual Database Tools) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - Results pane
 - sorting query results [SQL Server]
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f1151b57f590a184c1152a6504949fadd1caeca3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d1adeb21a6fca540cd4359c57ac6756bffa8cd16
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Sortieren und Gruppieren von Abfrageergebnissen (Visual Database Tools)
-Sie können ein Abfrageergebnis erstellen, in dem jede Ergebniszeile einer kompletten Zeilengruppe aus den ursprünglichen Daten entspricht.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können ein Abfrageergebnis erstellen, in dem jede Ergebniszeile einer kompletten Zeilengruppe aus den ursprünglichen Daten entspricht.  
   
 Einzelheiten zur Erstellung solcher Abfragen finden Sie unter den in der folgenden Tabelle aufgeführten Themen.  
   
@@ -74,4 +75,3 @@ Stellt Links zu Themen bereit, in denen die gängigsten Abfrageaufgaben behandel
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Stellt Links zu Themen bereit, die die Verwendung des Abfrage- und Sicht-Designers erläutern.  
   
-

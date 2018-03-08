@@ -1,11 +1,13 @@
 ---
 title: Erstellen von Verbindungsservern (SQL Server-Datenbankmodul) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/20/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linked-servers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: aef8e627adca014fbc9213f0a88f0588a950a4ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbankmodul)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen von Verbindungsservern (SQL Server-Datenbankmodul)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
 
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von SQL Server Management Studio  
   
@@ -173,7 +174,7 @@ ms.lasthandoff: 08/03/2017
   
 ##### <a name="to-view-the-provider-options"></a>So zeigen Sie die Anbieteroptionen an  
   
--   Um die Optionen anzuzeigen, die der Anbieter zur Verfügung stellt, klicken Sie auf die Seite für **die Anbieteroptionen**.  
+-   Um die Optionen anzuzeigen, die der Anbieter zur Verfügung stellt, klicken Sie auf die Seite für die **Anbieteroptionen**.  
   
      Nicht alle Anbieter verfügen über die gleichen Optionen. Bei einigen Typen von Daten sind z. B. Indizes verfügbar, für einige nicht. Mittels dieses Dialogfelds kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Funktionen des Anbieters verstehen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert einige allgemeine Datenanbieter; wenn das Produkt, das die Daten bereitstellt, jedoch geändert wird, unterstützt der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installierte Anbieter möglicherweise nicht alle neuesten Funktionen. Die beste Informationsquelle zu den Funktionen des Produkts, das die Daten bereitstellt, ist die Dokumentation für dieses Produkt.  
   
@@ -208,7 +209,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  Geben Sie im Abfrage-Editor folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl ein, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem Namen `SRVR002\ACCTG`zu verknüpfen:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -220,7 +221,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Führen Sie folgenden Code aus, um den Verbindungsserver zur Verwendung der Domänenanmeldeinformationen des Anmeldenamens zu konfigurieren, der den Verbindungsserver verwendet.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -235,7 +236,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Führen Sie folgenden Code aus, um die Verbindung mit dem Verbindungsserver zu testen. Das Beispiel gibt die Namen der Datenbanken auf dem Verbindungsserver zurück.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -245,7 +246,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Verwenden Sie vierteilige Namen, um auf ein Objekt auf einem Verbindungsserver zu verweisen. Führen Sie folgenden Code aus, um eine Liste aller Anmeldenamen auf dem lokalen Server und die entsprechenden Anmeldenamen auf dem Verbindungsserver zurückzugeben.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -255,10 +256,9 @@ ms.lasthandoff: 08/03/2017
   
      Wenn für den Anmeldenamen vom Verbindungsserver NULL zurückgegeben wird, zeigt dies an, dass der Anmeldename auf dem Verbindungsserver nicht vorhanden ist. Von diesen Anmeldenamen kann der Verbindungsserver erst verwendet werden, wenn der Verbindungsserver so konfiguriert wird, dass ein anderer Sicherheitskontext weitergegeben wird oder der Verbindungsserver anonyme Verbindungen akzeptiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
-

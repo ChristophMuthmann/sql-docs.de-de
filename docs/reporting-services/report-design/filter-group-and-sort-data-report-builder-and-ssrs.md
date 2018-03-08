@@ -1,13 +1,14 @@
 ---
-title: Filtern, gruppieren und Sortieren von Daten (Berichts-Generator und SSRS) | Microsoft Docs
+title: Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +21,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ec9e18aeee47b023b6afcf8dbac2e733fd2c6223
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
   In einem Bericht werden Ausdrücke zum Steuern, Organisieren und Sortieren von Berichtsdaten verwendet. Beim Erstellen von Datasets und Entwerfen des Berichtslayouts werden die Eigenschaften von Berichtselementen standardmäßig automatisch auf Ausdrücke festgelegt. Diese Einstellungen basieren auf den Datasetfeldern, Parametern und anderen Elementen, die im Berichtsdatenbereich angezeigt werden. Sie können einer Tabellen- oder Matrixzelle auch eine interaktive Sortierschaltfläche hinzufügen, um dem Benutzer das interaktive Ändern der Zeilensortierreihenfolge für Gruppen oder Zeilen innerhalb von Gruppen zu ermöglichen.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Interaktive Sortierung:** Wenn Sie es dem Benutzer ermöglichen möchten, die Sortierreihenfolge einer Spalte zu festzulegen oder umzukehren, können Sie einem Spaltenheader oder einer Gruppenkopfzelle in einer Tabelle oder Matrix eine interaktive Sortierschaltfläche hinzufügen.  
   
- Sie können einen Ausdruck ändern, indem Sie einen Verweis auf einen Berichtsparameter hinzufügen, um den Benutzern das Anpassen von Filter-, Gruppierungs- oder Sortierungsausdrücke zu erleichtern. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Sie können einen Ausdruck ändern, indem Sie einen Verweis auf einen Berichtsparameter hinzufügen, um den Benutzern das Anpassen von Filter-, Gruppierungs- oder Sortierungsausdrücke zu erleichtern. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
  Weitere Informationen und Beispiele finden Sie in den folgenden Themen:  
   
@@ -91,11 +91,11 @@ ms.lasthandoff: 08/09/2017
   
  In einem Tabellen- oder Matrixdatenbereich können mehrere Zeilengruppen und Spaltengruppen erstellt werden. Sie können die Daten in einer visuellen Hierarchie anzeigen, indem Sie geschachtelte Gruppen, angrenzende Gruppen und rekursive Hierarchiegruppen organisieren (z. B. ein Organigramm).  
   
- Der Gruppenname gibt einen Ausdrucksbereich an. Sie können den Namen einer Gruppe als Bereich angeben, in dem Aggregate berechnet werden sollen, um Daten hierarchisch zu organisieren und die Anzeige von untergeordneten Knoten in übergeordneten Knoten in einem Drilldownbericht umzuschalten, andere Sichten derselben Daten für mehrere Datenbereiche anzuzeigen und Zusammenfassungsdaten in einer Tabelle, einer Matrix, einem Diagramm, einem Messgerät oder einer Karte visuell darzustellen. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Der Gruppenname gibt einen Ausdrucksbereich an. Sie können den Namen einer Gruppe als Bereich angeben, in dem Aggregate berechnet werden sollen, um Daten hierarchisch zu organisieren und die Anzeige von untergeordneten Knoten in übergeordneten Knoten in einem Drilldownbericht umzuschalten, andere Sichten derselben Daten für mehrere Datenbereiche anzuzeigen und Zusammenfassungsdaten in einer Tabelle, einer Matrix, einem Diagramm, einem Messgerät oder einer Karte visuell darzustellen. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
   
  Fügen Sie dem Satz von Gruppierungsausdrücken die einzelnen Felder hinzu, um eine Gruppierung für mehrere Datasetfelder vorzunehmen. Sie können auch eigene Gruppierungsausdrücke in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]erstellen. Sie können z. B. eine Gruppierung anhand eines Bereichs von Werten oder mit einem Berichtsparameter durchführen, um Benutzern verschiedene Möglichkeiten zur Gruppierung von Daten in einem Datenbereich zu bieten. Weitere Informationen finden Sie unter [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- Für jede Berichtsdarstellung können Sie beim Erstellen von Gruppen vor und nach jeder Gruppe oder jeder Instanz einer Gruppe Seitenumbrüche hinzufügen. So kann die Datenmenge auf jeder Seite reduziert und die Leistung beim Rendern der Berichte besser verwaltet werden. Weitere Informationen finden Sie unter [einen Seitenumbruch &#40; hinzufügen Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ Für jede Berichtsdarstellung können Sie beim Erstellen von Gruppen vor und nach jeder Gruppe oder jeder Instanz einer Gruppe Seitenumbrüche hinzufügen. So kann die Datenmenge auf jeder Seite reduziert und die Leistung beim Rendern der Berichte besser verwaltet werden. Weitere Informationen finden Sie unter [Hinzufügen eines Seitenumbruchs (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  Das Erstellen von Datenbereichsgruppen ist eine Möglichkeit, Daten in einem Bericht zu organisieren. Zum Organisieren von Daten stehen mehrere weitere Methoden zur Verfügung, die alle bestimmte Vorteile bieten. Weitere Informationen finden Sie unter [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
@@ -212,14 +212,13 @@ FROM Production.Product
   
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Maps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Messgeräte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Indikatoren &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

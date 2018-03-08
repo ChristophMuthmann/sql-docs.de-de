@@ -3,7 +3,7 @@ title: Catalog-Objekt (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5d8f47b63022f481c5ed102bcc9e97f5fa563aea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26033bff0a1a88da25ed2eae566ffef49538c35f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-object-adox"></a>Katalogobjekt (ADOX)
 Enthält Auflistungen ([Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md), [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md), [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md), [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md), und [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)), Beschreiben Sie den Katalog Schema mit einer Datenquelle.  
@@ -46,7 +45,7 @@ Enthält Auflistungen ([Tabellen](../../../ado/reference/adox-api/tables-collect
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Katalog-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
+-   [Error-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für Katalog ActiveConnection-Eigenschaft (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -69,4 +68,3 @@ Enthält Auflistungen ([Tabellen](../../../ado/reference/adox-api/tables-collect
  [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)   
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-

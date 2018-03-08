@@ -2,30 +2,30 @@
 title: Erstellen eines Cubes mit einer Datenquellensicht | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Erstellen eines Cubes mithilfe einer Datenquellensicht
-  Verwenden Sie diese Methode zum Erstellen eines neuen Cubes, wenn Sie beabsichtigen, eine vorhandene Datenquellensicht zu verwenden. Mit dieser Methode geben Sie die Datenquellensicht an und wählen Fakten- und Dimensionstabellen aus, die Sie in der Datenquellensicht verwenden möchten. Anschließend wählen Sie die Dimensionen und Measures aus, die Sie in den Cube einschließen möchten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Verwenden Sie diese Methode zum Erstellen eines neuen Cubes, wenn Sie beabsichtigen, eine vorhandene Datenquellensicht zu verwenden. Mit dieser Methode geben Sie die Datenquellensicht an und wählen Fakten- und Dimensionstabellen aus, die Sie in der Datenquellensicht verwenden möchten. Anschließend wählen Sie die Dimensionen und Measures aus, die Sie in den Cube einschließen möchten.  
   
  Um einen Cube mit einer Datenquelle zu erstellen, klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Cubes** und wählen **Neuer Cube**aus. Der Cube-Assistent wird geöffnet.  
   
@@ -103,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  Auf der Seite **Assistenten abschließen** des Assistenten können Sie die Measuregruppen, Measures und Dimensionen im neuen Cube anzeigen. Geben Sie im Feld **Cubename** einen Namen für den Cube ein. Wenn der Cube Ihren Vorstellungen entspricht, klicken Sie auf **Fertig stellen**. Andernfalls klicken Sie auf **Zurück** , um zu einer vorherigen Assistentenseite zu wechseln und Änderungen vorzunehmen.  
   
   
-

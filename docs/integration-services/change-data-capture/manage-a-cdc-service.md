@@ -1,10 +1,13 @@
 ---
-title: Verwalten eines CDC Service | Microsoft Docs
+title: Verwalten eines CDC Service | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a2b3241a4152d81346da17d3f9eaddefaffa00b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-service"></a>Verwalten eines CDC Service
   Sie können die CDC Designer Console verwenden, um die mit der CDC Service Configuration Console erstellten Dienste anzuzeigen und alle Instanzen im Oracle CDC Service zu verwalten.  
@@ -47,10 +49,9 @@ ms.lasthandoff: 08/03/2017
   
  Klicken Sie auf **Stop All Instances** , um den Change Data Capture-Vorgang für alle Instanzen im Dienst zu beenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen von SQL Server Change-Datenbankinstanz](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Gewusst wie: Verwalten eines CDC Service über die CDC Designer Console](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Verwalten eines CDC Service über die CDC Designer Console](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Verwenden des Assistenten für neue Instanzen](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

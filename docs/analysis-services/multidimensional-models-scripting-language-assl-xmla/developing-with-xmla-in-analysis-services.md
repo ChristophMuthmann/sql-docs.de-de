@@ -1,13 +1,14 @@
 ---
 title: Entwickeln mit XMLA in Analysis Services | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,24 +21,23 @@ helpviewer_keywords:
 - XML for Analysis, Analysis Services tasks
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6bf41801ce6b81c532d8be56b5afdfe4fd5e901f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e66b7b47c25412bf52fe296461c4993d2a533632
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Entwickeln mit XMLA in Analysis Services
   XML for Analysis (XMLA) ist ein SOAP-basiertes (Simple Object Access Protocol) XML-Protokoll, das speziell auf den universellen Datenzugriff für jede standardmäßige, mehrdimensionale Datenquelle ausgerichtet ist, auf die mit einer HTTP-Verbindung zugegriffen werden kann. Beim Kommunizieren mit Clientanwendungen wird XMLA als einziges Protokoll von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet. Im Grunde formulieren alle von Analysis Services unterstützten Clientbibliotheken Anforderungen und Antworten in XMLA.  
   
  Als Entwickler können Sie eine Clientanwendung mithilfe von XMLA in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] integrieren, und zwar ohne Abhängigkeiten von .NET Framework oder COM-Schnittstellen. Anwendungsanforderungen, die das Hosten auf vielen Plattformen einschließen, können mit XMLA und einer HTTP-Verbindung zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erfüllt werden.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erfüllt vollständig die 1.1-Spezifikation von XMLA, aber erweitert sie auch, um Datendefinition, Datenbearbeitung und Datensteuerelementunterstützung zu ermöglichen. Analysis Services-Erweiterungen werden als Analysis Services Scripting Language (ASSL) bezeichnet. Die gemeinsame Verwendung von XMLA und ASSL ermöglicht einen größeren Satz an Funktionalitäten und bietet damit mehr Möglichkeiten als XMLA. Weitere Informationen über ASSL finden Sie unter [Entwickeln mit Analysis Services Scripting Language &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erfüllt vollständig die 1.1-Spezifikation von XMLA, aber auch erweitert, um Datendefinition, datenbearbeitung und datensteuerelementunterstützung zu ermöglichen. Analysis Services-Erweiterungen werden als Analysis Services Scripting Language (ASSL) bezeichnet. Die gemeinsame Verwendung von XMLA und ASSL ermöglicht einen größeren Satz an Funktionalitäten und bietet damit mehr Möglichkeiten als XMLA. Weitere Informationen über ASSL finden Sie unter [Entwickeln mit Analysis Services Scripting Language &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |[Verarbeitung von Objekten &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)|Beschreibt, wie die [Prozess](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) Befehl Prozess ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt.|  
 |[Zusammenführen von Partitionen &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)|Beschreibt, wie die [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl zum Zusammenführen von Partitionen auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz.|  
 |[Entwerfen von Aggregationen &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)|Beschreibt, wie die [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) -Befehl entweder im iterativen oder im Batchmodus verwendet, um Aggregationen zu entwerfen für einen Aggregationsentwurf in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|[Sichern, Wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|Beschreibt, wie die [Backup](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) und [wiederherstellen](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) Befehle zum Sichern und Wiederherstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank aus einer Sicherungsdatei.<br /><br /> Außerdem beschreibt, wie die [Synchronize](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) Befehls zum Synchronisieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank mit einer vorhandenen Datenbank auf derselben Instanz oder auf einer anderen Instanz.|  
+|[Sichern, wiederherstellen und Synchronisieren von Datenbanken &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|Beschreibt, wie die [Backup](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) und [wiederherstellen](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) Befehle zum Sichern und Wiederherstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank aus einer Sicherungsdatei.<br /><br /> Außerdem beschreibt, wie die [Synchronize](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) Befehls zum Synchronisieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank mit einer vorhandenen Datenbank auf derselben Instanz oder auf einer anderen Instanz.|  
 |[Einfügen, aktualisieren und Löschen von Elementen &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)|Beschreibt, wie die [einfügen](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), und [löschen](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) Befehle hinzufügen, ändern oder Löschen von Elementen aus einer Dimension mit aktiviertem Schreibzugriff.|  
 |[Aktualisieren von Zellen &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)|Beschreibt, wie die [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) Befehl aus, um die Werte der Zellen in einer Partition mit aktiviertem Schreibzugriff zu ändern.|  
 |[Verwalten von Caches &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md)|Erläutert, wie die [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) Befehl zum Löschen des Caches [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.|  
@@ -91,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Grundlegendes zur Microsoft OLAP-Architektur](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
   
-

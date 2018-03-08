@@ -3,10 +3,12 @@ title: "Datenquellen-Spezifikation Unterschlüssel | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61b485f55be504e894754f74c4ab779b9ebbaf5a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-specification-subkeys"></a>Data Source-Spezifikation Unterschlüssel
 Jede Datenquelle, die in der ODBC-Datenquellen-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel verfügt über den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel ODBC-Datenquellen. Die Werte unter dieser Unterschlüssel müssen die Treiber-DLL auflisten und listet möglicherweise eine Beschreibung der Datenquelle. Wenn der Treiber Konvertierer unterstützt, kann der Name von einem Standard-Konvertierer, das Standard-Konvertierungs-DLL und die Standardoption für die Übersetzung Werteliste. Die Werteliste möglicherweise auch andere Informationen, die vom Treiber bei der Herstellung einer Verbindung mit der Datenquelle erforderlich sind. Der Treiber möglicherweise z. B. einen Servernamen, Datenbanknamen oder Schemaname.  
@@ -51,4 +52,3 @@ TranslationDLL : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL
 TranslationName : REG_SZ : MS Code Page Translator  
 TranslationOption : REG_SZ : 12500850  
 ```
-

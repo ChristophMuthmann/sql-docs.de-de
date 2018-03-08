@@ -1,31 +1,31 @@
 ---
 title: "Installieren von SSMA für MySQL-Client (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Installing client,Licensing
+helpviewer_keywords: Installing client,Licensing
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20e2b46e1b020865359431a4999e097c20e14da1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eafef1f4a4f16f704b76b31aa77d3c93f84d5821
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Installieren von SSMA für die MySQL-Client (MySQLToSQL)
 SSMA für MySQL-Client besteht aus der Programmdateien an, die die folgenden Aufgaben ausführen:  
@@ -42,7 +42,7 @@ SSMA für MySQL-Client besteht aus der Programmdateien an, die die folgenden Auf
   
 Dieses Thema enthält die Installationsvoraussetzungen und die Anweisungen zum Installieren von SSMA für MySQL-Client.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 SSMA für die MySQL dient zum Arbeiten mit MySQL 4.1 oder höher und allen Editionen von SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016 und Azure SQL-Datenbank.  
   
 Bevor Sie SSMA installiert haben, stellen Sie sicher, dass der Computer die folgenden Anforderungen erfüllt:  
@@ -90,4 +90,3 @@ Auf 64-Bit-Windows-Computer ist das Produkt in C:\Microsoft SQL Server Migration
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

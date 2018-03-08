@@ -2,9 +2,12 @@
 title: "Ändern eines Indexes | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -14,16 +17,16 @@ helpviewer_keywords:
 - modifying indexes
 - index changes [SQL Server]
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: baab89e891a068e358727fd2a8c739ef1b37b400
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 539cd81a09c10703b4826e37245a9f225f606554
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="modify-an-index"></a>Ändern eines Indexes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-an-index"></a>So ändern Sie einen Index  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Wenn Sie die Position einer Indexspalte hinzufügen, entfernen oder ändern möchten, müssen Sie den Index löschen und neu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
@@ -89,4 +92,3 @@ ms.lasthandoff: 06/22/2017
  [Umbenennen von Indizes](../../relational-databases/indexes/rename-indexes.md)  
   
   
-

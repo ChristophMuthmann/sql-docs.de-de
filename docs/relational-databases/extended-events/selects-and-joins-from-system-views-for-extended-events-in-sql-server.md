@@ -2,29 +2,31 @@
 title: "SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8e257fc470b6988141b5581650285d69c09b1f2a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Dieser Artikel beschreibt die zwei Gruppen von Systemsichten, die mit erweiterten Ereignissen in Microsoft SQL Server und im Azure SQL Database-Clouddienst zusammenhängen. Dieser Artikel beschreibt:
@@ -119,7 +121,7 @@ Die Referenzdokumentation zu den Katalogsichten für erweiterte Ereignisse finde
 
 Im **Objekt-Explorer**von SSMS können Sie das Dialogfeld **Neue Sitzung** ausführen, indem Sie **Management** > **Extended Events**erweitern und anschließend mit der rechten Maustaste auf **Sitzungen** > **Neue Sitzung**klicken.
 
-Im großen Dialogfeld **New Session** (Neue Sitzung) wird im ersten Abschnitt namens **General** (Allgemein) angezeigt, dass die Option **Start the event session at server startup** (Ereignissitzung beim Serverstart starten) ausgewählt wurde.
+Im großen Dialogfeld **New Session** (Neue Sitzung) wird im ersten Abschnitt namens **General**(Allgemein) angezeigt, dass die Option **Start the event session at server startup**(Ereignissitzung beim Serverstart starten) ausgewählt wurde.
 
 ![Neue Sitzung > Allgemein, Ereignissitzung beim Serverstart starten.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -163,7 +165,7 @@ Sie können mit der rechten Maustaste im **Objekt-Explorer** auf den Sitzungskno
 Das folgende T-SQL-Skript wurde durch Zurückentwickeln mit SSMS erstellt. Anschließend wurde das Skript manuell durch strategische Bearbeitung der Leerzeichen verschönert.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -217,7 +219,7 @@ Dadurch ist die T-SQL-Perspektive abgeschlossen.
 Machen Sie sich keine Sorgen! Die folgende SELECT-Anweisung von T-SQL ist nur so lang, da durch die UNION-Klausel mehrere kleine SELECT-Anweisungen vereinigt wurden. Jede der kleinen SELECT-Anweisungen kann einzeln ausgeführt werden. Die kleinen SELECT-Anweisungen zeigen an, wie die verschiedenen Katalogsichten des Systems durch JOIN verknüpft werden müssen.
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -412,7 +414,7 @@ Hier ist die Liste der SELECT-Anweisungen in dieser DMV aus dem Abschnitt C:
 Alle Objekte, die Sie im Bereich erweitere Ereignisse verwenden können, stammen von Paketen, die in Ihr System geladen werden. In diesem Abschnitt werden alle Pakete und deren Beschreibungen aufgeführt.
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -468,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 Dieser Abschnitt beschreibt die Objekttypen, die in Ereignispaketen enthalten sind. Eine vollständige Liste aller Objekttypen, die in *sys.dm\_xe\_objects* zusammen mit der Anzahl der Objekte für jeden Typ angezeigt werden.
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -512,7 +514,7 @@ Die folgende SELECT-Anweisung gibt in etwa 1915 Zeilen zurück, eine für jedes 
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -581,7 +583,7 @@ Die folgende SELECT-Anweisung gibt alle Datenfelder zurück, die speziell für I
 - Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =*bearbeiten.
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -659,7 +661,7 @@ Der Zweck der SELECT-Anweisung ist es, die zahlreichen Felder anzuzeigen, aus de
 - Zum Filtern, welche Ereignisvorkommen zu Ihrem Ziel gesendet werden, bzw. davon abgehalten werden.
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -734,7 +736,7 @@ Die folgende SELECT-Anweisung gibt jeden Parameter für Ihr Ziel zurück. Jeder 
 - Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =*bearbeiten.
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -799,7 +801,7 @@ Diese DMV SELECT-Anweisung gibt Datenzeilen des Ziels Ihrer aktiven Ereignissitz
 - Sie müssen den Wert der WHERE-Klausel für *s.name =*bearbeiten.
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -867,7 +869,7 @@ Angenommen, Ihre Ereignissitzungen haben Daten erfasst und wurden später beende
     - Achten Sie nicht auf die zusätzlichen Ziffern, die SQL-System jedes Mal, wenn Sie die Sitzung neu starten, in Ihre tatsächlichen. XEL-Dateinamen einbettet. Geben Sie einfach den normalen Stammnamen und die Erweiterung an.
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,
@@ -921,6 +923,5 @@ Hier wird der Inhalt der ersten XML-Zelle aus dem vorherigen zurückgegebenen Ro
   </action>
 </event>
 ```
-
 
 

@@ -3,7 +3,7 @@ title: Clustered-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1f275eacb9b0e7012ef70d5e0c6e9aaade675ae3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ae5a8c271f819622aabed1d8809e5f6e5579eff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clustered-property-example-vc"></a>Clustered-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) Eigenschaft ein [Index](../../../ado/reference/adox-api/index-object-adox.md). Beachten Sie, dass Microsoft Jet-Datenbanken nicht gruppierte Indizes unterstützen, damit in diesem Beispiel zurückliefert **"false"** für die **Clustered** Eigenschaft aller Indizes in der *Northwind* die Datenbank.  
@@ -98,4 +97,3 @@ void ClusteredX() {
 ## <a name="see-also"></a>Siehe auch  
  [Clustered-Eigenschaft (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
-

@@ -2,9 +2,12 @@
 title: XML-Formatdateien (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt ein XML-Schema bereit, das die Syntax für das Schreiben von *XML-Formatdateien* definiert, die zum Übertragen von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle per Massenimport verwendet werden. XML-Formatdateien müssen sich an dieses Schema halten, das in XSDL (XML Schema Definition Language) definiert ist. XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installiert werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt ein XML-Schema bereit, das die Syntax für das Schreiben von *XML-Formatdateien* definiert, die zum Übertragen von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle per Massenimport verwendet werden. XML-Formatdateien müssen sich an dieses Schema halten, das in XSDL (XML Schema Definition Language) definiert ist. XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installiert werden.  
   
  Eine XML-Formatdatei kann mit dem Befehl **bcp**, einer BULK INSERT-Anweisung oder einer INSERT ... SELECT \* FROM OPENROWSET(BULK...)-Anweisung verwendet werden. Mithilfe des **bcp** -Befehls können Sie automatisch eine XML-Formatdatei für eine Tabelle generieren. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  
   
@@ -184,19 +187,19 @@ ms.lasthandoff: 10/04/2017
   
  <FIELD  
   
- ID **="***fieldID***"**  
+ ID **="***Feld-ID***"**  
   
- xsi**:**type **="***fieldType***"**  
+ xsi**:**Typ **="***Feldtyp***"**  
   
- [ LENGTH **="***n***"** ]  
+ [ LENGTH **= "***n***"** ]  
   
  [ PREFIX_LENGTH **="***p***"** ]  
   
  [ MAX_LENGTH **="***m***"** ]  
   
- [ COLLATION **="***collationName***"** ]  
+ [ COLLATION **="***Sortierungsname***"** ]  
   
- [ TERMINATOR **="***terminator***"** ]  
+ [ TERMINATOR **="***Abschlusszeichen***"** ]  
   
  />  
   
@@ -204,13 +207,13 @@ ms.lasthandoff: 10/04/2017
   
 |FIELD-Attribut|Beschreibung|Optional /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Gibt den logischen Namen des Felds in der Datendatei an. Die ID eines Felds ist der Schlüssel, mit dem auf das Feld verwiesen wird.<br /><br /> \<FIELD ID**="***fieldID***"**/> wird \<COLUMN SOURCE**="***fieldID***"**/> zugeordnet.|Required|  
-|xsi:type **="***fieldType***"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Typ der Instanz des Elements identifiziert. Der Wert von *fieldType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.|Erforderlich (abhängig vom Datentyp)|  
+|ID **="***Feld-ID***"**|Gibt den logischen Namen des Felds in der Datendatei an. Die ID eines Felds ist der Schlüssel, mit dem auf das Feld verwiesen wird.<br /><br /> \<FIELD ID**="***Feld-ID***"**/> wird \<COLUMN SOURCE**="***Feld-ID***"**/> zugeordnet.|Required|  
+|xsi:type **="***Feldtyp***"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Typ der Instanz des Elements identifiziert. Der Wert von *fieldType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.|Erforderlich (abhängig vom Datentyp)|  
 |LENGTH **="***n***"**|Dieses Attribut definiert die Länge für eine Instanz mit einem Datentyp fester Länge.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
 |PREFIX_LENGTH **="***p***"**|Dieses Attribut definiert die Präfixlänge für eine binäre Datendarstellung. Bei dem PREFIX_LENGTH-Wert, *p*, muss es sich um eine der folgenden Zahlen handeln: 1, 2, 4 oder 8.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
 |MAX_LENGTH **="***m***"**|Dieses Attribut gibt die maximale Anzahl an Byte an, die in einem bestimmten Feld gespeichert werden kann. Ohne eine Zieltabelle ist die maximale Spaltenlänge nicht bekannt. Das MAX_LENGTH-Attribut beschränkt die maximale Länge einer Ausgabezeichenspalte sowie den Speicherplatz, der dem Spaltenwert zugewiesen ist. Dies ist vor allem bei Verwendung der BULK-Option der OPENROWSET-Funktion in einer SELECT FROM-Klausel nützlich.<br /><br /> Der Wert von *m* muss eine positive ganze Zahl sein. Standardmäßig beträgt die maximale Länge 8000 Zeichen für eine **char** -Spalte und 4000 Zeichen für eine **nchar** -Spalte.|Optional|  
-|COLLATION **="***collationName***"**|COLLATION ist nur für Zeichenfelder zulässig. Eine Liste der SQL-Sortierungsnamen finden Sie unter [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
-|TERMINATOR **= "***terminator***"**|Dieses Attribut gibt das Abschlusszeichen eines Datenfelds an. Als Abschlusszeichen kann jedes beliebige Zeichen verwendet werden. Es muss sich jedoch um ein eindeutiges Zeichen handeln, das nicht Teil der Daten ist.<br /><br /> Standardmäßig wird das Tabstoppzeichen (dargestellt als \t) als Abschlusszeichen verwendet. Um eine Absatzmarke darzustellen, verwenden Sie \r\n.|Wird nur mit einem xsi:type von Zeichendaten verwendet, die dieses Attribut erfordern.|  
+|COLLATION **="***Sortierungsname***"**|COLLATION ist nur für Zeichenfelder zulässig. Eine Liste der SQL-Sortierungsnamen finden Sie unter [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
+|TERMINATOR **= "***Abschlusszeichen***"**|Dieses Attribut gibt das Abschlusszeichen eines Datenfelds an. Als Abschlusszeichen kann jedes beliebige Zeichen verwendet werden. Es muss sich jedoch um ein eindeutiges Zeichen handeln, das nicht Teil der Daten ist.<br /><br /> Standardmäßig wird das Tabstoppzeichen (dargestellt als \t) als Abschlusszeichen verwendet. Um eine Absatzmarke darzustellen, verwenden Sie \r\n.|Wird nur mit einem xsi:type von Zeichendaten verwendet, die dieses Attribut erfordern.|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Xsi:type-Werte des \<FIELD>-Elements  
  Der xsi:type-Wert ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp für eine Instanz eines Elements identifiziert. Weitere Informationen finden Sie unter "Einfügen des xsi:type-Werts in ein Dataset" weiter unten in diesem Abschnitt.  
@@ -255,11 +258,11 @@ ms.lasthandoff: 10/04/2017
   
  Ein Feld wird mithilfe der folgenden Attribute einer Spalte in der Zieltabelle zugeordnet:  
   
-|COLUMN-Attribut|Beschreibung|Optional /<br /><br /> Required|  
+|COLUMN-Attribut|Description|Optional /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> wird \<FIELD ID**="***fieldID***"**/> zugeordnet.|Required|  
+|SOURCE **="***Feld-ID***"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE**="***Feld-ID***"**/> wird \<FIELD ID**="***Feld-ID***"**/> zugeordnet.|Required|  
 |NAME = "*columnName*"|Gibt den Namen der Spalte im Rowset an, die durch die Formatdatei dargestellt wird. Dieser Spaltenname wird verwendet, um die Spalte im Resultset zu identifizieren; er muss nicht dem in der Zieltabelle verwendeten Spaltennamen entsprechen.|Required|  
-|xsi**:**type **="***ColumnType***"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* sowie die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
+|xsi**:**Typ **="***Spaltentyp***"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* sowie die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
 |LENGTH **="***n***"**|Definiert die Länge für eine Instanz mit einem Datentyp fester Länge. LENGTH wird nur verwendet, wenn es sich bei xsi:type um einen Zeichenfolgen-Datentyp handelt.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Zeichenfolgen-Datentyp ist)|  
 |PRECISION **="***n***"**|Gibt die Anzahl der Stellen einer Zahl an. Beispielsweise hat die Zahl 123,45 eine Genauigkeit von 5.<br /><br /> Der Wert muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
 |SCALE **="***int***"**|Gibt die Anzahl der Stellen rechts vom Dezimaltrennzeichen einer Zahl an. Beispielsweise verfügt die Zahl 123,45 über 2 Dezimalstellen.<br /><br /> Der Wert muss eine ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
@@ -351,7 +354,7 @@ for(int i=0;i<ColumnList.Count;i++)
 >  Informationen zum Erstellen einer Formatdatei finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. Gleiches Anordnen von Zeichendatenfeldern und Tabellenspalten  
- Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der drei Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält. Die Datenfelder entsprechen den Spalten der Tabelle eins zu eins.  
+ Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der drei Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält. Die Datenfelder entsprechen den Spalten der Tabelle eins zu eins.  
   
  **Tabelle (Zeile):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
@@ -568,11 +571,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
-

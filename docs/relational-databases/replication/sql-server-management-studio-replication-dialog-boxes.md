@@ -2,28 +2,29 @@
 title: "Dialogfelder für die Replikation in SQL Server Management Studio | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22d90850650f386147ccc9b88b00f06cbd6813ec
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e7bb9c99480c9f0205fc42af32c54f2fa3149bda
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Dialogfelder für die Replikation in SQL Server Management Studio
-  Dieser Abschnitt enthält Informationen zu einer Reihe von Dialogfeldern für die Replikation, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar sind:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zu einer Reihe von Dialogfeldern für die Replikation, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar sind:  
   
 -   [Sicherheit für den Momentaufnahme-Agent](../../relational-databases/replication/snapshot-agent-security.md)  
   
@@ -64,4 +65,3 @@ ms.lasthandoff: 06/22/2017
 -   [Verbindung mit Server herstellen &#40;Oracle&#41;, Verbindungseigenschaften](../../relational-databases/replication/connect-to-server-oracle-connection-properties.md)  
   
   
-

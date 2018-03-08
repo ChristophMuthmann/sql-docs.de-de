@@ -1,10 +1,13 @@
 ---
-title: "Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten | Microsoft Docs"
+title: "Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 80c5df3dec8351c6ab47e596081a5c4f8f7fd3fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für abgeleitete Spalten hinzufügen und konfigurieren können.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Falls der Ausdruck ungültig ist, wird der Ausdruckstext hervorgehoben dargestellt, und die Fehler werden in einer QuickInfo in der Spalte beschrieben.  
   
-7.  In der **abgeleitete Spalten** Liste  **\<als neue Spalte hinzufügen >** das Auswertungsergebnis des Ausdrucks in eine neue Spalte geschrieben werden soll, oder wählen eine vorhandene Spalte mit dem Auswertungsergebnis zu aktualisieren.  
+7.  Wählen Sie in der Liste **Abgeleitete Spalte** die Option **\<Als neue Spalte hinzufügen>** aus, um das Auswertungsergebnis des Ausdrucks in eine neue Spalte zu schreiben, oder wählen Sie eine vorhandene Spalte aus, um sie mit dem Auswertungsergebnis zu aktualisieren.  
   
      Wenn Sie eine neue Spalte auswählen, wird mithilfe des Dialogfelds **Transformations-Editor für abgeleitete Spalte** der Ausdruck ausgewertet und ein Datentyp einer Spalte zugewiesen, abhängig von Datentyp, Länge, Genauigkeit, Dezimalzahlen und Codepage.  
   
@@ -63,13 +65,12 @@ ms.lasthandoff: 08/03/2017
   
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transformation für abgeleitete Spalten](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
- [Integration Services-Datentypen](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+ [SQL Server Integration Services-Datentypen](../../../integration-services/data-flow/integration-services-data-types.md)   
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)   
- [Integrationsservices &#40; SSIS &#41; Ausdrücke](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services-Ausdrücke &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

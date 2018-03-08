@@ -1,11 +1,13 @@
 ---
 title: "Geschäftsregeln (Master Data Services) | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: 16
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 485f2694fe54000fc5784fdee26012de217ffd39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f28a6820698413cd3e5b2a6f827fd7b5a055d7c1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="business-rules-master-data-services"></a>Geschäftsregeln (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist eine Geschäftsregel ist eine Regel, mit der Sie die Qualität und Genauigkeit der Masterdaten sicherstellen. Sie können eine Geschäftsregel zum automatischen Aktualisieren von Daten, zum Senden von E-Mails oder zum Starten eines Geschäftsprozesses oder Workflows verwenden.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 09/07/2017
 ## <a name="system-settings"></a>Systemeinstellungen  
  Es gibt zwei Einstellungen in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , die sich auf Geschäftsregeln auswirken. Sie können diese Einstellungen in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder direkt in der Tabelle Systemeinstellungen anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -101,4 +102,3 @@ ms.lasthandoff: 09/07/2017
 -   [Änderungsnachverfolgung &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   
-

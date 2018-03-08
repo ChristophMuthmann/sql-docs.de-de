@@ -2,9 +2,12 @@
 title: Erstellen der Tabelle (SQL-Diagramm) | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,21 +34,19 @@ helpviewer_keywords:
 - EDGE
 - SQL graph, CREATE TABLE statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c32a8c4f683f20c4384089c1d2552614090f9b3d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-
 # <a name="create-table-sql-graph"></a>Erstellen der Tabelle (SQL-Diagramm)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Erstellt eine neue Tabelle der SQL-Diagramm entweder als eine `NODE` oder eine `EDGE` Tabelle. 
   
@@ -68,13 +69,13 @@ CREATE TABLE
 ## <a name="arguments"></a>Argumente  
 Dieses Dokument Listet nur die SQL-Diagramm für Argumente. Eine vollständige Liste und Beschreibung der unterstützten Argumente finden Sie unter [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- *Datenbankname*    
+ *database_name*    
  Der Name der Datenbank, in der die Tabelle erstellt wird. *Database_name* müssen den Namen einer vorhandenen Datenbank angeben. Wenn nicht angegeben, *Database_name* Standardwerte auf die aktuelle Datenbank. Der Anmeldename für die aktuelle Verbindung muss einer vorhandenen Benutzer-ID in der durch den angegebenen Datenbank zugeordnet werden *Database_name*, und diese Benutzer-ID muss über CREATE TABLE-Berechtigungen verfügen.  
   
  *schema_name*    
  Der Name des Schemas, zu dem die neue Tabelle gehört.  
   
- *Tabellenname*    
+ *table_name*    
  Ist der Name der Tabelle Knoten oder Edge. Tabellennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md). *TABLE_NAME* kann maximal 128 Zeichen enthalten, mit Ausnahme von lokalen temporären Tabellennamen (Namen mit dem Präfix ein einzelnen Nummernzeichen (#)), die 116 Zeichen nicht überschreiten.  
   
  KNOTEN   
@@ -126,7 +127,6 @@ Die folgenden Beispiele zeigen, wie erstellen `EDGE` Tabellen
 
 ## <a name="see-also"></a>Siehe auch  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [INSERT (SQL-Diagramm)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Diagramm mit SQL Server-2017 verarbeiten](../../relational-databases/graphs/sql-graph-overview.md)
-
 

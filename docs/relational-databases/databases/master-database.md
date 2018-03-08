@@ -2,30 +2,31 @@
 title: Master-Datenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - master database [SQL Server], about
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "50"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="master-database"></a>master-Datenbank
-  In der **master** -Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](../../relational-databases/databases/resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In der **master**-Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](../../relational-databases/databases/resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
   
 ## <a name="physical-properties-of-master"></a>physische Eigenschaften der master-Datenbank  
  Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **master** -Daten und -Protokolldateien. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
@@ -42,39 +43,39 @@ ms.lasthandoff: 06/22/2017
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Nein|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|nein|  
 |ANSI_NULL_DEFAULT|OFF|ja|  
 |ANSI_NULLS|OFF|ja|  
 |ANSI_PADDING|OFF|ja|  
 |ANSI_WARNINGS|OFF|ja|  
 |ARITHABORT|OFF|ja|  
-|AUTO_CLOSE|OFF|Nein|  
+|AUTO_CLOSE|OFF|nein|  
 |AUTO_CREATE_STATISTICS|ON|ja|  
-|AUTO_SHRINK|OFF|Nein|  
+|AUTO_SHRINK|OFF|nein|  
 |AUTO_UPDATE_STATISTICS|ON|ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
-|CHANGE_TRACKING|OFF|Nein|  
+|CHANGE_TRACKING|OFF|nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
 |CURSOR_DEFAULT|GLOBAL|ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> nein<br /><br /> nein|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
-|DB_CHAINING|ON|Nein|  
-|ENCRYPTION|OFF|Nein|  
-|MIXED_PAGE_ALLOCATION|ON|Nein|  
+|DB_CHAINING|ON|nein|  
+|ENCRYPTION|OFF|nein|  
+|MIXED_PAGE_ALLOCATION|ON|nein|  
 |NUMERIC_ROUNDABORT|OFF|ja|  
 |PAGE_VERIFY|CHECKSUM|ja|  
 |PARAMETERIZATION|SIMPLE|ja|  
 |QUOTED_IDENTIFIER|OFF|ja|  
-|READ_COMMITTED_SNAPSHOT|OFF|Nein|  
+|READ_COMMITTED_SNAPSHOT|OFF|nein|  
 |RECOVERY|SIMPLE|ja|  
 |RECURSIVE_TRIGGERS|OFF|ja|  
-|Service Broker-Optionen|DISABLE_BROKER|Nein|  
+|Service Broker-Optionen|DISABLE_BROKER|nein|  
 |TRUSTWORTHY|OFF|ja|  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
  Die folgenden Operationen können an der **master** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateien oder Dateigruppen.  
@@ -146,4 +147,3 @@ ms.lasthandoff: 06/22/2017
  [Verschieben von Datenbankdateien](../../relational-databases/databases/move-database-files.md)  
   
   
-

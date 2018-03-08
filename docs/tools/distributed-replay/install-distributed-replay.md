@@ -2,28 +2,29 @@
 title: Installieren von Distributed Replay | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- setup-install
+ms.suite: sql
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Installieren von Distributed Replay
-  Sie können Distributed Replay auf eine von drei Weisen installieren:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Distributed Replay auf eine von drei Arten installieren:  
   
 -   [Installieren von Distributed Replay über den Installations-Assistenten](#bkmk_wizard)  
   
@@ -158,15 +159,15 @@ ms.lasthandoff: 08/02/2017
   
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Installation.  
   
-|Parameter|Beschreibung|Unterstützte Werte|  
+|Parameter|Description|Unterstützte Werte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Optional**|Dienstkonto für den Distributed Replay Controller-Dienst.|Überprüft Konto und Kennwort.|  
 |/CTLRSVCPASSWORD<br /><br /> **Optional**|Kennwort für das Distributed Replay Controller-Dienstkonto.|Überprüft Konto und Kennwort.|  
-|/CTLRSTARTUPTYPE<br /><br /> **Optional**|Starttyp für den Distributed Replay Controller-Dienst.|Automatisch<br /><br /> Disabled<br /><br /> Manuell|  
+|/CTLRSTARTUPTYPE<br /><br /> **Optional**|Starttyp für den Distributed Replay Controller-Dienst.|Automatic<br /><br /> Disabled<br /><br /> Manuell|  
 |/CTLRUSERS<br /><br /> **Optional**|Geben Sie an, welche Benutzer über Berechtigungen für den Distributed Replay Controller-Dienst verfügen.|Satz von Benutzerkontozeichenfolgen, mit " " (Leerzeichen) als Trennzeichen.<br /><br /> **Wichtig**: Wenn Sie den Distributed Replay Controller-Dienst konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:<br /><br /> Domänenbenutzerkonto<br /><br /> Vom Benutzer erstelltes lokales Benutzerkonto<br /><br /> Administrator<br /><br /> Administrator<br /><br /> Virtuelles Konto und verwaltetes Dienstkonto (Managed Service Account, MSA)<br /><br /> Netzwerkdienste, lokale Dienste und System<br /><br /> <br /><br /> Hinweis: Gruppenkonten (lokales oder Domänenbenutzerkonto) und andere integrierte Konten (wie "Jeder") werden nicht akzeptiert.|  
 |/CLTSVCACCOUNT<br /><br /> **Optional**|Dienstkonto für den Distributed Replay Client-Dienst.|Überprüft Konto und Kennwort.|  
 |/CLTSVCPASSWORD<br /><br /> **Optional**|Kennwort für das Distributed Replay Client-Dienstkonto.|Überprüft Konto und Kennwort.|  
-|/CLTSTARTUPTYPE<br /><br /> **Optional**|Starttyp für den Distributed Replay Client-Dienst.|Automatisch<br /><br /> Disabled<br /><br /> Manuell|  
+|/CLTSTARTUPTYPE<br /><br /> **Optional**|Starttyp für den Distributed Replay Client-Dienst.|Automatic<br /><br /> Disabled<br /><br /> Manuell|  
 |/CLTCTLRNAME<br /><br /> **Optional**|Der Computername, mit dem der Client für den Distributed Replay Controller-Dienst kommuniziert.||  
 |/CLTWORKINGDIR<br /><br /> **Optional**|Das Arbeitsverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
 |/CLTRESULTDIR<br /><br /> **Optional**|Das Ergebnisverzeichnis für den Distributed Replay Client-Dienst.|Gültiger Pfad|  
@@ -227,4 +228,3 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
  [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

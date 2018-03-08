@@ -4,11 +4,12 @@ description: "Verwenden Sie das automatische Seeding zum Initialisieren sekundä
 services: data-lake-analytics
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -19,17 +20,15 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Automatisches Seeding für sekundäre Replikate
-
-[!INCLUDE [tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Bei SQL Server 2012 und 2014 ist die einzige Möglichkeit, ein sekundäres Replikat in einer SQL Server Always On-Verfügbarkeitsgruppe zu initialisieren, die Verwendung von Sicherung, Kopieren und Wiederherstellung. SQL Server 2016 führt eine neue Funktion zum Initialisieren eines sekundären Replikats ein – das *automatische Seeding*. Das automatische Seeding verwendet die Übermittlung durch Protokollstream, um die Sicherung mit VDI für jede Datenbank der Verfügbarkeitsgruppe mit konfigurierten Endpunkten an das sekundäre Replikat zu streamen. Diese neue Funktion kann verwendet werden, wenn eine Verfügbarkeitsgruppe erstellt wird oder wenn ihr eine Datenbank hinzugefügt wird. Das automatische Seeding ist in allen Versionen von SQL Server verfügbar, die Always On-Verfügbarkeitsgruppen unterstützen, und kann sowohl mit herkömmlichen als auch mit [verteilten Verfügbarkeitsgruppen](distributed-availability-groups.md) verwendet werden.
 
@@ -38,8 +37,8 @@ Bei SQL Server 2012 und 2014 ist die einzige Möglichkeit, ein sekundäres Repli
 Überlegungen zur Verwendung des automatischen Seedings beinhalten:
 
 * [Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Datenträgerlayout](#disk-layout)
-* [Sicherheit](#security)
+* [Datenträgerlayout](#disklayout)
+* [Security](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat
@@ -88,7 +87,7 @@ Beim Kombinieren von Standard- und Nicht-Standardpfaden auf den primären und se
 
 Aktivieren Sie das Ablaufverfolgungsflag 9571, um das Verhalten von SQL Server 2016 (und früher) wiederherzustellen. Weitere Informationen zum Aktivieren von Ablaufverfolgungsflags finden Sie unter [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### <a name="security"></a>Sicherheit
+### <a name="security"></a>Security
 
 Die Sicherheitsberechtigungen variieren je nach Art des Replikats, das initialisiert wird:
 
@@ -158,9 +157,6 @@ Bei erfolgreicher Ausführung wird die Datenbank/werden die Datenbanken auf dem 
 
 ![SQL Server-Protokoll][2]
 
-
-
-
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Kombinieren von Sicherung und Wiederherstellung mit automatischem Seeding
 
 Es ist möglich, das herkömmliche Sichern, Kopieren und Wiederherstellen mit automatischem Seeding zu kombinieren. Stellen Sie in diesem Fall zuerst die Datenbank auf einem sekundären Replikat wieder her, einschließlich aller verfügbaren Transaktionsprotokolle. Aktivieren Sie beim Erstellen der Verfügbarkeitsgruppe als Nächstes das automatische Seeding, um die Datenbank des sekundären Replikats „einzuholen“, als ob eine Sicherung des Protokollfragments wiederhergestellt würde (siehe [Protokollfragmentsicherungen (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
@@ -172,7 +168,7 @@ Wenn das sekundäre Replikat das automatische Seeding verwendet hat, als es zur 
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Ändern des Seedingmodus eines Replikats
 
-Der Seedingmodus eines Replikats kann geändert werden, nachdem die Verfügbarkeitsgruppe erstellt wurde, und das automatische Seeding kann so aktiviert oder deaktiviert werden. Das Aktivieren des automatischen Seedings nach dem Erstellen ermöglicht, dass eine Datenbank zur Verfügbarkeitsgruppe hinzugefügt werden kann, die automatisches Seeding verwendet, wenn Sie mit Sichern, Kopieren und Wiederherstellen erstellt wurde. Beispiel:
+Der Seedingmodus eines Replikats kann geändert werden, nachdem die Verfügbarkeitsgruppe erstellt wurde, und das automatische Seeding kann so aktiviert oder deaktiviert werden. Das Aktivieren des automatischen Seedings nach dem Erstellen ermöglicht, dass eine Datenbank zur Verfügbarkeitsgruppe hinzugefügt werden kann, die automatisches Seeding verwendet, wenn Sie mit Sichern, Kopieren und Wiederherstellen erstellt wurde. Zum Beispiel:
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -252,7 +248,7 @@ GO
 
 Die folgende Tabelle enthält erweiterte Ereignisse, die sich auf automatisches Seeding beziehen.
 
-|Name|Beschreibung|
+|Name|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Seedinganforderungsnachricht.|
 |hadr_physical_seeding_backup_state_change|Statusänderung auf der Sicherungsseite für das physische Seeding.|
@@ -280,4 +276,3 @@ Die folgende Tabelle enthält erweiterte Ereignisse, die sich auf automatisches 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png
 [2]: ./media/auto-seed-sql-server-log.png
-

@@ -2,38 +2,34 @@
 title: IncrementalProcessingNotification-Datentyp (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- IncrementalProcessingNotification Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: IncrementalProcessingNotification Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- IncrementalProcessingNotification data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d9da4b97b2e74d8a521b5a7bc302abacf3b85729
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf8705b8bd24915d4a4ee5e3eba60b8862153cc7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="incrementalprocessingnotification-data-type-assl"></a>IncrementalProcessingNotification-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der Informationen des [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) -Elements über die Abfrage darstellt, die zum Bestimmen des Fortschritts der inkrementellen Verarbeitung ausgeführt werden muss.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen abgeleiteten Datentyp, die Informationen der [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) Element über die Abfrage zum Ermitteln des Fortschritts der inkrementellen Verarbeitung ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,18 +44,18 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md)|  
-|Abgeleitete Datentypen|Keine|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[ProcessingQuery](../../../analysis-services/scripting/properties/processingquery-element-assl.md), [TableID](../../../analysis-services/scripting/properties/tableid-element-assl.md)|  
-|Abgeleitete Elemente|Keine|  
+|Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
@@ -69,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

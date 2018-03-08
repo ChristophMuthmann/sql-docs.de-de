@@ -3,33 +3,30 @@ title: ConfigDSN Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDSN
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDSN
-helpviewer_keywords:
-- ConfigDSN [ODBC]
+f1_keywords: ConfigDSN
+helpviewer_keywords: ConfigDSN [ODBC]
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b82eb128f125415d3dbdb24ffc616dbeccc5e938
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 491396da26d75d6710e708b840c9407b4a976bb9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configdsn-function"></a>ConfigDSN-Funktion
 **Konformität**  
@@ -131,4 +128,3 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 |Entfernen einen Datenquellennamen Odbc.ini (oder der Registrierung)|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |Hinzufügen von einem Datenquellennamen Odbc.ini (oder Registrierung)|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
 |Schreiben einen Wert in der Datei Odbc.ini oder in der Registrierung|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
-

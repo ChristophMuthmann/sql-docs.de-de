@@ -2,13 +2,13 @@
 title: Key Performance Indicators (KPIs) in mehrdimensionalen Modellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
-  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Auflistung von Berechnungen dar, die mit einer Measuregruppe in einem Cube verknüpft sind, die zur Auswertung der Geschäftserfolge verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse des KPIs anzeigen sollen.  
   
@@ -78,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  MDX-Funktionen können zum Abrufen einzelner Abschnitte (z. B. des Werts oder des Ziels) des KPI sowie in MDX-Ausdrücken, -Anweisungen und -Skripts verwendet werden.  
   
   
-

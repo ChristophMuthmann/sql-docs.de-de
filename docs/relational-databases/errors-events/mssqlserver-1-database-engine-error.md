@@ -2,31 +2,31 @@
 title: MSSQLSERVER_-1 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "-1"
-helpviewer_keywords:
-- -1 (Database Engine error)
+f1_keywords: "-1"
+helpviewer_keywords: -1 (Database Engine error)
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4ad7c2405b50c97e9d26f047089bc5069a3bc20
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 048db39c941cd54977c09450097724ebc7a2c584
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver-1"></a>MSSQLSERVER_-1
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -69,4 +69,3 @@ Führen Sie zum Beheben dieses Fehlers eine der folgenden Aktionen aus:
 [Konfigurieren von Clientprotokollen](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
-

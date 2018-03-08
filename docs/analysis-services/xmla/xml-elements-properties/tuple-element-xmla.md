@@ -2,42 +2,38 @@
 title: Tuple-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Tuple Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Tuple Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.tuple
 - urn:schemas-microsoft-com:xml-analysis#Tuple
 - http://schemas.microsoft.com/analysisservices/2003/engine#Tuple
-helpviewer_keywords:
-- Tuple element
+helpviewer_keywords: Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 72e7e976397ad2d7566b9e0efd7daa4102289768
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a9d3b633e680154787615c04ee1f08b65b8139
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tuple-element-xmla"></a>Tuple-Element (XMLA)
-  Enthält eine Sammlung von [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)-Elementen, die im übergeordneten [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)-Element enthalten sind.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Auflistung von [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) vom übergeordneten Element enthaltenen Elemente [Tupel](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,11 +49,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -121,4 +117,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

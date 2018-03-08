@@ -2,31 +2,30 @@
 title: New-RestoreFolder-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ee3a6068f376ff4f08af4cae67aa00d157d1f86
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>New-RestoreFolder-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Stellt einen ursprünglichen Ordner in einem neuen Ordner wieder her.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Stellt einen ursprünglichen Ordner in einem neuen Ordner wieder her.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -43,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="parameters"></a>Parameter  
   
-### <a name="-originalfolder-string"></a>-OriginalFolder \<Zeichenfolge >  
+### <a name="-originalfolder-string"></a>-OriginalFolder \<string>  
  Ruft den ursprünglichen Speicherort des Ordners ab.  
   
 |||  
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-newfolder-string"></a>-NewFolder \<Zeichenfolge >  
+### <a name="-newfolder-string"></a>-NewFolder \<string>  
  Legt den Speicherort eines neuen Ordners fest.  
   
 |||  
@@ -87,7 +86,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-credential-pscredential"></a>-Credential \<"PSCredential" >  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential>  
  Dieser Parameter wird für die Übergabe in einem Benutzernamen und einem Kennwort verwendet, wenn eine HTTP-Verbindung zu einer Analysis Services-Instanz verwendet wird, für die HTTP-Zugriff konfiguriert wurde. Weitere Informationen finden Sie unter [Konfigurieren des HTTP-Zugriffs auf Analysis Services unter Internetinformationsdienste (IIS) &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) für HTTP-Verbindungen.  
   
  Wenn dieser Parameter angegeben wird, werden der Benutzername und das Kennwort verwendet, um eine Verbindung mit der angegebenen Analysis-Server-Instanz herzustellen. Wenn keine Anmeldeinformationen angegeben sind, wird das Standard-Windows-Konto des Benutzers, der das Tool ausführt, verwendet.  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
 |Eingaben||  
 |Ausgaben|Keine|  
   
-

@@ -1,29 +1,30 @@
 ---
 title: "Arbeiten mit SSMA für Access-Konsole (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: a53f3cb5f05cff896bc03245c20f68a9050f5d1f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 80b7beb7d7fc10ae73d5bbd724986313cadcee3b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Arbeiten mit SSMA für Access-Konsole (AccessToSQL)
 Microsoft SQL Server Migration Assistant (SSMA) für den Zugriff ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden kann. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Zyklus Migration verringert und der Migrationsaufwand skaliert.  
@@ -49,4 +50,3 @@ In diesem Abschnitt behandelten Themen gehören:
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für Access-Konsole](http://msdn.microsoft.com/8585ec16-7e0a-483a-b250-adab9b9232a3)  
   
-

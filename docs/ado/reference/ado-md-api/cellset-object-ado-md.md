@@ -3,7 +3,7 @@ title: Cellset-Objekt (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d4b4fd5399fc595055f473f30fa97f9f73921f8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f53e9ec68a4375a9c8d07dc3937750c2e7ba3d46
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cellset-object-ado-md"></a>Cellset-Objekt (ADO MD)
 Stellt die Ergebnisse einer MDX-Abfrage. Es ist eine Ansammlung von Zellen, die aus Cubes oder anderen Cellsets ausgewählt wurden.  
@@ -72,5 +71,4 @@ cst.Axes(0).Positions(0).Members(0).Caption
  [Die Achsenauflistung (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -2,13 +2,13 @@
 title: "Datenquellen und Bindungen (SSAS – mehrdimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,20 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
-  Cubes, Dimensionen und andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte können an eine Datenquelle gebunden werden. Eine Datenquelle kann eines der folgenden Objekte sein:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cubes, Dimensionen und andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte können an eine Datenquelle gebunden werden. Eine Datenquelle kann eines der folgenden Objekte sein:  
   
 -   Eine relationale Datenquelle.  
   
@@ -195,4 +195,3 @@ ms.lasthandoff: 09/01/2017
  Ein weiteres innerhalb einer **Bindung** zulässiges Element, das nicht direkt im DDL-Code vorhanden ist, ist **ParentColumnID**, das in geschachtelten Tabellen für Data Mining verwendet wird. In diesem Fall ist es erforderlich, die übergeordnete Spalte in der verschachtelten Tabelle anzugeben, für die die Bindung bereitgestellt wird.  
   
   
-

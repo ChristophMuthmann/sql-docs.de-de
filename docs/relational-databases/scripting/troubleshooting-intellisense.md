@@ -2,9 +2,12 @@
 title: Problembehandlung von IntelliSense (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d5926bbe8569ed88f2697d17cd754cf0fd081f05
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3af61af6c19439e59ff055a5a0de325c8f278b61
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="troubleshooting-intellisense"></a>Problembehandlung bei IntelliSense
-  Es gibt bestimmte Fälle, in denen die IntelliSense-Optionen unter Umständen nicht erwartungsgemäß funktionieren.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Es gibt bestimmte Fälle, in denen die IntelliSense-Optionen unter Umständen nicht erwartungsgemäß funktionieren.  
   
 ## <a name="conditions-that-affect-intellisense"></a>Bedingungen, die Auswirkungen auf IntelliSense haben  
  Die folgenden Bedingungen können das Verhalten von IntelliSense beeinflussen:  
@@ -75,4 +77,3 @@ ms.lasthandoff: 06/22/2017
 -   Vervollständigungslisten funktionieren möglicherweise nicht mehr, wenn die Verbindung zur Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verloren geht. Stellen Sie erneut eine Verbindung zur Instanz her.  
   
   
-

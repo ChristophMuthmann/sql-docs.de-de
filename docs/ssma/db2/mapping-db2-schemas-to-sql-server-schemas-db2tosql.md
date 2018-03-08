@@ -1,29 +1,30 @@
 ---
 title: Zuordnen von DB2-Schemas in SQL Server-Schemas (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 19abc8a901b2241a4fa7d6c69da2ffd90b77afb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5d4d96ee2d2fb0bad8947b85c36ef6b27f4af326
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Zuordnen von DB2-Schemas in SQL Server-Schemas (DB2ToSQL)
 In DB2 hat jede Datenbank eine oder mehrere Schemas. Standardmäßig werden alle Objekte in einem DB2-Schema, um SSMA migriert eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen DB2 Schemas anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbanken.  
@@ -67,11 +68,10 @@ Wenn Sie die Zuordnung zwischen einem DB2-Schema anpassen und eine [!INCLUDE[ssN
   
 1.  Klicken Sie unter der Registerkarte "Schema-Zuordnung" Wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** , um die Standarddatenbank und das Schema wiederherzustellen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Wenn Sie die Konvertierung von DB2-Datenbankobjekte in analysieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, können Sie [(SSMA häufigen Spalten) Data-Migrationsbericht](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Herstellen einer Verbindung mit SQLServer &#40; DB2eToSQL &#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [Migrieren von DB2-Datenbanken zu SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

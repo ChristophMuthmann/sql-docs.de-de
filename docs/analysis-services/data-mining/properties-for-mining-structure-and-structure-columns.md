@@ -2,12 +2,13 @@
 title: "Eigenschaften für Miningstrukturen und Strukturspalten | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b342f6466a757ce2705d97680ed0e0460c0031f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
-  Sie können mithilfe der Registerkarte **Miningstruktur** des Data Mining-Designers die Eigenschaften für eine Miningstruktur und für die verbundenen Spalten und geschachtelten Tabellen festlegen oder ändern. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können mithilfe der Registerkarte **Miningstruktur** des Data Mining-Designers die Eigenschaften für eine Miningstruktur und für die verbundenen Spalten und geschachtelten Tabellen festlegen oder ändern. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
   
 > [!NOTE]  
 >  Wenn Sie den Wert einer beliebigen Eigenschaft in der Miningstruktur ändern, darunter auch Metadaten wie Name oder Beschreibung, müssen die Miningstruktur und zugehörige Modelle neu verarbeitet werden, bevor Sie das Modell anzeigen oder abfragen können.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 |--------------|-----------------|  
 |**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen. **Hinweis:**  Dieses Attribut muss auf **KeepTrainingCases** festgelegt werden, um Drillthroughs und zurückgehaltene Daten zu ermöglichen.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
-|**Description**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
+|**Beschreibung**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
 |**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
 |**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifiziert die Spalte, die eine klassifizierte Spalte beschreibt.|  
 |**Inhalt**|Der Inhaltstyp der Spalte.|  
-|**Description**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
+|**Beschreibung**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
 |**DiscretizationBucketCount**|Zeigt die Anzahl der Buckets in der diskretisierten Spalte an.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf **Discretized**festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**DiscretizationMethod**|Zeigt die Methode an, die zur Diskretisierung der Spalte verwendet wurde.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf **Discretized**festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**Distribution**|Gibt die Verteilung von Inhalten in der Spalte an.|  
@@ -84,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

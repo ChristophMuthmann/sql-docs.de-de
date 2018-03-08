@@ -1,10 +1,13 @@
 ---
-title: "Sicherheitsübersicht (Integration Services) | Microsoft Docs"
+title: "Sicherheitsübersicht (Integration Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -20,17 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 73
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: adc486a9655f8ddf394a371efa9da793e2fa4728
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 234895749b48f44601cddb76e4ca95783602a6e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="security-overview-integration-services"></a>Sicherheitsübersicht (Integration Services)
   Sicherheit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] besteht aus mehreren Ebenen, die eine umfangreiche und flexible Sicherheitsumgebung bereitstellen. Diese Sicherheitsebenen umfassen die Verwendung digitaler Signaturen, Paketeigenschaften, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen und Betriebssystemberechtigungen. Die meisten dieser Sicherheitsfunktionen können den Kategorien Identität und Zugriffssteuerung zugeordnet werden.  
@@ -83,7 +85,7 @@ ms.lasthandoff: 08/03/2017
 #### <a name="saving-packages-to-the-msdb-database"></a>Speichern von Paketen in der msdb-Datenbank  
  Das Speichern der Pakete in der msdb-Datenbank trägt zur Sicherheit auf der Server-, Datenbank- und Tabellenebene bei. In der msdb-Datenbank werden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete in der Tabelle „sysssispackages“ gespeichert. Da die Pakete in der sysssispackages- und der sysdtspackages-Tabelle der msdb-Datenbank gespeichert werden, werden die Pakete beim Sichern der msdb-Datenbank ebenfalls automatisch gesichert.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pakete, die in der msdb-Datenbank gespeichert sind, können auch durch Anwenden der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Rollen auf Datenbankebene geschützt werden. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet auf Datenbankebene die drei festen Rollen „db_ssisadmin“, „db_ssisltduser“ und „db_ssisoperator“ zum Steuern des Paketzugriffs. Den einzelnen Paketen kann eine Lese- und eine Schreibrolle zugewiesen werden. Sie können auch benutzerdefinierte Rollen auf Datenbankebene definieren, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen verwendet werden. Rollen können nur für Pakete implementiert werden, die in der msdb-Datenbank in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert werden. Weitere Informationen finden Sie unter [Integration Services-Rollen &#40;SSIS-Dienst&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pakete, die in der msdb-Datenbank gespeichert sind, können auch durch Anwenden der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Rollen auf Datenbankebene geschützt werden. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet auf Datenbankebene die drei festen Rollen „db_ssisadmin“, „db_ssisltduser“ und „db_ssisoperator“ zum Steuern des Paketzugriffs. Den einzelnen Paketen kann eine Lese- und eine Schreibrolle zugewiesen werden. Sie können auch benutzerdefinierte Rollen auf Datenbankebene definieren, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen verwendet werden. Rollen können nur für Pakete implementiert werden, die in der msdb-Datenbank in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert werden. Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).  
   
 #### <a name="saving-packages-to-the-file-system"></a>Speichern von Paketen im Dateisystem  
  Wenn Sie Pakete statt in der msdb-Datenbank im Dateisystem speichern, müssen Sie die Paketdateien und Ordner, die Paketdateien enthalten, sichern.  
@@ -136,7 +138,7 @@ ms.lasthandoff: 08/03/2017
   
  Es ist wichtig, den Zugriff auf Computer einzuschränken, auf denen ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird. Dies gilt besonders für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst, der Remoteordner auflisten kann. Jeder authentifizierte Benutzer kann die Auflistung von Paketen anfordern. Selbst wenn vom Dienst keine Pakete gefunden werden, listet er Ordner auf. Diese Ordnernamen können für böswillige Benutzer von Nutzen sein. Wenn ein Administrator den Dienst so konfiguriert hat, dass Ordner auf einem Remotecomputer aufgelistet werden, können die Benutzer auch Ordnernamen anzeigen, die sie normalerweise nicht anzeigen könnten.  
 
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Die folgende Liste enthält Links zu Themen, in denen die Ausführung bestimmter sicherheitsrelevanter Tasks beschrieben wird.  
   
 -   [Erstellen einer benutzerdefinierten Rolle](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
@@ -148,4 +150,3 @@ ms.lasthandoff: 08/03/2017
 -   [Signieren eines Pakets mit einem digitalen Zertifikat](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
 -   [Festlegen oder Ändern der Schutzebene von Paketen](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
-

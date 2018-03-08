@@ -1,29 +1,30 @@
 ---
 title: Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Wenn Sie den letzten (aktuellsten) Zustand der Daten in einer temporalen Tabelle abrufen möchten, können Sie die Abfrage wie gewohnt durchführen, so wie auch bei nicht temporalen Tabellen. Wenn die PERIOD-Spalten nicht ausgeblendet sind, erscheinen ihre Werte in einer SELECT \* -Abfrage. Wenn Sie die **PERIOD** -Spalten als ausgeblendet angegeben haben, erscheinen ihre Werte nicht in einer SELECT \* -Abfrage. Wenn die **PERIOD** -Spalten ausgeblendet wurden, verweisen Sie in der SELECT-Klausel explizit auf die **PERIOD** -Spalten, um die Werte für diese Spalten zurückzugeben.  
   
@@ -140,13 +141,13 @@ ORDER BY [DeptID], [SysStartTime] Desc
 ## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
  Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Erstellen einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)   
- [Ändern vom Schema einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
+ [Ändern des Schemas einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md) 
+  
  [Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

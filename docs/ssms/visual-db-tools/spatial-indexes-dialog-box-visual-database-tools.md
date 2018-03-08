@@ -3,33 +3,33 @@ title: "Dialogfeld 'Räumliche Indizes' (Visual Database Tools) | Microsoft-Doku
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.spatialindexes
+f1_keywords: vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bfaa6bfd65d898bedcbf7568f86c99b9c4b6a952
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5114c8b5fba96020c07758e8c0143c33540a8ad5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)
-Verwenden Sie das Dialogfeld **Räumliche Indizes** , um Indizes für Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede räumliche Spalte kann mehr als einen räumlichen Index aufweisen, jedoch müssen sie einzeln erstellt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Räumliche Indizes**, um Indizes für Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede räumliche Spalte kann mehr als einen räumlichen Index aufweisen, jedoch müssen sie einzeln erstellt werden.  
   
 Weitere Informationen über die Einschränkungen bei der Erstellung von räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Ausgewählter räumlicher Index**  
 Listet vorhandene räumliche Indizes auf. Wählen Sie einen Index aus, um dessen Eigenschaften anzuzeigen. Wenn die Liste leer ist, wurden bisher keine räumlichen Indizes für die Tabelle definiert.  
   
@@ -120,7 +120,6 @@ Gibt an, ob beim Erstellen des Index neue Statistiken berechnet werden sollen. D
 **Zeilensperren sind zulässig**  
 Gibt an, ob das Sperren auf Zeilenebene für diesen Index zugelassen ist. Das Zulassen oder Untersagen von Sperren auf Zeilenebene wirkt sich auf die Datenbankleistung aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Übersicht über räumliche Indizes](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   
-

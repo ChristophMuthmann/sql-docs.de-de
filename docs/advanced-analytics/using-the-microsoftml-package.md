@@ -2,29 +2,31 @@
 title: Verwenden das Paket MicrosoftML mit SQLServer | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 132
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38af2297d176205b06bd104228d44e50b4c94861
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Verwenden das Paket MicrosoftML mit SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Die [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) Paket, das mit Microsoft R Server und SQL Server-2017 bereitgestellt wird, enthält mehrere Algorithmen für maschinelles lernen. Diese APIs wurden von Microsoft für interne Machine learning-Anwendungen entwickelt und wurden im Laufe der Jahre zur Unterstützung von hohen Leistung von big Data Mehrkern Verarbeitung und Fast Track-Data streaming mit. MicrosoftML enthält auch mehrere Transformationen für Text- und Image-Verarbeitung.
 
@@ -125,4 +127,3 @@ Weitere Informationen zu Revoscalepy finden Sie unter:
 + [Was ist Revoscalepy](python/what-is-revoscalepy.md)
 
 + [Revoscalepy Funktionsbibliothek](https://docs.microsoft.com/en-us/r-server/python-reference/revoscalepy/revoscalepy-package) 
-

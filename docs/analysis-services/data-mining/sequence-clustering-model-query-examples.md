@@ -2,12 +2,13 @@
 title: Sequence Clustering-Modell Abfragebeispiele | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequenzclusteringmodellabfragebeispiele
-  Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage erstellen. Die Inhaltsabfrage liefert Details über die im Modell gespeicherten Informationen. Die Vorhersageabfrage nimmt hingegen Vorhersagen basierend auf von Ihnen angegebenen neuen Daten anhand der im Modell befindlichen Muster vor. Für ein Sequenzclustermodell bieten Inhaltsabfragen in der Regel weitere Details über die gefundenen Cluster oder über die Übergänge innerhalb dieser Cluster. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage erstellen. Die Inhaltsabfrage liefert Details über die im Modell gespeicherten Informationen. Die Vorhersageabfrage nimmt hingegen Vorhersagen basierend auf von Ihnen angegebenen neuen Daten anhand der im Modell befindlichen Muster vor. Für ein Sequenzclustermodell bieten Inhaltsabfragen in der Regel weitere Details über die gefundenen Cluster oder über die Übergänge innerhalb dieser Cluster. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
   
  Vorhersageabfragen für ein Sequenzclustermodell erstellen in der Regel Empfehlungen basierend auf den Sequenzen und Übergängen, auf nicht sequenziellen Attributen, die in das Modell einbezogen wurden, oder auf einer Kombination aus sequenziellen und nicht sequenziellen Attributen.  
   
@@ -264,24 +265,23 @@ AS t
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|Gibt den Abstand des Eingabefalls von dem angegebenen Cluster zurück, beziehungsweise, wenn kein Cluster angegeben wurde, den Abstand des Eingabefalls von dem wahrscheinlichsten Cluster.<br /><br /> Diese Funktion kann mit jedem Clusteringmodell verwendet werden (EM, K-Means usw.), die Ergebnisse unterscheiden sich jedoch in Abhängigkeit von dem Algorithmus.|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|Gibt die Wahrscheinlichkeit zurück, mit der der Eingabefall zum angegebenen Cluster gehört.|  
 |[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.|  
 |[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Sagt eine assoziative Mitgliedschaft voraus.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|Gibt die Wahrscheinlichkeit zurück, mit der ein Eingabefall in ein vorhandenes Modell passt.|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle zurück, die einem Histogramm für die Vorhersage einer bestimmten Spalte entspricht.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Gibt die Knoten-ID des Knotens zurück, für den der Fall klassifiziert ist.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für einen bestimmten Status zurück.|  
+|["PredictHistogram" &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle zurück, die einem Histogramm für die Vorhersage einer bestimmten Spalte entspricht.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Gibt die Knoten-ID des Knotens zurück, für den der Fall klassifiziert ist.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für einen bestimmten Status zurück.|  
 |[PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)|Sagt zukünftige Sequenzwerte für eine angegebene Gruppe von Sequenzdaten voraus.|  
 |[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz einer angegebenen Spalte zurück.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Sequence Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Miningmodellinhalt von Sequence Clustering-Modelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

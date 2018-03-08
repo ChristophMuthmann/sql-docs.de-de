@@ -3,27 +3,28 @@ title: SQLGetInfo (Access-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a8d9d611167f332e4d84cb22a759acafae020343
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 86fd194b5bdde4fad1daca185c18c9ed9fd742b5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access-Treiber)
 > [!NOTE]  
@@ -97,7 +98,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
-|ISAM|Version|Format der Versionsnummer erneut|  
+|ISAM|Versionsoptionen|Format der Versionsnummer erneut|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
@@ -242,4 +243,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
  SQL_FN_TD_CURDATE &#124;  SQL_FN_TD_CURTIME &#124;  SQL_FN_TD_DAYOFMONTH &#124;  SQL_FN_TD_DAYOFWEEK &#124; SQL_FN_TD_DAYOFYEAR &#124;  SQL_FN_TD_HOUR &#124; SQL_FN_TD_MINUTE &#124; SQL_FN_TD_MONTH &#124;  SQL_FN_TD_NOW &#124; SQL_FN_TD_SECOND &#124; SQL_FN_TD_WEEK &#124; SQL_FN_TD_YEAR
-

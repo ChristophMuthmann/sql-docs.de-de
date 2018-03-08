@@ -1,32 +1,31 @@
 ---
 title: Transaktionen mit speicheroptimierten Tabellen | Microsoft-Dokumentation
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 01/16/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
+ms.component: in-memory-oltp
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1a5cb6088e12b51dcc8992093b65e8dc95ad8d57
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 8301993dd05a833c07bd2b30674e59c6cb293c0e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 In diesem Artikel werden alle Aspekte von Transaktionen beschrieben, die für speicheroptimierte Tabellen und nativ kompilierte gespeicherte Prozeduren spezifisch sind.  
@@ -118,7 +117,7 @@ Datenträgerbasierte Tabellen weisen indirekt ein System zur Zeilenversionsverwa
   
 Die folgende Tabelle enthält die möglichen Stufen der Transaktionsisolation, wobei mit der niedrigsten Isolationsstufe begonnen wird. Informationen zu möglichen Konflikten und der Wiederholungslogik zum Beheben dieser Konflikte finden Sie unter [Konflikterkennung und Wiederholungslogik](#confdetretry34ni). 
   
-| Isolationsebene | Beschreibung |   
+| Isolationsebene | Description |   
 | :-- | :-- |   
 | READ UNCOMMITTED | Nicht verfügbar: Auf der Isolationsstufe „Read Uncommitted“ kann nicht auf speicheroptimierte Tabellen zugegriffen werden. Der Zugriff auf speicheroptimierte Tabellen auf der Isolationsstufe SNAPSHOT ist weiterhin möglich, wenn TRANSACTION ISOLATION LEVEL auf Sitzungsebene auf READ UNCOMMITTED festgelegt ist. Verwenden Sie hierzu den Tabellenhinweis WITH (SNAPSHOT), oder legen Sie die Datenbankeinstellung MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON fest. | 
 | READ COMMITTED | Nur für speicheroptimierte Tabellen unterstützt, wenn der Autocommitmodus aktiviert ist. Der Zugriff auf speicheroptimierte Tabellen auf der Isolationsstufe SNAPSHOT ist weiterhin möglich, wenn TRANSACTION ISOLATION LEVEL auf Sitzungsebene auf READ COMMITTED festgelegt ist. Verwenden Sie hierzu den Tabellenhinweis WITH (SNAPSHOT), oder legen Sie die Datenbankeinstellung MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON fest.<br/><br/>Wenn für die Datenbankoption READ_COMMITTED_SNAPSHOT „ON“ festgelegt ist, ist es nicht erlaubt, mit der gleichen Anweisung sowohl auf eine speicheroptimierte als auch auf eine datenträgerbasierte Tabelle auf der Isolationsstufe READ COMMITTED zuzugreifen. |  
@@ -166,13 +165,14 @@ Es gibt zwei Arten von transaktionsbezogenen Fehlerbedingungen, die einen Fehler
 
 Im Folgenden finden Sie eine Auflistung der Fehlerbedingungen, die dazu führen können, dass Transaktionen nicht auf speicheroptimierte Tabellen zugreifen können.
 
-| Fehlercode | Beschreibung | Ursache |
+| Fehlercode | Description | Ursache |
 | :-- | :-- | :-- |
 | **41302** | Es wurde versucht, eine Zeile zu aktualisieren, die seit dem Start der aktuellen Transaktion in einer anderen Transaktion aktualisiert wurde. | Diese Fehlerbedingung tritt auf, wenn zwei gleichzeitige Transaktionen versuchen, die gleiche Zeile zur gleichen Zeit zu aktualisieren oder zu löschen. Eine der beiden Transaktionen empfängt diese Fehlermeldung und muss wiederholt werden. <br/><br/>  | 
 | **41305**| REPEATABLE READ-Überprüfungsfehler. Eine Zeile einer speicheroptimierten Tabelle, die von dieser Transaktion gelesen wird, wurde von einer anderen Transaktion aktualisiert, für die vor dem Commit dieser Transaktion ein Commit ausgeführt wurde. | Dieser Fehler kann bei Verwendung der REPEATABLE READ- oder SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine FOREIGN KEY-Einschränkung verletzen. <br/><br/>Solche Verletzungen von FOREIGN KEY-Einschränkungen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Dieser Fehler kann allerdings auch auftreten, wenn in den Spalten, die an der FOREIGN KEY-Einschränkung beteiligt sind, kein Index vorhanden ist. Es empfiehlt sich daher, in FOREIGN KEY-Spalten einer speicheroptimierten Tabelle immer einen Index zu erstellen. <br/><br/> Ausführlichere Überlegungen zu Überprüfungsfehlern, die durch FOREIGN KEY-Verletzungen verursacht werden, finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) des SQL Server-Kundenberatungsteams. |  
 | **41325** | SERIALIZABLE-Überprüfungsfehler. Eine Zeile wurde in einen Bereich eingefügt, der zuvor von der aktuellen Transaktion gescannt wurde. Dies wird als Phantomzeile bezeichnet | Dieser Fehler kann bei Verwendung der SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine PRIMARY KEY-, UNIQUE- oder FOREIGN KEY-Einschränkung verletzen. <br/><br/> Solche Einschränkungsverletzungen durch gleichzeitige Transaktionen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Ähnlich wie bei REPEATABLE READ-Überprüfungsfehlern kann dieser Fehler auch auftreten, wenn für die an einer FOREIGN KEY-Einschränkung beteiligten Spalten kein Index vorhanden ist. |  
 | **41301** | Abhängigkeitsfehler: Es besteht eine Abhängigkeit von einer anderen Transaktion, bei der später ein Commitfehler auftritt. | Für diese Transaktion (Tx1) entstand eine Abhängigkeit von einer anderen Transaktion (Tx2), während die Transaktion (Tx2) sich in der Überprüfungs- oder Commitverarbeitungsphase befand. Der Grund: Tx1 hat Daten gelesen, die von Tx2 geschrieben wurden. Bei Tx2 trat anschließend ein Fehler beim Commit auf. Die häufigsten Ursachen für Fehler beim Commit von Tx2 sind REPEATABLE READ-Überprüfungsfehler (41305) und SERIALIZABLE-Überprüfungsfehler (41325). Eine weniger häufige Ursache ist ein Protokoll-E/A-Fehler. |
-| **41839** | Die Transaktion hat die maximale Anzahl von Commitabhängigkeiten überschritten. | Eine bestimmte Transaktion (Tx1) kann nur von einer bestimmten Anzahl von Transaktionen abhängig sein. Diese Transaktionen werden als ausgehende Abhängigkeiten bezeichnet. Darüber hinaus kann nur eine bestimmte Anzahl von Transaktionen von einer bestimmten Transaktion (Tx1) abhängig sein. Diese Transaktionen werden als eingehende Abhängigkeiten bezeichnet. Der Grenzwert für beide Arten lautet 8. <br/><br/> Dieser Fehler tritt am häufigsten dann auf, wenn eine große Anzahl von Lesetransaktionen auf Daten zugreift, die von einer einzigen Schreibtransaktion geschrieben werden. Die Wahrscheinlichkeit, dass diese Bedingung eintritt, steigt, wenn die Lesetransaktionen umfangreiche Scans der gleichen Daten durchführen und die Überprüfung oder Commitverarbeitung der Schreibtransaktion lange dauert. Beispiele: Die Schreibtransaktion führt in der SERIALIZABLE-Isolation umfangreiche Scans durch (dies verlängert die Überprüfungsphase), oder das Transaktionsprotokoll ist auf einem langsamen Protokoll-E/A-Gerät platziert (dies verlängert die Commitverarbeitung). Wenn die Lesetransaktionen umfangreiche Scans durchführen und nur auf einige wenige Zeilen zugreifen, fehlt möglicherweise ein Index. Gleiches gilt, wenn die Schreibtransaktion die SERIALIZABLE-Isolation verwendet und umfangreiche Scans durchführt, aber nur auf einige wenige Zeilen zugreifen soll. Auch dies kann ein Hinweis auf einen fehlenden Index sein. <br/><br/> Die maximale Anzahl von Commitabhängigkeiten kann durch Verwendung des Ablaufverfolgungsflags **9926**erhöht werden. Verwenden Sie dieses Flag nur, wenn die Fehlerbedingung weiterhin auftritt, nachdem Sie sichergestellt haben, dass keine Indizes fehlen. Ansonsten könnte dieses Flag die Fehler in den oben genannten Fällen verbergen. Eine weitere wichtige Überlegung: Komplexe Abhängigkeitsdiagramme, in denen für jede Transaktion eine Vielzahl von eingehenden und ausgehenden Abhängigkeiten besteht und in denen einzelne Transaktionen Abhängigkeiten auf vielen Ebenen aufweisen, können zu Ineffizienzen im System führen.  |
+| **41823** und **41840** | Das Kontingent für Benutzerdaten in speicheroptimierten Tabellen und Tabellenvariablen wurde erreicht. | Der Fehler 41823 bezieht sich auf SQL Server Express/Web/Standard Edition sowie eigenständige Datenbanken in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. Der Fehler 41840 bezieht sich auf Pools für elastische Datenbanken in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> In den meisten Fällen geben diese Fehler an, dass die maximalen Kapazität für Benutzerdaten erreicht wurde. Der Fehler kann behoben werden, indem Daten aus den speicheroptimierten Tabellen gelöscht werden. Es gibt jedoch seltene Fälle, in denen dieser Fehler nur vorübergehend ist. Deshalb wird empfohlen, dass Sie es zunächst erneut versuchen, wenn dieser Fehler zum ersten Mal auftritt.<br/><br/> Wie andere Fehler in dieser Liste verursachen die Fehler 41823 und 41840 einen Abbruch der aktiven Transaktion. |
+| **41839** | Die Transaktion hat die maximale Anzahl von Commitabhängigkeiten überschritten. |**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. In höhere Versionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] ist die Anzahl von Commitabhängigkeiten nicht eingeschränkt.<br/><br/> Eine bestimmte Transaktion (Tx1) kann nur von einer bestimmten Anzahl von Transaktionen abhängig sein. Diese Transaktionen werden als ausgehende Abhängigkeiten bezeichnet. Darüber hinaus kann nur eine bestimmte Anzahl von Transaktionen von einer bestimmten Transaktion (Tx1) abhängig sein. Diese Transaktionen werden als eingehende Abhängigkeiten bezeichnet. Der Grenzwert für beide Arten lautet 8. <br/><br/> Dieser Fehler tritt am häufigsten dann auf, wenn eine große Anzahl von Lesetransaktionen auf Daten zugreift, die von einer einzigen Schreibtransaktion geschrieben werden. Die Wahrscheinlichkeit, dass diese Bedingung eintritt, steigt, wenn die Lesetransaktionen umfangreiche Scans der gleichen Daten durchführen und die Überprüfung oder Commitverarbeitung der Schreibtransaktion lange dauert. Beispiele: Die Schreibtransaktion führt in der SERIALIZABLE-Isolation umfangreiche Scans durch (dies verlängert die Überprüfungsphase), oder das Transaktionsprotokoll ist auf einem langsamen Protokoll-E/A-Gerät platziert (dies verlängert die Commitverarbeitung). Wenn die Lesetransaktionen umfangreiche Scans durchführen und nur auf einige wenige Zeilen zugreifen, fehlt möglicherweise ein Index. Gleiches gilt, wenn die Schreibtransaktion die SERIALIZABLE-Isolation verwendet und umfangreiche Scans durchführt, aber nur auf einige wenige Zeilen zugreifen soll. Auch dies kann ein Hinweis auf einen fehlenden Index sein. <br/><br/> Die maximale Anzahl von Commitabhängigkeiten kann durch Verwendung des Ablaufverfolgungsflags **9926** erhöht werden. Verwenden Sie dieses Flag nur, wenn die Fehlerbedingung weiterhin auftritt, nachdem Sie sichergestellt haben, dass keine Indizes fehlen. Ansonsten könnte dieses Flag die Fehler in den oben genannten Fällen verbergen. Eine weitere wichtige Überlegung: Komplexe Abhängigkeitsdiagramme, in denen für jede Transaktion eine Vielzahl von eingehenden und ausgehenden Abhängigkeiten besteht und in denen einzelne Transaktionen Abhängigkeiten auf vielen Ebenen aufweisen, können zu Ineffizienzen im System führen.  |
  
   
 ### <a name="retry-logic"></a>Wiederholungslogik 
@@ -221,7 +221,7 @@ BEGIN
             SET @retry -= 1;
 
             IF (@retry > 0 AND
-                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41823, 41840, 41839, 1205)
                 )
             BEGIN
                 IF XACT_STATE() = -1
@@ -325,4 +325,3 @@ go
 - [Auf Zeilenversionsverwaltung basierende Isolationsstufen im Datenbankmodul](http://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md)   
-

@@ -2,11 +2,13 @@
 title: SQL Server Profiler-Vorlagen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "35"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b02daf16a7cb1be9d7b0f12d1b75c217575a5e4b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e99e38422da3d3d6acafd3e6a1cbbfa49bd3741d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler-Vorlagen
-  Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie Vorlagen erstellen, die die Ereignisklassen und Datenspalten definieren, die in Ablaufverfolgungen eingeschlossen werden sollen. Nach dem Definieren und Speichern der Vorlage können Sie eine Ablaufverfolgung ausführen, die die Daten für jede ausgewählte Ereignisklasse aufzeichnet. Eine Vorlage kann für viele Ablaufverfolgungen verwendet werden. Die Vorlage selbst wird nicht ausgeführt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] um Vorlagen zu erstellen, definieren die Ereignisklassen und Datenspalten in ablaufverfolgungen eingeschlossen werden sollen. Nach dem Definieren und Speichern der Vorlage können Sie eine Ablaufverfolgung ausführen, die die Daten für jede ausgewählte Ereignisklasse aufzeichnet. Eine Vorlage kann für viele Ablaufverfolgungen verwendet werden. Die Vorlage selbst wird nicht ausgeführt.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] bietet vordefinierte Ablaufverfolgungsvorlagen, mit denen Sie auf einfache Weise die Ereignisklassen konfigurieren können, die Sie höchstwahrscheinlich für spezifische Ablaufverfolgungen benötigen. Beispielsweise können Sie mithilfe der Standardvorlage eine allgemeine Ablaufverfolgung zum Aufzeichnen von Anmeldungen, Abmeldungen, abgeschlossenen Batches und Verbindungsinformationen erstellen. Diese Vorlage kann unverändert zum Ausführen von Ablaufverfolgungen verwendet werden. Sie kann aber auch als Ausgangspunkt für zusätzliche Vorlagen mit unterschiedlichen Ereigniskonfigurationen dienen.  
   
@@ -71,4 +72,3 @@ ms.lasthandoff: 08/02/2017
  [Importieren einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   
-

@@ -2,29 +2,30 @@
 title: MSSQLSERVER_17128 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17128 (Database Engine error)
+helpviewer_keywords: 17128 (Database Engine error)
 ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4cb960b5da644f114fee64ead0e122915000ba9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 10284d4192b05ff7fac278e5a02e33384982517f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -43,4 +44,3 @@ Die ursprünglichen Speicherbelegungen oder -reservierungen des Pufferpools sind
 ## <a name="user-action"></a>Benutzeraktion  
 Wird normalerweise durch das Starten von SQL Server auf einem Computer mit extrem geringer Kapazität (unter den minimalen Systemanforderungen) verursacht.  
   
-

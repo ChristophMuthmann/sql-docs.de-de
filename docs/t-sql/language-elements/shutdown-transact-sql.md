@@ -3,8 +3,11 @@ title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a959b807bf566eab860b93350ebe07664e4965fa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: df8ef0a3cfe0ac4adb6f45bddb0bef650fea6ff3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Beendet sofort die SQL Server.  
   
@@ -69,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers.  
   
--   Durch Ausführen von **net Stop Mssqlserver** über eine Eingabeaufforderung für eine Standardinstanz oder durch Ausführen **net Stop Mssql$***Instancename* über eine Eingabeaufforderung für eine benannte Instanz.  
+-   Durch Ausführen von **net Stop Mssqlserver** über eine Eingabeaufforderung für eine Standardinstanz oder durch Ausführen **net Stop Mssql$ *** Instancename* über eine Eingabeaufforderung für eine benannte Instanz.  
   
 -   Mithilfe der Dienste in der Systemsteuerung.  
   
@@ -82,11 +84,10 @@ SHUTDOWN [ WITH NOWAIT ]
  Mitglieder der SHUTDOWN-Berechtigungen zugewiesen sind die **Sysadmin** und **Serveradmin** festen Serverrollen, und sie sind nicht übertragbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [' sp_lock ' &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [Sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [PRÜFPUNKT &#40; Transact-SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr (Anwendung)](../../tools/sqlservr-application.md)   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Feld (ADO - WFC-Syntax) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea83e9a9d928ebfbab416a6cf85b4adbc887f05
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>Feld (ADO - WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
@@ -76,7 +75,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implementiert die **Wert** Eigenschaft mit dem **GetValue** Methode, die einen VARIANT-Objekt zurückgibt und die **SetValue** Methode, die einen Variant-Wert als Argument akzeptiert. Varianten sind sehr effizient in bestimmten Sprachen, z. B. Microsoft Visual Basic.  
   
- Zusätzlich zu den **Wert** Eigenschaft ADO/WFC bietet *Accessor* Methoden, die mit Java-Datentypen abrufen und Festlegen des Inhalts von **Feld** Objekte. Die meisten dieser Methoden haben Namen im Format **abrufen***DataType* oder **festgelegt***DataType*.  
+ Zusätzlich zu den **Wert** Eigenschaft ADO/WFC bietet *Accessor* Methoden, die mit Java-Datentypen abrufen und Festlegen des Inhalts von **Feld** Objekte. Die meisten dieser Methoden haben Namen im Format **abrufen *** DataType* oder **festgelegt *** DataType*.  
   
  Es gibt zwei wichtige Ausnahmen: eines der **GetObject** Methoden gibt ein Objekt in einer bestimmten Klasse umgewandelt. Ist keine **GetNull** Eigenschaft; stattdessen wird ein **IsNull** -Eigenschaft, die einen booleschen Wert, der angibt, ob das Feld null zurückgibt.  
   
@@ -108,4 +107,3 @@ public void setObject(Object value)
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)
-

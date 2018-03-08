@@ -3,7 +3,7 @@ title: HelloData Code | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - HelloData sample application [ADO], sample code
 ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a213378f5add13cae3237ad608c7cbeb39598b6c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0f8f80b597ff7fdb12cfb353a21ec3ef3d1119b1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hellodata-code"></a>HelloData-Code
 ```  
@@ -406,4 +405,3 @@ End Sub
   
 'EndHelloData  
 ```
-

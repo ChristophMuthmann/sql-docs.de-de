@@ -3,10 +3,12 @@ title: Externe Tools (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,22 +16,21 @@ helpviewer_keywords:
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 96e4b3799c478e219308a121bb31713ac171ddcb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eee32bf86aca8d55ca8ebddceb3f46e635f11ad8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="external-tools-dialog-box"></a>Externe Tools (Dialogfeld)
-Mit dem Dialogfeld **Externe Tools** können Sie dem Menü **Extras** externe Tools hinzufügen, z. B. SQLCMD oder den Editor. Durch das Hinzufügen von externen Tools können Sie auf einfache Weise andere Anwendungen starten, während Sie in der [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung arbeiten. Sie können beim Starten des Tools Argumente und ein Arbeitsverzeichnis angeben. Darüber hinaus kann im **Ausgabefenster** die Ausgabe einiger Tools angezeigt werden. Das Dialogfeld **Externe Tools** wird über das Menü **Extras** aufgerufen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem Dialogfeld **Externe Tools** können Sie dem Menü **Extras** externe Tools hinzufügen, z. B. SQLCMD oder den Editor. Durch das Hinzufügen von externen Tools können Sie auf einfache Weise andere Anwendungen starten, während Sie in der [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung arbeiten. Sie können beim Starten des Tools Argumente und ein Arbeitsverzeichnis angeben. Darüber hinaus kann im **Ausgabefenster** die Ausgabe einiger Tools angezeigt werden. Das Dialogfeld **Externe Tools** wird über das Menü **Extras** aufgerufen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Inhalt des Menüs**  
 Führt die Titel der Elemente auf, die aktuell dem Menü **Extras** hinzugefügt sind. Verwenden Sie die Schaltflächen **Nach oben** und **Nach unten** , um die Reihenfolge zu ändern, in der die Elemente im Menü angezeigt werden. Verwenden Sie die Schaltfläche **Löschen** , um ein Element aus dem Menü zu entfernen.  
   
@@ -42,7 +43,7 @@ Verschiebt das ausgewählte Tool innerhalb der Liste der Tools im Menü **Extras
 **Hinzufügen**  
 Löscht die Textfelder, sodass Sie ein neues Tool angeben können.  
   
-**Löschen**  
+**Delete**  
 Entfernt das Tool oder den Befehl aus der Liste **Menüinhalt** und aus dem Menü **Extras** .  
   
 **Titel**  
@@ -72,14 +73,13 @@ Schließt das vom Fenster geöffnete Tool, wenn das Tool geschlossen wird.
 ## <a name="example"></a>Beispiel  
 Durch die Eingabe der folgenden Werte im Dialogfeld **Externe Tools** wird ein Menüelement mit der Bezeichnung "DAC" erstellt. Durch Auswählen des Elements wird eine Eingabeaufforderung geöffnet und das Hilfsprogramm **sqlcmd** mithilfe der dedizierten Administratorverbindung (Dedicated Administrator Connection, DAC) ausgeführt.  
   
-|Feld|Wert|  
+|Feld|value|  
 |-------|---------|  
-|**Titel**|DAC|  
+|**Title**|DAC|  
 |**Befehl**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argumente**|-A|  
   
-## <a name="see-also"></a>Siehe auch  
-[Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Arguments für externe Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  
   
-

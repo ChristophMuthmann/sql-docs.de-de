@@ -1,31 +1,32 @@
 ---
-title: Programmgesteuertes Erstellen von Paketen | Microsoft Docs
+title: Programmgesteuertes Erstellen von Paketen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b80495b726ac6fdac713ba028629633bf84cc004
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a048e8bef9eeb64288f83f17f0ba9b3f3544a66b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="building-packages-programmatically"></a>Programmgesteuertes Erstellen von Paketen
-  Wenn Sie Pakete dynamisch erstellen oder verwalten und ausführen müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete außerhalb der Entwicklungsumgebung Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine breite Palette von Optionen:  
+  Wenn Sie Pakete dynamisch erstellen oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine breite Palette von Optionen:  
   
 -   Laden und Ausführen eines vorhandenen Pakets ohne Änderung  
   
@@ -33,9 +34,9 @@ ms.lasthandoff: 08/03/2017
   
 -   Erstellen eines neuen Pakets, Hinzufügen und Konfigurieren von Komponenten Objekt um Objekt und Eigenschaft um Eigenschaft, Speichern und Ausführen des Pakets  
   
- Sie können die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Objektmodell zum Schreiben von Code, der erstellt, konfiguriert und führt die Pakete in einer verwalteten Programmiersprache. Möglicherweise möchten Sie metadatengesteuerte Pakete erstellen, die ihre Verbindungen oder Datenquellen, Transformationen und Ziele basierend auf der gewählten Datenquelle und ihren Tabellen und Spalten konfigurieren.  
+ Sie können das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Objektmodell verwenden, um in einer beliebigen verwalteten Programmiersprache Code zu schreiben, mit dem Pakete erstellt, konfiguriert und ausgeführt werden. Möglicherweise möchten Sie metadatengesteuerte Pakete erstellen, die ihre Verbindungen oder Datenquellen, Transformationen und Ziele basierend auf der gewählten Datenquelle und ihren Tabellen und Spalten konfigurieren.  
   
- In diesem Abschnitt wird beschrieben und veranschaulicht, wie Pakete programmgesteuert Zeile um Zeile erstellt und konfiguriert werden. Am weniger komplex Ende des Bereichs des Pakets Optionen programmieren Sie einfach laden und Ausführen ein vorhandenes Pakets ohne Änderung wie in beschrieben können [ausführen und Verwalten von Paketen programmgesteuert](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
+ In diesem Abschnitt wird beschrieben und veranschaulicht, wie Pakete programmgesteuert Zeile um Zeile erstellt und konfiguriert werden. Als einfache Möglichkeit der Paketprogrammierung bietet es sich an, ein vorhandenes Paket ohne Änderungen zu laden und auszuführen. Dies wird unter [Programmgesteuerte Ausführung und Verwaltung von Paketen](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md) beschrieben.  
   
  Eine etwas kompliziertere und hier nicht erläuterte Möglichkeit besteht darin, ein vorhandenes Paket als Vorlage zu laden, diese neu zu konfigurieren (beispielsweise für eine andere Datenquelle) und das Paket dann auszuführen. Anhand der Informationen in diesem Abschnitt können Sie auch die vorhandenen Objekte in einem Paket ändern.  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 08/03/2017
  [Programmgesteuertes Aktivieren der Protokollierung](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
  Beschreibt, wie die Protokollierung für ein Paket oder einen Task aktiviert wird und wie benutzerdefinierte Filter auf Protokollereignisse angewendet werden.  
   
- [Programmgesteuertes Hinzufügen von Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+ [Programmgesteuertes Hinzufügen des Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
  Beschreibt, wie der Datenflusstask und seine Komponenten hinzugefügt und konfiguriert werden.  
   
  [Programmgesteuertes Auffinden von Datenflusskomponenten](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
@@ -76,14 +77,14 @@ ms.lasthandoff: 08/03/2017
  [Programmgesteuertes Verbinden von Datenflusskomponenten](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
  Beschreibt, wie zwei Datenflusskomponenten verbunden werden.  
   
- [Programmgesteuertes auswählen von Eingabespalten](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Programmgesteuertes Auswählen von Eingabespalten](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  Beschreibt, wie aus den Eingabespalten, die einer Komponente von Upstreamkomponenten im Datenfluss bereitgestellt werden, Spalten ausgewählt werden.  
   
  [Programmgesteuertes Speichern von Paketen](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Beschreibt, wie ein Paket programmgesteuert gespeichert wird.  
   
 ## <a name="reference"></a>Verweis  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Listet die vordefinierten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehlercodes mit ihren symbolischen Namen und Beschreibungen auf.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
@@ -93,7 +94,7 @@ ms.lasthandoff: 08/03/2017
  [Erweitern von Paketen mit benutzerdefinierten Objekten](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Beschreibt, wie benutzerdefinierte Tasks, Datenflusskomponenten und andere Paketobjekte für die Verwendung in mehreren Paketen erstellt und programmiert werden.  
   
- [Ausführen und verwalten Pakete programmgesteuert](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [Programmgesteuerte Ausführung und Verwaltung von Paketen](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Erläutert, wie Pakete und die Ordner, in denen sie gespeichert sind, aufgezählt, ausgeführt und verwaltet werden.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
@@ -102,8 +103,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Blogeintrag [Leistungsprofilerstellung für benutzerdefinierte Erweiterungen](http://go.microsoft.com/fwlink/?LinkId=238831)auf blogs.msdn.com.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Löschen Sie die (VC++-Methodenbeispiel) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADO], VC++ example
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ac2b901995a10e1af4f29dbc716f23fd26522678
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 03f9e08dbd81d82bd36a84fb3ba3b2d90e6ad331
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-example-vc"></a>Löschen Sie die (VC++-Methodenbeispiel)
 Dieses Beispiel verwendet die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode entfernt einen angegebenen Datensatz aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -304,4 +303,3 @@ BU7832
 ## <a name="see-also"></a>Siehe auch  
  [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

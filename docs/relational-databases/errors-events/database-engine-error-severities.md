@@ -2,11 +2,13 @@
 title: Schweregrade von Datenbankmodulfehlern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5b2b6fbe1d6d46c045452430067a542a99623bd
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="database-engine-error-severities"></a>Schweregrade von Datenbankmodulfehlern
-  Wenn von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ein Fehler ausgelöst wird, gibt der Schweregrad des Fehlers den Problemtyp an, das in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgetreten ist.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Fehler ausgelöst wird, gibt der Schweregrad des Fehlers den Problemtyp an, das in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetreten ist.  
   
 ## <a name="levels-of-severity"></a>Schweregrade  
  In der folgenden Tabelle sind die Schweregrade der Fehler aufgeführt und beschrieben, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ausgelöst werden.  

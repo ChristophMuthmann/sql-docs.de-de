@@ -2,30 +2,30 @@
 title: Starten von Microsoft SQL Server Management Studio | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "45"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ca25b34da611f2142c0889949c0c5d0c868984f7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lektion 1-1: Starten von SQL Server Management Studio
-Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="opening-sql-server-management-studio"></a>Öffnen von SQL Server Management Studio  
   
@@ -67,8 +67,7 @@ Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFu
   
 2.  Wird Ihr Server nicht angezeigt, klicken Sie in der Liste der registrierten Server mit der rechten Maustaste auf **Datenbankmodul**, dann auf **Tasks**und anschließend auf **Lokale Serverregistrierung aktualisieren**. Um zusätzliche SQL-Server auf einer SQL-Datenbank hinzuzufügen, klicken Sie mit der rechten Maustaste auf einen Speicherort unter Registrierte Server, und klicken Sie anschließend auf **Neue Serverregistrierung**. Tragen Sie im Bereich **Anmeldename** die Informationen ein, die Sie auch im Dialogfeld **Verbindung mit Server herstellen** eingetragen haben.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
-

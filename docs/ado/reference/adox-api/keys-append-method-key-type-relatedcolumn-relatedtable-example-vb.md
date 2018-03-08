@@ -3,7 +3,7 @@ title: "Erstellen eine neue Fremdschlüssel-Beziehung zwischen Tabellen-Beispiel
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 705ff3187e9502168d278d7059acd1ee5fcbd9d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: baf04a542b1f488e8570713df938f3a03aa753f1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)
 Der folgende Code veranschaulicht das Erstellen einer neuen Fremdschlüssel-Beziehung zwischen zwei vorhandenen Tabellen, die mit dem Namen **Kunden** und **Aufträge**.  
@@ -95,4 +94,3 @@ End Sub
  [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type-Eigenschaft (Schlüssel) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [UpdateRule-Eigenschaft (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)
-

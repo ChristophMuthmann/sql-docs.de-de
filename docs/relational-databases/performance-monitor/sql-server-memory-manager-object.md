@@ -2,30 +2,32 @@
 title: SQL Server, Speicher-Manager-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 884e6d05db70f9978b84a3423bdfad748f50b29c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Speicher-Manager-Objekt
-  Das **Speicher-Manager** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren bereit, mit denen Sie die gesamte Speicherauslastung des Servers überwachen können. Das Überwachen der gesamten Speicherauslastung des Servers zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen. Durch Überwachen des Arbeitsspeichers, der von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, können Sie Folgendes ermitteln:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **Speicher-Manager**-Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren bereit, mit denen Sie die gesamte Speicherauslastung des Servers überwachen können. Das Überwachen der gesamten Speicherauslastung des Servers zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen. Durch Überwachen des Arbeitsspeichers, der von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, können Sie Folgendes ermitteln:  
   
 -   Ob es zu Engpässen kommt, da nicht genügend Arbeitsspeicher vorhanden ist, um Daten, auf die häufig zugegriffen wird, im Cache zu speichern. In diesem Fall muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten vom Datenträger abrufen.  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="memory-manager-counters"></a>Speicher-Manager-Leistungsindikatoren  
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Speicher-Manager** beschrieben.  
   
-|Speicher-Manager-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Speicher-Manager-Leistungsindikatoren von SQL Server|Description|  
 |----------------------------------------|-----------------|  
 |**Verbindungsspeicher (KB)**|Gibt den Gesamtumfang des dynamischen Arbeitsspeichers an, den der Server für die Aufrechterhaltung von Verbindungen verwendet.|  
 |**Datenbankcachespeicher (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server derzeit für den Datenbankseitencache verwendet.|  
@@ -57,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |**Zielserverspeicher (KB)**|Gibt den idealen Umfang des Arbeitsspeichers an, den der Server belegen kann.|  
 |**Serverspeicher gesamt (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server mit dem Speicher-Manager zugesichert hat.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Puffer-Manager-Objekt](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

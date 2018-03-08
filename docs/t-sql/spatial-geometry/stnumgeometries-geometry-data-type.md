@@ -3,8 +3,11 @@ title: STNumGeometries (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STNumGeometries (geometry Data Type)
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c8ca87eeff2f807b55754d9d9adf19ebf03a4fd8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f4094aa647ddfa3bf5ffaf191896c9e65677f027
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt die Anzahl von Geometrien zurück eine **Geometrie** Instanz.
   
@@ -53,5 +55,4 @@ Gibt die Anzahl von Geometrien zurück eine **Geometrie** Instanz.
 >  Wenn eine **GeometryCollection** geschachtelte leere Elemente `STNumGeometries()` nicht 0 zurück. Obwohl die Elemente in der **GeometryCollection** Instanz leer sind, ist die Instanz selbst ist ein leeres Resultset.  
   
   
-
 

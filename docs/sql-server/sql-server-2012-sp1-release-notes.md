@@ -1,27 +1,30 @@
 ---
 title: SQL Server 2012 SP1 Release Notes | Microsoft-Dokumentation
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: 49
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: bb97a542834adce9221b55f54c4bf5657586f187
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
   
 ## <a name="bkmk_top"></a>Inhalt  
@@ -55,7 +58,7 @@ Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und i
 |Aktuell installierte Version...|Gewünschter Vorgang...|Download und Installation von...|  
 |-------------------------------------------|----------------------|---------------------------|  
 |**32-Bit-Installationen:**|||  
-|Eine 32-Bit-Version einer beliebigen Edition von SQL Server 2012|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe über [diesen Link](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|32-Bit-Version einer beliebigen Edition von SQL Server 2012|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe über [diesen Link](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Eine 32-Bit-Version von SQL Server 2012 RTM Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe über [diesen Link](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |32-Bit-Version nur der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 32-Bit-Version von SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe über [diesen Link](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Eine 32-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe über [diesen Link](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -201,8 +204,7 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
   
 [Inhalt](#bkmk_top)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ermitteln der Version und Edition von SQL Server](http://support.microsoft.com/kb/321185)  
 [Von den SQL Server 2014-Editionen unterstützte Funktionen](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
   
-

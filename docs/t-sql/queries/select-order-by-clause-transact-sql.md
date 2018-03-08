@@ -1,10 +1,13 @@
 ---
 title: ORDER BY-Klausel (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,20 +41,19 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 68
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fa84841e573d9bd1a285d24548c2f57ab5b9235
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Wählen SIE - ORDER BY-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sortiert die von einer Abfrage zurückgegebene Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese Klausel, um:  
   
@@ -61,9 +63,12 @@ ms.lasthandoff: 09/01/2017
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY wird nicht unterstützt, wählen Sie im / in oder erstellen Sie Tabelle AS auswählen (CTAS)-Anweisungen in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -103,7 +108,7 @@ ORDER BY order_by_expression
  COLLATE *Collation_name*  
  Gibt an, dass die ORDER BY-Vorgang soll, entsprechend der im angegebenen Sortierung ausgeführt werden *Collation_name*, und nicht gemäß der Sortierung der Spalte in der Tabelle oder Sicht definiert. *Collation_name* kann entweder ein Windows-Sortierungsname oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **Char**, **Varchar**, **Nchar**, und **Nvarchar**.  
   
- **ASC** | "DESC"  
+ **ASC** | DESC  
  Gibt an, dass die Werte in der angegebenen Spalte in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. ASC sortiert vom niedrigsten Wert zum höchsten Wert. DESC sortiert vom höchsten Wert zum niedrigsten Wert. ASC ist die Standardsortierreihenfolge. NULL-Werte werden als die niedrigsten Werte behandelt, die möglich sind.  
   
  OFFSET { *Integer_constant* | *Offset_row_count_expression* } {Zeile | ZEILEN}  
@@ -131,7 +136,7 @@ ORDER BY order_by_expression
  In Abfrageausführungsplänen wird der Wert für die offsetzeilenanzahl angezeigt, der **Zeilen** oder **oben** -Attribut des TOP-Abfrageoperators.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
- Geben Sie in der ORDER BY-Klausel keine ganzen Zahlen als Positionsangaben der Spalten in der Auswahlliste an. Auch wenn eine Anweisung wie `SELECT ProductID, Name FROM Production.Production ORDER BY 2` nicht ungültig ist, wird dadurch im Vergleich zur Angabe des tatsächlichen Spaltennamens das Verständnis durch andere erschwert. Außerdem erfordern Änderungen an der Auswahlliste, etwa eine Änderung der Spaltenreihenfolge oder das Hinzufügen neuer Spalten, auch Änderungen an der ORDER BY-Klausel, um unerwartete Ergebnisse zu vermeiden.  
+ Geben Sie in der ORDER BY-Klausel keine ganzen Zahlen als Positionsangaben der Spalten in der Auswahlliste an. Auch wenn eine Anweisung wie `SELECT ProductID, Name FROM Production.Production ORDER BY 2` nicht ungültig ist, wird dadurch im Vergleich zur Angabe des tatsächlichen Spaltennamens das Verständnis durch andere erschwert. Außerdem ändert sich in der select-Liste, z. B. das Ändern der Spaltenreihenfolge oder neue Spalten hinzufügen, erfordert das Ändern der ORDER BY-Klausel, um unerwartete Ergebnisse zu vermeiden.  
   
  In einer SELECT TOP (*N*)-Anweisung immer eine ORDER BY-Klausel verwenden. Dies ist die einzige Möglichkeit, zuverlässig anzugeben, welche Zeilen von TOP betroffen sind. Weitere Informationen finden Sie unter [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Wenn die Anweisung einen UNION-, EXCEPT- oder INTERSECT-Operator enthält, gilt außerdem, dass die Spaltennamen oder Spaltenaliasnamen in der Auswahlliste der ersten (linken) Abfrage angegeben werden müssen.  
+ Darüber hinaus, wenn die Anweisung eine UNION enthält, EXCEPT oder INTERSECT-Operator, Spaltennamen oder Spaltenaliasnamen in der Auswahlliste der ersten (linken) Abfrage angegeben werden müssen.  
   
- In einer Abfrage, die die Operatoren UNION, EXCEPT oder INTERSECT verwendet, wird ORDER BY nur am Ende der Anweisung zugelassen. Diese Einschränkung ist nur gültig, wenn UNION, EXCEPT und INTERSECT in einer Abfrage der obersten Ebene verwendet werden, nicht in einer Unterabfrage. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.  
+ In einer Abfrage, die die Operatoren UNION, EXCEPT oder INTERSECT verwendet, wird ORDER BY nur am Ende der Anweisung zugelassen. Diese Einschränkung gilt nur für auf, wenn Sie angeben UNION, EXCEPT und INTERSECT in einer Abfrage der obersten Ebene nicht in einer Unterabfrage. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.  
   
  Die ORDER BY-Klausel ist in Sichten, Inlinefunktionen, abgeleiteten Tabellen und Unterabfragen nicht gültig, es sei denn, die TOP- oder die OFFSET- und die FETCH-Klausel werden ebenfalls angegeben. Wenn ORDER BY in diesen Objekten verwendet wird, werden mit der Klausel nur die Zeilen bestimmt, die von der TOP-Klausel oder von der OFFSET- und der FETCH-Klausel zurückgegeben werden. Durch die ORDER BY-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Abfrage dieser Konstrukte sichergestellt, es sei denn, in der Abfrage selbst ist ebenfalls ORDER BY angegeben.  
   
@@ -267,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. Angeben einer aufsteigenden Reihenfolge  
- Im folgenden Beispiel wird das Resultset anhand der `Name`-Spalte in aufsteigender Reihenfolge sortiert. Beachten Sie, dass die Zeichen alphabetisch und nicht numerisch sortiert sind. Das heißt, 10 steht in der Sortierreihenfolge vor 2.  
+#### <a name="b-specifying-an-ascending-order"></a>B. Angeben einen aufsteigenden Reihenfolge  
+ Im folgenden Beispiel wird das Resultset anhand der `Name`-Spalte in aufsteigender Reihenfolge sortiert. Die Zeichen alphabetisch und nicht numerisch sortiert. Das heißt, 10 steht in der Sortierreihenfolge vor 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +318,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>Angeben einer bedingten Reihenfolge  
- In den folgenden Beispielen wird der CASE-Ausdruck in einer ORDER BY-Klausel verwendet, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
+ Die folgenden Beispiele verwenden den CASE-Ausdruck in einer ORDER BY-Klausel, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -484,7 +489,25 @@ GO
   
 ```  
   
-### <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+###  <a name="Union"></a>Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT  
+ Wenn eine Abfrage die Operatoren UNION, EXCEPT oder INTERSECT verwendet, muss die ORDER BY-Klausel am Ende der Anweisung angegeben werden, und die Ergebnissen der kombinierten Abfragen werden sortiert. Im folgenden Beispiel werden alle Produkte zurückgegeben, die rot oder gelb sind, und die kombinierte Liste wird anhand der Spalte `ListPrice` sortiert.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Red'  
+-- ORDER BY cannot be specified here.  
+UNION ALL  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Yellow'  
+ORDER BY ListPrice ASC;  
+  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Das folgende Beispiel veranschaulicht ein Resultset nach der numerischen Reihenfolge `EmployeeKey` Spalte in aufsteigender Reihenfolge.  
   
 ```  
@@ -525,35 +548,16 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-###  <a name="Union"></a>Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT  
- Wenn eine Abfrage die Operatoren UNION, EXCEPT oder INTERSECT verwendet, muss die ORDER BY-Klausel am Ende der Anweisung angegeben werden, und die Ergebnissen der kombinierten Abfragen werden sortiert. Im folgenden Beispiel werden alle Produkte zurückgegeben, die rot oder gelb sind, und die kombinierte Liste wird anhand der Spalte `ListPrice` sortiert.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Red'  
--- ORDER BY cannot be specified here.  
-UNION ALL  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Yellow'  
-ORDER BY ListPrice ASC;  
-  
-```  
-  
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Rangfolge Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [Nach oben &#40; Transact-SQL &#41;](../../t-sql/queries/top-transact-sql.md)   
+ [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [Abfragehinweise (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)   
  [Mit Ausnahme von und INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [UNION &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-
 

@@ -2,30 +2,30 @@
 title: Remote verarbeiten (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 5
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f32eb86f0d4b18ac576df77a28885c7f2053d962
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Remoteverarbeitung (Analysis Services)
-  Sie können die geplante oder unbeaufsichtigte Verarbeitung auf einer Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausführen, wobei die Verarbeitungsanforderung von einem Computer stammt, jedoch auf einem anderen Computer im selben Netzwerk ausgeführt wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können die geplante oder unbeaufsichtigte Verarbeitung auf einer Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausführen, wobei die Verarbeitungsanforderung von einem Computer stammt, jedoch auf einem anderen Computer im selben Netzwerk ausgeführt wird.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   
@@ -98,11 +98,10 @@ ms.lasthandoff: 09/01/2017
 2.  Ändern Sie als letzten Schritt den Auftrag so, dass er nach einem von Ihnen definierten Zeitplan ausgeführt wird. Fügen Sie dabei alle notwendigen Warnungen oder Benachrichtigungen hinzu, die zum Verwalten des Auftrags erforderlich sind. Sie können das Verarbeitungsskript außerdem noch genauer konfigurieren oder mehrere Schritte im Auftrag erstellen, um Objekte einzeln zu verarbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [SQL Server-Agent-Komponenten](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Schedule SSAS Administrative Tasks mit SQL Server-Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Batchverarbeitung &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Batchverarbeitung & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Verarbeitung von Objekten &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Verarbeitung von Objekten & #40; XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   
-

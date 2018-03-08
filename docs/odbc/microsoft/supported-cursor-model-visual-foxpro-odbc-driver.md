@@ -3,10 +3,12 @@ title: "Cursormodell (Visual FoxPro-ODBC-Treiber) unterstützt | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 097e8a5a4156ea9a107fc7393a7b9d76bdb1a70a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Unterstützte Cursormodell (Visual FoxPro-ODBC-Treiber)
 Der Visual FoxPro-ODBC-Treiber unterstützt sowohl *Block* (*Rowset*) und *statische* Cursor. Statische Cursor werden für alle Treiber unterstützt, die Ebene-1-ODBC-Kompatibilität entspricht. Der Treiber unterstützt keine dynamischen, keysetgesteuerten oder gemischt (keysetgesteuerte und dynamische) Cursor.  
@@ -47,4 +48,3 @@ Der Visual FoxPro-ODBC-Treiber unterstützt sowohl *Block* (*Rowset*) und *stati
   
 ## <a name="rowset"></a>Rowset  
  Blöcke von Daten in einem Cursor, die aus einer Datenquelle abgerufene Zeilen darstellt.
-

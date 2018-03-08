@@ -1,29 +1,30 @@
 ---
 title: SQL-Eigenschaft | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 406d5cd5fcf159d9354ef0af0b7036e3ebd24bab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b16ac51bae59fbb4435f094da6e0ac0e40053e89
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-property"></a>SQL-Eigenschaft
 Gibt die Abfragezeichenfolge zum Abrufen der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -42,7 +43,7 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Abfragezeichenfolge*  
+ *QueryString*  
  Ein **Zeichenfolge** Wert, der eine gültige SQL-Daten-Anforderung enthält.  
   
  *DataControl*  
@@ -54,7 +55,7 @@ Run time: DataControl.SQL = "QueryString"
  Die **SQL** Eigenschaft ist optional, wenn ein benutzerdefiniertes Geschäftsobjekt serverseitige für den Client die Daten abruft.  
   
 ## <a name="applies-to"></a>Gilt für  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL-Eigenschaft-Beispiel (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
@@ -62,6 +63,5 @@ Run time: DataControl.SQL = "QueryString"
  [Query-Methode (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Refresh-Methode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

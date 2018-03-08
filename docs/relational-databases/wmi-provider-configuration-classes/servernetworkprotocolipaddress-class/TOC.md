@@ -3,6 +3,6 @@
 # [IpAddressName-Eigenschaft (ServerNetworkProtocolIPAddress-Klasse)](ipaddressname-property-servernetworkprotocolipaddress-class.md)
 # [Properties-Eigenschaft (ServerNetworkProtocolIPAddress-Klasse)](properties-property-servernetworkprotocolipaddress-class.md)
 # [ProtocolName-Eigenschaft (ServerNetworkProtocolIPAddress-Klasse)](protocolname-property-servernetworkprotocolipaddress-class.md)
-# [ServerNetworkProtocolIPAddress-Klasse](servernetworkprotocolipaddress-class.md)
+# [ServerNetworkProtocolIPAddress Class](servernetworkprotocolipaddress-class.md)
 # [SetDisable-Methode (ServerNetworkProtocolIPAddress-Klasse)](setdisable-method-servernetworkprotocolipaddress-class.md)
 # [SetEnable-Methode (ServerNetworkProtocolIPAddress-Klasse)](setenable-method-servernetworkprotocolipaddress-class.md)

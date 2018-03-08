@@ -3,25 +3,29 @@ title: Verwalten von SQLServer on Linux mit SSMS | Microsoft Docs
 description: "Dieses Lernprogramm zeigt, wie SQL Server Management Studio unter Windows zur Verbindung mit SQL Server auf dem Linux ausgeführt wird."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Verwenden Sie SQL Server Management Studio (SSMS) zum Verwalten von SQL Server on Linux unter Windows
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Thema zeigt, wie [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) zur Verbindung mit SQL Server-2017 unter Linux. SSMS ist eine Windows-Anwendung, daher SSMS verwenden, wenn Sie einen Windows-Computer verfügen, der mit einer SQL Server-Remoteinstanz unter Linux eine Verbindung herstellen können.
+Dieser Artikel zeigt, wie [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) zur Verbindung mit SQL Server-2017 unter Linux. SSMS ist eine Windows-Anwendung, daher SSMS verwenden, wenn Sie einen Windows-Computer verfügen, der mit einer SQL Server-Remoteinstanz unter Linux eine Verbindung herstellen können.
 
 Nachdem die Verbindung erfolgreich hergestellt, führen Sie eine einfache Transact-SQL (T-SQL)-Abfrage, um die Kommunikation mit der Datenbank zu überprüfen.
 
@@ -85,4 +89,3 @@ Zusätzlich zu Abfragen können Sie T-SQL-Anweisungen zum Erstellen und Verwalte
 Wenn Sie noch nicht in T-SQL vertraut sind, finden Sie unter [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md) und [Transact-SQL-Referenz (Datenbankmodul)](https://msdn.microsoft.com/library/bb510741.aspx).
 
 Weitere Informationen zum Verwenden von SSMS finden Sie unter [Verwenden von SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).
-

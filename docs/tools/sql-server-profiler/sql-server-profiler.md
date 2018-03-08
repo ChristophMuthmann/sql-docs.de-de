@@ -2,11 +2,13 @@
 title: SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,20 +27,19 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "46"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8a6f1151141c3f0641ba35b92d8c9cd8b1639a14
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ist eine Schnittstelle zum Erstellen und Verwalten von ablaufverfolgungen und analysieren und wiedergeben derer Ergebnisse. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine Schnittstelle zum Erstellen und Verwalten von ablaufverfolgungen und analysieren und wiedergeben derer Ergebnisse. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann.  
   
 >**WICHTIG!**  
 > Wir kündigen die Veraltung von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Ablaufverfolgungssammlung und -Ablaufverfolgungswiedergabe an. Diese Funktionen stehen **noch** in SQL Server 2016 zur Verfügung, werden jedoch in einer späteren Version entfernt.
@@ -205,4 +206,3 @@ In der folgenden Tabelle werden die Funktionen angezeigt, deren Verwendung wir i
  [Überwachen der Serverleistung und -aktivität](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

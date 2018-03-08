@@ -2,13 +2,13 @@
 title: Synchronisieren von Analysis Services-Datenbanken | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die Datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken auf den gleichen Stand gebracht werden, indem die Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert werden. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
   
 -   Bereitstellen einer Datenbank von einem Stagingserver auf einem Produktionsserver  
@@ -158,7 +158,7 @@ ms.lasthandoff: 09/01/2017
   
      Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
   
-     **Schriftgrad**  
+     **Größe**  
      Zeigt die geschätzte Größe von den am Speicherort gespeicherten Remotepartitionen an.  
   
      Unter **Partitionen am ausgewählten Speicherort** wird ein Raster angezeigt, in dem die Remotepartitionen beschrieben werden, die am Speicherort auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Quellinstanz gespeichert sind, die in der Spalte **Quellordner** der ausgewählten Zeile in **Speicherorte**angegeben ist. Das Raster enthält die folgenden Spalten:  
@@ -199,4 +199,3 @@ ms.lasthandoff: 09/01/2017
  [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   
-

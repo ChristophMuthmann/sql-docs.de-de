@@ -2,9 +2,12 @@
 title: "Erteilen von Berechtigungen für eine XML-Schemaauflistung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 686fe65b9749fbafd2052d7a531f11aae44c6b65
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Erteilen von Berechtigungen für eine XML-Schemaauflistung
-  Sie können Berechtigungen zum Erstellen von XML-Schemaauflistungen sowie Berechtigungen für ein XML-Schemaauflistungsobjekt erteilen.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Sie können Berechtigungen zum Erstellen von XML-Schemaauflistungen sowie Berechtigungen für ein XML-Schemaauflistungsobjekt erteilen.  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Berechtigung zum Erstellen einer XML-Schemaauflistung  
  Zum Erstellen einer XML-Schemaauflistung sind die folgenden Berechtigungen erforderlich:  
@@ -506,7 +510,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

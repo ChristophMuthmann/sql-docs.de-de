@@ -3,27 +3,29 @@ title: ALTER_DATABASE (Parallel Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 74b47bec1033728d47e5fe577af29c6d43e9af65
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Ändert die maximale Größe Datenbankoptionen für replizierte Tabellen, verteilte Tabellen und das Transaktionsprotokoll in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Verwenden Sie diese Anweisung, um die speicherplatzzuordnungen für eine Datenbank zu verwalten, wie es vergrößert oder verkleinert die Größe.  
   
@@ -65,7 +67,7 @@ ALTER DATABASE database_name
  LOG_SIZE = *Größe* [GB]  
  Gibt die neue maximale GB pro Datenbank zum Speichern aller den Transaktionsprotokollen in der Datenbank geändert wird. Die Größe wird auf alle der Serverknoten in der Anwendung verteilt.  
   
- VERSCHLÜSSELUNG {ON | {OFF}  
+ ENCRYPTION { ON | OFF }  
  Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Verschlüsselung kann nur konfiguriert werden, für die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Wenn [sp_pdw_database_encryption aktiviert werden](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) vorsieht **1**. Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor die transparente datenverschlüsselung konfiguriert werden kann. Weitere Informationen über die datenbankverschlüsselung finden Sie unter [transparente datenverschlüsselung &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -171,4 +173,3 @@ ALTER DATABASE CustomerSales
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   
-

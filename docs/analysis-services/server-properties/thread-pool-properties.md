@@ -2,11 +2,13 @@
 title: Threadpooleigenschaften | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b7cf85d5e9c8be15a74d99c1e4181b0e206d869
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85d1c7727b699037711eb49f1be360c755f8dc3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, um die Gesamtserverleistung zu verbessern, indem mehrere Aufträge parallel ausgeführt werden. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
   
  Jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwaltet einen eigenen Satz von Threadpools. Es gibt Unterschiede in Bezug darauf, wie Threadpools von tabellarischen und mehrdimensionalen Instanzen verwendet werden. So verwenden z.B. nur mehrdimensionale Instanzen den **IOProcess** -Threadpool. Daher ist die in diesem Thema beschriebene **PerNumaNode** -Eigenschaft für tabellarische Instanzen bedeutungslos. Im Abschnitt [Eigenschaftsreferenz](#bkmk_propref) unten werden für jede Eigenschaft die Modusanforderungen aufgeführt.
@@ -73,7 +75,7 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
     > [!NOTE]  
     >  Ein Thread aus einem der beiden Analysepools kann zum Ausführen einer Abfrage verwendet werden. Abfragen mit schneller Ausführung wie eine schnelle Ermittlungs- oder Abbruchanforderung werden manchmal sofort ausgeführt und nicht in die Warteschlange des Abfragethreadpools gestellt. 
   
--   **Threadpool\Query** ist der Threadpool, der alle Anforderungen ausführt, die nicht vom Analysethreadpool behandelt werden. Threads in diesem Threadpool führen alle Vorgangstypen aus, z. B. Ermittlungen, MDX-, DAX-, DMX- und DDL-Befehle. A
+-   **Threadpool\Query** ist der Threadpool, der alle Anforderungen ausführt, die nicht vom Analysethreadpool behandelt werden. Threads in diesem Threadpool führen alle Vorgangstypen aus, z. B. Ermittlungen, MDX-, DAX-, DMX- und DDL-Befehle. Ein
   
 -   **Threadpool\IOProcess** wird für E/A-Aufträge verwendet, die Speichermodulabfragen im mehrdimensionalen Modul zugeordnet sind. Die von diesen Threads verarbeiteten Aufgaben sollten erwartungsgemäß keine Abhängigkeiten von anderen Threads aufweisen. Diese Threads scannen in der Regel ein einzelnes Segment einer Partition und führen eine Filterung und Aggregation der Segmentdaten durch. **IOProcess** -Threads reagieren besonders empfindlich auf die NUMA-Hardwarekonfigurationen. Dieser Threadpool verfügt über die **PerNumaNode** -Konfigurationseigenschaft, die verwendet werden kann, um die Leistung bei Bedarf zu optimieren. 
   
@@ -292,4 +294,3 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
  [SQL Server Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   
-

@@ -2,31 +2,32 @@
 title: "DAC-Unterstützung für SQL Server-Objekte und -Versionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "19"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 12b99446025274f0f3652a7552f53775283af7ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>DAC-Unterstützung für SQL Server-Objekte und -Versionen
-  Eine Datenebenenanwendung (DAC) unterstützt die am häufigsten verwendeten [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Objekte.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Datenebenenanwendung (DAC) unterstützt die am häufigsten verwendeten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Objekte.  
   
  **In diesem Thema**  
   
@@ -120,8 +121,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Problemumgehungen** : Durch Extrahierungs- und Exportvorgänge werden BCP-Datendateien mit vollständiger Datentreue in die DACPAC- oder BACPAC-Datei geschrieben. Zur Umgehung von Beschränkungen verwenden Sie das SQL Server-Befehlszeilenhilfsprogramm BCP.exe, um eine vollständig datentreue Version der Daten aus einem DAC-Paket in einer Zieldatenbank bereitzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

@@ -2,12 +2,13 @@
 title: "Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e67cca59b2383c525fdd0fbd80546d2c123a8a96
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab11f0f2b60a67656bc5c529a17b0251fe2c9487
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk
-  Ein Abhängigkeitsnetzwerk in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Miningmodell kann zahlreiche Knoten enthalten, wodurch das Auffinden der gewünschten Daten erschwert wird. Um dieses Problem zu lösen, können Sie bestimmte Knoten im Dialogfeld **Knoten suchen** auf der Registerkarte **Abhängigkeitsnetzwerk** des Data Mining-Designers suchen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ein Abhängigkeitsnetzwerk in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Miningmodell kann zahlreiche Knoten enthalten, wodurch das Auffinden der gewünschten Daten erschwert wird. Um dieses Problem zu lösen, können Sie bestimmte Knoten im Dialogfeld **Knoten suchen** auf der Registerkarte **Abhängigkeitsnetzwerk** des Data Mining-Designers suchen.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>So suchen Sie einen bestimmten Knoten in einem Abhängigkeitsnetzwerk  
   
@@ -43,7 +44,6 @@ ms.lasthandoff: 09/01/2017
 3.  Wählen Sie aus der Liste den richtigen Knoten aus, und klicken Sie dann auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

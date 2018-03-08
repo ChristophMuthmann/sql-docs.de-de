@@ -2,9 +2,12 @@
 title: Herstellen einer Verbindung mit einem anderen Computer (SQL Server-Konfigurations-Manager) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d8e4014206abb4c84201724744ec30f1f39f4243
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4df3365cc2c0bb7e042a23c60a78692d40bae7cf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM-Dienste: Verbinden mit einem anderen Computer
-  In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eine Verbindung mit einem anderen Computer herstellen können. Befolgen Sie die erste Prozedur, um die Computerverwaltung von Windows, MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) zu öffnen, stellen Sie eine Verbindung zu dem Computer her, und erweitern die Struktur "Dienste und Anwendungen". Führen Sie das zweite Verfahren zum Erstellen einer Datei mit einem Link zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf einem Remotecomputer aus.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eine Verbindung mit einem anderen Computer herstellen können. Befolgen Sie die erste Prozedur, um die Computerverwaltung von Windows, MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) zu öffnen, stellen Sie eine Verbindung zu dem Computer her, und erweitern die Struktur "Dienste und Anwendungen". Führen Sie das zweite Verfahren zum Erstellen einer Datei mit einem Link zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf einem Remotecomputer aus.  
   
 > [!NOTE]  
 >  Bei einer Remoteverbindung können einige Aktionen nicht von Configuration Manager ausgeführt werden.  
@@ -77,8 +80,7 @@ ms.lasthandoff: 08/02/2017
 > [!CAUTION]  
 >  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf einem Remotecomputer verwenden, ist der Computername nicht offensichtlich, und es ist möglich, versehentlich den falschen Computer zu stoppen oder zu konfigurieren. Überprüfen Sie auf der Registerkarte **Dienst** das Feld **Hostname** , um den Computernamen zu überprüfen, bevor Sie einen Dienst ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
   
   
-

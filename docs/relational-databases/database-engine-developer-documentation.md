@@ -2,29 +2,32 @@
 title: Entwicklerhandbuch (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-caps.latest.revision: 17
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9495c959569ab4801570612d890e39087fdee3a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 23d61cdb9d6f82ddd2e35e7e4e8999cd814557b7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Entwicklerhandbuch (Datenbankmodul)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt einen umfangreichen Satz von Tools zum Entwickeln, Verwalten und Steuern von Datenbankanwendungen bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -55,7 +58,7 @@ ms.lasthandoff: 06/22/2017
  [Programmierung eines Ausnahmemeldungsfelds](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Beschreibt, wie Sie das Ausnahmemeldungsfeld (eine programmgesteuerte Schnittstelle) in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Mining-Programmierung](../analysis-services/data-mining-programming.md)   
  [Entwicklerhandbuch (Analysis Services)](../analysis-services/analysis-services-developer-documentation.md)   
  [Entwicklerhandbuch (Integration Services)](../integration-services/integration-services-developer-documentation.md)   

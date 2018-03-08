@@ -3,7 +3,7 @@ title: Ereignisparameter | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ae7ee638c8489795df8894be23ef80e63b26f07
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>Ereignisparameter
 Jeder Ereignishandler hat einen Status-Parameter, der steuert, den Ereignishandler an. Für Ereignisse durch Abschluss wird dieser Parameter auch verwendet, um anzugeben, den Erfolg oder Misserfolg des Vorgangs, der das Ereignis generiert hat. Möglichst lückenlos Ereignisse enthalten auch einen Fehlerparameter enthalten Informationen zu Fehlern, die möglicherweise aufgetreten und einen oder mehrere Objektparameter, die an den ADO-Objekten, die zum Ausführen des Vorgangs zu verweisen. Z. B. die [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) Ereignis enthält die Objektparameter für die **Befehl**, **Recordset**, und **Verbindung** Objekte mit dem Ereignis verknüpft sind. Im folgenden Beispiel von Microsoft® Visual Basic® finden Sie unter der pCommand pCommand und pConnection-Objekten, die darstellen der **Befehl**, **Recordset**, und **Verbindung** Objekte, mit denen, die **Execute** Methode.  
@@ -99,4 +98,3 @@ End Sub
  [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Zusammenwirken der Ereignishandler](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)
-

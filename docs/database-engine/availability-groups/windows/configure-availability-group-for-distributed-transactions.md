@@ -2,13 +2,13 @@
 title: "Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 523b46925b2ed32ab68840fcc76ddead5d613758
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] unterstützt alle verteilten Transaktionen, einschließlich Datenbanken in einer Verfügbarkeitsgruppe. In diesem Artikel erfahren Sie, wie Sie eine Verfügbarkeitsgruppe für verteilte Transaktionen konfigurieren.  
 
@@ -45,7 +44,7 @@ Bei einer verteilten Transaktion arbeiten Clientanwendungen mit dem Microsoft Di
 
 In [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] werden verteilte Transaktionen für Datenbanken in einer Verfügbarkeitsgruppe nicht verhindert – selbst wenn die Verfügbarkeitsgruppe nicht für verteilte Transaktionen konfiguriert ist. Wenn eine Verfügbarkeitsgruppe jedoch nicht für verteilte Transaktionen konfiguriert ist, kann es vorkommen, dass das Failover in manchen Situationen fehlschlägt. Insbesondere neue [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz des primären Replikats ist möglicherweise nicht in der Lage, Transaktionsergebnisse vom DTC abzurufen. Um der [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz nach einem Failover das Abrufen der Ergebnisse unsicherer Transaktionen vom DTC zu ermöglichen, konfigurieren Sie die Verfügbarkeitsgruppe für verteilte Transaktionen. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Bevor Sie eine Verfügbarkeitsgruppe so konfigurieren, dass verteilte Transaktionen unterstützt werden, müssen die folgenden Voraussetzungen erfüllt sein:
 
@@ -87,7 +86,7 @@ Ab [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] lasen sich Verfügbarke
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -188,7 +187,7 @@ Nach dem Rollback oder Commit der Transaktion können Sie die Datenbank mit `ALT
 
 Weitere Informationen zum Auflösen unsicherer Transaktionen finden Sie unter [Resolve Transactions manually](http://technet.microsoft.com/library/cc754134.aspx) (Transaktionen manuell auflösen).
 
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 
 [Distributed Transactions](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions) (Verteilte Transaktionen)
 

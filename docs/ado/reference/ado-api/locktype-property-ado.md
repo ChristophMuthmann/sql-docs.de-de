@@ -3,7 +3,7 @@ title: LockType-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,19 +18,18 @@ f1_keywords:
 helpviewer_keywords:
 - LockType property [ADO]
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 231ca93c71468fc46ed7729170b2c58e224b1d6f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b2f293565affedf74facb22fffc85b3b2ead179
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="locktype-property-ado"></a>LockType-Eigenschaft (ADO)
+# <a name="locktype-property-ado"></a>LockType Property (ADO)
 Gibt den Typ der Sperren auf Datensätze während der Bearbeitung.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
@@ -56,4 +55,3 @@ Gibt den Typ der Sperren auf Datensätze während der Bearbeitung.
  [CursorType LockType und EditMode Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)
-

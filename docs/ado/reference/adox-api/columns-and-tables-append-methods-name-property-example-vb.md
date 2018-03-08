@@ -3,7 +3,7 @@ title: Spalten und Tabellen Append-Methode, benennen Sie die Beispiel-Eigenschaf
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d8756e3e72b656206ed4e30bc54ba42f00f25ef
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a691ce811b2f4b11af69b3df285f2b02908b3dc4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Append-Methode, Beispiel für Name-Eigenschaft (VB) Spalten und Tabellen
 Der folgende Code veranschaulicht, wie eine neue Tabelle erstellt wird.  
@@ -82,4 +81,3 @@ End Sub
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-

@@ -2,33 +2,32 @@
 title: Datamining-Programmierungsverfahren | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data mining [Analysis Services], developer's guide
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data mining [Analysis Services], developer's guide
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf88386fe9846ba1fee17f840a11ab635c050d01
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming"></a>Data Mining-Programmierung
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
   Wenn die integrierten Tools und Viewer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Ihren Anforderungen nicht entsprechen, können Sie die Effektivität von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] durch Codieren eigener Erweiterungen erhöhen. Dabei haben Sie zwei Möglichkeiten:  
   
 -   **XMLA**  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

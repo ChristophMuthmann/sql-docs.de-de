@@ -3,7 +3,7 @@ title: STAT-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2ad80d2f42e11834b0872f581913ad64939d25af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c19b5bed54d4bbb27a5aeb235b0e4ab529b9c836
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stat-method"></a>STAT-Methode
 Ruft Informationen zu einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -67,7 +66,7 @@ Long stream.Stat(StatStg, StatFlag)
  *mtime*  
  Gibt den Zeitpunkt der letzten Änderung dieses Speichers, Datenstroms oder Bytearrays an.  
   
- *CTime*  
+ *ctime*  
  Gibt die Erstellungszeit dieses Speichers, Datenstroms oder Bytearrays Array an.  
   
  *atime*  
@@ -78,5 +77,4 @@ Long stream.Stat(StatStg, StatFlag)
  Wenn STATFLAG_NONAME im StatFlag-Parameter nicht angegeben wurde und kein Name für den aktuellen Stream verfügbar ist, wird dieser Wert E_NOTIMPL sein.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

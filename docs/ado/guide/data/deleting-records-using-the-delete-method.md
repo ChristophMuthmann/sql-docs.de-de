@@ -3,7 +3,7 @@ title: "Löschen von Datensätzen, die mit der Delete-Methode | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 23238ea9992931cea607feb3fbd73ddefb9201f3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6975a45ddf15f1a42709fe7c4ab069ba0aa37bea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Löschen von Datensätzen, die mit der Delete-Methode
 Mithilfe der **löschen** Methode kennzeichnet den aktuellen Datensatz oder eine Gruppe von Datensätzen in einer **Recordset** Objekt zum Löschen. Wenn die **Recordset** Objekt lässt keine Datensätze löschen, ein Fehler auftritt. Wenn Sie sich im sofortupdatemodus sind, werden Löschvorgänge sofort in der Datenbank. Wenn ein Datensatz (aufgrund der Datenbank Verletzungen der Integrität, z. B.) wurde erfolgreich gelöscht werden kann, der Datensatz bleibt im Bearbeitungsmodus nach dem Aufruf von **Update.** Dies bedeutet, dass Sie das Update mit abbrechen müssen [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) vor dem Verschieben aus dem aktuellen Datensatz (z. B. [schließen](../../../ado/reference/ado-api/close-method-ado.md), [verschieben](../../../ado/reference/ado-api/move-method-ado.md), oder [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
@@ -77,4 +76,3 @@ Mithilfe der **löschen** Methode kennzeichnet den aktuellen Datensatz oder eine
     End With  
 'EndDeleteGroup  
 ```
-

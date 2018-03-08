@@ -2,31 +2,32 @@
 title: "Handbuch für die Überprüfung und Optimierung nach der Migration | Microsoft-Dokumtenation"
 ms.custom: 
 ms.date: 5/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - post-migration validation and optimization
 - guide, post-migration validation and optimization
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: pelopes
 ms.author: harinid
 manager: 
 ms.workload: Inactive
+ms.openlocfilehash: 3264cab532c77a8e27daff0a3c5c1bd5ed801818
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die Schritte in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die nach der der Migration ausgeführt werden, sind sehr wichtig für das Abgleichen der Genauigkeit und der Vollständigkeit der Daten sowie für das Aufdecken von Leistungsproblemen mit der Arbeitsauslastung.
 
@@ -133,7 +134,7 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
 ### <a name="steps-to-resolve"></a>Schritte zum Beheben
 1.  Wenn die Tabellenwertfunktion mit mehreren Anweisungen nur eine einzelne Anweisung enthält, konvertieren Sie zu einer Inline-Tabellenwertfunktion.
 
-    ```tsql
+    ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
     RETURNS @tblAddress TABLE
     ([Address] VARCHAR(60) NOT NULL)
@@ -149,7 +150,7 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
     ```
     Aktion 
 
-    ```tsql
+    ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
     RETURNS TABLE
     AS
@@ -170,4 +171,3 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
 [Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 1)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
 [Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 2)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
 [Zwischenspeichern und Wiederverwenden von Ausführungsplänen](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
-

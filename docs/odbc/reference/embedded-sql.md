@@ -3,10 +3,12 @@ title: Embedded SQL | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db7c9b02f885c09df1eccbdc27ef2fd895168848
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7e27c80832143ff9907878ffc35c9479ce39ce1e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 Das erste Verfahren für das Senden von SQL-Anweisungen an das DBMS eingebettet ist SQL. Da SQL keine Variablen und die Control-of-Flow-Anweisungen verwendet werden, wird dies häufig als eine Datenbanksprache verwendet, die in einer konventionellen Programmiersprache, z. B. C# oder COBOL geschriebenes Programm hinzugefügt werden können. Dies ist eine zentrale Vorstellung von embedded SQL: Platzieren von SQL-Anweisungen in einem Programm auf einem Host Programmiersprache geschrieben. Nur kurz, werden die folgenden Techniken zum Einbetten von SQL-Anweisungen in einer Hostsprache verwendet:  
@@ -43,11 +44,10 @@ Das erste Verfahren für das Senden von SQL-Anweisungen an das DBMS eingebettet 
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Embedded SQL-Beispiel](../../odbc/reference/embedded-sql-example.md)  
+-   [Embedded SQL – Beispiel](../../odbc/reference/embedded-sql-example.md)  
   
 -   [Kompilieren eines eingebetteten SQL-Programms](../../odbc/reference/compiling-an-embedded-sql-program.md)  
   
--   [Statische SQL](../../odbc/reference/static-sql.md)  
+-   [Statische SQL-Anweisungen](../../odbc/reference/static-sql.md)  
   
--   [Dynamische SQL-Anweisungen](../../odbc/reference/dynamic-sql.md)
-
+-   [Dynamisches SQL](../../odbc/reference/dynamic-sql.md)

@@ -2,31 +2,32 @@
 title: Konfigurieren von vordefinierten Replikationswarnungen (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - alerts [SQL Server replication]
 - predefined replication alerts [SQL Server replication]
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdd1352c4f7f6c62c8adfc5fcf9b2932568c12d1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a88d254d198f88a04ad99f987d4641abc575505d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Konfigurieren von vordefinierten Replikationswarnungen (SQL Server Management Studio)
-  Die Replikation bietet die folgenden vordefinierten Warnungen, die für das Reagieren auf die folgenden Replikationsereignisse konfiguriert werden können:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Replikation bietet die folgenden vordefinierten Warnungen, die für die Reaktion auf die folgenden Replikationsereignisse konfiguriert werden können:  
   
 -   **Replikation: Der Agent war erfolgreich.**  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Klicken Sie mit der rechten Maustaste auf eine Replikationswarnung, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung <AlertName>** die gewünschten Optionen fest:  
+4.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung AlertName>** die gewünschten Optionen fest:  
   
     -   Klicken Sie auf der Seite **Allgemein** auf **Aktivieren**, und geben Sie an, für welche Datenbank die Warnung gelten soll.  
   
@@ -88,8 +89,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Klicken Sie auf **Schließen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Warnungen für Replikations-Agentereignisse](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
   
   
-

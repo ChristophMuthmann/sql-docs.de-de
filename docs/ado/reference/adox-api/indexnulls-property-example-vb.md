@@ -3,7 +3,7 @@ title: "Beispiel für IndexNulls-Eigenschaft (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - IndexNulls property [ADOX], Visual Basic example
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d06e784cac696737b5e913ec5bb302a6c976173
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c40a9d773918bde9f71cfe5492c5fbb5fd611c7a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="indexnulls-property-example-vb"></a>Beispiel für IndexNulls-Eigenschaft (VB)
 Dieses Beispiel zeigt die [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) Eigenschaft ein [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code erstellt einen neuen Index und legt den Wert des **IndexNulls** basierend auf Benutzereingaben (aus einem Listenfeld, das mit dem Namen List1). Anschließend wird die **Index** wird angefügt, um die **Mitarbeiter** [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) in der *Northwind* [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md). Die neue **Index** wird angewendet, um eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf der **Mitarbeiter** Tabelle, und die **Recordset** wird geöffnet. Ein neuer Datensatz hinzugefügt wird die **Mitarbeiter** Tabelle mit einer **Null** Wert des indizierten Felds. Gibt an, ob diese neue Datensatz angezeigt wird, hängt davon ab, die Einstellung von der **IndexNulls** Eigenschaft.  
@@ -119,4 +118,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [IndexNulls-Eigenschaft (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
-

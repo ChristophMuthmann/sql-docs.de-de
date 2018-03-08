@@ -1,11 +1,13 @@
 ---
 title: PolyBase-Erweiterungsgruppen | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -15,21 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d297ff12aedfdbdf4e5e50c6656c3d208ecb260d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  Eine eigenständige SQL Server-Instanz mit PolyBase kann bei der Verarbeitung von sehr großen Datasets in Hadoop oder Azure Blob Storage zu einem Leistungsengpass werden. Die PolyBase-Gruppenfunktion ermöglicht Ihnen die Erstellung eines Clusters aus SQL Server-Instanzen, um große Datasets in einer Skalierungsart zu verarbeiten, die zu besseren Abfrageleistungen führt. Diese Datasets stammen aus externen Datenquellen, wie beispielsweise Hadoop oder Azure Blob Storage.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Eine eigenständige SQL Server-Instanz mit PolyBase kann bei der Verarbeitung von sehr großen Datasets in Hadoop oder Azure Blob Storage zu einem Leistungsengpass werden. Die PolyBase-Gruppenfunktion ermöglicht Ihnen die Erstellung eines Clusters aus SQL Server-Instanzen, um große Datasets in einer Skalierungsart zu verarbeiten, die zu besseren Abfrageleistungen führt. Diese Datasets stammen aus externen Datenquellen, wie beispielsweise Hadoop oder Azure Blob Storage.  
   
  Siehe [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) (Erste Schritte mit PolyBase) und [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(PolyBase-Handbuch).  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Der Hauptknoten enthält die SQL Server-Instanz, an die die PolyBase-Abfragen geschickt werden. Jede PolyBase-Gruppe kann nur einen Hauptknoten haben. Ein Hauptknoten ist eine logische Gruppe aus SQL-Datenbankmodul, PolyBase-Modul und PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz.  
   
 ### <a name="compute-node"></a>Computeknoten  
- Ein Computeknoten enthält die SQL Server-Instanz, die bei der Verarbeitung von Hochskalierungsabfragen für externe Daten hilft. Ein Computeknoten ist eine logische Gruppe aus SQL Server und dem PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz. Eine PolyBase-Gruppe kann mehrere Computeknoten umfassen.  
+ Ein Computeknoten enthält die SQL Server-Instanz, die bei der Verarbeitung von Hochskalierungsabfragen für externe Daten hilft. Ein Computeknoten ist eine logische Gruppe aus SQL Server und dem PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz. Eine PolyBase-Gruppe kann mehrere Computeknoten umfassen.  Auf den Hauptknoten und den Computeknoten muss die gleiche Version von SQL Server ausgeführt werden.
   
 ### <a name="distributed-query-processing"></a>Verarbeiten verteilter Abfragen  
  PolyBase-Abfragen werden an den SQL Server auf dem Hauptknoten gesendet. Der Teil der Abfrage, der sich auf externe Tabellen bezieht, wird an das PolyBase-Modul übergeben.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-configure-a-polybase-group"></a>So konfigurieren Sie eine PolyBase-Gruppe  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
   
 -   N Computer in der gleichen Domäne  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="steps"></a>Schritte  
   
-1.  Installieren Sie SQL Server mit PolyBase auf N Computern.  
+1.  Installieren Sie die gleiche Version von SQL Server mit PolyBase auf N Computern.  
   
 2.  Wählen Sie eine SQL Server-Instanz als Hauptknoten aus. Ein Hauptknoten kann nur auf einer Instanz festgelegt werden, die SQL Server Enterprise ausführt.  
   
@@ -138,10 +139,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="next-steps"></a>Nächste Schritte  
  Informationen zur Problembehandlung finden Sie unter [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)   
  [Konfiguration der PolyBase-Konnektivität &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  
   
   
-

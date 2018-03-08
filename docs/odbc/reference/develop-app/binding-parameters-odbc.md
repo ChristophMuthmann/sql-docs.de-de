@@ -3,26 +3,26 @@ title: Binden von Parametern ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- binding parameters [ODBC]
+helpviewer_keywords: binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53c032a38f81b87b596e05f22137c80f5c54853c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-odbc"></a>Binden von Parametern ODBC
 Jeder Parameter in einer SQL­Anweisung muss zugeordnet sein oder *gebunden,* einer Variablen in der Anwendung, bevor die Anweisung ausgeführt wird. Wenn die Anwendung eine Variable auf einen Parameter bindet, wird diese Variable beschrieben – Adresse, C-Datentyp usw. – an den Treiber. Es beschreibt auch die Parameter selbst – SQL-Daten Datentyp, Genauigkeit und So weiter. Der Treiber speichert diese Informationen in der Struktur, die sie für diese Anweisung verwaltet und verwendet die Informationen zum Abrufen des Werts aus der Variablen ein, wenn die Anweisung ausgeführt wird.  
@@ -49,9 +49,8 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
   
 -   [Binden von Parametermarkierungen](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   
--   [Binden von Parametern anhand des Namens (benannten Parametern)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)  
+-   [Binden von Parametern anhand des Namens (benannte Parameter)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)  
   
--   [Parameterbindung Offsets](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
+-   [Offsets der Parameterbindung](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
--   [Beschreibt die Parameter](../../../odbc/reference/develop-app/describing-parameters.md)
-
+-   [Describing Parameters (Beschreiben von Parametern)](../../../odbc/reference/develop-app/describing-parameters.md)

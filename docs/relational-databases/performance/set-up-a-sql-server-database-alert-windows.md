@@ -2,54 +2,54 @@
 title: Einrichten einer SQL Server-Datenbankwarnung (Windows) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alerts [SQL Server], creating
+helpviewer_keywords: alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8eabe827b89c3931523bda848e01471853cbde6b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 447c615f57a71a321a85315cb9de40df5fca8cfc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Einrichten einer SQL Server-Datenbankwarnung (Windows)
-  Sie können mithilfe des Systemmonitors eine Warnung erstellen, die ausgelöst wird, wenn ein Schwellenwert für einen Leistungsindikator des Systemmonitors erreicht wird. Als Reaktion auf die Warnung kann der Systemmonitor eine Anwendung starten, wie z. B. eine benutzerdefinierte Anwendung, die für das Verarbeiten der Warnung geschrieben wurde. Sie können beispielsweise eine Warnung erstellen, die ausgelöst wird, wenn die Anzahl der Deadlocks einen bestimmten Wert überschreitet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können mithilfe des Systemmonitors eine Warnung erstellen, die ausgelöst wird, sobald ein Schwellenwert für einen Leistungsindikator des Systemmonitors erreicht wird. Als Reaktion auf die Warnung kann der Systemmonitor eine Anwendung starten, wie z. B. eine benutzerdefinierte Anwendung, die für das Verarbeiten der Warnung geschrieben wurde. Sie können beispielsweise eine Warnung erstellen, die ausgelöst wird, wenn die Anzahl der Deadlocks einen bestimmten Wert überschreitet. 
   
- Warnungen können auch mit Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent definiert werden. Weitere Informationen finden Sie unter [Warnungen](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+ Warnungen können auch mit Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent definiert werden. Weitere Informationen finden Sie unter [Warnungen](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
   
-### <a name="to-set-up-a-sql-server-database-alert"></a>So richten Sie eine SQL Server-Datenbankwarnung ein  
+## <a name="set-up-a-sql-server-database-alert"></a>Einrichten einer SQL Server-Datenbankwarnung  
   
-1.  Erweitern Sie in der Navigationsstruktur des Fensters Leistung die Option **Leistungsprotokolle und Warnungen**.  
+1. Erweitern Sie in der Navigationsstruktur des Fensters **Leistung** die Option **Leistungsprotokolle und Warnungen**.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Warnungen**, und klicken Sie dann auf **Neue Warnungseinstellungen**.  
+2. Klicken Sie mit der rechten Maustaste auf **Warnungen**, und wählen Sie dann **Neue Warnungseinstellungen** aus.
   
-3.  Geben Sie im Dialogfeld **Neue Warnungseinstellungen** einen Namen für die neue Warnung ein, und klicken Sie dann auf **OK**.  
+3. Geben Sie im Dialogfeld **Neue Warnungseinstellungen** einen Namen für die neue Warnung ein, und wählen Sie dann **OK**.  
   
-4.  Fügen Sie im Dialogfeld für die neue Warnung auf der Registerkarte **Allgemein** einen **Kommentar**hinzu, und klicken Sie auf **Hinzufügen** , um der Warnung einen Leistungsindikator hinzuzufügen.  
+4. Fügen Sie im Dialogfeld für die neue Warnung auf der Registerkarte **Allgemein** einen **Kommentar**hinzu. Wählen Sie **Hinzufügen** aus, um der Warnung einen Leistungsindikator hinzuzufügen.  
   
      Jede Warnung muss mindestens einen Leistungsindikator aufweisen.  
   
-5.  Wählen Sie im Dialogfeld Leistungsindikatoren hinzufügen in der Liste **Leistungsobjekt** ein SQL Server-Objekt aus, und wählen Sie dann in der Liste **Leistungsindikatoren wählen**einen Leistungsindikator aus.  
+5. Wählen Sie im Dialogfeld **Indikatoren hinzufügen** in der Liste **Leistungsobjekt** ein SQL Server-Objekt aus. Wählen Sie in **Indikatoren aus Liste auswählen** einen Indikator aus.  
   
-6.  Klicken Sie auf **Hinzufügen**, um der Warnung den Leistungsindikator hinzuzufügen. Sie können weitere Leistungsindikatoren hinzufügen, oder klicken Sie auf **Schließen** , um zum Dialogfeld für die neue Warnung zurückzukehren.  
+6. Wählen Sie **Hinzufügen** aus, um der Warnung den Leistungsindikator hinzuzufügen. Sie können weitere Leistungsindikatoren hinzufügen, oder wählen Sie **Schließen** aus, um zum Dialogfeld für die neue Warnung zurückzukehren.  
   
-7.  Klicken Sie im Dialogfeld für die neue Warnung in der Liste **Warnung bei Wert** auf **größer als**oder **kleiner als** , und geben Sie dann in das Feld **Limit**einen Schwellenwert ein.  
+7. Wählen Sie im Dialogfeld für die neue Warnung entweder **größer als** oder **kleiner als** in der Liste **Warnung bei folgendem Wert** aus. Geben Sie dann einen Schwellenwert in **Grenzwert** ein.  
   
-     Die Warnung wird generiert, wenn der Wert für den Leistungsindikator größer oder kleiner als der Schwellwert ist (je nachdem, ob Sie auf **größer als** oder **kleiner als**geklickt haben).  
+     Die Warnung wird generiert, wenn der Wert für den Leistungsindikator größer oder kleiner als der Schwellwert ist (je nachdem, ob Sie **größer als** oder **kleiner als** gewählt haben).  
   
-8.  Legen Sie in den Feldern **Daten erfassen alle** die Stichprobenfrequenz fest.  
+8. Legen Sie in den Feldern **Daten erfassen alle** die Stichprobenfrequenz fest.  
   
 9. Legen Sie auf der Registerkarte **Aktion** die Aktionen fest, die jedes Mal ausgeführt werden, wenn die Warnung ausgelöst wird.  
   
@@ -59,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  [Erstellen einer SQL Server-Datenbankwarnung](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)  
   
   
-

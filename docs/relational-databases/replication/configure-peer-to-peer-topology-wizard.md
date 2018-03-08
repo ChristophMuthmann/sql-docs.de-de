@@ -2,29 +2,30 @@
 title: Assistent zum Konfigurieren der Peer-zu-Peer-Topologie | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Configure Peer-to-Peer Topology Wizard
+helpviewer_keywords: Configure Peer-to-Peer Topology Wizard
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b0921055a609351374eb909a5816b34867bff41
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "12"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: bd203d011b2fb45475111081199b8e20b34cdca1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>Assistent zum Konfigurieren der Peer-zu-Peer-Topologie
-  Dieser Abschnitt enthält Informationen zu allen Seiten des Assistenten zum Konfigurieren der Peer-zu-Peer-Topologie.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zu allen Seiten des Assistenten zum Konfigurieren der Peer-zu-Peer-Topologie:  
   
 -   [Veröffentlichung &#40;Peer-to-Peer Replication&#41;](../../relational-databases/replication/publication-peer-to-peer-replication.md)  
   
@@ -36,8 +37,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [Neue Peerinitialisierung &#40;Peer-to-Peer Replication&#41;](../../relational-databases/replication/new-peer-initialization-peer-to-peer-replication.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-zu-Peer-Transaktionsreplikation](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

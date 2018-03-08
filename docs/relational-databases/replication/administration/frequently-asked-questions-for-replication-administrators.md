@@ -2,9 +2,12 @@
 title: "Häufig gestellte Fragen für Replikationsadministratoren | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: 59
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7fd50c53405ab0866e5eca50275531687c7b171
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
-  Die folgenden Fragen und Antworten bieten einen Leitfaden für zahlreiche Aufgaben, die Administratoren von replizierten Datenbanken ausführen müssen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Die folgenden Fragen und Antworten bieten einen Leitfaden für zahlreiche Aufgaben, die Administratoren von replizierten Datenbanken ausführen müssen.  
   
 ## <a name="configuring-replication"></a>Konfigurieren der Replikation  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Die Momentaufnahme wird durch den Momentaufnahme-Agent erstellt. Im Replikationsmonitor können Sie den Status der Momentaufnahmeerstellung auf der Registerkarte **Agents** anzeigen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
--   Die Momentaufnahme wird vom Verteilungs-Agent oder vom Merge-Agent angewendet. Im Replikationsmonitor können Sie den Status der Momentaufnahmeanwendung auf der Seite **Verteilungs-Agent** oder **Merge-Agent** anzeigen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Die Momentaufnahme wird vom Verteilungs-Agent oder vom Merge-Agent angewendet. Im Replikationsmonitor können Sie den Status der Momentaufnahmeanwendung auf der Seite **Verteilungs-Agent** oder **Merge-Agent** anzeigen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>Was geschieht, wenn beim Start des Verteilungs- oder des Merge-Agents der Momentaufnahme-Agent noch nicht abgeschlossen ist?  
  Wenn der Verteilungs-Agent oder der Merge-Agent gleichzeitig mit dem Momentaufnahme-Agent ausgeführt wird, tritt kein Fehler auf. Es ist jedoch Folgendes zu beachten:  
@@ -138,7 +141,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
- Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften - \<***Article***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften\<***Artikel***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Wie können Erteilungen in der Abonnementdatenbank so konfiguriert werden, dass sie mit den Erteilungen in der Veröffentlichungsdatenbank übereinstimmen?  
  Bei der Replikation werden GRANT-Anweisungen standardmäßig nicht für die Abonnementdatenbank ausgeführt. Wenn die Berechtigungen für die Abonnementdatenbank mit denen für die Veröffentlichungsdatenbank übereinstimmen sollen, verwenden Sie eine der folgenden Methoden:  
@@ -233,9 +236,8 @@ ms.lasthandoff: 08/03/2017
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>Ist die Replikation in Verbindung mit dem Cluster funktionsfähig?  
  Ja. Da alle Daten auf einem Datenträgersatz im Cluster gespeichert sind, sind keine besonderen Überlegungen erforderlich.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   
-

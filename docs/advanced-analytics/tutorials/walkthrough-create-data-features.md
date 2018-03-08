@@ -2,31 +2,32 @@
 title: Erstellen von Data-Features, die mit R und SQL (Exemplarische Vorgehensweise) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 21
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 4f3f5463e6a0117780add65feb9916ff78dad68d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Erstellen von Data-Features, die mit R und SQL (Exemplarische Vorgehensweise)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Data Engineering ist ein wichtiger Teil des maschinellen Lernens. Daten erfordern oft Transformation aus, bevor Sie es zur vorhersagemodellierung verwenden können. Wenn die Daten nicht über die Features verfügen, die Sie benötigen, können Sie diese aus vorhandenen Werten erstellen.
 
@@ -35,7 +36,7 @@ Sie möchten für diesen Modellierungstask möglicherweise lieber die Entfernung
 In diesem Schritt Vergleichen wir zwei verschiedene Installationsmethoden für eine Funktion mit Daten zu erstellen:
 
 - Verwenden eine benutzerdefinierte R-Funktion
-- Verwenden in eine benutzerdefinierte T-SQL-Funktion[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- Verwenden in eine benutzerdefinierte T-SQL-Funktion [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 Das Ziel ist es zum Erstellen eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Satz von Daten, die die ursprünglichen Spalten und die neue numerische Funktion enthält *Direct_distance*.
 
@@ -250,5 +251,4 @@ Die Zeiten variieren beträchtlich, je nach Geschwindigkeit des Netzwerks ab, un
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
 [Anzeigen und Zusammenfassen von Daten mithilfe von R](walkthrough-view-and-summarize-data-using-r.md)
-
 

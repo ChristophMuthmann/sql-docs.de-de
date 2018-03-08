@@ -2,28 +2,29 @@
 title: Datenbankmodul (Fehler und Ereignisse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78b8df4b3bc143c06b2876856dcbd5f26711a3d7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e5ebba9bfa6cdbf6bf0c6c2416227a30c6605df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="database-engine-events-and-errors"></a>Datenbankmodul (Fehler und Ereignisse)
-  Dieses Thema enthält Informationen zu Fehlern und Ereignissen für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Informationen zu Fehlern und Ereignissen für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlegendes zu Datenbankmodulfehlern](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
@@ -33,4 +34,3 @@ ms.lasthandoff: 06/22/2017
  Erläutert die Systemfehlermeldungen sowie die möglichen Ursachen und die Maßnahmen, die Sie ergreifen können.  
   
   
-

@@ -1,31 +1,33 @@
 ---
-title: Catalog. create_environment (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.create_environment (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 588728b6f86090e5b8f492ba3a117e0ccd47132e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 87099d08212705034db52a030e2cb1012b23c1a8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt eine Umgebung, in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Erstellt eine Umgebung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,20 +38,20 @@ catalog.create_environment [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@folder_name =] *Ordnername*  
- Der Name des Ordners an die Umgebung enthalten. Der *folder_name* ist **nvarchar(128)**.  
+ [@folder_name =] *folder_name*  
+ Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [@environment_name =] *Environment_name*  
+ [@environment_name =] *environment_name*  
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
   
- [@environment_description=] *Environment_description*  
+ [@environment_description=] *environment_description*  
  Eine optionale Beschreibung der Umgebung. Der *environment_description* ist **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -69,8 +71,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   Im angegebenen Ordner ist bereits eine Umgebung mit dem gleichen Namen vorhanden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Umgebungsname muss innerhalb des Ordners eindeutig sein.  
   
   
-

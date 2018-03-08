@@ -2,32 +2,30 @@
 title: Definieren von Cubeattributeigenschaften | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], defining
+helpviewer_keywords: cubes [Analysis Services], defining
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b87146458e6aee0cac066078f1d0dfb302f186d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe36e6ba9ff002706260e2e195adb292ba19b085
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-cube-attribute-properties"></a>Definieren von Cubeattributeigenschaften
-  Durch Cubeattributeigenschaften können Sie eindeutige Einstellungen für Dimensionsattribute in Cubedimensionen angeben, die auf derselben Datenbankdimension basieren. In der folgenden Tabelle werden die Eigenschaften eines Cubeattributs beschrieben.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Durch cubeattributeigenschaften können Sie eindeutige Einstellungen für Dimensionsattribute in Cubedimensionen basierend auf derselben Datenbankdimension angeben. In der folgenden Tabelle werden die Eigenschaften eines Cubeattributs beschrieben.  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/01/2017
  [Definieren von Cubehierarchieeigenschaften](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   
   
-

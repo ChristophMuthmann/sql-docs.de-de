@@ -1,13 +1,14 @@
 ---
-title: Berichtsentwurfsansicht (Berichts-Generator) | Microsoft Docs
+title: "Entwurfsansicht für Berichte (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,21 +23,21 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: c5b5bc4bfaac7322b902cc4ea941c64c6b58f4f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Fenster des Berichts-Generators ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten paginierten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Das Menüband und die Bereiche befinden sind um die Entwurfsoberfläche angeordnet. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Dieser Artikel erklärt die Bereiche, die Sie zum Hinzufügen, Auswählen und Organisieren Ihrer Berichtsressoucen und zum Verändern der Berichtselementeigenschaften verwenden.  
   
- ![Berichtsentwurfsansicht: Builder](../../reporting-services/report-builder/media/ssrb-designview.png "Berichts-Generator-Entwurfsansicht")  
+ ![Report Builder Design View](../../reporting-services/report-builder/media/ssrb-designview.png "Report Builder Design View")  
   
 1.  Menüband  
   
@@ -73,13 +74,13 @@ ms.lasthandoff: 08/09/2017
   
 -   Ändern Sie die Eigenschaften von Berichtselementen, indem Sie mit der rechten Maustaste auf die Elemente klicken und anschließend auf **Eigenschaften**klicken.  
   
- Informationen zum Bearbeiten von Elementen auf der Entwurfsoberfläche über die Tastatur finden Sie unter [Tastenkombinationen &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ Informationen zum Bearbeiten von Elementen auf der Entwurfsoberfläche über die Tastatur finden Sie unter [Tastenkombinationen (Berichts-Generator)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md).  
   
 ### <a name="design-surface-size-and-print-area"></a>Entwurfsoberflächengröße und Druckbereich  
  Die Größe der Entwurfsoberfläche kann sich von der Größe des Druckbereichs unterscheiden, den Sie für das Drucken des Berichts angeben. Wenn Sie die Größe der Entwurfsoberfläche ändern, ändert sich der Druckbereich des Berichts dadurch nicht. Unabhängig von der Größe, die Sie für den Druckbereich des Berichts festlegen, ändert sich die Größe des vollständigen Entwurfsbereichs nicht. Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!TIP]  
->  Aktivieren Sie auf der Registerkarte **Ansicht** das Kontrollkästchen **Lineal** , um das Lineal anzuzeigen.  
+>  Aktivieren Sie auf der Registerkarte **Ansicht** das Kontrollkästchen **Lineal**, um das Lineal anzuzeigen.  
   
   
 ##  <a name="ReptDataPane"></a> The Report Data Pane  
@@ -92,7 +93,7 @@ ms.lasthandoff: 08/09/2017
   
  Sie können auch integrierte Felder vom Berichtsdatenbereich in die Berichtsentwurfsoberfläche ziehen. Beim Rendern enthalten diese Felder Informationen zum Bericht, z. B. Berichtsname, Gesamtanzahl von Seiten im Bericht und aktuelle Seitennummer.  
   
- Einige Elemente werden dem Berichtsdatenbereich automatisch hinzugefügt, wenn Sie der Berichtsentwurfsoberfläche etwas hinzufügen. Wenn Sie z. B. ein Berichtsteil aus dem Berichtsteilkatalog hinzufügen und der Berichtsteil ein Datenbereich ist, wird das Dataset dem Berichtsdatenbereich automatisch hinzugefügt. Weitere Informationen finden Sie unter [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md). Wenn Sie ein Bild in den Bericht einbetten, wird es dem Ordner "Bilder" im Berichtsdatenbereich hinzugefügt.  
+ Einige Elemente werden dem Berichtsdatenbereich automatisch hinzugefügt, wenn Sie der Berichtsentwurfsoberfläche etwas hinzufügen. Wenn Sie z. B. ein Berichtsteil aus dem Berichtsteilkatalog hinzufügen und der Berichtsteil ein Datenbereich ist, wird das Dataset dem Berichtsdatenbereich automatisch hinzugefügt. Weitere Informationen finden Sie unter [Berichtsteile und Datasets](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md). Wenn Sie ein Bild in den Bericht einbetten, wird es dem Ordner "Bilder" im Berichtsdatenbereich hinzugefügt.  
   
 > [!NOTE]  
 >  Mit der Schaltfläche **Neu** können Sie dem Berichtsdatenbereich ein neues Element hinzufügen. Sie können dem Bericht mehrere Datasets aus derselben Datenquelle oder anderen Datenquellen hinzufügen. Außerdem können Sie dem Berichtsserver freigegebene Datasets hinzufügen. Klicken Sie mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**, um ein neues Dataset aus derselben Datenquelle hinzuzufügen.  
@@ -152,7 +153,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="GroupPane"></a> Gruppierung (Bereich in Berichts-Generator)  
  Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich enthält zwei Bereiche: Zeilengruppen und Spaltengruppen. Wenn Sie einen Datenbereich wählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs in Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter den übergeordneten Gruppen angezeigt.  
   
- ![Berichts-Generator Zeilengruppen](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Berichts-Generator-Zeilengruppen")  
+ ![Berichts-Generator-Zeilengruppen](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Report Builder Row Groups")  
   
  Sie können Gruppen erstellen, indem Sie Felder mit Drag and Drop aus dem Berichtsdatenbereich ziehen und auf der Entwurfsoberfläche oder im Gruppierungsbereich einfügen. Sie können übergeordnete, angrenzende und untergeordnete Gruppen im Gruppierungsbereich hinzufügen, Gruppeneigenschaften ändern und Gruppen löschen.  
   
@@ -169,13 +170,13 @@ ms.lasthandoff: 08/09/2017
  Erfahren Sie mehr zu [Anzeigen einer Berichtsvorschau in Berichts-Generator](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Ausführen eines Berichts mit Parametern  
- Wenn Sie den Bericht ausführen, wird er automatisch verarbeitet. Wenn der Bericht Parameter enthält, müssen alle Parameter Standardwerte haben, bevor der Bericht automatisch ausgeführt werden kann. Wenn ein Parameter keinen Standardwert hat, müssen Sie bei der Ausführung des Berichts einen Wert für den Parameter wählen und dann auf **Bericht anzeigen** auf der Registerkarte Ausführen klicken. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Wenn Sie den Bericht ausführen, wird er automatisch verarbeitet. Wenn der Bericht Parameter enthält, müssen alle Parameter Standardwerte haben, bevor der Bericht automatisch ausgeführt werden kann. Wenn ein Parameter keinen Standardwert hat, müssen Sie bei der Ausführung des Berichts einen Wert für den Parameter wählen und dann auf **Bericht anzeigen** auf der Registerkarte Ausführen klicken. Weitere Informationen finden Sie unter [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Seitenansicht  
  Wenn Sie im Ausführungsmodus einen Bericht in der Vorschau anzeigen, entspricht er einem in HTML erstellten Bericht. Die Vorschau ist kein HTML-Code, das Layout und die Paginierung des Berichts gleichen jedoch der HTML-Ausgabe. Sie können die Ansicht ändern und einen gedruckten Bericht darstellen, indem Sie zur Seitenansicht wechseln. Klicken Sie auf der Registerkarte **Ausführen** auf die Schaltfläche **Seitenansicht** . Der Bericht wird so angezeigt, wie er auf einer physischen Seite dargestellt werde würde. Diese Ansicht gleicht der Ausgabe durch die Bild- und PDF-Renderingerweiterung. Die Seitenansicht ist keine Bild- oder PDF-Datei, das Layout und die Paginierung des Berichts ähneln jedoch der Ausgabe in diesen Formaten.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

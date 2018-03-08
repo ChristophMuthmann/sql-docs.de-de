@@ -2,9 +2,12 @@
 title: "Transaktionsprotokollspeicherplatz für Indexvorgänge | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - disk space [SQL Server], transaction logs
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7fcf3131776066e183f0b6f031dce00d143bdeca
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Transaktionsprotokollspeicherplatz für Indexvorgänge
-  Umfangreiche Indexvorgänge können riesige Datenmengen erzeugen, die zu einem schnellen Füllen des Transaktionsprotokolls führen können. Um sicherzustellen, dass ein Rollback des Indexvorgangs möglich ist, kann das Transaktionsprotokoll nicht abgeschnitten werden, bis der Indexvorgang abgeschlossen ist. Die Sicherung des Protokolls während des Indexvorgangs ist jedoch möglich. Deshalb muss das Transaktionsprotokoll über ausreichend Speicherplatz verfügen, um sowohl die Transaktionen des Indexvorgangs als auch alle gleichzeitigen Benutzertransaktionen für die Dauer des Indexvorgangs aufnehmen zu können. Das gilt sowohl für Offline- als auch für Onlineindexvorgänge. Da während eines Offlineindexvorgangs der Zugriff auf die zugrunde liegenden Tabellen nicht möglich ist, treten dabei evtl. nur wenige Benutzertransaktionen auf, und das Protokoll wächst nicht so schnell an. Bei Onlineindexvorgängen erfolgt jedoch keinerlei Einschränkung von gleichzeitigen Benutzeraktivitäten. Daher können umfangreiche Onlineindexvorgänge in Kombination mit zahlreichen gleichzeitigen Benutzertransaktionen zu einem kontinuierlichen Anwachsen des Transaktionsprotokolls führen, ohne dass es eine Möglichkeit zum Abschneiden des Protokolls gibt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Umfangreiche Indexvorgänge können riesige Datenmengen erzeugen, die zu einem schnellen Füllen des Transaktionsprotokolls führen können. Um sicherzustellen, dass ein Rollback des Indexvorgangs möglich ist, kann das Transaktionsprotokoll nicht abgeschnitten werden, bis der Indexvorgang abgeschlossen ist. Die Sicherung des Protokolls während des Indexvorgangs ist jedoch möglich. Deshalb muss das Transaktionsprotokoll über ausreichend Speicherplatz verfügen, um sowohl die Transaktionen des Indexvorgangs als auch alle gleichzeitigen Benutzertransaktionen für die Dauer des Indexvorgangs aufnehmen zu können. Das gilt sowohl für Offline- als auch für Onlineindexvorgänge. Da während eines Offlineindexvorgangs der Zugriff auf die zugrunde liegenden Tabellen nicht möglich ist, treten dabei evtl. nur wenige Benutzertransaktionen auf, und das Protokoll wächst nicht so schnell an. Bei Onlineindexvorgängen erfolgt jedoch keinerlei Einschränkung von gleichzeitigen Benutzeraktivitäten. Daher können umfangreiche Onlineindexvorgänge in Kombination mit zahlreichen gleichzeitigen Benutzertransaktionen zu einem kontinuierlichen Anwachsen des Transaktionsprotokolls führen, ohne dass es eine Möglichkeit zum Abschneiden des Protokolls gibt.  
   
 ## <a name="recommendations"></a>Empfehlungen  
  Beim Ausführen umfangreicher Indexvorgänge sollten Sie die folgenden Empfehlungen beachten:  
@@ -51,4 +54,3 @@ ms.lasthandoff: 06/22/2017
  [Beispiel für den zum Speichern eines Indexes belegten Speicherplatz](../../relational-databases/indexes/index-disk-space-example.md)  
   
   
-

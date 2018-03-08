@@ -2,28 +2,30 @@
 title: "Dauerhaftigkeit für speicheroptimierte Tabellen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: 28
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67987be025c453a2b1c5629c44314834716c7ec6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 206337e355352ce6b1f1a13cd36f90f18937de91
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] bietet vollständige Dauerhaftigkeit für speicheroptimierte Tabellen. Wenn für eine Transaktion, durch die eine speicheroptimierte Tabelle geändert wurde, ein Commit ausgeführt wird, gewährleistet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (genauso wie bei datenträgerbasierten Tabellen), dass die Änderungen dauerhaft sind (bei einem Neustart der Datenbank erhalten bleiben), vorausgesetzt der zugrunde liegende Speicher ist verfügbar. Die Dauerhaftigkeit basiert auf zwei Hauptmechanismen: der Transaktionsprotokollierung und der dauerhaften Speicherung von Datenänderungen auf einem Datenträger.  
   
@@ -102,19 +104,18 @@ ms.lasthandoff: 06/22/2017
   
 |Angrenzende CFP-Quelldateien (% voll)|Zusammenführungsauswahl|  
 |-------------------------------------------|---------------------|  
-|CFP0 (30 %), CFP1 (50 %), CFP2 (50 %), CFP3 (90 %)|(CFP0, CFP1)<br /><br /> CFP2 wird nicht ausgewählt, da andernfalls die resultierende Datendatei größer als 100 % der idealen Größe wird.|  
+|CFP0 (30 %), CFP1 (50 %), CFP2 (50 %), CFP3 (90 %)|(CFP0, CFP1)<br /><br /> CFP2 wird nicht ausgewählt, da andernfalls die resultierende Datendatei größer als 100 % der idealen Größe wird.|  
 |CFP0 (30 %), CFP1 (20 %), CFP2 (50 %), CFP3 (10 %)|(CFP0, CFP1, CFP2). Dateien werden von links nach rechts ausgewählt.<br /><br /> CTP3 wird nicht ausgewählt, da andernfalls die resultierende Datendatei größer als 100 % der idealen Größe wird.|  
 |CFP0 (80 %), CFP1 (30 %), CFP2 (10 %), CFP3 (40 %)|(CFP1, CFP2, CFP3). Dateien werden von links nach rechts ausgewählt.<br /><br /> CFP0 wird übersprungen, da die resultierende Datendatei bei Kombination mit CFP1 größer als 100 % der idealen Größe wird.|  
   
- Nicht alle CFPs mit verfügbarem Speicherplatz kommen für die Zusammenführung infrage. Wenn beispielsweise zwei aufeinanderfolgende CFPs zu 60 % gefüllt sind, kommen sie für eine Zusammenführung nicht infrage, und jedes dieser CFPs weist 40 % nicht genutzten Speicherplatz auf. Im ungünstigsten Fall sind alle CFPs zu 50 % gefüllt, was einer Speicherauslastung von nur 50 % entspricht. Auch wenn die gelöschten Zeilen möglicherweise im Speicher vorhanden sind, da die CFPs für eine Zusammenführung nicht infrage kommen, wurden die gelöschten Zeilen möglicherweise bereits von der In-Memory-Garbage Collection aus dem Arbeitsspeicher entfernt. Die Verwaltung des Speichers und des Arbeitsspeichers erfolgt unabhängig von der Garbage Collection. Der Speicher, der von aktiven CFPs belegt wird (nicht alle CFPs werden aktualisiert), kann doppelt so groß wie bei dauerhaften Tabellen im Arbeitsspeicher ausfallen.  
+ Nicht alle CFPs mit verfügbarem Speicherplatz kommen für die Zusammenführung infrage. Wenn beispielsweise zwei aufeinanderfolgende CFPs zu 60 % gefüllt sind, kommen sie für eine Zusammenführung nicht infrage, und jedes dieser CFPs weist 40 % nicht genutzten Speicherplatz auf. Im ungünstigsten Fall sind alle CFPs zu 50 % gefüllt, was einer Speicherauslastung von nur 50 % entspricht. Auch wenn die gelöschten Zeilen möglicherweise im Speicher vorhanden sind, da die CFPs für eine Zusammenführung nicht infrage kommen, wurden die gelöschten Zeilen möglicherweise bereits von der In-Memory-Garbage Collection aus dem Arbeitsspeicher entfernt. Die Verwaltung des Speichers und des Arbeitsspeichers erfolgt unabhängig von der Garbage Collection. Der Speicher, der von aktiven CFPs belegt wird (nicht alle CFPs werden aktualisiert), kann doppelt so groß wie bei dauerhaften Tabellen im Arbeitsspeicher ausfallen.  
   
 ### <a name="life-cycle-of-a-cfp"></a>Lebenszyklus eines CFP  
- CPFs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. Als Folge der Datenbank-Prüfpunkte und Protokollsicherungen durchlaufen die Dateien die Phasen, und am Ende werden die nicht mehr benötigten Dateien bereinigt. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
+ CFPs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. Als Folge der Datenbank-Prüfpunkte und Protokollsicherungen durchlaufen die Dateien die Phasen, und am Ende werden die nicht mehr benötigten Dateien bereinigt. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
   
  Sie können manuell erzwingen, dass ein Prüfpunkt mit anschließender Protokollsicherung die Garbage Collection beschleunigt. In Produktionsszenarien durchlaufen CFPs aufgrund der automatischen Prüfpunkte und Protokollsicherungen, die im Rahmen der Sicherungsstrategie ausgeführt werden, diese Phasen nahtlos, ohne dass ein manueller Eingriff erforderlich ist. Als Folge des Garbage Collection-Vorgangs weisen Datenbanken mit speicheroptimierten Tabellen gegenüber ihrer Größe im Arbeitsspeicher möglicherweise eine höhere Größe im Speicher auf. Wenn Prüfpunkte und Protokollsicherungen nicht ausgeführt werden, wächst der Speicherplatzbedarf für die Prüfpunktdateien auf dem Datenträger weiter an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
-

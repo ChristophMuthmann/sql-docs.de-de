@@ -2,9 +2,12 @@
 title: "Pakete für erweiterte Ereignisse von SQL Server | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -14,19 +17,19 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-caps.latest.revision: 21
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ab1e592975fce7d5439d33df265bb8ce5bf05c45
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Ein Paket ist ein Container für Objekte für erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es gibt drei Arten von Paketen für erweiterte Ereignisse, dazu zählen die folgenden:  
   
@@ -220,7 +223,7 @@ where name = 'lock_mode'
   
  Ausgehend von dieser Tabelle wird als Beispiel eine Spalte mit dem Namen mode und dem Wert 5 angenommen. Die Tabelle gibt an, dass 5 zu X zugeordnet wird. Das bedeutet, dass der Sperrentyp Exclusive ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Modul für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
  [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  

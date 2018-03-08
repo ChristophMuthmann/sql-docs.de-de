@@ -3,7 +3,7 @@ title: Shape-Befehle im Allgemeinen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fb85b1f835f494e7f86e69d25ed225ce4c605e55
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 245f842883ec0be1ac92ad58ea75b4cdef7d9cb3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-commands-in-general"></a>Shape-Befehle im Allgemeinen
 Datenstrukturierung definiert die Spalten von einer geformten **Recordset**, die Beziehungen zwischen den Entitäten dargestellt durch die Spalten und die Art und Weise, in dem die **Recordset** mit Daten aufgefüllt wird.  
@@ -64,4 +63,3 @@ Datenstrukturierung definiert die Spalten von einer geformten **Recordset**, die
 -   [Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   
 -   [Ausgeben von Befehlen an den zugrunde liegenden Datenanbieter](../../../ado/guide/data/issuing-commands-to-the-underlying-data-provider.md)
-

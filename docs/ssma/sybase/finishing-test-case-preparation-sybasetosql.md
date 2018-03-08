@@ -3,29 +3,29 @@ title: "Abschließen des Testfalls Vorbereitung (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Test Case Settings
+helpviewer_keywords: Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7568e7a78e0129204a23797cbc589139816ac13e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Testfall zur Vorbereitung (SybaseToSQL) beenden
 Letzte Seite des Assistenten zeigt den Testfall Beschreibung und die Informationen zu Objekten, die am Test Beteiligter. Darüber hinaus können auf dieser Seite des Tests Ausführungsoptionen festlegen.  
@@ -71,4 +71,3 @@ Klicken Sie auf die **Fertig stellen** Schaltfläche zum Speichern des vorbereit
 [Ausführen von Testfällen &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

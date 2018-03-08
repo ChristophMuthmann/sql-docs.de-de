@@ -2,11 +2,13 @@
 title: "Assistent für neue Veröffentlichung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,22 +39,21 @@ f1_keywords:
 - sql13.swb.dbpublishingwizard.choosedbroles.f1
 - sql13.swb.dbpublishingwizard.chooseudtype.f1
 - sql13.swb.dbpublishingwizard.chooseschemas.f1
-helpviewer_keywords:
-- New Publication Wizard
+helpviewer_keywords: New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 434497c7eaec0ffef8dfca16752e3919753d963d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "18"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1be53dfe84e9731339dabdc68c67cf9d161fae69
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="new-publication-wizard"></a>Assistent für neue Veröffentlichung
-  Dieser Abschnitt enthält Informationen zu den folgenden Seiten des Assistenten für neue Veröffentlichung:  
+# <a name="new-publication-wizard"></a>New Publication Wizard
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zu den folgenden Seiten des Assistenten für neue Veröffentlichung:  
   
 -   [Oracle-Verleger](../../relational-databases/replication/oracle-publisher.md)  
   
@@ -80,9 +81,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [Momentaufnahme-Agent &#40;New Publication Wizard&#41;](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Eigenschaftenreferenz &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Eigenschaftenreferenz &#40;Replikation&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

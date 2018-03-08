@@ -3,8 +3,11 @@ title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3799bc24ab3cfa9f0d65c961f69b72210c6cccef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema enthält die ALTER DATABASE-Syntax für die Einstellung [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Optionen für eine sekundäre Datenbank. Es ist nur eine SET HADR-Option pro ALTER DATABASE-Anweisung zulässig. Diese Optionen werden nur auf sekundären Replikaten unterstützt.  
   
@@ -62,10 +64,10 @@ ALTER DATABASE database_name
  SET HADR  
  Führt den angegebenen Befehl [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Befehl in der angegebenen Datenbank aus.  
   
- {AVAILABILITY GROUP  **=**  *Gruppenname* | {OFF}  
+ {AVAILABILITY GROUP **= *** Gruppenname* | {OFF}  
  Verknüpft die Verfügbarkeitsdatenbank mit der angegebenen Verfügbarkeitsgruppe oder entfernt sie hieraus.  
   
- *Gruppenname*  
+ *group_name*  
  Verknüpft die angegebene Datenbank auf dem sekundären Replikat, das von der Serverinstanz gehostet wird, auf der Sie den Befehl ausführen, mit der durch group_name angegebenen Verfügbarkeitsgruppe.  
   
  Für diesen Vorgang müssen folgende Voraussetzungen gegeben sein:  
@@ -81,7 +83,7 @@ ALTER DATABASE database_name
     > [!NOTE]  
     >  Um eine Datenbank mit der verfügbarkeitsgruppe hinzuzufügen, eine Verbindung mit der Serverinstanz, die das primäre Replikat hostet, und verwenden Sie die [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*Gruppenname* Hinzufügen von Datenbanken *Database_name*  Anweisung.  
   
- Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
+ Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  OFF  
  Entfernt die angegebene sekundäre Datenbank aus der Verfügbarkeitsgruppe.  
@@ -149,8 +151,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Problembehandlung bei AlwaysOn-Verfügbarkeitsgruppenkonfiguration &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   
-

@@ -2,30 +2,30 @@
 title: Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- log shipping [SQL Server], upgrading
+helpviewer_keywords: log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
-  Beim Aktualisieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversandkonfiguration auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Update wird Ihre Notfallwiederherstellungslösung für den Protokollversand beibehalten, wenn Sie Ihre Protokollversandserver in der richtigen Reihenfolge aktualisieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beim Aktualisieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokollversandkonfiguration auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Update wird Ihre Notfallwiederherstellungslösung für den Protokollversand beibehalten, wenn Sie Ihre Protokollversandserver in der richtigen Reihenfolge aktualisieren.  
   
 > [!NOTE]  
 >  Die[Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md) wurde in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]eingeführt. In einer aktualisierten Protokollversandkonfiguration wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** bestimmt, ob die Transaktionsprotokoll-Sicherungsdateien mithilfe der Sicherungskomprimierung komprimiert werden. Das Verhalten für die Sicherungskomprimierung der Protokollsicherung kann für jede Protokollversandkonfiguration festgelegt werden. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt.  
@@ -89,9 +89,9 @@ ms.lasthandoff: 08/02/2017
  Da der Protokollversand in erster Linie eine Notfallwiederherstellungslösung ist, wird im einfachsten und gängigsten Szenario ein direktes Upgrade der primären Instanz durchgeführt, wobei die Datenbank während dieses Upgrades nicht verfügbar ist. Sobald der Server aktualisiert wurde, wird die Datenbank automatisch online geschaltet. Daraufhin wird sie automatisch aktualisiert. Nachdem die Datenbank aktualisiert wurde, werden die Protokollversandaufträge fortgesetzt.  
   
 > [!NOTE]  
->  Der Protokollversand unterstützt auch die Option zum [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) sowie zum [Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Da der Protokollversand heute jedoch nur noch selten als hoch verfügbare Lösung konfiguriert wird (neuere Optionen sind deutlich stabiler), wird die Downtime durch ein Failover im Allgemeinen nicht minimiert, da Systemdatenbank-Objekte nicht synchronisiert werden. Außerdem ist es äußerst aufwändig, Clients eine problemlose Ermittlung und Verbindung mit einer höher gestuften sekundären Instanz zu ermöglichen.  
+>  Der Protokollversand unterstützt auch die Option zum [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) sowie zum [Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Da der Protokollversand heute jedoch nur noch selten als Hochverfügbarkeitslösung konfiguriert wird (neuere Optionen sind deutlich stabiler), wird die Downtime durch ein Failover im Allgemeinen nicht minimiert, da Systemdatenbank-Objekte nicht synchronisiert werden. Außerdem ist es äußerst aufwändig, Clients eine problemlose Ermittlung und Verbindung mit einer höher gestuften sekundären Instanz zu ermöglichen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Konfigurieren des Protokollversands (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
@@ -99,4 +99,3 @@ ms.lasthandoff: 08/02/2017
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

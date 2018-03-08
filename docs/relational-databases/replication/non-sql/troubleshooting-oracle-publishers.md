@@ -2,30 +2,32 @@
 title: Problembehandlung bei Oracle-Verlegern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: 62
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f6b52a9fc10c8dae7a0b01a6a615076bcc257104
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "62"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
-  In diesem Thema wird eine Reihe von Problemen aufgeführt, die bei der Konfiguration und Verwendung von Oracle-Verlegern auftreten können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird eine Reihe von Problemen aufgeführt, die bei der Konfiguration und Verwendung von Oracle-Verlegern auftreten können.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Fehler bezüglich Oracle-Client- und Netzwerksoftware  
  Dem Konto, unter dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem Verteiler ausgeführt wird, müssen Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt werden, in dem die Oracle-Clientnetzwerksoftware installiert ist. Wenn diese Berechtigungen nicht erteilt worden sind oder die Oracle-Clientkomponenten nicht ordnungsgemäß installiert sind, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
@@ -249,8 +251,8 @@ ms.lasthandoff: 06/22/2017
   
 -   Führen Sie **sp_dropdistpublisher**aus. Weitere Informationen finden Sie unter [Sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

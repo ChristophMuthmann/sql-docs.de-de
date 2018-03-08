@@ -3,26 +3,26 @@ title: ODBCCONF. EXE-DATEI | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- odbcconf.exe
+helpviewer_keywords: odbcconf.exe
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2f22cf640a790f120701eda8424fb4c19edc7c49
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db8ff09a2b77f51c97ab73d6d994e1e1b4dce2a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbcconfexe"></a>ODBCCONF. EXE-DATEI
 ODBCCONF.exe ist ein Befehlszeilentool, das Sie zum Konfigurieren der ODBC-Treiber und Namen von Datenquellen ermöglicht.  
@@ -72,4 +72,3 @@ ODBCCONF [switches] action
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Open Database Connectivity (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)
-

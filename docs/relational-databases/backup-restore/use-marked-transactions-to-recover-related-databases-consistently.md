@@ -2,11 +2,13 @@
 title: Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +22,19 @@ helpviewer_keywords:
 - BEGIN TRAN...WITH MARK statement
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 937eb729c5252b09a82576805102d3cdcbceeb21
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c294b6643456930d2198a3fc80734facf95430c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das Transaktionsprotokoll bis zur Markierung in der markierten Transaktion mit dem Namen `ListPriceUpdate`wiederhergestellt.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -133,7 +135,7 @@ RESTORE LOG AdventureWorks
   
  Angenommen, eine partitionierte Datenbank ist in mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden. In jeder Instanz gibt es eine Datenbank namens `coyote`. Erstellen Sie zuerst in allen Datenbanken eine gespeicherte Prozedur, z. B. `sp_SetMark`.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -145,7 +147,7 @@ GO
   
  Erstellen Sie anschließend die gespeicherte Prozedur `sp_MarkAll` , in der eine Transaktion enthalten ist, mit der in jeder Datenbank eine Markierung platziert wird. `sp_MarkAll` kann von jeder Instanz aus ausgeführt werden.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  
@@ -179,7 +181,7 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>Wiederherstellen bis zu einer markierten Transaktion  
  Informationen zum Wiederherstellen einer Datenbank, die markierte Transaktionen enthält, bis zu einer Markierung oder kurz vor einer bestimmten Markierung finden Sie unter [Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   

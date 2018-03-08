@@ -1,36 +1,33 @@
 ---
-title: 'DatabaseServerName-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'DatabaseServerName-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseServerName Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseServerName Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseServerName property
+helpviewer_keywords: DatabaseServerName property
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3d1aa08bbef7d0baeb0962ff3f3352fa954aa60
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bc74caa73810fd582513fa9542089ffad36ab214
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting Eigenschaft - Wert "DatabaseServerName"
+# <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting-Eigenschaft: DatabaseServerName
   Gibt den Namen des Servers an, auf dem die Berichtsserver-Datenbank installiert ist Lese-/Schreibzugriff.  
   
 ## <a name="syntax"></a>Syntax  
@@ -52,8 +49,7 @@ public string DatabaseServerName;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

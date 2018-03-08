@@ -3,7 +3,7 @@ title: ADOX-Codebeispiele | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0da086c625fcb54c2fbb62bc528d1dcf8f00d76
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples"></a>ADOX-Codebeispiele
 Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden von ADOX-Objekte, Methoden, Eigenschaften und Ereignisse.  
@@ -55,5 +54,4 @@ Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden von AD
  [Ansichten Append-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Views-Auflistung, CommandText-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Ansichten löschen Methodenbeispiel (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Ansichten aktualisieren Methodenbeispiel (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
-
+ [Views Refresh-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)

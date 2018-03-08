@@ -2,28 +2,30 @@
 title: Query Processing Events Data Columns | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1ef8b812aa362d42d8facd7d4620146ed3f917a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="query-processing-events-data-columns"></a>Abfrageverarbeitungsereignisse – Datenspalten
-  Die Ereigniskategorie "Abfrageverarbeitung" besitzt die folgenden Ereignisklassen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Ereigniskategorie "Abfrageverarbeitung" besitzt die folgenden Ereignisklassen:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
 |------------------|--------------------|---------------------------|  
@@ -547,7 +549,6 @@ ms.lasthandoff: 09/01/2017
 |ServerName|43|8|Name des Servers, der das Ereignis erzeugt.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Abfrageverarbeitung (Ereigniskategorie)](../../analysis-services/trace-events/query-processing-events-category.md)  
+ [Abfrage Verarbeitung Events-Ereigniskategorie](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   
-

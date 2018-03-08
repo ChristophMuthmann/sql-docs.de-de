@@ -2,7 +2,7 @@
 
 # Übersicht
 ## [Neues in Master Data Services (MDS)](what-s-new-in-master-data-services-mds.md)  
-## [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-master-data-services.md)
+## [Neue und aktualisierte Artikel](new-updated-master-data-services.md)
 ## [Erlernen von SQL Server Master Data Services](learn-sql-server-master-data-services.md)  
 ## [SQL Server-Beispiele: Modellbereitstellungspakete (MDS)](sql-server-samples-model-deployment-packages-mds.md)  
 ## [Master Data Services und Data Quality Services-Funktionen, die von den Editionen von SQL Server 2016 unterstützt](master-data-services-and-data-quality-services-features-support.md)  

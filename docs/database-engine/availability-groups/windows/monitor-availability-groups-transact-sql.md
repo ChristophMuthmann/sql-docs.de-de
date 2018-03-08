@@ -2,11 +2,13 @@
 title: "Überwachen von Verfügbarkeitsgruppen (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3eee47f8a0a3a032e9ccf74600769c8f7388bbb1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
-  Zum Überwachen von Verfügbarkeitsgruppen und -replikaten und den zugeordneten Datenbanken mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]stellt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen Satz von Katalogsichten und dynamischen Verwaltungssichten sowie Servereigenschaften bereit. Mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisungen können Sie mithilfe der Sichten Verfügbarkeitsgruppen und ihre Replikate und Datenbanken überwachen. Die für eine bestimmte Verfügbarkeitsgruppe zurückgegebenen Informationen hängen davon ab, ob Sie mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verbunden sind, die das primäre Replikat oder ein sekundäres Replikat hostet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zum Überwachen von Verfügbarkeitsgruppen und -replikaten und den zugeordneten Datenbanken mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] stellt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen Satz von Katalogsichten und dynamischen Verwaltungssichten sowie Servereigenschaften bereit. Mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisungen können Sie mithilfe der Sichten Verfügbarkeitsgruppen und ihre Replikate und Datenbanken überwachen. Die für eine bestimmte Verfügbarkeitsgruppe zurückgegebenen Informationen hängen davon ab, ob Sie mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verbunden sind, die das primäre Replikat oder ein sekundäres Replikat hostet.  
   
 > [!TIP]  
 >  Viele dieser Sichten können mithilfe ihre ID-Spalten verknüpft werden, um Informationen aus mehreren Sichten in einer einzelnen Abfrage zurückzugeben.  
@@ -294,10 +296,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

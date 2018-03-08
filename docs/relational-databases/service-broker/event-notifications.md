@@ -2,9 +2,12 @@
 title: Ereignisbenachrichtigungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 18
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01d42e113fabb39353971749462c144374e470fe
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8590e3177aefa3889743069c8b69b63ec5f93953
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-notifications"></a>Ereignisbenachrichtigungen
-  Mit Ereignisbenachrichtigungen werden Informationen zu Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet. Ereignisbenachrichtigungen werden als Antwort auf eine Vielzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Ereignissen der SQL-Ablaufverfolgung ausgeführt, indem Informationen zu diesen Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Mit Ereignisbenachrichtigungen werden Informationen zu Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet. Ereignisbenachrichtigungen werden als Antwort auf eine Vielzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Ereignissen der SQL-Ablaufverfolgung ausgeführt, indem Informationen zu diesen Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet werden.  
   
  Ereignisbenachrichtigungen können für die folgenden Aufgaben verwendet werden:  
   
@@ -99,7 +103,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Beschreibt, wie für Ereignisbenachrichtigungen, die Nachrichten an eine Service Broker-Instanz auf einem Remoteserver senden, die Dialogsicherheit von [!INCLUDE[ssSB](../../includes/sssb-md.md)] konfiguriert wird.|[Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |Beschreibt, wie Informationen zu Ereignisbenachrichtigungen zurückgegeben werden.|[Abrufen von Informationen zu Ereignisbenachrichtigungen](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)   
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  

@@ -2,29 +2,30 @@
 title: "Leistungsoptimierung für Oracle-Verleger | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Oracle publishing [SQL Server replication], performance tuning
+helpviewer_keywords: Oracle publishing [SQL Server replication], performance tuning
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 43042f93e80be4f9bf7c5044cc11791c614d85f0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 48afc3f5b4123b4a08b4be4ffe248a01dbd10461
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Leistungsoptimierung für Oracle-Verleger
-  Die Oracle-Veröffentlichungsarchitektur ist ähnlich aufgebaut wie diejenige von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Aus diesem Grund sind im ersten Schritt der Leistungsoptimierung der Oracle-Replikation die allgemeinen Optimierungsempfehlungen unter [Enhance General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)zu beachten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Oracle-Veröffentlichungsarchitektur ist ähnlich aufgebaut wie diejenige von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aus diesem Grund sind im ersten Schritt der Leistungsoptimierung der Oracle-Replikation die allgemeinen Optimierungsempfehlungen unter [Enhance General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md) zu beachten.  
   
  Darüber hinaus stehen zwei Optionen für Oracle-Verleger zur Verfügung, die im Zusammenhang mit der Leistung stehen:  
   
@@ -44,8 +45,8 @@ ms.lasthandoff: 06/22/2017
   
  Informationen zum Transaktionssatz-Auftrag finden Sie unter [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

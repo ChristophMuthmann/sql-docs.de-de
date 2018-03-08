@@ -3,29 +3,30 @@ title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9d1a4659deeab00589a09e66d885d7f7005f7a43
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fa9c4e335fddbe4851562f4aada8d55011d99b98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Zeigt die Größe und Anzahl der Zeilen für jede Partition einer Tabelle in eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank.
   
@@ -40,7 +41,7 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ *Database_name* . [ *Schema_name* ]. | *Schema_name* . ] *Table_name*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  Der ein-, zwei- oder dreiteiligen Name der Tabelle angezeigt werden.  Für zwei oder dreiteiligen Tabellennamen, Spaltennamen, der Name müssen in doppelte Anführungszeichen eingeschlossen werden (""). Verwenden Anführungszeichen ein einteiliger Tabellenname ist optional.  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -68,7 +69,6 @@ DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
 ## <a name="see-also"></a>Siehe auch
-[DBCC PDW_SHOWEXECUTIONPLAN &#40; Transact-SQL &#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)  
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
   
-

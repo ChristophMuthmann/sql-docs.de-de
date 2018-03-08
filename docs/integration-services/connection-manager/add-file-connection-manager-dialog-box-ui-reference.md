@@ -1,10 +1,13 @@
 ---
-title: "Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen | Microsoft Docs"
+title: "Referenz zur Benutzeroberfläche des Dialogfelds „Dateiverbindungs-Manager hinzufügen“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d4f3ee30eb310bdf109914dbdfb7dd0b56fb94c7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen
   Mithilfe des Dialogfelds **Dateiverbindungs-Manager hinzufügen** können Sie eine Verbindung zu einer Gruppe von Dateien oder Ordnern definieren.  
@@ -34,11 +36,11 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Die integrierten Tasks und Datenflusskomponenten in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden keinen Verbindungs-Manager für mehrere Dateien. Sie können den Verbindungs-Manager jedoch im Skripttask oder in der Skriptkomponente verwenden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Verwendungstyp**  
  Geben Sie den Dateityp an, der vom Verbindungs-Manager für mehrere Dateien verwendet werden soll.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Dateien erstellen**|Der Verbindungs-Manager erstellt die Dateien.|  
 |**Vorhandene Dateien**|Der Verbindungs-Manager verwendet vorhandene Dateien.|  
@@ -60,8 +62,7 @@ ms.lasthandoff: 08/03/2017
  **Pfeilschaltflächen**  
  Wählen Sie eine Datei oder einen Ordner aus, und verschieben Sie das Objekt dann mit den Pfeilschaltflächen nach oben oder unten, um die Reihenfolge des Zugriffs festzulegen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

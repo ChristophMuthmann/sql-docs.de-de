@@ -2,11 +2,13 @@
 title: "Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 3a5cd10ed1fc52431898748772038883b3bc4851
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Standardmäßig steigt die CPU-Nutzung durch die Sicherung mit Komprimierung erheblich, und die bei der Komprimierung zusätzlich benötigten CPU-Ressourcen können sich negativ auf gleichzeitig ausgeführte Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch den[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) eingeschränkt ist, eine komprimierte Sicherung mit niedriger Priorität zu erstellen, wenn CPU-Konflikte bestehen. In diesem Thema wird ein Szenario dargestellt, in dem die Sitzungen eines bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzers klassifiziert werden, indem diese einer Arbeitsauslastungsgruppe der Ressourcenkontrolle zugeordnet werden, die die CPU-Nutzung in solchen Fällen einschränkt.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
  In diesem Beispiel wird eine Anmeldung für das Windows-Konto *domain_name*`\MAX_CPU` erstellt, und dieser wird anschließend die VIEW SERVER STATE-Berechtigung erteilt. Mit dieser Berechtigung können Sie die Klassifizierung der Sitzungen der Anmeldung durch die Ressourcenkontrolle überprüfen. Im Beispiel wird anschließend ein Benutzer für *domain_name*`\MAX_CPU` erstellt, und dieser wird der festen Datenbankrolle db_backupoperator für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank hinzugefügt. Dieser Benutzername wird von der Klassifizierungsfunktion der Ressourcenkontrolle verwendet.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -205,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  Im folgenden Beispiel wird der Benutzername des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Beispielbenutzers *domain_name*`\MAX_CPU`verwendet, der unter "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)" erstellt wurde. Ersetzen Sie diesen durch den Namen des Benutzers der Anmeldung, die zum Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden soll.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -247,7 +249,7 @@ GO
 ##  <a name="verifying"></a> Überprüfen der Klassifizierung der aktuellen Sitzung (Transact-SQL)  
  Melden Sie sich optional als der Benutzer an, den Sie in der Klassifizierungsfunktion angegeben haben, und überprüfen Sie die Sitzungsklassifizierung durch Ausgeben der folgenden [SELECT](../../t-sql/queries/select-transact-sql.md) -Anweisung im Objekt-Explorer:  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -270,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Beispiel C: Erstellen einer komprimierten Sicherung (Transact-SQL)  
  Im folgenden [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Beispiel wird eine komprimierte, vollständige Sicherung der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank in der neu formatierten Sicherungsdatei `Z:\SQLServerBackups\AdvWorksData.bak`erstellt.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
@@ -283,7 +285,7 @@ GO
   
  [&#91;Nach oben&#93;](#Top)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   

@@ -1,13 +1,14 @@
 ---
-title: Konfigurieren des Berichts-Generator-Zugriffs | Microsoft Docs
+title: Konfigurieren des Berichts-Generatorzugriffs | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e4181a11fafb1629ce10e8ac21a462a1d95f5b2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
   Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver zusammen installiert wird.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  Es muss ein veröffentlichtes Berichtsmodell vorliegen, das bearbeitet werden kann, um den Berichts-Generator verwenden zu können.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Der Berichts-Generator ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Auf dem Clientcomputer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 installiert sein. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
@@ -54,14 +54,14 @@ ms.lasthandoff: 08/09/2017
   
  Zum Festlegen der Berichtsserver-Systemeigenschaften können Sie Management Studio oder ein Skript verwenden:  
   
--   Wenn Sie Management Studio verwenden möchten, stellen Sie eine Verbindung mit dem Berichtsserver her und legen auf der Seite mit den erweiterten Servereigenschaften die Eigenschaft **EnableReportDesignClientDownload** auf **false**fest. Weitere Informationen zum Öffnen dieser Seite finden Sie unter [Festlegen von Berichtsservereigenschaften &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Wenn Sie Management Studio verwenden möchten, stellen Sie eine Verbindung mit dem Berichtsserver her und legen auf der Seite mit den erweiterten Servereigenschaften die Eigenschaft **EnableReportDesignClientDownload** auf **false**fest. Weitere Informationen zum Öffnen dieser Seite finden Sie unter [Festlegen von Berichtsservereigenschaften (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Ein Beispielskript, das eine Berichtsservereigenschaft festlegt, finden Sie unter [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Rollenzuweisungen, die auf einem Berichtsserver im einheitlichen Modus Zugriff auf den Berichts-Generator gewähren  
  Erstellen Sie auf einem Berichtsserver im einheitlichen Modus Benutzerrollenzuweisungen, die Tasks zum Verwenden des Berichts-Generators einschließen. Sie müssen Inhalts-Manager und Systemadministrator sein, um Rollendefinitionen und Rollenzuweisungen auf der Element- und Websiteebene erstellen oder ändern zu können.  
   
- Die folgenden Anweisungen gehen davon aus, dass Sie vordefinierte Rollen verwenden. Wenn Sie die Rollendefinitionen abgeändert oder von SQL Server 2000 aktualisiert haben, überprüfen Sie die Rollen, um sicherzustellen, dass sie die erforderlichen Tasks enthalten. Weitere Informationen zum Erstellen von rollenzuweisungen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40; Berichts-Manager &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ Die folgenden Anweisungen gehen davon aus, dass Sie vordefinierte Rollen verwenden. Wenn Sie die Rollendefinitionen abgeändert oder von SQL Server 2000 aktualisiert haben, überprüfen Sie die Rollen, um sicherzustellen, dass sie die erforderlichen Tasks enthalten. Weitere Informationen zum Erstellen von Rollenzuweisungen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver (Berichts-Manager)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem berechtigt:  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Wenn für den Benutzer oder die Gruppe, für den bzw. die Sie den Zugriff auf den Berichts-Generator konfigurieren möchten, klicken Sie auf **Bearbeiten**.  
   
-     Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie im Gruppen- oder Benutzernamen, ein Windows Benutzer oder Gruppe Domänenkonto im folgenden Format: \<Domäne >\\< Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
+     Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie unter Gruppe oder Benutzer ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
   
 5.  Wählen Sie **Systembenutzer**aus, und klicken Sie dann auf **OK**.  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Wenn für den Benutzer oder die Gruppe, für den bzw. die Sie den Zugriff auf den Berichts-Generator konfigurieren möchten, klicken Sie auf **Bearbeiten**.  
   
-     Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie im Gruppen- oder Benutzernamen, ein Windows Benutzer oder Gruppe Domänenkonto im folgenden Format: \<Domäne >\\< Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
+     Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie unter Gruppe oder Benutzer ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
   
 10. Wählen Sie **Berichts-Generator**aus, und klicken Sie dann auf **Anwenden**.  
   
@@ -168,13 +168,12 @@ ms.lasthandoff: 08/09/2017
 |Standardauthentifizierung|ClickOnce unterstützt die Standardauthentifizierung nicht. Es werden keine Anforderungen formuliert, die die Standardauthentifizierung im Authentifizierungsheader angeben. Es werden keine Anmeldeinformationen übergeben oder Benutzer zur Angabe von Anmeldeinformationen aufgefordert. Sie können diese Probleme umgehen, indem Sie den anonymen Zugriff auf die Anwendungsdateien des Berichts-Generators aktivieren.<br /><br /> Anforderungen sind erfolgreich, wenn Sie anonyme Zugriffe auf die Anwendungsdateien des Berichts-Generators zulassen, weil der Berichtsserver den Authentifizierungsheader ignoriert. Weitere Informationen zum Aktivieren des anonymen Zugriffs auf den Berichts-Generator finden Sie unter [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Nachdem ClickOnce die Anwendungsdateien abgerufen hat, öffnet der Berichts-Generator eine separate Verbindung mit einem Berichtsserver. Die Benutzer müssen ihre Anmeldeinformationen erneut eingeben, damit die Verbindung zwischen Berichts-Generator und Berichtsserver hergestellt werden kann. Der Berichts-Generator erfasst keine Anmeldeinformationen von Internet Explorer oder ClickOnce.<br /><br /> Anforderungen schlagen fehl, wenn der Berichtsserver für die Standardauthentifizierung konfiguriert wurde und der anonyme Zugriff auf die Programmdateien des Berichts-Generators nicht aktiviert wurde. Die Anforderung schlägt fehl, da in ClickOnce-Anforderungen die integrierte Sicherheit von Windows angegeben wird. Wenn Sie einen Berichtsserver für die Standardauthentifizierung konfigurieren, weist der Server die Anforderung zurück, weil darin ein unzulässiges Sicherheitspaket angegeben wird und weil sie nicht die vom Server erwarteten Anmeldeinformationen enthält.<br /><br /> Falls der Berichtsserver für die Verwendung von SharePoint im integrierten Modul konfiguriert ist und die SharePoint-Site die grundlegende Authentifizierung verwendet, erhalten Benutzer zudem die Fehlermeldung 401, wenn Sie versuchen, den Berichts-Generator mithilfe von ClickOnce auf ihren Clientcomputern zu installieren. Der Grund hierfür liegt darin, dass SharePoint ein Cookie verwendet, um eine Benutzerauthentifizierung für die Dauer der Sitzung beizubehalten, ClickOnce dieses Cookie jedoch nicht unterstützt. Wenn ein Benutzer eine ClickOnce-Anwendung wie den Berichts-Generator startet, leitet die Anwendung das Cookie nicht an SharePoint weiter, weshalb SharePoint den Zugriff verweigert und den Fehler 401 zurückgibt.<br /><br /> Sie können dieses Problem umgehen, indem Sie eine der folgenden Optionen ausprobieren:<br /><br /> – Aktivieren Sie die Option **Kennwort speichern** , wenn Sie die Benutzeranmeldeinformationen bereitstellen.<br /><br /> –Aktivieren Sie den anonymen Zugriff auf die SharePoint-Websiteauflistung.<br /><br /> –Konfigurieren Sie die Umgebung so, dass der Benutzer keine Anmeldeinformationen bereitstellen muss. Beispielsweise können Sie den SharePoint-Server in einer Intranetumgebung so konfigurieren, dass er Teil einer Arbeitsgruppe ist. Anschließend können Sie Benutzerkonten auf den lokalen Computern erstellen.|  
 |Benutzerdefiniert|Wenn Sie einen Berichtsserver für die Verwendung einer benutzerdefinierten Authentifizierung konfigurieren, wird der anonyme Zugriff auf dem Berichtsserver aktiviert, und die Anforderungen werden ohne Authentifizierungsprüfung akzeptiert.<br /><br /> Nachdem ClickOnce die Anwendungsdateien abgerufen hat, öffnet der Berichts-Generator eine separate Verbindung mit einem Berichtsserver. Die Benutzer müssen ihre Anmeldeinformationen erneut eingeben, damit die Verbindung zwischen Berichts-Generator und Berichtsserver hergestellt werden kann. Der Berichts-Generator erfasst keine Anmeldeinformationen von Internet Explorer oder ClickOnce.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)   
- [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Berichtsserver-Systemeigenschaften](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
-

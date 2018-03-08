@@ -3,7 +3,7 @@ title: ExecuteOptions-Eigenschaft (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7cc52b6deb9915abd9f90b8596edee5ded07f816
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d46a26f7e4a80ae7a22954f388597552a5fb86
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions-Eigenschaft (RDS)
 Gibt an, ob asynchrone Ausführung aktiviert ist.  
@@ -53,11 +52,10 @@ Gibt an, ob asynchrone Ausführung aktiviert ist.
  Wenn ein Fehler, während einer asynchronen Operation auftritt der **RDS. DataControl** des Objekts [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) Wert ändert sich von **AdcReadyStateLoaded** auf **AdcReadyStateComplete**, und die  **Recordset** Eigenschaftswert bleibt *nichts*.  
   
 ## <a name="applies-to"></a>Gilt für  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [ExecuteOptions und FetchOptions Eigenschaften Beispiel (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel-Methode (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
 
 

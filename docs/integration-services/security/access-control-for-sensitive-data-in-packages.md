@@ -1,10 +1,13 @@
 ---
-title: Access Control for Sensitive Data in Paketen | Microsoft Docs
+title: "Zugriffssteuerung für sensible Daten in Paketen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,17 +26,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fd094efc965679119e0a15d9fc0fc97be27db4f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
   Sie können die Daten in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket schützen, indem Sie eine Schutzebene festlegen, mit der nur vertrauliche Daten oder alle Daten im Paket geschützt werden. Darüber hinaus können Sie diese Daten mit einem Kennwort oder Benutzerschlüssel verschlüsseln oder die Daten von der Datenbank verschlüsseln lassen. Die für ein Paket verwendete Schutzebene ist außerdem nicht unbedingt statisch, sondern ändert sich im Lebenszyklus eines Pakets. Häufig wird eine Schutzebene während der Entwicklung und eine andere Schutzebene beim Bereitstellen des Pakets festgelegt.  
@@ -115,7 +117,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>So legen Sie die Schutzebene von Paketen an der Eingabeaufforderung fest oder ändern sie  
   
-1.  Überprüfen Sie die verfügbaren Werte für die **ProtectionLevel** Eigenschaft klicken Sie im Abschnitt [Festlegen der Paketschutzebene](#set_protection), und bestimmen Sie den entsprechenden Wert für Ihr Paket.  
+1.  Überprüfen Sie die verfügbaren Werte für die **ProtectionLevel**-Eigenschaft im Abschnitt [Festlegen der Paketschutzebene](#set_protection), und bestimmen Sie den richtigen Wert für das Paket.  
   
 2.  Überprüfen Sie die Zuordnungen für die **Encrypt** -Option im Thema [dtutil Utility](../../integration-services/dtutil-utility.md), und bestimmen Sie die richtige ganze Zahl, die als Wert für die ausgewählte **ProtectionLevel** -Eigenschaft verwendet werden soll.  
   
@@ -137,12 +139,12 @@ ms.lasthandoff: 08/03/2017
   
          Wenn Sie einen ähnlichen Befehl in einer Batchdatei verwenden, geben Sie den Dateiplatzhalter "%f" in der Batchdatei als "%%f" ein.  
 
-## <a name="protection_dialog"></a>Paket Projekt Schutz (Dialogfeld)
+## <a name="protection_dialog"></a> Dialogfeld „Paket- und Projektschutzebene“
   Verwenden Sie das Dialogfeld **Paketschutzebene** , um die Schutzebene eines Pakets zu aktualisieren. Die Schutzebene bestimmt die Methode, das Kennwort oder den Benutzerschlüssel und den Bereich des Paketschutzes. Der Schutz kann alle Daten oder nur vertrauliche Daten einschließen.  
   
- Um die Anforderungen und Optionen für die paketsicherheit zu verstehen, Sie finden es vielleicht hilfreich, finden Sie unter [Sicherheitsübersicht &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md).  
+ Zum Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie weitere Informationen unter [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Package protection level**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   
@@ -152,16 +154,15 @@ ms.lasthandoff: 08/03/2017
  **Kennwort erneut eingeben**  
  Geben Sie das Kennwort erneut ein.  
 
-## <a name="password_dialog"></a>Kennwort-Dialogfelds "Paket"
+## <a name="password_dialog"></a> Dialogfeld „Paketkennwort“
   Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Kennwort**  
  Geben Sie das Kennwort ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Übersicht über die Sicherheit &#40; Integrationsservices &#41;](../../integration-services/security/security-overview-integration-services.md)  
- [Dtutil (Hilfsprogramm)](../../integration-services/dtutil-utility.md)  
+ [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [dtutil (Hilfsprogramm)](../../integration-services/dtutil-utility.md)  
   
-

@@ -2,11 +2,13 @@
 title: Upgrade einer Datenebenenanwendung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,26 +26,25 @@ helpviewer_keywords:
 - wizard [DAC], upgrade
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
-caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "35"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8ea79fb1e120239f25cfab958e92fcd44b79423d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="upgrade-a-data-tier-application"></a>Upgrade einer Datenebenenanwendung
-  Verwenden Sie entweder den Assistenten zum Aktualisieren von Datenebenenanwendungen oder ein Windows PowerShell-Skript, um das Schema und die Eigenschaften einer derzeit bereitgestellten Datenebenenanwendung (DAC) so zu ändern, dass sie mit dem Schema und den Eigenschaften übereinstimmt, die in einer neuen Version der DAC definiert sind.  
+# <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie entweder den Assistenten zum Aktualisieren von Datenebenenanwendungen oder ein Windows PowerShell-Skript, um das Schema und die Eigenschaften einer derzeit bereitgestellten Datenebenenanwendung (DAC) so zu ändern, dass sie mit dem Schema und den Eigenschaften übereinstimmt, die in einer neuen Version der DAC definiert sind.  
   
 -   **Vorbereitungen:**  [Auswählen von DAC-Aktualisierungsoptionen](#ChoseDACUpgOptions), [Einschränkungen](#LimitationsRestrictions), [Voraussetzungen](#Prerequisites), [Sicherheit](#Security), [Berechtigungen](#Permissions)  
   
 -   **Aktualisieren einer DAC mit:**  [Assistent zum Aktualisieren von Datenebenenanwendungen](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
  Eine DAC-Aktualisierung ist ein direkter Prozess, mit dem das Schema der vorhandenen Datenbank so geändert wird, dass es dem in einer neuen Version der DAC definierten Schema entspricht. Die neue Version der DAC wird in einer DAC-Paketdatei bereitgestellt. Weitere Informationen zum Erstellen eines DAC-Pakets finden Sie unter [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md).  
   
 ###  <a name="ChoseDACUpgOptions"></a> Auswählen von DAC-Aktualisierungsoptionen  
@@ -60,7 +61,7 @@ ms.lasthandoff: 07/31/2017
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
  DAC-Aktualisierungen können nur in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ab Service Pack 4 (SP4) durchgeführt werden.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Vor dem Beginn der Aktualisierung muss eine vollständige Datenbanksicherung durchgeführt werden. Wenn bei einer Aktualisierung ein Fehler auftritt und kein Rollback für alle Aktualisierungen ausgeführt werden kann, müssen Sie möglicherweise die Sicherung wiederherstellen.  
   
  Vor dem Starten der Aktualisierung gibt es mehrere Aktionen, die Sie durchführen sollten, um das DAC-Paket und die Aktualisierungsaktionen zu validieren. Weitere Informationen zum Ausführen dieser Tests finden Sie unter [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md).  
@@ -133,7 +134,7 @@ ms.lasthandoff: 07/31/2017
   
  **Weiter >**: Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
   
- **Abbrechen**: Beendet den Assistenten, ohne die DAC zu aktualisieren.  
+ **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
 ### <a name="validating-the-dac-package"></a>Überprüfen des DAC-Pakets  
  Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt. Wenn das DAC-Paket überprüft wird, geht der Assistent zur Seite **Richtlinie überprüfen** über. Wenn die Datei kein gültiges DAC-Paket ist, verbleibt der Assistent auf der Seite **DAC-Paket auswählen** . Wählen Sie entweder ein anderes gültiges DAC-Paket aus, oder brechen Sie den Assistenten ab, und generieren Sie ein neues DAC-Paket.  
@@ -178,7 +179,7 @@ ms.lasthandoff: 07/31/2017
   
  **Weiter >**: Geht zur Seite **Optionen** über.  
   
- **Abbrechen**: Beendet den Assistenten, ohne die DAC bereitzustellen.  
+ **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
 ## <a name="options-page"></a>Seite "Optionen"  
  Verwenden Sie diese Seite, um das Rollback bei Fehlern für die Aktualisierung auszuwählen.  
@@ -232,7 +233,7 @@ ms.lasthandoff: 07/31/2017
   
  **Bericht speichern** : Klicken Sie auf diese Schaltfläche, um den Aktualisierungsbericht in einer HTML-Datei zu speichern. In der Datei ist der Status der einzelnen Aktionen aufgeführt, einschließlich aller durch die Aktionen generierten Fehler. Der Standardordner ist ein Ordner "SQL Server Management Studio\DAC Packages" im Ordner "Dokumente" unter Ihrem Windows-Konto.  
   
- **Fertig stellen** : Beendet den Assistenten.  
+ **Fertig stellen** – Beendet den Assistenten.  
   
 ##  <a name="UpgradeDACPowerShell"></a> PowerShell  
  **Aktualisieren einer DAC mithilfe der IncrementalUpgrade()-Methode in einem PowerShell-Skript**  
@@ -289,9 +290,8 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
-

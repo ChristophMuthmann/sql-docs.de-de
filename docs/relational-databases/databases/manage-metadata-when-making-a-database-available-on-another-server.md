@@ -2,9 +2,12 @@
 title: Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,19 +37,20 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4c895c6dc04db18f8360f72a714b6c91b9e502ef
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
-  Dieses Thema ist in den folgenden Situationen relevant:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dieses Thema ist in den folgenden Situationen relevant:  
   
 -   Konfigurieren der Verfügbarkeitsreplikate einer [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Verfügbarkeitsgruppe.  
   
@@ -277,7 +281,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>GRANT-, REVOKE- und DENY-Berechtigungen für Systemobjekte  
  Berechtigungen für Systemobjekte wie z. B. gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Funktionen und Sichten werden in der **master** -Datenbank gespeichert und müssen auf der Zielserverinstanz konfiguriert werden.  
   
- Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Berechtigungen auf Objektebene** auf **True**festlegen.  
+ Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Berechtigungen auf Objektebene** auf **True** festlegen.  
   
 > **WICHTIG!** Wenn Sie Skripts für Anmeldungen erstellen, werden keine Skripts für die Kennwörter erstellt. Bei Anmeldungen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie das Skript auf dem Ziel ändern.  
   
@@ -332,7 +336,7 @@ ms.lasthandoff: 06/22/2017
  Informationen zu dieser Funktion finden Sie unter [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Kopieren von Datenbanken auf andere Server](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
@@ -343,4 +347,3 @@ ms.lasthandoff: 06/22/2017
  [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   
-

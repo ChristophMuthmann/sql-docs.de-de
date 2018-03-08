@@ -2,9 +2,12 @@
 title: Steuern der Transaktionsdauerhaftigkeit | Microsoft-Dokumentation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-transaction-log
 ms.tgt_pltfrm: 
@@ -13,22 +16,21 @@ helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 27
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionscommits können entweder vollständig dauerhaft sein, was in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Standardeinstellung entspricht, oder sie können verzögert dauerhaft sein (auch bekannt als verzögerter Commit).    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktionscommits können entweder vollständig dauerhaft sein, was in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Standardeinstellung entspricht, oder sie können verzögert dauerhaft sein (auch bekannt als verzögerter Commit).    
     
  Vollständig dauerhafte Transaktionscommits sind synchron, melden, dass ein COMMIT erfolgreich ausgeführt wurde, und geben die Steuerung erst an den Client zurück, nachdem die Protokolldatensätze für die Transaktion auf den Datenträger geschrieben wurden. Verzögert dauerhafte Transaktionscommits sind asynchron und melden, dass ein COMMIT erfolgreich ausgeführt wurde, bevor die Protokolldatensätze für die Transaktion auf den Datenträger geschrieben wurden. Damit eine Transaktion dauerhaft ist, müssen die Transaktionsprotokolleinträge auf dem Datenträger festgeschrieben werden. Verzögert dauerhafte Transaktionen werden dauerhaft, nachdem die Transaktionsprotokolleinträge auf den Datenträger geleert wurden.    
     
@@ -94,10 +96,10 @@ ms.lasthandoff: 06/22/2017
     
 ## <a name="how-to-control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit    
     
-###  <a name="bkmk_DbControl"></a> Database level control    
+###  <a name="bkmk_DbControl"></a> Steuerung auf Datenbankebene    
  Der Datenbankadministrator kann mithilfe der folgenden Anweisung steuern, ob Benutzer die verzögerte Transaktionsdauerhaftigkeit in einer Datenbank nutzen können. Sie müssen die Einstellung für verzögerte Dauerhaftigkeit mit ALTER DATABASE festlegen.    
     
-```tsql    
+```sql    
 ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -110,10 +112,10 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  Mit dieser Einstellung wird jede Transaktion, für die in der Datenbank ein Commit ausgeführt wird, zu einer verzögert dauerhaften Transaktion. Unabhängig davon, ob für die Transaktion vollständige Dauerhaftigkeit (DELAYED_DURABILITY = OFF) oder keine Einstellung angegeben wird, wird sie zu einer verzögert dauerhaften Transaktion. Diese Einstellung ist hilfreich, wenn die verzögerte Transaktionsdauerhaftigkeit für eine Datenbank von Nutzen ist und Sie keinen Anwendungscode ändern möchten.    
     
-###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
+###  <a name="CompiledProcControl"></a> Steuerung auf Atomic-Blockebene – systemintern kompilierte gespeicherte Prozeduren    
  Folgender Code wird in den Atomic-Block eingefügt.    
     
-```tsql    
+```sql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -125,7 +127,7 @@ DELAYED_DURABILITY = { OFF | ON }
     
  **Beispielcode:**    
     
-```tsql    
+```sql    
 CREATE PROCEDURE <procedureName> …    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
@@ -145,10 +147,10 @@ END
 |**DELAYED_DURABILITY = OFF**|Atomic-Block startet eine neue vollständig dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
 |**DELAYED_DURABILITY = ON**|Atomic-Block startet eine neue verzögert dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Steuerung auf COMMIT-Ebene –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  Da die COMMIT-Syntax erweitert ist, kann die verzögerte Transaktionsdauerhaftigkeit erzwungen werden. Wenn für DELAYED_DURABILITY auf Datenbankebene DISABLED oder FORCED festgelegt wird (siehe oben), wird diese COMMIT-Option ignoriert.    
     
-```tsql    
+```sql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
     
 ```    
@@ -201,7 +203,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Protokollsicherung**    
  In die Sicherung werden nur Transaktionen aufgenommen, die in dauerhafte Transaktionen konvertiert wurden.    
     
-##  <a name="bkmk_DataLoss"></a> When can I lose data?    
+##  <a name="bkmk_DataLoss"></a> Wann können Daten verloren gehen?    
  Wenn Sie verzögerte Dauerhaftigkeit in einer der Tabellen implementieren, sollten Sie beachten, dass es unter bestimmten Umständen zu Datenverlust kommen kann. Falls kein Datenverlust hinnehmbar ist, sollten Sie auf die verzögerte Dauerhaftigkeit in Tabellen verzichten.    
     
 ### <a name="catastrophic-events"></a>Notfälle    
@@ -210,8 +212,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herunterfahren und Neustart    
  Für die verzögerte Dauerhaftigkeit macht es keinen Unterschied, ob das Herunterfahren unerwartet erfolgt oder das Herunterfahren/Neustarten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geplant ist. Wie bei Notfällen sollten Sie mit Datenverlusten rechnen. Beim geplanten Herunterfahren/Neustarten werden möglicherweise einige Transaktionen, die noch nicht auf dem Datenträger festgeschrieben wurden, zuerst auf dem Datenträger gespeichert, aber dies lässt sich nicht planen. Planen Sie so, als ob beim Herunterfahren/Neustarten (ob geplant oder ungeplant) die Daten genauso wie bei unvorhersehbaren Notfällen verloren gehen.    
     
-## <a name="see-also"></a>Siehe auch    
+## <a name="see-also"></a>Weitere Informationen finden Sie unter    
  [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
-

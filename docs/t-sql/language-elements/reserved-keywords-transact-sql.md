@@ -3,8 +3,11 @@ title: "Reservierte Schlüsselwörter (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,19 +20,18 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter-Transact-SQL
+# <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet reservierte Schlüsselwörter zum Definieren, Bearbeiten und Zugreifen auf Datenbanken. Reservierte Schlüsselwörter sind ein Bestandteil der Grammatik der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprache, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches zu analysieren und zu verstehen. Obwohl es syntaktisch möglich ist, reservierte Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Bezeichner und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts zu verwenden, ist hierzu die Verwendung von Begrenzungsbezeichnern erforderlich.  
@@ -89,7 +91,7 @@ ms.lasthandoff: 09/01/2017
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|Benutzer|  
-|DROP|oder|VALUES|  
+|DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -97,7 +99,7 @@ ms.lasthandoff: 09/01/2017
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
 |EXEC|PRECISION|mit|  
-|EXECUTE|PRIMARY|WITHIN GROUP|  
+|Führen Sie|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
   
@@ -116,84 +118,84 @@ ms.lasthandoff: 09/01/2017
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**(ÜBERLAPPUNGEN)**|  
-|**AKTION**|**EXECUTE**|**MIT LEERSTELLEN AUFFÜLLEN**|  
-|**ADA**|**VORHANDEN IST**|**PARTIELLE**|  
-|**HINZUFÜGEN**|**EXTERNAL**|**PASCAL-SCHREIBWEISE**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**PARTIELLE**|  
+|**ADD**|**EXTERNAL**|**PASCAL-SCHREIBWEISE**|  
 |**ALL**|**EXTRAHIEREN**|**POSITION**|  
-|**ZUORDNEN**|**"FALSE"**|**GENAUIGKEIT**|  
-|**ALTER**|**ABRUFEN VON DATEN**|**VORBEREITEN**|  
-|**AND**|**ERSTE**|**BEIBEHALTEN**|  
-|**ALLE**|**"FLOAT"**|**PRIMARY**|  
-|**SIND**|**FÜR**|**VOR**|  
-|**AS**|**FREMDSCHLÜSSEL**|**BERECHTIGUNGEN**|  
-|**ASC**|**FORTRAN**|**PROZEDUR**|  
-|**ASSERTION**|**GEFUNDEN**|**ÖFFENTLICHE**|  
-|**AT**|**FROM**|**LESEN**|  
-|**AUTORISIERUNG**|**FULL**|**ECHTE**|  
-|**AVG**|**ERHALTEN**|**VERWEISE**|  
-|**BEGIN**|**GLOBALE**|**RELATIVE**|  
-|**BETWEEN**|**WECHSELN SIE**|**EINSCHRÄNKEN**|  
-|**BIT**|**GEHE ZU**|**REVOKE**|  
+|**ALLOCATE**|**FALSE**|**GENAUIGKEIT**|  
+|**ALTER**|**FETCH**|**VORBEREITEN**|  
+|**AND**|**FIRST**|**BEIBEHALTEN**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
+|**ARE**|**FÜR**|**VOR**|  
+|**AS**|**FOREIGN**|**PRIVILEGES**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
+|**ASSERTION**|**GEFUNDEN**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
+|**AVG**|**GET**|**VERWEISE**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**BEIDE**|**GRUPPE**|**ROLLBACK**|  
-|**DURCH**|**HAVING**|**ZEILEN**|  
+|**BOTH**|**GRUPPE**|**ROLLBACK**|  
+|**BY**|**HAVING**|**ROWS**|  
 |**CASCADE**|**STUNDE**|**SCHEMA**|  
 |**KASKADIERTE**|**IDENTITÄT**|**FÜHREN SIE EINEN BILDLAUF**|  
-|**FALL**|**SOFORTIGE**|**SEKUNDE**|  
-|**TYPUMWANDLUNG**|**IN**|**IM ABSCHNITT**|  
-|**KATALOG**|**EINSCHLIESSEN**|**SELECT**|  
-|**CHAR**|**INDEX**|**SITZUNG**|  
+|**CASE**|**IMMEDIATE**|**SEKUNDE**|  
+|**CAST**|**IN**|**IM ABSCHNITT**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
+|**CHAR**|**INDEX**|**SESSION**|  
 |**CHAR_LENGTH**|**INDIKATOR**|**SESSION_USER**|  
-|**ZEICHEN**|**ANFÄNGLICH**|**FESTLEGEN**|  
+|**CHARACTER**|**ANFÄNGLICH**|**SET**|  
 |**CHARACTER_LENGTH**|**INNERE**|**GRÖSSE**|  
-|**KONTROLLKÄSTCHEN**|**EINGABE**|**"SMALLINT"**|  
-|**SCHLIESSEN SIE**|**UNTERSCHEIDUNG**|**EINIGE**|  
-|**COALESCE**|**INSERT**|**SPEICHERPLATZ**|  
+|**CHECK**|**EINGABE**|**"SMALLINT"**|  
+|**CLOSE**|**UNTERSCHEIDUNG**|**EINIGE**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**location**|  
-|**SORTIERUNG**|**GANZE ZAHL**|**SQLCA**|  
-|**SPALTE**|**INTERSECT**|**SQLCODE**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
 |**COMMIT**|**INTERVALL**|**SQLERROR**|  
-|**EINE VERBINDUNG HERSTELLEN**|**IN**|**SQLSTATE**|  
-|**VERBINDUNG**|**IS**|**SQLWARNING**|  
+|**EINE VERBINDUNG HERSTELLEN**|**INTO**|**SQLSTATE**|  
+|**VERBINDUNG**|**IST**|**SQLWARNING**|  
 |**EINSCHRÄNKUNG**|**ISOLATION**|**SUBSTRING**|  
-|**EINSCHRÄNKUNGEN**|**JOIN**|**SUMME**|  
-|**FORTSETZEN**|**SCHLÜSSEL**|**SYSTEM_USER**|  
-|**KONVERTIEREN**|**LANGUAGE**|**TABELLE**|  
-|**ENTSPRICHT**|**LETZTE**|**TEMPORÄRE**|  
-|**ANZAHL**|**FÜHRENDE**|**KLICKEN SIE DANN**|  
-|**ERSTELLEN**|**LEFT**|**ZEIT**|  
-|**CROSS**|**EBENE**|**ZEITSTEMPEL**|  
+|**EINSCHRÄNKUNGEN**|**JOIN**|**SUM**|  
+|**CONTINUE**|**SCHLÜSSEL**|**SYSTEM_USER**|  
+|**KONVERTIEREN**|**LANGUAGE**|**TABLE**|  
+|**ENTSPRICHT**|**LAST**|**TEMPORARY**|  
+|**COUNT**|**LEADING**|**THEN**|  
+|**CREATE**|**LEFT**|**TIME**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**AKTUELLE**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOKALE**|**TIMEZONE_MINUTE**|  
-|**AKTUELLE_ZEIT**|**NIEDRIGERE**|**AN**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**NACHFOLGENDE**|  
+|**CURRENT_TIME**|**LOWER**|**TO**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
 |**CURRENT_USER**|**MAX**|**TRANSAKTION**|  
-|**CURSOR**|**MIN.**|**ÜBERSETZEN**|  
-|**DATUM**|**MINUTE**|**ÜBERSETZUNG**|  
-|**TAG**|**MODUL**|**ZUSCHNEIDEN**|  
-|**AUFHEBEN DER ZUORDNUNG**|**MONAT**|**"TRUE"**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATUM**|**MINUTE**|**TRANSLATION**|  
+|**DAY**|**MODUL**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**"TRUE"**|  
 |**DEC**|**NAMEN**|**UNION**|  
-|**DEZIMALZAHL**|**NATIONAL**|**EINDEUTIGE**|  
+|**DECIMAL**|**NATIONAL**|**EINDEUTIGE**|  
 |**DEKLARIEREN**|**NATÜRLICHE**|**UNBEKANNT**|  
-|**STANDARDWERT**|**NCHAR**|**UPDATE**|  
-|**VERZÖGERT**|**WEITER**|**OBERE**|  
-|**VERZÖGERTE**|**NEIN**|**VERWENDUNG**|  
-|**DELETE**|**NONE**|**BENUTZER**|  
-|**"DESC"**|**NOT**|**MITHILFE VON**|  
-|**BESCHREIBEN**|**NULL**|**VALUE**|  
-|**DER DESKRIPTOR**|**NULLIF**|**WERTE**|  
-|**DIAGNOSE**|**NUMERISCH**|**VARCHAR**|  
-|**TRENNEN**|**OCTET_LENGTH**|**VARYING**|  
-|**DISTINCT**|**DER**|**ANZEIGEN**|  
-|**DOMÄNE**|**ON**|**WENN**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**VERZÖGERTE**|**NO**|**VERWENDUNG**|  
+|**DELETE**|**NONE**|**USER**|  
+|**DESC**|**NOT**|**MITHILFE VON**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
+|**DESCRIPTOR**|**NULLIF**|**WERTE**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**DOMAIN**|**ON**|**WHEN**|  
 |**DOUBLE**|**NUR**|**BEI JEDEM**|  
-|**LÖSCHEN**|**ÖFFNEN**|**WHERE**|  
-|**ELSE**|**OPTION**|**MIT**|  
-|**END**|**OR**|**ARBEITSAUFGABEN**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**OPTION**|**WITH**|  
+|**END**|**OR**|**WORK**|  
 |**END-EXEC**|**REIHENFOLGE**|**SCHREIBEN**|  
-|**ESCAPEZEICHEN**|**ÄUSSERE**|**JAHR**|  
-|**AUSNAHME:**|**AUSGABE**|**ZONE**|  
-|**AUSNAHME**|||  
+|**ESCAPEZEICHEN**|**ÄUSSERE**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>Zukünftige Schlüsselwörter  
  Die folgenden Schlüsselwörter werden möglicherweise in zukünftigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen reserviert, wenn neue Funktionen implementiert werden. Es empfiehlt sich, diese Wörter nicht als Bezeichner zu verwenden.  
@@ -244,7 +246,7 @@ ms.lasthandoff: 09/01/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Nein|TIMEZONE_MINUTE|  
 |CURRENT_PATH|Keine|TRAILING|  
@@ -258,7 +260,7 @@ ms.lasthandoff: 09/01/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|Parameter|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -297,4 +299,3 @@ ms.lasthandoff: 09/01/2017
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

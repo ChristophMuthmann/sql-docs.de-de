@@ -2,40 +2,35 @@
 title: Translations-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Translations Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Translations Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Translations
-helpviewer_keywords:
-- Translations element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Translations
+helpviewer_keywords: Translations element
 ms.assetid: 7f6b8ff2-e834-44d3-a176-216203158a8d
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d41a39ea20c573712e98b38bf4ad929c7212a4c5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 459308948a39c4a35069b1e2a5a4df40c5fb7bf8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="translations-element-assl"></a>Translations-Element (ASSL)
-  Enthält die Auflistung der [Übersetzung](../../../analysis-services/scripting/objects/translation-element-assl.md) Elemente mit dem übergeordneten Element verknüpft sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der [Übersetzung](../../../analysis-services/scripting/objects/translation-element-assl.md) Elemente mit dem übergeordneten Element verknüpft sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,11 +51,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -82,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

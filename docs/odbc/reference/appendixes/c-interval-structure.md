@@ -3,10 +3,12 @@ title: C-Intervall-Struktur | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 00ec992c87cce93eb95cd85314743a109183c51f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-interval-structure"></a>C-Intervall-Struktur
 Jede C-Intervall-Datentypen aufgeführt, der [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt verwendet die gleiche Struktur, um die Intervalldaten enthalten. Wenn **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData** wird aufgerufen, der Treiber gibt Daten zurück, in der Struktur SQL_INTERVAL_STRUCT, verwendet den Wert, der durch angegeben wurde, die Anwendung für die C-Datentypen (im Aufruf **SQLBindCol**, **SQLGetData**, oder **SQLBindParameter**) zum Interpretieren des Inhalts der SQL_INTERVAL_STRUCT , und füllt die *Interval_type* -Feld der Struktur mit den *Enum* -Wert, des C-Typs entspricht. Beachten Sie, dass der Treiber kein Lesevorgang der *Interval_type* zum Bestimmen des Typs des Intervalls Feld; sie den Wert des Felds Deskriptor SQL_DESC_CONCISE_TYPE abrufen. Wenn die Struktur für Parameterdaten verwendet wird, der Treiber verwendet den angegebenen Wert durch die Anwendung in das Feld SQL_DESC_CONCISE_TYPE APD zum Interpretieren des Inhalts der SQL_INTERVAL_STRUCT, auch wenn die Anwendung den Wert für setzt die  *Interval_type* Feld auf einen anderen Wert.  
@@ -75,4 +76,3 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  Die *Interval_type* -Feld von der SQL_INTERVAL_STRUCT gibt an, an die Anwendung in welcher Struktur in der Union aufrechterhalten wird und welche Member der Struktur sind auch relevant. Die *Interval_sign* Feld hat den Wert SQL_FALSE aus, wenn die für anführenden Intervallwert, Feld nicht signiert ist, ist dies SQL_TRUE, das führende Feld ist ein negativer Wert. Der Wert im Feld führende selbst ist immer ohne Vorzeichen, unabhängig vom Wert der *Interval_sign*. Die *Interval_sign* Feld fungiert als Vorzeichenbit.
-

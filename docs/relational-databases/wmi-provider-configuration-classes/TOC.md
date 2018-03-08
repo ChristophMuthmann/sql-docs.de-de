@@ -1,6 +1,6 @@
-# [WMI-Anbieter für Configuration Management-Klassen](wmi-provider-for-configuration-management-classes.md)
+# [Klassen für WMI-Anbieter für die Konfigurationsverwaltung](wmi-provider-for-configuration-management-classes.md)
 
-# Bestimmte Bereiche
+# Spezifische Bereiche
 ## [ClientNetLibInfo-Klasse +](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)
 ## [ClientNetworkProtocol-Klasse +](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)
 ## [ClientNetworkProtocolProperty-Klasse +](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)
@@ -16,11 +16,11 @@
 ## [SqlService-Klasse +](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md)
 ## [SqlServiceAdvancedProperty-Klasse +](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md)
 
-# [CInstance-Klasse - InstanceName-Eigenschaft](cinstance-class-instancename-property.md)
-# [CInstance-Klasse - SetDefaults-Methode](cinstance-class-setdefaults-method.md)
+# [CInstance-Klasse – InstanceName-Eigenschaft](cinstance-class-instancename-property.md)
+# [CInstance-Klasse – SetDefaults-Methode](cinstance-class-setdefaults-method.md)
 # [CInstance-Klasse](cinstance-class.md)
-# [ClientSettings-Klasse - InstanceName-Eigenschaft](clientsettings-class-instancename-property.md)
-# [ClientSettings-Klasse - SetDefaults-Methode](clientsettings-class-setdefaults-method.md)
+# [ClientSettings-Klasse – InstanceName-Eigenschaft](clientsettings-class-instancename-property.md)
+# [ClientSettings-Klasse – SetDefaults-Methode](clientsettings-class-setdefaults-method.md)
 # [ClientSettings-Klasse](clientsettings-class.md)
 # [SqlErrorLogEvent-Klasse](sqlerrorlogevent-class.md)
 # [SqlErrorLogFile-Klasse](sqlerrorlogfile-class.md)

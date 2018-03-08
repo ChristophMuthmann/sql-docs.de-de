@@ -1,29 +1,30 @@
 ---
 title: "Verwalten von Kennwörtern (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 6f4203119231c6792d46d3287394dd3bab1b46a1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 14287c0638d066c18662937fa53c41ffc0d4e6cb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-passwords-oracletosql"></a>Verwalten von Kennwörtern (OracleToSQL)
 In diesem Abschnitt wird zum Schützen von Datenbankkennwörter und das Verfahren zum Importieren oder exportieren Sie sie über Server:  
@@ -134,4 +135,3 @@ Beispiel:
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
-

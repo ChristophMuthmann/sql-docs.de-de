@@ -3,33 +3,30 @@ title: Funktion SQLSetConnectOption | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetConnectOption
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetConnectOption
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetConnectOption
-helpviewer_keywords:
-- SQLSetConnectOption function [ODBC]
+f1_keywords: SQLSetConnectOption
+helpviewer_keywords: SQLSetConnectOption function [ODBC]
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a3ebe388429949f64e58ba8612328caf3a14ee2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b5499852e3574c597e3a424347b22021d0887ca9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption-Funktion
 **Konformität**  
@@ -50,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

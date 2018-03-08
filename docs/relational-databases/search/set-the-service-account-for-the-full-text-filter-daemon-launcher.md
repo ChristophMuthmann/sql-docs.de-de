@@ -2,9 +2,12 @@
 title: "Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4f860080278519f5c9a68619ee5a9e8c0a2292f9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 4f77e69ed4950e71302ef55d161fea96970789ea
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
- In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den SQL-Volltextfilterdaemon-Startprogrammdienst (MSSQLFDLauncher) mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers festlegen oder ändern. Das Standarddienstkonto, das von SQL Server-Setup verwendet wird ist `NT Service\MSSQLFDLauncher`.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den SQL-Volltextfilterdaemon-Startprogrammdienst (MSSQLFDLauncher) mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers festlegen oder ändern. Das Standarddienstkonto, das von SQL Server-Setup verwendet wird ist `NT Service\MSSQLFDLauncher`.
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>Über den Startprogrammdienst für SQL-Volltextfilterdaemon
@@ -37,7 +41,7 @@ Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dien
   
 1.  Zeigen Sie im Menü **Start** auf **Programme**, erweitern Sie [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie anschließend auf **SQL Server 2016-Konfigurations-Manager**.  
   
-2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**, klicken Sie mit der rechten Maustaste auf **SQL-Volltextfilterdaemon-Startprogramm (***Instanzname***)**, und klicken Sie anschließend auf **Eigenschaften**.  
+2.  Klicken Sie im **SQL Server-Konfigurations-Manager** auf **SQL Server-Dienste**, klicken Sie mit der rechten Maustaste auf **Startprogramm für SQL-Volltextfilterdaemon (***Instanzname***)**, und klicken Sie anschließend auf **Eigenschaften**.  
   
 3.  Klicken Sie im Dialogfeld auf die Registerkarte **Anmelden**, und wählen Sie anschließend das Konto aus, unter dem die vom SQL-Volltextfilterdaemon-Startprogrammdienst erstellten Prozesse ausgeführt werden sollen, oder geben Sie das Konto ein.  
   
@@ -79,7 +83,7 @@ Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dien
   
      Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst fungiert als Named Pipe-Server für den Client des SQL-Volltextfilterdaemon-Startprogrammdiensts. Wenn die Named Pipe bereits vor dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem anderen Prozess erstellt wurde, wird im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und im Windows-Ereignisprotokoll ein Fehler ausgegeben. Die Volltextsuche kann nicht ausgeführt werden.  Stellen Sie fest, welcher Prozess bzw. welche Anwendung versucht, die Named Pipe zu verwenden, und beenden Sie die betreffende Anwendung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md)  
   

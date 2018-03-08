@@ -1,10 +1,13 @@
 ---
-title: Data Mining Model Training Destination | Microsoft Docs
+title: Ziel des Data Mining-Modelltrainings | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: de320d943bf8159b211af64caa32cb37d09a7da9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-model-training-destination"></a>Ziel des Data Mining-Modelltrainings
   Das Ziel des Data Mining-Modelltrainings trainiert Data Mining-Modelle, indem die Daten, die vom Ziel empfangen werden, über Data Mining-Modellalgorithmen übergeben werden. Mehrere Data Mining-Modelle können von einem Ziel trainiert werden, falls die Modelle mit der gleichen Data Mining-Struktur erstellt wurden. Weitere Informationen finden Sie unter [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) und [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -48,7 +50,7 @@ ms.lasthandoff: 08/17/2017
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften des Ziels des Data Mining-Modelltrainings](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 08/17/2017
 ## <a name="data-mining-model-training-editor-connection-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
   Wählen Sie auf der Seite **Verbindung** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** ein Mining-Modell zum Trainieren aus.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verbindungs-Manager**  
  Wählen Sie eine Verbindung aus der Liste der vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungen aus, oder erstellen Sie wie im Folgenden beschrieben über die Schaltfläche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Neu **eine neue** -Verbindung.  
   
- **eine neue**  
+ **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
   
  **Miningstruktur**  
@@ -76,7 +78,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="data-mining-model-training-editor-columns-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten)
   Mithilfe der Seite **Spalten** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** können Sie Eingabespalten Spalten in der Miningstruktur zuordnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Ziehen Sie Eingabespalten, um sie Miningstrukturspalten zuzuordnen.  
   
@@ -89,4 +91,3 @@ ms.lasthandoff: 08/17/2017
  **Miningstrukturspalten**  
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
   
-

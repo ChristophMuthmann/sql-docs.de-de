@@ -1,31 +1,32 @@
 ---
 title: Herstellen einer Verbindung mit SQLServer (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: a5632152d76ea821022dd2915396d69efe722a8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a5f84178bc2f70dfd04239ec130735e51d117e3c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Herstellen einer Verbindung mit SQLServer (OracleToSQL)
 Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , die Sie zum migrieren möchten. Für den Zugriff auf die **Herstellen einer Verbindung mit SQL Server** Dialogfeld auf die **Datei** Menü klicken Sie auf **Herstellen einer Verbindung mit SQL Server**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Servername**  
 Geben Sie an, oder wählen Sie die Instanz von SQL Server für die Verbindung. Standardmäßig ist die Instanz, der Sie zuletzt verbunden angezeigt.  
   
@@ -44,7 +45,7 @@ Geben Sie die Datenbank, um Objekte und Daten zu migrieren. Diese Option ist nic
 **Authentifizierung**  
 Wählen Sie die Authentifizierungsmethode, die verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Um Ihre aktuelle Windows-Konto zu verwenden, wählen Sie Windows-Authentifizierung. Angeben einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldenamen und ein Kennwort wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung.  
   
-**Benutzername**  
+**User name**  
 Bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung, geben Sie den Anmeldenamen für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Wenn Sie Windows-Authentifizierung verwenden, ist diese Option nicht verfügbar.  
   
 **Kennwort**  
@@ -59,4 +60,3 @@ Wenn Sie diese Option verwenden möchten, wählen Sie die **vertrauenswürdiges 
 > [!NOTE]  
 > So aktivieren Sie **vertrauenswürdiges Serverzertifikat**, "Encrypt" müssen festgelegt werden, um **"true"**.  
   
-

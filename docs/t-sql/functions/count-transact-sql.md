@@ -3,8 +3,11 @@ title: COUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-caps.latest.revision: 45
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: e2d11d2cc57d275e952ff371ddf99c34dcae323d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: 0342e593b0bf13b5e5a9b53600aae5f3c39ae59d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt die Anzahl von Elementen in einer Gruppe zurück. COUNT funktioniert wie die [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) Funktion. Der einzige Unterschied zwischen den beiden Funktionen sind die Rückgabewerte. COUNT gibt immer zurück ein **Int** -Datentypwert. COUNT_BIG gibt immer eine **"bigint"** -Datentypwert.
   
@@ -299,6 +301,5 @@ ProductCount   SalesOrderID`
 [Failover-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
-
 
 

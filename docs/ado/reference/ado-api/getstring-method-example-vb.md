@@ -3,7 +3,7 @@ title: GetString-Methode (Beispiel) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d8b74eeee381bd0c1ef9d08c265316060af45fa1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36bfdcdf3e5300bfd3686b73d6439e11e8d7cf86
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getstring-method-example-vb"></a>GetString-Methode (Beispiel) (VB)
 Dieses Beispiel zeigt die [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) Methode.  
@@ -112,4 +111,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [GetString-Methode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

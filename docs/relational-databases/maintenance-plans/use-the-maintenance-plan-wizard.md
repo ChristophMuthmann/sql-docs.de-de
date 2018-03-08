@@ -1,11 +1,14 @@
 ---
 title: Verwenden des Wartungsplanungs-Assistenten | Microsoft-Dokumentation
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,20 +36,19 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "43"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
-  In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
     
  
 ##  <a name="Restrictions"></a> Einschränkungen  
@@ -57,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 
 Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
 
-##  <a name="Prerequisite"></a> Voraussetzungen 
+##  <a name="Prerequisite"></a> Erforderliche Komponenten 
 Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)aktivieren.
   
   
@@ -204,7 +206,7 @@ Kontrollkästchen**Indizes einschließen**
      Die Datenbank wird in aufeinander folgenden Seiten komprimiert. Dabei werden jedoch weder die Seiten neu zugeordnet noch die Datenbankdateien verkleinert. Verwenden Sie diese Option, wenn Sie erwarten, dass die Datenbank wieder wächst, und Sie den Speicher nicht neu zuordnen möchten. Bei Auswahl dieser Option werden die Datenbankdateien nicht so stark wie möglich verkleinert. Dabei wird die NOTRUNCATE-Option verwendet.  
   
      **Freigegebenen Speicherplatz an Betriebssystem zurückgeben**  
-     Die Datenbank wird in aufeinander folgenden Seiten komprimiert und die Seiten werden wieder für das Betriebssystem freigegeben und können für andere Programme verwendet werden. Dabei wird die TRUNCATEONLY-Option verwendet. Dies ist die Standardeinstellung.  
+     Die Datenbank wird in aufeinander folgenden Seiten komprimiert und die Seiten werden wieder für das Betriebssystem freigegeben und können für andere Programme verwendet werden. Dabei wird die TRUNCATEONLY-Option verwendet. Diese Option ist die Standardeinstellung.  
   
 ## <a name="define-the-index-tasks"></a>Definieren der Indextasks  
   
@@ -241,7 +243,7 @@ Kontrollkästchen**Indizes einschließen**
      Enthält Optionen, mit denen ein Füllfaktor auf Indizes und Tabellen angewendet werden kann.  
   
      **Freier Standardspeicherplatz pro Seite**  
-     Organisiert die Seiten mit der standardmäßigen freien Speicherplatzmenge neu. Dadurch werden die Indizes für die Tabellen in der Datenbank gelöscht, und sie werden mit dem Füllfaktor, der beim Erstellen der Indizes angegeben wurde, neu erstellt. Dies ist die Standardeinstellung.  
+     Organisiert die Seiten mit der standardmäßigen freien Speicherplatzmenge neu. Dadurch werden die Indizes für die Tabellen in der Datenbank gelöscht, und sie werden mit dem Füllfaktor, der beim Erstellen der Indizes angegeben wurde, neu erstellt. Diese Option ist die Standardeinstellung.  
   
      Feld**Freien Speicherplatz pro Seite ändern in**   
      Löscht die Indizes für die Tabellen in der Datenbank und erstellt sie mit einem neuen, automatisch berechneten Füllfaktor neu. Auf diese Weise wird der angegebene freie Speicherplatz auf den Indexseiten reserviert. Ein höherer Prozentsatz bedeutet, dass mehr freier Speicherplatz auf den Indexseiten reserviert wird und der Index entsprechend wachsen kann. Die gültigen Werte sind 0 bis 100. Verwendet die `FILLFACTOR` -Option.  
@@ -422,7 +424,7 @@ Kontrollkästchen**Indizes einschließen**
     |||  
     |-|-|  
     |**Standardservereinstellungen verwenden**|Klicken Sie hier, um die Standardeinstellung auf Serverebene zu verwenden. Diese Standardeinstellung wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** festgelegt. Informationen zum Anzeigen der aktuellen Einstellung dieser Option finden Sie unter [Anzeigen oder Konfigurieren der Serverkonfigurationsoption „Standardeinstellung für die Sicherungskomprimierung“](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-    |**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> **\*\* Wichtig \*\*** Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die Ressourcenkontrolle eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen.|  
+    |**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> **\*\* Wichtig \*\*** Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die Ressourcenkontrolle eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Sicherung nicht komprimieren**|Klicken Sie hier, um unabhängig von der Standardeinstellung auf Serverebene eine nicht komprimierte Sicherung zu erstellen.|  
   
 2.  Wählen Sie auf der Seite **Task 'Datenbank sichern (differenziell)' definieren** die Datenbanken aus, für die eine Teilsicherung ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP DATABASE … WITH DIFFERENTIAL`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
@@ -527,5 +529,4 @@ Kontrollkästchen**Indizes einschließen**
      Kopiert die Ergebnisse aus dem Statusbericht des Assistenten in eine E-Mail.  
   
   
-
 

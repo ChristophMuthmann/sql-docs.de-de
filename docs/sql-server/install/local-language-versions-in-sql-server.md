@@ -2,28 +2,30 @@
 title: Lokale Sprachversionen in SQL Server | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 6d7de04bb83519d13cb7046b3353cf12f1b5a312
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 59bccb3bef14b779a017567211148096d2cb6c35
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-language-versions-in-sql-server"></a>Lokale Sprachversionen in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt alle Sprachen, die von Windows-Betriebssystemen unterstützt werden.  
   
 ## <a name="cross-language-support"></a>Sprachübergreifende Unterstützung  
@@ -88,7 +90,7 @@ ms.lasthandoff: 08/28/2017
   
 4.  Klicken Sie auf **Übernehmen** , um die Änderung zu bestätigen, und dann auf **OK** , um das Fenster zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   

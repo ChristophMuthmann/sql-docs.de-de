@@ -3,7 +3,7 @@ title: IDSOShapeExtensions Schnittstelle | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - IDSOShapeExtensions interface [ADO]
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 454dc39046b33e2b621f77ea2a31bddc16b742ea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5168df904df1cfc8f764fe628f8e83382eb86f81
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions-Schnittstelle
 Ruft das zugrunde liegende Objekt für den OLE DB-Datenquelle für das SHAPE-Anbieters ab.  
@@ -54,4 +53,3 @@ public:
  **Bibliothek:** "MSADO15.dll"  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4
-

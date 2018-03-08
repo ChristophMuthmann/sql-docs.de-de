@@ -1,36 +1,36 @@
 ---
-title: "Bereitstellen von SQL Server-Datentools (SSAS – tabellarisch) | Microsoft Docs"
+title: Bereitstellen von SQL Server Datatools | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c009ba69247d754c95f98732f41e4023db0fcaa4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: adb50d35f60359d6bd1e18cacff6e80722665d59
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Bereitstellen in SQL Server Data Tools
-  Verwenden Sie die Aufgaben in diesem Thema, um eine Projektmappe für tabellarische Modelle bereitstellen, indem Sie mit dem Bereitstellungsbefehl in SSDT.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Verwenden Sie die Aufgaben in diesem Thema, um eine Projektmappe für tabellarische Modelle bereitstellen, indem Sie mit dem Bereitstellungsbefehl in SSDT.  
   
 ##  <a name="bkmk_deploy"></a> Konfigurieren der Eigenschaften "Bereitstellungsoptionen" und "Bereitstellungsserver"  
- Bevor Sie die Projektmappe für tabellarische Modelle bereitstellen, müssen Sie die Eigenschaft Bereitstellungsoptionen und die Eigenschaft Bereitstellungsserver angeben. Weitere Informationen zu Bereitstellungseigenschaften und Einstellungen finden Sie unter [tabellarische Bereitstellung von Tabellenmodelllösungen](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
+ Bevor Sie die Projektmappe für tabellarische Modelle bereitstellen, müssen Sie die Eigenschaft Bereitstellungsoptionen und die Eigenschaft Bereitstellungsserver angeben. Weitere Informationen zu Bereitstellungseigenschaften und Einstellungen finden Sie unter [tabellenmodelllösungsbereitstellung](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
 #### <a name="to-configure-options-and-properties"></a>So konfigurieren Sie Optionen und Eigenschaften  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 09/01/2017
 3.  Legen Sie unter **Bereitstellungsserver**die Einstellungen der Eigenschaften **Server** (Name), **Edition**, **Datenbank** (Name) und **Cubename** fest, falls diese von den Standardeinstellungen abweichen, und klicken Sie anschließend auf **OK**.  
   
 > [!NOTE]  
->  Sie können auch die Einstellung der Eigenschaft Standardbereitstellungsserver angeben, damit alle neu erstellten Projekte automatisch auf dem angegebenen Server bereitgestellt werden. Weitere Informationen finden Sie unter [Standard Datenmodellierung konfigurieren und Bereitstellungseigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  Sie können auch die Einstellung der Eigenschaft Standardbereitstellungsserver angeben, damit alle neu erstellten Projekte automatisch auf dem angegebenen Server bereitgestellt werden. Weitere Informationen finden Sie unter [modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-##  <a name="bkmk_deploy_proc"></a>Bereitstellen eines tabellarischen Modells  
+##  <a name="bkmk_deploy_proc"></a> Bereitstellen eines tabellarischen Modells  
   
 #### <a name="to-deploy-a-tabular-model"></a>Zum Bereitstellen eines tabellarischen Modells
   
@@ -74,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   
   
-

@@ -1,33 +1,33 @@
 ---
-title: Arbeiten mit Momentaufnahmen (Webportal) | Microsoft Docs
+title: Arbeiten mit Momentaufnahmen (Webportal) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51abaf6facdb6c9dbb9ed360d371057a0274de3f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>Arbeiten mit Momentaufnahmen (Webportal)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Sie können steuern, wenn Momentaufnahmen für einen Bericht, durch Auswahl erstellt werden der **mit den Auslassungszeichen (...)**  eines Berichts auswählen **verwalten** auswählen und **Caching** oder **Berichtsverlaufs-Momentaufnahmen**.  
+Sie können steuern, ob Momentaufnahmen für einen Bericht erstellt werden, indem Sie die **Auslassungspunkte (...)** eines Berichts auswählen, anschließend **Verwalten** und **Caching** oder **Verlaufsmomentaufnahmen**.  
   
 > [!NOTE]
 > Der SQL Server-Agent-Dienst muss gestartet werden.  
@@ -80,9 +80,8 @@ Mit dieser Option wird eine Berichtsmomentaufnahme, die auf Grundlage von Berich
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Arbeiten mit paginierten Berichten](working-with-paginated-reports-web-portal.md)  
-[Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Web portal (Webportal)](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Working with paginated reports (Arbeiten mit paginierten Berichten)](working-with-paginated-reports-web-portal.md)  
+[Work with shared datasets (Arbeiten mit freigegebenen Datasets)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

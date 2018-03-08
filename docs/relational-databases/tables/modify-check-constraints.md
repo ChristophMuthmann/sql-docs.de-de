@@ -2,9 +2,12 @@
 title: "Ändern von Check-Einschränkungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-tables
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 23af1baa5b43796d326aea114e4b2ae2a3a30382
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="modify-check-constraints"></a>Ändern von CHECK-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie eine CHECK-Einschränkung mit:**  
   
@@ -44,14 +46,14 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-check-constraint"></a>So ändern Sie eine CHECK-Einschränkung  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Klicken Sie auf **Schließen**.  
   
-6.  Klicken Sie im Menü **Datei** auf **Speichern***table name*.  
+6.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie eine CHECK-Einschränkung**  
@@ -84,4 +86,3 @@ ms.lasthandoff: 06/22/2017
  Um eine `CHECK` -Einschränkung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]zu ändern, müssen Sie zuerst die vorhandene `CHECK` -Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Löschen von CHECK-Einschränkungen](../../relational-databases/tables/delete-check-constraints.md) und [Erstellen von CHECK-Einschränkungen](../../relational-databases/tables/create-check-constraints.md).  
   
 ###  <a name="TsqlExample"></a>  
-

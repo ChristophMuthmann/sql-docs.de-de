@@ -2,38 +2,37 @@
 title: MININGSTRUKTUR (DMX) ERSTELLEN | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_MINING_STRUCTURE
 - CREATE MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - CREATE MINING STRUCTURE statement
 - mining structures [DMX], creating
 - RELATED TO column
 ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cb0b52cf7ac2b866119ff75bbd0d7e8da8cbac84
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Erstellt in einer Datenbank eine neue Miningstruktur und definiert optional Trainings- und Testpartitionen. Nachdem Sie die Miningstruktur erstellt haben, können Sie mithilfe der [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) -Anweisung Modelle zur Miningstruktur hinzufügen.  
   
@@ -78,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Standardwert: REPEATABLE(0)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Sie definieren eine Miningstruktur, indem Sie eine Liste mit Spalten und optional hierarchische Beziehungen zwischen den Spalten angeben und dann wahlweise die Miningstruktur in Trainings- und Testdatasets partitionieren.  
   
  Das optionale SESSION-Schlüsselwort gibt an, dass die Struktur eine temporäre Struktur ist, die Sie nur für die Dauer der aktuellen Sitzung verwenden können. Wenn die Sitzung beendet wird, werden die Struktur und alle Modelle auf Grundlage der Struktur gelöscht. Um temporäre Miningstrukturen und Modelle zu erstellen, müssen Sie zuerst die Datenbankeigenschaft AllowSessionMiningModels festlegen. Weitere Informationen finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -194,10 +193,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

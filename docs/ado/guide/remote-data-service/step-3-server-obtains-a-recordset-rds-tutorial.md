@@ -3,7 +3,7 @@ title: "Schritt 3: Server erhält ein Recordset (RDS-Lernprogramm) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO], server obtains Recordset
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a6a55083897b680ece362fe734f3f4a4cd97db4d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62210ae4cbf206faebed32b87bdbf64edd3265d9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Schritt 3: Server erhält ein Recordset (RDS-Lernprogramm)
 Server verwendet den Connect-Zeichenfolge und Befehl Text zum Abfragen der Datenquelle für die gewünschten Zeilen. ADO wird normalerweise verwendet, um diesen abzurufen **Recordset**, obwohl andere Microsoft-Daten Schnittstellen zuzugreifen, z. B. OLE DB verwendet werden konnte.  
@@ -48,4 +47,3 @@ End Function
 ## <a name="see-also"></a>Siehe auch  
  [Schritt 4: Server gibt das Recordset (RDS-Lernprogramm)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

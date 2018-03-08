@@ -2,9 +2,12 @@
 title: "Sicherheitsüberwachung-Ereigniskategorie (SQL Server Profiler) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,24 +17,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Security Audit event category
 - SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5b93277d27d4a797fc5ca5924794a7631673445f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Sicherheitsüberwachung-Ereigniskategorie (SQL Server Profiler)
-  Die **Sicherheitsüberwachung** -Ereigniskategorie enthält Sicherheitsüberwachungsereignisse.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die **Sicherheitsüberwachung** -Ereigniskategorie enthält Sicherheitsüberwachungsereignisse.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Audit Add DB User (Ereignisklasse)](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|Gibt an, dass eine Anmeldung hinzugefügt oder entfernt wurde, wie ein Datenbankbenutzer zu einer Datenbank.|  
 |[Audit Add Login to Server Role (Ereignisklasse)](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|Gibt an, dass eine Annmeldung von einer festen Serverrolle hinzugefügt oder entfernt wurde.|  
@@ -82,4 +85,3 @@ ms.lasthandoff: 06/22/2017
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Microsoft Cursordiensts für OLE DB (ADO-Dienstkomponente) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7a1f8568b633417196c6c9dda3e8a3615146603
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service für OLE DB-Übersicht
 Der Microsoft Cursor Service für OLE DB ergänzt die Cursorfunktionen der Unterstützung von Datenanbietern. Daher nimmt der Benutzer relativ einheitliche Funktionalität von allen Datenanbietern.
@@ -66,18 +65,18 @@ Recordset1.Properties.Item("Command Time out") = 50
 
 |Eigenschaftsname|Description|
 |-------------------|-----------------|
-|Automatische Neuberechnung (DBPROP_ADC_AUTORECALC)|Für Recordsets erstellt mit dem-Datenstrukturierungsdiensts dieser Wert gibt an, wie oft werden berechnete und aggregierte Spalten berechnet. Die Standardeinstellung (Wert = 1) ist, neu zu berechnen, bei jedem-Datenstrukturierungsdiensts bestimmt, dass die Werte geändert haben. Wenn der Wert 0 ist, werden die berechneten oder aggregierten Spalten nur berechnet, wenn die Hierarchie anfänglich basiert.|
+|Auto Recalc (DBPROP_ADC_AUTORECALC)|Für Recordsets erstellt mit dem-Datenstrukturierungsdiensts dieser Wert gibt an, wie oft werden berechnete und aggregierte Spalten berechnet. Die Standardeinstellung (Wert = 1) ist, neu zu berechnen, bei jedem-Datenstrukturierungsdiensts bestimmt, dass die Werte geändert haben. Wenn der Wert 0 ist, werden die berechneten oder aggregierten Spalten nur berechnet, wenn die Hierarchie anfänglich basiert.|
 |Batchgröße (DBPROP_ADC_BATCHSIZE)|Gibt die Anzahl der updateanweisungen, die zusammengefasst werden können, bevor Sie mit dem Datenspeicher gesendet werden. Weitere Anweisungen in einem Batch, weniger Roundtrips an den Daten zu speichern.|
-|Zwischenspeichern von untergeordneten Zeilen (DBPROP_ADC_CACHECHILDROWS)|Für Recordsets, die mit dem Datendienst strukturiert werden, erstellt werden gibt dieser Wert an, ob untergeordneten Recordsets in einem Cache für die spätere Verwendung gespeichert werden.|
-|Cursor-Modulversion (DBPROP_ADC_CEVER)|Gibt die Version des Diensts Cursor verwendet wird.|
-|Änderungsstatus (DBPROP_ADC_MAINTAINCHANGESTATUS) verwalten|Gibt den Text des Befehls zum erneuten Synchronisieren einer eine oder mehrere Zeilen in einer Verknüpfung aus mehreren Tabellen verwendet.|
+|Cache Child Rows (DBPROP_ADC_CACHECHILDROWS)|Für Recordsets, die mit dem Datendienst strukturiert werden, erstellt werden gibt dieser Wert an, ob untergeordneten Recordsets in einem Cache für die spätere Verwendung gespeichert werden.|
+|Cursor Engine Version (DBPROP_ADC_CEVER)|Gibt die Version des Diensts Cursor verwendet wird.|
+|Maintain Change Status (DBPROP_ADC_MAINTAINCHANGESTATUS)|Gibt den Text des Befehls zum erneuten Synchronisieren einer eine oder mehrere Zeilen in einer Verknüpfung aus mehreren Tabellen verwendet.|
 |[Optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index erstellt werden soll. Bei Festlegung auf **"true"**, wird das temporäre Erstellen von Indizes, die die Ausführung bestimmter Vorgänge zu verbessern.|
 |[Umstrukturieren von Namen](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt den Namen der der **Recordset**. Können verwiesen wird, in der aktuellen oder nachfolgenden Daten strukturieren Befehle sein.|
 |[Resync-Befehl](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt eine benutzerdefinierte Befehlszeichenfolge, die von verwendet wird, an der [Resync](../../../ado/reference/ado-api/resync-method.md) Methode beim der [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) Eigenschaft wirksam ist.|
 |[Eindeutige Katalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Gibt den Namen der Datenbank mit der Tabelle verwiesen wird, der **eindeutige Tabelle** Eigenschaft.|
 |[Eindeutiges Schema](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Gibt den Namen des Besitzers der Tabelle verwiesen wird, der **eindeutige Tabelle** Eigenschaft.|
 |[Eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Gibt den Namen der eine Tabelle in einer **Recordset** erstellt, die aus mehreren Tabellen, die von einfügungen, Updates oder Löschvorgänge geändert werden können.|
-|Updatekriterium (DBPROP_ADC_UPDATECRITERIA)|Gibt an, welche Felder in der **, in denen** Klausel werden zur Behandlung von Konflikten, die während einer Aktualisierung verwendet.|
+|Update Criteria (DBPROP_ADC_UPDATECRITERIA)|Gibt an, welche Felder in der **, in denen** Klausel werden zur Behandlung von Konflikten, die während einer Aktualisierung verwendet.|
 |[Aktualisieren Sie die Neusynchronisierung](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Gibt an, ob die **Resync** Methode wird implizit aufgerufen, nachdem die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode (und sein Verhalten), wenn die **eindeutige Tabelle** Eigenschaft wirksam ist.|
 
  Sie können auch festlegen, oder rufen Sie eine dynamische Eigenschaft durch Angabe ihres Namens als Index für die **Eigenschaften** Auflistung. Beispielsweise erhalten und drucken Sie den aktuellen Wert der die [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dynamische Eigenschaft legen Sie dann einen neuen Wert wie folgt:
@@ -98,4 +97,3 @@ rs.Properties("Optimize") = True
 
 ## <a name="method-behavior"></a>Methodenverhalten
  Der Cursor-Dienst für OLE DB ermöglicht oder wirkt sich auf das Verhalten von der [Feld](../../../ado/reference/ado-api/field-object.md) des Objekts [Anfügen](../../../ado/reference/ado-api/append-method-ado.md) Methode und die **Recordset** des Objekts [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), und [speichern](../../../ado/reference/ado-api/save-method.md) Methoden.
-

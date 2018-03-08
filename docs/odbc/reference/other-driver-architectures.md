@@ -3,10 +3,12 @@ title: Andere Treiber Architekturen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fca4bea3f40702fb2593442ccbbfb311f813a87a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-driver-architectures"></a>Andere Treiber-Architekturen
 Einige ODBC-Treiber übereinstimmen nicht streng auf die zuvor beschriebenen Architektur. Dies kann daran liegen die Treiber Aufgaben außer denen eines herkömmlichen ODBC-Treibers, oder sind keine Treiber in den normalen Sinn.  
@@ -55,4 +56,3 @@ Einige ODBC-Treiber übereinstimmen nicht streng auf die zuvor beschriebenen Arc
  Ein Vorteil dieser Architektur ist effizient Software-Wartung und Konfiguration. Treiber müssen nur an einer Stelle aktualisiert werden: auf dem Server. Mithilfe von System-Datenquellen können Datenquellen auf dem Server für die Verwendung von allen Clients definiert werden. Die Datenquellen müssen nicht auf dem Client definiert werden. Verbindungspooling kann verwendet werden, zur Optimierung dieses Prozesses mit dem Clients eine Verbindung mit Datenquellen herstellen.  
   
  Der Treiber auf dem Client ist in der Regel eine sehr kleine Treiber, bei dem den Treiber-Manager-Aufruf an den Server übertragen. Seine Platzbedarf kann erheblich kleiner als die voll funktionsfähige ODBC-Treiber auf dem Server sein. In dieser Architektur können Clientressourcen freigegeben werden, wenn der Server mehr rechenleistung verfügt. Darüber hinaus können der Effizienz und Sicherheit des gesamten Systems verbessert werden, vom backup-Server installieren und Ausführen des Lastenausgleichs, um die Verwendung durch Posteingangsserver zu optimieren.
-

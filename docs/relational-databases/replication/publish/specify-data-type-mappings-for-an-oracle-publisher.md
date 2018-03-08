@@ -2,11 +2,13 @@
 title: "Angeben von Datentypzuordnungen für einen Oracle-Verleger | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9ce8ce849533cb29249790d00371fe738d21db6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2589fa181a502c7eb016ce958e1fe1fe4d325a8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Angeben von Datentypzuordnungen für einen Oracle-Verleger
-  In diesem Thema wird beschrieben, wie Datentypzuordnungen für einen Oracle-Verleger in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]angegeben werden. Obwohl eine Gruppe von Standard-Datentypzuordnungen für Oracle-Verleger bereitgestellt wird, ist es möglicherweise erforderlich, für eine bestimmte Veröffentlichung andere Zuordnungen anzugeben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Datentypzuordnungen für einen Oracle-Verleger in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] angegeben werden. Obwohl eine Gruppe von Standard-Datentypzuordnungen für Oracle-Verleger bereitgestellt wird, ist es möglicherweise erforderlich, für eine bestimmte Veröffentlichung andere Zuordnungen anzugeben.  
   
  **In diesem Thema**  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Die Datentypzuordnungen werden auf der Registerkarte Datenzuordnung**des Dialogfelds **Artikeleigenschaften – \<Artikel>** angegeben. Diese Registerkarte ist über die Seite Artikel** des Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>So geben Sie eine Datentypzuordnung an  
@@ -97,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_3.sql)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Heterogene Datenbankreplikation](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

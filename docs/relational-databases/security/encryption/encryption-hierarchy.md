@@ -2,11 +2,13 @@
 title: "Verschlüsselungshierarchie | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 873a266bd722f6e5337abe94f615e2e82ea0e278
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="encryption-hierarchy"></a>Verschlüsselungshierarchie
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Daten anhand einer hierarchischen Verschlüsselungs- und Schlüsselverwaltungsinfrastruktur verschlüsselt. Jede Ebene verschlüsselt die Ebene darunter, indem eine Kombination aus Zertifikaten, asymmetrischen und symmetrischen Schlüsseln verwendet wird. Asymmetrische Schlüssel und symmetrische Schlüssel können außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem EKM-Modul (erweiterbare Schlüsselverwaltung) gespeichert werden.  
+Mit [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Daten anhand einer hierarchischen Verschlüsselungs- und Schlüsselverwaltungsinfrastruktur verschlüsselt. Jede Ebene verschlüsselt die Ebene darunter, indem eine Kombination aus Zertifikaten, asymmetrischen und symmetrischen Schlüsseln verwendet wird. Asymmetrische Schlüssel und symmetrische Schlüssel können außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem EKM-Modul (erweiterbare Schlüsselverwaltung) gespeichert werden.  
   
  In der folgenden Abbildung wird dargestellt, wie jede Ebene der Verschlüsselungshierarchie die Ebene darunter verschlüsselt und die häufigsten Verschlüsselungskonfigurationen anzeigt. Der Zugriff auf den Anfang der Hierarchie wird normalerweise durch ein Kennwort geschützt.  
   
@@ -119,4 +120,3 @@ ms.lasthandoff: 08/28/2017
  [Sicherungsfähige Elemente](../../../relational-databases/security/securables.md)  
   
   
-

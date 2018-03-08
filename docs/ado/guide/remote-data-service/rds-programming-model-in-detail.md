@@ -3,7 +3,7 @@ title: RDS-Programmiermodell detailliert | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,33 +15,32 @@ ms.topic: article
 helpviewer_keywords:
 - RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5a2798c750ba20b03c9e423b5897575ce4d5d697
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db8a1222c560b54629baa34da595e0f5c49835b0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS-Programmiermodell im Detail
 Im folgenden sind wichtige Elemente, die RDS-Programmiermodell:  
   
--   RDS. Datenspeicher  
+-   RDS.DataSpace  
   
 -   RDSServer.DataFactory  
   
--   RDS. DataControl  
+-   RDS.DataControl  
   
 -   Ereignis  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="rdsdataspace"></a>RDS. Datenspeicher  
+## <a name="rdsdataspace"></a>RDS.DataSpace  
  Ihre Clientanwendung muss den Server und des aufzurufenden Programms angeben. Die Anwendung wird im Gegenzug empfängt einen Verweis auf die Server-Anwendung und kann den Verweis behandeln, als handele es sich um die Server-Anwendung selbst.  
   
  Die RDS-Objektmodell stellt diese Funktionalität mit dem [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt.  
@@ -61,7 +60,7 @@ Im folgenden sind wichtige Elemente, die RDS-Programmiermodell:
   
  Die Server-Anwendung bezeichnet eine *Geschäftsobjekt*. Sie können eigene benutzerdefinierte Geschäftsobjekt schreiben, das komplexe Daten zugreifen, Gültigkeit überprüft usw. ausführen können. Auch wenn Sie ein benutzerdefiniertes Geschäftsobjekt zu schreiben, erstellen Sie eine Instanz von einer **RDSServer.DataFactory** -Objekts und die Verwendung einiger ihrer Methoden für Ihre eigenen Aufgaben.  
   
-## <a name="rdsdatacontrol"></a>RDS. DataControl  
+## <a name="rdsdatacontrol"></a>RDS.DataControl  
  RDS bietet die Möglichkeit, die Funktionalität Kombinieren der **RDS. DataSpace** und **RDSServer.DataFactory**, und aktivieren Sie visuelle Steuerelemente auf einfache Weise verwendet auch die **Recordset** Objekt, das von einer Abfrage aus einer Datenquelle zurückgegeben. RDS versucht der häufigste Fall ist, möchten Sie so weit wie möglich automatisch Zugriff auf Informationen auf einem Server und in einem visuellen Steuerelement anzeigt.  
   
  Die RDS-Objektmodell stellt diese Funktionalität mit dem [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
@@ -86,7 +85,6 @@ Im folgenden sind wichtige Elemente, die RDS-Programmiermodell:
  [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 
 

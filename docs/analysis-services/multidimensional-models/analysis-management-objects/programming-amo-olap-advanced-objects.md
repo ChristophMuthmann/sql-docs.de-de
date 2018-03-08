@@ -1,13 +1,14 @@
 ---
 title: Programmieren AMO-OLAP-von erweiterten Objekten | Microsoft Docs
 ms.custom: 
-ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dedfe7e17d6f8fd0be0bb769b9891880a83b2eba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmieren von erweiterten AMO OLAP-Objekten
   In diesem Thema werden die Programmierdetails von erweiterten OLAP-Objekten in Analysis Management Objects (AMO) erläutert. Dieses Thema enthält folgende Abschnitte:  
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Übersetzungsobjekte](#Transl)  
   
-##  <a name="Action"></a>Aktionsobjekte  
+##  <a name="Action">Aktionsobjekte</a>  
  Aktionsklassen werden verwendet, um beim Durchsuchen von bestimmten Bereichen des Cubes eine aktive Antwort zu erstellen. Aktionsobjekte können mithilfe von AMO definiert werden, sie werden jedoch von der Clientanwendung verwendet, die die Daten durchsucht. Aktionen können von anderen Typen sein, und sie müssen entsprechend ihrem Typ erstellt werden. Folgende Aktionen stehen zur Verfügung:  
   
 -   Drillthroughaktionen geben die Zeilen zurück, die die zugrunde liegenden Daten der ausgewählten Zellen des Cubes darstellen, in dem die Aktion ausgeführt wird.  
@@ -191,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>KPI-Objekte  
+##  <a name="KPI">KPI-Objekte</a>  
  Ein Key Performance Indicator (KPI) ist eine Auflistung von Berechnungen, die einer Measuregruppe in einem Cube zugeordnet sind und zur Auswertung der Geschäftserfolge verwendet werden. <xref:Microsoft.AnalysisServices.Kpi>-Objekte können mithilfe von AMO definiert werden, sie werden jedoch von der Clientanwendung verwendet, die die Daten durchsucht.  
   
  Erstellen einer <xref:Microsoft.AnalysisServices.Kpi> Objekt erfordert die folgenden Schritte aus:  
@@ -350,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>Perspective-Objekte  
+##  <a name="Persp">Perspective-Objekte</a>  
  <xref:Microsoft.AnalysisServices.Perspective>-Objekte können mithilfe von AMO definiert werden, sie werden jedoch von der Clientanwendung verwendet, die die Daten durchsucht.  
   
  Erstellen einer <xref:Microsoft.AnalysisServices.Perspective> Objekt erfordert die folgenden Schritte aus:  
@@ -413,8 +413,8 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>ProactiveCaching-Objekte  
- <xref:Microsoft.AnalysisServices.ProactiveCaching>Objekte können mithilfe von AMO definiert werden.  
+##  <a name="PC">ProactiveCaching-Objekte</a>  
+ <xref:Microsoft.AnalysisServices.ProactiveCaching> Objekte können mithilfe von AMO definiert werden.  
   
  Erstellen einer <xref:Microsoft.AnalysisServices.ProactiveCaching> Objekt erfordert die folgenden Schritte aus:  
   
@@ -424,7 +424,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  Fügen Sie Cachespezifikationen hinzu.  
   
-|Spezifikation|Beschreibung|  
+|Spezifikation|Description|  
 |-------------------|-----------------|  
 |AggregationStorage|Der Speichertyp für Aggregationen.<br /><br /> Gilt nur für Partitionen. Für Dimensionen muss **Regular.**verwendet werden.|  
 |SilenceInterval|Minimale Zeit, die der Cache vorhanden ist, bevor das MOLAP-Imaging beginnt.|  
@@ -470,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>Übersetzungsobjekte  
+##  <a name="Transl">Übersetzungsobjekte</a>  
  Übersetzungsobjekte können mithilfe von AMO definiert werden, sie werden jedoch von der Clientanwendung verwendet, die die Daten durchsucht. Übersetzungsobjekte sind einfach zu codierende Objekte. Übersetzungen für Objektbeschriftungen werden von Paaren von Gebietsschemabezeichnern und übersetzten Beschriftungen bereitgestellt. Für alle Beschriftungen können mehrere Übersetzungen aktiviert werden. Übersetzungen können bereitgestellt werden, für die meisten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte, z. B. Dimensionen, Attribute, Hierarchien, Cubes, Measuregruppen, Measures und andere.  
   
  Im folgenden Codebeispiel wird eine spanische Übersetzung für den Namen des Attributs "Product Name" bereitgestellt.  
@@ -499,4 +499,3 @@ static public void CreateTranslations(Database db)
  [Installieren von Sample Data and Projects für Analysis Services-mehrdimensionale Modellierung-Lernprogramm](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

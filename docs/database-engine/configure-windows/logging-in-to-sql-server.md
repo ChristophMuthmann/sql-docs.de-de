@@ -2,11 +2,13 @@
 title: Anmelden bei SQL Server | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9afd0526acb2531222828a104a81096a29846342
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4ed2e0c35921a717fc9447e62d469fb0153a74c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
-  Sie können sich mithilfe eines beliebigen grafischen Administrationstools oder von der Eingabeaufforderung aus bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können sich mithilfe eines beliebigen grafischen Administrationstools oder von der Eingabeaufforderung aus bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden.  
   
  Wenn Sie sich mithilfe eines grafischen Administrationstools, wie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , bei einer Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anmelden, werden Sie zum Angeben eines Servernamens, eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamens und gegebenenfalls eines Kennworts aufgefordert. Wenn Sie sich mithilfe der Windows-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden, müssen Sie den SQL Server-Anmeldenamen nicht jedes Mal angeben, wenn Sie auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugreifen. Stattdessen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ihr [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto zum automatischen Anmelden verwendet. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Authentifizierung im gemischten Modus ausgeführt wird (die Modi[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung), und wenn Sie zum Anmelden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden möchten, müssen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
@@ -76,13 +77,13 @@ ms.lasthandoff: 08/02/2017
 ## <a name="verifying-your-connection-protocol"></a>Überprüfen Ihres Verbindungsprotokolls  
  Bei einer Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt die folgende Abfrage das für die aktuelle Verbindung verwendete Protokoll sowie die Authentifizierungsmethode (NTLM oder Kerberos) zurück und gibt an, ob es sich um eine verschlüsselte Verbindung handelt:  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Anmelden an einer Instanz von SQL Server &#40;Befehlszeile&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Die folgenden Ressourcen können beim Beheben von Verbindungsproblemen hilfreich sein:  
@@ -99,4 +100,3 @@ WHERE session_id = @@SPID;
  [Erstellen einer Anmeldung](../../t-sql/lesson-2-1-creating-a-login.md)  
   
   
-

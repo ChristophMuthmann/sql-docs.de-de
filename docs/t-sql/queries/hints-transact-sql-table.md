@@ -3,8 +3,11 @@ title: Tabellenhinweise (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,20 +39,19 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c87922c612c4da8b1ca6841b0d7ff7c3f191eb50
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL) - Tabelle
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Tabellenhinweise überschreiben das Standardverhalten des Abfrageoptimierers für die Dauer von der Anweisung Data Manipulation Language (DML), durch Angeben einer Sperrmethode, eines oder mehrerer Indizes, einen Vorgang abfrageverarbeitung, z. B. eine Tabelle Scan oder Index Seek oder andere Optionen. Tabellenhinweise werden in der FROM-Klausel der DML-Anweisung angegeben und wirken sich nur auf die Tabelle oder Sicht aus, auf die in der betreffenden Klausel verwiesen wird.  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [ZUSAMMENFÜHREN](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -153,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie in den Hinweisen.  
   
- INDEX **(***Index_value* [**,**... *n* ] ) | INDEX = ( *Index_value***)**  
+ INDEX  **(*** Index_value* [**,**... *n* ] ) | INDEX = ( *Index_value ***)**  
  Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative INDEX = Syntax gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
   
  Falls ein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Scan des gruppierten Index, und INDEX(1) erzwingt einen Scan des gruppierten Index oder eine Suche im gruppierten Index. Falls kein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Tabellenscan, und INDEX(1) wird als Fehler interpretiert.  
@@ -184,7 +186,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... Wählen Sie * FROM OPENROWSET(Bulk...)-Anweisung finden Sie unter [beibehalten von NULL-Werten oder verwenden standardmäßig während des Massenimports &#40; SQLServer &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***Index_value***(***Index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***Index_value***(*** Index_column_name* [ **,**... *n* ] **))** ]  
  Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad auf die in der Tabelle oder Sicht angegebenen Daten verwenden darf. Ab SQL Server 2008 R2 SP1 können auch Indexparameter angegeben werden. Der Abfrageoptimierer berücksichtigt in diesem Fall nur Indexsuchvorgänge über den angegebenen Index mit mindestens den angegebenen Indexspalten.  
   
  *index_value*  
@@ -450,7 +452,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Verwenden des TABLOCK-Hinweises zum Angeben einer Sperrmethode  
  Im folgenden Beispiel wird angegeben, dass eine freigegebene Sperre für die `Production.Product`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank eingerichtet und bis zum Ende der UPDATE-Anweisung aufrechterhalten wird.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +476,7 @@ GO
   
  Im folgenden Beispiel wird der Abfrageoptimierer mithilfe des FORCESEEK-Hinweises mit Index gezwungen, einen Indexsuchvorgang im angegebenen Index und in der angegebenen Indexspalte durchzuführen.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +491,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. Verwenden des FORCESCAN-Hinweises zum Angeben eines Indexscanvorgangs  
  Im folgenden Beispiel wird der Abfrageoptimierer mithilfe eines FORCESCAN-Tipps gezwungen, einen Scanvorgang in der `Sales.SalesOrderDetail`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank durchzuführen.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -501,8 +503,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>Siehe auch  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Tabellenhinweise &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   
-

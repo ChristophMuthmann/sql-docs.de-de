@@ -2,9 +2,12 @@
 title: "Deaktivieren von Indizes und Einschränkungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - index disabling [SQL Server]
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 04a01391e07ff089e16179c8645e705d08aee449
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie ein Index oder Einschränkungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktiviert werden. Wenn Indizes deaktiviert werden, können Benutzer nicht mehr darauf zugreifen, und bei gruppierten Indizes können sie auch nicht mehr auf die dem Index zugrunde liegenden Tabellendaten zugreifen. Die Indexdefinition verbleibt jedoch in den Metadaten, und bei nicht gruppierten Indizes werden die Indexstatistiken beibehalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Das Deaktivieren eines gruppierten Indexes für eine Tabelle verhindert lediglich das Zugreifen auf die Daten; diese verbleiben in der Tabelle, sind jedoch erst für DML-Vorgänge (Datenbearbeitungssprache) verfügbar, wenn der Index gelöscht oder neu erstellt wurde.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So deaktivieren Sie einen Index mithilfe von:**  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -97,7 +99,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Ausführen von ALTER INDEX benötigen Sie mindestens die ALTER-Berechtigung auf der Tabelle bzw. Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   
@@ -170,7 +172,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -187,7 +189,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>So deaktivieren Sie alle Indizes in einer Tabelle  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -204,4 +206,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
-

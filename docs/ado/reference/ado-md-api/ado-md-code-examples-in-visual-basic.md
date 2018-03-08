@@ -3,7 +3,7 @@ title: ADO MD-Codebeispiele in Visual Basic | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, Visual Basic
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 96982fc09cbfb5538eccb8f57e2f5b99f5da0b75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6cc3b9cfb294610b39bf0a09fe704dcff325ee2a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>ADO MD-Codebeispiele in Visual Basic
 Die folgenden Beispiele erfordern Microsoft Visual Basic-Version 5.0 mit Service Pack 3 oder Visual Basic 6.0-Version.  
@@ -38,4 +37,3 @@ Die folgenden Beispiele erfordern Microsoft Visual Basic-Version 5.0 mit Service
 -   [Cellset-Beispiel](../../../ado/reference/ado-md-api/cellset-example-vb.md)  
   
 -   [Katalog-Beispiel](../../../ado/reference/ado-md-api/catalog-example-vb.md)
-

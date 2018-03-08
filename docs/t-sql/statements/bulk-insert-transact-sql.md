@@ -1,10 +1,13 @@
----
+﻿---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 153
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80b16fd446ff72c6a673a576d9a8deb9514be8b2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Importiert eine Datendatei in eine Datenbanktabelle oder Sicht und verwendet dabei ein vom Benutzer angegebenes Format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -318,12 +320,12 @@ Vor dem [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-Version 1.1, 
 ##  <a name="Limitations"></a> Einschränkungen  
  Bei Verwendung einer Formatdatei mit BULK INSERT können maximal 1024 Felder angegeben werden. Dieser Höchstwert entspricht der maximalen Zahl zulässiger Spalten in einer Tabelle. Wenn Sie BULK INSERT mit einer Datendatei verwenden, in der mehr als 1024 Felder enthalten sind, generiert BULK INSERT den Fehler 4822. Die [Hilfsprogramm "Bcp"](../../tools/bcp-utility.md) nicht unterliegt dieser Einschränkung, verwenden Sie daher für Datendateien, die mehr als 1024 Felder enthalten, die **Bcp** Befehl.  
   
-## <a name="performance-considerations"></a>Leistungsaspekte  
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Wenn die Anzahl der in einem einzelnen Batch geleerten Seiten einen internen Schwellenwert überschreitet, könnte ein vollständiger Scan des Pufferpools ausgeführt werden, um die zu leerenden Seiten bei der Durchführung eines Commits für den Batch zu identifizieren. Dieser vollständige Scan kann sich negativ auf die Massenimportleistung auswirken. Die Überschreitung des internen Schwellenwerts ist wahrscheinlich, wenn ein großer Pufferpool mit einem langsamen E/A-Subsystem kombiniert wird. Um Pufferüberläufe auf großen Computern zu vermeiden, verwenden Sie entweder keinen TABLOCK-Hinweis (da dieser die Massenoptimierungen entfernt), oder verwenden Sie eine kleinere Batchgröße (die die Massenoptimierungen beibehält).  
   
  Da Computer unterschiedlich sind, wird empfohlen, verschiedene Batchgrößen mit den geladenen Daten zu testen, um die optimale Vorgehensweise zu bestimmen.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="security-account-delegation-impersonation"></a>Delegierung von Sicherheitskonten (Identitätswechsel)  
  Wenn ein Benutzer einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen verwendet, wird das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesskontos verwendet. Ein Anmeldename, für den die SQL Server-Authentifizierung verwendet wird, kann nicht außerhalb des Datenbankmoduls authentifiziert werden. Wenn ein BULK INSERT-Befehl durch einen Anmeldenamen initiiert wird, der die SQL Server-Authentifizierung verwendet, wird die Datenverbindung folglich mithilfe des Sicherheitskontexts des SQL Server-Prozesskontos (dem vom SQL Server-Datenbankmoduldienst verwendeten Konto) hergestellt. Um die Quelldaten lesen zu können, müssen Sie dem vom SQL Server-Datenbankmodul verwendeten Konto Zugriff auf die Quelldaten gewähren. Wenn sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer dagegen mithilfe der Windows-Authentifizierung anmeldet, kann der Benutzer nur diejenigen Dateien lesen, auf die vom Benutzerkonto zugegriffen werden kann. Das gilt unabhängig vom Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses.  
@@ -335,7 +337,7 @@ Vor dem [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-Version 1.1, 
  Weitere Informationen zu diesen und anderen Sicherheitsaspekten bezüglich mithilfe von BULK INSERT finden Sie unter [Importieren von Massendaten durch Verwenden von BULK INSERT oder OPENROWSET &#40; BULK... &#41; &#40; SQLServer &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. Darüber hinaus ist die ALTER TABLE-Berechtigung erforderlich, wenn mindestens eine der folgenden Bedingungen zutrifft:  
+ Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. In Azure SQL-Datenbank sind INSERT und ADMINISTER Datenbank BULK OPERATIONS-Berechtigungen erforderlich. Darüber hinaus ist die ALTER TABLE-Berechtigung erforderlich, wenn mindestens eine der folgenden Bedingungen zutrifft:  
   
 -   Es sind Einschränkungen vorhanden, und die Option CHECK_CONSTRAINTS ist nicht angegeben.  
   
@@ -415,7 +417,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importieren von Daten aus einer Datei im Azure-Blob-Speicher   
 Das folgende Beispiel zeigt, wie zum Laden von Daten aus einer Csv-Datei in einen Azure-Blob-Speicherort, die als externe Datenquelle konfiguriert wurde. Dies erfordert eine datenbankweite Anmeldeinformationen mithilfe einer SAS.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -451,7 +453,7 @@ Führen Sie für `BULK INSERT` Konfigurieren der Anmeldeinformationen und die ex
   
 ## <a name="see-also"></a>Siehe auch  
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Formatdateien zum Importieren oder Exportieren von Daten &#40; SQLServer &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
@@ -459,4 +461,3 @@ Führen Sie für `BULK INSERT` Konfigurieren der Anmeldeinformationen und die ex
  [Sp_tableoption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   
-

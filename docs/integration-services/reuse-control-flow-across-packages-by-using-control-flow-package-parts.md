@@ -1,11 +1,13 @@
 ---
-title: Wiederverwenden der Ablaufsteuerung in Paketen mithilfe von Ablaufsteuerungs-Paketteile | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: "Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +18,16 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce2aeb6c2900004ea99d6bfeb9d9ff06f8a81114
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen
   Sie können einen häufig verwendeten Ablaufsteuerungstask oder Container in einer eigenständigen Teiledatei (einer DTSXP-Datei) speichern und in einem oder mehreren Paketen unter Verwendung von Ablaufsteuerungs-Paketteilen mehrmalig wiederverwenden. Die Wiederverwendbarkeit erleichtert das Design und die Verwaltung von SSIS-Paketen.  
@@ -34,18 +35,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="create-a-new-control-flow-package-part"></a>Erstellen eines neuen Ablaufsteuerungs-Paketteils  
  Erweitern Sie im Projektmappen-Explorer den Ordner **Paketteile** , um einen neuen Ablaufsteuerungs-Paketteil zu erstellen. Klicken Sie mit der rechten Maustaste auf **Ablaufsteuerung** , und wählen Sie **Neuer Ablaufsteuerungs-Paketteil**aus.  
   
- ![Erstellen eine neuen ablaufsteuerungsvorlage](../integration-services/media/control-flow-templates-create-new.png "erstellen eine neuen ablaufsteuerungsvorlage")  
+ ![Erstellen einer neuen Ablaufsteuerungsvorlage](../integration-services/media/control-flow-templates-create-new.png "Create a new control flow template")  
   
  Eine neue Teiledatei mit der Erweiterung „.dtsxp“ wird im Ordner **Paketteile | Ablaufsteuerung** erstellt. Gleichzeitig wird ein neues Element mit dem gleichen Namen zur SSIS-Toolbox hinzugefügt. (Das Toolboxelement wird nur angezeigt, wenn in Visual Studio ein Projekt geöffnet ist, das den Teil enthält.)  
   
- ![Steuern Sie die Vorlagen der ablaufsteuerung in Toolbox](../integration-services/media/control-flow-templates-in-toolbox.png "steuern Sie die Vorlagen der ablaufsteuerung in Toolbox")  
+ ![Ablaufsteuerungsvorlagen in der Toolbox](../integration-services/media/control-flow-templates-in-toolbox.png "Control flow templates in toolbox")  
   
 ## <a name="design-a-control-flow-package-part"></a>Entwerfen eines Ablaufsteuerungs-Paketteils  
  Zum Öffnen des Paketteil-Editors, doppelklicken Sie im Projektmappen-Explorer auf die Teiledatei. Sie können den Teil genau wie ein Paket entwerfen.  
   
- ![Schritt 1 von Control Flow Vorlagenentwurf](../integration-services/media/control-flow-template-design-step-1.png "Schritt 1 von Control Flow Vorlagenentwurf")  
+ ![Schritt 1 des Entwurfs von Ablaufsteuerungsvorlagen](../integration-services/media/control-flow-template-design-step-1.png "Step 1 of control flow template design")  
   
- ![Schritt 2 von Control Flow Vorlagenentwurf](../integration-services/media/control-flow-template-design-step-2.png "Schritt2 des Control Flow Vorlagenentwurf")  
+ ![Schritt 2 des Entwurfs von Ablaufsteuerungsvorlagen](../integration-services/media/control-flow-template-design-step-2.png "Step 2 of control flow template design")  
   
  Für Ablaufsteuerungs-Paketteile gelten die folgenden Einschränkungen.  
   
@@ -63,9 +64,9 @@ ms.lasthandoff: 08/03/2017
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>Verschieben eines Ablaufsteuerungs-Paketteils mit Drag & Drop  
  Wenn Sie einen Teil in einem Projekt wiederverwenden möchten, verschieben Sie das Teilelement einfach mit Drag & Drop wie einen beliebigen anderen Task oder Container aus der Toolbox. Sie können den Teil per Drag & Drop mehrere Male in ein Paket verschieben, um die Logik an mehreren Orten im Paket wiederzuverwenden. Mit dieser Methode können Sie einen Teil wiederverwenden, der zum aktuellen Projekt gehört.  
   
- ![Hinzufügen eine ablaufsteuerungsvorlage zu einem Paket](../integration-services/media/control-flow-templates-add-to-package.png "hinzufügen eine ablaufsteuerungsvorlage zu einem Paket")  
+ ![Hinzufügen einer Ablaufsteuerungsvorlage zu einem Paket](../integration-services/media/control-flow-templates-add-to-package.png "Add a control flow template to a package")  
   
- ![Paket mit mehreren Vorlagen der ablaufsteuerung](../integration-services/media/control-flow-templates-in-package.png "Paket mit mehreren Vorlagen der ablaufsteuerung")  
+ ![Packen mit mehreren Ablaufsteuerungsvorlagen](../integration-services/media/control-flow-templates-in-package.png "Package with multiple control flow templates")  
   
  Beim Speichern des Pakets wird vom SSIS-Designer überprüft, ob das Paket Teileinstanzen enthält.  
   
@@ -73,14 +74,14 @@ ms.lasthandoff: 08/03/2017
   
 -   Wenn das Paket keine Teile verwendet werden alle zuvor erstellten .dtsx.designer-Dateien für das Paket (d. h. alle .dtsx.designer-Dateien, die den gleichen Namen wie das Paket haben) vom Designer gelöscht.  
   
- ![Projektmappen-Explorer mit Vorlagen der ablaufsteuerung](../integration-services/media/control-flow-templates-in-solution-explorer.png "Projektmappen-Explorer mit Vorlagen der ablaufsteuerung")  
+ ![Projektmappen-Explorer mit Ablaufsteuerungsvorlagen](../integration-services/media/control-flow-templates-in-solution-explorer.png "Solution Explorer with control flow templates")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Hinzufügen einer Kopie eines vorhandenen Ablaufsteuerungs-Paketteils oder eines Verweises auf einen vorhandenen Teil  
  Erweitern Sie im Projektmappen-Explorer den Ordner **Paketteile** , um einem Paket im Dateisystem eine Kopie eines vorhandenen Teils hinzuzufügen. Klicken Sie mit der rechten Maustaste auf **Ablaufsteuerung** , und wählen Sie **Vorhandenen Ablaufsteuerungs-Paketteil hinzufügen**aus.  
   
- ![Hinzufügen einer neuen Vorlagen der ablaufsteuerung aus dem Menü](../integration-services/media/control-flow-templates-add-from-menu.png "fügen Sie einen neuen Vorlagen der ablaufsteuerung aus dem Menü hinzu")  
+ ![Hinzufügen von neuen Ablaufsteuerungsvorlagen über das Menü](../integration-services/media/control-flow-templates-add-from-menu.png "Add a new control flow templates from the menu")  
   
- ![Kopieren von vorhandenen Vorlagen-Dialogfelds "hinzufügen"](../integration-services/media/control-flow-templates-add-copy-dialog.png "Kopie des vorhandenen Vorlagen hinzufügen (Dialogfeld)")  
+ ![Dialogfeld „Kopie von vorhandenen Vorlagen hinzufügen“](../integration-services/media/control-flow-templates-add-copy-dialog.png "Add Copy of Existing Templates dialog box")  
   
  **Optionen**  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="properties-tab"></a>Eigenschaften (Registerkarte)  
  Verwenden Sie die Registerkarte **Eigenschaften** im Dialogfeld **Paketteilkonfiguration**  , um die Eigenschaften des Teils festzulegen.  
   
- ![Registerkarte "Eigenschaften" des Dialogfelds ist die Vorlagenkonfiguration](../integration-services/media/template-configuration-properties-tab.png "Registerkarte "Eigenschaften" des Dialogfelds ist die Vorlagenkonfiguration")  
+ ![Registerkarte „Eigenschaften“ des Dialogfelds „Vorlagenkonfiguration“](../integration-services/media/template-configuration-properties-tab.png "Properties tab of the Template Configuration dialog box")  
   
  In der Strukturansichthierarchie im linken Fensterbereich werden alle konfigurierbaren Eigenschaften der Teileinstanz aufgeführt.  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-managers-tab"></a>Registerkarte „Verbindungs-Manager“  
  Auf der Registerkarte **Verbindungs-Manager** im Dialogfeld **Paketteilkonfiguration**  können Sie die Eigenschaften der Verbindungs-Manager für die Teileinstanz festlegen.  
   
- ![Verbindungs-Manager-Registerkarte des Dialogfelds ist die Vorlagenkonfiguration](../integration-services/media/template-configuration-connection-managers-tab.png "Registerkarte "Verbindungs-Manager" des Dialogfelds ist die Vorlagenkonfiguration")  
+ ![Registerkarte „Verbindungs-Manager“ des Dialogfelds „Vorlagenkonfiguration“](../integration-services/media/template-configuration-connection-managers-tab.png "Connection Managers tab of the Template Configuration dialog box")  
   
  Die Tabelle im linken Fensterbereich enthält alle Verbindungs-Manager, die im Ablaufsteuerungsteil definiert sind. Wählen Sie den Verbindungs-Manager aus, den Sie konfigurieren möchten.  
   
@@ -154,7 +155,6 @@ ms.lasthandoff: 08/03/2017
   
  Das folgende Diagramm veranschaulicht die Beziehung zwischen Teilen („DTSXP-Dateien), dem SSIS-Designer und der SSIS-Laufzeit.  
   
- ![Datenfluss-Vorlagendateien und den Fluss steuern](../integration-services/media/control-flow-templates-intro.png "Flow-Vorlagendateien und den Fluss steuern")  
+ ![Dateien und Fluss von Ablaufsteuerungsvorlagen](../integration-services/media/control-flow-templates-intro.png "Control flow templates files and flow")  
   
   
-

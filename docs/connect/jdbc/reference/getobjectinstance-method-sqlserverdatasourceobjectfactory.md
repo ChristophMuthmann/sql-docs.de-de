@@ -3,29 +3,28 @@ title: GetObjectInstance-Methode (SQLServerDataSourceObjectFactory) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDataSourceObjectFactory.getObjectInstance
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDataSourceObjectFactory.getObjectInstance
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa9417d9b20ae5c1858c3c8f10019383565c4330
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d560f49aeb499c304028b3f2b317b2cb790faaa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance-Methode (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -74,4 +73,3 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
  [SQLServerDataSourceObjectFactory-Klasse](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  
   
   
-

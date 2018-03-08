@@ -2,9 +2,12 @@
 title: SQL Server 2016 Express LocalDB | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 42
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d559c1f713a51a51a3b8279f585b0fa48d81ecba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64d008b25aacd5ad76b711662f9b6ffd3e5e5926
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , das speziell für Entwickler konzipiert wurde. Es ist in SQL Server 2016 Express mit Advanced Services verfügbar.  
@@ -46,11 +48,11 @@ Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Ex
 ## <a name="install-localdb"></a>Installieren von LocalDB  
  Installieren Sie **LocalDB** über den Installations-Assistenten oder mithilfe des SqlLocalDB.msi-Programms. **LocalDB** ist eine Option bei der Installation von [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
-Wählen Sie während der Installation **LocalDB** auf der Seite **Funktionsauswahl/Freigegebene Funktionen** aus. Es darf nur eine Installation der **LocalDB** -Binärdateien für eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Hauptversion vorhanden sein. Mehrere [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Prozesse können gestartet werden und verwenden dann die gleichen Binärdateien. Für eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , die als **LocalDB** gestartet wurde, gelten die gleichen Einschränkungen wie für [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+Wählen Sie während der Installation **LocalDB** auf der Seite **Funktionsauswahl/Freigegebene Funktionen** aus. Es darf nur eine Installation der **LocalDB** -Binärdateien für eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Hauptversion vorhanden sein. Mehrere [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Prozesse können gestartet werden und verwenden dann die gleichen Binärdateien. Für eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], die als **LocalDB** gestartet wurde, gelten die gleichen Einschränkungen wie für [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
 
  Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** wird mit dem Hilfsprogramm **SqlLocalDB.exe** verwaltet. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** sollte anstelle des veralteten [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Benutzerinstanzfeatures verwendet werden. 
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>Description  
  Das **LocalDB** -Setupprogramm installiert mithilfe des SqlLocalDB.msi-Programms die notwendigen Dateien auf dem Computer. Nach der Installation ist **LocalDB** eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert. Dieser Pfad ist normalerweise verborgen. Beispiel: **C:\Users\\<Benutzer\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner **C:\Users\\<Benutzer\>\Documents\\**.  
   
  Weitere Informationen zum Einbeziehen von **LocalDB** in eine Anwendung finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Dokumentation [Übersicht über lokale Daten](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx) unter [Exemplarische Vorgehensweise: Erstellen einer SQL Server-LocalDB-Datenbank](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) und unter [Exemplarische Vorgehensweise: Herstellen einer Verbindung zu Daten in einer SQL Server-LocalDB-Datenbank (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -61,7 +63,7 @@ Wählen Sie während der Installation **LocalDB** auf der Seite **Funktionsauswa
   
  Die Instanzsortierung für **LocalDB** wird auf SQL_Latin1_General_CP1_CI_AS festgelegt und kann nicht geändert werden. Auf Datenbankebene, Spaltenebene und Ausdrucksebene werden Sortierungen normal unterstützt. Eigenständige Datenbanken basieren auf den Metadaten- und tempdb-Sortierungsregeln unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   
-### <a name="restrictions"></a>Einschränkungen  
+### <a name="restrictions"></a>Restrictions  
  **LocalDB** kann nicht als Abonnent für die Mergereplikation hinzugefügt werden.  
   
  FILESTREAM wird von**LocalDB** nicht unterstützt.  
@@ -109,10 +111,10 @@ REM Gather information about the instance of LocalDB
 |||  
 |-|-|  
 |Name|"LocalDBApp1"|  
-|Version|\<aktuelle Version>|  
+|Versionsoptionen|\<aktuelle Version>|  
 |Freigegebener Name|""|  
 |Besitzer|„\<Ihr Windows-Benutzerkonto>“|  
-|Automatisch erstellen|Nein|  
+|Automatisch erstellen|nein|  
 |Status|Ausführen|  
 |Letzte Startzeit|\<Datum und Uhrzeit>|  
 |Instanz-Pipename|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
@@ -121,7 +123,7 @@ REM Gather information about the instance of LocalDB
 >  Wenn Ihre Anwendung eine Version vor .NET 4.0.2 verwendet, müssen Sie eine direkte Verbindung mit der Named Pipe von **LocalDB**herstellen. Der Wert für Instanz-Pipename ist die Named Pipe, welche die Instanz von **LocalDB** überwacht. Der Teil des Instanzpipenamens nach LOCALDB # ändert sich jedes Mal, wenn die Instanz von **LocalDB** gestartet wird. Sie stellen eine Verbindung zur Instanz von **LocalDB** mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] her, indem Sie den Namen der Instanzpipe im Feld **Servername** des Dialogfeldes **Verbindung herstellen mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]** eingeben. Von Ihrem benutzerdefinierten Programm aus können Sie mit einer Verbindungszeichenfolge ähnlich **Die LocalDB** eine Verbindung mit der Instanz von LocalDB `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
   
 ### <a name="connecting-to-a-shared-instance-of-localdb"></a>Herstellen einer Verbindung mit einer freigegebenen Instanz von LocalDB  
- Fügen Sie zum Herstellen einer Verbindung mit einer freigegebenen Instanz von **LocalDB** der Verbindungszeichenfolge **erforderlich ist.\\** (Punkt + umgekehrter Schrägstrich) hinzu, um einen Verweis auf den für die freigegebenen Instanzen reservierten Namespace zu erstellen. Verwenden Sie beispielsweise eine Verbindungszeichenfolge wie **** als Teil der Verbindungszeichenfolge, um eine Verbindung mit einer freigegeben Instanz von LocalDB `AppData` namens `(localdb)\.\AppData` herzustellen. Benutzer, die eine Verbindung mit einer freigegebenen Instanz von **LocalDB** herstellen, die sie nicht besitzen, müssen über eine Windows-Authentifizierung oder über einen Anmeldenamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verfügen.  
+ Fügen Sie zum Herstellen einer Verbindung mit einer freigegebenen Instanz von **LocalDB** der Verbindungszeichenfolge **erforderlich ist.\\** (Punkt + umgekehrter Schrägstrich) hinzu, um einen Verweis auf den für die freigegebenen Instanzen reservierten Namespace zu erstellen. Verwenden Sie beispielsweise eine Verbindungszeichenfolge wie als Teil der Verbindungszeichenfolge, um eine Verbindung mit einer freigegeben Instanz von **LocalDB** `AppData` namens `(localdb)\.\AppData` herzustellen. Benutzer, die eine Verbindung mit einer freigegebenen Instanz von **LocalDB** herstellen, die sie nicht besitzen, müssen über eine Windows-Authentifizierung oder über einen Anmeldenamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verfügen.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
  Informationen zur Problembehandlung für **LocalDB**finden Sie unter [Problembehandlung SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
@@ -132,8 +134,7 @@ REM Gather information about the instance of LocalDB
 > [!NOTE]  
 >  **LocalDB** wird immer im Sicherheitskontext des Benutzers ausgeführt, d. h., **LocalDB** wird nie mit den Anmeldeinformationen der Gruppe lokaler Administratoren ausgeführt. Das bedeutet, dass der Zugriff auf alle von einer **LocalDB** -Instanz verwendeten Datenbankdateien über das eigene Windows-Konto des Benutzers möglich sein muss, unabhängig von der Mitgliedschaft in der Gruppe lokaler Administratoren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SqlLocalDB-Hilfsprogramm](../../tools/sqllocaldb-utility.md)  
   
   
-

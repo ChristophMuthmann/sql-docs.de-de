@@ -1,10 +1,13 @@
 ---
-title: "Schritt 3: Hinzufügen von Paketen und weiteren Dateien | Microsoft Docs"
+title: "Schritt 3: Hinzufügen von Paketen und weiteren Dateien | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f8cf4eedc8930492e28f41cee67f0c25a382bacd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e23136a630638a04c390eeac809c7786aa5476b6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-3---adding-packages-and-other-files"></a>Lektion 1 – 3 – Hinzufügen von Paketen und weiteren Dateien
+# <a name="lesson-1-3---adding-packages-and-other-files"></a>Lektion 1-3: Hinzufügen von Paketen und weiteren Dateien
 In diesem Schritt fügen Sie dem im vorherigen Schritt erstellten Deployment Tutorial-Projekt vorhandene Pakete, Hilfsdateien zur Unterstützung einzelner Pakete und eine Infodatei hinzu. Sie fügen z. B. eine XML-Datendatei hinzu, die die Daten für ein Paket und eine Textdatei enthält, von der Infodateiinformationen zu allen Paketen im Projekt bereitgestellt werden.  
   
 Wenn Sie Pakete in einer Test- oder Produktionsumgebung bereitstellen, fügen Sie normalerweise die Datendateien nicht in die Bereitstellung ein. Stattdessen verwenden Sie Konfigurationen zum Aktualisieren der Pfade der Datenquellen, um auf Test- oder Produktionsversionen der Datendateien oder Datenbanken zuzugreifen. Zu Unterrichtszwecken sind in diesem Lernprogramm Datendateien in der Paketbereitstellung enthalten.  
@@ -74,9 +76,8 @@ In der folgenden Aufgabe fügen Sie den DataTransfer- und LoadXMLData-Paketen Ko
   
 4.  Klicken Sie im Menü Datei auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 4: Hinzufügen von Paketkonfigurationen](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   
-

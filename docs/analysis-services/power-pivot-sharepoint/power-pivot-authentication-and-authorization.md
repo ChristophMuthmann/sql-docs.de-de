@@ -2,30 +2,30 @@
 title: Power Pivot-Authentifizierung und Autorisierung | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot-Authentifizierung und -Autorisierung
-  Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung, die innerhalb einer SharePoint 2010-Farm ausgeführt wird, verwendet das von den SharePoint-Servern bereitgestellte Authentifizierungssubsystem und Autorisierungsmodell. Die SharePoint-Sicherheitsinfrastruktur erstreckt sich auch auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Inhalte und -Vorgänge, da sämtliche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Inhalte in SharePoint-Inhaltsdatenbanken gespeichert und alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Vorgänge von freigegebenen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Diensten in der Farm ausgeführt werden. Benutzer, die eine Arbeitsmappe mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten anfordern, werden mit einer SharePoint-Benutzeridentität authentifiziert, die auf deren Windows-Benutzeridentität basiert. Anzeigeberechtigungen für die Arbeitsmappe bestimmen, ob die Anforderung gewährt oder verweigert wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung, die innerhalb einer SharePoint 2010-Farm ausgeführt wird, verwendet das von den SharePoint-Servern bereitgestellte Authentifizierungssubsystem und Autorisierungsmodell. Die SharePoint-Sicherheitsinfrastruktur erstreckt sich auch auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Inhalte und -Vorgänge, da sämtliche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Inhalte in SharePoint-Inhaltsdatenbanken gespeichert und alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Vorgänge von freigegebenen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Diensten in der Farm ausgeführt werden. Benutzer, die eine Arbeitsmappe mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten anfordern, werden mit einer SharePoint-Benutzeridentität authentifiziert, die auf deren Windows-Benutzeridentität basiert. Anzeigeberechtigungen für die Arbeitsmappe bestimmen, ob die Anforderung gewährt oder verweigert wird.  
   
  Da die Integration mit Excel Services für Self-Service-Datenanalysen erforderlich ist, sollten Ihnen zum Sichern eines [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Servers auch die Sicherheitsfunktionen von Excel Services vertraut sein. Wenn ein Benutzer eine PivotTable abfragt, die über eine Datenverbindung zu [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten verfügt, leiten die Excel Services eine Datenverbindungsanforderung zum Laden der Daten an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm weiter. Aufgrund der Interaktion zwischen den Servern sollten Sie wissen, wie Sie Sicherheitseinstellungen für beide Server konfigurieren.  
   
@@ -124,4 +124,3 @@ ms.lasthandoff: 09/01/2017
  [PowerPivot-Sicherheitsarchitektur](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
-

@@ -1,36 +1,37 @@
 ---
 title: Globale Einstellungen (Protokollierung) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c80030383827cd5086b7bb51dc66f0524acddbea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ae6cf2c4ed63515930098546c02c429ab253cbe4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging-db2tosql"></a>Globale Einstellungen (Protokollierung) (DB2ToSQL)
 Verwenden der **globale Einstellungen** (Dialogfeld), um die protokollierungseinstellungen für SSMA anzugeben. In der Regel ändern Sie diese Einstellungen nur bei der Arbeit mit Microsoft Support Services.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Tools** klicken Sie im Menü **globale Einstellungen** , und klicken Sie dann auf die **Protokollierung** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Nachrichten-Ebene**  
 Die folgenden Optionen sind verfügbar unter **Nachrichten Ebene**:  
   
@@ -68,4 +69,3 @@ Die maximale Größe der Protokolldatei in KB. Die Mindestgröße beträgt 10 KB
 **Gesamtanzahl der Protokolldateien**  
 Wenn ein Protokoll gefüllt wird, wird SSMA benennen Sie die Log-Datei und einen neuen startet. Geben Sie mit dieser Einstellung die maximale Anzahl von Protokolldateien beibehalten. Der Mindestwert beträgt 2.  
   
-

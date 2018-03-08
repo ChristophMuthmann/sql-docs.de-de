@@ -3,31 +3,31 @@ title: Sqlsrv_commit | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_commit
+apiname: sqlsrv_commit
 apitype: NA
 helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_commit
 - sqlsrv_commit
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7e5e7a7229f50cd5b0b28a07b6999d0891c97abc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1461edf0b99631e04fabc0dd91442dd88ad98504
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -133,4 +133,3 @@ Da wir uns auf die Überwachung des Transaktionsverhaltens konzentrieren, sind T
 [Vorgehensweise: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)  
 [Übersicht zum PHP-SQL-Treiber](../../connect/php/overview-of-the-php-sql-driver.md)
   
-

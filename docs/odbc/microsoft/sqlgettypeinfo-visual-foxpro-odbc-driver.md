@@ -3,26 +3,26 @@ title: SQLGetTypeInfo (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2e552a73289da6d78223b6416b7be7fe125e23e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0240734459de6fd86d86aef2b192f13842acae7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
   
 |ODBC-Typ|Visual FoxPro-Typ|  
 |---------------|------------------------|  
-|SQL_BIGINT|Wird nicht unterstützt. Es ist kein 64-Bit-Visual FoxPro-Typ.|  
+|SQL_BIGINT|Nicht unterstützt. Es ist kein 64-Bit-Visual FoxPro-Typ.|  
 |SQL_BIT|Logische Operatoren|  
 |SQL_CHAR|Zeichen|  
-|SQL_DATE|Datum|  
+|SQL_DATE|date|  
 |SQL_DECIMAL|Numerisch|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -49,8 +49,8 @@ ms.lasthandoff: 09/09/2017
 |SQL_NUMERIC|Numerische *, Währung, "float"|  
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Integer|  
-|SQL_TIME|Wird nicht unterstützt. Es ist keine Visual FoxPro *Zeit* Typ.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIME|Nicht unterstützt. Es ist keine Visual FoxPro *Zeit* Typ.|  
+|SQL_TIMESTAMP|datetime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memo (binär) *, Allgemein|  
 |SQL_VARCHAR|Zeichen|  
@@ -58,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  * Standardtyp  
   
  Weitere Informationen zum Visual FoxPro-Datentypen finden Sie unter [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Weitere Informationen zu dieser Funktion finden Sie unter [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) in der *ODBC Programmer's Reference*.
-

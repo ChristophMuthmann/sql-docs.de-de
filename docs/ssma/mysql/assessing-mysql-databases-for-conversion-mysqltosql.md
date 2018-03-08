@@ -1,31 +1,31 @@
 ---
 title: "Bewerten MySQL-Datenbanken für die Konvertierung (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Assessment reports
+helpviewer_keywords: Assessment reports
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73019709b3ce9b40dc05f678cc64d33305504213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 24e18761f50997b32da67a8ed2277259f5d53516
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Bewerten MySQL-Datenbanken für die Konvertierung (MySQLToSQL)
 Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, sollten Sie bestimmen, wie komplex die Migration gestellt werden und wie lange dauert die Migration. SSMA kann einen Assessment-Bericht erstellen, die den Prozentsatz von Objekten, die erfolgreich konvertiert werden. SSMA können auch die spezifischen Probleme anzeigen, die dazu führen, dass bei der Konvertierung auftreten.  
@@ -93,4 +93,3 @@ Die Konvertierungsstatistiken Bereich zeigt die Konvertierungsstatistiken. Wenn 
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

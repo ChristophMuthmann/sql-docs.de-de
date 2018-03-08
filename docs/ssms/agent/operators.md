@@ -3,10 +3,12 @@ title: Operatoren | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +25,19 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b9c8caffe4e8172585c1e17fdf9368dbbb3c87d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3e03cd3190e9705650199c35c18afb8c201eb100
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operators"></a>Operatoren
-Operatoren sind Aliasnamen für Personen oder Gruppen, die elektronische Benachrichtigungen erhalten können, sobald ein Auftrag abgeschlossen oder eine Warnung ausgelöst wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienst unterstützt die Benachrichtigung der Administratoren durch Operatoren. Durch Operatoren werden Benachrichtigungs- und Überwachungsfunktionen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents aktiviert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Operatoren sind Aliasnamen für Personen oder Gruppen, die elektronische Benachrichtigungen erhalten können, sobald ein Auftrag abgeschlossen oder eine Warnung ausgelöst wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienst unterstützt die Benachrichtigung der Administratoren durch Operatoren. Durch Operatoren werden Benachrichtigungs- und Überwachungsfunktionen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents aktiviert.  
   
 ## <a name="operator-attributes-and-concepts"></a>Operatorattribute und -konzepte  
 Für Operatoren gelten die folgenden Hauptattribute:  
@@ -52,7 +53,7 @@ Jeder Operator muss einen Namen aufweisen. Operatornamen müssen innerhalb der j
 Die Kontaktinformationen eines Operators definieren, wie der Operator benachrichtigt wird. Operatoren können per E-Mail, per Pager oder über den Befehl **net send** benachrichtigt werden:  
   
 > [!IMPORTANT]  
-> Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vermeiden Sie die Verwendung dieser Funktionen bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
+> Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
 -   **E-Mail-Benachrichtigung**  
   
@@ -118,7 +119,7 @@ Sie müssen mindestens eines der folgenden Elemente einrichten, um einen Operato
   
 -   Für den Befehl **NET SEND**muss der Bediener am angegebenen Computer angemeldet sein, und der angegebene Computer muss Nachrichten von Windows Messenger zulassen.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -126,7 +127,6 @@ Sie müssen mindestens eines der folgenden Elemente einrichten, um einen Operato
 |Tasks beim Erstellen eines Operators|[Erstellen eines Operators](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Tasks beim Zuordnen von Warnungen|[Zuweisen von Warnungen zu einem Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definieren der Antwort auf eine Warnung &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Zuweisen von Warnungen zu einem Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Datenbank-E-Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   
-

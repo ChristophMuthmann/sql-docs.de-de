@@ -2,34 +2,34 @@
 title: "Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.OEdetails.f1
+f1_keywords: sql13.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cbaab2811f5362d7fb2ad57285ee0bcfd4afb242
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer
-  In diesem Thema wird beschrieben, wie der Bereich **Details zum Objekt-Explorer** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] verwendet wird, um vorhandene Always On-Verfügbarkeitsgruppen, -Verfügbarkeitsreplikate und -Verfügbarkeitsdatenbanken zu überwachen und zu verwalten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie der Bereich **Details zum Objekt-Explorer** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] verwendet wird, um vorhandene Always On-Verfügbarkeitsgruppen, -Verfügbarkeitsreplikate und -Verfügbarkeitsdatenbanken zu überwachen und zu verwalten.  
   
 > [!NOTE]  
 >  Informationen zum Verwenden des Bereichs mit Details zum Objekt-Explorer finden Sie unter [Detailbereich des Objekt-Explorers](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  
@@ -46,19 +46,19 @@ ms.lasthandoff: 08/02/2017
   
      [Verfügbarkeitsdatenbank-Details](#AvDbDetails)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Sie müssen mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanz) verbunden sein, die entweder das primäre Replikat oder ein sekundäres Replikat hostet.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So überwachen Sie Verfügbarkeitsgruppen, Verfügbarkeitsreplikate und Verfügbarkeitsdatenbanken**  
   
 1.  Klicken Sie im Menü **Ansicht**auf **Details zum Objekt-Explorer** , oder drücken Sie F7.  
   
 2.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her, auf der Sie eine Verfügbarkeitsgruppe überwachen möchten, und klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  
   
-3.  Erweitern Sie die Knoten **Hohe Verfügbarkeit mit Always On** und den Knoten **Verfügbarkeitsgruppen** .  
+3.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
 4.  Der Bereich **Details zum Objekt-Explorer** zeigt jede Verfügbarkeitsgruppe an, für die die verbundene Serverinstanz ein Replikat hostet. Für jede Verfügbarkeitsgruppe zeigt die Spalte **Serverinstanz (primär)** den Namen der Serverinstanz an, die derzeit das primäre Replikat hostet.  Um weitere Informationen zu einer bestimmten Verfügbarkeitsgruppe anzuzeigen, wählen Sie diese im Objekt-Explorer aus.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
  Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**Keine Verbindungen zulassen**|Es sind keine direkten Verbindungen zu den Verfügbarkeitsdatenbanken zulässig, wenn dieses Verfügbarkeitsreplikat als sekundäres Replikat dient. Sekundäre Datenbanken sind nicht für Lesezugriff verfügbar.|  
 |**Nur Verbindungen für beabsichtigte Lesevorgänge zulassen**|Es sind nur direkte, schreibgeschützte Verbindungen zulässig, wenn dieses Replikat als sekundäres Replikat dient. Alle Datenbanken im Replikat sind für den Lesezugriff verfügbar.|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/02/2017
  **Verbindungsstatus**  
  Gibt an, ob ein sekundäres Replikat derzeit mit dem primären Replikat verbunden ist. Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**Getrennt**|Gibt bei einem Remoteverfügbarkeitsreplikat an, dass es vom lokalen Verfügbarkeitsreplikat getrennt ist. Die Antwort des lokalen Replikats auf den Status "Getrennt" hängt wie folgt von dessen Rolle ab:<br /><br /> Wenn auf dem primären Replikat ein sekundäres Replikat getrennt ist, werden die sekundären Datenbanken auf dem primären Replikat als **Nicht synchronisiert** gekennzeichnet, und das primäre Replikat wartet, bis das sekundäre Replikat wieder verbunden ist.<br /><br /> Wird erkannt, dass das sekundäre Replikat getrennt ist, wird versucht, die Verbindung des sekundären Replikats mit dem primären Replikat wiederherzustellen.|  
 |**Verbunden**|Ein Remoteverfügbarkeitsreplikat, das derzeit mit dem lokalen Replikat verbunden ist.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 08/02/2017
  **Synchronisierungsstatus**  
  Gibt an, ob ein sekundäres Replikat gerade mit dem primärem Replikat synchronisiert wird. Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**Nicht synchronisiert**|Die Datenbank ist nicht synchronisiert oder wurde noch nicht mit der Verfügbarkeitsgruppe verknüpft.|  
 |**Synchronisiert**|Die Datenbank ist mit der primären Datenbank auf dem aktuellen primären Replikat (falls vorhanden) oder auf dem letzten primären Replikat synchronisiert.<br /><br /> Hinweis: Im Leistungsmodus befindet sich die Datenbank nie im Status "Synchronisiert".|  
@@ -130,7 +130,7 @@ ms.lasthandoff: 08/02/2017
   
  Folgende Werte sind für den Synchronisierungsstatus möglich:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |Wird synchronisiert|Die sekundäre Datenbank hat die Transaktionsprotokoll-Datensätze für die primäre Datenbank empfangen, die noch nicht auf den Datenträger geschrieben (festgeschrieben) wurden.<br /><br /> Hinweis: Im Modus mit asynchronem Commit lautet der Synchronisierungsstatus immer **Wird synchronisiert**.|  
 |||  
@@ -138,7 +138,7 @@ ms.lasthandoff: 08/02/2017
  **Angehalten**  
  Gibt an, ob die Verfügbarkeitsdatenbank gerade online ist. Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**Angehalten**|Dieser Status gibt an, dass die Datenbank lokal angehalten wird und manuell fortgesetzt werden muss.<br /><br /> Auf dem primären Replikat ist der Wert für eine sekundäre Datenbank unzuverlässig. Um zuverlässig zu bestimmen, ob eine sekundäre Datenbank angehalten wird, fragen Sie sie auf dem sekundären Replikat ab, das die Datenbank hostet.|  
 |**Nicht verknüpft**|Gibt an, dass die sekundäre Datenbank entweder nicht mit der Verfügbarkeitsgruppe verknüpft wurde oder aus der Gruppe entfernt wurde.|  
@@ -148,11 +148,10 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Weitere Informationen zu Leistungsindikatoren für Verfügbarkeitsdatenbanken finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Verwenden des Alway On-Dashboards (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Anzeigen von Verfügbarkeitsgruppeneigenschaften (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   
  [Anzeigen von Verfügbarkeitsreplikateigenschaften &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
   
-

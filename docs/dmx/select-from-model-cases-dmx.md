@@ -2,38 +2,37 @@
 title: "SELECT FROM &lt;Modell&gt;. FÄLLE (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - CASES
 - FROM
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SELECT FROM <model>.CASES statement
 - drillthrough [DMX]
 ms.assetid: d58acb47-aaa6-40b7-b8c4-6a6700fbc1dd
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b40b75f21b77e6dd17cf426be3ea70fe05ac0757
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7f5ec287b2da5998748c19a5000a0a95b658f853
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;Modell&gt;. FÄLLE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Unterstützt Drillthrough und gibt die Fälle zurück, mit denen das Modell trainiert wurde. Sie können auch Strukturspalten zurückgeben, die nicht im Modell enthalten sind, wenn Drillthrough sowohl für die Miningstruktur als auch für das Miningmodell aktiviert wurde und wenn Sie über die entsprechenden Berechtigungen verfügen.  
   
@@ -107,7 +106,6 @@ AND IsInNode('002')
  [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

@@ -2,42 +2,38 @@
 title: CrossProduct-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CrossProduct Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CrossProduct Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#CrossProduct
 - microsoft.xml.analysis.crossproduct
 - urn:schemas-microsoft-com:xml-analysis#CrossProduct
-helpviewer_keywords:
-- CrossProduct element
+helpviewer_keywords: CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cb8065433f823c3d702447b0d75cc76d7ba16d5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a407c545fb4cc09b19a7b11c9e24a12c7f77c8b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct-Element (XMLA)
-  Enthält ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie für eine [Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie für eine [Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,11 +50,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -69,7 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="attributes"></a>Attribute  
   
-|Attribut|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Größe|Erforderliche **Ganzzahl** Attribut. Gibt die Anzahl von Tupeln in das Kreuzprodukt, dargestellt durch die **CrossProduct** Element.|  
   
@@ -133,4 +129,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

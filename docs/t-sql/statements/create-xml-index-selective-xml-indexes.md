@@ -3,8 +3,11 @@ title: Erstellen von XML-INDEX (selektive XML-Indizes) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 02b6c4b19007ecce500046ce6f3824abf9956309
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b0cd1c2dd0c77409768e8ea7838724ca4d6b827e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (selektive XML-Indizes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen neuen sekundären selektiven XML-Index für einen einzelnen Pfad, der bereits von einem vorhandenen selektiven XML-Index indiziert wird. Sie können auch primäre selektive XML-Indizes erstellen. Informationen finden Sie unter [Create, Alter und Drop selektive XML-Indizes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
@@ -118,5 +120,4 @@ FOR ( pathabc );
  [Erstellen, Ändern und Löschen sekundärer, selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)  
   
   
-
 

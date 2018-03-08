@@ -2,30 +2,30 @@
 title: "Erstellen ein vertrauenswürdiges Speicherorts für Power Pivot-Websites in der Zentraladministration | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Erstellen eines vertrauenswürdigen Speicherorts für Power Pivot-Websites in der Zentraladministration
-  In Excel Services können Sie angeben, welche Speicherorte gültige Repositorys für Arbeitsmappen sind, die Sie auf einem SharePoint-Server öffnen. Diese Speicherorte werden als 'vertrauenswürdige Speicherorte' bezeichnet, und Sie können unterschiedliche Konfigurationseinstellungen für jeden vertrauenswürdigen Speicherort verwenden, den Sie erstellen. Bei einer Bereitstellung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint sollten Sie erwägen, einen vertrauenswürdigen Speicherort für Websites zu erstellen, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen enthalten, sodass Sie die Einstellungen anwenden können, die optimal für den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenzugriff geeignet sind, aber gleichzeitig die Standardeinstellungen für den Rest der Farm beibehalten können.  
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In Excel Services können Sie angeben, welche Speicherorte gültige Repositorys für Arbeitsmappen sind, die Sie auf einem SharePoint-Server öffnen. Diese Speicherorte werden als 'vertrauenswürdige Speicherorte' bezeichnet, und Sie können unterschiedliche Konfigurationseinstellungen für jeden vertrauenswürdigen Speicherort verwenden, den Sie erstellen. Bei einer Bereitstellung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint sollten Sie erwägen, einen vertrauenswürdigen Speicherort für Websites zu erstellen, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen enthalten, sodass Sie die Einstellungen anwenden können, die optimal für den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenzugriff geeignet sind, aber gleichzeitig die Standardeinstellungen für den Rest der Farm beibehalten können.  
   
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
@@ -73,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Verwenden des Power Pivot-Katalogs](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   
-

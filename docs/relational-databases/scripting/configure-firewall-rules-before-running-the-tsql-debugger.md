@@ -2,9 +2,12 @@
 title: "Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,19 +24,19 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 1c1196f3195b1b54844a5420a8a9322265a1efa8
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers
-  Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ausgeführt wird.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ausgeführt wird.  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Konfigurieren des Transact-SQL-Debuggers  
  Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger umfasst sowohl serverseitige als auch clientseitige Komponenten. Die serverseitigen Debuggerkomponenten werden mit jeder Instanz des Datenbankmoduls von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher installiert. Die clientseitigen Debuggerkomponenten sind inbegriffen:  
@@ -162,7 +165,7 @@ ms.lasthandoff: 06/22/2017
 
 * Der Server muss über RPC mit dem Client kommunizieren. Das Konto, mit dem der SQL Server-Dienst ausgeführt wird, sollte über Authentifizierungsberechtigungen für den Client verfügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Ausführen des Transact-SQL-Debuggers](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -170,4 +173,3 @@ ms.lasthandoff: 06/22/2017
  [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
-

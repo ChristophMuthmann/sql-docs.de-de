@@ -2,11 +2,12 @@
 title: 'Lektion 5: Trainieren, und speichern Sie ein Modell mithilfe des T-SQL | Microsoft Docs'
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -15,19 +16,19 @@ dev_langs:
 - R
 - TSQL
 ms.assetid: 3282e8ed-b515-4ed5-8543-fcef68629a92
-caps.latest.revision: 10
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 23413e4c5093dbd4da39712faa4d5b0b03e58115
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 785e4dc3db234447c806ddc349682d08a8447923
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>Lektion 5: Trainieren Sie, und speichern Sie ein Modell mithilfe des T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms für SQL-Entwicklern zum Verwenden von R in SQL Server.
 
@@ -118,5 +119,4 @@ Im nächsten Schritt verwenden Sie das trainierte Modell zum Erstellen von Vorhe
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
 [Lektion 4: Erstellen von Data-Funktionen, die mithilfe des T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
-
 

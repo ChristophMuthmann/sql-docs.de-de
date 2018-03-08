@@ -1,10 +1,13 @@
 ---
-title: "Einschließen einer Datenprofilerstellungs-Task im Paket-Workflow | Microsoft Docs"
+title: "Einschließen einer Datenprofilerstellungs-Task in den Paket-Workflow | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8f7e2cbac0c5a86c4792991dc1634721ac1cb635
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
   Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung sind oder übertrieben. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
@@ -90,7 +92,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Fügen Sie den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für die Verwendung des .NET-Datenanbieters für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) und für die Verbindung mit einer verfügbaren Instanz der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank.  
   
-     Der Verbindungs-Manager hat standardmäßig die folgenden Namen: \<Servername >. "AdventureWorks1".  
+     Standardmäßig trägt der Verbindungs-Manager den folgenden Namen: \<Servername>.AdventureWorks1.  
   
 3.  Fügen Sie einen Dateiverbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für das Erstellen der Ausgabedatei für den Datenprofilerstellungs-Task.  
   
@@ -332,9 +334,8 @@ ms.lasthandoff: 08/03/2017
   
 7.  Verwenden Sie in den Rangfolgeneinschränkungen, mit denen der Skripttask mit Downstream-Verzweigungen verbunden wird, Ausdrücke, die den Workflow anhand der Werte der Variablen steuern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
   
-

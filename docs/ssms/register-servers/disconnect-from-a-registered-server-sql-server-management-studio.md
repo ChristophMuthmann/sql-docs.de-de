@@ -2,9 +2,12 @@
 title: Trennen der Verbindung mit einem registrierten Server (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a41c28806be100d553a77362db504b0807647575
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 802318d2ff9823b5ca0977083230ce625efdd13e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Trennen der Verbindung mit einem registrierten Server (SQL Server Management Studio)
-  In diesem Thema wird beschrieben, wie Sie den Objekt-Explorer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]jederzeit von einem Server trennen können. Beim Trennen des Objekt-Explorers werden die Verbindungen anderer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Komponenten (z. B. SQL Editor) nicht getrennt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In diesem Thema wird beschrieben, wie Sie den Objekt-Explorer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]jederzeit von einem Server trennen können. Beim Trennen des Objekt-Explorers werden die Verbindungen anderer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Komponenten (z. B. SQL Editor) nicht getrennt.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -37,4 +40,3 @@ ms.lasthandoff: 07/31/2017
 -   Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und klicken Sie auf **Trennen** , oder klicken Sie auf der Symbolleiste des Objekt-Explorers auf das Symbol **Trennen** .  
   
   
-

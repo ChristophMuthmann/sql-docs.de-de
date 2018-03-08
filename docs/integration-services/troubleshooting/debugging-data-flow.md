@@ -1,10 +1,13 @@
 ---
-title: Debuggen des Datenflusses | Microsoft Docs
+title: Debuggen des Datenflusses | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3491077486daf90c414a00eec3d382ae1537284a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-data-flow"></a>Debuggen des Datenflusses
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer enthalten Funktionen und Tools, mit denen Sie die Datenflüsse in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
@@ -173,7 +175,7 @@ order by source_component_name desc
   
 4.  Klicken Sie mit der rechten Maustaste auf die Komponente, deren Fehlerausgabespalten Sie konfigurieren möchten, und klicken Sie auf **Erweiterten Editor anzeigen**.  
   
-5.  Klicken Sie auf die **Eingabe- und Ausgabeeigenschaften** Registerkarte, und erweitern Sie  **\<Komponentenname > Fehlerausgabe** und schließlich **Ausgabespalten**.  
+5.  Klicken Sie auf die Registerkarte **Eingabe- und Ausgabeeigenschaften**, und erweitern Sie **\<Komponentenname> Fehlerausgabe** und dann **Ausgabespalten**.  
   
 6.  Klicken Sie auf eine Spalte, und aktualisieren Sie ihre Eigenschaften.  
   
@@ -250,7 +252,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  Der Parameter dataflow_path_id_string der gespeicherten Prozedur add_data_tap entspricht der Eigenschaft IdentificationString des Datenflusspfads, dem Sie eine Datenabzweigung hinzufügen möchten. Klicken Sie auf den Datenflusspfad (Pfeil zwischen den Tasks im Datenfluss), und notieren Sie sich den Wert der Eigenschaft **IdentificationString** im Eigenschaftenfenster, um „dataflow_path_id_string“ abzurufen.  
   
- Wenn Sie das Skript ausführen, wird die Ausgabedatei gespeichert, \<Programmdateien > \Microsoft SQL Server\110\DTS\DataDumps. Wenn bereits eine Datei mit diesem Namen vorhanden ist, wird eine neue Datei mit einem Suffix erstellt (z. B. "output[1].txt").  
+ Wenn Sie das Skript ausführen, wird die Ausgabedatei unter „\<Programme>\Microsoft SQL Server\110\DTS\DataDumps“ gespeichert. Wenn bereits eine Datei mit diesem Namen vorhanden ist, wird eine neue Datei mit einem Suffix erstellt (z. B. "output[1].txt").  
   
  Wie oben erwähnt, können Sie anstelle der gespeicherten Prozedur „add_data_tap“ auch die gespeicherte Prozedur [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)verwenden. Diese gespeicherte Prozedur verwendet anstelle von task_package_path die ID des Datenflusstasks als Parameter. Die ID des Datenflusstasks finden Sie im Eigenschaftenfenster in Visual Studio.  
   
@@ -276,8 +278,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ### <a name="video"></a>Video  
  Das [Video auf TechNet](http://technet.microsoft.com/sqlserver/dn600163) zeigt, wie Sie Datenabzweigungen im SQL Server 2012 SSISDB-Katalog hinzufügen bzw. verwenden, die das programmgesteuerte Debuggen von Paketen und die Erfassung von Teilergebnissen zur Laufzeit unterstützen. Das Video zeigt außerdem, wie Sie diese Datenabzweigungen auflisten bzw. entfernen, und welche bewährten Methoden für Datenabzweigungen in SSIS-Paketen empfohlen werden.  
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

@@ -3,24 +3,25 @@ title: "Schritt 1: Konfigurieren der Entwicklungsumgebung für die Entwicklung v
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: node-js
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4e41033ffb30801fd388f7816c34c8a7751daa9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für Node.js-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung mit den Voraussetzungen zu konfigurieren, um die Entwicklung einer Anwendung mithilfe der Node.js-Treiber für SQL Server.  Die häufigste Methode ist die Verwendung den Knoten-Paket-Manager (Npm) das mühsame-Modul installieren, jedoch mühsam Moduls direkt zum download [Github](https://github.com/pekim/tedious) Falls gewünscht.  
@@ -104,4 +105,3 @@ c. Nachdem das Download abgeschlossen ist, führen Sie die Dmg zum Installieren 
 > npm install tedious  
 ```  
   
-

@@ -3,7 +3,7 @@ title: Strukturieren von Daten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - data shaping [ADO]
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 37fb29f39fd6d9a5b5b3e7b0c1b1c97aa2627654
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ad3b257166308fe2c5a4bd94da5427dc0ca2649
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-shaping"></a>Daten strukturieren
 Dieser Abschnitt enthält die folgenden Themen.  
@@ -42,19 +41,18 @@ Dieser Abschnitt enthält die folgenden Themen.
   
 -   [Beibehalten von hierarchischen Recordsets](../../../ado/guide/data/persisting-hierarchical-recordsets.md)  
   
--   [Erforderlichen Anbieter Daten können strukturiert werden.](../../../ado/guide/data/required-providers-for-data-shaping.md)  
+-   [Required Providers for Data Shaping (Erforderliche Anbieter für die Datenstrukturierung)](../../../ado/guide/data/required-providers-for-data-shaping.md)  
   
 -   [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)  
   
--   [Form "APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)  
+-   [SHAPE APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)  
   
--   [Shape-COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)  
+-   [SHAPE COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)  
   
--   [Fabricating hierarchische Recordsets](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)  
+-   [Fabricating Hierarchical Recordsets (Herstellen hierarchischer Recordsets)](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)  
   
 -   [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)  
   
 -   [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)  
   
 -   [Visual Basic für Applikationen-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

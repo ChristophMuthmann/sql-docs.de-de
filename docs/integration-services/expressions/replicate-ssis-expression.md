@@ -1,10 +1,13 @@
 ---
-title: REPLICATE (SSIS-Ausdruck) | Microsoft Docs
+title: REPLICATE (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b4826170435f3f70a8530c891d8d797fc4b2691b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS-Ausdruck)
   Gibt einen Zeichenausdruck zurück, der mehrfach repliziert wird. Das *times* -Argument muss zu einer ganzen Zahl ausgewertet werden.  
@@ -47,7 +49,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Falls *times* null ist, gibt die Funktion eine leere Zeichenfolge zurück.  
   
  Falls *times* eine negative Zahl ist, gibt die Funktion einen Fehler zurück.  
@@ -77,8 +79,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

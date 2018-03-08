@@ -1,11 +1,13 @@
 ---
 title: Versionen (Master Data Services) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 9
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6348d7477123e993edc2223b874ac15f11da2897
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="versions-master-data-services"></a>Versionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie mehrere Versionen der Masterdaten innerhalb eines Modells erstellen. Versionen können gesperrt werden, während Sie die Daten überprüfen, und für Versionen kann ein Commit ausgeführt werden, nachdem die Daten überprüft wurden. Versionen mit ausgeführtem Commit bilden einen überwachbaren Datensatz mit Änderungen. Jede erstellte Version umfasst sämtliche Elemente, Attributwerte, Hierarchielemente, Hierarchiebeziehungen und Auflistungen für das Modell.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 09/07/2017
   
 1.  Eine Anfangsversion wird automatisch erstellt, wenn Sie ein Modell anlegen und die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank mit den Masterdaten des Unternehmens auffüllen. Auf der Grundlage von Berechtigungen können Benutzer dann bei Bedarf Änderungen an dieser Version vornehmen.  
   
-2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen. Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Wenden Sie Geschäftsregeln auf die Daten der gesperrten Version an und analysieren Sie alle Überprüfungsprobleme. Falls erforderlich können Sie fehlende Informationen einfügen oder die Transaktion, die das Problem verursacht hat, rückgängig machen. Darüber hinaus können Sie die Version entsperren, damit Benutzer Änderungen vornehmen können.  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 09/07/2017
     > [!NOTE]  
     >  Eine Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] bestimmt, ob alle oder nur die durch ein Commit bestätigten Versionen kopiert werden können. Um gleichzeitige Versionen zu erstellen, müssen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] konfigurieren, um es Ihnen zu ermöglichen, alle Versionen zu kopieren. Diese Einstellung ist auch in der Tabelle Systemeinstellungen verfügbar. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -95,4 +96,3 @@ ms.lasthandoff: 09/07/2017
 -   [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
-

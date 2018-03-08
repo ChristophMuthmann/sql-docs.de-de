@@ -2,33 +2,33 @@
 title: "Tools und Ansätze zum Verarbeiten (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Tools und Ansätze zum Verarbeiten (Analysis Services)
-  Die Verarbeitung ist ein Vorgang, bei dem Analysis Services Daten aus einer relationalen Datenquelle abfragt und Analysis Services-Objekte mit diesen Daten auffüllt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Verarbeitung ist ein Vorgang, bei dem Analysis Services Daten aus einer relationalen Datenquelle abfragt und Analysis Services-Objekte mit diesen Daten auffüllt.  
   
  Als Analysis Services-Systemadministrator können Sie die Verarbeitung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte mithilfe der folgenden Ansätze ausführen und überwachen:  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
  Die Verarbeitung ist ein stark konfigurierbarer Vorgang. Selbiger wird von einem Satz von Verarbeitungsoptionen gesteuert, die bestimmen, ob vollständige oder inkrementelle Verarbeitung auf Objektebene auftritt. Weitere Informationen zu Verarbeitungsoptionen und -objekten finden Sie unter [Verarbeiten von Optionen und Einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) und [Verarbeiten von Analysis Services-Objekten](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zum Verarbeiten von tabellarischen Modellen finden Sie unter [Verarbeiten von Datenbank, Tabelle oder Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) und [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zur Verarbeitung von tabellarischer Models finden Sie unter [Datenbank verarbeiten, Tabelle oder Partition &#40; Analysis Services &#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) und [Daten verarbeiten](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Verarbeiten von Objekten in SQL Server Management Studio  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Wählen Sie im Dialogfeld **Verarbeiten** die Verarbeitungsoption aus, die Sie verwenden möchten. Ändern Sie beliebige andere Einstellungen. Führen Sie die Auswirkungsanalyse aus, um die Änderungen zu identifizieren, die ggf. vorgenommen werden müssen.  
   
-4.  Klicken Sie im Bildschirm zum Verarbeiten von Objekten **** auf **Skript** .  
+4.  Klicken Sie im Bildschirm zum **Verarbeiten von Objekten** auf **Skript** .  
   
      Mit diesem Schritt wird ein XMLA-Skript generiert und ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -XMLA-Abfragefenster geöffnet.  
   
@@ -129,11 +129,11 @@ ms.lasthandoff: 09/01/2017
   
 1.  Ab dieser Version von SQL Server können Sie Analysis Services PowerShell-Cmdlets zum Verarbeiten von Objekten verwenden. Die folgenden Cmdlets können interaktiv oder per Skript ausgeführt werden:  
   
-    -   [Invoke-ProcessCube-Cmdlet](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
+    -   [Invoke-ProcessCube cmdlet (Invoke-ProcessCube-Cmdlet)](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
   
     -   [Invoke-ProcessDimension cmdlet (Invoke-ProcessDimension-Cmdlet)](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
   
-    -   [Invoke-ProcessPartition-Cmdlet](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
+    -   [Invoke-ProcessPartition cmdlet (Invoke-ProcessPartition-Cmdlet)](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
     -   [Invoke-ASCmd-Cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md), das verwendet werden kann, um ein XMLA-, MDX- oder DMX-Skript mit Verarbeitungsbefehlen auszuführen.  
   
@@ -167,4 +167,3 @@ ms.lasthandoff: 09/01/2017
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

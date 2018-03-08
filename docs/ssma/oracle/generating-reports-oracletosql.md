@@ -1,12 +1,14 @@
 ---
 title: Generieren von Berichten (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: aaadc1f77e9fb7e0179f46f4a2186322aa2ad656
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d82ebc3f1d6a3e88874430419d3a11baf5528695
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-oracletosql"></a>Generieren von Berichten (OracleToSQL)
 Berichte über bestimmte Aktivitäten mit Befehlen durchgeführt werden in SSMA-Konsole auf Objektebene-Struktur generiert.  
@@ -149,4 +150,3 @@ Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
-

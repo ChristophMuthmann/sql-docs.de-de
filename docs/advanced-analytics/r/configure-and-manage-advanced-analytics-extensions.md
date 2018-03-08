@@ -2,85 +2,63 @@
 title: "Erweiterte Konfigurationsoptionen für Machine Learning-Dienste | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 21
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 872acf107d72989b4623a9d5f4ccb85c44d1f2f9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>Erweiterte Konfigurationsoptionen für Machine Learning-Webdienste
+# <a name="advanced-configuration-options-for-machine-learning-services"></a>Erweiterte Konfigurationsoptionen für Machine Learning-Dienste
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt die Änderungen, die Sie zum Ändern der Konfiguration des R-Laufzeitmoduls und andere Dienste, die für Machine Learning in der SQL Server nach der Installation vornehmen können.
+Dieser Artikel beschreibt die Änderungen, die Sie zum Ändern der Konfiguration der Runtime externes Skript und andere Dienste, die für Machine Learning in der SQL Server nach der Installation vornehmen können.
 
-Gilt für: SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
+**Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
 
-##  <a name="bkmk_Provisioning"></a>Für die Bereitstellung von Benutzerkonten für Computer lernen
+##  <a name="bkmk_Provisioning"></a>Bereitstellen zusätzlicher-Benutzerkonten für den Computer lernen
 
 Externes Skript-Prozessen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Kontext des lokalen Benutzerkonten mit einer geringen ausgeführt. Diese Prozesse in einzelnen Konten, die mit eingeschränkten Berechtigungen ausgeführt, hat die folgenden Vorteile:
 
 + Reduziert die Berechtigungen des externen Skripts-laufzeitprozesse auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer
 + Eine Isolation zwischen Sitzungen aus einer externen z. B. R oder Python.
 
-Als Teil der Installation einer neuen Windows *benutzerkontenpool* erstellt wird, enthält die lokalen Benutzerkonten zum Ausführen von R-Laufzeitprozess erforderlich sind. Falls nötig können Sie die Anzahl von Benutzer zur Unterstützung von R anpassen. Der Administrator Ihrer Datenbank muss dieser Gruppe außerdem die Erlaubnis erteilen, eine Verbindung mit jeder Instanz herstellen zu können, auf der R Services aktiviert ist. Weitere Informationen finden Sie unter [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)zugeordnet sind.
+Als Teil der Installation einer neuen Windows *benutzerkontenpool* erstellt wird, enthält die lokalen Benutzerkonten zum Ausführen von externen-Laufzeitprozessen, z. B. R oder Python erforderlich sind. Sie können die Anzahl der Benutzer ändern, wie zur Unterstützung von Machine Learning-Aufgaben erforderlich sind. 
 
-Sie können allerdings eine Zugriffssteuerungliste (ACL) für sensible Ressourcen auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definieren, um den Zugriff auf diese Gruppe zu verhindern, damit der R-Laufzeitprozess keinen Zugriff auf die Ressourcen erhält.
+Darüber hinaus erteilen Datenbankadministrator dieser Gruppe die Berechtigung zur Verbindung mit einer beliebigen Instanz, in denen Machine Learning aktiviert wurde. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für SQL Server-Machine Learning-Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-+ Der Benutzerkontenpool ist mit einer bestimmten Instanz verknüpft.  Für jede Instanz, auf der R-Skript aktiviert wurde, wird ein separater Pool aus Workerkonten erstellt. Konten können nicht zwischen Instanzen freigegeben werden.
+Auf protext vertrauliche Ressourcen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie eine Zugriffssteuerungsliste (ACL) für diese Gruppe definieren. Durch die Angabe von Ressourcen, denen die Gruppe Zugriff auf verweigert wird, können Sie den Zugriff von externen Prozessen wie R oder Python-Laufzeiten verhindern.
 
-+ Benutzerkontonamen im Pool weisen das Format „SQLInstanzname*nn*zugeordnet sind. Wenn Sie z. B. die Standardinstanz als R-Server verwenden, unterstützt der Benutzerkontenpool Kontonamen wie MSSQLSERVER01, MSSQLSERVER02 usw.
++ Der Benutzerkontenpool ist mit einer bestimmten Instanz verknüpft. Ein separater Pool von Worker-Konten wird für jede Instanz benötigt auf dem Machine Learning aktiviert wurde. Konten können nicht zwischen Instanzen freigegeben werden.
 
-+ Die Größe des Benutzerkontenpools ist statisch und der Standardwert ist 20. Die Anzahl der R-Laufzeitsitzungen, die gleichzeitig gestartet werden können, ist durch die Größe dieses Benutzerkontenpools beschränkt. Diese Einschränkung kann allerdings von einem Administrator mithilfe von SQL Server Configuration Manager angepasst werden.
++ Benutzerkontonamen im Pool weisen das Format „SQLInstanzname*nn*zugeordnet sind. Z. B. bei Verwendung die Standardinstanz für den Machine learning unterstützt der benutzerkontenpool Kontonamen wie MSSQLSERVER01, MSSQLSERVER02 usw.
 
-Weitere Informationen zum Ändern des Benutzerkontenpools finden Sie unter [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
++ Die Größe des Benutzerkontenpools ist statisch und der Standardwert ist 20. Die Anzahl der externen-laufzeitsitzungen, die gleichzeitig gestartet werden kann, wird durch die Größe dieses benutzerkontenpools beschränkt. Zum Ändern dieses Limits, sollte ein Administrator SQL Server-Konfigurations-Manager verwenden.
+
+Weitere Informationen zum Ändern des benutzerkontenpools finden Sie unter [Ändern des benutzerkontenpools für SQL Server-Machine Learning-Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ##  <a name="bkmk_ManagingMemory"></a>Verwalten von externen Skriptprozesse belegter Arbeitsspeicher
 
-Die [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] zugeordneten R-Laufzeitprozesse sind standardmäßig auf die Verwendung von nicht mehr als 20 % des gesamten Arbeitsspeichers beschränkt. Dieser Grenzwert kann jedoch bei Bedarf vom Administrator erhöht werden.
+Standardmäßig sind die externen Skript Laufzeiten für Machine Learning auf nicht mehr als 20 % des gesamten Arbeitsspeichers beschränkt. Es hängt von Ihrem System, aber in der Regel stellen Sie möglicherweise dieses Limit nicht schwerwiegenden Machine Learning-Aufgaben wie z. B. Trainieren eines Modells oder Vorhersagen auf viele Zeilen mit Daten. 
 
-Dieser Wert ist im Allgemeinen für schwerwiegende R-Aufgaben nicht ausreichend; zu schwerwiegenden Aufgaben zählen z.B. Trainingsmodelle oder das Vorhersagen von vielen Datenzeilen. Möglicherweise müssen Sie den für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (oder für andere Dienste) reservierten Speicherplatz reduzieren und Resource Governor verwenden, um einen externen Ressourcenpool bzw. -pools zu definieren und zuzuweisen. Weitere Informationen finden Sie unter [Ressourcenkontrolle für R](../../advanced-analytics/r/resource-governance-for-r-services.md).
+Zur Unterstützung von Machine Learning kann ein Administrator dieses Limit zu erhöhen. Wenn Sie dies tun, müssen Sie möglicherweise verringern Sie die reservierten Umfang an Arbeitsspeicher für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder für andere Dienste. Außerdem sollten Sie die Verwendung der Ressourcenkontrolle können Sie einen externen Ressourcenpool und Pools definieren, damit bestimmte Ressourcenpools in R oder Python Aufträge zugewiesen werden kann.
 
-##  <a name="bkmk_ChangingConfig"></a>Erweiterte Dienstoptionen mithilfe der Konfigurationsdatei ändern
+Weitere Informationen finden Sie unter [Ressourcenkontrolle für Machine Learning](../../advanced-analytics/r/resource-governance-for-r-services.md).
 
-Sie können einige erweiterte Einstellungen von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] durch Bearbeiten der [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]-Konfigurationsdatei steuern. Diese Datei wird während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingerichtet und standardmäßig am folgenden Speicherort als Nur-Text-Datei gespeichert:
-
-`<instance path>\binn\rlauncher.config`
-
-Sie müssen Administrator auf dem Computer sein, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, um diese Datei ändern zu können. Für die Bearbeitung der Datei wird empfohlen, dass Sie eine Sicherungskopie erstellen, bevor Sie Änderungen speichern.
-
-Z. B. um Editor beim Öffnen der Konfigurationsdatei für die Standardinstanz verwenden, würde Sie eine Eingabeaufforderung als Administrator öffnen, und geben Sie den folgenden Befehl:
-
-```
-C:\>Notepad.exe "%programfiles%\Microsoft SQL Server\MSSQL13.MSSQLSERVER\mssql\binn\rlauncher.config"  
-```
-
-##  <a name="bkmk_properties"></a>Bearbeiten der Konfigurationseigenschaften
-
-Die folgende Tabelle führt jede für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützte Einstellung mit den zulässigen Werten auf.
-
-Alle Einstellungen haben die Form eines Schlüssel-Wert-Paars, bei dem jede Einstellung in einer separaten Zeile enthalten ist. Diese Eigenschaft gibt z. B. die Ablaufverfolgungsebene für RLauncher:
-
-Standard: TRACE_LEVEL=4
-
-
-|**Einstellungsname**|**Werttyp**|**Standardwert**|**Beschreibung**|
-|------------------|----------------|-------------|-----------------|
-|JOB_CLEANUP_ON_EXIT|Integer<br /><br /> 0 = Deaktiviert<br /><br /> 1 = Aktiviert|1<br /><br /> Protokolldateien werden beim Beenden entfernt.|Gibt an, ob der für jede R-Sitzung erstellte temporäre Arbeitsordner nach Abschluss der R-Sitzung bereinigt werden soll. Diese Einstellung ist beim Debuggen nützlich.<br /><br /> Hinweis: Dies ist eine interne Einstellung – ändern Sie diesen Wert nicht.|
-|TRACE_LEVEL|Integer<br /><br /> 1 = Fehler<br /><br /> 2 = Leistung<br /><br /> 3 = Warnung<br /><br /> 4 = Information|1<br /><br /> Nur schwerwiegende Warnungen ausgeben|Konfiguriert den Ausführlichkeitsgrad der Ablaufverfolgung für das R-Startprogramm (MSSQLLAUNCHPAD) zu Debugzwecken. Diese Einstellung wirkt sich auf den Ausführlichkeitsgrad der Ablaufverfolgungen aus, die in den folgenden Ablaufverfolgungsdateien gespeichert werden, die sich beide in dem Pfad befinden, der durch die Einstellung LOG_DIRECTORY angegeben wird:<br /><br /> **rlauncher.log**: Die Ablaufverfolgungsdatei, die für R-Sitzungen generiert wurde, die von T-SQL-Abfragen gestartet wurden.<br /><br /> |
 
 ## <a name="bkmk_Launchpad"></a>Ändern Sie das Launchpad-Dienstkonto
 
@@ -97,7 +75,37 @@ Wenn Sie das Dienstkonto ändern, achten Sie darauf, dass Sie die Anwendung **Lo
 
 Weitere Informationen zu erforderlichen Berechtigungen für das Ausführen von SQL Server-Diensten finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
+##  <a name="bkmk_ChangingConfig"></a>Ändern der erweiterten Dienstoptionen
+
+In frühen Versionen von SQL Server 2016 R Services können Sie einige Eigenschaften des Diensts ändern, indem Sie bearbeiten die [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] Konfigurationsdatei. 
+
+Diese Datei ist jedoch nicht mehr zum Ändern der Konfigurationen verwendet. Wir empfehlen die Verwendung von SQL Server-Konfigurations-Manager auf Auswirkungen Änderungen an der Dienstkonfiguration, wie das Dienstkonto und die Anzahl der Benutzer.
+
+**Launchpad-Konfiguration ändern**
+
+1. Öffnen Sie den [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md). 
+2. SQL Server Launchpad Maustaste und wählen Sie **Eigenschaften**.
+
+    + Um das Dienstkonto zu ändern, klicken Sie auf die **anmelden** Registerkarte.
+
+    + Um die Anzahl von Benutzern zu erhöhen, klicken Sie auf die **erweitert** Registerkarte.
+
+
+**So ändern Sie die Debugeinstellungen**
+
+Einige Eigenschaften können nur geändert werden, mithilfe der Launchpad-Konfigurationsdatei, die sich in selteneren Fällen, z. B. das Debuggen von Nutzen sein kann. Die Konfigurationsdatei wird erstellt, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einrichten und wird standardmäßig als nur-Text-Datei am folgenden Speicherort gespeichert:`<instance path>\binn\rlauncher.config`
+
+Sie müssen Administrator auf dem Computer sein, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, um diese Datei ändern zu können. Für die Bearbeitung der Datei wird empfohlen, dass Sie eine Sicherungskopie erstellen, bevor Sie Änderungen speichern.
+
+Die folgende Tabelle enthält die erweiterten Einstellungen für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], mit den zulässigen Werten. 
+
+|**Einstellungsname**|**Typ**|**Beschreibung**|
+|----|----|----|
+|AUFTRAG\_CLEANUP\_ON\_BEENDEN|Integer |Dies ist eine interne Einstellung – ändern Sie diesen Wert nicht. </br></br>Gibt an, ob die für jede externe Common Language Runtime-Sitzung erstellte temporäre Arbeitsordner bereinigt werden soll, nachdem die Sitzung abgeschlossen ist. Diese Einstellung ist beim Debuggen nützlich. </br></br>Unterstützte Werte sind **0** (deaktiviert) oder **1** (aktiviert). </br></br>Der Standard ist 1, Bedeutung Protokolldateien werden beim Beenden entfernt.|
+|TRACE\_EBENE|Integer |Konfiguriert den Ausführlichkeitsgrad der Ablaufverfolgung des MSSQLLAUNCHPAD für Debugzwecke an. Dies wirkt sich auf Ablaufverfolgungsdateien im Pfad, durch die Einstellung LOG_DIRECTORY angegeben. </br></br>Unterstützte Werte sind: **1** (Fehler), **2** (Leistung), **3** (Warnung), **4** (Information). </br></br>Der Standard ist 1, d. h. die Ausgabe von Warnungen.|
+
+Alle Einstellungen haben die Form eines Schlüssel-Wert-Paars, bei dem jede Einstellung in einer separaten Zeile enthalten ist. Klicken Sie z. B. um die Ablaufverfolgungsebene zu ändern, hinzufügen die Zeile `Default: TRACE_LEVEL=4`.
+
 ## <a name="see-also"></a>Siehe auch
 
 [Überlegungen zur Sicherheit](security-considerations-for-the-r-runtime-in-sql-server.md)
-

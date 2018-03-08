@@ -2,30 +2,30 @@
 title: Datenbankobjekt (Seite Erweiterte Eigenschaften) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.extendedproperties.f1
+f1_keywords: sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "24"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec5710e412a5e29399f897cf4e6e1c5ca3c88ce4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a40f19346fe5c40c4c7f6aa1426d2a58081e564a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-object-extended-properties-page"></a>Datenbankobjekt (Seite Erweiterte Eigenschaften)
-  Mithilfe der erweiterten Eigenschaften können Sie Datenbankobjekten benutzerdefinierte Eigenschaften hinzufügen. Mithilfe dieser Seite können Sie die erweiterten Eigenschaften für das ausgewählte Objekt anzeigen und ändern. Die Seite **Erweiterte Eigenschaften** ist für alle Datenbankobjekttypen gleich.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Mithilfe der erweiterten Eigenschaften können Sie Datenbankobjekten benutzerdefinierte Eigenschaften hinzufügen. Mithilfe dieser Seite können Sie die erweiterten Eigenschaften für das ausgewählte Objekt anzeigen und ändern. Die Seite **Erweiterte Eigenschaften** ist für alle Datenbankobjekttypen gleich.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Datenbank**  
@@ -43,8 +43,7 @@ ms.lasthandoff: 06/22/2017
  **Delete**  
  Entfernt die ausgewählte erweiterte Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Katalogsichten für erweiterte Eigenschaften &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
   
   
-

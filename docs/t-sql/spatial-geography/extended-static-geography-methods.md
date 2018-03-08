@@ -3,8 +3,11 @@ title: Erweiterte statische Geography-Methoden | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - Extended Static Geography Methods
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9bf284eb71e407cb7e7a3bc30db6c4a2d066de63
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c3a3b32f0218505de159c2269aa7b59ab6797dbc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-static-geography-methods"></a>Erweiterte statische geography-Methoden
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt mehrere Erweiterungen der statischen Geography-Methoden des Open Geospatial Consortium (OGC).  
   
@@ -47,13 +49,12 @@ ms.lasthandoff: 09/01/2017
   
 -   [Analysieren](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
--   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
+-   [Punkt](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Statische Geography-Aggregatmethoden](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
  [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Statische Geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
+ [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

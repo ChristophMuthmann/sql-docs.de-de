@@ -2,13 +2,13 @@
 title: "Aktionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
-  Aktionen können von verschiedenen Typen sein und müssen entsprechend erstellt werden. Folgende Aktionen stehen zur Verfügung:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Aktionen können von verschiedenen Typen sein und müssen entsprechend erstellt werden. Folgende Aktionen stehen zur Verfügung:  
   
 -   Drillthroughaktionen geben die Zeilen zurück, die die zugrunde liegenden Daten der ausgewählten Zellen des Cubes darstellen, in dem die Aktion ausgeführt wird.  
   
@@ -82,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [Aktionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   
-

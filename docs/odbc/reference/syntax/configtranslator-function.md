@@ -3,33 +3,30 @@ title: ConfigTranslator Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigTranslator
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigTranslator
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigTranslator
-helpviewer_keywords:
-- ConfigTranslator [ODBC]
+f1_keywords: ConfigTranslator
+helpviewer_keywords: ConfigTranslator [ODBC]
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b0c064453d84d10037eb1360c20b2fab8ecb1d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9de00042d81ac74bbda54be2060a331cf1ac3ad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator-Funktion
 **Konformität**  
@@ -76,4 +73,3 @@ BOOL ConfigTranslator(
 |Abrufen einer Übersetzungsoption|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Ein Konvertierungsprogramm auswählen|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |Festlegen einer Übersetzungsoption|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
-

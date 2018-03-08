@@ -1,26 +1,28 @@
 ---
-title: 'Gewusst wie: Anzeigen der CDC-Instanzeigenschaften | Microsoft Docs'
+title: Anzeigen der CDC-Instanzeigenschaften | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 753aa0f97ccfe8b5c63fff0e117e5f1a541bccb5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Anzeigen der CDC-Instanzeigenschaften
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Anzeigen von Informationen zu den Instanzen verwenden, die Sie im Rahmen der Verwaltung des Betriebs der Instanzen erstellen.  
@@ -44,8 +46,7 @@ ms.lasthandoff: 08/03/2017
      **Tabellen**  
      Auf dieser Registerkarte werden Informationen zu den Tabellen angezeigt, die Teil des Change Data Capture-Vorgangs sind. Außerdem werden die Spalten aufgeführt, die aufgezeichnet werden. Informationen zur Anzeige auf dieser Registerkarte finden Sie unter [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
-     **Erweitert**  
+     **Erweitert:**  
      Auf dieser Registerkarte wird eine Liste mit den erweiterten Eigenschaften angezeigt, die Sie im Eigenschaften-Editor definieren. Informationen zur Anzeige auf dieser Registerkarte finden Sie unter [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
   
-

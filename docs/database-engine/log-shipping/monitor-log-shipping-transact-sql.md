@@ -2,11 +2,13 @@
 title: "Überwachen des Protokollversands (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,32 +20,31 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dad074bfa7a777690f625fa175f631332f94e58b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Überwachen des Protokollversands (Transact-SQL)
-  Nach der Konfiguration des Protokollversands können Sie Informationen zum Status aller Protokollversandserver überwachen. Der Verlauf und der Status von Protokollversandvorgängen werden immer lokal durch die Protokollversandaufträge gespeichert. Der Verlauf und der Status des Sicherungsvorgangs werden auf dem primären Server gespeichert, und der Verlauf und der Status von Kopier- und Wiederherstellungsvorgängen werden auf dem sekundären Server gespeichert. Falls Sie einen Remoteüberwachungsserver implementiert haben, werden diese Informationen auch auf dem Überwachungsserver gespeichert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nach der Konfiguration des Protokollversands können Sie Informationen zum Status aller Protokollversandserver überwachen. Der Verlauf und der Status von Protokollversandvorgängen werden immer lokal durch die Protokollversandaufträge gespeichert. Der Verlauf und der Status des Sicherungsvorgangs werden auf dem primären Server gespeichert, und der Verlauf und der Status von Kopier- und Wiederherstellungsvorgängen werden auf dem sekundären Server gespeichert. Falls Sie einen Remoteüberwachungsserver implementiert haben, werden diese Informationen auch auf dem Überwachungsserver gespeichert.  
   
  Sie können Warnungen konfigurieren, die ausgelöst werden, falls Protokollversandvorgänge nicht wie geplant ausgeführt werden können. Fehler werden durch einen Warnungsauftrag ausgelöst, der den Status der Sicherungs- und Wiederherstellungsvorgänge überwacht. Sie können Warnungen definieren, mit denen ein Operator benachrichtigt wird, wenn diese Fehler ausgelöst werden. Falls ein Überwachungsserver konfiguriert ist, wird ein Warnungsauftrag auf dem Überwachungsserver ausgeführt, der Fehler für alle Vorgänge in der Protokollversandkonfiguration auslöst. Falls kein Überwachungsserver angegeben ist, wird ein Warnungsauftrag in der primären Serverinstanz ausgeführt, die den Sicherungsvorgang überwacht. Falls kein Überwachungsserver angegeben ist, wird außerdem ein Warnungsauftrag in jeder sekundären Serverinstanz ausgeführt, um die lokalen Kopier- und Wiederherstellungsvorgänge zu überwachen.  
   
 > [!IMPORTANT]  
->  Zum Überwachen einer Protokollversandkonfiguration müssen Sie den Überwachungsserver hinzufügen, wenn Sie den Protokollversand aktivieren. Wenn Sie später einen Überwachungsserver hinzufügen, müssen Sie die Protokollversandkonfiguration entfernen und sie anschließend durch eine Konfiguration ersetzen, die einen Überwachungsserver enthält. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md). Nach dem Konfigurieren des Überwachungsservers kann dieser zudem nicht ohne vorhergehendes Entfernen des Protokollversands geändert werden.  
+>  Zum Überwachen einer Protokollversandkonfiguration müssen Sie den Überwachungsserver hinzufügen, wenn Sie den Protokollversand aktivieren. Wenn Sie später einen Überwachungsserver hinzufügen, müssen Sie die Protokollversandkonfiguration entfernen und sie anschließend durch eine Konfiguration ersetzen, die einen Überwachungsserver enthält. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt. Nach dem Konfigurieren des Überwachungsservers kann dieser zudem nicht ohne vorhergehendes Entfernen des Protokollversands geändert werden.  
   
 ## <a name="history-tables-containing-monitoring-information"></a>Verlaufstabellen mit Überwachungsinformationen  
  Die Überwachungsverlaufstabellen enthalten Metadaten, die auf dem Überwachungsserver gespeichert sind. Eine Kopie der Informationen für einen bestimmten primären oder sekundären Server wird außerdem lokal gespeichert.  
   
  Sie können diese Tabellen abfragen, um den Status einer Protokollversandsitzung zu überwachen. Um z. B. den Status des Protokollversands abzurufen, überprüfen Sie den Status und den Verlauf des Sicherungsauftrags, des Kopierauftrags und des Wiederherstellungsauftrags. Sie können spezifische Details zum Protokollversandverlauf und zu Fehlern anzeigen, indem Sie die folgenden Überwachungstabellen abfragen.  
   
-|Tabelle|Beschreibung|  
+|Tabelle|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Speichert die Warnungsauftrags-ID.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Speichert Fehlerdetails für Protokollversandaufträge. Sie können diese Tabelle abfragen, um die Fehler für eine Agentsitzung anzuzeigen. Optional können Sie die Fehler nach dem Datum und der Uhrzeit der Protokollierung sortieren. Jeder Fehler wird als Abfolge von Ausnahmen protokolliert, und mehrere Fehler (Sequenzen) können pro Agentsitzung protokolliert werden.|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Gespeicherte Prozeduren für die Überwachung des Protokollversands  
  Überwachungs- und Verlaufsinformationen werden in Tabellen in der **msdb**-Datenbank gespeichert, auf die mithilfe gespeicherter Prozeduren für den Protokollversand zugegriffen werden kann. Führen Sie diese gespeicherten Prozeduren auf den in der folgenden Tabelle angegebenen Servern aus.  
   
-|Gespeicherte Prozedur|Beschreibung|Ausführen dieser Prozedur auf|  
+|Gespeicherte Prozedur|Description|Ausführen dieser Prozedur auf|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Gibt Überwachungsdatensätze für die angegebene primäre Datenbank aus der **log_shipping_monitor_primary** -Tabelle zurück.|Überwachungsserver oder primärer Server|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Gibt Überwachungsdatensätze für die angegebene sekundäre Datenbank aus der **log_shipping_monitor_secondary** -Tabelle zurück.|Überwachungsserver oder sekundärer Server|  
@@ -64,9 +65,8 @@ ms.lasthandoff: 08/02/2017
 |[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Ruft Einstellungen der sekundären Datenbank aus den Tabellen **log_shipping_secondary**, **log_shipping_secondary_databases** und **log_shipping_monitor_secondary** ab.|Sekundärer Server|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Diese gespeicherte Prozedur ruft die Einstellungen einer angegebenen primären Datenbank auf dem sekundären Server ab.|Sekundärer Server|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen des Protokollversandberichts &#40;SQL Server Management Studio&#41;](../../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md)   
  [Gespeicherte Prozeduren und Tabellen für den Protokollversand](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

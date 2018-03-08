@@ -3,8 +3,11 @@ title: "Berechtigungen für Systemobjekte GRANT (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - system objects [SQL Server]
 - GRANT statement, system objects
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-caps.latest.revision: 26
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3bd1f78212ef050c6610eab57f95cd44d51d9fbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 68fc428edb12c5b62d5e6eadb6d92bc090e66fde
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (Berechtigungen für Systemobjekte) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erteilt Berechtigungen für Systemobjekte wie z. B. im System gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Funktionen und Sichten.  
   
@@ -105,4 +107,3 @@ GO
  [Verweigern von Berechtigungen für Systemobjekte &#40; Transact-SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   
-

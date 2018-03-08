@@ -3,10 +3,12 @@ title: Verwendungen von Katalogdaten | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d47c73a7281ebdb094e87a01e78985cf97844a79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uses-of-catalog-data"></a>Der Katalogdaten verwendet
 Anwendungen verwenden die Katalogdaten in einer Vielzahl von Möglichkeiten. Es folgen einige häufige Verwendungsmöglichkeiten:  
@@ -38,4 +39,3 @@ Anwendungen verwenden die Katalogdaten in einer Vielzahl von Möglichkeiten. Es 
      Solche Umgebungen können auch **SQLTables** und **SQLColumns** Listen erstellen über die konnte der Programmierer Auswahl ändern. Diese Umgebungen können auch **SQLPrimaryKeys** und **SQLForeignKeys** automatisch ermitteln und Anzeigen von Beziehungen zwischen ausgewählten Tabellen und verwenden **SQLStatistics** zu bestimmen und indizierte Felder markieren, sodass Programmierer effizientere Abfragen erstellen kann.  
   
 -   **Cursor zu konstruieren.** Eine Anwendung, die Treiber oder die Middleware, die einen bildlauffähigen Cursor-Modul bietet können **SQLSpecialColumns** um zu bestimmen, welche Spalte oder Spalten eine Zeile eindeutig identifiziert. Das Programm erstellen konnte eine *Keyset* , die die Werte dieser Spalten für jede Zeile, die abgerufen wurde. Wenn die Anwendung wieder in die Zeile ein Bildlauf durchgeführt, würden sie diese Werte dann verwenden, zum Abrufen der neuesten Daten für die Zeile. Weitere Informationen zu bildlauffähige Cursor und Keysets, finden Sie unter [bildlauffähige Cursor](../../../odbc/reference/develop-app/scrollable-cursors.md).
-

@@ -3,29 +3,28 @@ title: GetTimestamp-Methode (java.lang.String) (SQLServerResultSet) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getTimestamp (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getTimestamp (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8b3c3938-e057-4919-9e9f-01eb8a4ad937
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2bf5cf27faf97c002dcc58989942084587002213
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6c1ea97756e6885afd36c4b98fa70167d519852d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="gettimestamp-method-javalangstring-sqlserverresultset"></a>GetTimestamp-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

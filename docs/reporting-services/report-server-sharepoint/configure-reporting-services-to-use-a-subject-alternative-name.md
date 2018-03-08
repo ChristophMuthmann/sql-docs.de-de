@@ -1,39 +1,39 @@
 ---
-title: Konfigurieren von Reporting Services zum Verwenden eines alternativen Antragstellernamens | Microsoft Docs
+title: "Konfigurieren von Reporting Services für die Verwendung eines alternativen Antragstellernamens | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 532a9c3c8daec262f9559f126c40810d90d737ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Konfigurieren von Reporting Services zum Verwenden eines alternativen Antragstellernamens
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Konfigurieren von Reporting Services für die Verwendung eines alternativen Antragstellernamens
 
-In diesem Thema wird erläutert, wie so konfigurieren Sie Reporting Services (SSRS) durch die Verwendung ein alternativen Antragstellernamen (SAN) die Datei "rsreportserver.config" ändern und verwenden das Netsh.exe-Tool wird.
+In diesem Artikel wird erklärt, wie Sie Reporting Services (SSRS) für die Verwendung eines alternativen Antragstellernamens (Subject Alternative Name, SAN) konfigurieren, indem Sie die Datei „rsreportserver.config“ ändern und das Tool „Netsh.exe“ verwenden.
 
 Die Anweisungen gelten sowohl für die Berichtsdienst-URL als auch die Webdienst-URL.
 
 Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und signiert sein und über den privaten Schlüssel verfügen. Sie können kein selbstsigniertes Zertifikat verwenden.  
   
- URLs in Reporting Services können zur Verwendung eines SSL-Zertifikats konfiguriert werden. Ein Zertifikat verfügt normalerweise nur über einen Antragstellernamen, der nur eine URL für eine SSL-Sitzung (Secure Sockets Layer) zulässt. Der SAN ist ein zusätzliches Feld im Zertifikat, das einen SSL-Dienst für viele URLs überwachen und zur Freigabe des SSL-Ports mit anderen Anwendungen ermöglicht. Der SAN sieht wie `www.s2.com`.  
+ URLs in Reporting Services können für die Verwendung eines SSL-Zertifikats konfiguriert werden. Ein Zertifikat verfügt normalerweise nur über einen Antragstellernamen, der nur eine URL für eine SSL-Sitzung (Secure Sockets Layer) zulässt. Der SAN ist ein zusätzliches Feld im Zertifikat, über das ein SSL-Zertifikat viele URLs überwachen kann. Außerdem kann der SSL-Port dadurch mit anderen Anwendungen gemeinsam verwendet werden. Der SAN sieht ungefähr wie `www.s2.com` aus.  
   
  Weitere Informationen zu SSL-Einstellungen für Reporting Services finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Konfigurieren von SSRS für die Verwendung ein alternativen Antragstellernamens für Webdienst-URL verwenden.
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Konfigurieren von SSRS für die Verwendung eines alternativen Antragstellernamens für die Webdienst-URL
   
 1.  Starten Sie den Konfigurations-Manager für Reporting Services.  
   
@@ -41,13 +41,13 @@ Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und s
   
 2.  Wählen Sie auf der Seite **Webdienst-URL** einen SSL-Port und ein SSL-Zertifikat aus.  
   
-     ![Reporting Services-Konfigurations-Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services-Konfigurations-Manager")  
+     ![Konfigurations-Manager für Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services Configuration Manager")  
   
      Der Konfigurations-Manager registriert das SSL-Zertifikat für den Port.  
   
 3.  Öffnen Sie die Datei rsreportserver.config.  
   
-     Für den einheitlichen SSRS-Modus befindet sich die Datei standardmäßig im folgenden Ordner:  
+     Die Datei für den einheitlichen SSRS-Modus befindet sich standardmäßig in folgendem Ordner:  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -55,7 +55,7 @@ Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und s
   
 4.  Kopieren Sie den URL-Abschnitt für die Berichtsserver-Webdienstanwendung.  
   
-     Beispielsweise ist die ursprüngliche URL nachfolgend ein:  
+     Im Folgenden wird beispielsweise der Original-URL-Abschnitt dargestellt:  
   
     ```  
         <URL>  
@@ -66,7 +66,7 @@ Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und s
   
     ```  
   
-     Die folgenden modifizierte URL-Abschnitt ist:
+     Im Folgenden wird der modifizierte URL-Abschnitt dargestellt:
   
     ```  
     <URL>  
@@ -126,10 +126,9 @@ Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und s
   
 ## <a name="see-also"></a>Siehe auch
 
- [Konfigurationsdatei "rsreportserver.config"](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Konfigurations-Manager für Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Konfigurieren von Berichtsserver-URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -3,29 +3,28 @@ title: Position-Methode (Byte, long) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerBlob.position (byte[], long)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerBlob.position (byte[], long)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1abb3e2df956be93b8aee42b1b1b6b14e62d0fe
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6d6a9eaec4548bbeff5e6c0879240f783301d211
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="position-method-byte-long"></a>Position-Methode (Byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,4 +64,3 @@ public long position(byte[] bPattern,
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
-

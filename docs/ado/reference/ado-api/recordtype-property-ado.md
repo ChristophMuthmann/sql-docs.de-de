@@ -3,7 +3,7 @@ title: RecordType-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - RecordType property [ADO]
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aba23983160b3ddb8dcdfab520b9d1c443ef1e28
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45a52a32cdc859c50c45f1803d2685bdb3cfc8bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordtype-property-ado"></a>RecordType-Eigenschaft (ADO)
 Gibt den Typ des [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  
@@ -42,9 +41,8 @@ Gibt den Typ des [Datensatz](../../../ado/reference/ado-api/record-object-ado.md
  Die **RecordType** Eigenschaft ist schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
- [Type-Eigenschaft (ADO-Datenstrom)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-
+ [Type-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -1,32 +1,32 @@
 ---
-title: Datasetfeldauflistungen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Verweise auf Datasetfeldauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c1a266bf27c1d31d3cb662c19903da50fb7e2b8f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Integrierte Auflistungen - Datasetfeldauflistungen (Berichts-Generator)
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Datasetfeldauflistungen (Berichts-Generator)
   Jedes Dataset in einem Bericht enthält eine Fields-Sammlung. Bei der Fields-Sammlung handelt es sich um eine Gruppe von Feldern, die von der Datasetabfrage und zusätzlichen berechneten Feldern angegeben werden, die Sie erstellen. Nachdem Sie ein Dataset erstellt haben, wird die Feldauflistung im **Berichtsdatenbereich** angezeigt.  
   
- Ein einfacher Feldverweis in einem Ausdruck wird auf der Entwurfsoberfläche als einfacher Ausdruck angezeigt. Wenn Sie zum Beispiel das Feld `Sales` aus dem Bereich Berichtsdaten in eine Tabellenzelle der Entwurfsoberfläche ziehen, wird `[Sales]` angezeigt. Dies ist der zugrunde liegende Ausdruck `=Fields!Sales.Value` , der in der Value-Eigenschaft des Textfelds festgelegt wird. Wenn der Bericht ausgeführt wird, wertet der Berichtsprozessor diesen Ausdruck aus und zeigt die eigentlichen Daten der Datenquelle in der Tabellenzelle im Textfeld an. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) und [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
+ Ein einfacher Feldverweis in einem Ausdruck wird auf der Entwurfsoberfläche als einfacher Ausdruck angezeigt. Wenn Sie zum Beispiel das Feld `Sales` aus dem Bereich Berichtsdaten in eine Tabellenzelle der Entwurfsoberfläche ziehen, wird `[Sales]` angezeigt. Dies ist der zugrunde liegende Ausdruck `=Fields!Sales.Value` , der in der Value-Eigenschaft des Textfelds festgelegt wird. Wenn der Bericht ausgeführt wird, wertet der Berichtsprozessor diesen Ausdruck aus und zeigt die eigentlichen Daten der Datenquelle in der Tabellenzelle im Textfeld an. Weitere Informationen finden Sie unter [Ausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) und [Datasetfeldauflistung (Berichts-Generator und SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Erkennen von fehlenden Feldern für dynamische Abfragen zur Laufzeit  
- Elemente in der Fields-Sammlung besitzen in der Standardeinstellung zwei Eigenschaften: Value und IsMissing. Mit der IsMissing-Eigenschaft wird angegeben, ob ein zur Entwurfszeit für ein Dataset definiertes Feld in den Feldern enthalten ist, die zur Laufzeit abgerufen werden. Beispielsweise kann die Abfrage Aufrufen einer gespeicherten Prozedur, in dem das Resultset eines Eingabeparameters variiert, oder die Abfrage möglicherweise `SELECT * FROM`  *\<Tabelle >* , in dem die Tabellendefinition ändern.  
+ Elemente in der Fields-Sammlung besitzen in der Standardeinstellung zwei Eigenschaften: Value und IsMissing. Mit der IsMissing-Eigenschaft wird angegeben, ob ein zur Entwurfszeit für ein Dataset definiertes Feld in den Feldern enthalten ist, die zur Laufzeit abgerufen werden. Die Abfrage kann zum Beispiel eine gespeicherte Prozedur aufrufen, bei der das Resultset in Abhängigkeit eines Eingabeparameters variiert, oder die Abfrage kann `SELECT * FROM` *\<Tabelle>* lauten und die Tabellendefinition ändern.  
   
 > [!NOTE]  
 >  IsMissing erkennt für alle Datenquellentypen Änderungen des Datasetschemas zwischen Entwurfs- und Laufzeit. Sie können IsMissing nicht verwenden, um in einem mehrdimensionalen Cube leere Elemente zu erkennen, und es besteht keine Beziehung zu den Begriffen **EMPTY** und **NON EMPTY**der MDX-Abfragesprache.  
@@ -92,13 +92,12 @@ End Function
  Das Textfeld zeigt entweder den Feldwert oder den Text an, den Sie angegeben haben.  
   
 ### <a name="using-extended-field-properties"></a>Verwenden von erweiterten Feldeigenschaften  
- Bei den erweiterten Feldeigenschaften handelt es sich um zusätzliche Eigenschaften, die für ein Feld über die Datenverarbeitungserweiterung definiert werden, die vom Datenquellentyp für das Dataset bestimmt wird. Erweiterte Feldeigenschaften sind entweder vordefiniert oder gelten speziell für einen Datenquellentyp. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ Bei den erweiterten Feldeigenschaften handelt es sich um zusätzliche Eigenschaften, die für ein Feld über die Datenverarbeitungserweiterung definiert werden, die vom Datenquellentyp für das Dataset bestimmt wird. Erweiterte Feldeigenschaften sind entweder vordefiniert oder gelten speziell für einen Datenquellentyp. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
  Wenn Sie eine Eigenschaft angeben, die für das Feld nicht unterstützt wird, wird der Verweis als **NULL** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) ausgewertet. Wenn ein Datenanbieter keine erweiterten Feldeigenschaften unterstützt oder wenn das Feld während des Ausführens der Abfrage nicht gefunden wird, entspricht der Wert für die Eigenschaft bei Eigenschaften vom Typ **Zeichenfolge** und**Objekt** [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]NULL **(** Nothing **in**), und bei Eigenschaften vom Typ **Integer**entspricht er Null (0). Für eine Datenverarbeitungserweiterung können die Vorteile der vordefinierten Eigenschaften genutzt werden, indem die Abfragen optimiert werden, die diese Syntax enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

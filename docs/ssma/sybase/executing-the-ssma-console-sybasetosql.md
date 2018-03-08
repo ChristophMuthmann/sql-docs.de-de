@@ -3,10 +3,12 @@ title: "Ausführen der Konsole SSMA (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +24,16 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a76b457d7178483d18a5a7a26d176d7e606b6fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 998a42b80fa415537051693467b337f07c9ba381
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ausführen der Konsole SSMA (SybaseToSQL)
 Microsoft stellt Ihnen Dateibefehle auszuführen und zu steuern SSMA Aktivitäten eine Reihe robuster Skript. In den folgenden Abschnitten ausführlich identisch.  
@@ -682,4 +683,3 @@ Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:
   
 -   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   
-

@@ -3,29 +3,28 @@ title: UpdateRef-Methode (Int, java.sql.Ref) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateRef (int, java.sql.Ref)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateRef (int, java.sql.Ref)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20d392dafcc9cd7a4d2c07b482295f5f3b27ccf8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed76c0a33d54f0f5a378b73fa32552ad67b26f35
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updateref-method-int-javasqlref"></a>updateRef-Methode (int, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public void updateRef(int columnIndex,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

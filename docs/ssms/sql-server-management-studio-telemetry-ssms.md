@@ -3,28 +3,28 @@ title: "SQL Server Management Studio – Telemetrie (SSMS) | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 02/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a960b0862617027d77f28a7acc247312f461a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SSMS-Nutzung
-
-SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die anonyme Featurenutzungsdaten erfassen und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Weitere Informationen finden Sie in den [Datenschutzbestimmungen von SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die anonyme Featurenutzungsdaten erfassen und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Weitere Informationen finden Sie in den [Datenschutzbestimmungen von SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
 
 ## <a name="audit-feature-usage-data"></a>Überwachen von Featurenutzungsdaten
 
@@ -42,4 +42,3 @@ Informationen zum Zustimmen oder Ablehnen der SSMS-Nutzungsdatenerfassung finden
 ## <a name="see-also"></a>Siehe auch
 
 [Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung](http://msdn.microsoft.com/library/mt743085.aspx)
-

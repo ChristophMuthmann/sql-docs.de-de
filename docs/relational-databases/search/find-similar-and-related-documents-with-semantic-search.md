@@ -2,9 +2,12 @@
 title: "Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 09dffbf5b7668022ec43ad10eb9de86691845a61
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche
-  Beschreibt, wie ähnliche oder verwandte Dokumente oder Textwerte sowie Informationen zur Ähnlichkeit oder Verwandtschaft über Spalten gesucht werden, die für die statistische semantische Indizierung konfiguriert sind.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt, wie ähnliche oder verwandte Dokumente oder Textwerte sowie Informationen zur Ähnlichkeit oder Verwandtschaft über Spalten gesucht werden, die für die statistische semantische Indizierung konfiguriert sind.  
    
 ##  <a name="HowToQuerySimilar"></a> Suchen von ähnlichen oder verwandten Dokumenten mit SEMANTICSIMILARITYTABLE  
  Fragen Sie zum Identifizieren ähnlicher oder verwandter Dokumente in einer bestimmten Spalte die Funktion [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md) ab.  
@@ -39,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToIdentifySimilar"></a> Beispiel: Suchen der wichtigsten Dokumente, die einem anderen Dokument ähnlich sind  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  Im folgenden Beispiel werden die ersten zehn Kandidaten abgerufen, die dem mit *@CandidateID* angegebenen Kandidaten aus der HumanResources.JobCandidate-Tabelle in der AdventureWorks2012-Beispieldatenbank ähneln.  
   
 ```scr  
@@ -64,10 +67,10 @@ GO
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToSimilarPhrases"></a> Beispiel: Suchen der wichtigsten Schlüsselausdrücke, die zwischen Dokumenten ähnlich sind  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  Im folgenden Beispiel werden die fünf Schlüsselausdrücke mit der größten Ähnlichkeit zwischen den in der **HumanResources.JobCandidate** -Tabelle angegebenen Kandidaten der AdventureWorks2012-Beispieldatenbank abgerufen.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROM SEMANTICSIMILARITYDETAILSTABLE  
     (  
@@ -80,4 +83,3 @@ GO
 ```  
   
   
-

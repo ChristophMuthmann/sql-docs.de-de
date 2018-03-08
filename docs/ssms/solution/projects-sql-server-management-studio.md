@@ -3,27 +3,28 @@ title: Projekte (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6aee221e94bfddd9ef968d5868c07ae2d9291d91
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e207a41546270197fa35cccd63348107db2d30f4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="projects-sql-server-management-studio"></a>Projekte (SQL Server Management Studio)
-Ein [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] -Projekt ist eine Sammlung logisch verbundener Skripts und Dateien, die zusammen zur Verwaltung und Entwicklung von Datenbanken gespeichert werden können.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ein [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]-Projekt ist eine Sammlung logisch verbundener Skripts und Dateien, die zusammen zur Verwaltung und Entwicklung von Datenbanken gespeichert werden können.  
   
 ## <a name="script-project-overview"></a>Übersicht über das Skriptprojekt  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Skriptprojekte werden in der Projektmappen-Explorer-Komponente von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]angezeigt. Ein Skriptprojekt kann null oder mehr Projektdateien enthalten. Sie können einer Projektmappe ein Projekt hinzufügen oder mehrere Projekte innerhalb einer Projektmappe kombinieren.  
@@ -60,9 +61,8 @@ Mit dem Eigenschaftenfenster in [!INCLUDE[ssManStudio](../../includes/ssmanstudi
 |Beschreibt, wie die Verbindungsinformationen für eine Abfrage geändert werden.|[Ändern der mit einer Abfrage verknüpften Verbindung](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Beschreibt, wie Verbindungseigenschaften geändert werden.|[Anzeigen oder Ändern der Eigenschaften einer Verbindung in einem Projekt](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
-

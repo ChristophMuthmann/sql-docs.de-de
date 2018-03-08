@@ -3,7 +3,7 @@ title: Zusammenfassung der RDS-Objekt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9423b2f6072f142336e1f36f02785b69f9efdae6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1c89ea8ccd9875368ea0d279c54a1153bc0cfd3d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-object-model-summary"></a>Zusammenfassung für RDS-Objekt
 > [!IMPORTANT]
@@ -34,15 +33,14 @@ ms.lasthandoff: 09/09/2017
   
 |Objekt|Description|  
 |------------|-----------------|  
-|[RDS. Datenspeicher](../../../ado/reference/rds-api/dataspace-object-rds.md)|Dieses Objekt enthält eine Methode zum Abrufen eines Proxys für Server. Der Proxy möglicherweise der Standard- oder ein benutzerdefiniertes Serverprogramm (Business-Objekt). Des Programms werden von einem lokalen Dynamic Link Library oder auf das Internet, Intranet, ein lokales Netzwerk initiiert werden kann.<br /><br /> Die **DataSpace** Objekt für die Skripterstellung sicher ist.|  
+|[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Dieses Objekt enthält eine Methode zum Abrufen eines Proxys für Server. Der Proxy möglicherweise der Standard- oder ein benutzerdefiniertes Serverprogramm (Business-Objekt). Des Programms werden von einem lokalen Dynamic Link Library oder auf das Internet, Intranet, ein lokales Netzwerk initiiert werden kann.<br /><br /> Die **DataSpace** Objekt für die Skripterstellung sicher ist.|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Dieses Objekt stellt das Standardprogramm für den Server dar. Dadurch wird das RDS Daten abrufen und aktualisieren Standardverhalten ausgeführt.<br /><br /> Die **DataFactory** Objekt ist nicht sicher für Skripting.|  
-|[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Dieses Objekt kann automatisch Aufrufen der **RDS. DataSpace** und **RDSServer.DataFactory** Objekte.<br /><br /> Verwenden Sie dieses Objekt, um die standardmäßige Verhalten von RDS-Daten abrufen "oder" Update aufzurufen.<br /><br /> Dieses Objekt stellt auch die notwendigen Mittel zum visuelle Steuerelemente auf das zurückgegebene **Recordset** Objekt.<br /><br /> Die **DataControl** Objekt für die Skripterstellung sicher ist.|  
+|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Dieses Objekt kann automatisch Aufrufen der **RDS. DataSpace** und **RDSServer.DataFactory** Objekte.<br /><br /> Verwenden Sie dieses Objekt, um die standardmäßige Verhalten von RDS-Daten abrufen "oder" Update aufzurufen.<br /><br /> Dieses Objekt stellt auch die notwendigen Mittel zum visuelle Steuerelemente auf das zurückgegebene **Recordset** Objekt.<br /><br /> Die **DataControl** Objekt für die Skripterstellung sicher ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [RDS-Grundlagen](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

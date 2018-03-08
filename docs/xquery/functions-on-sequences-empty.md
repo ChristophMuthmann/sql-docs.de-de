@@ -3,8 +3,11 @@ title: leer-Funktion (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - empty function
 - fn:empty function
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 433edf397acdb7a49371c80bffb562f7c27bf125
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ca580d89bf60046aaf2d02315f18b12772e0bea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-sequences---empty"></a>Funktionen für Sequenzen - leer
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt "true" zurück, wenn der Wert der *$arg* ist eine leere Sequenz. Andernfalls gibt die Funktion False zurück.  
   
@@ -122,4 +124,3 @@ ProductModelID Result
  [vorhanden &#40; &#41; -Methode &#40; Xml-Datentyp &#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   
-

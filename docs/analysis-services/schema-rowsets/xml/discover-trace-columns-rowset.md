@@ -2,31 +2,32 @@
 title: DISCOVER_TRACE_COLUMNS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 75e41e8d4784d04570eaebafc0efc607a45f40b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d017cee6e363f3a035baaf67c756f00edeaea3f6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS-Rowset
-  Gibt ein XML-Dokument mit einer Beschreibung der in einer Ablaufverfolgung verfügbaren Spalten zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Gibt ein XML-Dokument mit einer Beschreibung der in einer Ablaufverfolgung verfügbaren Spalten zurück.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
@@ -53,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

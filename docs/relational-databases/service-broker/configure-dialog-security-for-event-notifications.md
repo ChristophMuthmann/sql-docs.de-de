@@ -2,9 +2,12 @@
 title: "Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,18 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473e5873e7a522c691f39c5fa8b68d5eb17ab2ce
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: e7f03652828e07ca4f89d8c6259e4a682735e947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dialogsicherheit sollte für Ereignisbenachrichtigungen konfiguriert werden, die Meldungen an einen Service Broker auf einem Remoteserver senden. Die Dialogsicherheit muss entsprechend dem Modell für die vollständige Sicherheit von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dialogen manuell konfiguriert werden. Das Modell für vollständige Sicherheit ermöglicht die Ver- und Entschlüsselung von Nachrichten, die an und von Remoteservern gesendet werden. Obwohl Ereignisbenachrichtigungen nur in eine Richtung gesendet werden, werden andere Nachrichten, z. B. Fehlermeldungen, auch in die Gegenrichtung zurückgegeben.  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen  
@@ -89,7 +93,7 @@ ms.lasthandoff: 06/22/2017
 |Wechseln Sie zu der Quelldatenbank, auf der die Ereignisbenachrichtigung erstellt werden soll. Wenn Sie als Quelldatenbankbenutzer noch keine Verbindung mit der Datenbank hergestellt haben, stellen Sie nun die Verbindung her.|Wechseln Sie zur Zieldatenbank, um Ereignisbenachrichtigungen zu empfangen.|  
 |[Erstellen Sie die Ereignisbenachrichtigung](../../t-sql/statements/create-event-notification-transact-sql.md), und geben Sie den Broker-Dienst und den Bezeichner der Zieldatenbank an.||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

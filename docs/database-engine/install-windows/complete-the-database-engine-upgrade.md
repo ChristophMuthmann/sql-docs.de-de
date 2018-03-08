@@ -1,29 +1,31 @@
 ---
 title: "Abschließen des Datenbankmodul-Upgrades | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 9248c9f2868246d1b8da927d6563b3de8d7cb8cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 581e8cd7a43dd1e4c878cc56b49644e51d7a3a79
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="complete-the-database-engine-upgrade"></a>Abschließen des Datenbankmodul-Upgrades
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Nach Abschluss des Upgrades auf SQL Server gibt es eine Reihe zusätzlicher Schritte, die Sie möglicherweise durchführen müssen. Dabei handelt es sich z. B. um:  
   
@@ -31,7 +33,7 @@ Führen Sie nach dem Aktualisieren von [!INCLUDE[ssDE](../../includes/ssde-md.md
   
 - **Sichern Ihrer Datenbanken:** Führen Sie für jede Datenbank eine vollständige Sicherung durch.  
 
-- **Neue Funktionen aktivieren:** In SQL Server 2016 und SQL Server 2017 treten einige Änderungen erst in Kraft, nachdem der DATABASE_COMPATIBILITY-Grad für eine Datenbank auf 130 oder höher geändert wurde.  Weitere Informationen und den empfohlenen Workflow finden Sie unter [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
+- **Neue Funktionen aktivieren:** In SQL Server 2016 und SQL Server 2017 treten einige Änderungen erst in Kraft, nachdem der DATABASE_COMPATIBILITY-Grad für eine Datenbank auf 130 oder höher geändert wurde.  Weitere Informationen und den empfohlenen Workflow finden Sie unter [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Wenn Ihre Datenbank über speicheroptimierte Tabellen verfügt, die in SQL Server 2014 erstellt wurden, informieren Sie sich unter [Statistiken für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).
   
 - **Integration Services:**  
   
@@ -45,4 +47,3 @@ Führen Sie nach dem Aktualisieren von [!INCLUDE[ssDE](../../includes/ssde-md.md
   
 - **Volltextsuche:** Füllen Sie die Volltextkataloge wieder auf, um eine konsistente Semantik in Abfrageergebnissen zu gewährleisten. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).  
   
-

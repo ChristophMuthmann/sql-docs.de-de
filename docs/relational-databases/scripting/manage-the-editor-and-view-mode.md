@@ -2,9 +2,12 @@
 title: Verwalten des Editors und Ansichtsmodus | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 364c8e7db9d336df91b984d62aaf62cff19da4ac
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bc33a7d686cd91cb502ac37c0c1ab4ef267ff872
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Verwalten des Editors und des Ansichtsmodus
-  Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.  
   
 ## <a name="changing-the-view-mode"></a>Ändern des Ansichtsmodus  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über einen Ansichtsmodus namens **Dokumente im Registerformat**. In diesem Modus können Sie mehrere Editoren und Dokumente gleichzeitig öffnen und über Registerkarten am oberen Rand des Editors auf diese zugreifen. Alternativ können Sie die [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Umgebung im Modus für eine mehrfache Dokumentschnittstelle (MDI, Multiple Document Interface) öffnen, bei dem Fenster ohne Registerkarten verknüpft werden und nebeneinander angezeigt, minimiert oder ähnlich behandelt werden können.  
@@ -124,4 +126,3 @@ ms.lasthandoff: 06/22/2017
 1.  Wählen Sie im Menü **Fenster** die Option **Alle automatisch ausblenden** .  
   
   
-

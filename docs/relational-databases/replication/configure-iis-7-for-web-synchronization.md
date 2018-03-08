@@ -2,31 +2,32 @@
 title: "Konfigurieren von IIS 7 für die Websynchronisierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "11"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8aab51f8530cfe6ea27315314db996e94734e884
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Die Vorgehensweisen in diesem Thema führen Sie durch den Prozess zum manuellen Konfigurieren von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Internetinformationsdiensten (IIS) Version 7 oder höher zur Verwendung mit der Websynchronisierung für die Mergereplikation. 
   
@@ -316,7 +317,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 4.  Geben Sie im Dialogfeld **Verbindung mit \<ServerName> herstellen** den Anmeldenamen und das Kennwort an, den bzw. das der Merge-Agent zum Herstellen der Verbindung mit dem IIS verwenden soll. Diese Anmeldeinformationen werden auch im Assistenten für neue Abonnements angegeben.  
   
-5.  Überprüfen Sie im Internet Explorer-Fenster mit **** Diagnoseinformationen zur SQL-Websynchronisierung, ob der Wert in jeder **Status** -Spalte der Seite **Erfolg**lautet.  
+5.  Überprüfen Sie im Internet Explorer-Fenster mit **Diagnoseinformationen zur SQL-Websynchronisierung**, ob der Wert in jeder **Status** -Spalte der Seite **Erfolg**lautet.  
   
 6.  Stellen Sie sicher, dass das Zertifikat ordnungsgemäß auf dem Abonnenten installiert ist:  
   
@@ -324,9 +325,8 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     2.  Stellen Sie eine Verbindung mit dem Server im Diagnosemodus her. Wenn das Zertifikat ordnungsgemäß installiert ist, wird das Dialogfeld **Sicherheitshinweis** nicht angezeigt. Wenn das Dialogfeld angezeigt wird, ist der Merge-Agent nicht in der Lage, eine Verbindung mit dem Computer mit IIS herzustellen. Sie müssen daher sicherstellen, dass das Zertifikat für den Server, auf den Sie zugreifen, dem Zertifikatsspeicher auf dem Abonnenten als vertrauenswürdiges Zertifikat hinzugefügt wurde. Weitere Informationen zum Exportieren von Zertifikaten finden Sie in der IIS-Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Websynchronisierung für die Mergereplikation](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

@@ -3,23 +3,27 @@ title: "Betreiben von Red Hat Enterprise Linux freigegebenen Clusterdatenträger
 description: "Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server konfigurieren, um hohe Verfügbarkeit zu implementieren."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben von Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Dokument beschreibt, wie die folgenden Aufgaben für SQL Server auf einem freigegebenen Datenträger-Failovercluster mit Red Hat Enterprise Linux ausgeführt werden.
 
@@ -37,7 +41,7 @@ Das folgende Diagramm veranschaulicht die Komponenten in einem Linux-Cluster mit
 
 ![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zur Clusterkonfiguration, Agents Ressourcenoptionen und Verwaltung, finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Failovercluster manuell
 
@@ -69,7 +73,7 @@ Live Status der Cluster und Ressourcen anzeigen:
 sudo crm_mon 
 ```
 
-Die Ressource-Agent-Protokolle im anzeigen`/var/log/cluster/corosync.log`
+Die Ressource-Agent-Protokolle im anzeigen `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Hinzufügen eines Knotens zu einem cluster
 
@@ -79,7 +83,7 @@ Die Ressource-Agent-Protokolle im anzeigen`/var/log/cluster/corosync.log`
    ip addr show
    ```
 
-3. Der neue Knoten benötigt einen eindeutigen Namen, der 15 Zeichen oder weniger. In Red Hat Linux standardmäßig der Name des Computers ist `localhost.localdomain`. Dieser Standardname möglicherweise nicht eindeutig sein und ist zu lang. Legen Sie den Computernamen des neuen Knotens. Legen Sie die Computernamen durch Hinzufügen zu `/etc/hosts`. Das folgende Skript können Sie bearbeiten `/etc/hosts` mit `vi`. 
+3. Der neue Knoten benötigt einen eindeutigen Namen, der 15 Zeichen oder weniger. In Red Hat Linux standardmäßig der Name des Computers ist `localhost.localdomain`. Dieser Standardname möglicherweise nicht eindeutig sein und ist zu lang. Legen Sie den Computernamen des neuen Knotens. Legen Sie die Computernamen durch Hinzufügen zu `/etc/hosts`. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
 
    ```bash
    sudo vi /etc/hosts
@@ -101,7 +105,7 @@ Die Ressource-Agent-Protokolle im anzeigen`/var/log/cluster/corosync.log`
 
 1. Führen Sie die Anweisungen, um das datenbankdateiverzeichnis auf den freigegebenen Speicherort bereitstellen:
 
-   Von den NFS-Server installieren`nfs-utils`
+   Von den NFS-Server installieren `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -180,7 +184,7 @@ Die Ressource-Agent-Protokolle im anzeigen`/var/log/cluster/corosync.log`
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    Das folgende Beispiel Ads ein Knoten mit dem Namen **vm3** für den Cluster.
+    Im folgenden Beispiel wird einen Knoten mit dem Namen **vm3** für den Cluster.
 
     ```bash
     sudo pcs    cluster auth  
@@ -220,7 +224,7 @@ PCSD muss ausgeführt werden, damit verwenden `pcs` Tools.
 
 ### <a name="current-cluster-status"></a>Aktueller Clusterstatus 
 
-`sudo pcs status`grundlegende Informationen zu den Cluster, Quorum-Knoten, Ressourcen und Daemon-Status für jeden Knoten zurückgegeben. 
+`sudo pcs status` grundlegende Informationen zu den Cluster, Quorum-Knoten, Ressourcen und Daemon-Status für jeden Knoten zurückgegeben. 
 
 Ein Beispiel für eine fehlerfreie Schrittmacher Quorum Ausgabe würde folgendermaßen lauten:
 
@@ -249,9 +253,9 @@ pacemaker: active/enabled
 
 Im Beispiel `partition with quorum` bedeutet, dass die meisten Quorums der Knoten online ist. Wenn der Cluster die Mehrheit Quorums der Knoten, verliert `pcs status` zurück `partition WITHOUT quorum` und alle Ressourcen beendet. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`Gibt den Namen aller Knoten, die derzeit Teil des Clusters zurück. Wenn keine Knoten beteiligt sind, `pcs status` gibt `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Gibt den Namen aller Knoten, die derzeit Teil des Clusters zurück. Wenn keine Knoten beteiligt sind, `pcs status` gibt `OFFLINE: [<nodename>]`.
 
-`PCSD Status`Zeigt das Cluster den Status für jeden Knoten an.
+`PCSD Status` Zeigt das Cluster den Status für jeden Knoten an.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Gründe, warum ein Knoten offline geschaltet werden kann
 
@@ -261,7 +265,7 @@ Suchen Sie die folgenden Elemente aus, wenn ein Knoten offline ist.
 
     Die folgenden Ports müssen auf allen Knoten für Schrittmacher kommunizieren können geöffnet sein.
     
-    - ** TCP: 2224, 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Schrittmacher oder Corosync Services ausgeführt wird**
 
@@ -276,5 +280,4 @@ Suchen Sie die folgenden Elemente aus, wenn ein Knoten offline ist.
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Konfigurieren Sie Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

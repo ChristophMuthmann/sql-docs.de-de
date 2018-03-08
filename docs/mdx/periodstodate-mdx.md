@@ -2,34 +2,32 @@
 title: PeriodsToDate (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PERIODSTODATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- PeriodsToDate function
+f1_keywords: PERIODSTODATE
+dev_langs: kbMDX
+helpviewer_keywords: PeriodsToDate function
 ms.assetid: 43b9f69c-7b8c-4de0-9c4b-778ae766f74e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: b24e57d8f682e21a6d561a4e3a426da85f5ceb17
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc87b6be3a34f106784a8113eccb5dc5e75bd32c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt eine Menge von gleichgeordneten Elementen zurück, die derselben Ebene angehören wie ein angegebenes Element. Die Menge beginnt mit dem ersten gleichgeordneten Element und endet mit dem angegebenen Element, entsprechend der Einschränkung durch die angegebene Ebene in der Time-Dimension.  
   
@@ -47,7 +45,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Innerhalb des Bereichs der angegebenen Ebene der **PeriodsToDate** -Funktion die Menge der Zeiträume auf derselben Ebene wie die angegebenen Member auf, angefangen mit der ersten Periode und endend mit angegebenen Element zurück.  
   
 -   Wenn eine Ebene angegeben ist, wird das aktuelle Element der Hierarchie abgeleitet *Hierarchie*. **CurrentMember**, wobei *Hierarchie*ist die Hierarchie der angegebenen Ebene.  
@@ -97,9 +95,8 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [TopCount &#40; MDX &#41;](../mdx/topcount-mdx.md)   
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

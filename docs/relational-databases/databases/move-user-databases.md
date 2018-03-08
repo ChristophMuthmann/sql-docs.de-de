@@ -2,11 +2,13 @@
 title: Verschieben von Benutzerdatenbanken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,20 +26,19 @@ helpviewer_keywords:
 - planned database relocations [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: eb72a2d6947406c8fc14d40571ada79151668422
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 823a1ea2916f8a1fddac35ed8741b3ac503aa493
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-user-databases"></a>Verschieben von Benutzerdatenbanken
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können Sie die Daten-, Protokoll- und Volltextkatalogdateien einer Benutzerdatenbank an einen neuen Speicherort verschieben, indem Sie den neuen Dateispeicherort in der FILENAME-Klausel der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) -Anweisung angeben. Diese Methode ermöglicht das Verschieben von Datenbankdateien innerhalb derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine Datenbank auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einen anderen Server verschieben möchten, verwenden Sie [Sicherungs- und Wiederherstellungs-](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) oder [Trennungs- und Anfügungsoperationen](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie die Daten-, Protokoll- und Volltextkatalogdateien einer Benutzerdatenbank an einen neuen Speicherort verschieben, indem Sie den neuen Dateispeicherort in der FILENAME-Klausel der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung angeben. Diese Methode ermöglicht das Verschieben von Datenbankdateien innerhalb derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine Datenbank auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einen anderen Server verschieben möchten, verwenden Sie [Sicherungs- und Wiederherstellungs-](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) oder [Trennungs- und Anfügungsoperationen](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
   
 ## <a name="considerations"></a>Weitere Überlegungen  
  Wenn Sie eine Datenbank auf eine andere Serverinstanz verschieben, müssen Sie möglicherweise einen Teil oder auch alle Metadaten für die Datenbank erneut erstellen, um Benutzern und Anwendungen ein konsistentes Verhalten bereitzustellen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
@@ -88,7 +89,7 @@ ms.lasthandoff: 08/03/2017
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-2.  Beenden Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oder fahren Sie das System für die Wartungsarbeiten herunter. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Beenden Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oder fahren Sie das System für die Wartungsarbeiten herunter. Weitere Informationen finden Sie unter [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Verschieben Sie die Datei(en) an den neuen Speicherort.  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 08/03/2017
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Weitere Informationen finden Sie unter [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Verwenden Sie für jede zu verschiebende Datei die **sqlcmd** -Befehle oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die folgende Anweisung auszuführen:  
   
@@ -180,7 +181,7 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
     AND type_desc = N'LOG';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
@@ -191,4 +192,3 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   
-

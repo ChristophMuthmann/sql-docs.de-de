@@ -2,13 +2,13 @@
 title: "Festlegen des Rückschreibens von Partitionen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-writeback"></a>Einrichten des Rückschreibens von Partitionen
-  Wenn Sie den Schreibzugriff für eine Measuregruppe aktivieren, können Endbenutzer Cubedaten während des Durchsuchens ändern. Die Änderungen werden dabei in einer getrennten Tabelle, der Rückschreibetabelle, gespeichert und nicht in den Cubedaten oder Quelldaten. Endbenutzer, die eine Partition mit aktiviertem Schreibzugriff durchsuchen, können die Auswirkungen der Änderungen in der Rückschreibetabelle für die Partition anzeigen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Wenn Sie den Schreibzugriff für eine Measuregruppe aktivieren, können Endbenutzer Cubedaten während des Durchsuchens ändern. Die Änderungen werden dabei in einer getrennten Tabelle, der Rückschreibetabelle, gespeichert und nicht in den Cubedaten oder Quelldaten. Endbenutzer, die eine Partition mit aktiviertem Schreibzugriff durchsuchen, können die Auswirkungen der Änderungen in der Rückschreibetabelle für die Partition anzeigen.  
   
  Sie können Rückschreibedaten anzeigen oder löschen. Rückschreibedaten können außerdem zu einer Partition konvertiert werden. Bei einer Partition mit aktiviertem Schreibzugriff können Sie Cuberollen verwenden, um Benutzern und Gruppen von Benutzern Lese-/Schreibzugriff zu gewähren und den Zugriff auf bestimmte Zellen oder Gruppen von Zellen in der Partition zu beschränken.  
   
@@ -68,8 +68,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Partitionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Zurückschreiben in einem OLAP-Cube auf Zellebene in Excel 2010 aktivieren](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Aktivieren des Rückschreibens in einen OLAP-Cube auf Zellebene in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [Aktivieren und Sichern der Dateneingabe mit Analysis Services-Rückschreiben](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   
-

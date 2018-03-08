@@ -2,9 +2,12 @@
 title: SQL Server-Browser-Dienst | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96053eaff28d6c9c7954786c65e53ade429aa92c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-browser-service"></a>SQL Server-Browserdienst
-  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserprogramm wird als Windows-Dienst ausgeführt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser achtet auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zur Verfügung, die auf dem Computer installiert sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser unterstützt die folgenden Aktionen:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserprogramm wird als Windows-Dienst ausgeführt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser achtet auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zur Verfügung, die auf dem Computer installiert sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser unterstützt die folgenden Aktionen:  
   
 -   Durchsuchen einer Liste verfügbarer Server  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -, [!INCLUDE[ssAS](../../includes/ssas-md.md)]- und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst (sqlbrowser) stellt für jede Instanz den Instanzennamen und die Versionsnummer bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser kann so konfiguriert werden, während des Setups oder mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. In den folgenden Situationen wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst standardmäßig gestartet:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser kann während des Setups oder mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers konfiguriert werden. In den folgenden Situationen wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst standardmäßig gestartet:  
   
 -   Beim Ausführen eines Upgrades für eine Installation.  
   
@@ -87,7 +90,7 @@ ms.lasthandoff: 08/02/2017
 -   Die Ports, die Sie für die einzelnen Instanzen auswählen, können auf dem Server durch andere Dienste oder Anwendungen verwendet werden, sodass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht verfügbar ist.  
   
 ## <a name="clustering"></a>Clustering  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser ist keine gruppierte Ressource und Failover von einem Clusterknoten zum anderen wird nicht unterstützt. In einem Cluster sollte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser deshalb auf jedem Knoten des Clusters installiert und aktiviert werden. In Clustern lauscht auf jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser IP_ANY.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser handelt es sich nicht um eine gruppierte Ressource, und ein Failover von einem Clusterknoten auf einen anderen wird nicht unterstützt. In einem Cluster sollte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser deshalb auf jedem Knoten des Clusters installiert und aktiviert werden. In Clustern lauscht auf jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser IP_ANY.  
   
 > [!NOTE]  
 >  Wenn Sie bei der Überwachung von IP_ANY die Überwachung bestimmter IP-Adressen aktivieren, muss der Benutzer für jede IP-Adresse den gleichen TCP-Port konfigurieren, da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser die erste gefundene Kombination aus IP-Adresse und Port zurückgibt.  
@@ -97,7 +100,7 @@ ms.lasthandoff: 08/02/2017
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst wird deinstalliert, wenn die letzte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt wird.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser gestartet werden kann, von der Befehlszeile aus, für die Problembehandlung mithilfe der **- C** wechseln:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser kann zur Problembehandlung mit dem Schalter **-c** von der Eingabeaufforderung aus gestartet werden.  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
@@ -106,7 +109,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="account-privileges"></a>Kontoberechtigungen  
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser lauscht an einem UDP-Port und akzeptiert nicht authentifizierte Anforderungen mithilfe von SSRP ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser sollte im Sicherheitskontext eines Benutzers mit geringen Berechtigungen, die Anfälligkeit gegenüber böswilligen Angriffen zu verringern, ausgeführt werden. Das Anmeldekonto kann mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser gelten die folgenden Mindestbenutzerrechte:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser lauscht an einem UDP-Port und akzeptiert nicht authentifizierte Anforderungen mithilfe von SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser sollte im Sicherheitskontext eines Benutzers mit geringen Berechtigungen, die Anfälligkeit gegenüber böswilligen Angriffen zu verringern, ausgeführt werden. Das Anmeldekonto kann mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser gelten die folgenden Mindestbenutzerrechte:  
   
 -   Zugriff vom Netzwerk auf diesen Computer verweigern  
   
@@ -139,4 +142,3 @@ ms.lasthandoff: 08/02/2017
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   
-

@@ -2,36 +2,33 @@
 title: DMSCHEMA_MINING_MODEL_CONTENT_PMML-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT_PMML
+apiname: DMSCHEMA_MINING_MODEL_CONTENT_PMML
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
 ms.assetid: fa05bb08-a955-4c8d-b57f-ffcd82470220
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 771ce7da7719b186dffef3ae0f3095a215c71e48
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 960abf852fb3cf548b5f00203521e8440b04cae2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodelcontentpmml-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT_PMML-Rowset
-  Gibt die XML-Struktur des Miningmodells wieder. Das Format der XML-Zeichenfolge entspricht dem Standard der Predictive Model Markup Language (PMML 2.1).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt die XML-Struktur des Miningmodells. Das Format der XML-Zeichenfolge entspricht dem Standard der Predictive Model Markup Language (PMML 2.1).  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DMSCHEMA_MINING_MODEL_CONTENT_PMML** -Rowset enthält die folgenden Spalten.  
@@ -59,8 +56,7 @@ ms.lasthandoff: 09/01/2017
 |**MODEL_NAME**|**DBTYPE_WSTR**|Optional.|  
 |**MODEL_TYPE**|**DBTYPE_WSTR**|Optional.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

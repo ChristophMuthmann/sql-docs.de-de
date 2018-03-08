@@ -2,9 +2,12 @@
 title: "Bewährte Methoden für die Sicherheit eigenständiger Datenbanken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ecaa4832edf588d2fbe08e740d51db1194616361
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Bewährte Methoden für die Sicherheit eigenständiger Datenbanken
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Eigenständige Datenbanken bergen einige eindeutige Risiken. Diese müssen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Administratoren erkannt und gemindert werden. Die meisten Bedrohungen betreffen den Authentifizierungsprozess **USER WITH PASSWORD** , durch den die Authentifizierungsgrenze von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Ebene auf die Datenbankebene verschoben wird.  
   
@@ -60,7 +63,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Erstellen eines Benutzers, der eine Anmeldung dupliziert  
  Wenn ein Benutzer einer eigenständigen Datenbank mit Kennwort erstellt wird und dabei ein Name angegeben wird, der einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung entspricht und mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung eine Verbindung unter Angabe der eigenständigen Datenbank als Anfangskatalog hergestellt wird, kann mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung keine Verbindung hergestellt werden. Die Verbindung wird als Benutzer der eigenständigen Datenbank mit Kennwortprinzipal für die eigenständige Datenbank und nicht als Benutzer entsprechend der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung ausgewertet. Dies kann einen vorsätzlichen oder versehentlichen Denial of Service-Angriff für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung verursachen.  
   
--   Als Best Practice sollten Mitglieder der festen Serverrolle **sysadmin** erwägen, Verbindungen immer ohne die Option des Anfangskatalogs herzustellen. Dadurch wird die Anmeldung mit der master-Datenbank hergestellt, und Missbrauchsversuche des Anmeldeversuchs durch Datenbankbesitzer sind ausgeschlossen. Der Administrator kann nun mit der Anweisung **USE***\<database>* zur eigenständigen Datenbank wechseln. Sie können auch die Standarddatenbank der Anmeldung auf die eigenständige Datenbank festlegen. Dadurch wird die Anmeldung bei **master**abgeschlossen, und die Anmeldung wird an die eigenständige Datenbank übertragen.  
+-   Als Best Practice sollten Mitglieder der festen Serverrolle **sysadmin** erwägen, Verbindungen immer ohne die Option des Anfangskatalogs herzustellen. Dadurch wird die Anmeldung mit der master-Datenbank hergestellt, und Missbrauchsversuche des Anmeldeversuchs durch Datenbankbesitzer sind ausgeschlossen. Der Administrator kann nun mit der Anweisung **USE***\<Datenbank>* zur eigenständigen Datenbank wechseln. Sie können auch die Standarddatenbank der Anmeldung auf die eigenständige Datenbank festlegen. Dadurch wird die Anmeldung bei **master**abgeschlossen, und die Anmeldung wird an die eigenständige Datenbank übertragen.  
   
 -   Als Best Practice wird empfohlen, keine Benutzer von eigenständigen Datenbanken mit Kennwörtern zu erstellen, die denselben Namen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen aufweisen.  
   
@@ -91,9 +94,8 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Denial-of-Service-Angriff durch AUTO_CLOSE  
  Konfigurieren Sie eigenständige Datenbanken nicht so, dass sie automatisch geschlossen werden. Wenn die Datenbank nach dem Schließen geöffnet wird, um einen Benutzer zu authentifizieren, werden zusätzliche Ressourcen belegt, und dies kann in einem Denial-of-Service-Angriff ausgenutzt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Migrieren zu einer partiell eigenständigen Datenbank](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   
   
-

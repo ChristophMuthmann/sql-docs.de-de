@@ -2,31 +2,31 @@
 title: MSSQLSERVER_11001 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "12001"
-helpviewer_keywords:
-- 11001 (Database Engine error)
+f1_keywords: "12001"
+helpviewer_keywords: 11001 (Database Engine error)
 ms.assetid: 53d4d63a-61e3-441f-bfe9-9d44f7a05fd4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 070a44caa2738ec1cc475b2d7d26148b27063619
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 20fbde618c701e00b8ff84d991c414a89c4c2891
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver11001"></a>MSSQLSERVER_11001
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -51,4 +51,3 @@ Stellen Sie sicher, dass Sie den richtigen Servernamen auf dem Client eingegeben
 [Konfigurieren von Clientprotokollen](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
-

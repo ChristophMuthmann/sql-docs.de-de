@@ -3,7 +3,7 @@ title: "Verbindung Close-Methode, Beispiel für die Tabelle Type-Eigenschaft (VB
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1bdc520343baf5e00091aab8d683b6e6ea8456f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95ea01c8cfb495ce104e60cbb3e24110fac98116
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection-Methode schließen, Beispiel für die Tabelle Type-Eigenschaft (VB)
 Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollten die Verbindung mit dem Katalog schließen. Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften auf jene Objekte, die zwischengespeichert wurden, bleiben verfügbar, aber ein Versuch zum Lesen von Eigenschaften, der einen Aufruf an den Anbieter erfordert, schlägt fehl.  
@@ -88,4 +87,3 @@ Attribute VB_Name = "Connection"
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-

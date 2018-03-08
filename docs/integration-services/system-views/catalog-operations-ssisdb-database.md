@@ -1,10 +1,13 @@
 ---
-title: Catalog.Operations (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.operations (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f9d1969e9fe7bcb2104003cfab057effcd35da5d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a738859dc30fc1a845b15903a8b3691b431f3d1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Details aller Vorgänge im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an.  
   
@@ -41,16 +43,16 @@ ms.lasthandoff: 09/26/2017
 |status|**int**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
 |start_time|**datetimeoffset**|Der Zeitpunkt, zu dem der Vorgang begonnen wurde.|  
 |end_time|**datetimeoffsset**|Der Zeitpunkt, zu dem der Vorgang beendet wurde.|  
-|caller_sid|**varbinary (85)**|Die Sicherheits-ID (SID) des Benutzers, wenn für die Anmeldung Windows-Authentifizierung verwendet wurde.|  
-|caller_name|**vom Datentyp nvarchar(128)**|Der Name des Kontos, das den Vorgang ausgeführt hat.|  
+|caller_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, wenn für die Anmeldung Windows-Authentifizierung verwendet wurde.|  
+|caller_name|**nvarchar(128)**|Der Name des Kontos, das den Vorgang ausgeführt hat.|  
 |process_id|**int**|Ggf. die Prozess-ID des externen Prozesses.|  
-|stopped_by_sid|**varbinary (85)**|Die SID des Benutzers, der den Vorgang beendet hat.|  
-|stopped_by_name|**vom Datentyp nvarchar(128)**|Der Name des Benutzers, der den Vorgang beendet hat.|  
-|server_name|**vom Datentyp nvarchar(128)**|Informationen zu Windows Server- und Instanznamen für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|machine_name|**vom Datentyp nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
+|stopped_by_sid|**varbinary(85)**|Die SID des Benutzers, der den Vorgang beendet hat.|  
+|stopped_by_name|**nvarchar(128)**|Der Name des Benutzers, der den Vorgang beendet hat.|  
+|server_name|**nvarchar(128)**|Die Informationen zu Windows Server und zu Instanzen für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|machine_name|**nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
   
-## <a name="remarks"></a>Hinweise  
- Diese Ansicht zeigt eine Zeile für jeden Vorgang in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog. Sie ermöglicht es dem Administrator, alle logischen Operationen aufzuzählen, die auf dem Server ausgeführt wurden, z. B. das Bereitstellen eines Projekts oder das Ausführen eines Pakets.  
+## <a name="remarks"></a>Remarks  
+ In dieser Sicht wird eine Zeile für jeden Vorgang im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog angezeigt. Sie ermöglicht es dem Administrator, alle logischen Operationen aufzuzählen, die auf dem Server ausgeführt wurden, z. B. das Bereitstellen eines Projekts oder das Ausführen eines Pakets.  
   
  In dieser Sicht werden die folgenden Vorgangstypen angezeigt, wie in der Spalte **operation_type** aufgelistet:  
   
@@ -80,4 +82,3 @@ ms.lasthandoff: 09/26/2017
 >  Wenn Sie über die Berechtigung verfügen, einen Vorgang auf dem Server auszuführen, verfügen Sie auch über die Berechtigung, Informationen zu dem Vorgang anzuzeigen. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
   
-

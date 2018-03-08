@@ -1,28 +1,28 @@
 ---
-title: Abonnementeinstellungen und eine Dateifreigabe-Konto (Konfigurations-Manager) | Microsoft Docs
+title: Abonnementeinstellungen und ein Dateifreigabekonto (Configuration Manager) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.subscriptionsettings.F1
+f1_keywords: SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8faf295d4afa2967adaa1bcb922f8b360bbc138e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (Konfigurations-Manager)
   Verwenden Sie die Seite **Abonnementeinstellungen** im Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements zu konfigurieren. Mit dem Dateifreigabekonto können Sie einen einzelnen Anmeldeinformationssatz in mehreren Abonnements verwenden, die Berichte an eine Dateifreigabe übermitteln. Wenn die Anmeldeinformationen geändert werden müssen, konfigurieren Sie die Änderung für das Dateifreigabekonto. So müssen Sie nicht jedes einzelne Abonnement aktualisieren.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
  Die folgende Abbildung zeigt, was Benutzer in Abonnements sehen, die für eine Dateifreigabeübermittlung konfiguriert sind. **Dateifreigabekonto verwenden** ist deaktiviert, wenn kein Dateifreigabekonto konfiguriert wurde.  
   
- ![Configuration Manager-dateifreigabekonto](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "dateifreigabekonto für Configuration Manager")  
+ ![Configuration Manager-Dateifreigabekonto](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "configuration manager file share account")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Verhindern von Berechtigungsausweitung oder erhöhten Rechten  
   
@@ -102,9 +102,8 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
  `Aworks_sales_by_territory DOMAIN\UserName Disabled 10/5/2014 1:04:04 PM e843bc2b-023e-45a3-ba23-22f9dc9a0934`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Dateifreigabeübermittlung in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers (Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus)](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
-

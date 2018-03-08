@@ -2,11 +2,13 @@
 title: "SystemGetCrossValidationResults (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -14,20 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8558bacfce7bd6a70b769b42c60d568e76b433e0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services – Data Mining)
-  Partitioniert die Miningstruktur in die angegebene Anzahl an Querschnitten, trainiert ein Modell für jede Partition und gibt anschließend Genauigkeitsmetriken für jede Partition zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Partitioniert die Miningstruktur in die angegebene Anzahl an Querschnitten, trainiert ein Modell für jede Partition und gibt anschließend Genauigkeitsmetriken für jede Partition zurück.  
   
 > [!NOTE]  
 >  Die gespeicherte Prozedur kann nicht für die Kreuzvalidierung von Clusteringmodellen oder Modellen verwendet werden, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus oder des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden. Zur Kreuzvalidierung von Clusteringmodellen können Sie die gespeicherte Prozedur [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)verwenden.  
@@ -117,7 +119,7 @@ SystemGetCrossValidationResults(
  Der Standardwert ist **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird kein Fehler ausgelöst, wenn Sie festlegen, *statusschwellenwert* auf 0,0 ist, aber Sie sollten diesen Wert niemals verwenden. Tatsächlich bedeutet eine Schwelle von 0,0, dass Vorhersagen mit einer Wahrscheinlichkeit von 0 (null) Prozent als richtig gewertet werden.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] löst keinen Fehler aus, wenn Sie *state threshold* auf 0,0 setzen; allerdings sollten Sie diesen Wert niemals verwenden. Tatsächlich bedeutet eine Schwelle von 0,0, dass Vorhersagen mit einer Wahrscheinlichkeit von 0 (null) Prozent als richtig gewertet werden.  
   
  (Optional)  
   
@@ -133,7 +135,7 @@ SystemGetCrossValidationResults(
   
  In der folgenden Tabelle werden die Spalten in diesem Rowset beschrieben.  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|Description|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde.|  
 |AttributeName|Der Name der vorhersagbaren Spalte.|  
@@ -195,7 +197,6 @@ NULL
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
-

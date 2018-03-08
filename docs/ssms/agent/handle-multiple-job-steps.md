@@ -3,8 +3,11 @@ title: Handhaben mehrerer Auftragsschritte | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssms
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: 5
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c7474d555c03a9ce9d02afaf613146e7d638ba8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d193665f6d46a1e21ed397e3fe33c22afa95cc8b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handle-multiple-job-steps"></a>Handhaben mehrerer Auftragsschritte
-Wenn Ihr Auftrag aus mehr als einem Auftragsschritt besteht, müssen Sie die Reihenfolge angeben, in der die Auftragsschritte ausgeführt werden. Dies wird *Ablaufsteuerung* genannt*.* Sie können jederzeit neue Auftragsschritte hinzufügen und den Ablauf der Auftragsschritte neu ordnen. Die Änderungen werden bei der nächsten Ausführung des Auftrags wirksam. In dieser Abbildung ist die Ablaufsteuerung eines Auftrags für die Datenbanksicherung dargestellt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Wenn Ihr Auftrag aus mehr als einem Auftragsschritt besteht, müssen Sie die Reihenfolge angeben, in der die Auftragsschritte ausgeführt werden. Dies wird *Ablaufsteuerung*** genannt. Sie können jederzeit neue Auftragsschritte hinzufügen und den Ablauf der Auftragsschritte neu ordnen. Die Änderungen werden bei der nächsten Ausführung des Auftrags wirksam. In dieser Abbildung ist die Ablaufsteuerung eines Auftrags für die Datenbanksicherung dargestellt.  
   
 ![Ablaufsteuerung für SQL Server-Agent-Auftragsschritte](../../ssms/agent/media/dbflow01.gif "Ablaufsteuerung für SQL Server-Agent-Auftragsschritte")  
   
@@ -43,11 +46,11 @@ Sie definieren eine Ablaufsteuerungsaktion für die erfolgreiche oder fehlgeschl
 Auftragsschritte müssen eigenständig sein. Ein Auftrag kann keine booleschen Werte, Daten oder numerischen Werte zwischen den Auftragsschritten übergeben. Sie können allerdings Werte von einem [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschritt zu einem anderen mithilfe von dauerhaften Tabellen oder globalen temporären Tabellen übergeben. Sie können Werte von Auftragsschritten, die Programme von einem Auftragsschritt zum nächsten ausführen, mithilfe von Dateien übergeben. Von einer Datei, die von einem Auftragsschritt ausgeführt wird, kann beispielsweise in eine Datei geschrieben werden, und von einer Datei, die von einem nachfolgenden Auftragsschritt ausgeführt wird, kann die Datei gelesen werden.  
   
 > [!NOTE]  
-> Sollten Sie Auftragsschritte erstellen, die sich in einer Schleife gegenseitig aufrufen (auf Auftragsschritt 1 folgt Auftragsschritt 2, dann kehrt Auftragsschritt 2 zu Auftragsschritt 1 zurück), wird eine Warnmeldung angezeigt, wenn der Auftrag mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]erstellt wird.  
+> Sollten Sie Auftragsschritte erstellen, die sich in einer Schleife gegenseitig aufrufen (auf Auftragsschritt 1 folgt Auftragsschritt 2, dann kehrt Auftragsschritt 2 zu Auftragsschritt 1 zurück), wird eine Warnmeldung angezeigt, wenn der Auftrag mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] erstellt wird.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent zeichnet die Informationen von Aufträgen und Auftragsschritten im Auftragsverlauf auf.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
 [sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
@@ -55,4 +58,3 @@ Auftragsschritte müssen eigenständig sein. Ein Auftrag kann keine booleschen W
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  
 [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)  
   
-

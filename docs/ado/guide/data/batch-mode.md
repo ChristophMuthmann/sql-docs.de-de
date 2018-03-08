@@ -3,7 +3,7 @@ title: Batch-Modus | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 048fbd6f43bd78612c810049a07788e659a4139d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92e249a7c2d5b0c01e291f4829d5c4f8c580fb2c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="batch-mode"></a>Batchmodus
 Batchmodus im Endeffekt dasselbe ist bei der **LockType** -Eigenschaftensatz auf **AdLockBatchOptimistic** und BatchUpdates wird vom Anbieter unterstützt. Bestimmte Einstellungen für den Sperren sind nicht verfügbar, abhängig von der Cursorposition. Z. B. eine eingeschränkte Sperrtyp ist nicht verfügbar, wenn die **CursorLocation** festgelegt ist, um **AdUseClient**. Im Gegensatz dazu kann kein Anbieter optimistische unterstützt, wenn die Cursorposition auf dem Server befindet. Sie sollten Batchaktualisierung mit einem Keyset oder static-Cursor verwenden.  
@@ -36,7 +35,7 @@ Batchmodus im Endeffekt dasselbe ist bei der **LockType** -Eigenschaftensatz auf
   
  Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Senden die Updates: UpdateBatch-Methode](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Senden der Updates: UpdateBatch-Methode](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [Filtern nach aktualisierten Datensätzen](../../../ado/guide/data/filtering-for-updated-records.md)  
   
@@ -47,4 +46,3 @@ Batchmodus im Endeffekt dasselbe ist bei der **LockType** -Eigenschaftensatz auf
 -   [Trennen und erneutes Herstellen einer Verbindung des Recordsets](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
 -   [Aktualisieren von verknüpften Ergebnissen: Eindeutige Tabelle](../../../ado/guide/data/updating-joined-results-unique-table.md)
-

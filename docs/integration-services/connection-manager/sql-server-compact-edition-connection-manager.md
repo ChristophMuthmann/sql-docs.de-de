@@ -1,10 +1,13 @@
 ---
-title: SQL Server Compact Edition-Verbindungs-Manager | Microsoft Docs
+title: SQL Server Compact Edition-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 52662ac737fe33d151a423f8fa34feec7013e2dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition-Verbindungs-Manager
   Mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindungs-Manager kann ein Paket eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank herstellen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Ziel, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält, lädt mithilfe dieses Verbindungs-Managers Daten in eine Tabelle einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name und Pfad der Datenbankdatei**  
  Geben Sie den Pfad und Dateinamen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank ein.  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **AutoShrink Threshold**  
  Gibt den freien Speicherplatz in Prozent an, der in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank zulässig ist, bevor der Prozess des automatischen Verkleinerns ausgeführt wird.  
   
@@ -101,7 +103,7 @@ ms.lasthandoff: 08/09/2017
   
  Die Option Mode kann vier Werte annehmen. Siehe dazu die folgende Tabelle.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Schreibgeschützt**|Gibt an, dass der Zugriff auf die Datenbank schreibgeschützt erfolgen kann.|  
 |**Read Write**|Gibt Lese-/Schreibberechtigungen für die Datenbank an.|  
@@ -120,4 +122,3 @@ ms.lasthandoff: 08/09/2017
  **Kennwort**  
  Geben Sie das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank ein.  
   
-

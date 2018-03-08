@@ -2,9 +2,12 @@
 title: "Löschen von Datenbankobjekten | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ applies_to:
 helpviewer_keywords:
 - deleting database objects
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
-caps.latest.revision: 21
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7bcd4f3254cfd6b648411ae6fb9c364fa7017913
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d8e3d5eba52076ae58337fb9579781cad10a5f42
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-1---deleting-database-objects"></a>Lektion 3-1: Löschen von Datenbankobjekten
-Sie könnten einfach nur die Datenbank löschen, um dieses Lernprogramm vollständig zu entfernen. In diesem Thema führen Sie jedoch die erforderlichen Schritte aus, um jede Aktion rückgängig zu machen, die Sie im Lernprogramm ausgeführt haben.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Um dieses Lernprogramm vollständig zu entfernen, könnten Sie nur die Datenbank löschen. In diesem Thema führen Sie jedoch die erforderlichen Schritte aus, um jede Aktion rückgängig zu machen, die Sie im Lernprogramm ausgeführt haben.  
   
 ### <a name="removing-permissions-and-objects"></a>Entfernen von Berechtigungen und Objekten  
   
@@ -121,4 +123,3 @@ Damit ist das Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md
   
   
   
-

@@ -2,36 +2,33 @@
 title: DISCOVER_INSTANCES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_INSTANCES
+apiname: DISCOVER_INSTANCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_INSTANCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_INSTANCES rowset
 ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 39705d4efdcec8ed190bc58e2ac1888b3aeef7fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fbed6de71f83da959591003039fe5910a1a4c53d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverinstances-rowset"></a>DISCOVER_INSTANCES-Rowset
-  Beschreibt die Instanzen auf dem Server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Instanzen auf dem Server.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_INSTANCES** -Rowset enthält die folgenden Spalten.  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

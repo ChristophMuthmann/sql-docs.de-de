@@ -3,7 +3,7 @@ title: 'Schritt 1: Geben Sie ein Serverprogramm (RDS-Lernprogramm) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9eae6b17fc9277bd5e3c4cfe9259a026681252f0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c79cf47179f8fff140f4fda779b5db816c1d9418
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Schritt 1: Geben Sie ein Serverprogramm (RDS-Lernprogramm)
 In den allgemeinsten Fall verwenden die [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) Methode, um die Standardserverprogramm anzugeben [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), oder eigene benutzerdefinierte Serverprogramm (Business-Objekt). Ein Serverprogramm auf dem Server und einem Verweis auf das Serverprogramm instanziiert wird oder *Proxy*, zurückgegeben.  
@@ -46,4 +45,3 @@ Sub RDSTutorial1()
 ## <a name="see-also"></a>Siehe auch  
  [Schritt 2: Aufrufen des Programms (RDS-Lernprogramm)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

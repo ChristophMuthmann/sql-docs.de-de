@@ -2,9 +2,12 @@
 title: Datenbank (Ereigniskategorie) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,24 +17,24 @@ helpviewer_keywords:
 - Database event category [SQL Server]
 - SQL Server event classes, Database event category
 ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
-caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68d15a70be9212c6d19606e8408f1e4ea7bf25df
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 11b3298807357b454de671482a72c5aecb3cabaf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-event-category"></a>Datenbank (Ereigniskategorie)
-  Die **Datenbank** -Ereigniskategorie enthält Ereignisklassen zum Überwachen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die **Datenbank** -Ereigniskategorie enthält Ereignisklassen zum Überwachen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Data File Auto Grow-Ereignisklasse](../../relational-databases/event-classes/data-file-auto-grow-event-class.md)|Zeigt an, dass die Datendatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit mit ALTER DATABASE vergrößert wird.|  
 |[Data File Auto Shrink-Ereignisklasse](../../relational-databases/event-classes/data-file-auto-shrink-event-class.md)|Zeigt an, dass die Datendatei verkleinert wurde.|  
@@ -41,8 +44,7 @@ ms.lasthandoff: 06/22/2017
 |[Log File Auto Grow-Ereignisklasse](../../relational-databases/event-classes/log-file-auto-grow-event-class.md)|Zeigt an, dass die Protokolldatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Protokolldatei explizit mit ALTER DATABASE vergrößert wird.|  
 |[Log File Auto Shrink-Ereignisklasse](../../relational-databases/event-classes/log-file-auto-shrink-event-class.md)|Zeigt an, dass die Protokolldatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Protokolldatei explizit mit ALTER DATABASE verkleinert wird.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   
-

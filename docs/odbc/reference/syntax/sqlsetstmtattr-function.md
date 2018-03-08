@@ -3,33 +3,30 @@ title: SQLSetStmtAttr-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetStmtAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetStmtAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetStmtAttr
-helpviewer_keywords:
-- SQLSetStmtAttr function [ODBC]
+f1_keywords: SQLSetStmtAttr
+helpviewer_keywords: SQLSetStmtAttr function [ODBC]
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d652d9e028cb9eb8edd2ec2865449a4b379c4c64
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr-Funktion
 **Konformität**  
@@ -164,7 +161,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Anweisungsattribute  
  Die aktuell definierten Attribute und die Version von ODBC, in denen sie eingeführt wurden, werden in der folgenden Tabelle angezeigt. Es wird erwartet, dass weitere Attribute von Treibern, die von verschiedenen Datenquellen nutzen definiert werden. ODBC ist ein Bereich von Attributen reserviert. Entwickler müssen Werte für die eigene Verwendung treiberspezifische von Open Group reservieren. Weitere Informationen finden Sie unter [Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|Attribut|*ValuePtr* Inhalt|  
+|attribute|*ValuePtr* Inhalt|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|Das Handle für die APD für nachfolgende Aufrufe **SQLExecute** und **SQLExecDirect** des Anweisungshandles. Der erste Wert dieses Attributs ist der Deskriptor implizit zugeordnet werden, wenn die Anweisung ursprünglich zugeordnet wurde. Wenn der Wert dieses Attributs auf SQL_NULL_DESC oder das Handle, das ursprünglich zugeordnet wurde, für den Deskriptor festgelegt ist, einen explizit zugewiesenen APD-Handle, das zuvor das Anweisungshandle zugeordnet wurde von ihm getrennt ist und das Anweisungshandle zurückgesetzt wird, um die implizit reserviert APD Handle.<br /><br /> Dieses Attribut kann nicht festgelegt werden, um ein Deskriptor-Handle, das implizit für eine andere Anweisung zugewiesen wurde oder eine andere Deskriptorhandles, die implizit in derselben Anweisung festgelegt wurde; implizit zugeordneten Deskriptorhandles darf nicht mehr als eine Anweisung oder Deskriptorhandles zugeordnet sein.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|Das Handle für die ARD für nachfolgende Abrufe des Anweisungshandles. Der erste Wert dieses Attributs ist der Deskriptor implizit zugeordnet werden, wenn die Anweisung ursprünglich zugeordnet wurde. Wenn der Wert dieses Attributs auf SQL_NULL_DESC oder das Handle, das ursprünglich zugeordnet wurde, für den Deskriptor festgelegt ist, einen explizit zugewiesenen ARD-Handle, das zuvor das Anweisungshandle zugeordnet wurde von ihm getrennt ist und das Anweisungshandle zurückgesetzt wird, um die implizit reserviert ARD Handle.<br /><br /> Dieses Attribut kann nicht festgelegt werden, um ein Deskriptor-Handle, das implizit für eine andere Anweisung zugewiesen wurde oder eine andere Deskriptorhandles, die implizit in derselben Anweisung festgelegt wurde; implizit zugeordneten Deskriptorhandles darf nicht mehr als eine Anweisung oder Deskriptorhandles zugeordnet sein.|  
@@ -220,4 +217,3 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

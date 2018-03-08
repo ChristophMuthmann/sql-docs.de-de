@@ -3,7 +3,7 @@ title: DataMember-Eigenschaft | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c41fe1184908e3e46866d9405859a18d2181d187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c901fea62969f33b4c087b9e70117ade05b8c21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datamember-property"></a>DataMember-Eigenschaft
 Gibt den Namen des Datenmembers, die aus abgerufen werden, wird die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) verwiesen wird, indem Sie die [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) Eigenschaft.  
@@ -56,4 +55,3 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset
   
 ## <a name="see-also"></a>Siehe auch  
  [DataSource-Eigenschaft (ADO)](../../../ado/reference/ado-api/datasource-property-ado.md)
-

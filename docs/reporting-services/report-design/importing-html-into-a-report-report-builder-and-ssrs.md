@@ -1,32 +1,32 @@
 ---
-title: Importieren von HTML in einem Bericht (Berichts-Generator und SSRS) | Microsoft Docs
+title: Importieren von HTML in einen Bericht (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2ec424333d0b7bc277c3ecc884f58a853c0397b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)
   Sie können ein Textfeld verwenden, um aus einem Feld im Dataset abgerufenen HTML-Text in den Bericht einzufügen. Der Text kann aus einem einfachen oder komplexen Ausdruck stammen, der zum ordnungsgemäß formatierten HTML evaluiert wird. Formatierter Text kann in allen unterstützten Ausgabeformaten einschließlich PDF gerendert werden.  
   
- ![Rs_HTMLFormatting](../../reporting-services/report-design/media/rs-htmlformatting.gif "Rs_HTMLFormatting")  
+ ![Rs_HTMLFormatierung](../../reporting-services/report-design/media/rs-htmlformatting.gif "Rs_HTMLFormatting")  
   
  Diese Abbildung zeigt Text mit HTML-Formatierung in der Berichtsentwurfsansicht und den gleichen Text wie er beim Ausführen des Berichts gerendert wird.  
   
@@ -41,15 +41,15 @@ ms.lasthandoff: 08/09/2017
 ## <a name="supported-html-tags"></a>Unterstützte HTML-Tags  
  Nachfolgend finden Sie eine vollständige Liste der Tags, die bei einer Definition als Platzhaltertext als HTML gerendert werden:  
   
--   Links: \<eine HREF >  
+-   Hyperlinks: \<A HREF>  
   
--   Schriftarten: \<FONT >  
+-   Schriftarten: \<FONT>  
   
--   Header, Stil-und Blockelemente: \<H {n} >, \<DIV >, \<SPAN >,\<P >, \<DIV >, \<LI >, \<HN >  
+-   Header-, Stil- und Blockelemente: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Text-Format: \<B >, \<I >, \<U >, \<S >  
+-   Textformatierungen: \<B>, \<I>, \<U>, \<S>  
   
--   Listen: \<OL >, \<UL >, \<LI >  
+-   Listenformatierungen: \<OL>, \<UL>, \<LI>  
   
  Alle anderen HTML-Markuptags werden bei der Berichtsverarbeitung ignoriert. Wenn der Ausdruck im Platzhaltertext kein wohlgeformtes HTML aufweist, wird der Platzhalter als Text ohne Formatierung gerendert. Bei allen HTML-Tags wird nicht zwischen Groß- und Kleinschreibung unterschieden.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn mehrere Tags für den Text definiert wurden und ein Konflikt zwischen HTML und vorhandenen Berichtseinschränkungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erkannt wird, werden nur die innersten HTML-Tags als HTML behandelt.  
   
- Weitere Informationen finden Sie unter [Hinzufügen von HTML in einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Hinzufügen von HTML in einem Bericht (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   
 ## <a name="limitations-of-cascading-style-sheet-attributes"></a>Einschränkungen von Cascading Stylesheet-Attributen  
  Im Hinblick auf die Verwendung von CSS (Cascading Stylesheets)-Attributen wird nur eine Reihe grundlegender Tags definiert. Nachfolgend finden Sie eine Liste der unterstützten Attribute:  
@@ -84,12 +84,11 @@ ms.lasthandoff: 08/09/2017
   
 -   CSS-Werte mit ungültigem Format werden ebenso ignoriert wie fehlerhaftes HTML.  
   
--   Wenn ein Tag sowohl Attribute als auch CSS-Formatattribute enthält, kommt der CSS-Eigenschaft eine höhere Priorität zu. Z. B., wenn Ihre Text  **\<p-Stil = "Text-align: rechten" align = "Left" >**, wird nur das Text-align-Attribut angewendet werden, und der Text rechtsbündig ausgerichtet werden.  
+-   Wenn ein Tag sowohl Attribute als auch CSS-Formatattribute enthält, kommt der CSS-Eigenschaft eine höhere Priorität zu. Lautet der Text z.B. **\<p style="text-align: right" align="left">**, wird nur das text-align-Attribut angewendet, und der Text wird rechtsbündig ausgerichtet.  
   
--   Wenn eine Eigenschaft bei Attributen oder CSS-Formaten mehrfach angegeben wurde, wird nur die letzte Instanz der Eigenschaft verwendet. Z. B., wenn Ihre Text  **\<ausrichten p = "Left" align = "Right" >**, der Text rechtsbündig ausgerichtet werden.  
+-   Wenn eine Eigenschaft bei Attributen oder CSS-Formaten mehrfach angegeben wurde, wird nur die letzte Instanz der Eigenschaft verwendet. Lautet der Text z.B. **\<p align="left" align="right">**, wird der Text rechtsbündig ausgerichtet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   
-

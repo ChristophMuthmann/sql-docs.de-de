@@ -2,9 +2,12 @@
 title: "Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5023aeceed2edd6170b58500edafb7342c21ba28
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: e50f02ed70002a7f8af8d6464672328d20e70ea3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wörtertrennung und Wortstammerkennung führen eine linguistische Analyse aller volltextindizierten Daten aus. Die linguistische Analyse führt die folgenden beiden Schritte aus:
 
 -   **Suchen von Wortgrenzen (Wörtertrennung)**. Die *Wörtertrennung* identifiziert einzelne Wörter, indem die Wortgrenzen basierend auf den lexikalischen Regeln der Sprache ermittelt werden. Jedes Wort (auch bezeichnet als *Token*) wird zur Größenreduzierung in einer komprimierten Darstellung in den Volltextindex eingefügt.
@@ -52,7 +55,7 @@ Um Wörtertrennungen und Wortstammerkennungen für alle von SQL Server unterstü
 
 Verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Liste der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche unterstützten Sprachen anzuzeigen. Das Vorhandensein einer Sprache in der Liste gibt an, dass Wörtertrennungen für diese Sprache registriert sind. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -62,7 +65,7 @@ Zur Verwendung der Wörtertrennungen für eine Sprache durch die Volltextsuche m
 
 Verwenden Sie die folgende Anweisung, um die Liste der registrierten Wörtertrennungskomponenten anzuzeigen.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -87,7 +90,7 @@ Wenn Sie eine Wörtertrennung hinzufügen, entfernen oder ändern, müssen Sie d
   
 Führen Sie die folgende Anweisung aus, um die Wörtertrennungssprache bestimmter Spalten anzuzeigen.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -98,9 +101,9 @@ Zusätzliche Optionen und weitere Informationen finden Sie unter [sys.fulltext_i
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Informationen zum Fehler MSSQLSERVER_30053
   
-|Eigenschaft|Wert|
+|Eigenschaft|value|
 |-|-|
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|30053|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -139,10 +142,9 @@ Zusätzliche Optionen und weitere Informationen finden Sie unter [sys.fulltext_i
 Dies ist wichtig, wenn ein Volltextkatalog importiert wurde, während eine Datenbank auf die neue Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurde. Eine oder mehrere Sprachen, die von den Volltextindizes im Volltextkatalog verwendet werden, sind jetzt ggf. neuen Wörtertrennungen zugeordnet. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  
   
-

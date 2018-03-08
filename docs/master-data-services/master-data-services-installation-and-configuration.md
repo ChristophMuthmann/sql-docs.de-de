@@ -1,27 +1,28 @@
 ---
 title: "Master Data Services – Installation und Konfiguration | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 44
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e539d5a06f53fd4b79530031c8f1dec9dd493aae
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
   Dieser Artikel behandelt die Installation von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem Computer mit Windows Server 2012 R2, die Einrichtung der MDS-Datenbank und -Website und die Bereitstellung der Beispielmodelle und -daten. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) ermöglicht Ihrer Organisation, eine vertrauenswürdige Version der Daten zu verwalten.   
@@ -62,7 +63,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 1.  Doppelklicken Sie auf Setup.exe, und befolgen Sie die Schritte im Installations-Assistenten.  
   
-2.  Wählen Sie auf der Seite [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Funktionsauswahl **unter** **Freigegebene Funktionen** aus.  
+2.  Wählen Sie auf der Seite [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **Funktionsauswahl** unter **Freigegebene Funktionen** aus.  
   
      Dadurch werden [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], Assemblys, das Windows PowerShell-Snap-In sowie Ordner und Dateien für Webanwendungen und Dienste installiert.  
   
@@ -285,13 +286,12 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
  Einen Überblick darüber, wie Sie ein Modell und Entitäten verwenden, um eine Struktur für Ihre Daten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] zu erstellen, finden Sie unter [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
- Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
+ Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Master Data Services-Datenbank](../master-data-services/master-data-services-database.md)   
  [Master Data Manager-Webanwendung](../master-data-services/master-data-manager-web-application.md)   
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Neues in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
   
   
-

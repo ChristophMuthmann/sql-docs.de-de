@@ -3,7 +3,7 @@ title: "Unterstützt Methodenbeispiel (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f078404d2f524b0ae98cf875724a744f8b0d034e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9be77a25c92ac849b8481d3c880d01831fe715e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supports-method-example-vb"></a>Unterstützt-Methode (Beispiel) (VB)
 Dieses Beispiel verwendet die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode, um die Optionen, die von einem Recordset unterstützt anzuzeigen, die mit verschiedenen Cursortypen geöffnet. Die Prozedur DisplaySupport ist zum Ausführen dieser Prozedur erforderlich.  
@@ -171,5 +170,4 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)

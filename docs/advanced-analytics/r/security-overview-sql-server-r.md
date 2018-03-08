@@ -1,39 +1,41 @@
 ---
-title: "Sicherheitsübersicht (SQL Server R Services) | Microsoft-Dokumentation"
+title: "Sicherheit für SQL Server-Machine Learning und R | Microsoft Docs"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9ee0460e1e6a14e1d40c4e4f4bb3cf084c7d5b85
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8388d7c9d22a49a49a1a45a6fa6b479107f9ccae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="security-overview-sql-server-r-services"></a>Sicherheitsübersicht (SQL Server R Services)
+# <a name="security-for-sql-server-machine-learning-and-r"></a>Sicherheit für SQL Server-Machine Learning und R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Thema wird die Sicherheitsarchitektur beschrieben, die verwendet wird, um das [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Datenbankmodul und zugehörige Komponenten mit der R-Laufzeit zu verbinden. Beispiele für den Sicherheitsprozess werden für zwei häufige Szenarios gegeben, in denen R in einer Unternehmensumgebung verwendet wird:
+Dieser Artikel beschreibt die Sicherheit der Gesamtarchitektur, die verwendet wird, die Verbindung der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Datenbank-Engine und zugehöriger Komponenten, die R-Laufzeit. Beispiele für die Sicherheitsprozesse werden für die folgenden allgemeinen Szenarien für die Verwendung von R in einer unternehmensumgebung bereitgestellt:
 
 + Ausführen von RevoScaleR-Funktionen in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] aus einem Data Science-Client
 + Ausführen von R direkt aus [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] mithilfe von gespeicherten Prozeduren
 
-## <a name="security-overview"></a>Sicherheitsübersicht
+## <a name="security-overview"></a>Sicherheit (Übersicht)
 
-Ein [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Anmeldename oder Windows-Benutzerkonto ist erforderlich, um R-Skripts ausführen, die SQL Server-Daten verwenden oder, die mit SQL Server als computekontext auszuführen. Diese Anforderung gilt für beide [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] und SQL Server 2017 Machine Learning Services. 
+Ein [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Anmeldename oder Windows-Benutzerkonto ist erforderlich, um R-Skripts ausführen, die SQL Server-Daten verwenden oder, die mit SQL Server als computekontext auszuführen. Diese Anforderung gilt für beide [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] und SQL Server-2017 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].
 
 Gibt das Konto Anmeldenamen oder Benutzer an der *Sicherheitsprinzipal*, benötigen möglicherweise mehrere Ebenen des Zugriffs, abhängig von den Anforderungen der R-Skript:
+
 + Über die Berechtigung zum Zugriff auf die Datenbank, in denen R aktiviert ist
 + Berechtigungen zum Lesen von Daten aus gesicherte Objekte wie Tabellen
 + Die Fähigkeit zum Schreiben neuer Daten in eine Tabelle, z. B. ein Modell oder die Bewertung der Ergebnisse
@@ -56,7 +58,7 @@ Nachdem die Anmeldung oder die Windows-Benutzerkonto bereitgestellt und die erfo
 
 Daher müssen alle R-Aufträge, die von einem Remoteclient aus initiiert werden die Anmeldenamen oder Benutzer als Teil der Verbindungszeichenfolge angeben.
 
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Interaktion von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Sicherheit und LaunchPad-Sicherheit
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Interaktion von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Sicherheits- und Launchpad
 
 Wenn ein R-Skript im Kontext des [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Computers ausgeführt wird, ruft der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst ein verfügbares Workerkonto (ein lokales Benutzerkonto) aus einem Pool von Workerkonten für externe Prozesse ab und verwendet dieses Workerkonto für die verknüpften Aufgaben. 
 
@@ -66,23 +68,27 @@ Nach der Zuordnung zu einem Workerkonto erstellt [!INCLUDE[rsql_launchpad_md](..
 
 Wenn alle [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Vorgänge abgeschlossen sind, wird das Benutzerworkerkonto als frei markiert und an den Pool zurückgegeben.
 
-Weitere Informationen zu [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] finden Sie unter [New Components in SQL Server to Support R Integration (Neue Komponenten in SQL Server zur Unterstützung der R-Integration)](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
+Weitere Informationen zu [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], finden Sie unter [Komponenten in SQL Server zur Unterstützung der Integration von R](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
 
-> [!NOTE]
-Damit Launchpad die Workerkonten verwalten und R-Aufträge ausführen kann, muss die Gruppe „SQLRUserGroup“, die die Workerkonten enthält, über die Berechtigung „Lokale Anmeldung zulassen“ verfügen, andernfalls funktionieren R-Dienste möglicherweise nicht. In der Standardeinstellung wird dieses Recht allen neuen lokalen Benutzern erteilt, aber in einigen Organisationen werden möglicherweise strengere Gruppenrichtlinien erzwungen, die verhindern, dass die Workerkonten eine Verbindung zu SQL Server herstellen, um R-Aufträge auszuführen.  
+### <a name="implied-authentication"></a>Implizite Authentifizierung
 
-## <a name="security-of-worker-accounts"></a>Sicherheit von Workerkonten
+**Implizite Authentifizierung** wird der Begriff für den Prozess, unter dem SQL Server der Benutzer erhält, verwendet die Anmeldeinformationen, und führt dann alle externen Skript-Aufgaben im Auftrag von den Benutzern, vorausgesetzt der Benutzer die richtigen Berechtigungen besitzt, in der Datenbank. Implizite Authentifizierung ist besonders wichtig, wenn das R-Skript einen ODBC-Aufruf außerhalb der SQL Server-Datenbank ausführen muss. Der Code kann z. B. eine kürzere Listen von Faktoren aus einem Tabellenblatt oder einer anderen Quelle abgerufen werden.
 
-Die Zuordnung eines externen Windows-Benutzer oder die gültige SQL-Anmeldekennwort für ein workerkonto gilt nur für die Lebensdauer der Lebensdauer der SQL-Abfrage, die die R-Skript ausgeführt wird. 
+Für solche Loopback-Aufrufe erfolgreich ausgeführt werden kann muss die Gruppe mit den Konten, SQLRUserGroup, aus "Lokal anmelden zulassen" berechtigt. Standardmäßig erhält dieses Recht für alle neuen lokalen Benutzer jedoch in einigen Organisationen strengere Gruppenrichtlinien erzwungen werden können.
+
+![Implizite Authentifizierung für R](media/implied-auth-rsql.png)
+
+## <a name="security-of-worker-accounts"></a>Sicherheit der Konten
+
+Die Zuordnung eines externen Windows-Benutzer oder die gültige SQL-Anmeldekennwort für ein workerkonto gilt nur für die Lebensdauer der Lebensdauer der SQL-Abfrage, die die R-Skript ausgeführt wird.
 
 Parallele Abfragen von derselben Anmeldung werden demselben Benutzerworkerkonto zugeordnet.
 
 Die Verzeichnisse, die für die Prozesse verwendet werden, werden von [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] mit RLauncher verwaltet, und der Zugriff auf die Verzeichnisse ist eingeschränkt. Das Workerkonto kann nicht auf Dateien in Ordnern über dem eigenen zugreifen, kann aber untergeordnete Elemente des Arbeitsordners der Sitzung, der für die SQL-Abfrage mit dem R-Skript erstellt wurde, lesen, schreiben oder löschen.
 
-Weitere Informationen dazu, wie Sie die Anzahl der Workerkonten, Kontonamen oder Kennwörter ändern können, finden Sie unter [Ändern des Benutzerkontenpools für SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).
+Weitere Informationen dazu, wie Sie die Anzahl der Konten, Kontonamen oder Kennwörter ändern, finden Sie unter [Ändern des benutzerkontenpools für SQL Server-Machine Learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-
-## <a name="security-isolation-for-multiple-external-scripts"></a>Sicherheitsisolation für mehrere externe Skripts
+## <a name="security-isolation-for-multiple-external-scripts"></a>Die Sicherheitsisolation für mehrere externe Skripts
 
 Der Isolationsmechanismus basiert auf physischen Benutzerkonten. Da Satellitenprozesse für eine bestimmte Sprachlaufzeit gestartet werden, verwendet jede Satellitenaufgabe das von [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] angegebene Workerkonto. Wenn für eine Aufgabe mehrere Satelliten erforderlich sind, wie z.B. bei parallelen Abfragen, wird ein einziges Workerkonto für alle zusammenhängenden Aufgaben verwendet.
 
@@ -91,5 +97,5 @@ Kein Workerkonto kann Dateien finden oder bearbeiten, die von anderen Workerkont
 Wenn Sie Administrator auf dem Computer sind, können Sie die Verzeichnisse anzeigen, die für jeden Prozess erstellt wurden. Jedes Verzeichnis wird durch die Sitzungs-GUID identifiziert.
 
 ## <a name="see-also"></a>Siehe auch
-[Übersicht über die Architektur](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 
+[Übersicht über die Architektur für SQL Server-Machine learning](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

@@ -3,7 +3,7 @@ title: ADO MD-Objekte | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,29 +16,28 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9967930e6ee7ff1310a1ea331fb972f93d902f88
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4a0fa75a3b03b2cb5f2a31ed3bdf3756e1c64b01
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-objects"></a>ADO MD-Objekte
 |||  
 |-|-|  
-|[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Stellt eine mit Feldern fester Breite oder Filterachse eines cellSets, ausgewählte Elemente der eine oder mehrere Dimensionen enthält.|  
+|[Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Stellt eine mit Feldern fester Breite oder Filterachse eines cellSets, ausgewählte Elemente der eine oder mehrere Dimensionen enthält.|  
 |[Katalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Mehrdimensionale Schemainformationen (Cubes und zugrunde liegende Dimensionen, Hierarchien, Ebenen und Elemente), die speziell für eine mehrdimensionale Datenanbieter (MDP) enthält.|  
 |[Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Stellt die Daten am Schnittpunkt der Achsenkoordinaten, enthalten im Cellset dar.|  
 |[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Stellt die Ergebnisse einer MDX-Abfrage. Es ist eine Ansammlung von Zellen, die aus Cubes oder anderen Cellsets ausgewählt wurden.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Stellt einen Cube aus einem mehrdimensionalen Schema mit einem Satz von verknüpften Dimensionen dar.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder mehrere Hierarchien von Elementen enthält.|  
-|[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Stellt eine Möglichkeit dar, in dem die Elemente einer Dimension können aggregiert oder "Rollup wird erstellt." Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält eine Menge von Elementen, von die jedes denselben Rang innerhalb einer Hierarchie besitzt.|  
+|[Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Stellt eine Möglichkeit dar, in dem die Elemente einer Dimension können aggregiert oder "Rollup wird erstellt." Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.|  
+|[Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält eine Menge von Elementen, von die jedes denselben Rang innerhalb einer Hierarchie besitzt.|  
 |[Datenmember](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Stellt ein Element einer Ebene in einem Cube die untergeordneten Elemente eines Elements einer Ebene oder ein Mitglied einer Position auf einer Achse eines cellSets dar.|  
 |[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Stellt einen Satz von ein oder mehrere Elemente verschiedener Dimensionen, der einen Punkt auf einer Achse definiert.|  
   
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD-Methoden](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD-Eigenschaften](../../../ado/reference/ado-md-api/ado-md-properties.md)
-

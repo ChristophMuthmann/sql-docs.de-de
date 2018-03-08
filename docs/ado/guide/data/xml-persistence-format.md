@@ -3,7 +3,7 @@ title: XML-Format die Persistenz | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 832f79408a348ef0e0aa40075214357d147f2644
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8694aac4f8699d102d94664862f5ad357579eab9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-persistence-format"></a>XML-Format die Persistenz
 ADO verwendet UTF-8-Codierung für die XML-Datenstrom.  
@@ -80,4 +79,3 @@ xmlns:z="#RowsetSchema">
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

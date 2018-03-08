@@ -3,33 +3,33 @@ title: Verwalten von Objekten mittels Objekt-Explorer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP
+f1_keywords: sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP
 helpviewer_keywords:
 - Object Explorer F1 Help
 - OE F1 Help
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ef28c37c3232ad747129925c6259975b4005a40
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0469b79c9e5f53fe4a11d3c54ad9f313307f303b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Verwalten von Objekten mittels Objekt-Explorer
-Mit dem Objekt-Explorer können Sie Objekte, z. B. Datenbanken, Tabellen und gespeicherte Prozeduren, verwalten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem Objekt-Explorer können Sie Objekte, z. B. Datenbanken, Tabellen und gespeicherte Prozeduren, verwalten.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Anzeigen von Objekten im Objekt-Explorer  
 Der Objekt-Explorer verwendet zum Gruppieren von Informationen in Ordnern eine Baumstruktur. Zum Erweitern von Ordnern klicken Sie auf das Pluszeichen (+), oder doppelklicken Sie auf den Ordner. Erweitern Sie die Ordner, um detailliertere Informationen anzuzeigen. Klicken Sie mit der rechten Maustaste auf Ordner oder Objekte, um allgemeine Aufgaben auszuführen. Doppelklicken Sie auf Objekte, um die gängigste Aufgabe auszuführen.  
@@ -58,11 +58,10 @@ Wenn der Objekt-Explorer mit einem Server verbunden ist, können Sie mit den Ver
 ### <a name="start-powershell"></a>Starten von PowerShell  
 Zum Starten einer PowerShell-Sitzung können Sie mit der rechten Maustaste auf den Großteil der Ordner und Objekte in der Struktur des Objekt-Explorers klicken und **PowerShell starten**auswählen. Hierdurch wird eine PowerShell-Sitzung mit aktivierter PowerShell-Unterstützung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gestartet. Gleichzeitig ist der Pfad auf den Speicherort des Objekts festgelegt, auf das Sie mit der rechten Maustaste im Objekt-Explorer geklickt haben. Sie können PowerShell-Befehle anschließend in einer interaktiven PowerShell-Umgebung eingeben. Weitere Informationen finden Sie unter [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
-## <a name="see-also"></a>Siehe auch  
-[Objekt-Explorer](../../ssms/object/object-explorer.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Objekt-Explorers](../../ssms/object/object-explorer.md)  
 [Öffnen und Konfigurieren des Objekt-Explorers](../../ssms/object/open-and-configure-object-explorer.md)  
 [Verbinden mit einer Instanz mit dem Objekt-Explorer](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Detailbereich des Objekt-Explorers](../../ssms/object/object-explorer-details-pane.md)  
 [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   
-

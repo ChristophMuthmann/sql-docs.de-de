@@ -2,44 +2,47 @@
 title: "Verwenden eine geänderte Version der Analyse Services Tutorial-Projekt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 10cb63369b23a19ecb126ee210de2a90ed114fc4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lektion 4-1: Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Die verbleibenden Lektionen in diesem Lernprogramm basieren auf einer erweiterten Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekts, das Sie in den ersten drei Lektionen abgeschlossen haben. Zusätzliche Tabellen und benannte Berechnungen wurden der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt, zusätzliche Dimensionen wurden dem Projekt hinzugefügt, und diese neuen Dimensionen wurden dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube hinzugefügt. Außerdem wurde eine zweite Measuregruppe, die Measures aus einer zweiten Faktentabelle enthält, hinzugefügt. Mithilfe dieses erweiterten Projekts können Sie lernen, wie Sie Ihrer Business Intelligence-Anwendung Funktionalität hinzufügen können, ohne dass Sie bereits durchgeführte Lernschritte wiederholen müssen.  
   
 Bevor Sie dieses Lernprogramm fortsetzen können, müssen Sie die erweiterte Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekts herunterladen, extrahieren, laden und verarbeiten.  Überprüfen Sie anhand der Anweisungen in dieser Lektion, ob alle Schritte ausgeführt wurden.  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Herunterladen und Extrahieren der Projektdatei  
   
-1.  [Klicken Sie hier](http://go.microsoft.com/fwlink/?LinkID=221866) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
+1.  [Klicken Sie hier](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind in enthalten die **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** herunterladen.  
   
-2.  Klicken Sie auf **Analysis Services Tutorial SQL Server 2012** , um das Paket herunterzuladen, in dem die Projekte für dieses Lernprogramm enthalten sind.  
+2.  Klicken Sie auf **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** um das Paket herunterzuladen, die Projekte für dieses Lernprogramm enthält.  
   
     Standardmäßig wird eine ZIP-Datei im Ordner Downloads gespeichert. Sie müssen die ZIP-Datei an einen Ort mit einem kürzeren Pfadnamen verschieben (erstellen Sie z. B. einen Ordner C:\Tutorials, um die Dateien zu speichern).  Anschließend können Sie die in der ZIP-Datei enthaltenen Dateien extrahieren. Wenn Sie versuchen, die Dateien aus dem Ordner Downloads zu entzippen, der über einen längeren Pfad verfügt, wird nur Lektion 1 extrahiert.  
   
 3.  Erstellen Sie einen Unterordner auf oder nahe dem Stammlaufwerk, z. B. C:\Tutorial.  
   
-4.  Verschieben Sie die Datei **Analysis Services Tutorial SQL Server 2012.zip** in den Unterordner.  
+4.  Verschieben der **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** Datei in den Unterordner.  
   
 5.  Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Alle extrahieren**aus.  
   
@@ -126,4 +129,3 @@ Der **Analysis Services Tutorial** -Cube enthält jetzt zwei Measuregruppen – 
 ## <a name="see-also"></a>Siehe auch  
 [Bereitstellen eines Analysis Services-Projekts](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-

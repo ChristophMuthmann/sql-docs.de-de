@@ -3,7 +3,7 @@ title: "Beispiel für DefinedSize-Eigenschaft (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - DefinedSize property [ADOX], Visual Basic example
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2b509fdcd8b8c76ecdda29f6867012f2b39dd1d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3d78fa732b855f885253c7fed95e4b5e215e2f8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property-example-vb"></a>Beispiel für DefinedSize-Eigenschaft (VB)
 Dieses Beispiel zeigt die [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Der Code wird die Größe der Spalte "FirstName" der definieren die **Mitarbeiter** Tabelle mit den *Northwind* Datenbank. Klicken Sie dann die Änderung in den Werten der FirstName [Feld](../../../ado/reference/ado-api/field-object.md) von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf der **Mitarbeiter** Tabelle wird angezeigt. Beachten Sie, dass standardmäßig das Feld FirstName mit Leerzeichen aufgefüllt wird, nachdem Sie neu definieren die **DefinedSize** Eigenschaft.  
@@ -160,4 +159,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize-Eigenschaft (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
-

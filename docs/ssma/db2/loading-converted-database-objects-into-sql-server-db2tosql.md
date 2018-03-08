@@ -1,29 +1,30 @@
 ---
 title: Laden konvertierte Objekte in SQLServer (DB2ToSQL) Datenbank | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f74e15c261041ae0a68152417955a81ed96994f8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Laden konvertierte Objekte in SQLServer (DB2ToSQL) Datenbank
 Nachdem Sie zu DB2-Schemas konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie die resultierende Datenbankobjekte in laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Kann entweder über die SSMA, die die Objekte zu erstellen, oder können Sie Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus SSMA können Sie die Ziel-Metadaten mit dem tatsächlichen Inhalt aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank.  
@@ -117,4 +118,3 @@ Der nächste Schritt des Migrationsvorgangs besteht darin [DB2-Daten in SQL Serv
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von DB2-Daten in SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
-

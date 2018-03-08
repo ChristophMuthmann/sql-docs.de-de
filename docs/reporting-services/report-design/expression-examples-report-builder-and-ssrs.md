@@ -1,13 +1,14 @@
 ---
-title: "Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Beispiele für Ausdrücke (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 04/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4a5573c8b8b01b567aa5fff65d74bd7ece4632d7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
-Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zu den Ausdrucks-Editor und die Verweistypen, die Sie einschließen können, finden Sie unter [Ausdruck verwendet wird, in Berichten &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), und [einen Ausdruck &#40; hinzufügen Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Bei aktiviertem RDL-Sandkasten können nur bestimmte Typen und Elemente zum Veröffentlichungszeitpunkt des Berichts im Ausdruckstext verwendet werden. Weitere Informationen finden Sie unter [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -68,7 +68,7 @@ Beispiele für Ausdrücke und die jeweiligen Verwendungsmöglichkeiten finden Si
   
 -   [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Weitere Informationen zu den Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Weitere Informationen zum Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
 
@@ -103,7 +103,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     =Today()  
     ```  
   
--   Verwenden der **DateInterval** Funktion zu einem bestimmten Teil eines Datums herausziehen. Hier sind einige gültige **DateInterval** Parameter:
+-   Verwenden Sie die **DateInterval**-Funktion, um einen bestimmten Teil eines Datums zu extrahieren. Im Folgenden finden Sie einige gültige **DateInterval**-Parameter:
 
     -   DateInterval.Second
     -   DateInterval.Minute
@@ -116,7 +116,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     -   DateInterval.Quarter
     -   DateInterval.Year
 
-    Dieser Ausdruck wird beispielsweise die Anzahl der Woche im laufenden Jahr des heutigen Datums angezeigt:
+    Dieser Ausdruck zeigt beispielsweise die Wochenzahl im aktuellen Jahr für das heutige Datum an:
   
     ```  
     =DatePart(DateInterval.WeekOfYear, today()) 
@@ -170,7 +170,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die [erste Function &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), also in einer Aggregatfunktion gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
+-   Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die Aggregatfunktion [First-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md) gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -486,7 +486,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     Weitere Informationen finden Sie unter [Hinzufügen eines Links zu einer URL &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
+     Weitere Informationen finden Sie unter [Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   Der folgende Ausdruck steuert bedingt, ob eine URL in einem Textfeld hinzugefügt wird. Dieser Ausdruck ist von einem Parameter mit dem Namen `IncludeURLs` abhängig, mit dem ein Benutzer entscheiden kann, ob aktive URLs in einen Bericht eingeschlossen werden sollen. Dieser Ausdruck wird als Aktion in einem Textfeld festgelegt. Indem Sie den Parameter auf FALSE festlegen und dann den Bericht anzeigen, können Sie den Bericht ohne Links nach Microsoft Excel exportieren.  
   
@@ -519,7 +519,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     ```  
   
 ##  <a name="CustomCode"></a> Benutzerdefinierter Code  
- In einem Bericht kann benutzerdefinierter Code verwendet werden. Benutzerdefinierter Code ist entweder in einen Bericht eingebettet oder in einer benutzerdefinierten Assembly gespeichert, die im Bericht verwendet wird. Weitere Informationen zu benutzerdefiniertem Code finden Sie unter [benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40; SSRS &#41; ](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ In einem Bericht kann benutzerdefinierter Code verwendet werden. Benutzerdefinierter Code ist entweder in einen Bericht eingebettet oder in einer benutzerdefinierten Assembly gespeichert, die im Bericht verwendet wird. Weitere Informationen zu benutzerdefiniertem Code finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Verwenden von Gruppenvariablen für benutzerdefinierte Aggregation  
  Sie können den Wert für eine Gruppenvariable initialisieren, die zu einem bestimmten Gruppenbereich lokal ist, und anschließend einen Verweis auf diese Variable in den Ausdrücken einbinden. Eine der Methoden, wie Sie eine Gruppenvariable mit benutzerdefiniertem Code verwenden können, besteht darin, ein benutzerdefiniertes Aggregat zu implementieren. Weitere Informationen finden Sie unter [Gruppevariablen in Reporting Services 2008 für benutzerdefinierte Aggregation verwenden](http://go.microsoft.com/fwlink/?LinkId=128714).  
@@ -559,12 +559,11 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
   
      Dadurch wird die Ausführung von Laufzeitausnahmen vermieden. Sie können nun einen Ausdruck wie `=IIF(Me.Value < 0, "red", "black")` in der **Color** -Eigenschaft des Textfelds verwenden, um den Text unter Bedingungen anzuzeigen, nämlich abhängig davon, ob die Werte größer oder kleiner als 0 sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Beispiele für Gruppierungsausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Ausdrucksverwendungen in Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Häufig verwendete Filter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
-

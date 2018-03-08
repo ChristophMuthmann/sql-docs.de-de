@@ -3,7 +3,7 @@ title: ADO-Codebeispiele in Visual C++ | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual C++
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 34bf9a592a2d528affa13216efbcd5a988d41344
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92465db3866a5af2ba40ee48cbf92e42794fc587
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-code-examples-in-visual-c"></a>ADO-Codebeispiele in Visual C++
 Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden der ADO-Methoden, Eigenschaften und Ereignisse, die beim Schreiben in Microsoft Visual C++.  
@@ -157,4 +156,3 @@ Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden der AD
  [ADO-Codebeispiele in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO Code Beispiele VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-

@@ -3,7 +3,7 @@ title: GetObjectOwner- und SetObjectOwner Methoden (VC++-Beispiel) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ee1b891dd12810e8a54ebb8532a366789f28c957
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9dee1ff40c500c0727e0b82b5135b7893fdc319
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner- und SetObjectOwner Methoden (VC++-Beispiel)
 Dieses Beispiel zeigt die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) und [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) Methoden. Dieser Code geht davon aus, das Vorhandensein der Gruppe "Accounting (finden Sie unter der [Gruppen und Benutzer für anfügen, ChangePassword Methoden (VC++-Beispiel)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) zu erfahren, wie diese Gruppe mit dem System hinzufügen). Der Besitzer der Tabelle Kategorien, die in das Buchhaltungszahlenformat geändert festgelegt ist.  
@@ -99,4 +98,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

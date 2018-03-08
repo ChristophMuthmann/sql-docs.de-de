@@ -1,10 +1,13 @@
 ---
-title: Datenprofilerstellungs-Task und -Viewer | Microsoft Docs
+title: Datenprofilerstellungs-Task und -Viewer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7738775f08124a54765b3597af992a74d63aaf33
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 57a83b83294d77831e9ef688e12d4ec2879ad3ec
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-and-viewer"></a>Datenprofilerstellungs-Task und -Viewer
   Der Datenprofilerstellungs-Task bietet Funktionen zur Datenprofilerstellung beim Extrahieren, Transformieren und Laden von Daten. Mit dem Datenprofilerstellungs-Task können Sie die folgenden Vorteile erzielen:  
@@ -77,4 +79,3 @@ ms.lasthandoff: 08/03/2017
  [Datenprofiler-Schema](http://go.microsoft.com/fwlink/?LinkId=251524)  
   
   
-

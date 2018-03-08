@@ -3,33 +3,30 @@ title: SQLParamData-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLParamData
-apilocation:
-- sqlsrv32.dll
+apiname: SQLParamData
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLParamData
-helpviewer_keywords:
-- SQLParamData function [ODBC]
+f1_keywords: SQLParamData
+helpviewer_keywords: SQLParamData function [ODBC]
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 019b15aa5a4bd27bd96261d016fbaaebe0fc366c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData-Funktion
 **Konformität**  
@@ -124,5 +121,4 @@ SQLRETURN SQLParamData(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
- [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
-
+ [Abrufen von Ausgabeparametern mithilfe von SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

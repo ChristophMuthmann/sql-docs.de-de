@@ -2,29 +2,30 @@
 title: MSSQLSERVER_3417 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3417 (Database Engine error)
+helpviewer_keywords: 3417 (Database Engine error)
 ms.assetid: 005829c8-cf57-4828-818a-bbe8ee2e00f0
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a24a6c95f5ccd79fe4eb3af627be689755469a56
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b3e6b210231423d694bebbe1afa6c51544ea55b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver3417"></a>MSSQLSERVER_3417
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -43,4 +44,3 @@ Die **master**-Datenbank kann von SQL Server nicht gestartet werden. Wenn die Da
 ## <a name="user-action"></a>Benutzeraktion  
 Stellen Sie eine Sicherung der Datenbank wieder her, oder reparieren Sie die Datenbank.  
   
-

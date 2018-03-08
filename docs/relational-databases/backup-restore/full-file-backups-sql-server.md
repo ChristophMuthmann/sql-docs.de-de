@@ -2,11 +2,13 @@
 title: "Vollständige Dateisicherungen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 - file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
-caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "62"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 4caf6c242eabb3f3be393c896723314beff5c8ef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="full-file-backups-sql-server"></a>Vollständige Dateisicherungen (SQL Server)
-  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten.  
   
  Die Dateien in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank können einzeln gesichert und wiederhergestellt werden. Sie können auch eine ganze Dateigruppe angeben, statt jede in einer Gruppe enthaltene Datei einzeln anzugeben. Beachten Sie Folgendes: Wenn eine Datei in einer Dateigruppe offline ist (z. B. weil die Datei gerade wiederhergestellt wird), ist die gesamte Dateigruppe offline und kann nicht gesichert werden.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Dateisicherungen werden nicht vom Wartungsplanungs-Assistenten unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

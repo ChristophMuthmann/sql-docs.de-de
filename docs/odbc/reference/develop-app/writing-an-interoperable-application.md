@@ -3,10 +3,12 @@ title: Schreiben einer interoperablen Anwendung | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Schreiben einer interoperablen Anwendung
 Wenn eine Anwendung den gleichen Code für mehr als einen Treiber verwendet, muss diesen Code zwischen Treiber interoperabel sein. In den meisten Fällen ist dies eine einfache Aufgabe. Beispielsweise ist der Code zum Abrufen von Zeilen mit einem Vorwärtscursor für alle Treiber identisch. In einigen Fällen kann dies schwieriger sein. Beispielsweise muss der Code zum Konstruieren der Bezeichner für die Verwendung in SQL-Anweisungen Bezeichner Groß-/Kleinschreibung, zitieren und einteiliger, mit dem zweiteiligen und dreiteiligen Benennungskonventionen berücksichtigen.  
@@ -40,7 +41,6 @@ Wenn eine Anwendung den gleichen Code für mehr als einen Treiber verwendet, mus
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Überprüfung der Unterstützung von Funktionen und die Variabilität](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [Überprüfung der Unterstützung von Funktionen und Variabilität](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
--   [Funktionen, die Überwachung für](../../../odbc/reference/develop-app/features-to-watch-for.md)
-
+-   [Funktionen, die überwacht werden müssen](../../../odbc/reference/develop-app/features-to-watch-for.md)

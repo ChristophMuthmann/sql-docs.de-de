@@ -2,29 +2,30 @@
 title: "Dialogfeld 'Quelle auswählen' | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.selectsource.f1
+f1_keywords: sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8ffe2ca7e33b741309b594c0a351825fee59b07
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "16"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 9bd5115125244859cb147dbc4a5028f87111aaed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-source-dialog-box"></a>Dialogfeld 'Quelle auswählen'
-  Mithilfe dieses Dialogfelds können Sie die Quelle der zu ausführenden Richtlinien auswählen. Um eine oder mehrere XML-Dateien auszuwählen, die Richtlinien enthalten, wählen Sie **Dateien**aus. Um die Richtlinien auszuführen, die auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gefunden werden, wählen Sie **Server**aus.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie die Quelle der auszuführenden Richtlinien auswählen. Um eine oder mehrere XML-Dateien auszuwählen, die Richtlinien enthalten, wählen Sie **Dateien**aus. Um die Richtlinien auszuführen, die auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gefunden werden, wählen Sie **Server**aus.  
   
  Es gibt mehrere Möglichkeiten zum Öffnen dieses Dialogfelds.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, eine Datenbank oder ein Datenbankobjekt, wählen Sie **Richtlinien**aus, und wählen Sie dann **Auswerten**aus. Klicken Sie auf der Seite **Richtlinienauswahl** des Dialogfelds **Richtlinien auswerten** auf die Schaltfläche zum Durchsuchen (**...**).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dateien**  
  Wählen Sie eine oder mehrere XML-Dateien aus, die Richtlinien enthalten.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
- **Benutzername**  
+ **User name**  
  Geben Sie den Benutzernamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie die Windows-Authentifizierung für die Verbindungsherstellung ausgewählt haben.  
   
  **Anmeldename**  
@@ -70,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  **Kennwort**  
  Geben Sie das Kennwort für die Anmeldung ein. Sie können diese Option nur bearbeiten, wenn Sie zum Verbinden die Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgewählt haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Richtlinienverwaltungsknoten &#40;Objekt-Explorer&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

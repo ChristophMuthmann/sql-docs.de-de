@@ -2,28 +2,28 @@
 title: "Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 2a9f819427b4abb5e9ee4032a990842a4137611f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
 
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht.   
@@ -323,7 +323,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 4.  Klicken Sie auf **Speichern**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 
 Hiermit ist das Lernprogramm zum Erstellen eines Tabellenberichts mit Sparklinediagrammen abgeschlossen. Weitere Informationen zu Sparklines finden Sie unter [Sparklines und Datenbalken](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   

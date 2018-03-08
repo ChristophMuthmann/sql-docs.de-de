@@ -2,11 +2,13 @@
 title: SQLdiag (Hilfsprogramm) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqldiag
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,20 +31,19 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 58
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "58"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: dd4a4a1627a4a92a6d2f1942cfd9ad618105422d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 766c1292435eb11dcff94f7353d49478f554c6a7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (Hilfsprogramm)
-  Das Hilfsprogramm **SQLDiag** listet allgemeine Diagnoseinformationen auf und kann als Konsolenanwendung oder Dienst ausgeführt werden. Mithilfe von **SQLDiag** können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. **SQLDiag** dient dazu, das Sammeln von Diagnoseinformationen für [!INCLUDE[msCoName](../includes/msconame-md.md)] Support Services zu beschleunigen und zu vereinfachen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **SQLdiag** Dienstprogramm ist ein allgemeines Diagnose-datenerfassungshilfsprogramm, die als Konsolenanwendung oder Dienst ausgeführt werden kann. Mithilfe von **SQLDiag** können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. **SQLDiag** dient dazu, das Sammeln von Diagnoseinformationen für [!INCLUDE[msCoName](../includes/msconame-md.md)] Support Services zu beschleunigen und zu vereinfachen.  
   
 > [!NOTE]  
 >  Dieses Hilfsprogramm kann weiter geändert werden, und es besteht die Möglichkeit, dass Anwendungen oder Skripts, die auf den Befehlszeilenargumenten und dem entsprechenden Verhalten dieses Hilfsprogramms aufbauen, in zukünftigen Versionen nicht ordnungsgemäß ausgeführt werden.  
@@ -116,7 +117,7 @@ sqldiag
 > [!NOTE]  
 >  **SQLDiag** fügt beim Starten die Ausgabe nicht an den aktuellen Ausgabeordner an. Das Programm kann nur den Standardausgabeordner überschreiben (Option 1) oder den Ordner umbenennen (Option 2) und dann die Ausgabe in den neuen Standardausgabeordner namens SQLDIAG schreiben.  
   
- **/M** *machine1* [ *machine2**machineN*] | *@machinelistfile*  
+ **/ M** *"machine1"* [ *"machine2" ** MachineN*] |*@machinelistfile*  
  Überschreibt die in der Konfigurationsdatei angegebenen Computer. Standardmäßig ist die Konfigurationsdatei SQLDiag.Xml oder wird mit dem **/I** -Parameter festgelegt. Wenn Sie mehr als einen Computer angeben möchten, verwenden Sie Leerzeichen zum Trennen der Computernamen.  
   
  Durch Verwenden von *@machinelistfile* wird ein Computerlistendateiname angegeben, der in der Konfigurationsdatei gespeichert werden sollte.  
@@ -299,7 +300,7 @@ SQLDIAG STOP /A Instance1
 >  Verwenden Sie **SQLDiag STOP** oder **SQLDIAG STOP_ABORT** , um den **SQLDiag** -Dienst zu beenden. Verwenden Sie die zum Beenden von **SQLDiag** oder anderen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Diensten nicht die Windows-Dienstkonsole.  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>Automatisches Starten und Beenden von SQLdiag  
- Wenn Sie die Sammlung von Diagnosedaten zu einem bestimmten Zeitpunkt automatisch starten und beenden möchten, können Sie die Argumente **/B***start_time* und **/E***stop_time* (die Angabe erfolgt in 24-Stunden-Notation) verwenden. Wenn Sie beispielsweise ein Problem behandeln möchten, das immer gegen ca. 02:00:00 Uhr auftritt, können Sie **SQLDiag** so konfigurieren, dass die Sammlung von Diagnosedaten automatisch um 01:00 Uhr beginnt und automatisch um 03:00:00 Uhr endet. Geben Sie die Start- und Beendigungszeit mit dem **/B** -Argument und dem **/E** -Argument an. Verwenden Sie die 24-Stunden-Notation, um das genau Start- und Beendigungsdatum und die Uhrzeit im Format YYYYMMDD_HH:MM:SS anzugeben. Zum Angeben einer relativen Start- und Beendigungszeit geben Sie **+** vor der Start- und der Beendigungszeit an, wobei jedoch der Datumsabschnitt (YYYYMMDD_) wie im folgenden Beispiel gezeigt, entfällt. Diese Angabe bewirkt, dass **SQLDiag** 1 Stunde wartet, bevor mit dem Sammeln von Informationen begonnen wird. Die Datensammlung wird dann für 3 Stunden fortgeführt und danach beendet:  
+ Automatisch starten und beenden die Sammlung von Diagnosedaten zu einem bestimmten Zeitpunkt, verwenden die **/b *** Start_time* und **/e *** Stop_time* Argumente, die mit 24-Stunden-Notation. Wenn Sie beispielsweise ein Problem behandeln möchten, das immer gegen ca. 02:00:00 Uhr auftritt, können Sie **SQLDiag** so konfigurieren, dass die Sammlung von Diagnosedaten automatisch um 01:00 Uhr beginnt und automatisch um 03:00:00 Uhr endet. Geben Sie die Start- und Beendigungszeit mit dem **/B** -Argument und dem **/E** -Argument an. Verwenden Sie die 24-Stunden-Notation, um das genau Start- und Beendigungsdatum und die Uhrzeit im Format YYYYMMDD_HH:MM:SS anzugeben. Zum Angeben einer relativen Start- und Beendigungszeit geben Sie **+** vor der Start- und der Beendigungszeit an, wobei jedoch der Datumsabschnitt (YYYYMMDD_) wie im folgenden Beispiel gezeigt, entfällt. Diese Angabe bewirkt, dass **SQLDiag** 1 Stunde wartet, bevor mit dem Sammeln von Informationen begonnen wird. Die Datensammlung wird dann für 3 Stunden fortgeführt und danach beendet:  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -360,7 +361,7 @@ SQLDIAG START /A Instance1
  Das Anhalten des **SQLDiag** -Diensts wird nicht unterstützt.  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>Ausführen mehrerer Instanzen von SQLdiag  
- Sie können mehrere Instanzen von **SQLDiag** auf demselben Computer ausführen, indem Sie **/A***SQLDiag_application_name* in der Befehlszeile angeben. Dies ist sinnvoll, wenn von derselben Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verschiedene Sätze von Diagnosedaten gleichzeitig gesammelt werden sollen. Sie können beispielsweise eine benannte Instanz von **SQLDiag** konfigurieren, um fortlaufend eine geringe Menge von Daten zu sammeln. Falls anschließend ein bestimmtes Problem in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]auftritt, können Sie die Standardinstanz von **SQLDiag** ausführen, um Diagnosedaten für dieses Problem zu sammeln, oder um auf Anforderung vom [!INCLUDE[msCoName](../includes/msconame-md.md)] -Kundenservice und -support hin einen Satz von Diagnosedaten zu sammeln, die für die Diagnose eines Problems erforderlich sind.  
+ Ausführen mehrerer Instanzen von **SQLdiag** auf dem gleichen Computer durch Angabe **/A *** SQLdiag_application_name* in der Befehlszeile angegeben. Dies ist sinnvoll, wenn von derselben Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verschiedene Sätze von Diagnosedaten gleichzeitig gesammelt werden sollen. Sie können beispielsweise eine benannte Instanz von **SQLDiag** konfigurieren, um fortlaufend eine geringe Menge von Daten zu sammeln. Falls anschließend ein bestimmtes Problem in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]auftritt, können Sie die Standardinstanz von **SQLDiag** ausführen, um Diagnosedaten für dieses Problem zu sammeln, oder um auf Anforderung vom [!INCLUDE[msCoName](../includes/msconame-md.md)] -Kundenservice und -support hin einen Satz von Diagnosedaten zu sammeln, die für die Diagnose eines Problems erforderlich sind.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Sammeln von Diagnosedaten von gruppierten SQL Server-Instanzen  
  **SQLDiag** unterstützt das Sammeln von Diagnosedaten von gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Zum Sammeln von Diagnosedaten von gruppierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen, stellen sicher, dass **"."**  wird angegeben, für die **Name** Attribut des der  **\<Computer >** -Elements in der Konfigurationsdatei SQLDiag.Xml Datei, und geben Sie keine der **/g** Argument in der Befehlszeile angegeben. Standardmäßig ist **"."** für das **name**-Attribut in der Konfigurationsdatei angegeben und das Argument **/G** deaktiviert. Normalerweise ist es nicht nötig, die Konfigurationsdatei zu bearbeiten oder die Befehlszeilenargumente zu ändern, wenn Sie Diagnosedaten von einer gruppierten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sammeln möchten.  
@@ -374,4 +375,3 @@ SQLDIAG START /A Instance1
  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

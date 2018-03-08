@@ -2,9 +2,12 @@
 title: Erstellen von Statistiken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-statistics
 ms.tgt_pltfrm: 
@@ -18,20 +21,20 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
-  Sie können Abfrageoptimierungsstatistiken in einer oder mehreren Spalten einer Tabelle oder indizierten Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwenden. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Sie können Abfrageoptimierungsstatistiken in einer oder mehreren Spalten einer Tabelle oder indizierten Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwenden. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen.  
   
  **In diesem Thema**  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie Statistiken mit:**  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert, dass der Benutzer der Besitzer der Tabelle oder indizierten Sicht oder ein Mitglied einer der folgenden Rollen ist: feste Serverrolle **sysadmin** , feste Datenbankrolle **db_owner** oder feste Datenbankrolle **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>So erstellen Sie Statistiken  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik** , und wählen Sie dann **Neue Statistiken…**.  
   
-     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle***table_name* angezeigt.  
+     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
   
      **Tabellenname**  
      Zeigt den Namen der Tabelle an, die von den Statistiken beschrieben wird.  
@@ -118,12 +121,12 @@ ms.lasthandoff: 06/22/2017
      **Statistiken für diese Spalten aktualisieren**  
      Aktivieren Sie diese Option, wenn die Statistiken beim Schließen des Dialogfelds aktualisiert werden sollen.  
   
-     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle***table_name* angezeigt.  
+     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
   
      **Filterausdruck**  
-     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispiel: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispielsweise `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***table_name* auf der Seite **Allgemein** auf **Hinzufügen**.  
+5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* auf der Seite **Allgemein** auf **Hinzufügen**.  
   
      Die folgenden Eigenschaften werden im Dialogfeld **Spalten auswählen** angezeigt. Diese Informationen sind schreibgeschützt.  
   
@@ -144,7 +147,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Aktivieren Sie im Dialogfeld **Spalten auswählen** das oder die Kontrollkästchen der einzelnen Spalten, für die Sie eine Statistik erstellen möchten, und klicken Sie auf **OK**.  
   
-7.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***table_name* auf **OK**.  
+7.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -182,4 +185,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
   
-

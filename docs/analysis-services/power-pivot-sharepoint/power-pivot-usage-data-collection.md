@@ -2,36 +2,36 @@
 title: Power Pivot-Verwendungsdatenerfassung | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55ce7a5604bac4871942a281313a853d9477a974
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>Sammlung von Power Pivot-Verwendungsdaten
-  Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint verwendet und ergänzt dieses System, damit Berichte im [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard bereitgestellt werden, die die Verwendung von [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit die Verwendungsdaten für die Darstellung im [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard erstellt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint verwendet und ergänzt dieses System, damit Berichte im [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard bereitgestellt werden, die die Verwendung von [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit die Verwendungsdaten für die Darstellung im [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard erstellt werden.  
   
  Informationen zu den Verwendungsdaten im [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard finden Sie unter [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
   
 ##  <a name="usagearch"></a> Sammlung von Verwendungsdaten und Berichtsarchitektur  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]Verwendungsdaten werden gesammelt, Speicherung und Verwaltung mithilfe einer Kombination von Funktionen aus der SharePoint-Infrastruktur und die PowerPivot-Serverkomponenten. Die SharePoint-Infrastruktur umfasst einen zentralen Dienst für Verwendungsdaten und integrierte Zeitgeberaufträge. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint fügt die längerfristige Speicherung der in der SharePoint-Zentraladministration angezeigten [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten und -berichte hinzu.  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Verwendungsdaten werden gesammelt, Speicherung und Verwaltung mithilfe einer Kombination von Funktionen aus der SharePoint-Infrastruktur und die PowerPivot-Serverkomponenten. Die SharePoint-Infrastruktur umfasst einen zentralen Dienst für Verwendungsdaten und integrierte Zeitgeberaufträge. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint fügt die längerfristige Speicherung der in der SharePoint-Zentraladministration angezeigten [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten und -berichte hinzu.  
   
  Ereignisinformationen gehen auf dem Anwendungsserver oder Web-Front-End in das System für die Sammlung von Verwendungsdaten ein. Die Verwendungsdaten durchlaufen das System in Reaktion auf Zeitgeberaufträge, durch die Daten aus temporären Datendateien auf dem physischen Server in den persistenten Speicher auf einem Datenbankserver verschoben werden. Das folgende Diagramm veranschaulicht, durch welche Komponenten und Prozesse Verwendungsdaten innerhalb des Datensammlungs- und Berichtssystems verschoben werden.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 09/01/2017
 |---------------|----------------------|-----------------|  
 |SharePoint-Zeitgeberdienst (SPTimerV4)||Dieser Windows-Dienst wird lokal auf jedem Mitgliedscomputer in der Farm ausgeführt und verarbeitet alle auf Farmebene definierten Zeitgeberaufträge.|  
 |Microsoft SharePoint Foundation für den Import von Verwendungsdaten|In SharePoint 2010 alle 30 Minuten. In SharePoint 2013 alle 5 Minuten.|Dieser Zeitgeberauftrag wird global auf Farmebene konfiguriert. Er verschiebt Verwendungsdaten aus lokalen Verwendungsprotokolldateien in die zentrale Datenbank für Verwendungsdaten. Sie können diesen Zeitgeberauftrag manuell ausführen, um einen Datenimportvorgang zu erzwingen.|  
-|Microsoft SharePoint Foundation-Zeitgeberauftrag für die Verarbeitung von Verwendungsdaten|Täglich um 3:00 VORMITTAGS|Ab SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint wird dieser Zeitgeberauftrag für Upgrade- oder Migrationsszenarios unterstützt, falls noch ältere Verwendungsdaten in den SharePoint-Verwendungsdatenbanken enthalten sind. Ab SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint wird die SharePoint-Verwendungsdatenbank weder für die Sammlung von [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten noch für den Workflow des Management-Dashboards verwendet. Der Zeitgeberauftrag kann manuell ausgeführt werden, um verbliebene [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -bezogene Daten in der SharePoint-Verwendungsdatenbank in die Datenbanken der [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienstanwendung zu verschieben.<br /><br /> Dieser Zeitgeberauftrag wird global auf Farmebene konfiguriert. Er überprüft die zentrale Datenbank für Verwendungsdaten auf abgelaufene Verwendungsdaten (d. h. auf Datensätze, die älter als 30 Tage sind). Für [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Server in der Farm führt dieser Zeitgeberauftrag eine zusätzliche Überprüfung auf [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten aus. Wenn [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten erkannt werden, verschiebt der Zeitgeberauftrag die Daten in die Datenbank einer Dienstanwendung und verwendet dabei den Anwendungsbezeichner, um die richtige Datenbank zu identifizieren.<br /><br /> Sie können diesen Zeitgeberauftrag manuell ausführen, um eine Überprüfung auf abgelaufene Daten oder einen Import von [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten in die Datenbank einer [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienstanwendung zu erzwingen.|  
+|Microsoft SharePoint Foundation-Zeitgeberauftrag für die Verarbeitung von Verwendungsdaten|Täglich um 3:00 VORMITTAGS|Ab SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint wird dieser Zeitgeberauftrag für Upgrade- oder Migrationsszenarios unterstützt, falls noch ältere Verwendungsdaten in den SharePoint-Verwendungsdatenbanken enthalten sind. Ab SQL Server 2012 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint wird die SharePoint-Verwendungsdatenbank weder für die Sammlung von [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten noch für den Workflow des Management-Dashboards verwendet. Der Zeitgeberauftrag kann manuell ausgeführt werden, um verbliebene [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -bezogene Daten in der SharePoint-Verwendungsdatenbank in die Datenbanken der [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienstanwendung zu verschieben.<br /><br /> Dieser Zeitgeberauftrag wird global auf Farmebene konfiguriert. Er überprüft die zentrale Datenbank für Verwendungsdaten auf abgelaufene Verwendungsdaten (d. h. auf Datensätze, die älter als 30 Tage sind). Für [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Server in der Farm führt dieser Zeitgeberauftrag eine zusätzliche Überprüfung auf [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten aus. Wenn [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Verwendungsdaten erkannt werden, verschiebt der Zeitgeberauftrag die Daten in die Datenbank einer Dienstanwendung und verwendet dabei den Anwendungsbezeichner, um die richtige Datenbank zu identifizieren.<br /><br /> Sie können diesen Zeitgeberauftrag manuell ausführen, um eine Überprüfung auf abgelaufene Daten oder einen Import von [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]-Verwendungsdaten in die Datenbank einer [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]-Dienstanwendung zu erzwingen.|  
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard – Zeitgeberauftrag für die Verarbeitung|Täglich um 3:00 VORMITTAGS|Dieser Zeitgeberauftrag aktualisiert die interne [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Arbeitsmappe, die Verwaltungsdaten für das [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard enthält. Er ruft aktualisierte Informationen ab, die von SharePoint verwaltet werden, einschließlich Servernamen, Benutzernamen, Anwendungsnamen und Dateinamen, die in Dashboardberichten oder Webparts angezeigt werden.|  
   
 ##  <a name="reporting"></a> Berichte zu Verwendungsdaten  
@@ -80,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

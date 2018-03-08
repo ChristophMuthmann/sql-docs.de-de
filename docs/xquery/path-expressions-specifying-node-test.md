@@ -3,8 +3,11 @@ title: Angeben eines Knotentests in einem Pfadausdrucksschritt | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f9fece26e607005cca982be1963a9ca8a53a632
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>Path-Ausdrücken - angeben eines Knotentests
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ein Achsenschritt in einem Pfadausdruck besteht aus den folgenden Komponenten:  
   
@@ -371,4 +373,3 @@ WHERE ProductModelID=19
 -   processing-instruction(name) wird nicht unterstützt. Schließen Sie den Namen stattdessen in Anführungszeichen ein.  
   
   
-

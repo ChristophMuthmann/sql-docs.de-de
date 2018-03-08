@@ -2,32 +2,31 @@
 title: Index-Element (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Index element (DTA)
+dev_langs: XML
+helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "18"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Index-Element (DTA)
-  Enthält Informationen zu einem Index, den Sie für eine benutzerspezifische Konfiguration erstellen oder löschen möchten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Enthält Informationen über einen Index, den für eine benutzerspezifische Konfiguration erstellt oder gelöscht werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Indexattribut|Datentyp|Beschreibung|  
+|Indexattribut|Datentyp|Description|  
 |---------------------|---------------|-----------------|  
 |**Gruppiert**|**boolean**|Optional. Gibt einen gruppierten Index an. Auf "true" oder "false" festgelegt, z. B.:<br /><br /> `<Index Clustered="true">`<br /><br /> Standardmäßig ist dieses Attribut auf "false" festgelegt.|  
 |**Eindeutig**|**boolean**|Optional. Gibt einen eindeutigen Index an. Auf "true" oder "false" festgelegt, z. B.:<br /><br /> `<Index Unique="true">`<br /><br /> Standardmäßig ist dieses Attribut auf "false" festgelegt.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/02/2017
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[Create-Element &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.|  
-|**Untergeordnete Elemente**|[Name-Element für Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column-Element für Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PartitionColumn** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> [Filegroup-Element für Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PercentUsage** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.|  
+|**Untergeordnete Elemente**|[Name-Element für Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column-Element für Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PartitionColumn** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> [Filegroup-Element für Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PercentUsage** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
@@ -80,4 +79,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

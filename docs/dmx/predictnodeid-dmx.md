@@ -2,35 +2,32 @@
 title: PredictNodeId (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictNodeId
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictNodeId function
+f1_keywords: PredictNodeId
+dev_langs: DMX
+helpviewer_keywords: PredictNodeId function
 ms.assetid: fb236645-ad7e-4c54-9c4c-1af47cad7ad5
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c2184534d2eccc07ef42bae3ea17f311ba63cb3e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1ee43efb37a9ea9d6a1455947665470909ef73e2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt die Knoten-ID des Knotens zurück, für den der Fall klassifiziert ist.  
   
@@ -80,4 +77,3 @@ WHERE NODE_UNIQUE_NAME= '00000000100'
  [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

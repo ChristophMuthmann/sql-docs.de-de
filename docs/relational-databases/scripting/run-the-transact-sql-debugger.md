@@ -2,9 +2,12 @@
 title: "Ausführen des Transact-SQL-Debuggers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,19 +25,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 9f67818832da03faacf25adee23a1261ce44f430
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
-  Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger starten, nachdem Sie ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster geöffnet haben. Anschließend können Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code im Debugmodus ausführen, bis Sie den Debugger beenden. Sie können Optionen festlegen, um die Ausführung des Debuggers anzupassen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger starten, nachdem Sie ein [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor-Fenster geöffnet haben. Anschließend können Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code im Debugmodus ausführen, bis Sie den Debugger beenden. Sie können Optionen festlegen, um die Ausführung des Debuggers anzupassen.  
   
 ## <a name="starting-and-stopping-the-debugger"></a>Starten und Beenden des Debuggers  
  Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen folgende Anforderungen erfüllt sein:  
@@ -108,7 +111,7 @@ ms.lasthandoff: 06/22/2017
 |**Alle Breakpoints deaktivieren**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Deaktiviert alle Breakpoints.|  
 |Nicht verfügbar|**Überwachung hinzufügen**|Nicht verfügbar|Nicht verfügbar|Fügt dem **Überwachungsfenster** den ausgewählten Ausdruck hinzu.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   

@@ -2,34 +2,32 @@
 title: BottomSum (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMSUM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- BottomSum function
+f1_keywords: BOTTOMSUM
+dev_langs: kbMDX
+helpviewer_keywords: BottomSum function
 ms.assetid: b3b10e68-2a36-4c38-85f4-3bb7917d5ae8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ea22390b27a2ec2925cbdbc3d4d6ae257b2675dc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7d36c2567ab73b299cb528430b3ede7d81cf1bc5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Sortiert eine angegebene Menge in aufsteigender Reihenfolge und gibt eine Menge von Tupeln mit den niedrigsten Werten zurück, deren Summe kleiner oder gleich einem angegebenen Wert ist.  
   
@@ -44,7 +42,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Wert*  
+ *ReplTest1*  
  Ein gültiger numerischer Ausdruck, der den Wert angibt, mit dem die Tupel verglichen werden.  
   
  *Numeric_expression*  
@@ -81,4 +79,3 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

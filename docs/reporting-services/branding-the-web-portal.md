@@ -1,28 +1,26 @@
 ---
-title: Branding des Webportals | Microsoft Docs
+title: Branding des Webportals | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c01c3c7f6c05e0005f92addf82fb7e45d142b338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -31,7 +29,7 @@ Sie können die Darstellung des Webportals ändern, indem Sie es an das eigene U
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Erstellen des Markenpakets  
+## <a name="creating-the-brand-package"></a>Erstellen des Markenpakets
   
 Ein Markenpaket für Reporting Services besteht aus drei Elementen und wird als ZIP-Datei verpackt.   
   
@@ -41,7 +39,7 @@ Ein Markenpaket für Reporting Services besteht aus drei Elementen und wird als 
   
 Die Dateien müssen die oben aufgeführten Namen aufweisen. Die ZIP-Datei kann jedoch beliebig benannt werden.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### <a name="metadataxml"></a>metadata.xml
   
 Mit der Datei „metadata.xml“ können Sie den Namen des Markenpakets festlegen. Sie verfügt ebenso jeweils über einen Verweis auf Ihre „colors.json“- und „logo.png“-Dateien.  
   
@@ -64,7 +62,7 @@ Beispiel mit einer Logodatei.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### <a name="colorsjson"></a>Colors.json
   
 Wenn das Markenpaket hochgeladen wird, extrahiert der Server die entsprechenden Name/Wert-Paare aus der „colors.json“-Datei und verbindet sie mit dem LESS-Masterstylesheet „brand.less“. Diese LESS-Datei wird verarbeitet, und die resultierende CSS-Datei an den Client übermittelt. Alle Farben im Stylesheet folgen der hexadezimalen Darstellung einer Farbe mit sechs Zeichen.  
   
@@ -76,7 +74,7 @@ Das LESS-Stylesheet enthält Blöcke, die auf einige vordefinierte LESS-Variable
         background-color:@primaryButtonBg;   
     }  
   
-Obwohl dies der CSS-Syntax ähnelt, das die Farbwerte anzeigt, mit dem Präfix der @symbol, sind eindeutig für LESS. Sie sind Variablen, deren Werte von der JSON-Datei festgelegt werden.  
+Obwohl dies der CSS-Syntax ähnelt, sind die Farbwerte, die mit dem Präfix @symbol versehen sind, für LESS eindeutig. Sie sind Variablen, deren Werte von der JSON-Datei festgelegt werden.  
   
 Wenn beispielsweise die colors.json-Datei die folgenden Werte hätte.  
   
@@ -115,13 +113,13 @@ Wenn Sie sich zum ersten Mal mit Mobile Report Publisher auf einem Server anmeld
   
 Dann können Sie dieses Design für alle mobilen Berichte verwenden, die Sie erstellen, auch wenn sie nicht für den gleichen Server vorgesehen sind, auf dem Sie das Design bereitgestellt haben.   
   
-### <a name="using-a-logo"></a>Das Verwenden eines Logos  
+### <a name="using-a-logo"></a>Das Verwenden eines Logos
   
 Wenn Sie ein Logo mit Ihrem Markenpaket einschließen, wird es im Webportal anstelle des Namens angezeigt, den Sie für das Webportal im Menü "Einstellungen" festgelegt haben.  
   
 Die Datei, die Sie für das Logo einschließen, muss im PNG-Dateiformat vorliegen. Die Dateidimensionen werden skaliert, sobald sie auf den Server hochgeladen werden. Er sollten auf ungefähr 290px x 60px skalieren.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Anwenden des Markenpakets auf das Webportal  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Anwenden des Markenpakets auf das Webportal
   
 Um ein Markenpaket hinzuzufügen, herunterzuladen oder zu entfernen, können Sie Folgendes tun:  
   
@@ -141,9 +139,9 @@ Um ein Markenpaket hinzuzufügen, herunterzuladen oder zu entfernen, können Sie
   
 Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen des Pakets führt zum sofortigen Zurücksetzen des Webportals auf das Standardbranding.  
   
-## <a name="metadataxml-example"></a>metadata.xml-Beispiel  
+## <a name="metadataxml-example"></a>metadata.xml-Beispiel
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -155,7 +153,7 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen 
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>colors.json-Beispiel  
+## <a name="colorsjson-example"></a>colors.json-Beispiel
   
     {  
         "name":"Multicolored example brand",  
@@ -249,5 +247,4 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen 
         }  
     }  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

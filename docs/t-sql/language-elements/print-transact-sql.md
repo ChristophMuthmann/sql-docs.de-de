@@ -3,8 +3,11 @@ title: Drucken (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,19 +25,18 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: a1044fb78ebf3852a963d11607433fdb93d48007
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 9f78f85fc8697062c628a22736a7ae0d31d53792
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="print-transact-sql"></a>Drucken-Transact-SQL
+# <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine benutzerdefinierte Meldung an den Client zurück.  
@@ -51,8 +53,8 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  Eine Zeichen- oder Unicode-Zeichenfolgenkonstante. Weitere Informationen finden Sie unter [Konstanten &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***Local_variable*  
- Dies ist eine Variable eines beliebigen gültigen Zeichendatentyps. **@***Local_variable* muss **Char**, **Nchar**, **Varchar**, oder **Nvarchar**, oder es muss in der Lage sein implizit konvertiert in diese Datentypen.  
+ **@** *local_variable*  
+ Dies ist eine Variable eines beliebigen gültigen Zeichendatentyps. **@*** Local_variable* muss **Char**, **Nchar**, **Varchar**, oder **Nvarchar**, oder es muss in der Lage sein implizit konvertiert in diese Datentypen.  
   
  *string_expr*  
  Ein Ausdruck, der eine Zeichenfolge zurückgibt. Er kann verkettete Literalwerte, Funktionen und Variablen enthalten. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -121,5 +123,4 @@ GO
  [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-
 

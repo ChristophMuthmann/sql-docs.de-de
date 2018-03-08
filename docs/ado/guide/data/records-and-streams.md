@@ -3,7 +3,7 @@ title: "Datensätze und Datenströme | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 68af92a054b9c891849118df1802543d79432ef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11617fc364b3ce9f2c4f5b37623f4c74f968517
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
 ADO stellt derzeit die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt als das primäre Mittel, um den Zugriff auf Daten in Datenquellen, z. B. relationalen Datenbanken. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte als alternative oder Ergänzung Objekte, mit denen Daten von Anbietern bearbeitet werden können. Besonderheiten zur **Datensatz** Verhalten, finden Sie in der Dokumentation Ihres Anbieters.  
@@ -72,9 +71,8 @@ ADO stellt derzeit die [Recordset](../../../ado/reference/ado-api/recordset-obje
   
 -   [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md)  
   
--   [Befehl Streams](../../../ado/guide/data/command-streams.md)  
+-   [Command-Streams](../../../ado/guide/data/command-streams.md)  
   
 -   [Abrufen von Resultsets in Streams](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
--   [Mithilfe von ADO für Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md)
-
+-   [Using ADO for Internet Publishing (Verwenden von ADO für Internet-Publishing)](../../../ado/guide/data/using-ado-for-internet-publishing.md)

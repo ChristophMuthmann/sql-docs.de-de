@@ -3,7 +3,7 @@ title: FilterAxis-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FilterAxis property [ADO MD]
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 232e62fc37397601fad1751bd5718d9b35f67f14
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 81424fbe54417a16df85f31dfec1f7322da9974e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis-Eigenschaft (ADO MD)
 Gibt Informationen zu den aktuellen an [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -49,4 +48,3 @@ Gibt Informationen zu den aktuellen an [Cellset](../../../ado/reference/ado-md-a
  [Achsenobjekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [DimensionCount-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)
-

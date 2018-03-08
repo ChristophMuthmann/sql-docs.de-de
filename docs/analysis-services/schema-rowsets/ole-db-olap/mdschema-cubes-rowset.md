@@ -2,36 +2,33 @@
 title: MDSCHEMA_CUBES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_CUBES
+apiname: MDSCHEMA_CUBES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_CUBES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a3fa75f9ea6bcab54d123d6e914d5d77077b44e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES-Rowset
-  Beschreibt die Struktur der Cubes innerhalb einer Datenbank.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Struktur der Cubes innerhalb einer Datenbank.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **MDSCHEMA_CUBES** -Rowset enthält die folgenden Spalten.  
@@ -70,8 +67,7 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Optional) Standardeinschränkung besitzt den Wert 1. Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**Basis Cube_Name**|**DBTYPE_WSTR**|Optional.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

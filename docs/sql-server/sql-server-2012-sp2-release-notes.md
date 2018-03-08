@@ -1,27 +1,30 @@
 ---
 title: SQL Server 2012 SP2 Release Notes | Microsoft-Dokumentation
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 6
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31f86cebfc5dc23aac8d56a1a9c75d140b744063
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: ed00031d1f55fc6fda2ee1c37fe76f7637e8e891
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 Release Notes
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 In diesen Versionsanmerkungen werden Probleme beschrieben, die Sie vor der Installation und Problembehandlung von SQL Server 2012 Service Pack 2 kennen müssen. Versionsanmerkungen sind nur online verfügbar, nicht auf dem Installationsmedium. Sie werden regelmäßig mit dem Auftreten neuer Probleme aktualisiert. Weitere Informationen finden Sie unter [Bugs that are fixed in SQL Server 2012 Service Pack 2](http://support.microsoft.com/KB/2958429) .  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>Auswählen der richtigen Download- und Installationsdatei  
@@ -44,4 +47,3 @@ Identifizieren Sie anhand der unten stehenden Tabelle und entsprechend der derze
 |64-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64-Bit-Version eines oder mehrerer Tools des [Microsoft SQL Server 2012 RTM Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065) oder des [Microsoft SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)|Upgrade der Tools auf die 64-Bit-Version des Microsoft SQL Server 2012 SP2 Feature Pack|Eines oder mehrere Tools von der [Downloadseite für Microsoft SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)|  
   
-

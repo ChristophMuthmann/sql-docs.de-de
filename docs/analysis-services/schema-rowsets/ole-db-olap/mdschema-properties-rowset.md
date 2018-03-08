@@ -2,36 +2,33 @@
 title: MDSCHEMA_PROPERTIES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_PROPERTIES
+apiname: MDSCHEMA_PROPERTIES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_PROPERTIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_PROPERTIES rowset
 ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 43ec669b0b72775645f12ff51d0e4ede962b7700
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6f77505e9daa9efc330bfcd358a37982eace8935
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemaproperties-rowset"></a>MDSCHEMA_PROPERTIES-Rowset
-  Beschreibt die Eigenschaften von Elementen innerhalb einer Datenbank.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Eigenschaften von Elementen innerhalb einer Datenbank.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_PROPERTIES** Rowset enthält die folgenden Spalten.  
@@ -88,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

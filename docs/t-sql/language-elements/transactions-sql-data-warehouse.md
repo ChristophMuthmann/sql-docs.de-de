@@ -3,8 +3,11 @@ title: Transaktionen (SQL Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
-caps.latest.revision: 8
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8202a0de588bce3a36fc048e68c283b52db7e89d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4ea7244857dcd25b1e36f3420811ef035d4ee3b2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Eine Transaktion ist eine Gruppe von einer oder mehreren Datenbank-Anweisungen, die entweder vollständig zugesichert oder vollständig ein Rollback. Jede Transaktion wird atomic, konsistent, isoliert und dauerhaft (ACID-Eigenschaften). Wenn die Transaktion erfolgreich ausgeführt wird, sind alle Anweisungen darin ein Commit ausgeführt wurde. Beim Fehlschlagen die Transaktion ist, die mindestens eine der Anweisungen in der Gruppe ein Fehler auftritt, und klicken Sie dann die gesamte Gruppe, ein Rollback ausgeführt wird.  
   
@@ -70,7 +72,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Wenn AUTOCOMMIT auf ON festgelegt ist, wirkt sich mit einem anderen Satz AUTOCOMMIT ON-Anweisung nicht. Ebenso, wenn AUTOCOMMIT auf OFF festgelegt ist, hat eine andere SET AUTOCOMMIT OFF ausgeführt keine Auswirkungen.  
   
- SET IMPLICIT_TRANSACTIONS {ON | **OFF** }  
+ SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  Diese Funktion schaltet die gleichen Modi als AUTOCOMMIT festgelegt. Wenn auf ON gesetzt SET IMPLICIT_TRANSACTIONS die Verbindung in den impliziten Transaktionsmodus. Bei OFF wird die Verbindung zurück in den Autocommitmodus.  Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -150,9 +152,8 @@ COMMIT;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
-

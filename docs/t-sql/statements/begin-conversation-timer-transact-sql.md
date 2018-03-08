@@ -3,8 +3,11 @@ title: BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,20 +35,19 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b70228860699b3fefe9a1b5adcfc0250ce5d34e1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6f85695e3d8263936d053979074a92b52fba7259
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Startet einen Zeitgeber. Wenn das Timeout abläuft, [!INCLUDE[ssSB](../../includes/sssb-md.md)] speichert eine Nachricht vom Typ `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` in der lokalen Warteschlange für die Konversation.  
   
@@ -92,8 +94,7 @@ TIMEOUT = 120 ;
   
 ## <a name="see-also"></a>Siehe auch  
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [END CONVERSATION-Anweisung &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [Empfangen von &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)  
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)  
   
   
-

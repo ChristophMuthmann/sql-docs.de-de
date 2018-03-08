@@ -3,27 +3,28 @@ title: Projekteinstellungen (Migration) (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 06cda31832fca59fec1a0b064d211cfabc8cdac6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Projekteinstellungen (Migration) (SybaseToSQL)
 Die Seite "Migration", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA Daten aus Sybase Adaptive Server Enterprise (ASE), migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -75,4 +76,3 @@ Der Bereich für die Migration in beiden verfügbar ist die **Projekteinstellung
 > [!IMPORTANT]  
 > Wenn die **Parallel Daten Migrationsmodus** Option festgelegt wird **benutzerdefinierte**, ein neues Projekt mit dem Festlegen der Option **Threadanzahl** wird angezeigt. Anzahl der Threads, die für die Migration von Daten verwendet wird.  
   
-

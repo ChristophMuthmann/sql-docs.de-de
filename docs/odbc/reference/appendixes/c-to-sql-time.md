@@ -3,10 +3,12 @@ title: 'C, um SQL: Zeit | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - time data type [ODBC]
 - converting data from c to SQL types [ODBC], time
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d27d7d528aaf8d8fa0a4056f62fb59eba763663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f1a59c15d2ebf1866d4543fa89662888154d4da
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-time"></a>C, um SQL: Uhrzeit
 Der Bezeichner für die Zeit ODBC C-Datentyp ist:  
@@ -47,4 +48,3 @@ Der Bezeichner für die Zeit ODBC C-Datentyp ist:
  Wenn Zeitdaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*" hh "*:*mm*:*ss*" Format.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, beim Konvertieren von Daten von der Zeit, C-Datentyp, und setzt voraus, dass die Größe des Datenpuffers die Größe des Datentyps Zeit C ist. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
-

@@ -3,7 +3,7 @@ title: "Mithilfe von ADO für Internet Publishing | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 609f4574c7f8cf9cb13fd2d5b21f3504ec3ce9fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9b26261c83932005ba0852b67e4f246cea47b8e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-for-internet-publishing"></a>Mithilfe von ADO für Internet Publishing
 [Der OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) zeigt ein Beispiel hierfür den Zugriff auf heterogene Daten mit ADO. Obwohl in den Beispielen in diesem Abschnitt spezifisch sind für die Verwendung die Publishing Internetanbieter ist, sollte die veranschaulichten Prinzipien ähnlich sein, bei Verwendung von ADO mit anderen Anbietern für heterogene Daten, z. B. einen Anbieter zu einem e-Mail-Store.  
@@ -52,16 +51,15 @@ ms.lasthandoff: 09/09/2017
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Der OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
+-   [Der OLE DB-Anbieter für Internet-Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
--   [Internet, die Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md)  
+-   [Internet Publishing Scenario (Internet-Publishing-Szenario)](../../../ado/guide/data/internet-publishing-scenario.md)  
   
--   [Absoluten und relativen URLs](../../../ado/guide/data/absolute-and-relative-urls.md)  
+-   [Absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md)  
   
--   [Datensätze und Felder Anbieter bereitgestellte](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
+-   [Records and Provider-Supplied Fields (Datensätze und von Anbietern bereitgestellte Felder)](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)
-

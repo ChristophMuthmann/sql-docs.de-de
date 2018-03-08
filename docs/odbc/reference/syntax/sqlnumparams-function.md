@@ -3,33 +3,30 @@ title: SQLNumParams-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLNumParams
-apilocation:
-- sqlsrv32.dll
+apiname: SQLNumParams
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLNumParams
-helpviewer_keywords:
-- SQLNumParams function [ODBC]
+f1_keywords: SQLNumParams
+helpviewer_keywords: SQLNumParams function [ODBC]
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c74ed0084d40168fa507666df417d8069d466e88
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be2f145fdc92e263565610d552755b1f737cd8b3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams-Funktion
 **Konformität**  
@@ -94,4 +91,3 @@ SQLRETURN SQLNumParams(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

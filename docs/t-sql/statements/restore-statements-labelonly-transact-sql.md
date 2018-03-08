@@ -3,8 +3,11 @@ title: RESTORE LABELONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f69efb096931108fdaea084b337fcb319f7cfb6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE-Anweisungen - LABELONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt ein Resultset mit Informationen zu den durch das gegebene Sicherungsmedium identifizierten Sicherungsmedien zurück.  
   
@@ -83,7 +85,7 @@ FROM <backup_device>
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**MediaName**|**vom Datentyp nvarchar(128)**|Name des Mediums.|  
+|**MediaName**|**nvarchar(128)**|Name des Mediums.|  
 |**MediaSetId**|**uniqueidentifier**|Eindeutige ID des Mediensatzes.|  
 |**FamilyCount**|**int**|Die Anzahl der Medienfamilien im Mediensatz.|  
 |**FamilySequenceNumber**|**int**|Sequenznummer dieser Familie.|  
@@ -91,7 +93,7 @@ FROM <backup_device>
 |**MediaSequenceNumber**|**int**|Sequenznummer dieses Mediums in der Medienfamilie.|  
 |**MediaLabelPresent**|**tinyint**|Gibt an, ob die Medienbeschreibung Folgendes enthält:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] medienbezeichnung von Tape Format<br /><br /> **0** = medienbeschreibung|  
 |**MediaDescription**|**nvarchar(255)**|Medienbeschreibung als Text oder die Medienbezeichnung von Tape Format.|  
-|**SoftwareName**|**vom Datentyp nvarchar(128)**|Name der Sicherungssoftware, die die Bezeichnung geschrieben hat.|  
+|**SoftwareName**|**nvarchar(128)**|Name der Sicherungssoftware, die die Bezeichnung geschrieben hat.|  
 |**SoftwareVendorId**|**int**|Eindeutige ID des Softwareanbieters, der die Sicherung geschrieben hat.|  
 |**MediaDate**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Bezeichnung geschrieben wurde.|  
 |**Mirror_Count**|**int**|Die Anzahl von Spiegeln in einem Spiegelsatz (1-4).<br /><br /> Hinweis: Die Bezeichnungen für verschiedene Spiegel in einem Satz geschrieben sind identisch.|  
@@ -121,4 +123,3 @@ FROM <backup_device>
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

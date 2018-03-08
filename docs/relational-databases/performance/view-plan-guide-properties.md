@@ -2,39 +2,39 @@
 title: Anzeigen der Eigenschaften der Planhinweisliste | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.suite: sql
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.planguideprop.general.f1
+f1_keywords: sql13.swb.planguideprop.general.f1
 helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "19"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 536c61c536ab7815a35f311e68b7b5655e273011
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-plan-guide-properties"></a>Anzeigen der Eigenschaften der Planhinweisliste
-  Sie können die Eigenschaften von Planhinweislisten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können die Eigenschaften von Planhinweislisten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
   
  **In diesem Thema**  
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie die Eigenschaften von Planhinweislisten an mit:**  
   
@@ -42,14 +42,14 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente beschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>So zeigen Sie die Eigenschaften einer Planhinweisliste an  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>So zeigen Sie die Eigenschaften einer Planhinweisliste an  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -136,4 +136,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md).  
   
   
-

@@ -1,26 +1,28 @@
 ---
-title: DTExec (Hilfsprogramm) | Microsoft Docs
+title: dtexec-Hilfsprogramm | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 053744fd9493aae1c4d0cb4c2235a3da5a465397
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und dem Dateisystem.  
@@ -60,29 +62,29 @@ ms.lasthandoff: 09/27/2017
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- Wenn Sie **dtexec** verwenden, um ein Paket von der ISPAC-Projektdatei auszuführen, lauten die entsprechenden Optionen: /Proj[ect] und /Pack[age], womit der Projektpfad und der Datenstromname des Pakets angegeben werden. Wenn Sie ein Projekt in das Projektbereitstellungsmodell konvertieren, indem Sie den **Assistenten für die Konvertierung von Integration Services-Projekten** von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, wird vom Assistenten eine ISPAC-Datei erstellt. Weitere Informationen finden Sie unter [Bereitstellen von Integration Services (SSIS)-Projekten und Paketen](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Wenn Sie **dtexec** verwenden, um ein Paket von der ISPAC-Projektdatei auszuführen, lauten die entsprechenden Optionen: /Proj[ect] und /Pack[age], womit der Projektpfad und der Datenstromname des Pakets angegeben werden. Wenn Sie ein Projekt in das Projektbereitstellungsmodell konvertieren, indem Sie den **Assistenten für die Konvertierung von Integration Services-Projekten** von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, wird vom Assistenten eine ISPAC-Datei erstellt. Weitere Informationen finden Sie unter [Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Sie können **dtexec** mit Planungstools von Drittanbietern verwenden, um Pakete zu planen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt werden.  
   
 ##  <a name="bit"></a> Überlegungen zur Installation auf 64-Bit-Computern  
  Auf einem 64-Bit-Computer installiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine 64-Bit-Version des Hilfsprogramms **dtexec** (dtexec.exe). Wenn Sie bestimmte Pakete im 32-Bit-Modus ausführen möchten, müssen Sie die 32-Bit-Version des Hilfsprogramms **dtexec** installieren. Wählen Sie zum Installieren der 32-Bit-Version des Hilfsprogramms **dtexec** während des Setups entweder Clienttools oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
- Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Die 32-Bit-Verzeichnispfad ist normalerweise  *\<Laufwerk >*: \Programme Dateien (x86) \Microsoft SQL Server\110\DTS\Binn, während der 64-Bit-Verzeichnispfad  *\<Laufwerk >*: \Programme\Microsoft SQL Server\110\DTS\Binn.)  
+ Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Typischerweise ist der 32-Bit-Verzeichnispfad „*\<Laufwerk>*:\Programme (x86)\Microsoft SQL Server\110\DTS\Binn“, während der 64-Bit-Verzeichnispfad „*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“ lautet.)  
   
 > **HINWEIS:** Wenn Sie das Hilfsprogramm mithilfe des SQL Server-Agents ausführen, verwendet dieser automatisch die 64-Bit-Version des Hilfsprogramms. Der SQL Server-Agent sucht die richtige ausführbare Datei für das Hilfsprogramm in der Registrierung und nicht in der PATH-Umgebungsvariablen.  
   
  Wenn Sie sicherstellen möchten, dass die 64-Bit-Version des Hilfsprogramms an der Eingabeaufforderung ausgeführt wird, können Sie einen der folgenden Schritte ausführen:  
   
--   Öffnen Sie ein Eingabeaufforderungsfenster, wechseln Sie zum Verzeichnis mit der 64-Bit-Version des Hilfsprogramms (*\<Laufwerk >*: \Programme\Microsoft SQL Server\110\DTS\Binn), und führen Sie das Hilfsprogramm aus diesem Verzeichnis.  
+-   Öffnen Sie ein Eingabeaufforderungsfenster, wechseln Sie in das Verzeichnis mit der 64-Bit-Version des Hilfsprogramms („*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“), und führen Sie dann das Hilfsprogramm aus diesem Verzeichnis aus.  
   
--   Führen Sie das Hilfsprogramm an der Eingabeaufforderung, indem Sie den vollständigen Pfad eingeben (*\<Laufwerk >*: \Programme\Microsoft SQL Server\110\DTS\Binn) auf die 64-Bit-Version des Hilfsprogramms.  
+-   Führen Sie an der Eingabeaufforderung das Hilfsprogramm aus, indem Sie den vollständigen Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“) der 64-Bit-Version des Hilfsprogramms eingeben.  
   
--   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem platzieren den 64-Bit-Pfad (*\<Laufwerk >*: \Programme\Microsoft SQL Server\110\DTS\Binn) vor dem 32-Bit-Pfad (*\<Laufwerk >*: \ Programm Dateien (x86) \Microsoft SQL Server\110\DTS\Binn) in der Variablen.  
+-   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem Sie den 64-Bit-Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“) in der Variable vor den 32-Bit-Pfad („*\<Laufwerk>*:\ Programme (x86)\Microsoft SQL Server\110\DTS\Binn“) platzieren.  
   
 ##  <a name="side"></a> Überlegungen zu Computern mit parallelen Installationen  
  Wenn [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] auf einem Computer installiert wird, auf dem [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] installiert ist, sind mehrere Versionen des Hilfsprogramms **dtexec** installiert.  
   
- Um sicherzustellen, dass Sie die richtige Version des Hilfsprogramms, führen Sie an der Eingabeaufforderung das Hilfsprogramm ausführen, indem Sie den vollständigen Pfad eingeben (*\<Laufwerk >*: \Programme\Microsoft SQL Server\\< Version\>\DTS\Binn).  
+ Führen Sie das Hilfsprogramm an der Eingabeaufforderung aus, indem Sie den vollständigen Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\\<Version\>\DTS\Binn“) eingeben, um sicherzustellen, dass Sie die korrekte Version des Hilfsprogramms ausführen.  
   
 ##  <a name="phases"></a> Ausführungsphasen  
  Bei der Ausführung des Hilfsprogramms werden vier Phasen durchlaufen. Es handelt sich um die folgenden Phasen:  
@@ -106,7 +108,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Wenn ein Paket ausgeführt wird, kann **dtexec** einen Exitcode zurückgeben. Der Exitcode wird dazu verwendet, die ERRORLEVEL-Variable aufzufüllen, deren Wert anschließend in bedingten Anweisungen oder in einer Verzweigungslogik innerhalb einer Batchdatei getestet werden kann. In der folgenden Tabelle sind die Werte aufgeführt, die das Hilfsprogramm **dtexec** beim Beenden festlegen kann.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |0|Das Paket wurde erfolgreich ausgeführt.|  
 |1|Bei der Paketausführung ist ein Fehler aufgetreten.|  
@@ -154,7 +156,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/?** [*Optionsname*]: (Optional). Zeigt die Befehlszeilenoptionen oder die Hilfe zu der in *Optionsname* angegebenen Option an und beendet dann das Hilfsprogramm.  
   
-     Wenn Sie ein *Optionsname* -Argument angeben, startet **dtexec** die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation und zeigt das Thema für das Hilfsprogramm „dtexec“ an.  
+     Wenn Sie ein *Optionsname*-Argument angeben, startet **dtexec** die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation und zeigt das Thema für das Hilfsprogramm „dtexec“ an.  
   
 -   **/Ca[llerInfo]**: (Optional). Gibt weitere Informationen für eine Paketausführung an. Wenn Sie mit dem SQL Server-Agent ein Paket ausführen, legt der Agent dieses Argument fest, um anzuzeigen, dass die Paketausführung vom SQL Server-Agent aufgerufen wird. Dieser Parameter wird ignoriert, wenn das Hilfsprogramm **dtexec** in der Befehlszeile ausgeführt wird.  
   
@@ -218,7 +220,7 @@ dtexec /option [value] [/option [value]]...
   
      Im Abschnitt **Hinweise** finden Sie mehrere Beispiele für die Verwendung der **/ConsoleLog** -Option.  
   
---   **/ D [ts]** *Package_path*: (Optional). Lädt ein Paket aus dem SSIS-Paketspeicher. Pakete, die im SSIS-Paketspeicher gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/D[ts]** *package_path*: (optional). Lädt ein Paket aus dem SSIS-Paketspeicher. Pakete, die im SSIS-Paketspeicher gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option **/ISServer**, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -234,7 +236,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/ Dump** *Fehlercode*: standardmäßig [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] speichert die debugdumpdateien im Ordner  *\<Laufwerk >*: \Programme\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** *error code*: In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugsicherungsdateien im Ordner „*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
     > **HINWEIS:** Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an Microsoft Support Services senden, wird empfohlen, vertrauliche Informationen zu entfernen.  
   
@@ -246,7 +248,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (Optional) Erstellt die Debugdumpdateien mit der Erweiterung MDMP und TMP, wenn bei der Ausführung des Pakets ein beliebiger Fehler auftritt.  
   
-     Standardmäßig [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] speichert die debugdumpdateien im Ordner  *\<Laufwerk >*: Ordner "\Programme\Microsoft SQL Server\110\Shared\ErrorDumps".  
+     In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugsicherungsdateien im Ordner „*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
     > **HINWEIS:** Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an Microsoft Support Services senden, wird empfohlen, vertrauliche Informationen zu entfernen.  
   
@@ -263,7 +265,7 @@ dtexec /option [value] [/option [value]]...
      Verwenden Sie die **/Env[Verweis]** -Option zusammen mit der **/ISServer** - und **/Server** -Option.  
   
      Dieser Parameter wird vom SQL Server-Agent verwendet.  
-  --   **/ F [Ile]** *Filespec*: (Optional). Lädt ein im Dateisystem gespeichertes Paket. Pakete, die im Dateisystem gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen ](deploy-integration-services-ssis-projects-and-packages.md).  
+  --   **/F[ile]** *filespec*: (Optional). Lädt ein im Dateisystem gespeichertes Paket. Pakete, die im Dateisystem gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen ](deploy-integration-services-ssis-projects-and-packages.md).  
 
   Mit dem *Dateiangabe* -Argument werden Pfad und Dateiname des Pakets angegeben. Sie können den Pfad entweder als UNC-Pfad (Universal Naming Convention) oder als lokalen Pfad angeben. Enthält der im *Dateiangabe* -Argument angegebene Pfad- oder Dateiname ein Leerzeichen, muss das *Dateiangabe* -Argument in Anführungszeichen gesetzt werden.  
   
@@ -325,7 +327,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Pack[age]** *Paketname*: (Optional). Gibt das Paket an, das ausgeführt wird. Dieser Parameter wird hauptsächlich verwendet, wenn Sie das Paket von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ausführen.  
   
--   **/P[assword]** *Kennwort*: (Optional). Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird zusammen mit der Option **/User** verwendet. Wird die Option **/Password** nicht angegeben und die Option **/User** verwendet, wird ein leeres Kennwort verwendet. Der Wert *Kennwort* kann in Anführungszeichen eingeschlossen werden.  
+-   **/P[assword]** *Kennwort*: (Optional). Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung geschützt ist. Diese Option wird zusammen mit der Option **/User** verwendet. Wird die Option **/Password** nicht angegeben und die Option **/User** verwendet, wird ein leeres Kennwort verwendet. Der Wert *Kennwort* kann in Anführungszeichen eingeschlossen werden.  
   
     > **WICHTIG!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -413,7 +415,7 @@ dtexec /option [value] [/option [value]]...
   
      Die Option **/Ser[ver]** ist erforderlich, wenn die Option **/ISServer** angegeben wird.  
   
---   **/ SQ [L]** *Package_path*: lädt ein Paket, die in gespeichert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]im **Msdb** Datenbank. Pakete, die in der **msdb** -Datenbank gespeichert sind, werden mithilfe des Paketbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](https://msdn.microsoft.com/library/hh213290.aspx).   
+--   **/SQ[L]** *package_path*: Lädt ein in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichertes Paket in die **msdb**-Datenbank. Pakete, die in der **msdb** -Datenbank gespeichert sind, werden mithilfe des Paketbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](https://msdn.microsoft.com/library/hh213290.aspx).   
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -637,4 +639,3 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  Blogeintrag zu [Exitcodes, DTEXEC und SSIS-Katalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)auf www.mattmasson.com.  
   
   
-

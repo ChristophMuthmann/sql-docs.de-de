@@ -2,9 +2,12 @@
 title: Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,28 +18,28 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
-  Kopien von Datenbank-E-Mail-Nachrichten und deren Anlagen werden zusammen mit dem Datenbank-E-Mail-Ereignisprotokoll in **msdb** -Tabellen gespeichert. Sie sollten die Größe der Tabellen regelmäßig reduzieren und Nachrichten und Ereignisse archivieren, die nicht mehr benötigt werden. Die folgenden Prozeduren erstellen einen Auftrag des SQL Server-Agents, um diesen Prozess zu automatisieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Kopien von Datenbank-E-Mail-Nachrichten und deren Anlagen werden zusammen mit dem Datenbank-E-Mail-Ereignisprotokoll in **msdb** -Tabellen gespeichert. Sie sollten die Größe der Tabellen regelmäßig reduzieren und Nachrichten und Ereignisse archivieren, die nicht mehr benötigt werden. Die folgenden Prozeduren erstellen einen Auftrag des SQL Server-Agents, um diesen Prozess zu automatisieren.  
   
 -   **Vorbereitungen:**  , [Voraussetzungen](#Prerequisites), [Empfehlungen](#Recommendations), [Berechtigungen](#Permissions)  
   
--   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
+-   **Archivieren von Datenbank-E-Mail-Nachrichten und -Protokollen mithilfe von:**  [SQL Server-Agent](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Die neuen Tabellen zum Speichern der Archivdaten können sich in einer speziellen Archivdatenbank befinden. Alternativ können die Zeilen in eine Textdatei exportiert werden.  
    
 ###  <a name="Recommendations"></a> Empfehlungen  
@@ -51,11 +54,11 @@ ms.lasthandoff: 06/22/2017
   
 -   Die erste Prozedur erstellt den Auftrag "Datenbank-E-Mail archivieren" in den folgenden Schritten:  
   
-    1.  Kopieren Sie alle Nachrichten aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_***Jahr_Monat* benannt wird.  
+    1.  Kopieren Sie alle Nachrichten aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_***<Jahr_Monat>* benannt wird.  
   
-    2.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Anlagen aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Attachments_***Jahr_Monat* benannt wird.  
+    2.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Anlagen aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Attachments_***<Jahr_Monat>* benannt wird.  
   
-    3.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Ereignisse aus dem Datenbank-E-Mail-Ereignisprotokoll aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Log_***Jahr_Monat* benannt wird.  
+    3.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Ereignisse aus dem Datenbank-E-Mail-Ereignisprotokoll aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Log_***<Jahr_Monat>* benannt wird.  
   
     4.  Löschen Sie die Datensätze der übertragenen E-Mail-Elemente aus den Datenbank-E-Mail-Tabellen.  
   
@@ -90,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung zum Erstellen einer Tabelle ein, die nach dem vorhergehenden Monat benannt wird und Zeilen enthält, die aus der Zeit vor Beginn des aktuellen Monats stammen:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -116,7 +119,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung zum Erstellen einer Tabelle mit Anlagen ein, die nach dem vorhergehenden Monat benannt wird und die Anlagen zu den im vorhergehenden Schritt übertragenen Nachrichten enthält:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -143,7 +146,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung zum Erstellen einer Protokolltabelle ein, die nach dem vorhergehenden Monat benannt wird und die Protokolleinträge zu den in einem vorhergehenden Schritt übertragenen Nachrichten enthält:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -170,7 +173,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung ein, um Zeilen aus den Datenbank-E-Mail-Tabellen zu entfernen, die älter als der aktuelle Monat sind:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -190,7 +193,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Geben Sie im Feld **Befehl** die folgende Anweisung ein, um Zeilen aus dem Datenbank-E-Mail-Ereignisprotokoll zu entfernen, die älter als der aktuelle Monat sind:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  
@@ -221,4 +224,3 @@ ms.lasthandoff: 06/22/2017
  [Übersicht](#Process_Overview)  
   
   
-

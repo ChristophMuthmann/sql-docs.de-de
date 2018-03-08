@@ -2,11 +2,12 @@
 title: Aktualisieren der SQL Server-Verwaltungstools | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -14,19 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: 19
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 5c0a15d22956bc7b4076bceb2498cdaf2e5c3683
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3174cb5f1f865fb73dbb792066bbaf7ab2dc4894
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Aktualisieren der SQL Server-Verwaltungstools
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher. In diesem Thema sind Unterstützung und Verhalten für das Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools und Verwaltungskomponenten wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Datenbank-E-Mail, Wartungspläne, XPStar und XPWeb dokumentiert.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher. Dieser Artikel beschreibt die Unterstützung und das Verhalten des Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungstools und Verwaltungskomponenten wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent, Datenbank-E-Mail, Wartungsplänen, XPStar und XPWeb.  
   
 > [!IMPORTANT]  
 >  Bei lokalen Installationen müssen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup als Administrator ausführen. Wenn Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup von einer Remotefreigabe ausführen, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
@@ -52,7 +55,7 @@ Beachten Sie die folgenden Punkte, bevor Sie auf [!INCLUDE[ssCurrent](../../incl
   
 -   Datenbank-E-Mail, die auch als SQLiMail bezeichnet wird, wird mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert. Standardmäßig ist Datenbank-E-Mail nach dem Update deaktiviert. Alle Schema-Updates sollten nach dem Upgrade mit einem Updateskript abgeglichen werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Abwärtskompatibilität_gelöscht](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
  [Upgrade SQL Server Using the Installation Wizard (Setup) (Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup))](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  

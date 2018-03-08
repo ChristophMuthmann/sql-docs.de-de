@@ -1,11 +1,13 @@
 ---
 title: "Lektion 9: Verwalten von Sicherungssätzen und Dateimomentaufnahme-Sicherungen | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -13,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9747a3c7730db5d3fe1eda6145ece133c7b6d523
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dc5bfc42ce8ab0329e923aeb867f46e81cc0e74b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>Lektion 9: Verwalten von Sicherungssätzen und Dateimomentaufnahme-Sicherungen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In dieser Lektion löschen Sie einen Sicherungssatz mithilfe der gespeicherten Systemprozedur [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) . Diese gespeicherte Systemprozedur löscht die Sicherungsdatei und die Dateimomentaufnahme in jeder Datenbankdatei, die diesem Sicherungssatz zugeordnet ist.  
   
 > [!NOTE]  
@@ -64,7 +66,7 @@ Befolgen Sie folgende Schritte, um einen Dateimomentaufnahme-Sicherungssatz zu l
   
 **Ende des Tutorials**  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
@@ -72,5 +74,4 @@ Befolgen Sie folgende Schritte, um einen Dateimomentaufnahme-Sicherungssatz zu l
   
   
   
-
 

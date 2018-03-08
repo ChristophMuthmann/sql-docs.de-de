@@ -2,9 +2,12 @@
 title: Indexeigenschaften (F1-Hilfe) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -18,19 +21,19 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In den Abschnitten dieses Themas werden verschiedene Indexeigenschaften beschrieben, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Dialogfeldern verfügbar sind.  
   
@@ -175,7 +178,7 @@ ms.lasthandoff: 06/22/2017
 >  Diese Option ist für XML-Indizes nicht verfügbar. Das gilt auch, wenn der Index ein deaktivierter gruppierter Index ist.  
   
  **Maximalen Grad an Parallelität festlegen**  
- Begrenzt die Anzahl der bei der Ausführung paralleler Pläne einzusetzenden Prozessoren. Der Standardwert ist 0; bei diesem Wert wird die tatsächliche Anzahl der verfügbaren CPUs verwendet. Wenn Sie den Wert auf 1 setzen, wird die Ausführung paralleler Pläne unterdrückt; bei einem Wert von größer als 1 wird die maximale Anzahl der bei der Ausführung einer einzelnen Abfrage zu verwendenden Prozessoren begrenzt. Diese Option ist nur verfügbar, wenn sich das Dialogfeld im Status **Neu organisieren** oder **Neu erstellen** befindet. Weitere Informationen finden Sie unter [Festlegen der 'Max. Grad an Parallelität'-Option auf optimale Leistung](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Begrenzt die Anzahl der bei der Ausführung paralleler Pläne einzusetzenden Prozessoren. Der Standardwert ist 0; bei diesem Wert wird die tatsächliche Anzahl der verfügbaren CPUs verwendet. Wenn Sie den Wert auf 1 setzen, wird die Ausführung paralleler Pläne unterdrückt; bei einem Wert von größer als 1 wird die maximale Anzahl der bei der Ausführung einer einzelnen Abfrage zu verwendenden Prozessoren begrenzt. Diese Option ist nur verfügbar, wenn sich das Dialogfeld im Status **Neu organisieren** oder **Neu erstellen** befindet. Weitere Informationen finden Sie unter [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Wird ein Wert angegeben, der über der Anzahl der verfügbaren CPUs liegt, wird die tatsächliche Anzahl der CPUs verwendet.  
@@ -186,7 +189,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="bounding-box"></a>Umgebendes Feld  
  Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster**festgelegt ist.  
   
- In dem Bereich werden die Koordinaten **(***X-min***,***Y-min***)** und **(***X-max***,***Y-max***)** des umgebenden Felds angezeigt. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ **geometry** erstellen.  
+ In dem Bereich werden die Koordinaten **(***X-min***, ***Y-min***)** und **(***X-max***, ***Y-max***)** des umgebenden Felds angezeigt. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ **geometry** erstellen.  
   
  **X-min**  
  Die X-Koordinate der unteren linken Ecke des umgebenden Felds.  
@@ -244,10 +247,9 @@ ms.lasthandoff: 06/22/2017
  **Filterausdruck**  
  Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
-

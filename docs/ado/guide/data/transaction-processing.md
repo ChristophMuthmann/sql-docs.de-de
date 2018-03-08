@@ -3,7 +3,7 @@ title: Transaktionsverarbeitung | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c37bf04fd14bb2d5f276efd3321b044759cbe7ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="transaction-processing"></a>Transaktionsverarbeitung
 Ein *Transaktion* begrenzt Anfang und Ende einer Reihe von Datenzugriffsvorgänge über eine Verbindung ausgeführt. Unterliegen die Transaktionsfunktionen des Ihre Datenquelle anzuwenden die **Verbindung** Objekt auch bietet die Möglichkeit zum Erstellen und Verwalten von Transaktionen. Beispielsweise können mithilfe von Microsoft OLE DB-Anbieter für SQL Server auf eine Datenbank auf Microsoft SQL Server zugreifen, Sie mehrere geschachtelte Transaktionen für die Befehle erstellen, die Sie ausführen.  
@@ -53,4 +52,3 @@ Ein *Transaktion* begrenzt Anfang und Ende einer Reihe von Datenzugriffsvorgäng
   
 ## <a name="nested-transactions"></a>Geschachtelte Transaktionen  
  Für Anbieter, die geschachtelte Transaktionen unterstützen Aufrufen der **BeginTrans** Methode innerhalb einer geöffneten Transaktion wird eine neue, geschachtelte Transaktion gestartet. Der Rückgabewert gibt an, der Schachtelungsebene: ein Rückgabewert von "1" gibt an, Sie haben eine Transaktion der obersten Ebene geöffnet (d. h., die Transaktion ist nicht geschachtelte innerhalb einer anderen Transaktion), "2" gibt an, dass Sie eine Transaktion der zweiten Ebene (a geöffnet haben geschachtelten TRANSACTION-Anweisung innerhalb einer Transaktion auf der obersten Ebene), und so weiter. Aufrufen von **CommitTrans** oder **RollbackTrans** wirkt sich auf nur die zuletzt geöffnete Transaktion, und Sie müssen schließen oder Rollback für die aktuelle Transaktion aus, bevor Sie alle auf höherer Ebene Transaktionen auflösen können.
-

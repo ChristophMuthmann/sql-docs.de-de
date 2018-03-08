@@ -2,30 +2,30 @@
 title: "PowerPivot für SharePoint (SSAS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 864e795be41ccc9e68df3d1fc33b05f73e0695c7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 108c36ae7730a9622f5b8797b3dbb20cf0e96df3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>PowerPivot für SharePoint (SSAS)
-  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Modus stellt Serverhosting von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer SharePoint-Farm bereit. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten sind ein analytisches Datenmodell, das Sie mit einer der folgenden Anwendungen erstellen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Modus stellt Serverhosting von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer SharePoint-Farm bereit. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten sind ein analytisches Datenmodell, das Sie mit einer der folgenden Anwendungen erstellen:  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel 2010-Add-In  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/01/2017
  ![SSAS PowerPivot-Modus-2-Serverbereitstellung](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot-Modus-2-Serverbereitstellung")  
   
 ##  <a name="bkmk_RelatedContent"></a> In diesem Abschnitt  
- [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Power Pivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [PowerPivot-Konfiguration mit Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
@@ -94,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Notfallwiederherstellung für PowerPivot für SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   
-

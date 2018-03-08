@@ -2,9 +2,12 @@
 title: "Verwenden der Tabellen „inserted“ und „deleted“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: 
@@ -18,19 +21,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen inserted und deleted
-  DML-Triggeranweisungen verwenden zwei besondere Tabellen: die inserted-Tabelle und die deleted-Tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären, speicherresidenten Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Das direkte Ändern der Daten in den Tabellen bzw. das Ausführen von Data Definition Language-(DDL-)Vorgängen für die Tabellen, beispielsweise CREATE INDEX, ist nicht möglich.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+DML-Triggeranweisungen verwenden zwei besondere Tabellen: die inserted-Tabelle und die deleted-Tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären, speicherresidenten Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Das direkte Ändern der Daten in den Tabellen bzw. das Ausführen von Data Definition Language-(DDL-)Vorgängen für die Tabellen, beispielsweise CREATE INDEX, ist nicht möglich.  
   
  In DML-Triggern werden die Tabellen inserted und deleted hauptsächlich für folgende Vorgänge verwendet:  
   
@@ -78,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  Wenn eine INSERT-, UPDATE- oder DELETE-Anweisung auf eine Sicht verweist, die einen INSTEAD OF-Trigger aufweist, ruft [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Trigger auf, anstatt direkte Aktionen für Tabellen auszuführen. Der Trigger muss anhand der in den inserted- und deleted-Tabellen dargestellten Informationen Anweisungen erstellen, die zum Implementieren der angeforderten Aktion in den Basistabellen erforderlich sind, selbst wenn das Format der für die Sicht erstellten Informationen in den inserted- und deleted-Tabellen nicht mit dem Format der Daten in den Basistabellen identisch ist.  
   
- Das Format der inserted- und deleted-Tabellen, das an einen in einer Sicht definierten INSTEAD OF-Trigger übergeben wird, stimmt mit der Auswahlliste der SELECT-Anweisung überein, die für die Sicht definiert wurde. Beispiel:  
+ Das Format der inserted- und deleted-Tabellen, das an einen in einer Sicht definierten INSTEAD OF-Trigger übergeben wird, stimmt mit der Auswahlliste der SELECT-Anweisung überein, die für die Sicht definiert wurde. Zum Beispiel:  
   
 ```  
 USE AdventureWorks2012;  

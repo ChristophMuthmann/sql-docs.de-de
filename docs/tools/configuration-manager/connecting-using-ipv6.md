@@ -2,9 +2,12 @@
 title: "Herstellen einer Verbindung über IPv6 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,19 @@ helpviewer_keywords:
 - IPv4
 - IPv6
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3270ffb9899b8d8e4663c7e0d1b4dc52b8d89049
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02be74463da560da23ee016918a17bc0d272319d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="connecting-using-ipv6"></a>Herstellen von Verbindungen über IPv6
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vollständig unterstützt sowohl Internet Protocol Version 4 (IPv4) als auch Internet Protocol Version 6 (IPv6). Wenn Windows mit IPv6 konfiguriert ist, erkennen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten automatisch das Vorhandensein von IPv6. Eine spezielle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfiguration ist nicht erforderlich.  
   
  Umfang der Unterstützung:  
@@ -44,4 +47,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)  
   
   
-

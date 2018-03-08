@@ -2,30 +2,30 @@
 title: "Weitere Möglichkeiten zum Anzeigen des Codefensters | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "26"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cae5ffe9e604be6525010d5f595752d599e2ab2c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 5977d22f769e8edc3244cdd64ed7a4cd75684a62
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>Lektion 2-5: Weitere Möglichkeiten zum Anzeigen des Codefensters
-Das Codefenster kann so konfiguriert werden, dass es mehrere Codefenster auf verschiedene Weisen anzeigt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Das Codefenster kann so konfiguriert werden, dass es mehrere Codefenster auf verschiedene Weisen anzeigt.  
   
 ## <a name="using-multiple-code-windows"></a>Verwenden mehrerer Codefenster  
   
@@ -44,9 +44,8 @@ Das Codefenster kann so konfiguriert werden, dass es mehrere Codefenster auf ver
 > [!NOTE]  
 > Wenn Sie den Abfrage-Editor im Vollbildmodus anzeigen möchten, klicken Sie auf eine beliebige Stelle im Abfrage-Editorfenster, und drücken Sie dann UMSCHALT+ALT+EINGABE.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Erstellen eines Skriptes für eine Tabelle](../../tools/sql-server-management-studio/lesson-2-6-script-a-table.md)  
   
   
   
-

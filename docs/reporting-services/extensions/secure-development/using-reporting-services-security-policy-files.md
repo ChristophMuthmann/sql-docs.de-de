@@ -1,13 +1,14 @@
 ---
-title: Verwenden von Reporting Services-Sicherheitsrichtliniendateien | Microsoft Docs
+title: Verwenden von Reporting Services-Richtliniendateien | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,22 +22,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 2a7354eba000f4982753d0253dd9dfbc70aa09bf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Berichtsserver und Windows-Dienst, Berichts-Manager-Webanwendung und Vorschaufenster des Berichts-Designers.  
   
 > [!NOTE]  
->  Es stehen zwei Vorschaumodi für den Berichts-Designer: Registerkarte "Vorschau" und das Popup-Vorschaufenster, das geöffnet wird, wenn der Start Ihres Berichtsprojekts im **DebugLocal** Modus. Die **Vorschau** Registerkarte "ist keine sicherungsfähige Komponente und gilt nicht sicherheitsrichtlinieneinstellungen. Im Vorschaufenster sollen die Berichtsserverfunktionen simuliert werden. Es enthält daher eine Richtlinienkonfigurationsdatei, die von Ihnen oder einem Administrator verändert werden muss, um benutzerdefinierte Assemblys und benutzerdefinierte Erweiterungen im Berichts-Designer zu verwenden.  
+>  Es stehen zwei Vorschaumodi für den Berichts-Designer zur Verfügung: die Registerkarte „Vorschau“ und das Popup-Vorschaufenster, das beim Start Ihres Berichtsprojekts im **DebugLocal**-Modus aufgerufen wird. Die Registerkarte **Vorschau** ist keine sicherungsfähige Komponente und übernimmt keine Sicherheitsrichtlinieneinstellungen. Im Vorschaufenster sollen die Berichtsserverfunktionen simuliert werden. Es enthält daher eine Richtlinienkonfigurationsdatei, die von Ihnen oder einem Administrator verändert werden muss, um benutzerdefinierte Assemblys und benutzerdefinierte Erweiterungen im Berichts-Designer zu verwenden.  
   
  Die Sicherheitsrichtlinien-Konfigurationsdateien enthalten Informationen zu Sicherheitsklassen, einige benannte Standardberechtigungssätze und die Codegruppen für Assemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die Richtlinien-Konfigurationsdateien von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] weisen Ähnlichkeiten mit der Security.config-Datei auf, in der die Codegruppenhierarchie und die Berechtigungssätze für Richtlinien auf Computer- und Unternehmensebene in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] festgelegt werden. Der Speicherort dieser Datei ist C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config.  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 08/12/2017
   
  Zusätzliche Codegruppen können nacheinander hinzugefügt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Understanding Security Policies (Grundlegendes zu Sicherheitsrichtlinien)](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
   
   

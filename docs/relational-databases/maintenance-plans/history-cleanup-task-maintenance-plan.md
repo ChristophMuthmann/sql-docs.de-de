@@ -2,31 +2,31 @@
 title: "Task „Verlaufscleanup“ (Wartungsplan) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.historycleanup.f1
-helpviewer_keywords:
-- History Cleanup Task dialog box
+f1_keywords: sql13.swb.maint.historycleanup.f1
+helpviewer_keywords: History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: aeace432c78f5a8179997697e316e874767b57fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Task 'Verlaufscleanup' (Wartungsplan)
-  Mithilfe des Dialogfelds **Task 'Verlaufscleanup'** können Sie alte Verlaufsdaten aus Tabellen in der msdb-Datenbank entfernen. Dieser Task unterstützt das Löschen des Sicherungs- und Wiederherstellungsverlaufs, des Auftragsverlaufs des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents und des Wartungsplanverlaufs.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe des Dialogfelds **Task „Verlaufscleanup“** können Sie alte Verlaufsdaten aus Tabellen in der msdb-Datenbank entfernen. Dieser Task unterstützt das Löschen des Sicherungs- und Wiederherstellungsverlaufs, des Auftragsverlaufs des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents und des Wartungsplanverlaufs.  
   
  Diese Anweisung verwendet die **sp_purge_jobhistory** - und **sp_delete_backuphistory** -Anweisungen.  
   
@@ -74,13 +74,13 @@ ms.lasthandoff: 06/22/2017
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
  Stellt eine Verbindung zu einer Instanz von SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit der SQL Server-Authentifizierung her. Diese Option ist nicht verfügbar.  
   
- **Benutzername**  
+ **User name**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
  **Kennwort**  
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

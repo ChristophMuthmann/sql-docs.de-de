@@ -3,30 +3,31 @@ title: "Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“) |
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2d2e378f807925b467f0ec01575678a31e548360
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: bbe33b53b8dcb416e808f7756fea7da465e61105
-ms.contentlocale: de-de
-ms.lasthandoff: 08/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“)
-Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die folgenden Befehle in Objektkontextmenüs im **Objekt-Explorer**angewendet werden:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die folgenden Befehle in Objektkontextmenüs im **Objekt-Explorer** angewendet werden:  
   
 -   **Bearbeiten**-Befehle für Benutzertabellen und Sichten.  
   
@@ -36,10 +37,10 @@ Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die fo
   
 -   Auf dieser Seite werden zudem die Standardwerte der Skripterstellungsoptionen für den **Assistenten zum Generieren von SQL Server-Skripts**festgelegt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Die Befehle **Bearbeiten** und **Ändern** führen möglicherweise zu Ergebnissen, die sich vom Befehl **Skript für <object> erstellen als** für die gleiche Optionseinstellung unterscheiden. Die Befehle **Bearbeiten** und **Ändern** sind für das Ändern von Objekten in der aktuellen Datenbank während einer Abfrage-Editor-Sitzung vorgesehen. Der Befehl **Skript für <object> erstellen als** ist zum Generieren eines Skripts vorgesehen, sodass es später zum Erstellen von Objekten verwendet werden kann.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 Geben Sie Skriptoptionen an, indem Sie eine Auswahl aus den verfügbaren Einstellungen in der Liste rechts neben den einzelnen Optionen treffen.  
   
 ### <a name="general-scripting-options"></a>Allgemeine Skripterstellungsoptionen  
@@ -156,4 +157,3 @@ Generierte Skripts werden auf die angegebene Version von [!INCLUDE[ssNoVersion](
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen von Skripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   
-

@@ -2,32 +2,31 @@
 title: Festlegen von Optionen und Layout | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.suite: sql
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "24"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lektion 1-2: Festlegen von Optionen und Layout
-Sie können Optionen festlegen, über die konfiguriert wird, welche grafische Benutzeroberfläche der Datenbankoptimierungsratgeber beim Starten anzeigt, welche Schriftart verwendet wird sowie weitere Funktionen, die Sie jeweils optimal unterstützen. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Optionen festlegen, die konfigurieren, welche die grafischen Benutzeroberfläche (GUI) von der Datenbankoptimierungsratgeber beim Starten der Schriftart anzeigt, die verwendet wird, sowie weitere Funktionen, die am besten unterstützen, wie er verwendet werden. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  
   
 ### <a name="set-the-tool-options"></a>Festlegen der Tooloptionen  
   
@@ -54,4 +53,3 @@ Sie können Optionen festlegen, über die konfiguriert wird, welche grafische Be
   
   
   
-

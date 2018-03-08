@@ -2,11 +2,13 @@
 title: SQL Server-Multisubnetzclustering (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - multi-site failover cluster
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 615d94c4058e25a12ebcd21619928507b928c2d8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e213c409060396b334958010e2799ea2c6eacd91
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server-Multisubnetzclustering (SQL Server)
-  Ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster ist eine Konfiguration, in der jeder Failoverclusterknoten mit einem anderen Subnetz oder einer anderen Gruppe von Subnetzen verbunden ist. Diese Subnetze können am gleichen Standort oder an geografisch verteilten Standorten sein. Das Clustering von weit verstreuten Standorten wird mitunter auch als Stretchcluster bezeichnet. Da kein freigegebener Speicher vorhanden ist, auf den alle Knoten zugreifen können, sollten die Daten zwischen den Datenspeichern in den verschiedenen Subnetzen repliziert werden. Infolge der Datenreplikation ist mehr als eine Kopie der Daten verfügbar. Multisubnetz-Failovercluster bieten somit neben hoher Verfügbarkeit auch eine Lösung zur Wiederherstellung im Notfall.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster ist eine Konfiguration, in der jeder Failoverclusterknoten mit einem anderen Subnetz oder einer anderen Gruppe von Subnetzen verbunden ist. Diese Subnetze können am gleichen Standort oder an geografisch verteilten Standorten sein. Das Clustering von weit verstreuten Standorten wird mitunter auch als Stretched Cluster bezeichnet. Da kein freigegebener Speicher vorhanden ist, auf den alle Knoten zugreifen können, sollten die Daten zwischen den Datenspeichern in den verschiedenen Subnetzen repliziert werden. Infolge der Datenreplikation ist mehr als eine Kopie der Daten verfügbar. Multisubnetz-Failovercluster bieten somit neben Hochverfügbarkeit auch eine Lösung zur Wiederherstellung im Notfall.  
   
    
 ##  <a name="VisualElement"></a> SQL Server-Multisubnetz-Failovercluster (zwei Knoten, zwei Subnetze)  
@@ -43,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 verbunden. Node2 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1, Node2 und Node3. Node1 und Node2 sind mit Subnet1 verbunden. Node3 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest. Da sich Node1 und Node2 im gleichen Subnetz befinden, bietet diese Konfiguration zusätzlich eine hohe lokale Verfügbarkeit.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1, Node2 und Node3. Node1 und Node2 sind mit Subnet1 verbunden. Node3 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest. Da sich Node1 und Node2 im gleichen Subnetz befinden, bietet diese Konfiguration zusätzlich lokale Hochverfügbarkeit.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 befindet sich in Subnet1. Node2 befindet sich in Subnet1 und Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest.  
   
@@ -87,4 +88,3 @@ ms.lasthandoff: 06/22/2017
 
   
   
-

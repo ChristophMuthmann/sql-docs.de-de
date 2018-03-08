@@ -2,9 +2,12 @@
 title: "Verwalten und Überwachen von Change Data Capture (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c5b04e64e1cea0c24a6695a46eac0a2f94d04cf
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
-  In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
   
 ##  <a name="Capture"></a> Aufzeichnungsauftrag  
  Der Aufzeichnungsauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur **sp_MScdc_capture_job**initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten Werte für *maxtrans*, *maxscans*, *continuous*und *pollinginterval* für den Aufzeichnungsauftrag aus „msdb.dbo.cdc_jobs“. Diese konfigurierten Werte werden dann als Parameter an die gespeicherte Prozedur **sp_cdc_scan**übergeben. Dies wird verwendet, um **sp_replcmds** zum Ausführen des Protokollscans aufzurufen.  
@@ -109,7 +113,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Führen Sie den folgenden Code aus, um für Change Data Capture einen benutzerdefinierten Sammler zu erstellen.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  
@@ -157,7 +161,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Greifen Sie in dem Data Warehouse, das Sie in Schritt 1 konfiguriert haben, auf die Tabelle custom_snapshots.cdc_log_scan_data zu. Diese Tabelle stellt eine Verlaufs-Momentaufnahme der Daten von Protokollscansitzungen bereit. Sie können diese Daten verwenden, um die Latenzzeit, den Durchsatz und andere Leistungskennzahlen in Abhängigkeit der Zeit zu analysieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

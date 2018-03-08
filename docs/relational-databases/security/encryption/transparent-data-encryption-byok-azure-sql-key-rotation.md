@@ -7,26 +7,27 @@ documentationcenter:
 author: becczhang
 manager: jhubbard
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: quick start create, mvc
-ms.workload: data-management
-ms.tgt_pltfrm: portal
+ms.custom: 
+ms.component: security
+ms.workload: Inactive
+ms.tgt_pltfrm: 
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
+ms.openlocfilehash: 85a1d74907dc3e6b887a172247850b9bc4452b31
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 2789dad4e4a68e96cd957b0aecfb9115588d4fa6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
---- 
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
+---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>Rotieren einer Transparent Data Encryption-Schutzvorrichtung (TDE) mithilfe von PowerShell 
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Dieser Leitfaden zur Vorgehensweise beschreibt die Schlüsselrotation für einen Server von Azure SQL Server mithilfe einer TDE-Schutzvorrichtung von Azure Key Vault. Das Rotieren einer TDE-Schutzvorrichtung eines Servers von Azure SQL Server bedeutet, dass zu einem asymmetrischen Schlüssel gewechselt wird, der die Datenbanken auf einem Server schützt. Die Schlüsselrotation ist ein Onlinevorgang und sollte in ein paar Sekunden abgeschlossen sein, da dieser nur den Datenverschlüsselungsschlüssel der Datenbank entschlüsselt und wieder verschlüsselt und nicht die gesamte Datenbank.
 
@@ -40,11 +41,11 @@ Dieser Leitfaden erläutert zwei Optionen zum Rotieren der TDE-Schutzvorrichtung
 > **Löschen Sie keine** vorherigen Versionen des Schlüssels nach einem Rollover.  Wenn die Schlüssel von neuem beginnen, sind einige Daten noch immer mit den vorherigen Schlüsseln verschlüsselt, z.B. ältere Datenbanksicherungen. 
 >
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - In diesem Leitfaden wird davon ausgegangen, dass Sie bereits einen Schlüssel von Azure Key Vault als TDE-Schutzvorrichtung für Azure SQL-Datenbank oder Data Warehouse verwenden. Weitere Informationen finden Sie unter [Transparent Data Encryption with BYOK Support (Transparente Datenverschlüsselung mit BYOK-Unterstützung)](transparent-data-encryption-byok-azure-sql.md).
 - Sie müssen eine Installation von Azure PowerShell Version 3.7.0 oder höher besitzen und diese ausführen. 
-- [Empfohlen aber optional] Erstellen Sie das Schlüsselmaterial für die TDE-Schutzvorrichtung zunächst in einem Hardwaresicherheitsmodul (HSM) oder einem lokalen Schlüsselspeicher, und importieren Sie das Schlüsselmaterial in Azure Key Vault. Weiter Informationen erhalten Sie, wenn Sie die Anweisungen unter [Instructions for using a hardware security module (HSM) and Key Vault (Anweisungen zur Verwendung eines Hardwaresicherheitsmodells (HSM) und Key Vault)](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started) befolgen.
+- [Empfohlen aber optional] Erstellen Sie das Schlüsselmaterial für die TDE-Schutzvorrichtung zunächst in einem Hardwaresicherheitsmodul (HSM) oder einem lokalen Schlüsselspeicher, und importieren Sie das Schlüsselmaterial in Azure Key Vault. Weiter Informationen erhalten Sie, wenn Sie die Anweisungen unter [Instructions for using a hardware security module (HSM) and Key Vault (Anweisungen zur Verwendung eines Hardwaresicherheitsmodells (HSM) und Key Vault)](https://docs.microsoft.com/azure/key-vault/key-vault-get-started) befolgen.
 
 ## <a name="option-1-auto-rotation"></a>Option 1: Automatische Rotation
 
@@ -115,4 +116,3 @@ Die Option verwendet die Cmdlets [Add-AzureKeyVaultKey](/powershell/module/azure
 - Im Falle eines Sicherheitsrisikos, erfahren Sie unter [Remove a potentially compromised key (Entfernen eines möglicherweise kompromittierten Schlüssels)](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md), wie Sie eine möglicherweise kompromittierten TDE-Schutzvorrichtung entfernen können. 
 
 - Erste Schritte mit der Bring Your Own Key-Unterstützung für TDE: [Turn on TDE using your own key from Key Vault using PowerShell (Aktivieren von TDE für das Verwenden Ihres eigenen Schlüssels von Key Vault mithilfe von PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md).
-

@@ -1,10 +1,13 @@
 ---
-title: "Transformation für Ausdruckssuche | Microsoft Docs"
+title: "Transformation für Ausdruckssuche | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,17 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-lookup-transformation"></a>Transformation für Ausdruckssuche
   Die Transformation für Ausdruckssuche vergleicht aus Text in einer Transformationseingabespalte extrahierte Ausdrücke mit Ausdrücken in einer Verweistabelle. Anschließend wird gezählt, wie häufig ein Ausdruck in der Nachschlagetabelle im Eingabedataset vorkommt. Dieser Wert wird zusammen mit dem Ausdruck aus der Verweistabelle in Spalten in der Transformationsausgabe geschrieben. Mit dieser Transformation können Sie eine benutzerdefinierte Kennwortliste basierend auf dem Eingabetext erstellen, einschließlich Worthäufigkeitsstatistiken.  
@@ -64,13 +66,13 @@ ms.lasthandoff: 08/19/2017
   
  Wenn ein Suchelement Ausdrücke enthält, die sich im Verweissatz überlappen (d. h. ein Unterausdruck ist in mehreren Verweisdatensätzen zu finden), gibt die Transformation für Ausdruckssuche nur ein Suchergebnis zurück. Das folgende Beispiel zeigt das Ergebnis für den Fall, dass ein Suchelement einen sich überlappenden Unterausdruck enthält. In diesem Fall ist *Windows*der überlappende Unterausdruck, der sich in zwei Verweisausdrücken findet. Die Transformation gibt jedoch keine zwei Ergebnisse, sondern nur einen Verweisausdruck zurück: *Windows*. Der zweite Verweisausdruck, *Windows 7 Professional*, wird nicht zurückgegeben.  
   
-|Element|Wert|  
+|Element|value|  
 |----------|-----------|  
 |Eingabeausdruck|Windows 7 Professional|  
 |Verweisausdrücke|Windows, Windows 7 Professional|  
 |Ausgabe|Windows|  
   
- Die Transformation für Ausdruckssuche kann Nomen und nominale Ausdrücke vergleichen, die Sonderzeichen enthalten, und die Daten in der Verweistabelle können diese Zeichen enthalten. Sonderzeichen sind wie folgt: %, @, &, $, #, \*,:,,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, ", und".  
+ Die Transformation für Ausdruckssuche kann Nomen und nominale Ausdrücke vergleichen, die Sonderzeichen enthalten, und die Daten in der Verweistabelle können diese Zeichen enthalten. Die Sonderzeichen sind die folgenden: %, @, &, $, #, \*, :, ;, ., **,**, !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, und ‘.  
   
 ## <a name="data-types"></a>Datentypen  
  Die Transformation für Ausdruckssuche kann nur eine Spalte vom Datentyp DT_WSTR oder DT_NTEXT verwenden. Wenn eine Spalte Text enthält, aber keinen dieser Datentypen aufweist, kann die Transformation für Datenkonvertierung dem Datenfluss eine Spalte vom Datentyp DT_WSTR oder DT_NTEXT hinzufügen und die Spaltenwerte in die neue Spalte kopieren. Die Ausgabe von der Transformation für Datenkonvertierung kann dann als Eingabe für die Transformation für Ausdruckssuche verwendet werden. Weitere Informationen finden Sie unter [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
@@ -111,7 +113,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Ausdruckssuche)
   Mithilfe der Registerkarte **Ausdruckssuche** des Dialogfelds **Transformations-Editor für Ausdruckssuche** können Sie eine Eingabespalte einer Suchspalte in einer Verweistabelle zuordnen und einen Alias für jede Ausgabespalte bereitstellen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Eingabespalten aus, die unverändert an die Ausgabe weitergegeben werden. Ziehen Sie eine Eingabespalte auf die Liste **Verfügbare Verweisspalten** , um sie einer Suchspalte in der Verweistabelle zuzuordnen. Die Eingabe- und Suchspalten müssen übereinstimmende, unterstützte Datentypen haben, entweder DT_NTEXT oder DT_WSTR. Wählen Sie eine Zuordnungszeile aus, und klicken Sie mit der rechten Maustaste darauf, um die Zuordnungen im Dialogfeld [Beziehungen erstellen](../../../integration-services/data-flow/transformations/create-relationships.md) zu bearbeiten.  
   
@@ -125,12 +127,12 @@ ms.lasthandoff: 08/19/2017
  Geben Sie einen Alias für jede Spalte ein. Standardmäßig wird der Name der Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   
  **Fehlerausgabe konfigurieren**  
- Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) die Optionen zur Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
+ Auf der Registerkarte [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Verweistabelle)
   Verwenden Sie die Registerkarte **Verweistabelle** im Dialogfeld **Transformations-Editor für Ausdruckssuche** , um die Verbindung mit der Verweistabelle (Nachschlagetabelle) anzugeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **OLE DB-Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
@@ -141,20 +143,19 @@ ms.lasthandoff: 08/19/2017
  Wählen Sie eine Nachschlagetabelle oder Sicht aus der Datenbank aus, indem Sie in der Liste ein Element auswählen. Die Tabelle oder Sicht sollte eine Spalte mit einer vorhandenen Liste von Ausdrücken enthalten, mit der der Text in der Quellspalte verglichen werden kann.  
   
  **Fehlerausgabe konfigurieren**  
- Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) die Optionen zur Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
+ Auf der Registerkarte [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdruckssuche** können Sie angeben, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Ausdruckssuche mit Unterscheidung nach Groß-/Kleinschreibung verwenden**  
  Geben Sie an, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird. Der Standardwert ist **False**.  
   
  **Fehlerausgabe konfigurieren**  
- Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) die Optionen zur Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
+ Auf der Registerkarte [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Fehler- und Meldungsreferenz von Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformation für Ausdrucksextrahierung](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
-

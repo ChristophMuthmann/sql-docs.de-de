@@ -3,7 +3,7 @@ title: DataSource-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ecdaaeab8b09f392e5f21f365b082872e20efbfc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b6003f19993835b937828948658e29cfb271cada
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datasource-property-ado"></a>DataSource-Eigenschaft (ADO)
 Gibt ein Objekt, das Daten als dargestellt, enthält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -53,4 +52,3 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset.
   
 ## <a name="see-also"></a>Siehe auch  
  [DataMember-Eigenschaft](../../../ado/reference/ado-api/datamember-property.md)
-

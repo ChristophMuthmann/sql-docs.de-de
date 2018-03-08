@@ -3,10 +3,12 @@ title: Abfrage mit Parametern (Visual Database Tools)|Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - parameters [SQL Server], queries
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e0db1311d470614c5ab30b960bbfe05d1bf86e5d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc12e48c23b2e362b972f6d6e6d04f953a8f09c3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Erstellen von Abfragen mit Parametern (Visual Database Tools)
-In vielen Fällen empfiehlt es sich, eine Abfrage zu erstellen, die Sie in den Anwendungen immer wieder für die Eingabe verschiedener Daten verwenden können. In diesem Abschnitt erhalten Sie Informationen darüber, wie Parameterabfragen für allgemeine Zwecke erstellt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In vielen Fällen empfiehlt es sich, eine Abfrage zu erstellen, die Sie in den Anwendungen immer wieder für die Eingabe verschiedener Daten verwenden können. In diesem Abschnitt erhalten Sie Informationen darüber, wie Parameterabfragen für allgemeine Zwecke erstellt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Parameterabfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  
@@ -43,4 +44,3 @@ Stellt Links zu Themen bereit, in denen die gängigsten Abfrageaufgaben behandel
 [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Enthält Links zu Themen, die verschiedene Suchverfahren und deren Anwendung erläutern.  
   
-

@@ -1,10 +1,13 @@
 ---
-title: "Ändern von Data Capture Designer für Oracle von attunity – F1-Hilfe-Referenz | Microsoft Docs"
+title: "Change Data Capture Designer für Oracle von Attunity – Referenz zur F1-Hilfe | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,24 +15,23 @@ ms.topic: reference
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da92c9619f8bfbfbe732fd349cac195bc4c89926
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c9b325d98bfad926ae8832c2cc765ddfb05c8da5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer für Oracle von Attunity – Referenz zur F1-Hilfe
   Der Change Data Capture Designer für Oracle von Attunity wird zum Erstellen und Verwalten der Oracle CDC-Instanz verwendet. In den Themen in diesem Abschnitt wird erläutert, wie Sie die verfügbaren Tasks in der CDC Designer Console ausführen.  
   
 ## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun?  
   
--   [Zugriff auf die CDC Designer Console](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)  
+-   [Zugreifen auf die CDC Designer Console](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)  
   
 -   [Verwalten eines CDC Service](../../integration-services/change-data-capture/manage-a-cdc-service.md)  
   
@@ -39,17 +41,17 @@ ms.lasthandoff: 08/03/2017
   
     -   [Erstellen der SQL Server-Änderungsdatenbank](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
-    -   [Herstellen einer Verbindung mit einer Oracle-Quelldatenbank](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
+    -   [Herstellen einer Verbindung zu einer Oracle-Quelldatenbank](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
     -   [Herstellen einer Verbindung mit Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
-    -   [Wählen Sie Oracle-Tabellen und Spalten](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+    -   [Auswählen von Oracle-Tabellen und -Spalten](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
     -   [Auswählen von Oracle-Tabellen zum Aufzeichnen von Änderungen](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
     -   [Vornehmen von Änderungen an den zum Aufzeichnen von Änderungen ausgewählten Tabellen](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
-    -   [Generieren Sie und führen Sie des ergänzenden Protokollierungsskripts aus](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
+    -   [Generieren und Ausführen des ergänzenden Protokollierungsskripts](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
     -   [Generieren von Spiegeltabellen und CDC-Aufzeichnungsinstanzen](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
@@ -65,9 +67,8 @@ ms.lasthandoff: 08/03/2017
   
     -   [Bearbeiten der Tabelleneigenschaften](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
-    -   [Überprüfen Sie und generieren Sie ergänzender Protokollierungsskripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+    -   [Überprüfen und Generieren ergänzender Protokollierungsskripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
     -   [Bearbeiten der erweiterten Eigenschaften](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
   
-

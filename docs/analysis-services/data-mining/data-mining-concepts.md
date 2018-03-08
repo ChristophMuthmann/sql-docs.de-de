@@ -2,12 +2,13 @@
 title: Datamining-Konzepte | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,20 +26,20 @@ helpviewer_keywords:
 - SSAS, data mining
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 48
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-concepts"></a>Data Mining-Konzepte
-  Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  
   
  Diese Muster und Trends können gesammelt und als *Data Mining-Modell*definiert werden. Miningmodelle können auf spezifische Szenarien angewendet werden, beispielsweise:  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 09/01/2017
   
  Microsoft SQL Server Data Mining stellt eine integrierte Umgebung für die Erstellung und Verwendung von Data Mining-Modellen zur Verfügung. Diese Umgebung umfasst SQL Server Development Studio mit Data Mining-Algorithmen und Abfragetools, die das Erstellen einer umfassenden Projektmappe für unterschiedlichste Projekte erleichtern, sowie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit Tools zum Durchsuchen von Modellen und Verwalten von Data Mining-Objekten. Weitere Informationen finden Sie unter [Erstellen mehrdimensionaler Modelle mit SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
- Ein Beispiel dafür, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools auf ein Geschäftsszenario angewandt werden können, finden Sie unter [Tutorial zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Ein Beispiel dafür, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools auf ein Geschäftsszenario angewandt werden können, finden Sie unter [Tutorial zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ##  <a name="DefiningTheProblem"></a> Definieren der Problemstellung  
  Wie das folgende Diagramm verdeutlicht, besteht der erste Schritt des Data Mining-Prozesses darin, die Problemstellung exakt zu definieren und Möglichkeiten aufzuzeigen, wie das Problem anhand der richtigen Daten gelöst werden kann.  
@@ -140,7 +141,7 @@ ms.lasthandoff: 09/01/2017
   
  Sie definieren die zu verwendenden Datenspalten, indem Sie eine Miningstruktur erstellen. Die Miningstruktur ist zwar mit der Datenquelle verknüpft, enthält bis zu ihrer Verarbeitung jedoch keine Daten. Wenn Sie die Miningstruktur verarbeiten, erzeugt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Aggregate und andere statistische Informationen, die zu Analysezwecken verwendet werden können. Diese Informationen können von allen Miningmodellen verwendet werden, die auf der Struktur basieren. Weitere Informationen dazu, wie Miningstrukturen mit Miningmodellen in Beziehung stehen, finden Sie unter [Logische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md).  
   
- Bevor die Struktur und das Modell verarbeitet werden, fungiert auch ein Miningmodell lediglich als Container, in dem die Spalten angegeben sind, die für die Eingabe verwendet werden, die Attribute, die Sie vorhersagen, und die Parameter, die den Algorithmus anweisen, wie die Daten verarbeitet werden. Die Modellverarbeitung wird häufig als *Training*bezeichnet. Training bezieht sich auf den Vorgang der Anwendung eines spezifischen mathematischen Algorithmus auf die Daten in der Struktur, um Muster zu extrahieren. Die im Trainingsprozess gefundenen Muster hängen von der Auswahl der Trainingsdaten, dem ausgewählten Algorithmus und dessen Konfiguration ab. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthält viele verschiedene Algorithmen, die für unterschiedliche Tasks ausgelegt sind und zur Erstellung unterschiedlicher Modelltypen dienen. Eine Liste der in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bereitgestellten Algorithmen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Bevor die Struktur und das Modell verarbeitet werden, fungiert auch ein Miningmodell lediglich als Container, in dem die Spalten angegeben sind, die für die Eingabe verwendet werden, die Attribute, die Sie vorhersagen, und die Parameter, die den Algorithmus anweisen, wie die Daten verarbeitet werden. Die Modellverarbeitung wird häufig als *Training*bezeichnet. Training bezieht sich auf den Vorgang der Anwendung eines spezifischen mathematischen Algorithmus auf die Daten in der Struktur, um Muster zu extrahieren. Die im Trainingsprozess gefundenen Muster hängen von der Auswahl der Trainingsdaten, dem ausgewählten Algorithmus und dessen Konfiguration ab. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]enthält viele verschiedene Algorithmen für einen anderen Typ von Vorgang geeignet sind, jede verfügt und einen anderen Typ von Modell erstellen. Eine Liste der in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bereitgestellten Algorithmen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  Darüber hinaus können Sie Parameter einsetzen, um jeden Algorithmus anzupassen, und Sie können Filter auf die Trainingsdaten anwenden, um nur eine Teilmenge der Daten zu verwenden, wodurch unterschiedliche Ergebnisse erreicht werden. Nachdem Daten durch das Modell gelaufen sind, enthält das Miningmodellobjekt Zusammenfassungen und Muster, die abgefragt oder für Vorhersagen verwendet werden können.  
   
@@ -168,7 +169,7 @@ ms.lasthandoff: 09/01/2017
   
  Sobald die Miningmodelle in eine Produktionsumgebung integriert wurden, stehen sie je nach Bedarf für zahlreiche Tasks zur Verfügung. Sie können u. a. folgende Tasks ausführen:  
   
--   Verwenden Sie die Modelle zum Erstellen von Vorhersagen, mit deren Hilfe Geschäftsentscheidungen getroffen werden können. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die DMX-Sprache zur Verfügung, die Sie zum Erstellen von Vorhersageabfragen verwenden können. Darüber hinaus unterstützt Sie der Generator für Vorhersageabfragen beim Erstellen der Abfragen. Weitere Informationen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md).  
+-   Verwenden Sie die Modelle zum Erstellen von Vorhersagen, mit deren Hilfe Geschäftsentscheidungen getroffen werden können. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Stellt die DMX-Sprache, die Sie, zum Erstellen von Vorhersageabfragen und dem Generator für Vorhersageabfragen verwenden können können Sie die Abfragen zu erstellen. Weitere Informationen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md).  
   
 -   Erstellen von Inhaltsabfragen, um Statistik, Regeln oder Formeln für das Modell abzurufen. Weitere Informationen finden Sie unter [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md).  
   
@@ -183,8 +184,7 @@ ms.lasthandoff: 09/01/2017
 -   Ein dynamischea Update der Modelle, während neue Daten in das Unternehmen kommen, und die konstante Vornahme von Änderungen zur Verbesserung der Effizienz der Lösung sollten Teil der Bereitstellungsstrategie sein. Weitere Informationen finden Sie unter [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)  
+ [Datamining-Lösungen](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

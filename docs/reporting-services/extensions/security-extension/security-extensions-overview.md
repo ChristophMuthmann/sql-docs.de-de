@@ -1,38 +1,36 @@
 ---
-title: "Übersicht über Sicherheitserweiterungen | Microsoft Docs"
+title: "Übersicht über Sicherheitserweiterungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- security [Reporting Services], extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: 22
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "22"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7e8c95a478e733722d3c80da4b5e12e992ef4da
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: e07a4bbc62bf15d03887b12912fea2e216ad28ef
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-extensions-overview"></a>Übersicht über Sicherheitserweiterungen
-  Eine [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Sicherheitserweiterung ermöglicht die Authentifizierung und Autorisierung von Benutzern oder Gruppen. Das heißt, verschiedene Benutzer können sich bei einem Berichtsserver anmelden und anhand ihrer Identitäten verschiedene Aufgaben oder Vorgänge ausführen. Standardmäßig [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine Windows-basierte authentifizierungserweiterung, die Windows-kontoprotokollen die Identitäten der Benutzer überprüft, der vorgibt zu Konten im System verfügen. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]wird ein Sicherheitssystem mit der rollenbasierten zum Autorisieren von Benutzern verwendet. Die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rollenbasierte Sicherheitsmodell ähnelt den rollenbasierten Sicherheitsmodelle anderer Technologien.  
+  Eine [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Sicherheitserweiterung ermöglicht die Authentifizierung und Autorisierung von Benutzern oder Gruppen. Das heißt, verschiedene Benutzer können sich bei einem Berichtsserver anmelden und anhand ihrer Identitäten verschiedene Aufgaben oder Vorgänge ausführen. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet standardmäßig eine Windows-basierte Authentifizierungserweiterung, die mit Windows-Kontoprotokollen die Identitäten von Benutzern überprüft, die angeben, im System über Konten zu verfügen. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] werden Benutzer mithilfe eines rollenbasierten Sicherheitssystems authentifiziert. Das rollenbasierte Sicherheitsmodell von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ähnelt den rollenbasierten Sicherheitsmodellen anderer Technologien.  
   
- Da sicherheitserweiterungen auf einer offenen und erweiterbaren API beruhen, können Sie neue Erweiterungen für Authentifizierung und Autorisierung in erstellen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Im Folgenden sehen Sie ein Beispiel einer typischen Sicherheitserweiterungsimplementierung, die mit formularbasierter Authentifizierung und Autorisierung arbeitet:  
+ Da Sicherheitserweiterungen auf einer offenen und erweiterbaren API beruhen, können Sie neue Authentifizierungs- und Autorisierungserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] erstellen. Im Folgenden sehen Sie ein Beispiel einer typischen Sicherheitserweiterungsimplementierung, die mit formularbasierter Authentifizierung und Autorisierung arbeitet:  
   
- ![Reporting Services-sicherheitserweiterungsprozess](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services-sicherheitserweiterungsprozess")  
+ ![Prozesse bei Reporting Services-Sicherheitserweiterungen](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services security extension process")  
   
  Wie in der Abbildung dargestellt, treten Authentifizierung und Autorisierung folgendermaßen auf:  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/12/2017
   
 2.  Der Benutzer gibt die Anmeldeinformationen an das Formular.  
   
-3.  Die Anmeldeinformationen des Benutzers werden gesendet, um den Reporting Services-Webdienst über die <xref:ReportService2010.ReportingService2010.LogonUser%2A> Methode.  
+3.  Die Anmeldeinformationen des Benutzers werden mithilfe der <xref:ReportService2010.ReportingService2010.LogonUser%2A>-Methode an den Reporting Services-Webdienst übermittelt.  
   
 4.  Der Webdienst ruft die vom Benutzer angegebene Sicherheitserweiterung auf und überprüft, ob der Benutzername und das Kennwort in der benutzerdefinierten Sicherheitsinstanz vorhanden sind.  
   
@@ -63,15 +61,14 @@ ms.lasthandoff: 08/12/2017
 13. Der Benutzer fordert so lange Operationen auf dem Berichtsserver an, bis die Sitzung beendet ist.  
   
 ## <a name="when-to-implement-a-security-extension"></a>Sinnvolles Implementieren von Sicherheitserweiterungen  
- Es wird empfohlen, dass Sie Windows-Authentifizierung, wenn überhaupt möglich verwenden. In den folgenden Fällen ist jedoch möglicherweise eine benutzerdefinierte Authentifizierung und Autorisierung für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] angemessener:  
+ Es wird empfohlen, immer die Windows-Authentifizierung zu verwenden. In den folgenden Fällen ist jedoch möglicherweise eine benutzerdefinierte Authentifizierung und Autorisierung für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] angemessener:  
   
 -   Sie haben eine Internet- oder Extranetanwendung, die keine Windows-Konten nutzen kann.  
   
 -   Sie haben benutzerdefinierte Benutzer und Rollen, die ein übereinstimmendes Autorisierungsschema in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] bereitstellen müssen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementieren von Sicherheitserweiterungen](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [Konfigurieren Sie Berichts-Manager, um die Übergabe von benutzerdefinierten Authentifizierungscookies](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
+ [Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   
-

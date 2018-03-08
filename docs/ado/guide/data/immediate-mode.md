@@ -3,7 +3,7 @@ title: Unmittelbarer Modus | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f737d3b05e27eff7aae0aa95ee336a054c38f29f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="immediate-mode"></a>Unmittelbarer Modus
 Unmittelbarer Modus im Endeffekt dasselbe ist bei der **LockType** -Eigenschaftensatz auf **AdLockOptimistic** oder **AdLockPessimistic**. In unmittelbarer Modus sind Änderungen zu einem Datensatz mit der Datenquelle weitergegeben, sobald Sie die Arbeit in einer Zeile abgeschlossen durch Aufrufen von deklarieren die **Update** Methode.  
@@ -43,4 +42,3 @@ Unmittelbarer Modus im Endeffekt dasselbe ist bei der **LockType** -Eigenschafte
  Wenn Sie eine neue Zeile, beim Aufrufen Hinzufügen der **CancelUpdate** -Methode, zur aktiven Zeile wird die Zeile, die vor dem aktuellen wurde die **AddNew** aufrufen.  
   
  Wenn Sie nicht die aktuelle Zeile geändert oder eine neue Zeile hinzugefügt haben, beim Aufrufen der **CancelUpdate** Methode wird ein Fehler generiert.
-

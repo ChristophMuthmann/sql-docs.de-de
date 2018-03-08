@@ -2,38 +2,35 @@
 title: "Identitätswechsel in tabellarischen Modellen von Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: aef09b5327408701f15e484bbcea1cab9d82622b
-ms.contentlocale: de-de
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>Identitätswechsel 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Dieser Artikel bietet Entwicklern von tabellarischen Modellen einen Überblick über die Anmeldeinformationen von Analysis Services Verwendung beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten von Daten (aktualisieren).  
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  In diesem Thema bietet Entwicklern von tabellarischen Modellen einen Überblick über die Anmeldeinformationen von Analysis Services Verwendung beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und verarbeiten (aktualisieren) von Daten.  
-
-##  <a name="bkmk_conf_imp_info"></a>Konfigurieren des Identitätswechsels  
+##  <a name="bkmk_conf_imp_info"></a> Konfigurieren des Identitätswechsels  
  Ein Modell vorhanden ist, wo und in welchem Kontext bestimmt, wie die Identitätswechselinformationen konfiguriert ist. Wenn Sie ein neues Modellprojekt erstellen, wird Identitätswechsel beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren von Daten in SQL Server Data Tools (SSDT) konfiguriert. Nachdem ein Modell bereitgestellt wurde, kann Identitätswechsel in Datenbank-Verbindungszeichenfolgeneigenschaft Modell mithilfe von SQL Server Management Studio (SSMS) konfiguriert werden. Für tabellarische Modelle in Azure Analysis Services können Sie SSMS oder die **anzeigen als: Skript** Modus im Designer browserbasierte zum Bearbeiten der Datei Model.bim im JSON-Format.
   
-##  <a name="bkmk_how_imper"></a>Wie der Identitätswechsel verwendet wird  
+##  <a name="bkmk_how_imper"></a> Wie der Identitätswechsel verwendet wird  
  *Identitätswechsel* ist die Fähigkeit einer Serveranwendung, z.B. Analysis Services, die Identität einer Clientanwendung anzunehmen. Analysis Services wird über ein Dienstkonto, allerdings, wenn der Server eine Verbindung mit einer Datenquelle herstellt Anwendung ein Identitätswechsel verwendet, sodass für den Datenimport und die Verarbeitung zugriffsüberprüfungen kann ausgeführt werden.  
   
  Für den Identitätswechsel verwendeten Anmeldeinformationen unterscheiden sich von den Anmeldeinformationen, denen Sie derzeit angemeldet sind. Angemeldeten Benutzers Anmeldeinformationen werden beim Erstellen eines Modells für bestimmte clientseitige Vorgänge verwendet.  
@@ -93,7 +90,6 @@ Wenn Daten nicht importiert oder verarbeitet werden, werden Identitätswechsel-A
 ## <a name="see-also"></a>Siehe auch  
  [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Datenquellen](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Tabellenmodelllösungsbereitstellung](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Bereitstellung von Tabellenmodelllösungen](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
-

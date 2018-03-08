@@ -2,12 +2,13 @@
 title: Modellierungsflags (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Modellierungsflags (Data Mining)
-  Sie können Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dazu verwenden, für einen Data Mining-Algorithmus zusätzliche Informationen zu den Daten bereitzustellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dazu verwenden, für einen Data Mining-Algorithmus zusätzliche Informationen zu den Daten bereitzustellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
   
  Einige Modellierungsflags werden auf der Ebene der Miningstruktur definiert, während andere auf der Ebene der Miningmodellspalte definiert werden. Beispielsweise wird das **NOT NULL** -Modellierungsflag für Miningstrukturspalten verwendet. Sie können zusätzliche Modellierungsflags für die Miningmodellspalten definieren, abhängig vom Algorithmus, den Sie zur Erstellung des Modells verwenden.  
   
@@ -110,14 +111,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Task|Thema|  
 |----------|-----------|  
-|Bearbeiten von Modellierungsflags mit dem Data Mining-Designer|[Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Angeben eines Tipps für den Algorithmus, um wahrscheinliche Regressoren zu empfehlen|[Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Siehe die von bestimmten Algorithmen (im Abschnitt "Modellierungsflags" für jedes Algorithmusreferenzthema) unterstützten Modellierungsflags|[Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Bearbeiten von Modellierungsflags mit dem Data Mining-Designer|[Zeigen Sie an oder ändern Sie die Modellierung von Ablaufverfolgungsflags &#40; Datamining &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Angeben eines Tipps für den Algorithmus, um wahrscheinliche Regressoren zu empfehlen|[Geben Sie eine Spalte in einem Modell als Regressor verwendet.](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Siehe die von bestimmten Algorithmen (im Abschnitt "Modellierungsflags" für jedes Algorithmusreferenzthema) unterstützten Modellierungsflags|[Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Weitere Informationen zu Miningstrukturspalten und den Eigenschaften, die Sie festlegen können|[Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Weitere Informationen zu Miningmodellspalten und Modellierungsflags, die für die Modellebene übernommen werden können|[Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Siehe Syntax zum Arbeiten mit Modellierungsflags in DMX-Anweisungen|[Modellierungsflags &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Verstehen von fehlenden Werten und wie mit diesen gearbeitet wird|[Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Verstehen von fehlenden Werten und wie mit diesen gearbeitet wird|[Fehlende Werte &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Weitere Informationen zum Verwalten von Modellen und Strukturen sowie Festlegen von Verwendungseigenschaften|[Verschieben von Data Mining-Objekten](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
-

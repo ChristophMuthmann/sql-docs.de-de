@@ -2,30 +2,32 @@
 title: Sichere Entwicklung (Replikation) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server replication], deployment
 - deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e255329a57a07eef46b9415a5fda63366f96298
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 91887cd8440fbe7427d4bdba3c50fda151e80ee3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-deployment-replication"></a>Sichere Bereitstellung (Replikation)
-  Dieser Abschnitt enthält Informationen darüber, wie Sie die Replikation besser sichern können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen darüber, wie Sie die Replikation besser sichern können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Schützen des Verteilers](../../../relational-databases/replication/security/secure-the-distributor.md)  
@@ -40,13 +42,13 @@ ms.lasthandoff: 06/22/2017
  [Sichern des Momentaufnahmeordners](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  Beschreibt die erforderlichen Berechtigungen für den Zugriff auf den Momentaufnahmeordner, bewährte Methoden zum Definieren des Speicherorts für den Ordner sowie Überlegungen zur Übermittlung von Momentaufnahmen über FTP.  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [Absichern der Replikation über das Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  Enthält Informationen zu virtuellen privaten Netzwerken und zur Websynchronisierung.  
   
  [Überlegungen zur Sicherheit für die Replikation von SQL Server Compact](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  
  Erläutert das Sichern der Konnektivität zwischen einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] und [!INCLUDE[ssEW](../../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheitsübersicht &#40;Replikation&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
  [Sichere Entwicklung &#40;Replikation&#41;](../../../relational-databases/replication/security/secure-development-replication.md)  
   

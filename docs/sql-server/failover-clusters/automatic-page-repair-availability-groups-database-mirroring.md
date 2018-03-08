@@ -2,11 +2,13 @@
 title: "Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ffb0714b75265db7e2188a39d1e8ada568ef3160
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)
-  Automatische Seitenreparatur wird von Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]unterstützt. Wenn bestimmte Fehlertypen eine Seite beschädigen und sie unlesbar machen, versucht ein Datenbank-Spiegelungspartner (Prinzipal oder Spiegel) oder ein Verfügbarkeitsreplikat (primär oder sekundär), die Seite automatisch wiederherzustellen. Der Partner/das Replikat, der/das die Seite nicht lesen kann, fordert eine neue Kopie der Seite von seinem Partner oder einem anderen Replikat an. Wenn die Anforderung erfolgreich ist, wird die nicht lesbare Seite durch die lesbare Kopie ersetzt. Dadurch wird der Fehler normalerweise behoben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Automatische Seitenreparatur wird von der Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] unterstützt. Wenn bestimmte Fehlertypen eine Seite beschädigen und sie unlesbar machen, versucht ein Datenbank-Spiegelungspartner (Prinzipal oder Spiegel) oder ein Verfügbarkeitsreplikat (primär oder sekundär), die Seite automatisch wiederherzustellen. Der Partner/das Replikat, der/das die Seite nicht lesen kann, fordert eine neue Kopie der Seite von seinem Partner oder einem anderen Replikat an. Wenn die Anforderung erfolgreich ist, wird die nicht lesbare Seite durch die lesbare Kopie ersetzt. Dadurch wird der Fehler normalerweise behoben.  
   
  Im Allgemeinen behandeln Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] E/A-Fehler auf dieselbe Weise. Die wenigen Unterschiede werden hier explizit beschrieben.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
  In der Prinzipaldatenbank/primären Datenbank wird die automatische Seitenreparatur nur ausgeführt, wenn sich die Datenbank im Status SYNCHRONIZED befindet und der Prinzipalserver/primäre Server noch Protokolldatensätze für die Datenbank an den Spiegelserver/sekundären Server sendet. Im Prinzip werden bei einer automatischen Seitenreparatur die folgenden Aktionen in dieser Reihenfolge ausgeführt:  
   
-1.  Wenn in der Prinzipaldatenbank/primären Datenbank auf einer Datenseite ein Lesefehler auftritt, fügt der Prinzipalserver/primäre Server in die Tabelle [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) eine Zeile mit dem entsprechenden Fehlerstatus ein. Zur Datenbankspiegelung fordert der Prinzipalserver dann eine Kopie der Seite vom Spiegelserver aus an. Für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]überträgt der primäre Server die Anforderung an alle sekundären Server und ruft die Seite vom Server ab, der als Erster antwortet. In der Anforderung werden die Seiten-ID und die LSN angegeben, die sich derzeit am Ende des geleerten Protokolls befindet. Die Seite wird mit *Wiederherstellung steht aus*gekennzeichnet. Das bedeutet, dass während der automatischen Seitenreparatur kein Zugriff auf die Seite möglich ist. Bei dem Versuch, während der Seitenreparatur auf die Seite zuzugreifen, wird der Fehler 829 (Wiederherstellung steht aus) ausgegeben.  
+1.  Wenn in der Prinzipaldatenbank/primären Datenbank auf einer Datenseite ein Lesefehler auftritt, fügt der Prinzipalserver/primäre Server in die Tabelle [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) eine Zeile mit dem entsprechenden Fehlerstatus ein. Zur Datenbankspiegelung fordert der Prinzipalserver dann eine Kopie der Seite vom Spiegelserver aus an. Für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]überträgt der primäre Server die Anforderung an alle sekundären Server und ruft die Seite vom Server ab, der als Erster antwortet. In der Anforderung werden die Seiten-ID und die LSN angegeben, die sich derzeit am Ende des geleerten Protokolls befindet. Die Seite wird mit *Wiederherstellung steht aus*gekennzeichnet. Das bedeutet, dass während der automatischen Seitenreparatur kein Zugriff auf die Seite möglich ist. Bei dem Versuch, während der Seitenreparatur auf die Seite zuzugreifen, wird der Fehler 829 (<localizedText>Wiederherstellung steht aus</localizedText>) ausgegeben.  
   
 2.  Nach Erhalt der Seitenanforderung wartet der Spiegelserver/sekundäre Server, bis das Protokoll bis zu der in der Anforderung angegebenen LSN wiederholt wurde. Dann versucht der Spiegelserver/sekundäre Server die Seite in seiner Kopie der Datenbank aufzurufen. Wenn der Zugriff möglich ist, sendet der Spiegelserver/sekundäre Server die Kopie der Seite an den Prinzipalserver/primären Server. Andernfalls gibt der Spiegelserver/sekundäre Server einen Fehler an den Prinzipalserver/primären Server zurück, und die automatische Seitenreparatur schlägt fehl.  
   
@@ -120,6 +122,5 @@ ms.lasthandoff: 06/22/2017
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
-
 
 

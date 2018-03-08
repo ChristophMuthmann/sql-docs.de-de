@@ -2,31 +2,32 @@
 title: "Veröffentlichungsinformationen, Agents (Mergeveröffentlichung) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1
+f1_keywords: sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 661a6f73257e23f44dc303349dce5de80fcd352d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 70827d7aff090787f25f0cc8966e2647a51f9a9a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-information-agents-merge-publication"></a>Veröffentlichungsinformationen, Agents (Mergeveröffentlichung)
-  Auf der Registerkarte **Agents** werden Zusammenfassungsinformationen zum Momentaufnahme-Agent für die ausgewählte Veröffentlichung angezeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf der Registerkarte **Agents** werden Zusammenfassungsinformationen zum Momentaufnahmen-Agent für die ausgewählte Veröffentlichung angezeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Ausführliche Informationen und die Aufträge für den Momentaufnahme-Agent können Sie anzeigen, indem Sie mit der rechten Maustaste in die Zeile des jeweiligen Agents klicken und eine Option im Kontextmenü auswählen. Wenn Sie die Anzeige der Daten im Raster ändern möchten, klicken Sie mit der rechten Maustaste auf das Raster, und klicken Sie anschließend auf eine der folgenden Optionen:  
   
 -   **Sortieren**: Sortieren Sie nach einer oder mehreren Spalten im Dialogfeld **Spalten sortieren** .  
@@ -62,7 +63,7 @@ ms.lasthandoff: 06/22/2017
  **Letzte Aktion**  
  Die letzte Aktion, die bei der letzten Ausführung des Agents ausgeführt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

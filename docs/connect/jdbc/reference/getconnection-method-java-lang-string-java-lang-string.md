@@ -3,29 +3,28 @@ title: GetConnection-Methode (java.lang.String, java.lang.String) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDataSource.getConnection (java.lang.String, java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDataSource.getConnection (java.lang.String, java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff4d2cc222f5440f25fcb9e5b0c06570ebc377e0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39b7a3bb2896ff308fc58510443bd54c487c77f8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection-Methode (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -69,4 +68,3 @@ public java.sql.Connection getConnection(java.lang.String username,
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
-

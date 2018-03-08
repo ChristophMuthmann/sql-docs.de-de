@@ -1,31 +1,33 @@
 ---
-title: Catalog. set_environment_reference_type (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.set_environment_reference_type (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a4f3e97d5b6dd1aea83d806c4c9d4dbeaa0d3524
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Legt den Verweistyp fest und den Umgebungsnamen verknüpft sind mit einem vorhandenen umgebungsverweis für ein Projekt in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Legt den Verweistyp und den Umgebungsnamen fest, die einem vorhandenen Umgebungsverweis für ein Projekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,20 +38,20 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @reference_id =] *Reference_id*  
+ [ @reference_id = ] *reference_id*  
  Der eindeutige Bezeichner des Umgebungsverweises, der aktualisiert werden soll. Der *reference_id* ist **bigint**.  
   
- [ @reference_type =] *Reference_type*  
+ [ @reference_type = ] *reference_type*  
  Gibt an, ob sich die Umgebung im gleichen Ordner wie das Projekt (relativer Verweis) oder in einem anderen Ordner (absoluter Verweis) befinden kann. Verwenden Sie den Wert `R` , um einen relativen Verweis anzugeben. Verwenden Sie den Wert `A` , um einen absoluten Verweis anzugeben. Der *reference_type* ist **char(1)**.  
   
- [ @environment_folder_name =] *Environment_folder_name*  
+ [ @environment_folder_name = ] *environment_folder_name*  
  Der Ordner, in dem sich die Umgebung befindet. Dieser Wert ist für absolute Verweise erforderlich. Der *environment_folder_name* ist **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -69,11 +71,10 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   Im `A` -Parameter wird mit dem Zeichen *A* ein absoluter Verweis angegeben, jedoch wurde im *environment_folder_name* -Parameter nicht der Name des Ordners angegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Projekt kann über relative oder absolute Umgebungsverweise verfügen. Relative Verweise verweisen mit dem Namen auf die Umgebung und erfordern, dass sich diese im gleichen Ordner wie das Projekt befindet. Absolute Verweise verweisen mit Name und Ordner auf die Umgebung und verweisen möglicherweise auf Umgebungen, die sich in einem anderen Ordner als das Projekt befinden. Ein Projekt kann auf mehrere Umgebungen verweisen.  
   
 > [!IMPORTANT]  
 >  Wenn ein relativer Verweis angegeben wird, wird der *environment_folder_name* -Parameterwert nicht verwendet, und der Umgebungsordnername wird automatisch auf **NULL**festgelegt. Wenn ein absoluter Verweis angegeben wird, muss der Umgebungsordnername im *environment_folder_name* -Parameter angegeben werden.  
   
   
-

@@ -2,11 +2,13 @@
 title: "Angeben eines Mergeartikelkonfliktlösers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2934cf0580b44b6a496f9dae4d5cd297cd8717d7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: fe9fd09314e8800921efbacec9289cf4e4df586b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-a-merge-article-resolver"></a>Angeben eines Mergeartikelkonfliktlösers
-  In diesem Thema wird beschrieben, wie ein Konfliktlöser für Mergeartikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]angegeben wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie ein Konfliktlöser für Mergeartikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] angegeben wird.  
   
  **In diesem Thema**  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -60,8 +62,8 @@ ms.lasthandoff: 06/22/2017
   
     -   Dem Server mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internetinformationsdienste (IIS) für ein Pullabonnement, das die Websynchronisierung verwendet.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- Nach dem Registrieren des Konfliktlösers geben Sie dessen Verwendung durch einen Artikel im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Konfliktlöser** an. Dieses Dialogfeld ist im Assistenten für neue Veröffentlichung über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ Nach dem Registrieren des Konfliktlösers geben Sie dessen Verwendung durch einen Artikel im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Konfliktlöser** an. Dieses Dialogfeld ist im Assistenten für neue Veröffentlichung über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>So geben Sie einen Konfliktlöser an  
   
@@ -91,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Um zu bestimmen, ob der gewünschte Konfliktlöser bereits registriert ist, führen Sie auf dem Verleger für eine beliebige Datenbank [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus. Daraufhin werden eine Beschreibung des benutzerdefinierten Konfliktlösers sowie der Klassenbezeichner (CLSID) für jeden auf dem Verteiler registrierten COM-basierten Konfliktlöser bzw. Informationen zur verwalteten Assembly für jeden auf dem Verteiler registrierten Geschäftslogikhandler angezeigt.  
   
-3.  Wenn der gewünschte benutzerdefinierte Konfliktlöser noch nicht registriert ist, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) aus. Geben Sie den Namen des Konfliktlösers für **@article_resolver**an. Bei Geschäftslogikhandlern ist dies der Anzeigenamen der Assembly. Geben Sie für COM-basierte Konfliktlöser den Klassenbezeichner CLSID der DLL für **@resolver_clsid** an, und für einen Geschäftslogikhandler den Wert **true** für **@is_dotnet_assembly**, den Namen der Assembly für **@dotnet_assembly_name**, und den vollqualifizierten Namen der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> überschreibt, für **@dotnet_class_name**.  
+3.  Wenn der gewünschte benutzerdefinierte Konfliktlöser noch nicht registriert ist, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) aus. Geben Sie den Namen des Konfliktlösers für **@article_resolver**an. Bei Geschäftslogikhandlern ist dies der Anzeigenamen der Assembly. Geben Sie für COM-basierte Konfliktlöser den Klassenbezeichner (CLSID) der DLL für **@resolver_clsid**an, und für einen Geschäftslogikhandler den Wert **true** für **@is_dotnet_assembly**, den Namen der Assembly für **@dotnet_assembly_name**und den vollqualifizierten Namen der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> für **@dotnet_class_name**angegeben wird.  
   
     > [!NOTE]  
     >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name**angegeben wird.  
@@ -147,8 +149,8 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[HowTo#sp_changemerge_resolver](../../../relational-databases/replication/codesnippet/tsql/specify-a-merge-article-_2.sql)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

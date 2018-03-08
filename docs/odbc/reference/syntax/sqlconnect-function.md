@@ -3,33 +3,30 @@ title: SQLConnect-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConnect
-helpviewer_keywords:
-- SQLConnect function [ODBC]
+f1_keywords: SQLConnect
+helpviewer_keywords: SQLConnect function [ODBC]
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9f2c2d3e8b60d0a73d1beba4f68148cd956431b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3954538b63739fe19435aeb5cd30449edbc9d24
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconnect-function"></a>SQLConnect-Funktion
 **Konformität**  
@@ -264,4 +261,3 @@ int main() {
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

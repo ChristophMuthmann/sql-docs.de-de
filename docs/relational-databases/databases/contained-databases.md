@@ -1,11 +1,13 @@
----
+﻿---
 title: "Eigenständige Datenbanken | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40dc720b7c0e74efbd1602d29af26da6320f66c1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: e8f178ea4a02f0481256d73423bdd83d4aa543cd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Eine *eigenständige Datenbank* ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der die Datenbank hostet, isoliert ist.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] hilft Benutzern dabei, ihre Datenbank von der Instanz auf vier Arten zu isolieren.  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 06/22/2017
  Ein Element, das die Datenbankbegrenzung überschreitet.  
   
  Nicht enthaltene Datenbank  
- Eine Datenbank, deren Eigenständigkeit auf **NONE** festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE** festgelegt.   
+ Eine Datenbank, deren Eigenständigkeit auf **NONE** festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE** festgelegt.  
   
  Teilweise enthaltene Datenbank  
  Eine teilweise eigenständige Datenbank ist eine eigenständige Datenbank, die einige Funktionen zulassen kann, die die Datenbankbegrenzung überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die Fähigkeit ein zu bestimmen, wann die Kapselungsbegrenzung überschritten wird.  
@@ -120,7 +122,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="benefit-of-contained-database-users-with-always-on"></a>Vorteil Benutzern von eigenständigen Datenbanken mit Always On  
  Durch die Reduzierung der Verknüpfungen in Bezug auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können teilweise eigenständige Datenbanken bei einem Failover nützlich sein, wenn Sie [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]verwenden.  
   
- Durch die Erstellung von enthaltenen Benutzern kann der Benutzer direkt eine Verbindung mit der enthaltenen Datenbank herstellen. Dies ist eine sehr bedeutende Funktion in Szenarien mit hoher Verfügbarkeit und Notfallwiederherstellung, z.B. in einer Always On-Lösung. Wenn die Benutzer enthaltene Benutzer sind, können bei einem Failover Verbindungen zur sekundären Komponente hergestellt werden, ohne dass Anmeldungen bei der Instanz erforderlich sind, die die sekundäre Komponente hostet. Dies bietet einen unmittelbaren Vorteil. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) und [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Durch die Erstellung von enthaltenen Benutzern kann der Benutzer direkt eine Verbindung mit der enthaltenen Datenbank herstellen. Dies ist eine sehr bedeutende Funktion in Szenarien mit Hochverfügbarkeit und Notfallwiederherstellung, z.B. in einer Always On-Lösung. Wenn die Benutzer enthaltene Benutzer sind, können bei einem Failover Verbindungen zur sekundären Komponente hergestellt werden, ohne dass Anmeldungen bei der Instanz erforderlich sind, die die sekundäre Komponente hostet. Dies bietet einen unmittelbaren Vorteil. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) und [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Anfängliche Datenbankentwicklung  
  Da einem Entwickler möglicherweise nicht bekannt ist, wo eine neue Datenbank bereitgestellt wird, verringern sich durch das Beschränken der Auswirkungen der Bereitstellungsumgebung der Arbeitsaufwand und die Probleme für den Entwickler. Im nicht enthaltenen Modell muss der Entwickler beim Programmieren mögliche Umgebungsauswirkungen auf die neue Datenbank berücksichtigen. Mit teilweise eigenständigen Datenbanken können Entwickler jedoch Auswirkungen auf Instanzebene auf die Datenbank und Aspekte auf Instanzebene für den Entwickler erkennen.  
@@ -153,7 +155,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage-Ereignis  
  Dieses XEvent wird ausgelöst, wenn nicht enthaltene Entität zur Laufzeit bestimmt wird. Dies schließt in Clientcode ausgelöste Entitäten ein. Dieses Xevent wird nur für tatsächliche nicht enthaltene Entitäten ausgelöst. Das Ereignis wird jedoch nur zur Laufzeit ausgelöst. Daher werden alle nicht enthaltenen Benutzerentitäten, die nicht ausgeführt wurden, von diesem XEvent nicht identifiziert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Geänderte Funktionen &#40;Enthaltene Datenbank&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
@@ -161,4 +163,3 @@ ms.lasthandoff: 06/22/2017
  [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   
-

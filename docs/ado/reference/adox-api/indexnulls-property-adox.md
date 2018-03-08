@@ -3,7 +3,7 @@ title: IndexNulls-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,19 +22,18 @@ f1_keywords:
 helpviewer_keywords:
 - IndexNulls property [ADOX]
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 19af90b5272ea9a7232a34d922583111e6e7365c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f040cded9fb01fbe140a2a7215fd7ba333f4104a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="indexnulls-property-adox"></a>IndexNulls-Eigenschaft (ADOX)
+# <a name="indexnulls-property-adox"></a>IndexNulls Property (ADOX)
 Gibt an, ob Datensätze mit null-Werte in ihren Indexfelder über Indexeinträge verfügen.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
@@ -48,4 +47,3 @@ Gibt an, ob Datensätze mit null-Werte in ihren Indexfelder über Indexeinträge
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für IndexNulls-Eigenschaft (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
-

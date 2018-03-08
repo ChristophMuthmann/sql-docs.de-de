@@ -3,7 +3,7 @@ title: Resync-Befehl Eigenschaft dynamisch (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 43e3b1fdebfeb24233e36324f1225868353d25a8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cfa4fee83eef9c17a7dfb1eae6dbad64be2c98ce
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync-Befehl Eigenschaft dynamisch (ADO)
 Gibt an, ein Befehl Benutzer bereitgestellte Zeichenfolge, die [Resync](../../../ado/reference/ado-api/resync-method.md) Probleme der Methode zum Aktualisieren der Daten in der Tabelle mit dem Namen der [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamische Eigenschaft.  
@@ -92,4 +91,3 @@ WHERE Orders.ordid  = @ordid
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

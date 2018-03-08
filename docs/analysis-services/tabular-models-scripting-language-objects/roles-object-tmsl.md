@@ -2,32 +2,29 @@
 title: Rollenobjekt (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1812f60b-bd5f-417c-96bc-3d834bdb4d3c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 257ead3072f8b359bff275709ee372483989fccf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8073ac6a467673a5781f747c1a8ab60be17f31a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="roles-object-tmsl"></a>Rollenobjekt (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Definiert eine Rolle für das Modell, das eine Auflistung von Berechtigungen angibt. Mitgliedschaft in Datenbankrolle besteht aus Windows-Sicherheitsprinzipalen. Sie können Filter festlegen, für eine Rolle den Zugriff auf bestimmte Objekte einschränken.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert eine Rolle für das Modell, das eine Auflistung von Berechtigungen angibt. Mitgliedschaft in Datenbankrolle besteht aus Windows-Sicherheitsprinzipalen. Sie können Filter festlegen, für eine Rolle den Zugriff auf bestimmte Objekte einschränken.  
   
 ## <a name="object-definition"></a>Objektdefinition  
  Alle Objekte verfügen über einen gemeinsamen Satz von Eigenschaften, einschließlich Name, Typ, Beschreibung, eine eigenschaftsauflistung und Anmerkungen. **Rolle** Objekte verfügen außerdem über die folgenden Eigenschaften.  
@@ -271,4 +268,3 @@ ms.lasthandoff: 09/01/2017
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
-

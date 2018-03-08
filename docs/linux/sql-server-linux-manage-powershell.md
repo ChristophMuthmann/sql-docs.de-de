@@ -1,27 +1,31 @@
 ---
 title: Verwalten von SQLServer on Linux mit PowerShell | Microsoft Docs
-description: "Dieses Thema enthält eine Übersicht über die Verwendung von PowerShell unter Windows mit SQL Server on Linux."
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+description: "Dieser Artikel enthält eine Übersicht über die Verwendung von PowerShell unter Windows mit SQL Server on Linux."
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
+ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 7b607d624207b75ac2488f55fb75353110cf252c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von PowerShell unter Windows zum Verwalten von SQLServer on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Thema enthält [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) und führt Sie durch ein paar Beispiele zum mit SQL Server-2017 unter Linux verwenden. PowerShell-Unterstützung für SQL Server ist derzeit unter Windows verfügbar, damit Sie es verwenden können, wenn Sie einen Windows-Computer verfügen, der mit einer SQL Server-Remoteinstanz unter Linux eine Verbindung herstellen können.
+Dieser Artikel führt [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) und führt Sie durch ein paar Beispiele zum mit SQL Server-2017 unter Linux verwenden. PowerShell-Unterstützung für SQL Server ist derzeit unter Windows verfügbar, damit Sie es verwenden können, wenn Sie einen Windows-Computer verfügen, der mit einer SQL Server-Remoteinstanz unter Linux eine Verbindung herstellen können.
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Installieren Sie die neueste Version von SQL PowerShell unter Windows
 
@@ -41,19 +45,19 @@ PowerShell
 
 SQL Server bietet ein Windows PowerShell-Modul, das mit dem Namen **SqlServer** , dass Sie zum Importieren von SQL Server-Komponenten (SQL Server-Anbieter und Cmdlets) in einem PowerShell-Umgebung oder dieses Skript verwenden können.
 
-Kopieren Sie den unten stehenden Befehl an der PowerShell-Eingabeaufforderung Importieren der **SqlServer** -Modul in Ihrer aktuellen PowerShell-Sitzung:
+Kopieren Sie den folgenden Befehl an der PowerShell-Eingabeaufforderung Importieren der **SqlServer** -Modul in Ihrer aktuellen PowerShell-Sitzung:
 
 ```powershell
 Import-Module SqlServer
 ```
 
-Geben Sie den unten stehenden Befehl an der PowerShell-Eingabeaufforderung zu überprüfen, ob die **SqlServer** Modul ordnungsgemäß importiert wurde:
+Geben Sie den folgenden Befehl an der PowerShell-Eingabeaufforderung zu überprüfen, ob die **SqlServer** Modul ordnungsgemäß importiert wurde:
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell sollte etwa wie folgt anzeigen:
+PowerShell sollte die folgende Ausgabe ähnliche Informationen anzeigen:
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -66,7 +70,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 Wir verwenden von PowerShell unter Windows unter Linux die 2017 von SQL Server-Instanz herstellen und eine Reihe von Servereigenschaften anzuzeigen.
 
-Kopieren Sie die nachfolgenden Befehle an der PowerShell-Eingabeaufforderung. Wenn Sie diese Befehle ausführen, sehen PowerShell:
+Kopieren Sie die folgenden Befehle an der PowerShell-Eingabeaufforderung. Wenn Sie diese Befehle ausführen, sehen PowerShell:
 - Anzeigen der *Windows PowerShell anmelden* Dialogfeld, das Sie zum Angeben der Anmeldeinformationen aufgefordert werden (*SQL-Benutzername* und *SQL-Kennwort*) zur Verbindung mit Ihrem SQL Server-2017 die Instanz unter Linux
 - Laden Sie die SQL Server Management Objects (SMO)-assembly
 - Erstellen Sie eine Instanz von der [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) Objekt
@@ -93,7 +97,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell sollte ähnlich wie nachfolgend gezeigt Informationen anzuzeigen:
+PowerShell sollte die folgende Ausgabe ähnliche Informationen anzeigen:
 
 ```
 Edition          : Developer Edition (64-bit)
@@ -107,7 +111,7 @@ HostDistribution : Ubuntu
 
 Verwenden von PowerShell unter Windows Fehlerprotokolle untersuchen wir für Ihre 2017 von SQL Server-Instanz unter Linux verbinden. Wir verwenden ebenfalls die **Out GridView** -Cmdlet zum Anzeigen von Informationen aus den Fehler protokolliert, in einem Raster anzeigen.
 
-Kopieren Sie die nachfolgenden Befehle an der PowerShell-Eingabeaufforderung. Sie möglicherweise einige Minuten ausgeführt. Diese Befehle führen die folgenden:
+Kopieren Sie die folgenden Befehle an der PowerShell-Eingabeaufforderung. Sie möglicherweise einige Minuten ausgeführt. Diese Befehle führen die folgenden:
 - Anzeigen der *Windows PowerShell anmelden* Dialogfeld, das Sie zum Angeben der Anmeldeinformationen aufgefordert werden (*SQL-Benutzername* und *SQL-Kennwort*) zur Verbindung mit Ihrem SQL Server-2017 die Instanz unter Linux
 - Verwenden der **Get-SqlErrorLog** -Cmdlet zum Herstellen einer Verbindung mit der 2017 von SQL Server-Instanz unter Linux und Abrufen von Fehler protokolliert seit **gestern**
 - Die Ausgabe an die **Out GridView** Cmdlet
@@ -125,4 +129,3 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 ## <a name="see-also"></a>Siehe auch
 - [SQL Server-PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-

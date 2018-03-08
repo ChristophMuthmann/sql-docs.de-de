@@ -2,9 +2,12 @@
 title: Aktivieren und Deaktivieren von Change Data Capture (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cf419d411328bd5c437dfbd93d419b7fd944a495
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Aktivieren und Deaktivieren von Change Data Capture (SQL Server)
-  In diesem Thema wird beschrieben, wie Sie Change Data Capture für Datenbanken und Tabelle aktivieren und deaktivieren können.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie Change Data Capture für Datenbanken und Tabelle aktivieren und deaktivieren können.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Aktivieren von Change Data Capture für eine Datenbank  
  Bevor eine Aufzeichnungsinstanz für einzelne Tabellen erstellt werden kann, muss ein Mitglied der festen Serverrolle **sysadmin** zuerst die Datenbank für Change Data Capture aktivieren. Dies erfolgt durch Ausführen der gespeicherten Prozedur [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) im Kontext der Datenbank. Um zu bestimmen, ob die Datenbank bereits aktiviert ist, fragen Sie die **is_cdc_enabled**-Spalte in der **sys.databases**-Katalogsicht ab.  
@@ -41,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Um die Vorlagen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu suchen, rufen Sie **Ansicht**auf, klicken Sie auf **Vorlagen-Explorer**, und wählen Sie dann **SQL Server-Vorlagen**aus. **Change Data Capture** ist ein Unterordner. In diesem Ordner finden Sie alle Vorlagen, auf die in diesem Thema verwiesen wird. Es gibt auch ein **Vorlagen-Explorer** -Symbol auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Symbolleiste.  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -61,7 +65,7 @@ GO
 > [!IMPORTANT]  
 >  Um die Vorlagen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu suchen, rufen Sie **Ansicht**auf, klicken Sie auf **Vorlagen-Explorer**, und klicken Sie dann auf **SQL Server-Vorlagen**. **Change Data Capture** ist ein Unterordner, in dem Sie alle Vorlagen finden, auf die in diesem Thema verwiesen wird. Es gibt auch ein **Vorlagen-Explorer** -Symbol auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Symbolleiste.  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -84,7 +88,7 @@ GO
   
  Standardmäßig befindet sich die Änderungstabelle in der Standarddateigruppe der Datenbank. Wenn ein Datenbankbesitzer die Position der einzelnen Änderungstabellen steuern möchte, kann er den Parameter *@filegroup_name* verwenden, um für die Änderungstabelle der Aufzeichnungsinstanz eine bestimmte Dateigruppe anzugeben. Die benannte Dateigruppe muss bereits vorhanden sein. Im Allgemeinen empfehlen wir, Änderungstabellen in eine von den Quelltabellen getrennte Dateigruppe einzufügen. Ein Beispiel für die Verwendung des Parameters **@filegroup_name** finden Sie in der Vorlage *@filegroup_name* .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -106,7 +110,7 @@ GO
   
  Wenn Sie keine Gatingrolle verwenden möchten, legen Sie den *@role_name* -Parameter explizit auf NULL fest. Ein Beispiel für das Aktivieren einer Tabelle ohne Gatingrolle finden Sie unter **Enable a Table Without Using a Gating Role** .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -131,7 +135,7 @@ GO
   
  Ein Beispiel zur Erläuterung der Erstellung einer Aufzeichnungsinstanz mit beiden Abfragefunktionen finden Sie in der Vorlage **Enable a Table for All and Net Changes Queries** .  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -155,7 +159,7 @@ GO
   
  Ein Beispiel für das Deaktivieren einer Tabelle finden Sie in der Vorlage "Eine Aufzeichnungsinstanz für eine Tabelle deaktivieren".  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  
@@ -168,7 +172,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

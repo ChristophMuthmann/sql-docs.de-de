@@ -2,11 +2,13 @@
 title: Erstellen von EXTERNEN Bibliothek (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,23 +16,20 @@ f1_keywords:
 - CREATE_EXTERNAL_LIBRARY_TSQL
 - EXTERNAL LIBRARY
 - EXTERNAL_LIBRARY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- CREATE EXTERNAL LIBRARY
+dev_langs: TSQL
+helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 8066d267790f346a22a649fb0c873a3d454489a8
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-library-transact-sql"></a>Erstellen von EXTERNEN Bibliothek (Transact-SQL)  
+# <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Hochladen von R-Pakete in einer Datenbank aus dem angegebenen Stream oder Dateipfad.
 
@@ -192,8 +191,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 
 ## <a name="see-also"></a>Siehe auch
 
-[ALTER externe Bibliothek (Transact-SQL)](alter-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [Löschen von EXTERNEN Bibliothek (Transact-SQL)](drop-external-library-transact-sql.md)  
-[Sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[Sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-
+[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

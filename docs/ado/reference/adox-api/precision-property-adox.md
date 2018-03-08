@@ -3,7 +3,7 @@ title: Precision-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADOX]
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b27fa294315704dc0f7f7b86db061f1094491412
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c94776e31edda153e8f779425ac8eaef2db58ab
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="precision-property-adox"></a>Precision-Eigenschaft (ADOX)
 Gibt die maximale Genauigkeit von Datenwerten in den [Spalte](../../../ado/reference/adox-api/column-object-adox.md).  
@@ -52,4 +51,3 @@ Gibt die maximale Genauigkeit von Datenwerten in den [Spalte](../../../ado/refer
  [ADOX-Codebeispiel: NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type-Eigenschaft (Spalte) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-

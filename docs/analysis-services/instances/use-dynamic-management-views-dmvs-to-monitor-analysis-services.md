@@ -1,31 +1,30 @@
 ---
 title: "Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.date: 12/15/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 07565f6092a8f4e642234038c05a0f83024ce6a4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
-  Dynamische Verwaltungssichten (DMV) von Analysis Services sind Abfragestrukturen, die Informationen zu lokalen Servervorgängen und zum Serverstatus verfügbar machen. Die Abfragestruktur stellt eine Schnittstelle zu Schemarowsets dar, die Metadaten und Überwachungsinformationen zu einer Analysis Services-Instanz zurückgeben.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services dynamische Verwaltungssichten (DMV) sind Abfragestrukturen, die Informationen zu lokalen Servervorgängen und zum Serverstatus verfügbar machen. Die Abfragestruktur stellt eine Schnittstelle zu Schemarowsets dar, die Metadaten und Überwachungsinformationen zu einer Analysis Services-Instanz zurückgeben.  
   
  Für die meisten DMV-Abfragen verwenden Sie eine **SELECT** -Anweisung und das **$System** -Schema mit einem XML/A-Schemarowset.  
   
@@ -35,24 +34,12 @@ SELECT * FROM $System.<schemaRowset>
   
  DMV-Abfragen geben Informationen zum Serverstatus zurück, der während der Ausführung der Abfrage gegolten hat. Verwenden Sie stattdessen die Ablaufverfolgung, um Vorgänge in Echtzeit zu überwachen. Weitere Informationen finden Sie unter [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
- Dieses Thema enthält folgende Abschnitte:  
-  
- [Vorteile der Verwendung von DMV-Abfragen](#bkmk_ben)  
-  
- [Beispiele und Szenarien](#bkmk_ex)  
-  
- [Abfragesyntax](#bkmk_syn)  
-  
- [Tools und Berechtigungen](#bkmk_tools)  
-  
- [DMV-Referenz](#bkmk_ref)  
-  
-##  <a name="bkmk_ben"></a> Vorteile der Verwendung von DMV-Abfragen  
+##  <a name="bkmk_ben"></a>Vorteile der Verwendung von DMV-Abfragen  
  DMV-Abfragen geben Informationen zu Vorgängen und zum Ressourcenverbrauch zurück, die nicht auf anderen Wegen verfügbar sind.  
   
  DMV-Abfragen stellen eine Alternative zur Ausführung von XML/A-Discover-Befehlen dar. Für die meisten Administratoren ist das Schreiben einer DMV-Abfrage einfacher, weil die Abfragesyntax auf SQL basiert. Außerdem wird das Resultset in einem tabellarischen Format zurückgegeben, das besser lesbar ist und aus dem besser kopiert werden kann.  
   
-##  <a name="bkmk_ex"></a> Beispiele und Szenarien  
+##  <a name="bkmk_ex"></a>Beispiele und Szenarien  
  Eine DMV-Abfrage kann Ihnen helfen, Fragen zu aktiven Sitzungen und Verbindungen sowie die Frage zu beantworten, welche Objekte zu einem bestimmten Zeitpunkt den höchsten CPU-Anteil oder den meisten Arbeitsspeicher nutzen. Dieser Abschnitt enthält Beispiele für die Szenarien, in denen DMV-Abfragen am häufigsten verwendet werden. Weitere Informationen zur Verwendung von DMV-Abfragen für die Überwachung einer Serverinstanz finden Sie auch im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) .  
   
  `Select * from $System.discover_object_activity` /** Diese Abfrage erstellt einen Bericht zu der Objektaktivität seit dem letzten Start des Diensts. Beispielabfragen auf Grundlage dieser DMV-Abfrage finden Sie unter [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
@@ -63,10 +50,10 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** Diese Abfrage gibt eine Momentaufnahme der Sperren zurück, die zu verschiedenen Zeitpunkten verwendet werden.  
   
-##  <a name="bkmk_syn"></a> Abfragesyntax  
+##  <a name="bkmk_syn"></a>Abfragesyntax  
  Das Abfragemodul für DMVs ist der Data Mining-Parser. Die DMV-Abfragesyntax basiert auf der [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)-Anweisung.  
   
- Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
+ Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
   
 ```  
 SELECT [DISTINCT] [TOP <n>] <select list>  
@@ -88,14 +75,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> Tools und Berechtigungen  
+##  <a name="bkmk_tools"></a>Tools und Berechtigungen  
  Sie müssen über Systemadministratorberechtigungen für die Analysis Services-Instanz verfügen, um eine DMV-Abfrage ausführen zu können.  
   
  Sie können jede beliebige Clientanwendung verwenden, die MDX- oder DMX-Abfragen unterstützt, z. B. SQL Server Management Studio, einen Reporting Services-Bericht oder ein PerformancePoint-Dashboard.  
   
  Stellen Sie zum Ausführen einer DMV-Abfrage in Management Studio eine Verbindung mit der Instanz her, die Sie abfragen möchten, und klicken Sie auf **Neue Abfrage**. Sie können eine Abfrage über ein MDX- oder DMX-Abfragefenster ausführen.  
   
-##  <a name="bkmk_ref"></a> DMV-Referenz  
+##  <a name="bkmk_ref"></a>DMV-Referenz  
  Nicht alle Schemarowsets verfügen über eine DMV-Schnittstelle. Führen Sie die folgende Abfrage aus, um eine Liste aller Schemarowsets zurückzugeben, die per DMV abgefragt werden können.  
   
 ```  
@@ -169,10 +156,8 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES-Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Gibt den vollqualifizierten Namen jeder Eigenschaft zusammen mit Eigenschaftstyp, Datentyp und anderen Metadaten zurück.|  
 |[MDSCHEMA_SETS-Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Gibt eine Liste mit den Sätzen zurück, die unter der aktuellen Verbindung definiert sind.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+## <a name="see-also"></a>Siehe auch   
  [New System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Neue SYSTEMRESTRICTEDSCHEMA-Funktion für eingeschränkte Rowsets und DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   
-

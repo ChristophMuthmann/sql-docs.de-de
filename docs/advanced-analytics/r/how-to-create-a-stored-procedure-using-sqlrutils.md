@@ -2,29 +2,30 @@
 title: 'Vorgehensweise: Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils| Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 10
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 908f97aa0025fe737c22c3fc335d118b16c2507b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema werden die Schritte beschrieben, in denen Sie R-Code so konvertieren, dass er als gespeicherte T-SQL-Prozedur ausgeführt werden kann. Zum Erzielen bestmöglicher Ergebnisse kann es erforderlich sein, dass Ihr Code ein wenig geändert wird, damit sichergestellt ist, dass alle Eingaben parametrisiert werden können.
 
@@ -240,6 +241,5 @@ myetl1function <- function() {
 ## <a name="see-also"></a>Siehe auch
 
 [Generieren einer gespeicherten Prozedur mithilfe von sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-
 
 

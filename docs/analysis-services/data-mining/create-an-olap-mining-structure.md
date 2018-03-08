@@ -2,29 +2,30 @@
 title: Erstellen eine OLAP-Miningstruktur | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>Erstellen einer OLAP-Miningstruktur
-  Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder eines anderen mehrdimensionalen Datenspeichers bietet zahlreiche Vorteile. Eine OLAP-Lösung enthält bereits umfangreiche Datenmengen, die gut organisiert, bereinigt und ordnungsgemäß formatiert sind. Die Komplexität der Daten ist jedoch so hoch, dass Benutzer wahrscheinlich kaum sinnvolle Muster mittels Ad-hoc-Untersuchungen erkennen können. Data Mining bietet die Möglichkeit, neue Korrelationen zu ermitteln und wertvolle Einblicke bereitzustellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder eines anderen mehrdimensionalen Datenspeichers bietet zahlreiche Vorteile. Eine OLAP-Lösung enthält bereits umfangreiche Datenmengen, die gut organisiert, bereinigt und ordnungsgemäß formatiert sind. Die Komplexität der Daten ist jedoch so hoch, dass Benutzer wahrscheinlich kaum sinnvolle Muster mittels Ad-hoc-Untersuchungen erkennen können. Data Mining bietet die Möglichkeit, neue Korrelationen zu ermitteln und wertvolle Einblicke bereitzustellen.  
   
  In diesem Thema wird beschrieben, wie Sie eine OLAP-Miningstruktur auf Grundlage einer Dimension und verwandter Measures in einer vorhandenen mehrdimensionalen Lösung erstellen.  
   
@@ -165,11 +166,10 @@ ms.lasthandoff: 09/01/2017
 >  Die Erstellung von Data Mining-Dimensionen wird nur von den folgenden Modelltypen unterstützt: Modelle auf Grundlage des Microsoft Clustering-Algorithmus, des Microsoft Decision Trees-Algorithmus oder des Microsoft Associations-Algorithmus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)   
  [Miningmodelleigenschaften](../../analysis-services/data-mining/mining-model-properties.md)   
  [Eigenschaften für Miningstrukturen und Strukturspalten](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
-

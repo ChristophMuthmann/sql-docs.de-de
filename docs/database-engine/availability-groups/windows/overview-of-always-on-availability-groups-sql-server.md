@@ -2,11 +2,13 @@
 title: "Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 22f2cac063d651a2c5eb2867e54a64515b1472e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 162c688c587e0d9277f713e3fe7f9ee35e88bfcc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  > Informationen zu Inhalten, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Overview of Always On Availability Groups (SQL Server) (Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server))](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
 
@@ -62,7 +64,7 @@ ms.lasthandoff: 08/02/2017
  ![Verfügbarkeitsgruppe mit fünf Replikaten](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Availabilty group with five replicas")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
- Zum Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe muss die Datenbank eine Onlinedatenbank mit Lese-/Schreibzugriff auf der Serverinstanz sein, die das primäre Replikat hostet. Wenn Sie eine Datenbank hinzufügen, wird sie als primäre Datenbank mit der Verfügbarkeitsgruppe verknüpft, wobei sie für Clients verfügbar bleibt. Es ist keine entsprechende sekundäre Datenbank vorhanden, bis Sicherungen der neuen primären Datenbank mithilfe von RESTORE WITH NORECOVERY auf der Serverinstanz wiederhergestellt werden, die das sekundäre Replikat hostet. Die neue sekundäre Datenbank befindet sich im Status RESTORING, bis sie der Verfügbarkeitsgruppe hinzugefügt wird. Weitere Informationen finden Sie unter [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+ Zum Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe muss die Datenbank eine Onlinedatenbank mit Lese-/Schreibzugriff auf der Serverinstanz sein, die das primäre Replikat hostet. Wenn Sie eine Datenbank hinzufügen, wird sie als primäre Datenbank mit der Verfügbarkeitsgruppe verknüpft, wobei sie für Clients verfügbar bleibt. Es ist keine entsprechende sekundäre Datenbank vorhanden, bis Sicherungen der neuen primären Datenbank mithilfe von RESTORE WITH NORECOVERY auf der Serverinstanz wiederhergestellt werden, die das sekundäre Replikat hostet. Die neue sekundäre Datenbank befindet sich im Status RESTORING, bis sie der Verfügbarkeitsgruppe hinzugefügt wird. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  Durch das Hinzufügen wechselt die sekundäre Datenbank in den Status ONLINE und initiiert die Datensynchronisierung mit der entsprechenden primären Datenbank. Die*Datensynchronisierung* ist der Prozess, durch den Änderungen an einer primären Datenbank auf einer sekundären Datenbank reproduziert werden. Bei der Datensynchronisierung sendet die primäre Datenbank Transaktionsprotokoll-Datensätze an die sekundäre Datenbank.  
   
@@ -181,7 +183,7 @@ ms.lasthandoff: 08/02/2017
   
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Übersicht über Transact-SQL-Anweisungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
@@ -191,7 +193,6 @@ ms.lasthandoff: 08/02/2017
  [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
    
-

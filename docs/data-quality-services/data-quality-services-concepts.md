@@ -2,25 +2,26 @@
 title: Konzepte von Data Quality Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "17"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51b4813c67c7f7346bea533764b13fceef06db12
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
   Dieses Thema enthält eine kurze Zusammenfassung der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Konzepte in Wissensverwaltung, Data Quality-Projekten und Datenqualitätsverwaltung.  
@@ -76,13 +77,13 @@ ms.lasthandoff: 09/09/2017
   
  Die Aktivitätsüberwachung zeigt den Status und den Zustand jeder Aktivität an, die innerhalb eines Datenbereichs durchgeführt wird, stellt Daten für jede Aktivität bereit und ermöglicht es DQS-Administratoren, eine Aktivität zu steuern. Weitere Informationen finden Sie unter [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
- **Konfiguration**  
+ **Configuration**  
   
  Die Option "Konfiguration" bietet folgende Möglichkeiten:  
   
 -   Konfigurieren der Einstellungen für den Reference Data Service. Weitere Informationen finden Sie unter [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
--   Festlegen der Schwellenwerte für die Bereinigungs- und Abgleichsaktivitäten. Weitere Informationen finden Sie unter [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Festlegen der Schwellenwerte für die Bereinigungs- und Abgleichsaktivitäten. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Aktivieren/Deaktivieren von Profilerstellungsbenachrichtigungen. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
@@ -94,8 +95,7 @@ ms.lasthandoff: 09/09/2017
   
  Weitere Informationen zur DQS-Verwaltung finden Sie unter [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
-

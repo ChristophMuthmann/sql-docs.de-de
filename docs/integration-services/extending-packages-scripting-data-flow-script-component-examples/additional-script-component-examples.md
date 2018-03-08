@@ -1,12 +1,14 @@
 ---
-title: "Zusätzliche Skriptkomponentenbeispiele | Microsoft Docs"
+title: "Zusätzliche Skriptkomponentenbeispiele | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,22 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a5cf91bb82b66247aa100f8ada13693c409183a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e02c62ab6362c0fb423f522d7f70fe0855b77931
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additional-script-component-examples"></a>Zusätzliche Skriptkomponentenbeispiele
   Bei der Skriptkomponente handelt es sich um ein konfigurierbares Tool, das Sie im Datenfluss eines Pakets verwenden können, um nahezu allen Anforderungen gerecht zu werden, die von den Quellen, Transformationen und Zielen nicht erfüllt werden, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind. Dieser Abschnitt enthält Skriptkomponentencodebeispiele, in denen die verschiedenen verfügbaren Funktionsarten veranschaulicht werden.  
   
- Beispiele, die zum Konfigurieren der Skriptkomponente als einfache Quelle, Transformation oder Ziel veranschaulichen, finden Sie unter [Entwickeln von bestimmten Arten von Skriptkomponenten](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Beispiele, die das Konfigurieren der Skriptkomponente als grundlegende Quelle, Transformation oder Ziel zeigen, finden Sie unter [Entwickeln bestimmter Arten von Skriptkomponenten](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 > [!NOTE]  
 >  Wenn Sie Komponenten erstellen möchten, die Sie einfacher in mehreren Datenflusstasks und Paketen wiederverwenden können, empfiehlt es sich, den Code in diesen Skriptkomponentenbeispielen als Ausgangspunkt für benutzerdefinierte Datenflusskomponenten zu verwenden. Weitere Informationen finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
@@ -50,4 +51,3 @@ ms.lasthandoff: 09/26/2017
  Erklärt und veranschaulicht, wie zwei verschiedene nicht standardmäßige Textdateiformate in Zieltabellen analysiert werden.  
   
   
-

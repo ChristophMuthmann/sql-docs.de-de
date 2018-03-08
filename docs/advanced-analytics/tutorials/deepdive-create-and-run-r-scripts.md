@@ -1,42 +1,44 @@
 ---
-title: "R-Skripts erstellen und ausführen | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+title: "Erstellen und Ausführen von R-Skripts (SQL und R deep Dive) | Microsoft Docs"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
-caps.latest.revision: 18
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 1ca2c7227163816092e7248fe20cb377fc03ac03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08549ecffb6877fd160db62bb54c70dbe9347ce3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="create-and-run-r-scripts"></a>Erstellen und Ausführen von R-Skripts
+# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>Erstellen und Ausführen von R-Skripts (SQL und R deep Dive)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Da Sie nun Ihre Datenquellen eingerichtet und mindestens einen Computekontext festgelegt haben, können Sie leistungsstarke R-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden.  In dieser Lektion verwenden Sie den Server-Computekontext, um einige gängige Machine Learning-Tasks auszuführen:
+Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+
+Da Sie nun Ihre Datenquellen eingerichtet und mindestens einen Computekontext festgelegt haben, können Sie leistungsstarke R-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden.  In dieser Lektion verwenden Sie die Server-computekontext möchten Sie einige allgemeine den Machine learning-Aufgaben:
 
 - Visualisieren von Daten und Generieren einiger Zusammenfassungsstatistiken
 - Erstellen eines linearen Regressionsmodells
 - Erstellen eines logistischen Regressionsmodells
 - Bewerten von neuen Daten und Erstellen eines Histogramms der Bewertungen
 
-## <a name="change-compute-context-to-the-server"></a>Ändern des Computekontexts am Server
+## <a name="change-compute-context-to-the-server"></a>Ändern von computekontext mit dem server
 
 Bevor Sie einen beliebigen R-Code ausführen können, müssen Sie den *aktuellen* oder *aktiven* Computekontext angeben.
 
@@ -46,7 +48,7 @@ Bevor Sie einen beliebigen R-Code ausführen können, müssen Sie den *aktuellen
     rxSetComputeContext(sqlCompute)
     ```
   
-    Sobald Sie diese Anweisung ausführen, erfolgen alle nachfolgenden Berechnungen auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer, der im *sqlCompute* -Parameter angegeben ist.
+    Sobald Sie diese Anweisung ausführen, alle nachfolgende Berechnungen erfolgen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im angegebenen Computer die *SqlCompute* Parameter.
   
 2. Wenn Sie sich dazu entscheiden, den R-Code lieber auf Ihrer Arbeitsstation auszuführen, können lokalen Computer wieder als Kontext verwenden, indem Sie das Schlüsselwort  **local** verwenden.
   
@@ -58,22 +60,22 @@ Bevor Sie einen beliebigen R-Code ausführen können, müssen Sie den *aktuellen
   
 3. Nachdem Sie einen Computekontext angegeben haben, bleibt er aktiv, bis Sie ihn ändern. Alle R-Skripts, die *nicht* in einem Remoteserverkontext ausgeführt werden können, werden lokal ausgeführt.
 
-## <a name="compute-summary-statistics"></a>Berechnen von Zusammenfassungsstatistiken
+## <a name="compute-some-summary-statistics"></a>Einige Übersichtsstatistiken zu berechnen
 
-Versuchen Sie, einige zusammenfassende Statistiken mithilfe der *sqlFraudDS* -Datenquelle zu generieren, um die Funktionsweise der Computekontexts anzuzeigen.  Beachten Sie, dass das Datenobjekt nur die Daten definiert, die Sie verwenden. Es verändert nicht den Computekontext.
+Um die Funktionsweise des computekontexts, versuchen Sie es generiert einige zusammenfassende Statistiken mit der `sqlFraudDS` -Datenquelle.  Beachten Sie, dass das Datenquellenobjekt einfach die Daten definiert, die Sie verwenden; Es wird die computekontext nicht geändert.
 
-+ Verwenden Sie zur lokalen Durchführung der Zusammenfassung **rxSetComputeContext** , und geben Sie das Schlüsselwort „local“ an.
++ Verwenden Sie zum Ausführen der Zusammenfassung lokal **RxSetComputeContext** , und geben Sie die _lokale_ Schlüsselwort.
 + Wechseln Sie zum Erstellen der gleichen Berechnungen auf dem SQL Server-Computer zum SQL-Computekontext, den Sie zuvor definiert haben.
 
-1. Rufen Sie die Funktion **rxSummary** auf, und übergeben Sie alle erforderlichen Argumente, wie z.B. die Formel und die Datenquelle, und weisen Sie die Ergebnisse der Variablen *sumOut*zu.
+1. Rufen Sie die [RxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) Funktion und übergeben der erforderlichen Argumente, z. B. die Formel und die Datenquelle aus, und weisen die Ergebnisse der Variablen `sumOut`.
   
     ```R
-    sumOut \<- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
+    sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    Die Sprache "R" stellt viele Funktionen, aber RxSummary unterstützt die Ausführung auf verschiedenen remote rechenkontexte, einschließlich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Weitere Informationen zu ähnlichen Funktionen finden Sie unter [Data Summaries (Datenzusammenfassungen)](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) in der [ScaleR-Referenz](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
+    Die Sprache "R" stellt viele Funktionen, jedoch **RxSummary** unterstützt die Ausführung auf verschiedenen remote rechenkontexte, einschließlich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Informationen über ähnliche Funktionen finden Sie unter [Zusammenfassungen von Daten mithilfe von RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-2. Wenn die Verarbeitung abgeschlossen ist, können Sie die Inhalte der *sumOut* -Variable in der Konsole ausgeben.
+2. Wenn die Verarbeitung abgeschlossen ist, können Sie den Inhalt Drucken der `sumOut` Variable an die Konsole.
   
     ```R
     sumOut
@@ -81,7 +83,6 @@ Versuchen Sie, einige zusammenfassende Statistiken mithilfe der *sqlFraudDS* -Da
   
     > [!NOTE]
     > Versuchen Sie nicht, die Ergebnisse zu auszugeben, bevor sie vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer zurückgegeben wurden, sonst wird möglicherweise ein Fehler angezeigt.
-
 
 **Ergebnisse**
 
@@ -101,7 +102,7 @@ Versuchen Sie, einige zusammenfassende Statistiken mithilfe der *sqlFraudDS* -Da
 
  *numIntlTrans     4.0868    8.726757 0      60 10000    0           100000*
 
- *CreditLine 9.1856 9.870364 1 75 10000 0 100000*
+ *creditLine       9.1856    9.870364 1      75 10000    0          100000*
 
  *Anzahl der Kategorie für das Geschlecht*
 
@@ -117,11 +118,11 @@ Versuchen Sie, einige zusammenfassende Statistiken mithilfe der *sqlFraudDS* -Da
 
   *Female 3846*
 
-## <a name="add-maximum-and-minimum-values"></a>Hinzufügen von Maximum- und Minimumwerten
+## <a name="add-maximum-and-minimum-values"></a>Maximale und minimale Werte hinzufügen
 
-Auf Grundlage der berechneten Zusammenfassungsstatistiken haben Sie einige nützliche Informationen über die Daten gefunden, die Sie in die Datenquelle für weitere Berechnungen einfügen möchten. Beispielsweise können die minimalen und maximalen Werte verwendet werden, um Histogramme, zu berechnen, damit Sie die hohen und niedrigen Werten mit der Datenquelle RxSqlServerData hinzufügen möchten.
+Auf Grundlage der berechneten Zusammenfassungsstatistiken haben Sie einige nützliche Informationen über die Daten gefunden, die Sie in die Datenquelle für weitere Berechnungen einfügen möchten. Beispielsweise können die minimalen und maximalen Werte verwendet werden, um Histogramme zu berechnen. Aus diesem Grund fügen Sie den hohen und niedrigen Werten auf der **RxSqlServerData** -Datenquelle.
 
-Glücklicherweise beinhaltet [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] optimierte Funktionen, die Daten des Typs „Integer“ effizient in Daten des Typs „Faktor“ konvertieren können.
+Glücklicherweise [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] beinhaltet optimierte Funktionen, die effizient Ganzzahldaten "categorical" Faktor Daten konvertieren können.
 
 1. Beginnen Sie, indem Sie einige temporäre Variablen einrichten.
   
@@ -130,9 +131,9 @@ Glücklicherweise beinhaltet [!INCLUDE[rsql_productname](../../includes/rsql-pro
     var <- sumDF$Name
     ```
   
-2. Verwenden Sie die Variable *ccColInfo* , die Sie zuvor zum Definieren von Spalten in der Datenquelle erstellt haben.
+2. Verwenden Sie die Variable `ccColInfo`, die Sie zuvor zum Definieren von Spalten in der Datenquelle erstellt haben.
   
-    Sie fügen auch einige neue berechnete Spalten (*numTrans*, *numIntlTrans*und *creditLine*) zur Spaltensammlung hinzu.
+    Fügen Sie einige neue berechnete Spalten zusätzlich hinzu (`numTrans`, `numIntlTrans`, und `creditLine`) auf die spaltenauflistung.
   
     ```R 
     ccColInfo <- list(
@@ -154,29 +155,28 @@ Glücklicherweise beinhaltet [!INCLUDE[rsql_productname](../../includes/rsql-pro
             )
     ```
   
-3. Nach dem Update der Spaltensammlung können Sie die folgende Anweisung anwenden, um eine aktualisierte Version der zuvor definierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle zu erstellen.
+3. Die spaltenauflistung aktualisiert, dass die folgende Anweisung hinzu, erstellen Sie eine aktualisierte Version des gelten die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle, die Sie zuvor definiert.
   
     ```R
-    sqlFraudDS \<- RxSqlServerData(
+    sqlFraudDS <- RxSqlServerData(
         connectionString = sqlConnString,
         table = sqlFraudTable,
         colInfo = ccColInfo,
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    Die Datenquelle *sqlFraudDS* enthält nun die neuen Spalten, die in *ccColInfo*hinzugefügt wurden.
+    Die `sqlFraudDS` Datenquelle enthält nun die neuen Spalten hinzugefügt, mit `ccColInfo`.
   
-  Diese Änderungen wirken sich nur auf das Datenquellenobjekt in R aus. Es wurden noch keine neuen Daten in die Datenbanktabelle geschrieben. Sie können jedoch die in der *sumOut* -Variablen aufgezeichneten Daten verwenden, um Visualisierungen und Zusammenfassungen zu erstellen. Im nächsten Schritt erfahren Sie, wie Sie dies bewerkstelligen und gleichzeitig zwischen Computekontexten wechseln.
+
+An diesem Punkt beeinflussen die Änderungen nur das Datenquellenobjekt in R; keine neuen Daten wurde noch der Datenbanktabelle geschrieben. Sie können jedoch die aufgezeichneten Daten der `sumOut` Variable zum Erstellen von Visualisierungen und Zusammenfassungen. Im nächsten Schritt erfahren Sie, wie beim Wechsel rechenkontexte dazu.
 
 > [!TIP]
-> Wenn Sie die computekontext Sie verwenden vergessen, führen Sie `rxGetComputeContext()`.  Ein Rückgabewert von `RxLocalSeq Compute Context` gibt an, dass Sie im lokalen rechenkontext ausgeführt werden.
+> Wenn Sie die computekontext Sie verwenden vergessen, führen Sie `rxGetComputeContext()`.  Ein Rückgabewert von "RxLocalSeq Compute Context" gibt an, dass Sie im lokalen rechenkontext ausgeführt werden.
 
 ## <a name="next-step"></a>Nächster Schritt
 
-[Visualisieren von SQL Server-Daten mithilfe von R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[Visualisieren von SQL Server-Daten mit R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 
-## <a name="previous-step"></a>Vorheriger Schritt
+## <a name="previous-step"></a>Vorherigen Schritt
 
-[Definieren Sie und verwenden Sie Rechenkontexte](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
-
+[Definieren und Verwenden von Rechenkontexten](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

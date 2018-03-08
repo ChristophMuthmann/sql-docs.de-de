@@ -3,31 +3,31 @@ title: SQL Server-Agent-Eigenschaften (Seite Warnungssystem)|Microsoft-Dokumente
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.agent.alert.f1
+f1_keywords: sql13.ag.agent.alert.f1
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 334a1025cca8100f1ba6bcc0855712a7e5fe0ef0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bbef6fd5cdc500b80da926dae50942ddf252aa68
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server-Agent-Eigenschaften (Seite Warnungssystem)
-Auf dieser Seite können Sie die Einstellungen für die vom [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent versandten Warnmeldungen anzeigen und ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf dieser Seite können Sie die Einstellungen für die vom [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent versandten Warnmeldungen anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Mailsitzung**  
 Mithilfe der Optionen in diesem Abschnitt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Mail konfiguriert.  
   
@@ -76,7 +76,7 @@ Geben Sie einen beliebigen festgelegten Text ein, den das Pagingsystem bei Nachr
 **Betreff**  
 Bestimmt die Optionen für den Betreff der Nachricht.  
   
-**Prfix**  
+**Prefix**  
 Geben Sie einen beliebigen festgelegten Text ein, den das Pagingsystem bei Nachrichten, die an Pager gesendet werden, am Anfang der Zeile **Betreff** verlangt.  
   
 **Suffix**  
@@ -91,7 +91,7 @@ In diesem Abschnitt können Sie die Optionen für den Ausfallsicherheitsoperator
 **Ausfallsicherheitsoperator aktivieren**  
 Legt einen Ausfallsicherheitsoperator fest.  
   
-**Operator**  
+**Ist gleich**  
 Legt den Namen des Operators fest, der die Ausfallsicherheitsbenachrichtigungen empfängt.  
   
 **Benachrichtigen durch**  
@@ -108,9 +108,8 @@ In diesem Abschnitt können Sie Tokens für Auftragsschritte aktivieren, die in 
 **Token für alle Auftragsantworten auf Warnungen ersetzen**  
 Aktivieren Sie dieses Kontrollkästchen, um die Tokenersetzung für Aufträge zu aktivieren, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Warnungen aktiviert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Operatoren](../../ssms/agent/operators.md)  
 [Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
 [Datenbank-E-Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   
-

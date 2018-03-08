@@ -2,9 +2,12 @@
 title: Angeben einer Trefferanzahl | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-caps.latest.revision: 6
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 07a60dfe673b6aba231958324b4e9094fc3dcb38
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1430ec114f5aa14457fcff1d58a7f41e2e5bbe48
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="specify-a-hit-count"></a>Angeben einer Trefferanzahl
-  Die Breakpoint-Trefferanzahl bildet einen Leistungsindikator, der bei jedem Erreichen des Breakpoints vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger inkrementiert wird. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Breakpoint-Trefferanzahl bildet einen Leistungsindikator, der bei jedem Erreichen des Breakpoints vom [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger inkrementiert wird. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
   
 ## <a name="hit-count-considerations"></a>Überlegungen zur Trefferanzahl  
  Standardmäßig wird die Ausführung stets unterbrochen, wenn ein Breakpoint erreicht wird. Folgende Optionen sind verfügbar:  
@@ -74,8 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Klicken Sie auf **OK** oder **Abbrechen** , um das Dialogfeld zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Angeben einer Breakpointbedingung](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
   
   
-

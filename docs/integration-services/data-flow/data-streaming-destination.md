@@ -1,11 +1,13 @@
 ---
-title: Datenstreamingziel | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: Datenstreamingziel | Microsoft-Dokumentation
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,23 +15,23 @@ ms.topic: article
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b2a918e3460d23f33f432ea0925d722f9aefde78
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c010049c9a55427304357d06dc8fa9fd7b4400b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
   Das **Datenstreamingziel** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Zielkomponente (SSIS), die es dem **OLE DB-Anbieter für SSIS** ermöglicht, die Ausgabe eines SSIS-Pakets als ein tabellarisches Resultset zu verwenden. Sie können einen Verbindungsserver erstellen, der den OLE DB-Anbieter für SSIS verwendet und anschließend eine SQL-Abfrage auf den Verbindungsserver ausführen, um die Daten anzuzeigen, die vom SSIS-Paket zurückgegeben wurden.  
   
  Im folgenden Beispiel gibt die nachfolgende Abfrage eine Ausgabe aus dem Paket „Package.dtsx“ im Projekt SSISPackagePublishing zurück, das sich im Power BI-Ordner des SSIS-Katalogs befindet. Diese Abfrage verwendet den Verbindungsserver mit dem Namen [Standardverbindungsserver für Integration Services], der wiederum den neuen OLE DB-Anbieter für SSIS verwendet. Die Abfrage umfasst den Ordnernamen, den Projektnamen und den Paketnamen im SSIS-Katalog. Der OLE DB-Anbieter für SSIS führt das Paket aus, das Sie in der Abfrage angegeben haben, und gibt das tabellarische Resultset zurück.  
   
-```  
+```sql
 SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Folder=Power BI;Project=SSISPackagePublishing;Package=Package.dtsx')  
   
 ```  
@@ -84,7 +86,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="input-output-properties-tab"></a>Registerkarte „Eingabe- und Ausgabeeigenschaften“  
  Ähnlich wie bei der Registerkarte „Eingabespalten“ können Sie auf dieser Registerkarte die Namen von Ausgabespalten ändern. Erweitern Sie in der Strukturansicht auf der linken Seite den Eintrag **Eingabe des Datenstreamingziels** , und erweitern Sie dann **Eingabespalten**. Klicken Sie auf den Namen der Eingabespalte, und ändern Sie im rechten Bereich den Namen der Ausgabespalte.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

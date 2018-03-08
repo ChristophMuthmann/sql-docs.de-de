@@ -1,30 +1,30 @@
 ---
 title: "Verwendungsszenarios für temporale Tabellen | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0dc0b52ee5b62ceba53c1a092f67e7b0983c833e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarien für temporale Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Temporale Tabellen sind im Allgemeinen in Szenarien nützlich, in denen der Verlauf von Datenänderungen nachverfolgt werden muss.    
 Für maßgebliche Produktivitätsvorteile wird empfohlen, temporale Tabellen in den folgenden Fällen zu verwenden.  
@@ -585,7 +585,7 @@ Wenn ein neu aktualisierter Wert nicht korrekt ist, ist die Wiederherstellung de
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -596,4 +596,3 @@ Wenn ein neu aktualisierter Wert nicht korrekt ist, ist die Wiederherstellung de
  [Metadatenansichten und Funktionen für temporale Tabellen](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

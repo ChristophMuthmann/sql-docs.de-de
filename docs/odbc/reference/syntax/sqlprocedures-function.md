@@ -3,33 +3,30 @@ title: SQLProcedures-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLProcedures
-apilocation:
-- sqlsrv32.dll
+apiname: SQLProcedures
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLProcedures
-helpviewer_keywords:
-- SQLProcedures function [ODBC]
+f1_keywords: SQLProcedures
+helpviewer_keywords: SQLProcedures function [ODBC]
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b919ad9ca1e42ea87e1ac4891870dc8091beb722
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2790087b4a8ea0518a81f540da6b3887933a4ef6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures-Funktion
 **Konformität**  
@@ -161,4 +158,3 @@ SQLRETURN SQLProcedures(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

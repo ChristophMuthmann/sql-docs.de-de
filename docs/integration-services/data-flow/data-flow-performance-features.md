@@ -1,10 +1,13 @@
 ---
-title: Data Flow Performance Features | Microsoft Docs
+title: "Funktionen für die Datenflussleistung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,19 +26,18 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-flow-performance-features"></a>Data Flow Performance Features
+# <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
   
 ## <a name="configuring-the-data-flow"></a>Konfigurieren des Datenflusses  
@@ -103,7 +105,7 @@ ms.lasthandoff: 08/03/2017
  Es gibt zwei allgemeine Richtlinien, die von der Datenflusskomponente unabhängig sind, die Sie befolgen sollten, um die Leistung zu erhöhen: Optimieren Sie Abfragen, und vermeiden Sie unnötige Zeichenfolgen.  
   
 #### <a name="optimize-queries"></a>Optimieren von Abfragen  
- Zahlreiche Datenflusskomponenten verwenden Abfragen beim Extrahieren von Daten aus Quellen oder bei Suchvorgängen zum Erstellen von Verweistabellen. Die Standardabfrage verwendet die SELECT * FROM \<TableName > Syntax. Bei diesem Abfragetyp werden alle Spalten in der Quelltabelle zurückgegeben. Wenn alle Spalten zur Entwurfszeit zur Verfügung stehen, ist es möglich, eine beliebige Spalte als Such-, Pass-Through- oder Quellspalte auszuwählen. Nachdem Sie die zu verwendenden Spalten ausgewählt haben, sollten Sie die Abfrage so ändern, dass sie nur diese ausgewählten Spalten enthält. Das Entfernen überflüssiger Spalten macht den Datenfluss in einem Paket effizienter, da durch weniger Spalten eine kleinere Zeile erstellt wird. Je kleiner eine Zeile ist, desto mehr Zeilen passen in einen Puffer und desto geringer ist der Aufwand für die Verarbeitung aller Zeilen im Dataset.  
+ Zahlreiche Datenflusskomponenten verwenden Abfragen beim Extrahieren von Daten aus Quellen oder bei Suchvorgängen zum Erstellen von Verweistabellen. Die Standardabfrage verwendet die Syntax SELECT * FROM \<Tabellenname>. Bei diesem Abfragetyp werden alle Spalten in der Quelltabelle zurückgegeben. Wenn alle Spalten zur Entwurfszeit zur Verfügung stehen, ist es möglich, eine beliebige Spalte als Such-, Pass-Through- oder Quellspalte auszuwählen. Nachdem Sie die zu verwendenden Spalten ausgewählt haben, sollten Sie die Abfrage so ändern, dass sie nur diese ausgewählten Spalten enthält. Das Entfernen überflüssiger Spalten macht den Datenfluss in einem Paket effizienter, da durch weniger Spalten eine kleinere Zeile erstellt wird. Je kleiner eine Zeile ist, desto mehr Zeilen passen in einen Puffer und desto geringer ist der Aufwand für die Verarbeitung aller Zeilen im Dataset.  
   
  Wenn Sie eine Abfrage erstellen möchten, können Sie die Abfrage eingeben oder den Abfrage-Generator verwenden.  
   
@@ -164,13 +166,13 @@ ms.lasthandoff: 08/03/2017
  Möglicherweise nimmt das Speichern von Daten in Zielen mehr Zeit als erwartet in Anspruch. Um herauszufinden, ob dies darauf zurückzuführen ist, dass das Ziel die Daten nicht schnell genug verarbeiten kann, können Sie das Ziel vorübergehend durch eine Transformation für Zeilenanzahl ersetzen. Sollte sich der Durchsatz wesentlich verbessern, ist wahrscheinlich das Ziel, das die Daten lädt, Ursache für die langsamere Verarbeitung.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Überprüfen der Informationen auf der Registerkarte Status  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer werden Informationen zur ablaufsteuerung und zum Datenfluss beim Ausführen von Paketen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auf der Registerkarte **Status** werden Tasks und Container in der Ausführungsreihenfolge aufgeführt. Diese Registerkarte enthält außerdem die Start- und Beendigungszeiten, Warnungen und Fehlermeldungen für jeden Task, Container sowie das Paket selbst. Sie enthält außerdem eine nach Ausführungsreihenfolge sortierte Liste der Datenflusskomponenten, Angaben zum Fortschritt in Prozent sowie die Anzahl der verarbeiteten Zeilen.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer werden zusätzliche Informationen zur Ablaufsteuerung und zum Datenfluss beim Ausführen von Paketen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auf der Registerkarte **Status** werden Tasks und Container in der Ausführungsreihenfolge aufgeführt. Diese Registerkarte enthält außerdem die Start- und Beendigungszeiten, Warnungen und Fehlermeldungen für jeden Task, Container sowie das Paket selbst. Sie enthält außerdem eine nach Ausführungsreihenfolge sortierte Liste der Datenflusskomponenten, Angaben zum Fortschritt in Prozent sowie die Anzahl der verarbeiteten Zeilen.  
   
  Zum Aktivieren bzw. Deaktivieren der Anzeige von Meldungen auf der Registerkarte **Status** schalten Sie die Option **Debug-Statusbericht** im Menü **SSIS** um. Beim Ausführen eines komplexen Pakets in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]kann eine Deaktivierung der Statusberichterstellung zur Verbesserung der Leistung beitragen.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [Sortieren von Daten für die Zusammenführung und Join von Transformationen für zusammenführen](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  **Artikel und Blogbeiträge**  
@@ -205,9 +207,8 @@ ms.lasthandoff: 08/03/2017
   
 -   Video [Ausgeglichener Datenverteiler](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Tools zur Problembehandlung für die Ausführung des Pakets](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

@@ -3,7 +3,7 @@ title: 'Fehler (Visual C++-Syntax Index mit #import) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Error collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1fa3d08ab56531070ca6c46ebd218ad67e243c0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2e8a560cf6d0dd31500c7a1530f11b669571a81d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>Fehler (Visual C++-Syntax Index mit #import)
 ## <a name="properties"></a>Eigenschaften  
@@ -58,4 +57,3 @@ __declspec(property(get=GetSQLState)) _bstr_t SQLState;
   
 ## <a name="see-also"></a>Siehe auch  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)
-

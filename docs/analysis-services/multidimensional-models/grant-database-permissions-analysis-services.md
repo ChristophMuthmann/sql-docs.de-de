@@ -2,33 +2,33 @@
 title: Erteilen von Datenbankberechtigungen (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b05b035f530318759f0b2eb4b20bd9bd5edd4d01
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c58a338f700785bb338703c72e3b435a7aa22b94
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Erteilen von Datenbankberechtigungen (Analysis Services)
-  Wenn Sie Datenbanken mit Analysis Services verwalten und bereits über Kenntnisse zu relationalen Datenbanken verfügen, müssen Sie zuerst verstehen, dass in Bezug auf Datenzugriff die Datenbank nicht das primäre sicherungsfähige Objekt in Analysis Services ist.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Wenn Sie Datenbanken mit Analysis Services verwalten und bereits über Kenntnisse zu relationalen Datenbanken verfügen, müssen Sie zuerst verstehen, dass in Bezug auf Datenzugriff die Datenbank nicht das primäre sicherungsfähige Objekt in Analysis Services ist.  
   
  Die primäre Abfragestruktur in Analysis Services ist ein Cube (oder ein tabellarisches Modell), mit Benutzerberechtigungen, die für diese bestimmten Objekte festgelegt sind. Im Gegensatz zum relationalen Datenbankmodul, bei dem Datenbankanmeldenamen und Benutzerberechtigungen (oft **db_datareader**) für die Datenbank selbst festgelegt sind, ist eine Analysis Services-Datenbank hauptsächlich ein Container für die Hauptabfrageobjekte in einem Datenmodell. Wenn Sie hauptsächlich den Datenzugriff für einen Cube oder ein tabellarisches Modell aktivieren möchten, können Sie zunächst die Datenbankberechtigungen umgehen und sich direkt diesem Thema zuwenden: [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
@@ -86,7 +86,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Erteilen Sie Berechtigungen zum Verarbeiten &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   
-

@@ -2,32 +2,31 @@
 title: Arithmetische Operatoren | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- arithmetic operators
+dev_langs: kbMDX
+helpviewer_keywords: arithmetic operators
 ms.assetid: 1dff3e20-fe9d-4155-bf06-27d6458188e9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6e835905fb1d51d4918c3d382ad6268925d469e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc3adf599f92a74dd996a0ef090f6f42ab1fba0d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Sie können arithmetische Operatoren in MDX (Multidimensional Expressions) für beliebige arithmetische Berechnungen verwenden. Dazu gehören Addition, Subtraktion, Multiplikation und Division.  
   
@@ -35,10 +34,10 @@ ms.lasthandoff: 08/02/2017
   
 |Operator|Description|  
 |--------------|-----------------|  
-|[+ (Addition)](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
+|[+ (Add) (+ (Addieren))](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
 |[/ (Division)](../mdx/divide-mdx-operator-reference.md)|Dividiert eine Zahl durch eine andere Zahl.|  
-|[* (Multiplikation)](../mdx/multiply-mdx.md)|Multipliziert zwei Zahlen.|  
-|[-(Subtraktion)](../mdx/subtract-mdx.md)|Subtraktion zweier Zahlen.|  
+|[* (Multiply) (* (Multiplizieren))](../mdx/multiply-mdx.md)|Multipliziert zwei Zahlen.|  
+|[- (Subtract) (- (Subtrahieren))](../mdx/subtract-mdx.md)|Subtraktion zweier Zahlen.|  
 |^ (Potenz) |Potenziert eine Zahl mit einer anderen Zahl.|  
   
 > [!NOTE]  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/02/2017
  [Operatoren &#40; MDX-Syntax &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

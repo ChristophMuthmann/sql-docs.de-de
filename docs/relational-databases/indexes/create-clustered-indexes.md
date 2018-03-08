@@ -2,9 +2,12 @@
 title: Erstellen gruppierter Indizes | Microsoft Dokumentation
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: f7aa0ca2f5ea1ffe7ec54cc6279fbf5f1218f8c0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Sie können gruppierte Indizes für Tabellen mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellen. Abgesehen von wenigen Ausnahmen sollte jede Tabelle über einen gruppierten Index verfügen. Ein gruppierter Index steigert nicht nur die Abfrageleistung, sondern kann bei Bedarf auch neu erstellt oder neu organisiert werden, um die Tabellenfragmentierung zu steuern. Ein gruppierter Index kann auch für eine Sicht erstellt werden. (Gruppierte Indizes sind im Thema [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)definiert.)  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen eines gruppierten Indexes für eine Tabelle mit:**  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Implementations"></a> Typische Implementierungen  
  Gruppierte Indizes werden auf folgende Weise implementiert:  
@@ -80,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>So erstellen Sie einen gruppierten Index mit dem Objekt-Explorer  
   
@@ -92,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
   
-5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***table_name* das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
+5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -118,13 +121,13 @@ ms.lasthandoff: 06/22/2017
   
 9. Klicken Sie auf **Schließen**.  
   
-10. Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
+10. Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>So erstellen Sie einen gruppierten Index  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -148,9 +151,8 @@ ms.lasthandoff: 06/22/2017
   
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Primärschlüsseln](../../relational-databases/tables/create-primary-keys.md)   
  [Erstellen von Unique-Einschränkungen](../../relational-databases/tables/create-unique-constraints.md)  
   
   
-

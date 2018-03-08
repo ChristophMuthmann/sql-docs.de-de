@@ -2,27 +2,28 @@
 title: "Leistungsoptimierung für SQL Server R Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c4e77abfb68c30a1eac32b514c3987774bd5759d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Optimieren der Leistung für R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel wird die erste Aufgabe in einer Reihe von vier Artikeln, die zur leistungsoptimierung für R-Services, basierend auf zwei Fallstudien zu beschreiben:
 
@@ -92,7 +93,7 @@ Konfiguration und Optimierung der Leistung benötigt, erstellen eine solide Grun
 
 + [Optimieren der Leistung für R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Bietet einen Leitfaden zum Konfigurieren der Hardware, [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Dies ist besonders nützlich für **Datenbankadministratoren**.
+    Bietet einen Leitfaden zum Konfigurieren der Hardware, [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Dies ist besonders nützlich für **Datenbankadministratoren**.
 
 + [Optimieren der Leistung für R in SQL Server - Code und die Optimierung](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +105,3 @@ Konfiguration und Optimierung der Leistung benötigt, erstellen eine solide Grun
 + [Optimieren der Leistung für R in SQL Server - Methoden und Ergebnisse](..\r\performance-case-study-r-services.md)
 
     Fasst Daten wurde verwendet, die zwei Fallstudien, wie die Leistung getestet wurde und wie die Optimierungen Ergebnisse auswirken.
-

@@ -3,22 +3,26 @@ title: Konfigurieren von Failover Cluster Instanz Speicher iSCSI - SQL Server on
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18a73a25e8817577930ad058dbad56d56586d417
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Konfigurieren der Failover-Clusterinstanz - iSCSI - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Artikel erläutert, wie iSCSI-Speicher für eine Failoverclusterinstanz (FCI) unter Linux konfigurieren. 
 
@@ -37,7 +41,7 @@ Um sicherzustellen, dass die wichtigste ist abgeschlossen auf dem Ziel, dass die
 
 In diesem Abschnitt wird beschrieben, wie einen iSCSI-Initiator auf den Servern zu konfigurieren, das als Knoten für die FCI fungieren soll. Auf RHEL und Ubuntu ausgeführt wird, sollte die Anweisungen funktionieren.
 
-Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wenden Sie sich an den folgenden Links:
+Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen finden Sie in den folgenden Links:
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -95,7 +99,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  Erstellen Sie einen physischen Datenträger, auf dem iSCSI-Datenträger.
 
@@ -196,7 +200,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    Typ `exit` So wechseln Sie zurück an den Root-Benutzer.
 
@@ -206,7 +210,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > ist der Name der Volumegruppe und \<LogicalVolumeName > ist der Name des logischen Volumes, die erstellt wurde. Die folgende Beispielsyntax entspricht der Volumegruppe und logische Volume oben erstellt haben.
+    \<VolumeGroupName > ist der Name der Volumegruppe und \<LogicalVolumeName > ist der Name des logischen Volumes, die erstellt wurde. Die folgende Beispielsyntax entspricht der Volumegruppe und logische Datenträger aus dem vorherigen Befehl.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -246,7 +250,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
     
    *    Geben Sie `exit` kein Stammverzeichnis sein.
 
-   *    Starten Sie SqlServer. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
+   *    Start SQL Server. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
 
     ```bash
     sudo systemctl start mssql-server
@@ -274,7 +278,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
     mkdir <FolderName>
     ```
 
-    \<Ordnername > ist der Name des Ordners. Vollständiger Pfad des Ordners müssen angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
+    \<Ordnername > ist der Name des Ordners. Vollständigen Ordnerpfad muss angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -320,7 +324,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
 
    *    Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im Beispiel unten verwendet Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    Heben Sie die Bereitstellung der Freigabe 
 
@@ -354,7 +358,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
 
     \<ListOfVGsNotUsedByPacemaker > ist die Liste der Volumegruppen aus der Ausgabe von Schritt 20, die nicht von der FCI verwendet werden. Fügen Sie jeweils in Anführungszeichen eingeschlossen und getrennt durch ein Komma. Das folgende Beispiel soll dies erläutern:
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Wenn Sie Linux gestartet wird, wird er im Dateisystem einlegen. Um sicherzustellen, dass nur Schrittmacher des iSCSI-Datenträgers einbinden kann, erstellen Sie das Stamm-Filesystem-Abbild neu. 
@@ -412,4 +416,3 @@ Sie können nun die FCI konfigurieren.
 [9]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/50-ExampleCreateSSMS.png
 [10]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/40-Create25GBVol.png
 [11]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/55-ListOfVGs.png
-

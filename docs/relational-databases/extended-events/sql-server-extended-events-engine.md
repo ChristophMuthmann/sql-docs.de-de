@@ -2,9 +2,12 @@
 title: "Modul für erweiterte Ereignisse von SQL Server | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -13,20 +16,19 @@ ms.topic: article
 helpviewer_keywords:
 - extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 505a35bf0fcc76a79af933b75d3a26ec2de0329f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-extended-events-engine"></a>Modul für erweiterte Ereignisse von SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events-Modul ist eine Sammlung von Diensten und Objekten, die:  
   
@@ -64,8 +66,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Wenn Puffer aufgefüllt sind, werden diese an Ziele verteilt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   
-

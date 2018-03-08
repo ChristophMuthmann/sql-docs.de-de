@@ -2,32 +2,31 @@
 title: "Power Pivot Mindestberechtigungen Beispiel – SharePoint 2013 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aa7ce279e968322d9e1ffd80d9a277d27b18c9f7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9583847e375cf3deb030319dce8b77dab3e5e609
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot Mindestberechtigungen Beispiel – SharePoint 2013
-  Dieses Thema veranschaulicht eine Beispielkonfiguration für [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013 mit Mindestberechtigungen. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Dieses Thema veranschaulicht eine Beispielkonfiguration für [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013 mit Mindestberechtigungen. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ## <a name="summary-of-accounts"></a>Übersicht der Konten  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
@@ -88,4 +87,3 @@ ms.lasthandoff: 09/01/2017
     ```  
   
   
-

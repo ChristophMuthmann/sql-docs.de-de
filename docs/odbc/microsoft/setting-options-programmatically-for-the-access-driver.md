@@ -3,10 +3,12 @@ title: "Festlegen von Optionen für die Access-Treiber programmgesteuert | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 81ec270afc5c0e845bea829a1851b00bb38fa075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Festlegen von Optionen für die Access-Treiber programmgesteuert
 |Option|Description|Methode|  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |Systemdatenbank|Der vollständige Pfad der Microsoft Access-Systemdatenbank, die mit der Microsoft Access-Datenbank verwendet werden, die Sie zugreifen möchten.<br /><br /> Klicken Sie auf die **Systemdatenbank** klicken, um die Systemdatenbank zu verwendende auszuwählen. Der ODBC Microsoft Access-Treiber fordert den Benutzer für einen Namen und ein Kennwort. Der Standardname lautet Admin, und das Standardkennwort in Microsoft Access für den Admin-Benutzer ist eine leere Zeichenfolge.<br /><br /> Zur Erhöhung der Sicherheit Ihrer Microsoft Access-Datenbank erstellen Sie einen neuen Benutzer zum Ersetzen des Admin-Benutzers und zum Löschen des Admin-Benutzers oder ändern Sie die Objekte, die auf die Admin-Benutzer Zugriff hat.|Um diese Option dynamisch festzulegen, verwenden die **SYSTEMDB** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Threads|Die Anzahl der Hintergrundthreads für das Modul nutzen. Microsoft Access-Treiber wird dieser Wert wird standardmäßig auf 3 jedoch geändert werden kann. Der Benutzer möchte eventuell die Anzahl der Threads zu erhöhen, wenn eine große Menge an Aktivität in der Datenbank vorhanden ist.<br /><br /> Diese Option ist in enthalten die **erweiterte Optionen festlegen** im Dialogfeld für die Microsoft Access-Treiber.|Um diese Option dynamisch festzulegen, verwenden die **THREADS** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |UserCommitSync|Bestimmt, ob die Microsoft Access-Treiber eine explizite Transaktionen für eine benutzerdefinierte asynchron durchführen. Dieser Wert wird anfangs festgelegt, auf "Ja", was bedeutet, dass der Microsoft Access-Treiber in einer benutzerdefinierten Transaktion ausgeführt werden Commits wartet.<br /><br /> Diese Einstellung auf "false" kann unvorhersehbare Folgen in einer mehrbenutzerumgebung haben.|Um diese Option dynamisch festzulegen, verwenden die **USERCOMMITSYNC** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|
-

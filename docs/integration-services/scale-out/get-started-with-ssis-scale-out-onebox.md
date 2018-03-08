@@ -1,65 +1,73 @@
 ---
-title: Erste Schritte mit SSIS Skalierung auf einem einzelnen Computer Out | Microsoft Docs
+title: Erste Schritte mit SSIS Scale Out auf einem einzelnen Computer | Microsoft-Dokumentation
+ms.description: This article shows you everything you need to know to get started with SSIS Scale Out on a single computer
 ms.custom: 
-ms.date: 07/18/2017
-ms.prod: sql-server-2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.date: 12/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
+ms.reviewer: douglasl
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7175c63be4c0e15e50f2020f75d283ac0e3dfdbf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ed813ca6ea9775c6aeb3c40dac63d7ec5b630ee5
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/13/2017
 ---
-# <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Erste Schritte mit Integration Services (SSIS) horizontal skalieren auf einem einzelnen computer
-Dieser Abschnitt enthält die Anleitung zum Einrichten Integration Services horizontal skalieren, in einer 1-Box-Umgebung mit Standardeinstellungen.
+# <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Erste Schritte mit Integration Services (SSIS) Scale Out auf einem einzelnen Computer
+In diesem Artikel finden Sie eine Anleitung zum Einrichten von Integration Services Scale Out in einer Umgebung mit einem Computer mithilfe von Standardeinstellungen.
 
 ## <a name="1-install-sql-server-features"></a>1. Installieren von SQL Server-Funktionen
-Wählen Sie im Installations-Assistenten von SQL Server Database Engine Services, Integration Services, Scale-Out-Master und Scale-Out-Worker auf die **Funktionsauswahl** Seite.
+Wählen Sie im Installations-Assistenten auf der Seite **Funktionsauswahl** folgende Elemente aus:
+-   Datenbankmoduldienste
+-   Integration Services
+    -   Scale Out-Master
+    -   Scale Out-Worker
 
-![Funktion auswählen Onebox 1](media/feature-select-onebox1.PNG)
+![Erste Hälfte der Seite „Funktionsauswahl“](media/feature-select-onebox1.PNG)
 
-![Funktion auswählen Onebox 2](media/feature-select-onebox2.PNG)
+![Zweite Hälfte der Seite „Funktionsauswahl“](media/feature-select-onebox2.PNG)
 
-Auf der **Serverkonfiguration** einfach auf "Weiter", um die Standard-Dienstkonten und Starttypen verwenden.
+Klicken Sie auf der Seite **Serverkonfiguration** auf **Weiter**, um Standarddienstkonten und -starttypen anzunehmen.
 
-Auf der **Datenbankmodulkonfiguration** Seite "**im gemischten Modus**"und klicken Sie auf"**aktuellen Benutzer hinzufügen**" Schaltfläche. 
+Wählen Sie auf der Seite **Database Engine Configuration** (Konfiguration der Datenbank-Engine) **gemischter Modus** aus, und klicken Sie auf **Aktuellen Benutzer hinzufügen**. 
 
-![Konfiguration des Datenbankmoduls](media/engine-config.PNG)
+![Modulkonfiguration](media/engine-config.PNG)
 
-Einer der **Scale Out Konfiguration von Integration Services - Master Knoten** und **Scale Out Konfiguration von Integration Services - Worker-Knoten** Seiten, klicken Sie einfach auf "Weiter", um die Standardeinstellungen des Ports und Zertifikate gelten.
+Klicken Sie auf den Seiten **Integration Services Scale Out-Konfiguration – Masterknoten** und **Integration Services Scale Out-Konfiguration – Workerknoten** auf **Weiter**, um die Standardeinstellungen für den Port und die Zertifikate anzunehmen.
 
-Beenden Sie den SQL Server-Installations-Assistenten.
+Stellen Sie den Assistenten zum Installieren von SQL Server fertig.
 
 ## <a name="2-install-sql-server-management-studio"></a>2. Installieren von SQL Server Management Studio
 
-[Herunterladen](../../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio, und installieren Sie es.
+Laden Sie [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) herunter, und installieren Sie das Programm.
 
-## <a name="3-enable-scale-out"></a>3. Aktivieren Sie für horizontales Skalieren
-Öffnen Sie SSMS und Herstellen einer Verbindung mit der lokalen Sql Server-Instanz.
-Mit der rechten Maustaste **Integration Services-Kataloge** im Objekt-Explorer, und wählen **Katalog erstellen**.
+## <a name="3-enable-scale-out"></a>3. Aktivieren von Scale Out
+Öffnen Sie SSMS, und stellen Sie eine Verbindung mit einer lokalen SQL Server-Instanz her.
+Klicken Sie in Objekt-Explorer auf **Integration Services-Kataloge**, und wählen Sie **Katalog erstellen** aus.
 
-In der **Katalog erstellen** Dialogfeld **aktivieren Sie diesen Server als SSIS Dezentrales Skalieren Master** ist standardmäßig aktiviert. Erstellen Sie den Katalog einfach wie gewohnt. 
+Im Dialogfeld **Katalog erstellen** ist standardmäßig die Option **Diesen Server als SSIS Scale Out-Master aktivieren** ausgewählt.
 
-## <a name="4-enable-scale-out-worker"></a>4. Dezentrales Skalieren Worker aktivieren
-In SSMS mit der Maustaste **SSISDB** , und wählen Sie **verwalten horizontal skalieren...** . 
-![Verwalten für horizontales Skalieren](media/manage-scale-out.PNG)
+## <a name="4-enable-a-scale-out-worker"></a>4. Aktivieren des Scale Out-Workers
+Klicken Sie in SSMS auf **SSISDB**, und wählen Sie **Scale Out verwalten** aus. 
 
-Der Integration Services-Skalierung Out-Manager wird angezeigt. Sie können horizontal skalieren mit verwalten. Weitere Informationen finden Sie unter [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md).
+![Zentrales Hochskalieren verwalten](media/manage-scale-out.PNG)
 
-Um die Skalierung, Worker zu aktivieren, wechseln Sie zur **Worker-Manager** , und wählen Sie den Worker, die Sie aktivieren möchten. Der Worker ist ursprünglich deaktiviert. Klicken Sie auf **aktivieren Worker** zu aktivieren.
+Die App „Integration Services Scale Out-Manager“ wird geöffnet. Weitere Informationen finden Sie unter [Scale Out-Manager](integration-services-ssis-scale-out-manager.md).
+
+Wechseln Sie zu **Worker-Manager**, und wählen Sie den gewünschten Worker aus, um einen Scale Out-Worker zu aktivieren. Einige Worker sind standardmäßig deaktiviert. Klicken Sie zur Aktivierung des ausgewählten Workers auf **Worker aktivieren**.
 
 ## <a name="5-run-packages-in-scale-out"></a>5. Ausführen von Paketen in horizontaler Hochskalierung
-Jetzt sind Sie bereit zum Ausführen von SSIS-Paketen in horizontal skalieren. Finden Sie unter [Horizontales Skalieren Ausführen von Paketen in Integrationsservices (SSIS)](run-packages-in-integration-services-ssis-scale-out.md).
+Jetzt können Sie SSIS-Pakete in Scale Out ausführen. Weitere Informationen finden Sie unter [Run Packages in Integration Services (SSIS) Scale Out (Ausführen von Paketen für Scale Out mit SQL Server Integration Services (SSIS))](run-packages-in-integration-services-ssis-scale-out.md).
 
-
-Um mehr horizontal skalieren Worker hinzufügen zu können, finden Sie unter [eine Skala Out Worker mit Scale-Out-Manager hinzufügen](add-scale-out-worker.md).
+## <a name="next-steps"></a>Nächste Schritte
+-   [Hinzufügen eines SSIS Scale Out-Workers mit dem Scale Out-Manager](add-scale-out-worker.md)

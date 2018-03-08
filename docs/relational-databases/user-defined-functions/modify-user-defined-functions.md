@@ -2,28 +2,31 @@
 title: "Ändern von benutzerdefinierten Funktionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c7b7c08f7f2a853402fa2f9b8e870a317cb44554
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="modify-user-defined-functions"></a>Ändern benutzerdefinierter Funktionen
-  Sie können benutzerdefinierte Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern. Durch die Änderung von benutzerdefinierten Funktionen wie unten beschrieben werden die Funktionsberechtigungen nicht geändert. Es ergeben sich auch keine Auswirkungen auf abhängige Funktionen, gespeicherte Prozeduren oder Trigger.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Sie können benutzerdefinierte Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern. Durch die Änderung von benutzerdefinierten Funktionen wie unten beschrieben werden die Funktionsberechtigungen nicht geändert. Es ergeben sich auch keine Auswirkungen auf abhängige Funktionen, gespeicherte Prozeduren oder Trigger.  
   
  **In diesem Thema**  
   
@@ -31,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie eine benutzerdefinierte Funktion mit:**  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  ALTER FUNCTION kann nicht verwendet werden, um irgendeine der folgenden Aktionen auszuführen:  
@@ -55,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung auf der Funktion oder auf dem Schema. Wenn die Funktion einen benutzerdefinierten Typ angibt, wird die EXECUTE-Berechtigung für den Typ benötigt.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>So ändern Sie eine benutzerdefinierte Funktion  
   
@@ -75,13 +78,13 @@ ms.lasthandoff: 06/22/2017
   
 5.  Nehmen Sie im Abfragefenster die notwendigen Änderungen an der ALTER FUNCTION-Anweisung vor.  
   
-6.  Klicken Sie im Menü **Datei** auf **Speichern***Funktionsname*.  
+6.  Klicken Sie im Menü **Datei** auf *Funktionsname* **speichern**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>So ändern Sie eine benutzerdefinierte Funktion  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -165,4 +168,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md).  
   
   
-

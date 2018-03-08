@@ -3,10 +3,12 @@ title: Umbenennen eines Datenbankdiagramms (Visual Database Tools)|Microsoft-Dok
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - renaming database diagrams
 - database diagrams [SQL Server], renaming
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ed7c760343e1e1e94c11712c809e2a0ba5bcccde
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f134aea8903ab0c31c3790c90d07f062ff292055
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Umbenennen eines Datenbankdiagramms (Visual Database Tools)
-Sie können im Objekt-Explorer Datenbankdiagramme umbenennen. Erfordert die ALTER-Berechtigung für die Datenbank.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können im Objekt-Explorer Datenbankdiagramme umbenennen. Erfordert die ALTER-Berechtigung für die Datenbank.  
   
 ### <a name="to-rename-a-database-diagram"></a>So benennen Sie ein Datenbankdiagramm um  
   
@@ -44,7 +45,6 @@ Sie können im Objekt-Explorer Datenbankdiagramme umbenennen. Erfordert die ALTE
   
     Das Datenbankdiagramm wird im Objekt-Explorer mit dem neuen Namen angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

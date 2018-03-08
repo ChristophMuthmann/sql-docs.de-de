@@ -1,27 +1,27 @@
 ---
-title: "Hinzufügen oder Löschen einer Gruppe in einem Diagramm (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Hinzufügen oder Löschen einer Gruppe in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 818226f2942dfa37b5669fac8af17abed817de53
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Hinzufügen oder Löschen einer Gruppe in einem Diagramm (Berichts-Generator und SSRS)
 Klicken Sie in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten in den Diagrammdatenbereich, um den Bereich **Diagrammdaten** anzuzeigen. Erstellen Sie Gruppen, indem Sie Datasetfelder zu den Bereichen **Kategoriegruppen** und **Reihengruppen** ziehen. Wenn Sie geschachtelte Gruppen hinzufügen möchten, fügen Sie dem Bereich mehrere Felder hinzu.  
@@ -61,8 +61,7 @@ Klicken Sie in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
   
 2.  Klicken Sie mit der rechten Maustaste auf die Gruppe im Bereich **Kategoriegruppen** oder **Reihengruppen** , und klicken Sie anschließend auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

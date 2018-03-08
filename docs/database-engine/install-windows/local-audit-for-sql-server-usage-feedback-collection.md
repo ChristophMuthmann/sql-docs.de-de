@@ -2,36 +2,41 @@
 title: "Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
-- analysis-services
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1d579ced53344bc871e640de8ab81246ed652325
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 ## <a name="introduction"></a>Einführung
 
 Microsoft SQL Server enthält internetfähige Funktionen, die Daten über Ihren Computer oder Ihr Gerät („Standardcomputerinformationen“) erfassen und an Microsoft senden können. Die Komponente „Lokale Überwachung“ der [Feedbackerfassung zur SQL Server-Nutzung](http://support.microsoft.com/kb/3153756) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.  
 
 Seit SQL Server 2016 CU2 kann die lokale Überwachung auf Instanzebene für SQL Server-Datenbankmodul und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, verfügen für die Feedbackerfassung hinsichtlich der Nutzung nicht über die Funktion zur lokalen Überwachung. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten 
+## <a name="prerequisites"></a>Voraussetzungen 
 
 Nachfolgend sind die erforderlichen Komponenten zum Aktivieren der lokalen Überwachung auf jeder SQL Server-Instanz aufgeführt: 
 
@@ -75,10 +80,10 @@ Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in 
 
   ||Entwurfsentscheidung|Empfehlung|  
   |------|-----------------|----------|  
-  |![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Speicherplatzverfügbarkeit |Planen Sie für mittlere Arbeitsauslastungen mit ungefähr 10 Datenbanken ca. 2 MB an Speicherplatz pro Tag und Instanz ein.|  
-|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate Verzeichnisse | Erstellen sie für jede Instanz ein Verzeichnis. Verwenden Sie z. B. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* für eine SQL Server-Instanz namens `MSSQLSERVER`. Dies vereinfacht die Dateiverwaltung.
-|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für das Datenbankmodul. Wenn eine Instanz von SSAS denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für SSAS. Wenn sowohl Instanzen für Datenbankmodul und Analysis Services für denselben Ordner konfiguriert sind, führt dies dazu, dass die lokale Überwachung für beide Instanzen in dieselbe Protokolldatei schreibt.| 
-|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Erteilen von Berechtigungen für das Anmeldekonto für den SQL Server CEIP-Telemetriedienst|Aktivieren des Zugriffs für **Ordnerinhalt auflisten**, **Lesen** und **Schreiben** für das Anmeldekonto für den SQL Server CEIP-Telemetriedienst|
+  |![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Speicherplatzverfügbarkeit |Planen Sie für mittlere Arbeitsauslastungen mit ungefähr 10 Datenbanken ca. 2 MB an Speicherplatz pro Tag und Instanz ein.|  
+|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Separate Verzeichnisse | Erstellen sie für jede Instanz ein Verzeichnis. Verwenden Sie z. B. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* für eine SQL Server-Instanz namens `MSSQLSERVER`. Dies vereinfacht die Dateiverwaltung.
+|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für das Datenbankmodul. Wenn eine Instanz von SSAS denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für SSAS. Wenn sowohl Instanzen für Datenbankmodul und Analysis Services für denselben Ordner konfiguriert sind, führt dies dazu, dass die lokale Überwachung für beide Instanzen in dieselbe Protokolldatei schreibt.| 
+|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Erteilen von Berechtigungen für das Anmeldekonto für den SQL Server CEIP-Telemetriedienst|Aktivieren des Zugriffs für **Ordnerinhalt auflisten**, **Lesen** und **Schreiben** für das Anmeldekonto für den SQL Server CEIP-Telemetriedienst|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ciep-telemetry-service-logon-account"></a>Erteilen von Berechtigungen für das Anmeldekonto für den SQL Server CEIP-Telemetriedienst
@@ -180,7 +185,7 @@ Die lokale Überwachung generiert eine Protokolldatei pro Tag. Die Protokolldate
 | Computer | hostname, domainHash, sqmID, operatingSystem 
 | Instanz | instanceName, correlationID, clientVersion 
 | Session | sessionID, traceName 
-| Abfrage | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
+| Dataseteigenschaften | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
 | data |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definition und Beispiele für Name-Wert-Paare 
@@ -387,7 +392,6 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Lokale Überwachung für Feedbackerfassung zur SSMS-Nutzung](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
-
 

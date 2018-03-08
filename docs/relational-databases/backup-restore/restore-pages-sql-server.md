@@ -2,15 +2,16 @@
 title: Wiederherstellung von Seiten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restorepage.general.f1
+f1_keywords: sql13.swb.restorepage.general.f1
 helpviewer_keywords:
 - restoring pages [SQL Server]
 - pages [SQL Server], restoring
@@ -19,20 +20,19 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "67"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3e59972bf634c4326f14081d7909b0926161d90b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Seiten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederhergestellt werden. Das Ziel einer Seitenwiederherstellung besteht darin, eine oder mehrere beschädigte Seiten wiederherzustellen, ohne dazu die gesamte Datenbank wiederherstellen zu müssen. In der Regel wurden Seiten, die wiederhergestellt werden sollen, aufgrund eines Fehlers beim Zugriff auf die Seite als fehlerverdächtig gekennzeichnet. Fehlerverdächtige Seiten werden in der [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) -Tabelle in der **msdb** -Datenbank identifiziert.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen von Seiten mit:**  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/03/2017
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Ab [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Seitenwiederherstellungen.  
   
 #### <a name="to-restore-pages"></a>So stellen Sie Seiten wieder her  
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Aufgaben**, zeigen Sie auf **Wiederherstellen**, und klicken Sie anschließend auf **Seite**. Daraufhin wird das Dialogfeld **Seite wiederherstellen** geöffnet.  
   
-     **Wiederherstellen**  
+     **Restore**  
      Über diesen Abschnitt führen Sie die gleiche Funktion wie mit **Wiederherstellen in** unter [Datenbank wiederherstellen (Seite „Allgemein“)](../../relational-databases/backup-restore/restore-database-general-page.md)aus.  
   
      **Datenbank**  
@@ -211,7 +211,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel werden vier beschädigte Seiten der Datei `B` mit `NORECOVERY`wiederhergestellt. Anschließend werden zwei Protokollsicherungen mit `NORECOVERY`angewendet, gefolgt von der Sicherung des Protokollfragments, die mit `RECOVERY`wiederhergestellt wird. Im folgenden Beispiel wird eine Onlinewiederherstellung ausgeführt. In diesem Beispiel lautet die Datei-ID der Datei `B` : `1`. Die Seiten-IDs der beschädigten Seiten lauten `57`, `202`, `916`und `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  
@@ -224,11 +224,10 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   
-

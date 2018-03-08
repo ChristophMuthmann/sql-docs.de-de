@@ -1,65 +1,68 @@
 ---
-title: "Führen Sie ein SSIS-Paket mit Transact-SQL (SSMS) | Microsoft Docs"
+title: "Ausführen eines SSIS-Pakets mit Transact-SQL (SSMS) | Microsoft-Dokumentation"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: quick-start
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: 1c656661f645ac9f5d1659800893290819525f39
-ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 4b5518a521154b37dc473eb700c3ff50d1a70d60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Ausführen eines SSIS-Pakets von SSMS mit Transact-SQL
-Dieser Schnellstart veranschaulicht, wie SQL Server Management Studio (SSMS) zum Herstellen einer Verbindung mit dem SSIS-Katalogdatenbank und verwenden Sie Transact-SQL-Anweisungen zum Ausführen eines SSIS-Pakets im SSIS-Katalog gespeichert.
+# <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Ausführen eines SSIS-Pakets aus SSMS mit Transact-SQL (SSMS)
+In diesem Schnellstart wird erläutert, wie Sie SQL Server Management Studio (SSMS) verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend Transact-SQL-Anweisungen verwenden müssen, um ein im SSIS-Katalog gespeichertes SSIS-Paket auszuführen.
 
-SQL Server Management Studio ist eine integrierte Umgebung für alle SQL-Infrastruktur von SQL Server mit SQL-Datenbank verwalten. Weitere Informationen über SSMS finden Sie unter [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
+SQL Server Management Studio ist eine integrierte Umgebung zum Verwalten jeder beliebigen SQL-Infrastruktur, von SQL Server bis hin zur SQL-Datenbank. Weitere Informationen zu SSMS finden Sie unter [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Bevor Sie beginnen, stellen Sie sicher, dass Sie die neueste Version von SQL Server Management Studio (SSMS) verfügen. Informationen zum Herunterladen von SSMS finden Sie unter [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Prüfen Sie, ob Sie über die neueste Version von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wie Sie SSMS herunterladen, erfahren Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-## <a name="connect-to-the-ssisdb-database"></a>Herstellen einer Verbindung mit dem SSISDB-Datenbank
+## <a name="connect-to-the-ssisdb-database"></a>Herstellen einer Verbindung mit SSISDB
 
-Verwenden Sie SQL Server Management Studio zum Herstellen einer Verbindung im SSIS-Katalog auf dem Azure SQL-Datenbankserver. 
+Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Katalog auf Ihrem Azure SQL-Datenbankserver einzurichten. 
 
 > [!NOTE]
-> Ein Azure SQL-Datenbankserver wird Port 1433 überwacht. Wenn Sie, zur Verbindung mit eines Azure SQL-Datenbank-Servers innerhalb einer Unternehmens-Firewall versuchen muss diesen Port in der Unternehmensfirewall für Sie erfolgreich eine Verbindung herstellen geöffnet sein.
+> Ein Azure SQL-Datenbankserver überwacht Port 1433. Wenn Sie versuchen, eine Verbindung mit einem Azure SQL-Datenbankserver innerhalb einer Unternehmensfirewall herzustellen, muss dieser Port in der Unternehmensfirewall geöffnet sein, damit Sie eine Verbindung herstellen können.
 
 1. Öffnen Sie SQL Server Management Studio.
 
-2. In der **Verbindung mit Server herstellen** Dialogfeld Geben Sie die folgende Informationen:
+2. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Informationen ein:
 
-   | Einstellung       | Empfohlener Wert | Weitere Informationen | 
+   | Einstellung       | Vorgeschlagener Wert | Weitere Informationen | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Servertyp** | Datenbankmodul | Dieser Wert ist erforderlich. |
-   | **Servername** | Die vollqualifizierten Servernamen | Wenn Sie die Verbindung mit einem Azure SQL-Datenbankserver herstellen, wird der Name im folgenden Format: `<server_name>.database.windows.net`. |
-   | **Authentifizierung** | SQL Server-Authentifizierung | Dieser Schnellstart verwendet SQL-Authentifizierung. |
-   | **Anmeldename** | Serveradmin-Kontos | Dies ist das Konto, das Sie angegeben werden, wenn Sie auf den Server erstellt haben. |
-   | **Kennwort** | Das Kennwort für Ihr serveradmin-Kontos | Dies ist das Kennwort, das Sie angegeben werden, wenn Sie auf den Server erstellt haben. |
+   | **Servertyp** | Datenbank-Engine | Dieser Wert ist erforderlich. |
+   | **Servername** | Der vollqualifizierte Servername | Wenn Sie eine Verbindung mit einem Azure SQL-Datenbankserver herstellen, ist der Name im Format `<server_name>.database.windows.net`. |
+   | **Authentifizierung** | SQL Server-Authentifizierung | In diesem Schnellstart wird die SQL-Authentifizierung verwendet. |
+   | **Anmeldename** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Kennwort** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
 
-3.  Klicken Sie auf **Verbinden**. Die Objekt-Explorer-Fenster wird geöffnet, in SSMS.
+3.  Klicken Sie auf **Verbinden**. Das Fenster „Objekt-Explorer“ wird in SSMS geöffnet.
 
-4. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge** und schließlich **SSISDB** zum Anzeigen der Objekte in der SSIS-Katalogdatenbank.
+4. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge** und dann **SSISDB**, um die Objekte in der SSIS-Katalogdatenbank anzuzeigen.
 
 ## <a name="run-a-package"></a>Ausführen eines Pakets
-Führen Sie den folgenden Transact-SQL-Code, um ein SSIS-Paket ausführen.
+Führen Sie den folgenden Transact-SQL-Code aus, um ein SSIS-Paket auszuführen.
 
-1.  Öffnen Sie ein neues Abfragefenster, und fügen Sie den folgenden Code, in SSMS. (Dieser Code ist die vom generierten Code der **Skript** option in der **Paketausführungs** Dialogfeld in SSMS.)
+1.  Öffnen Sie in SSMS ein neues Abfragefenster, und fügen Sie den folgenden Code ein. (Dabei handelt es sich um den Code, der durch die Option **Skript** im Dialogfeld **Paket ausführen** in SSMS generiert wurde.)
 
-2.  Aktualisieren Sie die Parameterwerte in der `catalog.create_execution` für Ihr System die gespeicherte Prozedur.
+2.  Aktualisieren Sie die Parameterwerte in der für das System gespeicherten `catalog.create_execution`-Prozedur.
 
-3.  Stellen Sie sicher, dass die SSISDB der aktuellen Datenbank befindet.
+3.  Prüfen Sie, ob es sich bei SSISDB um die aktuelle Datenbank handelt.
 
 4.  Führen Sie das Skript aus.
 
-5. Aktualisieren Sie im Objekt-Explorer den Inhalt des **SSISDB** bei Bedarf und prüfen Sie das Projekt, das Sie bereitgestellt haben.
+5. Aktualisieren Sie im Objekt-Explorer ggf. die Inhalte von **SSISDB**, und überprüfen Sie das Projekt, das Sie bereitgestellt haben.
 
 ```sql
 Declare @execution_id bigint
@@ -80,10 +83,9 @@ GO
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Erwägen Sie andere Verfahren zum Ausführen eines Pakets aus.
-    - [Führen Sie ein SSIS-Paket mit SSMS](./ssis-quickstart-run-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Führen Sie ein SSIS-Paket von der Befehlszeile aus](./ssis-quickstart-run-cmdline.md)
-    - [Führen Sie ein SSIS-Paket mit PowerShell](ssis-quickstart-run-powershell.md)
-    - [Führen Sie ein SSIS-Paket mit c#](./ssis-quickstart-run-dotnet.md) 
-
+- Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
+    - [Run an SSIS package with SSMS (Ausführen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-run-ssms.md)
+    - [Ausführen eines SSIS-Pakets mit Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ausführen eines SSIS-Pakets mit PowerShell)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

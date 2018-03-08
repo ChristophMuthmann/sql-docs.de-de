@@ -1,26 +1,28 @@
 ---
-title: "Vorbereiten von SQLServer für Oracle CDC – Skript anzeigen | Microsoft Docs"
+title: "Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3cc704a115bbdb0ea7407f246f41c123ffdf89b0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0827118bb8b850331a37af5e58a1e60e554eaf67
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen
   Dieses Dialogfeld zeigt das Skript Prepare SQL an, mit dem die MSXDBCDC-Datenbank erstellt wird. Diese Datenbank muss sich auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz befinden, damit sie mit Oracle CDC for SQL Server verwendet werden kann.  
@@ -33,8 +35,7 @@ ms.lasthandoff: 08/03/2017
  **Kopieren**  
  Kopiert das Skript in die Zwischenablage. Sie können das Skript dann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einfügen, um es auszuführen und die MSXDBCDC-Datenbank zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorbereiten von SQLServer für CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Vorbereiten von SQL Server für CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   
-

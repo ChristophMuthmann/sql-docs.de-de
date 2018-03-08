@@ -1,29 +1,29 @@
 ---
-title: "SQL Server mobile-Berichten: End-to-End – Exemplarische Vorgehensweise | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
-ms.prod: sql-server-2016
+title: 'Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/07/2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server mobile-Berichten: End-to-End – Exemplarische Vorgehensweise
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
 
 Erstellen Sie mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexiblen Elementen für mobile Berichte. Verbinden Sie sich mit einer Vielzahl lokaler Datenquellen, oder laden Sie Excel-Arbeitsmappen hoch, um mobile Berichte zu erstellen. Speichern Sie Ihre Berichte in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal, und zeigen Sie sie in einem Browser oder mobilen Power BI-Apps an.  
@@ -31,18 +31,18 @@ Erstellen Sie mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rast
 Dieser Artikel begleitet Sie durch die folgenden Aufgaben:   
   
 - Erstellen einer freigegebenen Datenquelle und eines Datasets im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal mithilfe der AdventureWorks-Datenbank als Beispieldatenquelle  
-- Erstellen eines mobilen Reporting Services-Berichts in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- Erstellen eines mobilen Reporting Services-Berichts im [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - Veröffentlichen des mobilen Berichts im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal  
 - Anzeigen des mobilen Berichts in der mobilen Power BI-App  
   
 ## <a name="before-we-start"></a>Voraussetzungen  
 Um folgen zu können, benötigen Sie diese Produkte:  
   
-* Zum Erstellen von Datenquellen und -KPIs und Datasets und mobile Berichte veröffentlichen, benötigen Sie Zugriff auf eine [! UMFASSEN[SsRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
-* Um [freigegebene Datasets erstellen](../install-windows/install-report-builder.md).  
+* Zum Erstellen von Datenquellen und KPIs, und Veröffentlichen von Datasets und mobilen Berichten benötigen Sie Zugriff auf einen [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* [Erstellen von freigegebenen Datasets](../install-windows/install-report-builder.md).  
 * Zum Erstellen mobiler Berichte [installieren Sie den Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
-* [AdventureWorks-Beispieldatenbanken und Skripts](http://msftdbprodsamples.codeplex.com/).  
-*  OR: Wide World Importers-Beispieldatenbank verfügbar aus den [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) Seite.
+* [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases).  
+*  ODER: Wide World Importers-Beispieldatenbank (WWI), die auf der Seite [Microsoft SQL Server-Beispiele](../../sample/microsoft-sql-server-samples.md) verfügbar ist.
 * Führen Sie zum Anzeigen von Ergebnissen die folgenden Schritte aus: 
   *   [Registrieren beim Power BI-Dienst](http://go.microsoft.com/fwlink/?LinkID=513879) und
   *  [Herunterladen der mobilen Power BI-App](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
@@ -50,12 +50,12 @@ Um folgen zu können, benötigen Sie diese Produkte:
   
 ## <a name="create-a-shared-data-source"></a>Erstellen einer freigegebenen Datenquelle  
   
-Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. Finden Sie unter der [Liste der unterstützten Datenquellen](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. [Eine Liste unterstützter Datenquellen finden Sie hier](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Datenquelle**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Geben Sie die Datenquelleninformationen > **OK**.  
+3. Geben Sie Ihre Datenquelleninformationen ein, und klicken Sie auf **OK**.  
   
     Datenquellen werden nicht standardmäßig im Portal angezeigt.    
    
@@ -236,7 +236,7 @@ Auswahllisten fungieren wie Slicer in Power BI und Excel. Wir können eine hinzu
   
 Nachdem Sie visuelle Elemente im Masterlayout erstellt haben, können Sie einen mobilen Bericht mit einem Layout erstellen, das spezifisch für Benutzer von Smartphones optimiert ist.    
   
-1. Klicken Sie in der oberen rechten Ecke auf das Symbol "Zeichenbereich" > **Phone**.  
+1. Klicken Sie rechts oben auf das Canvas-Symbol und dann auf **Telefon**.  
   
 2. Auf der Registerkarte „Layout“ sehen Sie unter **Steuerelementinstanzen**die beiden Diagramme, die Sie erstellt haben.   
   
@@ -313,5 +313,4 @@ Die KPIs und mobilen Berichte werden in denselben Ordnern angezeigt, in denen si
 -  Anzeigen von [mobilen Reporting Services-Berichten und KPIs in der Power BI-App für Windows 10-Geräte](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

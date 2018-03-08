@@ -3,27 +3,28 @@ title: Katalogfunktionen in ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], listed
 - functions [ODBC], catalog functions
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e38bcf3158ba294d09d6898b4ab55b6ecbd33b10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74b86dfd62a12938d18b4aa11a8d0502db50da13
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-functions-in-odbc"></a>In ODBC-Katalogfunktionen
 ODBC enthält die folgenden Katalogfunktionen:  
@@ -46,9 +47,8 @@ ODBC enthält die folgenden Katalogfunktionen:
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Daten, die von Katalogfunktionen zurückgegeben werden.](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)  
+-   [Daten, die von Katalogfunktionen zurückgegeben werden](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)  
   
--   [Argumente im Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)  
+-   [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)  
   
--   [Schema-Ansichten](../../../odbc/reference/develop-app/schema-views.md)
-
+-   [Schemaansichten](../../../odbc/reference/develop-app/schema-views.md)

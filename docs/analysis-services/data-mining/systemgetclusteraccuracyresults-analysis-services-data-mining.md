@@ -2,11 +2,13 @@
 title: "SystemGetClusterAccuracyResults (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -14,20 +16,20 @@ helpviewer_keywords:
 - SystemGetClusterAccuracyResults
 - cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e31548023acfa5ef3c202b978d7be3c46d788a0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services – Data Mining)
-  Gibt Genauigkeitsmetriken einer Kreuzvalidierung für eine Miningstruktur und zugehörige Clustering-Modelle zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Gibt Genauigkeitsmetriken einer Kreuzvalidierung für eine Miningstruktur und zugehörige Clustering-Modelle zurück.  
   
  Diese gespeicherte Prozedur gibt Metriken für das ganze Dataset als einzelne Partition zurück. Um das Dataset in Querschnitte zu partitionieren und Metriken für jede Partition zurückzugeben, verwenden Sie [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -81,7 +83,7 @@ SystemGetClusterAccuracyResults(
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die von **SystemGetClusterAccuracyResults**zurückgegeben werden. Weitere Informationen zum Interpretieren der durch die gespeicherte Prozedur zurückgegebenen Informationen finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|Description|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde. **Alles** gibt an, dass das Ergebnis ein Aggregat für alle Modelle ist.|  
 |AttributeName|Nicht anwendbar auf Clustering-Modelle.|  
@@ -123,7 +125,7 @@ CALL SystemGetClusterAccuracyResults (
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Wert|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Cluster 1|||0|5545|Clustering|Fallwahrscheinlichkeit|0.796514342249313|  
-|Cluster 2|||0|5545|Clustering|Fallwahrscheinlichkeit|0.732122471228572|  
+|Cluster 2|||0|5545|Clustering|Fallwahrscheinlichkeit|0.732122471228572|  
   
 ## <a name="requirements"></a>Anforderungen  
  Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verfügbar.  
@@ -135,4 +137,3 @@ CALL SystemGetClusterAccuracyResults (
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
-

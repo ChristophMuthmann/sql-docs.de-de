@@ -2,9 +2,12 @@
 title: Navigieren in Code und Text | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - navigating code
 - Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e62b052b5d17b5cefb7a2e081cb3b3e5503e9b9f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 47e654694126fdb7e18527109d43da3fa4c90ef7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="navigate-code-and-text"></a>Navigieren in Code und Text
-  Zum Bewegen in Text können Sie Folgendes verwenden:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Zum Bewegen in Text können Sie Folgendes verwenden:  
   
 -   Lesezeichen.  
   
@@ -78,4 +80,3 @@ ms.lasthandoff: 06/22/2017
 2.  Geben Sie die gewünschte Zeilennummer ein.  
   
   
-

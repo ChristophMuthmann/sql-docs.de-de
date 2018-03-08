@@ -2,32 +2,29 @@
 title: Alter-Befehl (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 34e3e12741988f5d1369e96381a54c15f64ec557
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48567b03017e6ded0aba940b64ef1db52e7f78a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-command-tmsl"></a>Alter-Befehl (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Ändert ein vorhandenes Objekt, aber nicht dessen untergeordneten Elementen auf einer Analysis Services-Instanz im tabellarischen Modus an.  Wenn das Objekt nicht vorhanden ist, löst der Befehl einen Fehler aus.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ändert ein vorhandenes Objekt, aber nicht dessen untergeordneten Elementen auf einer Analysis Services-Instanz im tabellarischen Modus an.  Wenn das Objekt nicht vorhanden ist, löst der Befehl einen Fehler aus.  
   
  Verwendung **Alter** -Befehl für targeted Updates, z. B. Festlegen einer Eigenschaft für eine Tabelle ohne aller Spalten ebenfalls angeben zu müssen. Mit diesem Befehl ähnelt **CreateOrReplace**, aber ohne eine vollständige Objektdefinition angeben zu müssen.  
   
@@ -171,4 +168,3 @@ ms.lasthandoff: 09/01/2017
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

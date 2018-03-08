@@ -3,7 +3,7 @@ title: XSLT-Transformationen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7dc90399ec31c921bfebbd342bbc082365dc238d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36b39d14a4856d882add1e9bafdc9457fa3b8bc1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xslt-transformations"></a>XSLT-Transformationen
 XSLT kann auf die generierte XML-Datei in ein anderes Format zu transformieren angewendet werden. Grundlegendes zu XML-Format in ADO hilft bei der Entwicklung von XSLT-Vorlagen, die sie in eine benutzerfreundlichere Form transformieren können.  
@@ -62,4 +61,3 @@ XSLT kann auf die generierte XML-Datei in ein anderes Format zu transformieren a
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

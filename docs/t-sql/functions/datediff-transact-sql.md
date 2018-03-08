@@ -3,17 +3,18 @@ title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_TSQL
 - DATEDIFF
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - DATEDIFF function [SQL Server]
@@ -30,20 +31,19 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: cbbe6e93122cb69253b960afe067635ee0a852d8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: dba834b51bab48c2bd30d1bbbb4abe11694ab321
-ms.contentlocale: de-de
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt die Anzahl (Ganzzahl mit Vorzeichen) der angegebenen *Datepart* Grenzen überschritten, zwischen dem angegebenen *"StartDate"* und *Enddate*.
   
@@ -299,6 +299,5 @@ FROM dbo.DimEmployee
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-
 
 

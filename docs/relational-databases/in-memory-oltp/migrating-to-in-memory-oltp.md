@@ -1,29 +1,31 @@
 ---
 title: Migration zu In-Memory OLTP | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
-caps.latest.revision: 34
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79214d5c4104f232cf2094f0911d6c397d465434
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 18461e494f042ffdd18e10dd86be877c5a888b34
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="migrating-to-in-memory-oltp"></a>Migrieren zu In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+# <a name="migrating-to-in-memory-oltp"></a>Migrating to In-Memory OLTP
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Die Artikel in diesem Abschnitt des Inhaltsverzeichnisses erläutern, wie In-Memory-OLTP in eine vorhandene Anwendung übernommen wird, indem Datenbankobjekte, die für In-Memory-OLTP (Online Transaction Progressing) verwendet werden sollen, migriert werden.  
   
@@ -47,9 +49,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [Implementieren von IDENTITY in einer speicheroptimierten Tabelle](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)  
   
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration).  
+ Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
  [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
   

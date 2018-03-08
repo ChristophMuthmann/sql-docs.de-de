@@ -2,28 +2,30 @@
 title: Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: 11
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ff8a5cd7317b34e5f5cb09c5fc1b85b3580e7fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dieser Artikel enthält Informationen zum Entwickeln von .NET-Anwendungen mithilfe von [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) und dem [.NET Framework-Datenanbieter für SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
 
@@ -282,7 +284,7 @@ Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 Der .NET Framework-Datenanbieter für SQL Server enthält die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter, die mit den bestimmten Anbieternamen vorab registriert wurden (um den Anbieter zu suchen).
 
 
-| Klasse | Beschreibung | Anbietername (Suche) |
+| Class | Description | Anbietername (Suche) |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider-Klasse| Ein Anbieter für den Windows-Zertifikatspeicher. | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Hinweis:** Dieser Anbieter ist in .NET Framework 4.6.1 und höheren Versionen verfügbar. |Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)unterstützt. Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt.  | MSSQL_CNG_STORE|
@@ -552,7 +554,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Name|Beschreibung|In .NET Version eingeführt
+|Name|Description|In .NET Version eingeführt
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Ein Schlüsselspeicheranbieter für den Windows-Zertifikatspeicher.|  4.6
 |[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Eine Schlüsselspeicheranbieter für Microsoft Cryptography API: Next Generation (CNG).|  4.6.1
@@ -570,12 +572,11 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |Neues [Verbindungszeichenfolgen](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) -Schlüsselwort: `Column Encryption Setting=enabled`|Aktiviert oder deaktiviert die „Always Encrypted“-Funktionalität für die Verbindung.| 4.6 
   
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 - [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Tutorial zur SQL-Datenbank: Schützen vertraulicher Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
 
 
 

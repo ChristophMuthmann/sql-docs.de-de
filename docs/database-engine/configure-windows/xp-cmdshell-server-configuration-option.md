@@ -2,9 +2,12 @@
 title: xp_cmdshell (Serverkonfigurationsoption) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,22 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 5bfdb40617fe5620854ff7c953736c63a2e31ca0
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32eef170d0834b44932f753075bbd2df67762a2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell (Serverkonfigurationsoption)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Die **xp_cmdshell** -Option ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverkonfigurationsoption, mit der Systemadministratoren steuern können, ob auf einem System die erweiterte gespeicherte Prozedur **xp_cmdshell** ausgeführt werden kann. Die Option **xp_cmdshell** ist in neuen Installationen standardmäßig deaktiviert. Sie kann mithilfe der richtlinienbasierten Verwaltung oder durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden, wie im folgenden Beispiel dargestellt:  
+  Die **xp_cmdshell** -Option ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverkonfigurationsoption, mit der Systemadministratoren steuern können, ob auf einem System die erweiterte gespeicherte Prozedur **xp_cmdshell** ausgeführt werden kann. In neuen Installationen ist die **xp_cmdshell**-Option standardmäßig deaktiviert. Bevor Sie diese Option aktivieren, müssen Sie die möglichen Sicherheitsrisiken berücksichtigen, die mit der Verwendung dieser Option verbunden sind. In neu entwickeltem Code sollte diese Option nicht verwendet werden, weil sie grundsätzlich deaktiviert bleiben sollte. Für einige ältere Anwendungen muss sie aktiviert sein. Kann eine Anwendung nicht so geändert werden, dass auf ein Aktivieren dieser Option verzichtet werden kann, sollte die Option über die richtlinienbasierte Verwaltung oder durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden, wie dies im folgenden Codebeispiel gezeigt ist:  
   
 ```  
 -- To allow advanced options to be changed.  
@@ -46,9 +48,8 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

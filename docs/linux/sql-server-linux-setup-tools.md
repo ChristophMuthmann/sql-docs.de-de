@@ -1,25 +1,29 @@
 ---
 title: Installieren von SQL Server-Befehlszeilentools unter Linux | Microsoft Docs
-description: Dieses Thema beschreibt, wie die SQL Server-Verwaltungstools unter Linux zu installieren.
+description: Dieser Artikel beschreibt, wie der SQL Server-Tools unter Linux zu installieren.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren Sie die SQL Server-Befehlszeilentools Sqlcmd und Bcp unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Die folgenden Schritte installieren Sie die Befehlszeilentools, Microsoft ODBC-Treiber und ihre Abhängigkeiten. Die **Mssql-Tools** Paket enthält:
 
@@ -34,7 +38,7 @@ Installieren von Tools für Ihre Plattform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-In diesem Thema wird beschrieben, wie die Befehlszeilentools zu installieren. Beispiele zur Verwendung für die originale **Sqlcmd** oder **Bcp**, finden Sie unter der [Links](#next-steps) am Ende dieses Themas.
+Dieser Artikel beschreibt, wie die Befehlszeilentools zu installieren. Beispiele zur Verwendung für die originale **Sqlcmd** oder **Bcp**, finden Sie unter der [Links](#next-steps) am Ende dieses Themas.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installieren von Tools für RHEL 7
 
@@ -176,15 +180,18 @@ Verwenden Sie die folgenden Schritte zum Installieren der **Mssql-Tools** für S
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Installieren von Tools auf macOS
+## <a id="macos"></a> Installieren von Tools auf macOS
 
 Eine Vorschau der **Sqlcmd** und **Bcp** ist nun auf MacOS verfügbar. Weitere Informationen finden Sie unter der [Ankündigung](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
+
+*Installieren Sie [Homebrew](https://brew.sh) , wenn Sie es noch nicht haben:*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Verwenden Sie zum Installieren der Tools für Mac El Capitan und Sierra die folgenden Befehle ein:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -192,7 +199,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 Beginnend mit SQL Server 2017 CTP 2.0, sind die SQL Server-Befehlszeilentools in der Docker-Images enthalten. Wenn Sie das Image mit einer interaktiven Eingabeaufforderung anfügen, können Sie die Tools lokal ausführen.
 
@@ -257,7 +264,7 @@ Verwenden Sie die folgenden Schritte aus, um diese Pakete manuell zu installiere
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ein Beispiel zum Verwenden von **Sqlcmd** zum Herstellen einer Verbindung mit SQL Server, und erstellen Sie eine Datenbank, finden Sie in einem der folgenden Quick start Lernprogramme:
+Ein Beispiel zum Verwenden von **Sqlcmd** zum Herstellen einer Verbindung mit SQL Server, und erstellen Sie eine Datenbank, finden Sie in der folgenden Schnellstarts:
 
 - [Installieren Sie auf Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -265,4 +272,3 @@ Ein Beispiel zum Verwenden von **Sqlcmd** zum Herstellen einer Verbindung mit SQ
 - [Führen Sie auf Docker](quickstart-install-connect-ubuntu.md)
 
 Ein Beispiel zum Verwenden von **Bcp** zum Massenimport und Exportieren von Daten, finden Sie unter [Massenkopieren von Daten mit SQL Server on Linux](sql-server-linux-migrate-bcp.md).
-

@@ -2,25 +2,26 @@
 title: Systemeigene Bewertung | Microsoft Docs
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-
 # <a name="native-scoring"></a>Systemeigene Bewertung
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Thema beschreibt die für Features, die sich in SQL Server-2017 Bewertung auf Machine Learning-Modellen in beinahe in Echtzeit zur Verfügung.
 
@@ -105,7 +106,7 @@ Unterstützte Plattformen sind wie folgt aus:
   + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
-  + [der rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
+  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
 Wenn Sie Modelle auf der Grundlage MicrosoftML verwenden müssen, verwenden Sie Echtzeit-batchbewertung mit Sp_rxPredict.
@@ -119,4 +120,3 @@ Die folgenden Modelltypen werden nicht unterstützt:
 + PMML-Modelle
 + Mit anderen R-Bibliotheken von CRAN oder anderen Repositorys erstellte Modelle
 + Modelle, die mit anderen R-transformation
-

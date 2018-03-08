@@ -3,7 +3,7 @@ title: "Diesen zurück | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,19 +18,18 @@ f1_keywords:
 helpviewer_keywords:
 - SortOrderEnum enumeration [ADOX]
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 58d7e00a33565dbf7f5038ac3f19431b75edbc40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0da0901958ef50ebfef764d4aee626f6ffd7e6c3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="sortorderenum"></a>Diesen zurück
+# <a name="sortorderenum"></a>SortOrderEnum
 Gibt die Sortierreihenfolge für eine indizierte Spalte an.  
   
 |Konstante|Wert|Description|  
@@ -40,4 +39,3 @@ Gibt die Sortierreihenfolge für eine indizierte Spalte an.
   
 ## <a name="applies-to"></a>Gilt für  
  [SortOrder-Eigenschaft (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
-

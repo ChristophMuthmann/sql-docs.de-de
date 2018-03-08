@@ -3,7 +3,7 @@ title: Keys-Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 31b99b28a878048a59b6fd5b79760a1b70c1cd56
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d43a2b5a6417104461287b109ba06ed3438cc00e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-collection-adox"></a>Die Auflistung der Schlüssel (ADOX)
 Enthält alle [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekte von einem [Tabelle](../../../ado/reference/adox-api/table-object-adox.md).  
@@ -56,5 +55,4 @@ Enthält alle [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) O
 ## <a name="see-also"></a>Siehe auch  
  [Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Schlüssel Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
- [Schlüsselobjekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-
+ [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

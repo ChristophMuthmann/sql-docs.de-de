@@ -3,8 +3,11 @@ title: Heben Sie die XML-Schema Auflistungsberechtigungen (Transact-SQL) | Micro
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], permissions
 - schema collections [SQL Server], permissions
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4d7d530e89bdd3dcb320c4a08c340071b7faba3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7a8ffbc542c9a9490f497ff590f6bcf995979ed4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (Berechtigungen für XML-Schemaauflistungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Hebt Berechtigungen auf, die für eine XML-Schemaauflistung erteilt oder verweigert wurden.  
   
@@ -58,10 +60,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für eine XML-Schemaauflistung aufgehoben werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- ON XML SCHEMA COLLECTION:: [ *Schema_name***.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
  Gibt die XML-Schemaauflistung an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer (::) ist erforderlich. Wenn *Schema_name* nicht angegeben ist, wird das Standardschema verwendet werden. Wenn *Schema_name* angegeben ist, ist der schemabereichsqualifizierer (.) ist erforderlich.  
   
  GRANT OPTION  
@@ -76,7 +78,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
- {UM | FROM} \< *Database_principal*>  
+ { TO | FROM } \<*database_principal*>  
  Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird.  
   
  AS \<Database_principal > Gibt einen Prinzipal aus dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
@@ -116,7 +118,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |--------------------------------------|-------------------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|EXECUTE|CONTROL|EXECUTE|  
+|Führen Sie|CONTROL|Führen Sie|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
@@ -136,11 +138,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen Sie Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
  [Verweigern von Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [Sys. xml_schema_collections &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [Erstellen von XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

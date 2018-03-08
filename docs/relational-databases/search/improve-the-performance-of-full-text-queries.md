@@ -2,27 +2,31 @@
 title: Verbessern der Leistung von Volltextabfragen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ec53c06cb92a31b0488d2f6c4ef1f294e43c0a1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 2ff0018ac7b170b990f59020b243175940c7ad10
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
-  Die folgenden Empfehlungen sollen Ihnen dabei helfen, die Leistung von Volltextabfragen zu erhöhen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die folgenden Empfehlungen sollen Ihnen dabei helfen, die Leistung von Volltextabfragen zu erhöhen.  
   
  Die Leistung bei Volltextabfragen wird auch von den Hardwareressourcen wie Arbeitsspeicher, Datenträgergeschwindigkeit, CPU-Geschwindigkeit und Computerarchitektur beeinflusst.  
   
@@ -54,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="related-resources"></a>Verwandte Ressourcen  
  [SQL Server 2008-Volltextsuche: Internes und Erweiterungen](http://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)  
   

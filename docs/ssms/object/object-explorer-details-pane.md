@@ -3,10 +3,12 @@ title: Detailbereich des Objekt-Explorers | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a6a6ac677e6c084015b0d562f9382b53c2d9b0c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
-Details zum Objekt-Explorer, eine Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], stellt eine tabellarische Ansicht aller Objekte im Server sowie eine Benutzeroberfläche zu deren Verwaltung bereit. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Details zum Objekt-Explorer, eine Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], stellt eine tabellarische Ansicht aller Objekte im Server sowie eine Benutzeroberfläche zu deren Verwaltung bereit. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  
   
 Der Bereich Details zum Objekt-Explorer ist standardmäßig in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] sichtbar. Wenn der Objekt-Explorer nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer** , oder drücken Sie **F7**.  
   
@@ -102,7 +103,6 @@ Große Objektsätze
   
 -   Das Durchsuchen von großen Objektsätzen kann einige Zeit in Anspruch nehmen und die Serverleistung verringern.  
   
-## <a name="see-also"></a>Siehe auch  
-[Objekt-Explorer](../../ssms/object/object-explorer.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Objekt-Explorers](../../ssms/object/object-explorer.md)  
   
-

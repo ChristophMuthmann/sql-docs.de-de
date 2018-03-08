@@ -2,12 +2,13 @@
 title: Cubeeigenschaften - mehrdimensionalen Modell Programmierung | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -34,20 +35,20 @@ helpviewer_keywords:
 - ProcessingPriority property
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b86278422fc1e3ec91845c223adc56640602739
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Cubeeigenschaften - mehrdimensionalen Modell Programmierung
-  Cubes verfügen über eine Reihe von Eigenschaften, die Sie festlegen können und die sich auf das cubeweite Verhalten auswirken. Diese Eigenschaften sind in der folgenden Tabelle zusammengefasst.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cubes verfügen über eine Reihe von Eigenschaften, die Sie festlegen können und die sich auf das cubeweite Verhalten auswirken. Diese Eigenschaften sind in der folgenden Tabelle zusammengefasst.  
   
 > [!NOTE]  
 >  Manche Eigenschaften werden beim Erstellen des Cubes automatisch festgelegt und können nicht geändert werden.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 09/01/2017
 |**AggregationPrefix**|Gibt das für Aggregationsnamen verwendete gemeinsame Präfix an.|  
 |**Sortierung**|Gibt den Gebietsschemabezeichner (LCID) und das Vergleichsflag, durch einen Unterstrich voneinander getrennt, an, wie z. B. Latin1_General_C1_AS.|  
 |**DefaultMeasure**|Enthält einen mehrdimensionalen Ausdruck (Multidimensional Expression, MDX), der das Standardmeasure für den Cube definiert.|  
-|**Description**|Stellt eine Beschreibung des Cubes bereit, die in Clientanwendungen verwendet werden kann.|  
+|**Beschreibung**|Stellt eine Beschreibung des Cubes bereit, die in Clientanwendungen verwendet werden kann.|  
 |**ErrorConfiguration**|Enthält konfigurierbare Fehlerbehandlungseinstellungen für die Bearbeitung doppelter Schlüssel, unbekannter Schlüssel, für Fehlergrenzen, Aktionen bei Erkennung von Fehlern, Fehlerprotokolldateien und die Bearbeitung von NULL-Schlüsseln.|  
 |**EstimatedRows**|Gibt die Anzahl der geschätzten Zeilen im Cube an.|  
 |**ID**|Enthält den eindeutigen Bezeichner (ID) des Cubes.|  
@@ -72,7 +73,7 @@ ms.lasthandoff: 09/01/2017
 |**ScriptErrorHandlingMode**|Bestimmt die Fehlerbehandlung. Optionen sind **' ignorenone '** oder **' ignoreall '**|  
 |**Quelle**|Zeigt die für den Cube verwendete Datenquellensicht.|  
 |**StorageLocation**|Gibt den Speicherort des Dateisystems für den Cube an. Wenn kein Speicherort angegeben ist, wird er von der Datenbank geerbt, die das Cubeobjekt enthält.|  
-|**StorageMode**|Gibt den Speichermodus für den Cube an. Werte sind **MOLAP**, **ROLAP**, oder **HOLAP ***.**|  
+|**StorageMode**|Gibt den Speichermodus für den Cube an. Werte sind **MOLAP**, **ROLAP**, oder **HOLAP**.|  
 |**Visible**|Bestimmt die Sichtbarkeit des Cubes.|  
   
 > [!NOTE]  
@@ -82,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Proaktives Zwischenspeichern &#40; Partitionen &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   
-

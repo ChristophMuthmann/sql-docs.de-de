@@ -3,8 +3,11 @@ title: GOTO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - statements [SQL Server], skipping
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4c5614843f961d1ff3188ba1f3caa589d77c4735
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e4420f83c9cb36ea9c8dfb2f9cae6586d7089047
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Verändert den Kontrollfluss, sodass die Ausführung an einer Marke fortgesetzt wird. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungen, die GOTO folgen, werden ausgelassen, und die Verarbeitung wird an der Marke fortgesetzt. Sie können GOTO-Anweisungen und Marken überall in einer Prozedur, in einem Batch oder einem Anweisungsblock verwenden. GOTO-Anweisungen können geschachtelt werden.  
   
@@ -51,7 +53,7 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Bezeichnung*  
+ *label*  
  Ist der Punkt, an dem die Ausführung beginnt, wenn GOTO auf diese Marke zielt. Bezeichnungen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md). Sie können Marken auch als Kommentarmethode verwenden, unabhängig davon, ob GOTO verwendet wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -84,12 +86,11 @@ Branch_Three:
   
 ## <a name="see-also"></a>Siehe auch  
  [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [GESTARTET... END &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [BREAK &#40; Transact-SQL &#41;](../../t-sql/language-elements/break-transact-sql.md)   
- [WEITERHIN &#40; Transact-SQL &#41;](../../t-sql/language-elements/continue-transact-sql.md)   
- [IF... ELSE &#40; Transact-SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [WAITFOR &#40; Transact-SQL &#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
+ [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   
+ [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [WAITFOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   
-

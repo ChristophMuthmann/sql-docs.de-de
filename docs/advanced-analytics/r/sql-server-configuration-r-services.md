@@ -2,27 +2,28 @@
 title: SQL Server-Konfiguration (R Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>SQL Server-Konfiguration für die Verwendung mit R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist die zweite aus einer Reihe, die zur leistungsoptimierung für R-Dienste basierend auf zwei Fallstudien beschreibt.  Dieser Artikel enthält Hinweise zur Hardware und Netzwerk des Computers, der zum Ausführen von SQL Server R Services verwendet wird. Es enthält auch Informationen zu Methoden zum Konfigurieren der SQL Server-Instanz, Datenbank oder in einer Lösung verwendeten Tabellen. Da die Verwendung von NUMA in SQL Server die Linie zwischen Hardware und Datenbank-Optimierungen verwischt, wird ein dritter Abschnitt CPU Affinitization und Ressource Governance ausführlich erläutert.
 
@@ -72,7 +73,7 @@ Das Windows-Betriebssystem verwendet eine Auslagerungsdatei, um Abstürze zu ver
 
 Auch die Geschwindigkeit des Laufwerks, auf dem die Auslagerungsdatei gespeichert ist, kann die Leistung beeinträchtigen. Wenn Sie die Auslagerungsdatei auf einem SSD speichern oder mehrere Auslagerungsdateien SSD-übergreifend verwenden, kann dies die Leistung verbessern.
 
-Informationen zum Ändern der Größe der Auslagerungsdatei, finden Sie unter [Gewusst wie: Bestimmen der geeigneten Auslagerungsdateigröße für 64-Bit-Versionen von Windows](https://support.microsoft.com/en-us/kb/2860880).
+Informationen zum Ändern der Größe der Auslagerungsdatei, finden Sie unter [Gewusst wie: Bestimmen der geeigneten Auslagerungsdateigröße für 64-Bit-Versionen von Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Optimierungen auf Instanz- oder Datenbankebene
 
@@ -169,7 +170,7 @@ Details, einschließlich Beispielcode finden Sie in diesem Lernprogramm: [SQL Op
 
 **Weitere Ressourcen:**
 
-+ [Soft-NUMA in SQLServer](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA in SQLServer](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Zuordnen von Soft-NUMA-Knoten zu CPUs
 
@@ -243,4 +244,3 @@ Je nach Algorithmus, die Sie verwenden, kann einige Modelle sehr groß ist, jedo
 [Optimieren der Leistung für R - R Optimierung von Code und Daten](../r/r-and-data-optimization-r-services.md)
 
 [Performance Tuning - Fallstudien](../r/performance-case-study-r-services.md)
-

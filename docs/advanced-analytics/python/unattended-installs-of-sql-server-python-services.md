@@ -2,27 +2,28 @@
 title: Unbeaufsichtigte Installation von Python Machine Learning-Services (Datenbankintern) | Microsoft Docs
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Unbeaufsichtigte Installation von Python Machine Learning-Services (Datenbankintern)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Thema beschreibt, wie die Befehlszeilenargumente in 2017 von SQL Server-Setup zum Installieren von SQL Server-Datenbankmodul mit Machine Learning-Dienste und Python stillen Modus verwenden.
 
@@ -74,4 +75,3 @@ Das folgende Beispiel zeigt die **minimale** erforderlichen Funktionen in der Be
 3.  Starten Sie SQL Server-Diensts für den neu konfigurierten Instanz neu. Auf diese Weise wird automatisch neu gestartet den zugehörigen [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] als auch Service.
 
 3. Möglicherweise sind weitere Schritte erforderlich, wenn Sie eine benutzerdefinierte Sicherheitskonfiguration verwenden, oder wenn Sie SQL Server einsetzen möchten, um Remoterechenkontexte zu unterstützen. Weitere Informationen finden Sie unter [Problembehandlung beim Machine Learning-Setup](../machine-learning-troubleshooting-faq.md).
-

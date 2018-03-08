@@ -2,30 +2,30 @@
 title: Erstellen von Tabellen (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- table creation [SQL Server], Visual Database Tools
+helpviewer_keywords: table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: "19"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6710911638bf23755bf31450d8d4c82054c48be6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 6251736a0ba3f21e0dca7f97d32efb03205200d8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-tables-database-engine"></a>Erstellen von Tabellen (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Sie können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] eine neue Tabelle erstellen, diese benennen und einer vorhandenen Datenbank hinzufügen.  
   
@@ -100,4 +100,3 @@ Für diesen Task benötigen Sie die CREATE TABLE-Berechtigung in der Datenbank u
  Weitere Beispiele finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
   
-

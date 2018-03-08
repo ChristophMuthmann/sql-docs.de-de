@@ -2,39 +2,37 @@
 title: "CSDLBI-Attribute für Berichtsentwurf | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>CSDLBI-Attribute für Berichtsentwurf
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  In diesem Abschnitt werden die Attribute in den Erweiterungen für CSDL für Tabellenmodellierung beschrieben, die sich auf den [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Abfrageentwurf auswirken.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In diesem Abschnitt werden die Attribute in den Erweiterungen für CSDL für Tabellenmodellierung beschrieben, die sich auf den [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Abfrageentwurf auswirken.  
   
 ## <a name="model-attributes"></a>Modellattribute  
  Diese Attribute werden für ein Unterelement eines [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) -Elements der CSDL definiert.  
   
-|Attributname|Datentyp|Beschreibung|  
+|Attributname|Datentyp|Description|  
 |--------------------|---------------|-----------------|  
 |Culture|Text|Gibt die für Währungsformate verwendete Kultur an. Wenn keine Angabe erfolgt, wird EN-US verwendet.|  
 |IsRightToLeft|Boolean|Gibt an, ob die Werte von Textfeldern standardmäßig von rechts nach links gelesen werden sollen.|  
@@ -44,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
 |Attributname|Datentyp|Description|  
 |--------------------|---------------|-----------------|  
-|**Verweisname**|Text|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn kein Bezeichner angegeben wird, wird der Name verwendet.|  
+|**ReferenceName**|Text|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn kein Bezeichner angegeben wird, wird der Name verwendet.|  
 |**Beschriftung**|Text|Der Anzeigename für die Entität.|  
 |**Dokumentation**|Text|Beschreibender Text, der Geschäftskunden die Bedeutung der Daten erläutert.|  
 |**Hidden**|Boolean|Gibt an, ob die Entität angezeigt werden soll. Der Standardwert ist **false**.|  
@@ -61,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 |Attributname|Datentyp|Description|  
 |--------------------|---------------|-----------------|  
-|**Verweisname**|Text|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn der Bezeichner nicht angegeben wird, wird der Feldname verwendet.|  
+|**ReferenceName**|Text|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn der Bezeichner nicht angegeben wird, wird der Feldname verwendet.|  
 |**Beschriftung**|Text|Der Anzeigename für die Entität. Wenn der Name nicht angegeben wird, wird der **ReferenceName** des Felds verwendet.|  
 |**Dokumentation**|Text|Beschreibender Text, der Geschäftskunden die Bedeutung des Felds erläutert.|  
 |**Hidden**|Boolean|Gibt an, ob das Feld angezeigt werden soll. Der Standard ist **false**und bedeutet, dass das Feld angezeigt wird.|  
@@ -77,7 +75,6 @@ ms.lasthandoff: 09/01/2017
 |**Inhalt**|Enum|Eine Enumeration, die den Untertyp oder den Inhalt des Felds beschreibt. Wenn die Enumeration nicht angegeben wird, wird kein bestimmter Untertyp angenommen, sofern der Datentyp des Felds nicht "Binary" ist. In diesem Fall wird als Datentyp "Image" angenommen. Eine vollständige Liste der unterstützten Inhaltstypen finden Sie in der AMO-Dokumentation.|  
 |**DefaultAggregateFunction**|Enum|Ein Wert, der die Standardfunktion angibt (sofern vorhanden), mit der normalerweise das Feld aggregiert wird. Mögliche Werte: **None**, **Sum**, **Average**, **Count**, **Min**, **Max**. Wenn die Werte nicht angegeben werden, wird für numerische Felder **Sum** angenommen bzw. für alle anderen Felder **None** .|  
 |**IsSimpleMeasure**|Boolean|Gibt an, ob ein Measure lediglich ein einfaches Aggregat eines numerischen Feldes ist. Solche Aggregate können nach Bedarf in der Abfrage problemlos definiert werden. Daher sollten sie von der Modelldefinition ausgenommen werden, um die Leistung zu verbessern. Wenn die Werte nicht angegeben werden, wird **false** angenommen.|  
-|**KPI**<br /><br /> **KPIGoal-Element**<br /><br /> **KpiStatus**|Unterelement|Gibt an, dass das Measureelement als KPI verwendet werden soll. Das KPI-Unterelement verwendet das KpiGoal-Element und das KpiStauts-Element, um das zugeordnete Anzeigebild zu definieren und Zielbereiche festzulegen.|  
+|**KPI**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Unterelement|Gibt an, dass das Measureelement als KPI verwendet werden soll. Das KPI-Unterelement verwendet das KpiGoal-Element und das KpiStauts-Element, um das zugeordnete Anzeigebild zu definieren und Zielbereiche festzulegen.|  
   
   
-

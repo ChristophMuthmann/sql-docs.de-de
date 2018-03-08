@@ -3,8 +3,11 @@ title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 83
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdae49bd22b5398d120530db150bc9628e34d92a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE-Anweisungen - FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt ein Resultset mit einer Liste der Datenbank- und Protokolldateien zurück, die im Sicherungssatz in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind.  
   
@@ -88,10 +90,10 @@ FROM <backup_device>
   
 |Spaltenname|Datentyp|Description|  
 |-|-|-|  
-|LogicalName|**vom Datentyp nvarchar(128)**|Logischer Name der Datei.|  
+|LogicalName|**nvarchar(128)**|Logischer Name der Datei.|  
 |PhysicalName|**nvarchar(260)**|Physischer Name oder Betriebssystemname der Datei.|  
 |Typ|**char(1)**|Einer der folgenden Dateitypen:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokolldatei<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datendatei<br /><br /> **F** = Volltextkatalog<br /><br /> **S** = FileStream, FileTable oder [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Container|  
-|FileGroupName|**vom Datentyp nvarchar(128)**|Name der Dateigruppe, die die Datei enthält.|  
+|FileGroupName|**nvarchar(128)**|Name der Dateigruppe, die die Datei enthält.|  
 |Größe|**numeric(20,0)**|Aktuelle Größe in Bytes.|  
 |MaxSize|**numeric(20,0)**|Maximal zulässige Größe in Bytes.|  
 |FileID|**bigint**|Eindeutiger Dateibezeichner in der Datenbank.|  
@@ -138,4 +140,3 @@ GO
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

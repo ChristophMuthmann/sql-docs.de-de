@@ -3,7 +3,7 @@ title: "Filtern für Datensätze aktualisiert | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c6fee8a407c5cc01e768eb86854c07d215fc420d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b633f10b4bac5ec6347879510e1867e7d5d14741
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtering-for-updated-records"></a>Filtern nach aktualisierten Datensätzen
 Bevor Sie UpdateBatch aufrufen, können Sie Recordset-Filter-Eigenschaft, um nur die Datensätze anzuzeigen, die geändert wurden, seit dem Öffnen des Recordsets oder dem letzten Aufruf von UpdateBatch. Zu diesem Zweck legen Sie Filter auf AdFilterPendingRecords, um zu bestimmen, wie viele Datensätze aktualisiert werden, wie im Codebeispiel im nächsten Abschnitt gezeigt.  
@@ -64,4 +63,3 @@ Bevor Sie UpdateBatch aufrufen, können Sie Recordset-Filter-Eigenschaft, um nur
   
 ## <a name="see-also"></a>Siehe auch  
  [Batchmodus](../../../ado/guide/data/batch-mode.md)
-

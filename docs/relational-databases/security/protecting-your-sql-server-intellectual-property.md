@@ -3,30 +3,31 @@ title: Schutz Ihres geistigen SQL Server-Eigentums | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protecting intellectual property
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a7839940c07b1322cf00d357055caf83ad30daca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Schutz Ihres geistigen SQL Server-Eigentums
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Softwareentwickler fragen sich häufig, wie sie ihre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Datenanwendung am besten an die Kunden verteilen können. Und doch verhindern sie, dass Kunden die Anwendung analysieren und dekonstruieren. Entscheidend hierbei ist, dass der Schutz Ihres geistigen Eigentums ein rechtliches Problem und Teil Ihres Lizenzvertrags ist. Wenn [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] auf einem Computer installiert ist, der von anderen Benutzern verwaltet wird, verlieren Sie grundsätzlich einen Teil der Kontrolle. 
 
@@ -46,5 +47,4 @@ Sie können auch ein [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)
 
 [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Sichern von SQL Server](../../relational-databases/security/securing-sql-server.md)  
-
 

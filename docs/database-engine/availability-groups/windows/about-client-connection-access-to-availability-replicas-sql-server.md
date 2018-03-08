@@ -2,11 +2,13 @@
 title: "Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5fd4c6e3172fb2386e1b683153df98e526f304ef
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)
-  In einer Always On-Verfügbarkeitsgruppe können Sie mindestens ein Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen zuzulassen, wenn es unter der sekundären Rolle ausgeführt wird (d h. bei Ausführung als sekundäres Replikat). Sie können auch jedes Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen bei der Ausführung unter der primären Rolle zuzulassen oder auszuschließen (d. h. bei Ausführung als das primäre Replikat).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In einer Always On-Verfügbarkeitsgruppe können Sie mindestens ein Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen zuzulassen, wenn es unter der sekundären Rolle ausgeführt wird (d.h. bei Ausführung als sekundäres Replikat). Sie können auch jedes Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen bei der Ausführung unter der primären Rolle zuzulassen oder auszuschließen (d. h. bei Ausführung als das primäre Replikat).  
   
  Um den Clientzugriff auf primäre oder sekundäre Datenbanken einer bestimmten Verfügbarkeitsgruppe zu erleichtern, sollten Sie einen Verfügbarkeitsgruppenlistener erstellen. Standardmäßig werden eingehende Verbindungen vom Verfügbarkeitsgruppenlistener an das primäre Replikat weitergeleitet. Sie können jedoch eine Verfügbarkeitsgruppe konfigurieren, um schreibgeschütztes Routing zu unterstützen, das seinem Verfügbarkeitsgruppenlistener ermöglicht, die Verbindungsanforderungen von Anwendungen für beabsichtigte Lesevorgänge an ein lesbares, sekundäres Replikat umzuleiten. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/02/2017
  Schreibgeschützte Verbindungen zulassen  
  Die sekundären Datenbanken sind alle für Lesezugriffsverbindungen verfügbar. Diese Option ermöglicht es Clients mit älteren Versionen, eine Verbindung herzustellen.  
   
- Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
   
 ##  <a name="ConnectAccessForPrimary"></a> Von der primären Rolle unterstützte Verbindungszugriffstypen  
  Die primäre Rolle unterstützt die folgenden zwei Alternativen für Clientverbindungen:  
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/02/2017
   
 |Replikatrolle|Auf Replikat unterstützter Verbindungszugriff|Verbindungsabsicht|Ergebnis des Verbindungsversuchs|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|Alle|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
+|Secondary|All|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
 |Secondary|Keine (dies ist der sekundäre Standardverhalten)|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Failure|  
 |Secondary|Nur beabsichtigte Lesevorgänge|Beabsichtigte Lesevorgänge|Success|  
 |Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Failure|  
@@ -102,8 +103,8 @@ ms.lasthandoff: 08/02/2017
   
 |Replikat|Commit-Modus|Anfangsrolle|Verbindungszugriff für sekundäre Rolle|Verbindungszugriff für primäre Rolle|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replikat1|Synchron|Primär|Keine|Lese-/Schreibzugriff|  
-|Replikat2|Synchron|Secondary|Keine|Lese-/Schreibzugriff|  
+|Replikat1|Synchron|Primär|InclusionThresholdSetting|Lese-/Schreibzugriff|  
+|Replikat2|Synchron|Secondary|InclusionThresholdSetting|Lese-/Schreibzugriff|  
 |Replikat3|Asynchron|Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff|  
 |Replikat4|Asynchron|Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff|  
   
@@ -127,10 +128,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistik](../../../relational-databases/statistics/statistics.md)  
   
   
-

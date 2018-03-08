@@ -3,8 +3,11 @@ title: BufferWithTolerance (Geometry-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ffa8a350cb4531f9d4a6d1439a4dad0682189266
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1cb8520351369dad761862132211b5222c52e3ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punktwerte darstellt, deren Abstand zu einer **geometry** -Instanz kleiner oder gleich einem angegebenen Wert ist, wobei eine angegebene Toleranz gewährt wird.
   
@@ -42,10 +44,10 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punktwerte dar
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abstand*  
+ *distance*  
  Ein **float** -Ausdruck, der den Abstand zu der **geometry** -Instanz angibt, um die der Puffer berechnet werden soll.  
   
- *Fehlertoleranz*  
+ *tolerance*  
  Ein **float** -Ausdruck, der die Toleranz des Pufferabstands angibt.  
   
  *Toleranz* verweist auf die maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  
@@ -98,8 +100,7 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
   
 ## <a name="see-also"></a>Siehe auch  
  [STBuffer &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
- [Erweiterte Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
-
 

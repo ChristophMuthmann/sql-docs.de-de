@@ -1,30 +1,31 @@
 ---
 title: Installation und Konfiguration | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
-Wide World Importers OLTP-Datenbank Installations- und konfigurationsanleitung für.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP-Datenbank Installations- und konfigurationsanleitung für.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -96,5 +97,4 @@ Gilt für: Azure SQL-Datenbank
 Sicherheit auf Zeilenebene ist nicht in der bacpac-Datei-Download von "wideworldimporters" standardmäßig aktiviert. Um Sicherheit auf Zeilenebene in der Datenbank zu aktivieren, führen Sie die folgende gespeicherte Prozedur aus:
 
     EXECUTE [Application].[Configuration_ApplyAuditing]
-
 

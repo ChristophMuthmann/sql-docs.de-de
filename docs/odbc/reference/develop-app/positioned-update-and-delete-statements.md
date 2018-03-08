@@ -3,8 +3,11 @@ title: Positioniert, Update- und Delete-Anweisungen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -15,24 +18,23 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45bb604f0226ac05eab0fd99bdbef41704cc8de8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Positionierte Update- und Delete-Anweisungen
 Anwendungen können zu aktualisieren oder löschen Sie die aktuelle Zeile in einem Resultset mit ein positioniertes Update oder delete-Anweisung. Positioniert, Update- und Delete-Anweisungen werden von einigen Datenquellen, aber nicht alle von ihnen unterstützt. Um zu bestimmen, ob eine Datenquelle positioniert unterstützt Update- und-Anweisungen DELETE, eine Anwendung ruft **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 *Infotyp* (je nach Typ des Cursors). Beachten Sie, dass die ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen.  
   
  Ein positioniertes Update oder delete-Anweisung, muss die Anwendung erstellen, ein Resultset mit einer **für aktualisieren wählen** Anweisung. Die Syntax dieser Anweisung lautet:  
   
- **Wählen Sie** [**alle** &#124; **DISTINCT**] *Select-Liste*  
+ **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
  **VON** *Tabelle Verweisliste*  
   
@@ -156,4 +158,3 @@ while (GetAction(&Action, &RowNum)) {
 // Close the cursor.  
 SQLCloseCursor(hstmtCust);  
 ```
-

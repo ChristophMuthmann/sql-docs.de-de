@@ -3,7 +3,7 @@ title: Hierarchische Recordsets fabricating | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dd8c5c97983fbfa0cbf10f302f992c1bd6c9a59f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f8b01b8cd08c46f641fbd713f4acbdeca53db5c6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricating hierarchische Recordsets
 Im folgende Beispiel wird gezeigt, wie ein hierarchisches Recordset ohne eine zugrunde liegende Datenquelle mithilfe der Daten strukturieren Grammatik zum Definieren von Spalten für die übergeordneten und untergeordneten sowie zwei Ebenen untergeordneten bereitzustellen **Recordsets**.  
@@ -68,4 +67,3 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  [Erforderlichen Anbieter Daten können strukturiert werden.](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Form "APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
-

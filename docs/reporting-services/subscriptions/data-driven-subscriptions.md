@@ -1,30 +1,30 @@
 ---
-title: Datengesteuerte Abonnements | Microsoft Docs
+title: Datengesteuerte Abonnements | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 56
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "56"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e4ffac2b4342d0f8b3c30a9d76cdc7b0ecf098c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8deb6531b2bc14cb156787c6de115af34f402cc4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-driven-subscriptions"></a>Datengesteuerte Abonnements
   Ein datengesteuertes Abonnement bietet eine Möglichkeit, dynamische Abonnementdaten zu verwenden, die zur Laufzeit aus einer externen Datenquelle abgerufen werden. Mit einem datengesteuerten Abonnement können auch statischer Text und Standardwerte verwendet werden, die Sie beim Definieren des Abonnements angeben. Sie können datengesteuerte Abonnements für die folgenden Aufgaben verwenden:  
@@ -57,17 +57,16 @@ ms.lasthandoff: 08/09/2017
 ## <a name="working-with-data-driven-subscriptions"></a>Arbeiten mit datengesteuerten Abonnements  
  Die folgenden Themen enthalten weitere Informationen zu datengesteuerten Abonnements.  
   
-|Themen|Description|  
+|Thema|Description|  
 |------------|-----------------|  
 |[Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|Erläutert das Erstellen, Ändern oder Löschen eines datengesteuerten Abonnements.|  
 |[Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Enthält Informationen zu den Datenquellen, die Sie für ein datengesteuertes Abonnement verwenden können.|  
 |[Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|Enthält schrittweise Anleitungen zum Erstellen eines datengesteuerten Abonnements.|  
 |[Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)|Beschreibt die Verwendung des NULL-Übermittlungsanbieters mit einem datengesteuerten Abonnement, um den Cache vorab zu laden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Erstellen eines datengesteuerten Abonnements (Seite) &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
- [Vorabladen des Caches &#40; Berichts-Manager &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Erstellen eines datengesteuerten Abonnements (Seite) (Berichts-Manager)](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [Vorabladen des Caches (Berichts-Manager)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

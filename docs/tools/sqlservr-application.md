@@ -2,11 +2,13 @@
 title: sqlservr (Anwendung) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlservr
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "39"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2c3a63c23d2a7ecdb374269af72861c16638984
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0abbf1d371f7fb97547b7e52331c150c7c003ae
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlservr-application"></a>sqlservr (Anwendung)
-  Mithilfe der Anwendung **sqlservr** können Sie die Ausführung einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz von der Eingabeaufforderung aus starten, beenden, anhalten und fortsetzen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Sqlservr** Anwendung startet, beendet, angehalten und fortgesetzt wird eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] über eine Eingabeaufforderung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -94,13 +95,13 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  Diese Option kann Ihnen helfen, die Speicherbelegung zu optimieren. Dies gilt jedoch nur, wenn der physische Speicher die konfigurierte Grenze überschreitet, die vom Betriebssystem für den virtuellen Arbeitsspeicher, der für Anwendungen verfügbar ist, festgelegt wird. Die Verwendung dieser Option kann für Konfigurationen mit sehr viel Arbeitsspeicher geeignet sein, bei denen die Anforderungen an die Speicherauslastung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] untypisch sind und der virtuelle Adressraum des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Prozesses vollständig verwendet wird. Eine falsche Verwendung dieser Option kann dazu führen, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz nicht gestartet werden kann oder dass Laufzeitfehler auftreten.  
   
- Verwenden Sie den Standardwert für den **-g**-Parameter, es sei denn, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält eine der folgenden Warnungen:  
+ Verwenden Sie den Standardwert für den **-g** -Parameter, es sei denn, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Fehlerprotokoll enthält eine der folgenden Warnungen:  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<Größe >"  
+-   „Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>“  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<Größe >"  
+-   „Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT <Größe\<“  
   
- Diese Meldungen können darauf hinweisen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versucht, Teile des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicherpools freizugeben, um Speicherplatz für Elemente wie DLL-Dateien von erweiterten gespeicherten Prozeduren oder Automatisierungsobjekte zu erhalten. In diesem Fall sollten Sie erwägen, den durch den Schalter **-g**reservierten Umfang an Arbeitsspeicher zu erhöhen.  
+ Diese Meldungen können darauf hinweisen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versucht, Teile des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicherpools freizugeben, um Speicherplatz für Elemente wie DLL-Dateien von erweiterten gespeicherten Prozeduren oder Automatisierungsobjekte zu erhalten. In diesem Fall sollten Sie erwägen, den durch den Schalter **-g** reservierten Umfang an Arbeitsspeicher zu erhöhen.  
   
  Wenn Sie einen Wert verwenden, der niedriger als der Standardwert ist, erhöht sich dadurch der Umfang des Arbeitsspeichers, der für den Pufferpool und die Threadstapel zur Verfügung steht. Dies kann wiederum eine gewisse Verbesserung der Leistung für arbeitsspeicherintensive Arbeitsauslastungen in Systemen bedeuten, die nicht viele erweiterte gespeicherte Prozeduren, verteilte Abfragen oder Automatisierungsobjekte verwenden.  
   
@@ -114,4 +115,3 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
-

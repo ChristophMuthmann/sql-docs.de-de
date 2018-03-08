@@ -2,9 +2,12 @@
 title: Erstellen Sie Instanzen der XML-Daten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -19,19 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d02273b721b1b75b7bd134c8cd50c94ed2e9848d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
-  In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt es folgende Möglichkeiten, XML-Instanzen zu generieren:  
   
@@ -71,11 +75,11 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Standardmäßig verwirft der XML-Parser insignifikante Leerzeichen, wenn Zeichenfolgendaten in XML konvertiert werden, wenn eine der folgenden Bedingungen zutrifft:  
   
--   `The xml:space` -Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
+-   Das `xml:space`-Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
   
 -   Das `xml:space` -Attribut für ein Element oder eines seiner Vorgängerelemente weist den Standardwert auf.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 declare @x xml  
@@ -89,7 +93,7 @@ select @x
 <root><child/></root>  
 ```  
   
- Sie können dieses Verhalten jedoch ändern. Um Leerzeichen für eine xml DT-Instanz beizubehalten, verwenden Sie den CONVERT-Operator und seinen optionalen *style* -Parameter, um einen Wert von 1 festzulegen. Beispiel:  
+ Sie können dieses Verhalten jedoch ändern. Um Leerzeichen für eine xml DT-Instanz beizubehalten, verwenden Sie den CONVERT-Operator und seinen optionalen *style* -Parameter, um einen Wert von 1 festzulegen. Zum Beispiel:  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -137,7 +141,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Verwenden der SELECT-Anweisung mit einer FOR XML-Klausel  
- Sie können die FOR XML-Klausel in einer SELECT-Anweisung verwenden, um Ergebnisse als XML zurückzugeben. Beispiel:  
+ Sie können die FOR XML-Klausel in einer SELECT-Anweisung verwenden, um Ergebnisse als XML zurückzugeben. Zum Beispiel:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -187,7 +191,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden **xml** -Datentypinstanzen an den Client zurückgegeben, die das Ergebnis unterschiedlicher Serverkonstrukte sind (z. B. FOR XML-Abfragen, für die die TYPE-Direktive verwendet wird, oder bei denen der **xml** -Datentyp verwendet wird, um XML aus SQL-Spalten, -Variablen und -Ausgabeparametern zurückzugeben). Im Clientanwendungscode wird vom ADO.NET-Anbieter angefordert, dass diese **xml** -Datentypinformationen als Binärcode vom Server gesendet werden. Wenn Sie FOR XML jedoch ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgegeben. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten.  
   
 ## <a name="using-constant-assignments"></a>Verwenden von Konstantenzuweisungen  
- Eine Zeichenfolgenkonstante kann dort verwendet werden, wo eine Instanz des **xml** -Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Beispiel:  
+ Eine Zeichenfolgenkonstante kann dort verwendet werden, wo eine Instanz des **xml** -Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Zum Beispiel:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -213,11 +217,11 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Abrufen und Abfragen von XML-Daten](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Beschreibt die Teile von XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

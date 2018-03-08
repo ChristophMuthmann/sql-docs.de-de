@@ -2,33 +2,33 @@
 title: "Task „T-SQL-Anweisung ausführen“ (Wartungsplan) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.tsql.f1
-helpviewer_keywords:
-- Execute T-SQL Statement Task dialog box
+f1_keywords: sql13.swb.maint.tsql.f1
+helpviewer_keywords: Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
-caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc4fe80e02dfde259794807f700cee0e73dcd43f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "18"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a507e5599faec3047ec861e8c72d618b33c27bdf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Task 'T-SQL-Anweisung ausführen' (Wartungsplan)
-  Im Dialogfeld **Task 'T-SQL-Anweisung ausführen'** können Sie den Wartungsplan anpassen, indem Sie ihm [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen hinzufügen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Dialogfeld **Task „T-SQL-Anweisung ausführen“** können Sie den Wartungsplan anpassen, indem Sie ihm [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen hinzufügen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
  Stellt mithilfe der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her. Diese Option ist nicht verfügbar.  
   
- **Benutzername**  
+ **User name**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
  **Kennwort**  

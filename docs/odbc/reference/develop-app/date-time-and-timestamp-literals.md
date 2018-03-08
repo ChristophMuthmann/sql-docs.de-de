@@ -3,26 +3,26 @@ title: Date, Time und Timestamp-Literale | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], literals
+helpviewer_keywords: escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time und Timestamp-Literale
 Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet  
@@ -33,7 +33,7 @@ Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet
   
 |*Literal-Typ*|Bedeutung|Formatieren von *Wert*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Datum|*JJJJ*-*mm*-*TT*|  
+|**d**|date|*JJJJ*-*mm*-*TT*|  
 |**t**|Zeit *|*"hh"*:*mm*:*ss*[1]|  
 |**TS**|Timestamp|*JJJJ*-*mm*-*Dd* *"hh"*:*mm*:*ss* [. *f...* ] [1]|  
   
@@ -94,4 +94,3 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Um zu bestimmen, ob ein Treiber die ODBC-Escapesequenzen für Intervall Literale unterstützt, eine Anwendung ruft **SQLGetTypeInfo**. Wenn die Datenquelle einen Datetime-Intervall-Datentyp unterstützt, muss es auch die entsprechende Escapesequenz unterstützen.  
   
  Datenquellen unterstützen auch die Datetime-Literale in der ANSI SQL-92-Spezifikation definiert die unterscheiden sich von den ODBC-Escapesequenzen für Datetime-Intervall-Literale. Um zu bestimmen, ob eine Datenquelle die ANSI-Literale unterstützt, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_ANSI_SQL_DATETIME_LITERALS.
-

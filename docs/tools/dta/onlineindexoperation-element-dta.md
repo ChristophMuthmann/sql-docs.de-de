@@ -2,32 +2,31 @@
 title: OnlineIndexOperation-Element (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- OnlineIndexOperation element
+dev_langs: XML
+helpviewer_keywords: OnlineIndexOperation element
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "13"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 399763df5f0ee05db8d0058bf70f146873119952
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83fdbe16e2a461f2b30376f3f1e4178a01bf364
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation-Element (DTA)
-  Gibt an, ob die vom Datenbankoptimierungsratgeber empfohlenen Indizes, indizierten Sichten oder Partitionen online erstellt werden können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt an, ob die Indizes, indizierte Sichten oder Partitionen, die der Datenbankoptimierungsratgeber empfiehlt online erstellt werden können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,4 +61,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

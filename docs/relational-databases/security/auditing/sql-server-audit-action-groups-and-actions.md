@@ -2,9 +2,12 @@
 title: SQL Server Audit-Aktionsgruppen und -Aktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 46
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2a6dbc0a4fd646a93f6b0934d3297579e7e44398
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
-  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen. Bei diesen Überwachungsaktionselementen kann es sich entweder um Aktionsgruppen, wie Server_Object_Change_Group, oder um einzelne Aktionen, wie SELECT-Vorgänge in einer Tabelle, handeln.  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 06/22/2017
 |DATABASE_PERMISSION_CHANGE_GROUP|Das Ereignis wird immer dann ausgelöst, wenn ein Prinzipal in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine GRANT-, REVOKE- oder DENY-Anweisung für eine Anweisungsberechtigung ausgibt (dies gilt ausschließlich für datenbankspezifische Ereignisse, beispielsweise das Gewähren von Berechtigungen für eine Datenbank).<br /><br /> Das Ereignis wird für eine Datenbankbesitzänderung (GDR) in einer beliebigen Datenbank auf dem Server ausgelöst. Entspricht der [Audit Database Scope GDR Event Class](../../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn Prinzipale, z. B. Benutzer, in einer Datenbank erstellt oder geändert bzw. aus einer Datenbank gelöscht werden. Entspricht der [Audit Database Principal Management Event Class](../../../relational-databases/event-classes/audit-database-principal-management-event-class.md). (Entspricht ebenfalls der Audit Add DB Principal-Ereignisklasse, die bei den veralteten gespeicherten Prozeduren sp_grantdbaccess, sp_revokedbaccess, sp_addPrincipal und sp_dropPrincipal auftritt.)<br /><br /> Dieses Ereignis wird immer dann ausgelöst, wenn eine Datenbankrolle mit den gespeicherten sp_addrole- und sp_droprole-Prozeduren hinzugefügt bzw. entfernt wird. Das Ereignis wird immer dann ausgelöst, wenn Datenbankprinzipale erstellt, geändert oder aus einer Datenbank gelöscht werden. Entspricht der [Audit Add Role Event Class](../../../relational-databases/event-classes/audit-add-role-event-class.md).|  
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Dieses Ereignis wird ausgelöst, wenn es im Datenbankbereich zu einem Identitätswechselvorgang kommt, z.B. bei EXECUTE AS \<Prinzipalname> oder SETPRINCIPAL. Das Ereignis wird für Identitätswechsel in einer Datenbank ausgelöst. Entspricht der [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
-|DATABASE_ROLE_MEMBER_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn Anmeldedaten hinzugefügt oder aus einer Datenbankrolle entfernt werden. Diese Ereignisklasse wird für die gespeicherten Prozeduren sp_addrolemember, sp_changegroup und sp_droprolemember ausgelöst. Das Ereignis wird bei jeder Änderung der Mitgliedschaft in einer Datenbankrolle in jeder Datenbank ausgelöst. Entspricht der [Audit Add Member to DB Role Event Class](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
+|DATABASE_ROLE_MEMBER_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn Anmeldedaten hinzugefügt oder aus einer Datenbankrolle entfernt werden. Diese Ereignisklasse wird für die gespeicherten Prozeduren sp_addrolemember, sp_changegroup und sp_droprolemember ausgelöst. Das Ereignis wird bei jeder Änderung der Mitgliedschaft in einer Datenbankrolle in jeder Datenbank ausgelöst. Entspricht der [Audit Add Member to DB Role-Ereignisklasse](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Das Ereignis wird ausgelöst, wenn ein Prinzipal einen DBCC-Befehl ausgibt. Entspricht der [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Gibt an, dass ein Prinzipal vergeblich versucht hat, sich an einer eigenständigen Datenbank anzumelden. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden. Entspricht der [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
 |FAILED_LOGIN_GROUP|Gibt an, dass ein Prinzipal versucht hat, sich bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anzumelden, und diese Anmeldung fehlgeschlagen ist. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden. Entspricht der [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
@@ -112,7 +114,7 @@ ms.lasthandoff: 06/22/2017
 |SERVER_PERMISSION_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine GRANT-, REVOKE- oder DENY-Anweisung für Berechtigungen im Serverbereich ausgegeben wird, z. B. beim Erstellen eines Anmeldenamens. Entspricht der [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn Serverprinzipale erstellt, geändert oder gelöscht werden. Entspricht der [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md).<br /><br /> Dieses Ereignis wird ausgelöst, wenn ein Prinzipal die gespeicherten sp_defaultdb- oder sp_defaultlanguage-Prozeduren oder ALTER LOGIN-Anweisungen ausgibt. Entspricht der [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md).<br /><br /> Dieses Ereignis wird für die gespeicherten sp_addlogin- und sp_droplogin-Prozeduren ausgelöst. Entspricht auch der [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md).<br /><br /> Dieses Ereignis wird für die gespeicherten Prozeduren sp_grantlogin oder sp_revokelogin ausgelöst. Entspricht der [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|Dieses Ereignis wird ausgelöst, wenn es zu einem Identitätswechsel im Serverbereich kommt, z.B. bei EXECUTE AS \<Anmeldung>. Entspricht der [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md).|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn Anmeldedaten hinzugefügt werden oder aus einer festen Serverrolle entfernt werden. Dieses Ereignis wird für die gespeicherten Prozeduren sp_addsrvrolemember und sp_dropsrvrolemember ausgelöst. Entspricht der [Audit Add Login to Server Role Event Class](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn Anmeldedaten hinzugefügt werden oder aus einer festen Serverrolle entfernt werden. Dieses Ereignis wird für die gespeicherten Prozeduren sp_addsrvrolemember und sp_dropsrvrolemember ausgelöst. Entspricht der [Audit Add Login to Server Role-Ereignisklasse](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Dieses Ereignis wird ausgelöst, wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienststatus geändert wird. Entspricht der [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md).|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Gibt an, dass sich ein Prinzipal erfolgreich an einer eigenständigen Datenbank angemeldet hat. Entspricht der Audit Successful Database Authentication-Ereignisklasse.|  
 |SUCCESSFUL_LOGIN_GROUP|Gibt an, dass ein Prinzipal sich erfolgreich bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]angemeldet hat. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden. Entspricht der [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md).|  
@@ -231,4 +233,3 @@ ms.lasthandoff: 06/22/2017
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
-

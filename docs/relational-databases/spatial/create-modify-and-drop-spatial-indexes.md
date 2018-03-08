@@ -2,9 +2,12 @@
 title: "Erstellen, Ändern und Löschen von räumlichen Indizes | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: 
@@ -17,19 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 57aebfb8b20a0e6c751deb4b9914f8122b3c3cd3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
-  Mit einem räumlichen Index lassen sich bestimmte Operationen mit Spalten des Datentyps **Geometrie** oder **Geografie** ( *räumliche Spalten*) effizienter ausführen. Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Mit einem räumlichen Index lassen sich bestimmte Operationen mit Spalten des Datentyps **Geometrie** oder **Geografie** ( *räumliche Spalten*) effizienter ausführen. Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
   
  Die Erstellung von räumlichen Indizes unterliegt einigen Einschränkungen. Weitere Informationen zu den Beschränkungen von räumlichen Indizes finden Sie unter [Erstellen, Ändern und Löschen von räumlichen Indizes](#restrictions) in diesem Thema.  
   
@@ -67,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 11. Geben Sie auf der Seite **räumlich** die Werte ein, die Sie für die räumlichen Eigenschaften des Index verwenden möchten.  
   
-     Beim Erstellen eines Index für eine Spalte des Typs **Geometrie** müssen Sie die Koordinaten **(***X-min***,***Y-min***)** und **(***X-max***,***Y-max***)** des umgebenden Felds angeben. Bei einem Index für eine Spalte des Typs **Geografie** werden die umgebenden Felder schreibgeschützt, nachdem Sie das Mosaikschema **Geografieraster** angegeben haben, weil im Geografierastermosaik kein umgebendes Feld verwendet wird.  
+     Beim Erstellen eines Index für eine Spalte des Typs **Geometrie** müssen Sie die Koordinaten **(***X-min***, ***Y-min***)** und **(***X-max***, ***Y-max***)** des umgebenden Felds angeben. Bei einem Index für eine Spalte des Typs **Geografie** werden die umgebenden Felder schreibgeschützt, nachdem Sie das Mosaikschema **Geografieraster** angegeben haben, weil im Geografierastermosaik kein umgebendes Feld verwendet wird.  
   
      Optional können Sie benutzerdefinierte Werte für das Feld **Zellen pro Objekt** und für die Rasterdichte auf jeder Ebene des Mosaikschemas angeben. Die Standardanzahl von Zellen pro Objekt ist 16 für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder 8 für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder höher, und die Standardrasterdichte ist **Mittel** für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -157,7 +161,7 @@ ms.lasthandoff: 06/22/2017
  Räumliche Mosaike, die mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurden, können nicht in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]repliziert werden. Sie müssen räumliche Mosaike von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] für räumliche Indizes für die Abwärtskompatibilität mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] - oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Datenbanken verwenden.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

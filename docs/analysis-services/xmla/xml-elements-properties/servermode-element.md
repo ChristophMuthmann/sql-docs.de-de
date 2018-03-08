@@ -2,31 +2,30 @@
 title: ServerMode-Element | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: c2f8cb39-dad7-433b-b7b7-fb1625f76a84
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c0d0def053cf923474f8d8d3cd066a87bdc31833
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8145c7090e1c172fe210202e55078cb4bd404fcb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="servermode-element"></a>ServerMode-Element
-  Das **ServerMode** -Serverelement gibt den Modus an, in dem der Server arbeitet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Die **ServerMode** -Serverelement gibt den Modus an, in der Server betrieben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,23 +40,23 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|(none)|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Server arbeitet in einem der folgenden beiden Modi:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |*Mehrdimensionale*|Mehrdimensionaler und Data Mining-Modus|  
 |*Tabellarische*|Tabellenmodus|  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   
-

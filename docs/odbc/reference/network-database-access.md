@@ -3,10 +3,12 @@ title: Datenbank-Netzwerkzugriff | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: acdc1f994d6fd598051ceb2e4e955650f17ffc27
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="network-database-access"></a>Netzwerk-Datenbankzugriff
 Zugreifen auf eine Datenbank in einem Netzwerk erfordert eine Reihe von Komponenten, von die jedes ist unabhängig von, und befindet sich unterhalb der Programmierschnittstelle. Diese Komponenten sind in der folgenden Abbildung dargestellt.  
@@ -44,4 +45,3 @@ Zugreifen auf eine Datenbank in einem Netzwerk erfordert eine Reihe von Komponen
 -   **Prozessübergreifende Kommunikationsmechanismus** der prozessübergreifenden Kommunikation (IPC)-Mechanismus ist der Prozess, mit dem ein Prozess mit einem anderen kommuniziert. Beispiele sind benannte Pipes, TCP/IP-Sockets und DECnet-Sockets. Die Auswahl der IPC-Mechanismus wird durch das Betriebssystem und Netzwerk verwendeten eingeschränkt.  
   
 -   **Netzwerkprotokoll** das Netzwerkprotokoll wird verwendet, um den Datenstrom über ein Netzwerk zu transportieren. Sie können die Aufgaben, die berücksichtigt werden, dass unterstützt die IPC-Mechanismen verwendet, um die Daten zu implementieren Protokoll sowie die unterstützenden grundlegende Vorgänge wie dateiübertragungen stream und Druckerfreigabe. Netzwerkprotokolle gehören NetBEUI, TCP/IP, DECnet und SPX/IPX und gelten für jedes Netzwerk.
-

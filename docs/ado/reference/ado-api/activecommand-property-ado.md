@@ -3,7 +3,7 @@ title: ActiveCommand-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eee93cce3f7868ff9c71a83a462e5073d3e2d722
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4b1580dbedaa9c7667cd7b320817fdaea6ad48d7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand-Eigenschaft (ADO)
 Gibt an, die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt, das die zugeordnete erstellt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -51,4 +50,3 @@ Gibt an, die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Obje
  [Beispiel für ActiveCommand-Eigenschaft (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
  [ActiveCommand-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
-

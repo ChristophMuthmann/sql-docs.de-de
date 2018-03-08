@@ -1,10 +1,13 @@
 ---
-title: "Überprüfen und generieren ergänzender Protokollierungsskripts | Microsoft Docs"
+title: "Überprüfen und Generieren ergänzender Protokollierungsskripts | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e9b3f2ea4c6484544663cb00c15db662da56ee05
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Überprüfen und Generieren ergänzender Protokollierungsskripts
-  Verwenden Sie die Registerkarte **Skripts** , um ein Skript für die Oracle-Quelldatenbank auszuführen bzw. erneut auszuführen, mit dem die ergänzende Protokollierung eingerichtet wird.  
+  Verwenden Sie die Registerkarte **Skripts**, um ein Skript für die Oracle-Quelldatenbank auszuführen bzw. erneut auszuführen, mit dem die ergänzende Protokollierung eingerichtet wird.  
   
  Wählen Sie vor dem Ausführen der Skripts eine der folgenden Optionen:  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Wenn Sie die ergänzenden Protokollierungsskripts ausführen, wird das Dialogfeld Oracle Credentials for Running Script geöffnet, in dem Sie einen gültigen Oracle-Benutzernamen und das dazugehörige Kennwort angeben können. Informationen zum Bereitstellen der richtigen Oracle-Anmeldeinformationen finden Sie unter [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- Bei Bedarf können Sie die Skripts mithilfe von SQL*Plus auch manuell ausführen.  
+ Bei Bedarf können Sie die Skripts mithilfe von SQL\*Plus auch manuell ausführen.  
   
 ### <a name="to-run-the-scripts-manually"></a>So führen Sie Skripts manuell aus  
   
@@ -58,9 +60,8 @@ ms.lasthandoff: 08/03/2017
   
 2.  Geben Sie der Datei einen Namen, und klicken Sie auf **Speichern** , um die Datei zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Bearbeiten der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Bearbeiten der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Oracle-Anmeldeinformationen zum Ausführen von Skripts](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

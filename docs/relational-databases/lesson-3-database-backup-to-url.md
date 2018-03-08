@@ -1,11 +1,13 @@
 ---
 title: "Lektion 3: Datenbanksicherung über URLs | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -13,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 804f853ada6e3fe3cdbfc3964f3201d1a38cce80
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Lektion 3: Datenbanksicherung über URLs
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In dieser Lektion werden Sie die AdventureWorks2014-Datenbank in Ihrer lokalen SQL Server 2016-Instanz in dem Azure-Container sichern, den Sie in [Lektion 1: Erstellen einer Richtlinie und einer Shared Access Signature (SAS) in einem Azure-Container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)erstellt haben.  
   
 > [!NOTE]  
@@ -62,4 +64,3 @@ So sichern Sie eine Datenbank in Blob Storage:
   
 [Lektion 4: Wiederherstellen einer Datenbank auf einem virtuellen Computer über URLs](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
-

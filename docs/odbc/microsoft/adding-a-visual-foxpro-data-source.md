@@ -3,27 +3,28 @@ title: "Hinzufügen einer Datenquelle Visual FoxPro | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], adding
 - adding data sources [ODBC], Visual FoxPro ODBC driver
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f89e4bec58810b1afb5c15e1b89b96c3193d8793
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Fügen Sie eine Visual FoxPro-Datenquelle
 Um Visual FoxPro-Daten aus Ihrer Anwendung zuzugreifen, müssen Sie eine Datenquelle verfügen. Sie können eine Datenquelle wie folgt erstellen:  
@@ -54,4 +55,3 @@ Um Visual FoxPro-Daten aus Ihrer Anwendung zuzugreifen, müssen Sie eine Datenqu
      Der neue Name der Datenquelle wird in der Liste der Datenquellen für Benutzer in der Registerkarte "Benutzer-DSN" im Dialogfeld ODBC-Datenquellen-Administrator angezeigt.  
   
 6.  Klicken Sie auf OK, um die neue Datenquelle zu speichern und schließen das Dialogfeld ODBC-Datenquellen-Administrator.
-

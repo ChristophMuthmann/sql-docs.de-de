@@ -1,13 +1,14 @@
 ---
-title: Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter (SSRS) | Microsoft Docs
+title: Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eb8a4c575fd2dd6eea33ca875f0b54a999791d26
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter (SSRS)
   Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung ist eine Komponente, die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert wird und zum Abrufen von Daten von einem bestimmten Datenquellentyp sowie zum Bereitstellen zusätzlicher Funktionalität zur Unterstützung des Berichtsentwurfs und der Berichtsverarbeitung verwendet wird. Eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter ist eine Komponente, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] oder Drittanbieterquellen verfügbar ist und <xref:System.Data> -Schnittstellen unterstützt, über die Sie Daten von einem bestimmten Datenquellentyp abrufen und ändern können.  
@@ -50,11 +50,10 @@ ms.lasthandoff: 08/09/2017
  Da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] über eine erweiterbare Datenanbieterarchitektur verfügt, können Sie eine benutzerdefinierte Datenverarbeitungserweiterung erstellen, um die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterungen bereitgestellte zusätzliche Funktionalität einzuschließen. Weitere Informationen finden Sie unter [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Informationen zu Datenverarbeitungserweiterungen von Drittanbietern finden Sie in der mit der Datenverarbeitungserweiterung des Drittanbieters gelieferten Dokumentation.  
   
 > [!NOTE]  
->  Ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter oder eine benutzerdefinierte Datenverarbeitungserweiterung muss installiert und registriert werden, bevor Sie damit auf Daten aus einer Datenquelle zugreifen können. Die Datenverarbeitungserweiterung muss zum Verfassen des Berichts auf dem Berichterstellungsclient installiert und registriert werden sowie auf dem Berichtsserver, um den veröffentlichten Bericht anzuzeigen. Nicht alle Datenanbieter funktionieren in einer Serverumgebung. Weitere Informationen finden Sie unter [Registrieren eines .NET Framework-Standarddatenproviders &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) und [Bereitstellen von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
+>  Ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter oder eine benutzerdefinierte Datenverarbeitungserweiterung muss installiert und registriert werden, bevor Sie damit auf Daten aus einer Datenquelle zugreifen können. Die Datenverarbeitungserweiterung muss zum Verfassen des Berichts auf dem Berichterstellungsclient installiert und registriert werden sowie auf dem Berichtsserver, um den veröffentlichten Bericht anzuzeigen. Nicht alle Datenanbieter funktionieren in einer Serverumgebung. Weitere Informationen finden Sie unter [Registrieren eines .NET Framework-Standarddatenproviders (SSRS)](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) und [Bereitstellen von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Verarbeitung von Erweiterungen](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
- [Melden Sie eingebettete Datasets und freigegebene Datasets &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
+ [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

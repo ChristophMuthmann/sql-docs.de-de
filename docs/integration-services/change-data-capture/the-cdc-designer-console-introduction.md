@@ -1,26 +1,28 @@
 ---
-title: "Der Einführung in die CDC Designer Console | Microsoft Docs"
+title: "Einführung in die CDC Designer Console | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 12afe7ad2b83c4ab25e4c0803d015442ef9cfc55
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b89045fbbda6920dbeb57e6d19da3813932ba597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Einführung in die CDC Designer Console
   In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben.  
@@ -43,8 +45,8 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="source-oracle-database"></a>Oracle-Quelldatenbank
   
--   Oracle Database 10g Version 2
--   Oracle-Datenbank 11g Version 1 und Version 2
+-   Oracle-Datenbank 10g Release 2
+-   Oracle-Datenbank 11g Release 1 und Release 2
 -   Oracle Database 12c klassische Installation (Die mehrinstanzenfähige Installation wird nicht unterstützt).  
 
 ### <a name="target-sql-server-database"></a>SQL Server-Zieldatenbank
@@ -67,4 +69,3 @@ ms.lasthandoff: 08/03/2017
  Sie können die CDC Designer Console über die Systemsteuerung unter Programme und Funktionen deinstallieren.  
   
   
-

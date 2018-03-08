@@ -1,26 +1,28 @@
 ---
-title: Die Oracle CDC-Datenbanken | Microsoft Docs
+title: Oracle CDC-Datenbanken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 08/03/2017
  Wenn eine CDC-Datenbank erstellt wird und Oracle CDC-Quelltabellen eingerichtet werden, kann der CDC-Datenbankbesitzer die SELECT-Berechtigung für Spiegeltabellen gewähren und SQL Server CDC-Gatingrollen definieren, um zu steuern, welche Benutzer auf die Änderungsdaten zugreifen können.  
   
 ## <a name="mirror-tables"></a>Spiegeltabellen  
- Für jede aufgezeichnete Tabelle \<Schemaname >.\< Tabellenname >, eine ähnliche leere Tabelle wird in der Oracle-Quelldatenbank in die CDC-Datenbank, mit der gleichen Schema und Tabellennamen erstellt. Oracle-Quelltabellen mit dem Schemanamen `cdc` (Groß-/Kleinschreibung nicht berücksichtigt) können nicht aufgezeichnet werden, da das Schema `cdc` unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die SQL Server CDC reserviert ist.  
+ Für jede aufgezeichnete Tabelle der Form \<Schemaname>.\<Tabellenname> in der Oracle-Quelldatenbank wird in der CDC-Datenbank eine ähnliche leere Tabelle erstellt, die das gleiche Schema und den gleichen Tabellennamen aufweist. Oracle-Quelltabellen mit dem Schemanamen `cdc` (Groß-/Kleinschreibung nicht berücksichtigt) können nicht aufgezeichnet werden, da das Schema `cdc` unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die SQL Server CDC reserviert ist.  
   
  Die Spiegeltabellen sind leer. Darin werden keine Daten gespeichert. Sie werden verwendet, um die standardmäßige SQL Server CDC-Infrastruktur zu aktivieren, die von der Oracle CDC-Instanz verwendet wird. Um zu verhindern, dass Daten in die Spiegeltabellen eingefügt oder darin aktualisiert werden, werden alle UPDATE-, DELETE- und INSERT-Vorgänge für PUBLIC verweigert. Dadurch wird sichergestellt, dass die Daten nicht geändert werden können.  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_Change_Tables_CT"></a> Änderungstabellen (_CT)  
  Die Änderungstabellen werden aus den Spiegeltabellen erstellt. Sie enthalten die Änderungsdaten, die in der Oracle-Datenbank aufgezeichnet werden. Die Tabellen werden nach der folgenden Konvention benannt:  
   
- **[cdc]. [\<Aufzeichnungsinstanz > _CT]**  
+ **[cdc].[\<Aufzeichnungsinstanz>_CT]**  
   
  Wenn die Aufzeichnung anfänglich für die Tabelle `<schema-name>.<table-name>`aktiviert ist, ist der Standardname der Aufzeichnungsinstanz `<schema-name>_<table-name>`. Der Standardname der Aufzeichnungsinstanz für die Oracle-Tabelle HR.EMPLOYEES ist z. B. HR_EMPLOYEES, und die zugeordnete Änderungstabelle ist [cdc]. [HR_EMPLOYEES_CT].  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 08/03/2017
   
  In der folgenden Tabelle werden die verfügbaren Optionen beschrieben.  
   
-|Name|Standardwert|Min|Max|STATIC-Cursor|Description|  
+|Name|Default|Min|Max|STATIC-Cursor|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |Ablaufverfolgung|False|-|-|False|Die verfügbaren Werte sind:<br /><br /> Wahr<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Die Größe von Arbeitsspeichersegmenten (in KB), die für eine Transaktion zugeordnet werden (eine Transaktion kann mehr als ein Segment zuordnen). Siehe Spalte „memory_limit“ in der [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) -Tabelle.|  
@@ -190,8 +192,7 @@ ms.lasthandoff: 08/03/2017
 |data_end_cn|Die Änderungsnummer (CN) für die letzte Änderung der Daten in dieser Zeile.|  
 |data|Die bereitgestellten Änderungen für die Transaktion in BLOB-Form.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   
-

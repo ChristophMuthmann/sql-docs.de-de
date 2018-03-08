@@ -1,42 +1,40 @@
 ---
-title: Erstellen ein benutzerdefiniertes Element-Laufzeitkomponente | Microsoft Docs
+title: "Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "33"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: c8da0d4ac6024281315dc2e8b0b398904c8a1e6c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 4f3a03a71e6fac9b0e7803d94075a89bd8abd32b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement
-  Die Laufzeitkomponente Element einer benutzerdefinierten Bericht wird als implementiert eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Komponente, die mit einer beliebigen CLS-kompatiblen Sprache und vom Berichtsprozessor zur Laufzeit aufgerufen wird. Sie definieren die Eigenschaften für die Laufzeitkomponente in der Entwurfsumgebung, indem Sie die entsprechende Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ändern.  
+  Die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement ist in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Komponente mithilfe einer beliebigen CLS-kompatiblen Sprache implementiert und wird während der Laufzeit vom Prozessor aufgerufen. Sie definieren die Eigenschaften für die Laufzeitkomponente in der Entwurfsumgebung, indem Sie die entsprechende Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ändern.  
   
  Ein Beispiel für ein vollständig implementiertes benutzerdefiniertes Berichtselement finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="definition-and-instance-objects"></a>Definitions- and Instanzobjekte  
- Vor der Implementierung eines benutzerdefinierten Berichtselements ist es wichtig zu verstehen, den Unterschied zwischen *definitionsobjekten* und *Instanzobjekte*. Definitionsobjekte stellen die RDL-Darstellung des benutzerdefinierten Berichtselements bereit, wohingegen es sich bei Instanzobjekten um die bewerteten Versionen von Definitionsobjekten handelt. Für jedes Element des Berichts gibt es nur ein Definitionsobjekt. Beim Zugreifen auf Eigenschaften auf einem Definitionsobjekt, die Ausdrücke enthalten, erhalten Sie die nicht bewertete Ausdruckszeichenfolge. Instanzobjekte enthalten die bewerteten Versionen der Definitionsobjekte und können in einer 1:n-Beziehung mit dem Definitionsobjekt eines Elements stehen. Wenn beispielsweise ein Bericht einen <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>-Datenbereich besitzt, der ein <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in einer Detailzeile enthält, ist nur ein einziges Definitionsobjekt vorhanden, es gibt jedoch für jede Zeile im Datenbereich eine Instanz.  
+ Bevor Sie ein benutzerdefiniertes Berichtselement implementieren, sollten Sie den Unterschied zwischen *Definitionsobjekten* und *Instanzobjekten* kennen. Definitionsobjekte stellen die RDL-Darstellung des benutzerdefinierten Berichtselements bereit, wohingegen es sich bei Instanzobjekten um die bewerteten Versionen von Definitionsobjekten handelt. Für jedes Element des Berichts gibt es nur ein Definitionsobjekt. Beim Zugreifen auf Eigenschaften auf einem Definitionsobjekt, die Ausdrücke enthalten, erhalten Sie die nicht bewertete Ausdruckszeichenfolge. Instanzobjekte enthalten die bewerteten Versionen der Definitionsobjekte und können in einer 1:n-Beziehung mit dem Definitionsobjekt eines Elements stehen. Wenn beispielsweise ein Bericht einen <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>-Datenbereich besitzt, der ein <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in einer Detailzeile enthält, ist nur ein einziges Definitionsobjekt vorhanden, es gibt jedoch für jede Zeile im Datenbereich eine Instanz.  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>Implementieren der ICustomReportItem-Schnittstelle  
- Zum Erstellen einer **CustomReportItem** Laufzeitkomponente, die Sie implementieren müssen die <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> -Schnittstelle, die in der Datei Microsoft.ReportingServices.ProcessingCore.dll definiert ist:  
+ Um ein **CustomReportItem** zu erstellen, müssen Sie die <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem>-Schnittstelle implementieren, die in der Datei „Microsoft.ReportingServices.ProcessingCore.dll“ definiert ist:  
   
 ```csharp  
 namespace Microsoft.ReportingServices.OnDemandReportRendering  
@@ -139,11 +137,10 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Benutzerdefiniertes Element-Architektur](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Erstellen einer benutzerdefinierten Bericht Element zur Entwurfszeit-Komponente](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Klassenbibliotheken für benutzerdefinierten Berichts-Element](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Custom Report Item Architecture (Architektur des benutzerdefinierten Berichtselements)](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

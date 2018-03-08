@@ -2,12 +2,13 @@
 title: Entwickeln mit Analysis Services Scripting Language (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - Analysis Services Scripting Language
 - ASSL
 ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a3fd425fe03387cd20eb6c63bb0a8e9b6ed8e572
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f83437d79156511a22bf1640c6480b673c202c5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Entwickeln mit Analysis Services Scripting Language (ASSL)
-  Analysis Services Scripting Language (ASSL) ist eine Erweiterung, die XMLA durch eine Objektdefinitionssprache und Befehlssprache zum Erstellen und Verwalten von Analysis Services-Strukturen direkt auf dem Server ergänzt. Sie können ASSL in benutzerdefinierten Anwendung zur Kommunikation mit Analysis Services über das XMLA-Protokoll verwenden. ASSL umfasst zwei Teile:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services Scripting Language (ASSL) ist eine Erweiterung, die XMLA durch eine Objektdefinitionssprache und Befehlssprache zum Erstellen und Verwalten von Analysis Services-Strukturen direkt auf dem Server ergänzt. Sie können ASSL in benutzerdefinierten Anwendung zur Kommunikation mit Analysis Services über das XMLA-Protokoll verwenden. ASSL umfasst zwei Teile:  
   
 -   Eine (Data Definition Language, Datendefinitionssprache) oder objektdefinitionssprache, definiert und beschreibt eine Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], sowie die Datenbanken und Datenbankobjekte, die die Instanz enthält.  
   
@@ -43,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [Datenquellen und Bindungen &#40; SSAS – mehrdimensional &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   
-

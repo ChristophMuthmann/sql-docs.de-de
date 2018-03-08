@@ -3,7 +3,7 @@ title: ConnectionString-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34db69d25ff835de4f8c81d252c99017ae4acbb5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
 Gibt an, die Informationen zum Herstellen einer Verbindung mit einer Datenquelle verwendet.  
@@ -43,11 +42,11 @@ Gibt an, die Informationen zum Herstellen einer Verbindung mit einer Datenquelle
   
 |Argument|Description|  
 |--------------|-----------------|  
-|*Provider =*|Gibt den Namen eines Anbieters für die Verbindung verwenden.|  
+|*Provider=*|Gibt den Namen eines Anbieters für die Verbindung verwenden.|  
 |*Dateiname =*|Gibt den Namen einer anbieterspezifischen-Datei (z. B. eine persistente Datenquellenobjekt), die voreingestellte Verbindungsinformationen enthält.|  
-|*Remoteanbieter =*|Gibt den Namen eines Anbieters beim Öffnen einer clientseitigen Verbindung verwenden. (Nur remote Data Service.)|  
+|*Remote Provider=*|Gibt den Namen eines Anbieters beim Öffnen einer clientseitigen Verbindung verwenden. (Nur remote Data Service.)|  
 |*Remoteserver =*|Gibt den Pfadnamen des Servers, der beim Öffnen einer clientseitigen Verbindung verwenden. (Nur remote Data Service.)|  
-|*URL =*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
+|*URL=*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
   
  Nach dem Festlegen der **"ConnectionString"** -Eigenschaft, und Öffnen der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt, den Anbieter möglicherweise zu ändern den Inhalt der Eigenschaft, z. B. durch Zuordnen von ADO definierten Argumentnamen auf ihre Entsprechung für den bestimmten Anbieter.  
   
@@ -70,10 +69,9 @@ Gibt an, die Informationen zum Herstellen einer Verbindung mit einer Datenquelle
 |Keinen Standardwert.<br /><br /> Wenn eine ADO-Anwendung auf die folgenden Betriebssysteme ausgeführt wird und den Anbieter nicht explizit angegeben, ADO folgender Fehler zurückgegeben: "ADODB. Verbindung: Anbieter nicht angegeben ist und es ist keine festgelegten Standardanbieter "|Windows 2000 (64-Bit)<br /><br /> Windows XP (64-Bit)<br /><br /> WindowsServer 2003 (64-Bit)<br /><br /> Windows Vista (64-Bit)|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  ["ConnectionString" ConnectionTimeout und State-Eigenschaft (Beispiel) (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  ["ConnectionString" ConnectionTimeout und State-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

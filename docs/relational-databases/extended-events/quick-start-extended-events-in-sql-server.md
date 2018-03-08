@@ -2,28 +2,31 @@
 title: 'Schnellstart: Erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b532bf37f99a3fc05b0f2999d0d3d301323457d6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Dieser Artikel ist darauf ausgerichtet, SQL-Entwickler zu unterstützen, die mit erweiterten Ereignissen nicht vertraut sind und in wenigen Minuten eine Ereignissitzung erstellen möchten. Mithilfe von erweiterten Ereignissen können Sie Details zu internen Vorgängen des SQL-System und Ihrer Anwendung anzeigen. Wenn Sie eine Sitzung für erweiterte Ereignisse erstellen, teilen Sie dem System Folgendes mit:
@@ -84,7 +87,7 @@ Sie können die Schritte verstehen, selbst wenn Sie sich entscheiden, diese nich
 - Allgemein
 - Ereignisse
 - Datenspeicher
-- Erweitert
+- Erweitert:
 
 
 Der Text und die unterstützenden Screenshots können im Laufe der Monate oder Jahre etwas ungenau werden, wenn die SSMS-Benutzeroberfläche optimiert wird. Die Screenshots dienen jedoch weiterhin zur Erläuterung, wenn sie nur geringe Abweichungen aufweisen.
@@ -98,7 +101,7 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
     ![Neue Sitzung > Allgemein > Sitzungsname](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
-4. Klicken Sie in der linken oberen Ecke auf die Seite **Ereignisse**, und klicken Sie dann auf die Schaltfläche **Auswählen**.
+4. Klicken Sie in der linken oberen Ecke auf die Seite **Ereignisse** , und klicken Sie dann auf die Schaltfläche **Auswählen** .
 
     ![Neue Sitzung > Ereignisse > Auswählen > Ereignisbibliothek, Ausgewählte Ereignisse](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
@@ -131,7 +134,7 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 11. Geben Sie im Bereich **Eigenschaften** einen vollständigen Pfad und Namen in das Textfeld **Dateiname auf Server** ein.
     - Die Dateierweiterung muss *XEL*sein.
-    - Unser kleiner Test erfordert eine Dateigröße von weniger als 1 MB.
+    - Unser kleiner Test erfordert eine Dateigröße von weniger als 1 MB.
 
     ![Neue Sitzung > Erweitert > Maximale Verteilungslatenzzeit > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
@@ -162,7 +165,7 @@ Sie haben die SSMS-Benutzeroberfläche verwendet, um ein T-SQL-Skript zu generie
 Als Nächstes folgt die T-SQL CREATE EVENT SESSION-Anweisung für *YourSession*, die durch Klicken auf der Benutzeroberfläche generiert wurde:
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -203,7 +206,7 @@ GO
 Vor der CREATE EVENT SESSION-Anweisung sollten Sie eine DROP EVENT SESSION-Anweisung für den Fall bedingt ausgeben, dass der Name bereits vorhanden ist.
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -223,7 +226,7 @@ go
 Wenn Sie eine Ereignissitzung erstellen, wird sie gemäß der Standardeinstellung nicht automatisch gestartet. Sie starten die Ereignissitzung jederzeit mithilfe der folgenden T-SQL ALTER EVENT SESSION-Anweisung starten oder beenden.
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -249,7 +252,7 @@ Verwenden Sie die folgenden einfachen Schritte zum Testen Ihrer Ereignissitzung:
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -301,7 +304,7 @@ Führen Sie in SSMS die folgende T-SQL SELECT-Anweisung aus, um Ergebnisse zurü
 > Das Ereignissystem fügt immer eine lange Zahl an den von Ihnen angegebenen Dateinamen für „ *.xel* event_file“ an. Bevor Sie die folgende SELECT-Anweisung aus der Datei ausführen können, müssen Sie den vom System angegebenen vollständigen Namen kopieren und in die SELECT-Anweisung einfügen.
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -427,7 +430,7 @@ Bestimmte Szenarien für Ereignissitzungen, die auf den Zugriff von Sperren ausg
 In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriffe aufgeführt. Zudem werden ihre Bedeutungen beschrieben.
 
 
-| Begriff | Beschreibung |
+| Begriff | Description |
 | :--- | :---------- |
 | Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung*bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung*handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen werden im folgenden Abschnitt beschrieben: [Sitzungen für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | Ereignis | Ein bestimmtes Vorkommen im System, das von einer aktiven Ereignissitzung überwacht wird. <br/> <br/> Das Ereignis *sql_statement_completed* stellt z. B. den Zeitpunkt dar, zu dem jede angegebene T-SQL-Anweisung abgeschlossen wird. Das Ereignis kann seine Dauer und andere Daten melden. |
@@ -443,7 +446,7 @@ In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriff
 Die folgende T-SQL SELECT-Anweisung gibt eine Zeile für alle verfügbaren Ereignisse zurück, deren Name die drei Zeichen umfassende Zeichenfolge „sql“ enthält. Natürlich können Sie den LIKE-Wert bearbeiten, um andere Ereignisnamen zu suchen. Die Zeilen benennen auch das Paket, das das Ereignis enthält.
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -575,7 +578,7 @@ Mithilfe der folgenden Transact-SQL SELECT-Anweisungen kann gemeldet werden, wer
 Die folgende SELECT...UNION ALL-Anweisung gibt Zeilen zurück, die angeben, wer über die erforderlichen Berechtigungen zum Erstellen von Ereignissitzungen und zum Abfragen der Systemkatalogsichten für erweiterte Ereignisse verfügt.
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -633,7 +636,7 @@ Die folgende SELECT-Anweisung meldet Ihre Berechtigungen. Sie beruht auf der int
 Wenn Sie zudem über die Berechtigung verfügen, temporär die Identität anderer Konten *anzunehmen* , können Sie die Auskommentierung der [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) - und REVERT-Anweisungen aufheben, um sich über die anderen Konten zu informieren.
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,
@@ -661,6 +664,5 @@ Hier folgen Links zu Dokumentationen, die sich auf diese SELECT-Anweisungen und 
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

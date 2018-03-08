@@ -2,11 +2,13 @@
 title: "Deaktivieren der Veröffentlichung und Verteilung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - disabling replication
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80f107b2855a1e3f2ca4821354021e94c76269d7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "41"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: a7c86d721917d489824ef593f5bbad4ec2cd98ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-publishing-and-distribution"></a>Deaktivieren der Veröffentlichung und Verteilung
-  In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) deaktiviert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (Replication Management Objects, RMO) deaktiviert werden.  
   
  Sie können folgendermaßen vorgehen:  
   
@@ -54,13 +56,13 @@ ms.lasthandoff: 06/22/2017
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Zum Deaktivieren der Veröffentlichung und Verteilung müssen sämtliche Verteilungs- und Veröffentlichungsdatenbanken online sein. Wenn für Verteilungs- oder Veröffentlichungsdatenbanken *Datenbankmomentaufnahmen* vorhanden sind, müssen diese gelöscht werden, bevor die Veröffentlichung und Verteilung deaktiviert werden kann. Eine Datenbankenmomentaufnahme ist eine schreibgeschützte Offlinekopie einer Datenbank, die in keinem Bezug zu einer Replikationsmomentaufnahme steht. Weitere Informationen finden Sie unter [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie können die Veröffentlichung und die Verteilung mithilfe des Veröffentlichungs- und Verteilungsdeaktivierungs-Assistenten deaktivieren.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>So deaktivieren Sie die Veröffentlichung und Verteilung  
@@ -110,17 +112,17 @@ ms.lasthandoff: 06/22/2017
   
 2.  Entfernen Sie alle Veröffentlichungen, für die der Verteiler verwendet wird, und deaktivieren Sie die Veröffentlichung für alle Datenbanken, wenn sich Verleger und Verteiler auf dem gleichen Server befinden. Weitere Informationen finden Sie unter [Delete a Publication](../../relational-databases/replication/publish/delete-a-publication.md).  
   
-3.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die Klasse <xref:Microsoft.SqlServer.Management.Common.ServerConnection> verwenden.  
+3.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-4.  Erstellen Sie eine Instanz der Klasse <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Geben Sie die Eigenschaft <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt aus Schritt 3.  
+4.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Klasse. Geben Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> -Eigenschaft an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 3.  
   
-5.  (Optional) Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> auf, um die Eigenschaften des Objekts abzurufen und zu verifizieren, dass der Verleger vorhanden ist. Wenn diese Methode **false**zurückgibt, war der in Schritt 4 festgelegte Verlegername falsch, oder der Verleger wird von diesem Verteiler nicht verwendet.  
+5.  (Optional) Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen und zu verifizieren, dass der Verleger vorhanden ist. Wenn diese Methode **false**zurückgibt, war der in Schritt 4 festgelegte Verlegername falsch, oder der Verleger wird von diesem Verteiler nicht verwendet.  
   
-6.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> auf. Übergeben Sie den Wert **true** für *force* , wenn sich Verleger und Verteiler auf verschiedenen Servern befinden, und wenn der Verleger auf dem Verteiler deinstalliert werden soll, ohne dass zuvor überprüft wurde, ob die Veröffentlichungen auf dem Verleger gelöscht wurden.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> -Methode auf. Übergeben Sie den Wert **true** für *force* , wenn sich Verleger und Verteiler auf verschiedenen Servern befinden, und wenn der Verleger auf dem Verteiler deinstalliert werden soll, ohne dass zuvor überprüft wurde, ob die Veröffentlichungen auf dem Verleger gelöscht wurden.  
   
-7.  Erstellen Sie eine Instanz der Klasse <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt aus Schritt 3.  
+7.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 3.  
   
-8.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> auf. Übergeben Sie den Wert **true** für *force* , um alle Replikationsobjekte auf dem Verteiler zu löschen, ohne zuvor zu überprüfen, ob die lokalen Veröffentlichungsdatenbanken deaktiviert und die Verteilerdatenbanken deinstalliert wurden.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> -Methode auf. Übergeben Sie den Wert **true** für *force* , um alle Replikationsobjekte auf dem Verteiler zu löschen, ohne zuvor zu überprüfen, ob die lokalen Veröffentlichungsdatenbanken deaktiviert und die Verteilerdatenbanken deinstalliert wurden.  
   
 ###  <a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel werden die Verlegerregistrierung auf dem Verteiler entfernt, die Verteilungsdatenbank gelöscht und der Verteiler deinstalliert.  
@@ -135,8 +137,8 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Konzepte für Replikationsverwaltungsobjekte (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Konzepte für gespeicherte Systemprozeduren für die Replikation](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

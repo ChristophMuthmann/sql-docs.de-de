@@ -2,28 +2,30 @@
 title: Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c1ac27b53e011580bb185ba0f264c130d44560be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] unterstützt ein Muster, bei dem eine begrenzte Menge aktiver Daten in einer speicheroptimierten Tabelle gespeichert wird, während Daten, auf die seltener zugegriffen wird, auf dem Datenträger verarbeitet werden. In einem typischen Szenario würden Daten auf Grundlage eines **datetime** -Schlüssels gespeichert.  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Fügen Sie die aktive Partition hinzu.  
   
- ![Partitionswechsel.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![Partitionswechsel](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch")  
 Pflege aktiver Daten  
   
  Die Aktionen ab dem Löschen von "ActiveOrders" müssen während eines Wartungsfensters durchgeführt werden, damit Abfragen im Zeitraum zwischen der Datenlöschung und Übertragung in die Stagingtabelle immer auf alle Daten zugreifen können.  
@@ -53,7 +55,7 @@ Pflege aktiver Daten
   
  Im ersten Teil dieses Beispiels werden die Datenbank und die erforderlichen Objekte erstellt. Im zweiten Teil des Beispiels wird gezeigt, wie Daten aus einer speicheroptimierten Tabelle in eine partitionierte Tabelle verschoben werden.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   
@@ -216,8 +218,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

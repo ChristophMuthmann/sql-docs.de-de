@@ -1,29 +1,30 @@
 ---
 title: Arbeiten mit Beispiel-Konsole Skript FilesExecuting SSMA-Konsole | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b9ab154381c09d1b697cf0a9a46a864280ba5022
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a2ac9806e1f7577312ede0dddfcd38b3721f94f0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Arbeiten mit der Beispiel-Konsole Skript FilesExecuting SSMA-Konsole (AccessToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer-Verweis und die Verwendung bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts, sodass die Endbenutzer Bedürfnissen problemlos anzupassen.  
@@ -65,7 +66,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
 -   **ConversionAndDataMigrationSample.xml:** in diesem Beispiel kann der Benutzer eine End-to-End-Migration von der Konvertierung in die Datenmigration ausgeführt werden. Die Liste der erforderlichen Attributwerte, die sie ändern, wird im folgenden aufgeführt:  
   
-    |Befehlsname|Description|Attribut|  
+    |Befehlsname|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Schemazuordnung der Quelldatenbank mit dem Zielschema.|`source-schema:`Gibt die Quelldatenbank, die erforderlich sind, konvertiert werden soll.<br /><br />`sql-server-schema`: Gibt an, die Zieldatenbank, die migriert werden|  
     |`convert-schema`|Schemakonvertierung von der Quelle in das Zielschema durchgeführt.<br /><br />Wenn der Benutzer verfügt über mehrere Objekte bewerten / Datenbanken er mehrere festlegbaren `metabase-object` Knoten wie im veranschaulicht die `convert-schema` des Befehls Beispiel 4 von der Konsole Beispielskriptdatei.|`object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die`object-name`|  
@@ -77,4 +78,3 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
 [Erstellen die Server-Connection-Dateien &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
 [Generieren von Berichten &#40; AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md)  
   
-

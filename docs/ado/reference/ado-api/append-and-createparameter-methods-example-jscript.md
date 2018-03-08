@@ -3,7 +3,7 @@ title: "Anfügen und CreateParameter-Methoden (Beispiel) (JScript) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9f4fb56c40cca35734a4dbc247492f8db3dd86b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7650748a6bbddcbc65311cc03b6b52aa86e0d0d9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Anfügen und CreateParameter-Methoden (Beispiel) (JScript)
 Dieses Beispiel verwendet die [Append](../../../ado/reference/ado-api/append-method-ado.md) und [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) Methoden zum Ausführen einer gespeicherten Prozedur mit einem Eingabeparameter. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **AppendJS.asp**.  
@@ -155,4 +154,3 @@ body {
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
-

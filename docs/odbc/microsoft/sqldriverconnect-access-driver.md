@@ -3,8 +3,11 @@ title: SQLDriverConnect (Access-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Access Driver
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7362786d12678d90554cb0e7dab2d612fd061d2b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0041199b1168bdd639f88d4c13663b73cb54efd7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Access-Treiber)
 > [!NOTE]  
@@ -41,5 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 |Treiber|Schlüsselwörter, die erforderlich sind|Beispiele|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|DBQ-Treiber|Driver = {Microsoft Access-Treiber (*.mdb)}; DBQ = c:\\\temp\\\sample.mdb|
-
+|Microsoft Access|Driver, DBQ|Driver = {Microsoft Access-Treiber (*.mdb)}; DBQ = c:\\\temp\\\sample.mdb|

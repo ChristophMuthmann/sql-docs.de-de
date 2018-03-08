@@ -2,33 +2,33 @@
 title: Erstellen und Verwalten einer Remotepartition (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5c1dc173a2ea724f7542e5ca1f862b4d9df0dad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Erstellen und Verwalten einer Remotepartition (Analysis Services)
-  Bei der Partitionierung einer Measuregruppe können Sie eine sekundäre Datenbank auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Remoteinstanz als Partitionsspeicher konfigurieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Bei der Partitionierung einer Measuregruppe können Sie eine sekundäre Datenbank auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Remoteinstanz als Partitionsspeicher konfigurieren.  
   
  Remotepartitionen für einen Cube (die so genannte Masterdatenbank) werden in einer dedizierten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank auf der Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert (die so genannte sekundäre Datenbank).  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Beide Serverinstanzen müssen die gleiche Version aufweisen. Beide Datenbanken sollten die gleiche Funktionsebene aufweisen.  
   
--   Beide Instanzen müssen für TCP-Verbindungen konfiguriert sein. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht unterstützt.  
+-   Beide Instanzen müssen für TCP-Verbindungen konfiguriert sein. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Erstellung von Remotepartitionen nicht über das HTTP-Protokoll unterstützt werden.  
   
 -   Die Firewalleinstellungen auf beiden Computern müssen so festgelegt werden, dass sie Außenverbindungen akzeptieren. Weitere Informationen zum Einrichten der Firewall finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 09/01/2017
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Einrichten der Remotepartition (in SSDT)  
   
-1.  Auf dem Masterserver: Öffnen Sie den Cube im Cube-Designer, und klicken Sie auf die Registerkarte **Partitionen** . Erweitern Sie die Measuregruppe. Klicken Sie auf **Neue Partition** , wenn die Measuregruppe bereits für mehrere Partitionen konfiguriert ist, oder klicken Sie in der Quellspalte auf die Schaltfläche zum Durchsuchen (.. befinden. ), um die bestehende Partition zu bearbeiten.  
+1.  Auf dem Masterserver: Öffnen Sie den Cube im Cube-Designer, und klicken Sie auf die Registerkarte **Partitionen** . Erweitern Sie die Measuregruppe. Klicken Sie auf **Neue Partition** , wenn die Measuregruppe bereits für mehrere Partitionen konfiguriert ist, oder klicken Sie in der Quellspalte auf die Schaltfläche zum Durchsuchen (. befinden. ), um die bestehende Partition zu bearbeiten.  
   
 2.  Wählen Sie im Partitions-Assistenten unter **Quellinformationen angeben**die ursprüngliche Datenquellensicht und die Faktentabelle aus.  
   
@@ -139,7 +139,6 @@ ms.lasthandoff: 09/01/2017
 >  Obwohl für die Speicherung von Remotepartitionen dedizierte Datenbanken nicht für Schemarowsets verfügbar gemacht werden, können Anwendungen, die Analysis Management Objects (AMO) verwenden, eine dedizierte Datenbank weiterhin mithilfe des Discover-Befehls von XML for Analysis ermitteln. Über einen TCP- oder HTTP-Client direkt an eine dedizierte Datenbank gesendete CREATE- oder DELETE-Befehle werden zwar erfolgreich ausgeführt, der Server gibt jedoch eine Warnung mit dem Hinweis zurück, dass diese dediziert verwaltete Datenbank durch die Aktion beschädigt werden könnte.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   
-

@@ -3,33 +3,30 @@ title: SQLInstallDriverManager Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallDriverManager
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallDriverManager
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallDriverManager
-helpviewer_keywords:
-- SQLInstallDriverManager function [ODBC]
+f1_keywords: SQLInstallDriverManager
+helpviewer_keywords: SQLInstallDriverManager function [ODBC]
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d1769b4951662f99cd50709b498891540fd4b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6bc56b9045ae3f9a53b410ef0546d539e3c25ee8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager-Funktion
 **Konformität**  
@@ -90,4 +87,3 @@ BOOL SQLInstallDriverManager(
 |Entfernen eines Treibers|[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|  
 |Entfernen den Treiber-Manager|[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
 |Entfernen ein Konvertierungsprogramm|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
-

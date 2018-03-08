@@ -3,7 +3,7 @@ title: Remote Data Service (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - Remote Data Service (RDS)
 - RDS
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eab1e0b9e60d3c21bc185e6cfbec75ade8472d53
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f828952d89e6d93023f891a27150d38d44ef81e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="remote-data-service-rds"></a>Remote Data Service (RDS)
 Remote Data Service (RDS) ist ein Feature von ADO, mit dem Verschieben von Daten von einem Server in einer Clientanwendung oder die Webseite, die Daten auf dem Client und Updates in einem einzigen Roundtrip an den Server zurückgegeben.  
@@ -41,7 +40,6 @@ Remote Data Service (RDS) ist ein Feature von ADO, mit dem Verschieben von Daten
 -   [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)  
   
 -   [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 
 

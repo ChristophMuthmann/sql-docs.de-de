@@ -1,10 +1,13 @@
----
+﻿---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c23ec85299af595305a5f6d5141dbbf3ffab96d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 
   Enthält alle für einen Zugriff auf Remotedaten von einer OLE DB-Datenquelle notwendigen Verbindungsinformationen. Diese Methode ist eine Alternative zum Zugriff auf Tabellen eines Verbindungsservers. Sie ist eine einmalig verwendete Ad-hoc-Methode zum Verbinden und Zugreifen auf Remotedaten mithilfe von OLE DB. Für häufigere Verweise auf OLE DB-Datenquellen verwenden Sie stattdessen Verbindungsserver. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). Die `OPENROWSET` Funktion kann in der FROM-Klausel einer Abfrage verwiesen werden, als handele es sich um einen Tabellennamen an. Die `OPENROWSET` -Funktion kann auch als Zieltabelle verwiesen werden ein `INSERT`, `UPDATE`, oder `DELETE` unterliegen den Funktionen des OLE DB-Provider-Anweisung. Obwohl die Abfrage mehrere Resultsets zurückgeben könnte `OPENROWSET` nur der erste Entitätencontainer zurückgegeben.  
@@ -201,16 +203,14 @@ Eine benannte externe Datenquelle auf den Azure-Blob-Speicherort der Fehlerdatei
  Durch Lesen *Data_file* als ASCII-Daten, gibt Sie den Inhalt als einzeiliges, einspaltiges Rowset vom Typ **varchar(max)**, wobei die Sortierung der aktuellen Datenbank.  
   
  SINGLE_NCLOB  
- Gibt *data_file* als einzeiliges, einspaltiges Rowset vom Typ **nvarchar(max)** zurück, weil die Zeichen in *data_file* als UNICODE gelesen werden. Hierbei wird die Sortierung der aktuellen Datenbank verwendet.
+ Gibt *data_file* als einzeiliges, einspaltiges Rowset vom Typ **nvarchar(max)** zurück, weil die Zeichen in data_file als UNICODE gelesen werden. Hierbei wird die Sortierung der aktuellen Datenbank verwendet.  
 
 
 ### <a name="input-file-format-options"></a>Format der Eingabedatei (Optionen)
   
 FORMAT  **=**  "CSV"   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-
 Gibt eine Datei mit kommagetrennten Werten an, die mit [RFC 4180](https://tools.ietf.org/html/rfc4180) kompatibel ist.
-
 
  FORMATFILE = "*Format_file_path*"  
  Gibt den vollständigen Pfad einer Formatdatei an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien.  
@@ -287,7 +287,7 @@ Gibt ein Zeichen, das als das Anführungszeichen in CSV-Datei verwendet wird. We
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Verwenden von OPENROWSET mit SELECT und dem SQL Server Native Client OLE DB-Anbieter  
  Im folgenden Beispiel wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, den Zugriff auf die `HumanResources.Department` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank auf dem Remoteserver `Seattle1`. (Wenn Sie SQLNCLI verwenden, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur neuesten Version des OLE DB-Anbieters von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client um.) Mithilfe einer `SELECT`-Anweisung wird das zurückgegebene Rowset definiert. Die Anbieterzeichenfolge enthält die Schlüsselwörter `Server` und `Trusted_Connection`. Diese Schlüsselwörter werden erkannt, durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
   
-```tsql  
+```sql  
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
@@ -301,7 +301,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!NOTE]  
 >  In diesem Beispiel wird vorausgesetzt, dass Access installiert ist. Um dieses Beispiel auszuführen, müssen Sie die Northwind-Datenbank installieren.  
   
-```tsql  
+```sql  
 SELECT CustomerID, CompanyName  
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',  
       'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb';  
@@ -315,7 +315,7 @@ GO
 > [!NOTE]  
 >  In diesem Beispiel wird vorausgesetzt, dass Access installiert ist. Um dieses Beispiel auszuführen, müssen Sie die Northwind-Datenbank installieren.  
   
-```tsql  
+```sql  
 USE Northwind  ;  
 GO  
 SELECT c.*, o.*  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Verwenden von OPENROWSET zum Masseneinfügen von Dateidaten in eine Spalte vom Typ varbinary(max)  
  Das folgende Beispiel erstellt eine kleine Tabelle für Demonstrationszwecke und fügt Dateidaten aus der Datei `Text1.txt`, die im Stammverzeichnis `C:` gespeichert ist, in eine Spalte vom Datentyp `varbinary(max)` ein.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTable(FileName nvarchar(60),   
@@ -347,7 +347,7 @@ GO
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Verwenden des OPENROWSET BULK-Anbieters mit einer Formatdatei zum Abrufen von Zeilen aus einer Textdatei  
  Im folgenden Beispiel werden mithilfe einer Formatdatei Zeilen aus der durch Tabstopps getrennten Textdatei `values.txt` abgerufen, die die folgenden Daten enthält:  
   
-```tsql  
+```sql  
 1     Data Item 1  
 2     Data Item 2  
 3     Data Item 3  
@@ -355,7 +355,7 @@ GO
   
  Die Formatdatei `values.fmt` beschreibt die Spalten in `values.txt`:  
   
-```tsql  
+```sql  
 9.0  
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                SQL_Latin1_General_Cp437_BIN  
@@ -364,7 +364,7 @@ GO
   
  In der folgenden Abfrage werden diese Daten abgerufen:  
   
-```tsql  
+```sql  
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
@@ -372,14 +372,14 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Angabe Format der Datei und code  
  Im folgenden Beispiel wird gezeigt, wie sowohl die Datei- und Code Seite Formatoptionen gleichzeitig verwenden.  
   
-```tsql  
+```sql  
 INSERT INTO MyTable SELECT a.* FROM  
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. Zugriff auf Daten aus einer CSV-Datei mit einer Formatdatei  
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-```tsql
+```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt', 
@@ -389,7 +389,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. Zugriff auf Daten aus einer CSV-Datei ohne eine Formatdatei
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
@@ -399,7 +399,7 @@ SELECT * FROM OPENROWSET(
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Im folgenden Beispiel wird eine externe Datenquelle, die auf einen Container im Azure-Speicherkonten und datenbankweit gültigen Anmeldeinformationen für eine shared Access Signature erstellt verweist.     
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -441,4 +441,3 @@ Führen Sie für `OPENROWSET` Konfigurieren der Anmeldeinformationen und die ext
  [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: Massenimport von Insert-Vorgang | Microsoft Docs
+title: "Masseneinfügungstask | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
   Der Masseneinfügungstask stellt eine effektive Möglichkeit zum Kopieren großer Datenmengen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht bereit. Angenommen, Ihr Unternehmen verwaltet eine Produktliste mit einer Million Zeilen auf einem Großrechner. Das E-Commerce-System des Unternehmens verwendet jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Auffüllen von Webseiten. Sie müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkttabelle jede Nacht mit der Hauptproduktliste vom Großrechner aktualisieren. Dazu speichern Sie die Produktliste in einem Format mit Tabstopp-Trennzeichen und kopieren mit dem Masseneinfügungstask die Daten direkt in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
@@ -108,7 +110,7 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
@@ -124,11 +126,11 @@ ms.lasthandoff: 08/11/2017
   
  Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](../../integration-services/control-flow/bulk-insert-task.md) und [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Verbindung**  
- Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > Erstellen Sie eine neue Verbindung.  
+ Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
   
- **Verwandte Themen:** [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **Verwandte Themen:** [OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  Geben Sie den Namen der Zieltabelle oder Zielsicht ein, oder wählen Sie aus der Liste eine Tabelle oder Sicht aus.  
@@ -136,19 +138,19 @@ ms.lasthandoff: 08/11/2017
  **Format**  
  Wählen Sie die Quelle des Formats für die Masseneinfügung aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Use File**|Wählen Sie eine Datei mit Formatspezifikationen aus. Nach Auswahl dieser Option wird die dynamische Option **FormatFile**angezeigt.|  
 |**Specify**|Geben Sie das Format an. Nach Auswahl dieser Option werden die dynamischen Optionen **RowDelimiter** und **ColumnDelimiter**angezeigt.|  
   
- **File**  
- Wählen Sie einen Datei oder Flatfile-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > Erstellen Sie eine neue Verbindung.  
+ **Zuletzt geöffnete Dateien**  
+ Wählen Sie einen Datei- oder Flatfileverbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
   
  Der Speicherort ist relativ zum SQL Server-Datenbankmodul, das im Verbindungs-Manager für diesen Task angegeben wurde. Das SQL Server-Datenbankmodul muss auf die Textdatei zugreifen können, und zwar entweder auf einer lokalen Festplatte des Servers oder über eine Freigabe oder einem SQL Server zugeordneten Laufwerk. Auf die Datei wird nicht von der SSIS-Laufzeit zugegriffen.  
   
  Wenn Sie auf die Quelldatei mithilfe eines Flatfileverbindungs-Managers zugreifen, verwendet der Masseneinfügungstask nicht das im Flatfileverbindungs-Manager angegebene Format. Stattdessen verwendet der Masseneinfügungstask entweder das in einer Formatdatei angegebene Format oder die Werte der Eigenschaften RowDelimiter und ColumnDelimiter des Tasks.  
   
- **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager für Flatfiles](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) (Dateiverbindungs-Manager), [File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md) (Verbindungs-Manager für Flatfiles) 
   
  **Tabellen aktualisieren**  
  Aktualisieren Sie die Liste der Tabellen und Sichten.  
@@ -169,14 +171,14 @@ ms.lasthandoff: 08/11/2017
 ## <a name="bulk-insert-task-editor-general-page"></a>Masseneinfügungstask-Editor (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Masseneinfügungstask-Editor** können Sie einen Namen und eine Beschreibung für den Masseneinfügungstask angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Masseneinfügungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Masseneinfügungstasks ein.  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>Masseneinfügungstask-Editor (Seite Optionen)
@@ -184,7 +186,7 @@ ms.lasthandoff: 08/11/2017
   
  Weitere Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](../../integration-services/control-flow/bulk-insert-task.md) und [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **CodePage**  
  Geben Sie die Codepage für die in der Datendatei enthaltenen Daten an.  
   
@@ -218,4 +220,3 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Jede Zeile, die beim Massenladevorgang nicht importiert werden kann, zählt als ein Fehler.  
   
-

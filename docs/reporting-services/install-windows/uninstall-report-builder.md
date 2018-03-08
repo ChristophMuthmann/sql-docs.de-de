@@ -1,29 +1,28 @@
 ---
-title: Deinstallieren von Berichts-Generator | Microsoft Docs
+title: Deinstallieren des Berichts-Generators | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2ca635948940ec0a8921444d2b7928d53e16c70f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="uninstall-report-builder"></a>Deinstallieren des Berichts-Generators
 
 Sie können die eigenständige Version des Berichts-Generators über die Systemsteuerung oder die Befehlszeile deinstallieren.
@@ -38,7 +37,7 @@ Enthalten vom Berichts-Generator verwendete Ordner benutzerdefinierte Dateien, w
   
 2.  Klicken Sie in der Systemsteuerung auf **Programme und Funktionen**.  
   
-3.  Suchen Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 Berichts-Generator in der **Namen** aus, und klicken Sie darauf.  
+3.  Suchen Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 -Berichts-Generator in der Liste **Name**, und klicken Sie darauf.  
   
 4.  Klicken Sie auf **Deinstallieren**.  
   
@@ -60,11 +59,10 @@ Enthalten vom Berichts-Generator verwendete Ordner benutzerdefinierte Dateien, w
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-5.  Drücken Sie die EINGABETASTE ****.  
+5.  Drücken Sie die **EINGABETASTE**.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Installieren des Berichts-Generators](../../reporting-services/install-windows/install-report-builder.md)  
+[Install Report Builder (Installieren des Berichts-Generators)](../../reporting-services/install-windows/install-report-builder.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

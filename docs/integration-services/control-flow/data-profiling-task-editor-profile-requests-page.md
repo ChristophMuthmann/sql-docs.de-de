@@ -1,10 +1,13 @@
 ---
-title: Datenprofilerstellungs-Task-Editor (Seite "Profil Anfragen") | Microsoft Docs
+title: "Editor für den Datenprofilerstellungs-Task (Seite „Profilanforderungen“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
   Verwenden Sie die Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** , um die Profile auszuwählen und zu konfigurieren, die Sie berechnen möchten. In einem Datenprofilerstellungs-Task können Sie mehrere Profile für mehrere Spalten oder Kombinationen von Spalten in mehreren Tabellen oder Sichten berechnen.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="requests-pane-options"></a>Optionen im Anforderungsbereich  
  Der Anforderungsbereich enthält die folgenden Optionen:  
   
- **Sicht**  
+ **Ansicht**  
  Wählen Sie aus, ob alle für den Task konfigurierten Profile oder nur eines der Profile angezeigt werden soll.  
   
  Die Spalten im Anforderungsbereich haben sich je nach der ausgewählten **Sicht** geändert. Weitere Informationen über jede dieser Spalten finden Sie im nächsten Abschnitt, "Spalten im Anforderungsbereich".  
@@ -69,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  **Profiltyp**  
  Wählen Sie ein Datenprofil aus folgenden Optionen:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Anforderung für Kandidatenschlüsselprofil**|Berechnen Sie ein Kandidatenschlüsselprofil.<br /><br /> Dieses Profil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.|  
 |**Anforderung für Verteilungsprofil für Spaltenlänge**|Berechnen Sie ein Verteilungsprofil für Spaltenlänge.<br /><br /> Das Verteilungsprofil für Spaltenlänge dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge darstellt. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sind, und entdecken Werte, die länger als zwei Zeichen sind.|  
@@ -135,25 +137,24 @@ ms.lasthandoff: 08/03/2017
   
  Diese Optionen hängen vom ausgewählten Profil ab. Informationen zu den Optionen für einzelne Profiltypen finden Sie in den folgenden Themen:  
   
--   [Kandidat Profiloptionen für Anforderung Key &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Kandidatenschlüsselprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Spalte Null-Verhältnis Anforderung Profiloptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Statistics Profile-Anforderung Spaltenoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Spaltenstatistikprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Spalte Wert Profil Anforderung Verteilungsoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Verteilungsprofil für Spaltenwert &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Spalte Länge Profil Anforderung Verteilungsoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Verteilungsprofil für Spaltenlänge &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Muster Profil Anforderung Spaltenoptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Spaltenmusterprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Funktionale Abhängigkeit Anforderung Profiloptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für funktionales Abhängigkeitsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Wert Aufnahme Anforderung Profiloptionen &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenprofilerstellungs-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

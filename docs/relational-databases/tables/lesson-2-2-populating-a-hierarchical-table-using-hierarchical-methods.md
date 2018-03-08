@@ -2,33 +2,32 @@
 title: "Auffüllen einer hierarchischen Tabelle mit hierarchischen Methoden | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-f1_keywords:
-- HierarchyID
-helpviewer_keywords:
-- HierarchyID
+applies_to: SQL Server 2016
+f1_keywords: HierarchyID
+helpviewer_keywords: HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "22"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e4d9493f0abe60af4e4c063223cef63a080ed13f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 24e6481c9f9122786d46cf7b813fdbdddac2ef74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---populating-a-hierarchical-table-using-hierarchical-methods"></a>Lektion 2.2: Auffüllen einer hierarchischen Tabelle mit hierarchischen Methoden
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] hat 8 Mitarbeiter, die in der Marketingabteilung arbeiten. Die Angestelltenhierarchie sieht ungefähr wie folgt aus:  
   
 **David**, **EmployeeID** 6, ist der Marketing-Manager. Drei Marketingspezialisten berichten **David**:  
@@ -171,9 +170,8 @@ Wie in der vorigen Lektion verwenden wir die Methode `ToString()` , um den **hie
   
 Die Tabelle ist jetzt vollständig mit den Daten der Marketingabteilung aufgefüllt.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Abfragen einer hierarchischen Tabelle mit hierarchischen Methoden](../../relational-databases/tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md)  
   
   
   
-

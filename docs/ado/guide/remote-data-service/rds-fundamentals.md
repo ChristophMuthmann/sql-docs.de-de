@@ -3,7 +3,7 @@ title: RDS-Grundlagen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1ec6057fef15620c21a248e0b62d5904e3a71bda
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 167fb6b82df1a5ed944c84424d5a9b05e7713097
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-fundamentals"></a>RDS-Grundlagen
 > [!IMPORTANT]
@@ -49,6 +48,5 @@ ms.lasthandoff: 09/09/2017
  [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

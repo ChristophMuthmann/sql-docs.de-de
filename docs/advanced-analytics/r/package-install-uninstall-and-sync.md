@@ -1,32 +1,33 @@
 ---
 title: "Synchronisierung von R-Paket für SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
-ms.prod: sql-server-2016
+ms.date: 01/04/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: efb0477481e47af1ace78b938a64e72bace6d81f
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: ed7dbf99b0f492b5ca8879bb67a7256fdfae3306
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-
 # <a name="r-package-synchronization-for-sql-server"></a>Synchronisierung von R-Paket für SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server-2017 bietet die Möglichkeit zum Synchronisieren von Auflistungen von R-Pakete zwischen dem Dateisystem und die Instanz und Datenbank, in denen Pakete verwendet werden.
+Die Version von "revoscaler" in SQL Server-2017 enthalten bietet die Möglichkeit zum Synchronisieren von Auflistungen von R-Pakete zwischen dem Dateisystem und die Instanz und Datenbank, in denen Pakete verwendet werden.
+
 Dieses Feature wurde bereitgestellt, um R-Paket-Sammlungen im Zusammenhang mit SQL Server-Datenbanken sichern zu vereinfachen. Mit dieser Funktion kann Administrator wiederherstellen, nicht nur die Datenbank, jedoch R-Pakete, die von Datenanalysten Arbeit in dieser Datenbank verwendet wurden.
 
-In diesem Thema wird beschrieben, die Synchronisierungsfunktion Paket sowie zum Verwenden der [RxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages) Funktion, um die folgenden Aufgaben ausführen:
+Dieser Artikel beschreibt die Synchronisierungsfunktion Paket sowie zum Verwenden der [RxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) Funktion, um die folgenden Aufgaben ausführen:
 
 + Eine Liste der Pakete für eine gesamte SQL Server-Datenbank zu synchronisieren
 
@@ -42,27 +43,27 @@ Sie können z. B. paketsynchronisierung in diesen Szenarien verwenden:
 
 ## <a name="requirements"></a>Anforderungen
 
-Bevor Sie die paketsynchronisierung verwenden können, Sie benötigen die entsprechende Version von Microsoft R und die zugehörige Datenbank-Funktion aktiviert haben.
+Bevor Sie paketsynchronisierung verwenden können, müssen Sie die entsprechende Version von Microsoft R "oder" Machine Learning-Server haben. Diese Funktion wird in Microsoft R Version 9.1.0 oder höher bereitgestellt werden. 
+
+Außerdem müssen Sie aktivieren die [Verwaltungsfeature Paket](r-package-how-to-enable-or-disable.md) auf dem Server.
 
 ### <a name="determine-whether-your-server-supports-package-management"></a>Bestimmen Sie, ob der Server, paketverwaltung unterstützt
 
 Diese Funktion ist in SQL Server 2017 CTP 2 oder höher verfügbar.
 
-Da diese Funktion in Microsoft R Version 9.1.0 R-Funktionen verwendet, können Sie diese Funktion mit einer Instanz von SQL Server 2016 hinzufügen, mit dem Upgrade der Instanz, um die neueste Version von Microsoft R. verwenden Weitere Informationen finden Sie unter [verwenden SqlBindR.exe zum Upgrade von SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Sie können dieses Feature mit einer Instanz von SQL Server 2016 hinzufügen, indem Sie ein Upgrade der Instanz um die neueste Version von Microsoft R. verwenden Weitere Informationen finden Sie unter [verwenden SqlBindR.exe so aktualisieren Sie SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### <a name="enable-the-package-management-feature"></a>Aktivieren Sie die Paket-Management-Funktion
 
-Verwendung der paketsynchronisierung erfordert, dass der neue Features für Paket auf SQL Server-Instanz, und klicken Sie auf einzelne Datenbanken, die zum Ausführen von R-Aufgaben verwendet.
+Verwendung von paketsynchronisierung erfordert, dass das neue Paket-Feature für die SQL Server-Instanz, und klicken Sie auf einzelne Datenbanken aktiviert werden. Weitere Informationen finden Sie unter [aktivieren oder Deaktivieren der paketverwaltung für SQL Server](r-package-how-to-enable-or-disable.md).
 
 1. Der Serveradministrator aktiviert die Funktion für SQL Server-Instanz.
-2. Für jede Datenbank erteilt der Administrator Benutzer die Möglichkeit zum Installieren oder Freigeben von R-Pakete.
+2. Für jede Datenbank erteilt der Administrator einzelne Benutzer die Möglichkeit zum Installieren oder Freigeben von R-Pakete mithilfe von Datenbankrollen.
 
-Nachdem dies geschehen ist, werden Informationen zu Benutzern und die Pakete, die sie installiert haben in der SQL Server-Instanz gespeichert. Diese Informationen kann dann angewendet werden, um die R-Pakete im Dateisystem zu aktualisieren.
+Nachdem dies geschehen ist, können Sie RevoScaleR-Funktionen, wie z. B. [RxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) Pakete in einer Datenbank zu installieren.  Informationen zu Benutzern und die Pakete, die sie verwenden können, wird in der SQL Server-Instanz gespeichert. 
 
-Wenn Sie ein neues Paket mit den Paket-Management-Funktionen hinzufügen, werden beide Datensätze in SQL Server und dem Dateisystem aktualisiert.
+Wenn Sie ein neues Paket mit den Paket-Management-Funktionen hinzufügen, werden beide Datensätze in SQL Server und dem Dateisystem aktualisiert. Diese Informationen können verwendet werden, die Paketinformationen für die gesamte Datenbank wiederherstellen.
 
-> [!NOTE]
-> Paketsynchronisierung können Sie R-Pakete die traditionelle installiert haben mithilfe von R-Tools zum Installieren der Pakete direkt in das Dateisystem keine.
 ### <a name="permissions"></a>Berechtigungen
 
 + Die Person, die die Paket-Synchronisierung-Funktion ausführt, muss ein Sicherheitsprinzipal auf dem SQL Server-Instanz und die Datenbank, die die Pakete gespeichert sind.
@@ -73,27 +74,33 @@ Wenn Sie ein neues Paket mit den Paket-Management-Funktionen hinzufügen, werden
 
 + Pakete, die als gekennzeichnete synchronisiert **private**, entweder der Besitzer des Pakets oder der Administrator muss die Funktion ausgeführt, und die Pakete müssen privat sein.
 
-+ Um Pakete im Auftrag anderer Benutzer zu synchronisieren, muss der Besitzer Mitglied der **Db_owner** -Datenbankrolle.
++ Um Pakete im Auftrag anderer Benutzer zu synchronisieren, muss der Besitzer Bhe ein Mitglied der **Db_owner** -Datenbankrolle.
 
 ## <a name="how-package-synchronization-works"></a>Funktionsweise von paketsynchronisierung
 
-Rufen Sie zum Verwenden von paketsynchronisierung [RxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), dies ist eine neue Funktion in ["revoscaler"](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler). Rufen Sie diese Funktion von SQL Server mithilfe von Sp_execute_external_script, oder Sie können von einem Remoteclient von R ausgeführt und geben Sie die SQL Server-computekontext. 
+Rufen Sie zum Verwenden von paketsynchronisierung [RxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), dies ist eine neue Funktion in ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). 
 
-Da Pakete, auf der Datenbankebene für jeden Aufruf von verwaltet werden `rxSyncPackages`, geben Sie eine SQL Server-Instanz und Datenbank, und klicken Sie dann Pakete aufzulisten, oder geben Paketbereich.
+Für jeden Aufruf von `rxSyncPackages`, müssen Sie eine SQL Server-Instanz und Datenbank angeben. Entweder Sie dann die Liste der Pakete zu synchronisieren, oder geben Sie Paketbereich.
 
 1. Erstellen Sie die SQL Server-computekontext mithilfe der `RxInSqlServer` Funktion. Wenn Sie einen computekontext angeben, wird der aktuellen computekontext verwendet.
 
-2. Geben Sie den Namen einer Datenbank, für die Instanz in der angegebenen computekontext. Pakete werden pro Datenbank verwaltet.
+2. Geben Sie den Namen einer Datenbank, für die Instanz in der angegebenen computekontext. Pakete werden pro Datenbank synchronisiert.
 
-3. Liste der Pakete zu synchronisieren.
+3. Geben Sie die Pakete zu synchronisieren, indem Sie mit dem Bereichsargument.
 
-4.  Verwenden Sie optional die *Bereich* Argument, um anzugeben, ob Sie die Pakete für einen einzelnen Benutzer oder für eine Gruppe von Benutzern synchronisieren. Wenn Sie die Funktion ausführen, ohne entweder **private** oder **freigegebenen** Bereich, den gesamten Satz von Paketen, die für alle Bereiche und Benutzer kopiert werden.
+    Bei Verwendung von **private** Bereich nur Pakete, die im Besitz von dem angegebenen Besitzer werden synchronisiert. Bei Angabe von **freigegebenen** Bereich, alle privaten Pakete in der Datenbank synchronisiert werden. 
+    
+    Wenn Sie die Funktion ausführen, ohne entweder **private** oder **freigegebenen** Bereich, alle Pakete werden synchronisiert.
 
-Wenn der Befehl erfolgreich ausgeführt wird, werden vorhandene Pakete im Dateisystem mit dem angegebenen Bereich und der Besitzer der Datenbank hinzugefügt. Wenn das Dateisystem beschädigt ist, werden die Pakete basierend auf der Liste, die in der Datenbank beibehaltene wiederhergestellt.
+4. Wenn der Befehl erfolgreich ist, werden vorhandene Pakete im Dateisystem mit dem angegebenen Bereich und der Besitzer der Datenbank hinzugefügt.
+
+    Wenn das Dateisystem beschädigt ist, werden die Pakete basierend auf der Liste, die in der Datenbank beibehaltene wiederhergestellt.
+
+    Wenn das Paket-Feature nicht in der Zieldatenbank verfügbar ist, wird ein Fehler ausgelöst: "die Paket-Verwaltungsfunktion entweder nicht auf dem SQLServer aktiviert, oder die Version zu alt ist"
 
 ### <a name="example-1-synchronize-all-package-by-database"></a>Beispiel 1. Synchronisieren Sie alle Paket von der Datenbank
 
-In diesem Beispiel ruft alle Pakete, die in der Datenbank [TestDB] installiert. Da kein Besitzer spezifisch ist, enthält die Liste alle Pakete, die für private und freigegebene Bereiche installiert wurden.
+In diesem Beispiel ruft keine neuen Pakete aus dem lokalen Dateisystem und die Pakete werden in der Datenbank [TestDB] installiert. Da kein Besitzer spezifisch ist, enthält die Liste alle Pakete, die für private und freigegebene Bereiche installiert wurden.
 
 ```R
 connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
@@ -115,26 +122,12 @@ rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 
 ### <a name="example-3-restrict-synchronized-packages-by-owner"></a>Beispiel 3. Synchronisierte Pakete vom Besitzer zu beschränken
 
-Im folgenden Beispiel wird veranschaulicht, wie nur die installierten Pakete für einen bestimmten Benutzer abrufen. In diesem Beispiel wird der Benutzer durch den SQL-Anmeldenamen, identifiziert *"user1"*.
+Im folgenden Beispiel wird veranschaulicht, wie nur die Pakete zu synchronisieren, die für einen bestimmten Benutzer installiert wurden. In diesem Beispiel wird der Benutzer durch den SQL-Anmeldenamen, identifiziert *"user1"*.
 
 ```R
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))
 ```
 
-### <a name="example-4-restrict-synchronized-packages-by-owner"></a>Beispiel 4. Synchronisierte Pakete vom Besitzer zu beschränken
-
-Im folgende Beispiel synchronisiert die Pakete installiert, die im Dateisystem mit der Liste der Pakete, die in der Datenbank verwaltet. Wenn ein Paket nicht vorhanden ist, wird es im Dateisystem installiert.
-
-```R
-# Instantiate the compute context
-connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
-computeContext <- RxInSqlServer(connectionString = connectionString )
-
-# Synchronize the packages in the file system for all scopes and users
-rxSyncPackages(computeContext=computeContext, verbose=TRUE)
-```
-
 ## <a name="related-resources"></a>Verwandte Ressourcen
 
-[R-paketverwaltung für SQL Server](r-package-management-for-sql-server-r-services.md)
-
+[R-Paketverwaltung für SQL Server](r-package-management-for-sql-server-r-services.md)

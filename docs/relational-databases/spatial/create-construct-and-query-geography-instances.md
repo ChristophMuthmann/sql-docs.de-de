@@ -2,9 +2,12 @@
 title: Erstellen, Aufbauen und Abfragen von geography-Instanzen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 42259b77a2b40001824a88ab4e8bf744f25cf720
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Erstellen, Aufbauen und Abfragen von geography-Instanzen
-  Der Datentyp für räumliche Geografiedaten, **geography**, stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Der Datentyp für räumliche Geografiedaten, **geography**, stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
  Der **geography** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geography** -Typs in der gleichen Weise erstellen und **geography** -Daten in der gleichen Weise verwenden wie andere vom System bereitgestellte Typen.  
   
@@ -177,13 +181,13 @@ ms.lasthandoff: 06/22/2017
  [STArea &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> Empty  
- Eine *empty***geography** -Instanz besitzt keine Punkte. Die Länge von leeren **LineString, CircularString**-, **CompoundCurve**- und **MultiLineString** -Instanzen ist 0 (null). Die Fläche von leeren **Polygon, CurvePolygon** - und **MultiPolygon** -Instanzen ist 0 (null).  
+ Eine *leere***geographie**-Instanz besitzt keine Punkte. Die Länge von leeren **LineString, CircularString**-, **CompoundCurve**- und **MultiLineString** -Instanzen ist 0 (null). Die Fläche von leeren **Polygon, CurvePolygon** - und **MultiPolygon** -Instanzen ist 0 (null).  
   
  **So bestimmen Sie, ob eine Instanz leer ist**  
  [STIsEmpty &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> Abgeschlossenheit  
- Eine *geschlossene* **geography**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
+ Eine *geschlossene***geographie**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
   
  Ein Ring ist eine einfache, geschlossene **LineString** -Instanz.  
   
@@ -270,7 +274,7 @@ ms.lasthandoff: 06/22/2017
     SELECT @result.STAsText();  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

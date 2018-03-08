@@ -1,32 +1,32 @@
 ---
-title: Erstellen von abgestuften Berichten (Berichts-Generator und SSRS) | Microsoft Docs
+title: Erstellen von abgestuften Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d94397d96f5532ed798c2bfe6b50ea17709f9654
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Erstellen von abgestuften Berichten (Berichts-Generator und SSRS)
 Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtstyp, der Detailzeilen oder Untergruppen wie im folgenden Beispiel unter einer übergeordneten Gruppe eingerückt in der gleichen Spalte anzeigt:  
   
- ![Gerenderter gestufter Bericht](../../reporting-services/report-design/media/steppedreportrendered.gif "gerenderte abgestuften Bericht")  
+ ![Gerenderter abgestufter Bericht](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered stepped report")  
   
  Bei herkömmlichen Tabellenberichten wird die übergeordnete Gruppe in einer angrenzenden Spalte im Bericht platziert. Der neue Tablix-Datenbereich ermöglicht es Ihnen, eine Gruppe und Detailzeilen bzw. Untergruppen zur gleichen Spalte hinzuzufügen. Um die Gruppenzeilen von den Detailzeilen oder Zeilen untergeordneter Gruppen zu unterscheiden, können Sie entweder eine Formatierung wie eine Schriftfarbe anwenden oder die Detailzeilen mit einem Einzug versehen.  
   
@@ -54,15 +54,15 @@ Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes
   
      Sie haben jetzt einen grundlegenden Tabellenbericht. Beim Rendern werden eine Spalte mit dem Gruppeninstanzwert und eine oder mehrere weitere Spalten mit gruppierten Detaildaten angezeigt. Die folgende Abbildung zeigt, wie der Datenbereich auf der Entwurfsoberfläche aussehen könnte.  
   
-     ![Tabellendatenbereich mit Gruppe](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Tabellendatenbereich mit Gruppe")  
+     ![Tabellendatenbereich mit Gruppe](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Table data region with group")  
   
      Die folgende Abbildung zeigt, wie der gerenderte Datenbereich beim Anzeigen des Berichts aussehen könnte.  
   
-     ![Gerenderter gruppierter Bericht](../../reporting-services/report-design/media/tablereportrendered.gif "gerenderte gruppierter Bericht")  
+     ![Gerenderter gruppierter Bericht](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered grouped report")  
   
 3.  Für einen abgestuften Bericht benötigen Sie die erste Spalte, die die Gruppeninstanz enthält, nicht. Kopieren Sie stattdessen den Wert in der Gruppenkopfzelle, löschen Sie die Gruppenspalte, und fügen Sie den Wert in das erste Textfeld in der Gruppenkopfzeile ein. Um die Gruppenspalte zu entfernen, klicken Sie mit der rechten Maustaste auf die Gruppenspalte oder die Zelle, und klicken Sie auf **Spalten löschen**. Die folgende Abbildung zeigt, wie der Datenbereich auf der Entwurfsoberfläche aussehen könnte.  
   
-     ![Datenbereich mit Gruppenkopfzeile](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Datenbereich mit Gruppenkopfzeile")  
+     ![Datenbereich mit Gruppenkopfzeile](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Data region with group header row")  
   
 4.  Ändern Sie die Auffüllung der Detaildatenzelle, um die Detailzeilen unter der Gruppenkopfzeile in der gleichen Spalte einzurücken.  
   
@@ -84,7 +84,7 @@ Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes
   
      Ihr Datenbereich sollte dem folgenden Beispiel ähneln.  
   
-     ![Datenbereich für abgestuftes Bericht](../../reporting-services/report-design/media/steppedreportdataregion.gif "Datenbereich für abgestuften Berichten")  
+     ![Datenbereich für abgestuften Bericht](../../reporting-services/report-design/media/steppedreportdataregion.gif "Data region for stepped report")  
   
      **Datenbereich für abgestuftes Berichtslayout**  
   
@@ -109,14 +109,13 @@ Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes
   
 3.  Ändern Sie die Auffüllung für die Zelle, die die Gruppendaten enthält.  
   
-## <a name="see-also"></a>Siehe auch  
- [Kopf- und Fußzeilen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatieren von Berichtselementen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tablix-Datenbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tabellen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrizen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrizen (Berichts-Generator und SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Listen (Berichts-Generator und SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

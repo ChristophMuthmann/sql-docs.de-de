@@ -3,33 +3,30 @@ title: SQLNativeSql-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLNativeSql
-apilocation:
-- sqlsrv32.dll
+apiname: SQLNativeSql
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLNativeSql
-helpviewer_keywords:
-- SQLNativeSql function [ODBC]
+f1_keywords: SQLNativeSql
+helpviewer_keywords: SQLNativeSql function [ODBC]
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e233d9742ea7bd9aa5de56962e1d785be78b8066
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1672e4c1f21d223ed326c0e0649fc7cbb2376f74
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql-Funktion
 **Konformität**  
@@ -131,4 +128,3 @@ SELECT int2 (empid) FROM employee
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

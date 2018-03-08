@@ -2,9 +2,12 @@
 title: "Einfügen von Transact-SQL-Umschließungsausschnitten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: 6
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 852836ea43accda6af057b014abbc987f4f14299
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c1f1ec2e376c496e2b3dcdaf5ef032ba8c54745
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Einfügen von Transact-SQL-Umschließungsausschnitten
-  Als Umschließungsausschnitt wird eine Vorlage bezeichnet, die Sie als Ausgangspunkt beim Einschließen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem BEGIN-, IF- oder WHILE-Block verwenden können.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Als Umschließungsausschnitt wird eine Vorlage bezeichnet, die Sie als Ausgangspunkt beim Einschließen von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem BEGIN-, IF- oder WHILE-Block verwenden können.  
   
 ## <a name="inserting-surround-with-snippets"></a>Einfügen von Umschließungsausschnitten  
  Umschließungsausschnitte können mit einer von drei Methoden gestartet werden: mit einer Tastenkombination, über das Menü **Bearbeiten** und über das Kontextmenü.  
@@ -48,8 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Wählen Sie in der Liste den Namen des Ausschnitts (BEGIN, IF oder WHILE) aus, indem Sie die Maus verwenden oder den Namen des Ausschnitts eingeben und TAB oder die EINGABETASTE drücken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einfügen von Transact-SQL-Ausschnitten](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   
-

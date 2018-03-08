@@ -3,7 +3,7 @@ title: "Beibehalten von Datensätzen im XML-Format | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 538905bce39a603b6bda5f1164ae52c70ee2be24
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
 Wie beim ADTG **Recordset** Persistenz im XML-Format ist mit der Microsoft OLE DB-Anbieter für Persistenz implementiert. Dieser Anbieter generiert einen Vorwärtscursor, schreibgeschützte Rowset aus einer gespeicherten XML-Datei oder einem Stream, die die Schemainformationen von ADO generierten enthält. Auf ähnliche Weise kann es dauern, eine ADO **Recordset**, Generieren von XML, und speichern Sie sie in einer Datei oder jedes Objekt, das die COM implementiert **IStream** Schnittstelle. (Eine Datei ist sogar noch ein weiteres Beispiel für ein Objekt, das unterstützt **IStream**.) Für Version 2.5 und höher, ADO basiert auf Microsoft XML Parser (MSXML) beim Laden der XML-Daten in der **Recordset**; daher msxml.dll ist erforderlich.  
@@ -78,7 +77,7 @@ rs.Save "btitles.sav", adPersistXML
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [XML-Format die Persistenz](../../../ado/guide/data/xml-persistence-format.md)  
+-   [XML Persistence Format (XML-Beibehaltungsformat)](../../../ado/guide/data/xml-persistence-format.md)  
   
 -   [Namespaces](../../../ado/guide/data/namespaces.md)  
   
@@ -88,13 +87,12 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Hierarchische Recordsets im XML-Format](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Recordset dynamischen Eigenschaften in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Recordset Dynamic Properties in XML (Dynamische Recordset-Eigenschaften in XML)](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [XSLT-Transformationen](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Speichern der XML-DOM-Objekt](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Saving to the XML DOM Object (Speichern in das XML DOM-Objekts)](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
 -   [XML-Sicherheitsüberlegungen](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Speicherszenario für XML-Recordset](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
-
+-   [Speicherszenario für XML-Recordsets](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

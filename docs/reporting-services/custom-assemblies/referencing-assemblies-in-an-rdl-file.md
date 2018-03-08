@@ -1,17 +1,17 @@
 ---
-title: Verweisen auf Assemblys in einer RDL-Datei | Microsoft Docs
+title: Verweisen auf Assemblys in einer RDL-Datei | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-assemblies
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - RDL [Reporting Services], referencing assemblies
 - referencing custom assemblies
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: e79146c1a51eccc685813f47e79401128017995c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Verweisen auf Assemblys in einer RDL-Datei
-  Um die Verwendung von Assemblys mit benutzerdefiniertem Code in Berichtsdefinitionsdateien zu unterstützen, sind zwei Elemente der Berichtsdefinitionssprache (Report Definition Language, RDL) in der RDL-Spezifikation enthalten: die **CodeModules** Element und die **Klassen** Element.  
+  Um die Verwendung von Assemblys mit benutzerdefiniertem Code in Berichtsdefinitionsdateien zu unterstützen, sind zwei RDL-Elemente (Report Definition Language) in der RDL-Spezifikation enthalten: das **CodeModules** und das **Classes**-Element.  
   
- Die **CodeModules** Element ermöglicht es Ihnen, um Assemblys mit verwaltetem Code in Berichtsausdrücken zu verweisen. **CodeModules** ist ein Element der obersten Ebene, die den Verweis auf die Assembly, die Sie in Ihren Berichtsdefinitionsdateien verwenden enthält, um spezielle Funktionen aufzurufen. Ein Eintrag in einer Berichtsdefinition, der die Verwendung einer benutzerdefinierten Assembly unterstützt, kann folgendermaßen aussehen:  
+ Mithilfe des **CodeModules**-Elements kann in Berichtsausdrücken auf Assemblys mit verwaltetem Code verwiesen werden. **CodeModules** ist ein Element auf oberster Ebene, das den Verweis auf die Assembly enthält, mit der in Ihren Berichtsdefinitionsdateien spezialisierte Funktionen aufgerufen werden. Ein Eintrag in einer Berichtsdefinition, der die Verwendung einer benutzerdefinierten Assembly unterstützt, kann folgendermaßen aussehen:  
   
 ```  
 <CodeModules>  
@@ -41,9 +41,9 @@ ms.lasthandoff: 08/12/2017
 </CodeModules>  
 ```  
   
- Statt <xref:System.Reflection.Assembly.Load%2A> aus benutzerdefiniertem Code, registrieren Sie Ihren benutzerdefinierten Assemblys entweder manuell hinzufügen **CodeModule** Elemente, die RDL-Datei oder mithilfe der **Verweise** auf der Registerkarte die **Berichtseigenschaften** Dialogfeld. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Statt <xref:System.Reflection.Assembly.Load%2A> aus benutzerdefiniertem Code aufzurufen, registrieren Sie die benutzerdefinierten Assemblys entweder, indem Sie der RDL-Datei die **CodeModule**-Elemente manuell hinzufügen, oder mithilfe der Registerkarte **Verweise** im Dialogfeld **Berichtseigenschaften**. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)-Ausdruck dar.  
   
- Die **Klassen** Element unterstützt die Verwendung von Instanzelementen in einer Berichtsdefinition. **Klassen** ist ein Element der obersten Ebene, die einen Verweis auf den Klassennamen und einen Instanznamen enthält. Ein Eintrag in einer Berichtsdefinition, der die Verwendung von Instanzelementen unterstützt, kann folgendermaßen aussehen:  
+ Das **Classes**-Element unterstützt die Verwendung von Instanzelementen in einer Berichtsdefinition. **Classes** ist ein Element der obersten Ebene, das einen Verweis auf den Klassen- und einen Instanznamen enthält. Ein Eintrag in einer Berichtsdefinition, der die Verwendung von Instanzelementen unterstützt, kann folgendermaßen aussehen:  
   
 ```  
 <Classes>  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/12/2017
   
  Weitere Informationen finden Sie unter [Zugriff auf benutzerdefinierte Assemblys über Ausdrücke](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

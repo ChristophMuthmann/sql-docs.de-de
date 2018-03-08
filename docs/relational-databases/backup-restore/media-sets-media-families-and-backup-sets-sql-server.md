@@ -2,9 +2,12 @@
 title: "Mediensätze, Medienfamilien und Sicherungssätze (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -23,19 +26,19 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 13405de028f7392c9ef384743a44db9fb49c627c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0b3e7aa7ca8af93ed67134fffb79bb59193a0aec
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **Dieses Thema bietet eine Einführung zur grundlegenden Terminologie bezüglich der Sicherungsmedien für Sicherungen und Wiederherstellungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ist für Leser gedacht, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]noch nicht kennen.** 
   
   Dieses Thema beschreibt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Format für Sicherungsmedien, die Entsprechung zwischen Sicherungsmedien und Sicherungsgeräten und die Organisation von Sicherungen auf Sicherungsmedien sowie verschiedene Aspekte im Zusammenhang mit Mediensätzen und Medienfamilien. Im Thema werden außerdem die Schritte zum Initialisieren oder Formatieren von Sicherungsmedien vor der ersten Verwendung oder das Ersetzen eines alten Mediensatzes durch einen neuen Mediensatz beschrieben. Es enthält zudem Informationen dazu, wie alte Sicherungssätze in einem Mediensatz überschrieben und neue Sicherungssätze an einen Mediensatz angefügt werden.  
@@ -105,7 +108,7 @@ In einem gespiegelten Mediensatz werden alle Medienfamilien gespiegelt. Wenn bei
   
 -   Anzahl der Spiegel im Satz (1 bis 4). Mit 1 wird ein ungespiegeltes Medium angegeben.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann Medien verarbeiten, die durch frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]formatiert wurden.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann Medien verarbeiten, die durch frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formatiert wurden.  
   
 ## <a name="backup-sets"></a>Sicherungssätze  
  Durch einen erfolgreichen Sicherungsvorgang wird dem Mediensatz ein einzelner *Sicherungssatz* hinzugefügt. Der Sicherungssatz wird anhand des Mediensatzes beschrieben, zu dem die Sicherung gehört. Wenn das Sicherungsmedium nur aus einer Medienfamilie besteht, enthält diese Familie den gesamten Sicherungssatz. Wenn das Sicherungsmedium aus mehreren Medienfamilien besteht, wird der Sicherungssatz auf die Familien verteilt. Auf jedem Medium enthält der Sicherungssatz einen Header für die Beschreibung des Sicherungssatzes.  
@@ -143,7 +146,7 @@ WITH
   
  ![Zweiter Sicherungssatz verteilt auf 3 Mediensatzbänder](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Zweiter Sicherungssatz verteilt auf 3 Mediensatzbänder")  
   
- Beim Wiederherstellen von Sicherungen können Sie mit der Option FILE angeben, welche Sicherungen Sie verwenden möchten. Im folgenden Beispiel werden die FILE **=***backup_set_file_number* -Klauseln verwendet, um eine vollständige Datenbanksicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank wiederherzustellen. Im Anschluss daran wird für denselben Mediensatz eine differenzielle Datenbanksicherung durchgeführt. Es werden bis zu drei Sicherungsbänder vom Mediensatz verwendet. Diese befinden sich auf den Bandlaufwerken `\\.\tape0`, `tape1`und `tape2`.  
+ Beim Wiederherstellen von Sicherungen können Sie mit der Option FILE angeben, welche Sicherungen Sie verwenden möchten. Im folgenden Beispiel werden die FILE **=***Nummer_der_Sicherrungssatzdatei*-Klauseln verwendet, um eine vollständige Datenbanksicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank wiederherzustellen. Im Anschluss daran wird für denselben Mediensatz eine differenzielle Datenbanksicherung durchgeführt. Es werden bis zu drei Sicherungsbänder vom Mediensatz verwendet. Diese befinden sich auf den Bandlaufwerken `\\.\tape0`, `tape1`und `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -308,4 +311,3 @@ Das Anfügen (standardmäßiges Verhalten von BACKUP) kann explizit mithilfe der
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

@@ -2,12 +2,13 @@
 title: Technische Referenz zu Microsoft Neural Network-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk* , das auch als *Netzwerk von Deltaregeln mit Rückpropagierung*bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk*, das auch als *Netzwerk von Deltaregeln mit Rückpropagierung* bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
   
  Eine detaillierte Erläuterung von mehrschichtigen Perzeptronnetzwerken geht über den Rahmen dieser Dokumentation hinaus. In diesem Thema wird die grundlegende Implementierung des Algorithmus, einschließlich der Methode zum Normalisieren von Eingabe- und Ausgabewerten, erläutert sowie Funktionsauswahlverfahren zur Reduzierung der Attributkardinalität beschrieben. Das Thema enthält eine Beschreibung der Parameter und anderer Einstellungen, mit denen das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
   
@@ -209,7 +210,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Miningmodellinhalt, neuronale Netzwerkmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Neuronale Beispiele für Netzwerkmodellabfragen](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Neural Network-Abfragebeispiele](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
-

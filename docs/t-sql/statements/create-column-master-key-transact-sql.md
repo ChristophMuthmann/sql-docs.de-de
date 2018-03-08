@@ -1,11 +1,13 @@
 ---
 title: Erstellen von COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,20 +29,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 871acb46898a9a62b25062f69d4e51bf28658f06
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 30cf5c83de208992cb36692c0b4b7b07fabf5cb6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen spaltenhauptschlüssel-Metadaten-Objekt in einer Datenbank an. Master Key-Spalte Metadateneintrag, der einen Schlüssel darstellt gespeichert, in einem externen Schlüsselspeicher, die verwendet wird, um zu schützen (verschlüsseln) Spalte Verschlüsselungsschlüssel bei Verwendung der [Always Encrypted &#40; Datenbankmodul &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) Funktion. Mehrere spaltenhauptschlüssel ermöglichen Schlüsselrotation; der Schlüssel zur Erhöhung der Sicherheit ändern in regelmäßigen Abständen. Sie können einen spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank erstellen, indem Sie im Objekt-Explorer mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell. Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
@@ -220,4 +221,3 @@ WITH (
 * [Always Encrypted &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
 * [Overview of Key Management for Always Encrypted (Übersicht über die Schlüsselverwaltung für Always Encrypted)](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
   
-

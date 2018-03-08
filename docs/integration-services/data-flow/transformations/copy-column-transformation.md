@@ -1,10 +1,13 @@
 ---
-title: Kopieren Sie Spaltentransformation | Microsoft Docs
+title: Spalten-Kopieren-Transformation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - copying columns
 - Copy Column transformation
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-caps.latest.revision: 37
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: d05d290cd9468eb7fd0b208e00a88db76cfae61a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: de91d5bf19bc17764586df64bb854531f0c54306
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="copy-column-transformation"></a>Spalten-Kopieren-Transformation
   Die Transformation für das Kopieren von Spalten erstellt neue Spalten, indem Eingabespalten kopiert und der Transformationsausgabe die neuen Spalten hinzugefügt werden. Später können im Datenfluss verschiedene Transformationen auf die Spaltenkopien angewendet werden. Beispielsweise können Sie mit der Transformation für das Kopieren von Spalten eine Kopie einer Spalte erstellen und anschließend mithilfe der Transformation zum Zuordnen der Zeichen die kopierten Daten in Großbuchstaben konvertieren. Sie könnten aber auch mithilfe der Transformation für das Aggregieren Aggregationen auf die neue Spalte anwenden.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  Wenn Sie einfach alle Quelldaten in ein Ziel kopieren, ist die Verwendung der Transformation für das Kopieren von Spalten möglicherweise nicht erforderlich. In einigen Szenarien können Sie eine Quelle direkt mit einem Ziel verbinden, wenn keine Datentransformation erforderlich ist. In solchen Fällen ist zum Erstellen des Pakets häufig die Verwendung des SQL Server-Import/Export-Assistenten zu bevorzugen. Sie können das Paket je nach Bedarf zu einem späteren Zeitpunkt erweitern und neu konfigurieren. Weitere Informationen finden Sie unter [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die zu kopierenden Spalten aus. Durch Ihre Auswahl werden der nachfolgenden Tabelle Eingabespalten hinzugefügt.  
   
@@ -63,9 +65,8 @@ ms.lasthandoff: 08/19/2017
  **Ausgabealias**  
  Geben Sie einen Alias für jede neue Ausgabespalte ein. Der Standard lautet **Kopie von**, gefolgt von dem Namen der Eingabespalte. Sie können jedoch auch einen eindeutigen, beschreibenden Namen auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

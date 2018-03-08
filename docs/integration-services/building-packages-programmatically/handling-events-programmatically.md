@@ -1,12 +1,14 @@
 ---
-title: Programmgesteuerte Behandlung von Ereignissen | Microsoft Docs
+title: Programmgesteuerte Behandlung von Ereignissen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,27 +28,26 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 7235703f494bd1fb50e696aef537391ba23d1749
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c388f9a43859ca186a728dad641ca95d90c48372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="handling-events-programmatically"></a>Programmgesteuerte Behandlung von Ereignissen
-  Die [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Laufzeit stellt eine Auflistung von Ereignissen bereit, die vor, während und nach der Überprüfung und Ausführung eines Pakets auftreten. Diese Ereignisse können auf zwei Weisen aufgezeichnet werden. Die erste Methode besteht in der Implementierung der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> -Schnittstelle in einer Klasse und die Bereitstellung der Klasse als Parameter an die **Execute** und **Validate** -Methoden des Pakets. Die zweite Methode besteht in der Erstellung von <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekten, die andere [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Objekte enthalten können, wie z. B. Tasks und Loops, die ausgeführt werden, wenn ein Ereignis in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> auftritt. In diesem Abschnitt werden diese beiden Methoden beschrieben und zur Veranschaulichung ihrer Verwendung Codebeispiele bereitgestellt.  
+  Die [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Laufzeit stellt eine Auflistung von Ereignissen bereit, die vor, während und nach der Überprüfung und Ausführung eines Pakets auftreten. Diese Ereignisse können auf zwei Weisen aufgezeichnet werden. Die erste Methode besteht in der Implementierung der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle in einer Klasse und der Bereitstellung der Klasse als Parameter für die **Execute**- und **Validate**-Methoden des Pakets. Die zweite Methode besteht in der Erstellung von <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekten, die andere [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Objekte enthalten können, wie z. B. Tasks und Loops, die ausgeführt werden, wenn ein Ereignis in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> auftritt. In diesem Abschnitt werden diese beiden Methoden beschrieben und zur Veranschaulichung ihrer Verwendung Codebeispiele bereitgestellt.  
   
 ## <a name="receiving-idtsevents-callbacks"></a>Empfangen von IDTSEvents-Rückrufen  
- Entwickler, die Pakete programmgesteuert erstellen und ausführen, können während des Prüfungs-und Ausführungsprozesses über die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle Ereignisbenachrichtigungen erhalten. Dies erfolgt durch Erstellen einer Klasse, die implementiert die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> Schnittstelle und Bereitstellen von dieser Klasse als Parameter an die **Validate** und **Execute** -Methoden eines Pakets. Die Methoden der Klasse werden dann vom Laufzeitmodul aufgerufen, wenn die Ereignisse auftreten.  
+ Entwickler, die Pakete programmgesteuert erstellen und ausführen, können während des Prüfungs-und Ausführungsprozesses über die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle Ereignisbenachrichtigungen erhalten. Dazu wird eine Klasse erstellt, die die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle implementiert, wobei diese Klasse als Parameter für die **Validate**- und **Execute**-Methoden eines Pakets bereitgestellt wird. Die Methoden der Klasse werden dann vom Laufzeitmodul aufgerufen, wenn die Ereignisse auftreten.  
   
- Die <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>-Klasse ist eine Klasse, die bereits die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle implementiert; eine weitere Alternative für die direkte Implementierung von <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> besteht daher in der Ableitung von <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> und dem Überschreiben der bestimmten Ereignisse, auf die Sie reagieren wollen. Geben Sie dann die Klasse als Parameter an die **Validate** und **Execute** Methoden die <xref:Microsoft.SqlServer.Dts.Runtime.Package> um Ereignisrückrufe zu erhalten.  
+ Die <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>-Klasse ist eine Klasse, die bereits die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle implementiert; eine weitere Alternative für die direkte Implementierung von <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> besteht daher in der Ableitung von <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> und dem Überschreiben der bestimmten Ereignisse, auf die Sie reagieren wollen. Dann stellen Sie Ihre Klasse als Parameter für die **Validate**- und **Execute**-Methoden von <xref:Microsoft.SqlServer.Dts.Runtime.Package> bereit, um Ereignisrückrufe zu erhalten.  
   
- Im folgenden Codebeispiel wird eine Klasse veranschaulicht, die von <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> abgeleitet wird und die die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>-Methode überschreibt. Die Klasse dient dann als Aparameter auf die **überprüfen** und **Execute** -Methoden des Pakets.  
+ Im folgenden Codebeispiel wird eine Klasse veranschaulicht, die von <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> abgeleitet wird und die die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>-Methode überschreibt. Die Klasse wird dann als Parameter für die **Validate**- und **Execute**-Methoden des Pakets bereitgestellt.  
   
 ```csharp  
 using System;  
@@ -115,7 +116,7 @@ End Class
 ## <a name="creating-dtseventhandler-objects"></a>Erstellen von DtsEventHandler-Objekten  
  Das Laufzeitmodul stellt durch das <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekt eine Ereignisbehandlung und ein Benachrichtigungssystem bereit, die sich durch Robustheit und hohe Flexibilität auszeichnen. Mit diesen Objekten können Sie innerhalb des Ereignishandlers ganze Workflows entwerfen, die nur dann ausgeführt werden, wenn das Ereignis, zu dem der Ereignishandler gehört, eintritt. Das <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekt ist ein Container, der ausgeführt wird, wenn das entsprechende Ereignis auf seinem übergeordneten Objekt ausgelöst wird. Mit dieser Architektur können Sie isolierte Workflows erstellen, die als Antwort auf Ereignisse, die in einem Container auftreten, ausgeführt werden. Da <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekte synchron sind, wird die Ausführung erst dann fortgesetzt, wenn die an das Ereignis angefügten Ereignishandler zurückgegeben wurden.  
   
- Am folgenden Code wird das Erstellen eines <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekts veranschaulicht. Der Code fügt <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> zur <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A>-Auflistung des Pakets hinzu und erzeugt dann ein <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekt für das <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> Ereignis der Task. <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> wird zum Ereignishandler hinzugefügt, der ausgeführt wird, wenn das <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A>-Ereignis beim ersten <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> eintritt. In diesem Beispiel wird davon ausgegangen, dass Sie eine Datei haben, die C:\Windows\Temp\DemoFile.txt für Tests genannt wird. Wenn Sie das Beispiel zum ersten Mal ausführen, kann die Datei erfolgreich kopiert werden, und der Ereignishandler wird nicht aufgerufen. Zweiten Mal des Beispiels ausführen das erste <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> schlägt fehl, beim Kopieren der Datei (da der Wert der <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> ist **"false"**), der Ereignishandler wird aufgerufen, die zweite <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> löscht die Quelldatei und die Berichte vom Paket verursachten Fehler aufgrund des Fehlers, der aufgetreten ist.  
+ Am folgenden Code wird das Erstellen eines <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekts veranschaulicht. Der Code fügt <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> zur <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A>-Auflistung des Pakets hinzu und erzeugt dann ein <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekt für das <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> Ereignis der Task. <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> wird zum Ereignishandler hinzugefügt, der ausgeführt wird, wenn das <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A>-Ereignis beim ersten <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> eintritt. In diesem Beispiel wird davon ausgegangen, dass Sie eine Datei haben, die C:\Windows\Temp\DemoFile.txt für Tests genannt wird. Wenn Sie das Beispiel zum ersten Mal ausführen, kann die Datei erfolgreich kopiert werden, und der Ereignishandler wird nicht aufgerufen. Wenn Sie das Beispiel zum zweiten Mal ausführen, kann der erste <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> die Datei nicht kopieren (denn der Wert von <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> ist **false**), und der Ereignishandler wird aufgerufen. Der zweite <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> löscht die Quelldatei und das Paket meldet das Auftreten des Fehlers.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -254,9 +255,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Ereignishandler](../../integration-services/integration-services-ssis-event-handlers.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
  [Hinzufügen eines Ereignishandlers zu einem Paket](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

@@ -2,26 +2,29 @@
 title: SQL Server 2014 Release Notes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2014
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d6d229c14056f9157bd219ba6cbb7590eb14a7b7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 In diesem Dokument mit Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Fehlerbehebung von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]beginnen.  
   
 ## <a name="top"></a>Inhalt  
@@ -243,7 +246,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="328-using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>3.2.8 Die Verwendung eines Zeichenfolgenparameters oder einer Variablen mit DATEPART und zugehörigen Funktionen in einer systemintern kompilierten gespeicherten Prozedur führt zu einem Fehler  
 **Problem:** Wenn Sie einen Parameter oder eine Variable, der oder die einen Zeichenfolgendatentyp wie „(var)char“ oder „n(var)char“ aufweist, mit den integrierten Funktionen DATEPART, DAY, MONTH und YEAR innerhalb einer systemintern kompilierten gespeicherten Prozedur verwenden, wird eine Fehlermeldung mit dem Hinweis angezeigt, dass der Datentyp „datetimeoffset“ bei systemintern kompilierten gespeicherten Prozeduren nicht unterstützt wird.  
   
-**Problemumgehung:** Weisen Sie den Zeichenfolgenparameter oder die Variable einer neuen Variablen des datetime2-Typs zu, und verwenden Sie diese Variable in der Funktion DATEPART, DAY, MONTH oder YEAR. Beispiel:  
+**Problemumgehung:** Weisen Sie den Zeichenfolgenparameter oder die Variable einer neuen Variablen des datetime2-Typs zu, und verwenden Sie diese Variable in der Funktion DATEPART, DAY, MONTH oder YEAR. Zum Beispiel:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -430,4 +433,3 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
 ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../sql-server/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“")[Nach oben](#top)  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

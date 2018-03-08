@@ -3,7 +3,7 @@ title: Rowset-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset property [ADO]
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 14bbd12c7fe9a5900745cb8056d819b4fff67b4d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6b33788185909f6a7f428eee01a5403b5c03ab9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rowset-property-ado"></a>Rowset-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB- **Rowset** Objekt vom bzw. auf eine **ADORecordsetConstruction** Objekt. Bei Verwendung von Put_Rowset wird das Rowset in eine ADO umgewandelt **Recordset** Objekt.  
@@ -58,4 +57,3 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordsetConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
-

@@ -3,7 +3,7 @@ title: 'Schritt 5: Verwendbarmachen (RDS-Lernprogramm) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bc51b8047a4eddc007dfbb46cbc087676800d54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f59e167dfad5ddd4b99d784b34e37556a076a2f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: Verwendbarmachen (RDS-Lernprogramm)
 Das zurückgegebene **Recordset** Objekt für die Verwendung verfügbar ist. Sie können überprüfen, navigieren oder bearbeiten Sie sie wie jede andere **Recordset**. Was Sie tun können die **Recordset** richtet sich nach Ihrer Umgebung. Visual Basic und Visual C++ besitzen visuelle Steuerelemente, mit denen eine **Recordset** direkt oder indirekt mit Hilfe eines Datensteuerelements aktivieren.  
@@ -54,4 +53,3 @@ Sub RDSTutorial5()
 ## <a name="see-also"></a>Siehe auch  
  [Schritt 6: Änderungen werden an den Server (RDS-Lernprogramm) gesendet.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

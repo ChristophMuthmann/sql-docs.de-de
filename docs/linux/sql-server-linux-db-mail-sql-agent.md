@@ -1,35 +1,31 @@
 ---
 title: "DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux | Microsoft Docs"
-description: In diesem Thema wird beschrieben, wie mithilfe von DB-E-Mails und e-Mail-Benachrichtigungen mit SQL Server on Linux
+description: Dieser Artikel beschreibt, wie DB E-Mails und e-Mail-Benachrichtigungen mit SQL Server on Linux
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
+ms.openlocfilehash: 69d1ff539d2e488030f32b9246f1ccf40d92bdd8
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Die folgenden Schritte veranschaulichen, wie DB Mail einrichten und verwenden es mit SQL Server-Agent (**Mssql-Server-Agent**) unter Linux. 
-
-> [!NOTE]
-> Um die DB-Mail mit SQL Server on Linux verwenden zu können, müssen Sie SQL Server 2017 RC1 verwenden oder höher.
-
-## <a name="prerequisites"></a>Erforderliche Komponenten
-
-- SQL Server 2017 RC1 und höher
-- SQL Server-Agent v14.0.800.90-2 und höher (Wenn Sie e-Mail-Dienst für Benachrichtigungen verwenden möchten)
 
 ## <a name="1-enable-db-mail"></a>1. DB-Mail aktivieren
 
@@ -132,5 +128,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zur Verwendung von SQL Server-Agent erstellen, Planen und Ausführen von Aufträgen finden Sie unter [führen Sie einen SQL Server-Agent-Auftrag unter Linux](sql-server-linux-run-sql-server-agent-job.md).
-
+Weitere Informationen zum Erstellen, Planen und Ausführen von Aufträgen mithilfe des SQL Server-Agents finden Sie unter [„Erstellen und Ausführen von SQL Server-Agent-Aufträgen unter Linux“](sql-server-linux-run-sql-server-agent-job.md).

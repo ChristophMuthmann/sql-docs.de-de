@@ -3,7 +3,7 @@ title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc2cd3acc56c11bdab98d58c1adc76d98eb1579d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Gibt an, wie ein Befehlsargument interpretiert werden sollen.  
@@ -62,7 +61,6 @@ Gibt an, wie ein Befehlsargument interpretiert werden sollen.
   
 |||  
 |-|-|  
-|[CommandType-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[CommandType-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Execute-Methode (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[Requery-Methode](../../../ado/reference/ado-api/requery-method.md)||
-

@@ -3,10 +3,12 @@ title: Treiberspezifische Verbindungsinformationen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specific-connection-information"></a>Treiberspezifische Verbindungsinformationen
 **SQLConnect** wird davon ausgegangen, dass Datenquellenname, Benutzer-ID und Kennwort sind ausreichend für die Verbindung mit einer Datenquelle und alle anderen Verbindungsinformationen auf das System gespeichert werden kann. Dies ist häufig nicht der Fall. Ein Treiber möglicherweise z. B. eine Benutzer-ID und Kennwort zum Anmelden bei einem Server und einen anderen Benutzer-ID und ein Kennwort zum Anmelden bei einem DBMS. Da **SQLConnect** akzeptiert einen einzelnen Benutzer-ID und ein Kennwort, das bedeutet, dass andere Benutzer-ID und Kennwort mit Informationen für die Datenquelle auf dem System Wenn gespeichert werden müssen **SQLConnect** verwendet werden soll. Dies ist eine potenzielle Verletzung der Sicherheit und sollte vermieden werden, es sei denn, das Kennwort verschlüsselt ist.  
@@ -47,4 +48,3 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Schlüsselwort-Wert-Paare in **SQLDriverConnect** müssen bestimmte Syntaxregeln entsprechen. Die Schlüsselwörter und deren Werte dürfen nicht die **[] {} (),? \*=! @** Zeichen. Der Wert, der die **DSN** -Schlüsselwort darf nicht ausschließlich aus Leerzeichen bestehen und darf keine führende Leerzeichen enthalten. Aufgrund der Grammatik Registrierung Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen. Leerzeichen sind nach dem Gleichheitszeichen im Schlüsselwort-Wert-Paar nicht zulässig.  
   
  Die **FILEDSN** -Schlüsselwort kann verwendet werden, in einem Aufruf von **SQLDriverConnect** an den Namen einer Datei, die Informationen zur Datenquelle enthält (finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)weiter unten in diesem Abschnitt). Die **SAVEFILE** -Schlüsselwort können Sie den Namen des DSN-Datei angeben, in dem die Schlüsselwort-Wert-Paare für eine erfolgreiche Verbindung verwendet werden, durch den Aufruf von **SQLDriverConnect** gespeichert werden sollen. Weitere Informationen zu Datenquellen finden Sie unter der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.
-

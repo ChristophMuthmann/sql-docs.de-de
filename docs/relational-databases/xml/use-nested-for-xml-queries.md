@@ -2,9 +2,12 @@
 title: Verwenden von geschachtelten FOR XML-Abfragen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 53640114803f1dc03a10a0ed79edaaf09e08f638
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-nested-for-xml-queries"></a>Verwenden von geschachtelten FOR XML-Abfragen
-  Der **xml** -Datentyp und die [TYPE-Direktive in FOR XML-Abfragen](../../relational-databases/xml/type-directive-in-for-xml-queries.md) ermöglichen, dass der von FOR XML-Abfragen zurückgegebene XML-Code sowohl auf dem Server als auch auf dem Client verarbeitet werden kann.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Der **xml** -Datentyp und die [TYPE-Direktive in FOR XML-Abfragen](../../relational-databases/xml/type-directive-in-for-xml-queries.md) ermöglichen, dass der von FOR XML-Abfragen zurückgegebene XML-Code sowohl auf dem Server als auch auf dem Client verarbeitet werden kann.  
   
 ## <a name="processing-with-xml-type-variables"></a>Verarbeiten mit XML-Typvariablen  
  Sie können das Ergebnis einer FOR XML-Abfrage einer **xml** -Typvariablen zuweisen oder das Ergebnis mithilfe einer XQuery-Abfrage abfragen und das daraus entstehende Ergebnis einer **xml** -Typvariablen zur weiteren Verarbeitung zuweisen.  
@@ -88,7 +91,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Zurückgeben von Ergebnissen innerer FOR XML-Abfragen als XML-Typinstanzen an äußere Abfragen  
- Sie können geschachtelte `FOR XML` -Abfragen schreiben, bei denen das Ergebnis der inneren Abfrage als **xml** -Typ an die äußere Abfrage zurückgegeben wird. Beispiel:  
+ Sie können geschachtelte `FOR XML` -Abfragen schreiben, bei denen das Ergebnis der inneren Abfrage als **xml** -Typ an die äußere Abfrage zurückgegeben wird. Zum Beispiel:  
   
 ```  
 SELECT Col1,   
@@ -134,4 +137,3 @@ FOR XML AUTO, TYPE;
  Zeigt, wie mit geschachtelten FOR XML-Abfragen die Struktur eines von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellten XML-Dokuments gesteuert werden kann.  
   
   
-

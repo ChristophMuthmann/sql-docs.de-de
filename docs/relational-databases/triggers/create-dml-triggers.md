@@ -2,9 +2,12 @@
 title: Erstellen von DML-Triggern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: 
@@ -19,20 +22,20 @@ helpviewer_keywords:
 - testing column changes
 - results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 51c2af4bc0830ac5452bb4f88e0b815e169fd428
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 8ccace315bef092b7f93b11cd935460ee03cf726
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-dml-triggers"></a>Erstellen von DML-Triggern
-  In diesem Thema wird beschrieben, wie ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -DML-Trigger mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unter Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] - CREATE TRIGGER-Anweisung erstellt wird.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -DML-Trigger mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unter Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] - CREATE TRIGGER-Anweisung erstellt wird.  
   
 ##  <a name="Top"></a> Vorbereitungen  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/02/2017
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -61,11 +64,11 @@ ms.lasthandoff: 09/02/2017
   
 5.  Geben Sie im Dialogfeld **Werte für Vorlagenparameter angeben** die folgenden Werte für die angezeigten Parameter ein.  
   
-    |Parameter|Wert|  
+    |Parameter|value|  
     |---------------|-----------|  
-    |Autor|*Ihr Name*|  
+    |Author|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |Beschreibung|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
+    |Description|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
     |Schema_Name|Purchasing|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
@@ -144,4 +147,3 @@ ms.lasthandoff: 09/02/2017
   
  
   
-

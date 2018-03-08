@@ -2,30 +2,30 @@
 title: "Grundlegendes zu Power View für mehrdimensionale Modelle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9536b3a2d178e7dea79bf7d9cf3482e423c078ed
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
-  In diesem Artikel wird Power View für mehrdimensionale Modelle in SQL Server beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In diesem Artikel wird Power View für mehrdimensionale Modelle in SQL Server beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
   
  Mehrdimensionale Modelle bieten branchenführende Modellierungs-, Speicherungs- und Analyselösungen für OLAP-Daten. In Microsoft SQL Server unterstützen mehrdimensionale Modelle das Analysieren, Durchsuchen und Visualisieren von Daten im Ad-hoc-Verfahren unter Verwendung von Microsoft Power View.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Für die Power View-Clientfunktionen ist Microsoft Silverlight 5 erforderlich. Weitere Informationen finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-## <a name="features"></a>Funktionen  
+## <a name="features"></a>-Funktionen  
  **Systemeigene Unterstützung für Power View**  
   
  In dieser Version unterstützen mehrdimensionale Modelle die Analyse und Visualisierung unter Verwendung von Power View im SharePoint-Modus. Es ist keine spezielle Konfiguration für die mehrdimensionalen Modelle erforderlich. Es gibt jedoch Unterschiede zwischen der Anzeige mehrdimensionaler Modellobjekte in Power View und anderen Clienttools wie Microsoft Excel und Microsoft Performance Point. Diese Version bietet keine Unterstützung für die Analyse und Visualisierung mehrdimensionaler Modelle mithilfe von Power View in Excel.  
@@ -224,11 +224,11 @@ ms.lasthandoff: 09/01/2017
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Required|Description|  
+|Name|Erforderlich|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|Ja|Der Katalog-/Datenbankname.|  
+|CATALOG_NAME|ja|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  
-|VERSION|Ja|Vom Client angeforderte CSDL-Version. Mehrdimensionale Funktionen und Konstrukte werden in Version 2.0 unterstützt.|  
+|VERSION|ja|Vom Client angeforderte CSDL-Version. Mehrdimensionale Funktionen und Konstrukte werden in Version 2.0 unterstützt.|  
   
  Im zurückgegebenen "CSDL/out"-Dokument wird das Modell als Namespace mit Entitäten, Zuordnungen und Eigenschaften dargestellt.  
   
@@ -242,4 +242,3 @@ ms.lasthandoff: 09/01/2017
  [Durchsuchen des mehrdimensionalen Adventure Works-Modells mithilfe von Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 51
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5909ba97271614b39e0b899a257f62c1658cfe09
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
-  Um einen Zeugen für eine Datenbank einzurichten, weist der Datenbankbesitzer einer Instanz des Datenbankmoduls die Rolle des Zeugenservers zu. Die Zeugenserverinstanz kann auf demselben Computer wie die Prinzipal- oder Spiegelserverinstanz ausgeführt werden. Hierdurch wird jedoch die Zuverlässigkeit des automatischen Failovers erheblich reduziert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Um einen Zeugen für eine Datenbank einzurichten, weist der Datenbankbesitzer einer Instanz des Datenbankmoduls die Rolle des Zeugenservers zu. Die Zeugenserverinstanz kann auf demselben Computer wie die Prinzipal- oder Spiegelserverinstanz ausgeführt werden. Hierdurch wird jedoch die Zuverlässigkeit des automatischen Failovers erheblich reduziert.  
   
  Wir raten dringend, den Zeugen auf einem separaten Computer zu platzieren. Ein Server kann an mehreren gleichzeitigen Datenbank-Spiegelungssitzungen mit den gleichen oder anderen Partnern teilnehmen. Ein Server kann bei manchen Sitzungen als Partnerserver und bei anderen Sitzungen als Zeugenserver dienen.  
   
@@ -131,7 +134,7 @@ ms.lasthandoff: 08/02/2017
   
  Ein vollständiges Beispiel für das Einrichten der Sicherheitskomponenten, das Vorbereiten der Spiegeldatenbank, das Einrichten der Partner und das Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
  [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
@@ -140,4 +143,3 @@ ms.lasthandoff: 08/02/2017
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

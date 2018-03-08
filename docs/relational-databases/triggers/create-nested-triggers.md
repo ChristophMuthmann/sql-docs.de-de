@@ -2,9 +2,12 @@
 title: Erstellen von geschachtelten Triggern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: 
@@ -20,26 +23,27 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-nested-triggers"></a>Erstellen von geschachtelten Triggern
-  Sowohl DML-Trigger als auch DDL-Trigger werden geschachtelt, wenn ein Trigger eine Aktion ausführt, die einen anderen Trigger auslöst. Diese Aktionen können andere Trigger auslösen usw. DML- und DDL-Trigger können bis auf 32 Ebenen geschachtelt werden. Sie können über die **Geschachtelte Trigger** -Serverkonfigurationsoption steuern, ob AFTER-Trigger geschachtelt werden können. INSTEAD OF-Trigger (nur DML-Trigger können INSTEAD OF-Trigger sein) können unabhängig von dieser Einstellung geschachtelt werden.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Sowohl DML-Trigger als auch DDL-Trigger werden geschachtelt, wenn ein Trigger eine Aktion ausführt, die einen anderen Trigger auslöst. Diese Aktionen können andere Trigger auslösen usw. DML- und DDL-Trigger können bis auf 32 Ebenen geschachtelt werden. Sie können über die **Geschachtelte Trigger** -Serverkonfigurationsoption steuern, ob AFTER-Trigger geschachtelt werden können. INSTEAD OF-Trigger (nur DML-Trigger können INSTEAD OF-Trigger sein) können unabhängig von dieser Einstellung geschachtelt werden.  
   
 > [!NOTE]  
 >  Alle Verweise auf verwalteten Code aus einem Trigger von [!INCLUDE[tsql](../../includes/tsql-md.md)] zählen als eine Ebene hinsichtlich der Schachtelungsgrenze von 32 Ebenen. Methoden, die aus verwaltetem Code aufgerufen werden, werden nicht mitgezählt.  
   
  Wenn geschachtelte Trigger zulässig sind und ein Trigger in der Kette eine Endlosschleife einleitet, wird die Anzahl der maximal zulässigen Schachtelungsebenen überschritten und der Trigger demzufolge beendet.  
   
- Sie können geschachtelte Trigger verwenden, um nützliche Verwaltungsfunktionen durchzuführen, wie z. B. das Speichern einer Sicherungskopie von Zeilen, die von einem vorherigen Trigger betroffen sind. Es ist beispielsweise möglich, einen Trigger für `PurchaseOrderDetail` zu erstellen, der eine Sicherungskopie der `PurchaseOrderDetail` -Zeilen speichert, die vom `delcascadetrig` -Trigger gelöscht wurden. Wenn der `delcascadetrig` -Trigger wirksam ist, führt das Löschen von `PurchaseOrderID` 1965 aus `PurchaseOrderHeader` dazu, dass die entsprechende(n) Zeile(n) aus `PurchaseOrderDetail`gelöscht werden. Zum Speichern der Daten erstellen Sie einen DELETE-Trigger für `PurchaseOrderDetail` , der die gelöschten Daten in einer getrennt erstellten Tabelle, `del_save`, speichert. Beispiel:  
+ Sie können geschachtelte Trigger verwenden, um nützliche Verwaltungsfunktionen durchzuführen, wie z. B. das Speichern einer Sicherungskopie von Zeilen, die von einem vorherigen Trigger betroffen sind. Es ist beispielsweise möglich, einen Trigger für `PurchaseOrderDetail` zu erstellen, der eine Sicherungskopie der `PurchaseOrderDetail` -Zeilen speichert, die vom `delcascadetrig` -Trigger gelöscht wurden. Wenn der `delcascadetrig` -Trigger wirksam ist, führt das Löschen von `PurchaseOrderID` 1965 aus `PurchaseOrderHeader` dazu, dass die entsprechende(n) Zeile(n) aus `PurchaseOrderDetail`gelöscht werden. Zum Speichern der Daten erstellen Sie einen DELETE-Trigger für `PurchaseOrderDetail` , der die gelöschten Daten in einer getrennt erstellten Tabelle, `del_save`, speichert. Zum Beispiel:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -188,7 +192,7 @@ Paul                           Alice                          0
   
 -   [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Konfigurieren der Serverkonfigurationsoption Geschachtelte Trigger](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

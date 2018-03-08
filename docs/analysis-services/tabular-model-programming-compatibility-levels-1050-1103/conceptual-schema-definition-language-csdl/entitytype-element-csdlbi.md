@@ -2,31 +2,32 @@
 title: EntityType-Element (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf36253ccc373fb260538fdbc3d78764ce5548f9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType-Element (CSDLBI)
-  Das **EntityType** -Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene in einem Datenmodell darstellt, beispielsweise ein Kunde oder eine Bestellung. Die **Bi: EntityType** Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) verwendet der [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Das **EntityType** -Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene in einem Datenmodell darstellt, beispielsweise ein Kunde oder eine Bestellung. Die **Bi: EntityType** Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) verwendet der [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Ein EntityType-Element muss für jede der Entitäten angegeben werden, die im Datenmodell enthalten sind. Die Unterelemente von EntityType beschreiben die Spalten und Measures in der Tabelle. Beziehungen von Tabellen sind in **EntityContainer**enthalten.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 |Promotion|Attributen, die verschiedene Marketinghöherstufungsinformationen darstellen.|  
   
 ## <a name="example"></a>Beispiel  
- **Tabellarisch**  
+ **Tabellarische**  
   
  Das folgende Beispiel enthält eine teilweise Darstellung der Geography-Tabelle in CSDLBI, Version 1.1, die im tabellarischen AdventureWorks-Modell verwendet wird. Die RowNumber-Spalte ist eine ausgeblendete Spalte, die automatisch als Zeilenbezeichner in tabellarischen Modellen erstellt wird und daher Contents-Attribut **RowNumber**aufweist.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Multidimensional**  
+ **Mehrdimensionale**  
   
  Im folgenden Beispiel werden die EntityType-Elemente in CSDLBI, Version 1.1, veranschaulicht, die einen Teil einer Zeitdimension des Contoso-Vorgangscubes darstellen.  
   
@@ -132,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [Technische Referenz für BI-Anmerkungen zu CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

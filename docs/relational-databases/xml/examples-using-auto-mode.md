@@ -2,9 +2,12 @@
 title: 'Beispiele: Verwenden des AUTO-Modus | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd35722bc0392701813ad17877c19c8ef0583988
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: edb1a03183a36c6308b2b7d14253179ac52d9494
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
-  Die folgenden Beispiele veranschaulichen die Verwendung des AUTO-Modus. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradproduktionsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank gespeichert sind.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Die folgenden Beispiele veranschaulichen die Verwendung des AUTO-Modus. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradproduktionsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank gespeichert sind.  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Beispiel: Abrufen von Kunden-, Bestell- und Bestelldetailinformationen  
  Mit dieser Abfrage werden die Kunden-, Bestell- und Bestelldetailinformationen für einen bestimmten Kunden abgerufen.  
@@ -208,7 +211,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Standardmäßig wird beim Verwenden des AUTO-Modus zum Abrufen von Binärdaten statt der Binärdaten ein Verweis (eine relative URL auf das virtuelle Stammverzeichnis der Datenbank, in der die Abfrage ausgeführt wurde) zurückgegeben. Das geschieht, wenn die Option BINARY BASE64 nicht angegeben wurde.  
   
- Wenn der AUTO-Modus einen URL-Verweis auf die Binärdaten in Datenbanken zurückgibt, die die Groß-/Kleinschreibung nicht berücksichtigen, und wenn der in der Abfrage angegebene Tabellen- oder Spaltenname nicht mit dem Tabellen- oder Spaltennamen in der Datenbank übereinstimmt, wird die Abfrage ausgeführt. Allerdings ist dann die im Verweis zurückgegebene Groß-/Kleinschreibung nicht konsistent. Beispiel:  
+ Wenn der AUTO-Modus einen URL-Verweis auf die Binärdaten in Datenbanken zurückgibt, die die Groß-/Kleinschreibung nicht berücksichtigen, und wenn der in der Abfrage angegebene Tabellen- oder Spaltenname nicht mit dem Tabellen- oder Spaltennamen in der Datenbank übereinstimmt, wird die Abfrage ausgeführt. Allerdings ist dann die im Verweis zurückgegebene Groß-/Kleinschreibung nicht konsistent. Zum Beispiel:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -274,8 +277,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Falls die Werte der Elemente oder Attribute ein URL-Sonderzeichen enthalten, das in der URL eine besondere Bedeutung hat, werden sie nur im DBOBJECT URL-Wert codiert. Dies geschieht nur, wenn das Sonderzeichen Teil eines Tabellen- oder Spaltennamens ist. Im Resultset wird das `#` -Zeichen, das Teil des Tabellennamens `Col#&2` ist, als `_x0023_ in the DBOJBECT URL`codiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   
-

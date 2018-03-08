@@ -3,8 +3,11 @@ title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - objects [SQL Server], creating
 - DEFAULT definition
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-caps.latest.revision: 47
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71c0f964d245be92fb8d2be19e074fbd34dd616e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt ein Objekt, das als Standardwert bezeichnet wird. Wenn ein Standardwert an eine Spalte oder einen Aliasdatentyp gebunden ist, gibt er den Wert an, der in diese Spalte (oder im Fall eines Aliasdatentyps in alle Spalten) eingefügt werden soll, wenn beim Einfügen nicht explizit ein Wert angegeben ist.  
   
@@ -97,7 +99,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>A. Erstellen eines einfachen Zeichenstandards  
  Im folgenden Beispiel wird ein Zeichenstandardwert namens `unknown` erstellt.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -108,7 +110,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  Da kein Standardwert namens `phonedflt` vorhanden ist, schlägt die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung fehl. Dieses Beispiel dient nur zur Veranschaulichung.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
@@ -129,4 +131,3 @@ sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';
  [Sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   
-

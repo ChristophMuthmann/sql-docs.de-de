@@ -1,10 +1,13 @@
 ---
-title: "Die Änderungen auf das Ziel anzuwenden | Microsoft Docs"
+title: "Anwenden der Änderungen auf das Ziel | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a9e4e736d5207eaadfcd593068be68ad8432c212
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Anwenden der Änderungen auf das Ziel
   Im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der dritte und letzte Task die Anwendung der Änderungen auf Ihr Ziel. Sie benötigen jeweils eine Komponente, um Einfügungen, Updates und Löschungen anzuwenden.  
@@ -110,4 +112,3 @@ ms.lasthandoff: 08/03/2017
  In der Transact-SQL-Anweisung, mit der die Änderungsdaten abgerufen werden, können Sie *all with merge* als den Wert des *row_filter_option*-Parameters festlegen, wenn Sie die **cdc.fn_cdc_get_net_changes_<capture_instance>**-Funktion aufrufen. Diese Change Data Capture-Funktion arbeitet effizienter, wenn sie nicht die zusätzliche Verarbeitung ausführen muss, die erforderlich ist, um Einfügungen von Updates zu unterscheiden. Wenn Sie den *all with merge* -Parameterwert angeben, ist der **__$operation** -Wert der Änderungsdaten 1 für Löschungen oder 5 für Änderungen, die durch Einfügungen oder Updates verursacht wurden. Weitere Informationen zur Transact-SQL-Funktion, die zum Abrufen der Änderungsdaten verwendet wird, finden Sie unter [Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Nachdem Sie Änderungen mit dem *all with merge* -Parameterwert abgerufen haben, können Sie Löschungen anwenden und die übrigen Zeilen in eine temporäre Tabelle oder eine Stagingtabelle ausgeben. Sie können dann in einem Downstream-Task 'SQL Ausführen' eine einzelne MERGE-Anweisung verwenden, um alle Einfügungen oder Updates aus der Stagingtabelle auf das Ziel anzuwenden.  
   
   
-

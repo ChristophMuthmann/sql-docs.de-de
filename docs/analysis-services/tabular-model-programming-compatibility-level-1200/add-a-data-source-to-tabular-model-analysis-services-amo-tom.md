@@ -2,32 +2,29 @@
 title: "Hinzufügen einer Datenquelle auf tabellarische Modelle (Analysis Services AMO-TOM) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 692de4d83bfef7a61b11079fb31bb395da8771aa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>Hinzufügen einer Datenquelle auf tabellarische Modelle (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Die **DataSource** Klasse im Microsoft.AnalysisServices.Tabular-Namespace ist eine Abstraktion eines tabellarischen Modells-Datenquelle, die den Typ angibt und den Speicherort der importierten Daten während eines Datenaktualisierungsvorgangs. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Die **DataSource** Klasse im Microsoft.AnalysisServices.Tabular-Namespace ist eine Abstraktion eines tabellarischen Modells-Datenquelle, die den Typ angibt und den Speicherort der importierten Daten während eines Datenaktualisierungsvorgangs. 
 
 Sie können eine Datenquelle für das tabellarische Modell hinzufügen, indem Sie instanziieren ein Objekt einer Klasse abgeleitet **DataSource**, und fügen Sie diese der **DataSources** Auflistung des Modellobjekts. Um Änderungen an den Server zu speichern, rufen Sie entweder **Model.SaveChanges()** oder **Database.Update(UpdateOptions.ExpandFull)**. 
 
@@ -139,4 +136,3 @@ namespace TOMSamples
 ## <a name="next-step"></a>Nächster Schritt 
 
 Innerhalb eines Modells müssen Sie zum Einrichten von datenbindungen, die in der Datenquelle Quellspalten Zielspalten im Modell zugeordnet. Sie müssen auch die Partitionen einer Länge von mindestens 1 pro Tabelle zu definieren, in denen die Daten gespeichert. Der folgende Link zeigt, wie Sie: [Erstellen von Tabellen, Partitionen und Spalten](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md) 
-

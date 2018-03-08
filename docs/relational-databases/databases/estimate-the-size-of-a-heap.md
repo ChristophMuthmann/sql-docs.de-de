@@ -2,11 +2,13 @@
 title: "Schätzen der Größe eines Heaps | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - space [SQL Server], indexes
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67e38d5ab97529fbd912361aa16fa96587173f3e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "28"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: ec79282019d86f452df08676e8fa0d51f015c370
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Schätzen der Größe eines Heaps
-  Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern von Daten in einem Heap erforderlich ist:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern von Daten in einem Heap erforderlich ist:  
   
 1.  Geben Sie die Anzahl der Zeilen an, die die Tabelle enthalten wird:  
   
@@ -107,9 +109,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Spalten mit geringer Dichte  
   
-     Informationen zu den Speicherplatzanforderungen von Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
+     Informationen zu den Speicherplatzanforderungen von Sparsespalten finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Heaps &#40;Tabellen ohne gruppierte Indizes&#41;](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   

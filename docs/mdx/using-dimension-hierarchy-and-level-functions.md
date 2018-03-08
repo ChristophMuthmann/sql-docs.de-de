@@ -2,34 +2,34 @@
 title: Mithilfe von Dimensions-, Hierarchie- und Ebenenfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - dimensions [Analysis Services], functions
 - level functions [MDX]
 - hierarchy functions [MDX]
 ms.assetid: e730f65a-1798-4094-9acf-2739e2505d52
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 95264cc1e894fdd2acd43b4f49807968ea9ce587
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 10996fe3bec61356308a59ef78e52ecfeacca95a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Verwenden von Dimensions-, Hierarchie- und Ebenenfunktionen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Mit Dimensions-, Hierarchie- und Ebenenfunktionen lassen sich die mehrdimensionalen Strukturen traversieren, die in Analysis Services zu finden sind. Üblicherweise verwenden Sie solche Funktionen zusammen mit anderen Funktionen dazu, Informationen zu den Elementen einer Dimension, Hierarchie oder Ebene abzurufen.  
   
@@ -55,11 +55,10 @@ ms.lasthandoff: 08/02/2017
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Dimension &#40; MDX &#41;](../mdx/dimension-mdx.md)   
  [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)   
  [Hierarchie &#40; MDX &#41;](../mdx/hierarchy-mdx.md)   
  [Level &#40; MDX &#41;](../mdx/level-mdx.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: Bereitstellen einer Datenebenenanwendung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - How to [DAC], deploy
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: eeda8a1432ad975caaf74134ce598b0c70c16d29
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 4fc9229e01d07d9932d0ae61ad60dc06d5855141
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
-  Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene Instanz des Datenbankmoduls oder der Azure SQL-Datenbank bereitstellen. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene Instanz des Datenbankmoduls oder der Azure SQL-Datenbank bereitstellen. 
   
  Beim Bereitstellungsprozess wird eine DAC-Instanz registriert, indem die DAC-Definition in der **msdb**-Systemdatenbank (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) gespeichert und eine Datenbank erstellt wird, die anschließend mit allen in der DAC definierten Datenbankobjekten aufgefüllt wird.  
  
@@ -43,7 +45,7 @@ ms.lasthandoff: 06/22/2017
  Dasselbe DAC-Paket kann mehrmals an eine einzelne [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitgestellt werden, die Bereitstellungen müssen jedoch einzeln ausgeführt werden. Der für die einzelnen Bereitstellungen angegebene DAC-Instanzname muss innerhalb der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]eindeutig sein.  
   
 ## <a name="managed-instances"></a>Verwaltete Instanzen  
- Beim Bereitstellen einer DAC an eine verwaltete Instanz des Datenbankmoduls wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenebenenanwendungen** details page.  
+ Beim Bereitstellen einer DAC an eine verwaltete Instanz des Datenbankmoduls wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  
   
 ###  <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Die während der Bereitstellung erstellte Datenbank verfügt standardmäßig über alle Standardeinstellungen der CREATE DATABASE-Anweisung mit folgenden Ausnahmen:  
@@ -183,4 +185,3 @@ $fileStream.Close()
  [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md)  
   
   
-

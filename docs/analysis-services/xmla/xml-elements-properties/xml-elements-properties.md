@@ -2,35 +2,34 @@
 title: Eigenschaften (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [XML for Analysis]
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 7aa5815f-d614-497b-a9eb-f6284772bda8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38f0983ae4f840ac0addf4e30439ff57a679e30e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cc403451163e860c9f7ecdf00149768569423714
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---properties"></a>XML-Elemente - Eigenschaften
-  Das XMLA-Protokoll (XML for Analysis) nutzt XML-Elemente für die Darstellung von Eigenschaftsinformationen und Werten für XMLA-Header, -Methoden, -Objekte, -Befehle und -Datentypen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA)-Protokoll verwendet XML-Elemente, um die Darstellung von Eigenschaftsinformationen und Werten für XMLA-Header, Methoden, Objekte, Befehle und Datentypen.  
   
 ## <a name="topic-list"></a>Themenliste  
  In den folgenden Themen werden die von [!INCLUDE[ssAS](../../../includes/ssas-md.md)] implementierten XMLA-Elemente beschrieben.  
@@ -167,4 +166,3 @@ ms.lasthandoff: 09/01/2017
  [XML-Elemente &#40; XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   
-

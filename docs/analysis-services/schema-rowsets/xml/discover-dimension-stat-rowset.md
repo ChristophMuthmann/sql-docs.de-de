@@ -2,31 +2,32 @@
 title: DISCOVER_DIMENSION_STAT-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8646303bf73732a1a9f62c94879840e9e9866865
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT-Rowset
-  Stellt Informationen zu einer Dimension bereit, einschließlich des Namens der Datenbank, die sie enthält, den Dimensionsnamen, ihre Attribute und die Anzahl der Elemente für jedes Attribut. In einem tabellarischen Modell entspricht dies den Spalten in einer Tabelle und der Anzahl von Werten in jeder Spalte.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Stellt Informationen zu einer Dimension bereit, einschließlich des Namens der Datenbank, die sie enthält, den Dimensionsnamen, ihre Attribute und die Anzahl der Elemente für jedes Attribut. In einem tabellarischen Modell entspricht dies den Spalten in einer Tabelle und der Anzahl von Werten in jeder Spalte.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
@@ -35,9 +36,9 @@ ms.lasthandoff: 09/01/2017
   
 |Spaltenname|Typindikator|Einschränkung|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATENBANKNAME**|**DBTYPE_WSTR**|Required|Der Name der Datenbank, welche die Dimension enthält.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|Required|Der Name der Dimension.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
-|**ATTRIBUTNAME**|**DBTYPE_WSTR**||Der Name eines Attributs in der Dimension.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Erforderlich|Der Name der Datenbank, welche die Dimension enthält.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Erforderlich|Der Name der Dimension.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
+|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Der Name eines Attributs in der Dimension.|  
 |**ATTRIBUTE_COUNT**|**DBTYPE_I8**||Die Anzahl der Werte im benannten Attribut. Für ein tabellarisches Modell entspricht der Wert immer der Anzahl der Zeilen in der Tabelle.|  
   
  Dieses Schemarowset ist nicht sortiert.  
@@ -56,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

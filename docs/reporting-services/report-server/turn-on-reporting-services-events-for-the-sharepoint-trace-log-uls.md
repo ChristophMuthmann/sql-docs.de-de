@@ -1,29 +1,28 @@
 ---
-title: "Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS) | Microsoft Docs"
+title: "Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
 
   Ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]schreiben [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Server im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Ereignisse in die Ablaufverfolgung des SharePoint Unified Logging Service (ULS). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -spezifische Kategorien sind auf der Seite Überwachung der SharePoint-Zentraladministration verfügbar.  
@@ -109,7 +108,7 @@ Get-SPDiagnosticConfig
 |Rendering im lokalen Modus||  
 |SOAP-Clientproxy||  
 |Benutzeroberflächenseiten||  
-|Power View|Protokolleinträge, die in die **LogClientTraceEvents** -API geschrieben wurden. Diese Einträge stammen aus Clientanwendungen, einschließlich der Power View, einer Funktion des SQL Server Reporting Services-Add-Ins.<br /><br /> Alle Protokolleinträge aus der LogClientTraceEvents-API werden unter der "SQL Server Reporting Services"- **Kategorie** und dem "Power View"- **Bereich** protokolliert.<br /><br /> Der Inhalt der Einträge, der mit dem "Power View"-Bereich protokolliert wurde, wird von der Clientanwendung bestimmt.|  
+|Power View|Protokolleinträge, die in die **LogClientTraceEvents** -API geschrieben wurden. Diese Einträge werden aus Clientanwendungen eingebunden. Dazu zählt Power View, eine Funktion des Add-Ins von SQL Server Reporting Services.<br /><br /> Alle Protokolleinträge aus der LogClientTraceEvents-API werden unter der "SQL Server Reporting Services"- **Kategorie** und dem "Power View"- **Bereich** protokolliert.<br /><br /> Der Inhalt der Einträge, der mit dem "Power View"-Bereich protokolliert wurde, wird von der Clientanwendung bestimmt.|  
 |Laufzeit für Berichtsserverwarnungen||  
 |Berichtsserver-AppDomain-Manager||  
 |Gepufferte Berichtsserverantwort||  
@@ -117,7 +116,7 @@ Get-SPDiagnosticConfig
 |Berichtsserverkatalog||  
 |Berichtsserverausschnitt||  
 |Berichtsservercleanup||  
-|Berichtsserver-Konfigurations-Manager|Beispieleinträge:<br /><br /> Interne Server-Url für MediumUsing-Berichtsserver `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing- oder ungültige ExtendedProtectionLevel-Einstellung|  
+|Berichtsserver-Konfigurations-Manager|Beispieleinträge:<br /><br /> Interne URL `http://localhost:80/ReportServer` des MediumUsing-Berichtservers<br /><br /> UnexpectedMissing- oder ungültige ExtendedProtectionLevel-Einstellung|  
 |Berichtsserver-Crypto||  
 |Berichtsserver-Datenerweiterung||  
 |Berichtsserver-DB-Abruf||  
@@ -147,13 +146,13 @@ Get-SPDiagnosticConfig
 |Gemeinsamer Dienst|Beispieleinträge:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting-Zugriff auf Inhaltsdatenbanken.<br /><br /> MediumProvisioning-Instanzen für ReportingWebServiceApplication<br /><br /> MediumProcessing-Dienstkontoänderung für ReportingWebServiceApplication<br /><br /> MediumSetting-Datenbankberechtigungen.|  
   
 ##  <a name="bkmk_powershell"></a> Anzeigen einer Protokolldatei mit PowerShell  
- ![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")mithilfe von PowerShell eine Liste der zurückzugebenden der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -bezogenen Ereignisse aus einer ULS-Protokolldatei. Geben Sie den folgenden Befehl über die SharePoint 2010-Verwaltungsshell ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die**sql server reporting services**enthalten:  
+ ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") Sie können PowerShell verwenden, um eine Liste der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-bezogenen Ereignisse aus einer ULS-Protokolldatei zurückzugeben. Geben Sie den folgenden Befehl über die SharePoint 2010-Verwaltungsshell ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die**sql server reporting services**enthalten:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
 ```  
   
- Es gibt auch viele für den Download verfügbare Tools, mit denen sich ULS-Protokolle lesen lassen. Beispielsweise der [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) oder [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Beide sind über CodePlex verfügbar.  
+ Sie können auch Tools herunterladen, die Ihnen erlauben, ULS-Protokolle zu lesen. Zum Beispiel den auf GitHub verfügbaren [SharePoint-LogViewer](https://github.com/hasankhan/SharePointLogViewer). 
   
  Weitere Informationen zum Anzeigen von Protokolldaten mithilfe von PowerShell finden Sie unter [Anzeigen von Diagnoseprotokollen (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
   
@@ -162,5 +161,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Weitere Informationen und Anweisungen zur Konfiguration der Diagnoseprotokollierung auf einem SharePoint-Server in der SharePoint 2010-Zentraladministration finden Sie unter [Konfigurieren von Einstellungen für die Diagnoseprotokollierung (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -2,11 +2,13 @@
 title: DiagnosticInformation-Element (Ssbdiagnose) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssbdiagnose
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - diagnosticinformation element
 - ssbdiagnose
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 82593d8330e5f7263ff43c6b408998164425617f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d5a21ac18d6b4982c7c93bf11e3bf16051dc0c7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation-Element (ssbdiagnose)
-  Das **DiagnosticInformation** -Element enthält alle Elemente, die die vom Hilfsprogramm gefundenen Diagnoseinformationen melden. **DiagnosticInformation** ist das Stammelement einer XML-Ausgabedatei von **ssbdiagnostic** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **DiagnosticInformation** Element enthält alle Elemente, die vom Hilfsprogramm gefundenen Diagnoseinformationen melden. **DiagnosticInformation** ist das Stammelement einer XML-Ausgabedatei von **ssbdiagnostic** .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,9 +41,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Attribut|Beschreibung|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|**Keine**|–|  
+|**InclusionThresholdSetting**|–|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
@@ -66,4 +67,3 @@ ms.lasthandoff: 08/02/2017
  [Ssbdiagnose-Hilfsprogramm &#40; Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   
-

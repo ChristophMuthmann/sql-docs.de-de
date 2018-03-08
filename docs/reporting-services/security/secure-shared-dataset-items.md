@@ -1,27 +1,27 @@
 ---
-title: Sichern freigegebener Datasetelemente | Microsoft Docs
+title: Sichern von freigegebenen Datasetelementen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f167edb4e9391a14682e46c3a7e839c48bc43396
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-shared-dataset-items"></a>Sichern von freigegebenen Datasetelementen
   Auf einem Berichtsserver können freigegebene Datasetelemente von mehreren Berichten verwendet werden. Sie können freigegebene Datasets sichern, um die Zugriffsebene der Benutzer zu steuern. Standardmäßig können nur Benutzer, die Mitglieder der integrierten Gruppe **Administratoren** sind, freigegebene Datasets anzeigen, Eigenschaften ändern, das Zwischenspeichern aktivieren, Cacheaktualisierungspläne erstellen und die Elemente löschen. Für alle anderen Benutzer müssen Rollenzuweisungen erstellt werden, die den Zugriff auf ein freigegebenes Dataset zulassen.  
@@ -47,19 +47,18 @@ ms.lasthandoff: 08/09/2017
   
 |Verwendete Aufgabe|Berechtigt zu folgender Aktion|Standardrollen, in denen der Task enthalten ist|  
 |----------------------|---------------------------------|-----------------------------------------|  
-|Berichte anzeigen|Anzeigen des freigegebenen Datasetelements in der Ordnerhierarchie. Ohne diesen Task ist das Element für Benutzer nicht sichtbar, und sie bemerken möglicherweise nicht, dass das Dataset verfügbar ist.|Browser<br /><br /> Inhalts-Manager<br /><br /> Berichts-Generator<br /><br /> Meine Berichte|  
+|Berichte anzeigen|Anzeigen des freigegebenen Datasetelements in der Ordnerhierarchie. Ohne diesen Task ist das Element für Benutzer nicht sichtbar, und sie bemerken möglicherweise nicht, dass das Dataset verfügbar ist.|-Browser<br /><br /> Inhalts-Manager<br /><br /> Berichts-Generator<br /><br /> Meine Berichte|  
 |Berichte verwalten|Anzeigen von Eigenschaften, die den Namen, eine Beschreibung und Verbindungsinformationen angeben. Dieser Task wird auch verwendet, um ein freigegebenes Datasetelement in der Ordnerhierarchie anzuzeigen. Wenn Sie diesen Task auswählen, können Sie den Task Berichte anzeigen auslassen.|Inhalts-Manager<br /><br /> Verleger<br /><br /> Meine Berichte|  
 |Berichte lesen|Anzeigen der Definition des freigegebenen Datasets.|Inhalts-Manager<br /><br /> Berichts-Generator|  
 |Die Sicherheit für einzelne Elemente festlegen|Erstellen und Ändern von Rollenzuweisungen, die den Zugriff auf das freigegebene Dataset steuern. Dieser Task muss zusammen mit dem Task Berichte anzeigen oder Berichte verwalten verwendet werden. Andernfalls zeigt sie keine Wirkung, weil der Benutzer das Element nicht auswählen kann.|Inhalts-Manager|  
   
  Weitere Informationen finden Sie unter [Aufgaben auf Elementebene](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) und [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md)   
  [Sichere Ordner](../../reporting-services/security/secure-folders.md)   
  [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

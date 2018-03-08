@@ -3,7 +3,7 @@ title: DataTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 289d11f586fc1bd583baeb615ce3cff491949ccc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Gibt den Datentyp, der eine [Feld](../../../ado/reference/ado-api/field-object.md), [Parameter](../../../ado/reference/ado-api/parameter-object.md), oder [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md). Die entsprechende OLE DB-Typindikator wird in Klammern in der Spalte "Beschreibung" der folgenden Tabelle aufgeführt.  
@@ -59,7 +58,7 @@ Gibt den Datentyp, der eine [Feld](../../../ado/reference/ado-api/field-object.m
 |**adLongVarBinary**|205|Gibt einen langen Binärwert.|  
 |**adLongVarChar**|201|Gibt einen langen Zeichenfolgenwert an.|  
 |**adLongVarWChar**|203|Gibt eine lange Null-terminierte Unicode-Zeichenfolgenwert an.|  
-|**Type**|131|Gibt einen genauen numerischen Wert mit einer festen Genauigkeit und festen Dezimalstellen (DBTYPE_NUMERIC) an.|  
+|**adNumeric**|131|Gibt einen genauen numerischen Wert mit einer festen Genauigkeit und festen Dezimalstellen (DBTYPE_NUMERIC) an.|  
 |**adPropVariant**|138|Gibt eine Automatisierung PROPVARIANT (DBTYPE_PROP_VARIANT) an.|  
 |**adSingle**|4|Gibt einen Gleitkommawert mit einfacher Genauigkeit (DBTYPE_R4) an.|  
 |**adSmallInt**|2|Gibt eine 2-Byte-Ganzzahl mit Vorzeichen (DBTYPE_I2) an.|  
@@ -128,4 +127,3 @@ Gibt den Datentyp, der eine [Feld](../../../ado/reference/ado-api/field-object.m
 |-|-|  
 |[Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
 |[CreateRecordset-Methode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
-

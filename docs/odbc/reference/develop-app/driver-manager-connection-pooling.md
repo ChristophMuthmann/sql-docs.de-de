@@ -3,10 +3,12 @@ title: Treibermanager-Verbindungspooling | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>Treibermanager-Verbindungspooling
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung neu eingerichtet werden müssen. Sobald eine Verbindung erstellt und in einem Pool platziert wurde, kann eine Anwendung diese Verbindung wiederverwenden, ohne die vollständige Verbindungsprozess auszuführen.  
@@ -90,4 +91,3 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
  [Herstellen einer Verbindung mit einer Quelle oder Treiber](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [In der Microsoft Data Access Components Pooling](http://go.microsoft.com/fwlink/?LinkId=120776)
-

@@ -3,8 +3,11 @@ title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - GET CONVERSATION GROUP statement
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5cf1bd19e9ccc290c2c822ab59f00be75d447ba1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 04035a9ccbe406b9fa50b5003ab109c3f1ff997d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt den Bezeichner der Konversationsgruppe für die nächste zu empfangende Nachricht zurück und sperrt die Konversationsgruppe für die Konversation, die die Nachricht enthält. Der Konversationsgruppenbezeichner kann zum Abrufen der Informationen zum Konversationsstatus vor dem Abrufen der eigentlichen Nachricht verwendet werden.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 09/01/2017
  *schema_name*  
  Der Name des Schemas, das die Warteschlange besitzt, aus der die Konversationsgruppe abgerufen werden soll. Wenn kein *Schema_name* angegeben ist, wird der Standardwert ist das Standardschema für den aktuellen Benutzer.  
   
- *Warteschlangenname*  
+ *queue_name*  
  Der Name der Warteschlange, aus der die Konversationsgruppe abgerufen werden soll.  
   
  TIMEOUT *Timeout*  
@@ -146,4 +148,3 @@ FROM AdventureWorks.dbo.ExpenseQueue ;
  [MOVE CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   
-

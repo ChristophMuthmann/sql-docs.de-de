@@ -2,9 +2,12 @@
 title: Erstellen und Verwalten von Volltextkatalogen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 04ab847cd0305139aa1f7e1dc462ef77ef555bee
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b3e98a00fd7f165fbd5c83b7149a8e63505116e3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Erstellen und Verwalten von Volltextkatalogen
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Ein Volltextkatalog ist ein logischer Container für eine Gruppe von Volltextindizes. Sie müssen einen Volltextkatalog erstellen, bevor Sie einen Volltextindex erstellen können.
 
 Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.
@@ -33,9 +36,9 @@ Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.
 ##  <a name="creating"></a> Erstellen eines Volltextkatalogs  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Erstellen eines Volltextkatalogs mit Transact-SQL
-Verwenden Sie [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Beispiel:
+Verwenden Sie [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Zum Beispiel:
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -70,7 +73,7 @@ GO
   
 In der folgenden Tabelle sind die Eigenschaften aufgeführt, die sich auf Volltextkataloge beziehen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche möglicherweise hilfreich. 
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Einstellung für die Unterscheidung nach Akzent.|
 |**ImportStatus**|Gibt an, ob der Volltextkatalog importiert wird.|  
@@ -125,4 +128,3 @@ Führen Sie die Transact-SQL-Anweisung [DROP FULLTEXT CATALOG](
 
 ## <a name="next-step"></a>Nächster Schritt
 [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md)
-

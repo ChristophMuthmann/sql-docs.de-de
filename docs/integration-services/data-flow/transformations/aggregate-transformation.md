@@ -1,10 +1,13 @@
 ---
-title: Aggregieren-Transformation | Microsoft Docs
+title: "Transformation für das Aggregieren | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="aggregate-transformation"></a>Transformation für das Aggregieren
   Die Transformation für das Aggregieren wendet Aggregatfunktionen, wie z.B. Average, auf Spaltenwerte an und kopiert die Ergebnisse in die Transformationsausgabe. Neben Aggregatfunktionen stellt diese Transformation die GROUP BY-Klausel bereit, mit der Sie Gruppen für das Aggregieren angeben können.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/19/2017
 |Vorgang|Description|  
 |---------------|-----------------|  
 |Group By|Unterteilt Datasets in Gruppen. Spalten eines beliebigen Datentyps können für das Gruppieren verwendet werden. Weitere Informationen finden Sie unter [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
-|Sum|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
+|SUM|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
 |Mittelwert|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |Count distinct|Gibt die Anzahl eindeutiger Werte ungleich null in einer Gruppe zurück.|  
@@ -69,7 +71,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  Für Spalten, die für die Vorgänge GROUP BY, Maximum oder Minimum verwendet werden, können Sie IsBig nicht auf 1 festlegen.  
   
-## <a name="performance-considerations"></a>Leistungsaspekte  
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Die Transformation für das Aggregieren enthält Eigenschaften, die Sie festlegen können, um die Leistung der Transformation zu optimieren.  
   
 -   Wenn Sie einen **GROUP BY** -Vorgang ausführen, legen Sie die Keys-Eigenschaft oder die KeysScale-Eigenschaft für die Komponente und die Komponentenausgaben fest. Mithilfe von Keys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation behandelt werden sollen. (In diesem Kontext bezeichnet Keys die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY**-Vorgangs erwartet werden.) Mit KeysScale können Sie eine ungefähre Anzahl von Schlüsseln angeben. Wenn Sie einen entsprechenden Wert für Keys oder KeyScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
@@ -131,7 +133,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Aggregieren von Werten in einem Dataset mithilfe der Transformation für das Aggregieren](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Aggregationen)
@@ -142,7 +144,7 @@ ms.lasthandoff: 08/19/2017
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Erweitert/Standard**  
  Blenden Sie die Optionen ein oder aus, um mehrere Aggregationen für mehrere Ausgaben zu konfigurieren. Die erweiterten Optionen sind standardmäßig ausgeblendet.  
   
@@ -155,7 +157,7 @@ ms.lasthandoff: 08/19/2017
  **Schlüsselskala**  
  Geben Sie in der erweiterten Anzeige optional die ungefähre Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn die Eigenschaften **Schlüsselskala** und **Schlüssel** festgelegt sind, wird der Wert von **Schlüssel** vorrangig behandelt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Keine Angabe|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
@@ -193,7 +195,7 @@ ms.lasthandoff: 08/19/2017
  **Count Distinct Scale**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **CountDistinctScale** und **CountDistinctKeys** angegeben werden, wird **CountDistinctKeys** vorrangig behandelt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Keine Angabe|Die **CountDistinctScale** -Eigenschaft wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
@@ -211,11 +213,11 @@ ms.lasthandoff: 08/19/2017
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Schlüsselskala**  
  Gibt optional die ungefähre Anzahl an Schlüsseln an, die von der Aggregation erwartet werden. Für die Transformation wird diese Information verwendet, um die anfängliche Cachegröße zu optimieren. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **Schlüsselskala** als auch **Anzahl von Schlüsseln** angegeben wurden, hat **Anzahl von Schlüsseln** Vorrang.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Keine Angabe|Die Eigenschaft **Schlüsselskala** wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
@@ -228,7 +230,7 @@ ms.lasthandoff: 08/19/2017
  **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **COUNT DISTINCT-Skala** als auch **COUNT DISTINCT-Schlüssel** angegeben wurden, hat **COUNT DISTINCT-Schlüssel** Vorrang.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Keine Angabe|Die CountDistinctScale-Eigenschaft wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
@@ -241,9 +243,8 @@ ms.lasthandoff: 08/19/2017
  **Faktor für automatische Erweiterung**  
  Verwenden Sie einen Wert zwischen 1 und 100, um den Prozentsatz anzugeben, um den der Arbeitsspeicher während der Aggregation erweitert werden kann. Der Standardwert für diese Option ist **25 %**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

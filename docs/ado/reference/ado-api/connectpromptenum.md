@@ -3,7 +3,7 @@ title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4761b8375e78c10556d3c9f414e3558cb59a4e21
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ae0c2179e321e521a86fdc76e5f8978ab4ab747
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Gibt an, ob ein Dialogfeld angezeigt werden soll, um fehlende Parameter beim Öffnen einer Verbindung mit einer Datenquelle anzufordern.  
@@ -51,5 +50,4 @@ Gibt an, ob ein Dialogfeld angezeigt werden soll, um fehlende Parameter beim Öf
 |AdoEnums.ConnectPrompt.NEVER|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Prompt-Eigenschaft dynamisch (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
-
+ [Dynamische Eigenschaft Prompt (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)

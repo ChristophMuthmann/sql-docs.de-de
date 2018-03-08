@@ -1,27 +1,27 @@
 ---
-title: Melden Sie Entwurfstipps (Berichts-Generator und SSRS) | Microsoft Docs
+title: Berichtsentwurfstipps (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6310daa382072ae5125f0f3cff1913548a0801fb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Berichtsentwurfstipps (Berichts-Generator und SSRS)
   Nutzen Sie die folgenden Tipps zum Entwerfen paginierter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte.  
@@ -163,10 +163,9 @@ ms.lasthandoff: 08/09/2017
   
  Die Kombination dieses Verhaltens, die Breiten- und Höheneigenschaften von Berichtselementen, die Größe des Hauptteils des Berichts, die Seitenhöhe und die Seitenbreitendefinition, die Seitenrandeinstellungen des übergeordneten Berichts und die rendererspezifische Unterstützung für Auslagerungen bestimmen gemeinsam, welche Berichtselemente sich auf einer gerenderten Seite zusammenfügen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Reporting Services-Lernprogramme &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services-Tutorials (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)  
   
   
-

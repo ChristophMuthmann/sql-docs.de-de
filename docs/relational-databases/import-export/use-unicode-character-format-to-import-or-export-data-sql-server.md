@@ -2,9 +2,12 @@
 title: Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c6a9afc3b92d4de54b166e56c745e28898937c59
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: b38f5585ffa79fbfa5ba702d4fdc8acee9924c7c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Es wird empfohlen, für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei, die Sonderzeichen oder Zeichen aus dem Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) enthält, das Unicode-Zeichenformat zu verwenden. Mit dem Unicode-Zeichenformat können Daten von einem Server mithilfe einer Codepage exportiert werden, wenn sich diese Codepage von der Codepage unterscheidet, die der Client verwendet, der den Vorgang ausführt. In solchen Fällen bietet die Verwendung des Unicode-Zeichenformats folgende Vorteile:  
   
 * Wenn es sich bei den Quell- und Zieldaten um Unicode-Datentypen handelt, bleiben bei Verwendung des Unicode-Zeichenformats alle Zeichendaten erhalten.  
@@ -85,7 +88,7 @@ Sie können Daten im Unicode-Zeichenformat in eine Tabelle importieren, indem Si
   
 Das Unicode-Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|Beschreibung|  
+|Befehl|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Verwendet das Unicode-Zeichenformat|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Verwendet das Unicode-Zeichenformat beim Massenimport von Daten|  
@@ -240,7 +243,7 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
   
 -   [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
@@ -248,4 +251,3 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
  [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-

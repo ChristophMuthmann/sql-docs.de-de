@@ -2,9 +2,12 @@
 title: Verwenden des Volltextindizierungs-Assistenten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -23,20 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Verwenden des Volltextindizierungs-Assistenten
-  Der Volltextindizierungs-Assistent in SSMS führt Sie durch eine Reihe von Arbeitsschritten, die Ihnen das Erstellen eines Volltextindexes erleichtern.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Der Volltextindizierungs-Assistent in SSMS führt Sie durch eine Reihe von Arbeitsschritten, die Ihnen das Erstellen eines Volltextindexes erleichtern.  
   
 ## <a name="create-a--full-text-index"></a>Erstellen eines Volltextindexes 
 
@@ -88,10 +91,10 @@ ms.lasthandoff: 07/31/2017
  10. **Neuen Katalog erstellen**
  - Volltextkatalog auswählen  
   
-    a. **Name**  
+    A. **Name**  
      Geben Sie einen Namen für Ihren neuen Volltextkatalog ein.  
   
-     b. **Als Standardkatalog festlegen**  
+     B. **Als Standardkatalog festlegen**  
      Wählen Sie diese Option aus, um diesen Katalog als Standardkatalog für die Datenbank festzulegen.  
   
      c. **Unterscheidung nach Akzent**  
@@ -101,7 +104,7 @@ ms.lasthandoff: 07/31/2017
      Geben Sie die Dateigruppe an, für die der Volltextindex erstellt werden soll.  
   
      e. Wählen Sie einen Wert:  
-      |Wert|Beschreibung|  
+      |value|Description|  
       |-----------|-----------------|
       |**<default>**| Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|
       |**PRIMARY**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|
@@ -115,7 +118,7 @@ ms.lasthandoff: 07/31/2017
   
      Folgende Werte sind möglich:  
   
-   |Wert|Beschreibung|  
+   |value|Description|  
     |-----------|-----------------|  
     |**<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
     |**<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
@@ -146,4 +149,3 @@ ms.lasthandoff: 07/31/2017
      Wenn alle Vorgänge ausgeführt wurden, können Sie auf diese Schaltfläche klicken, um auf einen Bericht zu den ausgeführten Vorgängen zuzugreifen. Sie können den Bericht anzeigen, in eine Datei drucken, in die Zwischenablage kopieren oder ihn per E-Mail versenden.  
   
   
-

@@ -2,9 +2,12 @@
 title: Vergleichen von typisiertem XML mit nicht typisiertem XML | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -25,19 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 57
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27533bcc63a8df64597db4529b16a26f1fb5a009
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
-  Sie können Variablen, Parameter und Spalten des **xml** -Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ **xml** verknüpfen. In diesem Fall wird die Instanz des **xml** -Datentyps als *typisiert*bezeichnet. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Sie können Variablen, Parameter und Spalten des **xml** -Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ **xml** verknüpfen. In diesem Fall wird die Instanz des **xml** -Datentyps als *typisiert*bezeichnet. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Wohlgeformtes XML und der xml-Datentyp  
  Der **xml** -Datentyp implementiert den im ISO-Standard definierten **xml** -Datentyp. Deshalb ermöglicht er das Speichern sowohl von wohlgeformten XML-Dokumenten der Version 1.0 als auch von so genannten XML-Inhaltsfragmenten mit Textknoten und einer beliebigen Anzahl von Elementen auf der obersten Ebene in einer nicht typisierten XML-Spalte. Das System überprüft, ob die Daten wohlgeformt sind (wobei es nicht erforderlich ist, dass die Spalte an XML-Schemas gebunden ist) und weist alle Daten zurück, die in diesem erweiterten Sinne nicht wohlgeformt sind. Dies gilt auch für nicht typisierte XML-Variablen und -Parameter.  
@@ -72,7 +76,7 @@ ms.lasthandoff: 06/22/2017
  Im folgenden Beispiel wird eine zweiteilige Benennungskonvention zum Angeben des Namens der XML-Schemaauflistung verwendet. Der erste Teil ist der Schemaname, der zweite Teil der Name der XML-Schemaauflistung.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemaauflistung mit einer Variablen vom Typ xml  
- Im folgenden Beispiel wird eine Variable vom Typ**xml** erstellt und eine Schemaauflistung mit dieser verknüpft. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
+ Im folgenden Beispiel wird eine Variable vom Typ **xml** erstellt und eine Schemaauflistung mit dieser verknüpft. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -159,9 +163,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  Beachten Sie, dass Sie den gesamten XML-Datentyp weiterhin mit einer einfachen SQL-SELECT-Anweisung abrufen können, selbst wenn er negative Jahresangaben enthält. Es wird empfohlen, dass Sie die negativen Jahresangaben durch eine Jahresangabe ersetzen, die im neuen unterstützten Bereich liegt, oder den Typ des Elements oder Attributs in **xs:string**ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

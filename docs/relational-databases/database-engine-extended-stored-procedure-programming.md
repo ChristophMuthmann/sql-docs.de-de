@@ -2,11 +2,13 @@
 title: "Datenbankmodul – Programmierung der erweiterten gespeicherten Prozedur | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +18,19 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-caps.latest.revision: 37
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5a95d30441082dd497e7626f2ecc3de08dbcbf8b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1da67999b5c0ae02606d83dfe47c194b2b4499ff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Datenbankmodul – Programmierung der erweiterten gespeicherten Prozedur
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration. Weitere Informationen finden Sie unter [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  

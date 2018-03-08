@@ -2,9 +2,12 @@
 title: Generieren eines XSD-Inlineschemas | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -18,20 +21,20 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2b651f16b3bf5c43755aafa1c6b67cbef06fc1cd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
-  In einer FOR XML-Klausel können Sie anfordern, dass die Abfrage ein Inlineschema zusammen mit den Abfrageergebnissen zurückgibt. Wenn Sie ein XDR-Schema wünschen, verwenden Sie das XMLDATA-Schlüsselwort in der FOR XML-Klausel. Wenn Sie ein XSD-Schema wünschen, verwenden Sie das XMLSCHEMA-Schlüsselwort.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In einer FOR XML-Klausel können Sie anfordern, dass die Abfrage ein Inlineschema zusammen mit den Abfrageergebnissen zurückgibt. Wenn Sie ein XDR-Schema wünschen, verwenden Sie das XMLDATA-Schlüsselwort in der FOR XML-Klausel. Wenn Sie ein XSD-Schema wünschen, verwenden Sie das XMLSCHEMA-Schlüsselwort.  
   
  Dieses Thema beschreibt das XMLSCHEMA-Schlüsselwort und erläutert die Struktur des sich ergebenden XSD-Inlineschemas. Die folgenden Einschränkungen gelten beim Anfordern von Inlineschemas:  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
  Wenn Sie XMLSCHEMA in einer FOR XML-Abfrage angeben, erhalten Sie sowohl ein Schema als auch XML-Daten als Abfrageergebnis. Jedes Datenelement der obersten Ebene verweist mithilfe einer Standard-Namespacedeklaration auf das vorherige Schema, das seinerseits auf den Zielnamespace des Inlineschemas verweist.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -474,4 +477,3 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
 -   Im Ergebnis verweist jede Instanz des <`Col`>-Elements mithilfe des `xsi:type`-Attributs auf ihren Instanztyp.  
   
   
-

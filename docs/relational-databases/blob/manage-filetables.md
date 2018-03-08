@@ -1,10 +1,13 @@
----
+﻿---
 title: Verwalten von FileTables | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e59931627ce7c22ccb799f048f04bc77edd49fec
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: f804ca956ac8287fad529f4bc5c31965d01f1c72
-ms.contentlocale: de-de
-ms.lasthandoff: 08/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="manage-filetables"></a>Verwalten von FileTables
-  Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
   
 ##  <a name="HowToEnumerate"></a> Vorgehensweise: Abrufen einer Liste von FileTables und verbundenen Objekten  
  Um eine Liste von FileTables abzurufen, fragen Sie eine der folgenden Katalogsichten ab:  
@@ -235,7 +238,6 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC und FileTables  
  Sie können die Einschränkungen für eine FileTable, einschließlich systemdefinierter Einschränkungen, mithilfe von DBCC CHECKCONSTRAINTS überprüfen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [FileTable-Kompatibilität mit anderen SQL Server-Funktionen](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
-

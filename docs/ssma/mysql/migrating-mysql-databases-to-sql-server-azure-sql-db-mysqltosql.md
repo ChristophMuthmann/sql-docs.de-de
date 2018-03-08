@@ -1,29 +1,30 @@
 ---
 title: Migrieren von MySQL-Datenbanken zu SQLServer - Azure SQL-Datenbank | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3e2f0f13d57b242e9f17b7241a1311df17b39612
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d86a7d779212a781a4bab29a85a963cf163b9ade
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank (MySQLToSql)
 SQL Server Migration Assistant (SSMA) for MySQL ist eine umfassende Umgebung, mit die Sie schnell MySQL-Datenbanken zu SQL Server oder SQL Azure migriert werden kann. SSMA für MySQL verwenden, können Sie überprüfen von Datenbankobjekten und Daten, Datenbanken für die Migration bewerten, Datenbankobjekte zu SQL Server oder SQL Azure migrieren und Migrieren von Daten klicken Sie dann auf SQL Server- oder SQL Azure.  
@@ -66,4 +67,3 @@ Verwenden Sie zum erfolgreichen Objekte und Daten aus MySQL-Datenbanken zu SQL S
 [Installieren SSMA für MySQL &#40; MySqlToSql &#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
 [Erste Schritte mit SSMA für MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   
-

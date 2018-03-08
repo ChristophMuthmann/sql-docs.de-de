@@ -3,7 +3,7 @@ title: Find-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
 Sucht eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Zeile, die die angegebenen Kriterien erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilenposition bei dem gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, Ende (oder Start) von der **Recordset**.  
@@ -46,12 +45,12 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Ein **Zeichenfolge** Wert, der eine Anweisung zu verwendenden Spaltennamen, Vergleichsoperator und-Wert angeben, in die Suche enthält.  
   
  *SkipRows*  
- Optionale*.* Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, das Zeilenoffset wurde aus der aktuellen Zeile oder *starten* Lesezeichen, um die Suche zu starten. Standardmäßig wird die Suche für die aktuelle Zeile gestartet.  
+ Optional*.* Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, das Zeilenoffset wurde aus der aktuellen Zeile oder *starten* Lesezeichen, um die Suche zu starten. Standardmäßig wird die Suche für die aktuelle Zeile gestartet.  
   
  *SearchDirection*  
- Optionale*.* Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf der aktuellen Zeile oder die nächste verfügbare Zeile in die Richtung der Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** ist der Wert **AdSearchForward**. Eine Suche nicht erfolgreiche beendet wird, am Anfang der **Recordset** ist der Wert **AdSearchBackward**.  
+ Optional*.* Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf der aktuellen Zeile oder die nächste verfügbare Zeile in die Richtung der Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** ist der Wert **AdSearchForward**. Eine Suche nicht erfolgreiche beendet wird, am Anfang der **Recordset** ist der Wert **AdSearchBackward**.  
   
- *Starten*  
+ *Start*  
  Optional. Ein **Variant** Lesezeichen, das als die Startposition für die Suche funktioniert.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -79,4 +78,3 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)   
  [Optimieren Sie die Eigenschaft dynamisch (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)
-

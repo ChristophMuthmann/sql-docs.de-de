@@ -1,13 +1,14 @@
 ---
 title: Datenebenenanwendungen| Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "31"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d42c7d587e18e306a15a95e4576e312a0e7c31c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
-  Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  
   
  Ein BACPAC ist ein verwandtes Artefakt, das das Datenbankschema sowie die in der Datenbank gespeicherten Daten kapselt.  
   
@@ -139,4 +139,3 @@ ms.lasthandoff: 06/22/2017
  [DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
-

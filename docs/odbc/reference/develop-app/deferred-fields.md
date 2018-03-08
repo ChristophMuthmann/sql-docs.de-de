@@ -3,27 +3,28 @@ title: "Verzögerte Felder | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2042efcdacf45a8638bb5197da04f903a6ffdd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-fields"></a>Zurückgestellten Felder
 Die Werte der *verzögert Felder* werden nicht verwendet werden, wenn sie festgelegt werden, aber der Treiber die Adressen mit den Variablen für eine verzögerte wirksam speichert. Für eine anwendungsparameterdeskriptor, verwendet der Treiber den Inhalt der Variablen zum Zeitpunkt des Aufrufs von **SQLExecDirect** oder **SQLExecute**. Für eine Anwendung Zeilendeskriptor verwendet der Treiber den Inhalt der Variablen zum Zeitpunkt des Abrufs.  
@@ -47,4 +48,3 @@ Die Werte der *verzögert Felder* werden nicht verwendet werden, wenn sie festge
 -   Wenn Feld SQL_DESC_OCTET_LENGTH_PTR ein APD einen null-Wert hat, und der Parameter eine Zeichenfolge ist, wird vom Treiber angenommen, dass Null-terminierte Zeichenfolge ist. Für dynamische Output-Parameter verhindert, dass ein null-Wert in diesem Feld den Treiber Längeninformationen zurückgeben. (Wenn das SQL_DESC_TYPE-Feld einen Zeichenfolge Parameter nicht angegeben ist, wird das Feld SQL_DESC_OCTET_LENGTH_PTR ignoriert.)  
   
  Die Anwendung muss nicht freigeben oder verwerfen Variablen für verzögerte Felder zwischen dem Zeitpunkt, der sie die Felder zuordnet und die Uhrzeit, die der Treiber liest oder schreibt sie, verwendet wird.
-

@@ -3,7 +3,7 @@ title: "Append-Methode (ADOX-Schlüssel) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d1f8938adf51ee1f38de29b85753095d55d7703
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5821bdda7ae3276d8da83267de45ba46ad6bfbb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-keys"></a>Append-Methode (ADOX-Schlüssel)
 Fügt ein neues [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) -Objekt an die [Schlüssel](../../../ado/reference/adox-api/keys-collection-adox.md) Auflistung.  
@@ -45,7 +44,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *Key*  
  Die **Schlüssel** anzufügende Objekt oder den Namen des Schlüssels, der erstellt oder ergänzt.  
   
- *"KeyType"*  
+ *KeyType*  
  Optional. Ein **lange** Wert, der den Typ des Schlüssels angibt. Die *Schlüssel* Parameter entspricht der [Typ](../../../ado/reference/adox-api/type-property-key-adox.md) Eigenschaft von einem **Schlüssel** Objekt.  
   
  *Column*  
@@ -61,7 +60,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  Die *Spalten* -Parameter akzeptiert entweder den Namen einer Spalte oder ein Array von Spaltennamen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Die Auflistung der Schlüssel (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
@@ -71,5 +70,4 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  [Append-Methode (ADOX Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

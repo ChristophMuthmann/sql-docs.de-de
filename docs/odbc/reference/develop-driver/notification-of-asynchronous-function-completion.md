@@ -3,24 +3,25 @@ title: Der asynchrone Funktion Benachrichtigung | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dbccf95ca62f3a77618f36f69523e28e5d85c17a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91c63c55a3d36e1b0c788361a8ae13a01ece9a38
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Benachrichtigung über Abschluss des asynchronen Funktion
 Im SDK für Windows 8 hinzugefügt ODBC einen Mechanismus, um Anwendungen zu benachrichtigen, wenn ein asynchroner Vorgang abgeschlossen dem wir als "Benachrichtigung bei Abschluss" bezeichnet werden ist, an. (Siehe [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) für Weitere Informationen.) In diesem Artikel werden einige der Probleme für Entwickler.  
@@ -41,5 +42,4 @@ Im SDK für Windows 8 hinzugefügt ODBC einen Mechanismus, um Anwendungen zu ben
  Der Treiber-Manager wird die ursprüngliche Funktion erneut aufgerufen, nachdem der Treiber wieder aufgerufen. Der Treiber-Manager kann einen Thread verwenden, der weder ein Thread der Anwendung noch ein Treiber-Thread ist. Wenn der Treiber einige Informationen, die dem Thread (z. B. Sicherheits-Token oder Benutzer-ID) zugeordnet verwendet, sollte der Treiber speichern die erforderliche Informationen in der ersten asynchroner Aufruf und verwenden Sie den gespeicherten Wert vor dem gesamten asynchronen Vorgang abgeschlossen ist. In der Regel nur **SQLDriverConnect**, **SQLConnect**, oder **SQLBrowseConnect** müssen diese Art von Informationen verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-
+ [Developing an ODBC Driver (Entwickeln eines ODBC-Treibers)](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

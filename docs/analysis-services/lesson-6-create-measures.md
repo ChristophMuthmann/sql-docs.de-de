@@ -2,27 +2,27 @@
 title: 'Lektion 7: Erstellen von Measures | Microsoft Docs'
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f486e0094e66ed503b63fb52c4cba88dbcadbb62
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-create-measures"></a>Lektion 6: Erstellen von Measures
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ In dieser Lektion erstellen Sie Measures sowohl durch Eingabe einer DAX-Formel i
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Erstellen von Measures  
@@ -92,16 +92,16 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 1.  Erstellen Sie unter Verwendung der AutoSumme-Funktion die folgenden Measures, und benennen Sie diese um:  
   
-    |Measurename|Column|AutoSumme (∑)|Formel|  
+    |Measurename|Spalte|AutoSumme (∑)|Formel|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
   
 2.  Erstellen Sie durch Klicken auf eine leere Zelle im measureraster, und mithilfe der Bearbeitungsleiste und benennen Sie die folgenden Measures in der Reihenfolge:  
   
@@ -135,4 +135,3 @@ Für die FactInternetSales-Tabelle erstellten Measures können verwendet werden,
 Wechseln Sie zur nächsten Lektion: [Lektion 7: Erstellen von Key Performance Indicators](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   
-

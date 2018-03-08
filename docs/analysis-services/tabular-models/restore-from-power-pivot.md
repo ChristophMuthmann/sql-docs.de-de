@@ -2,35 +2,35 @@
 title: Wiederherstellen von PowerPivot | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ab75dfb620c3d0fc41799f2f59a88b6e741440ea
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27541f0f58b11367994d2131eb95b63cbf55a4af
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-from-power-pivot"></a>Wiederherstellen von PowerPivot
-  Sie können die Funktion „Von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] wiederherstellen“ in SQL Server Management Studio verwenden, um eine neue Datenbank für tabellarische Modelle auf einer (im Tabellenmodus ausgeführten) Analysis Services-Instanz zu erstellen oder um eine vorhandene Datenbank aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe (.xlsx) wiederherzustellen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Sie können die Funktion „Von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] wiederherstellen“ in SQL Server Management Studio verwenden, um eine neue Datenbank für tabellarische Modelle auf einer (im Tabellenmodus ausgeführten) Analysis Services-Instanz zu erstellen oder um eine vorhandene Datenbank aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe (.xlsx) wiederherzustellen.  
   
 > [!NOTE]  
->  Die Projektvorlage „Aus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] importieren“ in SQL Server Data Tools verfügt über ähnliche Funktionen. Weitere Informationen finden Sie unter [Importieren aus PowerPivot &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
+>  Die Projektvorlage „Aus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] importieren“ in SQL Server Data Tools verfügt über ähnliche Funktionen. Weitere Informationen finden Sie unter [importieren aus PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
   
  Folgendes sollte bei Verwendung der Funktion „Von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]wiederherstellen“ beachtet werden:  
   
@@ -38,9 +38,9 @@ ms.lasthandoff: 09/01/2017
   
 -   Das Dienstkonto der Analysis Services-Instanz muss über Leseberechtigungen für die Arbeitsmappendatei verfügen, aus der Daten wiederhergestellt werden.  
   
--   Wenn Sie eine Datenbank von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]wiederherstellen, ist die Eigenschaft Identitätswechselinformationen der Datenquelle der Datenbank für tabellarische Modelle auf den Standardwert festgelegt, der dem Dienstkonto der Analysis Services-Instanz entspricht. Es wird empfohlen, die Identitätswechsel-Anmeldeinformationen in den Datenbankeigenschaften in ein Windows-Benutzerkonto zu ändern. Weitere Informationen finden Sie unter [Identitätswechsel &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
+-   Wenn Sie eine Datenbank von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]wiederherstellen, ist die Eigenschaft Identitätswechselinformationen der Datenquelle der Datenbank für tabellarische Modelle auf den Standardwert festgelegt, der dem Dienstkonto der Analysis Services-Instanz entspricht. Es wird empfohlen, die Identitätswechsel-Anmeldeinformationen in den Datenbankeigenschaften in ein Windows-Benutzerkonto zu ändern. Weitere Informationen finden Sie unter [Identitätswechsel](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
   
--   Daten im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenmodell werden in eine vorhandene oder neue Datenbank für tabellarische Modelle auf der Analysis Services-Instanz kopiert. Wenn die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe verknüpfte Tabellen enthält, werden sie ähnlich wie eine Tabelle, die mit In neue Tabelle einfügen erstellt wurde, als Tabelle ohne Datenquelle neu erstellt.  
+-   Daten im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodell werden in eine vorhandene oder neue Datenbank für tabellarische Modelle auf der Analysis Services-Instanz kopiert. Wenn die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe verknüpfte Tabellen enthält, werden sie ähnlich wie eine Tabelle, die mit In neue Tabelle einfügen erstellt wurde, als Tabelle ohne Datenquelle neu erstellt.  
   
 ### <a name="to-restore-from-power-pivot"></a>So führen Sie eine Wiederherstellung aus PowerPivot aus  
   
@@ -55,8 +55,7 @@ ms.lasthandoff: 09/01/2017
 5.  Lassen Sie unter **Optionen**das Kontrollkästchen **Sicherheitsinformationen einschließen** aktiviert. Diese Einstellung gilt nicht beim Wiederherstellen von Daten aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellarische Modelldatenbanken &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
- [Importieren aus PowerPivot &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
+ [Tabellenmodell-Datenbanken](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
+ [Importieren aus PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   
-

@@ -3,8 +3,11 @@ title: DROP AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,25 +23,24 @@ helpviewer_keywords:
 - DROP AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], dropping
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
-caps.latest.revision: 44
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c1cd1e16d7d25810d571f940aaf1dece825406c3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 82fdb4b104a0be0aa0d6469ccdd23f361f55618b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Entfernt die angegebene Verfügbarkeitsgruppe und alle dazugehörigen Replikate. Wenn eine Serverinstanz, auf der eines der Verfügbarkeitsreplikate gehostet wird, offline ist, wenn Sie eine Verfügbarkeitsgruppe löschen, so wird das lokale Verfügbarkeitsreplikat von der Serverinstanz gelöscht, nachdem diese online geschaltet wurde. Wird eine Verfügbarkeitsgruppe gelöscht, wird auch der zugeordnete Verfügbarkeitsgruppenlistener gelöscht, falls vorhanden.  
   
 > [!IMPORTANT]  
->  Entfernen Sie die Verfügbarkeitsgruppe wenn möglich nur, während eine Verbindung mit der Serverinstanz besteht, die das primäre Replikat hostet. Wenn die Verfügbarkeitsgruppe aus dem primären Replikat gelöscht wird, sind Änderungen in den früheren primären Datenbanken (ohne hohen Verfügbarkeitsschutz) zulässig. Löschen einer verfügbarkeitsgruppe aus einem sekundären Replikat erhält das primäre Replikat in der **RESTORING** Status, und Änderungen sind für die Datenbanken nicht zulässig.  
+>  Entfernen Sie die Verfügbarkeitsgruppe wenn möglich nur, während eine Verbindung mit der Serverinstanz besteht, die das primäre Replikat hostet. Wenn die Verfügbarkeitsgruppe aus dem primären Replikat gelöscht wird, sind Änderungen in den früheren primären Datenbanken (ohne Hochverfügbarkeitsschutz) zulässig. Löschen einer verfügbarkeitsgruppe aus einem sekundären Replikat erhält das primäre Replikat in der **RESTORING** Status, und Änderungen sind für die Datenbanken nicht zulässig.  
   
  Informationen zu alternativen Möglichkeiten zum Löschen einer verfügbarkeitsgruppe finden Sie unter [Entfernen einer Verfügbarkeitsgruppe &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
@@ -53,7 +55,7 @@ DROP AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Gruppenname*  
+ *group_name*  
  Gibt den Namen der Verfügbarkeitsgruppe an, die gelöscht werden soll.  
   
 ## <a name="limitations-and-recommendations"></a>Einschränkungen und Empfehlungen  
@@ -87,8 +89,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Entfernen einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Entfernen einer Verfügbarkeitsgruppe &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   
-

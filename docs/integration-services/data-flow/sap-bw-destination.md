@@ -1,26 +1,28 @@
 ---
-title: SAP BW-Ziel | Microsoft Docs
+title: SAP BW-Ziel | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47b31595b327e762f4710ffbfd85f1c3ccf894c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination"></a>SAP BW-Ziel
   Das SAP BW-Ziel ist die Zielkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Folglich lädt das SAP BW-Ziel Daten aus dem Datenfluss in ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket im SAP NetWeaver BW-System, Version 7.  
@@ -93,17 +95,17 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Konfigurieren des Ziels mit dem SSIS-Designer  
  Um weitere Informationen zu den Eigenschaften des SAP BW-Ziels zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, klicken Sie auf eines der folgenden Themen:  
   
--   [Ziel-Editor für SAP BW &#40; Seite Verbindungs-Manager &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für SAP BW &#40; Seite "Zuordnungen" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für SAP BW &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Ziel-Editor für SAP BW &#40; Seite "Erweitert" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Ziel-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  Während Sie das SAP BW-Ziel konfigurieren, können Sie auch verschiedene Dialogfelder verwenden, um SAP NetWeaver BW-Objekte zu suchen oder zu erstellen. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu diesen Dialogfeldern zu erhalten:  
   
--   [Infopackage suchen](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [InfoPackage suchen](../../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [Neues InfoObject erstellen](../../integration-services/data-flow/create-new-infoobject.md)  
   
@@ -119,8 +121,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [InfoPackage erstellen](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

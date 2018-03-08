@@ -1,27 +1,27 @@
 ---
-title: Reporting Services-Datenwarnungen | Microsoft Docs
+title: Reporting Services-Datenwarnungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "33"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66c095233b8e7642e4c491767ce678218d8ef42
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
 
@@ -29,12 +29,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services-datenwarnungen sind eine datengesteuerte warnungslösung, mit denen die über Berichtsdaten informiert werden, die interessante oder wichtige und zu einem relevanten Zeitpunkt. Mithilfe von Datenwarnungen müssen Sie nicht mehr nach Informationen suchen – diese werden Ihnen bereitgestellt.
+SQL Server Reporting Services-Datenwarnungen sind eine datengesteuerte Warnungslösung, mit der Sie sich leichter und zu einem relevanten Zeitpunkt über für Sie interessante oder wichtige Berichtsdaten informieren können. Mithilfe von Datenwarnungen müssen Sie nicht mehr nach Informationen suchen – diese werden Ihnen bereitgestellt.
 
 Datenwarnmeldungen werden per E-Mail gesendet. Sie können festlegen, dass Meldungen je nach Wichtigkeit der Informationen mehr oder weniger häufig oder nur im Fall von Ergebnisänderungen zu senden sind. Sie können mehrere E-Mail-Empfänger festlegen und somit andere Benutzer informieren, um die Effizienz und Zusammenarbeit verbessern.
 
 > [!NOTE]
-> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
 ##  <a name="AlertingWF"></a> Datenwarnungsarchitektur und Workflow
 
@@ -56,7 +56,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  Das folgende Diagramm zeigt den Workflow zum Erstellen und Speichern einer Datenwarnungsdefinition und zum Erstellen eines SQL-Agent-Auftrags, um mit der Verarbeitung der Instanz der Datenwarnung und dem Senden von Datenwarnmeldungen per E-Mail zu beginnen, die die Berichtsdaten enthalten, die die Warnung für mindestens einen Empfänger ausgelöst haben.  
   
- ![Workflows in einer Reporting Services-Warnungen](../reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services-Warnungen")  
+ ![Workflows von Reporting Services-Warnungen](../reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
   
 ### <a name="reports-supported-by-data-alerts"></a>Von Datenwarnungen unterstützte Berichte  
  Sie können Datenwarnungen für alle Typen von professionellen Berichten erstellen, die in der Berichtsdefinitionssprache (RDL) geschrieben und im Berichts-Designer oder Berichts-Generator erstellt wurden. Berichte, die Datenbereiche wie z. B. Tabellen und Diagramme enthalten, Berichte mit Unterberichten und komplexe Berichte mit mehreren parallelen Spaltengruppen und geschachtelten Datenbereichen. Die einzige Voraussetzung ist, dass der Bericht mindestens einen Datenbereich beliebigen Typs beinhaltet und die Berichtsdatenquelle so konfiguriert ist, dass entweder gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet werden. Wenn der Bericht keine Datenbereiche aufweist, können Sie keine Warnung dafür erstellen.  
@@ -88,7 +88,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Speichern von Datenwarnungsdefinitionen und Warnungsmetadaten  
  Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, wird die SQL Server-Warnungsdatenbank automatisch erstellt.  
   
- Datenwarnungsdefinitionen und Warnungsmetadaten werden in der Warnungsdatenbank gespeichert. Standardmäßig heißt diese Datenbank ReportingServices\<GUID > _Alerting.  
+ Datenwarnungsdefinitionen und Warnungsmetadaten werden in der Warnungsdatenbank gespeichert. Diese Datenbank wird standardmäßig als ReportingServices\<GUID>_Alerting bezeichnet.  
   
  Wenn Sie die Datenwarnungsdefinition speichern, erstellt der Warnungsdienst einen SQL Server-Agent-Auftrag für die Warnungsdefinition. Der Auftrag beinhaltet einen Auftragszeitplan. Der Zeitplan basiert auf dem Serienmuster, das Sie mit der Warnungsdefinition definieren. Durch die Ausführung des Auftrags wird die Verarbeitung der Datenwarnungsdefinition initiiert.  
   
@@ -127,7 +127,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  Gemäß des zuvor in diesem Thema gezeigten Diagramms verwenden Datenwarnungen SQL Server-Agent-Aufträge. Zum Erstellen des Auftrags muss der SQL Server-Agent ausgeführt werden. Unter Umständen haben Sie den SQL Server-Agent bei der Installation von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert, dass er automatisch startet. Andernfalls lässt sich der SQL Server-Agent manuell starten. Weitere Informationen finden Sie unter [Konfigurieren des SQL Server-Agents](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) und [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agents oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
- Sie können in der SharePoint-Zentraladministration mithilfe der Seite **Abonnements und Warnungen bereitstellen** herausfinden, ob der SQL Server-Agent ausgeführt wird, und benutzerdefinierte [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts erstellen und herunterladen, die Sie dann ausführen, um dem SQL Server-Agent Berechtigungen zu gewähren. Erstellen Sie die [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts alternativ mithilfe von PowerShell. Weitere Informationen finden Sie unter [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+ Sie können in der SharePoint-Zentraladministration mithilfe der Seite **Abonnements und Warnungen bereitstellen** herausfinden, ob der SQL Server-Agent ausgeführt wird, und benutzerdefinierte [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts erstellen und herunterladen, die Sie dann ausführen, um dem SQL Server-Agent Berechtigungen zu gewähren. Erstellen Sie die [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts alternativ mithilfe von PowerShell. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Konfigurieren von Datenwarnungen  
  Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] werden die Einstellungen für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen, einschließlich Datenwarnungen, zwischen der Konfigurationsdatei des Berichtsservers (rsreportserver.config) und einer SharePoint-Konfigurationsdatenbank verteilt, wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren. Wenn Sie die Dienstanwendung als Schritt der Installation und Konfiguration von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]erstellen, wird die SharePoint-Konfigurationsdatenbank automatisch erstellt. Weitere Informationen finden Sie unter [RsReportServer.config-Konfigurationsdatei](../reporting-services/report-server/rsreportserver-config-configuration-file.md) und [Reporting Services-Konfigurationsdateien](../reporting-services/report-server/reporting-services-configuration-files.md).  
@@ -295,7 +295,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
      Weitere Informationen zum Verwalten aller Datenwarnungen auf einer Website finden Sie unter [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md) und [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
--   Stellen Sie**Abonnements und Datenwarnungen** bereit, mit denen Sie herausfinden, ob Reporting Services den SQL Server-Agent für Datenwarnungen verwenden und Skripts herunterladen kann, die den Zugriff auf den SQL Server-Agent ermöglichen. Weitere Informationen finden Sie unter [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+-   Stellen Sie**Abonnements und Datenwarnungen** bereit, mit denen Sie herausfinden, ob Reporting Services den SQL Server-Agent für Datenwarnungen verwenden und Skripts herunterladen kann, die den Zugriff auf den SQL Server-Agent ermöglichen. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Globalisierung der Datenwarnungen  
  Bestimmte Schriften wie Arabisch und Hebräisch werden von rechts nach links geschrieben. Datenwarnungen unterstützen Schriften mit Schreibrichtung von rechts nach links und umgekehrt. Datenwarnungen erkennen die Kultur und ändern die Darstellung und das Verhalten der Benutzeroberfläche und des Layouts von Datenwarnmeldungen entsprechend. Die Kultur wird von der regionalen Einstellung des Betriebssystems auf dem Computer des Benutzers abgeleitet. Der Kultur wird bei jedem Update und erneuten Speicherung der Datenwarnungsdefinition gespeichert.  
@@ -314,19 +314,18 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
 -   [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Edit a Data Alert in Alert Designer (Bearbeiten einer Datenwarnung im Warnungs-Designer)](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
--   [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [Manage My Data Alerts in Data Alert Manager (Verwalten meiner Datenwarnungen im Datenwarnungs-Manager)](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
 -   [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
 -   [Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Datenwarnungs-Manager für SharePoint-Benutzer](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

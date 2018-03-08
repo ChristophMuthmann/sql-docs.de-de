@@ -3,8 +3,11 @@ title: Fall (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: 59
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b366f7b6d57adbed5f028171617abb7516f3260b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0036e0ddf54eeef950bf81da2bf4a8997b4bef3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Wertet eine Liste von Bedingungen aus und gibt einen von mehreren möglichen Ergebnisausdrücken zurück.  
   
@@ -85,7 +87,7 @@ END
  Klicken Sie dann *Result_expression*  
  Wird der Ausdruck zurückgegeben, wenn *Input_expression* gleich *When_expression* TRUE ergibt, oder *Boolean_expression* auf "true" ergibt. *-Ergebnisausdrücke* ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- ELSE *Else_result_expression*  
+ ELSE *else_result_expression*  
  Der Ausdruck, der zurückgegeben wird, wenn keine Vergleichsoperation TRUE ergibt. Wenn dieses Argument weggelassen wird und keine Vergleichsoperation als TRUE ausgewertet wird, gibt die CASE-Funktion NULL zurück. *Else_result_expression* kann jeder gültige Ausdruck. Die Datentypen der *Else_result_expression* und ein beliebiger *Result_expression* müssen identisch sein oder muss eine implizite Konvertierung.  
   
  Wenn *Boolean_expression*  
@@ -122,7 +124,7 @@ END
   
  Die CASE-Anweisung bewertet ihre Bedingungen sequenziell und hält bei der ersten Bedingung an, deren Bedingung erfüllt ist. In einigen Situationen wird ein Ausdruck bewertet, bevor eine CASE-Anweisung die Ergebnisse des Ausdrucks als Eingabe empfängt. Bei der Bewertung dieser Ausdrücke sind Fehler möglich. Aggregierte Ausdrücke, die in WHEN-Argumenten zu einer CASE-Anweisung angezeigt werden, werden zuerst bewertet und dann der CASE-Anweisung bereitgestellt. Beim Erzeugen des MAX-Aggregat-Werts erzeugt die folgende Abfrage beispielsweise einen Fehler aufgrund einer Division durch Null. Dies erfolgt vor dem Auswerten des CASE-Ausdrucks.  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   
@@ -355,14 +357,13 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [Wählen Sie &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
-
 
 
 

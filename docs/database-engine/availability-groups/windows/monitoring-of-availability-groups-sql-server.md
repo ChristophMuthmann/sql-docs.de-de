@@ -2,31 +2,32 @@
 title: "Überwachen von Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: bc061ce1dd4ea316daefa7a5dee7212c387d7820
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e677658ccc029174a452b0eba1a4b31ec691915e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>Überwachen von Verfügbarkeitsgruppen (SQL Server)
-  Sie können zum Überwachen der Eigenschaften und des Status einer Always On-Verfügbarkeitsgruppe die folgenden Tools verwenden:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können zum Überwachen der Eigenschaften und des Status einer Always On-Verfügbarkeitsgruppe die folgenden Tools verwenden.  
   
 |Tool|Kurze Beschreibung|Links|  
 |----------|-----------------------|-----------|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
      [Monitoring Always On Health with PowerShell - Part 4 : Integration with SQL Server Agent (Überwachen des Always On-Zustands mit PowerShell - Teil 4: Integration in SQL Server-Agent)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
   
-     [SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server-Technikblogs](https://blogs.msdn.microsoft.com/psssql/)  
   
@@ -63,13 +64,12 @@ ms.lasthandoff: 08/02/2017
   
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Katalogsichten Always On-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Dynamische Verwaltungssichten und -funktionen für Always On-Verfügbarkeitsgruppen (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)   
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Verwenden des Always On-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: ADO NET-Quelle | Microsoft Docs
+title: ADO NET-Quelle | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,17 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
   Die ADO NET-Quelle verwendet Daten von einem .NET-Anbieter und stellt sie dem Datenfluss zur Verfügung.  
@@ -66,7 +68,7 @@ ms.lasthandoff: 08/17/2017
  Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="ado-net-source-troubleshooting"></a>Problembehandlung der ADO NET-Quelle  
- Sie können die von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme beim Laden von Daten aus externen Datenquellen durch die ADO NET-Quelle behandeln. Aktivieren Sie zum Protokollieren der von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Sie können die von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme beim Laden von Daten aus externen Datenquellen durch die ADO NET-Quelle behandeln. Aktivieren Sie zum Protokollieren der von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="ado-net-source-configuration"></a>ADO NET-Quellkonfiguration  
  Zum Konfigurieren der ADO NET-Quelle geben Sie die SQL-Anweisung an, die das Resultset definiert. Beispielsweise extrahiert eine ADO NET-Quelle, die eine Verbindung mit der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Datenbank herstellt und die SQL-Anweisung `SELECT * FROM Production.Product` verwendet, alle Zeilen aus der **Production.Product** -Tabelle und stellt das Dataset einer Downstreamkomponente bereit.  
@@ -75,7 +77,7 @@ ms.lasthandoff: 08/17/2017
 >  Wenn Sie mithilfe einer SQL-Anweisung eine gespeicherte Prozedur aufrufen, die Ergebnisse von einer temporären Tabelle zurückgibt, verwenden Sie die Option WITH RESULT SETS, um Metadaten für das Resultset zu definieren.  
   
 > [!NOTE]  
->  Wenn Sie zum Ausführen einer gespeicherten Prozedur eine SQL-Anweisung verwenden und der folgende Paketfehler auftritt, können Sie den Fehler u.U. beheben, indem Sie die **SET FMTONLY OFF** -Anweisung vor der EXEC-Anweisung hinzufügen.  
+>  Wenn Sie zum Ausführen einer gespeicherten Prozedur eine SQL-Anweisung verwenden und der folgende Paketfehler auftritt, können Sie den Fehler u.U. beheben, indem Sie die **SET FMTONLY OFF**-Anweisung vor der EXEC-Anweisung hinzufügen.  
 >   
 >  **Die Spalte <Spaltenname> wurde in der Datenquelle nicht gefunden.**  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 08/17/2017
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Rufen Sie Daten aus einer Tabelle oder Sicht in der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  
 |SQL-Befehl|Rufen Sie mit SQL-Abfrage Daten aus der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  
@@ -125,7 +127,7 @@ ms.lasthandoff: 08/17/2017
  Zeigt mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der**Vorschau** können bis zu 200 Zeilen angezeigt werden.  
   
 > [!NOTE]  
->  In der Datenvorschau enthalten Spalten mit einem CLR-benutzerdefinierten Typ keine Daten. Stattdessen die Werte \<Wert zu groß zum Anzeigen > oder System.Byte [] angezeigt. Der erste Wert wird angezeigt, wenn mithilfe des [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Anbieters auf die Datenquelle zugegriffen wird. Der zweite Wert wird bei Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieters angezeigt.  
+>  In der Datenvorschau enthalten Spalten mit einem CLR-benutzerdefinierten Typ keine Daten. Stattdessen werden die Werte \<Wert zu groß zum Anzeigen> oder „System.Byte[]“ angezeigt. Der erste Wert wird angezeigt, wenn mithilfe des [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Anbieters auf die Datenquelle zugegriffen wird. Der zweite Wert wird bei Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieters angezeigt.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
   
@@ -137,7 +139,7 @@ ms.lasthandoff: 08/17/2017
  **SQL-Befehlstext**  
  Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken, oder suchen Sie nach der Datei, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
   
- **Build query**  
+ **Abfrage erstellen**  
  Mithilfe des Dialogfelds **Abfrage-Generator** können Sie die SQL-Abfrage visuell erstellen.  
   
  **Durchsuchen**  
@@ -156,7 +158,7 @@ ms.lasthandoff: 08/17/2017
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Spalten**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -179,7 +181,7 @@ ms.lasthandoff: 08/17/2017
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -194,7 +196,7 @@ ms.lasthandoff: 08/17/2017
  **Abschneiden**  
  Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Fehlers an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -203,10 +205,9 @@ ms.lasthandoff: 08/17/2017
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DataReader-Ziel](../../integration-services/data-flow/datareader-destination.md)   
- [ADO NET-Ziels](../../integration-services/data-flow/ado-net-destination.md)   
+ [ADO NET-Ziel](../../integration-services/data-flow/ado-net-destination.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   
-

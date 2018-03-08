@@ -1,31 +1,33 @@
 ---
-title: Catalog.add_execution_worker (SSISDB-Datenbank) | Microsoft Docs
+title: Catalog.add_execution_worker (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8ce83f2678a1f3dcae6539f33beb33070b8e771b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 42d1332c727f26b6850c7fd7227c3a124ebc50a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>Catalog.add_execution_worker (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Fügt eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker mit einer Instanz der Ausführung im horizontal skalieren.
+Fügt einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out-Worker einer Instanz der Ausführung in Scale Out hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,17 +36,17 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 ```
 
 ## <a name="arguments"></a>Argumente
-[ @execution_id =] *Execution_id*  
+[ @execution_id = ] *execution_id*  
  Der eindeutige Bezeichner für die Instanz der Ausführung. Der *execution_id* ist **bigint**.  
  
-[@workeragent_id =] *Workeragent_id*  
-Die Worker-Agent-Id von einem Scale Out Worker. Die *Workeragent_id* ist **"uniqueidentifier"**.
+[@workeragent_id = ] *workeragent_id*  
+Die Worker-Agent-ID für den Scale Out-Worker. Die *workeragent_id* ist **uniqueIdentifier**.
 
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
 
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -60,13 +62,12 @@ Die Worker-Agent-Id von einem Scale Out Worker. Die *Workeragent_id* ist **"uniq
  
 - Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.
 
-- Der ausführungsbezeichner ist ungültig.
+- Der Ausführungsbezeichner ist ungültig.
 
-- Der Worker-Agent-Id ist ungültig.
+- Die Worker-Agent-ID ist ungültig.
 
-- Die Ausführung ist nicht in horizontal skalieren.
+- Die Ausführung erfolgt nicht in horizontaler Hochskalierung.
 
-## <a name="see-also"></a>Siehe auch
-[Ausführen von Paketen in horizontal skalieren](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
-
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+[Ausführen von Paketen in horizontaler Hochskalierung](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

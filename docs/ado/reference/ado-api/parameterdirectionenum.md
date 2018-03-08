@@ -3,7 +3,7 @@ title: ParameterDirectionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40c8ef97704d48b13eebd7c76aeb6dbe0d709377
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c32176b7c9c5dc235c77e5f2363f1fc51ae9bb40
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Gibt an, ob die [Parameter](../../../ado/reference/ado-api/parameter-object.md) stellt einen Eingabeparameter, Ausgabeparameter, sowohl ein Eingabe- und ein Output-Parameter oder den Rückgabewert einer gespeicherten Prozedur.  
@@ -57,4 +56,3 @@ Gibt an, ob die [Parameter](../../../ado/reference/ado-api/parameter-object.md) 
 |||  
 |-|-|  
 |[CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|[Direction-Eigenschaft](../../../ado/reference/ado-api/direction-property.md)|
-

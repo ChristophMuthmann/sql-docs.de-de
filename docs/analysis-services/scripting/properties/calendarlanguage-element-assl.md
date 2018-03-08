@@ -2,40 +2,35 @@
 title: CalendarLanguage-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CalendarLanguage Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CalendarLanguage Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CalendarLanguage
-helpviewer_keywords:
-- CalendarLanguage element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CalendarLanguage
+helpviewer_keywords: CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b9f8888f4d034ae01d92c4f166073336e253490
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b07200c3f6f33a72d577d74fb6070ae3b7c799e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calendarlanguage-element-assl"></a>CalendarLanguage-Element (ASSL)
-  Definiert die für verwendete Kalendersprache der [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert die für verwendete Kalendersprache der [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Integer|  
 |Standardwert|**1033**|  
@@ -61,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Dies ist die Sprache, in der Dimensionselementnamen erstellt werden. Die Sprache von Beschriftungen sollte mit ganzzahlig-basierten LCID-Codes definiert werden. Zum Beispiel stellt den Standardwert die English-US LCID dar.  
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

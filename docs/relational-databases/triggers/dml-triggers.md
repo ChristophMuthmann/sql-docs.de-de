@@ -2,9 +2,12 @@
 title: DML-Trigger | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 52773af792848bd628c238e0120f08f7441c2d6f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dml-triggers"></a>DML-Trigger
-  Bei DML-Triggern handelt es sich um einen bestimmten Typ einer gespeicherten Prozedur, die automatisch wirksam wird, sobald ein DML-Ereignis (Data Manipulation Language, Datenbearbeitungssprache) ausgeführt wird, das sich auf die im Trigger definierte Tabelle oder Sicht auswirkt. DML-Ereignisse schließen die Anweisungen INSERT, UPDATE oder DELETE ein. DML-Trigger können zum Erzwingen von Geschäftsregeln und Datenintegrität, Abfragen anderer Tabellen und Einschließen komplexer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden. Der Trigger und die auslösende Anweisung werden wie eine einzige Transaktion behandelt, für die aus dem Trigger heraus ein Rollback ausgeführt werden kann. Tritt ein schwerer Fehler auf (z B. bei unzureichendem Speicherplatz), wird für die gesamte Transaktion automatisch ein Rollback ausgeführt.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Bei DML-Triggern handelt es sich um einen bestimmten Typ einer gespeicherten Prozedur, die automatisch wirksam wird, sobald ein DML-Ereignis (Data Manipulation Language, Datenbearbeitungssprache) ausgeführt wird, das sich auf die im Trigger definierte Tabelle oder Sicht auswirkt. DML-Ereignisse schließen die Anweisungen INSERT, UPDATE oder DELETE ein. DML-Trigger können zum Erzwingen von Geschäftsregeln und Datenintegrität, Abfragen anderer Tabellen und Einschließen komplexer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden. Der Trigger und die auslösende Anweisung werden wie eine einzige Transaktion behandelt, für die aus dem Trigger heraus ein Rollback ausgeführt werden kann. Tritt ein schwerer Fehler auf (z B. bei unzureichendem Speicherplatz), wird für die gesamte Transaktion automatisch ein Rollback ausgeführt.  
   
 ## <a name="dml-trigger-benefits"></a>Vorteile von DML-Triggern  
  DML-Trigger ähneln Einschränkungen insofern, als sie die Entitätsintegrität oder Domänenintegrität erzwingen können. Im Allgemeinen sollte die Entitätsintegrität immer auf der untersten Ebene durch Indizes erzwungen werden, die Teil von PRIMARY KEY- und UNIQUE-Einschränkungen sind oder unabhängig von Einschränkungen erstellt wurden. Die Domänenintegrität sollte durch CHECK-Einschränkungen und referenzielle Integrität (RI) sollte durch FOREIGN KEY-Einschränkungen erzwungen werden. DML-Trigger sind dann am sinnvollsten, wenn die von Einschränkungen unterstützten Funktionen nicht die Funktionalitätsanforderungen der Anwendung erfüllen.  
@@ -64,14 +68,14 @@ ms.lasthandoff: 06/22/2017
 |Anzahl pro Tabelle oder Sicht|Mehrere Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|Ein Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|  
 |Kaskadierende Verweise|Keine Einschränkungen|INSTEAD OF UPDATE- und DELETE-Trigger sind nicht für Tabellen zulässig, die Ziel von kaskadierenden Einschränkungen für die referenzielle Integrität sind.|  
 |Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br /><br /> Deklarativen referenziellen Aktionen<br /><br /> Erstellung der**inserted** - und **deleted** -Tabellen<br /><br /> Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
-|Ausführungsreihenfolge|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht zutreffend|  
+|Ausführungsreihenfolge|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht verfügbar|  
 |**varchar(max)**-, **nvarchar(max)**-, und **varbinary(max)** -Spaltenverweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
 |Verweise auf**text**, **ntext**- und **image** -Spalten in **inserted** - und **deleted** -Tabellen|Nicht zulässig|Zulässig|  
   
  CLR-Trigger  
  Ein CLR-Trigger kann ein AFTER- oder ein INSTEAD OF-Trigger sein. Bei einem CLR-Trigger kann es sich auch um einen DDL-Trigger handeln. Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Task|Thema|  
 |----------|-----------|  
@@ -86,7 +90,7 @@ ms.lasthandoff: 06/22/2017
 |Beschreibt, wie DML-Trigger gelöscht oder deaktiviert werden.|[Löschen oder Deaktivieren von DML-Triggern](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Beschreibt, wie Triggersicherheit verwaltet wird.|[Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

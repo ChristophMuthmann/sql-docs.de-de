@@ -3,24 +3,25 @@ title: "Beispiel für grundlegende Datentypen | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ae9417b20f6a8c25d690bcfdbda86fc51f7b074
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 424b1442a554cc2e4e52b0bf11c50c276d2a32cf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="basic-data-types-sample"></a>Standarddatentypen - Beispiel
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -173,4 +174,3 @@ public class basicDT {
  [Arbeiten mit Datentypen &#40; JDBC &#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   
-

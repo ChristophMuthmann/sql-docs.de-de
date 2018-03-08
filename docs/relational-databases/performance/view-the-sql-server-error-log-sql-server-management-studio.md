@@ -2,11 +2,13 @@
 title: Anzeigen des SQL Server-Fehlerprotokolls (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,38 +18,36 @@ helpviewer_keywords:
 - logs [SQL Server], SQL Server error logs
 - logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "14"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a8823906fc96755dd70862e0a362562b956d2739
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
-ms.openlocfilehash: a8c1290e33ad567520c813a1f365830644f545c7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Anzeigen des SQL Server-Fehlerprotokolls (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält benutzerdefinierte Ereignisse und bestimmte Systemereignisse, die für die Problembehandlung nützlich sind. 
 
-Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll enthält benutzerdefinierte Ereignisse und bestimmte Systemereignisse, die für die Problembehandlung nützlich sind. 
+## <a name="view-the-logs"></a>Anzeigen der Protokolle
 
-## <a name="how-to-view-the-logs"></a>Anzeigen der Protokolle
-
-1.  Wählen Sie **Objekt-Explorer** in SSMS aus. **Öffnen** Sie den Objekt-Explorer entweder mit **F8**. oder klicken Sie im oberen Menü auf **Ansicht**, und wählen Sie **Objekt-Explorer** aus:
+1. Wählen Sie in SQL Server Management Studio die Option **Objekt-Explorer** aus. Um den **Objekt-Explorer** zu öffnen, wählen Sie F8 aus. Alternativ klicken Sie im Hauptmenü auf **Ansicht**, und wählen Sie dann **Objekt-Explorer** aus:
     
-    ![Object_explorer](../../relational-databases/performance/media/object-explorer.png) 
+    ![Object_Explorer](../../relational-databases/performance/media/object-explorer.png) 
 
-2.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von SQL Server her, und erweitern Sie dann diese Instanz.
+2. Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von SQL Server her, und erweitern Sie dann diese Instanz.
   
-3.  Suchen und erweitern Sie den Abschnitt **Verwaltung** (unter der Voraussetzung, dass Sie über Berechtigungen zum Anzeigen verfügen).
+3. Suchen und erweitern Sie den Abschnitt **Verwaltung** (unter der Voraussetzung, dass Sie über Berechtigungen zum Anzeigen verfügen).
 
-4.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Protokolle**, wählen Sie erst **Ansicht** und anschließend **SQL Server-Protokoll anzeigen** aus.
+4. Klicken Sie mit der rechten Maustaste auf **SQL Server-Protokolle**, wählen Sie erst **Ansicht** und anschließend **SQL Server-Protokoll** aus.
 
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
-5.  Der Protokolldatei-Viewer öffnet sich, und es wird eine Liste der verfügbaren Protokolle angezeigt (dies kann einen Moment dauern).
+5. Der **Protokolldatei-Viewer** wird geöffnet, und es wird eine Liste der verfügbaren Protokolle angezeigt (dies kann einen Moment dauern).
   
-6. Eine Reihe von Personen hat den nützlichen Beitrag [Identify location of the SQL Server Error Log file (Bestimmen des Speicherorts der SQL Server-Fehlerprotokolldatei)](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)[MSSQLTips.com](https://www.mssqltips.com/) empfohlen. Da finden Sie eine Menge wirklich guter Informationen – probieren Sie es unbedingt aus!
-
+  ## <a name="see-also"></a>Siehe auch
+  Weitere Informationen finden Sie in dem nützlichen [MSSQLTips.com](https://www.mssqltips.com/)-Beitrag [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/) (Bestimmen des Speicherorts der SQL Server-Fehlerprotokolldatei).
 

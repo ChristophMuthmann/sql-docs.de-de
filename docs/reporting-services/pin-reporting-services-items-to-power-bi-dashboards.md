@@ -1,13 +1,14 @@
 ---
-title: Anheften von Reporting Services-Elementen an Power BI-Dashboards | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: Anheften von Reporting Services-Elementen an Power BI-Dashboards | Microsoft-Dokumentation
+ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +18,21 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "23"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3f349916c1047360afa77ee81a9ff9e33699ed65
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Anheften von Reporting Services-Elementen an Power BI-Dashboards
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ermöglicht es Benutzern, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtselemente aus der Berichts-Viewer-Symbolleiste als neue Kachel an ein [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard anzuheften.   Zum Anheften muss der Administrator den Berichtsserver zuerst in Azure Active Directory und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integrieren.  
   
- ![Rs_powerbi_icon](../reporting-services/media/ssrs-powerbi-icon.png "Rs_powerbi_icon")  
+ ![Reporting Services-Power BI-Symbol](../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")  
   
  [!INCLUDE[applies](../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Heften Sie Sie aus der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichts-Viewer in t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]er z. B. `http://myserver/Reports`.  Das Anheften ist weder aus [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]noch aus dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]oder aus einer Berichtsserver-URL möglich,  Z. B. `http://myserver/ReportServer`.  
+-   Das Anheften erfolgt über den Berichts-Viewer für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], z.B. `http://myserver/Reports`.  Das Anheften ist weder aus [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]noch aus dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]oder aus einer Berichtsserver-URL möglich,  lediglich aus `http://myserver/ReportServer`.  
   
 -   Ihr Browser muss Popups von der Berichtsserversite zulassen.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 4. Wählen Sie das Berichtselement aus, das Sie an [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]anheften möchten. Sie können jeweils nur ein Element anheften.  Der Berichts-Viewer zeigt eine schattierte Sicht des Berichts an, und die Berichtselemente, die Sie anheften können, werden hervorgehoben. Die Elemente, die nicht angeheftet werden können, sind dunkel schattiert.  
   
-    **(1)** Wählen Sie die Gruppe aus, die das Dashboard enthält, an das Sie das Element anheften möchten, **(2)** wählen Sie das Dashboard aus, an das Sie das Element anheften möchten, und **(3)** wählen Sie aus, wie oft die Kachel im Dashboard aktualisiert werden soll.   ![Hinweis](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") die Aktualisierung erfolgt durch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Abonnements und nach dem anheften des Elements können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.  
+    **(1)** Wählen Sie die Gruppe aus, die das Dashboard enthält, an das Sie das Element anheften möchten, **(2)** wählen Sie das Dashboard aus, an das Sie das Element anheften möchten, und **(3)** wählen Sie aus, wie oft die Kachel im Dashboard aktualisiert werden soll.   ![Hinweis](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Die Aktualisierung wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angehängt wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -105,7 +105,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
 
 **(4)** Wenn Sie die Kachel auswählen, verwendet [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] den **(3) benutzerdefinierten Link** , um zur [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] -Seite des registrierten Berichtsservers zu navigieren. Der Link wurde während des Anheftens des Elements aus [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]festgelegt. Wenn Sie keine Internetverbindung mit dem Berichtsserver haben, wird im Browser ein Fehler angezeigt.  
 
-![Ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "Ssrs_pinned_tile_details")  
+![SQL Server Reporting Services: Details zu angehängten Kacheln](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
 ##  <a name="bkmk-troubleshoot"></a> Problembehandlung  
   
@@ -136,7 +136,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
-     Sie könnten auch die Abonnementeigenschaften bearbeiten und **Angezeigter Name des Berichts** in den Namen des entsprechenden Berichtselements ändern. ![Ändern Sie das visuelle Element für die Power Bi-Aktualisierung verwendet](../reporting-services/media/ssrs-powerbi-subscription-visual.png "ändern Sie die Visualisierung für die Power Bi-Aktualisierung verwendet")  
+     Sie könnten auch die Abonnementeigenschaften bearbeiten und **Angezeigter Name des Berichts** in den Namen des entsprechenden Berichtselements ändern. ![Für die Power BI-Aktualisierung verwendetes Steuerelement ändern](../reporting-services/media/ssrs-powerbi-subscription-visual.png "change the visual used for the power bi refresh")  
   
 -   **Löschen einer Kachel**. Wenn Sie eine Kachel in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]löschen, wird das zugehörige Abonnement in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und auf der Seite **Meine Abonnements**nicht gelöscht, und es wird eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt. So können das Abonnement löschen.  
   
@@ -146,12 +146,11 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
  [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

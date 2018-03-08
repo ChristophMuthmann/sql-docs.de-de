@@ -3,10 +3,12 @@ title: Mehrere Ergebnisse | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e537a1a767d0789333659d1aa26e57e11c42195e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-results"></a>Mehrere Ergebnisse
 Ein *Ergebnis* ist etwas von der Datenquelle zurückgegeben, nachdem eine Anweisung ausgeführt wird. ODBC verfügt über zwei Arten von Ergebnissen: Resultsets und Zeilen-. *Zeilen-* sind die Anzahl der Zeilen, die von einem Update betroffen löschen oder insert-Anweisung. Batches, in der beschriebenen [Batches von SQL-Anweisungen](../../../odbc/reference/develop-app/batches-of-sql-statements.md), mehrere Ergebnisse generieren können.  
@@ -58,4 +59,3 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  Es ist treiberspezifische gibt an, ob die gesamte Batch-Anweisung ausgeführt wird, bevor Ergebnisse verfügbar sind. In einigen Implementierungen ist dies der Fall. in anderen Fällen Aufrufen **SQLMoreResults** löst die Ausführung die nächste Anweisung im Batch.  
   
  Wenn einer der Anweisungen in einem Batch fehlschlägt, **SQLMoreResults** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück. Wenn der Batch abgebrochen wird, wenn Fehler bei der Anweisung oder die fehlerhafte Anweisung die letzte Anweisung im Batch wurde, **SQLMoreResults** SQL_ERROR zurück. Wenn der Batch nicht abgebrochen wird, wenn Fehler bei der Anweisung und die fehlgeschlagene Anweisung nicht die letzte Anweisung im Batch war **SQLMoreResults** wird SQL_SUCCESS_WITH_INFO zurückgegeben. SQL_SUCCESS_WITH_INFO gibt an, dass mindestens ein Resultset oder Count generiert wurde und der Batch nicht abgebrochen wurde.
-

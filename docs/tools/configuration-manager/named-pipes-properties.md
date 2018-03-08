@@ -2,9 +2,12 @@
 title: Named Pipes-Eigenschaften | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,22 +18,22 @@ helpviewer_keywords:
 - pipes [SQL Server], listening on pipes
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7a8a88c3d7f54d4bf31cb5256e52d8257297ae91
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5e2f9b67c74a5eea97209bb812ee2e385c9c41a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="named-pipes-properties"></a>Named Pipes-Eigenschaften
-  Verwenden Sie die Seite **Protokoll**im Dialogfeld **Named Pipes-Eigenschaften** , um die Named Pipe anzuzeigen oder zu ändern, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verwenden des Named Pipes-Protokoll überwacht wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Verwenden Sie die Seite **Protokoll**im Dialogfeld **Named Pipes-Eigenschaften** , um die Named Pipe anzuzeigen oder zu ändern, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verwenden des Named Pipes-Protokoll überwacht wird.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]muss neu gestartet werden, um zu aktivieren oder deaktivieren Sie das Protokoll oder die named Pipe zu ändern.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um das Protokoll zu aktivieren oder zu deaktivieren oder die Named Pipe zu ändern.  
   
 ## <a name="options"></a>enthalten  
  **Enabled**  
@@ -53,4 +56,3 @@ ms.lasthandoff: 08/02/2017
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
-

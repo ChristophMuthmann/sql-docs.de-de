@@ -2,36 +2,33 @@
 title: DMSCHEMA_MINING_MODELS Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODELS
+apiname: DMSCHEMA_MINING_MODELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f857cf206932ad8048768c2c65f047670ec9d1e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS-Rowset
-  Listet die Data Mining-Modelle im aktuellen Katalog auf. Die **DMSCHEMA_MINING_MODELS** Rowset enthält Informationen wie Modellnamen, Verarbeitungsdatum und die jedes Miningmodell zugeordneten miningalgorithmen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Listet die Datamining-Modelle im aktuellen Katalog auf. Die **DMSCHEMA_MINING_MODELS** Rowset enthält Informationen wie Modellnamen, Verarbeitungsdatum und die jedes Miningmodell zugeordneten miningalgorithmen.  
   
  zugreifen. Die **DMSCHEMA_MINING_MODELS** Schemarowset ist vergleichbar mit der [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) -Schemarowsets und die gleiche Weise verwendet werden kann.  
   
@@ -77,7 +74,6 @@ ms.lasthandoff: 09/01/2017
  Beispiele zum Abfragen dieses Rowsets, finden Sie unter [Abfragen, die Parameter, die zum Erstellen eines Miningmodells verwendet](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

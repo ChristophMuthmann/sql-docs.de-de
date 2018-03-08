@@ -3,8 +3,11 @@ title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - priority deadlock settings [SQL Server]
 - SET DEADLOCK_PRIORITY statement
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 12be78ffb2e899170095415a03dccc69511f7424
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Gibt die relative Bedeutung an, um zu bestimmen, ob die aktuelle Sitzung die Verarbeitung fortsetzt, wenn ein Deadlock mit einer anderen Sitzung vorliegt.  
   
@@ -75,7 +77,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  Von der für die Sitzungen festgelegten Deadlockpriorität hängt ab, welche Sitzung als Deadlockopfer ausgewählt wird:  
   
--   Wenn für beide Sitzungen die gIeiche Deadlockprioriät festgelegt wurde, wählt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diejenige Sitzung als Deadlockopfer aus, für die das Rollback weniger aufwändig ist. Wenn beispielsweise für beide Sitzungen die Deadlockpriorität HIGH festgelegt wurde, wählt die Instanz diejenige Sitzung als Opfer aus, bei der das Rollback voraussichtlich weniger aufwändig sein wird.  
+-   Wenn für beide Sitzungen die gIeiche Deadlockprioriät festgelegt wurde, wählt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diejenige Sitzung als Deadlockopfer aus, für die das Rollback weniger aufwändig ist. Wenn beispielsweise für beide Sitzungen die Deadlockpriorität HIGH festgelegt wurde, wählt die Instanz diejenige Sitzung als Opfer aus, bei der das Rollback voraussichtlich weniger aufwändig sein wird. Die Kosten wird bestimmt durch Vergleich der Anzahl der Protokollbytes, die bis zu diesem Zeitpunkt in der jeweiligen Transaktion geschrieben. (Sie können diesen Wert als "Protokoll verwendet" in einem deadlockdiagramm finden Sie unter).
   
 -   Wenn die Sitzungen verschiedene Deadlockprioritäten aufweisen, wird die Sitzung mit der niedrigsten Deadlockpriorität als Deadlockopfer ausgewählt.  
   
@@ -108,4 +110,3 @@ GO
  [SET LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   
-

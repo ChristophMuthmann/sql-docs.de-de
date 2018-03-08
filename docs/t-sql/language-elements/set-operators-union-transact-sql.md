@@ -3,8 +3,11 @@ title: UNION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - combining query results
 - UNION operator [SQL Server]
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 29f86913fd2fb6bf04c4c00d95427d34128c8fee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7c71b2eae1c0c3e55d09cdc5af2dfd7740df143f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-operators---union-transact-sql"></a>Mengenoperatoren Sie - UNION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Kombiniert die Ergebnisse von mindestens zwei Abfragen zu einem Resultset, das alle Zeilen enthält, die zu allen Abfragen der Vereinigung gehören. Der UNION-Vorgang unterscheidet sich von dem Verwenden von Joins, die Spalten aus zwei Tabellen kombinieren.  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\<Query_specification > | ( \<Query_expression >) ist eine Abfragespezifikation oder ein Abfrageausdruck, der Daten zurückgibt, die mit den Daten aus einer anderen Abfrageangabe oder Abfrageausdruck kombiniert werden. Die Definitionen der Spalten, die Bestandteil eines UNION-Vorgangs sind, müssen nicht identisch, jedoch durch implizite Konvertierung kompatibel sein. Datentypen unterschiedlich sind, das der resultierenden Datentyp bestimmt, in gemäß den Regeln für [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md). Wenn die Typen identisch sind, diese sich aber in der Genauigkeit, Dezimalstellenanzahl oder Länge unterscheiden, wird das Ergebnis basierend auf denselben Regeln wie für das Kombinieren von Ausdrücken bestimmt. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | ( \<query_expression> ) Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. Die Definitionen der Spalten, die Bestandteil eines UNION-Vorgangs sind, müssen nicht identisch, jedoch durch implizite Konvertierung kompatibel sein. Datentypen unterschiedlich sind, das der resultierenden Datentyp bestimmt, in gemäß den Regeln für [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md). Wenn die Typen identisch sind, diese sich aber in der Genauigkeit, Dezimalstellenanzahl oder Länge unterscheiden, wird das Ergebnis basierend auf denselben Regeln wie für das Kombinieren von Ausdrücken bestimmt. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
  Spalten mit den **Xml** -Datentyp muss äquivalent sein. Alle Spalten müssen entweder einen XML-Schematyp aufweisen oder nicht typisiert sein. Wenn sie typisiert sein, müssen sie derselben XML-Schemaauflistung zugeordnet werden.  
   
@@ -359,5 +361,4 @@ FROM DimCustomer
  [Wählen Sie die Beispiele &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
   
   
-
 

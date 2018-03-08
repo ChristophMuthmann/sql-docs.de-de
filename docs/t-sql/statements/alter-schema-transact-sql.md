@@ -1,10 +1,13 @@
 ---
 title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 05/01/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - schemas [SQL Server], modifying
 - modifying schemas
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad157c7d4d7b92bc199c4a490d4387acc0af0908
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 30ef553ccfba1f30be9b75f8d0290115be395925
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Überträgt ein sicherungsfähiges Element zwischen Schemas.  
   
@@ -67,11 +69,11 @@ ALTER SCHEMA schema_name
  *schema_name*  
  Der Name eines Schemas in der aktuellen Datenbank, in das das sicherungsfähige Element verschoben wird. Kann weder SYS noch INFORMATION_SCHEMA sein.  
   
- \<Entity_type >  
+ \<entity_type>  
  Die Klasse der Entität, für die der Besitzer geändert wird. Object ist der Standardwert.  
   
  *securable_name*  
- Bezeichnet den ein- oder zweiteiligen Namen eines sicherungsfähigen Elements mit Schemabereich, das in das Schema verschoben werden soll.  
+ Ist die einteiligen oder zweiteiligen Namen von einem Schemabereich sicherungsfähigen Elements, das in das Schema verschoben werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Benutzer und Schemas vollkommen voneinander getrennt.  
@@ -82,7 +84,11 @@ ALTER SCHEMA schema_name
   
  Alle dem sicherungsfähigen Element zugeordneten Berechtigungen werden gelöscht, wenn das sicherungsfähige Element in das neue Schema verschoben wird. Wurde der Besitzer des sicherungsfähigen Elements explizit festgelegt, bleibt der Besitzer unverändert. Wenn der Besitzer des sicherungsfähigen Elements auf SCHEMA OWNER festgelegt wurde, bleibt diese Einstellung zunächst erhalten. Nach dem Verschieben wird SCHEMA OWNER jedoch zum Besitzer des neuen Schemas aufgelöst. principal_id des neuen Besitzers ist NULL.  
   
- So ändern Sie das Schema einer Tabelle oder Sicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], im Objekt-Explorer mit der Maustaste die Tabelle oder Sicht, und klicken Sie dann auf **Entwurf**. Drücken Sie **F4** um das Eigenschaftenfenster zu öffnen. In der **Schema** wählen ein neues Schema.  
+ Verschieben eine gespeicherte Prozedur, Funktion, Sicht oder Trigger wird der Schemaname nicht ändern, wenn vorhanden, der das entsprechende entweder in der definitionsspalte der Objekt der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht oder erhalten hat, mithilfe der [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) integrierte Funktion. Aus diesem Grund wird empfohlen, ALTER SCHEMA nicht verwendet werden, um diese Objekttypen zu verschieben. Löschen Sie stattdessen auf, und das Objekt in das neue Schema neu erstellen.  
+  
+ Das Verschieben eines Objekts, z. B. eine Tabelle oder ein Synonym werden Verweise auf dieses Objekt nicht automatisch aktualisiert. Sie müssen Objekte ändern, die das übertragene Objekt, manuell verweisen. Wenn Sie eine Tabelle verschieben, und diese Tabelle in einem Trigger verwiesen wird, müssen Sie z. B. den Trigger entsprechend den neuen Schemanamen ändern. Verwendung [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) für eine Liste der Abhängigkeiten für das Objekt vor dem verschieben.  
+
+ So ändern Sie das Schema einer Tabelle mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Objekt-Explorer mit der Maustaste auf die Tabelle, und klicken Sie dann auf **Entwurf**. Drücken Sie **F4** um das Eigenschaftenfenster zu öffnen. In der **Schema** wählen ein neues Schema.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -90,7 +96,7 @@ ALTER SCHEMA schema_name
 ## <a name="permissions"></a>Berechtigungen  
  Für die Übertragung eines sicherungsfähigen Elements aus einem anderen Schema benötigt der aktuelle Benutzer die CONTROL-Berechtigung für das sicherungsfähige Element (nicht das Schema) sowie die ALTER-Berechtigung für das Zielschema.  
   
- Verfügt das sicherungsfähige Element über eine EXECUTE AS OWNER-Spezifikation und der Benutzer ist als SCHEMA OWNER festgelegt, benötigt der Benutzer auch die IMPERSONATION-Berechtigung für den Besitzer des Zielschemas.  
+ Wenn das sicherungsfähige Element weist eine EXECUTE AS OWNER-Spezifikation auf, und der Besitzer auf SCHEMA OWNER festgelegt ist, muss der Benutzer auch auf den Besitzer des Zielschemas IMPERSONATE-Berechtigung verfügen.  
   
  Alle dem sicherungsfähigen Element, das übertragen wird, zugeordneten Berechtigungen werden gelöscht, wenn es verschoben wird.  
   
@@ -155,10 +161,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

@@ -2,40 +2,35 @@
 title: Columns-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Columns Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Columns Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- COLUMNS
-helpviewer_keywords:
-- Columns element
+applies_to: SQL Server 2016 Preview
+f1_keywords: COLUMNS
+helpviewer_keywords: Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6ede10e4bdb4053050dbd299c49a40359450737c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 85e58f48f9b014e6dcb2f79982ad96b19afdae95
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="columns-element-assl"></a>Columns-Element (ASSL)
-  Enthält die Auflistung der Spalten, die mit dem übergeordneten Element verknüpft sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der Spalten mit dem übergeordneten Element verknüpft sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,10 +53,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
 |Cardinality|Finden Sie in der folgenden Tabelle aus.|  
   
 |Vorgänger oder übergeordnetes Element|Cardinality|  
@@ -94,4 +89,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

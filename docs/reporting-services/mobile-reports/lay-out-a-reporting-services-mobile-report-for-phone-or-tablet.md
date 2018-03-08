@@ -1,29 +1,30 @@
 ---
-title: "Anordnen von mobilen Reporting Services-Berichte für Smartphone oder Tablet | Microsoft Docs"
+title: "Gestalten eines mobilen Reporting Services-Berichts für Telefone oder Tablets | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 283c93958b4cb8bedc890e8af942db3bc3c13a41
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d5b0d607f3e111c5cc2e05f303d43d236c76b50
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Gestalten eines mobilen Reporting Services-Berichts für Telefone oder Tablets
-Nachdem Sie in [ ](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) Ihren mobilen Reporting Services-Bericht erstellt haben [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], können Sie eine für Telefone und Tablets angepasste Version dieses Berichts gestalten.  
+Nachdem Sie in [Ihren mobilen Reporting Services-Bericht erstellt haben](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], können Sie eine für Telefone und Tablets angepasste Version dieses Berichts gestalten.  
   
 ![SSMRP_SalesTrendRptLayout](../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png)   
 *Das Masterlayout für den mobilen Bericht.*  
@@ -48,4 +49,3 @@ Nachdem Sie in [ ](../../reporting-services/mobile-reports/create-a-reporting-se
 - [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

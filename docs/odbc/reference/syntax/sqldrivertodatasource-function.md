@@ -3,33 +3,30 @@ title: SQLDriverToDataSource Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDriverToDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDriverToDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDriverToDataSource
-helpviewer_keywords:
-- SQLDriverToDataSource function [ODBC]
+f1_keywords: SQLDriverToDataSource
+helpviewer_keywords: SQLDriverToDataSource function [ODBC]
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd6fee8d18326d09781f4890b63f4c12191f3465
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0582038f1b1b89da041fde96e77bbdc47cad12a0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource-Funktion
 **SQLDriverToDataSource** Übersetzungen für ODBC-Treiber unterstützt. Diese Funktion wird nicht von ODBC-fähigen Anwendungen aufgerufen wird. Anwendungen fordern Übersetzung über **SQLSetConnectAttr**. Die zugeordneten Treibers Untersuchen der *Verbindungshandle* im angegebenen **SQLSetConnectAttr** Ruft die angegebene DLL um Übersetzungen für alle Daten, die aus dem Treiber mit der Datenquelle auszuführen. Eine Standard-Konvertierungs-DLL kann in der ODBC-Initialisierungsdatei angegeben werden.  
@@ -114,4 +111,3 @@ BOOL SQLDriverToDataSource(
 |Übersetzen von Daten zurückgegeben aus der Datenquelle|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|  
 |Die Einstellung der Verbindungsattribut zurückgeben|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Ein Verbindungsattribut festlegen|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
-

@@ -3,8 +3,11 @@ title: Erstellen des DIENSTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f281cd0f60c0f4f2a37419af4870d927868183a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5298494b6c3be0685df771f6d86e11c7b788d002
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt einen neuen Dienst. Bei einem [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dienst handelt es sich um einen Namen für einen bestimmten Task oder eine Gruppe von Tasks. [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet den Namen des Diensts zum Weiterleiten von Nachrichten, zum Übermitteln von Nachrichten an die richtige Warteschlange innerhalb einer Datenbank und zum Erzwingen des Vertrags für eine Konversation.  
   
@@ -117,4 +119,3 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

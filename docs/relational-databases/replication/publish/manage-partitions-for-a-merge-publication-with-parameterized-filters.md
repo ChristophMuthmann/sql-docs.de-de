@@ -2,11 +2,13 @@
 title: "Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - merge replication partitions [SQL Server replication], SQL Server Management Studio
 - parameterized filters [SQL Server replication], partition management
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 04a4d84f16cdf7d208f52fcb27f210d3e26e073d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern
-  In diesem Thema wird beschrieben, wie Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) verwaltet werden. Mithilfe parametrisierter Zeilenfilter können nicht überlappende Partitionen generiert werden. Diese Partitionen können eingeschränkt werden, sodass nur ein Abonnement eine bestimmte Partition erhält. In solchen Fällen führt eine große Anzahl von Abonnenten zu einer großen Anzahl von Partitionen, was wiederum eine gleiche Anzahl von partitionierten Momentaufnahmen erforderlich macht. Weitere Informationen finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (Replication Management Objects, RMO) verwaltet werden. Mithilfe parametrisierter Zeilenfilter können nicht überlappende Partitionen generiert werden. Diese Partitionen können eingeschränkt werden, sodass nur ein Abonnement eine bestimmte Partition erhält. In solchen Fällen führt eine große Anzahl von Abonnenten zu einer großen Anzahl von Partitionen, was wiederum eine gleiche Anzahl von partitionierten Momentaufnahmen erforderlich macht. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **In diesem Thema**  
   
@@ -43,16 +44,16 @@ ms.lasthandoff: 08/03/2017
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Wenn Sie, wie empfohlen, ein Skript für eine Replikationstopologie erstellen, enthalten die Veröffentlichungsskripts die Aufrufe der gespeicherten Prozedur zum Erstellen von Datenpartitionen. Die Skripts stellen einen Verweis für die erstellten Partitionen bereit und ermöglichen das erneute Erstellen von Partitionen, falls dies erforderlich wird. Weitere Informationen finden Sie unter [Skript Replikation](../../../relational-databases/replication/scripting-replication.md).  
+-   Wenn Sie, wie empfohlen, ein Skript für eine Replikationstopologie erstellen, enthalten die Veröffentlichungsskripts die Aufrufe der gespeicherten Prozedur zum Erstellen von Datenpartitionen. Die Skripts stellen einen Verweis für die erstellten Partitionen bereit und ermöglichen das erneute Erstellen von Partitionen, falls dies erforderlich wird. Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
--   Wenn eine Veröffentlichung parametrisierte Filter aufweist, die Abonnements mit nicht überlappenden Partitionen ergeben, und ein bestimmtes Abonnement verloren gegangen ist und neu erstellt werden muss, müssen Sie wie folgt vorgehen: Entfernen Sie die Partition, die abonniert wurde, erstellen Sie das Abonnement neu, und erstellen Sie dann die Partition neu. Weitere Informationen finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). Durch Replikation werden Erstellungsskripts für vorhandene Abonnentenpartitionen generiert, wenn ein Erstellungsskript für eine Veröffentlichung generiert wird. Weitere Informationen finden Sie unter [Skript Replikation](../../../relational-databases/replication/scripting-replication.md).  
+-   Wenn eine Veröffentlichung parametrisierte Filter aufweist, die Abonnements mit nicht überlappenden Partitionen ergeben, und ein bestimmtes Abonnement verloren gegangen ist und neu erstellt werden muss, müssen Sie wie folgt vorgehen: Entfernen Sie die Partition, die abonniert wurde, erstellen Sie das Abonnement neu, und erstellen Sie dann die Partition neu. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). Durch Replikation werden Erstellungsskripts für vorhandene Abonnentenpartitionen generiert, wenn ein Erstellungsskript für eine Veröffentlichung generiert wird. Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- Zum Verwalten von Partitionen steht Ihnen die Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Auf dieser Seite können Sie Partitionen erstellen und löschen, Abonnenten ermöglichen, die Momentaufnahmegenerierung und -bereitstellung zu initialisieren, Momentaufnahmen für eine oder mehrere Partitionen generieren und einen Cleanup von Momentaufnahmen ausführen.  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ Zum Verwalten von Partitionen steht Ihnen die Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Auf dieser Seite können Sie Partitionen erstellen und löschen, Abonnenten ermöglichen, die Momentaufnahmegenerierung und -bereitstellung zu initialisieren, Momentaufnahmen für eine oder mehrere Partitionen generieren und einen Cleanup von Momentaufnahmen ausführen.  
   
 #### <a name="to-create-a-partition"></a>So erstellen Sie eine Partition  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Das Datum der letzten Ausführung eines Auftrags für eine partitionierte Momentaufnahme.  
   
- Während der zweite Teil der zweiteiligen Momentaufnahme bedarfsgerecht generiert werden kann, wenn ein neues Abonnement initialisiert wird, können Sie mithilfe der nachfolgenden Anweisungen die Generierung dieser Momentaufnahme steuern und die Momentaufnahme im Voraus zu einem beliebigen Zeitpunkt erstellen. Weitere Informationen finden Sie unter [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Während der zweite Teil der zweiteiligen Momentaufnahme bedarfsgerecht generiert werden kann, wenn ein neues Abonnement initialisiert wird, können Sie mithilfe der nachfolgenden Anweisungen die Generierung dieser Momentaufnahme steuern und die Momentaufnahme im Voraus zu einem beliebigen Zeitpunkt erstellen. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 #### <a name="to-view-information-on-existing-partitions"></a>So zeigen Sie Informationen zu vorhandenen Partitionen an  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **@host_name** – wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert definiert wird.  
   
-2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>So löschen Sie eine Partition  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 08/03/2017
      Dadurch werden zudem der Momentaufnahmeauftrag und alle Momentaufnahmedateien für die Partition entfernt.  
   
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
- Um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können, können Sie programmgesteuert neue Abonnentenpartitionen erstellen, die vorhandenen Abonnentenpartitionen aufzählen und Abonnentenpartitionen mithilfe von Replikationsverwaltungsobjekten (RMO) entfernen. Informationen zum Erstellen von Abonnentenpartitionen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
+ Um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können, können Sie programmgesteuert neue Abonnentenpartitionen erstellen, die vorhandenen Abonnentenpartitionen aufzählen und Abonnentenpartitionen mithilfe von Replikationsverwaltungsobjekten (RMO) entfernen. Informationen zum Erstellen von Abonnentenpartitionen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
   
 -   Der Wert und die Filterfunktion, auf dem bzw. der die Partition basiert.  
   
@@ -164,9 +165,8 @@ ms.lasthandoff: 08/03/2017
   
 7.  Wiederholen Sie Schritt 6 für jede zu löschende Partition.  
   
-## <a name="see-also"></a>Siehe auch  
- [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   
-

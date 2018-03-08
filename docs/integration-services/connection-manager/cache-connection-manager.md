@@ -1,10 +1,13 @@
 ---
-title: Cacheverbindungs-Manager | Microsoft Docs
+title: Cacheverbindungs-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f645f1e81965c0b39a63f7317fc660639df5d0e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest Daten aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Unabhängig davon, ob der Cacheverbindungs-Manager für die Verwendung einer Cachedatei konfiguriert ist, werden die Daten stets im Arbeitsspeicher gespeichert.  
@@ -56,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Weitere Informationen dazu, wie Sie programmgesteuert einen Verbindungs-Manager so konfigurieren, finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Verbindungen programmgesteuert hinzufügen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und unter [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="cache-connection-manager-editor"></a>Editor für den Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest ein Verweisdataset aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Die Daten werden immer im Arbeitsspeicher abgelegt.  
@@ -71,11 +73,11 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="generaltab"></a> Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Cacheverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
- **Description**  
+ **Beschreibung**  
  Beschreiben Sie die Verbindung. Die bewährte Methode ist hierbei, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
   
  **Dateicache verwenden**  
@@ -102,7 +104,7 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="columnstab"></a> Registerkarte 'Spalten'  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Column**  
  Geben Sie den Spaltennamen an.  
   
@@ -131,8 +133,7 @@ ms.lasthandoff: 08/09/2017
  **Codepage**  
  Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Code Page**aktualisieren.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
- [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

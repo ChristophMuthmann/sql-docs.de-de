@@ -2,9 +2,12 @@
 title: "Beispiele für Massenzugriff auf Daten in Azure Blob Storage | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - BULK INSERT, Azure blob storage
 - OPENROWSET, Azure blob storage
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-caps.latest.revision: 2
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6d94d679ee6eea27302f003fb5e0b7134fff8c08
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: ece80f578fc797dcd721dfb3f831e9bf3937abd1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Beispiele für Massenzugriff auf Daten in Azure Blob Storage
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Die Anweisungen `BULK INSERT` und `OPENROWSET` können direkt auf eine Datei in Azure Blob Storage zugreifen. In den folgenden Beispielen werden Daten aus einer CSV-Datei (Comma Separated Value: durch Trennzeichen getrennte Werte) (mit dem Namen `inv-2017-01-19.csv`) verwendet, die in einem Container (mit dem Namen `Week3`) gespeichert ist, der in einem Speicherkonto (mit dem Namen `newinvoices`) gespeichert ist. Der Pfad zur Datei kann verwendet werden, ist aber nicht in diesen Beispielen enthalten. 
 
@@ -41,7 +43,7 @@ Alle nachfolgenden Beispiele erfordern für die komplette Datenbank gültige Anm
 >  [!IMPORTANT]
 >  Die externe Datenquelle muss mit für die komplette Datenbank gültige Anmeldeinformationen erstellt werden, die die `SHARED ACCESS SIGNATURE`-Identität verwenden. Informationen zum Erstellen einer Shared Access Signature für das Speicherkonto finden Sie unter der Eigenschaft **Shared Access Signature** auf der Eigenschaftenseite des Speicherkontos im Azure-Portal. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Weitere Informationen finden Sie unter [ (Erstellen von datenbankweit gültigen Anmeldeinformationen)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
-Erstellen Sie datenbankweit gültige Anmeldeinformationen mithilfe von `IDENTITY`, die auf `SHARED ACCESS SIGNATURE` festgelegt sein muss. Verwenden Sie den geheimen Schlüssel aus dem Azure-Portal. Beispiel:  
+Erstellen Sie datenbankweit gültige Anmeldeinformationen mithilfe von `IDENTITY`, die auf `SHARED ACCESS SIGNATURE` festgelegt sein muss. Verwenden Sie den geheimen Schlüssel aus dem Azure-Portal. Zum Beispiel:  
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
@@ -107,11 +109,10 @@ WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
       FORMAT = 'CSV'); 
 ```
 
-## <a name="see-also"></a>Siehe auch   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter   
 
 [CREATE DATABASE SCOPED CREDENTIAL (Erstellen von datenbankweit gültigen Anmeldeinformationen)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
 [ERSTELLEN EINER EXTERNEN DATENQUELLE](../../t-sql/statements/create-external-data-source-transact-sql.md)   
 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)   
 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)   
-
 

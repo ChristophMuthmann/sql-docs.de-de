@@ -3,7 +3,7 @@ title: SortOrder-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5505596de79392b6974afa8f1282008707da3309
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6941ae3663d0f87c09f3f97e2c8e7d0adab3aaee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorder-property-adox"></a>SortOrder-Eigenschaft (ADOX)
 Gibt die Sortierreihenfolge für die Spalte (nur Indexspalten) an.  
@@ -50,4 +49,3 @@ Gibt die Sortierreihenfolge für die Spalte (nur Indexspalten) an.
  [SortOrder-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
-

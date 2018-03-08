@@ -3,8 +3,11 @@ title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-caps.latest.revision: 34
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dd8302417e09eeef6e8052db6ced58c47cd25158
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 64ae9cd8f03e31959d433377af368b675f5eeb63
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Entschlüsselt einen symmetrischen Schlüssel und stellt ihn zur Verwendung zur Verfügung.  
   
@@ -73,7 +75,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  Das Kennwort, mit dem der symmetrische Schlüssel geschützt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Geöffnete symmetrische Schlüssel werden an die Sitzung gebunden und nicht an den Sicherheitskontext. Ein geöffneter Schlüssel ist weiterhin verfügbar, bis er entweder explizit geschlossen oder die Sitzung beendet wird. Wenn Sie einen symmetrischen Schlüssel öffnen und dann den Kontext wechseln, bleibt der Schlüssel geöffnet und in dem durch Identitätswechsel übernommenen Kontext verfügbar. Informationen zu offenen symmetrischen Schlüsseln werden in der [sys.openkeys & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) -Katalogsicht angezeigt.  
+ Geöffnete symmetrische Schlüssel werden an die Sitzung gebunden und nicht an den Sicherheitskontext. Ein geöffneter Schlüssel ist weiterhin verfügbar, bis er entweder explizit geschlossen oder die Sitzung beendet wird. Wenn Sie einen symmetrischen Schlüssel öffnen und dann den Kontext wechseln, bleibt der Schlüssel geöffnet und in dem durch Identitätswechsel übernommenen Kontext verfügbar. Informationen zu offenen symmetrischen Schlüsseln werden in der [sys.openkeys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) -Katalogsicht angezeigt.  
   
  Falls der symmetrische Schlüssel mit einem anderen Schlüssel verschlüsselt wurde, muss zuerst dieser Schlüssel geöffnet werden.  
   
@@ -121,10 +123,9 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY & #40; Transact-SQL & #41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
-

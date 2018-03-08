@@ -2,31 +2,32 @@
 title: Konflikterkennung bei der Peer-zu-Peer-Replikation |Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "18"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2b248262e1344a7dc4652ed5d48aefa081a2f40
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Peer-zu-Peer - Konflikterkennung bei der Peer-zu-Peer-Replikation
-  Bei der Peer-zu-Peer-Transaktionsreplikation können Sie an einem beliebigen Knoten in der Topologie Daten einfügen, aktualisieren oder löschen, und Datenänderungen können an andere Knoten übermittelt werden. Da Sie Daten an einem beliebigen Knoten ändern können, können Datenänderungen an verschiedenen Knoten untereinander in Konflikt stehen. Wird eine Zeile an mehr als einem Knoten geändert, kann es zu einem Konflikt kommen, oder das Update kann sogar verloren gehen, wenn die Zeile an andere Knoten übermittelt wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei der Peer-zu-Peer-Transaktionsreplikation können Sie an einem beliebigen Knoten in der Topologie Daten einfügen, aktualisieren oder löschen, und Datenänderungen können an andere Knoten übermittelt werden. Da Sie Daten an einem beliebigen Knoten ändern können, können Datenänderungen an verschiedenen Knoten untereinander in Konflikt stehen. Wird eine Zeile an mehr als einem Knoten geändert, kann es zu einem Konflikt kommen, oder das Update kann sogar verloren gehen, wenn die Zeile an andere Knoten übermittelt wird.  
   
  Die Peer-zu-Peer-Replikation in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und neueren Versionen bietet die Option, die Konflikterkennung für eine gesamte Peer-zu-Peer-Topologie zu aktivieren. Mithilfe dieser Option kann Problemen vorgebeugt werden, die durch nicht erkannte Konflikte, einschließlich inkonsistentem Verhalten von Anwendungen und verlorenen Updates, entstehen. Standardmäßig wird, wenn diese Option aktiviert ist, eine konfliktverursachende Änderung als ein schwerwiegender Fehler betrachtet, der zu einem Fehler des Verteilungs-Agents führt. Bei einem Konflikt verbleibt die Topologie so lange in einem inkonsistenten Zustand, bis der Konflikt gelöst und die Datenkonsistenz in der Topologie wiederhergestellt wurde.  
   
@@ -104,8 +105,7 @@ ms.lasthandoff: 06/22/2017
   
     5.  Führen Sie [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus: Geben Sie 'p2p_continue_onconflict' für den @property-Parameter und **false** für den @value-Parameter an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   
-

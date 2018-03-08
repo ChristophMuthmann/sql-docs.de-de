@@ -3,22 +3,26 @@ title: Wiederherstellen einer SQL Server-Datenbank in Docker | Microsoft Docs
 description: In diesem Lernprogramm werden wiederherstellen wie einer SQL Server-datenbanksicherung in einem neuen Linux-Docker-Container.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
-ms.contentlocale: de-de
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer SQL Server-Sicherungsdatei in einem SQL Server 2017 Linux-containerimage in Docker ausgeführt wird.
 
@@ -32,12 +36,9 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 * Docker-Modul 1.8 für ein beliebiges unterstützt für Mac/Windows, Linux-Distribution oder Docker. Weitere Informationen finden Sie unter [installieren Sie Docker](https://docs.docker.com/engine/installation/).
-* Mindestens 4 GB Speicherplatz
-* Mindestens 4 GB RAM
+* Mindestens 2 GB Speicherplatz
+* Mindestens 2 GB RAM
 * [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> Die Standardeinstellung zu Docker für Mac und Docker für Windows beträgt 2 GB für die VM Moby, damit auf 4 GB geändert werden muss. Wenn Sie auf Mac oder Windows ausgeführt werden, erhöhen Sie die speichereinstellungen mithilfe der [Anweisungen in der Docker-Schnellstart](quickstart-install-connect-docker.md).
 
 ## <a name="pull-and-run-the-container-image"></a>Ziehen Sie aus, und führen Sie das Container-Bild
 
@@ -406,4 +407,3 @@ In diesem Lernprogramm haben Sie gelernt, wie Sichern einer Datenbank auf Window
 
 > [!div class="nextstepaction"]
 >[Für die Basiskonfiguration für SQL Server-2017 für Docker](sql-server-linux-configure-docker.md)
-

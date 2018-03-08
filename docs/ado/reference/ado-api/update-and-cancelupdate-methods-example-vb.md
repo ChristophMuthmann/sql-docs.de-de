@@ -3,7 +3,7 @@ title: Update- und CancelUpdate Methoden Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6c2f4f3de2ca297fb803eef8fd855611bf835282
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dcbfb39cd89804277d60bee7962d211d90569e0c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update- und CancelUpdate Methoden Beispiel (VB)
 Dieses Beispiel zeigt die [Update](../../../ado/reference/ado-api/update-method.md) Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  
@@ -132,4 +131,3 @@ Attribute VB_Name = "Update"
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)
-

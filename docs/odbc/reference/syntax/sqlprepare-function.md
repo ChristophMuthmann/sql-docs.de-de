@@ -3,33 +3,30 @@ title: SQLPrepare-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLPrepare
-apilocation:
-- sqlsrv32.dll
+apiname: SQLPrepare
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLPrepare
-helpviewer_keywords:
-- SQLPrepare function [ODBC]
+f1_keywords: SQLPrepare
+helpviewer_keywords: SQLPrepare function [ODBC]
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2bdb9a85c14f3636286ea9ca97ea173c9c2b65a4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare-Funktion
 **Konformität**  
@@ -137,4 +134,3 @@ SQLRETURN SQLPrepare(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

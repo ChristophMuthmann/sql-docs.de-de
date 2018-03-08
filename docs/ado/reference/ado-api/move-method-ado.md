@@ -3,7 +3,7 @@ title: Move-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 098ef46d9d0e336cb142b29b9b899ec0bcaf2eba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 69f3ce38f87be4670bcb08f80db076ce88d37212
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-ado"></a>Move-Methode (ADO)
 Verschiebt die Position des aktuellen Datensatzes in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -45,7 +44,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  Eine signierte **lange** Ausdruck, der die Anzahl der Datensätze angibt, das die Position des aktuellen Datensatzes bewegt.  
   
- *Starten*  
+ *Start*  
  Optional. Ein **Zeichenfolge** Wert oder **Variant** , die ein Lesezeichen ergibt. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -78,4 +77,3 @@ recordset.Move NumRecords, Start
  [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [MoveRecord-Methode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

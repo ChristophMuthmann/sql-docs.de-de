@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a702625e2bc1fbb00a8f7d1519d574a30d8df270
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 23eeee5244ccb92159c2afbc3ffb55fb586ff2f9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="read-method"></a>Read-Methode
 Liest eine angegebene Anzahl von Bytes aus einer Binärdatei [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -55,8 +54,7 @@ Variant = Stream.Read ( NumBytes)
 >  *NumBytes* immer misst Bytes. Für Text **Stream** Objekte ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**), verwenden Sie [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [ReadText-Methode](../../../ado/reference/ado-api/readtext-method.md)
-

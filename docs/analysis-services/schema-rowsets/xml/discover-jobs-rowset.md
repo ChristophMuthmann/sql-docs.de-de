@@ -2,33 +2,31 @@
 title: DISCOVER_JOBS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_JOBS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_JOBS rowset
 ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0fd27205ff919130eed2e7708031b0268f35408f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7dc22595beb3870d58aea4e0b98cdb51af92327b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverjobs-rowset"></a>DISCOVER_JOBS-Rowset
-  Stellt Informationen über die aktiven Aufträge bereit, die auf dem Server ausgeführt werden. Ein Auftrag ist ein Teil eines Befehls, der für den Befehl einen bestimmten Task ausführt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält Informationen über die aktiven Aufträge auf dem Server ausgeführt. Ein Auftrag ist ein Teil eines Befehls, der für den Befehl einen bestimmten Task ausführt.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_JOBS** -Rowset enthält die folgenden Spalten.  
@@ -58,7 +56,6 @@ ms.lasthandoff: 09/01/2017
 |JOB_MIN TOTAL_TIME_MS|DBTYPE_I8|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

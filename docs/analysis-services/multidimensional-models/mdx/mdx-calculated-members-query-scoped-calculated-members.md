@@ -2,33 +2,33 @@
 title: Erstellen im Bereich einer Abfrage berechnete Elemente (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WITH keyword
 - query-scoped calculated members [MDX]
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2ba34cb6af554bb958c8754a9971f3ff4ba5b9a6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3e4bb973a314a6f5ba9103960c4d54cb1a119fa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX berechnete Elemente - Bereich einer Abfrage berechnete Elemente
-  Wenn ein berechnetes Element nur für eine einzelne MDX-Abfrage (Multidimensional Expressions) benötigt wird, können Sie das berechnete Element mit dem WITH-Schlüsselwort definieren. Ein berechnetes Element, das mit dem WITH-Schlüsselwort erstellt wird, ist nach der Ausführung der Abfrage nicht länger vorhanden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Wenn ein berechnetes Element nur für eine einzelne MDX-Abfrage (Multidimensional Expressions) benötigt wird, können Sie das berechnete Element mit dem WITH-Schlüsselwort definieren. Ein berechnetes Element, das mit dem WITH-Schlüsselwort erstellt wird, ist nach der Ausführung der Abfrage nicht länger vorhanden.  
   
  Wie in diesem Thema erläutert wird, ist die Syntax des WITH-Schlüsselworts sehr flexibel und ermöglicht sogar die Definition berechneter Elemente auf der Grundlage eines anderen berechneten Elements.  
   
@@ -98,9 +98,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [MDX-Funktionsreferenz &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [Erstellen im Bereich einer Sitzung berechnete Elemente &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   
-

@@ -1,32 +1,31 @@
 ---
 title: Verbindungszeichenfolgen-Eigenschaften (Analysis Services) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e939bafc911fd5d8b09b28754aeb6c8f028de6b2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Verbindungszeichenfolgen-Eigenschaften (Analysis Services)
-  In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, die Sie u. U. in einem der Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen verwendet werden, die eine Verbindung mit Analysis Services-Daten herstellen und diese abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, die Sie u. U. in einem der Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen verwendet werden, die eine Verbindung mit Analysis Services-Daten herstellen und diese abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
   
  Entwickler, die benutzerdefinierte Verbindungszeichenfolgen im Anwendungscode erstellen, finden in der API-Dokumentation für ADOMD.NET-Clients eine ausführlichere Liste: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 |--------------|-----------------|-------------|  
 |**Data Source** oder **DataSource**|Gibt die Serverinstanz an. Diese Eigenschaft ist für alle Verbindungen erforderlich. Gültige Werte sind der Netzwerkname oder die IP-Adresse des Servers, local oder localhost für lokale Verbindungen, eine URL, wenn der Server für den HTTP- oder HTTPS-Zugriff konfiguriert ist, oder der Name einer lokalen Cubedatei (CUB).|`Data source=AW-SRV01` für die Standardinstanz und den Standardport (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` für eine benannte Instanz ($Finance) und einen festen Port<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` für einen vollqualifizierten Domänennamen, vorausgesetzt, die Standardinstanz und der Standardport werden verwendet.<br /><br /> `Data source=172.16.254.1` für eine IP-Adresse des Servers unter Umgehung des DNS-Serverlookups. Eignet sich für die Behandlung von Verbindungsproblemen.|  
 |**Initial Catalog** oder **Catalog**|Gibt den Namen der Analysis Services-Datenbank an, mit der eine Verbindung hergestellt werden soll. Die Datenbank muss unter Analysis Services bereitgestellt werden, und Sie müssen berechtigt sein, eine Verbindung damit herzustellen. Diese Eigenschaft ist für AMO-Verbindungen optional, für ADOMD.NET jedoch erforderlich.|`Initial catalog=AdventureWorks2016`|  
-|**Anbieter**|Gültige Werte sind MSOLAP. \<Version >, wobei \<Version > 4, 5, 6 oder 7 ist.<br /><br /> –   MSOLAP.4 wurde in SQL Server 2008 und erneut in SQL Server 2008 R2 veröffentlicht (der Dateiname lautet „msolap100.dll“ für SQL Server 2008 und 2008 R2)<br />–   MSOLAP.5 wurde in SQL Server 2012 veröffentlicht (der Dateiname ist „msolap110.dll“)<br />–   MSOLAP.6 wurde in SQL Server 2014 veröffentlicht (der Dateiname ist „msolap1200.dll“)<br />–   MSOLAP.7 wurde in SQL Server 2016 veröffentlicht (der Dateiname ist „msolap130.dll“)<br /><br /> Diese Eigenschaft ist optional. Standardmäßig wird die aktuelle Version des OLE DB-Anbieters von den Clientbibliotheken aus der Registrierung gelesen. Sie müssen diese Eigenschaft nur festlegen, wenn Sie eine bestimmte Datenanbieterversion benötigen, beispielsweise um eine Verbindung mit einer SQL Server 2012-Instanz herzustellen.<br /><br /> MSOLAP.4 wurde sowohl mit SQL Server 2008 als auch mit SQL Server 2008 R2 bereitgestellt. Die 2008 R2-Version unterstützt [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen und muss auf SharePoint-Servern manchmal manuell installiert werden. Um zwischen diesen Versionen zu unterscheiden, überprüfen Sie die Buildnummer in den Dateieigenschaften des Anbieters unter Programme\Microsoft Analysis Services\AS OLEDB\10. Klicken Sie mit der rechten Maustaste auf „msolap110.dll“, und wählen Sie **Eigenschaften**. Klicken Sie auf **Details**. Zeigen Sie die Dateiversionsinformationen an. Die Version sollte 10.50. enthalten. \<Buildnumber > für SQL Server 2008 R2. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) und [Für Analysis Services-Verbindungen verwendete Datenanbieter](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` wird für Verbindungen verwendet, die die SQL Server 2016-Version des OLE DB-Anbieters für Analysis Services erfordern.|  
+|**Provider**|Gültige Werte sind MSOLAP. \<Version >, wobei \<Version > 4, 5, 6 oder 7 ist.<br /><br /> –   MSOLAP.4 wurde in SQL Server 2008 und erneut in SQL Server 2008 R2 veröffentlicht (der Dateiname lautet „msolap100.dll“ für SQL Server 2008 und 2008 R2)<br />–   MSOLAP.5 wurde in SQL Server 2012 veröffentlicht (der Dateiname ist „msolap110.dll“)<br />–   MSOLAP.6 wurde in SQL Server 2014 veröffentlicht (der Dateiname ist „msolap1200.dll“)<br />–   MSOLAP.7 wurde in SQL Server 2016 veröffentlicht (der Dateiname ist „msolap130.dll“)<br /><br /> Diese Eigenschaft ist optional. Standardmäßig wird die aktuelle Version des OLE DB-Anbieters von den Clientbibliotheken aus der Registrierung gelesen. Sie müssen diese Eigenschaft nur festlegen, wenn Sie eine bestimmte Datenanbieterversion benötigen, beispielsweise um eine Verbindung mit einer SQL Server 2012-Instanz herzustellen.<br /><br /> MSOLAP.4 wurde sowohl mit SQL Server 2008 als auch mit SQL Server 2008 R2 bereitgestellt. Die 2008 R2-Version unterstützt [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen und muss auf SharePoint-Servern manchmal manuell installiert werden. Um zwischen diesen Versionen zu unterscheiden, überprüfen Sie die Buildnummer in den Dateieigenschaften des Anbieters unter Programme\Microsoft Analysis Services\AS OLEDB\10. Klicken Sie mit der rechten Maustaste auf „msolap110.dll“, und wählen Sie **Eigenschaften**. Klicken Sie auf **Details**. Zeigen Sie die Dateiversionsinformationen an. Die Version sollte 10.50. enthalten. \<Buildnumber > für SQL Server 2008 R2. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) und [Für Analysis Services-Verbindungen verwendete Datenanbieter](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` wird für Verbindungen verwendet, die die SQL Server 2016-Version des OLE DB-Anbieters für Analysis Services erfordern.|  
 |**Cube**|Cubename oder Perspektivenname. Eine Datenbank kann mehrere Cubes und Perspektiven enthalten. Wenn mehrere Ziele möglich sind, schließen Sie den Cube- oder Perspektivennamen in die Verbindungszeichenfolge ein.|`Cube=SalesPerspective` veranschaulicht, dass Sie mithilfe der Cube-Eigenschaft einer Verbindungszeichenfolge entweder den Namen eines Cubes oder den einer Perspektive angeben können.|  
   
 ##  <a name="bkmk_auth"></a> Authentifizierung und Sicherheit  
@@ -157,7 +156,7 @@ ms.lasthandoff: 09/01/2017
   
  **Native (oder direkte) Verbindungen mit dem Server**  
   
- `Data Source=server[:port][\instance]` , wobei "port" und "\instance" optional sind. "Data Source=server1" öffnet z. B. eine Verbindung mit der Standardinstanz (und dem Standardport 2383) auf einem Server mit dem Namen "server1".  
+ `Data Source=server[:port][\instance]` , wobei "port" und "\instance" optional sind. "Data Source=server1" öffnet z. B. eine Verbindung mit der Standardinstanz (und dem Standardport 2383) auf einem Server mit dem Namen "server1".  
   
  "Data Source=server1:port1" öffnet eine Verbindung mit einer Analysis Services-Instanz, die an Port "port1" auf "server1" ausgeführt wird.  
   
@@ -196,7 +195,7 @@ ms.lasthandoff: 09/01/2017
   
  Um die Verbindungszeichenfolgeninformationen zu verschlüsseln und zu schützen, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Datenschutz-API.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet einen separaten Verschlüsselungsschlüssel zum Verschlüsseln der Verbindungszeichenfolgen-Informationen für jede [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt diesen Schlüssel, wenn Sie eine Datenbank erstellen, und verschlüsselt die Informationen zur Verbindungszeichenfolge auf Grundlage des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Startkontos. Beim Start von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird der verschlüsselte Schlüssel für jede Datenbank gelesen, entschlüsselt und gespeichert. Anschließend verwendet[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den entsprechenden entschlüsselten Schlüssel zum Entschlüsseln der Verbindungszeichenfolgen-Informationen für die Datenquelle, wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit einer Datenquelle herstellen muss.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verschlüsselt Verbindungszeichenfolgeninformationen für jede [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe eines separaten Verschlüsselungsschlüssels. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt diesen Schlüssel, wenn Sie eine Datenbank erstellen, und verschlüsselt die Informationen zur Verbindungszeichenfolge auf Grundlage des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Startkontos. Beim Start von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird der verschlüsselte Schlüssel für jede Datenbank gelesen, entschlüsselt und gespeichert. Anschließend verwendet[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den entsprechenden entschlüsselten Schlüssel zum Entschlüsseln der Verbindungszeichenfolgen-Informationen für die Datenquelle, wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit einer Datenquelle herstellen muss.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
@@ -205,4 +204,3 @@ ms.lasthandoff: 09/01/2017
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

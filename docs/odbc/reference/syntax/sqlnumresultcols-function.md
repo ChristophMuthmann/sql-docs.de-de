@@ -3,33 +3,30 @@ title: SQLNumResultCols-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLNumResultCols
-apilocation:
-- sqlsrv32.dll
+apiname: SQLNumResultCols
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLNumResultCols
-helpviewer_keywords:
-- SQLNumResultCols function [ODBC]
+f1_keywords: SQLNumResultCols
+helpviewer_keywords: SQLNumResultCols function [ODBC]
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c9210256473f8f7bb3822d7d28e4e46978e27118
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0e5ff9c7fa1bf48b05d436bc8e703bb9659e76bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols-Funktion
 **Konformität**  
@@ -105,4 +102,3 @@ SQLRETURN SQLNumResultCols(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -3,10 +3,12 @@ title: Abrufen von Zeilen mit SQLBulkOperations | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b3af3d83d9d0dab4735842621bbcb49fab69a4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Abrufen von Zeilen mit SQLBulkOperations
 Daten können in ein Rowset mithilfe von Lesezeichen erneut abgerufen werden, durch den Aufruf von **SQLBulkOperations.** Die Zeilen abgerufen werden sollen, werden durch die Lesezeichen in einer Lesezeichenspalte gebundenen identifiziert. Spalten mit einem Wert von SQL_COLUMN_IGNORE werden nicht abgerufen.  
@@ -43,4 +44,3 @@ Daten können in ein Rowset mithilfe von Lesezeichen erneut abgerufen werden, du
 4.  Aufrufe **SQLBulkOperations** mit der *Vorgang* -Argument auf SQL_FETCH_BY_BOOKMARK festgelegt.  
   
  Besteht keine Notwendigkeit für die Anwendung auf die Zeile Operation-Array verwenden, um den Vorgang zu verhindern, dass in bestimmte Spalten ausgeführt werden. Die Anwendung wählt die Zeilen, die abgerufen werden nur die Lesezeichen für die Zeilen in die gebundenen Lesezeichen Array kopiert werden sollen.
-

@@ -1,11 +1,13 @@
 ---
 title: "Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: 
@@ -24,22 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: a3385d76691aa2710dd0d0e1544ee6e4fb5b43d0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- Um eine Datenbank für Stretch-Datenbank zu konfigurieren, führen Sie den Assistenten zum Aktivieren von Stretch für eine Datenbank aus.  In diesem Thema werden die im Assistenten einzugebenden Informationen und zu treffenden Entscheidungen beschrieben.  
+
+ Um eine Datenbank für Stretch-Datenbank zu konfigurieren, führen Sie den Assistenten zum Aktivieren von Stretch für eine Datenbank aus.  Dieser Artikel beschreibt die Informationen und Entscheidungen, die Sie im Assistenten angeben bzw. treffen müssen.  
   
  Weitere Informationen zu Stretch-Datenbank finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
  
@@ -69,7 +71,7 @@ Oben in der sortierten Liste werden Tabellen mit einer Vielzahl von Zeilen angez
   
  ![Seite „Tabellen auswählen“ des Assistenten für die Stretch-Datenbank](../../sql-server/stretch-database/media/stretch-wizard-2.png "Seite „Tabellen auswählen“ des Assistenten für die Stretch-Datenbank")  
   
-|Column|Beschreibung|  
+|Spalte|Description|  
 |------------|-----------------|  
 |(kein Titel)|Aktivieren Sie das Kontrollkästchen in dieser Spalte, um die ausgewählte Tabelle für Stretch zu aktivieren.|  
 |**Name**|Gibt den Namen der Tabelle in der Datenbank an.|  
@@ -82,11 +84,11 @@ Oben in der sortierten Liste werden Tabellen mit einer Vielzahl von Zeilen angez
 ## <a name="optionally-provide-a-row-filter"></a>Optionales Angeben eines Zeilenfilters  
  Wenn Sie zum Auswählen zu migrierender Zeilen eine Filterfunktion verwenden möchten, führen Sie auf der Seite **Tabellen auswählen** die folgenden Schritte aus.  
   
-1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, die Sie strecken möchten.** in der Zeile für die Tabelle auf **Gesamte Tabelle** . Das Dialogfeld **Wählen Sie die zu streckenden Zeilen aus.** wird geöffnet.  
+1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, für die Sie ein Stretching durchführen möchten.** in der Zeile für die Tabelle auf **Gesamte Tabelle** . Das Dialogfeld **Wählen Sie die Zeilen für das Stretching aus.** wird geöffnet.  
   
      ![Definieren eines datenbasierten Filterprädikats](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Definieren eines datenbasierten Filterprädikats")  
   
-2.  Wählen Sie im Dialogfeld **Wählen Sie die zu streckenden Zeilen aus.** die Option **Zeilen auswählen**.  
+2.  Wählen Sie im Dialogfeld **Wählen Sie die Zeilen für das Stretching aus.** die Option **Zeilen auswählen**.  
   
 3.  Geben Sie im Feld **Namensfeld**einen Namen für die Filterfunktion an.  
   
@@ -159,7 +161,7 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
   
  Wenn kein Hauptschlüssel für die Datenbank vorhanden ist, geben Sie ein sicheres Kennwort ein, um einen Datenbank-Hauptschlüssel zu erstellen.  
   
- ![Sichere Anmeldeinformationenseite des Stretch-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Sichere Anmeldeinformationenseite des Stretch-Assistenten")  
+ ![Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten")  
   
  Weitere Informationen zum Datenbank-Hauptschlüssel finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) und [Erstellen eines Datenbank-Hauptschlüssels](../../relational-databases/security/encryption/create-a-database-master-key.md). Weitere Informationen zu den Anmeldeinformationen, die der Assistent erstellt, finden Sie unter[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
@@ -201,9 +203,8 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
   
 -   [Restore Stretch-enabled databases (Wiederherstellen von für die Streckung aktivierten Datenbanken)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktivieren von Stretch-Datenbank für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
-

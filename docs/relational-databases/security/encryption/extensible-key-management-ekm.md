@@ -2,11 +2,13 @@
 title: "Erweiterbare Schlüsselverwaltung (EKM) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c642ca8448624c79b77f84c71619439918856767
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 632fec019b757d782e7bd54f6854e815ccd2afcf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Funktionen zur Datenverschlüsselung zusammen mit der *erweiterbaren Schlüsselverwaltung* (Extensible Key Management, EKM) bereit. Dabei wird der Anbieter *Microsoft Cryptographic API* (MSCAPI) zur Verschlüsselung und Schlüsselgenerierung verwendet. Verschlüsselungsschlüssel für die Daten- und Schlüsselverschlüsselung werden in temporären Schlüsselcontainern erstellt und müssen vom Anbieter exportiert werden, bevor sie in der Datenbank gespeichert werden. Dieser Ansatz ermöglicht eine Schlüsselverwaltung mit einer Verschlüsselungsschlüsselhierarchie und Schlüsselsicherung durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Funktionen zur Datenverschlüsselung zusammen mit der *erweiterbaren Schlüsselverwaltung* (Extensible Key Management, EKM) bereit. Dabei wird der Anbieter *Microsoft Cryptographic API* (MSCAPI) zur Verschlüsselung und Schlüsselgenerierung verwendet. Verschlüsselungsschlüssel für die Daten- und Schlüsselverschlüsselung werden in temporären Schlüsselcontainern erstellt und müssen vom Anbieter exportiert werden, bevor sie in der Datenbank gespeichert werden. Dieser Ansatz ermöglicht eine Schlüsselverwaltung mit einer Verschlüsselungsschlüsselhierarchie und Schlüsselsicherung durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Da die Einhaltung behördlicher Bestimmungen und der Datenschutz immer wichtiger werden, nutzen Organisationen die Verschlüsselung als Lösung für eine "tiefgreifende Verteidigung". Dieser Lösungsansatz ist jedoch häufig mit den Verwaltungstools für die Datenbankverschlüsselung alleine nicht durchführbar. Hardwarehersteller bieten Produkte an, die die Schlüsselverwaltung in Unternehmen mittels *Hardwaresicherheitsmodulen* (HSM) umsetzen. HSM-Geräte speichern die Verschlüsselungsschlüssel auf Hardware- oder Softwaremodulen. Dies ist eine sicherere Lösung, da die Verschlüsselungsschlüssel von den Verschlüsselungsdaten getrennt werden.  
   
@@ -174,4 +175,3 @@ DECRYPTION BY EKM_AKey1
  [Erstellen identischer symmetrischer Schlüssel auf zwei Servern](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-

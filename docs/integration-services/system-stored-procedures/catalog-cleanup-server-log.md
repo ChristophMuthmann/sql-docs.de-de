@@ -1,29 +1,31 @@
 ---
-title: Catalog.cleanup_server_log | Microsoft Docs
+title: catalog.cleanup_server_log | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1195bbfcc77cb6b96ea5a68cd1a95c2b2126a81e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31e8aba7f3ac9913189278c6c6ccc482ec3e3020
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogcleanupserverlog"></a>Catalog.cleanup_server_log
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Bereinigt die Vorgangsprotokolle, um die SSISDB-Datenbank in einen Zustand zu versetzen, in dem Sie den Wert der Eigenschaft SERVER_OPERATION_ENCRYPTION_LEVEL ändern können.  
   
@@ -37,7 +39,7 @@ catalog.cleanup_server_log
  Keine.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 für Erfolg und 1 für den Fehler.  
+ 0 für „erfolgreich“ und 1 für „fehlerhaft“.  
   
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
@@ -45,44 +47,44 @@ catalog.cleanup_server_log
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
   
--   Lese- und AUSFÜHRUNGSBERECHTIGUNGEN für das Projekt und ggf. READ-Berechtigungen für die Umgebung auf die verwiesen wird.  
+-   READ- und EXECUTE-Berechtigungen für das Projekt und ggf. READ-Berechtigungen für die Umgebung, auf die verwiesen wird.  
   
--   Mitgliedschaft in der **Ssis_admin** -Datenbankrolle.  
+-   Mitgliedschaft in der Datenbankrolle **ssis_admin**.  
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Fehler und Warnungen  
- Diese gespeicherte Prozedur löst Fehler in den folgenden Szenarien:  
+ Diese gespeicherte Prozedur löst Fehler in den folgenden Szenarien aus:  
   
--   Es gibt einen oder mehrere aktive Vorgänge in der SSISDB-Datenbank.  
+-   Es gibt mindestens einen aktiven Vorgang in SSISDB.  
   
--   Die SSISDB-Datenbank ist nicht im Einzelbenutzermodus befindet.  
+-   Die SSIS-Datenbank befindet sich nicht im Einzelbenutzermodus.  
   
-## <a name="remarks"></a>Hinweise  
- SQL Server 2012 Service Pack 2 hinzugefügt, der Eigenschaft SERVER_OPERATION_ENCRYPTION_LEVEL, um die **internal.catalog_properties** Tabelle. Diese Eigenschaft hat zwei mögliche Werte:  
+## <a name="remarks"></a>Remarks  
+ In SQL Server 2012 Service Pack 2 wird die Eigenschaft SERVER_OPERATION_ENCRYPTION_LEVEL der Tabelle **internal.catalog_properties** hinzugefügt. Diese Eigenschaft verfügt über zwei mögliche Werte:  
   
--   **PER_EXECUTION (1)** – das Zertifikat und symmetrische Schlüssel verwendet, für den Schutz von vertraulichen Execution-Parametern und ausführungsprotokolle werden für jede Ausführung erstellt. Dies ist der Standardwert. Sie können in Leistungsprobleme (Deadlocks, fehlerhafte Wartung Aufträge usw.) in einer produktionsumgebung ausführen, da Zertifikatsschlüssel/für jede Ausführung generiert werden. Diese Einstellung bietet jedoch ein höheres Maß an Sicherheit als der andere Wert (2).  
+-   **PER_EXECUTION (1):** Das Zertifikat und der symmetrische Schlüssel, die zum Schutz von sensiblen Ausführungsparametern und -protokollen verwendet werden, werden für jede Ausführung erstellt. Möglicherweise entstehen Probleme mit der Leistung (Deadlocks, fehlerhafte Wartungsaufträge, etc.) in einer Produktumgebung, da für jede Ausführung Zertifikate bzw. Schlüssel generiert werden. Trotzdem bietet diese Einstellung ein höheres Maß an Sicherheit als der andere Wert (2).  
   
--   **PER_PROJECT (2)** – das Zertifikat und den symmetrischen Schlüssel für den Schutz von sensiblen Parameter werden für jedes Projekt erstellt. Dies bietet Ihnen eine bessere Leistung als die PER_EXECUTION-Ebene, da der Schlüssel und das Zertifikat einmal für ein Projekt und nicht für jede Ausführung generiert werden.  
+-   **PER_PROJECT (2):** Das Zertifikat und der symmetrische Schlüssel, die zum Schutz von sensiblen Parametern verwendet werden, werden für jedes Projekt erstellt. PER_PROJECT (2) ist der Standardwert. Diese Einstellung bietet eine bessere Leistung als die PER_EXECUTION-Ebene, da der Schlüssel und das Zertifikat nur einmal pro Projekt anstatt für jede Ausführung generiert werden.  
   
- Auszuführende stehen Ihnen die [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) gespeicherte Prozedur aus, bevor Sie zwischen 1 und 2 (oder) zwischen 2 und 1 der SERVER_OPERATION_ENCRYPTION_LEVEL ändern können. Vor dem Ausführen dieser gespeicherten Prozedur, führen Sie folgende Schritte aus:  
+ Sie müssen die gespeicherte [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)-Prozedur ausführen, bevor Sie SERVER_OPERATION_ENCRYPTION_LEVEL von 2 auf 1 oder von 1 auf 2 ändern können. Führen Sie die folgenden Schritte aus, bevor Sie diese gespeicherte Prozedur ausführen:  
   
-1.  Stellen Sie sicher, dass der Wert der Eigenschaft OPERATION_CLEANUP_ENABLED, auf "true" in festgelegt ist der [Catalog. catalog_properties &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) Tabelle.  
+1.  Stellen Sie sicher, dass der Wert der Eigenschaft OPERATION_CLEANUP_ENABLED in der Tabelle [catalog.catalog_properties &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) auf TRUE festgelegt ist.  
   
-2.  Die Integration Services-Datenbank (SSISDB) auf den Einzelbenutzermodus festgelegt. Starten Sie in SQL Server Management Studio im Dialogfeld Eigenschaften für SSISDB, wechseln Sie zur Registerkarte "Optionen" und legen Sie den Zugriff beschränken-Eigenschaft auf Einzelbenutzermodus (SINGLE_USER). Legen Sie nach dem Ausführen der Cleanup_server_log gespeicherte Prozedur den Wert der Eigenschaft auf den ursprünglichen Wert zurückzusetzen.  
+2.  Legen Sie die Integration Services-Datenbank (SSISDB) auf den Einzelbenutzermodus fest. Starten Sie in SQL Server Management Studio das Dialogfeld „Datenbankeigenschaften“ für SSISDB, wechseln Sie zur Registerkarte „Optionen“, und legen Sie die Eigenschaft „Zugriff beschränken“ auf den Einzelbenutzermodus fest (SINGLE_USER). Nachdem Sie die gespeicherte Prozedur „cleanup_server_log“ ausgeführt haben, setzen Sie den Eigenschaftswert auf den ursprünglichen Wert zurück.  
   
-3.  Führen Sie die gespeicherte Prozedur [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md).  
+3.  Führen Sie die gespeicherte Prozedur [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) aus.  
   
-4.  Jetzt, fahren Sie fort, und ändern Sie den Wert der Eigenschaft SERVER_OPERATION_ENCRYPTION_LEVEL in die [Catalog. catalog_properties &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) Tabelle.  
+4.  Nun können Sie den Wert für die Eigenschaft SERVER_OPERATION_ENCRYPTION_LEVEL in der Tabelle [catalog.catalog_properties &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) ändern.  
   
-5.  Führen Sie die gespeicherte Prozedur [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) , um Zertifikate Schlüssel aus der SSISDB-Datenbank zu bereinigen. Löschen von Zertifikaten und Schlüsseln aus der SSISDB-Datenbank kann sehr lange dauern, damit es in regelmäßigen Abständen während Nebenzeiten ausgeführt werden soll.  
+5.  Führen Sie die gespeicherte [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md)-Prozedur aus, um Zertifikatschlüssel aus der SSIS-Datenbank zu bereinigen. Das Löschen von Zertifikaten und Schlüssel aus der SSIS-Datenbank nimmt möglicherweise einige Zeit in Anspruch. Aus diesem Grund sollten Sie diesen Vorgang regelmäßig außerhalb der Spitzenzeiten ausführen.  
   
-     Geben Sie den Umfang oder die Ebene (Ausführung im Vergleich zu Project) und die Anzahl der Schlüssel gelöscht werden soll. Die Standardgröße des Stapel für die Löschung ist 1000. Wenn Sie die Ebene auf 2 festlegen, werden nur dann, wenn die zugehörigen Projekte gelöscht wurden Schlüssel und Zertifikate gelöscht.  
+     Sie können auch den Bereich oder die Ebene (Ausführung bzw. Projekt) angeben und festlegen, wie viele Schlüssel gelöscht werden sollen. Die Standardbatchgröße zum Löschen beträgt 1000. Wenn Sie die Ebene auf 2 festlegen, werden die Schlüssel und Zertifikate nur gelöscht, wenn zugehörige Projekte gelöscht worden sind.  
   
- Weitere Informationen finden Sie unter den folgenden Knowledge Base-Artikel. [FIX: Leistungsprobleme auftreten, wenn SSISDB, als die Bereitstellung verwenden in SQL Server 2012 speichern](http://support.microsoft.com/kb/2972285)  
+ Weitere Informationen finden Sie im folgenden Knowledge Base-Artikel: [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012 (Fehlerbehebung: Probleme mit der Leistung bei der Verwendung von SSISDB als Bereitstellungsspeicher in SQL Server 2012)](http://support.microsoft.com/kb/2972285).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Prozedur Cleanup_server_log gespeichert.  
+ Mithilfe des folgenden Beispiels wird die gespeicherte „cleanup_server_log“-Prozedur aufgerufen.  
   
 ```sql  
 USE [SSISDB]  
@@ -95,4 +97,3 @@ GO
 ```  
   
   
-

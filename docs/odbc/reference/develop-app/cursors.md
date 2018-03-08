@@ -3,10 +3,12 @@ title: Cursors | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>Cursor
 Eine Anwendung ruft die Daten mit einem *Cursor*. Ein Cursor unterscheidet sich von einem Resultset: ein Resultset ist der Satz von Zeilen, die bestimmten Suchkriterien entspricht, während ein Cursors auf die Software ist, die diese Zeilen an die Anwendung wird zurückgegeben. Der Name *Cursor* anwenden auf Datenbanken, sollten Sie wahrscheinlich die blinkender Cursor auf einem Computer terminal stammt. Ebenso wie diesem Cursor gibt an, die aktuelle Position auf dem Bildschirm und, wo die typisierte Wörter weiter angezeigt wird, gibt einen Cursor für ein Resultset der aktuellen Position im Resultset und welche Zeile als Nächstes zurückgegeben werden an.  
@@ -43,4 +44,3 @@ Eine Anwendung ruft die Daten mit einem *Cursor*. Ein Cursor unterscheidet sich 
   
 > [!IMPORTANT]  
 >  Ein Commit oder Rollback einer Transaktion, entweder durch explizites Aufrufen **SQLEndTran** oder durch im Autocommit-Modus ausgeführt wird, bewirkt, dass einige Datenquellen zu allen Cursorn für alle Anweisungen für eine Verbindung zu schließen. Weitere Informationen finden Sie unter der SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR Attribute in der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.
-

@@ -1,12 +1,14 @@
 ---
-title: "Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente | Microsoft Docs"
+title: "Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -24,25 +26,24 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5a1e9773d91303335b616159f70de7aa0ddf966e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 038dd21da57df8a2002d1b66766d57c39ddf4188
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente
   Komponentenentwickler können für eine Komponente eine benutzerdefinierte Benutzeroberfläche bereitstellen, die in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt wird, wenn die Komponente bearbeitet wird. Bei der Implementierung einer benutzerdefinierten Benutzeroberfläche werden Ihnen Benachrichtigungen bereitgestellt, wenn die Komponente zur Datenflusstask hinzugefügt oder aus diesem gelöscht wird und wenn für die Komponente Hilfe angefordert wird.  
   
- Wenn Sie keine individuelle Benutzeroberfläche für Ihre Komponente bereitstellen, können die Benutzer die Komponente und ihre benutzerdefinieren Eigenschaften auch mithilfe des erweiterten Editors konfigurieren. Sie können sicherstellen, dass der erweiterte Editor es Benutzern ermöglicht, mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>- und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>-Eigenschaften von <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> benutzerdefinierte Eigenschaftswerte ggf. entsprechend zu bearbeiten. Weitere Informationen finden Sie unter "Erstellen von benutzerdefinierten Eigenschaften" in [Entwurfszeitmethoden von einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ Wenn Sie keine individuelle Benutzeroberfläche für Ihre Komponente bereitstellen, können die Benutzer die Komponente und ihre benutzerdefinieren Eigenschaften auch mithilfe des erweiterten Editors konfigurieren. Sie können sicherstellen, dass der erweiterte Editor es Benutzern ermöglicht, mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>- und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>-Eigenschaften von <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> benutzerdefinierte Eigenschaftswerte ggf. entsprechend zu bearbeiten. Weitere Informationen finden Sie in [Entwurfszeitmethoden einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md) unter „Erstellen von benutzerdefinierten Eigenschaften“.  
   
 ## <a name="setting-the-uitypename-property"></a>Festlegen der UITypeName-Eigenschaft  
- Für die Bereitstellung einer benutzerdefinierten Benutzeroberfläche muss der Entwickler die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>-Eigenschaft von <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> auf den Namen einer Klasse festlegen, die die <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>-Schnittstelle implementiert. Wenn diese Eigenschaft, von der Komponente festgelegt ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] geladen und die benutzerdefinierten Benutzeroberfläche aufgerufen, wenn die Komponente, in bearbeitet wird [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
+ Für die Bereitstellung einer benutzerdefinierten Benutzeroberfläche muss der Entwickler die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>-Eigenschaft von <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> auf den Namen einer Klasse festlegen, die die <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>-Schnittstelle implementiert. Bei Festlegung dieser Eigenschaft durch die Komponente wird die benutzerdefinierte Oberfläche von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] geladen und aufgerufen, wenn die Komponente im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer bearbeitet wird.  
   
  Die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>-Eigenschaft ist eine durch Trennzeichen getrennte Zeichenfolge, die den vollqualifizierten Namen des Typs angibt. Die folgende Liste zeigt die Elemente, die den Typ identifizieren, in Reihenfolge, an:  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Culture  
   
--   Token des öffentlichen Schlüssels  
+-   Öffentliches Schlüsseltoken  
   
  Im folgenden Codebeispiel wird eine Klasse veranschaulicht, die von der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Basisklasse abgeleitet wird und die die <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>-Eigenschaft angibt.  
   
@@ -91,10 +92,10 @@ End Class
   
  Obwohl Sie die Komponente direkt über die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle ändern können, ist es vorteilhafter, eine Instanz von <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A>-Methode zu erstellen. Wenn Sie die Komponente direkt mithilfe der Schnittstelle bearbeiten, umgehen Sie die Schutzmaßnahmen zur Überprüfung der Komponente. Die Verwendung der Entwurfszeitinstanz der Komponente über <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> hat den Vorteil, sicherzustellen, dass die Komponente, die an ihr vorgenommenen Änderungen steuern kann.  
   
- Der Rückgabewert der <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A>-Methode bestimmt, ob die an einer Komponente vorgenommenen Änderungen beibehalten oder verworfen werden. Diese Methode gibt **"false"**, alle Änderungen werden verworfen. **"true"** weiterhin die Änderungen an der Komponente und das Paket gespeichert werden müssen.  
+ Der Rückgabewert der <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A>-Methode bestimmt, ob die an einer Komponente vorgenommenen Änderungen beibehalten oder verworfen werden. Wenn diese Methode **false** zurückgibt, dann werden alle Änderungen verworfen; bei **true** werden die Änderungen an der Komponente beibehalten und durch eine Kennzeichnung angegeben, dass das Paket gespeichert werden muss.  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>Verwenden der Dienste des SSIS-Designers  
- Die **IServiceProvider** Parameter von der <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> -Methode bietet Zugriff auf die folgenden Dienste des [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer:  
+ Der **IServiceProvider**-Parameter der <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A>-Methode bietet Zugriff auf die folgenden Dienste des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers:  
   
 |Dienst|Description|  
 |-------------|-----------------|  
@@ -288,8 +289,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen einer benutzerdefinierten Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   
-

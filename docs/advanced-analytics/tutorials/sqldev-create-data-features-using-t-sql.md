@@ -2,32 +2,33 @@
 title: 'Lektion 4: Erstellen von Data-Funktionen, die mithilfe des T-SQL | Microsoft Docs'
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 5b2f4c44-6192-40df-abf1-fc983844f1d0
-caps.latest.revision: 10
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5802fe172f8476d11a776b15fd2038ebc6917eaf
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c9359979b625ad8763f95f340b2b4527ea9fbb6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-4-create-data-features-using-t-sql"></a>Lektion 4: Erstellen von Data-Funktionen, die mithilfe des T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms für SQL-Entwicklern zum Verwenden von R in SQL Server.
 
@@ -139,4 +140,3 @@ Um die berechneten Werte in einer Tabelle hinzuzufügen, die zum Trainieren des 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
 [Lektion 3: Durchsuchen und Visualisieren von Daten](../tutorials/sqldev-explore-and-visualize-the-data.md)
-

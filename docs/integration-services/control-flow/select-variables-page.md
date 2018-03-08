@@ -1,10 +1,13 @@
 ---
-title: "Wählen Sie die Seite \"Variablen\" | Microsoft Docs"
+title: "Variablen auswählen (Seite) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,24 +18,23 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98e0cdc9e81497aafb35ca3b0dfed662d06bac28
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e9effda4d820e17fd7adca9894b5500c27c8de2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-variables-page"></a>Variablen auswählen (Seite)
   Mithilfe des Dialogfelds **Variablen auswählen** können Sie bei der Konfiguration eines Skripttasks oder einer Skriptkomponente eine oder mehrere Variablen für die Eigenschaften **ReadOnlyVariables** und **ReadWriteVariables** auswählen.  
   
  Um das Dialogfeld **Variablen auswählen** zu öffnen, suchen Sie im Dialogfeld **Transformations-Editor für Skripterstellung** auf der Seite **Skript** unter **Benutzerdefinierte Eigenschaften**entweder nach der **ReadOnlyVariables** -Eigenschaft oder nach der **ReadWriteVariables** -Eigenschaft, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (…), die dieser Eigenschaft zugeordnet ist.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Auswahlfeld  
  Wählt eine bestimmte Variable aus, wählt alle Variablen aus, oder hebt die Auswahl aller Variablen auf.  
   
@@ -42,8 +44,7 @@ ms.lasthandoff: 08/03/2017
  **Typ**  
  Gibt den Datentyp einer Variablen an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Skripttask-Editor &#40; Seite "Skript" &#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Skripttask-Editor &#40;Seite „Skript“&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   
-

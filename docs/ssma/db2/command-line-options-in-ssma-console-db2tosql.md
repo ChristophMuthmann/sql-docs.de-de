@@ -1,29 +1,30 @@
 ---
 title: Befehlszeilenoptionen in SSMA-Konsole (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4a48daba17ddb4695f362414037615789ce8509b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Befehlszeilenoptionen in SSMA-Konsole (DB2ToSQL)
 Microsoft stellt Ihnen eine Reihe robuster Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. In den folgenden Abschnitten ausführlich identisch.  
@@ -179,4 +180,3 @@ Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:
   
 3.  Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   
-

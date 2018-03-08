@@ -3,33 +3,30 @@ title: SQLMoreResults-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLMoreResults
-apilocation:
-- sqlsrv32.dll
+apiname: SQLMoreResults
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLMoreResults
-helpviewer_keywords:
-- SQLMoreResults function [ODBC]
+f1_keywords: SQLMoreResults
+helpviewer_keywords: SQLMoreResults function [ODBC]
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1905665f1505cd484a6d2ab5c1f83008efc2298
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 772bfd3d05d620840ea43c9f1313b4d94add10de
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults-Funktion
 **Konformität**  
@@ -122,5 +119,4 @@ SQLRETURN SQLMoreResults(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
- [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
-
+ [Abrufen von Ausgabeparametern mithilfe von SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

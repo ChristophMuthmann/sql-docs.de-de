@@ -3,10 +3,12 @@ title: Projektmappen (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cbaa02918eb4d30e7fc9f58b69a3665c0a3296a2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 095f51e1ba4713d13133eac5bb42d8b468a4cada
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="solutions-sql-server-management-studio"></a>Projektmappen (SQL Server Management Studio)
-Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] -Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]-Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
   
 ## <a name="solution-overview"></a>Übersicht über die Lösungen  
 Sie können [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] als Plattform für die Skriptentwicklung für [!INCLUDE[ssDE](../../includes/ssde_md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]verwenden. Entwickeln Sie Skripts und Abfragen für relationale und mehrdimensionale Datenbanken mithilfe der [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] -Code-Editoren, und sammeln Sie verwandte Skripts und Abfragen in Projekten.  
@@ -57,9 +58,8 @@ Projektmappen und Projekte können in eine [!INCLUDE[msCoName](../../includes/ms
 |Beschreibt, wie Elemente zwischen Projekten in einer Projektmappe verschoben werden.|[Verschieben von Elementen in einer Projektmappe](../../ssms/solution/move-items-in-a-solution.md)|  
 |Beschreibt, wie eine Projektmappe oder die Elemente in der Projektmappe umbenannt werden.|[Umbenennen von Projektmappen und Projektelementen](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
-

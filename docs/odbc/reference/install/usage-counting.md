@@ -3,10 +3,12 @@ title: "Zählen Verbrauch | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], usage counts
 - subkeys [ODBC], usage counts
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: deb6923a2e842241eea1434997194f6e6d19ce1a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0f9db5a35b8b0bb3dc437dd203267c6f53825e22
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="usage-counting"></a>Zählen Verbrauch
 > [!NOTE]  
@@ -74,4 +75,3 @@ ms.lasthandoff: 09/09/2017
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  
 C:\WINDOWS\SYSTEM32\INFRMX32.HLP : REG_DWORD : 0x2  
 ```
-

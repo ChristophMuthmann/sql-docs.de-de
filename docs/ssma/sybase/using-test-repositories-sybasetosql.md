@@ -3,29 +3,29 @@ title: Mithilfe von Test-Repositorys (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Test Repositories
+helpviewer_keywords: Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8c790666f48f142e65a0293bef2170dc12eb5f7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Mithilfe von Test-Repositorys (SybaseToSQL)
 Die SSMA testen Repository-Speicher SSMA Tester Testfälle und die Testergebnisse für die spätere Verwendung. Die Repository-Daten werden in der SQL Server-Tabellen gespeichert **TestCaseRepository** und **RunTestCaseResultRepository** im Schema **Ssma_sybase_utilities** von **Ssmatesterdb_syb** Datenbank.  
@@ -86,4 +86,3 @@ Die folgenden Schaltflächen stehen auf der Seite "Testergebnis" zur Verfügung:
 [Ausführen von Testfällen &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

@@ -3,27 +3,29 @@ title: SICHERUNGSDATENBANK (Parallel Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: 11
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4fb36fd89c02ff9ddd5bc33825a387b53ab6e174
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>SICHERUNGSDATENBANK (Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Erstellt eine Sicherungskopie der eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank und speichert die Sicherung deaktiviert das Gerät in einem Benutzer angegebenen Netzwerkadresse. Verwenden Sie diese Anweisung mit [Datenbank wiederherstellen &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) Wiederherstellung im Notfall oder eine Datenbank auf einem Gerät in einen anderen kopieren.  
   
@@ -62,7 +64,7 @@ BACKUP DATABASE database_name
  *database_name*  
  Der Name der Datenbank auf dem eine Sicherung erstellt. Die Datenbank kann es sich um die master-Datenbank oder eine Benutzerdatenbank sein.  
   
- AUF den Datenträger = "\\\\*UNC_path*\\*Backup_directory*"  
+ TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
  Der Netzwerkpfad und das Verzeichnis, in dem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] schreibt die Sicherungsdateien. Z. B. "\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup".  
   
 -   Der Pfad zur Sicherungsverzeichnis Namen muss bereits vorhanden und muss als eine vollqualifizierte Universal naming Convention (UNC)-Pfad angegeben werden.  
@@ -75,7 +77,7 @@ BACKUP DATABASE database_name
   
 -   Der Server oder Host muss eine IP-Adresse angegeben werden.  Sie können nicht als Host-oder Server angeben.  
   
- DESCRIPTION = **"***Text***"**  
+ DESCRIPTION = **'***text***'**  
  Gibt eine Beschreibung des Sicherungssatzes an. Die maximale Länge des Texts beträgt 255 Zeichen.  
   
  Die Beschreibung wird in den Metadaten gespeichert und wird angezeigt, wenn der Sicherungsheader mit RESTORE HEADERONLY wiederhergestellt wird.  
@@ -159,11 +161,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>Metadaten  
  Diese dynamischen Verwaltungssichten enthalten Informationen über alle Sicherung, Wiederherstellung und Ladevorgänge. Die Informationen, die über Systemneustarts weiterhin besteht.  
   
--   [Sys.pdw_loader_backup_runs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [Sys.pdw_loader_backup_run_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [Sys.pdw_loader_run_stages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>Leistung  
  Zum Ausführen einer Sicherung [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erste sichert die Metadaten, und klicken Sie dann führt eine parallele Sicherung der Datenbankdaten auf den Serverknoten gespeichert. Daten werden direkt aus jeder Serverknoten im Sicherungsverzeichnis kopiert. Die beste Leistung zum Verschieben von Daten von den Computeknoten im Sicherungsverzeichnis erzielen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] steuert die Anzahl von Serverknoten, die gleichzeitig von Daten kopieren.  
@@ -249,4 +251,3 @@ WITH (
  [WIEDERHERSTELLUNGSDATENBANK &#40; Parallel Datawarehouse &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
-

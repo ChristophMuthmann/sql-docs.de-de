@@ -3,7 +3,7 @@ title: 'HelloData: Eine einfache ADO-Anwendung | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
 Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden für die Beispieldatenbank Northwind, die Sie mit Microsoft® SQL Server ausgeführt. Im Beispiel für die Fehlerbehandlung ist minimal, auf die Grundlagen von ADO konzentrieren und Code übersichtliche zu verhindern.  
@@ -55,7 +54,7 @@ Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: 
 |Form|Name|Form1|  
 ||Höhe|6500|  
 ||Breite|6500|  
-|MS-DataGrid|Name|grdDisplay1|  
+|MS DataGrid|Name|grdDisplay1|  
 |Textfeld|Name|txtDisplay1|  
 ||Mehrzeilige|true|  
 |Befehlsschaltfläche|Name|cmdGetData|  
@@ -66,4 +65,3 @@ Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: 
 ||Beschriftung|Bearbeiten von Daten|  
 |Befehlsschaltfläche|Name|cmdUpdateData|  
 ||Beschriftung|Aktualisierungsdaten|
-

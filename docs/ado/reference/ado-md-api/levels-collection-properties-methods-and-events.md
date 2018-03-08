@@ -3,7 +3,7 @@ title: Zugriffsebenen, die von Auflistungseigenschaften, Methoden und Ereignisse
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Levels collection [ADO MD], members
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 39ae301cce1ea54cc253db04be1258292ce9cef6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e02086ef65cfe7679488424d74cba506c85de957
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Ebenen Auflistungseigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -41,4 +40,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Levels-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)
-

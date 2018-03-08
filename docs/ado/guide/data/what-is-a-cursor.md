@@ -1,9 +1,9 @@
 ---
-title: Was ist ein Cursor? | Microsoft-Dokumentation
+title: Was ist ein Cursor? | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e467c01afe9ebdb53d5d66e4c939205a97ca4be7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what-is-a-cursor"></a>Was ist ein Cursor?
 Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Die von einer SELECT-Anweisung zurückgegebene Gruppe von Zeilen besteht aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, insbesondere solche, die interaktive und online ist, sind bearbeitet nicht immer effektiv das gesamte Resultset als eine Einheit. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
@@ -80,4 +79,3 @@ Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollstän
   
 ## <a name="scrollability"></a>Bildlauffähigkeit  
  Der Typ des von der Anwendung verwendete Cursortyp wirkt sich auch die Möglichkeit, die Zeilen in einem Resultset vorwärts und rückwärts durchlaufen; Dies wird manchmal als scrolloptionen bezeichnet. Die Möglichkeit dann vorwärts bewegt, *und* rückwärts durch ein Ergebnis Satz die Komplexität des Cursors und ist daher teurer implementieren. Aus diesem Grund sollten Sie für einen Cursor mit dieser Funktionalität, die nur bei Bedarf bitten.
-

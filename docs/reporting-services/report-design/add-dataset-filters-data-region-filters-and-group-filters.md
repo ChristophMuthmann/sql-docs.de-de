@@ -1,27 +1,27 @@
 ---
-title: "Hinzufügen von Datasetfiltern, Datenbereichsfiltern, und Gruppenfiltern | Microsoft Docs"
+title: "Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern
   In einem Bericht ist ein Filter Teil eines Datasets, eines Datenbereichs oder einer Datenbereichsgruppe, den Sie erstellen, um die im Bericht verwendeten Daten zu beschränken. Mithilfe von Filtern können Berichtsdaten gesteuert werden, wenn es nicht möglich ist, die Datasetabfrage zu ändern, z. B. bei Verwendung eines freigegebenen Datasets.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
  In den folgenden Abschnitten werden die einzelnen Bestandteile der Filtergleichung vorgestellt.  
   
-### <a name="expression"></a>Ausdruck  
+### <a name="expression"></a>expression  
  Wenn die Filtergleichung zur Laufzeit vom Berichtsprozessor ausgewertet wird, müssen Ausdruck und Wert denselben Datentyp aufweisen. Der Datentyp des unter **Ausdruck** ausgewählten Felds wird durch die Datenverarbeitungserweiterung oder den Datenanbieter, über den die Daten aus der Datenquelle abgerufen werden, vorgegeben. Der Datentyp des unter **Wert** eingegebenen Ausdrucks wird durch [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Standards vorgegeben. Die verfügbaren Datentypen sind abhängig von den für eine Berichtsdefinition unterstützten Datentypen. Die Werte aus der Datenbank werden ggf. vom Datenanbieter in einen CLR-Typ konvertiert.  
   
 ### <a name="data-type"></a>Datentyp  
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/09/2017
 |**Zwischen**|Prüft, ob der Ausdruck zwischen zwei Werten (einschließlich) liegt.|  
 |**In**|Prüft, ob der Ausdruck in einem Satz von Werten enthalten ist.|  
   
-### <a name="value"></a>Wert  
+### <a name="value"></a>value  
  Der Value-Ausdruck legt den abschließenden Teil der Filtergleichung fest. Der Berichtsprozessor konvertiert den ausgewerteten Ausdruck in den festgelegten Datentyp und wertet dann die gesamte Filtergleichung aus, um zu ermitteln, ob die unter Ausdruck angegebenen Daten den Filter passieren dürfen.  
   
  Wenn der Ausdruck in einen Datentyp konvertiert werden soll, bei dem es sich nicht um einen Standard-CLR-Datentyp handelt, müssen Sie den Ausdruck so ändern, dass explizit in einen Datentyp konvertiert wird. Sie können hierfür die im Dialogfeld **Ausdruck** unter **Allgemeine Funktionen**, **Konvertierung**aufgelisteten Konvertierungsfunktionen verwenden. Beispiel: Das Feld `ListPrice` repräsentiert Daten, die mit einem **money** -Datentyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle gespeichert sind. Die Datenverarbeitungserweiterung gibt den Feldwert als <xref:System.Decimal> -Datentyp zurück. Wenn Sie einen Filter festlegen möchten, durch den nur Werte über **€ 50000,00** in der Berichtswährung verwendet werden, konvertieren Sie den Wert mit dem Ausdruck `=CDec(50000.00)`in einen Dezimalwert.  
@@ -104,9 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  Zurück zum Anfang  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrucksverwendungen in Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

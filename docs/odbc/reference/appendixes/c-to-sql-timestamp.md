@@ -3,10 +3,12 @@ title: 'C, um SQL: Timestamp | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9577b649d2812ad087728b7849637f872d4a84b9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bbb6396dc1a49d984834ec6f105b3a9ba42d95c4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-timestamp"></a>C, um SQL: Timestamp
 Der Bezeichner für den Timestamp ODBC C-Datentyp ist:  
@@ -48,4 +49,3 @@ Der Bezeichner für den Timestamp ODBC C-Datentyp ist:
  Wenn Zeitstempeldaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*Yyyy*-*mm*-*Dd* *"hh"*:*mm*:*ss*[. *f...* ] "Format.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten aus der C-Timestamp-Datentyp zu konvertieren und wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des C-Timestamp-Datentyps. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
-

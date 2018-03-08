@@ -2,31 +2,31 @@
 title: MSSQLSERVER_10060 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "10060"
-helpviewer_keywords:
-- 10060 (Database Engine error)
+f1_keywords: "10060"
+helpviewer_keywords: 10060 (Database Engine error)
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ecb82ea855bac3ba6f85b1c4f881b72ff741f7e2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8804ad6e01204446f1e5b3c2cab3b1e2bd85367f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver10060"></a>MSSQLSERVER_10060
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -57,4 +57,3 @@ Führen Sie zum Beheben dieses Fehlers eine der folgenden Aktionen aus:
 [Konfigurieren von Clientprotokollen](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
-

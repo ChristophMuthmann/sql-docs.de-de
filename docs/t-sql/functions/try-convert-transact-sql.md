@@ -3,8 +3,11 @@ title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CONVERT function
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-caps.latest.revision: 17
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0cb3854ae349b17dcdb0b0528c6415fd41b1e072
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5fedc9777146d24cb04fb7652344f244babc8246
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
@@ -72,7 +74,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT gibt NULL zurück.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT "0" zurückgibt, wenn die Umwandlung fehlerhaft ist.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CONVERT(float, 'test') IS NULL   
     THEN 'Cast failed'  
@@ -93,7 +95,7 @@ Cast failed
   
  Im folgenden Beispiel wird veranschaulicht, dass der Ausdruck das erwartete Format aufweisen muss.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  
@@ -112,7 +114,7 @@ NULL
 ### <a name="b-tryconvert-fails-with-an-error"></a>B. Bei TRY_CONVERT tritt ein Fehler auf.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT einen Fehler zurückgibt, wenn die Umwandlung explizit nicht zulässig ist.  
   
-```tsql  
+```sql  
 SELECT TRY_CONVERT(xml, 4) AS Result;  
 GO  
 ```  
@@ -146,4 +148,3 @@ Result
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

@@ -1,11 +1,13 @@
----
+﻿---
 title: OPENJSON (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 27eeb54d6493bb200e56caada1238d6fafb5b339
-ms.contentlocale: de-de
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: fe464bedc22fa5ebc47fc7f783e75b994d0cff49
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 
 **OPENJSON** ist eine Tabellenwertfunktion, die JSON-Text analysiert, und gibt Objekte und Eigenschaften aus der JSON-Eingabe als Zeilen und Spalten zurück. Das heißt, **OPENJSON** stellt eine Rowsetsicht eines JSON-Dokuments bereit. Sie können die Spalten explizit in das Rowset und die JSON-eigenschaftspfade zum Auffüllen der Spalten angeben. Da **OPENJSON** einen Satz von Zeilen zurückgibt, können Sie **OPENJSON** in der `FROM` -Klausel eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ebenso wie Sie jede Tabelle, Sicht oder Funktion mit Tabellenrückgabe verwenden können.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/11/2017
 Verwendung **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oder zum Konvertieren von JSON-Daten in ein relationales Format für eine app oder dem Dienst nicht nutzen, JSON direkt.  
   
 > [!NOTE]  
->  	Die **OPENJSON**-Funktion ist nur für Kompatibilitätsgrad 130 oder höher verfügbar. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar. 
+>  Die **OPENJSON**-Funktion ist nur für Kompatibilitätsgrad 130 oder höher verfügbar. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar. 
 Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
 
 > 
@@ -47,7 +48,7 @@ Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Komp
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
 >   
-
+> Auch in einer neuen Azure SQL-Datenbank-Instanz kann der Standardkompatibilitätsgrad 120 sein.  
 > Auch in einer neuen Azure SQL-Datenbank-Instanz kann der Standardkompatibilitätsgrad 120 sein.   
 
   
@@ -378,4 +379,3 @@ DECLARE @json NVARCHAR(max)  = N'{
  [Verwenden von OPENJSON mit einem expliziten Schema &#40; SQLServer &#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   
   
-

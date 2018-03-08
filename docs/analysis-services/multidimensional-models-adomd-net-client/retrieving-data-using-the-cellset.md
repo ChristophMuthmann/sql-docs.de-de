@@ -1,13 +1,14 @@
 ---
 title: Abrufen von Daten mittels CellSet | Microsoft Docs
 ms.custom: 
-ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 20dea89569c845332def257d0ae72f9d470dee60
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 3f379624159ec776d591c70569db2e696b19c9ea
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Abrufen von Daten mittels Cellset
   Beim Abruf analytischer Daten bietet das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt die meiste Interaktivität und Flexibilität. Das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt ist ein im Arbeitsspeicher befindlicher Cache für hierarchische Daten und Metadaten, der die ursprüngliche Dimensionalität der Daten beibehält. Das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt kann darüber hinaus in einen Online- oder Offlinezustand traversiert werden. Aufgrund dieser Offline-Fähigkeit kann das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt verwendet werden, um Daten und Metadaten in beliebiger Reihenfolge einzusehen, und es stellt das umfangreichste Objektmodell für die Datenabfrage bereit. Diese Offline-Fähigkeit führt dazu, dass das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt den größten Verwaltungsaufwand erfordert und von allen ADOMD.NET-Objektmodellen zur Datenabfrage das langsamste ist.  
@@ -73,4 +73,3 @@ ms.lasthandoff: 10/24/2017
  [Abrufen von Daten mittels XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   
-

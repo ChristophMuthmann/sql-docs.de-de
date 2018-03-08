@@ -1,31 +1,31 @@
 ---
-title: "Partitionen (SSAS – tabellarisch) | Microsoft Docs"
+title: Partitionen | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b2130a0e6a8b6f734ec77564e7a41e3057e15572
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="partitions"></a>Partitionen
-  Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Mithilfe des Dialogfelds Partitionen in SSDT während der Modellerstellung erstellte Partitionen gelten für die arbeitsbereichsdatenbank des Modells. Beim Bereitstellen des Modells werden die für die Arbeitsbereichsdatenbank des Modells definierten Partitionen in der bereitgestellten Modelldatenbank dupliziert. Sie können weitere erstellen und Verwalten von Partitionen für eine bereitgestellte Modelldatenbank mithilfe des Dialogfelds Partitionen in SSMS.  In diesem Thema werden Partitionen beschrieben erstellt während der Modellerstellung mithilfe des Dialogfelds Partitions-Manager in SSDT. Informationen zum Erstellen und Verwalten von Partitionen für ein bereitgestelltes Modell finden Sie unter [erstellen und Verwalten von Partitionen tabellarischen Modell](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Mithilfe des Dialogfelds Partitionen in SSDT während der Modellerstellung erstellte Partitionen gelten für die arbeitsbereichsdatenbank des Modells. Beim Bereitstellen des Modells werden die für die Arbeitsbereichsdatenbank des Modells definierten Partitionen in der bereitgestellten Modelldatenbank dupliziert. Sie können weitere erstellen und Verwalten von Partitionen für eine bereitgestellte Modelldatenbank mithilfe des Dialogfelds Partitionen in SSMS.  In diesem Thema werden Partitionen beschrieben erstellt während der Modellerstellung mithilfe des Dialogfelds Partitions-Manager in SSDT. Informationen zum Erstellen und Verwalten von Partitionen für ein bereitgestelltes Modell finden Sie unter [erstellen und Verwalten von Partitionen tabellarischen Modell](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Durch Partitionen in tabellarischen Modellen werden Tabellen in logische Partitionsobjekte unterteilt. Anschließend kann jede Partition unabhängig von anderen Partitionen verarbeitet werden. Eine Tabelle kann z. B. bestimmte Rowsets mit Daten enthalten, die selten geändert werden, während andere Rowsets Daten enthalten, die häufig geändert werden. In diesen Fällen ist es nicht erforderlich, sämtliche Daten zu verarbeiten, wenn tatsächlich nur ein Teil der Daten verarbeitet werden soll. Mit Partitionen können Daten, die häufig verarbeitet werden müssen, und Daten, die weniger häufig verarbeitet werden müssen, voneinander getrennt werden.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="partitions-in-a-deployed-model-database"></a>Partitionen in der Datenbank eines bereitgestellten Modells  
  Wenn Sie ein Modell bereitstellen, werden die Partitionen für die bereitgestellte Modelldatenbank als Datenbankobjekte in SSMS angezeigt. Sie können erstellen, bearbeiten, Zusammenführen und Löschen von Partitionen für ein bereitgestelltes Modell mithilfe des Dialogfelds Partitionen in SSMS. Verwalten von Partitionen für ein bereitgestelltes Modell in SSMS ist außerhalb des Bereichs der in diesem Thema. Informationen zum Verwalten von Partitionen in SSMS finden Sie unter [erstellen und Verwalten von Partitionen tabellarischen Modell](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |Thema|Description|  
 |-----------|-----------------|  
@@ -53,8 +53,7 @@ ms.lasthandoff: 09/01/2017
 |[Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Beschreibt, wie Partitionen in der Arbeitsbereichsdatenbank des Modells verarbeitet (aktualisiert) werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Verarbeiten von Daten](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
+ [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Daten verarbeiten](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
-

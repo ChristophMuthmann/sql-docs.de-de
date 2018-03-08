@@ -1,5 +1,5 @@
 
-# [Fehler im SQL Server Native Client OLE DB-Anbieter](errors.md)
+# [OLE DB-Anbieter von SQL Server Native Client](errors.md)
 
 # [Informationen in Fehlerschnittstellen](information-in-error-interfaces.md)
 # [Abrufen von Fehlerinformationen](retrieving-error-information.md)

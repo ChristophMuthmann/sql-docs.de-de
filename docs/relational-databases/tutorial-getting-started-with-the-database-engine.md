@@ -2,9 +2,12 @@
 title: 'Tutorial: Erste Schritte mit dem Datenbankmodul | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 06/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 64fca04ede55e3bf0e98c4cb62b4495fd19d576b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
-ms.openlocfilehash: 736763496d78fff7ed70dee9a0518c428502024a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Lernprogramm: Erste Schritte mit dem Datenbankmodul
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Willkommen bei den ersten Schritten im Lernprogramm zu [!INCLUDE[ssDE](../includes/ssde-md.md)] . Dieses Lernprogramm richtet sich an Benutzer, die noch nicht mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vertraut sind und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]installiert haben. Dieses kurze Lernprogramm hilft Ihnen bei den ersten Schritten mit [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -49,12 +51,11 @@ Für dieses Lernprogramm sind keine Vorkenntnisse erforderlich.
   
 Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]installiert haben. Informationen zur Installation von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] finden Sie unter [Herunterladen von SQL Server Management Studio 17.1](../ssms/download-sql-server-management-studio-ssms.md).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]zugreifen. Informationen zur Installation von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] finden Sie unter [Herunterladen von SQL Server Management Studio 17.1](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a>Siehe auch  
-[Lernprogramm: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   
-
 

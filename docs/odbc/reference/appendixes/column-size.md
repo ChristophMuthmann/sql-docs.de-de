@@ -3,10 +3,12 @@ title: "Spaltengröße | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size"></a>Spaltengröße
 Die Spalte (oder Parameter) Größe des numerischen Datentypen wird als die maximale Anzahl von Ziffern nach dem Datentyp der Spalte oder Parameter oder die Genauigkeit der Daten definiert. Für Zeichentypen entspricht ist dies die Länge in Zeichen der Daten. für binäre Datentypen wird die Spaltengröße als die Länge in Bytes der Daten definiert. Für die Zeit, Timestamp und alle Intervalldatentypen ist dies die Anzahl der Zeichen in die zeichendarstellung dieser Daten. Die Größe der Spalte für jeden präzise SQL-Datentyp definiert ist in der folgenden Tabelle gezeigt.  
@@ -72,4 +73,3 @@ Die Spalte (oder Parameter) Größe des numerischen Datentypen wird als die maxi
 |Alle numerischen Typen|PRECISION|  
 |Alle Typen von "DateTime" und das Intervall|LENGTH|  
 |SQL_BIT|LENGTH|
-

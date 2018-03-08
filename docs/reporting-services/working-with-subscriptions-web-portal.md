@@ -1,28 +1,28 @@
 ---
-title: Arbeiten mit Abonnements (Webportal) | Microsoft Docs
+title: Arbeiten mit Abonnements (Webportal) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bee70a9c4d77be578aae8c77af8772bdd2faadc0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>Arbeiten mit Abonnements (Webportal)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +36,7 @@ Bevor Sie ein neues Abonnement erstellen können, müssen Sie sicherstellen, das
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Erhalten Sie zur Seite "Abonnements" durch Auswählen der **mit den Auslassungszeichen (...)**  eines Berichts auswählen **verwalten** auswählen und **Abonnements**.  
+Sie können die Seite „Abonnements“ aufrufen, indem Sie auf die **Auslassungspunkte (...)** eines Berichts klicken, **Verwalten** und anschließend **Abonnements** auswählen.  
   
 Sie können auf der Seite „Abonnements“ ein neues Abonnement erstellen, indem Sie **+ Neues Abonnement**auswählen. Sie können vorhandene Abonnements auch bearbeiten oder die von Ihnen ausgewählten Abonnements löschen.  
   
@@ -92,9 +92,8 @@ Sie können anschließend die Abfrage überprüfen. Sie können auch ein **Abfra
   
 Nachdem die Abfrage erstellt wurde, können Sie dann die Werte den benötigten Feldern zuweisen. Sie können die Daten manuell eingeben oder ein Feld aus dem Dataset auswählen, das Sie erstellt haben.
 
-[Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Arbeiten mit paginierten Berichten](working-with-paginated-reports-web-portal.md)  
-[Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Web portal (Webportal)](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Working with paginated reports (Arbeiten mit paginierten Berichten)](working-with-paginated-reports-web-portal.md)  
+[Work with shared datasets (Arbeiten mit freigegebenen Datasets)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -2,30 +2,30 @@
 title: Leistungsverbesserungen mit DTA-Empfehlungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Database Engine Tuning Advisor, performance improvements
+helpviewer_keywords: Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-caps.latest.revision: 3
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "3"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7722ff42ebc2e4e4515a3097a6b8d1106f5e1287
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 935483efd524b85c24e11716c5499b25b81ff651
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Leistungsverbesserungen mit DTA-Empfehlungen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 ---
@@ -56,7 +56,7 @@ Anschließend haben wir die jeweils empfohlenen Indizes implementiert. Dabei wur
 
 Die obigen Beispiele veranschaulichen also die Fähigkeit von DTA, die vom SQL Server-Datenbankmodul unterstützten Rowstore- und Columnstore-Indizes optimal nutzen und eine geeignete Indexkombination empfehlen zu können, mit der sich die CPU-Zeit für die Arbeitsauslastung deutlich reduzieren lässt. 
 
-<a name="see-also"></a>Siehe auch
+<a name="see-also"></a>Weitere Informationen finden Sie unter
 ---
 [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)
 
@@ -69,7 +69,6 @@ Die obigen Beispiele veranschaulichen also die Fähigkeit von DTA, die vom SQL S
 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-
 
 
 

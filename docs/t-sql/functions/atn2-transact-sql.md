@@ -3,8 +3,11 @@ title: ATN2 (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - tangent
 - ATN2 function
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-caps.latest.revision: 36
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 3c68b65c2bde2d8b4c5cd8f34452563b433c6a29
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 022c5cd7655debb529ec00789f075d95278073f6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt den Winkel im Bogenmaß (Radiant) zwischen der positiven X-Achse und dem Strahl vom Ursprung zum Punkt (x, y) zurück, wobei "x" und "y" die Werte der beiden angegebenen float-Ausdrücke sind.
   
@@ -72,5 +74,4 @@ The ATN2 of the angle is: 0.265345
 [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
-
 

@@ -1,10 +1,13 @@
 ---
-title: "Verbindungs-Manager für mehrere Dateien | Microsoft Docs"
+title: "Verbindungs-Manager für mehrere Dateien | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23dc2338948dc97d68436b23995a1817a0b3bb66
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiple-files-connection-manager"></a>Verbindungs-Manager für mehrere Dateien
   Mit einem Verbindungs-Manager für mehrere Dateien kann ein Paket auf vorhandene Dateien und Ordner verweisen oder Dateien und Ordner zur Laufzeit erstellen.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  In der folgenden Tabelle sind die Werte von **FileUsageType**aufgeführt.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Der Verbindungs-Manager für mehrere Dateien verwendet eine vorhandene Datei.|  
 |**1**|Der Verbindungs-Manager für mehrere Dateien erstellt eine Datei.|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 08/03/2017
   
  \<*Pfad*>|\<*Pfad*>  
   
- Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Wenn z.B. auf alle Textdateien auf Laufwerk C verwiesen werden soll, kann der Wert der **ConnectionString** -Eigenschaft auf C:\\*.txt festgelegt werden.  
+ Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Wenn z.B. auf alle Textdateien auf Laufwerk C verwiesen werden soll, kann der Wert der **ConnectionString** -Eigenschaft auf C:\\\*.txt festgelegt werden.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
@@ -73,4 +75,3 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und unter [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
   
-

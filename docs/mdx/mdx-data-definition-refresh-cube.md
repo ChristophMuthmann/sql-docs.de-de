@@ -2,11 +2,13 @@
 title: REFRESH CUBE-Anweisung (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - REFRESH CUBE
 - REFRESH_CUBE
 - REFRESH
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - cubes [Analysis Services], cache
 - refreshing cache
 - REFRESH CUBE statement
 - cache [Analysis Services]
 ms.assetid: b8c087fb-5d17-4b13-b7cf-9929e9aab35c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 37649d37d1cef67eb50caf8f3768beba19545988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce57b2384e8cf28dae218dec5f09b756b8cd61c6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX-Datendefinition - CUBE aktualisieren
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Aktualisiert den Clientcache für einen Cube.  
   
@@ -62,4 +62,3 @@ REFRESH CUBECube_Name
  [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

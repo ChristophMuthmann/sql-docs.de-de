@@ -3,8 +3,11 @@ title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - partition functions [SQL Server], modifying
 - partitioned tables [SQL Server], merging
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5969f9487a55437febfba9f6deec7fb1e0df5f02
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 66b921eb3bd6378d20de11a0197a20c957d14ac6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ändert eine Partitionsfunktion durch Teilen oder Zusammenführen der Begrenzungswerte. Durch Ausführen von ALTER PARTITION FUNCTION kann eine Partition einer Tabelle oder eines Index, die bzw. der die Partitionsfunktion verwendet, in zwei Partitionen aufgeteilt werden, oder zwei Partitionen können zu einer einzigen Partition zusammengeführt werden.  
   
@@ -117,7 +119,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. Teilen der Partition einer partitionierten Tabelle oder eines partitionierten Index in zwei Partitionen  
  Im folgenden Beispiel wird eine Partitionsfunktion zum Partitionieren einer Tabelle oder eines Indexes in vier Partitionen erstellt. `ALTER PARTITION FUNCTION` teilt eine Partition in zwei, sodass insgesamt fünf Partitionen entstehen.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -135,7 +137,7 @@ SPLIT RANGE (500);
 ### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. Zusammenführen von zwei Partitionen einer partitionierten Tabelle zu einer einzigen Partition  
  Im folgenden Beispiel wird dieselbe Partitionsfunktion wie oben erstellt, und anschließend werden zwei Partitionen zu einer einzigen Partition zusammengeführt, sodass sich insgesamt drei Partitionen ergeben.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -169,4 +171,3 @@ MERGE RANGE (100);
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-

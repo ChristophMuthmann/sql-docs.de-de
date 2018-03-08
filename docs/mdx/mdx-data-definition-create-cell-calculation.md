@@ -2,11 +2,13 @@
 title: Erstellen von CELL CALCULATION-Anweisung (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,27 +19,25 @@ f1_keywords:
 - CREATE_CELL_CALCULATION
 - CREATE CELL
 - CREATE CELL CALCULATION
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - calculations [Analysis Services], creating
 - CREATE CELL CALCULATION statement
 - cubes [Analysis Services], calculations
 ms.assetid: 01ced1b3-ada1-4b55-b350-e4255c3cc679
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 07f8925db3b1a427129c37e589f37d8b028aae41
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8d371e3ca64f848cb30f54fe1f0ce4eb98a648a4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX-Datendefinition - CELL CALCULATION erstellen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Erstellt eine Berechnung, die einen MDX-Ausdruck (Multidimensional Expressions) für eine angegebene Tupelmenge in einem Cube auswertet.  
   
@@ -104,4 +104,3 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

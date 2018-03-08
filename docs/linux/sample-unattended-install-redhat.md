@@ -2,32 +2,36 @@
 title: "Unbeaufsichtigte Installation für SQL Server unter Red Hat Enterprise Linux | Microsoft Docs"
 description: SQL Server-Skript-Beispiel - unbeaufsichtigte Installation unter Red Hat Enterprise Linux
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 67f9d71c2a5bd1f57e270c07028f6e8c0ac036a1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Beispiel: Für die unbeaufsichtigte SQL Server-Installationsskript für Red Hat Enterprise Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Beispielskript für die Bash installiert SQL Server 2017 auf Red Hat Enterprise Linux (RHEL) ohne interaktiver Eingabe. Er bietet Beispiele für die Installation des Datenbankmoduls, die SQL Server-Befehlszeilentools, SQL Server-Agent, und führt nach der Installation Schritte aus. Optional können Sie einen Administrator zu erstellen und Installieren der Volltextsuche.
 
 > [!TIP]
-> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [quick Start-Lernprogramm für Red Hat](quickstart-install-connect-red-hat.md). Weitere Informationen zum Setup finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
+> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [Schnellstart für Red Hat](quickstart-install-connect-red-hat.md). Weitere Informationen zum Setup finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Sie benötigen mindestens 3,25 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
+- Sie benötigen mindestens 2 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
 - Das Dateisystem muss **XFS** oder **EXT4**. Andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt.
 - Weitere Informationen zu Systemanforderungen, finden Sie unter [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -35,7 +39,7 @@ Dieses Beispielskript für die Bash installiert SQL Server 2017 auf Red Hat Ente
 Speichern Sie das Beispielskript in einer Datei und um ihn anzupassen, ersetzen Sie die Variablenwerte in das Skript. Sie können auch eine der Skriptvariablen als Umgebungsvariablen, festlegen solange Sie sie aus der Skriptdatei entfernen.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -220,4 +224,3 @@ Führen Sie dann die Bash-Skripts wie folgt:
 ```
 
 Weitere Informationen zu SQL Server unter Linux finden Sie unter [SQL Server on Linux – Übersicht](sql-server-linux-overview.md).
-

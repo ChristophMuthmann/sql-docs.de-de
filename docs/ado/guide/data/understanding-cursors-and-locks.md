@@ -3,7 +3,7 @@ title: Grundlegendes zu Cursorn und Sperren | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8a28f672ffd4a5cd1cb7cbf98353a9fb3b987c5e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96231e4b76ab2a01f2d817c0fd85aa2d0dca33e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-cursors-and-locks"></a>Grundlegendes zu Cursorn und Sperren
 Es ist wichtig zu verstehen, wie Cursor ausgeführt werden, damit Sie die beste und effizienteste Cursortyp für eine Anwendung Datenzugriffs-Anforderungen auswählen können. Eine kleiner als optimale Konfiguration der Cursor kann Datenzugriff Datenzugriffsvorgänge extrem langsam werden.  
@@ -41,11 +40,10 @@ Es ist wichtig zu verstehen, wie Cursor ausgeführt werden, damit Sie die beste 
   
 -   [Die Bedeutung der Cursorposition](../../../ado/guide/data/the-significance-of-cursor-location.md)  
   
--   [Der Dienst Microsoft Cursor für OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
+-   [Microsoft Cursor-Dienst für OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
   
 -   [Was ist eine Sperre?](../../../ado/guide/data/what-is-a-lock.md)  
   
 -   [Verwenden von CacheSize](../../../ado/guide/data/using-cachesize.md)  
   
 -   [Cursor und Merkmale der Sperre](../../../ado/guide/data/cursor-and-lock-characteristics.md)
-

@@ -2,32 +2,30 @@
 title: Konfigurieren von Measuregruppeneigenschaften | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- properties [Analysis Services], measure groups
+helpviewer_keywords: properties [Analysis Services], measure groups
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f7cf2328a6f93ed1c7fe17034af1b42b53baaa39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16613e83f5632864fd86ff46067a72ed9dc88539
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-group-properties"></a>Konfigurieren von Measuregruppeneigenschaften
-  Measuregruppen haben Eigenschaften, die es Ihnen ermöglichen, die Funktionsweise von Measuregruppen zu definieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Measuregruppen haben Eigenschaften, mit denen Sie die Funktionsweise von Measuregruppen zu definieren.  
   
 ## <a name="measure-group-properties"></a>Eigenschaften von Measuregruppen  
  Die Eigenschaften von Measuregruppen bestimmen das Verhalten innerhalb der gesamten Measuregruppe und legen das Standardverhalten für bestimmte Eigenschaften von Measures innerhalb einer Measuregruppe fest.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 |--------------|----------------|  
 |**AggregationPrefix**|Gilt für die ROLAP-Speicherung. Weist den indizierten Sichten in SQL Server ein gemeinsames Präfix zu, das zum Speichern von Aggregationen für die mit dieser Measuregruppe verknüpften Partitionen verwendet wird.|  
 |**DataAggregation**|Diese Eigenschaft ist für die zukünftige Verwendung reserviert und hat derzeit keine Auswirkungen. Aus diesem Grund wird empfohlen, diese Einstellung nicht zu ändern.|  
-|**Description**|Mit dieser Eigenschaft können Sie die Measuregruppe dokumentieren.|  
+|**Beschreibung**|Mit dieser Eigenschaft können Sie die Measuregruppe dokumentieren.|  
 |**ErrorConfiguration**|Konfigurierbare Fehlerbehandlungseinstellungen für die Bearbeitung doppelter Schlüssel, unbekannter Schlüssel, für Fehlergrenzen, Aktionen bei Erkennung von Fehlern, Fehlerprotokolldateien und die Bearbeitung von NULL-Schlüsseln. Weitere Informationen finden Sie unter [Fehlerkonfiguration für die Verarbeitung von Cubes, Partitionen und Dimensionen &#40;SSAS - mehrdimensional&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Gibt die geschätzte Anzahl von Zeilen in der Faktentabelle an.|  
 |**EstimatedSize**|Gibt die geschätzte Größe (in Byte) der Measuregruppe an.|  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
 |**Typ**|Gibt den Typ der Measuregruppe an.|  
   
   
-

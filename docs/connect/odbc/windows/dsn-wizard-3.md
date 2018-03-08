@@ -3,24 +3,26 @@ title: Datenquellen (Assistentenbildschirm 3) (Odbcdriver for SQLServer) | Micro
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 1bda5a320e399888ed05331b3adbc2d29cf28022
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>Assistent Datenquellenbildschirm 3
 
@@ -82,6 +84,10 @@ Wenn Ihre Anwendung eine hohe Verfügbarkeit und Disaster Recovery (AlwaysOn-Ver
 
 Ermöglicht die automatische Entschlüsselung und Verschlüsselung von Datenübertragungen von und von mit verschlüsselten Spalten der [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) Feature in SQL Server 2016 und höher verfügbar.
 
+### <a name="use-fmtonly-metadata-discovery"></a>Verwenden Sie FMTONLY metadatenermittlung:
+
+Verwenden Sie die ältere SET FMTONLY Metadaten-Ermittlungsmethode, beim Herstellen einer Verbindung mit SQL Server 2012 oder höher. Aktivieren Sie diese Option nur bei Verwendung von nicht unterstützten Abfragen [Sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), z. B. solche, die temporäre Tabellen enthält. 
+
 ### <a name="next"></a>Weiter
 
 Fährt mit dem nächsten Bildschirm des Assistenten.
@@ -95,4 +101,3 @@ Zurück zum vorherigen Bildschirm des Assistenten.
 [Data Source-Assistent (Bildschirm 2)](../../../connect/odbc/windows/dsn-wizard-2.md)
 
 [Data Source-Assistent (Bildschirm 4)](../../../connect/odbc/windows/dsn-wizard-4.md)
-

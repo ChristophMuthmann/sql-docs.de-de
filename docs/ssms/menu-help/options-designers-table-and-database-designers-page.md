@@ -3,29 +3,29 @@ title: "Optionen (Designer – Seite „Tabellen- und Datenbank-Designer“) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Designers.Table_Designer
+f1_keywords: VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 79e728f7cf2c300338e202b3e9cae27226f70a50
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 391a1d60a36b479ae8ead0e6ba2679a8c8a339ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Optionen (Designer – Seite „Tabellen- und Datenbank-Designer“)
-Auf dieser Seite können Sie das Standardverhalten des Designers bestimmen. Um auf die Einstellungen zuzugreifen, klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Designer** , und klicken Sie dann auf **Tabellen-Designer**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie diese Seite, um das Standardverhalten des Designers zu bestimmen. Um auf die Einstellungen zuzugreifen, klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Designer** , und klicken Sie dann auf **Tabellen-Designer**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
 **Timeoutwert für Verbindungszeichenfolge für Tabellen-Designer-Updates überschreiben**  
@@ -85,4 +85,3 @@ Wählen Sie aus, wie Tabellen in den Designern angezeigt werden sollen:
 **Tabellendialogfeld hinzufügen bei Neues Diagramm starten**  
 Öffnet beim Öffnen der Designer automatisch das Dialogfeld **Tabelle hinzufügen** .  
   
-

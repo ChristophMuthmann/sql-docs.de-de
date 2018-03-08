@@ -2,11 +2,13 @@
 title: Verwalten von Servern mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "76"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
-   Die richtlinienbasierte Verwaltung ist ein richtlinienbasiertes System zum Verwalten einer oder mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese, um Bedingungen zu erstellen, die Bedingungsausdrücke enthalten. Erstellen Sie dann Richtlinien, die die Bedingungen für Datenbankzielobjekte übernehmen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Richtlinienbasierte Verwaltung ist ein richtlinienbasiertes System zum Verwalten einer oder mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese, um Bedingungen zu erstellen, die Bedingungsausdrücke enthalten. Erstellen Sie dann Richtlinien, die die Bedingungen für Datenbankzielobjekte übernehmen.  
 
 Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstellen möchten, dass für bestimmte Server Datenbank-E-Mail nicht aktiviert ist. Also erstellen Sie eine Bedingung und eine Richtlinie, die diese Serveroption festgelegt. 
    
@@ -126,4 +127,3 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
  [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
-

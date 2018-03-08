@@ -25,3 +25,4 @@
 ### [Ändern der IP-Adresse einer Failoverclusterinstanz](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [Upgraden einer SQL Server-Failoverclusterinstanz](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
 ### [Upgraden einer SQL Server-Failoverclusterinstanz (Setup)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
+### [Aktualisieren einer SQL Server-Failoverclusterinstanz ((Windows Server 2008/2008 R2/2012)](windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)

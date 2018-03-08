@@ -2,36 +2,33 @@
 title: MDSCHEMA_HIERARCHIES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_HIERARCHIES
+apiname: MDSCHEMA_HIERARCHIES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_HIERARCHIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_HIERARCHIES rowset
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ecdc6817c5a2d7e1e88b909080a3156c55f40eb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6eae8854ad8d989b19548bb74922763d6e398e7a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemahierarchies-rowset"></a>MDSCHEMA_HIERARCHIES-Rowset
-  Beschreibt jede Hierarchie innerhalb einer bestimmten Dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt jede Hierarchie innerhalb einer bestimmten Dimension.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_HIERARCHIES** Rowset enthält die folgenden Spalten.  
@@ -87,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Beispiel für MaxRecords-Eigenschaft (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 89a1d7e9ecc360bb5a92cb4a9584c93cbc2ca8ce
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6bc345e6b09ba099c8b34c74cdd0e57248ac3756
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="maxrecords-property-example-vb"></a>Beispiel für MaxRecords-Eigenschaft (VB)
 Dieses Beispiel verwendet die [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) Eigenschaft so öffnen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit dem 10 die teuersten Titel in die ***Titel*** Tabelle.  
@@ -98,4 +97,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [MaxRecords-Eigenschaft (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

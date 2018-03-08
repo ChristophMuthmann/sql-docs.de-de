@@ -2,29 +2,30 @@
 title: MSSQLSERVER_2814 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2814 (Database Engine error)
+helpviewer_keywords: 2814 (Database Engine error)
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b3229022b95b8e747e1d76d00cddb0cf01c29428
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
-ms.openlocfilehash: 3bca883d9f5b13b81e021014193df43fc3f5f6e3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -78,4 +79,3 @@ In der folgenden Tabelle werden die Ursachen für die Neukompilierung aufgeliste
 ## <a name="see-also"></a>Siehe auch  
 [SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
   
-

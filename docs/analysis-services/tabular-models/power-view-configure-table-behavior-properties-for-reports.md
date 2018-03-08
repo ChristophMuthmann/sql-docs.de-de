@@ -1,33 +1,33 @@
 ---
-title: "Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch) | Microsoft Docs"
+title: "Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: Konfigurieren von Tabellenverhalten-Eigenschaften für Berichte
-  Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] unterscheidet sich von anderen Berichtsanwendungen darin, dass es Gruppenelemente automatisch während des Berichtsentwurfs gruppiert, indem die von Ihnen in der Berichtsfeldliste positionierten Spalten gegenüber dem von Ihnen verwendeten Präsentationsformat ausgewertet werden. In den meisten Fällen führt die Standardgruppierung zu einem optimalen Ergebnis. Für einige Tabellen, hauptsächlich solche, die Detaildaten enthalten, führt das Standardgruppierungsverhalten jedoch manchmal zur Gruppierung von Zeilen, bei denen dies nicht erwünscht ist. Für solche Tabellen können Sie Eigenschaften festlegen, die ändern, wie Gruppen ausgewertet werden.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Entfernen unerwünschter Teilergebnisse aus einem Matrixbericht. Die Standardgruppierung auf Feldebene erstellt ein Teilergebnis für jedes Feld. Wenn Sie nur ein einzelnes Teilergebnis möchten, das auf Zeilenebene berechnet wird, führt die Festlegung der Zeilen-ID zu diesem Ergebnis.  
   
- Für Tabellen, die als Datumstabellen markiert sind, kann keine Zeilen-ID festgelegt werden. Für Datumstabellen wird die Zeilen-ID angegeben, wann Sie die Tabelle markieren. Weitere Informationen finden Sie unter [Dialogfeld "Als Datumstabelle markieren" &#40;SSAS&#41;](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ Für Tabellen, die als Datumstabellen markiert sind, kann keine Zeilen-ID festgelegt werden. Für Datumstabellen wird die Zeilen-ID angegeben, wann Sie die Tabelle markieren. Weitere Informationen finden Sie unter [markieren als Date-Tabelle Dialogfeld ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Festlegen der Eigenschaft Eindeutige Zeilen beibehalten  
  Mit dieser Eigenschaft können Sie angeben, welche Spalten Identitätsinformationen (z. B. ein Mitarbeitername oder ein Produktcode) auf eine Weise vermitteln, die eine Zeile von einer anderen unterscheidet. In Fällen, in denen Zeilen identisch zu sein scheinen (z. B. zwei Kunden mit dem gleichen Namen), wiederholen sich die Spalten, die Sie für diese Eigenschaft angeben, in der Berichtstabelle.  
@@ -144,4 +144,3 @@ ms.lasthandoff: 09/01/2017
  Nachdem Sie die Tabellen im Modell ausgewertet und die Tabellenverhaltenseigenschaften zu jenen Tabellen festgelegt haben, die Detailzeilen enthalten, welche stets als einzelne Elemente angezeigt werden sollen, können Sie das Modell durch zusätzliche Eigenschaften oder Einstellungen weiter optimieren.  
   
   
-

@@ -1,29 +1,30 @@
 ---
 title: Laden konvertierte Objekte in SQLServer (OracleToSQL) Datenbank | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 1de8ae1e53dfd76527987a15be62894dcae10120
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6fd5616c61af419d5d2ff3134177ae296b317d57
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Laden konvertierte Objekte in SQLServer (OracleToSQL) Datenbank
 Nachdem Sie die Oracle-Schemas in SQL Server konvertiert haben, können Sie die resultierende Datenbankobjekte in SQL Server laden. Kann entweder über die SSMA, die die Objekte zu erstellen, oder können Sie Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus können mit SSMA Sie Metadaten durch den tatsächlichen Inhalt der SQL Server-Datenbank zu aktualisieren.  
@@ -117,4 +118,3 @@ Der nächste Schritt des Migrationsvorgangs besteht darin [Migrieren von Daten i
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Oracle-Datenbanken zu SQLServer &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

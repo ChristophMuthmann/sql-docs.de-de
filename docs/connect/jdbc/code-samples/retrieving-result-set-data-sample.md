@@ -3,23 +3,24 @@ title: Abrufen von Resultsetdaten-Beispiel festgelegt | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 4c2ddae853f00d63c48670b2c4f5e2abe0b17ea1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd100d639e80ff9b6c78d17593cc30abfa7b7911
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="retrieving-result-set-data-sample"></a>Abrufen von Resultsetdaten - Beispiel
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

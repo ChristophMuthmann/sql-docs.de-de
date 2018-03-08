@@ -2,12 +2,13 @@
 title: Funktionsauswahl (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
-  Die*Featureauswahl* ist ein wichtiger Teil für das Machine Learning. Die Featureauswahl bezieht sich auf das Reduzieren der Eingaben für die Verarbeitung und Analyse oder die Suche nach sinnvollen Eingaben. Ein verwandter Begriff ist die *Featureentwicklung* (oder *Featureextraktion*), der sich auf Verfahren zum Extrahieren nützlicher Informationen aus vorhandenen Daten bezieht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Die *Featureauswahl* ist ein wichtiger Teil für das Machine Learning. Die Featureauswahl bezieht sich auf das Reduzieren der Eingaben für die Verarbeitung und Analyse oder die Suche nach sinnvollen Eingaben. Ein verwandter Begriff ist die *Featureentwicklung* (oder *Featureextraktion*), der sich auf Verfahren zum Extrahieren nützlicher Informationen aus vorhandenen Daten bezieht.  
   
 ## <a name="why-do-feature-selection"></a>Wofür dient die Featureauswahl?  
  Die Featureauswahl ist aus verschiedenen Gründen entscheidend für die Erstellung eines guten Modells. Einer ist, dass die Featureauswahl ein gewisses Maß an *Kardinalitätsreduzierung*impliziert, um die Anzahl der Attribute zu reduzieren, die beim Erstellen eines Modells berücksichtigt werden. Daten enthalten fast immer mehr Informationen als für das Erstellen des Modells erforderlich sind – oder die falsche Art von Informationen. Angenommen, Sie verfügen über ein Dataset mit 500 Spalten, die Merkmale von Kunden beschreiben. Wenn die Daten in einigen Spalten jedoch nur eine geringe Dichte aufweisen, bringt es nur sehr wenig, diese dem Modell hinzuzufügen, und wenn einige Spalten sich untereinander duplizieren, könnte die Verwendung beider Spalten Auswirkungen auf das Modell haben.  
@@ -141,4 +142,3 @@ ms.lasthandoff: 09/01/2017
  [Anpassen von Miningmodellen und -strukturen](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

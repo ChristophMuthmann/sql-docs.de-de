@@ -2,9 +2,12 @@
 title: Erlernen von SQL Server Master Data Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -12,23 +15,22 @@ ms.topic: get-started-article
 keywords:
 - Erlernen von SQL
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-caps.latest.revision: 19
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 34d9c876e8fab97fcce0f81421d918af4741a47f
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9139c9faeb4d38fe43300d6b97c019ae845567ec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="learn-sql-server-master-data-services"></a>Erlernen von SQL Server Master Data Services
   
   
 ## <a name="training"></a>Training  
-* Absolvieren Sie diese [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], um die neuen Features und Funktionen in [****](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) zu kennenzulernen. Dazu müssen Sie bei Ihrem Microsoft-Konto angemeldet sein.  
+* Absolvieren Sie diese [**virtuelle TechNet-Übungseinheit**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true), um die neuen Features und Funktionen in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] zu kennenzulernen. Dazu müssen Sie bei Ihrem Microsoft-Konto angemeldet sein.  
 * Absolvieren Sie diese [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] virtuelle TechNet-Übungseinheit [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], um mithilfe des Add-In für Excel und des [**s eine**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)-Lösung zum Speichern und Verwalten von Masterlisten mit geografischen Daten zu entwickeln. Erstellen Sie Entitäten und Hierarchien, und verwenden Sie [!INCLUDE[ssIS_md](../includes/ssis-md.md)] zum Auffüllen einer Dimensionstabelle.  
   
 ## <a name="videos"></a>Videos  
@@ -60,5 +62,4 @@ ms.lasthandoff: 09/07/2017
   
   
   
-
 

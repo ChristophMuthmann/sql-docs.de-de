@@ -3,10 +3,12 @@ title: Installieren von ODBC-Komponenten | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], about installing
 - ODBC [ODBC], component installation
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 790d398aff2723557f0e944fad87cd03fbc9819c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 383a3a17abb969a57eb2de68b304da4b1bde9a6b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-odbc-components"></a>Installieren von ODBC-Komponenten
 > [!NOTE]  
@@ -50,4 +51,3 @@ ms.lasthandoff: 09/09/2017
 -   [Installationskomponenten](../../../odbc/reference/install/installation-components.md)  
   
 -   [Zählen der Verwendung](../../../odbc/reference/install/usage-counting.md)
-

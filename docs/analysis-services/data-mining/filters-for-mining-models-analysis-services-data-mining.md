@@ -2,12 +2,13 @@
 title: "Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,26 +18,26 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db42f50eca097c58afac1ded71d143f8230fd42d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
-  Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
   
  Zum Beispiel definieren Sie die Datenquellensicht für die Tabelle "Kunden" und verknüpfte Tabellen. Anschließend definieren Sie eine einzelne Miningstruktur, die alle Felder enthält, die Sie benötigen. Schließlich erstellen Sie ein Modell, das nach einem bestimmten Kundenattribut gefiltert wird, z. B. "Region". Sie können einfach eine Kopie dieses Modells erstellen und nur die Filterbedingungen ändern, um ein neues Modell auf der Grundlage einer anderen Region zu erzeugen.  
   
  Die folgenden realistischen Szenarien sind einige Beispiele, in denen diese Funktion hilfreich sein kann:  
   
--   Das Erstellen von separaten Modellen für diskrete Werte wie z. B. Geschlecht, Regionen usw. Ein Bekleidungsgeschäft könnte beispielsweise demografische Kundendaten verwenden, um unterschiedliche Modelle nach Geschlecht zu erstellen, auch wenn die Verkaufsdaten aus einer einzigen Datenquelle für alle Kunden stammen.  
+-   Das Erstellen von separaten Modellen für diskrete Werte wie z. B. Geschlecht, Regionen usw. Ein Bekleidungsgeschäft könnte beispielsweise demografische Kundendaten verwenden, um unterschiedliche Modelle nach Geschlecht zu erstellen, auch wenn die Verkaufsdaten aus einer einzigen Datenquelle für alle Kunden stammen.  
   
 -   Man könnte mit Modellen experimentieren, indem man unterschiedliche Gruppierungen der gleichen Daten erstellt, beispielsweise die Altersgruppen 20-30, 20-40 oder 20-25.  
   
@@ -128,7 +129,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

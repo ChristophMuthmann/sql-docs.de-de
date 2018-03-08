@@ -2,28 +2,30 @@
 title: "Statistiken für speicheroptimierte Tabellen | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 10/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 83b83588668057284eaf92d972d5dcf42ca46a56
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiken für speicheroptimierte Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Der Abfrageoptimierer verwendet Statistiken zu Spalten zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Die Statistiken werden aus den Tabellen in der Datenbank gesammelt und in den Datenbankmetadaten gespeichert.  
   
@@ -102,8 +104,7 @@ WHERE o.is_memory_optimized=1
   
  Indem Sie systemintern kompilierte gespeicherten Prozeduren erstellen, nachdem die Daten geladen wurden, wird sichergestellt, dass der Abfrageoptimierer über die für die speicheroptimierten Tabellen erforderlichen Statistiken verfügt. Damit liegen effiziente Abfragepläne vor, wenn die Prozedur kompiliert wird.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

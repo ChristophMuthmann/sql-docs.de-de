@@ -3,7 +3,7 @@ title: Achsenobjekt (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Axis object [ADO MD]
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cdf9844445a4512a9ec81b1178e110da3410c475
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7d563e9359853c109605c2f87438e2e7b2c795c4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="axis-object-ado-md"></a>Achsenobjekt (ADO MD)
 Stellt eine mit Feldern fester Breite oder Filterachse eines cellSets, ausgewählte Elemente der eine oder mehrere Dimensionen enthält.  
@@ -54,5 +53,4 @@ Stellt eine mit Feldern fester Breite oder Filterachse eines cellSets, ausgewäh
  [Achse-Beispiel (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Die Achsenauflistung (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Positionen-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

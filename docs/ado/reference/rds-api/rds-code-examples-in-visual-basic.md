@@ -1,12 +1,14 @@
 ---
 title: RDS-Codebeispiele in Visual Basic | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - Visual Basic RDS examples [ADO]
 - RDS samples [ADO], Visual Basic
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f1b84d856fd85f6c52ee5a4ebe49bfb8d9893f42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6cb09dac252035372f67aafaf72768c3aa32bdf0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>RDS-Codebeispiele in Visual Basic
 > [!IMPORTANT]
@@ -41,6 +42,5 @@ ms.lasthandoff: 09/09/2017
 -   [Beispiel für Dateneigenschaften Handler](../../../ado/reference/rds-api/handler-property-example-vb.md)  
   
 -   [Beispiel-InternetTimeout-Eigenschaft](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)
-
 
 

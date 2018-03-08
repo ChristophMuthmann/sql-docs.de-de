@@ -2,32 +2,30 @@
 title: Integrierte Elementeigenschaften (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- intrinsic member properties [MDX]
+helpviewer_keywords: intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1b3dfd57447e95c22a468e3635030f8973fcc2bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX-Elementeigenschaften - systeminternen Elementeigenschaften
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente verfügbar, die Sie in eine Abfrage einschließen können, um zusätzliche Daten oder Metadaten für eine benutzerdefinierte Anwendung zurückzugeben, oder um die Überprüfung oder Erstellung des Modells zu unterstützen. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente, die in einer Abfrage, um zusätzliche Daten oder Metadaten für die Verwendung in eine benutzerdefinierte Anwendung zurückzugeben oder bei der Überprüfung des Modells oder Erstellung eingeschlossen werden können. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
   
  Systeminterne Eigenschaften sind **ID**, **KEY**, **KEYx**und **NAME**und werden von jedem Element auf beliebigen Ebenen verfügbar gemacht. Sie können u.a. auch Positionsinformationen wie **LEVEL_NUMBER** oder **PARENT_UNIQUE_NAME**zurückgeben.  
   
@@ -226,4 +224,3 @@ FROM [Adventure Works]
  [MDX-Funktionsreferenz &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

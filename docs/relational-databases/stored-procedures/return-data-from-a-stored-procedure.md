@@ -2,9 +2,12 @@
 title: "Zurückgeben von Daten von einer gespeicherten Prozedur | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -13,23 +16,49 @@ helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 7d4ec18d40f6777a2d72b838030e3b4305c891e6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Zurückgeben von Daten von einer gespeicherten Prozedur](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
-  Es gibt zwei Methoden, Resultsets oder Daten von einer Prozedur an ein aufrufendes Programm zurückzugeben: Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu beiden Ansätzen.  
+  Es gibt drei Methoden, Daten aus einer Prozedur an ein aufrufendes Programm zurückzugeben: Resultsets, Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu diesen drei Ansätzen.  
+  
+  ## <a name="returning-data-using-result-sets"></a>Zurückgeben von Daten mithilfe von Resultsets
+ Wenn Sie eine SELECT-Anweisung im Textkörper einer gespeicherten Prozedur (jedoch nicht die Anweisungen SELECT... INTO oder INSERT... SELECT) einfügen, werden die Zeilen, die durch die SELECT-Anweisung angegeben werden, direkt an den Client gesendet.  Bei großen Resultsets wird die Ausführung der gespeicherten Prozedur nicht mit der nächsten Anweisung fortgesetzt, bis das Resultset vollständig an den Client gesendet wurde.  Bei kleinen Resultsets werden die Ergebnisse für die Rückgabe an den Client gespoolt und die Ausführung wird fortgesetzt.  Wenn mehrere dieser SELECT-Anweisungen während der Ausführung der gespeicherten Prozedur ausgeführt werden, werden mehrere Resultsets an den Client gesendet.  Dieses Verhalten gilt auch für geschachtelte TSQL-Batches, geschachtelte gespeicherte Prozeduren und allgemeine TSQL-Batches.
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>Beispiele für das Zurückgeben von Daten mithilfe eines Resultsets 
+  Das folgende Beispiel zeigt eine gespeicherte Prozedur, die die Werte „LastName“ und „SalesYTD“ für alle SalesPerson-Zeilen zurückgibt, die auch in der Ansicht „vEmployee“ angezeigt werden.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>Zurückgeben von Daten mithilfe eines OUTPUT-Parameters  
  Wenn Sie in der Prozedurdefinition für einen Parameter das Schlüsselwort OUTPUT angeben, kann die Prozedur den aktuellen Wert des Parameters an das aufrufende Programm zurückgeben, wenn die Prozedur beendet wird. Um den Wert des Parameters in einer Variablen zu speichern, die in dem aufrufenden Programm verwendet werden kann, muss das aufrufende Programm beim Ausführen der Prozedur das Schlüsselwort OUTPUT verwenden. Weitere Informationen dazu, welche Datentypen als Ausgabeparameter verwendet werden können, finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -113,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>Beispiele für Cursorausgabeparameter  
  Im folgenden Beispiel wird eine gespeicherte Prozedur mit einem Ausgabeparameter `@currency_cursor` vom Datentyp **cursor** erstellt. Die Prozedur wird anschließend in einem Batch aufgerufen.  
-  
+ 
  Zuerst wird die Prozedur erstellt, die einen Cursor für die Currency-Tabelle deklariert und dann öffnet.  
   
 ```  
@@ -160,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- Rückgabecodes werden häufig in Blöcken zur Ablaufsteuerung innerhalb von Prozeduren verwendet, um den Wert des Rückgabecodes für sämtliche Fehler festzulegen. Sie können die @@ERROR-Funktion nach einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden, um festzustellen, ob während der Ausführung der Anweisung ein Fehler aufgetreten ist.  
+ Rückgabecodes werden häufig in Blöcken zur Ablaufsteuerung innerhalb von Prozeduren verwendet, um den Wert des Rückgabecodes für sämtliche Fehler festzulegen. Sie können die @@ERROR-Funktion nach einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden, um festzustellen, ob während der Ausführung der Anweisung ein Fehler aufgetreten ist.  Vor der Einführung der TRY/CATCH/THROW-Fehlerbehandlung in TSQL waren Rückgabecodes manchmal erforderlich, um den Erfolg oder Misserfolg von gespeicherten Prozeduren festzustellen.  Gespeicherte Prozeduren sollten Misserfolge immer mit einem Fehler (der bei Bedarf durch THROW/RAISERROR generiert wird) anzeigen, und nicht einen Rückgabecode benötigen.  Ebenfalls sollten Sie vermeiden, den Rückgabecode für das Zurückgeben von Anwendungsdaten zu verwenden.
   
 ### <a name="examples-of-return-codes"></a>Beispiele für Rückgabecodes  
  Das folgende Beispiel zeigt die `usp_GetSalesYTD` -Prozedur mit Fehlerbehandlung, in der für verschiedene Fehler spezielle Rückgabecodewerte festgelegt sind. In der Tabelle werden die ganzzahligen Werte aufgeführt, die die Prozedur den einzelnen möglichen Fehlern zuweist, sowie die Bedeutung der einzelnen Werte.  
@@ -261,7 +290,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   
@@ -270,4 +299,3 @@ GO
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,20 +42,19 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "20"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3671c010f2c17d4a7c0312a99312f6d0996e5735
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40dd0c1438bb9102cfbc8d9daa9206f49b17b973
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Informationen finden früheren Versionen von SQL Server finden Sie unter [Start Stop Pause Resume Restart the Database Engine SQL Server Agent or SQL Server Browser Service (Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Agent, SQL Server-Browserdienst oder des Datenbankmoduls)](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
 
   In diesem Thema wird beschrieben, wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, mit  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** -Befehlen von einer Eingabeaufforderung, mit [!INCLUDE[tsql](../../includes/tsql-md.md)]oder mit PowerShell gestartet, beendet, angehalten, fortgesetzt oder neu gestartet werden.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
     -   [Zusätzliche Informationen](#MoreInformation)  
   
-    -   [Sicherheit](#Security)  
+    -   [Security](#Security)  
   
 -   **Anweisungen mit:**  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/02/2017
   
     -   [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Services"></a> Was ist die Funktion des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Diensts, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdiensts?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten sind ausführbare Programme, die als Windows-Dienst ausgeführt werden. Programme, die als Windows-Dienst ausgeführt werden, lassen sich ohne Anzeige von Aktivitäten auf dem Computerbildschirm weiterhin ausführen.  
@@ -276,13 +276,13 @@ ms.lasthandoff: 08/02/2017
   
 -   Um nach der vollständigen Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und gespeicherten Prozeduren [!INCLUDE[ssDE](../../includes/ssde-md.md)]zu beenden, führen Sie die folgende Anweisung aus.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   Um [!INCLUDE[ssDE](../../includes/ssde-md.md)] sofort zu beenden, führen Sie die folgende Anweisung aus.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   
@@ -360,7 +360,7 @@ ms.lasthandoff: 08/02/2017
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über die SQL Server-Setupdokumentation](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)   
@@ -368,5 +368,4 @@ ms.lasthandoff: 08/02/2017
  [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
-
 

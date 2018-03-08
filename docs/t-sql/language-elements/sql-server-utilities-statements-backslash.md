@@ -1,10 +1,13 @@
 ---
-title: "(Umgekehrter Schrägstrich) (Transact-SQL) | Microsoft Docs"
+title: "Umgekehrter Schrägstrich (Zeilenfortsetzungszeichen) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,24 +33,21 @@ helpviewer_keywords:
 - line continuation character
 - reverse solidus
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 011025d20b6341b9fa43b25f6c14c91a135a6ffa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6cc27da58953985a2fa4910583bde2dd31d67405
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---backslash"></a>Anweisungen für SQL Server-Hilfsprogramme - umgekehrter Schrägstrich
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="backslash-line-continuation-transact-sql"></a>Umgekehrter Schrägstrich (Zeilenfortsetzungszeichen) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthält Befehle, die nicht [!INCLUDE[tsql](../../includes/tsql-md.md)] sind aber -Anweisungen erkannt, durch die **Sqlcmd** und **Osql** Hilfsprogramme und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code-Editor. Die Befehle können zur Vereinfachung der Lesbarkeit und Ausführung von Batches und Skripts verwendet werden.  
-  
-\ eine lange Zeichenfolge in zwei oder mehr Zeilen zur besseren Lesbarkeit Konstante unterbrochen.  
+`\`teilt eine lange Zeichenfolgenkonstante, die Zeichen oder binär, in zwei oder mehr Zeilen auf.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,15 +67,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>Hinweise  
  Dieser Befehl gibt den ersten und den fortgesetzten Abschnitt der Zeichenfolge ohne den umgekehrten Schrägstrich als eine einzige Zeichenfolge zurück.  
-  
- Der umgekehrte Schrägstrich ist keine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Es ist ein Befehl, der vom erkannt wird die **Sqlcmd** und **Osql** Hilfsprogramme und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code-Editor.  
-  
+
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden ein umgekehrter Schrägstrich und ein Wagenrücklauf verwendet, um die Zeichenfolge in zwei Zeilen zu teilen.  
+
+### <a name="a-splitting-a-character-string"></a>A. Aufteilen einer Zeichenfolge  
+
+Im folgenden Beispiel wird ein umgekehrter Schrägstrich und ein Wagenrücklaufzeichen, eine Zeichenfolge in zwei Linien geteilt.  
   
 ```  
 SELECT 'abc\  
-def' AS ColumnResult;  
+def' AS [ColumnResult];  
   
 ```  
   
@@ -86,14 +87,31 @@ def' AS ColumnResult;
  ------------  
  abcdef
  ```    
+
+### <a name="b-splitting-a-binary-string"></a>B. Teilen eine binäre Zeichenfolge  
+
+Im folgende Beispiel werden ein umgekehrter Schrägstrich und ein Wagenrücklauf verwendet, um eine binäre Zeichenfolge in zwei Linien geteilt.  
+
+```  
+SELECT 0xabc\  
+def AS [ColumnResult];  
   
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ ```  
+ ColumnResult  
+ ------------  
+ 0xABCDEF
+ ```    
+
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [&#40; aufgrund einer Division &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; Teilen gleich &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [&#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
+ [&#40; Divisionszuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-

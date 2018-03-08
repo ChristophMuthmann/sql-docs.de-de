@@ -1,25 +1,25 @@
 ---
-title: "Aktivieren und Deaktivieren von RDL-Sandkasten für Reporting Services im integrierten SharePoint-Modus | Microsoft Docs"
+title: "Aktivieren und Deaktivieren von RDL-Sandkasten für Reporting Services im integrierten SharePoint-Modus | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Aktivieren und Deaktivieren von RDL-Sandkasten für Reporting Services im integrierten SharePoint-Modus
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Mithilfe der sandboxingfunktion der RDL (Report Definition Language) können Sie erkennen und Einschränken der Verwendung bestimmter Typen von Ressourcen, die von den einzelnen Mandanten in einer Umgebung mehrere Mandanten, die eine einzelne Webfarm von Berichtsservern verwenden. Ein Beispiel hierfür ist ein Szenario mit einem Hostingdienst, in dem eine einzelne Webfarm mit Berichtsservern verwaltet wird, die von mehreren Mandanten und möglicherweise auch unterschiedlichen Firmen verwendet werden. Als Berichtsserveradministrator können Sie diese Funktion aktivieren, um die folgenden Zielsetzungen zu erreichen:  
+Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdefinitionssprache) können Sie die Verwendung bestimmter Ressourcentypen durch einzelne Mandanten in einer Umgebung erkennen und einschränken, in der mehrere Mandanten eine einzelne Webfarm von Berichtsservern verwenden. Ein Beispiel hierfür ist ein Szenario mit einem Hostingdienst, in dem eine einzelne Webfarm mit Berichtsservern verwaltet wird, die von mehreren Mandanten und möglicherweise auch unterschiedlichen Firmen verwendet werden. Als Berichtsserveradministrator können Sie diese Funktion aktivieren, um die folgenden Zielsetzungen zu erreichen:  
   
 -   Beschränken der Größen externer Ressourcen. Externe Ressourcen sind Bilder, XSLT-Dateien und Kartendaten.  
   
@@ -36,20 +36,20 @@ Mithilfe der sandboxingfunktion der RDL (Report Definition Language) können Sie
 -   Beschränken der Länge des Texts und der Größe des Rückgabewerts für Ausdrücke zur Berichtsverarbeitungszeit.
 
 > [!NOTE]
-> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
  Bei Aktivierung des RDL-Sandboxing werden die folgenden Funktionen deaktiviert:  
   
--   Benutzerdefinierter Code in der  **\<Code >** -Element einer Berichtsdefinition.  
+-   Benutzerdefinierter Code im **\<Code>**-Element einer Berichtsdefinition.  
   
 -   RDL-Abwärtskompatibilitätsmodus für benutzerdefinierte Berichtselemente von [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] .  
   
 -   Benannte Parameter in Ausdrücken.  
   
- In diesem Thema wird beschrieben, jedes Element in der \< **RDLSandboxing**>-Element in der Datei "rsreportserver.config". Weitere Informationen zum Ändern dieser Datei finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). In einem Server-Ablaufverfolgungsprotokoll werden Aktivitäten aufgezeichnet, die sich auf die RDL-Sandboxingfunktion beziehen. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).  
+ In diesem Thema werden die einzelnen Elemente im \<**RDLSandboxing**>-Element in der Datei „RSReportServer.Config“ beschrieben. Weitere Informationen zum Ändern dieser Datei finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). In einem Server-Ablaufverfolgungsprotokoll werden Aktivitäten aufgezeichnet, die sich auf die RDL-Sandboxingfunktion beziehen. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Beispielkonfiguration
- Das folgende Beispiel zeigt die Einstellungen und Beispielwerte für die \< **RDLSandboxing**>-Element in der Datei "rsreportserver.config".  
+ Im folgenden Beispiel werden die Einstellungen und Beispielwerte für das \<**RDLSandboxing**>-Element in der Datei „RSReportServer.Config“ veranschaulicht.  
   
 ```  
 <RDLSandboxing>  
@@ -81,10 +81,10 @@ Mithilfe der sandboxingfunktion der RDL (Report Definition Language) können Sie
 |**Typen**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
 |**Allow**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
 |**Namespace**|Attribut für **Erlauben** , das den Namespace darstellt, der mindestens einen gültigen Typ für Value enthält. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**AllowNew**|Boolesches Attribut für **zulassen** , die steuert, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL erstellt werden dürfen  **\<Klasse >** Element.<br /><br /> Wenn **RDLSandboxing** aktiviert ist, können keine neuen Arrays erstellt werden, in RDL-Ausdrücken, unabhängig von der Einstellung der **AllowNew**.|  
-|**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**Elemente**|Die Liste der Typen, die in eingeschlossen werden sollen, werden die  **\<Typen >** -Element, das die Liste der Elementnamen, die in RDL-Ausdrücken nicht zulässig sind.|  
-|**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Wenn **Deny** angegeben für ein Element, alle Elemente mit diesem Namen für alle Typen sind nicht zulässig ist.|  
+|**AllowNew**|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Wenn **RDLSandboxing** aktiviert ist, können in RDL-Ausdrücken keine neuen Arrays erstellt werden, unabhängig von der Einstellung von **AllowNew**.|  
+|**ReplTest1**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
+|**Elemente**|Für die Liste der Typen, die im **\<Types>**-Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
+|**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für keinen Typ zugelassen.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Arbeiten mit Ausdrücken bei aktiviertem RDL-Sandkasten
 
@@ -113,7 +113,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
 -   Die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** method.  
   
--   Die  **\<Klassen >** Element in der Berichtsdefinition.  
+-   Das **\<Classes>**-Element in der Berichtsdefinition  
   
 -   Elemente, die Sie der Sperrliste für einen Typ in der Zulassungsliste hinzugefügt haben.  
   
@@ -127,7 +127,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
  Um ein Element eines Typs zu aktivieren, aber ein Element mit dem gleichen Namen für einen anderen Typ zu verweigern, gehen Sie wie folgt vor:  
   
--   Hinzufügen einer  **\<Deny >** Element für den Elementnamen.  
+-   Fügen Sie ein **\<Deny>**-Element für den Elementnamen hinzu.  
   
 -   Erstellen Sie ein Proxyelement mit einem anderen Namen für eine Klasse in einer benutzerdefinierten Assembly für das Element, das Sie aktivieren möchten.  
   
@@ -135,7 +135,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
  Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen für .NET Framework hinzuzufügen, fügen Sie die entsprechenden Typen aus dem Namespace „Microsoft.VisualBasic“ zur Zulassungsliste hinzu.  
   
- Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Beispielsweise verwenden die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework-Schlüsselwort **Ganzzahl**, fügen Sie die folgenden XML-Fragment in der  **\<RDLSandboxing >** Element:  
+ Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Fügen Sie dem **\<RDLSandboxing>**-Element das folgende XML-Fragment hinzu, um beispielsweise das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Schlüsselwort **Integer** für .NET Framework zu verwenden:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -149,7 +149,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
  Indem Sie einen Typ aus einer benutzerdefinierten Assembly der Zulassungsliste hinzufügen, gewähren Sie nicht implizit die Ausführungsberechtigung für die Assembly. Sie müssen die Codezugriffs-Sicherheitsdatei spezifisch ändern und die  Ausführungsberechtigung für die Assembly bereitstellen. Weitere Informationen finden Sie unter [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Verwalten der \<Deny > Liste von Elementen
+#### <a name="maintaining-the-deny-list-of-members"></a>Verwalten der \<Deny>-Liste von Elementen
 
  Wenn Sie der Zulassungsliste einen neuen Typ hinzufügen, verwenden Sie die folgende Liste, um zu bestimmen, wann Sie die Sperrliste von Elementen möglicherweise aktualisieren müssen:  
   
@@ -163,9 +163,9 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
 -   Wenn Sie einen Berichtsserver aktualisieren, um ein späteres RDL-Schema verarbeiten zu können, da RDL-Typen möglicherweise neue Elemente hinzugefügt wurden.  
   
-### <a name="working-with-operators-and-new"></a>Arbeiten mit Operatoren und "new"
+### <a name="working-with-operators-and-new"></a>Arbeiten mit Operatoren und „New“
 
- Standardmäßig werden [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Sprachoperatoren für .NET Framework außer **New**immer zugelassen. Die **neu** Operator wird gesteuert, indem die **AllowNew** -Attribut auf die  **\<zulassen >** Element. Andere Sprachoperatoren, wie z. B. der standardmäßige Auflistungsungsaccessoroperator **!** und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Umwandlungsmakros von .NET Framework wie **CInt**sind immer zulässig.  
+ Standardmäßig werden [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Sprachoperatoren für .NET Framework außer **New**immer zugelassen. Der **New**-Operator wird vom **AllowNew**-Attribut des **\<Allow>**-Elements gesteuert. Andere Sprachoperatoren, wie z. B. der standardmäßige Auflistungsungsaccessoroperator **!** und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Umwandlungsmakros von .NET Framework wie **CInt**sind immer zulässig.  
   
  Das Hinzufügen von Operatoren, einschließlich benutzerdefinierter Operatoren, zu einer Sperrliste wird nicht unterstützt. Um Operatoren für einen Typ auszuschließen, gehen Sie wie folgt vor:  
   
@@ -183,8 +183,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
 ## <a name="see-also"></a>Siehe auch
 
- [Konfigurationsdatei "rsreportserver.config"](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report Server-Dienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Report Server Service Trace Log (Berichtsserverdienst-Ablaufverfolgungsprotokoll)](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

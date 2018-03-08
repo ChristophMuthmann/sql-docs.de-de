@@ -1,10 +1,13 @@
 ---
 title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,20 +36,19 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e99240896bb1192a742ad2b614080e5325acc1f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 12a05d112f55fd4323b5f6e4278c6134f581f4ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Meldet und behebt Ungenauigkeiten bei den Seiten- und Zeilenzahlen in den Katalogsichten. Diese Ungenauigkeiten können falsche Berichte über die Speicherplatzverwendung verursachen, die von der gespeicherten Systemprozedur sp_spaceused zurückgegeben werden.
   
@@ -63,13 +65,13 @@ DBCC UPDATEUSAGE
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Database_name* | *Database_id* | 0  
+*database_name* | *database_id* | 0  
 Name oder ID der Datenbank, deren Statistiken zur Speicherverwendung mitgeteilt und korrigiert werden sollen. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 *TABLE_NAME* | *Table_id* | *View_name* | *View_id*  
 Name oder ID der Tabelle oder indizierten Sicht, deren Statistiken zur Speicherverwendung mitgeteilt und korrigiert werden sollen. Tabellen- und Sichtnamen müssen den Regeln für Bezeichner entsprechen.  
   
-*Index_id* | *Index_name*  
+*index_id* | *index_name*  
 ID oder Name des zu verwendenden Indexes. Falls nicht angegeben, werden von der Anweisung alle Indizes der angegebenen Tabelle oder Sicht verarbeitet.  
   
 mit  
@@ -135,8 +137,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)
   
   
-

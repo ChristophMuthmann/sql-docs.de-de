@@ -2,30 +2,30 @@
 title: Discover Server State Events Data Columns | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Discover Server State event category
+helpviewer_keywords: Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 192c9bc97a67f5690619ac0b0ef667e9de6c99d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discover-server-state-events-data-columns"></a>Datenspalten mit Serverstatusermittlungs-Ereignissen
-  Die Serverstatusermittlungs-Ereigniskategorie beinhaltet die folgenden Ereignisklassen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Serverstatusermittlung-Ereigniskategorie enthält die folgenden Ereignisklassen:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
 |------------------|--------------------|---------------------------|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Serverstatusermittlungs-Ereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Enthält die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Duration|5|2|Enthält die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Enthält die CPU-Zeit (in Millisekunden), die vom Serverstatusermittlungs-Ereignis verwendet wird.|  
 |ConnectionID|25|1|Enthält die eindeutige, dem Serverstatusermittlungs-Ereignis zugeordnete Verbindungs-ID.|  
 |NTUserName|32|8|Enthält das mit dem Serverstatusermittlungs-Ereignis verbundene Windows-Benutzerkonto.|  
@@ -98,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   
-

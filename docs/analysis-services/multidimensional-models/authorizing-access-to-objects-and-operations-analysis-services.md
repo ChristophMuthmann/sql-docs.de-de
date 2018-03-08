@@ -2,13 +2,13 @@
 title: "Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
-  Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt die gültigen Berechtigungen für einen bestimmten Windows-Benutzer oder eine bestimmte Windows-Benutzergruppe, indem die Berechtigungen kombiniert werden, die jeder Datenbankrolle zugeordnet sind, zu der der Benutzer oder die Gruppe gehört. Das führt dazu, dass wenn eine bestimmte Datenbankrolle einem Benutzer oder einer Gruppe die Berechtigung zum Anzeigen einer Dimension, eines Measures oder eines Attributs erteilt, eine andere Datenbankrolle diese Benutzer- oder Gruppenberechtigung jedoch nicht erteilt, der Benutzer oder die Gruppe über die Berechtigung zum Anzeigen des Objekts verfügt.  
   
@@ -100,7 +100,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [Von Analysis Services Unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   
-

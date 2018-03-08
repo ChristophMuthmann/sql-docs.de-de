@@ -2,29 +2,29 @@
 title: Backup-ASDatabase-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 03d58a82-021c-4e13-b265-c084f42a8bb2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c4b8975c64d8fecd6227368ee0147e94496cb1df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1a4daeaf04fc9fe9c41064fe047110037c6d34e1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-asdatabase-cmdlet"></a>Backup-ASDatabase-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Sichern Sie eine mehrdimensionale oder tabellarische Analysis Services-Datenbank in einer Analysis Services-Sicherungsdatei (.abf).  
 
@@ -215,4 +215,3 @@ PS SQLSERVER:\SQLAS\Localhost\default >Remove-Variable –Name pwd
   
   
   
-

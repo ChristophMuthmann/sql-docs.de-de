@@ -3,7 +3,7 @@ title: "Persistenz-Provider für Microsoft OLE DB (ADO-Dienstanbieter) | Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 30df806429167550cdf39f064e349e46dd692502
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508b983c514031587f2b6507b806d3f279e0f822
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Übersicht über die Microsoft OLE DB-Persistenz-Provider
 Der Microsoft OLE DB-Persistenz-Provider ermöglicht Ihnen das Speichern einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt in eine Datei, und höhere Versionen wiederherstellen, die **Recordset** Objekt aus der Datei. Schemainformationen, Daten und ausstehende Änderungen werden beibehalten.
@@ -60,4 +59,3 @@ Der Microsoft OLE DB-Persistenz-Provider ermöglicht Ihnen das Speichern einer [
 
 ## <a name="see-also"></a>Siehe auch
 [Persistenz-Provider für Microsoft OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
-

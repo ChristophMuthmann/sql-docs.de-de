@@ -3,27 +3,28 @@ title: "Rückgabecodes ODBC | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9e5daaf1389631ac392fd487e99b28864b71efb8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-codes-odbc"></a>Rückgabecodes ODBC
 Jede Funktion in ODBC gibt einen Code, bekannt als seine *Rückgabecode,* gibt den Erfolg oder Fehler bei der Funktion an. Die Programmlogik basiert im Allgemeinen auf Rückgabecodes.  
@@ -58,4 +59,3 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|Es wurde keine weiteren Daten verfügbar. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um weitere Informationen abzurufen. Einen oder mehrere treiberdefinierten Statusdatensätze in der Klasse 02xxx können zurückgegeben werden. **Hinweis:** In ODBC 2. *X*, dadurch Code hieß SQL_NO_DATA_FOUND zurückgegeben.|  
 |SQL_NEED_DATA|Weitere Daten erforderlich ist, z. B. wenn die Parameterdaten zur Ausführungszeit gesendet wird, oder zusätzliche Verbindungsinformationen ist erforderlich. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** zusätzliche Informationen abrufen, sofern vorhanden.|  
 |SQL_STILL_EXECUTING|Eine Funktion, die asynchron gestartet wurde, wird weiterhin ausgeführt. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** zusätzliche Informationen abrufen, sofern vorhanden.|
-

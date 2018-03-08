@@ -2,9 +2,12 @@
 title: Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: 7
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 99221347b323c5353d681c372865616083bdbd5b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Datenbank-E-Mail-Profil und -Konto erstellen** , um ein Datenbank-E-Mail-Profil und -Konto für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank zu erstellen. Dieses Profil wird verwendet, um Benutzer und Gruppen per E-Mail über die nicht erfolgreiche Überprüfung einer Geschäftsregel zu benachrichtigen.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 09/07/2017
 |**E-Mail-Adresse**|Geben Sie den Namen der E-Mail-Adresse für das Konto ein. Dies ist die E-Mail-Adresse, von der aus die E-Mail gesendet wird. Sie muss das folgendes Format aufweisen: *E-Mail-Name*@*Domänenname*. Ein Beispiel für eine E-Mail-Adresse ist sales@contoso.com.|  
 |**Anzeigename**|Optionale Einstellung. Geben Sie den Namen ein, der in den von diesem Konto aus versendeten E-Mails angezeigt wird. Ein Beispiel für den Anzeigenamen ist Contoso Sales Group.|  
 |**E-Mail-Antwortadresse**|Optionale Einstellung. Geben Sie die E-Mail-Adresse ein, die für Antworten auf E-Mails von diesem Konto verwendet wird. Ein Beispiel für eine E-Mail-Antwortadresse ist admin@contoso.com.|  
-|**SMTP-Server**|Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Ein Beispiel für das SMTP-Server-Format lautet **smtp.***<Firmenname>***.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.|  
+|**SMTP-Server**|Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Ein Beispiel für das SMTP-Serverformat lautet **smtp.***<Firmenname>***.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.|  
 |**Portnummer**|Geben Sie die Portnummer des SMTP-Servers für dieses Konto ein. Port 25 ist der SMTP-Standardport.|  
 |**Für diesen Server ist eine sichere Verbindung (SSL) erforderlich**|Verschlüsselt die Kommunikation mit SSL (Secure Sockets Layer).|  
   
@@ -56,14 +58,13 @@ ms.lasthandoff: 09/07/2017
 |------------------|-----------------|  
 |**Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbankmoduldiensts**|Geben Sie an, dass für Datenbank-E-Mail die Anmeldeinformationen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Windows-Dienstkontos verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann.|  
 |**Standardauthentifizierung**|Geben Sie an, dass für Datenbank-E-Mail ein bestimmter Benutzername und ein bestimmtes Kennwort verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann. Diese Informationen werden nur zur Authentifizierung mit dem E-Mail-Server verwendet, das Konto muss keinem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer bzw. keinem Benutzer auf dem Computer entsprechen, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird.|  
-|**Benutzername**|Geben Sie den Namen des Benutzerkontos ein, das von Datenbank-E-Mail für die Anmeldung beim SMTP-Server verwendet wird. Ein Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
+|**User name**|Geben Sie den Namen des Benutzerkontos ein, das von Datenbank-E-Mail für die Anmeldung beim SMTP-Server verwendet wird. Ein Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
 |**Kennwort**|Geben Sie das Kennwort ein, mit dem sich Datenbank-E-Mail beim SMTP-Server anmeldet. Ein Kennwort ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
 |**Kennwort bestätigen**|Geben Sie das Kennwort zur Bestätigung erneut ein.|  
 |**Anonyme Authentifizierung**|Geben Sie an, dass der SMTP-Server keine Authentifizierung erfordert. Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)
   
   
-

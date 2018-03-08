@@ -2,30 +2,30 @@
 title: Technische Referenz (Replikation) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- technical reference [SQL Server replication]
+helpviewer_keywords: technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 591194f20b042c1f069fc3a7756cc4bcb96581c9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="technical-reference-replication"></a>Technische Referenz (Replikation)
-  Dieser Abschnitt enthält Links zu technischer Referenzdokumentation zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Dieser Abschnitt enthält Links zu technischer Referenzdokumentation zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation.  
   
  ![Kleines Dateiordnersymbol](../../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Fehler und Ereignisse**  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
@@ -80,9 +80,8 @@ ms.lasthandoff: 07/31/2017
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Sicherheit und Schutz &#40;Replikation&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   
-

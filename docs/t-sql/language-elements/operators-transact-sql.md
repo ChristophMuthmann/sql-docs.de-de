@@ -3,8 +3,11 @@ title: Operatoren (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - operators [Transact-SQL], about operators
 - operators [Transact-SQL]
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 565444ca9c738dfd7ceaff3e3c7be036264d28e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 535dcd920d25c347dc507c8f869706a49a1163a8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="operators-transact-sql"></a>Operatoren (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ein Operator ist ein Symbol, das die Ausführung einer Aktion mit einem oder mehreren Ausdrücken festlegt. In der folgenden Tabelle sind die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Operatorkategorien aufgeführt.  
   
@@ -44,4 +46,3 @@ ms.lasthandoff: 09/01/2017
  [Rangfolge von Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   
-

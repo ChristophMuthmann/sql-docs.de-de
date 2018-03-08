@@ -2,28 +2,31 @@
 title: Analysis-Server-Eigenschaften (Registerkarte Anmelden) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 915d8b9b06d30ce7690b177f71f14d3ce8f38ca8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 764930102320a6a6f4b998e3de3ec6491bbb485c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Analysis-Server-Eigenschaften (Registerkarte Anmelden)
-  Verwenden Sie im Dialogfeld **Eigenschaften für Analysis-Server** die Registerkarte **Anmelden** , um das vom [!INCLUDE[ssAS](../../includes/ssas-md.md)] -Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Verwenden Sie im Dialogfeld **Eigenschaften für Analysis-Server** die Registerkarte **Anmelden** , um das vom [!INCLUDE[ssAS](../../includes/ssas-md.md)] -Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
 > [!NOTE]  
 >  Beim Ändern der Option **Kontoname** , die von einem Dienst auf einer gruppierten Instanz verwendet wird, muss das neue Konto Mitglied der Domänengruppe sein, die während des Setups für den zu ändernden Dienst angegeben wird. Andernfalls müssen Sie die Berechtigung zum Hinzufügen von Mitgliedern zu dieser Gruppe besitzen. Wenden Sie sich an Ihren Domänenadministrator, falls Sie keine Berechtigung zum Ändern der Gruppenmitgliedschaft haben.  
@@ -57,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  Setzen Sie einen angehaltenen Dienst fort.  
   
   
-

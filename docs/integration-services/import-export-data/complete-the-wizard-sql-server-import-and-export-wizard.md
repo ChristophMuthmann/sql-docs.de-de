@@ -1,10 +1,13 @@
 ---
-title: "Schließen Sie den Assistenten (SQL Server-Import / Export-Assistent) | Microsoft Docs"
+title: "Assistenten abschließen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,29 +15,28 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2592ac0539b2cd693e4aef48d7652c7970ec71c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 738281bcaef0bce47cfc4c54890b48fd840eb91c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Assistenten abschließen (SQL Server-Import/Export-Assistent)
-Nachdem Sie angeben, ob den Kopiervorgang sofort ausgeführt werden soll, und optional das Paket zu speichern die der Assistent erstellt, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistent zeigt **Abschließen des Assistenten**. Auf dieser Seite überprüfen Sie die im Assistenten ausgewählten Optionen und klicken dann auf **Fertig stellen** , um den Kopiervorgang zu starten.
+Nachdem Sie angegeben haben, ob der Kopiervorgang sofort ausgeführt werden soll, und nachdem Sie optional auch das Paket gespeichert haben, das der Assistent erstellt hat, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent die Seite **Assistenten abschließen** an. Auf dieser Seite überprüfen Sie die im Assistenten ausgewählten Optionen und klicken dann auf **Fertig stellen** , um den Kopiervorgang zu starten.
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Screenshot der Seite „Assistenten abschließen“ 
- Der folgende Screenshot zeigt ein einfaches Beispiel der **Abschließen des Assistenten** Seite des Assistenten.  
+ Der folgende Screenshot zeigt ein einfaches Beispiel der Seite **Assistenten abschließen** des Assistenten.  
   
- ![Die Assistenten-Seite des Import / Export-Assistenten "abschließen"](../../integration-services/import-export-data/media/complete.png "Assistenten-Seite des Import / Export-Assistenten "abschließen"")  
+ ![Seite „Assistenten abschließen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/complete.png "Seite „Assistenten abschließen“ des Import/Export-Assistenten")  
   
 ## <a name="review-the-options-you-selected"></a>Überprüfen der ausgewählten Optionen  
  
-Überprüfen Sie die Zusammenfassung, und überprüfen Sie die folgende Informationen:  
+Überprüfen Sie die Zusammenfassung, und verifizieren Sie die folgenden Informationen:  
 -   Die Quelle und Ziel der zu kopierenden Daten.
 -   Die zu kopierenden Daten.
 -   Gibt an, ob das Paket gespeichert wird.
@@ -45,5 +47,4 @@ Nachdem Sie angeben, ob den Kopiervorgang sofort ausgeführt werden soll, und op
  
 ## <a name="see-also"></a>Siehe auch
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 

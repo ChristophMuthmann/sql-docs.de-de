@@ -1,29 +1,30 @@
 ---
 title: "Neue GUI-Funktionen in SSMA für Access to SQL | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 392ffae9874950d288a315798685294ccac71a28
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e1393007372900c4480fa6ee8ae5311edd59feee
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Neue GUI-Funktionen in SSMA für Access to SQL
 In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche  
@@ -132,4 +133,3 @@ Sie können die schnelle Textsuche mithilfe der folgenden Funktionen ausführen:
 ### <a name="advanced-search"></a>Erweiterte Suche  
 Klicken Sie dann auf Erweiterte Suche, um erweiterte Suche Dialogfeld zeigen Sie im Menü "Bearbeiten" suchen zu öffnen. Klicken Sie im Dialogfeld werden Sie jedes Objekt, das Muster gefunden. Oben im Dialogfeld können Sie Suchkategorien "Bereich" und "Objekt auswählen.  
   
-

@@ -3,8 +3,11 @@ title: CUME_DIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - CUME_DIST function
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-caps.latest.revision: 19
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22364fce2c5c8bfa2707f1f270dd728735096a31
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: dadae05fa8556b403c6cba436647203b30452559
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Berechnet die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CUME_DIST berechnet somit die relative Position eines angegebenen Werts in einer Gruppe von Werten. Für eine Zeile *r*eine aufsteigende Reihenfolge der CUME_DIST davon ausgegangen, dass *r* ist die Anzahl der Zeilen mit Werten, kleiner als oder gleich dem Wert der *r*, dividiert durch die Anzahl von Zeilen im Resultset Partition oder Abfrage ausgewertet. CUME_DIST ähnelt der PERCENT_RANK-Funktion.
   
@@ -101,4 +103,3 @@ Information Services   Bueno                  27.4038               0.4         
 [PERCENT_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   
-

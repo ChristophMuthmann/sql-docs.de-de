@@ -2,9 +2,12 @@
 title: "Rückgabecodes und Fehlerinformationen der OLE-Automatisierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-ole
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d2621860c2090c3c3efe1fa72bbd4c9e4315c68d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Rückgabecodes und Fehlerinformationen der OLE-Automatisierung
-  Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen **int** -Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich 0 ist ein OLE-Fehlercode im hexadezimalen Format 0x800*nnnnn*, als **int** -Wert im Rückgabecode einer gespeicherten Prozedur entspricht dies dem Format 214*nnnnnnn*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen **int** -Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich 0 ist ein OLE-Fehlercode im hexadezimalen Format 0x800*nnnnn*, als **int** -Wert im Rückgabecode einer gespeicherten Prozedur entspricht dies dem Format 214*nnnnnnn*.  
   
  Die Übergabe eines ungültigen Objektnamens (SQLDMO.Xyzzy) an die sp_OACreate-Funktion führt zu einem **int** -HRESULT von 2147221005, was im hexadezimalen Format 0x800401f3 entspricht.  
   
@@ -121,4 +124,3 @@ GO
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   
-

@@ -1,33 +1,35 @@
 ---
-title: Integration Services (SSIS) in einem Cluster | Microsoft Docs
+title: Integration Services (SSIS) in einem Cluster | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: service
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) in einem Cluster
   Für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist Clustering nicht zu empfehlen, da es sich beim [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst nicht um einen Cluster- oder clusterfähigen Dienst handelt, der auch keine Failoverunterstützung zwischen Clusterknoten bietet. In einer Clusterumgebung sollte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deshalb auf jedem Knoten im Cluster als eigenständiger Dienst installiert und gestartet werden.  
   
  Auch wenn der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst kein Clusterdienst ist, können Sie den Dienst manuell so konfigurieren, dass er das Clusterressource ausgeführt wird, wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] separat auf den einzelnen Clusterknoten installiert haben.  
   
- Wenn jedoch mit der Erstellung einer gruppierten Hardwareumgebung eine hohe Verfügbarkeit erzielt werden soll, dann müssen Sie dazu den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst nicht als Clusterressource konfigurieren.  Zum Verwalten der Pakete auf einem beliebigen Knoten im Cluster von einem beliebigen anderen Knoten des Clusters aus ändern Sie die Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst auf jedem Knoten im Cluster. Sie müssen diese Konfigurationsdatei ändern, um auf alle verfügbaren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweisen zu können, auf denen Pakete gespeichert sind. Mit dieser Lösung kann die hohe Verfügbarkeit bereitgestellt werden, die die meisten Kunden benötigen, ohne dass die Probleme auftreten, zu denen es kommen kann, wenn der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst als Clusterressource konfiguriert wird. Weitere Informationen zum Ändern der Konfigurationsdatei finden Sie unter [Integration Services-Dienst &#40; SSIS-Dienst &#41; ](../../integration-services/service/integration-services-service-ssis-service.md).  
+ Wenn jedoch mit der Erstellung einer gruppierten Hardwareumgebung Hochverfügbarkeit erzielt werden soll, dann müssen Sie dazu den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst nicht als Clusterressource konfigurieren.  Zum Verwalten der Pakete auf einem beliebigen Knoten im Cluster von einem beliebigen anderen Knoten des Clusters aus ändern Sie die Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst auf jedem Knoten im Cluster. Sie müssen diese Konfigurationsdatei ändern, um auf alle verfügbaren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweisen zu können, auf denen Pakete gespeichert sind. Mit dieser Lösung kann Hochverfügbarkeit bereitgestellt werden, die die meisten Kunden benötigen, ohne dass die Probleme auftreten, zu denen es kommen kann, wenn der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst als Clusterressource konfiguriert wird. Weitere Informationen zum Ändern der Konfigurationsdatei finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
  Um fundierte Entscheidungen in Bezug auf das Konfigurieren des Diensts in einer Clusterumgebung treffen zu können, müssen Sie die Rolle des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts verstehen. Weitere Informationen finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Bei mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcengruppen, die den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst in einem Cluster aufweisen, kann ein Failover zu unerwarteten Ergebnissen führen. Nehmen Sie das folgende Szenario als Beispiel. Gruppe 1, die den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst und den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst aufweist, wird auf Knoten A ausgeführt. Gruppe 2, die ebenfalls den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst und den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst aufweist, wird auf Knoten B ausgeführt. Gruppe 2 führt ein Failover zu Knoten A aus. Beim Versuch, eine andere Instanz des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts auf Knoten A zu starten, tritt ein Fehler auf, weil der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ein Dienst mit einer Instanz ist. Ob bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst, der versucht, ein Failover zu Knoten A auszuführen, auch ein Fehler auftritt, hängt von der Konfiguration des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts in Gruppe 2 ab. Wenn der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst so konfiguriert wurde, dass er Auswirkungen auf die anderen Dienste in der Ressourcengruppe hat, dann tritt bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst, der das Failover ausführt, ein Fehler auf, da bei dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ein Fehler aufgetreten ist. Wenn der Dienst so konfiguriert wurde, dass er keinerlei Auswirkungen auf die anderen Dienste in der Ressourcengruppe hat, kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ein Failover zu Knoten A ausführen. Sofern nicht der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst in Gruppe 2 so konfiguriert wurde, dass er keine Auswirkungen auf die anderen Dienste in der Ressourcengruppe hat, kann der Fehler bei dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst, der das Failover ausführt, dazu führen, dass bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst, der das Failover ausführt, auch ein Fehler auftritt.  
 
-## <a name="configure-the-service-as-a-cluster-resource"></a>Konfigurieren Sie den Dienst als Clusterressource
+## <a name="configure-the-service-as-a-cluster-resource"></a>Konfigurieren des Diensts als Clusterressource
 Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts als Clusterressource die Nachteile überwiegen, finden in diesem Abschnitt alle erforderlichen Konfigurationsanweisungen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] rät dennoch von einer Konfiguration des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts als Clusterressource ab.  
   
  Sie müssen Sie die folgenden Tasks ausführen, um den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst als Clusterressource zu konfigurieren.  
@@ -136,4 +138,3 @@ Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../
 -   Wählen Sie in der **Clusterverwaltung**den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst aus, klicken Sie mit der rechten Maustaste, und wählen Sie im Popupmenü **Online schalten** aus. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ist nun als Clusterressource online.  
   
   
-

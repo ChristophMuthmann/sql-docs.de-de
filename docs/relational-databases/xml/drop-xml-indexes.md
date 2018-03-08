@@ -2,9 +2,12 @@
 title: "Löschen von XML-Indizes | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b1d7f2f2e8eb4fedd4184cb65647bb295af3f1b0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="drop-xml-indexes"></a>Löschen von XML-Indizes
-  Die [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann zum Löschen vorhandener primärer oder sekundärer XML-Indizes und Nicht-XML-Indizes verwendet werden. Die DROP INDEX-Optionen gelten jedoch nicht für XML-Indizes. Wenn Sie den primären XML-Index löschen, werden sämtliche vorhandenen sekundären Indizes ebenfalls gelöscht.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Die [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann zum Löschen vorhandener primärer oder sekundärer XML-Indizes und Nicht-XML-Indizes verwendet werden. Die DROP INDEX-Optionen gelten jedoch nicht für XML-Indizes. Wenn Sie den primären XML-Index löschen, werden sämtliche vorhandenen sekundären Indizes ebenfalls gelöscht.  
   
  Die DROP-Syntax mit *TableName.IndexName* ist veraltet und wird für XML-Indizes nicht unterstützt.  
   
@@ -101,8 +104,7 @@ AND    si.object_id=object_id('T')
   
  Diese Abfrage gibt den Spaltennamen zurück, für den der angegebene XML-Index erstellt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
-

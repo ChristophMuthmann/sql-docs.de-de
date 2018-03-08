@@ -1,31 +1,33 @@
 ---
-title: Catalog. clear_object_parameter_value (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.clear_object_parameter_value (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 799b3c1305daa8cdc7021a79a4c8f8007ef91241
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Löscht den Wert eines Parameters für eine vorhandene [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekt oder Paket, das auf dem Server gespeichert ist.  
+  Löscht den Wert eines Parameters für ein vorhandenes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt oder -Paket, das auf dem Server gespeichert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,26 +40,26 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [ @folder_name = ] *folder_name*  
  Der Name des Ordners, der das Projekt enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @project_name =] *Project_name*  
+ [ @project_name = ] *project_name*  
  Der Name des Projekts. Der *project_name* ist **nvarchar(128)**.  
   
- [ @object_type =] *Object_type*  
+ [ @object_type = ] *object_type*  
  Der Typ des Objekts. Gültige Werte sind `20` für ein Projekt und `30` für ein Paket. Der *object_type* ist **smallInt**.  
   
  [ @ object _name = ] *object _name*  
  Der Name des Pakets. Der *object _name* ist **nvarchar(260)**.  
   
- [ @parameter_ Name =] *Parameter_name*  
+ [ @parameter_ name = ] *parameter_name*  
  Der Name des Parameters. Der *parameter_ name* ist **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -69,7 +71,7 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Fehler und Warnungen  
- Die folgende Liste beschreibt einige Bedingungen, die möglicherweise die Clear_object_parameter gespeicherte Prozedur einen Fehler auslöst:  
+ In der folgenden Liste werden Bedingungen beschrieben, die möglicherweise bewirken, dass die gespeicherte clear_object_parameter-Prozedur einen Fehler auslöst:  
   
 -   Es wurde ein ungültiger Objekttyp angegeben, oder der Objektname wurde nicht im Projekt gefunden.  
   
@@ -80,4 +82,3 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
   
-

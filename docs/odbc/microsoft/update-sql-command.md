@@ -3,26 +3,26 @@ title: UPDATE - SQL-Befehl | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- update [ODBC]
+helpviewer_keywords: update [ODBC]
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4aaf4c9d8e44108888c2c440fba506cf9b2874c8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL-Befehl
 Datensätze in einer Tabelle mit neuen Werten aktualisiert.  
@@ -63,5 +63,4 @@ SET Column_Name1 = eExpression1
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen - SQL-Befehl](../../odbc/microsoft/delete-sql-command.md)   
- [INSERT - SQL-Befehl](../../odbc/microsoft/insert-sql-command.md)
-
+ [INSERT (SQL-Befehl)](../../odbc/microsoft/insert-sql-command.md)

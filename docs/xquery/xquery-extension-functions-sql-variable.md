@@ -3,8 +3,11 @@ title: SQL:Variable()-Funktion (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - sql:variable() function
 - sql:variable function
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 77a8f9c8857c0a054922d0ad2bdb4b12ceab815e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ffacec1b08bd0fa4fed107a1149273034057e405
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>XQuery-Erweiterungsfunktionen - SQL:Variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="xquery-extension-functions---sqlvariable"></a>XQuery Extension Functions - sql:variable()
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Macht eine Variable verfügbar, die einen relationalen SQL-Wert in einem XQuery-Ausdruck enthält.  
   
@@ -108,4 +110,3 @@ WHERE ProductID=771
  [XML Data Modification Language &#40; XML DML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

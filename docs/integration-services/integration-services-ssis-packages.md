@@ -1,10 +1,13 @@
 ---
-title: SQL Server Integration Services (SSIS)-Pakete | Microsoft Docs
+title: Integration Services-Pakete (SSIS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -20,17 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54d83a301d72577eadd7e042977b572c7f8f1a57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
   Bei einem Paket handelt es sich um eine organisierte Auflistung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  Das folgende Diagramm zeigt ein einfaches Paket, das eine Ablaufsteuerung mit einem Datenflusstask enthält, der wiederum einen Datenfluss enthält.  
   
- ![Ein Paket mit einer ablaufsteuerung und eines Datenflusses](../integration-services/media/ssis-package.gif "ein Paket mit einer ablaufsteuerung und einem Datenfluss")  
+ ![Paket mit Ablaufsteuerung und Datenfluss](../integration-services/media/ssis-package.gif "A package with a control flow and a data flow")  
   
  Nachdem Sie das Basispaket erstellt haben, können Sie erweiterte Funktionen hinzufügen, wie z. B. Protokollierung und Variablen, um die Funktionalität des Pakets zu erweitern. Weitere Informationen finden Sie im Abschnitt zu Objekten, die die Paketfunktionalität erweitern.  
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 08/03/2017
 |**PackageEnd**|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |**Diagnostic**|Enthält Informationen zur Systemkonfiguration, die sich auf die Paketausführung auswirken, wie z. B. die Anzahl ausführbarer Dateien, die gleichzeitig ausgeführt werden können.|  
   
-## <a name="set-the-properties-of-a-package"></a>Legen Sie die Eigenschaften eines Pakets  
+## <a name="set-the-properties-of-a-package"></a>Festlegen der Eigenschaften eines Pakets  
  Eigenschaften können Sie im Fenster **Eigenschaften** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder programmgesteuert festlegen.  
   
  Informationen zum Festlegen dieser Eigenschaften mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]finden Sie unter [Festlegen von Paketeigenschaften](../integration-services/set-package-properties.md).  
@@ -109,14 +111,13 @@ ms.lasthandoff: 08/03/2017
   
  Zum Ändern der Paket-GUID müssen Sie in **im Eigenschaftenfenster in der** ID [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Eigenschaft eine GUID neu generieren. Zum Ändern des Paketnamens können Sie im Eigenschaftenfenster den Wert der **Name** -Eigenschaft aktualisieren. Sie können auch die **dtutil** -Eingabeaufforderung verwenden oder die GUID und Namen programmgesteuert aktualisieren. Weitere Informationen finden Sie unter [Festlegen von Paketeigenschaften](../integration-services/set-package-properties.md) und [dtutil (Hilfsprogramm)](../integration-services/dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schließt neben dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Objektmodell zum Erstellen von Paketen zwei grafische Tools ein, den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Designer und den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Import/Export-Assistenten. Weitere Informationen finden Sie in den folgenden Themen:  
   
--   [Importieren und Exportieren von Daten mit der SQL Server-Import / Export-Assistent](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [Erstellen von Paketen in SQL Server Datatools](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Erstellen von Paketen in SQL Server-Datentools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   Finden Sie unter [Programmgesteuertes Erstellen von Paketen](../integration-services/building-packages-programmatically/building-packages-programmatically.md) im Entwicklerhandbuch. 
+-   Weitere Informationen finden Sie unter [Programmgesteuertes Erstellen von Paketen](../integration-services/building-packages-programmatically/building-packages-programmatically.md) im Entwicklerhandbuch. 
   
   
-

@@ -3,7 +3,7 @@ title: "Übersicht über das Befehl | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - command object [ADO]
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 175c3793a41c4502a0c558c63e4eec89b35cd02f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61d296aaafd3e610a244aa4e0831b9bed5ff5855
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-overview"></a>Command-Objekte (Übersicht)
 Mit einem **Befehl** Objekt ist, können Sie wie folgt vorgehen:  
@@ -51,4 +50,3 @@ Mit einem **Befehl** Objekt ist, können Sie wie folgt vorgehen:
 -   Übergeben einer **Befehl** -Objekt an die **Quelle** Eigenschaft eine **Recordset** um Daten zu erhalten.  
   
 -   Übergeben Sie eine **Stream** Objekt, das an einen Anbieter, die er unterstützt einen Befehl (z. B. eine XML-Befehl) enthält.
-

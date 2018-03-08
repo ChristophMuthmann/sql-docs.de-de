@@ -2,28 +2,29 @@
 title: "Erstellen einer verschlüsselten Sicherung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "17"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2ee0ec30a5ec6f6fc6977d74ff4b00a35781e2ac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-an-encrypted-backup"></a>Erstellen einer verschlüsselten Sicherung
-  Dieses Thema beschreibt die Schritte, die notwendig sind, um eine verschlüsselte Sicherung mit Transact-SQL zu erstellen.  Ein Beispiel zum Verwenden von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]finden Sie unter [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema beschreibt die Schritte, die notwendig sind, um eine verschlüsselte Sicherung mit Transact-SQL zu erstellen.  Ein Beispiel zum Verwenden von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]finden Sie unter [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
 ## <a name="backup-to-disk-with-encryption"></a>Sicherung auf Datenträger mit Verschlüsselung  
  **Voraussetzungen:**  
@@ -135,4 +136,3 @@ ms.lasthandoff: 06/22/2017
     ```  
   
   
-

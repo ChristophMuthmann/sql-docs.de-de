@@ -2,12 +2,13 @@
 title: "Cube-Speicher (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,20 +21,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], cubes
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bf2333da378e88992b54db5169a2cf8fedc5ec9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 27b0e9be1051b6abab2e0be7b0e521e9a5b54567
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Cubespeicherung (Analysis Services – Mehrdimensionale Daten)
-  Der Speicher kann nur Cubemetadaten oder alle Quelldaten aus der Faktentabelle sowie die Aggregationen enthalten, die durch Dimensionen im Bezug auf die Measuregruppe definiert sind. Die gespeicherte Datenmenge hängt vom ausgewählten Speichermodus und der Anzahl der Aggregationen ab. Die Abfrageleistung ist abhängig vom Umfang der direkt gespeicherten Daten. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] minimiert den erforderlichen Speicherplatz für Cubedaten und Aggregationen mithilfe verschiedener Verfahren:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der Speicher kann nur Cubemetadaten oder alle Quelldaten aus der Faktentabelle sowie die Aggregationen enthalten, die durch Dimensionen im Bezug auf die Measuregruppe definiert sind. Die gespeicherte Datenmenge hängt vom ausgewählten Speichermodus und der Anzahl der Aggregationen ab. Die Abfrageleistung ist abhängig vom Umfang der direkt gespeicherten Daten. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] minimiert den erforderlichen Speicherplatz für Cubedaten und Aggregationen mithilfe verschiedener Verfahren:  
   
 -   Mithilfe von Speicheroptionen können Sie die Speichermodi und Speicherorte auswählen, die für Cubedaten am besten geeignet sind.  
   
@@ -59,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [Aggregationen und Aggregationsentwürfe](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
-

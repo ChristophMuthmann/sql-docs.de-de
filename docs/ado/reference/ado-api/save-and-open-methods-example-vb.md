@@ -3,7 +3,7 @@ title: "Speichern und öffnen Sie die Methoden-Beispiel (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7bf87da3c7a8e00b93c7e4055e6c957453fe658c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad4d79342ae4903e3469f3685210e882d64d318f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-and-open-methods-example-vb"></a>Speichern Sie und öffnen Sie die Methoden-Beispiel (VB)
 Diese drei Beispielen wird gezeigt, wie die [speichern](../../../ado/reference/ado-api/save-method.md) und [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methoden können zusammen verwendet werden.  
@@ -109,4 +108,3 @@ Attribute VB_Name = "Save"
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Weitere Informationen zum Recordset Persistenz](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)
-

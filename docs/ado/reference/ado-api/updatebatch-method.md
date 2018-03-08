@@ -3,7 +3,7 @@ title: UpdateBatch-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5da32525c4ff0d04c19704efd2aa04050d3db93d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57c85b6ed83792e2e489eb91dab59bd0da598939
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updatebatch-method"></a>UpdateBatch-Methode
 Schreibt alle ausstehenden BatchUpdates auf den Datenträger an.  
@@ -72,6 +71,5 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  [UpdateBatch und CancelBatch Methoden (VC++-Beispiel)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
+ [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)
-

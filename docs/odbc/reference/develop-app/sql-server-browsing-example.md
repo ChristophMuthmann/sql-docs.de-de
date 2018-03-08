@@ -3,10 +3,12 @@ title: SQLServer-Beispiel durchsuchen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 358a1ce1e7351fa61e19b78f766a7aaa71c3b441
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f344ce0a3830bbd79d6674cfd4d5961b973939e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-browsing-example"></a>Durchsuchen von SQL Server-Beispiel
 Das folgende Beispiel zeigt wie **SQLBrowseConnect** kann verwendet werden, um die Verbindungen mit einem Treiber verfügbar für SQL Server zu durchsuchen. Zuerst, fordert die Anwendung ein Verbindungshandle:  
@@ -87,4 +88,3 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  
                   sizeof(ConnStrOut), &ConnStrOutLen, SQL_DRIVER_NOPROMPT);  
 ```
-

@@ -3,7 +3,7 @@ title: ExecuteComplete-Ereignis (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bda38ed41e57c84d629ff6f301575e963d893f5e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e612e83e3c550c429b9ebcfe63c0641b61390b95
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete-Ereignis (ADO)
 Die **ExecuteComplete** Ereignis wird aufgerufen, nachdem ein Befehl beendet wurde.  
@@ -56,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pCommand*  
  Die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das ausgeführt wurde. Enthält eine **Befehl** Objekt auch beim Aufrufen von **Connection.Execute** oder **Recordset.Open** ohne explizites erstellen eine **Befehl** , in welchen Fällen die **Befehl** -Objekt intern durch ADO erstellt wurde.  
   
- *pCommand*  
+ *pRecordset*  
  Ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, das das Ergebnis des Befehls ausgeführt wird. Dies **Recordset** kann leer sein. Sie sollten dieses Recordset-Objekt innerhalb dieser Ereignishandler nie gelöscht. Andernfalls wird eine zugriffsverletzung entstehen, wenn ADO versucht, Zugriff auf ein Objekt, das nicht mehr vorhanden ist.  
   
  *pConnection*  
@@ -67,5 +66,4 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Ereignisse Modell (VC++-Beispiel)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -1,34 +1,35 @@
 ---
 title: Neues Projekt (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 530850701a81d304e6e381292cc91252e2d3d65e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c97402a72bf7e9553e7e76c0c9d9c03a2b8bac31
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-project-db2tosql"></a>Neues Projekt (DB2ToSQL)
 Verwenden der **neues Projekt** (Dialogfeld), um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Geben Sie den Namen des Projekts ein. SSMA wird die Erweiterung angefügt.  
   
@@ -46,4 +47,3 @@ Wählen Sie eine Version der Zieldatenbank über den folgenden Liste:
   
 -   Azure SQL-Datenbank  
   
-

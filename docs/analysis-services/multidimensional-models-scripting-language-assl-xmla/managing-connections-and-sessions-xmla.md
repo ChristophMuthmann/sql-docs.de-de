@@ -1,13 +1,14 @@
 ---
 title: Verwalten von Verbindungen und Sitzungen (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +21,16 @@ helpviewer_keywords:
 - XMLA, sessions
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 761618d7a0d651fb24257e03c5fcb261fde051c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc532f9097c8023fcdc160d597c2cd0830782891
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Verwalten von Verbindungen und Sitzungen (XMLA)
   *Statusbehaftung* ist eine Bedingung, die während der Server die Identität und den Kontext eines Clients zwischen Methodenaufrufen behält. *Zustandsfreiheit* ist eine Bedingung, die während der Server nicht merkt sich die Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  
@@ -117,4 +117,3 @@ ms.lasthandoff: 09/01/2017
  [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

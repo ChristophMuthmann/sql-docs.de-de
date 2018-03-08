@@ -3,10 +3,12 @@ title: "Auswählen einer SQL-Grammatik | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6eedc2466842d922e1b10445500f05ad904d1a0b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>Auswählen einer SQL-Grammatik
 Die erste Entscheidung, die bei der SQL-Anweisungen Konstruieren der Grammatik verwendet wird. Zusätzlich zu den von verschiedenen normungsinstitutionen, z. B. Open Group, ANSI und ISO-Images Grammatiken, definiert praktisch jeder DBMS-Hersteller eine eigene Grammatik, von denen jede geringfügig vom Standard variiert.  
@@ -38,4 +39,3 @@ Die erste Entscheidung, die bei der SQL-Anweisungen Konstruieren der Grammatik v
  Aus diesem Grund sind tatsächlich zwei Optionen der Grammatik verwendet: die SQL-92-Grammatik (und die ODBC-Escapesequenzen) und einer DBMS-spezifische-Grammatik. Die beiden ist nur die SQL-92-Grammatik interoperabel, damit alle interoperable Anwendungen verwendet werden soll. Anwendungen, die nicht vollständig kompatibel sind, können die SQL-92-Grammatik oder Grammatik DBMS-spezifische verwenden. DBMS-spezifische Grammatiken haben zwei Vorteile: können sie alle Funktionen, die nicht von SQL-92 abgedeckt ausnutzen, und sie sind geringfügig schneller, da der Treiber nicht verfügt, sie zu ändern. Die zweite Funktion kann teilweise durch Festlegen der SQL_ATTR_NOSCAN-Anweisungsattribut, beenden, den Treiber von Suchen und Ersetzen von Escapesequenzen erzwungen werden.  
   
  Wenn die SQL-92-Grammatik verwendet wird, die Anwendung erkennen, wie sie vom Treiber durch den Aufruf geändert wurden **SQLNativeSql**. Dies ist häufig nützlich, beim Debuggen von Anwendungen. **SQLNativeSql** akzeptiert eine SQL-Anweisung, und gibt ihn zurück, nachdem der Treiber verändert wurde. Da diese Funktion in der Konformitätsgrad des Core-Schnittstelle ist, wird sie durch alle Treiber unterstützt.
-

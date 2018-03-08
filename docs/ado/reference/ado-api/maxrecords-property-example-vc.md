@@ -3,7 +3,7 @@ title: MaxRecords-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ba77502023c04aac8bdb262c66314a4c0c04d12
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 77ab4e80cb319aa95f7a566462e648ccbb9bbadb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel verwendet die [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) Eigenschaft so öffnen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit dem 10 die teuersten Titel in die ***Titel*** Tabelle.  
@@ -187,4 +186,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [MaxRecords-Eigenschaft (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

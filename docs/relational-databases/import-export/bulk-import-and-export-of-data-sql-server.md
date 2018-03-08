@@ -1,10 +1,13 @@
----
+﻿---
 title: Massenimport und -export von Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -24,20 +27,20 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: f886fae083af54f2d6eb619b215330921f2e1d2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0cd72ac1a99d3a2ccf121b4b659229b2fc6117c0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den Massenexport von Daten (*Massendaten*) aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und den Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht. 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den Massenexport von Daten (*Massendaten*) aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle und den Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle oder eine nicht partitionierte Sicht. 
   
 -   Der*Massenexport* bezieht sich auf das Kopieren von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei.
 
@@ -47,11 +50,11 @@ ms.lasthandoff: 09/27/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Massenexport von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und der Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht unterstützt. Dazu stehen die folgenden grundlegenden Methoden zur Verfügung.  
  
   
-|Methode|Beschreibung|Importiert Daten|Exportiert Daten|  
+|Methode|Description|Importiert Daten|Exportiert Daten|  
 |------------|-----------------|------------------|------------------|  
 |[bcp (Hilfsprogramm)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|ja|ja|  
-|[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|ja|Nein|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|ja|Nein| 
+|[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|ja|nein|  
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|ja|nein| 
 |[SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Der Assistent erstellt einfache Pakete, die Daten zwischen vielen häufigen Datenformaten, einschließlich Datenbanken, Kalkulationstabellen und Textdateien, importieren und exportieren.|ja|ja|  
   
 > [!IMPORTANT]
@@ -92,4 +95,3 @@ ms.lasthandoff: 09/27/2017
 
   
   
-

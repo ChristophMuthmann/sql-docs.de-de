@@ -2,9 +2,12 @@
 title: "FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17a8348b6d4f3b89668128d28e3bca27fbc468b5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0eed847233401ffffc5e783e4de89b52e57910eb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen
-  Da sich die FILESTREAM-Daten im Dateisystem befinden, werden in diesem Thema Informationen, Richtlinien und Einschränkungen in Bezug auf die Verwendung von FILESTREAM mit den folgenden Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Da sich die FILESTREAM-Daten im Dateisystem befinden, werden in diesem Thema Informationen, Richtlinien und Einschränkungen in Bezug auf die Verwendung von FILESTREAM mit den folgenden Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
   
@@ -124,8 +127,7 @@ ms.lasthandoff: 06/22/2017
   
  Sie können den Einschlusstyp der Datenbank auf PARTIAL festlegen, wenn Sie bestimmte Funktionen eigenständiger Datenbanken verwenden möchten, z. B. eigenständige Benutzer. In diesem Fall müssen Sie jedoch beachten, dass einige Datenbankeinstellungen nicht in der Datenbank enthalten sind und nicht automatisch mit der Datenbank verschoben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   
-

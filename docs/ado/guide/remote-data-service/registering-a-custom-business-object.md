@@ -3,7 +3,7 @@ title: "Registrieren ein benutzerdefiniertes Geschäftsobjekt | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1b95345c2c3818330bf442b56671192d9a47cad6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be54505545b80211ec34216a67596c32ca8ce2b2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registering-a-custom-business-object"></a>Registrieren ein benutzerdefiniertes Geschäftsobjekt
 Um ein benutzerdefiniertes Geschäftsobjekt (.dll oder .exe) erfolgreich über den Webserver zu starten, muss das Geschäftsobjekt ProgID in der Registrierung eingegeben werden, wie in diesem Verfahren beschrieben. Dieses Feature von RDS schützt die Sicherheit Ihres Webservers, indem nur zulässige ausführbare Dateien ausgeführt.  
@@ -49,6 +48,5 @@ Um ein benutzerdefiniertes Geschäftsobjekt (.dll oder .exe) erfolgreich über d
 4.  Wählen Sie die **ADCLaunch** Schlüssel, und klicken Sie dann im die **bearbeiten**Sie im Menü **neu** , und klicken Sie auf **Schlüssel**.  
   
 5.  Geben Sie die ProgID des benutzerdefinierten Geschäftsobjekts, und klicken Sie auf **EINGABETASTE**. Lassen Sie die **Wert** Eintrag leer.
-
 
 

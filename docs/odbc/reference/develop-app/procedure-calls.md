@@ -3,27 +3,28 @@ title: Prozeduraufrufe | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC], procedure calls
 - procedure calls [ODBC]
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4ca9347cae8227885237882117ae3f486309093
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f907cf8700a683988277e84b93f9fc3bdae11317
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedure-calls"></a>Prozeduraufrufe
 Ein *Prozedur* ein ausführbares Objekt in der Datenquelle gespeichert ist. In der Regel handelt es sich dabei um eine oder mehrere vorkompilierte SQL-Anweisungen. Ist die-Escapesequenz zum Aufrufen einer Prozedur  
@@ -68,4 +69,3 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
  Um zu bestimmen, ob eine Datenquelle Prozeduren unterstützt, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_PROCEDURES.  
   
  Weitere Informationen zu Verfahren finden Sie unter [Prozeduren](../../../odbc/reference/develop-app/procedures-odbc.md).
-

@@ -3,27 +3,28 @@ title: Architektur der sprachmonitortreiber | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], architecture
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe6ffa26bdae5f4d40257b36e9776cff95d8f9ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a74f6e1b212f570ba9aa47a09310b63b13ee0e42
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-architecture"></a>Architektur der sprachmonitortreiber
 Architektur der sprachmonitortreiber fällt in zwei Kategorien unterteilt, je nachdem welche Software Prozesse SQL-Anweisungen:  
@@ -38,11 +39,10 @@ Architektur der sprachmonitortreiber fällt in zwei Kategorien unterteilt, je na
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Dateibasierten Treibern](../../odbc/reference/file-based-drivers.md)  
+-   [Dateibasierte Treiber](../../odbc/reference/file-based-drivers.md)  
   
--   [DBMS-basierten Treibern](../../odbc/reference/dbms-based-drivers.md)  
+-   [DBMS-basierte Treiber](../../odbc/reference/dbms-based-drivers.md)  
   
 -   [Netzwerkbeispiel](../../odbc/reference/network-example.md)  
   
--   [Andere Treiber-Architekturen](../../odbc/reference/other-driver-architectures.md)
-
+-   [Andere Treiberarchitekturen](../../odbc/reference/other-driver-architectures.md)

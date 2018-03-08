@@ -1,10 +1,13 @@
 ---
-title: Task "Nachrichtenwarteschlange"-Nachricht | Microsoft Docs
+title: Nachrichtenwarteschlange (Task) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,19 +24,18 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: d58b3c497860668dee90836193ff9bd788852715
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="message-queue-task"></a>Nachrichtenwarteschlange (Task)
+# <a name="message-queue-task"></a>Message Queue Task
   Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
   
  Mit dem Task Nachrichtenwarteschlange können Sie Vorgänge im gesamten Unternehmen koordinieren. Nachrichten können in eine Warteschlange eingereiht und später übermittelt werden, falls das Ziel nicht verfügbar oder ausgelastet ist. Beispielsweise können mit diesem Task Nachrichten für den Offlinelaptopcomputer von Vertriebsmitarbeitern, die ihre Nachrichten beim Herstellen einer Verbindung mit dem Netzwerk erhalten, einer Warteschlange hinzugefügt werden. Der Task Nachrichtenwarteschlange kann für folgende Zwecke verwendet werden:  
@@ -101,27 +103,27 @@ ms.lasthandoff: 08/11/2017
   
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie in der Dokumentation zur **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** -Klasse im Entwicklerhandbuch.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Anzeigen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ benennen und beschreiben, das Nachrichtenformat angeben und kennzeichnen, ob vom Task Nachrichten gesendet oder empfangen werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task Nachrichtenwarteschlange an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Tasks Nachrichtenwarteschlange ein.  
   
  **Use2000Format**  
  Geben Sie an, ob das 2000-Format von Message Queuing (auch bekannt als MSMQ) verwendet werden soll. Der Standardwert ist **False**.  
   
  **MSMQConnection**  
- Wählen Sie einen vorhandenen MSMQ-Verbindungs-Manager, oder klicken Sie auf \< **neue Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen MSMQ-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ Connection Manager Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="message-queue-task-editor-send-page"></a>Task 'Nachrichtenwarteschlange' (Seite Senden)
   Im Dialogfeld **Editor für den Task 'Nachrichtenwarteschlange'** können Sie auf der Seite **Senden** den Task Nachrichtenwarteschlange so konfigurieren, dass Nachrichten von einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket gesendet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **UseEncryption**  
  Geben Sie an, ob die Nachricht verschlüsselt werden soll. Der Standardwert ist **False**.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 08/11/2017
  **MessageType**  
  Wählen Sie den Nachrichtentyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Data file message**|Die Nachricht wird in einer Datei gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **DataFileMessage**angezeigt.|  
 |**Variable message**|Die Nachricht wird in einer Variable gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **VariableMessage**angezeigt.|  
@@ -172,7 +174,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="message-queue-task-editor-receive-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Empfangen)
   Auf der Seite **Empfangen** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ konfigurieren, um MSMQ-Nachrichten ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) zu empfangen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **RemoveFromMessageQueue**  
  Geben Sie an, ob die Nachricht aus der Warteschlange entfernt werden soll, nachdem sie empfangen wurde. Standardmäßig ist dieser Wert auf **False**festgelegt.  
   
@@ -185,7 +187,7 @@ ms.lasthandoff: 08/11/2017
  **MessageType**  
  Wählen Sie den Nachrichtentyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Data file message**|Die Nachricht wird in einer Datei gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **DataFileMessage**angezeigt.|  
 |**Variable message**|Die Nachricht wird in einer Variable gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **VariableMessage**angezeigt.|  
@@ -204,7 +206,7 @@ ms.lasthandoff: 08/11/2017
  **Filter**  
  Geben Sie an, ob auf die Nachricht ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Kein Filter**|Der Task filtert keine Nachrichten. Wenn Sie diesen Wert auswählen, wird die dynamische Option **IdentifierReadOnly**angezeigt.|  
 |**Vom Paket**|Der Task empfängt nur Nachrichten von dem angegebenen Paket. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Identifier**angezeigt.|  
@@ -225,13 +227,13 @@ ms.lasthandoff: 08/11/2017
  **Filter**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Kein Filter**|Der Task filtert keine Nachrichten. Wenn Sie diesen Wert auswählen, wird die dynamische Option **IdentifierReadOnly**angezeigt.|  
 |**Vom Paket**|Der Task empfängt nur Nachrichten von dem angegebenen Paket. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Identifier**angezeigt.|  
   
  **Variable**  
- Geben Sie den Variablennamen ein, oder klicken Sie auf \< **neue Variable...** > und konfigurieren Sie dann eine neue Variable.  
+ Geben Sie den Variablennamen an, oder klicken Sie auf \<**Neue Variable…**>, und konfigurieren Sie anschließend eine neue Variable.  
   
  **Verwandte Themen:** [Variable hinzufügen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -251,7 +253,7 @@ ms.lasthandoff: 08/11/2017
  **Vergleichen**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**InclusionThresholdSetting**|Die Nachrichten werden nicht verglichen.|  
 |**Genaue Übereinstimmung**|Die Nachrichten müssen genau mit der Zeichenfolge in der Option **CompareString** übereinstimmen.|  
@@ -265,7 +267,7 @@ ms.lasthandoff: 08/11/2017
  **Vergleichen**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**InclusionThresholdSetting**|Die Nachrichten werden nicht verglichen.|  
 |**Genaue Übereinstimmung**|Die Nachricht muss genau mit der Zeichenfolge in der Option **CompareString** übereinstimmen.|  
@@ -276,14 +278,14 @@ ms.lasthandoff: 08/11/2017
  Geben Sie hier die Zeichenfolge an, mit der die Nachricht verglichen wird, wenn die Option **Vergleichen** nicht auf **Keine**festgelegt ist.  
   
  **Variable**  
- Geben Sie den Namen der Variablen zum Speichern der Nachricht, oder klicken Sie auf \< **neue Variable...** > und konfigurieren Sie dann eine neue Variable.  
+ Geben Sie den Namen der Variablen zum Speichern der Nachricht ein, oder klicken Sie auf \<**Neue Variable…**>, und konfigurieren Sie anschließend eine neue Variable.  
   
  **Verwandte Themen:** [Variable hinzufügen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>Variablen auswählen
   Mithilfe des Dialogfelds **Variablen auswählen** geben Sie die Variablen an, die beim Vorgang des Sendens einer Nachricht im Task Nachrichtenwarteschlange verwendet werden. Die Liste **Verfügbare Variablen** enthält Systemvariablen und benutzerdefinierte Variablen, die sich auf den Task „Nachrichtenwarteschlange“ oder dessen übergeordneten Container beziehen. Der Task verwendet die Variablen der Liste **Ausgewählte Variablen** .  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Variablen**  
  Wählen Sie eine oder mehrere Variablen aus.  
   
@@ -300,9 +302,8 @@ ms.lasthandoff: 08/11/2017
  Erstellt eine neue Variable.  
   
  **Verwandte Themen:** [Variable hinzufügen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   
   
-

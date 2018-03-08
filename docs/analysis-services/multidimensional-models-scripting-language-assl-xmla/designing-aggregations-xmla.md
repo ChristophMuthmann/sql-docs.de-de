@@ -1,13 +1,14 @@
 ---
 title: Entwerfen von Aggregationen (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +22,16 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a70f23c8d37218d50713de2f2c65d915ea5f496
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Entwerfen von Aggregationen (XMLA)
   Aggregationsentwürfe werden den Partitionen einer bestimmten Measuregruppe zugeordnet, um sicherzustellen, dass die Partitionen beim Speichern von Aggregationen die gleiche Struktur verwenden. Verwenden einheitliche Speicherstruktur für Partitionen können Sie ganz einfach Partitionen definieren, die später zusammengeführt werden können mithilfe der [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl. Weitere Informationen zu Aggregationsentwürfen finden Sie unter [Aggregationen und Aggregationsentwürfe](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -57,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="specifying-queries"></a>Angeben von Abfragen  
  Der DesignAggregations-Befehl unterstützt Verwendungsbasierte optimierungsbefehle durch die Einbindung mindestens **Abfrage** Elemente in der [Abfragen](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) Eigenschaft. Die **Abfragen** Eigenschaft enthalten kann, eine oder mehrere [Abfrage](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) Elemente. Wenn die **Abfragen** Eigenschaft enthält keine **Abfrage** Elemente, der Aggregationsentwurf angegeben, der **Objekt** -Element verwendet eine Standardstruktur, enthält ein allgemeinen Satz Aggregationen. Diese allgemeinen Satz Aggregationen dient, die die Kriterien erfüllen die **Optimierung** und **Speicher** Eigenschaften der **DesignAggregations** Befehl.  
   
- Jedes **Query** -Element stellt eine Zielabfrage dar, die der Entwurfsprozess nutzt, um Aggregationen zu definieren, die auf die am häufigsten verwendeten Abfragen abzielen. Sie können entweder Ihre eigenen zielabfragen festlegen oder können Sie die Informationen gespeichert, die von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Abfrageprotokoll einbezogen, zum Abrufen von Informationen über die am häufigsten verwendeten Abfragen. Der Assistent für Verwendungsbasierte Optimierung verwendet das Abfrageprotokoll abzurufenden zielabfragen basierend auf Zeit, Verwendung oder einen angegebenen Benutzer beim Senden von einem **DesignAggregations** Befehl. Weitere Informationen finden Sie unter [Verwendungsbasierte Optimierung-Assistent F1-Hilfe](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
+ Jedes **Query** -Element stellt eine Zielabfrage dar, die der Entwurfsprozess nutzt, um Aggregationen zu definieren, die auf die am häufigsten verwendeten Abfragen abzielen. Sie können entweder Ihre eigenen Zielabfragen festlegen oder die Informationen nutzen, die von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Abfrageprotokoll gespeichert werden, um Informationen über die am häufigsten verwendeten Abfragen abzurufen. Der Assistent für Verwendungsbasierte Optimierung verwendet das Abfrageprotokoll abzurufenden zielabfragen basierend auf Zeit, Verwendung oder einen angegebenen Benutzer beim Senden von einem **DesignAggregations** Befehl. Weitere Informationen finden Sie unter [Verwendungsbasierte Optimierung-Assistent F1-Hilfe](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
   
  Wenn Sie Aggregationen iterativ entwerfen, nur müssen Sie zielabfragen im ersten übergeben **DesignAggregations** Befehl, weil die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz diese zielabfragen speichert und verwendet diese Abfragen während der nachfolgenden  **DesignAggregations** Befehle. Nachdem Sie Zielabfragen im ersten **DesignAggregations** -Befehl eines iterativen Prozesses weitergegeben haben, generiert jeder darauf folgende **DesignAggregations** -Befehl, der über Zielabfragen in der **Queries** -Eigenschaft verfügt, einen Fehler.  
   
@@ -109,10 +109,10 @@ ms.lasthandoff: 09/01/2017
 ## <a name="returning-design-statistics"></a>Zurückgeben von Entwurfsstatistiken  
  Wenn die **DesignAggregations** Befehl die Steuerung an die Clientanwendung zurückgegeben, der Befehl gibt ein Rowset, das eine einzelne Zeile, die die entwurfsstatistiken für den Befehl darstellt. Das Rowset enthält die in der folgenden Tabelle aufgeführten Spalten.  
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |Schritte|Integer|Die Anzahl der Schritte, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Uhrzeit|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
+|Zeit|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
 |Optimization|Double|Der geschätzte Prozentwert der Leistungsverbesserung, der durch den Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung erreicht wird.|  
 |Speicherung|Lange ganze Zahl|Die geschätzte Anzahl an Bytes, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
 |Aggregationen|Lange ganze Zahl|Die Anzahl der Aggregationen, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung definiert werden.|  
@@ -124,4 +124,3 @@ ms.lasthandoff: 09/01/2017
  [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

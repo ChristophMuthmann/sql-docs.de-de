@@ -3,8 +3,11 @@ title: COALESCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fddb9a8535472c153adf036b5afed9584cfbd3d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Wertet die Argumente in der Reihenfolge und gibt den aktuellen Wert des ersten Ausdrucks, das anfänglich nicht ergibt `NULL`. Beispielsweise `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` der dritten Wert zurückgegeben, weil der dritte Wert den ersten Wert, der nicht null ist. 
   
@@ -69,7 +71,7 @@ COALESCE ( expression [ ,...n ] )
   
  Dies bedeutet, dass die Eingabewerte (*expression1*, *expression2*, *ExpressionN*usw.) mehrmals ausgewertet werden. Außerdem wird ein Wertausdruck, der eine Unterabfrage enthält, gemäß dem SQL-Standard als nicht deterministisch angesehen und die Unterabfrage zweimal ausgewertet. In beiden Fällen können zwischen der ersten Auswertung und nachfolgenden Auswertungen unterschiedliche Ergebnisse zurückgegeben werden.  
   
- Beispiel: Wenn der Code `COALESCE((subquery), 1)` ausgeführt wird, wird die Unterabfrage zweimal ausgewertet. Folglich können Sie abhängig von der Isolationsstufe der Abfrage unterschiedliche Ergebnisse erhalten. Beispielsweise kann der Code zurückgeben `NULL` unter der `READ COMMITTED` Isolationsstufe in einer mehrbenutzerumgebung. Um sicherzustellen, dass beständige Ergebnisse zurückgegeben werden, verwenden die `SNAPSHOT ISOLATION` Isolationsstufe oder ersetzen `COALESE` mit der `ISNULL` Funktion. Alternativ können Sie die Abfrage aus, um die Unterabfrage in einer untergeordneten SELECT-Anweisung zu verschieben, wie im folgenden Beispiel gezeigt unterteilen:  
+ Beispiel: Wenn der Code `COALESCE((subquery), 1)` ausgeführt wird, wird die Unterabfrage zweimal ausgewertet. Folglich können Sie abhängig von der Isolationsstufe der Abfrage unterschiedliche Ergebnisse erhalten. Beispielsweise kann der Code zurückgeben `NULL` unter der `READ COMMITTED` Isolationsstufe in einer mehrbenutzerumgebung. Um sicherzustellen, dass beständige Ergebnisse zurückgegeben werden, verwenden die `SNAPSHOT ISOLATION` Isolationsstufe oder ersetzen `COALESCE` mit der `ISNULL` Funktion. Alternativ können Sie die Abfrage aus, um die Unterabfrage in einer untergeordneten SELECT-Anweisung zu verschieben, wie im folgenden Beispiel gezeigt unterteilen:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -298,8 +300,7 @@ ORDER BY TotalSalary;
  ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ISNULL &#40; Transact-SQL &#41;](../../t-sql/functions/isnull-transact-sql.md)   
+ [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

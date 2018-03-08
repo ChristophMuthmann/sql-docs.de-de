@@ -3,8 +3,11 @@ title: INTO-Klausel (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,20 +31,19 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: 63
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8aa3c2ff42396114287f58b7d9d431d13de8a2f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, und die Ergebniszeilen aus der Abfrage werden darin eingefügt. Die vollständige SELECT-Syntax finden Sie unter [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 09/01/2017
  *new_table*  
  Gibt den Namen einer neuen Tabelle an, die mithilfe der Spalten in der Auswahlliste und der aus der Datenquelle ausgewählten Zeilen erstellt wird.  
  
-  *Dateigruppe*
+  *filegroup*
  
  Gibt den Namen der Dateigruppe, in der neue Tabelle erstellt wird. Die angegebene Dateigruppe sollten für die Datenbank, die andernfalls löst das Modul für die SQL Server einen Fehler vorhanden sein. Diese Option wird nur unterstützt ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
@@ -94,7 +96,7 @@ Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstell
   
  Durch Angabe einer ORDER BY-Klausel wird nicht gewährleistet, dass die Zeilen in der angegebenen Reihenfolge eingefügt werden.  
   
- Wenn eine Spalte mit geringer Dichte in die Auswahlliste eingeschlossen ist, wird die Eigenschaft der Spalte mit geringer Dichte nicht an die neue Tabelle übertragen. Wenn diese Eigenschaft in der neuen Tabelle erforderlich ist, ändern Sie die Spaltendefinition, nachdem Sie die INTO SELECT...INTO-Anweisung ausgeführt haben, um diese Eigenschaft einzuschließen.  
+ Wenn eine Sparsespalte in die Auswahlliste eingeschlossen ist, wird die Eigenschaft der Sparsespalte nicht an die neue Tabelle übertragen. Wenn diese Eigenschaft in der neuen Tabelle erforderlich ist, ändern Sie die Spaltendefinition, nachdem Sie die INTO SELECT...INTO-Anweisung ausgeführt haben, um diese Eigenschaft einzuschließen.  
   
  Wenn eine berechnete Spalte in die Auswahlliste eingeschlossen ist, ist die entsprechende Spalte in der neuen Tabelle keine berechnete Spalte. Die Werte in der neuen Spalte entsprechen den Werten, die zum Zeitpunkt der Ausführung der SELECT...INTO-Anweisung berechnet wurden.  
   
@@ -109,7 +111,7 @@ Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstell
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Erstellen einer Tabelle durch Angeben von Spalten aus mehreren Quellen  
  Im folgenden Beispiel wird die `dbo.EmployeeAddresses`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt, indem sieben Spalten aus verschiedenen mitarbeiter- und adressbezogenen Tabellen ausgewählt werden.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +130,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. Einfügen von Zeilen bei minimaler Protokollierung  
  Im folgenden Beispiel wird die `dbo.NewProducts`-Tabelle erstellt, und Zeilen aus der `Production.Product`-Tabelle werden eingefügt. Im Beispiel wird davon ausgegangen, dass das Wiederherstellungsmodell der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank auf FULL festgelegt wird. Um sicherzustellen, dass die minimale Protokollierung verwendet wird, wird das Wiederherstellungsmodell der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank auf BULK_LOGGED festgelegt, bevor Zeilen eingefügt und nach der SELECT...INTO-SELECT-Anweisung auf FULL zurückgesetzt werden. Dadurch wird sichergestellt, dass die SELECT…INTO-Anweisung minimalen Speicherplatz im Transaktionsprotokoll belegt und effektiv ausgeführt wird.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +146,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. Erstellen einer Identitätsspalte mithilfe der IDENTITY-Funktion  
  Im folgenden Beispiel wird die IDENTITY-Funktion verwendet, um eine Identitätsspalte in der neuen `Person.USAddress`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zu erstellen. Dies ist erforderlich, da die SELECT-Anweisung, durch die die Tabelle definiert wird, einen Join enthält. Dieser Join bewirkt, dass die IDENTITY-Eigenschaft nicht an die neue Tabelle übertragen wird. Beachten Sie, dass sich der in der IDENTITY-Funktion angegebene Ausgangs- und Inkrementwert von dem der `AddressID`-Spalte in der `Person.Address`-Quelltabelle unterscheidet.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +175,7 @@ WHERE name = 'AddressID';
   
  **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +218,7 @@ GO
   
  **Gilt für:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -230,11 +232,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Erstellen einer neuen Tabelle als eine Kopie einer anderen Tabelle aus, und Laden es mit einer angegebenen Dateigruppe
-Das folgende Beispiel Demostrates als Kopie einer anderen Tabelle eine neue Tabelle erstellen, und Laden es in einer angegebenen Dateigruppe die Standarddateigruppe des Benutzers unterscheiden.
+Im folgende Beispiel wird veranschaulicht, eine Kopie einer anderen Tabelle eine neue Tabelle erstellen, und Laden es in einer angegebenen Dateigruppe die Standarddateigruppe des Benutzers unterscheiden.
 
  **Gilt für:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -250,8 +252,7 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ## <a name="see-also"></a>Siehe auch  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Wählen Sie die Beispiele &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [IDENTITY &#40; Function &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   
-

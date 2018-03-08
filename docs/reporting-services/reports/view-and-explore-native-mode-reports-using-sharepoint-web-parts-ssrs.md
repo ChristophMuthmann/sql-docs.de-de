@@ -1,33 +1,32 @@
 ---
-title: Anzeigen und Durchsuchen von Berichten im einheitlichen Modus, die mit SharePoint-Webparts (SSRS) | Microsoft Docs
+title: Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
 
 > [!IMPORTANT]  
->  Webparts im einheitlichen Modus (RSWebParts.cab) auf den Zugriff berichtsserverinhalte auf einer SharePoint-Website von einem Berichtsserver im einheitlichen Modus mithilfe von SQL Server Reporting Services nicht mehr unterstützt. Verwenden Sie ein [Berichts-Viewer-Webpart für eine SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
+>  SQL Server Reporting Services unterstützt nicht mehr die Verwendung von Webparts im einheitlichen Modus („RSWebParts.cab“) für den Zugriff auf Berichtsserverinhalt auf einer SharePoint-Website von einem Berichtsserver im einheitlichen Modus. Verwenden Sie ein [Berichts-Viewer-Webpart für eine SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden verschiedene Webparts bereitgestellt, die mit bestimmten Versionen eines Berichtsservers und in bestimmten Bereitstellungsmodi verwendet werden können.  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Folgende Versionen von SharePoint-Produkten und Technologien werden unterstützt:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] und [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="install-web-parts-using-powershell"></a>Installieren von Webparts mit PowerShell  
   
-1.  Kopieren Sie **RSWebParts.cab** in einen Ordner auf dem SharePoint-Server. Sie können sie in einen beliebigen Ordner auf dem SharePoint-Server kopieren und nach der Installation der Webparts löschen. SQL Server 2014 Reporting Services standardmäßig und zuvor die Datei "RSWebParts.cab" im folgenden Ordner installiert:  
+1.  Kopieren Sie **RSWebParts.cab** in einen Ordner auf dem SharePoint-Server. Sie können sie in einen beliebigen Ordner auf dem SharePoint-Server kopieren und nach der Installation der Webparts löschen. Mit SQL Server 2014 Reporting Services und früher wird die Datei „RSWebParts.cab“ automatisch im folgenden Ordner installiert:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -149,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  Klicken Sie im Berichts-Viewer-Webpart auf **Webpart bearbeiten** , während sich die Seite im Bearbeitungsmodus befindet.  
   
-7.  Geben Sie unter **Report Manager URL**eine URL zu einer Berichts-Manager-Instanz ein, die mit dem Berichtsserver im einheitlichen Modus verbunden ist, auf den Sie zugreifen möchten. Standardmäßig hat eine Berichts-Manager-URL die folgende Syntax: **http://\<Servername > / reports**.  
+7.  Geben Sie unter **Report Manager URL**eine URL zu einer Berichts-Manager-Instanz ein, die mit dem Berichtsserver im einheitlichen Modus verbunden ist, auf den Sie zugreifen möchten. In der Standardeinstellung weist die Berichts-Manager-URL die folgende Syntax auf: **http://\<Servername>/reports**.  
   
 8.  Geben Sie unter **Berichtspfad**einen Schrägstrich an, gefolgt vom Ordnerpfad und dem Berichtsnamen. Der Servername oder das virtuelle Berichts-Manager-Verzeichnis dürfen **nicht** angegeben werden. Wenn Sie z.B. den Bericht „Company Sales“ im Ordner „Adventure Works“ öffnen möchten, geben Sie **/Adventure Works/Company Sales**an. Im Folgenden wird ein weiteres Beispiel gezeigt, in dem sich der Bericht „Produkte“ im Stammordner **/Products**des Berichtsservers befindet.  
   
@@ -175,5 +174,4 @@ ms.lasthandoff: 08/09/2017
   
     3.  Klicken Sie auf **Berichts-Viewer**.  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -2,32 +2,31 @@
 title: Optimieren einer Arbeitsauslastung | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.suite: sql
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- workloads [SQL Server], tuning
+applies_to: SQL Server 2016
+helpviewer_keywords: workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "25"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6acb93ddde56546e170b01c093dff843a2ea5968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 287b45c3cf54cb043e111fd62e1d6fa286f9c9a0
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Lektion 1: 1-Optimieren einer Arbeitsauslastung
-Der Datenbankoptimierungsratgeber dient dazu, den optimalen Entwurf für eine physische Datenbank hinsichtlich der Abfrageleistung für die Datenbanken zu ermitteln, die Sie für die Optimierung auswählen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Der Datenbankmodul-Optimierungsratgeber kann verwendet werden, finden Sie die besten physischen Datenbankentwurf für die abfrageleistung für die Datenbanken und Tabellen, die Sie für die Optimierung auswählen.  
   
 In dieser Aufgabe wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank verwendet. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. Informationen zur Installation der Beispieldatenbanken finden Sie unter [Installieren der SQL Server-Beispiele und -Beispieldatenbanken](http://sqlserversamples.codeplex.com).  
   
@@ -41,7 +40,7 @@ In dieser Aufgabe wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledb
   
 4.  Wählen Sie unter **Arbeitsauslastung** die Option **Datei**aus, und klicken Sie auf die Schaltfläche **Suchen Sie nach einer Arbeitsauslastungsdatei** , um die in Schritt 1 gespeicherte Datei **MyScript.sql** zu suchen.  
   
-5.  Wählen Sie [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] in der **Datenbank für Arbeitsauslastungsanalyse** aus, wählen Sie [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] im Raster **Zu optimierende Datenbanken und Tabellen auswählen** aus, und lassen Sie **Optimierungsprotokoll speichern** aktiviert. **Datenbank für Arbeitsauslastungsanalyse** gibt die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt. Nach dem Beginn der Optimierung stellt der Datenbankoptimierungsratgeber Verbindungen mit den Datenbanken her, die über die `USE DATABASE` -Anweisungen in der Arbeitsauslastung angegeben sind.  
+5.  Wählen Sie [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] in der **Datenbank für Arbeitsauslastungsanalyse** aus, wählen Sie [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] im Raster **Zu optimierende Datenbanken und Tabellen auswählen** aus, und lassen Sie **Optimierungsprotokoll speichern** aktiviert. **Datenbank für Arbeitsauslastungsanalyse** gibt die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt. Nach dem Beginn der Optimierung stellt der Datenbankoptimierungsratgeber Verbindungen mit den Datenbanken her, die über die `USE DATABASE`-Anweisungen in der Arbeitsauslastung angegeben sind.  
   
 6.  Klicken Sie auf die Registerkarte **Optimierungsoptionen** . In dieser Übung werden Sie keine Optimierungsoptionen festlegen. Aber nehmen Sie sich die Zeit, und überprüfen Sie die Standardoptimierungsoptionen. Drücken Sie F1, um die Hilfe zu dieser Seite im Registerformat anzuzeigen. Klicken Sie auf **Erweiterte Optionen** , um weitere Optimierungsoptionen anzuzeigen. Klicken Sie im Dialogfeld **Erweiterte Optimierungsoptionen** auf **Hilfe** , um weitere Informationen zu den angezeigten Optimierungsoptionen aufzurufen. Klicken Sie auf **Abbrechen** , um das Dialogfeld **Erweiterte Optimierungsoptionen** zu schließen und die Standardoptionen beizubehalten.  
   
@@ -59,4 +58,3 @@ Sie haben die Arbeitsauslastung für eine einfache SELECT-Anweisung auf der [!IN
   
   
   
-

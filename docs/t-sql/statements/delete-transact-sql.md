@@ -3,8 +3,11 @@ title: "Löschen (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 78
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 339b84a5362bd2011a557bb2f45e2bee8c3eb101
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Entfernt eine oder mehrere Zeilen aus einer Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -96,10 +98,10 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  MIT \<Common_table_expression >  
  Gibt das temporäre benannte Resultset, auch als allgemeiner Tabellenausdruck bezeichnet, an, das im Rahmen der DELETE-Anweisung definiert wurde. Das Resultset wird von einer SELECT-Anweisung abgeleitet.  
   
- Allgemeine Tabellenausdrücke können außerdem mit SELECT-, INSERT-, UPDATE- und CREATE VIEW-Anweisungen verwendet werden. Weitere Informationen finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Allgemeine Tabellenausdrücke können außerdem mit SELECT-, INSERT-, UPDATE- und CREATE VIEW-Anweisungen verwendet werden. Weitere Informationen finden Sie unter [WITH Common_table_expression & #40; Transact-SQL & #41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP **(***Ausdruck***)** [PERCENT]  
- Gibt die Anzahl oder den Prozentsatz willkürlicher Zeilen an, die gelöscht werden. *expression* kann eine Anzahl oder ein Prozentsatz der Zeilen sein. Die Zeilen, auf die im TOP-Ausdruck für die Anweisung INSERT, UPDATE oder DELETE verwiesen wird, sind nicht auf bestimmte Weise angeordnet. Weitere Informationen finden Sie unter [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ Gibt die Anzahl oder den Prozentsatz willkürlicher Zeilen an, die gelöscht werden. *expression* kann eine Anzahl oder ein Prozentsatz der Zeilen sein. Die Zeilen, auf die im TOP-Ausdruck für die Anweisung INSERT, UPDATE oder DELETE verwiesen wird, sind nicht auf bestimmte Weise angeordnet. Weitere Informationen finden Sie unter [nach oben & #40; Transact-SQL & #41; ](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
  Ein optionales Schlüsselwort, das zwischen dem DELETE-Schlüsselwort und das Ziel verwendet werden kann *Table_or_view_name*, oder *Rowset_function_limited*.  
@@ -123,7 +125,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  In ihrem Gültigkeitsbereich kann eine Tabellenvariable auch als Quelltabelle in einer DELETE-Anweisung verwendet werden.  
   
- Die Sicht verweist *Table_or_view_name* muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sichtdefinition verweisen. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Die Sicht verweist *Table_or_view_name* muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sichtdefinition verweisen. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter [CREATE VIEW & #40; Transact-SQL & #41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -131,10 +133,10 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Entweder die [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) Funktion, je nach den Funktionen des Anbieters.  
   
  MIT **(** \<Table_hint_limited > [... *n*] **)**  
- Gibt mindestens einen Tabellenhinweis an, der für eine Zieltabelle zulässig ist. Das WITH-Schlüsselwort und die Klammern sind erforderlich. NOLOCK und READUNCOMMITTED sind nicht zulässig. Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+ Gibt mindestens einen Tabellenhinweis an, der für eine Zieltabelle zulässig ist. Das WITH-Schlüsselwort und die Klammern sind erforderlich. NOLOCK und READUNCOMMITTED sind nicht zulässig. Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise & #40; Transact-SQL & #41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause >  
- Gibt gelöschte Zeilen bzw. auf diesen basierende Ausdrücke als Teil der DELETE-Operation zurück. Die OUTPUT-Klausel wird in DML-Anweisungen, deren Ziel Sichten oder Remotetabellen sind, nicht unterstützt. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ Gibt gelöschte Zeilen bzw. auf diesen basierende Ausdrücke als Teil der DELETE-Operation zurück. Die OUTPUT-Klausel wird in DML-Anweisungen, deren Ziel Sichten oder Remotetabellen sind, nicht unterstützt. Weitere Informationen finden Sie unter [OUTPUT-Klausel & #40; Transact-SQL & #41; ](../../t-sql/queries/output-clause-transact-sql.md).  
   
  VON *Table_source*  
  Gibt eine zusätzliche FROM-Klausel an. Dies [!INCLUDE[tsql](../../includes/tsql-md.md)] -Erweiterung für DELETE ermöglicht, Daten aus \<Table_source > und das Löschen der entsprechenden Zeilen aus der Tabelle in der ersten FROM Klausel.  
@@ -153,7 +155,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   Positionierte Löschungen verwenden die CURRENT OF-Klausel, um einen Cursor anzugeben. Die Löschoperation wird an der aktuellen Position des Cursors ausgeführt. Dies kann genauer sein als eine gesuchte DELETE-Anweisung, die eine WHERE verwendet *Search_condition* -Klausel, um die zu löschenden Zeilen zu qualifizieren. Eine gesuchte DELETE-Anweisung löscht mehrere Zeilen, wenn die Suchbedingung nicht eindeutig eine einzelne Zeile identifiziert.  
   
 \<Search_condition >  
- Gibt die Einschränkungsbedingungen für die zu löschenden Zeilen an. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+ Gibt die Einschränkungsbedingungen für die zu löschenden Zeilen an. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen finden Sie unter [Suchbedingung & #40; Transact-SQL & #41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CURRENT OF  
  Gibt an, dass DELETE an der aktuellen Position des angegebenen Cursors durchgeführt wird.  
@@ -171,9 +173,9 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Schlüsselwörter, die angeben, welche Optimierungshinweise verwendet werden, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verarbeitet die Anweisung. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
- Um alle Zeilen in einer Tabelle zu löschen, verwenden Sie TRUNCATE TABLE. TRUNCATE TABLE ist schneller als DELETE und verwendet weniger Systemressourcen und Ressourcen für die Transaktionsprotokollierung. Für TRUNCATE TABLE gelten Einschränkungen, beispielsweise kann die Tabelle nicht in Replikationen verwendet werden. Weitere Informationen finden Sie unter [TRUNCATE TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
+ Um alle Zeilen in einer Tabelle zu löschen, verwenden Sie TRUNCATE TABLE. TRUNCATE TABLE ist schneller als DELETE und verwendet weniger Systemressourcen und Ressourcen für die Transaktionsprotokollierung. Für TRUNCATE TABLE gelten Einschränkungen, beispielsweise kann die Tabelle nicht in Replikationen verwendet werden. Weitere Informationen finden Sie unter [TRUNCATE TABLE & #40; Transact-SQL & #41;](../../t-sql/statements/truncate-table-transact-sql.md)  
   
- Verwenden der @@ROWCOUNT Funktion zum Zurückgeben der Anzahl der gelöschten Zeilen an die Clientanwendung. Weitere Informationen finden Sie unter [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).  
+ Verwenden der @@ROWCOUNT Funktion zum Zurückgeben der Anzahl der gelöschten Zeilen an die Clientanwendung. Weitere Informationen finden Sie unter [@@ROWCOUNT & #40; Transact-SQL & #41; ](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Sie können die Fehlerbehandlung für die DELETE-Anweisung durch Angeben der Anweisung in einem TRY…CATCH-Konstrukt implementieren.  
@@ -187,7 +189,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Wenn Sie eine Zeile mit einer FILESTREAM-Spalte löschen, löschen Sie auch die zugrunde liegenden Dateisystemdateien. Die zugrunde liegenden Dateien werden vom FILESTREAM Garbage Collector entfernt. Weitere Informationen finden Sie unter [zugreifen auf FILESTREAM-Daten mit Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md).  
   
- Die FROM-Klausel kann nicht für eine DELETE-Anweisung angegeben werden, die entweder direkt oder indirekt auf eine Sicht verweist, für die ein INSTEAD OF-Trigger definiert wurde. Weitere Informationen zu INSTEAD OF-Trigger finden Sie unter [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Die FROM-Klausel kann nicht für eine DELETE-Anweisung angegeben werden, die entweder direkt oder indirekt auf eine Sicht verweist, für die ein INSTEAD OF-Trigger definiert wurde. Weitere Informationen zu INSTEAD OF-Trigger finden Sie unter [CREATE TRIGGER & #40; Transact-SQL & #41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Wenn TOP mit ENTF verwendet wird, werden die Zeilen, auf die verwiesen wird, nicht auf bestimmte Weise angeordnet, und die ORDER BY-Klausel kann in dieser Anweisung nicht direkt angegeben werden. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge zu löschen, müssen Sie sie zusammen mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung verwenden. Weitere Informationen finden Sie im Abschnitt "Beispiele" in diesem Thema.  
@@ -201,7 +203,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Verwenden Sie eine der folgenden Methoden, um Zeilen in einem Heap zu löschen und die Zuordnung der Seiten aufzuheben:  
   
--   Geben Sie den TABLOCK-Hinweis in der DELETE-Anweisung an. Mithilfe des TABLOCK-Hinweises wird durch den Löschvorgang eine exklusive Sperre für die Tabelle statt einer Zeilen- oder Seitensperre angefordert. Dadurch ist es möglich, die Zuordnung der Seiten aufzuheben. Weitere Informationen zum TABLOCK-Hinweis finden Sie unter [Tabellenhinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Geben Sie den TABLOCK-Hinweis in der DELETE-Anweisung an. Mithilfe des TABLOCK-Hinweises wird durch den Löschvorgang eine exklusive Sperre für die Tabelle statt einer Zeilen- oder Seitensperre angefordert. Dadurch ist es möglich, die Zuordnung der Seiten aufzuheben. Weitere Informationen zum TABLOCK-Hinweis finden Sie unter [Tabellenhinweise & #40; Transact-SQL & #41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
 -   Verwenden Sie TRUNCATE TABLE, wenn alle Zeilen aus der Tabelle gelöscht werden sollen.  
   
@@ -252,7 +254,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Das Beispiel gibt außerdem den Wert aus der **@@ROWCOUNT**  Funktion zum Zurückgeben der Anzahl der gelöschten Zeilen.  
+ Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Das Beispiel gibt außerdem den Wert aus der **@@ROWCOUNT ** Funktion zum Zurückgeben der Anzahl der gelöschten Zeilen.  
   
 ```  
 DELETE Production.ProductCostHistory  
@@ -318,7 +320,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Verwenden von TOP, um die Anzahl der zu löschenden Zeilen einzuschränken  
- Wenn eine TOP (*n*)-Klausel wird zusammen mit DELETE verwendet, der Löschvorgang wird ausgeführt, auf eine zufällige Auswahl von  *n*  Zeilen. Das folgende Beispiel löscht `20` zufällige Zeilen aus der `PurchaseOrderDetail` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, die Fälligkeitsdaten Datumsangaben, die vor dem 1. Juli 2006 sind.  
+ Wenn eine TOP (*n*)-Klausel wird zusammen mit DELETE verwendet, der Löschvorgang wird ausgeführt, auf eine zufällige Auswahl von * n * Zeilen. Das folgende Beispiel löscht `20` zufällige Zeilen aus der `PurchaseOrderDetail` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, die Fälligkeitsdaten Datumsangaben, die vor dem 1. Juli 2006 sind.  
   
 ```  
 DELETE TOP (20)   
@@ -479,11 +481,10 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [TRUNCATE TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE & #40; Transact-SQL & #41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [WITH Common_table_expression &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [WITH Common_table_expression & #40; Transact-SQL & #41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
   
-
 

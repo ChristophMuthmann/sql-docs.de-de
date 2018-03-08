@@ -1,26 +1,28 @@
 ---
 title: JDBC Driver-API-Referenz | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
-caps.latest.revision: 46
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9b1083f7807caef852a3ed44991ba7b21109f086
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c19740d1247fa1fd7fe8036fa2aa557e01e74c82
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="jdbc-driver-api-reference"></a>API-Referenz für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,12 +45,14 @@ ms.lasthandoff: 09/09/2017
 >   
 >  API-Details zur Using Table-Valued-Parameter, beginnend mit Microsoft JDBC Driver 6.0 für SQL Server verfügbar sind in diesem Abschnitt nicht gefunden. Finden Sie unter [mit Tabellenwertparametern](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
+>  6.4 für Microsoft JDBC-Treiber unterstützt die Kompilierung mit JDK 7.0, 8.0 und 9.0.  
+>   
+>  6.2 für Microsoft JDBC-Treiber unterstützt die Kompilierung mit JDK 7.0 und 8.0.  
+>   
 >  Microsoft JDBC Driver 6.0 und 4.2 unterstützen die Kompilierung mit JDK 5.0, 6.0, 7.0 und 8.0.  
 >   
 >  Microsoft JDBC Driver 4.1 unterstützt die Kompilierung mit JDK 5.0, 6.0 und 7.0.  
->   
->  Microsoft JDBC Driver 4.0 unterstützt die Kompilierung mit JDK 5.0 und 6.0.  
-  
+
 ## <a name="interfaces"></a>Schnittstellen  
   
 |Schnittstellenname|Description|  
@@ -64,7 +68,7 @@ ms.lasthandoff: 09/09/2017
   
 |Klassenname|Description|  
 |----------------|-----------------|  
-|["DateTimeOffset"](../../../connect/jdbc/reference/datetimeoffset-class.md)|Stellt ein Objekt vom Typ "microsoft.sql.DateTimeOffset" dar.|  
+|[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Stellt ein Objekt vom Typ "microsoft.sql.DateTimeOffset" dar.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Stellt ein BLOB (Binary Large Object) dar.|  
 |[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)|Implementiert ISQLServerCallableStatement.|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)|Stellt ein CLOB (Character Large Binary Object) dar.|  
@@ -78,7 +82,7 @@ ms.lasthandoff: 09/09/2017
 |[SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)|Stellt ein CLOB (Character Large Binary Object) mit nationalem Zeichensatz dar.|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|Stellt die Metadaten für die Parameter vorbereiteter Anweisungen dar.|  
 |[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)|Stellt eine physische Datenbankverbindung in einem Verbindungspool dar.|  
-|[Sqlserverpreparedstatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)|Implementiert ISQLServerPreparedStatement.|  
+|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)|Implementiert ISQLServerPreparedStatement.|  
 |[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)|Stellt eine Ressource für lokalisierte Fehlerzeichenfolgen dar. Diese Klasse dient nur zur internen Verwendung.|  
 |[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)|Implementiert ISQLServerResultSet.|  
 |[SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)|Stellt die Metadaten der Spalten innerhalb eines Resultsets dar.|  
@@ -89,7 +93,6 @@ ms.lasthandoff: 09/09/2017
 |[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|Stellt einen XAResource für den XA-verteilter Verwaltung Transaktionen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die JDBC-Treiber](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

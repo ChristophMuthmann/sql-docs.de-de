@@ -3,7 +3,7 @@ title: Dialect-Eigenschaft | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Dialect property
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a0dbf91200e241596217566d8859626f69dcbe1f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73c7dfd6fe5aec706d5e27ce6d55f489285748c4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialect-property"></a>Dialect-Eigenschaft
 Der Dialekt der gibt an, die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaften. Der Dialekt definiert die Syntax und die allgemeinen Regeln, die der Anbieter verwendet, um die Zeichenfolge oder den Stream zu analysieren.  
@@ -45,5 +44,4 @@ Der Dialekt der gibt an, die [CommandText](../../../ado/reference/ado-api/comman
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)
-
+ [Execute-Methode (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)

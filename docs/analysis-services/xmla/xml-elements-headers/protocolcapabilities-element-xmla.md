@@ -2,46 +2,42 @@
 title: ProtocolCapabilities-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProtocolCapabilities Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProtocolCapabilities Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.protocolcapabilities
 - http://schemas.microsoft.com/analysisservices/2003/engine#ProtocolCapabilities
 - urn:schemas-microsoft-com:xml-analysis#ProtocolCapabilities
-helpviewer_keywords:
-- ProtocolCapabilities element
+helpviewer_keywords: ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 511cca07c0505db7bd1aaa21bed923498137e04f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d2ff72b1fdc3a3e3a4b09a046933d3ead88fc78
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
-# ProtocolCapabilities-Element (XMLA)
-  Verwendet den SOAP-Header in einer SOAP-Anforderungsnachricht zur Identifizierung von Protokollfunktionen zwischen einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer Clientanwendung.  
+# <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities-Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Verwendet den SOAP-Header in einer SOAP-Anforderungsnachricht zur Identifizierung von Protokollfunktionen zwischen einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer Clientanwendung.  
   
  **Namespace**`http://schemas.microsoft.com/analysisservices/2003/engine`  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
   
@@ -59,22 +55,22 @@ ms.lasthandoff: 09/01/2017
 </soap:Envelope>  
 ```  
   
-## Elementmerkmale  
+## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
-## Elementbeziehungen  
+## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Funktion](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die **ProtocolCapabilities** Element ermöglicht Clientanwendungen das aushandeln, Protokollfunktionen, z. B. für binäres XML und Komprimierung unterstützt, wobei ein [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz zu einem beliebigen Zeitpunkt. Die Protokollaushandlung schließt die folgenden Schritte ein:  
   
 1.  Die Clientanwendung identifiziert die Protokollfunktion, indem sie eine SOAP-Anforderung sendet, die sowohl das **ProtocolCapabilities** -Element als auch den SOAP-Header enthält.  
@@ -91,9 +87,8 @@ ms.lasthandoff: 09/01/2017
   
  Protokollfunktionen müssen nicht explizit ausgehandelt werden. Das heißt, dass eine Clientanwendung kein **ProtocolCapabilities** -Element als Teil der SOAP-Anforderung enthalten muss. Wenn eine SOAP-Anforderung nicht enthalten ist ein **ProtocolCapabilities** Element, das [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz antwortet mit dem gleichen Format wie die SOAP-Anforderung.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von Verbindungen und Sitzungen &#40; XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Header &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
-

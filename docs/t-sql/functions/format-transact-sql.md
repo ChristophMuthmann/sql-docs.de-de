@@ -3,8 +3,11 @@ title: FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: 21
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75f944ad28bc56300db7ca9dd7220036faaea711
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt ein Wert mit dem angegebenen Format und der optionalen Kultur in formatiert [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Verwenden Sie die FORMAT-Funktion für die gebietsschemabasierte Formatierung von Datums-/Uhrzeitwerten sowie numerischen Werten als Zeichenfolgen. Für allgemeine Datentypkonvertierungen verwenden Sie CAST oder CONVERT.  
   
@@ -46,12 +48,12 @@ FORMAT ( value, format [, culture ] )
  *value*  
  Ausdruck eines unterstützten Datentyps, der formatiert werden soll. Eine Liste gültiger Typen finden Sie in der Tabelle im folgenden Abschnitt mit Hinweisen.  
   
- *Format*  
+ *format*  
  **Nvarchar** Formatmuster.  
   
  Das *format* -Argument muss eine gültige .NET Framework-Formatzeichenfolge enthalten, entweder als Standardformatzeichenfolge (z. B. "C" oder "D") oder als ein Muster aus benutzerdefinierten Zeichen für Datumsangaben und numerische Werte (z. B. "MMMM-DD, yyyy (dddd)"). Kombinierte Formatierung wird nicht unterstützt. Ausführliche erläuterungen zu diesen Formatierungsmustern können entnehmen Sie die .NET Framework-Dokumentation zur allgemeinen zeichenfolgenformatierung, benutzerdefinierte Datums- und Zeitformate und benutzerdefinierten Zahlenformaten. Ein guter Ausgangspunkt ist das Thema zu "[Formatierungstypen](http://go.microsoft.com/fwlink/?LinkId=211776)".  
   
- *Kultur*  
+ *culture*  
  Optionales **nvarchar** -Argument, das eine Kultur angibt.  
   
  Wenn das *culture* -Argument nicht angegeben wurde, wird die Sprache der aktuellen Sitzung verwendet. Diese Sprache ist entweder implizit definiert oder wird explizit mit der Anweisung SET LANGUAGE festgelegt. *Kultur* akzeptiert jede von .NET Framework als Argument unterstützte Kultur es gibt keine Beschränkung, die explizit von unterstützten Sprachen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn das *culture* -Argument nicht gültig ist, löst FORMAT einen Fehler aus.  
@@ -84,13 +86,13 @@ FORMAT ( value, format [, culture ] )
 |Numerisch|Numerisch|SqlDecimal|  
 |Numerisch|float|Double|  
 |Numerisch|real|Single|  
-|Numerisch|smallmoney|decimal|  
+|Numerisch|smallmoney|Decimal|  
 |Numerisch|money|decimal|  
-|Datum und Uhrzeit|Datum|DateTime|  
+|Datum und Uhrzeit|Datum|datetime|  
 |Datum und Uhrzeit|Uhrzeit|TimeSpan|  
 |Datum und Uhrzeit|DateTime|DateTime|  
-|Datum und Uhrzeit|smalldatetime|DateTime|  
-|Datum und Uhrzeit|datetime2|DateTime|  
+|Datum und Uhrzeit|smalldatetime|datetime|  
+|Datum und Uhrzeit|datetime2|datetime|  
 |Datum und Uhrzeit|datetimeoffset|datetimeoffset|  
   
 ## <a name="examples"></a>Beispiele  
@@ -213,6 +215,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>Siehe auch  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
-

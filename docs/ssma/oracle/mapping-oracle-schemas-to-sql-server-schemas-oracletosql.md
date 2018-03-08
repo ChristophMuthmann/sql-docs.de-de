@@ -1,26 +1,27 @@
 ---
 title: Zuordnen von Oracle-Schemas in SQL Server-Schemas (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ca4fbcf3a49ccaf289bab39e3dbd15493fe08bb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Zuordnen von Oracle-Schemas in SQL Server-Schemas (OracleToSQL)
 In Oracle hat jede Datenbank eine oder mehrere Schemas. Standardmäßig SSMA migriert alle Objekte in einem Oracle-Schema, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen dem Oracle-Schemas anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbanken.  
@@ -64,11 +65,10 @@ Wenn Sie die Zuordnung zwischen einem Oracle-Schema anpassen und eine [!INCLUDE[
   
 1.  Klicken Sie unter der Registerkarte "Schema-Zuordnung" Wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** , um die Standarddatenbank und das Schema wiederherzustellen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Wenn Sie die Konvertierung von Oracle-Objekten in analysieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, können Sie [erstellen Sie ein Konvertierungsbericht](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357). Andernfalls können Sie [konvertieren Sie die Oracle-Datenbank-Objektdefinitionen](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Objektdefinitionen.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Herstellen einer Verbindung mit SQLServer &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
 [Migrieren von Oracle-Datenbanken zu SQLServer &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

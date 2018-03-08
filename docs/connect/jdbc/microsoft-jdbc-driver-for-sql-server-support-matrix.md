@@ -1,26 +1,28 @@
 ---
 title: "Microsoft JDBC Driver für SQL Server-Supportmatrix | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 30e750a2f69b52c04907c91aa0d47f2a3a60be91
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35747cff6a18c79a828e5269d7085c710338bf18
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für Microsoft JDBC Driver for SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +30,7 @@ ms.lasthandoff: 09/09/2017
   Auf dieser Seite finden Sie die Unterstützungsmatrix und die Support Lifecycle-Richtlinie für Microsoft JDBC Driver for SQL Server.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Unterstützungsmatrix und Support Lifecycle-Richtlinie für Microsoft JDBC-Treiber  
- Die Microsoft Support Lifecycle-Richtlinie (MLS) bietet transparente, vorhersagbare Informationen hinsichtlich der Supportdauer bei Microsoft-Produkten. Für die Versionen 3.0 und 4.x des JDBC-Treibers wird ab dem Veröffentlichungsdatum fünf Jahre grundlegender Support (Mainstream-Support) geleistet. Die Definition für Mainstream-Support finden Sie auf der Website der Microsoft Support Lifecycle-Richtlinie.  
+ Die Microsoft Support Lifecycle-Richtlinie (MLS) bietet transparente, vorhersagbare Informationen hinsichtlich der Supportdauer bei Microsoft-Produkten. JDBC Driver, Version 3.0, 4.x und 6.x haben Veröffentlichungsdatum fünf Jahre grundlegender Support aus dem Treiber. Die Definition für Mainstream-Support finden Sie auf der Website der Microsoft Support Lifecycle-Richtlinie.  
   
  Erweiterte und benutzerdefinierte Support-Optionen sind für den Microsoft JDBC-Treiber nicht verfügbar.  
     
@@ -36,16 +38,17 @@ ms.lasthandoff: 09/09/2017
   
 |Treibername|Paket-Treiberversion|Zutreffend JAR(s)|Ende der Mainstream-Support|
 |-|-|-|-|  
-|Microsoft JDBC Driver 6.2 für SQLServer|6.2|MSSQL-Jdbc-6.2.1.jre8.jar<br> MSSQL-Jdbc-6.2.1.jre7.jar|30 Juni 2022|    
-|Microsoft JDBC Driver 6.0 für SQLServer|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 Juli 2021|    
+|Microsoft JDBC Driver 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|22 Januar 2023|    
+|Microsoft JDBC Driver 6.2 für SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 Juni 2022|    
+|Microsoft JDBC Driver 6.0 für SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 Juli 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24. August 2020|  
-|Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|12. Dezember 2019|  
+|Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|12. Dezember 2019|  
   
  Die folgenden Microsoft JDBC-Treiber werden nicht länger unterstützt.  
  
 |Treibername|Paket-Treiberversion|Ende der Mainstream-Support|  
 |-|-|-|
-|Microsoft JDBC-Treiber 4.0 für SQL Server|4.0|6. März 2017|  
+|Microsoft JDBC-Treiber 4.0 für SQL Server|4.0|6. März 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|23. April 2015|  
 |Microsoft SQL Server JDBC Driver 2.2|2.0|31. Dezember 2012|  
 |Microsoft SQL Server 2005 JDBC Driver 1.2|1.2|25. Juni 2011|  
@@ -55,20 +58,21 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="sql-version-compatibility"></a>SQL-Versionskompatibilität  
   
-|Treiberversion|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL-Datenbank|PDW-2008R2-AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
-|-|-|-|-|-|-|-|-| 
-|6.2|J|J|J|J|J|J|J|  
-|6.1|J|J|J|J|J|J|J|  
-|6.0|J|J|J|J|J|J|J|  
-|4.2|J|J|J|J|J|J|J|  
-|4.1|J|J|J|J|J|J|J|  
-|4.0|J|J|J|J|J|J|J|  
-|3.0|J|J|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|  
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|  
-|1.2|Y<sup>3</sup>|N|N|N|N|N|N|  
-|1.1|N|N|N|N|N|N|N|  
-|1,0|N|N|N|N|N|N|N|  
-|2000|N|N|N|N|N|N|N|  
+|Treiberversion|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Azure verwaltete Instanz (Extended privaten Ansicht)|  
+|-|-|-|-|-|-|-|-|-|-|
+|6.4|N|J|J|J|J|J|J|J|J|  
+|6.2|J|J|J|J|J|J|J|J|N|
+|6.1|J|J|J|J|J|J|J|N|N|
+|6.0|J|J|J|J|J|J|J|N|N|
+|4.2|J|J|J|J|J|J|J|N|N|
+|4.1|J|J|J|J|J|J|J|N|N|
+|4.0|J|J|J|J|J|J|J|N|N|
+|3.0|J|J|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
+|1.1|N|N|N|N|N|N|N|N|N|  
+|1,0|N|N|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver, Version 3.0 können auf SQL Server 2012 als ein downlevelclient eine Verbindung herstellen.  
   
@@ -84,6 +88,7 @@ ms.lasthandoff: 09/09/2017
   
 |Version des JDCB-Treibers|JRE-Version|JDBC-API-Version| 
 |-|-|-|  
+|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (teilweise)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
@@ -106,4 +111,3 @@ ms.lasthandoff: 09/09/2017
  Der Microsoft JDBC-Treiber für SQL Server wird mit verschiedenen Anwendungsservern getestet.  Wenden Sie sich an den Anbieter Ihres Anwendungsserver, um detaillierte Informationen über die zu seinem Produkt kompatible Treiberversion zu erhalten.  
   
   
-

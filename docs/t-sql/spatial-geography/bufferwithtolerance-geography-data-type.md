@@ -3,8 +3,11 @@ title: BufferWithTolerance (Geography-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: feaa401cfd6e2077035d164412941392412011ae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bb70f24c521fd5f0325ecbb718e7d76aa43f935d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt ein geometrisches Objekt, das die Vereinigung aller Punktwerte darstellt, Werte, deren Abstand zu einer **Geography** Instanz ist kleiner oder gleich einem angegebenen Wert einer angegebenen Toleranz.  
   
@@ -44,12 +46,12 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abstand*  
+ *distance*  
  Ist eine **"float"** Ausdruck, der den Abstand zwischen angibt der **Geography** Instanz, die der Puffer berechnet werden soll.  
   
  Der maximale Abstand des Puffers darf 0.999 nicht überschreiten \* *π* * MinorAxis \* MinorAxis / MajorAxis (~0.999 \* 1/2 kugelumfang) oder die vollständige Kugel.  
   
- *Fehlertoleranz*  
+ *tolerance*  
  Ein **float** -Ausdruck, der die Toleranz des Pufferabstands angibt.  
   
  Die *Toleranz* -Wert bezieht sich auf die maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  
@@ -90,7 +92,6 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
   
 ## <a name="see-also"></a>Siehe auch  
  [STBuffer &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

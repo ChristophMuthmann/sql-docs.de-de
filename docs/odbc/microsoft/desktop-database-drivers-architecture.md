@@ -3,10 +3,12 @@ title: Desktop-Treiber Datenbankarchitektur | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>Desktop-Treiber-Datenbankarchitektur
 Diese Treiber sind für die Verwendung auf Microsoft Windows 95 oder höher oder Windows NT 4.0 oder Windows 2000 vorgesehen. Nur 32-Bit-Anwendungen werden unter Windows 95 oder höher unterstützt. 16-Bit- und 32-Bit-Anwendungen werden unter Windows NT 4.0 und Windows 2000 unterstützt.  
@@ -55,4 +56,3 @@ Diese Treiber sind für die Verwendung auf Microsoft Windows 95 oder höher oder
  Odbcjt32.dll implementiert ODBC-Funktionen auf der Microsoft Jet-API. Es ist jedoch keine direkte Zuordnung zwischen ODBC und Microsoft Jet-Funktionen. Viele Faktoren, z. B. die Cursormodelle und SQL-Zuordnung zu verhindern, dass eine direkte Korrelation der Funktionen.  
   
  Der ODBC-Treiber befindet sich zwischen dem Microsoft Jet-Datenbankmodul und der ODBC-Treiber-Manager. Einige ODBC-Funktionen, die von einer Anwendung aufgerufen werden vom Treiber-Manager behandelt und nicht an den Treiber übergeben. Für diese Funktionen sieht Microsoft Jet nie die Funktion aufgerufen werden, da sie nicht über eine direkte Verbindung zu der Treiber-Manager verfügt.
-

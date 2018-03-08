@@ -2,9 +2,12 @@
 title: "Erstellen, Ändern und Löschen von FileTables | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
-  Beschreibt, wie eine neue FileTable erstellt bzw. eine vorhandene FileTable geändert oder gelöscht wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt, wie eine neue FileTable erstellt bzw. eine vorhandene FileTable geändert oder gelöscht wird.  
   
 ##  <a name="BasicsCreate"></a> Erstellen einer FileTable  
  Eine FileTable ist eine spezialisierte Benutzertabelle, die ein vordefiniertes und festes Schema aufweist. Dieses Schema speichert FILESTREAM-Daten, Datei- und Verzeichnisinformationen sowie Dateiattribute. Weitere Informationen zum FileTable-Beispielschema finden Sie unter [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
@@ -72,7 +75,7 @@ ms.lasthandoff: 06/22/2017
   
  Im folgenden Beispiel wird eine neue FileTable erstellt, und für **FILETABLE_DIRECTORY** und **FILETABLE_COLLATE_FILENAME**werden benutzerdefinierte Werte angegeben.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -83,7 +86,7 @@ GO
   
  Im folgenden Beispiel wird zudem eine neue FileTable erstellt. Da keine benutzerdefinierten Werte angegeben werden, wird der Wert von **FILETABLE_DIRECTORY** zum Namen der FileTable, der Wert von **FILETABLE_COLLATE_FILENAME** wird zu database_default, und die PRIMARY KEY- und die UNIQUE-Einschränkung erhalten jeweils von System generierte Namen.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -118,7 +121,7 @@ GO
   
  **Beispiel**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -140,7 +143,7 @@ GO
   
  Beim Löschen einer FileTable werden auch die folgenden Objekte gelöscht:  
   
--   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
+-   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
   
 -   Das FileTable-Verzeichnis und die Unterverzeichnisse, die es enthielt, aus der FILESTREAM-Datei und der Verzeichnishierarchie der Datenbank.  
   
@@ -149,7 +152,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> Beim Erstellen einer FileTable werden andere Datenbankobjekte erstellt  
  Wenn Sie eine neue FileTable erstellen, werden auch einige systemdefinierte Indizes und Einschränkungen erstellt. Sie können diese Objekte nicht ändern oder löschen; sie verschwinden nur, wenn die FileTable selbst gelöscht wird. Um eine Liste dieser Objekte anzuzeigen, fragen Sie die Katalogsicht [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md) ab.  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -186,8 +189,7 @@ GO
   
 -   *\<uniquifier>* ist eine vom System generierte Zeichenfolge, die den Namen eindeutig macht. Diese Zeichenfolge kann den FileTable-Namen und einen eindeutigen Bezeichner enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   
-

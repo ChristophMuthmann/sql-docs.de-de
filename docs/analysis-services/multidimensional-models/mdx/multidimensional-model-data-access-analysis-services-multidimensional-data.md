@@ -2,13 +2,13 @@
 title: "Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b659b4fd581742270fe5d38e5791ef215002757b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
-  Verwenden Sie die Informationen in diesem Thema, um zu erfahren, wie mit programmgesteuerten Methoden, Skript oder Clientanwendungen, die integrierten Support für das Herstellen einer Verbindung zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server in Ihrem Netzwerk enthalten, auf mehrdimensionale [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Daten zugegriffen wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Verwenden Sie die Informationen in diesem Thema, um zu erfahren, wie mit programmgesteuerten Methoden, Skript oder Clientanwendungen, die integrierten Support für das Herstellen einer Verbindung zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server in Ihrem Netzwerk enthalten, auf mehrdimensionale [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Daten zugegriffen wird.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -76,11 +76,11 @@ ms.lasthandoff: 09/01/2017
   
  [Abfragen von mehrdimensionalen Daten mit MDX](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Schlüsselkonzepte in MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Skripts &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Befehlsorientierte Benutzerschnittstellen  
  Wenn Sie eine benutzerdefinierte Anwendung erstellen, die mehrdimensionale Daten verwendet, wird der Ansatz zum Aufrufen der Daten wahrscheinlich in eine der folgenden Kategorien fallen:  
@@ -109,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [Datenzugriff für tabellarische Modelle](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
-

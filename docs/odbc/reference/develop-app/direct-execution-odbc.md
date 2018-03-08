@@ -3,10 +3,12 @@ title: "Direkte Ausführung ODBC | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 058dada1c14b901b32f721bc2d42f3cc24434f07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="direct-execution-odbc"></a>Direkte Ausführung ODBC
 Direkte Ausführung ist die einfachste Möglichkeit zum Ausführen einer Anweisung. Wenn die Anweisung zur Ausführung übermittelt wird, wird die Datenquelle in eines Plans kompiliert und führt dann diesen Zugriffsplan.  
@@ -58,4 +59,3 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   Sendet die Anweisung und die konvertierten Parameterwerte an die Datenquelle für die Ausführung an.  
   
     -   Gibt Fehlermeldungen zurück. Dazu gehören Sequenzierung oder Status-Diagnose z. B. SQLSTATE 24000 (Ungültiger Cursorstatus), syntaktische Fehler wie z. B. SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) und semantische Fehler, z. B. SQLSTATE 42S02 (Basis Tabelle oder-Sicht wurde nicht gefunden).
-

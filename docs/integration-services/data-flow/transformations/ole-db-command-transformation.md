@@ -1,10 +1,13 @@
 ---
-title: "Transformation für OLE DB-Befehl | Microsoft Docs"
+title: "Transformation für OLE DB-Befehl | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 99d34e8dd153c5ca1793d14cc9638aab6529a643
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: b759d86a0a501364cdb5f4a1544ac2eb3df8d717
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-command-transformation"></a>Transformation für OLE DB-Befehl
   Die Transformation für OLE DB-Befehl führt eine SQL-Anweisung für jede Zeile in einem Datenfluss aus. Beispielsweise können Sie eine SQL-Anweisung ausführen, die Zeilen in einer Datenbanktabelle einfügt, aktualisiert oder löscht.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="logging"></a>Protokollierung  
  Sie können die von der Transformation für OLE DB-Befehl an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme bei Verbindungen mit externen Datenquellen und bei Befehlen an externe Datenquellen durch die Transformation für OLE DB-Befehl behandeln. Aktivieren Sie zum Protokollieren der von der Transformation für OLE DB-Befehl an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Sie können die Transformation konfigurieren, indem Sie entweder den [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder das Objektmodell verwenden. Details zum programmgesteuerten Konfigurieren dieser Transformation finden Sie im Entwicklerhandbuch.  
   
 ## <a name="configure-the-ole-db-command-transformation"></a>Konfigurieren der Transformation für OLE DB-Befehl
@@ -105,9 +107,8 @@ ms.lasthandoff: 08/19/2017
   
 15. Klicken Sie im Menü **Datei** auf **Speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

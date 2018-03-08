@@ -2,36 +2,33 @@
 title: DMSCHEMA_MINING_STRUCTURES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_STRUCTURES
+apiname: DMSCHEMA_MINING_STRUCTURES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_STRUCTURES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_STRUCTURES rowset
 ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e75e8c17baba84bd690ec51605ffac9f577de35c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c648aeb0603661e249f205e43cfbb1d8c6dc125c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingstructures-rowset"></a>DMSCHEMA_MINING_STRUCTURES-Rowset
-  Listet Informationen über die Miningstrukturen im aktuellen Katalog auf.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Listet Informationen über die Miningstrukturen im aktuellen Katalog auf.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DMSCHEMA_MINING_STRUCTURES** -Rowset enthält die folgenden Spalten.  
@@ -66,7 +63,6 @@ ms.lasthandoff: 09/01/2017
 |**STRUKTURNAME**|**DBTYPE_WSTR**|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

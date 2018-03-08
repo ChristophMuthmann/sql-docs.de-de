@@ -2,32 +2,30 @@
 title: Anordnen von Formen im Attributbeziehungsdiagramm | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- attribute relationships [Analysis Services]
+helpviewer_keywords: attribute relationships [Analysis Services]
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 932726539120c0ecee0f57f879677811e3be9f0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b42070c64e1e96268ac73fece5bb8d246eb45e21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>Attributbeziehungen - Anordnen von Formen im Diagramm
-  Sie können das Layout der Formen auf der Registerkarte **Attributbeziehungen** der Dimensionsstruktursicht im Dimension Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können das Layout der Formen ändern, auf die **Attributbeziehungen** der dimensionsstruktursicht im Dimension Designer auf der Registerkarte [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-arrange-shapes-in-the-attribute-relationship-diagram"></a>So ordnen Sie Formen im Attributbeziehungsdiagramm an  
   
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/01/2017
  [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   
-

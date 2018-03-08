@@ -3,10 +3,12 @@ title: Das Umgebungshandle zuordnen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-the-environment-handle"></a>Das Umgebungshandle zuordnen
 Die erste Aufgabe für jede ODBC-Anwendung ist der Treiber-Manager zu laden. Diese Vorgehensweise ist abhängig vom Betriebssystem. Z. B. auf einem Computer unter Microsoft® Windows NT® Server-Windows 2000 Server, Windows NT Arbeitsstation/Windows 2000 Professional oder Microsoft Windows® 95-und Windows 98, die Anwendung entweder enthält links zu den Treiber-Manager-Bibliothek oder Aufrufe  **LoadLibrary** zum Laden der DLL-Treiber-Manager.  
@@ -52,4 +53,3 @@ Die erste Aufgabe für jede ODBC-Anwendung ist der Treiber-Manager zu laden. Die
  Wenn **SQLFreeHandle** aufgerufen wird, wird der Treiberversionen, die die Struktur zum Speichern von Informationen über die Umgebung verwendet. Beachten Sie, dass **SQLFreeHandle** kann nicht für ein Umgebungshandle erst aufgerufen werden, nachdem alle Verbindungshandles auf diesem Umgebungshandle freigegeben wurden.  
   
  Weitere Informationen über das Umgebungshandle finden Sie unter [Umgebung behandelt](../../../odbc/reference/develop-app/environment-handles.md).
-

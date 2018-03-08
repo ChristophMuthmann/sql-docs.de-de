@@ -2,33 +2,32 @@
 title: "Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 34063117645178c5e8326c3245d6368baa8480e5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema enthält Informationen über die Konfiguration von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] zur Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Die drei Szenarien zum Verwenden von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sind Datenbanken für Berichtsdatenquellen, Berichtsserver-Datenbanken und Berichtsentwurf. Die unterstützten Funktionen und die erforderliche Konfiguration sind für die drei Szenarien unterschiedlich.  
   
@@ -197,7 +196,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Nachdem das Datenbankfailover abgeschlossen wurde, und nachdem der Berichtsserverdienst neu gestartet wurde, werden Aufträge des SQL Server-Agents automatisch neu erstellt. Hintegrundausführungen, die dem SQL Server-Agent zugeordnet sind, werden so lange nicht verarbeitet, bis die SQL Agent-Aufträge neu erstellt werden. Hierzu zählen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Abonnements, Zeitpläne und Momentaufnahmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Erste Schritte mit Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
@@ -206,5 +205,4 @@ ms.lasthandoff: 08/02/2017
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
-
 

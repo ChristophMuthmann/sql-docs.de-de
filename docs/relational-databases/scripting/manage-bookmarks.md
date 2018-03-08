@@ -2,9 +2,12 @@
 title: Verwalten von Lesezeichen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f77006d812e4ba114f5fc161f3701457f836d62
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 933f5b57a1c6a5b8516ec9ca8985c800b3fa36b7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-bookmarks"></a>Verwalten von Lesezeichen
-  Während der Arbeit mit einem Code-Editor können Sie mithilfe des Fensters **Lesezeichen** Links zu bestimmten Codezeilen innerhalb des Dokuments erstellen. Sie können dieses Fenster über das Menü **Ansicht** anzeigen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Während der Arbeit mit einem Code-Editor können Sie mithilfe des Fensters **Lesezeichen** Links zu bestimmten Codezeilen innerhalb des Dokuments erstellen. Sie können dieses Fenster über das Menü **Ansicht** anzeigen.  
   
  Zum Erstellen von Lesezeichen und für die Navigation innerhalb der Lesezeichen klicken Sie auf die auf der Symbolleiste **Text-Editor** und die oben im Fenster **Lesezeichen** vorhandenen Schaltflächen. Sie können Lesezeichen hinzufügen und entfernen, aktivieren oder deaktivieren und in Ordnern organisieren. Bestimmte Befehle stehen auch über das Kontextmenü im Fenster **Lesezeichen** zur Verfügung. Zum Hinzufügen oder Entfernen eines Lesezeichens platzieren Sie die Einfügemarke im Editor auf der gewünschten Zeile, und klicken Sie dann auf **Lesezeichen ein/aus**. Zum Aktivieren eines Lesezeichens aktivieren Sie im Fenster **Lesezeichen** das zugehörige Kontrollkästchen; Zum Deaktivieren (aber nicht zum Entfernen) eines Lesezeichens deaktivieren Sie das Kontrollkästchen.  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 06/22/2017
  **Delete**  
  Entfernt das aktuell ausgewählte Lesezeichen aus dem Fenster **Lesezeichen** sowie aus dem Dokument, in dem es aufgetreten ist. Die Codezeile, die mit dem Lesezeichen versehen war, wird dabei nicht entfernt.  
   
- **Rename**  
+ **Umbenennen**  
  Ermöglicht Ihnen, einem Lesezeichen oder Ordner einen neuen Anzeigenamen zuzuweisen.  
   
  **Lesezeichen deaktivieren/aktivieren**  
@@ -97,8 +99,7 @@ ms.lasthandoff: 06/22/2017
  **Alle Lesezeichen deaktivieren/aktivieren**  
  Deaktiviert oder aktiviert die Kontrollkästchen für alle Lesezeichen im Fenster **Lesezeichen** . Die Lesezeichen werden nicht entfernt und die mit ihnen gekennzeichneten Codezeilen nicht geändert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

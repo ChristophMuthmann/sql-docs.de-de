@@ -1,12 +1,14 @@
 ---
 title: Server-Eigenschaft-Beispiel (VBScript) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 609afcec22d49c7391f48042720367dce1146681
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8d6ce28412b0c4ca55cd9a8c126d36bd5db0296
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="server-property-example-vbscript"></a>Server-Eigenschaft-Beispiel (VBScript)
 > [!IMPORTANT]
@@ -184,7 +185,6 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Servereigenschaft (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
-
 
 
 

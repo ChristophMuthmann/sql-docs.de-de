@@ -2,9 +2,12 @@
 title: Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 927bc546612f0d56ce857a41fbb2ba49ca32d47e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Das Zeichenformat wird für den Massenexport von Daten in eine Textdatei empfohlen, die in einem anderen Programm verwendet werden sollen, oder für den Massenimport von Daten aus einer Textdatei, die von einem anderen Programm generiert werden.  
 
 Das Zeichenformat verwendet das Zeichendatenformat für alle Spalten. Es ist nützlich, Informationen im Zeichenformat zu speichern, wenn Sie die Daten mit einem anderen Programm, z. B. als Kalkulationstabelle, verwenden, oder die Daten aus einer Datenbank eines anderen Herstellers wie z. B. Oracle in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden müssen.  
@@ -66,7 +69,7 @@ Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie die fo
   
 Das Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|Beschreibung|  
+|Befehl|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Bewirkt, dass das Hilfsprogramm „bcp“ Zeichendaten verwendet.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  
@@ -221,7 +224,7 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
   
 -   [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
@@ -229,4 +232,3 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
  [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   
-

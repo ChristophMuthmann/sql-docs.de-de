@@ -3,7 +3,7 @@ title: Cursortypen (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3ec8ccca017236a8f6aa784d92e8304a98452f02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7648e91432bd90c03398e5189e4101b9741841c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-cursors-ado"></a>Cursortypen (ADO)
 Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden den Zugriff erforderlichen Daten ermöglicht. Jedes Cursormerkmal zusätzliche, die Grundlagen (Vorwärtscursor, schreibgeschützte, statische, Durchführen eines Bildlaufs, ungepufferten) weist einen Preis – im Clientspeicher, Netzwerklast oder Leistung. In vielen Fällen generieren die Standardcursoroptionen einen komplexeren Cursor, als tatsächlich Ihre Anwendung benötigt.  
@@ -57,4 +56,3 @@ Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden den 
  [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
  [KEYSET-Cursor](../../../ado/guide/data/keyset-cursors.md)   
  [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)
-

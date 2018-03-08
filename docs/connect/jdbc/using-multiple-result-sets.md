@@ -3,24 +3,25 @@ title: Verwenden mehrerer Resultsets | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e76f30f5c6b7eb16351749086173bdceaa49f938
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e4796d369ed9eb5567cb026d1892399c86479897
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-multiple-result-sets"></a>Verwenden von mehreren Resultsets
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,6 @@ ms.lasthandoff: 09/09/2017
 >  Wenn Sie die GetMoreResults-Methode der SQLServerStatement-Klasse aufrufen, wird das zuvor zurückgegebene Resultset implizit geschlossen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Anweisungen mit der JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

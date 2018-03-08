@@ -2,31 +2,29 @@
 title: Restore-ASDatabase-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96e61c207316b216a1706834188a4f6f235cb52e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Stellt eine mehrdimensionale oder tabellarische Datenbanksicherungsdatei (.abf) in einer Analysis Services-Instanz wieder her.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Stellt eine Analysis Services-Instanz einer mehrdimensionalen oder tabellarischen Datenbank Sicherungsdatei (.abf) wieder her.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -201,4 +199,3 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\my
   
  Dieser Befehl stellt eine verschlüsselte Analysis Services-Sicherungsdatei (testdb.abf) in einem Remotesicherungsordner auf einer Remote-Analysis Services Standardinstanz wieder her. Der –StorageLocations-Parameter wird verwendet, um die Datenbankdateien an einem nicht standardmäßigen Speicherort einzufügen, in diesem Fall eine freigegebene Datei mit dem Namen "restoreDBfiles".  
   
-

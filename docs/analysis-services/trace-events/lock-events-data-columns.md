@@ -2,28 +2,30 @@
 title: Sperren Events Data Columns | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
-caps.latest.revision: 5
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 71b4a1d084d56cdb260ac6ed4dd9688a7e388df3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lock-events-data-columns"></a>Sperrenereignisse – Datenspalten
-  Die Sperren-Ereigniskategorie enthält die folgenden Ereignisklassen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Sperren-Ereigniskategorie enthält die folgenden Ereignisklassen:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
 |------------------|--------------------|---------------------------|  
@@ -124,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Sperren-Ereigniskategorie](../../analysis-services/trace-events/lock-events-category.md)  
   
   
-

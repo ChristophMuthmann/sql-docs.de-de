@@ -2,9 +2,12 @@
 title: "Angeben des Füllfaktors für einen Index | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - fill factor [SQL Server]
 - page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 60356d04463b7905e092ddb8ccc6374fe410719b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4f22e84a17cb2401dec70f4855c5afd3cff1c319
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Angeben des Füllfaktors für einen Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
      [Leistungsaspekte](#Performance)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So geben Sie einen Füllfaktor für einen Index an mit:**  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Performance"></a> Leistungsaspekte  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>So geben Sie einen Füllfaktor mit dem Tabellen-Designer an  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  Klicken Sie auf **Schließen**.  
   
-8.  Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
+8.  Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>So geben Sie einen Füllfaktor in einem Index mit dem Objekt-Explorer an  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>So geben Sie einen Füllfaktor für einen vorhandenen Index an  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -129,7 +131,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Alternative Möglichkeit zum Angeben eines Füllfaktors in einem Index  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -150,4 +152,3 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
-

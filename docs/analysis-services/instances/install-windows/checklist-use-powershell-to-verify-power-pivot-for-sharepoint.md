@@ -2,42 +2,34 @@
 title: "Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Prüfliste: Überprüfen von PowerPivot für SharePoint mithilfe von PowerShell
-  [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Installations- oder -Wiederherstellungsvorgänge sind erst abgeschlossen, nachdem ein solider Überprüfungstestlauf ausgeführt wurde, durch den die Einsatzbereitschaft der Dienste und Daten bestätigt wird. In diesem Artikel erfahren Sie, wie Sie diese Schritte mit Windows PowerShell ausführen. Jeder Schritt wird in einem eigenen Abschnitt behandelt, sodass Sie direkt zu einer bestimmten Aufgabe wechseln können. Führen Sie z. B. das Skript im Abschnitt [Datenbanken](#bkmk_databases) dieses Themas aus, um die Namen von Dienstanwendung und Inhaltsdatenbanken zu überprüfen, wenn Sie Wartungen oder Sicherungen für sie planen möchten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Installations- oder -Wiederherstellungsvorgänge sind erst abgeschlossen, nachdem ein solider Überprüfungstestlauf ausgeführt wurde, durch den die Einsatzbereitschaft der Dienste und Daten bestätigt wird. In diesem Artikel erfahren Sie, wie Sie diese Schritte mit Windows PowerShell ausführen. Jeder Schritt wird in einem eigenen Abschnitt behandelt, sodass Sie direkt zu einer bestimmten Aufgabe wechseln können. Führen Sie z. B. das Skript im Abschnitt [Datenbanken](#bkmk_databases) dieses Themas aus, um die Namen von Dienstanwendung und Inhaltsdatenbanken zu überprüfen, wenn Sie Wartungen oder Sicherungen für sie planen möchten.  
   
-|||  
-|-|-|  
-|![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")|Ein vollständiges PowerShell-Skript finden Sie am Ende des Themas. Verwenden Sie das vollständige Skript als Ausgangspunkt für die Erstellung eines benutzerdefinierten Skripts, das zur Überwachung der gesamten [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]-Bereitstellung eingesetzt wird.|  
+![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") ein vollständiges Powershellskript an das Ende des Themas enthalten ist. Verwenden Sie das vollständige Skript als Ausgangspunkt für die Erstellung eines benutzerdefinierten Skripts, das zur Überwachung der gesamten [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Bereitstellung eingesetzt wird.
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
-  
- **In diesem Thema**: Die mit Buchstaben gekennzeichneten Elemente im folgenden Inhaltsverzeichnis beziehen sich auf die Bereiche des Diagramms. Das Diagramm veranschaulicht  
-  
-|||  
-|-|-|  
-|[Vorbereitung der PowerShell-Umgebung](#bkmk_prerequisites)<br /><br /> [Symptome und empfohlene Aktionen](#bkmk_symptoms)<br /><br /> **(A)** [Windows-Dienst von Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService und PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot-Dienstanwendung(en) und -Proxys](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Datenbanken](#bkmk_databases)<br /><br /> [SharePoint-Funktionen](#bkmk_features)<br /><br /> [Zeitgeberaufträge](#bkmk_timer_jobs)<br /><br /> [Integritätsregeln](#bkmk_health_rules)<br /><br /> **(E)** [Windows- und ULS-Protokolle](#bkmk_logs)<br /><br /> [MSOLAP-Anbieter](#bkmk_msolap)<br /><br /> [ADOMD.NET-Clientbibliothek](#bkmk_adomd)<br /><br /> [Regeln zur Sammlung von Integritätsdaten](#bkmk_health_collection)<br /><br /> [Lösungen](#bkmk_solutions)<br /><br /> [Manuelle Überprüfungsschritte](#bkmk_manual)<br /><br /> [Weitere Ressourcen](#bkmk_more_resources)<br /><br /> [Vollständiges PowerShell-Skript](#bkmk_full_script)|![PowerShell-Überprüfung von Powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "Powershell-Überprüfung von Powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Vorbereitung der PowerShell-Umgebung  
  Mithilfe der Schritte in diesem Abschnitt bereiten Sie die PowerShell-Umgebung vor. Je nach Konfiguration der Skriptumgebung sind die Schritte u. U. nicht erforderlich.  
@@ -580,4 +572,3 @@ write-host -foregroundcolor DarkGray EndTime $time
 ```  
   
   
-

@@ -1,35 +1,34 @@
 ---
-title: "Klassenbibliotheken für benutzerdefinierten Berichts Element | Microsoft Docs"
+title: "Klassenbibliotheken für ein benutzerdefiniertes Berichtselement | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-caps.latest.revision: 27
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "27"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f216228c01e835e88cd9d4c7d7d4190648a386db
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa3d1e9c7278efcac5af62d3a6d892d12944ba84
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="custom-report-item-class-libraries"></a>Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
-  Benutzerdefinierte Berichtselemente verwenden Klassen aus der **Microsoft.ReportDesigner** Namespace. Die Klassen, die zum Implementieren eines benutzerdefinierten Berichtselements verwendet werden, können in zwei Hauptkategorien gruppiert werden: eindeutige Klassen zur Unterstützung der Infrastruktur eines benutzerdefinierten Berichtselements und verwaltete Wrapperklassen, die die Funktionalität von relevanten RDL-Elementen (Report Definition Language) kapseln. Ein Codebeispiel für die Verwendung dieser Klassen finden Sie unter [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Benutzerdefinierte Berichtselemente verwenden Klassen des **Microsoft.ReportDesigner**-Namespaces. Die Klassen, die zum Implementieren eines benutzerdefinierten Berichtselements verwendet werden, können in zwei Hauptkategorien gruppiert werden: eindeutige Klassen zur Unterstützung der Infrastruktur eines benutzerdefinierten Berichtselements und verwaltete Wrapperklassen, die die Funktionalität von relevanten RDL-Elementen (Report Definition Language) kapseln. Ein Codebeispiel für die Verwendung dieser Klassen finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Infrastrukturklassen eines benutzerdefinierten Berichtselements  
  Die folgenden Klassen werden zum Implementieren eines benutzerdefinierten Berichtselements verwendet.  
@@ -46,16 +45,16 @@ ms.lasthandoff: 08/09/2017
 |-|-|  
 |**Name**|Der Name des benutzerdefinierten Berichtselements.|  
 |**Typ**|Der Typ des benutzerdefinierten Berichtselements.|  
-|**Die CustomData-Funktion**|Ein <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>-Objekt, das die während der Entwurfszeit angegebenen Dateneigenschaften für ein benutzerdefiniertes Berichtselement kapselt.|  
+|**CustomData**|Ein <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>-Objekt, das die während der Entwurfszeit angegebenen Dateneigenschaften für ein benutzerdefiniertes Berichtselement kapselt.|  
 |**CustomProperties**|Eine Auflistung benutzerdefinierter Eigenschaften für das benutzerdefinierte Berichtselement.|  
-|**Höhe**|Die Höhe der Steuerung für ein benutzerdefiniertes Berichtselement.|  
-|**Breite**|Die Breite der Steuerung für ein benutzerdefiniertes Berichtselement.|  
+|**Height**|Die Höhe der Steuerung für ein benutzerdefiniertes Berichtselement.|  
+|**Width**|Die Breite der Steuerung für ein benutzerdefiniertes Berichtselement.|  
 |**Bericht**|Ein Container für die Eigenschaften auf Berichtsebene, z. B. die Liste der Datasets in dem Bericht.|  
 |**AltReportItem**|Das alternative Berichtselementobjekt, das verwendet werden muss, wenn die Laufzeitsteuerung für das benutzerdefinierte Berichtselement nicht unterstützt wird.|  
 |**Style**|Die Stileigenschaften für das benutzerdefinierte Berichtselement.|  
-|**Zusatzelement (adornment)**|Ein Gestaltungsfenster für die interaktive Bearbeitung der Steuerung.|  
-|**Website**|Die **ISite** der Komponente.|  
-|**Dann DesignerVerbCollection**|Ein Array der benutzerdefinierten Verben für das Kontextmenü der Steuerung.|  
+|**Adornment**|Ein Gestaltungsfenster für die interaktive Bearbeitung der Steuerung.|  
+|**Site**|Die **ISite** der Komponente.|  
+|**DesignerVerbCollection**|Ein Array der benutzerdefinierten Verben für das Kontextmenü der Steuerung.|  
   
 #### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -65,13 +64,13 @@ ms.lasthandoff: 08/09/2017
 |**DoDefaultAction**|Wird als Reaktion auf das Doppelklicken oder Drücken der EINGABETASTE auf der Steuerung aufgerufen.|  
 |**EndEdit**|Deaktiviert die interaktive Bearbeitung der Steuerung.|  
 |**GetService**|Gibt ein Objekt zurück, das einen Dienst darstellt.|  
-|**InitializeNewComponent aus**|Wird aufgerufen, wenn ein neues benutzerdefiniertes Berichtselement erstellt wird.|  
-|**Für ungültig zu erklären**|Zeichnet die gesamte Oberfläche der Steuerung neu.|  
+|**InitializeNewComponent**|Wird aufgerufen, wenn ein neues benutzerdefiniertes Berichtselement erstellt wird.|  
+|**Invalidate**|Zeichnet die gesamte Oberfläche der Steuerung neu.|  
 |**OnDragEnter**<br /><br /> **OnDragDrop**|Wird aufgerufen, wenn ein Objekt auf die Steuerung gezogen wird.|  
-|**OnPaint**|Wird aufgerufen, als Antwort auf die **Paint** Ereignis.|  
+|**OnPaint**|Wird als Reaktion auf das **Paint**-Ereignis aufgerufen.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Dieses Attribut wird zur Identifizierung des Typs des benutzerdefinierten Berichtselements verwendet. Der Name muss den Wert des übereinstimmen der \< **Namen**>-Attribut des der **ReportItem** Element in der Konfigurationsdatei für den Berichts-Designer.  
+ Dieses Attribut wird zur Identifizierung des Typs des benutzerdefinierten Berichtselements verwendet. Der Name muss dem Wert des \<**Name**>-Attributs des **ReportItem**-Elements in der Konfigurationsdatei des Berichts-Designers entsprechen.  
   
 #### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -89,19 +88,19 @@ ms.lasthandoff: 08/09/2017
 |**LocalizedNameAttribute**|Erstellt das LocalizedNameAttribute-Objekt.|  
   
 ### <a name="microsoftreportdesigneradornment"></a>Microsoft.ReportDesigner.Adornment  
- Die **Randsteuerelement** Klasse wird von der Entwurfszeitkomponente Element einer benutzerdefinierten Bericht verwendet, um Bereiche außerhalb des hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge.  
+ Die **Adornment**-Klasse wird von der Entwurfszeitkomponente eines benutzerdefinierten Berichtselements verwendet, um Bereiche außerhalb des Hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge.  
   
 #### <a name="public-methods"></a>Öffentliche Methoden  
   
 |||  
 |-|-|  
-|**OnShow**|Wird aufgerufen, wenn die **Randsteuerelement** aktiviert ist.|  
-|**OnHide**|Wird aufgerufen, wenn die **Randsteuerelement** deaktiviert ist.|  
-|**Paint**|Wird aufgerufen, als Antwort auf die **Paint** Ereignis.|  
-|**OnDragEnter**<br /><br /> **OnDragOver**<br /><br /> **OnDragLeave**<br /><br /> **OnDragDrop**|Wird aufgerufen, wenn ein Objekt, in gezogen wird der **Randsteuerelement**.|  
+|**OnShow**|Wird aufgerufen, wenn **Adornment** aktiviert wird.|  
+|**OnHide**|Wird aufgerufen, wenn **Adornment** deaktiviert wird.|  
+|**Paint**|Wird als Reaktion auf das **Paint**-Ereignis aufgerufen.|  
+|**OnDragEnter**<br /><br /> **OnDragOver**<br /><br /> **OnDragLeave**<br /><br /> **OnDragDrop**|Wird aufgerufen, wenn ein Objekt in **Adornment** gezogen wird.|  
   
 ### <a name="microsoftreportdesigneradornerservice"></a>Microsoft.ReportDesigner.AdornerService  
- Diese Klasse wird verwendet, um eine Auflistung von anzeigediensten, die durch das benutzerdefinierte Berichtselement verwendet werden, um Unterstützung zu bieten **Randsteuerelement** Objekte für die Entwurfszeitkomponente Element einer benutzerdefinierten Bericht.  
+ Diese Klasse wird zum Bereitstellen einer Auflistung von Anzeigediensten verwendet, die vom benutzerdefinierten Berichtselement zum Unterstützen von **Adornment**-Objekten für die Entwurfszeitkomponente eines benutzerdefinierten Berichtselements genutzt werden.  
   
 #### <a name="public-properties"></a>Öffentliche Eigenschaften  
   
@@ -136,12 +135,11 @@ ms.lasthandoff: 08/09/2017
 |||  
 |-|-|  
 |**DataSetName**|Der Name des Datasets mit den Feldern, die abgelegt werden soll.|  
-|**Felder**|Die Auflistung von Feldern (**Microsoft.ReportDesigner.Field**) gelöscht werden.|  
+|**Fields**|Die Auflistung von Feldern (**Microsoft.ReportDesigner.Field**), die abgelegt werden sollen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Report Definition Language &#40; SSRS &#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Erstellen ein benutzerdefiniertes Element-Laufzeitkomponente](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Erstellen einer benutzerdefinierten Bericht Element zur Entwurfszeit-Komponente](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Berichtsdefinitionssprache (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)   
+ [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Creating a Custom Report Item Design-Time Component (Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement)](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
   
   
-

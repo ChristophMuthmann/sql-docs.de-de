@@ -1,12 +1,14 @@
 ---
-title: "Programmgesteuertes auswählen von Eingabespalten | Microsoft Docs"
+title: "Programmgesteuertes Auswählen von Eingabespalten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,17 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2ead17945bc9a6d2d3baeb73c07c86fad0e8cf1f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 37610e7a14cef8512059929ac1ea04faa79bed38
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="selecting-input-columns-programmatically"></a>Programmgesteuertes Auswählen von Eingabespalten
   Nachdem Sie Komponenten programmgesteuert verbunden haben, wählen Sie die Spalten von Upstreamkomponenten aus, die Sie transformieren oder an Downstreamkomponenten übergeben werden. Wenn Sie keine Eingabespalten für Ihre Komponente auswählen, empfängt die Komponente keine Zeilen von dem Datenflusstask.  
@@ -217,8 +218,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Programmgesteuertes Speichern von Paketen](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   
-

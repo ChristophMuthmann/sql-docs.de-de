@@ -2,33 +2,34 @@
 title: "Erstellen einer Domänenregel | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "28"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
   In diesem Thema wird beschrieben, wie Sie eine Domänenregel in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte validiert, korrigiert und standardisiert werden. Eine Domänenregel muss über eine Domäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Domänenregeln können Überprüfungsregeln enthalten, die für die Überprüfung von Domänenwerten, aber nicht für die Korrektur von Daten in Data Quality-Projekten verwendet werden. Regeln umfassen auch Standardisierungsregeln, die auf gültige Daten angewendet und in der Datenkorrektur verwendet werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um eine Domänenregel zu erstellen, müssen Sie eine Wissensdatenbank und eine Domäne in der Domänenverwaltungsaktivität geöffnet haben.  
@@ -42,12 +43,12 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Öffnen oder erstellen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm eine Wissensdatenbank. Wählen Sie **Domänenverwaltung** als Aktivität aus, und klicken Sie dann auf **Öffnen** oder **Erstellen**. Weitere Informationen finden Sie unter [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) oder [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Öffnen oder erstellen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm eine Wissensdatenbank. Wählen Sie **Domänenverwaltung** als Aktivität aus, und klicken Sie dann auf **Öffnen** oder **Erstellen**. Weitere Informationen finden Sie unter [Erstellen einer Wissensdatenbank](../data-quality-services/create-a-knowledge-base.md) oder [Öffnen einer Wissensdatenbank](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  Die Domänenverwaltung wird auf einer Seite des Data Quality Service-Clients ausgeführt, der fünf Registerkarten für separate Domänenverwaltungsvorgänge enthält. Es ist kein assistentengesteuerter Prozess; jeder Verwaltungsvorgang kann getrennt ausgeführt werden.  
   
-3.  Wählen Sie aus der **Domänenliste** auf der Seite **Domänenverwaltung** die Domäne aus, für die Sie eine Domänenregel erstellen möchten, oder erstellen Sie eine neue Domäne. Wenn Sie eine neue Domäne erstellen müssen, finden Sie unter [Create a Domain](../data-quality-services/create-a-domain.md)weitere Informationen.  
+3.  Wählen Sie aus der **Domänenliste** auf der Seite **Domänenverwaltung** die Domäne aus, für die Sie eine Domänenregel erstellen möchten, oder erstellen Sie eine neue Domäne. Wenn Sie eine neue Domäne erstellen müssen, finden Sie unter [Domäne erstellen](../data-quality-services/create-a-domain.md)weitere Informationen.  
   
 4.  Klicken Sie auf die Registerkarte **Domänenregeln** .  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  Klicken Sie auf **Alle Änderungen verwerfen** , um alle Änderungen zu entfernen, die Sie an den Domänenregeln vorgenommen haben, und die zuvor angewendeten Regeln wiederherzustellen. Das führt dazu, dass alle Änderungen, die nach der letzten Anwendung der Regeln vorgenommen wurden, nicht mehr gelten. Die Gültigkeit jedes Werts in der Domäne wird dann nicht gemäß den verworfenen Änderungen, sondern gemäß den zuvor angewendeten Regeln aktualisiert.  
   
-3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
+3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Domänenregel  
  Nachdem Sie eine Domänenregel erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
@@ -114,7 +115,7 @@ ms.lasthandoff: 09/09/2017
   
  Beim Erstellen einer Domänenregel stehen verschiedene Alternativen zur Auswahl. Um beispielsweise zu überprüfen, ob Werte mit dem Buchstaben A, B oder C beginnen, können Sie eine einfache Regel mit einer komplexen Bedingung (z. B. ein regulärer Ausdruck mit Pipezeichen) erstellen, oder Sie können eine komplexe Regel erstellen, die mehrere einfache Bedingungen enthält. Beispiel für die erste Regel: "Wert enthält regulären Ausdruck (^A|^B|^C)". Beispiel für die zweite Regel: "'Wert beginnt mit A' OR 'Wert beginnt mit B' OR 'Wert beginnt mit C'".  
   
-|Bedingung|Beschreibung|Beispiel|  
+|Bedingung|Description|Beispiel|  
 |---------------|-----------------|-------------|  
 |Länge ist gleich|Nur die Werte, die die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültiger Wert: BB1<br /><br /> Ungültiger Wert: AA|  
 |Länge ist größer als oder gleich|Nur die Werte, die mindestens die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültige Werte: BB1, BBAA<br /><br /> Ungültiger Wert: AA|  
@@ -137,4 +138,3 @@ ms.lasthandoff: 09/09/2017
 |Der Wert stimmt nicht mit einem regulären Ausdruck überein|Nur die Werte, die nicht dem regulären Ausdruck im Operanden entsprechen, werden als gültig angesehen.|Beispieloperand: [1-5] + (die Zeichenfolge darf nicht nur Ziffern von 1 bis 5 enthalten)<br /><br /> Gültige Werte: 456, ABC<br /><br /> Ungültige Werte: 123, 123456, 14352|  
   
   
-

@@ -3,7 +3,7 @@ title: AppendChunk und GetChunk Methoden (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - GetChunk method [ADO], VC++ example
 - AppendChunk method [ADO], VC++ example
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b308cc25abf4020835ac5703548fa4e8616ecd89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79eafb56215f2384579689220354231d791be7ae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk und GetChunk Methoden (VC++-Beispiel)
 Dieses Beispiel verwendet die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) Methoden, um ein Bildfeld mit Daten aus einem anderen Datensatz zu füllen.  
@@ -277,4 +276,3 @@ void PrintProviderError(_ConnectionPtr pConnection) {
  [AppendChunk-Methode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk-Methode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
-

@@ -2,30 +2,30 @@
 title: Fragt Events Data Columns | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Queries Events event category
+helpviewer_keywords: Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f329c73f2fbfd0b99e45c2012fb90b90ec52f879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="queries-events-data-columns"></a>Datenspalten der Abfrageereignisse
-  Die Ereigniskategorie "Abfrageereignisse" besitzt folgende Ereignisklassen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Abfragen Events-Ereigniskategorie weist folgende Ereignisklassen:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
 |------------------|--------------------|---------------------------|  
@@ -65,9 +65,9 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Ereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Enthält die abgelaufene Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Duration|5|2|Enthält die abgelaufene Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Enthält die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
-|Severity|22|1|Enthält den Schweregrad einer mit dem Abfrageereignis verbundenen Ausnahme. Die Werte sind:<br /><br /> 0 = Erfolg<br /><br /> 1 = Information<br /><br /> 2 = Warnung<br /><br /> 3 = Fehler|  
+|Schweregrad|22|1|Enthält den Schweregrad einer mit dem Abfrageereignis verbundenen Ausnahme. Die Werte sind:<br /><br /> 0 = Erfolg<br /><br /> 1 = Information<br /><br /> 2 = Warnung<br /><br /> 3 = Fehler|  
 |Success|23|1|Enthält den Erfolg oder Fehler des Abfrageereignisses. Die Werte sind:<br /><br /> 0 = Fehler<br /><br /> 1 = Erfolg|  
 |Fehler|24|1|Enthält die Fehlernummer aller mit dem Abfrageereignis verbundenen Fehler.|  
 |ConnectionID|25|1|Enthält die mit dem Abfrageereignis verbundene eindeutige Verbindungs-ID.|  
@@ -86,4 +86,3 @@ ms.lasthandoff: 09/01/2017
  [Abfrageereigniskategorie](../../analysis-services/trace-events/queries-events-category.md)  
   
   
-

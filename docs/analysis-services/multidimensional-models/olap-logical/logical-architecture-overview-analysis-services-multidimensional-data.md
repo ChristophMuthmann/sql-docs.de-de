@@ -2,12 +2,13 @@
 title: "Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,22 +17,22 @@ helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 125422ba5479f56a2659f1fc609359741d63b7e3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
-  Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
   
- In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter [tabellarische Modellierung &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) und [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter [Tabellenmodellierung ](../../../analysis-services/tabular-models/tabular-models-ssas.md) und [Vergleichen von tabellarischen und mehrdimensionalen Lösungen ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Grundlegende Architektur  
  Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] heißen "\<ServerName >\\< InstanceName\>". Die folgende Abbildung zeigt alle genannten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte.  
@@ -132,7 +133,6 @@ ms.lasthandoff: 09/01/2017
  Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandtes Thema:**[Dimensionsbeziehungen](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionale Modelldatenbanken &#40; SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Mehrdimensionale Modelldatenbanken ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
-

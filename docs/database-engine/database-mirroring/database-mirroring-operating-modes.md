@@ -2,30 +2,30 @@
 title: Betriebsmodi der Datenbankspiegelung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- database mirroring [SQL Server], operating modes
+helpviewer_keywords: database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8c716fa65c68b44c6a4eb53e9c63bbe378298633
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
-  In diesem Thema werden die synchronen und asynchronen Betriebsmodi für Datenbank-Spiegelungssitzungen beschrieben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema werden die synchronen und asynchronen Betriebsmodi für Datenbank-Spiegelungssitzungen beschrieben.  
   
 > [!NOTE]  
 >  Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
@@ -251,7 +251,7 @@ ms.lasthandoff: 08/02/2017
 ###  <a name="ViewWitness"></a> Anzeigen der Sicherheitseinstellung und des Status des Zeugen  
  Verwenden Sie zum Anzeigen der Sicherheitseinstellung und des Status des Zeugen für eine Datenbank die **sys.database_mirroring** -Katalogsicht. Die wichtigen Spalten sind die folgenden:  
   
-|Faktor|Spalten|Beschreibung|  
+|Faktor|Spalte|Description|  
 |------------|-------------|-----------------|  
 |Transaktionssicherheit|**mirroring_safety_level** oder **mirroring_safety_level_desc**|Transaktionssicherheitseinstellung für Updates der Spiegeldatenbank:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= Datenbank ist nicht online.|  
 |Ist ein Zeuge vorhanden?|**mirroring_witness_name**|Servername des Datenbankspiegelungszeugen oder NULL. Damit wird angegeben, das kein Zeuge vorhanden ist.|  
@@ -287,9 +287,8 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

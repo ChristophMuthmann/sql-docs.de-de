@@ -3,7 +3,7 @@ title: Feld Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Field object [ADO], members
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3d0b888947896af5b11d9d7ce3ea8e55d43ac842
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4e9deaf9563f49e94c8648f340c33bd305f54b7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-object-properties-methods-and-events"></a>Feld-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/09/2017
   
  [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Status-Eigenschaft (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)  
+ [Status-Eigenschaft (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)  
   
  [Type (Eigenschaft)](../../../ado/reference/ado-api/type-property-ado.md)  
   
- [OriginalValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)  
+ [UnderlyingValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
  [Value-Eigenschaft](../../../ado/reference/ado-api/value-property-ado.md)  
   
@@ -63,4 +62,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)
-

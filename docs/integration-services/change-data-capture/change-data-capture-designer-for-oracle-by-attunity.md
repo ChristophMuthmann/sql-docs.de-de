@@ -1,10 +1,13 @@
 ---
-title: "Ändern Sie die Data Capture Designer für Oracle von Attunity | Microsoft Docs"
+title: "Change Data Capture Designer für Oracle von Attunity | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd65ef848696254aa8badb47e41196106401e100
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6eec0f35ddccef3653c9ad4cb06e5c8e1b887257
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer für Oracle von Attunity
   CDC Designer Console wird verwendet, um Oracle CDC-Instanzen zu entwickeln und zu warten. Die CDC Designer Console ist ein Microsoft Management Console-Snap-In, das die folgenden Elemente enthält:  
@@ -37,31 +39,30 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-documentation"></a>In dieser Dokumentation  
   
--   [Der Einführung in die CDC Designer Console](../../integration-services/change-data-capture/the-cdc-designer-console-introduction.md)  
+-   [Einführung in die CDC Designer Console](../../integration-services/change-data-capture/the-cdc-designer-console-introduction.md)  
   
--   [Datentypen von Oracle CDC-Instanz](../../integration-services/change-data-capture/oracle-cdc-instance-data-types.md)  
+-   [Datentypen von Oracle CDC-Instanzen](../../integration-services/change-data-capture/oracle-cdc-instance-data-types.md)  
   
 -   [Fehlerbehandlung](../../integration-services/change-data-capture/error-handling.md)  
   
--   [Die Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
+-   [Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
--   [Die Oracle CDC-Datenbanken](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
+-   [Oracle CDC-Datenbanken](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Change Data Capture Designer für Oracle von attunity – F1-Hilfe-Referenz](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Change Data Capture Designer für Oracle von Attunity – Referenz zur F1-Hilfe](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
 -   [Change Data Capture Designer für Oracle von Attunity – Anleitung](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [SQL Server-Verbindung für die Instanzerstellung](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
 -   [Erweiterte Verbindungseigenschaften](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
 -   [Oracle-Anmeldeinformationen zum Ausführen von Skripts](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
--   [Oracle-Protokollierungsskript](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
+-   [Ergänzendes Oracle-Protokollierungsskript](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   
 -   [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [SQL Server-Verbindung erforderliche Berechtigungen für den CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [SQL Server-Verbindung erfordert Berechtigungen für den CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   
-

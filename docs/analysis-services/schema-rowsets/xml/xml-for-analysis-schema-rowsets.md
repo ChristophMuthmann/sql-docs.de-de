@@ -2,12 +2,13 @@
 title: XML for Analysis-Schemarowsets | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,20 +19,20 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0c44abd2ba4be59a86b46a9b0ff74196c570e5e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-  Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA-Anbieter (XML for Analysis) schließt Schemarowsets ein, die Metadaten zu Serverstatus, Aktivität und Objekten zurückgeben. Es ist nötig, Metadaten abzurufen, wenn Sie eine Clientanwendung entwickeln, die eine Verbindung mit einem Analysis Services-Modell herstellt, dessen Struktur und Eigenschaften variabel sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA-Anbieter (XML for Analysis) schließt Schemarowsets ein, die Metadaten zu Serverstatus, Aktivität und Objekten zurückgeben. Es ist nötig, Metadaten abzurufen, wenn Sie eine Clientanwendung entwickeln, die eine Verbindung mit einem Analysis Services-Modell herstellt, dessen Struktur und Eigenschaften variabel sind.  
   
  Schemarowsets gewähren auch Einblicke in interne Prozesse und Vorgänge, die Ihnen helfen können, den Server zu überwachen und Probleme zu beheben. Sie können für die meisten Schemarowsets eine DMV-Abfrage (Dynamic Management View, dynamische Verwaltungssicht) ausführen, um administrative Ad-hoc-Aufgaben besser zu unterstützen. DMV-Abfragen geben Ergebnisse in einem lesbaren, tabellarischen Format zurück, das Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] anzeigen können.  
   
@@ -83,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Abrufen von Metadaten aus einer analytischen Datenquelle](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

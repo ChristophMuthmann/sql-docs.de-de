@@ -3,10 +3,12 @@ title: Treiber-spezifische Typen - Daten, Beschreibung, Informationen Diagnose |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 184ad1369e8f37def7baa2f1ed8ff4677b2a85f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05aaeca12342ec9d037595ff001a0d1edc745818
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnose Typen und Attribute
 Treiber können Treiber-spezifische Werte für Folgendes zuordnen:  
@@ -65,4 +66,3 @@ Treiber können Treiber-spezifische Werte für Folgendes zuordnen:
 ```  
 SQL_DRIVER_DIAGNOSTIC_BASE+0, SQL_DRIVER_DIAGNOSTIC_BASE +1  
 ```
-

@@ -3,30 +3,30 @@ title: Sqlsrv_num_fields | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_num_fields
+apiname: sqlsrv_num_fields
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 978f04e3796cc104844ca86e3ac74b1c24cc10e1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7c42aa895d02420f50f8ab35b6d18453839eb18
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -99,4 +99,3 @@ sqlsrv_close( $conn );
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   
-

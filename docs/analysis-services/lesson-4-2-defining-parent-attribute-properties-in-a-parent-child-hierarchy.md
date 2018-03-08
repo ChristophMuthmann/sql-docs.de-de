@@ -2,29 +2,32 @@
 title: "Definieren von Eigenschaften des übergeordneten Attributs in einer über-/ Unterordnungshierarchie | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e369924d45fe9cc718103cf1e763340e2c03c018
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lektion 4-2: Definieren von Eigenschaften des übergeordneten Attributs in einer über-/ Unterordnungshierarchie
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Eine Hierarchie mit über- und untergeordneten Elementen ist eine Hierarchie in einer Dimension, die auf zwei Tabellenspalten basiert. Zusammen definieren diese Spalten die hierarchischen Beziehungen zwischen den Elementen der Dimension. Die erste Spalte, die so genannte *Elementschlüsselspalte*, identifiziert jedes Dimensionselement. Die zweite Spalte, die so genannte *übergeordnete Spalte*, identifiziert das übergeordnete Element der einzelnen Dimensionselemente. Die **NamingTemplate** -Eigenschaft eines übergeordneten Attributs bestimmt den Namen jeder Ebene in der Über-/Unterordnungshierarchie, und die **MembersWithData** -Eigenschaft bestimmt, ob Daten für übergeordnete Elemente angezeigt werden sollen.  
   
 Weitere Informationen finden Sie unter [Über- und untergeordnete Dimensionen](../analysis-services/multidimensional-models/parent-child-dimension.md), [Attribute in über- und untergeordneten Hierarchien](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
@@ -96,7 +99,7 @@ In den Aufgaben dieses Themas erstellen Sie eine Benennungsvorlage, durch die de
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>Durchsuchen der Employee-Dimension mit den geänderten Attributen  
   
-1.  Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
+1.  Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] auf **Analysis Services Tutorial bereitstellen**.  
   
 2.  Wechseln Sie nach erfolgreichem Abschluss der Bereitstellung zum Cube-Designer für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, und klicken Sie auf der Symbolleiste der Registerkarte **Browser** auf **Verbindung wiederherstellen** .  
   
@@ -119,4 +122,3 @@ In den Aufgaben dieses Themas erstellen Sie eine Benennungsvorlage, durch die de
   
   
   
-

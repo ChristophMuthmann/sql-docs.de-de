@@ -3,24 +3,25 @@ title: ODBC-Funktionen und die Cursorbibliothek | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: afb5908c4a83988365922b7a3f086a06317fb2a3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6405c2a0890b9a5b43c420960f1b823b39ad9e60
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC-Funktionen und die Cursorbibliothek
 > [!IMPORTANT]  
@@ -32,51 +33,50 @@ ms.lasthandoff: 09/09/2017
   
 -   [ODBC-Funktionen, die von der Cursorbibliothek ausgeführt](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   
--   [ODBC-Funktionen, die von der Cursorbibliothek nicht ausgeführt.](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
+-   [ODBC-Funktionen, die von der Cursorbibliothek nicht ausgeführt werden](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
   
--   [SQLBindCol (Cursor Library)](../../../odbc/reference/appendixes/sqlbindcol-cursor-library.md)  
+-   [SQLBindCol (Cursor Library) (SQLBindCol (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlbindcol-cursor-library.md)  
   
--   [SQLBindParameter (Cursor Library)](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
+-   [SQLBindParameter (Cursor Library) (SQLBindParameter (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
 -   [SQLBulkOperations (Cursor Library)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
 -   [SQLCloseCursor (Cursor Library)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
--   [SQLEndTran (Cursor Library)](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
+-   [SQLEndTran (Cursor Library) (SQLEndTran (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
--   [SQLExtendedFetch (Cursor Library)](../../../odbc/reference/appendixes/sqlextendedfetch-cursor-library.md)  
+-   [SQLExtendedFetch (Cursor Library) (SQLExtendedFetch (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlextendedfetch-cursor-library.md)  
   
--   [SQLFetch (Cursor Library)](../../../odbc/reference/appendixes/sqlfetch-cursor-library.md)  
+-   [SQLFetch (Cursor Library) (SQLFetch (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlfetch-cursor-library.md)  
   
--   [SQLFetchScroll (Cursor Library)](../../../odbc/reference/appendixes/sqlfetchscroll-cursor-library.md)  
+-   [SQLFetchScroll (Cursor Library) (SQLFetchScroll (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlfetchscroll-cursor-library.md)  
   
--   [SQLFreeStmt (Cursor Library)](../../../odbc/reference/appendixes/sqlfreestmt-cursor-library.md)  
+-   [SQLFreeStmt (Cursor Library) (SQLFreeStmt (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlfreestmt-cursor-library.md)  
   
--   [SQLGetData (Cursor Library)](../../../odbc/reference/appendixes/sqlgetdata-cursor-library.md)  
+-   [SQLGetData (Cursor Library) (SQLGetData (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlgetdata-cursor-library.md)  
   
--   [SQLGetDescField und SQLGetDescRec (Cursor Library)](../../../odbc/reference/appendixes/sqlgetdescfield-and-sqlgetdescrec-cursor-library.md)  
+-   [SQLGetDescField und SQLGetDescRec (Cursorbibliothek)](../../../odbc/reference/appendixes/sqlgetdescfield-and-sqlgetdescrec-cursor-library.md)  
   
--   [SQLGetFunctions (Cursor Library)](../../../odbc/reference/appendixes/sqlgetfunctions-cursor-library.md)  
+-   [SQLGetFunctions (Cursor Library) (SQLGetFunctions (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlgetfunctions-cursor-library.md)  
   
--   [SQLGetInfo (Cursor Library)](../../../odbc/reference/appendixes/sqlgetinfo-cursor-library.md)  
+-   [SQLGetInfo (Cursor Library) (SQLGetInfo (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlgetinfo-cursor-library.md)  
   
--   [SQLGetStmtAttr (Cursor Library)](../../../odbc/reference/appendixes/sqlgetstmtattr-cursor-library.md)  
+-   [SQLGetStmtAttr (Cursor Library) (SQLGetStmtAttr (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlgetstmtattr-cursor-library.md)  
   
--   [SQLGetStmtOption (Cursor Library)](../../../odbc/reference/appendixes/sqlgetstmtoption-cursor-library.md)  
+-   [SQLGetStmtOption (Cursor Library) (SQLGetStmtOption (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlgetstmtoption-cursor-library.md)  
   
--   [SQLNativeSql (Cursor Library)](../../../odbc/reference/appendixes/sqlnativesql-cursor-library.md)  
+-   [SQLNativeSql (Cursor Library) (SQLNativeSql (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlnativesql-cursor-library.md)  
   
--   [SQLRowCount (Cursor Library)](../../../odbc/reference/appendixes/sqlrowcount-cursor-library.md)  
+-   [SQLRowCount (Cursor Library) (SQLRowCount (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlrowcount-cursor-library.md)  
   
--   [SQLSetConnectAttr (Cursor Library)](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
+-   [SQLSetConnectAttr (Cursor Library) (SQLSetConnectAttr (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
   
--   [SQLSetDescField und SQLSetDescRec (Cursor Library)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
+-   [SQLSetDescField und SQLSetDescRec (Cursorbibliothek)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
 -   [SQLSetEnvAttr (Cursor Library)](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
--   [SQLSetPos (Cursor Library)](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
+-   [SQLSetPos (Cursor Library) (SQLSetPos (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   
--   [SQLSetScrollOptions (Cursor Library)](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
+-   [SQLSetScrollOptions (Cursor Library) (SQLSetScrollOptions (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
   
--   [SQLSetStmtAttr (Cursor Library)](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)
-
+-   [SQLSetStmtAttr (Cursor Library) (SQLSetStmtAttr (Cursorbibliothek))](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)

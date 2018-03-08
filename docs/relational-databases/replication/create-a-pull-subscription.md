@@ -2,11 +2,13 @@
 title: Erstellen eines Pullabonnements | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +18,23 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
-caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "46"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b05513645f78b39129d9d738c344e049f532a7ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dc76b8cf1cdd104a0a536389d768ad6165ac8fc3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="create-a-pull-subscription"></a>Erstellen eines Pullabonnements
-  In diesem Thema wird beschrieben, wie ein Pullabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird.  
+# <a name="create-a-pull-subscription"></a>Create a Pull Subscription
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie ein Pullabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (Replication Management Objects, RMO) erstellt wird.  
   
  Das Einrichten eines Pullabonnements für die P2P-Replikation ist mit einem Skript möglich, aber nicht über den Assistenten.  
  
-  ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+  ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Erstellen Sie mit dem Assistenten für neue Abonnements ein Pullabonnement auf dem Verleger oder dem Abonnenten. Folgen Sie den Seiten im Assistenten für folgende Aufgaben:  
   
 -   Angeben des Verlegers und der Veröffentlichung.  
@@ -104,7 +105,7 @@ ms.lasthandoff: 09/27/2017
     -   Die Parameter [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Abonnenten ausgeführt wird, für **@job_login** und **@job_password**.  
   
         > [!NOTE]  
-        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password**. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Abonnenten immer mithilfe der integrierten Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Verteiler her.  
+        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password**erstellt wird. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Abonnenten immer mithilfe der integrierten Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Verteiler her.  
   
     -   (Optional) Ein Wert von **0** für **@distributor_security_mode** und die SQL Server-Anmeldeinformationen für **@distributor_login** und **@distributor_password**, wenn Sie beim Herstellen einer Verbindung zum Verteiler die SQL Server-Authentifizierung verwenden müssen.  
   
@@ -1124,12 +1125,11 @@ Finally
 End Try  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Konzepte für Replikationsverwaltungsobjekte (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
-

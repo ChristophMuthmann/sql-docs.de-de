@@ -2,35 +2,34 @@
 title: "Automatisches Initialisieren der Always On-Verfügbarkeitsgruppe | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Automatisches Initialisieren der AlwaysOn-Verfügbarkeitsgruppe
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Mit SQL Server 2016 wurde das automatische Seeding von Verfügbarkeitsgruppen eingeführt. Beim Erstellen einer Verfügbarkeitsgruppe mit automatischem Seeding erstellt SQL Server automatisch die sekundären Replikate für jede Datenbank in der Gruppe. Sie müssen sekundäre Replikate nicht mehr manuell sichern und wiederherstellen. Erstellen Sie zum Aktivieren des automatischen Seedings die Verfügbarkeitsgruppe mit T-SQL, oder verwenden Sie die neueste Version von SQL Server Management Studio.
 
 Weitere Hintergrundinformationen finden Sie unter [Automatisches Seeding für sekundäre Replikate](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 In SQL Server 2016 erfordert automatisches Seeding, dass der Pfad für Daten- und Protokolldateien für jede SQL Server-Instanz der Verfügbarkeitsgruppe identisch ist. In SQL Server 2017 können Sie unterschiedliche Pfade verwenden, Microsoft empfiehlt jedoch, dieselben Pfade zu verwenden, wenn alle Replikate auf derselben Plattform (z.B. Windows oder Linux) gehostet werden. Plattformübergreifende Verfügbarkeitsgruppen besitzen unterschiedliche Pfade für die Replikate. Weitere Informationen finden Sie unter [Datenträgerlayout](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -151,7 +150,7 @@ Die folgenden Systemsichten zeigen den Status des automatischen Seedings in SQL 
 
 **sys.dm_hadr_automatic_seeding** 
 
-Fragen Sie auf dem primären Replikat `sys.dm_hadr_automatic_seeding` ab, um den Status des automatischen Seedingprozesses zu überprüfen. Die Sicht gibt eine Zeile für jeden Seedingprozess zurück. Beispiel:
+Fragen Sie auf dem primären Replikat `sys.dm_hadr_automatic_seeding` ab, um den Status des automatischen Seedingprozesses zu überprüfen. Die Sicht gibt eine Zeile für jeden Seedingprozess zurück. Zum Beispiel:
 
 ```sql
 SELECT start_time, 
@@ -216,7 +215,7 @@ GO
 
 Die folgende Tabelle enthält die erweiterten Ereignisse die sich auf automatisches Seeding beziehen: 
 
-| Name | Beschreibung|
+| Name | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Seedinganforderungsnachricht.
 |hadr_physical_seeding_backup_state_change |    Statusänderung auf der Sicherungsseite für das physische Seeding.
@@ -237,7 +236,7 @@ Die folgende Tabelle enthält die erweiterten Ereignisse die sich auf automatisc
 
 **Überwachen des automatischen Seedings**
 
-Fragen Sie `sys.dm_hadr_physical_seeding_stats` nach aktuell ausgeführten automatischen Seedingprozessen ab. Die Sicht gibt eine Zeile für jede Datenbank zurück. Beispiel:
+Fragen Sie `sys.dm_hadr_physical_seeding_stats` nach aktuell ausgeführten automatischen Seedingprozessen ab. Die Sicht gibt eine Zeile für jede Datenbank zurück. Zum Beispiel:
 
 ```sql
 SELECT local_database_name, 
@@ -287,5 +286,4 @@ Vor dem Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe mit automatis
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [Handbuch zur Problembehandlung und Überwachung von AlwaysOn-Verfügbarkeitsgruppen](http://technet.microsoft.com/library/dn135328.aspx)
-
 

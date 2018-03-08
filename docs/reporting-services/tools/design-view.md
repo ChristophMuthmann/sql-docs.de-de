@@ -1,31 +1,29 @@
 ---
-title: Entwurfsansicht | Microsoft Docs
+title: Entwurfsansicht | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.layoutview.f1
-helpviewer_keywords:
-- Layout View dialog box
+f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
+helpviewer_keywords: Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-caps.latest.revision: 38
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "38"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 43b324699b0e462f452b106846fe86d5e5e0919a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-view"></a>Entwurfsansicht
 Im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichtsdesigner können Sie mithilfe der Entwurfsansicht Berichtselemente im Bericht anordnen. Die Entwurfsansicht wird auch als Entwurfsoberfläche oder Layoutansicht bezeichnet.  
@@ -61,9 +59,8 @@ Mithilfe der Toolbox können Sie Elemente auswählen, die in einem dieser drei A
 ## <a name="properties-pane"></a>Eigenschaftenbereich  
  Verwenden Sie den Bereich Eigenschaften, um Eigenschaften für das ausgewählte Berichtselement auf der Entwurfsoberfläche oder die ausgewählte Gruppe im Gruppierungsbereich anzuzeigen. Alternativ können Sie mit der rechten Maustaste auf das ausgewählte Berichtselement oder die Gruppe klicken und anschließend auf **Eigenschaften** klicken, um das entsprechende Dialogfeld **Eigenschaften** für das Berichtselement oder die Gruppe zu öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Kopf- und Fußzeilen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Berichtsentwurfstipps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Berichtsentwurfstipps (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
-

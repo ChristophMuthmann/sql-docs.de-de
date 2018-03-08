@@ -3,7 +3,7 @@ title: "Unterstützt-(VC++-Methodenbeispiel) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6013186a6c58cf7be43e8c126b86ffa7fed3d8c2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b6390788e04763fe684dbee801e01024b3c559f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supports-method-example-vc"></a>Unterstützt-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode, um die Optionen, die von einem Recordset unterstützt anzuzeigen, die mit verschiedenen Cursortypen geöffnet. Die DisplaySupport-Funktion ist erforderlich, damit dieses Beispiel ausführen.  
@@ -235,5 +234,4 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)

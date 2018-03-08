@@ -2,11 +2,13 @@
 title: Nicht-SQL Server-Abonnenten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-caps.latest.revision: 55
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "55"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 104940bffe513813414dff15b2e0bec6343ed2e9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
-ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/30/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die folgenden Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können Momentaufnahme- und Transaktionsveröffentlichungen mithilfe von Pushabonnements abonnieren. Abonnements werden für die beiden neuesten Versionen jeder aufgeführten Datenbank mithilfe der neuesten Version des aufgeführten OLE DB-Anbieters unterstützt.  
   
@@ -74,7 +75,7 @@ Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, fin
   
 -   Weist eine Veröffentlichung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten und Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten auf, muss sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten aktiviert werden, bevor Abonnements für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten erstellt werden.  
   
--   Standardmäßig verwenden vom Momentaufnahme-Agent für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten generierte Skripts Bezeichner ohne Anführungszeichen in der `CREATE TABLE`-Syntax. Deshalb wird eine veröffentlichte Tabelle mit dem Namen 'test' als 'TEST' repliziert. Wenn die Groß- und Kleinschreibung der Schreibweise in der Veröffentlichungsdatenbank entsprechen soll, verwenden Sie den **-QuotedIdentifier** -Parameter für den Verteilungs-Agent. Der **-QuotedIdentifier** -Parameter muss auch verwendet werden, wenn veröffentlichte Objektnamen (wie Tabellen, Spalten und Einschränkungen) Leerzeichen und Wörter enthalten, bei denen es sich in der Version der Datenbank auf dem Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten um reservierte Wörter handelt. Weitere Informationen zu diesem Parameter finden Sie unter [Replikationsverteilungs-Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   Standardmäßig verwenden vom Momentaufnahme-Agent für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten generierte Skripts Bezeichner ohne Anführungszeichen in der `CREATE TABLE`-Syntax. Deshalb wird eine veröffentlichte Tabelle mit dem Namen 'test' als 'TEST' repliziert. Wenn die Groß- und Kleinschreibung der Schreibweise in der Veröffentlichungsdatenbank entsprechen soll, verwenden Sie den **-QuotedIdentifier** -Parameter für den Verteilungs-Agent. Der **-QuotedIdentifier** -Parameter muss auch verwendet werden, wenn veröffentlichte Objektnamen (wie Tabellen, Spalten und Einschränkungen) Leerzeichen und Wörter enthalten, bei denen es sich in der Version der Datenbank auf dem Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten um reservierte Wörter handelt. Weitere Informationen zu diesem Parameter finden Sie unter [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   Das Konto, unter dem der Verteilungs-Agent ausgeführt wird, muss über Lesezugriff für das Installationsverzeichnis des OLE DB-Anbieters verfügen.  
   
@@ -94,7 +95,7 @@ Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, fin
   
 -   Der Wert NULL wird von den verschiedenen Datenbanken unterschiedlich behandelt. Das wirkt sich darauf aus, wie ein leerer Wert, eine leere Zeichenfolge oder NULL dargestellt werden. Dies wiederum wirkt sich auf das Verhalten von Werten aus, die in Spalten mit definierten UNIQUE-Einschränkungen eingefügt werden. Oracle lässt z. B. mehrere NULL-Werte in einer eindeutigen Spalte zu, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nur einen einzigen NULL-Wert in einer eindeutigen Spalte zulässt.  
   
-     Ein weiterer Faktor ist, wie NULL-Werte, leere Zeichenfolgen und leere Werte behandelt werden, wenn eine Spalte als NOT NULL definiert ist. Informationen zum Umgang mit Oracle-Abonnenten finden Sie unter [Oracle-Abonnenten](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Ein weiterer Faktor ist, wie NULL-Werte, leere Zeichenfolgen und leere Werte behandelt werden, wenn eine Spalte als NOT NULL definiert ist. Informationen zum Umgang mit Oracle-Abonnenten finden Sie unter [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
 -   Replikationsbezogene Metadaten (Transaktionssequenztabelle) werden bei Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten nicht gelöscht, wenn das Abonnement entfernt wird.  
   
@@ -116,9 +117,8 @@ Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, fin
   
 -   Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können nicht automatisch von einer Sicherung initialisiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Heterogene Datenbankreplikation](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

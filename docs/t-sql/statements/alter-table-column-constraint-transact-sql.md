@@ -3,8 +3,11 @@ title: Column_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - constraints [SQL Server], definitions
 - column_constraint
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
-caps.latest.revision: 54
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4f8238266e82aadeee973772266de1c74712f28
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8530f45f71d231783083b061f1c6e0095770ea53
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE Column_constraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die Eigenschaften einer PRIMARY KEY-, FOREIGN KEY-, UNIQUE- oder CHECK-Einschränkung, die Teil einer neuen Spaltendefinition einer Tabelle hinzugefügt, mit [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -189,4 +191,3 @@ ms.lasthandoff: 09/01/2017
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)  
   
   
-

@@ -1,33 +1,33 @@
 ---
 title: Replikation in die SQL-Datenbank | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Database replication
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c06ca9a84504ca2ce9958e39e352a7ad93c9a56d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 72ae10ca4b2977d50a883507e2658abcf50e6579
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-to-sql-database"></a>Replikation zu SQL-Datenbank
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   <a name="includessnoversionincludesssnoversion-mdmd-replication-can-be-configured-to-includesssdsfullincludessssdsfull-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation kann für [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]konfiguriert werden.  
  -  
@@ -155,9 +155,8 @@ ms.lasthandoff: 09/27/2017
  --   [Erstellen Sie ein Pushabonnement](../../relational-databases/replication/create-a-push-subscription.md), indem Sie den logischen Servernamen von [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] als Abonnent (z.B. **N'azuresqldbdns.database.windows.net'**) und den [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Namen als Zieldatenbank verwenden (z.B. **AdventureWorks**).  
  -  
  – ## Siehe auch  
- - [Erstellen einer Veröffentlichung](../../relational-databases/replication/publish/create-a-publication.md)   
+ - [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  - [Erstellen eines Pushabonnements](../../relational-databases/replication/create-a-push-subscription.md)   
  - [Replikationstypen](../../relational-databases/replication/types-of-replication.md)   
  - [Überwachen &#40;Replikation&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)   
- - [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)  
-
+ - [Initialisieren eines Abonnements](../../relational-databases/replication/initialize-a-subscription.md)  

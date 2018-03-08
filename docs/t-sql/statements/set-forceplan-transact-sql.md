@@ -3,8 +3,11 @@ title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - query optimizer [SQL Server], optimizing process
 - overriding query optimizer process
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df0bb88faa940a54f3b3eb14c34998b1982879c6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2edac268c50a5958abe4c47a3339eb54dda511bd
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Wenn FORCEPLAN auf ON festgelegt wird, verarbeitet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer einen Join in der Reihenfolge, in der die Tabellen in der FROM-Klausel einer Abfrage aufgeführt sind. Darüber hinaus wird durch Festlegen von FORCEPLAN auf ON die Verwendung eines Nested Loops-Joins erzwungen, sofern nicht andere Jointypen zum Erstellen eines Plans für die Abfrage erforderlich sind oder durch Join- bzw. Abfragehinweise angefordert werden.  
   
@@ -112,4 +114,3 @@ GO
  [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   
-

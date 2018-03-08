@@ -1,10 +1,13 @@
 ---
-title: "Ausführen von Paketen und andere Vorgänge überwachen | Microsoft Docs"
+title: "Überwachen der Ausführung von Paketen und anderen Vorgängen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Überwachen der Ausführung von Paketen und anderen Vorgängen
   Sie können [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketausführungen, Projektüberprüfungen und andere Vorgänge mit einem oder mehreren der folgenden Tools überwachen. Bestimmte Tools, z. B. Datenabzweigungen, sind nur für Projekte verfügbar, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt werden.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 09/27/2017
   
  Neun verschiedene Statustypen werden verwendet, um den Status eines Vorgangs anzugeben. Eine vollständige Liste der Statustypen finden Sie in der Sicht [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
 
-## <a name="active_ops"></a>Aktive Vorgänge (Dialogfeld)
+## <a name="active_ops"></a> Dialogfeld „Aktive Vorgänge“
   Verwenden Sie das Dialogfeld **Aktive Vorgänge** , um den Status der derzeit ausgeführten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server anzuzeigen, z. B. Bereitstellung, Überprüfung und Paketausführung. Diese Daten werden im SSISDB-Katalog gespeichert.  
   
  Weitere Informationen zu verwandten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ansichten finden Sie unter [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) und [catalog.executions &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
@@ -99,7 +101,7 @@ ms.lasthandoff: 09/27/2017
  Fragen Sie die Sicht [catalog.executions &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) nach Paketen ab, die einen Status von 2 aufweisen, um die Liste der Pakete anzuzeigen, die auf dem Server ausgeführt werden.  
   
  Programmgesteuerter Zugriff auf die verwaltete API  
- Finden Sie unter der <xref:Microsoft.SqlServer.Management.IntegrationServices> Namespace und die zugehörigen Klassen.  
+ Weitere Details finden Sie in den Informationen zum <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespace und den zugehörigen Klassen.  
   
 ### <a name="stopping-a-running-package"></a>Beenden eines ausgeführten Pakets  
  Sie können die Beendigung eines ausgeführten Pakets im Dialogfeld **Aktive Vorgänge** anfordern. Weitere Informationen finden Sie unter [Active Operations Dialog Box](#active_ops).  
@@ -110,7 +112,7 @@ ms.lasthandoff: 09/27/2017
  Rufen Sie die gespeicherte Prozedur [catalog.stop_operation &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md) auf, um ein Paket zu beenden, das auf dem Server ausgeführt wird.  
   
  Programmgesteuerter Zugriff auf die verwaltete API  
- Finden Sie unter der <xref:Microsoft.SqlServer.Management.IntegrationServices> Namespace und die zugehörigen Klassen.  
+ Weitere Details finden Sie in den Informationen zum <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespace und den zugehörigen Klassen.  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>Anzeigen des Verlaufs ausgeführter Pakete  
  Verwenden Sie den Bericht [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Alle Ausführungen **, um den Verlauf der Pakete anzuzeigen, die in** ausgeführt wurden. Weitere Informationen zum Bericht **Alle Ausführungen** und zu anderen Standardberichten finden Sie unter [Berichte für den Integration Services-Server](#reports).  
@@ -121,14 +123,14 @@ ms.lasthandoff: 09/27/2017
  Um Informationen zu Paketen anzuzeigen, die ausgeführt wurden, fragen Sie die Sicht [catalog.executions &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) ab.  
   
  Programmgesteuerter Zugriff auf die verwaltete API  
- Finden Sie unter der <xref:Microsoft.SqlServer.Management.IntegrationServices> Namespace und die zugehörigen Klassen.  
+ Weitere Details finden Sie in den Informationen zum <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespace und den zugehörigen Klassen.  
 
 ## <a name="reports"></a> Berichte für den Integration Services-Server
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sind Standardberichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar, die zum Überwachen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten hilfreich sind, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt wurden. Mit diesen Berichten können Sie den Paketstatus und -verlauf anzeigen und ggf. die Ursache von Paketausführungsfehlern identifizieren.  
   
  Im oberen Bereich jeder Berichtsseite werden die folgenden Symbole bereitgestellt: Zurück-Symbol (um zur vorherigen Seite zurückzukehren), Aktualisierungssymbol (um die auf der Seite angezeigten Informationen zu aktualisieren) und Druckersymbol (um die aktuelle Seite zu drucken).  
   
- Informationen zum Bereitstellen von Paketen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server, finden Sie unter [Bereitstellen von Integration Services (SSIS)-Projekten und Paketen](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Weitere Informationen zum Bereitstellen von Paketen auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, finden Sie unter [Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ### <a name="integration-services-dashboard"></a>Integration Services-Dashboard  
  Der Bericht **Integration Services-Dashboard** bietet eine Übersicht über alle Paketausführungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Im Dashboard können Sie die Informationen zu jedem auf dem Server ausgeführten Paket erweitern, um spezifische Details über möglicherweise aufgetretene Paketausführungsfehler zu suchen.  
@@ -151,7 +153,7 @@ ms.lasthandoff: 09/27/2017
   
 |Abschnitt|Description|  
 |-------------|-----------------|  
-|Filtern|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. der Startzeitraum.|  
+|Filter|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. der Startzeitraum.|  
 |Ausführungsinformationen|Zeigt die Startzeit, die Endzeit und die Dauer für jede Paketausführung an. Sie können eine Liste der Parameterwerte anzeigen, die bei einer Paketausführung verwendet wurden, z. B. Werte, die mit dem Task "Paket ausführen" an ein untergeordnetes Paket übergeben wurden. Um die Parameterliste anzuzeigen, klicken Sie auf "Übersicht".|  
   
  Weitere Informationen über das Verwenden des Tasks "Paket ausführen" zum Verfügbarmachen von Werten für untergeordnete Pakete finden Sie unter [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
@@ -175,7 +177,7 @@ ms.lasthandoff: 09/27/2017
  Der Bericht **Alle Überprüfungen** zeigt eine Zusammenfassung aller [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Überprüfungen, die auf dem Server ausgeführt wurden. Die Zusammenfassung enthält Informationen für jede Überprüfungen, z. B. Status, Startzeit und Endzeit. Jeder Zusammenfassungseintrag enthält einen Link zu den Meldungen, die während der Überprüfungen generiert wurden. Wie in dem Integration Services-Dashboard können Sie einen Filter auf die Tabelle anwenden, um die angezeigten Informationen einzugrenzen.  
   
 ### <a name="custom-reports"></a>Benutzerdefinierte Berichte  
- Sie können dem **SSISDB** -Katalogknoten unter dem Knoten **Integration Services-Kataloge** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]einen benutzerdefinierten Bericht (RDL-Datei) hinzufügen. Stellen Sie vor dem Hinzufügen des Berichts sicher, dass Sie eine Konvention für dreiteilige Namen verwenden, um die Objekte, auf die Sie verweisen, z. B. eine Quelltabelle, vollständig zu qualifizieren. Andernfalls meldet [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Fehler. Die Namenskonvention ist \<Datenbank >.\< Besitzer >. \<Objekt >. Ein Beispiel wäre SSISDB.internal.executions.  
+ Sie können dem **SSISDB** -Katalogknoten unter dem Knoten **Integration Services-Kataloge** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]einen benutzerdefinierten Bericht (RDL-Datei) hinzufügen. Stellen Sie vor dem Hinzufügen des Berichts sicher, dass Sie eine Konvention für dreiteilige Namen verwenden, um die Objekte, auf die Sie verweisen, z. B. eine Quelltabelle, vollständig zu qualifizieren. Andernfalls meldet [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Fehler. Die Namenskonvention ist \<Datenbank>.\<Besitzer>.\<Objekt>. Ein Beispiel wäre SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  Wenn Sie dem **SSISDB** -Knoten unter dem Knoten **Datenbanken** benutzerdefinierte Berichte hinzufügen, ist das SSISDB-Präfix nicht erforderlich.  
@@ -203,7 +205,6 @@ ms.lasthandoff: 09/27/2017
   
     -   **Alle Verbindungen**  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausführung von Projekten und Paketen](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Behandlung von Problemen in Berichten für die Paketausführung](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
-

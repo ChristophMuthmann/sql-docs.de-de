@@ -2,31 +2,32 @@
 title: "Multiplizitätselement (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9aa018ac9f692eac5de76743fb2d74c0d9832e56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b69a5fd295ac6107f5469966cb0b4d7329018eee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiplicity-element-assl"></a>Multiplizitätselement (ASSL)
-  Gibt an, ob die Attribute in RelationshipEnd zur Seite "one" oder der Seite "many" einer Beziehung sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Gibt an, ob die Attribute in RelationshipEnd zur Seite "one" oder der Seite "many" einer Beziehung sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,10 +60,9 @@ ms.lasthandoff: 09/01/2017
   
 |Wert|Description|  
 |-----------|-----------------|  
-|*Eine*|Dies ist das Primärschlüsselende.|  
+|*eine*|Dies ist das Primärschlüsselende.|  
 |*Viele*|Dies ist das Fremdschlüsselende.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht **Rolle** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Multiplicity>.  
   
   
-

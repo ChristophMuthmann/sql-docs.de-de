@@ -1,26 +1,27 @@
 ---
 title: "Neue GUI-Funktionen in SSMA für Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 6de8f6e3ccb01838117aa1696c873aec117bbb81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6edfe4c2058b840f8757c49a0b3f2df80122553c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Neue GUI-Funktionen in SSMA für Oracle (OracleToSQL)
 In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche.  
@@ -129,4 +130,3 @@ Sie können die schnelle Textsuche mithilfe der folgenden Funktionen ausführen:
 ### <a name="advanced-search"></a>Erweiterte Suche  
 Klicken Sie dann auf Erweiterte Suche, um erweiterte Suche Dialogfeld zeigen Sie im Menü "Bearbeiten" suchen zu öffnen. Klicken Sie im Dialogfeld werden Sie jedes Objekt, das Muster gefunden. Oben im Dialogfeld können Sie Suchkategorien "Bereich" und "Objekt auswählen.  
   
-

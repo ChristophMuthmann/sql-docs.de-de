@@ -1,11 +1,13 @@
 ---
-title: "Tools zur Problembehandlung für die Ausführung des Pakets | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Tools zur Problembehandlung für die Paketausführung | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
@@ -83,19 +84,19 @@ ms.lasthandoff: 09/27/2017
   
     1.  **Erstellen einer übergeordneten Tabelle zum Protokollieren aller Paketausführungen**. Diese übergeordnete Tabelle enthält nur eine einzige Zeile pro Paketausführung und verwendet die ExecutionID zur Verlinkung mit den untergeordneten Datensätzen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Protokollierungstabelle. Zum Erstellen dieser neuen Zeile und Aufzeichnen der Startzeit können Sie am Anfang eines jeden Pakets den Task 'SQL ausführen' verwenden. Anschließend können Sie am Ende des Pakets den Task 'SQL ausführen' erneut verwenden, um die Beendigungszeit, Dauer und den Status in der Zeile zu aktualisieren.  
   
-    2.  **Hinzufügen von Überwachungsinformationen zum Datenfluss**. Sie können mit der Überwachungstransformation Informationen zu Zeilen im Datenfluss hinzufügen, die Daten zur Paketausführung enthalten, durch die die betreffende Zeile erstellt oder geändert wurde. Die Überwachungstransformation stellt neun Arten von Informationen bereit, wie z.B. PackageName und ExecutionInstanceGUID. Weitere Informationen finden Sie unter [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Wenn Sie zu Überwachungszwecken jede Zeile mit benutzerdefinierten Informationen versehen möchten, können Sie diese Informationen mithilfe einer Transformation für abgeleitete Spalten den Zeilen im Datenfluss hinzufügen. Weitere Informationen finden Sie unter [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+    2.  **Hinzufügen von Überwachungsinformationen zum Datenfluss**. Sie können mit der Überwachungstransformation Informationen zu Zeilen im Datenfluss hinzufügen, die Daten zur Paketausführung enthalten, durch die die betreffende Zeile erstellt oder geändert wurde. Die Überwachungstransformation stellt neun Arten von Informationen bereit, wie z.B. PackageName und ExecutionInstanceGUID. Weitere Informationen finden Sie unter [Überwachungstransformation](../../integration-services/data-flow/transformations/audit-transformation.md). Wenn Sie zu Überwachungszwecken jede Zeile mit benutzerdefinierten Informationen versehen möchten, können Sie diese Informationen mithilfe einer Transformation für abgeleitete Spalten den Zeilen im Datenfluss hinzufügen. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Verwenden Sie den Task 'SQL ausführen', um nach Beendigung des Datenflusses die Variablenreihe zur späteren Analyse und Berichterstattung in eine Zeile der Tabelle einzufügen.  
   
      Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Whitepaper [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Debugdumpdateien  
- In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Weitere Informationen finden Sie unter [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
+ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>Behandlung von Problemen bei der Überprüfung zur Laufzeit  
  Es kann vorkommen, dass Sie keine Verbindung mit den Datenquellen herstellen können oder Teile des Pakets erst nach der Ausführung von vorausgehenden Tasks im Paket zur Laufzeit überprüft werden können. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt die folgenden Funktionen bereit, mit denen Sie die Überprüfungsfehler, die in solchen Fällen ausgelöst werden, vermeiden können:  
   
--   **Konfigurieren der DelayValidation-Eigenschaft für Paketelemente, die beim Laden des Pakets noch nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern beim Laden des Pakets können Sie für Paketelemente, deren Konfigurationen zu diesem Zeitpunkt noch nicht gültig sind, **DelayValidation** auf **True** festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die **DelayValidation** -Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden.  
+-   **Konfigurieren der DelayValidation-Eigenschaft für Paketelemente, die beim Laden des Pakets noch nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern beim Laden des Pakets können Sie für Paketelemente, deren Konfigurationen zu diesem Zeitpunkt noch nicht gültig sind, **DelayValidation** auf **True** festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die **DelayValidation**-Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden.  
   
      Die **DelayValidation** -Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft einzelner Datenflusskomponenten auf **FALSE**. Wenn jedoch der Wert dieser Eigenschaft auf **false**festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen. Wenn der Wert auf **true**festgelegt ist, können Sie mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft Blockierungsprobleme vermeiden, die durch Sperren in der Datenbank verursacht werden, insbesondere wenn das Paket Transaktionen verwendet.  
   
@@ -111,9 +112,8 @@ ms.lasthandoff: 09/27/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>Behandlung von Fehlern ohne Beschreibung  
  Wenn ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Fehler ohne zugehörige Beschreibung auftritt, können Sie die Beschreibung zu dem Fehler anhand seiner Fehlernummer in der Liste unter [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md) nachschlagen. Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(Hinzufügen des Fehlerspaltennamens zu einer Fehlerausgabe) auf dougbert.com.  
-

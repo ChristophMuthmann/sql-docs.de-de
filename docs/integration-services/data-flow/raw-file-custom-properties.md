@@ -1,26 +1,28 @@
 ---
-title: Benutzerdefinierte Eigenschaften der Rohdatendatei | Microsoft Docs
+title: Benutzerdefinierte Eigenschaften der Rohdatendatei | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a364ae62ebc8823f9d57fb44ef99b7b14469c608
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b007bc2aa2f8e8a2b7f9b7d3dfbfbbeece4730cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raw-file-custom-properties"></a>Benutzerdefinierte Eigenschaften der Rohdatendatei
   **Benutzerdefinierte Eigenschaften von Quellen**  
@@ -29,10 +31,10 @@ ms.lasthandoff: 08/03/2017
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Rohdatendatei-Quelle beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Rohdaten verwendete Modus. Die möglichen Werte sind **Dateiname** (0) und **Dateiname aus Variable** (1). Der Standardwert ist **Dateiname** (0).|  
-|FileName|String|Der Pfad und der Dateiname der Quelldatei.|  
+|FileName|Zeichenfolge|Der Pfad und der Dateiname der Quelldatei.|  
   
  Die Ausgabe und die Ausgabespalten der Rohdatendatei-Quelle verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -44,10 +46,10 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Rohdatendatei-Ziels. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob die FileName-Eigenschaft einen Dateinamen oder den Namen einer Variablen enthält, die einen Dateinamen enthält. Die möglichen Werte sind **Dateiname** (0) und **Dateiname aus Variable** (1).|  
-|FileName|String|Der Name der Datei, in die das Rohdatendatei-Ziel schreibt.|  
+|FileName|Zeichenfolge|Der Name der Datei, in die das Rohdatendatei-Ziel schreibt.|  
 |WriteOption|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob das Rohdatendatei-Ziel eine vorhandene Datei mit demselben Namen löscht. Die Optionen sind **Immer erstellen** (0), **Einmal erstellen** (1), **Abschneiden und anfügen** (3) und **Anfügen** (2). Der Standardwert dieser Eigenschaft ist **Immer erstellen** (0).|  
   
 > [!NOTE]  
@@ -57,8 +59,7 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen finden Sie unter [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

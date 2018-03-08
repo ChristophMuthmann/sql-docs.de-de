@@ -3,30 +3,31 @@ title: "Benutzerunterstützung in SQL Server Management Studio | Microsoft-Dokum
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 94bba147f35fe23d2276f4f32596c5a2890f56f1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Benutzerunterstützung in SQL Server Management Studio
-Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] über das Menü „?“ und die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
   
 ## <a name="the-help-interface"></a>Die Hilfeoberfläche  
 Die Optionen **Inhalt** und **Index** verfügen über eine Benutzeroberfläche und eine Funktionalität, mit denen Benutzer von [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] bereits vertraut sind. Folgende andere Optionen sind verfügbar:  
@@ -35,7 +36,7 @@ Die Optionen **Inhalt** und **Index** verfügen über eine Benutzeroberfläche u
   
     Enthält eine hierarchisch strukturierte Liste verknüpfter Seiten mit hilfreichen Themen zu allgemeinen [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Aufgaben. Der Inhalt ist nach Komponente und Aufgabe (Beispiel: Themen zur Replikation) usw. geordnet.  
   
--   **Suchen**  
+-   **Search**  
   
     Sucht nach Themen, mit oder ohne vordefinierte Filter. Die Suche in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] ist eine eigene Seite im Registerformat. Der Benutzer kann die Suche anhand von vordefinierten Thementyp-, Sprach- oder Technologiefiltern verfeinern. Standardmäßig wird bei der Suche kein vordefinierter Filter verwendet, und nur Themen in den installierten Auflistungen werden durchsucht.  
   
@@ -103,4 +104,3 @@ Sie können die Onlinedokumentation auch als Dokumentfenster in [!INCLUDE[ssManS
   
 2.  Klicken Sie im Feld **Hilfe anzeigen mit** auf **Integrierter Hilfeviewer**.  
   
-

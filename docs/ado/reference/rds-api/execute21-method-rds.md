@@ -3,7 +3,7 @@ title: Execute21-Methode (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3a985a6bb9d9e50a3a6d6741a8f379abafc26af
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Execute21-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2.1.  
@@ -42,13 +41,13 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *"ConnectionString"*  
+ *ConnectionString*  
  Eine Zeichenfolge verwendet, um mit dem OLE DB-Anbieter hergestellt, in dem die Anforderung für die Ausführung gesendet werden. Wenn ein Ereignishandler mithilfe des Parameters *HandlerString*, es bearbeiten oder die Verbindungszeichenfolge ersetzen kann.  
   
  *HandlerString*  
  Die Zeichenfolge identifiziert den Handler, die mit dieser Ausführung verwendet werden. Die Zeichenfolge besteht aus zwei Teilen. Der erste Teil enthält den Namen (ProgID) des Handlers verwendet werden. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Ereignishandler übergeben werden. Wie die Argumentzeichenfolge interpretiert wird, ist bestimmten Handler. Die beiden Teile werden durch die erste Instanz eines Kommas in der Zeichenfolge getrennt, (obwohl die Argumentzeichenfolge zusätzliche Kommas enthalten kann). Die Argumente sind optional.  
   
- *Abfragezeichenfolge*  
+ *QueryString*  
  Ein Befehl in der Befehlssprache unterstützt die OLE DB-Anbieter, die in der Verbindungszeichenfolge angegeben wird. Für SQL-basierte Anbieter, er enthält möglicherweise eine [!INCLUDE[tsql](../../../includes/tsql_md.md)] Befehls-Anweisung, jedoch für nicht-SQL-Anbieter (z. B. MSDataShape) dies u. u. keine [!INCLUDE[tsql](../../../includes/tsql_md.md)] abfrageanweisung.  
   
  Wenn ein Ereignishandler verwendet wird (und es wird dringend empfohlen, dass ein Handler verwendet werden), kann der Handler auch, ändern oder Ersetzen Sie den Wert, der hier angegebenen. Der Ereignishandler beispielsweise in der Regel ersetzt *QueryString* mit einer Abfragezeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "Msdfmap.ini" verwendet.  
@@ -85,6 +84,5 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
   
 ## <a name="applies-to"></a>Gilt für  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

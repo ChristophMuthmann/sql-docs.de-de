@@ -2,30 +2,30 @@
 title: 'Zusammenfassung: Grundlagen zur Navigation | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "25"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4bec50ff9f626b38b994dd6dbd09f8091fa5e41c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 546a25682e74daa3515e36069fbcb764da7c8dee
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-9---summary---basic-navigation"></a>Lektion 1-9: Zusammenfassung: Grundlagen zur Navigation
-Die Entwurfsoberfläche von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann angepasst werden, sodass sie Ihren privaten und beruflichen Anforderungen entspricht.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Entwurfsoberfläche von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann angepasst werden, sodass sie Ihren privaten und beruflichen Anforderungen entspricht.  
   
 Im Folgenden werden die bewährten Vorgehensweisen für den effizienten Einsatz des Arbeitsbereichs von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] aufgelistet:  
   
@@ -42,4 +42,3 @@ Im Folgenden werden die bewährten Vorgehensweisen für den effizienten Einsatz 
   
   
   
-

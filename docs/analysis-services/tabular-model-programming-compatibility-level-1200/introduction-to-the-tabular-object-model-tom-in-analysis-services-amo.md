@@ -2,32 +2,30 @@
 title: "Einführung in tabellarischen Objektmodell (TOM) in Analysis Services AMO | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Einführung in die im tabellarischen Objektmodell (TOM) in Analysis Services AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Im tabellarischen Objektmodell (TOM) ist eine Erweiterung von der Clientbibliothek des Analysis Services Management Object (AMO) erstellt zur Unterstützung von Programmierszenarien für tabellarische Modelle mit Kompatibilitätsgrad 1200 oder höher erstellt. Wie bei AMO, bietet TOM eine programmgesteuerte Möglichkeit zum Verarbeiten von Verwaltungsfunktionen wie das Erstellen von Modellen, importieren und Aktualisieren von Daten und Zuweisen von Rollen und Berechtigungen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Im tabellarischen Objektmodell (TOM) ist eine Erweiterung von der Clientbibliothek des Analysis Services Management Object (AMO) erstellt zur Unterstützung von Programmierszenarien für tabellarische Modelle mit Kompatibilitätsgrad 1200 oder höher erstellt. Wie bei AMO, bietet TOM eine programmgesteuerte Möglichkeit zum Verarbeiten von Verwaltungsfunktionen wie das Erstellen von Modellen, importieren und Aktualisieren von Daten und Zuweisen von Rollen und Berechtigungen.  
   
 TOM macht native tabellarischen Metadaten, wie z. B. **Modell**, **Tabellen**, **Spalten**, und **Beziehungen** Objekte.  Ein allgemeinen Überblick über das Modell Objektstruktur unten veranschaulicht, wie die Komponententeile miteinander verknüpft sind.  
   
@@ -56,7 +54,7 @@ Im Gegensatz dazu bei der Verwaltung von Objekten, die Teil der tabellarischen M
 
 ### <a name="tom-and-xmla"></a>PETER und XMLA
 
-Bei der Übertragung verwendet TOM das XMLA-Protokoll aus, für die Kommunikation mit dem Analysis Services-Server und zum Verwalten von Objekten. Wenn Sie nicht tabellarische Objekte zu verwalten, die PETER verwendet [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), die Analysis Services Scripting Language-Erweiterung des XMLA. Wenn Sie tabellarische Objekte zu verwalten, verwendet dem tabellarische SSAS-Protokoll bei TOM auch die eine Erweiterung der XMLA. Finden Sie unter [MS-SSAS-T-SQL Server Analysis Services-Tabellendatenbank protokolldokumentation](https://msdn.microsoft.com/library/mt719260.aspx) für Weitere Informationen.
+Bei der Übertragung verwendet TOM das XMLA-Protokoll aus, für die Kommunikation mit dem Analysis Services-Server und zum Verwalten von Objekten. Wenn Sie nicht tabellarische Objekte zu verwalten, die PETER verwendet [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), die Analysis Services Scripting Language-Erweiterung des XMLA. Beim Verwalten von Tabellenobjekten verwendet TOM tabellarische MS-SSAS-Protokoll, auch eine Erweiterung des XMLA. Finden Sie unter [MS-SSAS-T-SQL Server Analysis Services-Tabellendatenbank protokolldokumentation](https://msdn.microsoft.com/library/mt719260.aspx) für Weitere Informationen.
 
 ### <a name="tom-and-json"></a>PETER und JSON
 
@@ -73,4 +71,3 @@ Die Entscheidung zum Verwenden eines dieser Zuordnungsverfahren wird auf die Ein
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)
   
-

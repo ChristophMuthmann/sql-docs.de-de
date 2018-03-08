@@ -2,13 +2,13 @@
 title: Verarbeiten eines mehrdimensionalen Modells (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,22 +23,22 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 52
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Verarbeiten eines mehrdimensionalen Modells (Analysis Services)
-  Die Verarbeitung bezeichnet den Schritt oder eine Abfolge von Schritten, durch die Daten von Analysis Services aus einer relationalen Datenquelle in ein mehrdimensionales Modell geladen werden. Bei Objekten, die die MOLAP-Speicherung verwenden, werden Daten auf dem Datenträger im Datenbankdateiordner gespeichert. In Bezug auf den ROLAP-Speicher ist die Verarbeitung bedarfsbasiert, und zwar als Reaktion auf eine MDX-Abfrage auf einem Objekt. Bei Objekten, die die ROLAP-Speicherung verwenden, bezieht sich "Verarbeitung" auf die Aktualisierung des Caches, bevor Abfrageergebnisse zurückgegeben werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Verarbeitung bezeichnet den Schritt oder eine Abfolge von Schritten, durch die Daten von Analysis Services aus einer relationalen Datenquelle in ein mehrdimensionales Modell geladen werden. Bei Objekten, die die MOLAP-Speicherung verwenden, werden Daten auf dem Datenträger im Datenbankdateiordner gespeichert. In Bezug auf den ROLAP-Speicher ist die Verarbeitung bedarfsbasiert, und zwar als Reaktion auf eine MDX-Abfrage auf einem Objekt. Bei Objekten, die die ROLAP-Speicherung verwenden, bezieht sich "Verarbeitung" auf die Aktualisierung des Caches, bevor Abfrageergebnisse zurückgegeben werden.  
   
- Die Verarbeitung wird standardmäßig ausgeführt, wenn eine Projektmappe auf dem Server bereitgestellt wird. Sie können eine Projektmappe auch vollständig oder teilweise verarbeiten, indem Sie entweder Ad-hoc-Tools wie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]verwenden oder eine zeitgesteuerte Verarbeitung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und SQL Server-Agent durchführen. Wenn Sie eine strukturelle Änderung am Modell vornehmen, z.. B. eine Dimension entfernen oder den Kompatibilitätsgrad ändern, müssen Sie die Verarbeitung wiederholen, um die physischen und logischen Aspekte des Modells zu synchronisieren.  
+ Die Verarbeitung wird standardmäßig ausgeführt, wenn eine Projektmappe auf dem Server bereitgestellt wird. Sie können eine Projektmappe auch vollständig oder teilweise verarbeiten, indem Sie entweder Ad-hoc-Tools wie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]verwenden oder eine zeitgesteuerte Verarbeitung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und SQL Server-Agent durchführen. Wenn Sie eine strukturelle Änderung am Modell vornehmen, z. B. eine Dimension entfernen oder den Kompatibilitätsgrad ändern, müssen Sie die Verarbeitung wiederholen, um die physischen und logischen Aspekte des Modells zu synchronisieren.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -87,7 +87,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Logische Architektur &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Datenbankobjekte &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

@@ -3,27 +3,28 @@ title: SQLConfigDataSource (Access-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27658fe72c79409a32435971bfac8d10ce92cded
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Access-Treiber)
 > [!NOTE]  
@@ -55,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 |THREADS|Die Anzahl der Hintergrundthreads für das Modul nutzen. Dieser Wert kann wird standardmäßig auf 3, jedoch geändert werden.<br /><br /> Dadurch wird die gleiche Option als **Threads** im Dialogfeld "Setup".|  
 |UID|Microsoft Access-Treiber für die Anmeldung verwendeten Benutzer-ID-Namen.|  
 |USERCOMMITSYNC|Bestimmt, ob die Microsoft Access-Treiber eine benutzerdefinierte Transaktionen asynchron durchführen. Dieser Wert wird anfangs festgelegt, auf "Ja", was bedeutet, dass der Microsoft Access-Treiber in einer benutzerdefinierten Transaktion ausgeführt werden Commits wartet.<br /><br /> Der Wert dieser Option sollten nicht ohne sorgfältiger Überlegung der möglichen Konsequenzen geändert werden. Weitere Informationen zu dieser Option finden Sie unter der *Microsoft Jet-Datenbank-Engine-Programmiererhandbuch*.<br /><br /> Dadurch wird die gleiche Option als **UserCommitSync** im Dialogfeld "Setup".|
-

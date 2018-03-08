@@ -2,28 +2,30 @@
 title: "Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 32
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2c1553db5a161b8ca4fb69694340f55d8d818ff5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Speicheroptimierte Tabellen benötigen ausreichend verfügbaren Arbeitsspeicher, um alle Zeilen und Indizes im Arbeitsspeicher ablegen zu können. Da Arbeitsspeicher nicht unbegrenzt verfügbar ist, sollten Sie die Arbeitsspeichernutzung in Ihrem System kennen und effizient verwalten. Die Themen in diesem Abschnitt behandeln allgemeine Szenarien zur Speichernutzung und -verwaltung.
 
@@ -39,7 +41,7 @@ Die Größe einer speicheroptimierten Tabelle entspricht die Größe der Daten z
 
 Indizes für speicheroptimierte Tabellen sind tendenziell kleiner als nicht gruppierte Indizes für datenträgerbasierte Tabellen. Die Größe eines nicht gruppierten Index bewegt sich in der Größenordnung von `[primary key size] * [row count]`. Die Größe von Hashindizes beträgt `[bucket count] * 8 bytes`. 
 
-Wenn eine aktive Arbeitsauslastung vorliegt, ist zusätzlicher Arbeitsspeicher erforderlich, um die Zeilenversionsverwaltung und verschiedene Vorgänge zu berücksichtigen. Wie viel Arbeitsspeicher in der Praxis benötigt wird, hängt von der Arbeitsauslastung ab, aber es wird sicherheitshalber empfohlen, mit dem Zweifachen der erwarteten Größe für speicheroptimierte Tabellen und Indizes zu beginnen, um dann zu beobachten, welche Speicheranforderungen sich in der Praxis ergeben. Der Mehraufwand für die Zeilenversionsverwaltung hängt immer von den Merkmalen der Arbeitsauslastung ab – insbesondere lang andauernde Transaktionen erhöhen den Mehraufwand. Für die meisten Arbeitsauslastungen, die größere Datenbanken (z. B. >100 GB) verwenden, ist der Mehraufwand meist begrenzt (25 % oder weniger).
+Wenn eine aktive Arbeitsauslastung vorliegt, ist zusätzlicher Arbeitsspeicher erforderlich, um die Zeilenversionsverwaltung und verschiedene Vorgänge zu berücksichtigen. Wie viel Arbeitsspeicher in der Praxis benötigt wird, hängt von der Arbeitsauslastung ab, aber es wird sicherheitshalber empfohlen, mit dem Zweifachen der erwarteten Größe für speicheroptimierte Tabellen und Indizes zu beginnen, um dann zu beobachten, welche Speicheranforderungen sich in der Praxis ergeben. Der Mehraufwand für die Zeilenversionsverwaltung hängt immer von den Merkmalen der Arbeitsauslastung ab – insbesondere lang andauernde Transaktionen erhöhen den Mehraufwand. Für die meisten Arbeitsauslastungen, die größere Datenbanken (z. B. >100 GB) verwenden, ist der Mehraufwand meist begrenzt (25 % oder weniger).
 
   
 ## <a name="detailed-computation-of-memory-requirements"></a>Detaillierte Berechnung der Speicheranforderungen 
@@ -60,7 +62,7 @@ Wenn eine aktive Arbeitsauslastung vorliegt, ist zusätzlicher Arbeitsspeicher e
 
 Betrachten Sie das folgende speicheroptimierte Tabellenschema:
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -115,21 +117,21 @@ Jeder Hashindex ist ein Hasharray aus 8-Byte-Adresszeigern.  Die Größe des Arr
   
 Mit Hashindizes erzielen Sie sehr schnelle Übereinstimmungssuchen wie:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 Nicht gruppierte Indizes liefern schneller Ergebnisse bei Bereichssuchen wie:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 Beim Migrieren einer datenträgerbasierten Tabelle können Sie die Anzahl der eindeutigen Werte für den Index "t1c2_index" wie folgt bestimmen.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
@@ -165,7 +167,7 @@ Der von nicht gruppierten Indizes belegte Arbeitsspeicher kann wie folgt berechn
   
  Nicht gruppierte Indizes eignen sich am besten für Bereichssuchen, wie in der folgenden Abfrage veranschaulicht:  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  
@@ -196,8 +198,7 @@ Tabellenvariablen, die in einem umfangreichen SQL-Batch und nicht in einem Proze
 
 Mit den oben aufgeführten Berechnungen wird der Arbeitsspeicherbedarf für die derzeit bestehende Tabelle geschätzt. Zusätzlich zu diesem Arbeitsspeicher müssen Sie einplanen, dass die Tabelle anwächst, und ausreichend Arbeitsspeicher für zukünftiges Wachstum vorsehen.  Wenn Sie beispielsweise ein zehnprozentiges Wachstum erwarten, müssen Sie die oben ermittelten Ergebnisse mit 1,1 multiplizieren, um den insgesamt erforderlichen Arbeitsspeicher für die Tabelle zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
 

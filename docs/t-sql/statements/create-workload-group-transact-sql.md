@@ -1,10 +1,13 @@
 ---
 title: Erstellen Sie die ARBEITSAUSLASTUNGSGRUPPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 46dce7ed81cdce215cfbff8f5fcce0900a9309a0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine Arbeitsauslastungsgruppe unter Ressourcenkontrolle und verknüpft die Arbeitsauslastungsgruppe mit einem Ressourcenpool der Ressourcenkontrolle. Die Ressourcenkontrolle ist nicht verfügbar in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -41,7 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -59,20 +60,18 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Gruppenname*  
+ *group_name*  
  Der benutzerdefinierte Name für die Arbeitsauslastungsgruppe. *Gruppenname* ist alphanumerisch, kann bis zu 128 Zeichen sein, muss innerhalb einer Instanz eindeutig sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und Sie müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  WICHTIGKEIT = {NIEDRIG | **MITTEL** | HOHE}  
  Gibt die relative Wichtigkeit einer Anforderung in der Arbeitsauslastungsgruppe an. Wichtigkeit kann einen der folgenden, wobei MEDIUM die Standardeinstellung:  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (Standard)    
 -   HIGH  
   
 > [!NOTE]  
->  Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
+> Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
   
  IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen mit verschiedener Wichtigkeit innerhalb desselben Ressourcenpools beeinflussen sich gegenseitig, haben jedoch keine Auswirkungen auf Arbeitsauslastungsgruppen in anderen Ressourcenpools.  
   
@@ -80,7 +79,7 @@ CREATE WORKLOAD GROUP group_name
  Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. Dieser Prozentwert ist relativ zur Ressourcenpoolgröße, die von MAX_MEMORY_PERCENT festgelegt wird.  
   
 > [!NOTE]  
->  Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
+> Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
   
  *Wert* muss 0 oder eine positive ganze Zahl sein. Der zulässige Bereich für *Wert* liegt zwischen 0 und 100. Die Standardeinstellung für *Wert* ist 25.  
   
@@ -99,13 +98,16 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  Beachten Sie, dass in beiden Fällen der Timeoutfehler 8645 auftreten kann, wenn der Server nicht über ausreichend physischen Arbeitsspeicher verfügt.  
   
- REQUEST_MAX_CPU_TIME_SEC =*Wert*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert* ist 0 (null) bedeutet unbeschränkt.  
   
 > [!NOTE]  
->  Die Ressourcenkontrolle verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Standardmäßig wird Ressourcenkontrolle nicht verhindern, dass eine Anforderung fortgesetzt, wenn die maximale Zeit überschritten wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+
+> [!IMPORTANT]
+> Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, und Verwenden von [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Ressourcenkontrolle wird eine Anforderung abgebrochen, wenn die maximale Zeit überschritten wird. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*Wert*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Gibt die maximale Zeit in Sekunden an, die eine arbeitsspeicherzuweisung (Arbeitsspeicherpuffer) auf das Freiwerden eine Abfrage wartet.  
   
 > [!NOTE]  
@@ -113,7 +115,7 @@ CREATE WORKLOAD GROUP group_name
   
  *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert*, 0, verwendet eine interne Berechnung basierend auf den Abfragekosten, um die maximale Zeit festlegen.  
   
- MAX_DOP =*Wert*  
+ MAX_DOP =*value*  
  Gibt den maximalen Grad der Parallelität (DOP) für parallele Anforderungen an. *Wert* muss 0 oder eine positive ganze Zahl sein. Der zulässige Bereich für *Wert* liegt zwischen 0 und 64. Die Standardeinstellung für *Wert*, 0, verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:  
   
 -   MAX_DOP als Abfragehinweis wird so lange verwendet, wie die Arbeitsauslastungsgruppe MAX_DOP nicht überschritten wird. Wenn der Wert des MAXDOP-Abfragehinweises den mit der Ressourcenkontrolle konfigurierten Wert überschreitet, verwendet das Datenbankmodul den MAXDOP-Wert der Ressourcenkontrolle.  
@@ -126,7 +128,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Nach der Konfiguration kann DOP nur bei Arbeitsspeicher-Engpässen verringert werden. Die Neukonfiguration der Arbeitsauslastungsgruppe ist während des Wartens in der Speicherzuweisungs-Warteschlange nicht sichtbar.  
   
- GROUP_MAX_REQUESTS =*Wert*  
+ GROUP_MAX_REQUESTS =*value*  
  Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert*0 lässt unbegrenzte Anforderungen. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.  
   
  Mithilfe von { *Pool_name* | **"Default"** }  
@@ -174,5 +176,4 @@ GO
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-
 

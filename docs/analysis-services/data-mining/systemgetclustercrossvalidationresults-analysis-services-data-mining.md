@@ -2,11 +2,13 @@
 title: "SystemGetClusterCrossValidationResults (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -14,20 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1a4bf1ffb2768e21c323fd8abc80c1e0706b7b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services – Data Mining)
-  Partitioniert die Miningstruktur in die angegebene Anzahl an Querschnitten, trainiert ein Modell für jede Partition und gibt anschließend Genauigkeitsmetriken für jede Partition zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Partitioniert die Miningstruktur in die angegebene Anzahl an Querschnitten, trainiert ein Modell für jede Partition und gibt anschließend Genauigkeitsmetriken für jede Partition zurück.  
   
  **Hinweis** Diese gespeicherte Prozedur kann nur mit einer Miningstruktur verwendet werden, die mindestens ein Clustering-Modell enthält. Zur Kreuzvalidierung von Nichtclusteringmodellen müssen Sie [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)verwenden.  
   
@@ -80,7 +82,7 @@ SystemGetClusterCrossValidationResults(
   
  (erforderlich)  
   
- *Testliste*  
+ *test list*  
  Eine Zeichenfolge, die Testoptionen angibt.  
   
  **Hinweis** Dieser Parameter ist für die zukünftige Verwendung reserviert.  
@@ -92,7 +94,7 @@ SystemGetClusterCrossValidationResults(
   
  In der folgenden Tabelle werden diese zurückgegebenen Spalten beschrieben.  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|Description|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde.|  
 |AttributeName|Der Name der vorhersagbaren Spalte. Bei Clustermodellen immer **null**.|  
@@ -144,7 +146,6 @@ CALL SystemGetClusterCrossValidationResults(
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
-

@@ -3,7 +3,7 @@ title: EOS und Zeilentrennzeichen Eigenschaften und SkipLine-Methode (VB) | Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8e333bc3eeefcdf4e6ba4439833b2aef9c6f8d25
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af08ca92b0f9a6f20e7b1aa0544ea41361945c9d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS und Zeilentrennzeichen Eigenschaften und SkipLine-Methode (VB)
 In diesem Beispiel wird veranschaulicht, wie eine Textzeile für Streams gleichzeitig bearbeiten. Die Auswirkungen der Änderung die Linie wird als Trennzeichen in der Standardeinstellung Wagenrücklauf/Zeilenvorschub (**AdCRLF**), einfach Zeilenvorschubzeichen (**AdLF**) oder Carriage return, Wagenrücklauf (**AdCR**) wird angezeigt.  
@@ -124,4 +123,3 @@ End Sub
  [EOS-Eigenschaft](../../../ado/reference/ado-api/eos-property.md)   
  [Zeilentrennzeichen-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine-Methode](../../../ado/reference/ado-api/skipline-method.md)
-

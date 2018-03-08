@@ -3,8 +3,11 @@ title: EXCEPT und INTERSECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - comparing queries
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d8bff51308e9b8dbf02066d56b73829bc1658c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3b78bf6f0c70b3c522c18ada72cacdec8de8c099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Mengenoperatoren - außer und INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt durch den Vergleich zweier Abfragen eindeutige Zeilen zurück.  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \<*Query_specification*> | ( \< *Query_expression*>)  
+ \<*query_specification*> | ( \<*query_expression*> )  
  Eine Abfrageangabe oder ein Abfrageausdruck, die bzw. der Daten zurückgibt, die mit den Daten aus einer anderen Abfrageangabe oder einem anderen Abfrageausdruck zu vergleichen sind. Die Definitionen der Spalten, die Bestandteil eines EXCEPT- oder INTERSECT-Vorgangs sind, müssen nicht identisch, jedoch mithilfe impliziter Konvertierung vergleichbar sein. Wenn sich die Datentypen unterscheiden, der Typ, der verwendet wird, um den Vergleich und Zurückgeben von Ergebnissen gemäß den Regeln für [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
  Wenn die Typen identisch sind, diese sich aber in der Genauigkeit, Dezimalstellenanzahl oder Länge unterscheiden, wird das Ergebnis basierend auf denselben Regeln wie für das Kombinieren von Ausdrücken bestimmt. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
@@ -194,5 +196,4 @@ ORDER BY CustomerKey;
 ```  
   
   
-
 

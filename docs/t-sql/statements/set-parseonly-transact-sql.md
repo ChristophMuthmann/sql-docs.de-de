@@ -1,10 +1,13 @@
 ---
 title: SET PARSEONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - verifying syntax
 - SET PARSEONLY statement
 ms.assetid: 514ab042-c53e-4d96-be71-fb08fcc6ef3c
-caps.latest.revision: 18
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a117e81d9645edd9f24702ac01d8eeea3765726
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: eb009b23f9d4a751f6850218f4845c6c70c3bbd3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Überprüft die Syntax jeder [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung und gibt Fehlermeldungen zurück, ohne die Anweisung zu kompilieren oder auszuführen.  
   
@@ -65,4 +67,3 @@ SET PARSEONLY { ON | OFF }
  [SET OFFSETS &#40; Transact-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   
-

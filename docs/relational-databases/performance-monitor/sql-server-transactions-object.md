@@ -2,31 +2,32 @@
 title: SQL Server, Transaktionen-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 642a22206b25ec2963fae4fa04e6b10a5329f0e6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
-  Das **Transaktionen** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Leistungsindikatoren zum Überwachen der Anzahl aktiver Transaktionen in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und der Auswirkungen solcher Transaktionen auf Ressourcen wie dem Momentaufnahmeisolations-Zeilenversionsspeicher in **tempdb**. Transaktionen sind logische Arbeitseinheiten - eine Reihe von Vorgängen, die entweder alle erfolgreich ausgeführt oder aber komplett aus einer Datenbank gelöscht werden müssen, damit die logische Integrität der Daten beibehalten werden kann. Jede Veränderung an Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken wird in Transaktionen vorgenommen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **Transaktionen**-Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Leistungsindikatoren zum Überwachen der Anzahl aktiver Transaktionen in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und der Auswirkungen solcher Transaktionen auf Ressourcen wie dem Momentaufnahmeisolations-Zeilenversionsspeicher in **tempdb**. Transaktionen sind logische Arbeitseinheiten - eine Reihe von Vorgängen, die entweder alle erfolgreich ausgeführt oder aber komplett aus einer Datenbank gelöscht werden müssen, damit die logische Integrität der Daten beibehalten werden kann. Jede Veränderung an Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken wird in Transaktionen vorgenommen.  
   
  Wenn für eine Datenbank die Möglichkeit der Momentaufnahmeisolationsstufe gegeben ist, muss von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datensatz der Änderungen beibehalten werden, die an jeder Zeile in einer Datenbank vorgenommen wurden. Bei jeder Änderung an einer Zeile wird eine Kopie der Zeile im Zustand vor der Änderung in einem Zeilenversionsspeicher in **tempdb**aufgezeichnet. Viele der Leistungsindikatoren im **Transaction** -Objekt können zum Überwachen der Größe und Wachstumsrate des Zeilenversionsspeichers in **tempdb**verwendet werden.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  In dieser Tabelle werden die **SQLServer:Transaktionen** -Leistungsindikatoren beschrieben.  
   
-|Transaktionsleistungsindikatoren von SQL Server|Beschreibung|  
+|Transaktionsleistungsindikatoren von SQL Server|Description|  
 |--------------------------------------|-----------------|  
 |**Freier Speicherplatz in tempdb (KB)**|Der verfügbare Speicherplatz (in Kilobytes) in **tempdb**. Es muss ausreichend Speicherplatz zur Aufnahme des Momentaufnahmeisolationsstufen-Versionsspeichers und aller neuer temporärer Objekte vorhanden sein, die in der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erstellt worden sind.|  
 |**Längste Transaktionsausführungszeit**|Die verstrichene Zeit (in Sekunden) seit dem Start der Transaktion, die länger aktiv war als alle anderen aktuellen Transaktionen. Dieser Leistungsindikator zeigt nur Aktivität an, wenn die Datenbank unter der READ_COMMITTED_SNAPSHOT-Isolationsstufe ausgeführt wird. Es werden keine Aktivitäten protokolliert, wenn die Datenbank eine andere Isolationsstufe aufweist.|  
@@ -51,8 +52,7 @@ ms.lasthandoff: 06/22/2017
 |**Erstellung von Versionsspeichereinheiten**|Die Anzahl der Zuordnungseinheiten, die seit dem Start der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] im Momentaufnahmeisolationsspeicher erstellt worden sind.|  
 |**Abschneiden von Versionsspeichereinheiten**|Die Anzahl der Zuordnungseinheiten, die seit dem Start der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] aus dem Momentaufnahmeisolationsspeicher entfernt worden sind.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

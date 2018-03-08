@@ -2,13 +2,13 @@
 title: Power Pivot-Datenfeeds | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 - Atom data feeds
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97bc6142b19e453c2415653e899d6bbf832f4c1a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b6ee3f4fe47a524fb645040adb6e6a61691decc6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-feeds"></a>Power Pivot-Datenfeeds
-  Ein Datenfeed stellt einen aus einer Onlinedatenquelle in eine Clientanwendung abrufbaren Datenstrom bereit. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mithilfe von Datenfeeds Daten aus einem Atom-fähigen Webdienst oder einer Atom-fähigen Anwendung in eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle in einer Excel-Arbeitsmappe einfügen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ein Datenfeed stellt einen aus einer Onlinedatenquelle in eine Clientanwendung abrufbaren Datenstrom bereit. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mithilfe von Datenfeeds Daten aus einem Atom-fähigen Webdienst oder einer Atom-fähigen Anwendung in eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle in einer Excel-Arbeitsmappe einfügen.  
   
  Die Informationen in diesem Abschnitt sollen Sie bei der optimalen Nutzung von Datenfeeds zum Abrufen vorhandener Unternehmens- oder Arbeitsgruppendaten in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen unterstützen. Er enthält zusätzlich Informationen zum Freigeben von Datenfeeds für andere Mitarbeiter in Ihrer Organisation sowie zur Erstellung und Verwendung von Datenfeeds, falls Probleme behoben werden müssen.  
   
@@ -43,4 +43,3 @@ ms.lasthandoff: 09/01/2017
  [Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
-

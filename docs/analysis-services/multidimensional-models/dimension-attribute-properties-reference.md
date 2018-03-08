@@ -2,33 +2,33 @@
 title: Dimension Attribute Properties Reference | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 589e282fbe84a37fd9b966a14441fe7885c71285
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Dimensionsattributeigenschaftenverweis
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird anhand von zahlreichen Eigenschaften die Funktionsweise von Dimensionen und Dimensionsattributen festgelegt. In der folgenden Tabelle werden die einzelnen Attributeigenschaften aufgelistet und beschrieben.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird anhand von zahlreichen Eigenschaften die Funktionsweise von Dimensionen und Dimensionsattributen festgelegt. In der folgenden Tabelle werden die einzelnen Attributeigenschaften aufgelistet und beschrieben.  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**CustomRollupColumn**|Gibt die Spalte an, die eine benutzerdefinierte Rollupformel definiert.|  
 |**CustomRollupPropertiesColumn**|Gibt die Spalte an, die die Eigenschaften einer benutzerdefinierten Rollupformel enthält.|  
 |**DefaultMember**|Enthält einen mehrdimensionalen Ausdruck (Multidimensional Expression, MDX), der das Standardmeasure für das Attribut definiert.|  
-|**Description**|Enthält die Beschreibung des Attributs.|  
+|**Beschreibung**|Enthält die Beschreibung des Attributs.|  
 |**DiscretizationBucketCount**|Enthält die Anzahl der Buckets, in denen diskretisiert werden soll.|  
 |**DiscretizationMethod**|Definiert die zur Diskretisierung zu verwendende Methode.|  
 |**EstimatedCount**|Gibt die Anzahl der geschätzten Elemente im Attribut an. Der Standardwert ist so lange Null, bis Sie den Aggregationsentwurfs-Assistenten ausführen. Sie können die Anzahl der Datensätze durch den Assistenten zählen lassen oder einen geschätzten Wert eingeben. Geben Sie den Wert manuell ein, wenn Sie die Anzahl der Elemente kennen und die Zeit sparen möchten, die das Abfragen der Datenbank erfordert. Wenn Sie mit einer Testteilmenge der Produktionsdaten arbeiten, können Sie die Anzahl der Produktionsdaten verwenden, damit der Aggregationsentwurf für die Produktionsdaten und nicht für die Testdaten optimiert wird.|  
@@ -73,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Attribute und Attributhierarchien](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e49ab29353985dc5e3de035b7a67da9928412c23
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
-  Im Kontext einer Datenbank-Spiegelungssitzung können die Prinzipal- und Spiegelrollen normalerweise im Rahmen des so genannten *Rollenwechsels*ausgetauscht werden. Beim Rollenwechsel dient der Spiegelserver als *Failoverpartner* für den Prinzipalserver. Er übernimmt die Prinzipalrolle, stellt dessen Kopie der Datenbank wieder her und schaltet sie als neue Prinzipaldatenbank online. Der ehemalige Prinzipalserver übernimmt, soweit verfügbar, die Spiegelrolle, und die zugehörige Datenbank wird zur neuen Spiegeldatenbank. Potenziell können die Rollen hin- und hergewechselt werden, entweder als Antwort auf auftretende Fehler oder zu Verwaltungszwecken.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Kontext einer Datenbank-Spiegelungssitzung können die Prinzipal- und Spiegelrollen normalerweise im Rahmen des so genannten *Rollenwechsels* ausgetauscht werden. Beim Rollenwechsel dient der Spiegelserver als *Failoverpartner* für den Prinzipalserver. Er übernimmt die Prinzipalrolle, stellt dessen Kopie der Datenbank wieder her und schaltet sie als neue Prinzipaldatenbank online. Der ehemalige Prinzipalserver übernimmt, soweit verfügbar, die Spiegelrolle, und die zugehörige Datenbank wird zur neuen Spiegeldatenbank. Potenziell können die Rollen hin- und hergewechselt werden, entweder als Antwort auf auftretende Fehler oder zu Verwaltungszwecken.  
   
 > [!NOTE]  
 >  Dieses Thema setzt voraus, dass Sie mit den Betriebsmodi der Datenbankspiegelung vertraut sind. Weitere Informationen finden Sie unter [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
@@ -72,9 +73,9 @@ ms.lasthandoff: 08/02/2017
   
 ||Hohe Leistung|Modus für hohe Sicherheit ohne einen Zeugen|Modus für hohe Sicherheit mit einem Zeugen|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Automatisches Failover|Nein|Nein|ja|  
-|Manuelles Failover|Nein|Ja|ja|  
-|Erzwungener Dienst|ja|ja|Nein|  
+|Automatisches Failover|nein|nein|ja|  
+|Manuelles Failover|nein|ja|ja|  
+|Erzwungener Dienst|ja|ja|nein|  
   
  Nach einem Rollenwechsel müssen bestimmte Metadaten auf beiden Partnern vorhanden sein, um sicherzustellen, dass alle Datenbankbenutzer auf die neue Prinzipaldatenbank zugreifen können. Darüber hinaus müssen Sicherungsaufträge auf dem neuen Prinzipalserver erstellt werden, damit die Datenbank weiterhin in regelmäßigen Abständen gesichert wird. Weitere Informationen finden Sie unter [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 08/02/2017
   
  **So initiieren Sie ein manuelles Failover**  
   
--   [Manuelles Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+-   [Manueller Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
 -   [Manuelles Failover für eine Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
@@ -315,7 +316,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Mögliche Fehler während der Datenbankspiegelung](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
@@ -325,4 +326,3 @@ ms.lasthandoff: 08/02/2017
  [Spiegelungsstatus &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   
-

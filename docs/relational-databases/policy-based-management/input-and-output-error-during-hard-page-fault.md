@@ -2,30 +2,30 @@
 title: "Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "9"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 803292602dc33187714db393cf120522cd856654
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8f12a24ca3ae9c6f4185565a2bc6cb8e4a027cf0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
-  Diese Regel überprüft das Systemereignisprotokoll auf EventId 51. Dieser Fehler wird von einem Fehler während eines Hardwareseitenfehlers verursacht.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Diese Regel überprüft das Systemereignisprotokoll auf EventId 51. Dieser Fehler wird von einem Fehler während eines Hardwareseitenfehlers verursacht.  
   
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  
  Weitere Informationen über das Beheben dieses Fehlers finden Sie im folgenden Microsoft Knowledge Base-Artikel:  
@@ -33,4 +33,3 @@ ms.lasthandoff: 06/22/2017
 -   [Microsoft Knowledge Base-Artikel 305547](http://go.microsoft.com/fwlink/?linkid=117748)  
   
   
-

@@ -2,9 +2,12 @@
 title: Sequenznummern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: sequence-numbers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - sequence numbers [SQL Server]
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-caps.latest.revision: 31
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4369c402254e0b0de8082c1670171b834585b2d5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
-  Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz von numerischen Werten wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert, und je nach Anforderung wird ein Zyklus (Wiederholungen) ausgeführt. Sequenzen werden anders als Identitätsspalten keinen Tabellen zugeordnet. Eine Anwendung verweist auf ein Sequenzobjekt, um den nächsten Wert zu empfangen. Die Beziehung zwischen Sequenzen und Tabellen wird von der Anwendung gesteuert. Benutzeranwendungen können auf ein Sequenzobjekt verweisen und die Werteschlüssel in mehreren Zeilen und Tabellen koordinieren.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz von numerischen Werten wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert, und je nach Anforderung wird ein Zyklus (Wiederholungen) ausgeführt. Sequenzen werden anders als Identitätsspalten keinen Tabellen zugeordnet. Eine Anwendung verweist auf ein Sequenzobjekt, um den nächsten Wert zu empfangen. Die Beziehung zwischen Sequenzen und Tabellen wird von der Anwendung gesteuert. Benutzeranwendungen können auf ein Sequenzobjekt verweisen und die Werteschlüssel in mehreren Zeilen und Tabellen koordinieren.  
   
  Eine Sequenz wird unabhängig von den Tabellen mithilfe der **CREATE SEQUENCE** -Anweisung erstellt. Mithilfe von Optionen können Sie das Inkrement, Maximal- und Minimalwerte, den Anfangspunkt, die automatische Neustartfunktion sowie das Zwischenspeichern konfigurieren, um die Leistung zu verbessern. Weitere Informationen zu den Optionen finden Sie unter [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   
@@ -392,7 +395,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die `SELECT *` verwenden, empfangen die neue Spalte anstelle der ersten Spalte als letzte Spalte. Wenn dies nicht zulässig ist, müssen Sie eine völlig neue Tabelle erstellen, die Daten in diese Tabelle verschieben und die Berechtigungen für die neue Tabelle erneut erstellen.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die `SELECT *` verwenden, empfangen die neue Spalte anstelle der ersten Spalte als letzte Spalte. Wenn dies nicht zulässig ist, müssen Sie eine völlig neue Tabelle erstellen, die Daten in diese Tabelle verschieben und die Berechtigungen für die neue Tabelle erneut erstellen.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
@@ -404,4 +407,3 @@ GO
  [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   
-

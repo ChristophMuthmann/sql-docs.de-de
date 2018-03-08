@@ -1,10 +1,13 @@
 ---
-title: Kandidat Key Profil Anforderungsoptionen (Datenprofilerstellungs-Task) | Microsoft Docs
+title: "Optionen für die Anforderung für Kandidatenschlüsselprofil (Datenprofilerstellungs-Task) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Kandidatenschlüsselprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Kandidatenschlüsselprofil** festzulegen. Ein Kandidatenschlüsselprofil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **TableOrView**  
  Wählen Sie die vorhandene Tabelle oder Sicht aus, für die ein Profil erstellt werden soll.  
@@ -105,7 +107,7 @@ ms.lasthandoff: 08/03/2017
   
  Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |**IgnoreNonSpace**|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann "å" mit "a" identisch.|  
@@ -122,7 +124,7 @@ ms.lasthandoff: 08/03/2017
   
 |value|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|Es ist kein Schwellenwert angegeben. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
+|**Keine**|Es ist kein Schwellenwert angegeben. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
 |**Specified**|Ein Schwellenwert wird in **KeyStrengthThreshold**angegeben. Die Schlüsselstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
 |**Exact**|Es ist kein Schwellenwert angegeben. Die Schlüsselstärke wird nur gemeldet, wenn die ausgewählten Spalten ein genauer Schlüssel sind.|  
   
@@ -132,9 +134,8 @@ ms.lasthandoff: 08/03/2017
  **MaxNumberOfViolations**  
  Geben Sie die maximale Anzahl von Kandidatenschlüsselverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **KeyStrengthThresholdSetting**ausgewählt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenprofilerstellungs-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

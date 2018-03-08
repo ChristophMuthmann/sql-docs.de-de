@@ -2,9 +2,12 @@
 title: "Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: 59
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ff841106e99cd34bedd1d93e106fb04d452b411f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 367ed2873b0f1fff6dcd852d84b4c53104cb9696
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Die Transportsicherheit schließt die Authentifizierung und optional die Verschlüsselung der Nachrichten ein, die zwischen den Datenbanken ausgetauscht werden. Für die Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]werden Authentifizierung und Verschlüsselung am Datenbankspiegelungs-Endpunkt konfiguriert. Eine Einführung für die Datenbankspiegelungs-Endpunkte finden Sie unter [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Dienste unter unterschiedlichen Domänenkonten ausgeführt werden (in der gleichen oder einer vertrauenswürdigen Domäne), müssen die Anmeldeinformationen jedes Kontos in **master** auf jeder der anderen Serverinstanzen erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden.  
   
--   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Netzwerkdienstkonto ausgeführt werden, muss die Anmeldung zu jedem Hostcomputer-Konto (*DomainName***\\***ComputerName$*) in **master** auf jedem der anderen Server erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden. Das liegt daran, dass eine Serverinstanz, die unter dem Netzwerkdienstkonto ausgeführt wird, mit dem Domänenkonto des Hostcomputers authentifiziert wird.  
+-   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Netzwerkdienstkonto ausgeführt werden, muss die Anmeldung bei jedem Hostcomputer-Konto (*Domänenname***\\***Computername$*) in **master** auf jedem der anderen Server erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden. Das liegt daran, dass eine Serverinstanz, die unter dem Netzwerkdienstkonto ausgeführt wird, mit dem Domänenkonto des Hostcomputers authentifiziert wird.  
   
 > [!NOTE]  
 >  Ein Beispiel für das Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
@@ -76,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
  Sie können auch die Verschlüsselungsalgorithmen steuern, die von einem Endpunkt verwendet werden können, indem Sie einen der folgenden Werte für die ALGORITHM-Option in einer CREATE ENDPOINT- oder ALTER ENDPOINT-Anweisung angeben:  
   
-|ALGORITHM-Wert|Beschreibung|  
+|ALGORITHM-Wert|Description|  
 |---------------------|-----------------|  
 |RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardeinstellung.<br /><br /> **\*\* Warnung \*\*** Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
 |AES|Gibt an, dass der Endpunkt den AES-Algorithmus verwenden muss.|  
@@ -103,7 +105,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Ermöglichen des Verwendens von Zertifikaten für ausgehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
@@ -116,4 +118,3 @@ ms.lasthandoff: 08/02/2017
  [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
-

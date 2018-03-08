@@ -2,11 +2,13 @@
 title: TableDiff (Hilfsprogramm) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: tabledif
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "30"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
-  Mit dem Hilfsprogramm **tablediff** wird verglichen, ob die Daten in zwei Tabellen konvergent sind. Das Hilfsprogramm eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Die **"TableDiff"** Dienstprogramm wird verwendet, um die Daten in zwei Tabellen für Nichtkonvergenz zu vergleichen und eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
   
 -   Zeilenweiser Vergleich einer Quelltabelle in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz, die als Replikationsverleger agiert, mit der Zieltabelle in einer oder mehreren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, die als Replikationsabonnenten agieren.  
   
@@ -83,8 +84,8 @@ tablediff
  [ **-?** ]  
  Gibt die Liste unterstützter Parameter zurück.  
   
- **-sourceserver** *Name des Quellservers*[**\\***Instanzname*]  
- Der Name des Quellservers. Geben Sie *Name des Quellservers* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *Name des Quellservers***\\***Instanzname* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an.  
+ **-Sourceserver** *Name des Quellservers*[**\\*** Instance_name*]  
+ Der Name des Quellservers. Geben Sie *Name des Quellservers* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *Name des Quellservers***\\***Instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *Quelldatenbank*  
  Der Name der Quelldatenbank.  
@@ -107,8 +108,8 @@ tablediff
  **-sourcelocked**  
  Die Quelltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
- **-destinationserver** *Zielservername*[**\\***Instanzname*]  
- Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie *Zielservername***\\***Instanzname* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an.  
+ **-destinationserver** *destination_server_name*[**\\***instance_name*]  
+ Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie *Zielservername***\\***Instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *Abonnementdatenbank*  
  Der Name der Zieldatenbank.  
@@ -230,4 +231,3 @@ tablediff
  [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   
-

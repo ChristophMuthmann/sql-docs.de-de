@@ -3,10 +3,12 @@ title: "ODBC-Treiber-Unterschlüssel | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - registry entries for components [ODBC], drivers subkey
 - drivers subkey [ODBC]
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 171692642f04cbab5b1e289efdae89ab79f15831
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 21b151256f93d77cd0efecedfa8eef2ddcd6482b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC-Treiber-Unterschlüssel
 Die Werte unter der ODBC-Treiber-Unterschlüssel Auflisten der installierten Treiber. Das Format dieser Werte wird in der folgenden Tabelle dargestellt.  
@@ -41,4 +42,3 @@ Die Werte unter der ODBC-Treiber-Unterschlüssel Auflisten der installierten Tre
 Text : REG_SZ : Installed  
 SQL Server : REG_SZ : Installed  
 ```
-

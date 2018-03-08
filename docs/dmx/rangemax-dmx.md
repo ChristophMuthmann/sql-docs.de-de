@@ -2,35 +2,32 @@
 title: RangeMax (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RangeMax
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMax function
+f1_keywords: RangeMax
+dev_langs: DMX
+helpviewer_keywords: RangeMax function
 ms.assetid: 6798d9d7-c3dc-40fb-bd8e-56cb1a6d0e5f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 24559ff09a5791897a41627941d0cf98c7c3cabf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8b8cb363e9d5db767ed172206f497ff300bb29a6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt das obere Ende des vorhergesagten Buckets zurück, der für eine diskretisierte Spalte ermittelt wird.  
   
@@ -71,4 +68,3 @@ FROM [TM Decision Tree]
  [RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)  
   
   
-

@@ -2,31 +2,32 @@
 title: DISCOVER_PARTITION_STAT-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 649475fa5fd1a4e0bb2a6c734f916270ac7f9a64
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0863c2f263cc13ff9673063ab1f49535cd2407a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT-Rowset
-  Gibt Statistiken zu Aggregationen in einer bestimmten Partition zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Gibt Statistiken zu Aggregationen in einer bestimmten Partition zurück.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
@@ -35,10 +36,10 @@ ms.lasthandoff: 09/01/2017
   
 |Spaltenname|Typindikator|Einschränkung|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATENBANKNAME**|**DBTYPE_WSTR**|Required|Der Name der Datenbank, welche die Dimension enthält.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Required|Der Namen des Cubes oder des Tabellenmodells mit der Partition.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Required|Der Name der Measuregruppe in der Dimension.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
-|**PARTITIONSNAME**|**DBTYPE_WSTR**|Required|Der Name einer Partition.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Erforderlich|Der Name der Datenbank, welche die Dimension enthält.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Erforderlich|Der Namen des Cubes oder des Tabellenmodells mit der Partition.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Erforderlich|Der Name der Measuregruppe in der Dimension.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|Erforderlich|Der Name einer Partition.<br /><br /> Diese Spalte ist in der Einschränkungsliste erforderlich.|  
 |**AGGREGATION_NAME**|**DBTYPE_WSTR**||Der Name der Aggregation.|  
 |**AGGREGATION_SIZE**|**DBTYPE_I8**||Die Größe der Aggregation.|  
   
@@ -58,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

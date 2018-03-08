@@ -3,33 +3,30 @@ title: SQLConfigDataSource-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConfigDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConfigDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConfigDataSource
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC]
+f1_keywords: SQLConfigDataSource
+helpviewer_keywords: SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d1fddaf67cfbdb8f8c8df7e66b86a681ca2e23d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource-Funktion
 **Konformität**  
@@ -118,4 +115,3 @@ BOOL SQLConfigDataSource(
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (in der Setup-DLL)|  
 |Entfernen einen Datenquellennamen aus der Systeminformationen|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |Die Systeminformationen hinzugefügt einen Datenquellennamen|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

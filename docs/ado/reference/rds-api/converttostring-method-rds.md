@@ -3,7 +3,7 @@ title: ConvertToString-Methode (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 95425c734f254bf534eacdad606025fca43c2158
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b910522edc20c73164d03fd5f7f313c1eaffabd7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString-Methode (RDS)
 Konvertiert eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.  
@@ -63,7 +62,6 @@ DataFactory.ConvertToString(Recordset)
   
 ## <a name="see-also"></a>Siehe auch  
  [ConvertToString-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
- [ConvertToString-Methode (Beispiel (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
-
+ [ConvertToString-Methode – Beispiel (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 
 

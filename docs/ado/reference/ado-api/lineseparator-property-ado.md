@@ -3,7 +3,7 @@ title: Zeilentrennzeichen-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - LineSeparator property [ADO]
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3742653b10e98c7608557da86a2975b24e472b9c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2be2e27fa93791647fd3e27945c3203cf1afe999
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lineseparator-property-ado"></a>Zeilentrennzeichen-Eigenschaft (ADO)
 Gibt die binären Zeichen als Zeilentrennzeichen in Text zu verwendende [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte.  
@@ -42,8 +41,7 @@ Gibt die binären Zeichen als Zeilentrennzeichen in Text zu verwendende [Stream]
  **Zeilentrennzeichen** wird verwendet, nur mit Text **Stream** Objekte ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**). Diese Eigenschaft wird ignoriert, wenn **Typ** ist **AdTypeBinary**.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

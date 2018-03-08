@@ -1,12 +1,14 @@
 ---
-title: "Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager) | Microsoft Docs"
+title: "Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +20,16 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 5b120f83fd0abf7558790b877087f0f0b3c71512
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
@@ -61,9 +63,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  Geben Sie den folgenden Befehl ein, um das Konto in einer lokalen Berichtsserverinstanz zu konfigurieren:  
   
-     **RSConfig -e -u\<Domäne/Benutzername > – p\<Kennwort >**  
+     **rsConfig -e -u\<Domäne/Benutzername> -p\<Kennwort**  
   
- **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie unter [Rsconfig-Hilfsprogramm &#40; SSRS &#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) in SQL Server-Onlinedokumentation.  
+ **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md).  
   
 ### <a name="how-account-information-is-stored"></a>Speichern von Kontoinformationen  
  Wenn Sie das Konto festlegen, werden die folgenden Einstellungen als verschlüsselte Werte in der Datei RSreportserver.config in einer lokalen oder einer Remote-Berichtsserverinstanz angegeben:  
@@ -107,8 +109,7 @@ ms.lasthandoff: 08/09/2017
   
  Die Kontoinformationen werden aus der Datei RSReportServer.config entfernt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
   
   
-

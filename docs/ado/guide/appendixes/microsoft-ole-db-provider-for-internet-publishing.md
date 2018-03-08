@@ -1,9 +1,9 @@
 ---
-title: "Microsoft OLE DB-Anbieter für Internet Publishing | Microsoft Docs"
+title: Microsoft OLE DB Provider for Internet Publishing | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f86280c8c9b01e8482500fa174784d6d752b7d9e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d466123e7330eb599847225d2b108ec7f80d9ea9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB-Anbieter für Internet Publishing (Übersicht)
+# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet Publishing Overview
 Microsoft OLE DB-Anbieter für Internet Publishing ermöglicht ADO den Zugriff auf Ressourcen, die von Microsoft FrontPage oder Microsoft Internet Information Server bedient. Ressourcen gehören Web-Quelldateien, z. B. HTML-Dateien oder Ordner für Windows 2000-Webserver.
 
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
@@ -58,7 +57,7 @@ MSDAIPP.DSO
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt die OLE DB-Anbieter für Internet Publishing.|
+|**Provider**|Gibt die OLE DB-Anbieter für Internet Publishing.|
 |**Datenquelle** -"oder" - **URL**|Gibt die URL einer Datei oder eines Verzeichnisses in einem Webordner veröffentlicht.|
 |**Benutzer-ID**|Gibt den Benutzernamen an.|
 |**Kennwort**|Gibt das Kennwort des Benutzers an.|
@@ -73,4 +72,3 @@ MSDAIPP.DSO
 
 ## <a name="see-also"></a>Siehe auch
  [Internet, die Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md) [der OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
-

@@ -2,31 +2,32 @@
 title: Protokollversand und Replikation (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
-  Beim Protokollversand werden zwei Kopien einer einzigen Datenbank verwendet, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als primäre Datenbank bezeichnet. Updates, die von Clients an der primären Datenbank vorgenommen werden, werden durch den Protokollversand auf die andere Kopie der Datenbank übertragen, die als sekundäre Datenbank bezeichnet wird. Beim Protokollversand wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der primären Datenbank vorgenommen wird, auf die sekundäre Datenbank angewandt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beim Protokollversand werden zwei Kopien einer einzigen Datenbank verwendet, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als primäre Datenbank bezeichnet. Updates, die von Clients an der primären Datenbank vorgenommen werden, werden durch den Protokollversand auf die andere Kopie der Datenbank übertragen, die als sekundäre Datenbank bezeichnet wird. Beim Protokollversand wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der primären Datenbank vorgenommen wird, auf die sekundäre Datenbank angewandt.  
   
  Der Protokollversand kann zusammen mit der Replikation verwendet werden, wobei das folgende Verhalten auftritt:  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="log-shipping-with-transactional-replication"></a>Protokollversand mit Transaktionsreplikation  
  Bei der Transaktionsreplikation hängt das Verhalten des Protokollversands von der **sync with backup** -Option ab. Diese Option kann für die Veröffentlichungsdatenbank und für die Verteilungsdatenbank festgelegt werden; beim Protokollversand für den Verleger ist nur die Einstellung für die Veröffentlichungsdatenbank relevant.  
   
- Wenn Sie diese Option für die Veröffentlichungsdatenbank festlegen, stellen Sie sicher, dass Transaktionen erst an die Verteilungsdatenbank übermittelt werden, wenn Sie in der Veröffentlichungsdatenbank gesichert wurden. Die neueste Sicherung der Veröffentlichungsdatenbank kann dann auf dem Sekundärserver wiederhergestellt werden, und es besteht keine Möglichkeit, dass die Verteilungsdatenbank Transaktionen enthält, die in der wiederhergestellten Veröffentlichungsdatenbank nicht vorhanden sind. Mit dieser Option wird die Konsistenz zwischen dem Verleger, dem Verteiler und den Abonnenten sichergestellt, wenn ein Failover des Verlegers zu einem Sekundärserver erfolgt. Latenzzeit und Durchsatz sind betroffen, da Transaktionen erst an die Verteilungsdatenbank übermittelt werden können, nachdem sie auf dem Verleger gesichert wurden. Wenn Ihre Anwendung diese Latenzzeit tolerieren kann, sollten Sie diese Option für die Veröffentlichungsdatenbank festlegen. Wenn die **sync with backup** -Option nicht festgelegt ist, können Abonnenten Änderungen empfangen, die nicht mehr in der wiederhergestellten Datenbank auf dem Sekundärserver enthalten sind. Weitere Informationen finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+ Wenn Sie diese Option für die Veröffentlichungsdatenbank festlegen, stellen Sie sicher, dass Transaktionen erst an die Verteilungsdatenbank übermittelt werden, wenn Sie in der Veröffentlichungsdatenbank gesichert wurden. Die neueste Sicherung der Veröffentlichungsdatenbank kann dann auf dem Sekundärserver wiederhergestellt werden, und es besteht keine Möglichkeit, dass die Verteilungsdatenbank Transaktionen enthält, die in der wiederhergestellten Veröffentlichungsdatenbank nicht vorhanden sind. Mit dieser Option wird die Konsistenz zwischen dem Verleger, dem Verteiler und den Abonnenten sichergestellt, wenn ein Failover des Verlegers zu einem Sekundärserver erfolgt. Latenzzeit und Durchsatz sind betroffen, da Transaktionen erst an die Verteilungsdatenbank übermittelt werden können, nachdem sie auf dem Verleger gesichert wurden. Wenn Ihre Anwendung diese Latenzzeit tolerieren kann, sollten Sie diese Option für die Veröffentlichungsdatenbank festlegen. Wenn die **sync with backup** -Option nicht festgelegt ist, können Abonnenten Änderungen empfangen, die nicht mehr in der wiederhergestellten Datenbank auf dem Sekundärserver enthalten sind. Weitere Informationen finden Sie unter [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
  **Konfigurieren der Transaktionsreplikation und des Protokollversands mit der "sync with backup"-Option**  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
  **So konfigurieren Sie die Mergereplikation und den Protokollversand**  
   
-1.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+1.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt.  
   
 2.  Bei einem Ausfall des Verlegers benennen Sie den Computer auf dem Sekundärserver um, und weisen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz dann einen Namen zu, der dem Namen des primären Servers entspricht. Informationen zum Umbenennen des Computers finden Sie in der Windows-Dokumentation. Informationen zum Umbenennen des Servers finden Sie unter [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) und [Umbenennen einer SQL Server-Failoverclusterinstanz](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
@@ -118,10 +119,9 @@ ms.lasthandoff: 08/02/2017
   
      Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet). Weitere Informationen finden Sie unter [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   
-

@@ -2,28 +2,29 @@
 title: "Überwachen von SQL Server-Komponenten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e42a68231284071a38797fa76085123ab89e92fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-sql-server-components"></a>Überwachen von SQL Server-Komponenten
-  Die Überwachung ist wichtig, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Dienst in einer dynamischen Umgebung bereitstellt. Die Daten in der Anwendung ändern sich. Die Art des Zugriffs, den Benutzer benötigen, ändert sich. Die Art der Verbindungsherstellung ändert sich. Möglicherweise ändern sich sogar die Typen der Anwendungen, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet automatisch Ressourcen auf Systemebene, z.B. Arbeits- oder Datenträgerspeicher, um den Bedarf an manueller Optimierung auf Systemebene zu minimieren. Mithilfe der Überwachung können Administratoren Leistungstrends identifizieren, um zu bestimmen, ob Änderungen erforderlich sind.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Überwachung ist wichtig, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Dienst in einer dynamischen Umgebung bereitstellt. Die Daten in der Anwendung ändern sich. Die Art des Zugriffs, den Benutzer benötigen, ändert sich. Die Art der Verbindungsherstellung ändert sich. Möglicherweise ändern sich sogar die Typen der Anwendungen, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet automatisch Ressourcen auf Systemebene, z.B. Arbeits- oder Datenträgerspeicher, um den Bedarf an manueller Optimierung auf Systemebene zu minimieren. Mithilfe der Überwachung können Administratoren Leistungstrends identifizieren, um zu bestimmen, ob Änderungen erforderlich sind.  
   
  So überwachen Sie effektiv eine beliebige Komponente von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -142,4 +143,3 @@ ms.lasthandoff: 08/03/2017
      Die Wiedergabe von Ereignissen ermöglicht das Erstellen einer Testkopie der Datenbankumgebung, von der die Daten aufgezeichnet wurden, und dann das Wiederholen der aufgezeichneten Ereignisse, so wie sie im echten System ursprünglich aufgetreten sind. Diese Funktion ist nur mit dem Distributed Replay Utility oder [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verfügbar. Sie können die Ereignisse mit der Geschwindigkeit des ursprünglichen Auftretens oder so schnell wie möglich (um das System zu belasten) oder, wie in den meisten Fällen, schrittweise wiedergeben, wodurch das System nach jedem Ereignis analysiert werden kann. Durch das Analysieren der Ergebnisse in einer Testumgebung können Sie Schäden im Produktionssystem verhindern. Weitere Informationen finden Sie unter [Wiedergeben von Ablaufverfolgungen](../../tools/sql-server-profiler/replay-traces.md).  
   
   
-

@@ -2,9 +2,12 @@
 title: "Verwenden von „sqlcmd“ mit Skriptvariablen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: d088599955f156dd82f327bcc9833bbae64b6185
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>Verwenden von „sqlcmd“ mit Skriptvariablen
-  Variablen, die in Skripts verwendet werden, werden als Skriptvariablen bezeichnet. Durch Skriptvariablen wird ein Skript aktiviert, das in verschiedenen Szenarien verwendet wird. Wenn Sie beispielsweise ein einzelnes Skript auf mehreren Servern ausführen möchten, anstatt das Skript für jeden Server zu ändern, können Sie eine Skriptvariable für den Servernamen verwenden. Durch das Ändern des Servernamens für die Skriptvariable kann das gleiche Skript auf verschiedenen Servern ausgeführt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Variablen, die in Skripts verwendet werden, werden als Skriptvariablen bezeichnet. Durch Skriptvariablen wird ein Skript aktiviert, das in verschiedenen Szenarien verwendet wird. Wenn Sie beispielsweise ein einzelnes Skript auf mehreren Servern ausführen möchten, anstatt das Skript für jeden Server zu ändern, können Sie eine Skriptvariable für den Servernamen verwenden. Durch das Ändern des Servernamens für die Skriptvariable kann das gleiche Skript auf verschiedenen Servern ausgeführt werden.  
   
  Skriptvariablen können explizit mithilfe des Befehls **setvar** oder implizit mithilfe der Option **sqlcmd -v** definiert werden.  
   
@@ -113,7 +115,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
  Mithilfe von **sqlcmd** definierte Variablen werden als Skriptvariablen bezeichnet. In der folgenden Tabelle sind die **sqlcmd** -Skriptvariablen aufgelistet.  
   
-|        Variable         | Zugehörige Option | R/W |         Standardwert         |
+|        Variable         | Zugehörige Option | R/W |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
@@ -334,10 +336,9 @@ C:\> sqlcmd
 >2 GO
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des Hilfsprogramms sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md)   
  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

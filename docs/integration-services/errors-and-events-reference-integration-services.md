@@ -1,10 +1,13 @@
 ---
-title: Fehler- und Ereignisreferenz (Integration Services) | Microsoft Docs
+title: Fehler- und Ereignisreferenz (Integration Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cecb7c7bf6210f1c4c343f168af650f454322d64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Fehler- und Ereignisreferenz (Integration Services)
   Dieser Abschnitt der Dokumentation enthält Informationen zu verschiedenen Fehlern und Ereignissen, die im Zusammenhang mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]auftreten können. Für Fehlermeldungen sind Informationen zu Ursache und Lösung enthalten.  
@@ -81,8 +83,7 @@ ms.lasthandoff: 08/03/2017
 |SQLISService_273|Gibt an, dass die Konfigurationsdatei nicht gelesen werden konnte oder nicht gültig ist.|  
 |SQLISService_274|Gibt an, dass der Registrierungseintrag, der den Speicherort der Konfigurationsdatei enthält, nicht vorhanden oder leer ist.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

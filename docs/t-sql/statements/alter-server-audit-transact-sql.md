@@ -3,8 +3,11 @@ title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6d2522a2876165f8e18222f2268dad091a6ba342
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Ändert ein Serverüberwachungsobjekt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit-Funktion. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -191,7 +193,7 @@ GO
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. Ändern einer WHERE-Klausel für Serverüberwachung  
  Im folgende Beispiel ändert die Where-Klausel erstellt, die in Beispiel C [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). Die neue WHERE-Klausel filtert für das benutzerdefinierte Ereignis, wenn es von 27.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -204,7 +206,7 @@ GO
 ### <a name="d-removing-a-where-clause"></a>D. Entfernen einer WHERE-Klausel  
  Im folgenden Beispiel wird ein WHERE-Klausel-Prädikatausdruck entfernt.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -217,7 +219,7 @@ GO
 ### <a name="e-renaming-a-server-audit"></a>E. Umbenennen einer Serverüberwachung  
  Im folgenden Beispiel wird der Name der Serverüberwachung von `FilterForSensitiveData` in `AuditDataAccess` geändert.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -248,4 +250,3 @@ GO
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   
-

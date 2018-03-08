@@ -1,29 +1,30 @@
 ---
 title: Erweiterte Objektauswahl (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2e56ee8c0ef68507add00f5c9f628a77df90e137
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6cfc028e9d3f1e8d49395eb404c06be286ba052e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Erweiterte Objektauswahl (AccessToSQL)
 Die **Objektabschnitt erweiterte** Dialogfeld können Sie die Datenbankobjekte mithilfe von Zeichenfolgen und Teilzeichenfolgen in Objektnamen, Filtern und dann zu aktivieren oder deaktivieren diese Objekte. SSMA führt konvertieren und Migrieren von Vorgängen für ausgewählte Objekte.  
@@ -34,7 +35,7 @@ Wenn Sie das Dialogfeld zum ersten Mal öffnen, klicken Sie auf **Unterkategorie
   
 Bevor Sie dieses Dialogfeld verwenden, empfiehlt es sich, erzwingen von SSMA alle Metadaten durch Konvertieren von Schemas oder speichern das Projekt geladen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Überprüfen Sie alle Elemente**  
 Fügt ein Häkchen neben allen Elementen. Diese Elemente werden sofort in den Metadaten-Explorer ausgewählt werden.  
   
@@ -58,4 +59,3 @@ Wenn Elemente den Filterkriterien entsprechen, werden der Kategorien oder die El
 **Filter löschen**  
 Löscht die **Filter** Feld.  
   
-

@@ -3,8 +3,11 @@ title: OUTPUT-Klausel (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,20 +33,19 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cd5caae29a6ec10957c45f755954c9b9e9b7ecda
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6a28059e6a30657a67275d317c70bdb26d2507a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen aus bzw. Ausdrücke basierend auf den einzelnen Zeilen zurück, auf die eine INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung Auswirkungen hat. Diese Ergebnisse können an die verarbeitende Anwendung zurückgegeben werden, die sie z. B. für Bestätigungen, Archivierungen und andere Anwendungsanforderungen verwendet. Die Ergebnisse können auch in eine Tabelle oder Tabellenvariable eingefügt werden. Darüber hinaus können Sie die Ergebnisse einer OUTPUT-Klausel in einer geschachtelten INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung aufzeichnen und diese Ergebnisse in eine Zieltabelle oder -sicht einfügen.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [ZUSAMMENFÜHREN](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -104,7 +106,7 @@ ms.lasthandoff: 09/01/2017
 *column_list*  
  Ist eine optionale Liste mit Spaltennamen in der Zieltabelle der INTO-Klausel. Es ist analog zu der Liste der Spalten in zulässig der [einfügen](../../t-sql/statements/insert-transact-sql.md) Anweisung.  
   
- *"scalar_expression"*  
+ *scalar_expression*  
  Ist eine beliebige Kombination von Symbolen und Operatoren, die zu genau einem Wert ausgewertet werden. Aggregatfunktionen sind nicht zulässig *"scalar_expression"*.  
   
  Alle Verweise auf Spalten in der Tabelle, die geändert wird, müssen mit dem INSERTED- oder DELETED-Präfix gekennzeichnet werden.  
@@ -137,14 +139,14 @@ DELETE Sales.ShoppingCartItem
     OUTPUT DELETED.*;  
 ```  
   
- *Spaltenname*  
- Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle geändert wird, muss werden richtig gekennzeichnet durch das inserted- oder DELETED-Präfix nach Bedarf, z. B.: INSERTED**.** *Column_name*.  
+ *column_name*  
+ Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle geändert wird, muss werden richtig gekennzeichnet durch das inserted- oder DELETED-Präfix nach Bedarf, z. B.: INSERTED **. *** Column_name*.  
   
  $action  
  Ist verfügbar nur für die MERGE-Anweisung. Gibt eine Spalte vom Typ **nvarchar(10)** in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen von drei Werten für jede Zeile zurückgibt: 'INSERT', 'UPDATE' oder 'DELETE' die Aktion, die für diese Zeile ausgeführt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Ausgabe \<Dml_select_list >-Klausel und die Ausgabe \<Dml_select_list > INTO {  **@**  *Table_variable*  |   *Output_table* }-Klausel kann in einer einzelnen INSERT-, Update-, DELETE- oder MERGE-Anweisung definiert werden.  
+ Die Ausgabe \<Dml_select_list >-Klausel und die Ausgabe \<Dml_select_list > INTO {**@*** Table_variable* | *Output_table* }-Klausel definiert werden kann in einer einzelnen INSERT-, Update-, DELETE- oder MERGE-Anweisung.  
   
 > [!NOTE]  
 >  Sofern nicht anderweitig angegeben, beziehen sich Verweise auf die OUTPUT-Klausel sowohl auf die OUTPUT- als auch die OUTPUT INTO-Klausel.  
@@ -670,11 +672,10 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ## <a name="see-also"></a>Siehe auch  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [Table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

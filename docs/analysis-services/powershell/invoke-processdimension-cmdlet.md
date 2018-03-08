@@ -2,31 +2,30 @@
 title: Invoke-ProcessDimension-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8a24a4b19f20e28346456e3c0c53f39eaeb200b9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75b6a75ddabecd65cd323839c46af07af6aa18ba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="invoke-processdimension-cmdlet"></a>Invoke-ProcessDimension-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Verarbeitet eine Dimension mit einer bestimmten Verarbeitungstypvariable.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Verarbeitet eine Dimension mit einer bestimmten Verarbeitungstypvariable.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -85,7 +84,7 @@ ms.lasthandoff: 09/01/2017
 |Pipelineeingabe akzeptieren?|True (ByPropertyName)|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Dieses Cmdlet unterstützt die gängigen Parameter: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer und -OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
@@ -94,7 +93,7 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|  
 |Eingaben|Microsoft.AnalysisSevices.Dimension|  
-|Ausgaben|InclusionThresholdSetting|  
+|Ausgaben|Keine|  
   
 ## <a name="example-1"></a>Beispiel 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Dimensions\Account> Get-Item .| Invoke-ProcessDimension –ProcessType:ProcessDefault`  
@@ -111,4 +110,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

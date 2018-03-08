@@ -3,7 +3,7 @@ title: ADORecordsetConstruction Schnittstelle | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: be4c36c5bd69fe6657b57d74e8808259fe602db0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3da6260d5e0d4e503dae54e6ffc13f6d35f1890d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
 Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erstellen **Recordset** Objekt aus einer OLE DB- **Rowset** Objekt in einer C-/C++-Anwendung.  
@@ -39,7 +38,7 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
   
 |||  
 |-|-|  
-|[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **Kapitel** Objekt vom bzw. auf diesen ADO **Recordset** Objekt.|  
+|[Chapter](../../../ado/reference/ado-api/chapter-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **Kapitel** Objekt vom bzw. auf diesen ADO **Recordset** Objekt.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **RowPosition** Objekt vom bzw. auf diesen ADO **Recordset** Objekt.|  
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **Rowset** Objekt vom bzw. auf diesen ADO **Recordset** Objekt.|  
   
@@ -89,4 +88,3 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset-Eigenschaft (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
-

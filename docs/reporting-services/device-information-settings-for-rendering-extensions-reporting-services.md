@@ -1,28 +1,27 @@
 ---
-title: "Geräteinformationseinstellungen für Renderingerweiterungen (Reporting Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Geräteinformationseinstellungen für Renderingerweiterungen (Reporting Services) | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 09/15/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ad004b9e6c01b1bddc61019f64ae9bd1999850f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Geräteinformationseinstellungen für Renderingerweiterungen (Reporting Services)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]werden Geräteinformationseinstellungen zum Übergeben von Renderingparametern an eine Renderingerweiterung verwendet. Jede Renderingerweiterung akzeptiert einen bestimmten Satz von Einstellungen.  
@@ -43,8 +42,7 @@ ms.lasthandoff: 08/09/2017
 |[RGDI-Geräteinformationseinstellungen](../reporting-services/rgdi-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der RGDI-Renderingausgabe zugeordnet sind.|  
 |[PPTX-Geräteinformationseinstellungen](../reporting-services/pptx-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der PPTX-Renderingausgabe zugeordnet sind.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
-

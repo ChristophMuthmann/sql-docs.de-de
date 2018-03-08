@@ -3,7 +3,7 @@ title: Row-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,22 +22,21 @@ f1_keywords:
 helpviewer_keywords:
 - Row property [ADO]
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 093b4fdc13df9ae1bc62ace896ca2f0d9d3f9cda
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19b935d43739d1a1ce19f414cae12b00c311b261
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="row-property-ado"></a>Row-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB- **Zeile** Objekt aus, oder auf eine [ADORecordConstruction Schnittstelle](../../../ado/reference/ado-api/adorecordconstruction-interface.md) Objekt. Bei Verwendung von **Put_Row** festzulegende eine **Zeile** -Objekt, eine Zeile in einer ADO umgewandelt ist **Datensatz** Objekt.  
   
-## <a name="readwritesyntax"></a>Lese-/Schreibzugriff. Syntax  
+## <a name="readwritesyntax"></a>Read/write.Syntax  
   
 ```  
 HRESULT get_Row([out, retval] IUnknown** ppRow);  
@@ -56,4 +55,3 @@ HRESULT put_Row([in] IUnknown* pRow);
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
-

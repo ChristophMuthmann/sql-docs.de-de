@@ -2,12 +2,13 @@
 title: Drillthroughabfragen (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - drillthrough [Analysis Services]
 - drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1cb15acfcc31572a34c6bf2fe6c3ec75101a9fd0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>Drillthroughabfragen (Data Mining)
-  Mithilfe einer *Drillthroughabfrage* können Sie Details aus zugrunde liegenden Fällen oder Strukturdaten abrufen, indem Sie eine Anfrage an das Miningmodell senden. Ein Drillthrough ist hilfreich, wenn Sie die Fälle anzeigen möchten, die zum Trainieren des Modells verwendet wurden, und nicht die Fälle, die zum Testen des Modells verwendet wurden, oder wenn Sie zusätzliche Details aus den Falldaten einsehen möchten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Mithilfe einer *Drillthroughabfrage* können Sie Details aus zugrunde liegenden Fällen oder Strukturdaten abrufen, indem Sie eine Anfrage an das Miningmodell senden. Ein Drillthrough ist hilfreich, wenn Sie die Fälle anzeigen möchten, die zum Trainieren des Modells verwendet wurden, und nicht die Fälle, die zum Testen des Modells verwendet wurden, oder wenn Sie zusätzliche Details aus den Falldaten einsehen möchten.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining stellt zwei verschiedene Drillthroughoptionen bereit:  
   
@@ -99,14 +100,13 @@ ms.lasthandoff: 09/01/2017
   
 |Task|Link|  
 |----------|----------|  
-|Schritte zur Verwendung von Drillthroughs im Data Mining-Designer|[Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Schritte zur Verwendung von Drillthroughs im Data Mining-Designer|[Drillthrough zu Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |So ändern Sie ein vorhandenes Miningmodell, um Drillthroughs zu ermöglichen|[Aktivieren von Drillthrough für ein Miningmodell](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|Aktivieren von Drillthroughs für eine Miningstruktur mit der DMX WITH DRILLTHROUGH-Klausel|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
-|Weitere Informationen über das Zuweisen von Berechtigungen, die für Drillthroughs in Miningstrukturen und Miningmodellen gelten|[Erteilen von Berechtigungen für Data Mining-Strukturen und -Modellen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Aktivieren von Drillthroughs für eine Miningstruktur mit der DMX WITH DRILLTHROUGH-Klausel|[ERSTELLEN SIE DIE MININGSTRUKTUR &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Weitere Informationen über das Zuweisen von Berechtigungen, die für Drillthroughs in Miningstrukturen und Miningmodellen gelten|[Erteilen von Berechtigungen für Datamining-Strukturen und Modelle &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

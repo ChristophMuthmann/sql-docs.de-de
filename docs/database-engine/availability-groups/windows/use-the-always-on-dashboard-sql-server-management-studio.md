@@ -1,34 +1,34 @@
 ---
 title: "Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Datenbankadministratoren verwenden das Verfügbarkeitsgruppen-Dashboard von Always On, um die Integrität einer Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikate und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in einer übersichtlichen Ansicht darzustellen. Einige der typischen Verwendungen für das Verfügbarkeitsgruppen-Dashboard von Always On sind:  
   
@@ -123,7 +123,10 @@ ms.lasthandoff: 08/02/2017
  Name und Zustand des Clusters, auf dem die Instanz des verbundenen Servers und die Verfügbarkeitsgruppe ein Elementknoten ist.  
   
 ##  <a name="AvReplicaDetails"></a> Verfügbarkeitsreplikatdetails  
- Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:  
+
+Beim Verbinden mit dem primären Replikat **Verfügbarkeitsreplikatdetails** werden Informationen von allen Replikaten in der Verfügbarkeitsgruppe angezeigt. Beim Verbinden mit einem sekundären Replikat werden in der Anzeige nur Informationen vom verbundenen Replikat dargestellt.  
+
+Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:  
   
  **Name**  
  Der Namen der Serverinstanz, die das Verfügbarkeitsreplikat hostet. Diese Spalte wird standardmäßig angezeigt.  
@@ -362,4 +365,3 @@ ms.lasthandoff: 08/02/2017
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

@@ -1,10 +1,13 @@
----
+﻿---
 title: "Wartungspläne| Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], database compatibility level displayed in designer
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plans"></a>Wartungspläne
-  Mit Wartungsplänen wird ein Workflow der Tasks erstellt, die erforderlich sind, um sicherzustellen, dass Ihre Datenbank optimiert und regelmäßig gesichert wird und dass sie keine Inkonsistenzen aufweist. Mit dem Wartungsplanungs-Assistenten werden zudem zentrale Wartungspläne erstellt, doch durch das manuelle Erstellen von Plänen steht Ihnen eine sehr viel höhere Flexibilität zur Verfügung.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit Wartungsplänen wird ein Workflow der Tasks erstellt, die erforderlich sind, um sicherzustellen, dass Ihre Datenbank optimiert und regelmäßig gesichert wird, und dass sie keine Inkonsistenzen aufweist. Mit dem Wartungsplanungs-Assistenten werden zudem zentrale Wartungspläne erstellt, doch durch das manuelle Erstellen von Plänen steht Ihnen eine sehr viel höhere Flexibilität zur Verfügung.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Vorteile von Wartungsplänen  
  In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] wird mit Wartungsplänen ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket erstellt, das durch einen Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt wird. Wartungspläne können manuell oder automatisch in bestimmten Zeitabständen ausgeführt werden.  
@@ -63,16 +65,15 @@ ms.lasthandoff: 06/22/2017
   
  Die von den Wartungstasks generierten Ergebnisse können als Bericht in eine Textdatei oder in die Wartungsplantabellen (**sysmaintplan_log** und **sysmaintplan_logdetail**) in **msdb** geschrieben werden. Um die Ergebnisse im Protokolldatei-Viewer anzuzeigen, klicken Sie mit der rechten Maustaste auf **Wartungspläne**, und klicken Sie anschließend auf **Verlauf anzeigen**.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Erste Schritte mit Wartungsplänen mithilfe der folgenden Themen:  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Konfigurieren der **Agent XPs**-Serverkonfigurationsoption, um erweiterte gespeicherte Prozeduren für SQL Server Agent zu aktivieren.|[Agent XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Beschreibt, wie ein Wartungsplan mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt wird.|[Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Beschreibt, wie ein Wartungsplan mithilfe der Wartungsplan-Entwurfsbenutzeroberfläche erstellt wird.|[Erstellen eines Wartungsplans &#40;Entwurfsoberfläche für Wartungspläne&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |Dokumentiert die Funktionalität von Wartungsplänen im Objekt-Explorer.|[Knoten Wartungspläne &#40;Objekt-Explorer&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
-

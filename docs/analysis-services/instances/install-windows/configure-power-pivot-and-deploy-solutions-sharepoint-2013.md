@@ -2,28 +2,31 @@
 title: "Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2013) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2013)
-  In diesen Themen wird beschrieben, wie Erweiterungen der mittleren Ebene für die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Funktionen in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] bereitgestellt und konfiguriert werden, z. B. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Katalog, planmäßige Datenaktualisierung, Management-Dashboard und Datenanbieter. Führen Sie das **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool** aus, um folgende Aufgaben auszuführen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+In diesen Themen wird beschrieben, wie Erweiterungen der mittleren Ebene für die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Funktionen in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] bereitgestellt und konfiguriert werden, z. B. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Katalog, planmäßige Datenaktualisierung, Management-Dashboard und Datenanbieter. Führen Sie das **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool** aus, um folgende Aufgaben auszuführen:  
   
 -   Bereitstellen von SharePoint-Lösungsdateien  
   
@@ -33,22 +36,10 @@ ms.lasthandoff: 09/01/2017
   
  Weitere Informationen zur Installation des [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstools finden Sie unter [Installieren oder Deinstallieren des Power Pivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
- Dieses Thema enthält folgende Abschnitte:  
-  
- [Ausführen der Konfiguration von PowerPivot für SharePoint 2013](#bkmk_run_configuration_tool)  
-  
- [Überprüfen der PowerPivot-Konfiguration](#bkmk_verify_powerpivot)  
-  
- [Problembehandlung](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Ausführen der Konfiguration von PowerPivot für SharePoint 2013  
  **Hinweis:** Vom Setup-Assistenten für [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] werden zwei unterschiedliche Konfigurationstools für [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]installiert. Jedes Tool unterstützt eine andere SharePoint-Version.  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Konfigurationstool|SharePoint 2010 mit SharePoint 2010 Service Pack 1 (SP1)|  
@@ -135,9 +126,9 @@ ms.lasthandoff: 09/01/2017
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von Datenladevorgängen  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von -Abfragen  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von Abfragen  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von -Datenentladevorgängen  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von Datenentladevorgängen  
   
 4.  Achten Sie darauf, dass **Integritätsdatenerfassung aktivieren** ausgewählt ist.  
   
@@ -145,7 +136,6 @@ ms.lasthandoff: 09/01/2017
   
  Weitere Informationen zur Problembehandlung bei der Datenaktualisierung finden Sie unter [Problembehandlung bei der Power Pivot-Datenaktualisierung](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- Weitere Informationen zum Konfigurationstool finden Sie unter [PowerPivot-Konfigurationstools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+ Weitere Informationen zum Konfigurationstool finden Sie unter [Power Pivot-Konfigurationstools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   
-

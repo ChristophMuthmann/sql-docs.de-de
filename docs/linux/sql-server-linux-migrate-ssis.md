@@ -5,23 +5,27 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
+ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 04b294aafb8019a44d2bb7fa05a4e6092a9a490f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Thema wird beschrieben, wie SQL Server Integration Services (SSIS)-Pakete auf Linux ausgeführt wird. SSIS löst Probleme bei der Integration von komplexen Daten extrahieren von Daten aus mehreren Quellen und Formaten, Transformieren und Bereinigen der Daten und die Daten in mehrere Ziele laden. 
+Dieser Artikel beschreibt, wie SQL Server Integration Services (SSIS)-Pakete auf Linux ausgeführt wird. SSIS löst Probleme bei der Integration von komplexen Daten extrahieren von Daten aus mehreren Quellen und Formaten, Transformieren und Bereinigen der Daten und die Daten in mehrere Ziele laden. 
 
 SSIS-Pakete auf Linux laufende können mit Microsoft SQL Server, die auf Windows lokal oder in der Cloud, die unter Linux oder in Docker verbinden. Sie können auch mit Azure SQL-Datenbank, Azure SQL Data Warehouse, ODBC-Datenquellen, Flatfiles und anderen Datenquellen, einschließlich ADO.NET Quellen, XML-Dateien und OData-Diensten verbinden.
 
@@ -43,17 +47,45 @@ Um ein SSIS-Paket auf einem Linux-Computer auszuführen, führen Sie folgende Sc
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>Andere allgemeine SSIS-tasks
+## <a name="run-an-encrypted-password-protected-package"></a>Führen Sie ein verschlüsselte (kennwortgeschützte)-Paket
+Es gibt drei Möglichkeiten zum Ausführen eines SSIS-Pakets, das verschlüsselt werden mit einem Kennwort:
 
--   **Entwerfen Sie Pakete**.
+1.  Legen Sie den Wert der Umgebungsvariablen `SSIS_PACKAGE_DECRYPT`, wie im folgenden Beispiel gezeigt:
 
-    -   **Herstellen einer Verbindung mit der ODBC-Datenquellen**. Mit SSIS unter Linux CTP-Version 2.1 aktualisiert und höher können SSIS-Pakete auf Linux ODBC-Verbindungen. Diese Funktion wurde mit SQL Server und die MySQL-ODBC-Treiber getestet, aber auch mit jeder Unicode-ODBC-Treiber arbeiten, die die ODBC-Spezifikation berücksichtigt werden sollen. Zur Entwurfszeit können Sie entweder einen DSN oder eine Verbindungszeichenfolge in die ODBC-Verbindung angeben; Sie können auch Windows-Authentifizierung verwenden. Weitere Informationen finden Sie unter der [Blogbeitrag Ankündigung ODBC-Unterstützung unter Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
 
-    -   **Pfade**. Geben Sie im Windows-Format Pfade im SSIS-Pakete. SSIS unter Linux unterstützt keine Pfade für Linux-Format, aber Windows-Stil Pfade Linux-Stil Pfade zur Laufzeit zugeordnet. Klicken Sie dann, z. B. SSIS unter Linux ordnet den Windows-Stil Pfad `C:\test` auf den Linux-Stil Pfad `/test`.
+2.  Geben Sie die `/de[crypt]` Option aus, um das Kennwort eingeben, interaktiv, wie im folgenden Beispiel gezeigt:
 
--   **Bereitstellen von Paketen**. Sie können nur Pakete im Dateisystem unter Linux in dieser Version speichern. Die SSIS-Katalogdatenbank und die legacy-SSIS-Dienst sind nicht verfügbar unter Linux für die Bereitstellung von Paketen und Speicher.
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
 
--   **Planen von Paketen**. Sie können Linux-System Planen von Tools wie z. B. `cron` um Pakete zu planen. SQL-Agent können für Linux keine um Ausführung in dieser Version des Pakets zu planen. Weitere Informationen finden Sie unter [Zeitplan SSIS-Pakete auf Linux mit Cron](sql-server-linux-schedule-ssis-packages.md).
+3.  Geben Sie die `/de` Option aus, um das Kennwort in der Befehlszeile angeben, wie im folgenden Beispiel gezeigt. Diese Methode wird nicht empfohlen, da das Kennwort für die Entschlüsselung mit dem Befehl im Befehlsverlauf gespeichert.
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
+
+## <a name="design-packages"></a>Entwerfen von Paketen
+
+**Herstellen einer Verbindung mit der ODBC-Datenquellen**. Mit SSIS unter Linux CTP-Version 2.1 aktualisiert und höher können SSIS-Pakete auf Linux ODBC-Verbindungen. Diese Funktion wurde mit SQL Server und die MySQL-ODBC-Treiber getestet, aber auch mit jeder Unicode-ODBC-Treiber arbeiten, die die ODBC-Spezifikation berücksichtigt werden sollen. Zur Entwurfszeit können Sie entweder einen DSN oder eine Verbindungszeichenfolge in die ODBC-Verbindung angeben; Sie können auch Windows-Authentifizierung verwenden. Weitere Informationen finden Sie unter der [Blogbeitrag Ankündigung ODBC-Unterstützung unter Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+
+**Pfade**. Geben Sie im Windows-Format Pfade im SSIS-Pakete. SSIS unter Linux unterstützt keine Pfade für Linux-Format, aber Windows-Stil Pfade Linux-Stil Pfade zur Laufzeit zugeordnet. Klicken Sie dann, z. B. SSIS unter Linux ordnet den Windows-Stil Pfad `C:\test` auf den Linux-Stil Pfad `/test`.
+
+## <a name="deploy-packages"></a>Bereitstellen von Paketen
+Sie können nur Pakete im Dateisystem unter Linux in dieser Version speichern. Die SSIS-Katalogdatenbank und die legacy-SSIS-Dienst sind nicht verfügbar unter Linux für die Bereitstellung von Paketen und Speicher.
+
+## <a name="schedule-packages"></a>Planen von Paketen
+Sie können Linux-System Planen von Tools wie z. B. `cron` um Pakete zu planen. SQL-Agent können für Linux keine um Ausführung in dieser Version des Pakets zu planen. Weitere Informationen finden Sie unter [Zeitplan SSIS-Pakete auf Linux mit Cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Einschränkungen und bekannte Probleme
 
@@ -79,8 +111,13 @@ SSIS umfasst die folgenden Funktionen:
 
 Laden Sie zum Einstieg in SSIS die neueste Version des [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md).
 
-## <a name="see-also"></a>Siehe auch
+Weitere Informationen zum SSIS finden Sie in den folgenden Artikeln:
 - [Erfahren Sie mehr über SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) Entwicklungs- und Verwaltungstools](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Serverintegration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)
 
+## <a name="related-content-about-ssis-on-linux"></a>Verwandte Inhalte über SSIS unter Linux
+-   [Installieren von SQL Server Integration Services (SSIS) unter Linux](sql-server-linux-setup-ssis.md)
+-   [Konfigurieren von SQL Server Integration Services unter Linux mit Ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Einschränkungen und bekannten Probleme für SSIS unter Linux](sql-server-linux-ssis-known-issues.md)
+-   [Zeitplan SQL Server Integration Services-paketausführung unter Linux mit cron](sql-server-linux-schedule-ssis-packages.md)

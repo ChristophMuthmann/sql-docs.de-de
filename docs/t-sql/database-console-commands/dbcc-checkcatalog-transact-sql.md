@@ -1,10 +1,13 @@
 ---
 title: DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f63850a2cf39d783daee65431da349d04cba3b03
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7c8b73259e599e0001706cfaf09dca30d7d31a5b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Überprüft die Katalogkonsistenz innerhalb der angegebenen Datenbank. Die Datenbank muss online sein.  
   
@@ -45,7 +47,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -56,7 +57,7 @@ DBCC CHECKCATALOG
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* | *Database_id* | 0  
+ *database_name* | *database_id* | 0  
  Der Name oder die ID der Datenbank, für die die Katalogkonsistenz überprüft werden soll. Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  WITH NO_INFOMSGS  
@@ -78,23 +79,23 @@ DBCC CHECKCATALOG führt verschiedene Konsistenzprüfungen zwischen System-Metad
 Wenn eine Momentaufnahme nicht erstellt werden kann, erwirbt DBCC CHECKCATALOG eine exklusive Datenbanksperre, um die erforderliche Konsistenz zu erhalten. Wenn Inkonsistenzen gefunden werden, können diese nicht repariert werden, und die Datenbank muss von einer Sicherung wiederhergestellt werden.
   
 > [!NOTE]  
->  Ausführen von DBCC CHECKCATALOG für **Tempdb** Überprüfungen ausgeführt. Dies liegt daran, dass aus Leistungsgründen keine datenbankmomentaufnahmen verfügbar sind **Tempdb**. Dies bedeutet, dass die erforderliche Transaktionskonsistenz nicht erhalten werden kann. Wiederverwenden des Servers zum Auflösen einer beliebigen **Tempdb** Metadaten zu beseitigen.  
+> Ausführen von DBCC CHECKCATALOG für **Tempdb** Überprüfungen ausgeführt. Dies liegt daran, dass aus Leistungsgründen keine datenbankmomentaufnahmen verfügbar sind **Tempdb**. Dies bedeutet, dass die erforderliche Transaktionskonsistenz nicht erhalten werden kann. Wiederverwenden des Servers zum Auflösen einer beliebigen **Tempdb** Metadaten zu beseitigen.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG überprüft keine FILESTREAM-Daten. FILESTREAM speichert BLOBs (Binary Large Objects) im Dateisystem.  
+> DBCC CHECKCATALOG überprüft keine FILESTREAM-Daten. FILESTREAM speichert BLOBs (Binary Large Objects) im Dateisystem.  
   
 DBCC CHECKCATALOG wird auch ausgeführt, im Rahmen des [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## <a name="result-sets"></a>Resultsets  
 Falls keine Datenbank angegeben ist, gibt DBCC CHECKCATALOG Folgendes zurück:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 Falls [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] als Datenbankname angegeben ist, gibt DBCC CHECKCATALOG Folgendes zurück:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
@@ -115,6 +116,5 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Systemtabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   
-

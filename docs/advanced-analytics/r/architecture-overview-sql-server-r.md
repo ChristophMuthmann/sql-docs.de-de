@@ -2,27 +2,28 @@
 title: "Übersicht über die Architektur (SQL Server R Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Übersicht über die Architektur für R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Abschnitt enthält eine Übersicht über die Architektur von SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services.
 
@@ -58,9 +59,8 @@ Daten werden innerhalb der Begrenzung des Kompatibilität beibehalten, durch das
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Komponenten, die R-Integration unterstützen](new-components-in-sql-server-to-support-r.md)
+[Komponenten mit Unterstützung für die R-Integration](new-components-in-sql-server-to-support-r.md)
 
-[R-Interoperabilität](r-interoperability-in-sql-server.md)
+[Interoperabilität mit R](r-interoperability-in-sql-server.md)
 
-[Sicherheit (Übersicht)](security-overview-sql-server-r.md)
-
+[Sicherheitsübersicht](security-overview-sql-server-r.md)

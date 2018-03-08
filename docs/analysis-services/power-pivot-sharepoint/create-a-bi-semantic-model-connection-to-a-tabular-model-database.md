@@ -2,30 +2,30 @@
 title: Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer tabellarischen Modelldatenbank | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
-  Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, durch die eine Umleitung zu einer Datenbank für tabellarische Modelle erfolgt, die auf einer Analysis Services-Instanz außerhalb der SharePoint-Farm ausgeführt wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, durch die eine Umleitung zu einer Datenbank für tabellarische Modelle erfolgt, die auf einer Analysis Services-Instanz außerhalb der SharePoint-Farm ausgeführt wird.  
   
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und SharePoint- und Analysis Services-Berechtigungen konfiguriert haben, kann diese Verbindung als Datenquelle für Excel- oder [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte verwendet werden.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_BISM"></a> Erteilen von Leseberechtigungen für die Datenbank für tabellarische Modelle  
  Da die Datenbank auf einem Server außerhalb der Farm ausgeführt wird, müssen im Rahmen der Verbindungseinrichtung Datenbankbenutzerberechtigungen auf dem Analysis Services-Backend-Server erteilt werden. Analysis Services verwendet ein rollenbasiertes Berechtigungsmodell. Benutzer, die eine Verbindung mit Modelldatenbanken herstellen, müssen dazu Leseberechtigungen oder höher über eine Rolle verwenden, die Lesezugriff auf die Elemente gewährt.  
   
- Rollen und gelegentlich Rollenmitgliedschaft werden definiert, wenn das Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird. Sie können Rollen nicht mithilfe von SQL Server Management Studio erstellen, aber Sie können einer Rolle, die bereits definiert ist, Mitglieder hinzufügen. Weitere Informationen zum Erstellen von Rollen finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Rollen und gelegentlich Rollenmitgliedschaft werden definiert, wenn das Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird. Sie können Rollen nicht mithilfe von SQL Server Management Studio erstellen, aber Sie können einer Rolle, die bereits definiert ist, Mitglieder hinzufügen. Weitere Informationen zum Erstellen von Rollen finden Sie unter [erstellen und Verwalten von Rollen](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Zuweisen der Rollenmitgliedschaft  
   
@@ -151,7 +151,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [PowerPivot-BI-Semantikmodell-Verbindung &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Herstellen einer BI-Semantikmodellverbindung mit einer Power Pivot-Arbeitsmappe](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   
-

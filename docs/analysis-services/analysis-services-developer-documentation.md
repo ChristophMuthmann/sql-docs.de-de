@@ -2,31 +2,33 @@
 title: "Analysis Services-Dokumentation für Entwickler | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Entwicklerhandbuch (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 In Analysis Services fast jedes Objekt und die Arbeitslast programmierbaren und häufig mehr als ein Ansatz zur Auswahl vorhanden ist.  Optionen umfassen das Schreiben von verwaltetem Code, Skript oder einen offenen Standards wie XMLA und MSOLAP verwenden, wenn Ihre Lösung nicht infrage mithilfe von .NET Framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>Was können Sie im Code erreichen.
@@ -80,6 +82,5 @@ Analysis Services bietet viele Methoden zum Anpassen einer Lösung mithilfe von 
 [Referenz zu Analysis Services PowerShell](../analysis-services/powershell/analysis-services-powershell-reference.md) dokumentiert den-Cmdlets für administrative Funktionen sowie die allgemeine verwendet **Invoke-ASCmd** -Cmdlet, das Skripts oder einer Abfrage als Eingabe akzeptiert.
 
 ## <a name="see-also"></a>Siehe auch
-[Technische Referenz &#40; SSAS &#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
+[Technische Referenz ](../analysis-services/powershell/technical-reference-ssas.md) 
  [Abfrage- und Expression-Sprachreferenz &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-

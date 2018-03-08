@@ -3,7 +3,7 @@ title: Status-Eigenschaft (ADO-Recordset) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Recordset]
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1a8b65d43534fd75a9d6d8e659959100c5bea14f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28842b05cf75282252450475372a8955dfd28cbd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-ado-recordset"></a>Status-Eigenschaft (ADO-Recordset)
 Gibt den Status des aktuellen Datensatzes in Bezug auf BatchUpdates oder andere Massenvorgänge an.  
@@ -45,5 +44,4 @@ Gibt den Status des aktuellen Datensatzes in Bezug auf BatchUpdates oder andere 
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel der Status-Eigenschaft (Recordset) (VB)](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)   
- [Status-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/status-property-example-vc.md)   
-
+ [Status-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

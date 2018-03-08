@@ -1,10 +1,13 @@
----
+﻿---
 title: Legen Sie @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a92fa424de70d1ba9cccf437a2de49ab8432ba1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-localvariable-transact-sql"></a>Legen Sie @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Legt die angegebene lokale Variable, die zuvor erstellt haben, mit der DECLARE @*Local_variable* -Anweisung mit dem angegebenen Wert.  
   
@@ -74,13 +76,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@***Local_variable*  
+ **@** *local_variable*  
  Der Name einer Variablen eines beliebigen Typs außer **Cursor**, **Text**, **Ntext**, **Image**, oder **Tabelle**. Variablennamen müssen mit einem at-Zeichen beginnen (**@**). Variablennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
- *Eigenschaftsname*  
+ *property_name*  
  Eigenschaft eines benutzerdefinierten Typs.  
   
- *Feldname*  
+ *field_name*  
  Öffentliches Feld eines benutzerdefinierten Typs.  
   
  *udt_name*  
@@ -92,7 +94,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *keine Variablenargumentlisten verwenden* **(** *Argument* [ **,**... *n* ] **)**  
  Eine Methode eines benutzerdefinierten Typs, der ein oder mehrere Argumente übergeben werden, um den Status einer Instanz eines Typs zu ändern. Statische Methoden müssen öffentlich sein.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  Eine Variable, deren Typ sich in einer Assembly befindet. Weitere Informationen finden Sie unter [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -123,7 +125,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *cursor_variable*  
  Ist der Name einer Cursorvariablen. Falls die Zielcursorvariable zuvor auf einen anderen Cursor verwiesen hat, wird dieser Verweis entfernt.  
   
- *Cursorname*  
+ *cursor_name*  
  Der Name eines Cursors, der mit der DECLARE CURSOR-Anweisung deklariert wurde.  
   
  CURSOR  
@@ -181,7 +183,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Variablen können nur in Ausdrücken verwendet werden, nicht anstelle von Objektnamen oder Schlüsselwörtern. Um dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zu erstellen, verwenden Sie EXECUTE.  
   
- Die Syntaxregeln für SET  **@**  *Cursor_variable* schließen nicht die Schlüsselwörter LOCAL und GLOBAL. Wenn der Satz  **@**  *Cursor_variable* = CURSOR...-Syntax verwendet wird, wird der Cursor je nach der Einstellung der Datenbankoption Default to lokalen Cursor als GLOBAL oder LOCAL erstellt.  
+ Die Syntaxregeln für SET **@*** Cursor_variable* schließen nicht die Schlüsselwörter LOCAL und GLOBAL. Wenn der Satz **@*** Cursor_variable* = CURSOR...-Syntax verwendet wird, wird der Cursor je nach der Einstellung der Datenbankoption Default to lokalen Cursor als GLOBAL oder LOCAL erstellt.  
   
  Cursorvariablen sind stets lokal, selbst wenn sie auf einen globalen Cursor verweisen. Wenn eine Cursorvariable auf einen globalen Cursor verweist, besitzt der Cursor einen globalen und einen lokalen Verweis. Weitere Informationen finden Sie unter Beispiel C.  
   
@@ -192,7 +194,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Verwenden Sie keine Variable in einer SELECT-Anweisung, um Werte zu verketten (d. h., um Aggregatwerte zu berechnen). Dies kann zu unerwarteten Abfrageergebnissen führen. Dies liegt daran, dass nicht gewährleistet ist, dass alle Ausdrücke in der SELECT-Liste (einschließlich Zuweisungen) für jede Ausgabezeile exakt einmal ausgeführt werden. Weitere Informationen finden Sie unter [diesem KB-Artikel](http://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET  **@**  *Local_variable*.  
+ Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@*** Local_variable*.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -367,11 +369,11 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
+ [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-
 

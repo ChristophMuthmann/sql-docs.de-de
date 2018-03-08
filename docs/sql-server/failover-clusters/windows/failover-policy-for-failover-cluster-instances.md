@@ -2,30 +2,30 @@
 title: "Failoverrichtlinie für Failoverclusterinstanzen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- flexible failover policy
+helpviewer_keywords: flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
-  In einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) kann jeweils nur ein Knoten Besitzer der WSFC-Clusterressourcengruppe (Windows Server Failover Cluster) sein. Die Clientanforderungen werden durch diesen Knoten in der FCI behandelt. Falls ein Fehler auftritt und kein erfolgreicher Neustart möglich ist, geht die Gruppe in den Besitz eines anderen WSFC-Knotens in der FCI über. Dieser Prozess wird als Failover bezeichnet. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] erhöht die Zuverlässigkeit der Fehlererkennung und bietet eine flexible Failoverrichtlinie.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz (FCI) kann jeweils nur ein Knoten Besitzer der WSFC-Clusterressourcengruppe (Windows Server Failover Cluster) sein. Die Clientanforderungen werden durch diesen Knoten in der FCI behandelt. Falls ein Fehler auftritt und kein erfolgreicher Neustart möglich ist, geht die Gruppe in den Besitz eines anderen WSFC-Knotens in der FCI über. Dieser Prozess wird als Failover bezeichnet. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] erhöht die Zuverlässigkeit der Fehlererkennung und bietet eine flexible Failoverrichtlinie.  
   
  Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI ist im Hinblick auf die Failovererkennung vom zugrunde liegenden WSFC-Dienst abhängig. Daher wird das Failoververhalten für die FCI durch zwei Mechanismen bestimmt: Der erste Mechanismus wird durch die systemeigenen WSFC-Funktionen und der zweite durch die Funktionen bereitgestellt, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup hinzugefügt werden.  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 06/22/2017
  *Standardwert  
   
 ####  <a name="respond"></a> Reagieren auf Fehler  
- Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine hohe Verfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen zu diesen Einstellungen finden Sie unter [\<Eigenschaften von <Ressource>: Richtlinien (Registerkarte)](http://technet.microsoft.com/library/cc725685.aspx).  
+ Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine Hochverfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen zu diesen Einstellungen finden Sie unter [\<Eigenschaften von <Ressource>: Richtlinien (Registerkarte)](http://technet.microsoft.com/library/cc725685.aspx).  
   
  Informationen zum Verwalten der Quorumintegrität finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
@@ -117,4 +117,3 @@ ms.lasthandoff: 06/22/2017
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
-

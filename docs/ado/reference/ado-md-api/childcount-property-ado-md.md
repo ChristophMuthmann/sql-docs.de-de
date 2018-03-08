@@ -3,7 +3,7 @@ title: ChildCount-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - ChildCount property [ADO MD]
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1dea6c6878ee9ff56a40818b54e64e2c1f8ef68c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ca8ee6c01299c3db45977a8e64c4f2afd46c7d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount-Eigenschaft (ADO MD)
 Gibt die Anzahl der Elemente für den aktuellen [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekt ist das übergeordnete Element in einer Hierarchie.  
@@ -51,4 +50,3 @@ Gibt die Anzahl der Elemente für den aktuellen [Member](../../../ado/reference/
  [Children-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Members-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
-

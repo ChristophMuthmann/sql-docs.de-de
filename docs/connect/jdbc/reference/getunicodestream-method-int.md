@@ -3,29 +3,28 @@ title: GetUnicodeStream-Methode (Int) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getUnicodeStream (int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getUnicodeStream (int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b487da1231cb0077693291ee40fcb7ea275c3178
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36b0bdcc07f74f887aa452d56af4fd0717d5d8b3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,4 +61,3 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

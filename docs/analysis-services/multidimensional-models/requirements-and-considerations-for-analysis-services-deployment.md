@@ -2,13 +2,13 @@
 title: "Anforderungen und Überlegungen für Analysis Services-Bereitstellung | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
-  Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
   
 ## <a name="memory-and-processor-requirements"></a>Arbeitsspeicher- und Prozessoranforderungen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  
@@ -110,4 +110,3 @@ ms.lasthandoff: 09/01/2017
 -   Wenn die Abfrageleistung schlecht ist, die Prozessor- und Speicherressourcen auf dem lokalen Server jedoch nicht vergrößert werden können, können Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf zwei oder mehr Produktionsservern bereitstellen. Anschließend können Sie Netzwerklastenausgleich zum Kombinieren der Server in einem einzigen Cluster verwenden. In einem NLB-Cluster werden Abfragen automatisch auf alle Server im NLB-Cluster verteilt.  
   
   
-

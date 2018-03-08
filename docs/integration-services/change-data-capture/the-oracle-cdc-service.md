@@ -1,26 +1,28 @@
 ---
-title: Der Oracle CDC Service | Microsoft Docs
+title: Oracle CDC Service | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7371c120f4ff874a878a77cd3db0df8755aebd75
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Der Oracle CDC Service ist ein Windows-Dienst, der das Programm xdbcdcsvc.exe ausführt. Der Oracle CDC Service kann so konfiguriert werden, dass er mehrere Windows-Dienste auf demselben Computer ausführt, wobei jeder Dienst einen anderen Windows-Dienstnamen aufweist. Die Erstellung mehrerer Oracle CDC-Windows-Dienste auf einem Computer wird häufig angewendet, um eine bessere Trennung der einzelnen Dienste zu erzielen oder um zu ermöglichen, dass jeder Dienst mit einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz arbeitet.  
@@ -97,9 +99,8 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Arbeiten mit dem Oracle CDC Service](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten eines lokalen CDC Service](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
  [Verwalten eines Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   
-

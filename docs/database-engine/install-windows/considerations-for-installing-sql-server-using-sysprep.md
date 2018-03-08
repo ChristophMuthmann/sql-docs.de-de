@@ -2,28 +2,31 @@
 title: "Überlegungen zur Installation von SQL Server mit SysPrep | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-caps.latest.revision: 22
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: e1089089d6e0eb1a3085dad9306a6e598535b739
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f10952679464999ae78fbb00432d3a8b8a7dc5ef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Überlegungen zur Installation von SQL Server mit SysPrep
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep ermöglicht Ihnen die Vorbereitung einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer und den Abschluss der Konfiguration zu einem späteren Zeitpunkt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep umfasst einen aus zwei Schritten bestehenden Prozess zur Konfiguration einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Schritte umfassen Folgendes:  
   
 - [Vorbereiten eines Images](#BKMK_PrepareImage)  
@@ -89,7 +92,7 @@ Die zu installierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 - Sie können für SysPrep-Installationen den vorhandenen vorbereiteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützte Funktionen hinzufügen oder sie aus ihnen entfernen.  
   
- Nach der Vorbereitung der Instanz wird eine Verknüpfung im **** Startmenü verfügbar, mit der Sie die Konfiguration der vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]abschließen können.  
+ Nach der Vorbereitung der Instanz wird eine Verknüpfung im **Startmenü** verfügbar, mit der Sie die Konfiguration der vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]abschließen können.  
   
 ##  <a name="BKMK_CompleteImage"></a> Abschließen des Images  
 Sie können die vorbereiteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit beiden der folgenden Methoden abschließen:  
@@ -98,5 +101,5 @@ Sie können die vorbereiteten Instanzen von [!INCLUDE[ssNoVersion](../../include
   
 - Greifen Sie auf den Schritt **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz** auf der Seite **Erweitert** des **Installationscenters**zu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)  

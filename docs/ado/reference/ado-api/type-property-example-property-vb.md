@@ -3,7 +3,7 @@ title: Geben Sie die Beispiel-Eigenschaft (Eigenschaft) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Type property [property] [ADO], Visual Basic example
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8ea71c68359ffb7c312b38675ae55f26e8eee479
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9d97025218856d56b291fe50e67f69b7e4202b9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-example-property-vb"></a>Type-Eigenschaft (Beispiel) (VB)
 Dieses Beispiel zeigt die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Eigenschaft. Es ist ein Modell für ein Hilfsprogramm zum Auflisten von z. B. die Namen und Typen einer Auflistung [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md), [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)usw.  
@@ -158,4 +157,3 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-

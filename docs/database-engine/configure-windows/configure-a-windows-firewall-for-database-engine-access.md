@@ -2,11 +2,13 @@
 title: "Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-caps.latest.revision: 57
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "57"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 49a59b9225ffff183e537025de7f503ba58429d6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7d79f9d00344dceb2559d66f7f6f4450597c79f7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Inhalte, die mit früheren Versionen von SQL Server zusammenhängen, finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx).
 
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So konfigurieren Sie eine Windows-Firewall für Datenbankmodulzugriff mit**  
   
@@ -101,8 +102,7 @@ ms.lasthandoff: 08/02/2017
   
 7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für die Regel ein, und klicken Sie dann auf **Fertig stellen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Gewusst wie: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

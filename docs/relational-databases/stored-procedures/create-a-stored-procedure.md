@@ -2,9 +2,12 @@
 title: Erstellen einer gespeicherten Prozedur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -14,28 +17,27 @@ helpviewer_keywords:
 - stored procedures [SQL Server], creating
 - creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 85b2194d4535c4edb2d4a27039fde6ca87911871
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 36ca0485ec35bcfd14ee1da0d01ac66c0a40c886
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-stored-procedure"></a>Erstellen einer gespeicherten Prozedur
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen einer gespeicherten Prozedur](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
 
   In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung CREATE PROCEDURE beschrieben.  
   
 ##  <a name="Top"></a>   
--   **Before you begin:**  [Permissions](#Permissions)  
+-   **Vorbereitungen:**  [Berechtigungen](#Permissions)  
   
--   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Erstellen einer Prozedur mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE PROCEDURE-Berechtigung in der Datenbank und die ALTER-Berechtigung auf dem Schema, in dem die Prozedur erstellt wird.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So erstellen Sie eine Prozedur im Objekt-Explorer**  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
@@ -60,11 +62,11 @@ ms.lasthandoff: 06/22/2017
   
 5.  Geben Sie im Dialogfeld **Werte für Vorlagenparameter angeben** die folgenden Werte für die angezeigten Parameter ein.  
   
-    |Parameter|Wert|  
+    |Parameter|value|  
     |---------------|-----------|  
-    |Autor|*Ihr Name*|  
+    |Author|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |Beschreibung|Gibt Mitarbeiterdaten zurück.|  
+    |Description|Gibt Mitarbeiterdaten zurück.|  
     |Prozedurname|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -77,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  Ersetzen Sie im **Abfrage-Editor**die SELECT-Anweisung durch die folgende Anweisung:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -100,7 +102,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So erstellen Sie eine Prozedur im Abfrage-Editor**  
   
-1.  Stellen **Sie im Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie im Menü **Datei** auf **Neue Abfrage**.  
   
@@ -137,8 +139,7 @@ ms.lasthandoff: 06/22/2017
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
-

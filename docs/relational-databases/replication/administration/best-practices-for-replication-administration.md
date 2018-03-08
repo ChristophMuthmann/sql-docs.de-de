@@ -2,31 +2,32 @@
 title: "Bewährte Methoden für die Replikationsverwaltung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, best practices
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "17"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4e86f2eb13062223533a3994180446174f9291b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1aade2a55ca0af319c84ddff35ced1f22b675839
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
-  Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Neben den folgenden Hinweisen zu den bewährten Methoden in diesem Thema sollten Sie das Thema mit den häufig gestellten Fragen lesen, um die häufigen Fragen und Probleme kennen zu lernen: [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Neben den folgenden Hinweisen zu den bewährten Methoden in diesem Thema sollten Sie das Thema mit den häufig gestellten Fragen lesen, um die häufigen Fragen und Probleme kennen zu lernen: [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Eine Unterteilung der Hinweise zu den bewährten Methoden in zwei Bereiche bietet sich an:  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="validate-data-periodically"></a>Regelmäßige Überprüfung der Daten  
  Eine Datenüberprüfung ist bei der Replikation zwar nicht erforderlich, es wird jedoch empfohlen, die Überprüfung regelmäßig für die Transaktions- und die Mergereplikation auszuführen. Mit der Überprüfung stellen Sie sicher, dass die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Eine erfolgreiche Überprüfung bedeutet, dass zu diesem Zeitpunkt alle Änderungen vom Verleger auf den Abonnenten repliziert wurden (und vom Abonnenten auf den Verleger, wenn Updates auf dem Abonnenten unterstützt werden) und dass die beiden Datenbanken synchron sind.  
   
- Es wird empfohlen, die Überprüfung in Übereinstimmung mit dem Sicherungszeitplan der Veröffentlichungsdatenbank auszuführen. Wenn beispielsweise einmal wöchentlich eine vollständige Sicherung der Veröffentlichungsdatenbank erfolgt, könnte die Überprüfung einmal wöchentlich nach Abschluss der Sicherung ausgeführt werden. Weitere Informationen zur Überprüfung finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-replicated-data.md).  
+ Es wird empfohlen, die Überprüfung in Übereinstimmung mit dem Sicherungszeitplan der Veröffentlichungsdatenbank auszuführen. Wenn beispielsweise einmal wöchentlich eine vollständige Sicherung der Veröffentlichungsdatenbank erfolgt, könnte die Überprüfung einmal wöchentlich nach Abschluss der Sicherung ausgeführt werden. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-replicated-data.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Verwenden von Agentprofilen zum Ändern von Agentparameter bei Bedarf  
  Agentprofile stellen eine praktische Methode zum Festlegen von Parametern des Replikations-Agents dar. Parameter können auch in der Befehlszeile des Agents angegeben werden. Es ist jedoch in der Regel besser, ein vordefiniertes Agentprofil zu verwenden oder ein neues Profil zu erstellen, wenn Sie den Wert eines Parameters ändern müssen. Wenn Sie z. B. die Mergereplikation verwenden und ein Abonnent von einer Breitbandverbindung auf eine DFÜ-Verbindung wechselt, sollten Sie das **slow link** -Profil für den Merge-Agent verwenden. Dieses Profil verwendet eine Reihe von Parametern, die sich für langsame Datenverbindungen besser eigenen. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -152,8 +153,7 @@ ms.lasthandoff: 06/22/2017
   
  Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
   
-

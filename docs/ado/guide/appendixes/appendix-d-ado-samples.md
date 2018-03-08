@@ -3,7 +3,7 @@ title: 'Anhang D: ADO-Beispiele | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ebaa64517591b9ea89700557f02c9e17dfa3c72e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9c5f5d827900e2ff7ecf68320bd2b1165785d46a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Anhang D: ADO-Beispiele, in das Windows SDK
 Das Windows SDK enthält mehrere Beispielanwendungen, in denen die Verwendung von ADO und RDS-Code veranschaulicht. Diese Beispiele sollen Sie die Informationen zum Verwenden von ADO und RDS unterstützen, aber nicht auf Produktionsservern bereitgestellt werden sollen.
@@ -42,4 +41,3 @@ Das Windows SDK enthält mehrere Beispielanwendungen, in denen die Verwendung vo
 
 ## <a name="see-also"></a>Siehe auch
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md) [ADO-Codebeispiele](../../../ado/reference/ado-api/ado-code-examples.md) [ADO-Codebeispiele in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO-Code Beispiele für VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [ADO-Codebeispiele in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) [Konfigurieren von RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO-Verlauf](../../../ado/guide/ado-history.md)
-

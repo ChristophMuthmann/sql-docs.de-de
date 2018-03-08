@@ -1,10 +1,13 @@
----
+﻿---
 title: DBCC (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,20 +39,19 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8e8750f4b44ec206bb5a26586acd6b567f7dac37
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 24092c692e25010d284d083a1632cffbfe0ed599
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Die Programmiersprache [!INCLUDE[tsql](../../includes/tsql-md.md)] stellt DBCC-Anweisungen bereit, die als Datenbankkonsolenbefehle (Database Console Commands, DBCC) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dienen.
   
@@ -94,7 +96,7 @@ Die DBCC-Befehle verwenden Tabellensperren anstelle der internen Datenbankmoment
 >  Wird DBCC CHECKALLOC oder der entsprechende Teil von DBCC CHECKDB mithilfe der WITH TABLOCK-Option ausgeführt, muss hierfür die Datenbank exklusiv gesperrt (X) werden. Diese Datenbanksperre kann nicht festgelegt werden, auf **Tempdb** oder **master** und erzeugt wahrscheinlich bei allen anderen Datenbanken einen Fehler.  
   
 > [!NOTE]  
->  Bei der Ausführung von DBCC CHECKDB für die Masterdatenbank tritt ein Fehler auf, wenn eine interne Datenbankmomentaufnahme nicht erstellt werden kann.  
+>  Bei der Ausführung von DBCC CHECKDB für die **Masterdatenbank** tritt ein Fehler auf, wenn eine interne Datenbankmomentaufnahme nicht erstellt werden kann.   
   
 ## <a name="progress-reporting-for-dbcc-commands"></a>Statusmeldungen für DBCC-Befehle  
 Die **Sys. dm_exec_requests** -Katalogsicht enthält Informationen zum Fortschritt und zur aktuellen Ausführungsphase der Befehle DBCC CHECKDB, CHECKFILEGROUP und CHECKTABLE. Die **Percent_complete** Spalte zeigt den Fortschritt des Befehls, und die **Befehl** Spalte meldet die aktuelle Phase der Ausführung des Befehls.
@@ -119,7 +121,7 @@ Die Definition einer Statuseinheit hängt von der aktuellen Ausführungsphase de
 |-|-|  
 |[DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)|[DBCC SHOWCONTIG](../../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md)|  
 |[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)|[DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)|  
-|[DBCC OUTPUTBUFFER DARGESTELLTEN](../../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md)|[DBCC TRACESTATUS](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)|  
+|[DBCC OUTPUTBUFFER](../../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md)|[DBCC TRACESTATUS](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)|  
 |[DBCC PROCCACHE](../../t-sql/database-console-commands/dbcc-proccache-transact-sql.md)|[DBCC USEROPTIONS](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)|  
 |[DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)||  
   
@@ -145,10 +147,9 @@ Die Definition einer Statuseinheit hängt von der aktuellen Ausführungsphase de
   
 |||  
 |-|-|  
-|[DBCC-DLL-Namen (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
+|[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
-|[DBCC FREESESSIONCACHE.](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
+|[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
 |[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC ' CLONEDATABASE '](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.|  
   
   
-

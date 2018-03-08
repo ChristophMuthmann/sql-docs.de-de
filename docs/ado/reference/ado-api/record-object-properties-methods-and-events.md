@@ -3,7 +3,7 @@ title: Aufzeichnen von Objekteigenschaften, Methoden und Ereignisse | Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Record object [ADO], members
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e664fa38ea9d12507ca001868f6788f0e9b963ac
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 087b6ad1620ae26d8651159125774ad4dafb41e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="record-object-properties-methods-and-events"></a>Aufzeichnen von Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -41,7 +40,7 @@ ms.lasthandoff: 09/09/2017
   
  [RecordType-Eigenschaft](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
- [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)  
+ [Source-Eigenschaft (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
  [State-Eigenschaft](../../../ado/reference/ado-api/state-property-ado.md)  
   
@@ -58,11 +57,10 @@ ms.lasthandoff: 09/09/2017
   
  [MoveRecord-Methode](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   
- [Open-Methode (ADO-Datensatz)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+ [Open-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
 ## <a name="events"></a>Ereignisse  
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

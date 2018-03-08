@@ -1,10 +1,13 @@
 ---
-title: "Angeben eines Intervalls von Änderungsdaten | Microsoft Docs"
+title: "Angeben eines Intervalls von Änderungsdaten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbe685552f38f7da644d4e57d63fe47a1c400da6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 262f93736e963785054686dd573389670d44bc46
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte sind **datetime** -Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert.  
@@ -69,7 +71,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [YEAR &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/year-ssis-expression.md)  
   
- Funktionen in Transact-SQL, die mit **datetime** -Werten funktionieren  
+ Funktionen in Transact-SQL, die mit **datetime**-Werten funktionieren  
  [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  Bevor Sie eine dieser **datetime** -Funktionen verwenden, um Endpunkte zu berechnen, müssen Sie bestimmen, ob das Intervall unveränderlich ist und regelmäßig auftritt. In der Regel möchten Sie regelmäßig in Quelltabellen aufgetretene Änderungen in Zieltabellen übernehmen. Beispielsweise möchten Sie diese Änderungen auf einer stündlichen, täglichen oder wöchentlichen Basis übernehmen.  
@@ -112,11 +114,10 @@ ms.lasthandoff: 08/03/2017
   
  **Nächstes Thema:** [Bestimmen, ob die Änderungsdaten bereit sind](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integrationsservices &#40; SSIS &#41; Ausdrücke](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Tasks "SQL ausführen"](../../integration-services/control-flow/execute-sql-task.md)   
+ [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [SQL ausführen (Task)](../../integration-services/control-flow/execute-sql-task.md)   
  [Skripttask](../../integration-services/control-flow/script-task.md)  
   
   
-

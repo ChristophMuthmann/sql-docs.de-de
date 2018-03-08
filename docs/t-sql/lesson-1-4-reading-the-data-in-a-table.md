@@ -2,9 +2,12 @@
 title: Lesen der Daten in einer Tabelle (Lernprogramm) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ applies_to:
 helpviewer_keywords:
 - reading data in a table
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
-caps.latest.revision: 14
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4f808355e765cb54fa973fce76af98ae56dbdc5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 37d35412e052c6b47ef08ece1f861fcd3c44b88e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-4---reading-the-data-in-a-table"></a>Lektion 1-4 – Lesen der Daten in einer Tabelle
-Daten in einer Tabelle können mithilfe der SELECT-Anweisung gelesen werden. Die SELECT-Anweisung gehört zu den wichtigsten [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen. Ihre Syntax zeichnet sich durch unzählige Variationen aus. In diesem Lernprogramm arbeiten Sie mit fünf einfachen Versionen.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Verwenden Sie die SELECT-Anweisung zum Lesen der Daten in einer Tabelle an. Die SELECT-Anweisung gehört zu den wichtigsten [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen. Ihre Syntax zeichnet sich durch unzählige Variationen aus. In diesem Lernprogramm arbeiten Sie mit fünf einfachen Versionen.  
   
 ### <a name="to-read-the-data-in-a-table"></a>So lesen Sie die Daten in einer Tabelle  
   
@@ -98,4 +100,3 @@ Weitere Informationen zu bestimmten Funktionen, die zum Bearbeiten von Daten in 
   
   
   
-

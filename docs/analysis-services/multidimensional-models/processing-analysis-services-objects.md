@@ -2,33 +2,33 @@
 title: Verarbeiten von Analysis Services-Objekte | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 44
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b9d17eac58d4ae287f71e924d9c012f63484c21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-analysis-services-objects"></a>Verarbeiten von Analysis Services-Objekten
-  Die Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, -Cubes, -Dimensionen, -Measuregruppen, -Partitionen, -Miningmodelle und -Miningstrukturen. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, -Cubes, -Dimensionen, -Measuregruppen, -Partitionen, -Miningmodelle und -Miningstrukturen. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Es ist wichtig, dass Sie sich der möglichen Konsequenzen des Verarbeitungsverhaltens bewusst sind, um eventuelle negative Auswirkungen zu vermeiden. Wenn Sie zum Beispiel die vollständige Verarbeitung einer Dimension wählen, werden alle von dieser Dimension abhängigen Partitionen in den Status 'Nicht verarbeitet' versetzt. Davon betroffene Cubes sind dann nicht für Abfragen verfügbar, bis die abhängigen Partitionen verarbeitet sind.  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 09/01/2017
   
 |Country|Verkaufsregion|Status|  
 |-------------|------------------|-----------|  
-|USA|West|California|  
-|USA|West|Oregon|  
-|USA|West|Washington|  
+|United States|West|California|  
+|United States|West|Oregon|  
+|United States|West|Washington|  
   
  Die Verarbeitung selbst wandelt die tabellarischen Daten in verwendbare Hierarchien um. Diese Hierarchien sind vollständig angezeigte Elementnamen und werden intern durch eindeutige numerische Pfade dargestellt. Das folgende Beispiel ist eine Textdarstellung einer Hierarchie.  
   
@@ -105,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "DROP ausgelegte Anmeldeinformationen für die Datenbank (Transact-SQL) |
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - DROP DATABASE SCOPED CREDENTIAL statement
 - credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
-caps.latest.revision: 11
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3768e6b95fb991b784c7c4f29c70599970ac1453
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 96016adf491a2869054068339a7fba64f8e7fedb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE ausgelegte CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Entfernt eine datenbankbezogenen Anmeldeinformationen vom Server an.  
   
@@ -57,7 +59,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der datenbankweite Anmeldeinformationen namens `SalesAccess`.  
   
-```tsql  
+```sql  
 DROP DATABASE SCOPED CREDENTIAL AppCred;  
 GO  
 ```  
@@ -71,4 +73,3 @@ GO
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   
-

@@ -3,23 +3,27 @@ title: VDI-Spezifikation Backup - SQLServer on Linux | Microsoft Docs
 description: SQL Server Backup Virtual Device Interface Specification.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server auf Linux VDI-Client-SDK-Spezifikation
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Dokument behandelt die Schnittstellen, die von SQL Server auf Linux virtual Device Interface (VDI) Client-SDK bereitgestellt wird. Unabhängige Softwarehersteller (ISVs) können die virtuellen Sicherung Gerät Application Programming Interface (API), SQL Server in ihre Produkte integrieren. Im Allgemeinen verhält sich VDI unter Linux auf ähnliche Weise zu VDI unter Windows mit folgenden Änderungen:
 
@@ -106,7 +110,7 @@ Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschrei
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| | **Timeout** | Dies ist das Timeout in Millisekunden. Verwenden Sie INFINITE oder eine negative ganze Zahl, um Timeouts zu verhindern.
+| | **timeout** | Dies ist das Timeout in Millisekunden. Verwenden Sie INFINITE oder eine negative ganze Zahl, um Timeouts zu verhindern.
 | | **cfg** | Nach erfolgreicher Ausführung enthält diese Spalte die Konfiguration vom Server ausgewählt. Weitere Informationen finden Sie unter "Konfiguration" weiter unten in diesem Dokument.
 
 | Rückgabewerte | Argument | Erklärung
@@ -161,14 +165,14 @@ Wenn diese Funktion nicht erfolgreich ist, wird ein null-Wert durch die PpVirtua
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**Timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl derzeit verfügbar ist. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
+| |**timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl derzeit verfügbar ist. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
 | |**Timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite oder einen negativen Wert, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl verfügbar ist, bevor das Timeout abläuft. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
 | |**ppCmd** |Wenn ein Befehl wurde erfolgreich zurückgegeben wird, wird die Adresse eines Befehls zum Ausführen von Parameters zurückgegeben. Der zurückgegebene Arbeitsspeicher ist schreibgeschützt. Wenn der Befehl abgeschlossen ist, wird dieser Zeiger an die Routine CompleteCommand übergeben. Weitere Informationen zu jedem Befehl finden Sie unter "Befehle" weiter unten in diesem Dokument.
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
 | |**NOERROR ZURÜCK** |Ein Befehl wurde abgerufen.
-| |**VD_E_CLOSE ZURÜCKGEGEBEN** |Das Gerät wurde vom Server geschlossen.
+| |**VD_E_CLOSE** |Das Gerät wurde vom Server geschlossen.
 | |**VD_E_TIMEOUT** |Es wurde kein Befehl verfügbar, und vor dem abgelaufenen Timeoutintervall.
 | |**VD_E_ABORT** |Der Client oder der Server hat die SignalAbort verwendet, um ein Herunterfahren erzwungen.
 
@@ -325,6 +329,5 @@ Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weite
 | |**VD_E_INVALID** |Die PpBuffer ist ein ungültiges Handle.
 
 **"Hinweise"** muss darauf geachtet werden auf die Handles ordnungsgemäß zu kommunizieren. Ziehpunkte werden für einen einzelnen virtuellen Gerät Satz lokal. Die Partner-Prozesse, die Freigabe ein Handle müssen diesen Puffer sicherstellen, dass die Handles, nur innerhalb des Bereichs des virtuellen Geräts verwendet werden aus dem Puffer ursprünglich abgerufen wurde festgelegt.
-
 
 

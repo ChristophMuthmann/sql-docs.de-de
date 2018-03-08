@@ -1,10 +1,13 @@
 ---
 title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - ARITHIGNORE option
 - divide-by-zero errors
 ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 779510e1a7a302fc4bfd4a730b88db9c4b4a4b1b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8229ccdae1e3074bf8f726a9dfdfcc4e52b8df5e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Steuert die Rückgabe von Fehlermeldungen, die wegen Überlauffehlern oder Fehlern aufgrund einer Division durch Null während einer Abfrage auftreten.  
   
@@ -44,19 +46,17 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SET ARITHIGNORE { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ARITHIGNORE { ON | OFF }
+```
+
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHIGNORE OFF   
-[ ; ]  
-```  
-  
+
+SET ARITHIGNORE OFF
+```
+
 ## <a name="remarks"></a>Hinweise  
  Die SET ARITHIGNORE-Einstellung steuert lediglich, ob eine Fehlermeldung zurückgegeben wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt unabhängig von dieser Einstellung in einer Berechnung NULL zurück, wenn ein Überlauf- oder Division-durch-0-Fehler auftritt. Mithilfe der SET ARITHABORT-Einstellung kann bestimmt werden, ob die Abfrage beendet wird. Diese Einstellung wirkt sich nicht auf Fehler aus, die im Verlauf von INSERT-, UPDATE- und DELETE-Anweisungen auftreten.  
   
@@ -121,5 +121,4 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
  [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
-
 

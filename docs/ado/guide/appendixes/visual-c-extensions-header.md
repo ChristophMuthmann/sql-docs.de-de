@@ -3,7 +3,7 @@ title: Visual C++-Erweiterungen-Header | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bd4add0612acdf4d55dc8ba17d0ba13b9c2f804d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d9065ef0ee22ce415fa764a8572ec4effdb3c61
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungen-Header
 Die folgende Kopfzeile **icrsint.h**, die Schnittstelle, die Clients zum Abrufen von Feldern aus können Sie details einer **Recordset** in Variablen, die in einer abgeleiteten Klasse definierten **CADORecordBinding**. Sie müssen ein ADO-Bindung-Makro für jedes Feld angeben, die Sie zugreifen möchten.  
@@ -218,4 +217,3 @@ public:
 ## <a name="see-also"></a>Siehe auch  
  [Visual C++-Erweiterungen-Beispiel](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Verwenden von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md)
-

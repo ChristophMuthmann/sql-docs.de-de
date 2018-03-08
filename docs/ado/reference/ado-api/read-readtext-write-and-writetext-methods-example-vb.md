@@ -3,7 +3,7 @@ title: Lesen, ReadText, schreiben und WriteText-Methoden-Beispiel (VB) | Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Read method [ADO], Visual Basic example
 - WriteText method [ADO], Visual Basic example
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c51ca097f3c1a9c71dbd75d00f7411b6dd61d03b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c90b463c42d7f0cc289fdc35620f610a5a2980ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Lesen, ReadText, schreiben und WriteText-Methoden-Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, wie der Inhalt eines Textfelds in beide einen Text zu lesen [Stream](../../../ado/reference/ado-api/stream-object-ado.md) und eine binäre **Stream**. Einschließen von anderen Eigenschaften und Methoden gezeigt [Position](../../../ado/reference/ado-api/position-property-ado.md), [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), und [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
@@ -128,4 +127,3 @@ End Sub
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Write-Methode](../../../ado/reference/ado-api/write-method.md)   
  [WriteText-Methode](../../../ado/reference/ado-api/writetext-method.md)
-

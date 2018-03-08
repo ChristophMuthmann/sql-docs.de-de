@@ -3,10 +3,12 @@ title: 'C, um SQL: Tag-Zeitintervalle | Microsoft Docs'
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f6c08356a4a46c1a1520dcced93cfd11c0920474
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61c271a9de10bbc43db116f576b0c34589f899f3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C, um SQL: Tag-Zeiträume
 Der Bezeichner für die Tag-Zeitintervall ODBC C-Datentypen sind:  
@@ -90,4 +91,3 @@ SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_INTERVAL_DAY_TO_SECOND,
 // whose data type is SQL_INTERVAL_DAY_TO_MINUTE.  
 SQLExecDirect(hstmt,"INSERT INTO table(interval_column) VALUES (?)",SQL_NTS);  
 ```
-

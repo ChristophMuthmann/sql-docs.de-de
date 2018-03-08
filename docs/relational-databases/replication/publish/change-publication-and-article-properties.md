@@ -2,11 +2,13 @@
 title: "Ändern von Veröffentlichungs- und Artikeleigenschaften | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +18,23 @@ helpviewer_keywords:
 - publications [SQL Server replication], changing properties
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4d4c3677959b074a2c3b30c6fc6abc31ccda7a43
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "20"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2322ccf6cb2543f772aa72218ab0dcddce876223
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
-  Nach dem Erstellen einer Veröffentlichung können die meisten Veröffentlichungs- und Artikeleigenschaften geändert werden. Bei Änderungen bestimmter Eigenschaften muss jedoch die Momentaufnahme erneut generiert und/oder die Abonnements müssen erneut initialisiert werden. Dieses Thema enthält Informationen zu allen Eigenschaften, bei deren Änderung eine oder beide der genannten Aktionen erforderlich werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nach dem Erstellen einer Veröffentlichung können die meisten Veröffentlichungs- und Artikeleigenschaften geändert werden. Bei Änderungen bestimmter Eigenschaften muss jedoch die Momentaufnahme erneut generiert und/oder die Abonnements müssen erneut initialisiert werden. Dieses Thema enthält Informationen zu allen Eigenschaften, bei deren Änderung eine oder beide der genannten Aktionen erforderlich werden.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Veröffentlichungseigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changepublication**|**sync_method**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -46,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Artikeleigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels|**sp_droparticle**|Alle Parameter|Artikel können vor dem Erstellen von Abonnements gelöscht werden. Bei Verwendung von gespeicherten Prozeduren kann ein Abonnement eines Artikels gelöscht werden; wird dagegen [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwendet, muss das gesamte Abonnement gelöscht, neu erstellt und synchronisiert werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Ändern eines Spaltenfilters|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="publication-properties-for-merge-replication"></a>Veröffentlichungseigenschaften für die Mergereplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changemergepublication**|**sync_mode**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -83,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="article-properties-for-merge-replication"></a>Artikeleigenschaften für die Mergereplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels, der den zuletzt parametrisierten Filter in der Veröffentlichung enthält|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels, der einem Joinfilter oder einem logischen Datensatz übergeordnet ist (mit der Nebenwirkung, dass der Join gelöscht wird).|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
@@ -96,7 +98,7 @@ ms.lasthandoff: 06/22/2017
 |Aktivieren bzw. Deaktivieren von nur zum Herunterladen berechtigten Abonnements (beim Ändern in oder aus andere(n) Uploadoptionen sind keine gesonderten Aktionen erforderlich)|**sp_changemergearticle**|Ändern in den oder aus dem Wert **2** für **subscriber_upload_options**|Erneutes Initialisieren von Abonnements|  
 |Ändern des Besitzers der Zieltabelle|**sp_changemergearticle**|**destination_owner**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Erstellen und Anwenden der Momentaufnahme](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   

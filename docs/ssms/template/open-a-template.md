@@ -3,30 +3,31 @@ title: "Öffnen einer Vorlage | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-templates
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - templates [Transact-SQL], opening
 - opening templates
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fdf01f10ec6de0b63b1981f59cc6ba541b4de7c2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 346cfa3d8fbeaa4b85f600aa7928edebf47a7661
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-template"></a>Öffnen einer Vorlage
-Sie können eine Vorlage über den Vorlagen-Explorer öffnen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können eine Vorlage über den Vorlagen-Explorer öffnen.  
   
 ## <a name="to-open-a-template-from-template-explorer"></a>So öffnen Sie eine Vorlage über den Vorlagen-Explorer  
 Vorlagen lassen sich über den Vorlagen-Explorer öffnen.  
@@ -47,8 +48,7 @@ Sobald die Vorlage geöffnet ist, können Sie im Dialogfeld **Vorlagenparameter 
   
 Wird durch das Öffnen einer Vorlage ein neues Editor-Fenster geöffnet, erfolgt dies mit den Anmeldeinformationen der aktuellen aktiven Verbindung. Ist beispielsweise beim Öffnen einer CREATE DATABASE-Vorlage eine [!INCLUDE[ssDE](../../includes/ssde_md.md)] -Instanz im Objekt-Explorer fokussiert, wird ein neues Editor-Fenster mit einer Verbindung zu dieser Instanz geöffnet. Ist keine aktive Verbindung vorhanden, gibt [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ein Anmeldedialogfeld zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Vorlagen-Explorer](../../ssms/template/template-explorer.md)  
 [Vorlagenparameter ersetzen](../../ssms/template/replace-template-parameters.md)  
   
-

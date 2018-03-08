@@ -2,30 +2,31 @@
 title: "Trennen und Anfügen von DQS-Datenbanken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "9"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a068286adbcacf5edf77e44e4f9b91059663e58f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 00f259597e28f7c2cf841f71dfeaf18467f1ebb0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Trennen und Anfügen von DQS-Datenbanken
   In diesem Thema wird beschrieben, wie DQS-Datenbanken getrennt und angefügt werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Limitations"></a> Einschränkungen  
  Eine Liste der Einschränkungen finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)getrennt wird.  
@@ -104,8 +105,7 @@ ms.lasthandoff: 09/09/2017
   
  Sie können DQS-Datenbanken auch mithilfe der Transact-SQL-Anweisungen anfügen. Weitere Informationen zum Anfügen von Datenbanken mithilfe von Transact-SQL-Anweisungen finden Sie unter [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) in [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von DQS-Datenbanken](../data-quality-services/manage-dqs-databases.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Hierarchische Recordsets in XML | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3e33d176e47a9d509c504755d336985bb8a060df
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c5d4a03801d4f126185ba63fe3fb6409947219bf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Hierarchische Recordsets im XML-Format
 ADO ermöglicht Persistenz hierarchische Recordset-Objekte in XML. Mit hierarchischen Recordset-Objekte ist der Wert eines Felds in der übergeordneten Recordset eine andere Recordset. Diese Felder werden als untergeordnete Elemente in der XML-Datenstrom, anstatt ein Attribut dargestellt.  
@@ -134,4 +133,3 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

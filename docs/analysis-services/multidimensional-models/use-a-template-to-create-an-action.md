@@ -2,30 +2,30 @@
 title: Verwenden Sie eine Vorlage zum Erstellen einer Aktion | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d4c4be707a45efa922109e695bad0991e4416e6a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d6d22f74c7e522d06b05eb93539d9b4bfa4654a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-a-template-to-create-an-action"></a>Verwenden einer Vorlage zum Erstellen einer Aktion
-  Die Sicht **Aktionen** im Cube-Designer enthält eine Reihe von Vorlagen, mit denen Sie allgemeine Aktionen erstellen können. Der Zugriff auf den Cube-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Sicht **Aktionen** im Cube-Designer enthält eine Reihe von Vorlagen, mit denen Sie allgemeine Aktionen erstellen können. Der Zugriff auf den Cube-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich.  
   
 > [!NOTE]  
 >  Nachdem Sie die Aktion erstellt haben, ist sie nach einer Aktualisierung oder erneuten Verarbeitung des Cubes für die Benutzer verfügbar. Weitere Informationen finden Sie unter [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
@@ -42,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
   
   
-

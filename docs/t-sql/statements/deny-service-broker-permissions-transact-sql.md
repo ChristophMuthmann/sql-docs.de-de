@@ -3,8 +3,11 @@ title: Verweigern von Berechtigungen von Service Broker (Transact-SQL) | Microso
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed0ab0e375ecddbf9086647adce744a8ef4cb53d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Berechtigungen von Service Broker) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verweigert Berechtigungen für einen Vertrag, Nachrichtentyp, eine Remotedienstbindung, Route oder einen Dienst von [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -59,22 +61,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für ein sicherbares Element von [!INCLUDE[ssSB](../../includes/sssb-md.md)] verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- Vertrag **::***Contract_name*  
+ Vertrag **:: *** Contract_name*  
  Gibt den Vertrag an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- NACHRICHTENTYP **::***Message_type_name*  
+ NACHRICHTENTYP **:: *** Message_type_name*  
  Gibt den Nachrichtentyp an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- REMOTE SERVICE BINDING **::***Remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** Remote_binding_name*  
  Gibt die Remotedienstbindung an, für die die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- ROUTE **::***Route_name*  
+ ROUTE **::***route_name*  
  Gibt die Route an, für die die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- Dienst **::***Message_type_name*  
+ Dienst **:: *** Message_type_name*  
  Gibt den Dienst an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
@@ -169,4 +171,3 @@ CASCADE
  [Berechtigungen &#40; Datenbankmodul &#41;](../../relational-databases/security/permissions-database-engine.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - Migrate database
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4226b33bd805aca7e38781d5a55eb990f61e4e69
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: d92da3c51843ee10b0c781bb400109abf04fefab
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
-  Importieren Sie eine Datei einer Datenebenenanwendung (DAC) (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]oder auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Importieren Sie eine Datei einer Datenebenenanwendung (DAC) (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Importvorgang wird in zwei Phasen eine neue DAC erstellt.  
@@ -58,10 +60,10 @@ ms.lasthandoff: 06/22/2017
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Eine DAC kann in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , die unter [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher ausgeführt wird, importiert werden. Wenn Sie eine DAC aus einer höheren Version exportieren, kann die DAC Objekte enthalten, die von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]nicht unterstützt werden. Sie können diese DACs nicht auf Instanzen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]bereitstellen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Das Importieren einer DAC-Exportdatei aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Dateien können schädlichen Code enthalten, der möglicherweise unbeabsichtigten Transact-SQL-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine Exportdatei aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, entpacken Sie die DAC, und untersuchen Sie den Code, z. B. gespeicherte Prozeduren und anderen benutzerdefinierten Code. Weitere Informationen zum Ausführen dieser Tests finden Sie unter [Validate a DAC Package](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx).  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Zur Erhöhung der Sicherheit werden die Anmeldenamen für die SQL Server-Authentifizierung ohne Kennwort in eine DAC-Exportdatei gespeichert. Sobald die Datei importiert wird, wird der Anmeldename als deaktivierter Anmeldename mit einem generierten Kennwort erstellt. Um die Anmeldenamen zu aktivieren, melden Sie sich unter einem Anmeldenamen an, der über die ALTER ANY LOGIN-Berechtigung verfügt, und verwenden ALTER LOGIN, um den Anmeldenamen zu aktivieren und ein neues Kennwort zuzuweisen, das dem Benutzer mitgeteilt werden kann. Dies ist für Anmeldenamen der Windows-Authentifizierung nicht erforderlich, da die zugehörigen Kennwörter nicht von SQL Server verwaltet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -146,10 +148,9 @@ ms.lasthandoff: 06/22/2017
   
  Klicken Sie auf **Schließen** , um den Assistenten zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Importieren einer BACPAC-Datei zum Erstellen einer neuen Azure SQL-Datenbank](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportieren einer Datenebenenanwendung](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   
-

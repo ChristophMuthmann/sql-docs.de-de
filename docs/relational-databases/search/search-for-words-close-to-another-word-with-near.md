@@ -2,9 +2,12 @@
 title: "Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -20,19 +23,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aaff4768722fa830cccf9e2ee397945f0866ae07
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 74732252ddb62adc02b532a23fdfe588fbbed2b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
-  Sie können in einem [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-Prädikat oder in einer [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Funktion mithilfe des *Näherungsbegriffs* **NEAR** nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Sie können in einem [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-Prädikat oder in einer [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Funktion mithilfe des *Näherungsbegriffs* **NEAR** nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. 
   
 ##  <a name="Custom_NEAR"></a> Übersicht über NEAR  
 **NEAR** umfasst die folgenden Funktionen:  
@@ -78,7 +82,7 @@ Weitere Informationen zur Syntax finden Sie unter [CONTAINS &#40;Transact-SQL&#4
 ### <a name="example-1"></a>Beispiel 1
  Sie können z. B. innerhalb der zwei Begriffe von 'Smith' wie folgt nach 'John' suchen:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -91,7 +95,7 @@ Weitere Informationen zur Syntax finden Sie unter [CONTAINS &#40;Transact-SQL&#4
 ### <a name="example-2"></a>Beispiel 2
  Im folgenden Beispiel wird die Tabelle `Production.Document` der Beispieldatenbank `AdventureWorks` nach allen Dokumentzusammenfassungen durchsucht, bei denen das Wort "reflector" im selben Dokument wie das Wort "bracket" enthalten ist.  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -114,15 +118,15 @@ GO
 ## <a name="combine-near-with-other-terms"></a>Kombinieren von NEAR mit anderen Begriffen  
  Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND *Begriff3*')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND *Begriff3*')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) OR *Begriff3*')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) OR *Begriff3*')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND NOT *Begriff3*')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND NOT *Begriff3*')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND NEAR((*Begriff3*,*Begriff4*),2)')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND NEAR((*Begriff3*, *Begriff4*),2)')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) OR NEAR((*Begriff3*,*Begriff4*),2, TRUE)')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) OR NEAR((*Begriff3*, *Begriff4*),2, TRUE)')  
   
  Beispiel:  
   
@@ -151,14 +155,13 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   Auswirkungen von NEAR-Begriffen auf das Generieren der Rangfolge durch die CONTAINSTABLE-Funktion  
   
-    Wenn NEAR in der CONTAINSTABLE-Funktion verwendet wird, wirken sich die Anzahl der Treffer in einem Dokument relativ zu seiner Länge sowie der Abstand zwischen dem ersten und dem letzten Suchbegriff in den einzelnen Treffern auf die Rangfolge des jeweiligen Dokuments aus. Wenn für einen generischen NEAR-Begriff die gefundenen Suchbegriffe >50 logische Begriffe auseinander liegen, ist der für ein Dokument zurückgegebene Rang gleich 0 (null). Wenn für einen benutzerdefinierten NEAR-Begriff keine ganze Zahl als maximaler Abstand angegeben ist, erhält ein Dokument, das nur Treffer mit einer Lücke >100 logische Begriffe aufweist, den Rang 0 (null). Weitere Informationen zum Generieren der Rangfolge bei benutzerdefinierten NEAR-Suchen finden Sie unter [Einschränken von Suchergebnissen mit RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
+    Wenn NEAR in der CONTAINSTABLE-Funktion verwendet wird, wirken sich die Anzahl der Treffer in einem Dokument relativ zu seiner Länge sowie der Abstand zwischen dem ersten und dem letzten Suchbegriff in den einzelnen Treffern auf die Rangfolge des jeweiligen Dokuments aus. Wenn für einen generischen NEAR-Begriff die gefundenen Suchbegriffe >50 logische Begriffe auseinander liegen, ist der für ein Dokument zurückgegebene Rang gleich 0 (null). Wenn für einen benutzerdefinierten NEAR-Begriff keine ganze Zahl als maximaler Abstand angegeben ist, erhält ein Dokument, das nur Treffer mit einer Lücke >100 logische Begriffe aufweist, den Rang 0 (null). Weitere Informationen zum Generieren der Rangfolge bei benutzerdefinierten NEAR-Suchen finden Sie unter [Einschränken von Suchergebnissen mit RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
   
 -   **Füllwörtertransformation** (Serveroption)  
   
      Der Wert von **Füllwörtertransformation** wirkt sich darauf aus, wie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stoppwörter behandelt werden, wenn diese in NEAR-Suchen angegeben sind. Weitere Informationen finden Sie unter [Füllwörtertransformation (Serverkonfigurationsoption)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
-

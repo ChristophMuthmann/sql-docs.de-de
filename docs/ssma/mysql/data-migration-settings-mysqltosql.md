@@ -1,29 +1,30 @@
 ---
 title: Daten-Migrationseinstellungen (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5776d0e27ab6d68b83ce0e8ce7c9ddb667b13f1a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 86d7e6160ab17ecb7a12beb058d33172705342a8
-ms.contentlocale: de-de
-ms.lasthandoff: 10/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Daten-Migrationseinstellungen (MySQLToSQL)
   
@@ -63,4 +64,3 @@ Es begrenzt sind zwei Schaltflächen vorhanden.:
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von MySQL-Daten in SQL Server-oder SQL Azure](http://msdn.microsoft.com/en-us/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   
-

@@ -1,31 +1,31 @@
 ---
-title: "DAX in tabellarischen Modellen (SSAS – tabellarisch) | Microsoft Docs"
+title: DAX in tabellarischen Modellen | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX in tabellarischen Modellen (SSAS – tabellarisch)
-  Data Analysis Expressions (DAX) ist eine Formelsprache, die zum Erstellen von benutzerdefinierter Berechnungen in Analysis Services, Power BI Desktop und Power Pivot in Excel verwendet. DAX-Formeln beinhalten Funktionen, Operatoren und Werte zum Ausführen erweiterter Berechnungen für Daten in Tabellen und Spalten.  
+# <a name="dax-in-tabular-models"></a>DAX in tabellarischen Modellen 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Data Analysis Expressions (DAX) ist eine Formelsprache, die zum Erstellen von benutzerdefinierter Berechnungen in Analysis Services, Power BI Desktop und Power Pivot in Excel verwendet. DAX-Formeln beinhalten Funktionen, Operatoren und Werte zum Ausführen erweiterter Berechnungen für Daten in Tabellen und Spalten.  
   
  Obwohl DAX in Analysis Services, Power BI Desktop und Power Pivot in Excel verwendet wird, gilt das in diesem Thema mehr Analysis Services-tabellenmodellprojekte in SQL Server Data Tools (SSDT) erstellt.  
   
@@ -367,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Die Verarbeitung und die Neuberechnung haben nur dann Auswirkungen auf Zeilenfilterformeln, wenn das Ergebnis einer Neuberechnung einen anderen Wert zurückgibt, durch den die Zeile für Rollenmitglieder abfragbar oder nicht abfragbar wird.  
   
- Weitere Informationen finden Sie unter [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Weitere Informationen finden Sie unter [Verarbeitungsdaten](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Beheben von Fehlern in Formeln  
  Wenn Sie beim Definieren einer Formel einen Fehler erhalten, enthält die Formel eventuell entweder einen *Syntaxfehler*, einen *Semantikfehler*oder einen *Berechnungsfehler*.  
@@ -404,4 +404,3 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Unterstützte Datenquellen](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
-

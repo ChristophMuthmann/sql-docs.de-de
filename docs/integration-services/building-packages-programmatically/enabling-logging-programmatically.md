@@ -1,12 +1,14 @@
 ---
-title: Programmgesteuertes Aktivieren der Protokollierung | Microsoft Docs
+title: Programmgesteuertes Aktivieren der Protokollierung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,17 +27,16 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-caps.latest.revision: 50
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: dd512f022832b57aa3fdcb85260926dd8354298c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e9a3eafea038aa10da1bd21e1ab89c6c3f6fcdbb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enabling-logging-programmatically"></a>Programmgesteuertes Aktivieren der Protokollierung
   Das Laufzeitmodul stellt eine Auflistung von <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>-Objekten bereit, mit deren Hilfe ereignisspezifische Informationen während der Paketüberprüfung und -ausführung aufgezeichnet werden können. <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>-Objekte sind für <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>-Objekte verfügbar; hierzu zählen auch die Objekte <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> und <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. Die Protokollierung wird für einzelne Container oder das gesamte Paket aktiviert.  
@@ -43,22 +44,22 @@ ms.lasthandoff: 08/03/2017
  Es gibt mehrere Typen von Protokollanbietern, die für einen zu verwendenden Container verfügbar sind. Dies bietet die Flexibilität, Protokollinformationen in vielen verschiedenen Formaten erstellen und speichern zu können. Das Eintragen eines Containerobjekts zur Protokollierung umfasst zwei Schritte. Zuerst wird die Protokollierung aktiviert, und im zweiten Schritt wird ein Protokollanbieter ausgewählt. Die Eigenschaften <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> und <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> des Containers werden zum Angeben der protokollierten Ereignisse und zum Auswählen des Protokollanbieters verwendet.  
   
 ## <a name="enabling-logging"></a>Aktivieren der Protokollierung  
- Die <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>-Eigenschaft ist in jedem Container verfügbar, der eine Protokollierung ausführen kann, und legt fest, ob die Ereignisinformationen des Containers im Ereignisprotokoll aufgezeichnet werden. Der Eigenschaft wird ein Wert aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>-Struktur zugewiesen, sie wird standardmäßig vom übergeordneten Container geerbt. Die Eigenschaft wird verwendet, wenn der Container ein Paket ist und daher kein übergeordnetes Element verfügt, das <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, die standardmäßig die **deaktiviert**.  
+ Die <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>-Eigenschaft ist in jedem Container verfügbar, der eine Protokollierung ausführen kann, und legt fest, ob die Ereignisinformationen des Containers im Ereignisprotokoll aufgezeichnet werden. Der Eigenschaft wird ein Wert aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>-Struktur zugewiesen, sie wird standardmäßig vom übergeordneten Container geerbt. Wenn der Container ein Paket ist und deshalb keinen übergeordneten Container hat, verwendet die Eigenschaft die <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, die standardmäßig auf **Deaktiviert** festgelegt ist.  
   
 ### <a name="selecting-a-log-provider"></a>Auswählen eines Protokollanbieters  
- Nach der <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> -Eigenschaftensatz auf **aktiviert**, ein Protokollanbieter hinzugefügt wird die <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> -Auflistung des Containers, um den Vorgang abzuschließen. Die <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders>-Auflistung steht im <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions>-Objekt zur Verfügung und enthält die für den Container ausgewählten Protokollanbieter. Zum Erstellen eines Anbieters und Hinzufügen dieses Anbieters zu einer Auflistung wird die <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A>-Methode aufgerufen. Die Methode gibt daraufhin den Protokollanbieter zurück, der der Auflistung hinzugefügt wurde. Jeder Anbieter verfügt über eindeutige Konfigurationseinstellungen, und diese Eigenschaften werden mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>-Eigenschaft festgelegt.  
+ Nachdem die <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>-Eigenschaft auf **Aktiviert** festgelegt wurde, wird der <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders>-Auflistung des Containers ein Protokollanbieter hinzugefügt, um den Prozess abzuschließen. Die <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders>-Auflistung steht im <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions>-Objekt zur Verfügung und enthält die für den Container ausgewählten Protokollanbieter. Zum Erstellen eines Anbieters und Hinzufügen dieses Anbieters zu einer Auflistung wird die <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A>-Methode aufgerufen. Die Methode gibt daraufhin den Protokollanbieter zurück, der der Auflistung hinzugefügt wurde. Jeder Anbieter verfügt über eindeutige Konfigurationseinstellungen, und diese Eigenschaften werden mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>-Eigenschaft festgelegt.  
   
  In der folgenden Tabelle werden die verfügbaren Protokollanbieter, ihre Beschreibung und ihre <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>-Informationen aufgeführt.  
   
 |Anbieter|Description|ConfigString-Eigenschaft|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Generiert SQL-Ablaufverfolgungen, die aufgezeichnet und im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Profiler angezeigt werden können. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist TRC.|Es ist keine Konfiguration erforderlich.|  
-|SQL Server|Schreibt Ereignisprotokolleinträge in die **Sysssislog** Tabelle in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter erfordert eine angegebene Verbindung zur Datenbank sowie den Namen der Zieldatenbank.|  
+|SQL Server|Schreibt in allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken Ereignisprotokolleinträge in die **sysssislog**-Tabelle.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter erfordert eine angegebene Verbindung zur Datenbank sowie den Namen der Zieldatenbank.|  
 |Textdatei|Schreibt Ereignisprotokolleinträge im durch Trennzeichen getrennten CSV-Format in ASCII-Textdateien. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist LOG.|Der Name eines Dateiverbindungs-Managers.|  
 |Windows-Ereignisprotokoll|Schreibt Protokolle in das Anwendungsprotokoll im standardmäßigen Windows-Ereignisprotokoll auf dem lokalen Computer.|Es ist keine Konfiguration erforderlich.|  
 |XML-Datei|Schreibt Ereignisprotokolleinträge in Dateien im XML-Format. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist XML.|Der Name eines Dateiverbindungs-Managers.|  
   
- Ereignisse enthalten sind, oder aus dem Ereignisprotokoll ausgeschlossen werden, indem die **EventFilterKind** und **EventFilter** Eigenschaften des Containers. Der **EventFilterKind** Struktur enthält zwei Werte **ExclusionFilter** und **InclusionFilter**, die angeben, ob die Ereignisse, die sind hinzugefügt der **EventFilter** in das Ereignisprotokoll enthalten sind. Die **EventFilter** Eigenschaft ist ein Zeichenfolgenarray, das die Namen der Ereignisse, die Gegenstand enthält der Filterung sind, dann zugewiesen.  
+ Ob Ereignisse in das Ereignisprotokoll aufgenommen werden oder nicht, wird über die **EventFilterKind**-Eigenschaft und die **EventFilter**-Eigenschaft des Containers festgelegt. Die **EventFilterKind**-Struktur enthält zwei Werte, **ExclusionFilter** und **InclusionFilter**, die angeben, ob die Ereignisse, die **EventFilter** hinzugefügt werden, im Ereignisprotokoll enthalten sind. Der **EventFilter**-Eigenschaft wird daraufhin ein Zeichenfolgenarray mit den Namen der Ereignisse zugewiesen, nach denen gefiltert wurde.  
   
  Mit dem folgenden Code wird die Protokollfunktion eines Pakets aktiviert, der Protokollanbieter für Textdateien zur <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders>-Auflistung hinzugefügt und eine Liste der Ereignisse angegeben, die in die Protokollausgabe aufgenommen werden sollen.  
   
@@ -121,8 +122,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Protokollierung](../../integration-services/performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

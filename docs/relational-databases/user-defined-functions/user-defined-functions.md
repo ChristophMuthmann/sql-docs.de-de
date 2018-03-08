@@ -2,9 +2,12 @@
 title: Benutzerdefinierte Funktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 03521903614a187ca0af708dd318bbc9b3ae599d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
-ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
-  Ebenso wie Funktionen in Programmiersprachen sind auch benutzerdefinierte Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Routinen, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben können. Der Rückgabewert kann ein einzelner Skalarwert oder ein Resultset sein.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Ebenso wie Funktionen in Programmiersprachen sind auch benutzerdefinierte Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Routinen, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben können. Der Rückgabewert kann ein einzelner Skalarwert oder ein Resultset sein.  
    
 ##  <a name="Benefits"></a> Benutzerdefinierte Funktionen  
 Warum diese verwenden? 
@@ -46,7 +49,7 @@ Warum diese verwenden?
      Eine Operation, die Daten basierend auf einer komplexen Einschränkung filtert, die nicht als einzelner Skalarausdruck ausgedrückt werden kann, kann als Funktion definiert werden. Diese Funktion kann anschließend in der WHERE-Klausel aufgerufen werden, um die Anzahl der Zeilen zu verringern, die an den Client gesendet werden.  
   
 > [!NOTE]
-> Benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen in Abfragen können nur auf einem einzelnen Thread (serieller Ausführungsplan) ausgeführt werden.  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen in Abfragen können nur auf einem einzelnen Thread (serieller Ausführungsplan) ausgeführt werden.  
   
 ##  <a name="FunctionTypes"></a> Funktionstypen  
 **Skalarfunktion**  
@@ -60,7 +63,7 @@ Warum diese verwenden?
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt viele Systemfunktionen bereit, mit denen Sie eine Vielzahl von Vorgängen ausführen können. Sie können nicht geändert werden. Weitere Informationen finden Sie unter [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Systemgespeicherte Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) und [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Richtlinien  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehler, die dazu führen, dass eine Anweisung abgebrochen und mit der nächsten Anweisung fortgefahren wird (z.B. Trigger oder gespeicherte Prozeduren), werden innerhalb einer Funktion anders behandelt. In Funktionen bewirken solche Fehler, dass die Ausführung der Funktion beendet wird. Dies hat wiederum zur Folge, dass die Anweisung abgebrochen wird, die die Funktion aufgerufen hat.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] -Fehler, die dazu führen, dass eine Anweisung abgebrochen und mit der nächsten Anweisung fortgefahren wird (z. B. Trigger oder gespeicherte Prozeduren), werden innerhalb einer Funktion anders behandelt. In Funktionen bewirken solche Fehler, dass die Ausführung der Funktion beendet wird. Dies hat wiederum zur Folge, dass die Anweisung abgebrochen wird, die die Funktion aufgerufen hat.  
   
  Die Anweisungen in einem BEGIN…END-Block dürfen keine Nebeneffekte haben. Nebeneffekte von Funktionen sind dauerhafte Änderungen am Status einer Ressource, deren Gültigkeitsbereich außerhalb der Funktion liegt, wie z. B. Änderungen an einer Datenbanktabelle. Die einzigen Änderungen, die von den Anweisungen in der Funktion vorgenommen werden dürfen, sind Änderungen an lokalen Objekten der Funktion, wie z. B. lokale Cursor oder Variablen. Änderungen an Datenbanktabellen, Cursorvorgänge außerhalb der Funktion, das Senden von E-Mails, das Ausführen einer Katalogänderung und das Generieren eines Resultsets, das an den Benutzer zurückgegeben wird, sind Beispiele für Aktionen, die in einer Funktion nicht ausgeführt werden können.  
   
@@ -141,4 +144,3 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |Beschreibt, wie die Definition einer benutzerdefinierten Funktion angezeigt wird.|[Anzeigen benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-

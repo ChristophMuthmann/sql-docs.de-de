@@ -2,9 +2,12 @@
 title: "Anforderungen und Einschränkungen für XML-Schemasammlungen auf dem Server | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -24,28 +27,29 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 84
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1cf19211d774242d0f4b88bc089fb8ece06b511
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: e60de9c75202dc0c5c02a8765a1c2f8d4c631498
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
-  Die Überprüfung mit der XML-Schemadefinitionssprache (XSD) weist einige Einschränkungen für SQL-Spalten auf, die den **xml** -Datentyp verwenden. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Die Überprüfung mit der XML-Schemadefinitionssprache (XSD) weist einige Einschränkungen für SQL-Spalten auf, die den **xml** -Datentyp verwenden. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  
   
 |Element|Einschränkung|  
 |----------|----------------|  
 |**minOccurs** und **maxOccurs**|Die Werte für **minOccurs** - und **maxOccurs** -Attribute müssen in ganze 4-Byte-Zahlen passen. Schemas, die diese Bedingung nicht erfüllen, werden vom Server zurückgewiesen.|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist Schemas zurück, die einen **\<xsd:choice>**-Partikel ohne untergeordnete Elemente besitzen, es sei denn, der Partikel ist mit einem **minOccurs**-Attributwert von Null definiert.|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist Schemas zurück, die einen **\<xsd:choice>**-Partikel ohne untergeordnete Elemente besitzen, es sei denn, der Partikel ist mit dem **minOccurs**-Attributwert Null definiert.|  
 |**\<xsd:include>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die dieses Element enthalten, werden vom Server zurückgewiesen.<br /><br /> Als Lösung können XML-Schemas, die die **\<<xsd:include>**-Direktive enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Weitere Informationen finden Sie unter [Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>**,  **\<xsd: keyref>** und **\<xsd: unique>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese XSD-basierten Einschränkungen zum Erzwingen der Eindeutigkeit oder zum Einrichten von Schlüsseln oder Schlüsselverweisen nicht. XML-Schemas, die diese Elemente enthalten, können nicht registriert werden.|  
-|**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. Informationen über eine andere Möglichkeit, Schemas zu aktualisieren, finden Sie unter [Das &#60;xsd:redefine&#62;-Element](../../relational-databases/xml/the-xsd-redefine-element.md)bereit.|  
-|**\<xsd:simpleType>**-Werte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Millisekundengenauigkeit für simple-Datentypen, die Sekundenkomponenten besitzen – mit Ausnahme von **xs:time** und **xs:dateTime**–, sowie eine Genauigkeit von 100 Nanosekunden für **xs:time** und **xs:dateTime**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Einschränkungen für alle erkannten XSD-Enumerationen des einfachen Typs fest.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den „NaN“-Wert in **\<xsd:simpleType>**-Deklarationen.<br /><br /> Weitere Informationen finden Sie unter[Werte für &#60;xsd:simpleType&#62;-Deklarationen](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)bereit.|  
+|**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt dieses Element nicht. Informationen über eine andere Möglichkeit, Schemas zu aktualisieren, finden Sie unter [Das &#60;xsd:redefine&#62;-Element](../../relational-databases/xml/the-xsd-redefine-element.md)bereit.|  
+|**\<xsd:simpleType>**-Werte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Millisekundengenauigkeit für simple-Datentypen, die Sekundenkomponenten besitzen – mit Ausnahme von **xs:time** und **xs:dateTime** –, sowie eine Genauigkeit von 100 Nanosekunden für **xs:time** und **xs:dateTime**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Einschränkungen für alle erkannten XSD-Enumerationen des einfachen Typs fest.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den Wert „NaN“ in **\<xsd:simpleType>**-Deklarationen.<br /><br /> Weitere Informationen finden Sie unter[Werte für &#60;xsd:simpleType&#62;-Deklarationen](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)bereit.|  
 |**xsi:schemaLocation** und **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignoriert diese Attribute, wenn sie in den XML-Instanzdaten vorhanden sind, die in eine Spalte oder Variable des **xml** -Datentyps eingefügt werden.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine von **xs:QName** abgeleiteten Typen, die ein Beschränkungselement des XML-Schemas verwenden.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine union-Typen, die **xs:QName** als Memberelement besitzen.<br /><br /> Weitere Informationen finden Sie unter [Der xs:QName-Typ](../../relational-databases/xml/the-xs-qname-type.md).|  
 |Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe|Das Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe in einer XML-Schemaauflistung wird nicht unterstützt. Eine Ersetzungsgruppe in einem XML-Schema ist insofern eingeschränkt, als das Headelement und alle seine Memberelemente in der gleichen {CREATE &#124; ALTER} XML SCHEMA COLLECTION-Anweisung definiert werden müssen.|  
@@ -66,7 +70,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Beschreibt kanonische Formen und Musterbeschränkungen.|  
 |[Platzhalterkomponenten und Inhaltsüberprüfung](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Beschreibt die Einschränkungen bei der Verwendung von Platzhalterzeichen, lax-Überprüfung und anyType-Elementen mit XML-Schemaauflistungen.|  
@@ -78,7 +82,7 @@ ms.lasthandoff: 06/22/2017
 |[Große XML-Schemasammlungen und Bedingungen des Typs „Nicht genügend Arbeitsspeicher“](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Stellt Lösungen für Situationen bereit, in denen nicht genügend Arbeitsspeicher verfügbar ist, was gelegentlich bei großen Schemaauflistungen vorkommt.|  
 |[Nicht deterministische Inhaltsmodelle](../../relational-databases/xml/non-deterministic-content-models.md)|Beschreibt die Einschränkungen hinsichtlich nicht deterministischer Inhaltsmodelle.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erteilen von Berechtigungen für eine XML-Schemaauflistung](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)   

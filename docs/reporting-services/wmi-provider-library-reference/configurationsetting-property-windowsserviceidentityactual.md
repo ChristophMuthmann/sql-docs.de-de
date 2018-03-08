@@ -1,36 +1,33 @@
 ---
-title: ConfigurationSetting Eigenschaft - WindowsServiceIdentityActual | Microsoft Docs
+title: 'ConfigurationSetting-Eigenschaft: WindowsServiceIdentityActual | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- WindowsServiceIdentityActual
-apilocation:
-- reportingservices.mof
+apiname: WindowsServiceIdentityActual
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- WindowsServiceIdentityActual property
+helpviewer_keywords: WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-caps.latest.revision: 16
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "16"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ae7b3392b114858ef4630cc957117ca985dd89e0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bd58858a0199907cc36ce4c2c615de71043768ed
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting Eigenschaft - WindowsServiceIdentityActual
+# <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting-Eigenschaft: WindowsServiceIdentityActual
   Die Identität, unter der der Report Server-Windows-Dienst ausgeführt wird. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -52,8 +49,7 @@ public string WindowsServiceIdentityActual;
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

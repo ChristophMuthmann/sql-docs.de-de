@@ -3,7 +3,7 @@ title: WillChangeRecord- und RecordChangeComplete-Ereignisse (ADO) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 314df047b5d155f2605c3fa9c98151687d57c297
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b72e7f1a2e69b23f9c696a5ce544153a5a0e8a3e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord- und RecordChangeComplete-Ereignisse (ADO)
 Die **WillChangeRecord** Ereignis aufgerufen wird, bevor eine oder mehrere Datensätze (Zeilen) in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ändern. Die **RecordChangeComplete** Ereignis wird aufgerufen, nachdem eine oder mehrere Einträge ändern.  
@@ -65,7 +64,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  Vor dem **RecordChangeComplete** zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusUnwantedEvent** um nachfolgende Benachrichtigungen zu verhindern.  
   
- *pCommand*  
+ *pRecordset*  
  Ein **Recordset** Objekt. Die **Recordset** für die dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -77,5 +76,4 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Ereignisse Modell (VC++-Beispiel)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)

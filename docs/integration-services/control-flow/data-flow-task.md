@@ -1,10 +1,13 @@
 ---
-title: Datenflusstask | Microsoft Docs
+title: Datenflusstask | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0e16ec789222a73e6d4a73a654576f5d0295df64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt das Datenflussmodul, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
@@ -93,7 +95,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : Ausgabe der OLE DB-Quelle : 1180 : Sort : 1181 : Sortiereingabe : 76". Die Meldung wurde vom **OnPipelineRowsSent** -Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
-|Column|Description|Wert|  
+|Spalte|Description|value|  
 |------------|-----------------|-----------|  
 |**PathID**|Der Wert der **ID** -Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
 |**PathName**|Der Wert der **Name** -Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  
@@ -115,11 +117,10 @@ ms.lasthandoff: 08/03/2017
   
 -   [Programmgesteuertes Hinzufügen des Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Video [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
   
-

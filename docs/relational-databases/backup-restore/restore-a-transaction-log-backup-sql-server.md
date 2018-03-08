@@ -2,11 +2,13 @@
 title: Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server) | Microsoft-Datenbank
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b8c2e5f024b878cb0f110bb1f5220702bc87ee65
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Transaktionsprotokollsicherung mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederherstellen.  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen einer Transaktionsprotokollsicherung mit:**  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -66,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur geprüft werden kann, wenn die Datenbank unbeschädigt ist und auf sie zugegriffen werden kann, was beim Ausführen von RESTORE nicht immer der Fall ist, verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
+ RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!WARNING]  
 >  Beim üblichen Prozess der Wiederherstellung wählen Sie im Dialogfeld **Datenbank wiederherstellen** die Protokollsicherungen zusammen mit den Datensicherungen und den differenziellen Sicherungen aus.  
@@ -102,9 +104,9 @@ ms.lasthandoff: 06/22/2017
   
      In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
-    |Header|Wert|  
+    |Header|value|  
     |------------|-----------|  
-    |**Wiederherstellen**|Aktivierte Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
+    |**Restore**|Aktivierte Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Komponente**|Gesicherte Komponente: **Datenbank**, **Datei** oder \<leer> (bei Transaktionsprotokollen).|  
     |**Datenbank**|Name der an dem Sicherungsvorgang beteiligten Datenbank.|  
@@ -134,7 +136,7 @@ ms.lasthandoff: 06/22/2017
   
          In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
-        |Header|Wert|  
+        |Header|value|  
         |------------|-----------|  
         |\<leer>|Zeigt ein Kontrollkästchen zur Auswahl der Markierung an.|  
         |**Transaktionsmarkierung**|Name der markierten Transaktion, der vom Benutzer zugewiesen wurde, als für die Transaktion der Commit ausgeführt wurde.|  
@@ -166,7 +168,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
   
-         Gestattet nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**, auf die wiederhergestellte Datenbank zuzugreifen.  
+         Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**verfügbar.  
   
          Das Überprüfen dieser Option entspricht der Verwendung der Option **RESTRICTED_USER** in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** -Anweisung.  
   
@@ -243,14 +245,14 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Standardmäßig verwendet die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank das einfache Wiederherstellungsmodell. Für die folgenden Beispiele ist es erforderlich, dass die Datenbank folgendermaßen für die Verwendung des vollständigen Wiederherstellungsmodells geändert wird:  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. Anwenden einer einzelnen Transaktionsprotokollsicherung  
  Im folgenden Beispiel wird mit der Wiederherstellung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mithilfe einer vollständigen Datenbanksicherung begonnen, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_1`befindet. Dann wird die erste Transaktionsprotokollsicherung angewendet, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_log`befindet. Schließlich wird die Datenbank im Beispiel wiederhergestellt.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -268,7 +270,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. Anwenden mehrerer Transaktionsprotokollsicherungen  
  Im folgenden Beispiel wird mit der Wiederherstellung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mithilfe einer vollständigen Datenbanksicherung begonnen, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_1`befindet. Dann werden nacheinander die ersten drei Transaktionsprotokollsicherungen angewendet, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_log`befinden. Schließlich wird die Datenbank im Beispiel wiederhergestellt.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -305,7 +307,7 @@ GO
   
 -   [Wiederherstellen einer Datenbank bis zu einer markierten Transaktion &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   

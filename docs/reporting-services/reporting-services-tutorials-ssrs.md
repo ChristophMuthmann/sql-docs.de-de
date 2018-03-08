@@ -1,31 +1,29 @@
 ---
-title: Reporting Services-Lernprogramme (SSRS) | Microsoft Docs
+title: Reporting Services-Tutorials (SSRS) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 05/25/2017
-ms.prod: sql-server-2016
+ms.date: 11/07/2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tutorials [Reporting Services]
+applies_to: SQL Server 2016
+helpviewer_keywords: tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eebe70acfc915140f4d43a5a454ffcde6d572af7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1a22cac75e2ac8e23e282e1a317559e61197cfa9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services-Tutorials (SSRS)
 
@@ -47,13 +45,12 @@ Führen Sie die Schritte in diesem Lernprogramm aus, um zu erfahren, wie ein Dri
 In diesen Tutorials lernen Sie eine Vielzahl von Visualisierungen kennen, die Sie im Berichts-Generator erstellen können, z.B. Karten und Sparklines. Außerdem sind Tutorials enthalten, die Ihnen bei der Verwendung von Parametern und Ausdrücken weiterhelfen.   
   
   
-## <a name="see-also"></a>Siehe auch  
-* [Adventure Works 2014-Beispieldatenbanken](https://msftdbprodsamples.codeplex.com/releases/view/125550)  
-* [Reporting Services Samples on CodePlex (Beispiele zu Reporting Services auf CodePlex)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+* [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases)  
+* [Reporting Services-Beispiele auf der TechNet-Wiki](http://go.microsoft.com/fwlink/?LinkId=198283)  
 * [TechNet Wiki: SQL Server 2012 Samples (TechNet Wiki: Beispiele zu SQL Server 2012)](http://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   
   
-
 

@@ -2,25 +2,27 @@
 title: Sicherheit (Master Data Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0768294a9e8d555e8405e642c7cda3ecc639c5b2
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 4b540d7f5a204d6543bc32b5ec46fef766c9b973
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="security-master-data-services"></a>Sicherheit (Master Data Services)
   Verwenden Sie die Sicherheitseinstellungen in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um dafür zu sorgen, dass Benutzer auf die speziellen Masterdaten zugreifen können, die sie für ihre Arbeit benötigen, nicht jedoch auf Daten, für die sie nicht zuständig sind.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 09/07/2017
   
  Es muss allerdings berücksichtigt werden, dass alle in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] festgelegten Sicherheitseinstellungen in Excel erst nach 20 Minuten wirksam werden. Das Intervall wird durch die Einstellung *MdsMaximumUserInformationCacheInterval* in der Datei web.config definiert. Um das Intervall zu ändern, können Sie die Einstellung ändern und IIS neu starten.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 09/07/2017
 |Weisen Sie die Berechtigung Attributwerten zu, indem Sie die Berechtigung zum Modellieren von Objekten zuweisen.|[Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Weisen Sie die Berechtigung Elementwerten zu, indem Sie die Berechtigung Hierarchieknoten zuweisen.|[Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Benutzer und Gruppen &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
  [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
@@ -73,4 +75,3 @@ ms.lasthandoff: 09/07/2017
  [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   
-

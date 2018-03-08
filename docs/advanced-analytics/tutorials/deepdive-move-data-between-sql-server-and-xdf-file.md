@@ -1,44 +1,46 @@
 ---
-title: Verschieben von Daten zwischen SQLServer und XDF-Datei | Microsoft Docs
+title: Verschieben von Daten zwischen SQL Server und XDF-Datei (SQL und R deep Dive) | Microsoft Docs
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - R
 ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
-caps.latest.revision: 17
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 19502fbed507fff36c038145d0e4dbd683d7acdc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db44423f71f1808d99a9611062bdc8291640ece
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="move-data-between-sql-server-and-xdf-file"></a>Verschieben von Daten zwischen SQL Server und einer XDF-Datei
+# <a name="move-data-between-sql-server-and-xdf-file-sql-and-r-deep-dive"></a>Verschieben von Daten zwischen SQL Server und XDF-Datei (SQL und R deep Dive)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Wenn Sie in einen lokalen computekontext arbeiten, haben Sie Zugriff auf beide lokalen Datendateien und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank (definiert als RxSqlServerData-Datenquelle).
+Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In diesem Abschnitt erfahren Sie, wie Daten abgerufen und in einer Datei auf dem lokalen Computer gespeichert werden, sodass Sie die Daten transformieren können. Wenn Sie fertig sind, müssen Sie die Daten in der Datei verwenden, zum Erstellen eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, mithilfe von RxDataStep.
+In diesem Schritt erfahren Sie, um eine XDF-Datei zu verwenden, um die Datenübertragung zwischen remote und lokalen rechenkontexten. Das Speichern der Daten in einer XDF-Datei können Sie Transformationen für die Daten ausführen.
+
+Wenn Sie fertig sind, Sie verwenden die Daten in der Datei zum Erstellen eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. Die Funktion [RxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) Transformationen auf die Daten anwenden und führt die Konvertierung zwischen Datenrahmen und xdf-Dateien.
   
-## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Erstellen einer SQL Server-Tabelle aus einer XDF-Datei
+## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Erstellen Sie eine SQL Server-Tabelle aus einer XDF-Datei
 
-Die RxImport-Funktion können Sie die Daten aus beliebigen unterstützten Datenquellen in einer lokalen XDF-Datei importieren. Die Verwendung einer lokalen Datei eignet sich, wenn Sie verschiedene Analysen der in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank gespeicherten Daten ausführen oder verhindern möchten, dass dieselbe Abfrage immer wieder ausgeführt wird.
+In dieser Übung verwenden Sie die Kreditkarte Betrug Daten erneut. In diesem Szenario wurden Sie gebeten, zusätzliche Analysen für Benutzer in den US-Bundesstaaten Kalifornien, Oregon und Washington durchzuführen. Um weitere werden haben effiziente, Sie sich entschieden, Speichern von Daten für die nur diese Zustände auf dem lokalen Computer, und Arbeiten mit Variablen Geschlecht, Karteninhabern, Status und Lastenausgleich.
 
-Verwenden Sie für diese Übung wieder die Daten über Kreditkartenbetrug. In diesem Szenario wurden Sie gebeten, zusätzliche Analysen für Benutzer in den US-Bundesstaaten Kalifornien, Oregon und Washington durchzuführen. Sie haben sich der Effizienz halber dazu entschieden, Daten nur für diese Bundesstaaten auf Ihrem lokalen Computer zu speichern und mit den Variablen „gender“ (Geschlecht), „cardholder“ (Karteninhaber/in), „state“ (Bundesstaat) und „balance“ (Kontostand) zu arbeiten.
-
-1. Verwenden Sie erneut den Vektor *stateAbb* , den Sie vorher erstellt haben, um die einzuschließenden Ebenen zu identifizieren und die neue Variable *statesToKeep*anschließend in der Konsole auszugeben.
+1. Verwenden Sie erneut die `stateAbb` Variable, die Sie zuvor identifiziert die Ebenen enthalten, und Schreiben in eine neue Variable erstellt `statesToKeep`.
   
     ```R
     statesToKeep <- sapply(c("CA", "OR", "WA"), grep, stateAbb)
@@ -50,7 +52,7 @@ Verwenden Sie für diese Übung wieder die Daten über Kreditkartenbetrug. In di
     ----|----|----
     5|38|48
     
-2. Nun definieren Sie die Daten, die mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage von SQL Server übermittelt werden sollen.  Später verwenden Sie diese Variable als das *inData* -Argument für *rxImport*.
+2. Definieren Sie die Daten, die Sie von SQL Server, bringen möchten mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage.  Später verwenden Sie diese Variable als die *InData* Argument für **RxImport**.
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -58,7 +60,7 @@ Verwenden Sie für diese Übung wieder die Daten über Kreditkartenbetrug. In di
   
     Stellen Sie sicher, dass keine ausgeblendeten Zeichen, wie z. B. Zeilenvorschübe oder Registerkarten, in der Abfrage vorhanden sind.
   
-3. Als Nächstes müssen Sie die Spalten aus, die beim Arbeiten mit Daten in r verwenden definieren. Z. B. fallen in kleineren Dataset, nur drei Ebenen von Faktor, da die Abfrage für Daten nur drei Zustände zurückgegeben wird.  Sie können die *statesToKeep* -Variable erneut verwenden, um die richtigen Ebenen zu identifizieren, die eingeschlossen werden sollen.
+3. Als Nächstes definieren Sie die Spalten aus, die beim Arbeiten mit Daten in r verwenden Z. B. fallen in kleineren Dataset nur drei Ebenen von Faktor, da die Abfrage gibt Daten für nur drei Status zurück.  Anwenden der `statesToKeep` Variable zur Identifizierung der richtigen Ebenen enthalten.
   
     ```R
     importColInfo <- list(
@@ -73,8 +75,10 @@ Verwenden Sie für diese Übung wieder die Daten über Kreditkartenbetrug. In di
     ```R
     rxSetComputeContext("local")
     ```
-  
-5. Erstellen Sie das Datenquellenobjekt, indem alle Variablen, die gerade als Argumente für RxSqlServerData definierte übergeben.
+    
+    Die [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) Funktion kann Daten aus beliebigen unterstützten Datenquellen in einer lokalen XDF-Datei importieren. Verwenden eine lokale Kopie der Daten eignet sich, wenn Sie viele verschiedene Analysen der Daten zu tun möchten, aber vermeiden Sie dieselbe Abfrage immer wieder ausführen möchten.
+
+5. Erstellen Sie das Datenquellenobjekt durch Übergeben der Variablen als Argumente für zuvor definierten **RxSqlServerData**.
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -83,7 +87,7 @@ Verwenden Sie für diese Übung wieder die Daten über Kreditkartenbetrug. In di
         colInfo = importColInfo)
     ```
   
-6. Rufen Sie dann **RxImport** , schreiben die Daten in eine Datei namens `ccFraudSub.xdf`, in das aktuelle Arbeitsverzeichnis.
+6. Rufen Sie **RxImport** , schreiben die Daten in eine Datei namens `ccFraudSub.xdf`, in das aktuelle Arbeitsverzeichnis.
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -91,9 +95,9 @@ Verwenden Sie für diese Übung wieder die Daten über Kreditkartenbetrug. In di
         overwrite = TRUE)
     ```
   
-    Die *LocalDs* von der Funktion RxImport zurückgegebene Objekt ist ein Lightweight-RxXdfData Datenquellenobjekt, das die ccFraud.xdf-Datendatei, die lokal auf einem Datenträger gespeicherten darstellt.
+    Die `localDs` zurückgegebenes Objekt die **RxImport** Funktion ist ein Lightweight- **RxXdfData** Datenquellenobjekt, das darstellt der `ccFraud.xdf` Datendatei, die lokal auf dem Datenträger gespeichert.
   
-7. Aufrufen von RxGetVarInfo für die XDF-Datei überprüfen, ob das Datenschema identisch ist.
+7. Rufen Sie [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) für die XDF-Datei auf, um zu überprüfen, ob das Schema identisch ist.
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -111,22 +115,21 @@ Verwenden Sie für diese Übung wieder die Daten über Kreditkartenbetrug. In di
 
     *Var 4: state, Type: factor, no factor levels available*
   
-8. Sie können nun verschiedene R-Funktionen aufrufen, um das *localDs* -Objekt zu analysieren, so Sie wie die auch mit den Quelldaten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfahren würden. Beispiel:
+8. Sie können nun beliebige R-Funktionen aufrufen, um das `localDs`-Objekt genau so wie die Quelldaten auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu analysieren. Sie können z. B. nach Geschlecht zusammenfassen:
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-Da Sie nun wissen, wie Computekontexte verwendet werden und die Arbeit mit verschiedenen Datenquellen kennen, ist es an der Zeit, etwas lustiges auszuprobieren. In der nächsten, finalen Lektion, werden Sie eine einfache Simulation mit einer benutzerdefinierten R-Funktion erstellen und sie auf dem Remoteserver ausführen.
+Da Sie nun wissen, wie Computekontexte verwendet werden und die Arbeit mit verschiedenen Datenquellen kennen, ist es an der Zeit, etwas lustiges auszuprobieren. In der nächsten und letzten Lektion erstellen Sie eine einfache Simulation, die eine benutzerdefinierte R-Funktion auf dem Remoteserver ausgeführt wird.
 
 ## <a name="next-step"></a>Nächster Schritt
 
-[Erstellen Sie eine einfache Simulation](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
+[Erstellen einer einfachen Simulation](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
 
-## <a name="previous-step"></a>Vorheriger Schritt
+## <a name="previous-step"></a>Vorherigen Schritt
 
-[Analysieren von Daten im lokalen Computekontext.](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-
+[Analysieren von Daten in einem lokalen Rechenkontext](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 
 
 

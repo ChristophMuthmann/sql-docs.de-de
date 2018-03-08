@@ -2,15 +2,16 @@
 title: "Implementieren eines Geschäftslogikhandlers für einen Mergeartikel | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], business logic handlers
 - merge replication business logic handlers [SQL Server replication]
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 8e209ff7746c90c12079e100c2e1553d76839a8d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
-  In diesem Thema wird beschrieben, wie ein Geschäftslogikhandler für einen Mergeartikel mit Replikationsprogrammierung oder Replikationsverwaltungsobjekten (RMO) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] implementiert wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie ein Geschäftslogikhandler für einen Mergeartikel mit Replikationsprogrammierung oder Replikationsverwaltungsobjekten (Replication Management Objects, RMO) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] implementiert wird.  
   
  Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Die Methoden im Geschäftslogikhandler können vom Replikationsvorgang für jede geänderte Zeile aufgerufen werden, die während der Synchronisierung repliziert wird.  
   
@@ -74,23 +75,23 @@ ms.lasthandoff: 07/31/2017
   
 5.  Überschreiben Sie mindestens eine der folgenden Methoden der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> -Klasse:  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> &amp;ndash; wird aufgerufen, wenn während der Synchronisierung ein Commit für eine Datenänderung ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> &ndash; wird aufgerufen, wenn während der Synchronisierung ein Commit für eine Datenänderung ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> &amp;ndash; wird aufgerufen, wenn beim Hochladen oder Herunterladen einer DELETE-Anweisung ein Fehler auftritt.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> &ndash; wird aufgerufen, wenn beim Hochladen oder Herunterladen einer DELETE-Anweisung ein Fehler auftritt.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> &amp;ndash; wird aufgerufen, wenn DELETE-Anweisungen hochgeladen oder heruntergeladen werden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> &ndash; wird aufgerufen, wenn DELETE-Anweisungen hochgeladen oder heruntergeladen werden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> &amp;ndash; wird aufgerufen, wenn beim Hochladen oder Herunterladen einer INSERT-Anweisung ein Fehler auftritt.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> &ndash; wird aufgerufen, wenn beim Hochladen oder Herunterladen einer INSERT-Anweisung ein Fehler auftritt.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> &amp;ndash; wird aufgerufen, wenn INSERT-Anweisungen hochgeladen oder heruntergeladen werden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> &ndash; wird aufgerufen, wenn INSERT-Anweisungen hochgeladen oder heruntergeladen werden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> &amp;ndash; wird aufgerufen, wenn in Konflikt stehende UPDATE-Anweisungen auf dem Verleger und dem Abonnenten auftreten.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> &ndash; wird aufgerufen, wenn in Konflikt stehende UPDATE-Anweisungen auf dem Verleger und dem Abonnenten auftreten.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> &amp;ndash; wird aufgerufen, wenn UPDATE-Anweisungen mit DELETE-Anweisungen auf dem Verleger und dem Abonnenten in Konflikt stehen.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> &ndash; wird aufgerufen, wenn UPDATE-Anweisungen mit DELETE-Anweisungen auf dem Verleger und dem Abonnenten in Konflikt stehen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> &amp;ndash; wird aufgerufen, wenn beim Hochladen oder Herunterladen einer UPDATE-Anweisung ein Fehler auftritt.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> &ndash; wird aufgerufen, wenn beim Hochladen oder Herunterladen einer UPDATE-Anweisung ein Fehler auftritt.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> &amp;ndash; wird aufgerufen, wenn UPDATE-Anweisungen hochgeladen oder heruntergeladen werden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> &ndash; wird aufgerufen, wenn UPDATE-Anweisungen hochgeladen oder heruntergeladen werden.  
   
 6.  Erstellen Sie das Projekt, um die Geschäftslogikhandler-Assembly zu erstellen.  
   
@@ -147,23 +148,23 @@ ms.lasthandoff: 07/31/2017
   
 5.  Überschreiben Sie mindestens eine der folgenden Methoden der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> -Klasse:  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> &amp;ndash; wird aufgerufen, wenn während der Synchronisierung ein Commit für eine Datenänderung ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> &ndash; wird aufgerufen, wenn während der Synchronisierung ein Commit für eine Datenänderung ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> &amp;ndash; wird aufgerufen, wenn ein Fehler auftritt, während eine DELETE-Anweisung hochgeladen oder heruntergeladen wird.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> &ndash; wird aufgerufen, wenn ein Fehler auftritt, während eine DELETE-Anweisung hochgeladen oder heruntergeladen wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> &amp;ndash; wird aufgerufen, wenn DELETE-Anweisungen hochgeladen oder heruntergeladen werden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> &ndash; wird aufgerufen, wenn DELETE-Anweisungen hochgeladen oder heruntergeladen werden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> &amp;ndash; wird aufgerufen, wenn ein Fehler auftritt, während eine INSERT-Anweisung hochgeladen oder heruntergeladen wird.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> &ndash; wird aufgerufen, wenn ein Fehler auftritt, während eine INSERT-Anweisung hochgeladen oder heruntergeladen wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> &amp;ndash; wird aufgerufen, wenn INSERT-Anweisungen hochgeladen oder heruntergeladen werden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> &ndash; wird aufgerufen, wenn INSERT-Anweisungen hochgeladen oder heruntergeladen werden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> &amp;ndash; wird aufgerufen, wenn in Konflikt stehende UPDATE-Anweisungen auf dem Verleger und dem Abonnenten auftreten.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> &ndash; wird aufgerufen, wenn in Konflikt stehende UPDATE-Anweisungen auf dem Verleger und dem Abonnenten auftreten.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> &amp;ndash; wird aufgerufen, wenn UPDATE-Anweisungen mit DELETE-Anweisungen auf dem Verleger und dem Abonnenten in Konflikt stehen.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> &ndash; wird aufgerufen, wenn UPDATE-Anweisungen mit DELETE-Anweisungen auf dem Verleger und dem Abonnenten in Konflikt stehen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> &amp;ndash; wird aufgerufen, wenn ein Fehler auftritt, während eine UPDATE-Anweisung hochgeladen oder heruntergeladen wird.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> &ndash; wird aufgerufen, wenn ein Fehler auftritt, während eine UPDATE-Anweisung hochgeladen oder heruntergeladen wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> &amp;ndash; wird aufgerufen, wenn UPDATE-Anweisungen hochgeladen oder heruntergeladen werden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> &ndash; wird aufgerufen, wenn UPDATE-Anweisungen hochgeladen oder heruntergeladen werden.  
   
     > [!NOTE]  
     >  Alle Artikelkonflikte, die nicht explizit von Ihrem benutzerdefinierten Geschäftslogikhandler verarbeitet werden, werden vom Standardkonfliktlöser für den Artikel bearbeitet.  
@@ -180,13 +181,13 @@ ms.lasthandoff: 07/31/2017
   
 4.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> -Klasse. Geben Sie die folgenden Eigenschaften an:  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> &amp;ndash; der Name der .NET-Assembly. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, falls die Assembly nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im GAC bereitgestellt wird. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, wenn Sie einen Geschäftslogikhandler mit der Websynchronisierung verwenden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> &ndash; der Name der .NET-Assembly. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, falls die Assembly nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im GAC bereitgestellt wird. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, wenn Sie einen Geschäftslogikhandler mit der Websynchronisierung verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> &amp;ndash; der vollqualifizierte Name der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> überschreibt und den Geschäftslogikhandler implementiert.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> &ndash; der vollqualifizierte Name der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> überschreibt und den Geschäftslogikhandler implementiert.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> &amp;ndash; ein Anzeigename, den Sie beim Zugriff auf den Geschäftslogikhandler verwenden.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> &ndash; ein Anzeigename, den Sie beim Zugriff auf den Geschäftslogikhandler verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &amp;ndash; der Wert **true**.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &ndash; der Wert **true**.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>So stellen Sie einen Geschäftslogikhandler bereit  
   
@@ -241,10 +242,10 @@ ms.lasthandoff: 07/31/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
- [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Konzepte für Replikationsverwaltungsobjekte (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

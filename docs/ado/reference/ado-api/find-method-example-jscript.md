@@ -3,7 +3,7 @@ title: Find Methodenbeispiel (JScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 71fc2a1180d702cf0324aefd7769f1fb6d7c0dec
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 44343f325c1d316406363a90019647eed10ad877
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-example-jscript"></a>Find Methodenbeispiel (JScript)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [suchen](../../../ado/reference/ado-api/find-method-ado.md) Methode zum Suchen und Anzeigen von Unternehmen in die ***Northwind*** Datenbank, deren Name mit dem Buchstaben beginnt, und fügen Sie Im folgenden code in Editor oder einem anderen Texteditor, und speichern Sie sie als **g**.  
@@ -163,4 +162,3 @@ BODY {
 ## <a name="see-also"></a>Siehe auch  
  [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

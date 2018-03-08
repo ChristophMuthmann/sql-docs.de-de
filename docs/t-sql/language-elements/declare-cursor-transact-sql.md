@@ -3,8 +3,11 @@ title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 79bf3115ef4e1d929e3e4a1b3ff731a1977ba28e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Definiert die Attribute eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursors, wie z. B. dessen Scrollverhalten, sowie die Abfrage, die zum Erstellen des Resultsets verwendet wird, auf das der Cursor ausgeführt wird. DECLARE CURSOR unterstützt sowohl die Syntax basierend auf dem ISO-Standard als auch eine Syntax, für die eine Teilmenge der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Erweiterungen verwendet wird.  
   
@@ -64,7 +66,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Cursorname*  
+ *cursor_name*  
  Der Name des der [!INCLUDE[tsql](../../includes/tsql-md.md)] Servercursor definiert. *Cursor_name* muss den Regeln für Bezeichner entsprechen.  
   
  INSENSITIVE  
@@ -84,7 +86,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  UPDATE [OF *Column_name* [**,**... *n*]]  
  Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *Column_name* [**,**... *...n*] angegeben wird, können Änderungen nur die Spalten aufgeführt. Wenn UPDATE ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden.  
   
- *Cursorname*  
+ *cursor_name*  
  Der Name des der [!INCLUDE[tsql](../../includes/tsql-md.md)] Servercursor definiert. *Cursor_name* muss den Regeln für Bezeichner entsprechen.  
   
  LOCAL  
@@ -256,12 +258,11 @@ DEALLOCATE vendor_cursor;
   
 ## <a name="see-also"></a>Siehe auch  
  [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)   
- [Schließen &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [Aufheben der ZUORDNUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [Abrufen von Daten &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

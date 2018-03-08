@@ -2,11 +2,13 @@
 title: "Ausführen der Geschäftslogik während der Mergesynchronisierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +19,21 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a165253bc79d9fe6c958a9d0e8ec83e73cf58c7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "31"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: fadbd13868423a4defc38dad56653e745634fdb4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ausführen der Geschäftslogik während der Mergesynchronisierung
-  Im Geschäftslogikhandler können Sie eine Assembly in verwaltetem Code schreiben, die während des Mergesynchronisierungsvorgangs aufgerufen wird. Die Assembly enthält Geschäftslogik, die auf viele Bedingungen während der Synchronisierung reagieren kann: Datenänderungen, Konflikte und Fehler. Das Geschäftslogikhandler-Framework stellt ein einfaches Programmiermodell bereit. Dabei weisen die Daten, die der Mergeprozess an Ihre Assembly übergibt, das Format eines ADO.NET-Datasets auf. Auf diese Weise können Sie auf Ihren Kenntnissen von ADO.NET aufbauen und müssen sich mit keiner neuen proprietären Schnittstelle vertraut machen. Weitere Informationen zum Programmieren von Geschäftslogikhandlern finden Sie hier:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Geschäftslogikhandler können Sie eine Assembly in verwaltetem Code schreiben, die während des Mergesynchronisierungsvorgangs aufgerufen wird. Die Assembly enthält Geschäftslogik, die auf viele Bedingungen während der Synchronisierung reagieren kann: Datenänderungen, Konflikte und Fehler. Das Geschäftslogikhandler-Framework stellt ein einfaches Programmiermodell bereit. Dabei weisen die Daten, die der Mergeprozess an Ihre Assembly übergibt, das Format eines ADO.NET-Datasets auf. Auf diese Weise können Sie auf Ihren Kenntnissen von ADO.NET aufbauen und müssen sich mit keiner neuen proprietären Schnittstelle vertraut machen. Weitere Informationen zum Programmieren von Geschäftslogikhandlern finden Sie hier:  
   
--   Die API-Referenz (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
+-   In der API-Referenz (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
 -   Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
@@ -93,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Ein IIS-Server (Internetinformationsdienste), wenn die Websynchronisierung verwendet wird. Verwenden Sie ein mit der Websynchronisierung synchronisiertes Pullabonnement. Der Geschäftslogikhandler wird dann auf dem IIS-Server ausgeführt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Mergereplikation](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md)   

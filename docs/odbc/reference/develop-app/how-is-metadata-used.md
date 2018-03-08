@@ -3,27 +3,28 @@ title: Wie Metadaten verwendet wird? | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0920797887e8fa1d156401a2b91255396f6e24d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-is-metadata-used"></a>Wie Metadaten verwendet wird?
 Anwendungen erfordern Metadaten für die meisten Resultsetvorgänge. Die Anwendung verwendet z. B. den Datentyp einer Spalte, um zu bestimmen, welche Art von Variable an diese Spalte gebunden werden soll. Er verwendet die Bytelänge einer Zeichenspalte, um zu bestimmen, wie viel Speicherplatz, Daten aus dieser Spalte angezeigt werden muss. Wie eine Anwendung die Metadaten für eine Spalte bestimmt, hängt vom Typ der Anwendung ab.  
@@ -35,4 +36,3 @@ Anwendungen erfordern Metadaten für die meisten Resultsetvorgänge. Die Anwendu
  Allgemeiner Anwendungen, insbesondere solche, die ad-hoc-Abfragen unterstützen, fast nie kennen, die Metadaten des Resultsets, die sie erstellen. Aus diesem Grund müssen sie die Metadaten zur Laufzeit mithilfe der Funktionen ermitteln **SQLNumResultCols**, **SQLDescribeCol**, und **SQLColAttribute**, die in beschriebenen der im nächsten Abschnitt [SQLDescribeCol und SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Alle Anwendungen, unabhängig von ihrem Typ können hartcodieren Metadaten für die durch die Katalogfunktionen zurückgegebenen Resultsets. Diese Resultsets werden im Abschnitt "Referenz" dieses Handbuchs definiert.
-

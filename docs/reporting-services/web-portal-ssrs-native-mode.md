@@ -1,26 +1,27 @@
 ---
 title: Webportal (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: e134b496c8e7e9a3cf39c2fa8fb0f8f6cf31dafb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Webportal (einheitlicher SSRS-Modus)
 
@@ -96,7 +97,7 @@ Das Webportal gruppiert Elemente in verschiedene Kategorien. Die folgenden Kateg
 - Power BI Desktop-Berichte
 - Excel-Arbeitsmappen
 - Datasets
-- Datenquellen
+- Projektmappen-Explorer
 - Ressourcen
 
 Sie können steuern, was angezeigt werden soll, indem Sie oben rechts **View** (Ansicht) auswählen. Wenn Sie „Show Hidden“ (Ausgeblendete anzeigen) auswählen, werden diese Elemente in einer helleren Farbe angezeigt.

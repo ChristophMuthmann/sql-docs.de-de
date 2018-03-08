@@ -2,28 +2,31 @@
 title: Konfigurieren kompatibler SQL Server-Features mit Stretch Database | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 278a44c01f1436434465a32a397a5670ab557fa8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
-ms.contentlocale: de-de
-ms.lasthandoff: 08/30/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Konfigurieren kompatibler SQL Server-Features mit Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 Führen Sie einfache Schritte aus, um die folgenden SQL Server-Features für die Arbeit mit Stretch Database zu konfigurieren.
 -   Always On
@@ -53,4 +56,3 @@ Wenn Sie temporale Tabellen verwenden, können Sie Stretch Database für die Ver
 -   Hinweise zur Verwendung von temporalen Tabellen mit Stretch Database finden Sie unter [Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 -   Informationen zum Filtern von Zeilen für die Migration aus der Verlaufstabelle mithilfe von gleitenden Fenstern finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 -   Sie können Stretch Database in der temporalen Verlaufstabelle nicht aktivieren, wenn die Tabelle speicheroptimiert ist. Speicheroptimierte Tabellen werden nicht unterstützt.
-

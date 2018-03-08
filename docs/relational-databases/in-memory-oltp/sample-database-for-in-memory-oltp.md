@@ -2,27 +2,30 @@
 title: "Beispieldatenbank für In-Memory OLTP | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
 ## <a name="overview"></a>Übersicht  
  In diesem Beispiel wird das In-Memory OLTP-Feature vorgestellt. Gezeigt werden die neuen speicheroptimierten Tabellen und nativ kompilierten gespeicherten Prozeduren. Darüber hinaus kann es verwendet werden, um die Leistungsvorteile von In-Memory OLTP zu veranschaulichen.  
@@ -83,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Entpacken Sie die Datei „SQLServer2016CTP3Samples.zip“ in einen lokalen Ordner, um die Beispielskripts und die Arbeitsauslastung anzuzeigen. Informationen zum Ausführen der Arbeitsauslastung finden Sie in der Datei „In-Memory OLTP\readme.txt“.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Beschreibung der Beispieltabellen und -prozeduren  
  Im Beispiel werden neue Tabellen für Produkte und Verkaufsaufträge auf Grundlage vorhandener AdventureWorks-Tabellen erstellt. Das Schema der neuen Tabellen entspricht bis auf die nachfolgend beschriebenen Unterschiede dem der vorhandenen Tabellen.  
   
  Die neuen speicheroptimierten Tabellen verfügen über das Suffix "_inmem". Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix "_ondisk". Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
@@ -217,7 +220,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Da in der exemplarischen Arbeitsauslastung nicht auf Sales.SpecialOfferProduct_inmem verwiesen wird, ist es nicht erforderlich, HASH-Indizes für die Tabelle zu verwenden, um die Arbeitsauslastung zu optimieren. Für (SpecialOfferID, ProductID) und (ProductID) werden NONCLUSTERED-Indizes verwendet.  
   
- Beachten Sie, dass einige der oben genannten Bucketanzahlen zu hoch angesetzt sind. Auf die Bucketanzahlen für die Indizes von SalesOrderHeader_inmem und SalesOrderDetail_inmem trifft dies jedoch nicht zu, da sie auf eine Anzahl von 10 Millionen Verkaufsaufträgen beschränkt sind. Auf diese Weise kann das Beispiel auch auf Systemen mit geringerer Arbeitsspeicherkapazität installiert werden. In diesen Fällen verursacht die exemplarische Arbeitsauslastung jedoch einen Fehler vom Typ "Nicht genügend Arbeitsspeicher". Wenn Sie einen Wert festlegen möchten, der 10 Millionen Verkaufsaufträge erheblich überschreitet, können Sie die Bucketanzahlen einfach entsprechend erhöhen.  
+ Beachten Sie, dass einige der oben genannten Bucketanzahlen zu hoch angesetzt sind. Auf die Bucketanzahlen für die Indizes von SalesOrderHeader_inmem und SalesOrderDetail_inmem trifft dies jedoch nicht zu, da sie auf eine Anzahl von 10 Millionen Verkaufsaufträgen beschränkt sind. Auf diese Weise kann das Beispiel auch auf Systemen mit geringerer Arbeitsspeicherkapazität installiert werden. In diesen Fällen verursacht die exemplarische Arbeitsauslastung jedoch einen Fehler vom Typ "Nicht genügend Arbeitsspeicher". Wenn Sie einen Wert festlegen möchten, der 10 Millionen Verkaufsaufträge erheblich überschreitet, können Sie die Bucketanzahlen einfach entsprechend erhöhen.  
   
 #### <a name="considerations-for-memory-utilization"></a>Überlegungen zur Arbeitsspeichernutzung  
  Die Arbeitsspeichernutzung der Beispieldatenbank vor und nach der Ausführung der exemplarischen Arbeitsauslastung wird im Abschnitt [Arbeitsspeichernutzung für speicheroptimierte Tabellen](#Memoryutilizationforthememory-optimizedtables)erörtert.  
@@ -307,7 +310,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
     -   Die zum Ausführen der Integritätsprüfungen erforderliche T-SQL-Anweisung wird mithilfe der Hilfsprozeduren dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck und dbo.GenerateUQCheck generiert.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Leistungsmessungen anhand der exemplarischen Arbeitsauslastung  
  OSTRESS ist ein Befehlszeilentool, das vom Microsoft CSS SQL Server-Supportteam entwickelt wurde. Mit diesem Tool können Abfragen ausgeführt oder gespeicherte Prozeduren parallel aufgerufen werden. Sie können die Anzahl der Threads zur parallelen Ausführung einer bestimmten T-SQL-Anweisung konfigurieren und angeben, wie oft die Anweisung in diesem Thread ausgeführt werden soll. OSTRESS bündelt die Threads und führt die Anweisung in allen Threads gleichzeitig aus. Nachdem die Ausführung aller Threads beendet wurde, meldet OSTRESS die zur Beendigung sämtlicher Threads benötigte Dauer.  
   
 ### <a name="installing-ostress"></a>Installieren von OSTRESS  
@@ -382,7 +385,7 @@ END
  Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter -n gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter -r, wie oft das Skript für jede Verbindung ausgeführt wird.  
   
 #### <a name="running-the-workload"></a>Ausführen der Arbeitsauslastung  
- Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests)informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter -n ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter -n100 in -n40.  
+ Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests)informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter -n ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter -n100 in -n40.  
   
  Als Leistungskennzahl für die Arbeitsauslastung wird die Zeitspanne verwendet, die von ostress.exe nach Ausführung der Arbeitsauslastung gemeldet wird.  
   
@@ -418,7 +421,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von SQL Server nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Das In-Memory OLTP-Modul verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Da sich Einfügungen gleichzeitiger Transaktionen nicht gegenseitig blockieren, kann die CPU-Leistung von SQL Server voll ausgeschöpft werden.  
   
- Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
+ Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
   
  Optional können Sie den Leistungsindikator \SQL Server:Latches\Latchwartevorgänge/Sekunde im Systemmonitor verwenden, um die Anzahl der Latchwartevorgänge pro Sekunde anzuzeigen.  
   
@@ -433,7 +436,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Es wird empfohlen, die Arbeitsauslastung nach jedem Durchgang zurückzusetzen. Da bei dieser Arbeitsauslastung nur Einfügungen stattfinden, wird bei jedem Durchgang mehr Arbeitsspeicher belegt. Durch das Zurücksetzen wird verhindert, dass der Arbeitsspeicher knapp wird. Der Abschnitt [Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung](#Memoryutilizationafterrunningtheworkload)enthält Informationen darüber, wie viel Arbeitsspeicher nach einer Ausführung belegt ist.  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
+###  <a name="Troubleshootingslow-runningtests"></a> Problembehandlung bei langsamer Testausführung  
  Die Testergebnisse variieren normalerweise je nach Hardware und dem im Testlauf verwendeten Parallelitätsgrad. Wenn die Ergebnisse nicht wie erwartet ausfallen, sollten Sie folgende Punkte überprüfen:  
   
 -   Anzahl gleichzeitiger Transaktionen: Wenn die Arbeitsauslastung in einem einzelnen Thread ausgeführt wird, liegt der Leistungsgewinn bei In-Memory OLTP wahrscheinlich unter dem zweifachen Wert. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
@@ -449,7 +452,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Arbeitsspeicher- und Datenträgernutzung im Beispiel  
  Im Folgenden wird beschrieben, wie viel Arbeitsspeicher und Datenträgerspeicher für die Beispieldatenbank benötigt wird. Außerdem sind die Ergebnisse aufgeführt, die auf einem Testserver mit 16 logischen Kernen ermittelt wurden.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Arbeitsspeichernutzung für speicheroptimierte Tabellen  
   
 #### <a name="overall-utilization-of-the-database"></a>Gesamtnutzung der Datenbank  
  Mithilfe der folgenden Abfrage kann die gesamte Arbeitsspeichernutzung für In-Memory OLTP im System ermittelt werden.  
@@ -466,10 +469,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standardwert|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Standardwert|0|  
-|MEMORYCLERK_XTP|Standardwert|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Die standardmäßigen Arbeitsspeicherclerks basieren auf systemweiten Strukturen und sind relativ klein. Der Arbeitsspeicherclerk für die Benutzerdatenbank, d. h. die Datenbank mit der ID 5, umfasst etwa 900 MB.  
   
@@ -502,7 +505,7 @@ WHERE t.type='U'
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung  
  Nach 10 Millionen eingefügten Verkaufsaufträgen stellt sich die Arbeitsspeichernutzung insgesamt wie folgt dar:  
   
 ```  
@@ -515,10 +518,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standardwert|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Standardwert|0|  
-|MEMORYCLERK_XTP|Standardwert|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Sie sehen, dass SQL Server etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank belegt.  
   
@@ -561,14 +564,14 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standardwert|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Standardwert|0|  
-|MEMORYCLERK_XTP|Standardwert|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Erwartetes Verhalten: Der Arbeitsspeicher wird beim Ausführen der Transaktionsarbeitsauslastung freigegeben.  
   
- Wenn Sie die exemplarische Arbeitsauslastung ein zweites Mal ausführen, werden Sie anfänglich einen Rückgang der Arbeitsspeichernutzung feststellen, da die zuvor gelöschten Zeilen bereinigt werden. Gleichzeitig nimmt die Arbeitsspeichergröße wieder zu, bis die Arbeitsauslastung abgeschlossen wurde. Nachdem die exemplarische Arbeitsauslastung zurückgesetzt und 10 Millionen Zeilen eingefügt wurden, entspricht die Arbeitsspeichernutzung weitestgehend der Nutzung nach der ersten Ausführung. Beispiel:  
+ Wenn Sie die exemplarische Arbeitsauslastung ein zweites Mal ausführen, werden Sie anfänglich einen Rückgang der Arbeitsspeichernutzung feststellen, da die zuvor gelöschten Zeilen bereinigt werden. Gleichzeitig nimmt die Arbeitsspeichergröße wieder zu, bis die Arbeitsauslastung abgeschlossen wurde. Nachdem die exemplarische Arbeitsauslastung zurückgesetzt und 10 Millionen Zeilen eingefügt wurden, entspricht die Arbeitsspeichernutzung weitestgehend der Nutzung nach der ersten Ausführung. Zum Beispiel:  
   
 ```  
 SELECT type  
@@ -580,10 +583,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standardwert|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Standardwert|0|  
-|MEMORYCLERK_XTP|Standardwert|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Datenträgernutzung für speicheroptimierte Tabellen  
  Mithilfe der folgenden Abfrage können Sie ermitteln, wie viel Gesamtspeicherplatz die Prüfpunktdateien einer Datenbank zu einem bestimmten Zeitpunkt auf dem Datenträger belegen:  
@@ -742,7 +745,7 @@ ORDER BY state, file_type
   
  Nachdem die exemplarische Arbeitsauslastung ein zweites Mal ausgeführt, zurückgesetzt und 10 Millionen Verkaufsaufträge eingefügt wurden, werden Sie feststellen, dass die während der ersten Ausführung der Arbeitsauslastung erstellten Dateien bereinigt wurden. Wenn Sie die vorangehende Abfrage bei aktiver Arbeitsauslastung mehrere Male ausführen, können Sie beobachten, wie die Prüfpunktdateien die verschiedenen Phasen durchlaufen.  
   
- Nachdem die Arbeitsauslastung zum zweiten Mal ausgeführt und 10 Millionen Verkaufsaufträge eingefügt wurden, ist die Datenträgernutzung ähnlich (wenn auch nicht identisch) mit der Nutzung nach der ersten Ausführung. Dies liegt an der Dynamik des Systems. Beispiel:  
+ Nachdem die Arbeitsauslastung zum zweiten Mal ausgeführt und 10 Millionen Verkaufsaufträge eingefügt wurden, ist die Datenträgernutzung ähnlich (wenn auch nicht identisch) mit der Nutzung nach der ersten Ausführung. Dies liegt an der Dynamik des Systems. Zum Beispiel:  
   
 ```  
 SELECT state_desc  
@@ -771,9 +774,8 @@ ORDER BY state, file_type
   
  In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status UNDER CONSTRUCTION. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status UNDER CONSTRUCTION versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von PRECREATED in UNDER CONSTRUCTION geändert hat.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-
 

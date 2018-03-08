@@ -2,9 +2,12 @@
 title: Replikationsverteilungs-Agent | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 64
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
-  Der Replikationsverteilungs-Agent ist eine ausführbare Datei, die die Momentaufnahme (bei der Momentaufnahme- und Transaktionsreplikation) und die in den Tabellen der Verteilungsdatenbank gespeicherten Transaktionen (bei der Transaktionsreplikation) in die Zieltabellen auf den Abonnenten verschiebt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Der Replikationsverteilungs-Agent ist eine ausführbare Datei, die die Momentaufnahme (bei der Momentaufnahme- und Transaktionsreplikation) und die in den Tabellen der Verteilungsdatenbank gespeicherten Transaktionen (bei der Transaktionsreplikation) in die Zieltabellen auf den Abonnenten verschiebt.  
   
 > [!NOTE]  
 >  Parameter können in beliebiger Reihenfolge angegeben werden. Wenn keine optionalen Parameter angegeben werden, werden Werte von vordefinierten Registrierungseinstellungen auf dem lokalen Computer verwendet.  
@@ -94,13 +98,13 @@ distrib [-?]
  **-?**  
  Druckt alle verfügbaren Parameter.  
   
- **-Publisher** *server_name*[**\\***i**nstance_name*]  
+ **-Publisher** *Servername*[**\\***Instanzname***]  
  Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie *server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-PublisherDB** *publisher_database*  
  Der Name der Verlegerdatenbank.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
+ **-Subscriber** *Servername*[**\\***Instanzname*]  
  Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie *server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-SubscriberDB** *subscriber_database*  
@@ -139,7 +143,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|Beschreibung|  
+|Wert von EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -165,13 +169,13 @@ distrib [-?]
  **-FtpPort** *ftp_port*  
  Die Anschlussnummer des FTP-Diensts für den Verteiler. Wenn keine Portnummer angegeben wird, wird die Standardportnummer für den FTP-Dienst (21) verwendet.  
   
- **-FtpUserName**  *ftp_user_name*  
+ **-FtpUserName** *FTP-Benutzername*  
  Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird. Wenn kein Benutzername angegeben wird, wird **anonymous** verwendet.  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Description|  
 |-------------------------------|-----------------|  
 |**0**|Statusmeldungen werden entweder an der Konsole ausgegeben oder in eine Ausgabedatei geschrieben. Verlaufsdatensätze werden nicht in der Verteilungsdatenbank protokolliert.|  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -223,7 +227,7 @@ distrib [-?]
  **-ProfileName** *profile_name*  
  Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replikations-Agent-Profile](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publication**  *publication*  
+ **-Publication** *Veröffentlichung*  
  Der Name der Veröffentlichung. Dieser Parameter ist nur gültig, wenn die Veröffentlichung so festgelegt ist, dass sie immer eine Momentaufnahme für neue oder neu initialisierte Abonnements zur Verfügung hat.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
@@ -232,7 +236,7 @@ distrib [-?]
  **-QuotedIdentifier** *quoted_identifier*  
  Gibt den zu verwendenden Bezeichner in Anführungszeichenzeichen an. Das erste Zeichen des Werts gibt den Wert an, den der Verteilungs-Agent verwendet. Wenn **QuotedIdentifier** ohne Wert verwendet wird, verwendet der Verteilungs-Agent ein Leerzeichen. Wenn **QuotedIdentifier** nicht verwendet wird, verwendet der Verteilungs-Agent einen vom Abonnenten unterstützten Bezeichner in Anführungszeichen.  
   
- **-SkipErrors** *native_error_id* [**:***...n*]  
+ **-SkipErrors** *Native_Fehler-ID* [**:***...n*]  
  Eine durch Doppelpunkte getrennte Liste, die die Fehlernummern angibt, die von diesem Agent übersprungen werden sollen.  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
@@ -250,7 +254,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Gibt den Typ der vom Verteilungs-Agent verwendeten Abonnentenverbindung an.  
   
-|Wert von SubscriberType|Beschreibung|  
+|Wert von SubscriberType|Description|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC-Datenquelle (ODBC data source)|  
@@ -286,7 +290,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  Wenn dieser Parameter angegeben wird, wird die Bindung der BLOB-Daten (Binary Large Object) als Datenstrom aktiviert. Verwenden Sie **-OledbStreamThreshold** , um die Größe in Bytes anzugeben, ab der ein Datenstrom verwendet wird. **UseOledbStreaming** ist standardmäßig aktiviert. **UseOledbStreaming** schreibt in den Ordner **C:\Programme\Microsoft SQL Server\\<Version\>\COM**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent so installiert haben, dass er unter einem lokalen Systemkonto und nicht unter einem Domänenbenutzerkonto (Standard) ausgeführt wird, kann der Dienst nur auf den lokalen Computer zugreifen. Wenn der Verteilungs-Agent, der unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, so konfiguriert ist, dass beim Anmelden bei einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]der Windows-Authentifizierungsmodus verwendet wird, schlägt der Verteilungs-Agent fehl. Die Standardeinstellung ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung. Weitere Informationen zum Ändern von Sicherheitskonten finden Sie unter [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -299,8 +303,7 @@ distrib [-?]
 |---------------------|  
 |Der **-ExtendedEventConfigFile** -Parameter wurde hinzugefügt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Replikations-Agent-Verwaltung](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

@@ -3,8 +3,11 @@ title: STR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - character data [SQL Server]
 - STR function
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 7cddf1af7eba56824e41ad1ebaedb9aecdc37074
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Konvertiert numerische Daten in Zeichenfolgen.  
   
@@ -50,7 +52,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  Ist ein Ausdruck der ungefähren numerischen (**"float"**)-Datentyp mit einem Dezimaltrennzeichen.  
   
  *length*  
- Die Gesamtlänge. Dazu gehören Dezimaltrennzeichen, Zeichen, Ziffern und Leerzeichen. Der Standardwert ist 10.  
+ Die Gesamtlänge. Dazu gehören Dezimaltrennzeichen, Zeichen, Ziffern und Leerzeichen. Der Standardwert lautet 10.  
   
  *decimal*  
  Die Anzahl der Stellen nach dem Dezimaltrennzeichen. *Decimal* muss kleiner oder gleich 16 sein. Wenn *decimal* mehr als 16 ist, und klicken Sie dann das Ergebnis bei sechzehn Stellen rechts vom Dezimaltrennzeichen abgeschnitten wird.  
@@ -114,8 +116,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
+ [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
  [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
-
 

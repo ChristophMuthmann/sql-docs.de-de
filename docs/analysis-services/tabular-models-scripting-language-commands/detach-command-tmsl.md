@@ -2,32 +2,29 @@
 title: Detach-Befehl (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 413b49cb-ea8f-415c-a059-ce692b7771a1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7930a6c70b7bf9ac1b4802b9014fba9ebf27bca8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dfa0440270971b80d6cd1f6789534cedb6f976ad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="detach-command-tmsl"></a>Detach-Befehl (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Trennt eine Analysis Services-Datenbank von einem Server an.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Trennt eine Analysis Services-Datenbank von einem Server an.  
   
 ## <a name="request"></a>Anforderung  
   
@@ -44,8 +41,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Eigenschaft**|**Default**|**Description**|  
-|database|[Erforderlich]|Der Name des Datenbankobjekts kann nur getrennt werden.|  
+|**Eigenschaft**|**Default**|**Beschreibung**|  
+|Datenbank|[Erforderlich]|Der Name des Datenbankobjekts kann nur getrennt werden.|  
 |Kennwort|Empty|Das Kennwort zum Verschlüsseln geheimer Schlüssel in der Datenbank getrennt.|  
   
 ## <a name="response"></a>Antwort  
@@ -69,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   
-

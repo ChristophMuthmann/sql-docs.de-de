@@ -2,31 +2,32 @@
 title: DISCOVER_LOCATIONS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15828ba16158f97479010617a68a5f3a11cf185e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS-Rowset
-  Gibt Informationen zum Inhalt einer Sicherungsdatei zurück. Sie müssen über die Berechtigung zum Zugreifen auf den Speicherort der Sicherungsdatei verfügen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Gibt Informationen zum Inhalt einer Sicherungsdatei zurück. Sie müssen über die Berechtigung zum Zugreifen auf den Speicherort der Sicherungsdatei verfügen.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_LOCATIONS** -Rowset enthält die folgenden Spalten.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 |Spaltenname|Typindikator|Einschränkungsstatus|  
 |-----------------|--------------------|-----------------------|  
-|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|Required|  
+|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|Erforderlich|  
 |**LOCATION_PASSWORD PF_DBTYPE**|**DBTYPE_WSTR**|Erforderlich, falls während der Sicherung angegeben. Diese Einschränkung wird nicht verwendet, um die zurückgegebenen Zeilen einzuschränken. Wird verwendet, um das Kennwort bereitzustellen, damit auf den Speicherort zugegriffen werden kann.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Verwenden von ADOMD.NET zum Zurückgeben des Rowsets  
@@ -66,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

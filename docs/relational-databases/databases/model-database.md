@@ -2,11 +2,13 @@
 title: Model-Datenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "52"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6733a6d7440071e655004df7dc7926b33503ed1b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="model-database"></a>model-Datenbank
-  Die **model** -Datenbank wird als Vorlage für alle Datenbanken verwendet, die auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erstellt werden. Da **tempdb** bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wird, muss die **model** -Datenbank zu jedem Zeitpunkt auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein. Der gesamte Inhalt der **model** -Datenbank, einschließlich Datenbankoptionen, wird in die neue Datenbank kopiert. Einige Einstellungen der **model** -Datenbank werden auch zum Erstellen einer neuen **tempdb** -Datenbank während des Startvorgangs verwendet; deshalb muss die **model** -Datenbank immer in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die **model**-Datenbank wird als Vorlage für alle Datenbanken verwendet, die auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erstellt werden. Da **tempdb** bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wird, muss die **model** -Datenbank zu jedem Zeitpunkt auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein. Der gesamte Inhalt der **model** -Datenbank, einschließlich Datenbankoptionen, wird in die neue Datenbank kopiert. Einige Einstellungen der **model** -Datenbank werden auch zum Erstellen einer neuen **tempdb** -Datenbank während des Startvorgangs verwendet; deshalb muss die **model** -Datenbank immer in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein.  
   
  Neu erstellte Benutzerdatenbanken verwenden dasselbe [Wiederherstellungsmodell](../../relational-databases/backup-restore/recovery-models-sql-server.md) wie die model-Datenbank. Der Standard ist vom Benutzer konfigurierbar. Informationen zum aktuellen Wiederherstellungsmodell der model-Datenbank finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
@@ -67,15 +68,15 @@ ms.lasthandoff: 08/03/2017
 |AUTO_SHRINK|OFF|ja|  
 |AUTO_UPDATE_STATISTICS|ON|ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
-|CHANGE_TRACKING|OFF|Nein|  
+|CHANGE_TRACKING|OFF|nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
 |CURSOR_DEFAULT|GLOBAL|ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Ja<br /><br /> ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> ja<br /><br /> ja|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
-|DB_CHAINING|OFF|Nein|  
-|ENCRYPTION|OFF|Nein|  
-|MIXED_PAGE_ALLOCATION|ON|Nein|  
+|DB_CHAINING|OFF|nein|  
+|ENCRYPTION|OFF|nein|  
+|MIXED_PAGE_ALLOCATION|ON|nein|  
 |NUMERIC_ROUNDABORT|OFF|ja|  
 |PAGE_VERIFY|CHECKSUM|ja|  
 |PARAMETERIZATION|SIMPLE|ja|  
@@ -83,14 +84,14 @@ ms.lasthandoff: 08/03/2017
 |READ_COMMITTED_SNAPSHOT|OFF|ja|  
 |RECOVERY|Hängt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition ab*|ja|  
 |RECURSIVE_TRIGGERS|OFF|ja|  
-|Service Broker-Optionen|DISABLE_BROKER|Nein|  
-|TRUSTWORTHY|OFF|Nein|  
+|Service Broker-Optionen|DISABLE_BROKER|nein|  
+|TRUSTWORTHY|OFF|nein|  
   
  *Informationen zum Überprüfen des aktuellen Wiederherstellungsmodells der Datenbank finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oder [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
  Die folgenden Operationen können an der **model** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateien oder Dateigruppen.  
@@ -127,4 +128,3 @@ ms.lasthandoff: 08/03/2017
  [Verschieben von Datenbankdateien](../../relational-databases/databases/move-database-files.md)  
   
   
-

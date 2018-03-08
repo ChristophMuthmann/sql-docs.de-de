@@ -1,56 +1,54 @@
 ---
-title: Mithilfe des ReportViewer-Steuerelements WebForms | Microsoft Docs
+title: Verwenden des ReportViewer-Steuerelements in WebForms | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "25"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d7ba5ace49e8990322e119cce01426578a017cd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WebForms
   Zum Anzeigen von Berichten, die auf einem Berichtsserver bereitgestellt werden oder sich im lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement in WebForms verwenden, um die Berichte in einer Webanwendung zu rendern.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>So verwenden Sie das ReportViewer-Steuerelement in einer Webanwendung  
   
-1.  Erstellen Sie ein neues [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET-Website entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Erstellen Sie mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue [!INCLUDE[msCoName](../../includes/msconame-md.md)]-ASP.NET-Website.  
   
-     \-"Oder" -  
+     \- Oder –  
   
      Öffnen Sie eine bestehende ASP.NET-Website, und fügen Sie eine neue WebForm hinzu.  
   
-2.  Suchen der **ScriptManager** steuern, der **AJAX-Erweiterungen** Gruppe in der **Toolbox** Fenster, und ziehen Sie es auf die Entwurfsoberfläche des Webformulars.  
+2.  Suchen Sie im Fenster **Toolbox** in der Gruppe **AJAX-Erweiterungen** das **ScriptManager**-Steuerelement, und ziehen Sie es auf die Entwurfsoberfläche des Webformulars.  
   
-     Wenn die **Toolbox** ist nicht sichtbar ist, Sie können darauf zugreifen aus der **Ansicht** Menü dazu **Toolbox**.  
+     Wenn die **Toolbox** nicht sichtbar ist, können Sie über das Menü **Ansicht** darauf zugreifen, indem Sie auf **Toolbox** klicken.  
   
-3.  Suchen Sie die **ReportViewer** steuern, der **Toolbox** und ziehen Sie es auf der Entwurfsoberfläche unter der **ScriptManager** Steuerelement.  
+3.  Suchen Sie in der  **Toolbox** das **ReportViewer**-Steuerelement, und ziehen Sie es auf der Entwurfsoberfläche unter das **ScriptManager**-Steuerelement.  
   
-     Die **ReportViewer** reportviewer1 Steuerelement zum Formular hinzugefügt wird.  
+     Das als „reportViewer1“ bezeichnete **ReportViewer**-Steuerelement wird dem Formular hinzugefügt.  
   
- Nachdem das Steuerelement dem Formular hinzugefügt wird die **ReportViewer-Aufgaben** Smarttag erscheint dazu aufgefordert, einen Bericht auswählen. Wenn der Bericht, die Sie anzeigen möchten, wählen einen Bericht bereitgestellt wurde die  **\<Serverbericht >** option die **Bericht auswählen** Dropdown-Liste. Einmal die  **\<Serverbericht >** Option ist die ausgewählte zwei zusätzliche Eigenschaften angezeigt: **Berichtsserver-Url** und **Berichtspfad**. Die **Berichtsserver-Url** ist die Adresse auf dem Berichtsserver und die **Berichtspfad** ist der vollständige Pfad zum Bericht gerendert werden sollen.  
+ Nachdem das Steuerelement zum Formular hinzugefügt wurde, wird das SmartTag **ReportViewer-Aufgaben** angezeigt, und Sie werden aufgefordert, einen Bericht auszuwählen. Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Serverbericht>** aus der Dropdownliste **Bericht wählen** aus. Wenn die Option **\<Serverbericht>** aktiviert wurde, werden zwei weitere Eigenschaften angezeigt: **Berichtsserver-URL** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, den Sie rendern möchten.  
   
- Wenn Sie einen Bericht im lokalen Modus anzeigen möchten, wählen Sie entweder die **einen neuen Bericht entwerfen** Option aus, um den Berichts-Designer zu starten, oder wählen Sie einen Bericht, der bereits Teil eines bestehenden Projekts ist. Nachdem Sie einen Bericht ausgewählt haben, achten Sie darauf, geben Sie den Namen der RDLC-Berichtsdatei in die **"ReportPath"** Eigenschaft des ReportViewer-Steuerelements. Diese Eigenschaft wird unter der **LocalReport** Knoten in der **Eigenschaften** Bereich.  
+ Wenn Sie einen Bericht im lokalen Modus anzeigen möchten, aktivieren Sie entweder die Option **Neuen Bericht entwerfen**, um den Berichts-Designer zu starten, oder wählen Sie einen Bericht aus, der bereits Teil des vorhandenen Projekts ist. Nachdem Sie einen Bericht ausgewählt haben, müssen Sie den Namen der RDLC-Berichtsdatei in die **ReportPath**-Eigenschaft des ReportViewer-Steuerelements eingeben. Diese Eigenschaft wird im Bereich **Eigenschaften** unter dem Knoten **LocalReport** angezeigt.  
   
- Beim Rendern des Berichts können Sie eines oder mehrere Elemente auf der ReportViewer-Symbolleiste ausblenden. Beispielsweise können Sie die Druckschaltfläche ausblenden. Um Symbolleistenelemente auszublenden, legen Sie die folgenden ReportViewer-Eigenschaften auf **"false"** in der **Eigenschaften** Bereich.  
+ Beim Rendern des Berichts können Sie eines oder mehrere Elemente auf der ReportViewer-Symbolleiste ausblenden. Beispielsweise können Sie die Druckschaltfläche ausblenden. Legen Sie die folgenden ReportViewer-Eigenschaften im Bereich **Eigenschaften** auf **FALSE** fest, um Symbolleistenelemente auszublenden.  
   
 -   **ShowBackButton**  
   
@@ -67,9 +65,9 @@ ms.lasthandoff: 08/09/2017
 -   **ShowZoomControl**  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Anzeigen von Berichten im Remoteverarbeitungsmodus  
- Im folgenden Beispiel wird veranschaulicht, wie ein Bericht, der auf einem Berichtsserver bereitgestellt wurde, gerendert wird. Dieses Beispiel verwendet die Sales Order Detail-Bericht, der in enthalten ist das [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Projekt für Beispielberichte.  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Bericht, der auf einem Berichtsserver bereitgestellt wurde, gerendert wird. In diesem Beispiel wird der Bericht für Auftragsdetails, der im [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Projekt für Beispielberichte enthalten ist, verwendet.  
   
- Da im Beispiel eine integrierte Windows-Authentifizierung verwendet wird, müssen Sie zuerst den Identitätswechsel aktivieren. Hierzu fügen Sie die folgende Zeile in der **"Web.config"** Datei:  
+ Da im Beispiel eine integrierte Windows-Authentifizierung verwendet wird, müssen Sie zuerst den Identitätswechsel aktivieren. Hierzu fügen Sie folgende Zeile in die **web.config**-Datei ein:  
   
 ```  
 <!-- Web.config file. -->  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Der Identitätswechsel ist standardmäßig deaktiviert.  
 
-**C#-**
+**C#**
 ```
 protected void Page_Init(object sender, EventArgs e)  
 {  
@@ -155,23 +153,23 @@ End Class
   
 1.  Öffnen Sie die Website, zu der der Bericht hinzugefügt werden soll.  
   
-2.  Aus der **Website** klicken Sie im Menü **vorhandenes Element hinzufügen**.  
+2.  Aktivieren Sie im Menü **Website** die Option **Vorhandenes Element hinzufügen**.  
   
 3.  Wechseln Sie zu der Position, an der das Projekt für AdventureWorks-Beispielberichte installiert ist.  
   
      Der Standardspeicherort lautet C:\Programme\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports.  
   
-4.  Wählen Sie die Datei Sales Order Detail.rdl aus, und klicken Sie auf die **hinzufügen** Schaltfläche.  
+4.  Wählen Sie die Datei „Sales Order Detail.rdl“ aus, und klicken Sie auf die Schaltfläche **Hinzufügen**.  
   
      Die Datei Sales Order Detail.rdl sollte jetzt ein Teil des Projekts sein.  
   
-5.  Mit der rechten Maustaste in die Datei Sales Order Detail.rdl im Projektmappen-Explorer, und wählen Sie **umbenennen**. Benennen Sie den Bericht zu **Sales Order Detail.rdlc** und drücken Sie die EINGABETASTE.  
+5.  Klicken Sie mit der rechten Maustaste auf die Datei „Sales Order Detail.rdl“ im Projektmappen-Explorer, und wählen Sie **Umbenennen** aus. Benennen Sie den Bericht in **Sales Order Detail.rdlc** um, und drücken Sie die EINGABETASTE.  
   
-     Projektmappen-Explorer nicht sichtbar ist, öffnen Sie es aus der **Ansicht** Menü, indem Sie Projektmappen-Explorer auswählen.  
+     Wenn der Projektmappen-Explorer nicht sichtbar ist, können Sie ihn über das Menü **Ansicht** öffnen, indem Sie Projektmappen-Explorer auswählen.  
   
  Mit dem folgenden Codebeispiel wird ein Dataset für die Auftragsdaten erstellt. Dann wird der Bericht für Auftragsdetails im lokalen Modus erstellt.  
 
-**C#-**
+**C#**
 ```csharp  
 protected void Page_Init(object sender, EventArgs e)  
 {  
@@ -489,9 +487,8 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrieren von Reporting Services, die mit den ReportViewer-Steuerelementen](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- [Die Datenerfassung im ReportViewer-Steuerelement 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Data collection in ReportViewer Control 2016 (Datensammlung im ReportViewer-Steuerelement 2016)](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   
-

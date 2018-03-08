@@ -2,11 +2,13 @@
 title: Schrittweise Wiederherstellungen [SQL Server] | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-caps.latest.revision: 74
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "74"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
-  Dieses Thema ist nur für Datenbanken in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relevant, die mehrere Dateien oder Dateigruppen enthalten, und unter dem einfachen Modell nur für schreibgeschützte Dateigruppen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema ist nur für Datenbanken in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relevant, die mehrere Dateien oder Dateigruppen enthalten, und unter dem einfachen Modell nur für schreibgeschützte Dateigruppen.  
   
  Weitere Informationen zur schrittweisen Wiederherstellung und speicheroptimierten Tabellen finden Sie unter [Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
      Weitere Informationen zur schrittweisen Wiederherstellung von In-Memory OLTP-Datenbanken finden Sie unter [Schrittweise Sicherung und Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
  Wenn in einer Teilwiederherstellungssequenz eine [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) -Dateigruppe ausgeschlossen wird, wird die Wiederherstellung bis zu einem bestimmten Zeitpunkt nicht unterstützt. Sie können das Fortsetzen der Wiederherstellungssequenz erzwingen. Die FILESTREAM-Dateigruppen, die nicht in die RESTORE-Anweisung eingeschlossen werden, können jedoch zu keinem Zeitpunkt wiederhergestellt werden. Wenn Sie eine Wiederherstellung bis zu einem bestimmten Zeitpunkt erzwingen möchten, geben Sie die CONTINUE_AFTER_ERROR-Option zusammen mit der Option STOPAT, STOPATMARK oder STOPBEFOREMARK an. Diese müssen Sie auch in den folgenden RESTORE LOG-Anweisungen angeben. Wenn Sie CONTINUE_AFTER_ERROR angeben, ist die Teilwiederherstellungssequenz erfolgreich, und die FILESTREAM-Dateigruppe wird nicht mehr wiederherstellbar.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Schrittweise Wiederherstellung mit dem einfachen Wiederherstellungsmodell  
@@ -176,7 +178,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Die differenzielle Sicherung, die nach allen anderen Sicherungen ausgeführt wird, die in der ursprünglichen schrittweisen Wiederherstellung gespeichert wurden, um die Daten bis zum ursprünglichen Wiederherstellungszeitpunkt wiederherzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

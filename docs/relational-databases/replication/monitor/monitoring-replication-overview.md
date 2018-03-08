@@ -2,31 +2,32 @@
 title: "Übersicht über den Replikationsmonitor | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d753e6f33d721fe409af8ca71afc6812f500a95f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-replication-overview"></a>Übersicht über den Replikationsmonitor
-  Der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor ist ein grafisches Tool, mit dem Sie die allgemeine Integrität der Replikationstopologie überwachen können. Der Replikationsmonitor stellt detaillierte Informationen zum Status und der Leistung von Veröffentlichungen und Abonnements bereit und unterstützt Sie bei der Beantwortung allgemeiner Fragen:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikationsmonitor ist ein grafisches Tool, mit dem Sie die allgemeine Integrität der Replikationstopologie überwachen können. Der Replikationsmonitor stellt detaillierte Informationen zum Status und der Leistung von Veröffentlichungen und Abonnements bereit und unterstützt Sie bei der Beantwortung allgemeiner Fragen:  
   
 -   Arbeitet das System fehlerfrei?  
   
@@ -94,4 +95,3 @@ ms.lasthandoff: 06/22/2017
  Beschreibt das Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents mithilfe des Replikationsmonitors.  
   
   
-

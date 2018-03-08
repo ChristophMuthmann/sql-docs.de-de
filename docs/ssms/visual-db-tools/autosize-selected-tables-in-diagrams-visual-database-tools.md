@@ -3,10 +3,12 @@ title: "Automatisches Anpassen der Größe ausgewählter Tabellen in Diagrammen 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - database diagrams [SQL Server], autosizing objects
 - autosizing objects in database diagrams
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fae89a44c80d415155359d20024ae6cacd9dbf0d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 85956b6ed09b3ba2e68880a8704dc3a545a3176e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Automatisches Anpassen der Größe ausgewählter Tabellen in Diagrammen (Visual Database Tools)
-Sie können die Größe von in Diagrammen enthaltenen Tabellen rasch auf die kleinste Größe verkleinern, in der noch alle Felder angezeigt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können die Größe von in Diagrammen enthaltenen Tabellen rasch auf die kleinste Größe verkleinern, in der noch alle Felder angezeigt werden.  
   
 ### <a name="to-automatically-size-selected-tables-in-diagrams"></a>So passen Sie die Größe ausgewählter Tabellen in Diagrammen automatisch an  
   
@@ -36,7 +37,6 @@ Sie können die Größe von in Diagrammen enthaltenen Tabellen rasch auf die kle
   
 2.  Klicken Sie mit der rechten Maustaste auf eine ausgewählte Tabelle, und wählen Sie im Kontextmenü den Befehl **Größe ausgewählter Tabellen automatisch anpassen**aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

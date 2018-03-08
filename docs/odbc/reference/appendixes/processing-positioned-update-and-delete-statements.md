@@ -3,10 +3,12 @@ title: Verarbeitung positioniert, Update- und Delete-Anweisungen | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97678a0f54c9cbe02ed28b30393db6c16473e58f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Verarbeitung positioniert, Update- und Delete-Anweisungen
 > [!IMPORTANT]  
@@ -48,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Bibliothek-Cursorn, die der Rest des Ergebnisses festgelegt, und klicken Sie dann das aktuelle Rowset aus dem Cache refetches, bevor eine positionierte ausgeführt wird, update oder delete-Anweisung. Wenn die Anwendung dann eine Funktion aufruft, der Metadaten in einem Resultset zurückgibt (z. B. **SQLNumResultCols** oder **SQLDescribeCol**), die Cursorbibliothek gibt einen Fehler zurück.  
   
 -   Wenn eine positionierte Update- oder Delete-Anweisung für eine Spalte einer Tabelle ausgeführt wird, die eine Timestamp-Spalte enthält, die automatisch aktualisiert wird, jedes Mal, wenn ein Update ausgeführt wird, fehl alle nachfolgenden positionierte Update- oder Delete-Anweisungen, wenn die Timestamp-Spalte ist gebunden. Dies tritt auf, wenn der gesuchten update oder delete-Anweisung, die Cursorbibliothek erstellt, die zu aktualisierende Zeile nicht genau identifiziert wird. Der Wert in der komplexen Anweisung für die Timestamp-Spalte wird den automatisch aktualisierten Wert des Timestamp-Spalte nicht überein.
-

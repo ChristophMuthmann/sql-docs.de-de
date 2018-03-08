@@ -2,11 +2,13 @@
 title: Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,22 +16,21 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "8"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09045ca8bd6eda252a61143207b466455ec7bd34
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38ec6e08292a20a748db81a106f6d721026a8a15
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS
   In diesem Thema wird beschrieben, wie Profilerstellungsbenachrichtigungen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) aktiviert und deaktiviert werden. Standardmäßig sind Profilerstellungsbenachrichtigungen in DQS aktiviert. Profilerstellungsbenachrichtigungen liefern Ihnen wichtige Fakten zur Datenquelle und der Effektivität der aktuellen Aktivität, die für die Daten ausgeführt wird. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -49,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 5.  Klicken Sie auf **Schließen**.  
   
   
-

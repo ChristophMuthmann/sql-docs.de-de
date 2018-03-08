@@ -2,11 +2,13 @@
 title: Anhalten und Fortsetzen der Datenbankspiegelung (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Anhalten und Fortsetzen der Datenbankspiegelung (SQL Server)
-  Der Datenbankbesitzer kann eine Datenbank-Spiegelungssitzung jederzeit anhalten und später fortsetzen. Durch Anhalten bleibt der Sitzungsstatus erhalten, während die Spiegelung unterbrochen wird. Bei Engpässen ist das Anhalten möglicherweise nützlich, um die Leistung auf dem Prinzipalserver zu verbessern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Datenbankbesitzer kann eine Datenbank-Spiegelungssitzung jederzeit anhalten und später fortsetzen. Durch Anhalten bleibt der Sitzungsstatus erhalten, während die Spiegelung unterbrochen wird. Bei Engpässen ist das Anhalten möglicherweise nützlich, um die Leistung auf dem Prinzipalserver zu verbessern.  
   
  Wenn eine Sitzung angehalten wird, bleibt die Prinzipaldatenbank weiterhin verfügbar. Durch das Anhalten wird der Status der Spiegelungssitzung auf SUSPENDED festgelegt, und die Spiegeldatenbank hält nicht mehr Schritt mit der Prinzipaldatenbank. Dadurch wird die Prinzipaldatenbank fehleranfällig ausgeführt.  
   
@@ -72,10 +73,9 @@ ms.lasthandoff: 08/02/2017
   
 -   [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   
   
-

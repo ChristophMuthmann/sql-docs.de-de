@@ -1,10 +1,13 @@
 ---
-title: Datenfluss | Microsoft Docs
+title: Datenfluss | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0ddc6281b1f0332c4a62af8b6fb787c508d49ba3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow"></a>Datenfluss
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Datenflusskomponenten bereit: Quellen, Transformationen und Ziele. Quellen extrahieren Daten aus Datenspeichern, wie z. B. Tabellen und Sichten in relationalen Datenbanken, Dateien und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken. Mit Transformationen werden Daten geändert, zusammengefasst und bereinigt. Mit Zielen werden Daten in Datenspeicher geladen oder Datasets im Arbeitsspeicher erstellt.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
  Im folgenden Diagramm wird ein Datenfluss angezeigt, der eine Quelle, eine Transformation mit einer Eingabe und einer Ausgabe sowie ein Ziel aufweist. Dieses Diagramm enthält die Eingaben, Ausgaben und Fehlerausgaben sowie die Eingabespalten, Ausgabespalten und externen Spalten.  
   
- ![Datenfluss Komponenten und ihre Eingaben und Ausgaben](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Datenfluss Komponenten und ihre Eingaben und Ausgaben")  
+ ![Datenflusskomponenten und ihre Ein- und Ausgaben](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Datenflusskomponenten und ihre Ein- und Ausgaben")  
   
 ## <a name="data-flow-implementation"></a>Datenflussimplementierung  
  Der erste Schritte beim Implementieren eines Datenflusstasks in einem Paket besteht darin, der Ablaufsteuerung eines Pakets einen Datenflusstask hinzuzufügen. Ein Paket kann mehrere Datenflusstasks mit jeweils einem eigenen Datenfluss einschließen. Wenn z. B. für ein Paket Datenflüsse in einer bestimmten Reihenfolge oder andere Tasks zwischen den Datenflüssen ausgeführt werden müssen, ist für jeden Datenfluss ein separater Datenflusstask erforderlich.  
@@ -193,7 +195,7 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
-### <a name="columns"></a>Spalten  
+### <a name="columns"></a>Spalte  
  Eingaben, Ausgaben und Fehlerausgaben sind Auflistungen von Spalten. Alle Spalten sind konfigurierbar, und je nach Spaltentyp – Eingabe, Ausgabe oder extern – stellt[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterschiedliche Eigenschaften für die jeweilige Spalte bereit. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Möglichkeiten zum Festlegen von Spalteneigenschaften bereit: programmgesteuert, durch die Verwendung komponentenspezifischer Dialogfelder oder durch die Verwendung des Dialogfelds **Erweiterter Editor**.  
   
 ## <a name="paths"></a>Pfade  
@@ -214,11 +216,10 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zum Festlegen von Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Hinzufügen oder Löschen einer Komponente im Datenfluss](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [Verbinden von Komponenten in einem Datenfluss](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Video [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) auf technet.microsoft.com.  
-

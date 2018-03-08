@@ -3,7 +3,7 @@ title: Tables-Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Tables collection [ADOX]
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f19e4ae74c893062559d8cffbec8c6e8e375ce07
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1489bb1716cb29116e385158e6f05dcc3d028431
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tables-collection-adox"></a>Tables-Auflistung (ADOX)
 Enthält alle [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) Objekte eines Katalogs.  
@@ -53,7 +52,7 @@ Enthält alle [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) Ob
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Tabellen Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
+-   [Tables Collection Properties, Methods, and Events (Tables-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für Katalog ActiveConnection-Eigenschaft (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -62,4 +61,3 @@ Enthält alle [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) Ob
  [Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-

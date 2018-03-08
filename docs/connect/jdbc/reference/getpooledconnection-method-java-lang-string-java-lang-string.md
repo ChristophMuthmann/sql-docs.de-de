@@ -3,29 +3,28 @@ title: GetPooledConnection-Methode (java.lang.String, java.lang.String) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a28924aab79628830fe2f51e6b8642f12be2bfd
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c62f975b9d9176941906f3ab8b5e5d7d241d14ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>getPooledConnection-Methode (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,4 +64,3 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
  [SQLServerConnectionPoolDataSource-Klasse](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
   
-

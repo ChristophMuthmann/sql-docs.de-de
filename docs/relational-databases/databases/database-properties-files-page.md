@@ -2,29 +2,30 @@
 title: Datenbankeigenschaften (Seite Dateien) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.files.f1
+f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "42"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-files-page"></a>Datenbankeigenschaften (Seite Dateien)
-  Auf dieser Seite können Sie eine neue Datenbank erstellen bzw. die Eigenschaften einer ausgewählten Datenbank anzeigen oder ändern. Dieses Thema bezieht sich auf die Option **Datenbankeigenschaften (Seite 'Dateien')** für vorhandene Datenbanken und auf die Option **Neue Datenbank (Seite 'Allgemein')**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf dieser Seite können Sie eine neue Datenbank erstellen bzw. die Eigenschaften einer ausgewählten Datenbank anzeigen oder ändern. Dieses Thema bezieht sich auf die Option **Datenbankeigenschaften (Seite 'Dateien')** für vorhandene Datenbanken und auf die Option **Neue Datenbank (Seite 'Allgemein')**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Datenbankname**  
@@ -86,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
  Weitere Informationen zu Dateien finden Sie unter [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

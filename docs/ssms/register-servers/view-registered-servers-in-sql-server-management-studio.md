@@ -2,9 +2,12 @@
 title: Anzeigen von registrierten Servern in SQL Server Management Studio | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - viewing Registered Servers
 - Registered Servers [SQL Server], viewing
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f49a98bbef075ebcb9f6bdc9327f49b6301220c6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 3a4ea7bec5f6cc8d46a0a2783199a6f9d30cf53c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>Anzeigen von registrierten Servern in SQL Server Management Studio
-  In diesem Thema wird beschrieben, wie registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]angezeigt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In diesem Thema wird beschrieben, wie registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]angezeigt werden.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -38,4 +41,3 @@ ms.lasthandoff: 07/31/2017
      Standardmäßig wird der Bereich für registrierte Server im Hauptfenster über dem Objekt-Explorer angezeigt.  
   
   
-

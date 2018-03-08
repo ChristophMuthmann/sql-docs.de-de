@@ -1,29 +1,30 @@
 ---
 title: "Arbeiten mit SSMA für die MySQL-Konsole (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 08/15/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3bd319d0cff1a3f7d7681591a59b640a2afd9d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6212ff417a112687332129597b2a442f87d46da1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Arbeiten mit SSMA für die MySQL-Konsole (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) for MySQL ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden kann. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Zyklus Migration verringert und der Migrationsaufwand skaliert.  
@@ -49,4 +50,3 @@ In diesem Abschnitt behandelten Themen gehören:
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für MySQL-Konsole](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
   
-

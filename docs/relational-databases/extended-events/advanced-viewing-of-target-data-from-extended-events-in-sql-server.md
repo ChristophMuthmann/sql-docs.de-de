@@ -3,26 +3,28 @@ title: Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Serve
 ms.custom: 
 ms.date: 10/04/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+manager: craigg
+ms.openlocfilehash: 7415e768584c9256eaa600cb2302c7cc9aa0d529
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Dieser Artikel veranschaulicht, wie Sie die erweiterten Funktionen von SQL Server Management Studio (SSMS.exe) verwenden können, um die Zieldaten aus erweiterten Ereignissen sehr detailliert anzuzeigen. Der Artikel erläutert Folgendes:
@@ -43,7 +45,7 @@ In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Ereignis
 
 In diesem Artikel wird ebenfalls davon ausgegangen, dass Sie eine möglichst aktuelle monatliche Version von SSMS installiert haben. Hier finden Sie Hilfe zur Installation:
 
-- [Herunterladen von SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+- [SQL Server Management Studio (SSMS) herunterladen](http://msdn.microsoft.com/library/mt238290.aspx)
 
 
 
@@ -120,7 +122,7 @@ SSMS kann Daten aus jedem Ziel anzeigen. Die Ansichten unterscheiden sich jedoch
 ### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Öffnen einer .XEL-Datei über das Menü „Datei“ > „Öffnen“ > „Datei“
 
 
-Sie können eine einzelne .XEL-Datei über das Standardmenü **Datei** > **Öffnen** > **Datei** öffnen.
+Sie können eine einzelne .XEL-Datei über das Standardmenü **Datei** > **Öffnen** > **Datei**öffnen.
 
 Sie können auch eine .XEL-Datei per Drag & Drop auf die Registerkartenleiste in der SSMS-Benutzeroberfläche ziehen.
 
@@ -162,7 +164,7 @@ Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit a
 
 Die Datenanzeige wird in einem von Ihnen angegebenen Intervall aktualisiert. Siehe **Maximale Verteilungslatenzzeit** unter:
 
-- **Extended Events** > **Sessions** > *[your-session]* > **Properties** > **Advanced** > **Maximum dispatch latency**
+- **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
 
 
 
@@ -301,7 +303,7 @@ Nachdem die Gruppierung durchgeführt wurde, ändert sich die Anzeige, wie in de
 #### <a name="d42-aggregation"></a>D.4.2 Aggregation
 
 
-Nachdem die angezeigten Daten gruppiert wurden, können Sie damit fortfahren, Daten in anderen Spalten zu aggregieren.  Der nächste Screenshot zeigt die gruppierten Daten, die nach *Anzahl* aggregiert werden.
+Nachdem die angezeigten Daten gruppiert wurden, können Sie damit fortfahren, Daten in anderen Spalten zu aggregieren.  Der nächste Screenshot zeigt die gruppierten Daten, die nach *Anzahl*aggregiert werden.
 
 ![Symbolleiste > Schaltfläche „Aggregation“, dann Dialogfeld „Aggregation“](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
@@ -318,6 +320,5 @@ Das Ereignis **query_post_execution_showplan** ermöglicht Ihnen die Anzeige des
 
 
 ![Abfrageplan mit Eigenschaftenliste für einen Knoten](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

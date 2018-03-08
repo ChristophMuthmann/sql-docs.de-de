@@ -2,9 +2,12 @@
 title: Anzeigen der Eigenschaften eines Facets der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,39 +15,39 @@ ms.topic: article
 helpviewer_keywords:
 - Policy-Based Management, view facet properties
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 673586c308ec38088788112ec3e0c9a5730fff9e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0ef0cb61dbfbf8e026b64db3ce97c24a3806be5b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Anzeigen der Eigenschaften eines Facets der richtlinienbasierten Verwaltung
-  In diesem Thema wird beschrieben, wie Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung i mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung i mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
   
  **In diesem Thema**  
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Anzeigen der Eigenschaften eines Facets mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-facet"></a>So zeigen Sie die Eigenschaften eines Facets an  
   
@@ -56,9 +59,8 @@ ms.lasthandoff: 06/22/2017
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Facets** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf das Facet, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen über die verfügbaren Optionen im Dialogfeld **Eigenschaften des Facets –***facet_name* finden Sie unter [Dialogfeld 'Facet-Eigenschaften', Seite 'Allgemein'](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Dialogfeld 'Facet-Eigenschaften', Seite 'Abhängige Richtlinien'](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)und [Dialogfeld 'Facet-Eigenschaften', Seite 'Abhängige Bedingungen'](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Klicken Sie mit der rechten Maustaste auf das Facet, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen über die verfügbaren Optionen im Dialogfeld **Faceteigenschaften** > *Facetname* finden Sie unter [Facet Properties Dialog Box, General Page (Dialogfeld „Faceteigenschaften“, Seite „Allgemein“)](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Facet Properties Dialog Box, Dependent Policies Page (Dialogfeld „Faceteigenschaften“, Seite „Abhängige Richtlinien“)](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md) und [Facet Properties Dialog Box, Dependent Conditions Page (Dialogfeld „Faceteigenschaften“, Seite „Abhängige Bedingungen“)](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **Schließen**.  
   
   
-

@@ -3,30 +3,31 @@ title: "Optionen (Umgebung – Seite „Tastatur“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b19b72a2359af1a08ddaa3d2d01715483fd29533
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eba82fd5cbff225b5c80153036f35150de7db48a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---keyboard-page"></a>Optionen (Umgebung – Seite „Tastatur“)
-Mithilfe des Dialogfelds **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Dialogfelds **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  
   
 Die Dropdownliste **Tastaturschema** stellt die verfügbaren Auflistungen von Tastenkombinationen bereit. Um ein bestimmtes Schema zu laden, wählen Sie es aus der Liste aus. Wenn Sie das Dialogfeld **Optionen** verlassen möchten, klicken Sie auf **OK**. Das ausgewählte Schema wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]geladen.  
   
@@ -43,4 +44,3 @@ Die gespeicherte Prozedur, die ausgeführt wird, wenn Sie die Tastenkombination 
   
 Eine Liste der Tastenkombinationen für das jeweilige Schema finden Sie unter [Tastenkombinationen für SQL Server Management Studio](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
   
-

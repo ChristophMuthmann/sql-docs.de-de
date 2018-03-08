@@ -2,9 +2,12 @@
 title: "Suchen von Text mit regulären Ausdrücken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,33 +21,32 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: f60dd96e3a335938d99c0b0f619ce859c208e795
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
-  Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 #### <a name="to-find-using-regular-expressions"></a>So können Sie Suchvorgänge mithilfe von regulären Ausdrücken ausführen  
   
 1.  Um die Verwendung von regulären Ausdrücken im Feld **Suchen nach** bei den Vorgängen **Schnellsuche**, **In Dateien suchen**, **Schnellersetzung**oder **In Dateien ersetzen** zu aktivieren, wählen Sie unter **Suchoptionen** die Option **Mit**und dann **Reguläre Ausdrücke**aus.  
   
-2.  Die dreieckige Schaltfläche für die Verweisliste ****  neben dem Feld **Suchen nach** ist jetzt aktiviert. Klicken Sie auf diese Schaltfläche, um eine Liste der am häufigsten verwendeten regulären Ausdrücke anzuzeigen. Wenn Sie ein Element aus dem Ausdrucks-Generator auswählen, wird es in die **Suchen nach** -Zeichenfolge eingefügt.  
+2.  Die dreieckige Schaltfläche für die **Verweisliste** neben dem Feld **Suchen nach** ist jetzt aktiviert. Klicken Sie auf diese Schaltfläche, um eine Liste der am häufigsten verwendeten regulären Ausdrücke anzuzeigen. Wenn Sie ein Element aus dem Ausdrucks-Generator auswählen, wird es in die **Suchen nach** -Zeichenfolge eingefügt.  
   
 > [!NOTE]  
 >  Zwischen der Syntax der regulären Ausdrücke, die in **Suchen nach** -Zeichenfolgen verwendet werden können, und der Syntax bei der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Programmierung gibt es bestimmte Unterschiede. So werden z.B. geschweifte Klammern „{}“ bei **Suchen und Ersetzen**für markierte Ausdrücke verwendet. Der Ausdruck „zo{1}“ entspricht allen Vorkommen von „zo“, gefolgt von der Markierung 1, wie z.B. in „Alonzo1“ und „Gonzo1“. In .NET Framework hingegen wird die Notation {} für Quantifizierer verwendet. Der Ausdruck „zo{1}“ entspricht hier allen Vorkommen von „z“ gefolgt von genau einem „o“, wie in „zone“, nicht aber in „zoo“.  
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Beliebiges Zeichen|aus.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
@@ -66,7 +68,7 @@ ms.lasthandoff: 07/31/2017
   
  Die Liste aller regulären Ausdrücke, die in **Suchen und Ersetzen** -Vorgängen zulässig sind, ist zu lang, um in der **Verweisliste**angezeigt werden zu können. Sie können auch einen der folgenden regulären Ausdrücke in eine **Suchen nach** -Zeichenfolge einfügen:  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Minimal; 0 oder mehr|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal; ein oder mehr|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
@@ -90,7 +92,7 @@ ms.lasthandoff: 07/31/2017
   
  In der folgenden Tabelle ist die Syntax für Übereinstimmungen in Bezug auf Standardeigenschaften von Unicode-Zeichen aufgelistet. Die aus zwei Buchstaben bestehende Abkürzung ist mit der in der Datenbank für Eigenschaften von Unicode-Zeichen identisch. Die Abkürzungen lassen sich als Teil eines Zeichensatzes angeben. So entspricht z. B. der Ausdruck [:Nd:Nl:No] einer beliebigen Ziffer.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Großbuchstabe|:Lu|Entspricht einem beliebigen Großbuchstaben. So entspricht :Luhe z. B. "The", aber nicht "the".|  
 |Kleinbuchstabe|:Ll|Entspricht einem beliebigen Kleinbuchstaben. So entspricht :Llhe z. B. "the", aber nicht "The".|  
@@ -125,7 +127,7 @@ ms.lasthandoff: 07/31/2017
   
  Neben den Standardeigenschaften von Unicode-Zeichen können auch die folgenden zusätzlichen Eigenschaften als Teil eines Zeichensatzes angegeben werden:  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Entspricht einem beliebigen einzelnen Zeichen. So entspricht :Alhe Wörtern wie "The", "then" und "reached".|  
 |Numerisch|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  
@@ -137,9 +139,8 @@ ms.lasthandoff: 07/31/2017
 |Katakana|:Ka|Entspricht Katakana-Zeichen.|  
 |Ideografisch/Han/Kanji|:Id|Entspricht ideografischen Zeichen, z. B. Han und Kanji.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Suchen und Ersetzen](../../relational-databases/scripting/search-and-replace.md)   
  [Suchen von Text mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md)  
   
   
-

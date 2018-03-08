@@ -2,30 +2,30 @@
 title: "Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (Power Pivot für SharePoint)
-  Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung verwendet den verfügbaren Speicherplatz des Hostcomputers, um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbanken zum schnelleren Neuladen zwischenzuspeichern. Jede in den Arbeitsspeicher geladene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank wird zuerst auf einen Datenträger zwischengespeichert, damit sie später für neue Anforderungen schnell erneut geladen werden kann. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint nutzt standardmäßig den gesamten verfügbaren Speicherplatz zum Zwischenspeichern der zugehörigen Datenbanken. Sie können dieses Verhalten jedoch ändern, indem Sie Eigenschaften festlegen, durch die der verwendete Speicherplatz eingeschränkt wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung verwendet den verfügbaren Speicherplatz des Hostcomputers, um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbanken zum schnelleren Neuladen zwischenzuspeichern. Jede in den Arbeitsspeicher geladene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank wird zuerst auf einen Datenträger zwischengespeichert, damit sie später für neue Anforderungen schnell erneut geladen werden kann. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint nutzt standardmäßig den gesamten verfügbaren Speicherplatz zum Zwischenspeichern der zugehörigen Datenbanken. Sie können dieses Verhalten jedoch ändern, indem Sie Eigenschaften festlegen, durch die der verwendete Speicherplatz eingeschränkt wird.  
   
  In diesem Thema wird erklärt, wie Sie Grenzwerte für die Speicherplatzverwendung festlegen.  
   
@@ -101,7 +101,6 @@ ms.lasthandoff: 09/01/2017
  Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation stellt Integritätsregeln bereit, sodass Sie Korrekturmaßnahmen ergreifen können, wenn Probleme bei Integrität, Konfiguration oder Verfügbarkeit des Servers erkannt werden. Einige dieser Regeln bestimmen mithilfe von Konfigurationseinstellungen die Bedingungen, unter denen Integritätsregeln ausgelöst werden. Beim aktiven Optimieren der Serverleistung können Sie auch diese Einstellungen überprüfen, um sicherzustellen, dass die Standardwerte für das System am besten geeignet sind. Weitere Informationen finden Sie unter [Konfigurieren von Power Pivot-Integritätsregeln](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Power Pivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

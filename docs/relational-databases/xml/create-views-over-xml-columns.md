@@ -2,9 +2,12 @@
 title: "Erstellen von Sichten über XML-Spalten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e5f71a5ebacb8af3a58c6eada233c16b955b6ae5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c4b8bd242925ef871daa9842bc7489c364ec0b29
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-views-over-xml-columns"></a>Erstellen von Sichten über XML-Spalten
-  Sie können eine Spalte vom Typ **xml** zum Erstellen von Sichten verwenden. Im folgenden Beispiel wird eine Sicht erstellt, in der mithilfe der `xml` value() **-Methode des** xml **-Datentyps der Wert aus einer Spalte vom Typ** abgerufen wird.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Sie können eine Spalte vom Typ **xml** zum Erstellen von Sichten verwenden. Im folgenden Beispiel wird eine Sicht erstellt, in der mithilfe der `xml` value() **-Methode des** xml **-Datentyps der Wert aus einer Spalte vom Typ** abgerufen wird.  
   
 ```  
 -- Create the table.  
@@ -71,4 +74,3 @@ ProductID   PName
 -   XML-Datentypmethoden in einer Sicht sind nicht aktualisierbar.  
   
   
-

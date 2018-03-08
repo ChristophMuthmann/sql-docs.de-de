@@ -3,7 +3,7 @@ title: AppendChunk und GetChunk Methoden Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - GetChunk method [ADO], Visual Basic example
 - AppendChunk method [ADO], Visual Basic example
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3ba03fbbb502e648127bf5bfab7e9ec79f2839fe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 53550f1e8e899a480c189c6925e649d8814316ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk und GetChunk Methoden Beispiel (VB)
 Dieses Beispiel verwendet die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) Methoden, um ein Bildfeld mit Daten aus einem anderen Datensatz zu füllen.  
@@ -160,4 +159,3 @@ End Sub
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk-Methode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
-

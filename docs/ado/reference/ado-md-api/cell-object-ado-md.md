@@ -3,7 +3,7 @@ title: Cell-Objekt (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9a8b634548700a92a2524a50cbac7548eea871d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6ef6e4e3cf888b60050bfd297863568d8112a57
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cell-object-ado-md"></a>Cell-Objekt (ADO MD)
 Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthaltenen im Cellset dar.  
@@ -52,11 +51,11 @@ Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthaltenen im Cellset da
   
 |Name|Description|  
 |----------|-----------------|  
-|Hintergrundfarbe|Background-Farbe ab die Zelle angezeigt wird.|  
+|BackColor|Background-Farbe ab die Zelle angezeigt wird.|  
 |FontFlags|Bitmaske, die Auswirkungen auf die Schriftart detailliert angibt.|  
 |FontName|Der Wert der Zelle anzuzeigenden verwendete Schriftart.|  
 |FontSize|Der Wert der Zelle anzuzeigenden verwendeten Schriftgrad.|  
-|Vordergrundfarbe|Die Vordergrundfarbe ab die Zelle angezeigt wird.|  
+|ForeColor|Die Vordergrundfarbe ab die Zelle angezeigt wird.|  
 |FormatString|Der Wert in eine formatierte Zeichenfolge.|  
   
  Dieser Abschnitt enthält das folgende Thema.  
@@ -67,5 +66,4 @@ Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthaltenen im Cellset da
  [Achse-Beispiel (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Positionen-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

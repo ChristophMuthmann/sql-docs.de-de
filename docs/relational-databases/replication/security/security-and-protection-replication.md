@@ -2,11 +2,13 @@
 title: Sicherheit und Schutz (Replikation) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,28 +19,28 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], security
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8e9675b71eaadc2e86015c4de49be55d026fd02
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-and-protection-replication"></a>Sicherheit und Schutz (Replikation)
-  Schützen Sie die Replikationsszenarien, die Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bereitstellen, vor böswilligen Angriffen, und verbessern Sie die Sicherheit Ihrer Daten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Schützen Sie die Replikationsszenarien, die Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bereitstellen, vor böswilligen Angriffen, und verbessern Sie die Sicherheit Ihrer Daten.  
   
- ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Sicherheitsübersicht**  
+ ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Sicherheitsübersicht**  
  [Mindern von Bedrohungen und Sicherheitsrisiken &#40;Replikation&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
   
  [Identität und Zugriffssteuerung &#40;Replikation&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
  [Weitere Informationen…](../../../relational-databases/replication/security/security-overview-replication.md)  
   
- ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Sichere Entwicklung**  
+ ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Sichere Entwicklung**  
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
@@ -47,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  [Weitere Informationen…](../../../relational-databases/replication/security/secure-development-replication.md)  
   
- ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Sichere Bereitstellung**  
+ ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Sichere Bereitstellung**  
  [Schützen des Verteilers](../../../relational-databases/replication/security/secure-the-distributor.md)  
   
  [Sichern des Verlegers](../../../relational-databases/replication/security/secure-the-publisher.md)  
@@ -60,10 +62,10 @@ ms.lasthandoff: 06/22/2017
   
  [Weitere Informationen…](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
- ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Sicherer Vorgang**  
+ ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Sichere Bereitstellung**  
  [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Technische Referenz &#40;Replikation&#41;](../../../relational-databases/replication/technical-reference-replication.md)  
   
   

@@ -2,11 +2,13 @@
 title: Optimieren der SQL-Ablaufverfolgung | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - traces [SQL Server], performance
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb701bd4ade246ebaf7b796a49c207b0f89e5e0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-sql-trace"></a>Optimieren der SQL-Ablaufverfolgung
-  Obwohl die SQL-Ablaufverfolgung die Leistung beansprucht, weil Systemressourcen zum Sammeln von Daten verwendet werden, können diese Leistungseinbußen begrenzt werden. Zum Minimieren der Leistungseinbuße durch eine Ablaufverfolgung gibt es folgende Möglichkeiten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Obwohl die SQL-Ablaufverfolgung die Leistung beansprucht, weil Systemressourcen zum Sammeln von Daten verwendet werden, können diese Leistungseinbußen begrenzt werden. Zum Minimieren der Leistungseinbuße durch eine Ablaufverfolgung gibt es folgende Möglichkeiten:  
   
 -   Sie können auch die Eingabeaufforderung verwenden, um Ablaufverfolgungen auszuführen. Das Verwenden einer grafischen Benutzeroberfläche beeinträchtigt die Leistung. Weitere Informationen finden Sie unter [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
   
@@ -48,8 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Schränken Sie die Anzahl der zurückgegebenen Ereignisse ein. Mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie die Anzahl der zurückgegebenen Ereignisse begrenzen, indem Sie die Ablaufverfolgung in einer Tabelle speichern und die maximale Zeilenanzahl festlegen. Die Ablaufverfolgungsergebnisse werden weiterhin zum [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Bildschirm zurückgegeben, nachdem die maximale Zeilenanzahl erreicht wurde, aber die Kosten für das Aufzeichnen der Ergebnisse in einer Tabelle sind ausgeschaltet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Filtern einer Ablaufverfolgung](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   
-

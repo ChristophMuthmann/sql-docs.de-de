@@ -2,31 +2,30 @@
 title: New-PowerPivotSystemServiceInstance-Cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f2e412047e4d859de637da933d2335232961ee13
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>New-PowerPivotSystemServiceInstance-Cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Fügt einem Anwendungsserver eine neue Instanz des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdiensts hinzu.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Fügt einem Anwendungsserver eine neue Instanz des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdiensts hinzu.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -66,7 +65,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="provision-switchparameter"></a>Bereitstellen [\<Switch-Parameter >]  
+### <a name="provision-switchparameter"></a>Provision [\<SwitchParameter>]  
  Macht den Dienst unter SharePoint verfügbar. Gültige Werte sind $true oder $false.  
   
 |||  
@@ -77,7 +76,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer und OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  
@@ -105,4 +104,3 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  In diesem Beispiel wird die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienstinstanz benannt, aber nicht bereitgestellt. Wenn Sie keinen Namen angeben, wird stattdessen der Standardname Instanz des SQL Server Analysis Services-Systemdiensts verwendet. Das Erstellen eines benutzerdefinierten Namens für den Dienst ist optional. Sie können den Dienst z. B. benennen, um Testszenarien zu unterstützen, oder wenn Sie über ein benutzerdefiniertes Tool oder ein Skript verfügen, mit dem die Instanz in einem späteren Schritt bereitgestellt wird.  
   
   
-

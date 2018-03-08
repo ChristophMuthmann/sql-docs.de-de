@@ -2,9 +2,12 @@
 title: "Von IntelliSense unterstützte Transact-SQL-Syntax | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0775b58cc86f349e94ae2305fa058a1edfe42370
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
-  Dieses Thema beschreibt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und Syntaxelemente, die von IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Thema beschreibt die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und Syntaxelemente, die von IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt werden.  
   
 ## <a name="statements-supported-by-intellisense"></a>Von IntelliSense unterstützte Anweisungen  
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt IntelliSense nur die am häufigsten verwendeten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Einige allgemeine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor-Bedingungen könnten verhindern, dass IntelliSense funktioniert. Weitere Informationen finden Sie unter [Problembehandlung von IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
@@ -52,17 +54,17 @@ ms.lasthandoff: 06/22/2017
   
 |Transact-SQL-Anweisung|Unterstützte Syntax|Ausnahmen|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|Keine|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|Keine|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Gesamte Syntax.|Keine|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|InclusionThresholdSetting|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|InclusionThresholdSetting|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|Gesamte Syntax.|Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Gesamte Syntax|Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|Gesamte Syntax.|Keine|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in unterstützten Anweisungen  
  IntelliSense im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt die folgenden Syntaxelemente, wenn sie in einer der unterstützten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden:  
@@ -77,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Tabellen, Sichten, Tabellenwertfunktionen und Tabellenausdrücke  
   
-    -   Spalten  
+    -   Spalte  
   
     -   Prozeduren und Prozedurparameter  
   
@@ -138,4 +140,3 @@ SELECT
  Wenn Sie `SELECT`eingegeben haben, listet IntelliSense **PrimaryKeyCol**, **FirstNameCol**und **LastNameCol** als mögliche Elemente in der Auswahlliste auf, auch wenn das Skript nicht ausgeführt wurde und `MyTable` noch nicht in `MyTestDB`vorhanden ist.  
   
   
-

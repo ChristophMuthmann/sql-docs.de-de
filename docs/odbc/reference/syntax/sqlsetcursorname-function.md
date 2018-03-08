@@ -3,33 +3,30 @@ title: SQLSetCursorName-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetCursorName
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetCursorName
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetCursorName
-helpviewer_keywords:
-- SQLSetCursorName function [ODBC]
+f1_keywords: SQLSetCursorName
+helpviewer_keywords: SQLSetCursorName function [ODBC]
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9f416827e5f192599b35027d2a203b011b844f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 716170dc027cce47b29a11cc9a650cf4fbb3eb29
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName-Funktion
 **Konformität**  
@@ -147,4 +144,3 @@ if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

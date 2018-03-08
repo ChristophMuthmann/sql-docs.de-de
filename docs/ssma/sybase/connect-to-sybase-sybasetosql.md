@@ -3,35 +3,36 @@ title: Herstellen einer Verbindung mit der Sybase (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fe9cf1f66a181f252e644a6e610eb102776dc27d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Herstellen einer Verbindung mit der Sybase (SybaseToSQL)
 Verwenden der **Herstellen einer Verbindung mit der Sybase** Dialogfeld Verbindung mit der Sybase Adaptive Server Enterprise (ASE)-Instanz, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit der Sybase**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung zu Sybase**.  
   
-## <a name="options"></a>enthalten  
-**Provider**  
+## <a name="options"></a>Tastatur  
+**Anbieter**  
 Wählen Sie einen der installierten Anbieter auf dem Computer für die Verbindung mit der Sybase-Server.  
   
 **Mode**  
@@ -43,7 +44,7 @@ Geben Sie an, oder wählen Sie den Namen oder IP-Adresse des Adaptive Server. De
 **Serverport**  
 Wenn Sie einen nicht standardmäßigen Port für Verbindungen mit ASE verwenden, geben Sie die Portnummer. Die Standardportnummer ist 5000. Dies ist ein Modus "standard"-Option.  
   
-**Benutzername**  
+**User name**  
 Geben Sie den Benutzernamen ein, der zum Herstellen einer ASE verwendet wird. Dies ist ein Modus "standard"-Option.  
   
 **Kennwort**  
@@ -105,4 +106,3 @@ Weitere Informationen finden Sie unter der ASE-Dokumentation.
   
 Dies ist eine Option im erweiterten Modus.  
   
-

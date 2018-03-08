@@ -3,10 +3,12 @@ title: Value-Argumenten Muster | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pattern-value-arguments"></a>Muster Value-Argumenten
 Einige Argumente im Katalog-Funktionen, wie die *TableName* Argument in **SQLTables**, Suchmustern akzeptieren. Diese Argumente akzeptieren Suchmustern Wenn SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_FALSE; festgelegt ist Sie sind Bezeichner Argumente, die einem Suchmuster nicht akzeptieren, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  
@@ -52,4 +53,3 @@ Einige Argumente im Katalog-Funktionen, wie die *TableName* Argument in **SQLTab
 >  ODBC-2. *x* Treiber unterstützen keine Suchmuster in der *CatalogName* Argument in **SQLTables**. ODBC 3.*.x* Treiber akzeptiert Suchmustern in diesem Argument aus, wenn die SQL_ATTR_ ODBC_VERSION Umgebung-Attribut auf SQL_OV_ODBC3 festgelegt ist; sie akzeptieren keine Suchmustern in diesem Argument, wenn er auf SQL_OV_ODBC2 festgelegt ist.  
   
  Einen null-Zeiger an eine Suche Pattern-Argument übergeben schränkt die Suche für dieses Argument nicht; d. h. sind ein null-Zeiger und die Suche Muster% (Zeichen) Äquivalent. Jedoch eine leere Muster suchen – d. h. ein gültiger Zeiger auf eine Zeichenfolge der Länge 0 (null) – entspricht, nur die leere Zeichenfolge ("").
-

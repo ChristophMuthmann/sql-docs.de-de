@@ -3,7 +3,7 @@ title: ADO-Grundlagen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 76892d6ae394b41c64852cd721e22f494aee51af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-fundamentals"></a>ADO-Grundlagen
 ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell zum programmgesteuerten Zugriff auf, bearbeiten und Aktualisieren von Daten aus einer Vielzahl von Datenquellen über OLE DB-Schnittstellen. Die häufigste Verwendung von ADO ist zum Abfragen einer Tabelle oder Tabellen in einer relationalen Datenbank, abrufen und Anzeigen der Ergebnisse in einer Anwendung und vielleicht können Benutzer vornehmen und Änderungen an den Daten speichern. Andere Aufgaben sind folgende:  
@@ -71,4 +70,3 @@ ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell zum program
 -   [OLE DB-Anbieter](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [Fehler](../../../ado/guide/data/errors-ado.md)
-

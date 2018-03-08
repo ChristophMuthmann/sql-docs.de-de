@@ -3,7 +3,7 @@ title: FieldStatusEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33ea3379808e818b1afd723ce9223858896ea709
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von einem [Field-Objekt](../../../ado/reference/ado-api/field-object.md).  
@@ -72,5 +71,4 @@ Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-field.m
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Status-Eigenschaft (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)
-
+ [Status-Eigenschaft (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

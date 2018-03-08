@@ -2,25 +2,26 @@
 title: "Hinzufügen von Daten zu einem Tablix-Datenbereich (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 2bf18d57ac033120507c9c2ab5df9b98bf5cc2db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b6f41b4d1b42db5ca020841f9363df3f4cf3eb99
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Hinzufügen von Daten zu einem Tablix-Datenbereich (Berichts-Generator und SSRS)
 Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht Daten aus einem Berichtsdataset in einer Tabelle oder einer Matrix anzeigen möchten, geben Sie in jeder Datenzelle den Namen eines anzuzeigenden Datasetfelds an. Sie können Detaildaten oder gruppierte Daten anzeigen. Wenn Sie einer Tabelle oder Matrix Gruppen hinzufügen, werden automatisch Zeilen und Spalten für Gruppenwerte und Gruppendaten hinzugefügt. Anschließend können Sie Teilergebnisse und Gesamtergebnisse für die Daten hinzufügen.  
@@ -55,7 +56,7 @@ Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Hinzufügen eines vorhandenen Tablix-Datenbereichs aus einem anderen Bericht  
  Sie können einen Datenbereich aus einem anderen Bericht kopieren und diesen in einen neuen oder einen vorhandenen Bericht einfügen. Nach dem Einfügen des Datenbereichs müssen Sie sicherstellen, dass das vom Datenbereich verwendete Dataset definiert ist und dass die Datasetfelder dieselben Namen und Datentypen wie im ursprünglichen Bericht aufweisen. Sie können Datasets nicht von einem Bericht zu einem anderen kopieren, Wenn die Berichte jedoch freigegebene Datenquellen verwenden, können Sie das Dataset schnell im anderen Bericht duplizieren. Außerdem können Sie den Abfragetext für die Abfragen importieren, die die Daten für das Dataset abrufen. So können Abfragen in Berichten problemlos dupliziert werden. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

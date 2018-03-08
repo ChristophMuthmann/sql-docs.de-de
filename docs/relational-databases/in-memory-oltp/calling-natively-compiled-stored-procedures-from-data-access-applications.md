@@ -2,28 +2,31 @@
 title: "Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9965ea8ab6c5b1492a57cfd20b03bd17167bd6d2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
-  Dieses Thema enthält Informationen zum Aufrufen systemintern kompilierter gespeicherter Prozeduren über Datenzugriffsanwendungen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Dieses Thema enthält Informationen zum Aufrufen systemintern kompilierter gespeicherter Prozeduren über Datenzugriffsanwendungen.  
   
  Cursor können keine systemintern kompilierte gespeicherte Prozedur durchlaufen.  
   
@@ -397,8 +400,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

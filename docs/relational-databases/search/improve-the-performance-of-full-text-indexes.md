@@ -2,9 +2,12 @@
 title: Verbessern der Leistung von Volltextindizes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -17,19 +20,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 In diesem Thema werden einige häufige Ursachen für eine geringe Leistung für Volltextindizes und -Abfragen beschrieben. Darüber hinaus werden einige Vorschläge für das Verringern dieser Probleme und das Verbessern der Leistung gemacht.
   
 ##  <a name="causes"></a> Common causes of performance issues
@@ -150,7 +153,7 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
   
  `F = 8*10*8=640`  
   
- Die nächste Berechnung ergibt den optimalen Wert für **max server memory**:*M*. **Der gesamte physische Speicher für dieses System in MB –*T*– beträgt `8192`.  
+ Die nächste Berechnung ergibt den optimalen Wert für **max server memory**:*M*. *T*, der gesamte physische Speicher, der auf diesem System verfügbar ist, beträgt `8192` (in MB).  
   
  `M = 8192-640-500=7052`  
   
@@ -182,7 +185,7 @@ Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht 
   
      In der folgenden Tabelle sind die relevanten Wartetypen aufgeführt.  
   
-    |Wartetyp|Beschreibung|Mögliche Lösung|  
+    |Wartetyp|Description|Mögliche Lösung|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX oder _UP)|Dies kann auf einen E/A-Engpass hinweisen. In diesem Fall ist normalerweise auch eine hohe durchschnittliche Warteschlangenlänge des Datenträgers zu erkennen.|Sie können den E/A-Engpass ggf. reduzieren, indem Sie den Volltextindex in eine andere Dateigruppe auf einem anderen Datenträger verschieben.|  
     |PAGELATCH_EX (oder _UP)|Dies kann auf eine hohe Zahl von Konflikten zwischen Threads hinweisen, die versuchen, in dieselbe Datenbankdatei zu schreiben.|Diese Konflikte können ggf. verringert werden, indem Sie Dateien der Dateigruppe hinzufügen, auf der sich der Volltextindex befindet.|  
@@ -212,7 +215,7 @@ Beim Auffüllen eines Volltextindexes werden vom Volltextmodul zwei Arten von Fi
   
 Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als Filter mit einem einzigen Thread kennzeichnen, um dieses Problem zu umgehen. Hierzu müssen Sie den Registrierungswert **ThreadingModel** für den Filter auf **Apartment Threaded** festlegen. Informationen zu Singlethreadapartments finden Sie im Whitepaper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Grundlegendes zur Verwendung von COM-Threadingmodellen).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Max. Bereich für Volltextdurchforstung (Serverkonfigurationsoption)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md)   
@@ -222,4 +225,3 @@ Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als F
  [Behandeln von Problemen mit der Volltextindizierung](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
   
   
-

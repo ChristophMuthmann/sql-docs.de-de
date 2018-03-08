@@ -3,7 +3,7 @@ title: "Hinzufügen von Datensätzen mit AddNew | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f68a67e0eafaf7bbb9d89ddd151b73dd5d0bbb75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92bbc404985ebbb49c4e654efd5a7f54198d35ab
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adding-records-using-addnew-method"></a>Hinzufügen von Datensätzen mit AddNew-Methode
 Dies ist die grundlegende Syntax der **AddNew** Methode:
@@ -57,4 +56,3 @@ End If
 
 ## <a name="remarks"></a>Hinweise
  Da dieser Code verwendet wird, eine nicht verbundene **Recordset** mit einem clientseitigen Cursor im Batchmodus ausgeführt, müssen Sie die Verbindung der **Recordset** mit der Datenquelle mit einem neuen **Verbindung** -Objekt vor dem Aufruf können die **UpdateBatch** Methode zum Bereitstellen von Änderungen an der Datenbank. Dies erfolgt einfach mithilfe der neuen Funktion **GetNewConnection**.
-

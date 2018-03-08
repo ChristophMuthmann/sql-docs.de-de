@@ -3,10 +3,12 @@ title: "Außerkraftsetzung der führende und Sekunden Genauigkeit für Intervall
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - interval leading precision [ODBC]
 - interval precision [ODBC]
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70ae232ed09ab7bd04a2474b5798dd4ed581df39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Überschreiben Standard führende und Sekunden Genauigkeit für die Interval-Datentypen
 Wenn das SQL_DESC_TYPE-Feld ein ARD durch Aufrufen von entweder um einen "DateTime" oder "Intervall C" festgelegt ist **SQLBindCol** oder **SQLSetDescField**, Feld SQL_DESC_PRECISION (enthält das Intervall (Sekunden) Genauigkeit) wird auf die folgenden Standardwerte festgelegt:  
@@ -47,4 +48,3 @@ Wenn das SQL_DESC_TYPE-Feld ein ARD durch Aufrufen von entweder um einen "DateTi
  Wenn die Anwendung aufruft, **SQLGetData** Daten in eine "DateTime" oder das Intervall C-Typ zurück, die führende standardgenauigkeit für Intervall und Intervall Sekunden Genauigkeit verwendet werden. Wenn entweder Standard nicht zulässig ist, muss die Anwendung aufrufen **SQLSetDescField** entweder Deskriptorfeld festlegen oder **SQLSetDescRec** SQL_DESC_PRECISION festlegen. Der Aufruf von **SQLGetData** sollte eine *TargetType* von SQL_ARD_TYPE, um die Werte in die deskriptorfelder verwenden.  
   
  Wenn **SQLPutData** aufgerufen wird, wird die für anführenden Intervallwert, Genauigkeit und Intervall Sekunden Genauigkeit werden die Felder der Deskriptordatensatz, die entsprechen gelesen, in die Data-at-Execution-Parameter oder eine Spalte, die APD Felder für Aufrufe sind um **SQLExecute** oder **SQLExecDirect**, oder ARD Felder für Aufrufe von **SQLBulkOperations** oder **SQLSetPos**.
-

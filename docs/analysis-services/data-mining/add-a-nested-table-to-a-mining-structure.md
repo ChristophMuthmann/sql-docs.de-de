@@ -2,12 +2,13 @@
 title: "Hinzufügen einer geschachtelten Tabelle zu einer Miningstruktur | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], nested tables
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d5495f39dfd44c27326592f2efe34e66f4392440
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33c2958724cf1d64a0706427afa377d4db9e8bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Hinzufügen einer geschachtelten Tabelle zu einer Miningstruktur
-  Mithilfe des Data Mining-Designers fügen Sie einer Miningstruktur eine geschachtelte Tabelle hinzu, die Sie zuvor im Data Mining-Assistenten erstellt haben.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Mithilfe des Data Mining-Designers fügen Sie einer Miningstruktur eine geschachtelte Tabelle hinzu, die Sie zuvor im Data Mining-Assistenten erstellt haben.  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>So fügen Sie einer Miningstruktur eine geschachtelte Tabelle hinzu  
   
@@ -53,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

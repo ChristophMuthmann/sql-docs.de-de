@@ -3,10 +3,12 @@ title: Zeichenfolgenfunktionen (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], string functions
 - FoxPro ODBC driver [ODBC], string functions
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 60de82a28d6b85d04dc76cacc7d557cbeffe37e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3fa7491ea354cc616d6b58de17e6fa82c785a3a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>String-Funktionen (Visual FoxPro-ODBC-Treiber)
 In der folgenden Tabelle werden die ODBC-Funktionen zur Zeichenfolgenmanipulation von der Visual FoxPro-ODBC-Treiber unterstützt. Wenn die Visual FoxPro-Grammatik für dieselbe Funktion aus der ODBC-Syntax unterscheidet, wird der entsprechende Visual FoxPro aufgeführt.  
@@ -49,4 +50,3 @@ In der folgenden Tabelle werden die ODBC-Funktionen zur Zeichenfolgenmanipulatio
 |Speicherplatz *(Anzahl)*||  
 |TEILZEICHENFOLGE *(String_exp, Start, Länge)*|SUBSTR *(String_exp, Start, Länge)*|  
 |UCASE *(String_exp)*|OBERE *(String_exp)*|
-

@@ -3,7 +3,7 @@ title: "Beispiel für ParentCatalog-Eigenschaft (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 017deaf81b79bac3bbf777aaf0bcb0757397b424
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8dc3ab11b1cb9b439fce517e7277c94b31d7f4ec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-example-vb"></a>Beispiel für ParentCatalog-Eigenschaft (VB)
 Der folgende Code veranschaulicht, wie die [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) Eigenschaft auf eine anbieterspezifische Eigenschaft vor dem Anfügen einer Tabellenstatus mit einem Katalog zuzugreifen. Die Eigenschaft ist **AutoIncrement**, die einem AutoIncrement-Feld in einer Microsoft Jet-Datenbank erstellt.  
@@ -100,5 +99,4 @@ End Sub
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [ParentCatalog-Eigenschaft (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Type-Eigenschaft (Spalte) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
-
+ [Type-Eigenschaft (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

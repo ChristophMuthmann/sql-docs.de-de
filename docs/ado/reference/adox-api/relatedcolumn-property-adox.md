@@ -3,7 +3,7 @@ title: RelatedColumn-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f06a8d57b78d86708b46a8e830cb13eeac8fc5c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb09cdefcb35afdc86f7e296d4a809329a7e4e4b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn-Eigenschaft (ADOX)
 Gibt den Namen der zugehörigen [Spalte-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) in der verknüpften Tabelle (nur Schlüsselspalten).  
@@ -50,5 +49,4 @@ Gibt den Namen der zugehörigen [Spalte-Objekt (ADOX)](../../../ado/reference/ad
   
 ## <a name="see-also"></a>Siehe auch  
  [Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Schlüsselobjekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-
+ [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

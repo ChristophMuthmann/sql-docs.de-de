@@ -3,8 +3,11 @@ title: Point (Geography-Datentyp) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - Point method
 - Point (geography Data Type)
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cefb6e199bbd4617b1fc2f6f71d9bb3997445dc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f37072d64159d5d8bfb1d44a64dd017adf0fceed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="point-geography-data-type"></a>Point (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Erstellt eine **Geography** Instanz darstellt eine **Punkt** Instanz ihren Werten Breiten- und Längengrad sowie spatial Reference ID (SRID)).
   
@@ -43,10 +45,10 @@ Point ( Lat, Long, SRID )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *LAT*  
+ *Lat*  
  Ist eine **"float"** Ausdruck, der die X-Koordinate des darstellt der **Punkt** generiert wird.  
   
- *Lange*  
+ *Long*  
  Ist eine **"float"** Ausdruck, der die y-Koordinate des darstellt der **Punkt** generiert wird. Weitere Informationen zu gültigen Breiten- und längengradwerte finden Sie unter [Punkt](../../relational-databases/spatial/point.md).  
   
  *SRID*  
@@ -70,7 +72,6 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte statische Geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

@@ -2,32 +2,31 @@
 title: DropOnlyMode-Element (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- DropOnlyMode element
+dev_langs: XML
+helpviewer_keywords: DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6c30ec1f3a06e0bb2142dd889852ddb071b68d96
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fac9ba968a7288b7bb7b9a31f93aeb1b597b7ba7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
-  Gibt an, dass der Datenbankoptimierungsratgeber während der Optimierungssitzung nur vorhandene Indizes, indizierte Sichten oder Partitionen löschen soll. Wenn diese Optimierungsoption angegeben ist, werden keine neuen physischen Entwurfsstrukturen berücksichtigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt an, dass der Datenbankoptimierungsratgeber nur löschen soll vorhandene Indizes, indizierte Sichten oder Partitionen während der optimierungssitzung. Wenn diese Optimierungsoption angegeben ist, werden keine neuen physischen Entwurfsstrukturen berücksichtigt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
  **Vorkommen**: optional. Kann für jedes **TuningOptions** -Element nur einmal verwendet werden. Keine Verwendung möglich, wenn im **TuningOptions** -Element die folgenden Elemente angegeben sind:  
   
--   [FeatureSet-Element &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
+-   [FeatureSet-Element &#40; DTA &#41;](../../tools/dta/featureset-element-dta.md)  
   
 -   [Partitioning-Element &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
   
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

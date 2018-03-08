@@ -2,9 +2,12 @@
 title: "Schritt 3: Hinzufügen von Fehlerflussumleitungen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc919793ccb694f5cb6bfc8da4b69cc3528c5ee0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: d823eff897577569b99736b152d289353bdc1507
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Lektion 4-3: Hinzufügen der Fehlerflussumleitung
 Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
@@ -76,7 +78,7 @@ Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer 
   
     Die fertige Unterroutine sieht wie der folgende Code aus.  
   
-    [Visual Basic]  
+    [Visual Basic]  
   
     ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
@@ -102,9 +104,8 @@ Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer 
   
 13. Klicken Sie auf **OK** , um das Dialogfeld **Transformations-Editor für Skripterstellung** zu schließen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 [Schritt 4: Hinzufügen eines Flatfileziels](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   
   
-

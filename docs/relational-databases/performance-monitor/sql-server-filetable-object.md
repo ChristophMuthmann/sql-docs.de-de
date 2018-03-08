@@ -2,30 +2,30 @@
 title: SQL Server, FileTable Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:FileTable
+helpviewer_keywords: SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 321ed2db9195a957f10982fe07f1da7b8cb01c25
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 57a16709c701e8754446287f9d0b74b6e94581b3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-filetable-object"></a>SQLServer, FileTable (Objekt)
-Das Leistungsobjekt **SQLServer:FileTable** stellt Leistungsindikatoren für Statistiken bereit, die FileTable und dem nicht transaktionsgebundenen Zugriff zugeordnet sind.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Leistungsobjekt **SQLServer:FileTable** stellt Leistungsindikatoren für Statistiken bereit, die der Dateitabelle und dem nicht transaktionsgebundenen Zugriff zugeordnet sind.
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **FileTable** beschrieben.
 
@@ -61,6 +61,5 @@ In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **FileTable
 |**Basis für Zeit für FileTable-Elementabruf**|Nur zur internen Verwendung.|
 |**Basis für Zeit für FileTable-Elementupdate**|Nur zur internen Verwendung.| 
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Überwachen der Ressourcenverwendung (Systemmonitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
-

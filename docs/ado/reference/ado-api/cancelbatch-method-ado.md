@@ -3,7 +3,7 @@ title: CancelBatch-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e01ed9e58695af606d02a156aa83854746be83d0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2eced52fb03d47d8f79838d07a45c1d8dde31cf9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch-Methode (ADO)
 Bricht einen ausstehenden BatchUpdate ab.  
@@ -65,6 +64,5 @@ recordset.CancelBatchAffectRecords
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [CancelUpdate-Methode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
+ [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)
-

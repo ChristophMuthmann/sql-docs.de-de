@@ -3,8 +3,11 @@ title: Feste Datenbankrollen des SQL Server-Agents|Microsoft-Dokumente
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssms
 ms.tgt_pltfrm: 
@@ -19,20 +22,20 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: 5
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ccb75de64c08f26932a26af3c1c4b9d5a17d11a5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 02a76ac743e89269296cdb04e9eb27ec5faca66f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] verfügt über die folgenden festen **msdb** -Datenbankrollen, mit denen Administratoren den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] verfügt über die folgenden festen **msdb**-Datenbankrollen, mit denen Administratoren den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
   
 -   **SQLAgentUserRole**  
   
@@ -55,14 +58,14 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentUserRole** -B
   
 |Aktion|Operatoren|Lokale Aufträge<br /><br />(nur Aufträge mit Besitzern)|Auftragszeitpläne<br /><br />(nur Zeitpläne mit Besitzern)|Proxys|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
-|Erstellen/Ändern/Löschen|Nein|Ja<br /><br />Der Auftragsbesitz kann nicht geändert werden.|Ja|Nein|  
-|Liste anzeigen (aufzählen)|Ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Ja|ja|Ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
-|Aktivieren/Deaktivieren|Nein|ja|Ja|Nicht verfügbar|  
-|Eigenschaften anzeigen|Nein|ja|ja|Nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Nein<br /><br />Den Mitgliedern von **SQLAgentUserRole** muss die EXECUTE-Berechtigung für **sp_purge_jobhistory** zum Löschen des Auftragsverlaufs für Aufträge, deren Besitzer sie sind, ausdrücklich erteilt werden. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.|Nicht verfügbar|Nicht verfügbar|  
-|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Ja|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|nein|ja<br /><br />Der Auftragsbesitz kann nicht geändert werden.|ja|nein|  
+|Liste anzeigen (aufzählen)|ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|ja|ja|ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
+|Aktivieren/Deaktivieren|nein|ja|ja|Nicht verfügbar|  
+|Eigenschaften anzeigen|nein|ja|ja|nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|nein<br /><br />Den Mitgliedern von **SQLAgentUserRole** muss die EXECUTE-Berechtigung für **sp_purge_jobhistory** zum Löschen des Auftragsverlaufs für Aufträge, deren Besitzer sie sind, ausdrücklich erteilt werden. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.|Nicht verfügbar|Nicht verfügbar|  
+|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|ja|Nicht verfügbar|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>SQLAgentReaderRole-Berechtigungen  
 **SQLAgentReaderRole** enthält alle **SQLAgentUserRole** -Berechtigungen sowie die Berechtigungen zum Anzeigen der Liste verfügbarer Multiserveraufträge, ihrer Eigenschaften und ihres Verlaufs. Die Mitglieder dieser Rolle können auch die Liste aller verfügbaren Aufträge und Auftragszeitpläne sowie ihre Eigenschaften anzeigen, nicht nur die Aufträge und Auftragszeitpläne, deren Besitzer sie sind. Die Mitglieder von**SQLAgentReaderRole** können den Auftragsbesitz nicht ändern, um Zugriff auf Aufträge zu erhalten, deren Besitzer sie nicht bereits sind. Nur der Knoten **Aufträge** in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ist für die Mitglieder von **SQLAgentReaderRole** sichtbar.  
@@ -74,15 +77,15 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentReaderRole** 
   
 |Aktion|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Erstellen/Ändern/Löschen|Nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
-|Liste anzeigen (aufzählen)|Ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Ja|ja|ja|Ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
-|Aktivieren/Deaktivieren|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
-|Eigenschaften anzeigen|Nein|ja|ja|ja|Nein|  
-|Eigenschaften bearbeiten|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|Nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Nein<br /><br />Den Mitgliedern von **SQLAgentReaderRole** muss die EXECUTE-Berechtigung für **sp_purge_jobhistory** zum Löschen des Auftragsverlaufs für Aufträge, deren Besitzer sie sind, ausdrücklich erteilt werden. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.|Nein|Nicht verfügbar|Nicht verfügbar|  
-|Anfügen/Trennen|Nicht verfügbar|Nicht zutreffend|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
+|Liste anzeigen (aufzählen)|ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|ja|ja|ja|ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
+|Aktivieren/Deaktivieren|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
+|Eigenschaften anzeigen|nein|ja|ja|ja|nein|  
+|Eigenschaften bearbeiten|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|nein|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|ja|ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|nein<br /><br />Den Mitgliedern von **SQLAgentReaderRole** muss die EXECUTE-Berechtigung für **sp_purge_jobhistory** zum Löschen des Auftragsverlaufs für Aufträge, deren Besitzer sie sind, ausdrücklich erteilt werden. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.|nein|Nicht verfügbar|Nicht verfügbar|  
+|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole-Berechtigungen  
 **SQLAgentOperatorRole** ist die feste Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents mit den höchsten Berechtigungen. Sie enthält alle Berechtigungen von **SQLAgentUserRole** und **SQLAgentReaderRole**. Die Mitglieder dieser Rolle können auch die Eigenschaften für Operatoren und Proxys anzeigen und die verfügbaren Proxys und Warnungen auf dem Server aufzählen.  
@@ -98,24 +101,23 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentOperatorRole*
   
 |Aktion|Warnungen|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Erstellen/Ändern/Löschen|Nein|Nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
-|Liste anzeigen (aufzählen)|Ja|Ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Ja|ja|ja|Ja|  
-|Aktivieren/Deaktivieren|Nein|Nein|Ja<br /><br />**SQLAgentOperatorRole** können lokale Aufträge, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_job** verwenden und Werte für die **@enabled** und **@job_id** -Parameter (oder **@job_name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nein|Ja<br /><br />**SQLAgentOperatorRole** können Zeitpläne, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_schedule** verwenden und Werte für die **@enabled** und **@schedule_id** -Parameter (oder **@name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nicht verfügbar|  
-|Eigenschaften anzeigen|Ja|ja|ja|ja|ja|Ja|  
-|Eigenschaften bearbeiten|Nein|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|Ja|Nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|Ja|Nein|Nicht verfügbar|Nicht verfügbar|  
-|Anfügen/Trennen|Nicht verfügbar|Nicht zutreffend|Nicht zutreffend|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|nein|nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
+|Liste anzeigen (aufzählen)|ja|ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|ja|ja|ja|ja|  
+|Aktivieren/Deaktivieren|nein|nein|ja<br /><br />**SQLAgentOperatorRole** können lokale Aufträge, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_job** verwenden und Werte für die **@enabled** und **@job_id** -Parameter (oder **@job_name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|nein|ja<br /><br />**SQLAgentOperatorRole** können Zeitpläne, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_schedule** verwenden und Werte für die **@enabled** und **@schedule_id** -Parameter (oder **@name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nicht verfügbar|  
+|Eigenschaften anzeigen|ja|ja|ja|ja|ja|ja|  
+|Eigenschaften bearbeiten|nein|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|ja|nein|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|ja|ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|ja|nein|Nicht verfügbar|Nicht verfügbar|  
+|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
 ## <a name="assigning-users-multiple-roles"></a>Zuweisen von mehreren Rollen an Benutzer  
 Die Mitglieder der festen Serverrolle **sysadmin** haben Zugriff auf alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Funktionen. Wenn ein Benutzer nicht Mitglied der **sysadmin** -Rolle ist, sondern von mehr als einer festen Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents, sollten Sie das konzentrische Berechtigungsmodell dieser Rollen berücksichtigen. Da die Rollen mit höheren Berechtigungen immer alle Berechtigungen der Rollen mit niedrigeren Berechtigungen enthalten, hat ein Benutzer, der Mitglied von mehreren Rollen ist, automatisch die Berechtigungen der Rolle mit den höchsten Berechtigungen, deren Mitglied der Benutzer ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)  
 [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623)  
 [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/97b3119b-e43e-447a-bbfb-0b5499e2fefe)  
 [sp_notify_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/c440f5c9-9884-4196-b07c-55d87afb17c3)  
 [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/en-us/237f9bad-636d-4262-9bfb-66c034a43e88)  
   
-

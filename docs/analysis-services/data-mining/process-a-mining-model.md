@@ -2,31 +2,30 @@
 title: Verarbeiten eines Miningmodells | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], processing
+helpviewer_keywords: mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d2ff8b606dfa9c7d6f4692afcd57d0c633989924
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="process-a-mining-model"></a>Verarbeiten eines Miningmodells
-  Auf der Registerkarte Miningmodelle im Data Mining-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie ein bestimmtes Miningmodell verarbeiten, das einer Miningstruktur zugeordnet ist. Sie können auch alle Modelle verarbeiten, die der Struktur zugeordnet sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Im Data Mining-Designer in der Registerkarte Miningmodelle [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], verarbeiten Sie ein bestimmtes Miningmodell, das einer Miningstruktur zugeordnet ist, oder Sie können alle Modelle verarbeiten, die der Struktur zugeordnet sind.  
   
  Sie können ein Miningmodell mit den folgenden Tools verarbeiten:  
   
@@ -71,7 +70,6 @@ ms.lasthandoff: 09/01/2017
  Die Miningstruktur und alle zugeordneten Miningmodelle wurden verarbeitet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Miningmodelltasks und -anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

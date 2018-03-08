@@ -2,29 +2,30 @@
 title: MSSQLSERVER_2579 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2579 (Database Engine error)
+helpviewer_keywords: 2579 (Database Engine error)
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 07c02ec8e2011853a2d9427a75cafc5c368fb629
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 59c0fff1d160a804e272468c41df6c153711c9b7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -66,4 +67,3 @@ Durch Ausführen von REPAIR wird die Zuordnung des Blocks zur IAM-Seite aufgehob
 > [!CAUTION]  
 > Diese Reparatur führt möglicherweise zum Datenverlust.  
   
-

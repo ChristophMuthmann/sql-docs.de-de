@@ -2,9 +2,12 @@
 title: Abfragebenachrichtigungen (Ereigniskategorie) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
-caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2156cef6f6d610a80410ffb468c5428da4152492
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c9256c4d3ea467012053a2a6251e465de8a1c3bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="query-notifications-event-category"></a>Abfragebenachrichtigungen (Ereigniskategorie)
-  Die **Abfragebenachrichtigungen** -Ereigniskategorie enthält Ereignisklassen, die Informationen melden, mit deren Hilfe Entwickler und Administratoren Abfragebenachrichtigungen überwachen und auftretende Probleme behandeln können.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die **Abfragebenachrichtigungen** -Ereigniskategorie enthält Ereignisklassen, die Informationen melden, mit deren Hilfe Entwickler und Administratoren Abfragebenachrichtigungen überwachen und auftretende Probleme behandeln können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [QN:Dynamics (Ereignisklasse)](../../relational-databases/event-classes/qn-dynamics-event-class.md)  
@@ -39,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  [QN:Template (Ereignisklasse)](../../relational-databases/event-classes/qn-template-event-class.md)  
  Übermittelt Informationen zur internen Verwendung von Abfragevorlagen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

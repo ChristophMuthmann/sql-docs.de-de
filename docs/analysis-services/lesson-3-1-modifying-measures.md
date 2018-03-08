@@ -2,30 +2,33 @@
 title: "Ändern von Measures | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 322abebe579106c03f4855f7b9e2e7573f5d5580
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 350fadc471d30f79b8b1e6b1e8d63cc507f1d484
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Lektion 3: 1-Ändern von Measures
-Sie können die **FormatString** -Eigenschaft verwenden, um Formatierungseinstellungen zu definieren, die die Darstellung von Measures steuern. In dieser Aufgabe geben Sie Formatierungseigenschaften für die Währungs- und Prozentsatzmeasures im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube an.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Sie können die **FormatString**-Eigenschaft verwenden, um Formatierungseinstellungen zu definieren, die die Darstellung von Measures steuern. In dieser Aufgabe geben Sie Formatierungseigenschaften für die Währungs- und Prozentsatzmeasures im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube an.  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>So ändern Sie die Measures des Cubes  
   
@@ -72,7 +75,7 @@ Sie können die **FormatString** -Eigenschaft verwenden, um Formatierungseinstel
 11. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
-[Ändern der Customer-Dimension](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
+[Ändern die Customer-Dimension](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Definieren von Datenbankdimensionen](../analysis-services/multidimensional-models/define-database-dimensions.md)  
@@ -80,4 +83,3 @@ Sie können die **FormatString** -Eigenschaft verwenden, um Formatierungseinstel
   
   
   
-

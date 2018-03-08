@@ -2,11 +2,13 @@
 title: Peer-zu-Peer-Transaktionsreplikation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
-caps.latest.revision: 71
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73cba38d92983eb7e6650201a76c067e7f6de58f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "71"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: c7d2e0bedf8161b39323cf8260e154890032dfdb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-zu-Peer - Transaktionsreplikation
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Peer-zu-Peer-Replikation bietet eine skalierbare Lösung mit hoher Verfügbarkeit, da Kopien der Daten auf mehreren Serverinstanzen verwaltet werden, die auch als *Knoten*bezeichnet werden. Auf der Grundlage der Transaktionsreplikation aufbauend, gibt die Peer-zu-Peer-Replikation transaktionskonsistente Änderungen fast in Echtzeit weiter. Dies macht Anwendungen möglich, die skalierbare Lesevorgänge voraussetzen, weil die Leseanforderungen von Clients über mehrere Knoten verteilt werden können. Da die Knoten die Daten fast in Echtzeit übernehmen, bietet die Peer-zu-Peer-Replikation Datenredundanz, die die Verfügbarkeit der Daten erhöht.  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Eine Veröffentlichung muss für die Peer-zu-Peer-Replikation aktiviert werden, bevor Abonnements erstellt werden können.  
   
--   Abonnements müssen mithilfe einer Sicherung oder mit der Option **'replication support only'** initialisiert werden. Weitere Informationen finden Sie unter [Initialisieren eines Transaktionsabonnements ohne Momentaufnahme](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Abonnements müssen mithilfe einer Sicherung oder mit der Option **'replication support only'** initialisiert werden. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
 -   Die Verwendung von Identitätsspalten wird nicht empfohlen. Bei der Verwendung von Identitäten müssen Sie die den Tabellen zugewiesenen Bereiche in jeder teilnehmenden Datenbank manuell verwalten. Weitere Informationen finden Sie im Abschnitt „Zuweisen von Bereichen für die manuelle Identitätsbereichsverwaltung“ im Thema [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
@@ -182,10 +184,9 @@ ms.lasthandoff: 06/22/2017
   
 -   In einer Peer-zu-Peer-Topologie können Abonnements nicht erneut initialisiert werden. Wenn Sie sicherstellen müssen, dass ein Knoten eine neue Kopie der Daten besitzt, stellen Sie an diesem Knoten eine Sicherung wieder her.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Veröffentlichungstypen der Transaktionsreplikation](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
   
   
-

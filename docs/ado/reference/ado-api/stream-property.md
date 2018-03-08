@@ -3,7 +3,7 @@ title: Stream-Eigenschaft | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dc56c9a655c4e85f76cae877579b9a344c11ff4d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6ee0a6a3827d0f2d3c7b7bf781f7fc1fd73a765
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stream-property"></a>Streameigenschaft
 Ruft ab oder legt einen OLE DB- **Stream** Objekt vom bzw. auf eine **ADOStreamConstruction** Objekt.  
@@ -58,4 +57,3 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="applies-to"></a>Gilt für  
  [ADOStreamConstruction-Schnittstelle](../../../ado/reference/ado-api/adostreamconstruction-interface.md)
-

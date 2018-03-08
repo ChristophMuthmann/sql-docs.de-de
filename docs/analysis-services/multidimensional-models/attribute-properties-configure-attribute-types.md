@@ -2,13 +2,13 @@
 title: Konfigurieren von Attributtypen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 740d140999a182df59eb9741c5addedd9dac0aac
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Attributeigenschaften: Konfigurieren von Attributtypen
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]tragen Attributtypen zur Klassifizierung eines Attributs im Hinblick auf die Geschäftsfunktionalität bei. Es gibt viele Attributtypen. Die meisten werden von Clientanwendungen verwendet, um ein Attribut anzuzeigen oder zu unterstützen. Einige Attributtypen haben jedoch auch eine besondere Bedeutung für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. So identifizieren manche Attributtypen Attribute, die in verschiedenen Kalendern für Zeitdimensionen die Zeiträume darstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]tragen Attributtypen zur Klassifizierung eines Attributs im Hinblick auf die Geschäftsfunktionalität bei. Es gibt viele Attributtypen. Die meisten werden von Clientanwendungen verwendet, um ein Attribut anzuzeigen oder zu unterstützen. Einige Attributtypen haben jedoch auch eine besondere Bedeutung für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. So identifizieren manche Attributtypen Attribute, die in verschiedenen Kalendern für Zeitdimensionen die Zeiträume darstellen.  
   
 ##  <a name="setting_attibute_types"></a> Festlegen von Attributtypen  
  Der Wert der **Type** -Eigenschaft für ein Attribut bestimmt den Attributtyp des entsprechenden Attributs. Verschiedene Assistenten in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legen die Attributtypen fest, wenn Dimensionen oder Attribute definiert werden. Diese [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assistenten legen auch dann Attributtypen fest, wenn den Dimensionen mit den Assistenten Funktionen hinzugefügt werden. Der Business Intelligence-Assistent wendet auf Attribute in einer Dimension mehrere Attributtypen an, wenn der Assistent Kontointelligenz zur Identifizierung von Attributen hinzufügt, die die Namen, Codes, Nummern und Struktur von Konten in der Dimension enthalten. Der Business Intelligence-Assistent verarbeitet auch Attributtypen, z. B. für die Währungsumrechnung. Weitere Informationen finden Sie unter [Erstellen einer Währungstypdimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -317,4 +317,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

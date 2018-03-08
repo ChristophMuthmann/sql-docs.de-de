@@ -1,10 +1,13 @@
 ---
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,20 +32,19 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 87
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14746a5bfac3674299e03b6eba0da1a823f1bba9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Reduziert die Größe der angegebenen Daten- oder Protokolldatei für die aktuelle Datenbank oder leert eine Datei, indem die Daten aus der angegebenen Datei in andere Dateien in derselben Dateigruppe verschoben werden, sodass die Datei aus der Datenbank entfernt werden kann. Sie können eine Datei auf eine Größe reduzieren, die kleiner ist als die bei der Erstellung angegebene Größe. Dadurch wird die Mindestdateigröße auf den neuen Wert zurückgesetzt.
   
@@ -63,10 +65,10 @@ DBCC SHRINKFILE
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Dateiname*  
+*file_name*  
 Der logische Name der Datei, die verkleinert werden soll.
   
-*FILE_ID*  
+*file_id*  
 Die Datei-ID der Datei, die verkleinert werden soll. Verwenden Sie zum Abrufen einer Datei-ID der [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) -Systemfunktion oder einer Abfrage der [Sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) -Katalogsicht in der aktuellen Datenbank.
   
 *target_size*  
@@ -236,9 +238,8 @@ GO
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID &#40; Transact-SQL &#41;](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [Verkleinern einer Datei](../../relational-databases/databases/shrink-a-file.md)
   
   
-

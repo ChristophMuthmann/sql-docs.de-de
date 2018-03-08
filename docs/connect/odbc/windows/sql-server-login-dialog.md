@@ -3,24 +3,25 @@ title: Dialogfeld "SQL Server-Anmeldung" (ODBC) | Microsoft Docs
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 67aa8fc08a75efbcf77eb839b1999961a17e2a9f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Dialogfeld „SQL Server-Anmeldung“ (ODBC)
 
@@ -109,4 +110,3 @@ Diese Option ist nur anwendbar, wenn **starken Verschlüsselung für Daten verwe
 ## <a name="see-also"></a>Siehe auch
 
 [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-

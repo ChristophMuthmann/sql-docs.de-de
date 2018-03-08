@@ -2,28 +2,30 @@
 title: "Datenbankübergreifende Abfragen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
-ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea0f897f2445ba48649dd74d01b4fc67a1527280
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cross-database-queries"></a>Datenbankübergreifende Abfragen
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]bieten speicheroptimierte Tabellen keine Unterstützung für datenbankübergreifende Transaktionen. Innerhalb einer Transaktion oder Abfrage, die auf eine speicheroptimierte Tabelle zugreift, können Sie nicht gleichzeitig auf eine andere Datenbank zugreifen. Daten aus einer Tabelle in einer Datenbank können nicht einfach in eine speicheroptimierte Tabelle in einer anderen Datenbank kopiert werden.  
   
@@ -34,7 +36,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
 
 1. Erstellen Sie Testobjekte.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -86,7 +88,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
 
 2.  Versuchen Sie eine datenbankübergreifende Abfrage. Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -97,7 +99,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
 
 3.  Erstellen Sie einen speicheroptimierten Tabellentyp.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -113,7 +115,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
     ```
 
 4.  Versuchen Sie erneut die datenbankübergreifende Abfrage.  Dieses Mal werden die Daten zunächst in eine speicheroptimierte Tabellenvariable übertragen.  Dann werden die Daten aus der Tabellenvariablen in die speicheroptimierte Tabelle übertragen.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     
@@ -125,8 +127,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
     GO 
     ```
    
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

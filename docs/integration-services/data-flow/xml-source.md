@@ -1,10 +1,13 @@
 ---
-title: XML-Quelle | Microsoft Docs
+title: XML-Quelle | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source"></a>XML-Quelle
   Die XML-Quelle liest eine XML-Datendatei und füllt die Spalten in der Quellausgabe mit den Daten.  
@@ -83,7 +85,7 @@ ms.lasthandoff: 08/17/2017
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften der XML-Quelle](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 08/17/2017
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |XML-Dateispeicherort|Ruft Daten aus einer XML-Datei ab.|  
 |XML-Datei aus Variable|Gibt den XML-Dateinamen in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -136,7 +138,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="xml-source-editor-columns-page"></a>Quellen-Editor für XML (Seite Spalten)
   Mithilfe des Knotens **Spalten** im Dialogfeld **Quellen-Editor für XML** können Sie einer externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -149,7 +151,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="xml-source-editor-error-output-page"></a>Quellen-Editor für XML (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für XML** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -164,7 +166,7 @@ ms.lasthandoff: 08/17/2017
  **Abschneiden**  
  Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Fehlers an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -173,6 +175,5 @@ ms.lasthandoff: 08/17/2017
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Extrahieren von Daten mithilfe der XML-Quelle](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
-

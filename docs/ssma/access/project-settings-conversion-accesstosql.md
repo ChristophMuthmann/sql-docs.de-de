@@ -1,10 +1,13 @@
 ---
 title: Projekteinstellungen (Konvertierung) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - sql-ssma
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ec31bf02ccdeedd4356d0a85c85d7d33041d5bde
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c9a9c7fb027bfd8f90d5310bb096eaef706aa353
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Projekteinstellungen (Konvertierung) (AccessToSQL)
 Die Konvertierung projekteinstellungen können Sie konfigurieren, wie Objekte aus den Zugriff auf Datenbankobjekte zu umgewandelt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbankobjekte.  
@@ -122,4 +124,3 @@ Zeigt eine Meldung in den Bewertungsbericht, und klicken Sie im Bereich "Ausgabe
 ## <a name="see-also"></a>Siehe auch  
 [Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

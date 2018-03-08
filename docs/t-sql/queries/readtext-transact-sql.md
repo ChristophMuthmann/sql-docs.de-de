@@ -3,8 +3,11 @@ title: READTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c501fe8ea8146b4b2ec6e138f72fc2604b4b374
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c1659dfcc9ca8908ce756eb41b32fd30649decfa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Liest **Text**, **Ntext**, oder **Image** Werte aus einer **Text**, **Ntext**, oder **Bild**  -Spalte, beginnend bei einem angegebenen Offset und die angegebene Anzahl von Bytes zu lesen.  
   
@@ -49,16 +51,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Tabelle* **.** *Spalte*  
+ *table* **.** *column*  
  Dies ist der Name einer Tabelle und Spalte, aus der gelesen wird. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Die Angabe der Tabellen- und Spaltennamen ist erforderlich, wohingegen die Angabe des Datenbank- und Besitzernamens optional ist.  
   
  *text_ptr*  
- Ein gültiger Textzeiger. *Text_ptr* muss **binary(16)**.  
+ Ein gültiger Textzeiger. *text_ptr* must be **binary(16)**.  
   
- *Offset*  
+ *offset*  
  Ist die Anzahl der Bytes (bei der **Text** oder **Image** Datentypen verwendet werden) oder Zeichen (bei der **Ntext** -Datentyp verwendet wird,) überspringen vor Beginn der Lesen**Text**, **Image**, oder **Ntext** Daten.  
   
- *Größe*  
+ *size*  
  Ist die Anzahl der Bytes (bei der **Text** oder **Image** Datentypen verwendet werden) oder Zeichen (bei der **Ntext** -Datentyp verwendet wird) der zu lesenden Daten. Wenn *Größe* ist 0, 4 KB Daten gelesen wird.  
   
  HOLDLOCK  
@@ -98,4 +100,3 @@ GO
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   
   
-

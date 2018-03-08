@@ -2,17 +2,17 @@
 title: "Mehrdimensionale Ausdrücke (MDX)-Referenz | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- sql13.asvs.sqlserverstudio.startpage.mdx.f1
-dev_langs:
-- kbMDX
+f1_keywords: sql13.asvs.sqlserverstudio.startpage.mdx.f1
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services]
 - MDX [Analysis Services], reference
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - MDX [Analysis Services]
 - Analysis Services Multidimensional Expressions
 ms.assetid: 7e1cb1fb-2a50-41c2-9c70-b853ad6b6c3f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: f0391b6ddf2e87a8170e4271ab2082b424baff34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 46bd5c421fbf697c7ab0525006fa14dc2510d27a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Multidimensional Expressions (MDX) - Referenz
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
     
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -50,4 +49,3 @@ ms.lasthandoff: 08/02/2017
  [Definieren von Zuweisungen und anderen Skriptbefehlen](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   
-

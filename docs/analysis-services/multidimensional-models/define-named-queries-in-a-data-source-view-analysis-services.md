@@ -2,13 +2,13 @@
 title: Definieren von benannten Abfragen in einer Datenquellensicht (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - modifying named queries
 - data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19b3f52626202c555cb51173508f2a1954318b83
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definieren von benannten Abfragen in einer Datenquellensicht (Analysis Services)
-  Bei einer benannten Abfrage handelt es sich um einen SQL-Ausdruck, der als Tabelle dargestellt wird. In einer benannten Abfrage können Sie einen SQL-Ausdruck angeben, um Zeilen und Spalten auszuwählen, die aus mindestens einer Tabelle in mindestens einer Datenquelle zurückgegeben wurden. Eine benannte Abfrage verhält sich wie alle anderen Tabellen in einer Datenquellensicht (Data Source View, DSV) mit Zeilen und Beziehungen. Der einzige Unterschied besteht darin, dass eine benannte Abfrage auf einem Ausdruck basiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Bei einer benannten Abfrage handelt es sich um einen SQL-Ausdruck, der als Tabelle dargestellt wird. In einer benannten Abfrage können Sie einen SQL-Ausdruck angeben, um Zeilen und Spalten auszuwählen, die aus mindestens einer Tabelle in mindestens einer Datenquelle zurückgegeben wurden. Eine benannte Abfrage verhält sich wie alle anderen Tabellen in einer Datenquellensicht (Data Source View, DSV) mit Zeilen und Beziehungen. Der einzige Unterschied besteht darin, dass eine benannte Abfrage auf einem Ausdruck basiert.  
   
  Mit einer benannten Abfrage können Sie das relationale Schema vorhandener Tabellen in einer Datenquellensicht ohne Ändern der zugrunde liegenden Datenquelle erweitern. Sie können z. B. mithilfe einer Reihe benannter Abfragen eine komplexe Dimensionstabelle in kleinere einfachere Dimensionstabellen aufteilen, die in Datenbankdimensionen verwendet werden sollen. Eine benannte Abfrage kann auch zum Verknüpfen mehrerer Datenbanktabellen von mindestens einer Datenquelle in einer einzelnen Tabelle für die Datenquellensicht verwendet werden.  
   
@@ -69,7 +69,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Definieren von benannten Berechnungen in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   
-

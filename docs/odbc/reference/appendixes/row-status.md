@@ -3,10 +3,12 @@ title: Zeile Status | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - row status [ODBC]
 - cache [ODBC]
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c30e5f98a4b55c028087618d99efbf5f452d2162
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f164b8269e1150cdf7a85e486bcc3fd93a9411f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="row-status"></a>Zeilenstatus
 > [!IMPORTANT]  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   SQL_ROW_SUCCESS, wenn sie die Zeile wurde erfolgreich aus der Datenquelle mit abruft **SQLFetch**.  
   
 -   SQL_ROW_UPDATED, wenn sie eine positioniertes Update-Anweisung in der Zeile ausgeführt wird.
-

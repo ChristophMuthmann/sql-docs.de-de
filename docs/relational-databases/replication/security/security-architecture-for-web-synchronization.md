@@ -2,29 +2,30 @@
 title: "Sicherheitsarchitektur für die Websynchronisierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Web synchronization, security architecture
+helpviewer_keywords: Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67af14595c75a12429ed58342149be27232d1bb5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "31"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 94de766b7e039aa2b66d900202fff0d458b0f358
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Sicherheitsarchitektur für die Websynchronisierung
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enables fine-grained control over the configuration of Web synchronization security. In diesem Thema wird eine umfassende Liste aller Komponenten bereitgestellt, die in eine Websynchronisierungskonfiguration einbezogen werden können, und Informationen zu den zwischen den Komponenten hergestellten Verbindungen. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht eine präzise Steuerung der Konfiguration der Websynchronisierungssicherheit. In diesem Thema wird eine umfassende Liste aller Komponenten bereitgestellt, die in eine Websynchronisierungskonfiguration einbezogen werden können, und Informationen zu den zwischen den Komponenten hergestellten Verbindungen. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  Die folgende Abbildung zeigt alle möglichen Verbindungen, manche Verbindungen sind jedoch in einer bestimmten Topologie möglicherweise nicht erforderlich. Beispielsweise ist eine Verbindung zu einem FTP-Server nur erforderlich, wenn die Momentaufnahme mithilfe von FTP übermittelt wird.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 |Authentifizierungstyp|Stelle, an der die Authentifizierung angegeben wird|  
 |----------------------------|-------------------------------------------|  
 |-   Windows-Authentifizierung|Der Merge-Agent stellt Verbindungen im Kontext des Windows-Benutzers her, der für den Merge-Agent (A) angegeben ist.|  
-|Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung wird nur verwendet, wenn Folgendes angegeben wird:<br /><br /> – RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **SubscriberSecurityMode**.|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A>.<br /><br /> Merge-Agentbefehlszeile: **-SubscriberLogin** und **-SubscriberLogin**.|  
+|Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung wird nur verwendet, wenn Folgendes angegeben wird:<br /><br /> RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **SubscriberSecurityMode**.|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A>.<br /><br /> Merge-Agentbefehlszeile: **-SubscriberLogin** und **-SubscriberLogin**.|  
   
 ## <a name="c-connection-to-an-outgoing-proxy-server"></a>C. Verbindung zu einem ausgehenden Proxyserver  
  Geben Sie nur dann einen Windows-Benutzer für diese Verbindung an, wenn ein ausgehender Proxyserver den Zugriff auf das interne Netzwerk des Abonnenten einschränkt.  
@@ -64,8 +65,8 @@ ms.lasthandoff: 06/22/2017
   
 |Authentifizierungstyp|Stelle, an der die Authentifizierung angegeben wird|  
 |----------------------------|-------------------------------------------|  
-|Die Standardauthentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für den Parameter **@internet_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **-InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@internet_login** und **@internet_password** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Merge-Agentbefehlszeile: **-InternetLogin** und **-InternetPassword**.|  
-|Der Wert<sup>1</sup> für die integrierte Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **1** für den Parameter **@internet_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **1** für **-InternetSecurityMode**.|Der Merge-Agent stellt Verbindungen im Kontext des Windows-Benutzers her, der für den Merge-Agent (A) angegeben ist.|  
+|Die Standardauthentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für den Parameter **@internet_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **-InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@internet_login** und **@internet_password** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Merge-Agentbefehlszeile: **-InternetLogin** und **-InternetPassword**.|  
+|Der Wert<sup>1</sup> für die integrierte Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **1** für den Parameter **@internet_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **1** für **-InternetSecurityMode**.|Der Merge-Agent stellt Verbindungen im Kontext des Windows-Benutzers her, der für den Merge-Agent (A) angegeben ist.|  
   
  <sup>1</sup> Die integrierte Authentifizierung kann nur verwendet werden, wenn alle Computer derselben Domäne oder aber mehreren Domänen angehören, zwischen denen Vertrauensstellungen bestehen.  
   
@@ -89,13 +90,13 @@ ms.lasthandoff: 06/22/2017
   
 |Authentifizierungstyp|Stelle, an der die Authentifizierung angegeben wird|  
 |----------------------------|-------------------------------------------|  
-|Die Windows-Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **1** für den Parameter **@publisher_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **1** für **-PublisherSecurityMode**.|Der Merge-Agent stellt Verbindungen zum Verleger im Kontext des Windows-Benutzers her, der für die Verbindung zu IIS (D) angegeben ist. Wenn sich der Verleger und IIS auf verschiedenen Computern befinden und die integrierte Authentifizierung für die Verbindung (D) verwendet wird, müssen Sie die Kerberos-Delegierung auf dem Computer aktivieren, auf dem IIS ausgeführt wird. Weitere Informationen finden Sie in der Windows-Dokumentation.|  
-|Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für den Parameter **@publisher_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **-PublisherSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@publisher_login** und **@publisher_password** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>.<br /><br /> Merge-Agentbefehlszeile: **-PublisherLogin** und **-PublisherPassword**.|  
+|Die Windows-Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **1** für den Parameter **@publisher_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **1** für **-PublisherSecurityMode**.|Der Merge-Agent stellt Verbindungen zum Verleger im Kontext des Windows-Benutzers her, der für die Verbindung zu IIS (D) angegeben ist. Wenn sich der Verleger und IIS auf verschiedenen Computern befinden und die integrierte Authentifizierung für die Verbindung (D) verwendet wird, müssen Sie die Kerberos-Delegierung auf dem Computer aktivieren, auf dem IIS ausgeführt wird. Weitere Informationen finden Sie in der Windows-Dokumentation.|  
+|Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für den Parameter **@publisher_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **-PublisherSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@publisher_login** und **@publisher_password** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>.<br /><br /> Merge-Agentbefehlszeile: **-PublisherLogin** und **-PublisherPassword**.|  
   
 ## <a name="f-connection-to-the-distributor"></a>F. Verbindung zum Verteiler  
  Die Mergereplikationssynchronisierung, die auf dem Computer mit IIS gehostet wird, stellt auch Verbindungen zum Verteiler her. Die Mergereplikationssynchronisierung stellt die Verbindung zum Verteiler entweder mithilfe der Windows-Authentifizierung oder der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung her. Die Windows-Benutzer- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung, die Sie angeben, muss folgende Kriterien erfüllen:  
   
--   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Schützen des Verlegers](../../../relational-databases/replication/security/secure-the-publisher.md).  
+-   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
 -   Sie muss mit einem Datenbankbenutzer in der Verteilungsdatenbank verknüpft sein. Der Benutzer kann der **Guest** -Benutzer sein.  
   
@@ -103,8 +104,8 @@ ms.lasthandoff: 06/22/2017
   
 |-   Authentifizierungstyp|Stelle, an der die Authentifizierung angegeben wird|  
 |-------------------------------|-------------------------------------------|  
-|Die Windows-Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **1** für den Parameter **@distributor_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **1** für **-DistributorSecurityMode**.|Der Merge-Agent stellt Verbindungen zum Verteiler im Kontext des Windows-Benutzers her, der für die Verbindung zu IIS (D) angegeben ist. Wenn sich der Verteiler und IIS auf verschiedenen Computern befinden und die integrierte Authentifizierung für die Verbindung (D) verwendet wird, müssen Sie die Kerberos-Delegierung auf dem Computer aktivieren, auf dem IIS ausgeführt wird. Weitere Informationen finden Sie in der Windows-Dokumentation.|  
-|Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für den Parameter **@distributor_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@distributor_login** und **@distributor_password** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Merge-Agentbefehlszeile: **-DistributorLogin** und **-DistributorPassword**.|  
+|Die Windows-Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **1** für den Parameter **@distributor_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **1** für **-DistributorSecurityMode**.|Der Merge-Agent stellt Verbindungen zum Verteiler im Kontext des Windows-Benutzers her, der für die Verbindung zu IIS (D) angegeben ist. Wenn sich der Verteiler und IIS auf verschiedenen Computern befinden und die integrierte Authentifizierung für die Verbindung (D) verwendet wird, müssen Sie die Kerberos-Delegierung auf dem Computer aktivieren, auf dem IIS ausgeführt wird. Weitere Informationen finden Sie in der Windows-Dokumentation.|  
+|Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für den Parameter **@distributor_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@distributor_login** und **@distributor_password** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Merge-Agentbefehlszeile: **-DistributorLogin** und **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Verbindung zu einem FTP-Server  
  Geben Sie nur dann einen Windows-Benutzer für diese Verbindung an, wenn Sie Momentaufnahmedateien von einem FTP-Server statt von einem UNC-Speicherort auf den Computer herunterladen, auf dem IIS ausgeführt wird, bevor Sie die Momentaufnahme auf den Abonnenten anwenden. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
@@ -139,8 +140,8 @@ ms.lasthandoff: 06/22/2017
 |---------------------|------------------------------------|  
 |Beliebiger Windows-Benutzer, der über die erforderlichen Berechtigungen verfügt.|Internetinformationsdienste-Manager (IIS). |  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der Websynchronisierung](../../../relational-databases/replication/configure-web-synchronization.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
   

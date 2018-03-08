@@ -3,10 +3,12 @@ title: Diagnose | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], diagnostic information
 - diagnostic information [ODBC], about diagnostic information
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: efbc34be3dc532b329863a98305952d90adcc9f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: adb6f66ecfbff558fd163437a56453efb4265185
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostics"></a>Diagnose
 Funktionen in ODBC gibt Diagnoseinformationen in zweierlei Art zurück. Gibt der Rückgabecode an den Erfolg oder Fehler bei der Funktion, DiagnoseDatensätze ausführliche Informationen über die Funktion bereitstellen. Mindestens ein Diagnosedatensatz – der Headerdatensatz – wird zurückgegeben, auch wenn die Funktion erfolgreich ausgeführt wird.  
@@ -35,11 +36,10 @@ Funktionen in ODBC gibt Diagnoseinformationen in zweierlei Art zurück. Gibt der
   
 -   [Rückgabecodes](../../../odbc/reference/develop-app/return-codes-odbc.md)  
   
--   [DiagnoseDatensätze](../../../odbc/reference/develop-app/diagnostic-records.md)  
+-   [Diagnosedatensätze](../../../odbc/reference/develop-app/diagnostic-records.md)  
   
 -   [Verwenden von SQLGetDiagRec und SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md)  
   
 -   [Implementieren von SQLGetDiagRec und SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)  
   
--   [Beispiele für die Diagnose Behandlung](../../../odbc/reference/develop-app/diagnostic-handling-examples.md)
-
+-   [Beispiele für die Diagnosebehandlung](../../../odbc/reference/develop-app/diagnostic-handling-examples.md)

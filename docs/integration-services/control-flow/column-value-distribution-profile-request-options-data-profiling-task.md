@@ -1,10 +1,13 @@
 ---
-title: Spalte Wert Profil Anforderung Verteilungsoptionen (Datenprofilerstellungs-Task) | Microsoft Docs
+title: "Optionen für Anforderung für Verteilungsprofil für Spaltenwert (Datenprofilerstellungs-Task) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79ce587ac6e1f0da8bf0c2ae237b6b9c3ae2623f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 861b01ee4002bb592f5fc85978a5afd08994f606
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Verteilungsprofil für Spaltenwert (Datenprofilerstellungs-Task)
-  Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Verteilungsprofil für Spaltenwert** festzulegen. Ein Verteilungsprofil für Spaltenwert dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jeder Wert darstellt. Das Profil kann auch Werte melden, die mehr als einen angegebenen Prozentwert der Zeilen in der Tabelle darstellen. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. eine falsche Anzahl eindeutiger Werte in einer Spalte. Beispiel: Sie erstellen ein Profil für eine Spalte mit US-Bundesstaaten und ermitteln mehr als 50 unterschiedliche Werte.  
+  Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Verteilungsprofil für Spaltenwert** festzulegen. Ein Verteilungsprofil für Spaltenwert dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jeder Wert darstellt. Das Profil kann auch Werte melden, die mehr als einen angegebenen Prozentwert der Zeilen in der Tabelle darstellen. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. eine falsche Anzahl eindeutiger Werte in einer Spalte. Beispiel: Sie erstellen ein Profil für eine Spalte mit US-Bundesstaaten und ermitteln mehr als 50 unterschiedliche Werte.  
   
 > [!NOTE]  
 >  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task**angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
@@ -43,14 +45,14 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **TableOrView**  
  Wählen Sie die vorhandene Tabelle oder die Sicht aus, die die Spalte enthält, für die ein Profil erstellt werden soll.  
   
  Weitere Informationen finden Sie im Abschnitt "TableorView-Optionen" in diesem Thema.  
   
- **Spalte**  
+ **Column**  
  Wählen Sie die vorhandene Spalte aus, für die ein Profil erstellt werden soll. Wählen Sie **(\*)** aus, um ein Profil für alle Spalten zu erstellen.  
   
  Weitere Informationen finden Sie im Abschnitt "Spaltenoptionen" in diesem Thema.  
@@ -75,7 +77,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Wenn Sie den Platzhalter **(\*)** für **ColumnName** verwenden, ist **CompareOptions** schreibgeschützt und auf die **Default**-Einstellung festgelegt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Default**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
@@ -83,7 +85,7 @@ ms.lasthandoff: 08/03/2017
   
  Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |**IgnoreNonSpace**|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann "å" mit "a" identisch.|  
@@ -94,11 +96,11 @@ ms.lasthandoff: 08/03/2017
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **ValueDistributionOption**  
  Geben Sie an, ob die Verteilung für alle Spaltenwerte berechnet werden soll. Der Standardwert für diese Option ist **FrequentValues**.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**AllValues**|Die Verteilung wird für alle Spaltenwerte berechnet.|  
 |**FrequentValues**|Die Verteilung wird nur für Werte berechnet, deren Frequenz den in **FrequentValueThreshold**angegebenen minimalen Wert übersteigt. Werte, die nicht dem Wert von **FrequentValueThreshold** entsprechen, werden im Ausgabebericht ausgeschlossen.|  
@@ -106,9 +108,8 @@ ms.lasthandoff: 08/03/2017
  **FrequentValueThreshold**  
  Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten der Spaltenwert gemeldet werden sollte. Diese Option wird deaktiviert, wenn Sie **AllValues** als **ValueDistributionOption**auswählen. Der Standardwert dieser Option ist 0,001.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenprofilerstellungs-Task-Editor &#40; Seite "Allgemein" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

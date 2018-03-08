@@ -3,8 +3,11 @@ title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - ALTER SERVER CONFIGURATION statement
 - setting process affinity
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 72
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4c406824e51b79b74403623a100f2fc355d28bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4489934ad1bb21c79cbb0ece01e7d061fd794c2a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert globale Konfigurationseinstellungen für den aktuellen Server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -415,4 +417,3 @@ GO
  [Pufferpoolerweiterung](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   
-

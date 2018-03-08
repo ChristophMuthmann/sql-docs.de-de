@@ -1,10 +1,13 @@
 ---
-title: Erstellen einer EXTERNEN Tabelle (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e9ee131e1c4bb09ae19c90d84b78a7d6fc662ae8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abb5affb76f0caac24e973928561939280ba40
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="create-external-table-transact-sql"></a>Erstellen einer EXTERNEN Tabelle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+# <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Erstellt eine externe PolyBase-Tabelle, die in einem Hadoop-Cluster oder Azure Blob-Speicher gespeicherte Daten verweist. Kann auch verwendet werden, zum Erstellen einer externen Tabelle [elastische Datenbankabfrage](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
@@ -135,15 +137,19 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* . [Schema_name]. | Schema_name. ] *Table_name*  
+ *Database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  1 bis 3 - Teilenamens der Tabelle zu erstellen. Für eine externe Tabelle ist nur die Metadaten der Tabellen in SQL zusammen mit grundlegende Statistiken über die Datei oder Ordner verwiesen, die in Hadoop oder Azure Blob-Speicher gespeichert. Keine tatsächlichen Daten verschoben oder in gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  \<Column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE können eine oder mehrere Spaltendefinitionen. Verwenden die gleiche Syntax für eine Spalte definieren, CREATE EXTERNAL TABLE und CREATE TABLE. Eine Ausnahme, können Sie keine DEFAULT-Einschränkung in externen Tabellen. Die vollständigen Details Spaltendefinitionen und deren Datentypen finden Sie unter [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) und [erstellt eine Tabelle in Azure SQL-Datenbank](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Die Spaltendefinitionen, einschließlich der Datentypen und die Anzahl der Spalten der Daten in externen Dateien übereinstimmen. Wenn es ein Konflikt besteht, werden die Zeilen der Datei beim Abfragen der tatsächlichen Daten zurückgewiesen.  
   
- Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müssen die Definitionen Spalte, und geben die genaue Schema der externen Datei zuordnen. Beim Datentypen definieren, die in Hadoop Hive/gespeicherte Daten zu verweisen, verwenden Sie die folgenden Zuordnungen zwischen Datentypen von SQL und Hive und wandeln Sie den Typ in einen SQL-Datentyp, wenn Sie daraus auswählen. Die folgenden Anweisungstypen alle Versionen von Hive, sofern nicht anders.  
-  
+ Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müssen die Definitionen Spalte, und geben die genaue Schema der externen Datei zuordnen. Beim Datentypen definieren, die in Hadoop Hive/gespeicherte Daten zu verweisen, verwenden Sie die folgenden Zuordnungen zwischen Datentypen von SQL und Hive und wandeln Sie den Typ in einen SQL-Datentyp, wenn Sie daraus auswählen. Die folgenden Anweisungstypen alle Versionen von Hive, sofern nicht anders.
+
+> [!NOTE]  
+>  SQL Server unterstützt nicht die Struktur _unendlich_ Datenwert in beliebigen Konvertierungen. PolyBase schlägt mit einem Typkonvertierungsfehler Daten fehl.
+
+
 |SQL-Datentyp|.NET-Datentyp|Hive-Datentyp|Hadoop/Java-Datentyp|Kommentare|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Für unsignierte Zahlen.|  
@@ -155,20 +161,20 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Single|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|String<br /><br /> Char[]|Zeichenfolge|text||  
+|NCHAR|String<br /><br /> Char[]|Zeichenfolge|text||  
 |nvarchar|String<br /><br /> Char[]|Zeichenfolge|Text||  
 |char|String<br /><br /> Char[]|Zeichenfolge|Text||  
 |varchar|String<br /><br /> Char[]|Zeichenfolge|Text||  
-|binary|Byte[]|binary|BytesWritable|Gilt für Hive 0,8 und höher.|  
-|varbinary|Byte[]|binary|BytesWritable|Gilt für Hive 0,8 und höher.|  
-|Datum|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
+|BINARY|Byte[]|BINARY|BytesWritable|Gilt für Hive 0,8 und höher.|  
+|varbinary|Byte[]|BINARY|BytesWritable|Gilt für Hive 0,8 und höher.|  
+|Datum|datetime|timestamp|TimestampWritable||  
+|smalldatetime|datetime|timestamp|TimestampWritable||  
+|datetime2|datetime|timestamp|TimestampWritable||  
+|datetime|datetime|timestamp|TimestampWritable||  
 |Uhrzeit|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Decimal|decimal|BigDecimalWritable|Gilt für Hive0.11 und später erneut.|  
+|Decimal|Decimal|Decimal|BigDecimalWritable|Gilt für Hive0.11 und später erneut.|  
   
- Speicherort = "*Folder_or_filepath*"  
+ LOCATION =  '*folder_or_filepath*'  
  Gibt den Ordner oder Pfad und Dateinamen für die tatsächlichen Daten in Hadoop oder Azure Blob-Speicher an. Die Position beginnt im Stammordner. Der Stammordner ist der Speicherort des in der externen Datenquelle angegeben.  
   
  Wenn Sie Standort um einen Ordner angeben, werden eine PolyBase-Abfrage, die aus der externen Tabelle auswählt Dateien aus dem Ordner und allen Unterordnern abgerufen. Keinen wie Hadoop zurück versteckte Ordner PolyBase. Sie gibt auch keine Dateien zurück für die der Dateiname mit einem Unterstrich (_) oder einem Punkt (.) beginnt.  
@@ -179,21 +185,21 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Um die Standardwebsite als auch nur Lesen aus dem Stammordner zu ändern, legen Sie das Attribut \<polybase.recursive.traversal > in der Konfigurationsdatei Core-site.xml auf "false". Diese Datei befindet sich unter `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Beispiel: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
- DATA_SOURCE = *External_data_source_name*  
+ DATA_SOURCE = *external_data_source_name*  
  Gibt den Namen der externen Datenquelle, die den Speicherort der externen Daten enthält. Dieser Speicherort kann entweder eine Hadoop oder Azure Blob-Speicher. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
- FILE_FORMAT = *External_file_format_name*  
+ FILE_FORMAT = *external_file_format_name*  
  Gibt den Namen des externen Format Dateiobjekts, in dem die Datei Typ und Komprimierung die Methode für die externen Daten gespeichert. Verwenden Sie zum Erstellen eines externen Dateiformats [CREATE EXTERNAL FILE FORMAT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  Ablehnen von Optionen  
  Sie können angeben, dass Reject-Parameter, die bestimmen, wie PolyBase behandelt *dirty* zeichnet er aus der externen Datenquelle abgerufen. Ein Datensatz gilt als "dirty", wenn sie tatsächliche Datentypen oder die Anzahl der Spalten entsprechen nicht den Spaltendefinitionen der externen Tabelle.  
   
- Wenn Sie nicht angeben oder ändern die Werte ablehnen, werden PolyBase Standardwerte verwendet. Diese Informationen zu den Parametern ablehnen wird als zusätzliche Metadaten gespeichert, wenn Sie eine externe Tabelle mit CREATE EXTERNAL TABLE-Anweisung erstellen.   Wenn eine zukünftige SELECT-Anweisung oder wählen Sie in SELECT-Anweisung Daten aus der externen Tabelle auswählt, wird PolyBase die Reject-Optionen verwenden, um zu bestimmen, die Anzahl oder den Prozentsatz der Zeilen, die zurückgewiesen werden kann, bevor die tatsächliche Abfrage fehlschlägt. zugreifen. Die Abfrage zurückgegeben wird (Teilergebnisse), bis der Schwellenwert zum Zurückweisen überschritten wird. Es wird dann ein Fehler auftritt, mit der entsprechenden Fehlermeldung.  
+ Wenn Sie nicht angeben oder ändern die Werte ablehnen, werden PolyBase Standardwerte verwendet. Diese Informationen zu den Parametern ablehnen wird als zusätzliche Metadaten gespeichert, wenn Sie eine externe Tabelle mit CREATE EXTERNAL TABLE-Anweisung erstellen.   Wenn eine zukünftige SELECT-Anweisung oder wählen Sie in SELECT-Anweisung Daten aus der externen Tabelle auswählt, wird PolyBase die Reject-Optionen verwenden, um zu bestimmen, die Anzahl oder den Prozentsatz der Zeilen, die zurückgewiesen werden kann, bevor die tatsächliche Abfrage fehlschlägt. aus. Die Abfrage zurückgegeben wird (Teilergebnisse), bis der Schwellenwert zum Zurückweisen überschritten wird. Es wird dann ein Fehler auftritt, mit der entsprechenden Fehlermeldung.  
   
  REJECT_TYPE = **Wert** | Prozentsatz  
  Verdeutlicht, ob die Option "REJECT_VALUE" als ein Literalwert oder als Prozentsatz angegeben wird.  
   
- value  
+ Wert  
  REJECT_VALUE ist ein Literalwert, kein Prozentsatz. Die PolyBase-Abfrage schlägt fehl, wenn die Anzahl der abgelehnten Zeilen überschreitet *Reject_value*.  
   
  Z. B. wenn REJECT_VALUE = 5 und REJECT_TYPE = Wert, der PolyBase-SELECT-Abfrage schlägt fehl, nachdem 5 Zeilen abgelehnt wurden.  
@@ -252,7 +258,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 -   **CREATE TABLE**  
   
--   **BELIEBIGES SCHEMA ÄNDERN**  
+-   **ALTER ANY SCHEMA**  
   
 -   **ÄNDERN SIE JEDE EXTERNE DATENQUELLE**  
   
@@ -291,6 +297,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE und DROP TABLE  
   
 -   CREATE STATISTICS und DROP STATISTICS  
+Hinweis: Zum Erstellen und Löschen von Statistiken in externen Tabellen werden in Azure SQL-Datenbank nicht unterstützt. 
   
 -   CREATE VIEW und DROP VIEW  
   
@@ -361,7 +368,7 @@ WITH (
   
 CREATE EXTERNAL FILE FORMAT myfileformat_rc  
 WITH (  
-    FORMAT = RCFILE,  
+    FORMAT_TYPE = RCFILE,  
     SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
 )  
 ;  
@@ -469,102 +476,7 @@ WITH
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-create-an-external-table-with-data-in-text-delimited-format"></a>H. Erstellen Sie eine externe Tabelle mit Daten im Format Texttrennzeichen an.  
- Dieses Beispiel zeigt die Schritte, die erforderlich, um eine externe Tabelle zu erstellen, die Daten in Dateien Texttrennzeichen formatiert wurde. Es definiert eine externe Quelle Mydatasource und eine externe Datei Format Myfileformat. Diese Serverebene verwendete Objekte werden dann in der CREATE EXTERNAL TABLE-Anweisung verwiesen werden. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) und [externes DATEIFORMAT erstellen &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat  
-WITH (  
-    FORMAT_TYPE = DELIMITEDTEXT,   
-    FORMAT_OPTIONS (FIELD_TERMINATOR ='|')  
-);  
-  
-CREATE EXTERNAL TABLE ClickStream (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee.tbl',  
-        DATA_SOURCE = mydatasource,  
-        FILE_FORMAT = myfileformat  
-    )  
-;  
-  
-```  
-  
-### <a name="i-create-an-external-table-with-data-in-rcfile-format"></a>I. Erstellen Sie eine externe Tabelle mit Daten im RCFile-Format.  
- Dieses Beispiel zeigt die Schritte, die erforderlich, um eine externe Tabelle zu erstellen, die Daten, die als RCFiles formatiert wurde. Es definiert eine externe Quelle Mydatasource_rc und eine externe Datei Format Myfileformat_rc. Diese Serverebene verwendete Objekte werden dann in der CREATE EXTERNAL TABLE-Anweisung verwiesen werden. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) und [externes DATEIFORMAT erstellen &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_rc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_rc  
-WITH (  
-    FORMAT = RCFILE,  
-    SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_rc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee_rc.tbl',  
-        DATA_SOURCE = mydatasource_rc,  
-        FILE_FORMAT = myfileformat_rc  
-    )  
-;  
-  
-```  
-  
-### <a name="j-create-an-external-table-with-data-in-orc-format"></a>J. Erstellen Sie eine externe Tabelle mit Daten im Format ORC.  
- Dieses Beispiel zeigt die Schritte, die erforderlich, um eine externe Tabelle zu erstellen, die formatierte Daten als ORC Dateien verfügt. Es definiert eine externe Quelle Mydatasource_orc und eine externe Datei Format Myfileformat_orc. Diese Serverebene verwendete Objekte werden dann in der CREATE EXTERNAL TABLE-Anweisung verwiesen werden. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) und [externes DATEIFORMAT erstellen &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_orc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_orc  
-WITH (  
-    FORMAT = ORC,  
-    COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_orc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/',  
-        DATA_SOURCE = mydatasource_orc,  
-        FILE_FORMAT = myfileformat_orc  
-    )  
-;  
-  
-```  
-  
-### <a name="k-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>K. Importieren von Daten aus der ADLS in Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. Importieren von Daten aus der ADLS in Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```  
@@ -610,7 +522,7 @@ AS SELECT * FROM
      
 ```  
   
-### <a name="l-join-external-tables"></a>L. Verknüpfen von externen Tabellen  
+### <a name="i-join-external-tables"></a>I. Verknüpfen von externen Tabellen  
   
 ```  
 SELECT url.description  
@@ -620,7 +532,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="m-join-hdfs-data-with-pdw-data"></a>M. Verknüpfen von HDFS-Daten mit PDW-Daten  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>J. Verknüpfen von HDFS-Daten mit PDW-Daten  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  
@@ -630,7 +542,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="n-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>N. Importieren von Zeilendaten aus HDFS in einer verteilten PDW-Tabelle  
+### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>K. Importieren von Zeilendaten aus HDFS in einer verteilten PDW-Tabelle  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -639,7 +551,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="o-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>O. Importieren von Zeilendaten aus HDFS in eine replizierte Tabelle mit PDW  
+### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>L. Importieren von Zeilendaten aus HDFS in eine replizierte Tabelle mit PDW  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -653,11 +565,10 @@ FROM ClickStream
  [Beispiele für Metadaten-Abfrage (SQLServer PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
- [Erstellen Sie die externe Tabelle AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [Erstellen Sie die Tabelle als SELECT &#40; Azure SQL Datawarehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
-
 
 
 

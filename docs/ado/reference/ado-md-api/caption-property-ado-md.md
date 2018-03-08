@@ -3,7 +3,7 @@ title: Caption-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Caption property [ADO MD]
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7ec834b58d7801403b2abb8ad618fc1842ab16a5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d95bfaf5ad7375c406ebfaccb77c584c22edb2e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="caption-property-ado-md"></a>Caption-Eigenschaft (ADO MD)
 Gibt an, die textbeschriftung, verwenden Sie beim Anzeigen einer [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) oder [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekt.  
@@ -42,9 +41,8 @@ Gibt an, die textbeschriftung, verwenden Sie beim Anzeigen einer [Ebene](../../.
   
 |||  
 |-|-|  
-|[Ebenenobjekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
+|[Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Description-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)
-

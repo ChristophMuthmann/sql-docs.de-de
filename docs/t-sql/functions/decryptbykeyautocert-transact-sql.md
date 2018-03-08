@@ -3,8 +3,11 @@ title: DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,26 +20,25 @@ dev_langs:
 helpviewer_keywords:
 - DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
-caps.latest.revision: 26
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0842000cd08e3ca82dab181f32ae96f4a0280d5d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9aca90f988ae2d12d9a7c26f01673530b1a07f4b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Führt mithilfe eines symmetrischen Schlüssels, der mit einem Zertifikat automatisch entschlüsselt wird, eine Entschlüsselung durch.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -46,7 +48,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  *cert_ID*  
  Die ID des Zertifikats, das zum Schützen des symmetrischen Schlüssels verwendet wird. *Cert_ID* ist **Int**.  
   
@@ -71,16 +73,16 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
  @authenticator  
  Eine Variable, die Daten enthält, aus denen ein Authentifikator generiert werden soll. Dies muss derselbe Wert sein, der an EncryptByKey übergeben wurde.  
   
-## Rückgabetypen  
+## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  In DecryptByKeyAutoCert ist die Funktionalität von OPEN SYMMETRIC KEY und von DecryptByKey kombiniert. In einem einzelnen Vorgang wird ein symmetrischer Schlüssel entschlüsselt und mit diesem Schlüssel der verschlüsselte Text entschlüsselt.  
   
-## Berechtigungen  
+## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DEFINITION-Berechtigung für den symmetrischen Schlüssel und die CONTROL-Berechtigung für das Zertifikat.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt wie `DecryptByKeyAutoCert` können verwendet werden, um Code zu vereinfachen, die eine Entschlüsselung ausgeführt. Dieser Code sollte ausgeführt werden, auf eine [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank, die nicht bereits einen Datenbank-Hauptschlüssel verfügt.  
   
 ```  
@@ -130,11 +132,10 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
     FROM HumanResources.Employee;  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

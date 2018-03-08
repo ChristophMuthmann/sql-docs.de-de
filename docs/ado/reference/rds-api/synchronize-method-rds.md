@@ -1,29 +1,30 @@
 ---
 title: Synchronize-Methode (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4f6b559b8ad716be403a00d9cf171094286c222f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize-method-rds"></a>Synchronize-Methode (RDS)
 Synchronisieren Sie das angegebene Recordset, mit der Datenbank, die durch die Verbindungszeichenfolge für die Verwendung in ADO 2.5 und höher angegeben.  
@@ -39,7 +40,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *"ConnectionString"*  
+ *ConnectionString*  
  Eine Zeichenfolge verwendet, um mit dem OLE DB-Anbieter hergestellt, in dem die Anforderung gesendet werden. Wenn ein Ereignishandler verwendet wird, kann der Ereignishandler bearbeiten oder Ersetzen Sie die Verbindungszeichenfolge.  
   
  *HandlerString*  
@@ -73,6 +74,5 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
   
 ## <a name="applies-to"></a>Gilt für  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

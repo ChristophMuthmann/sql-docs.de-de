@@ -1,29 +1,30 @@
 ---
 title: Projekteinstellungen (Konvertierung) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f459472409e9fc85322aca5067d0953bd24831a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98ebb756d8d228de70c1c1969dba36ee89f8e076
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Projekteinstellungen (Konvertierung) (DB2ToSQL)
 Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA zu DB2-Syntax konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax.  
@@ -490,4 +491,3 @@ Nur sichtbar, wenn die Sequenz-Generator konvertiert, um festgelegt ist **mithil
 ## <a name="see-also"></a>Siehe auch  
 [Referenz zur Benutzeroberfläche &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

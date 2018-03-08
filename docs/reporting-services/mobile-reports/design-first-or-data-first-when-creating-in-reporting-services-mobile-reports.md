@@ -1,27 +1,27 @@
 ---
-title: "Entwurf oder erst Daten zuerst für die Erstellung in der mobilen Reporting Services-Berichte | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: Beim Erstellen von mobilen Berichten in Reporting Services wahlweise mit Entwurf oder Daten beginnen | Microsoft-Dokumentation
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8cf203f17ac149825e0e4d79ed7f6f6041700ae4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5eb348ea84163770d112667b071f7538061a1360
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Beim Erstellen von mobilen Reporting Services-Berichten wahlweise mit Entwurf oder Daten beginnen
   
@@ -45,12 +45,11 @@ Wenn Sie erst die Daten verarbeiten, importieren Sie zunächst alle erforderlich
 ![SS_MRP_DataTab](../../reporting-services/mobile-reports/media/ss-mrp-datatab.png)  
   
 ### <a name="see-also"></a>Siehe auch  
-- [Create and publish mobile reports with SQL Server Mobile Report Publisher (Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+- [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPad-App](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI für iOS)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPhone-App](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI für iOS)  
   
   
   
   
-
 

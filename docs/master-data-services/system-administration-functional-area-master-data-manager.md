@@ -2,25 +2,27 @@
 title: "Funktionsbereich „Systemverwaltung“ (Master Data Manager) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-caps.latest.revision: 9
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 72cb92630ce2777887929deaa46bfc57eecca837
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: db2ce55d178cd7de3e179e3ae1543d8a9f3460b9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Funktionsbereich "Systemverwaltung" (Master Data Manager)
   Im Funktionsbereich "Systemverwaltung" können Administratoren ein Modell und alle seine Objekte erstellen. Sie können auch Geschäftsregeln erstellen und Modellpakete bereitstellen. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -63,8 +65,7 @@ ms.lasthandoff: 09/07/2017
   
  [Geschäftsregelaktionen &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)  
   
   
-

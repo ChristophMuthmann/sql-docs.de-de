@@ -3,7 +3,7 @@ title: Mithilfe von Lesezeichen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9a8da466d7fb1cc988df297dee72d80ed19fed44
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-bookmarks"></a>Mithilfe von Lesezeichen
 Es ist oft hilfreich, direkt zu einem bestimmten Datensatz zurück, nachdem verschoben haben, der **Recordset** ohne Blättern Sie in jedem Datensatz und Vergleichen von Werten. Z. B., wenn Sie versuchen, suchen Sie für einen Datensatz mit den **suchen** -Methode, aber die Suche keine Datensätze zurückgibt, werden automatisch an einem Ende der **Recordset**. Wenn Ihr Anbieter unterstützt werden, können Lesezeichen, markieren Sie die Stelle vor dem Verwenden der **suchen** Methode, sodass Sie für Ihre Position zurückkehren können. Ein Lesezeichen ist ein **Variant** Typwert, die eindeutig einen Datensatz in einem **Recordset** Objekt.  
@@ -57,4 +56,3 @@ End If
  Die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode wird später ausführlicher behandelt.  
   
  Mit Ausnahme der Groß-/Kleinschreibung geklonten **Recordsets**, Lesezeichen gelten nur für die **Recordset** in dem sie erstellt wurden, auch wenn Sie denselben Befehl verwendet wird. Dies bedeutet, dass Sie nicht verwenden können eine **Lesezeichen** abgerufen, die von einem **Recordset** verschieben auf den gleichen Datensatz in einer Sekunde **Recordset** mit dem gleichen Befehl geöffnet.
-

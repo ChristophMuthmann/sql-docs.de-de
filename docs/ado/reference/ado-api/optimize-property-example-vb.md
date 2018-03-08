@@ -3,7 +3,7 @@ title: Optimieren Sie die Beispiel-Eigenschaft (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0cbc84bfbbd4f6f26bf82bc9fe373606c965451a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6137ef4be778a659107458ba9fe6f1a7f3000cfa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-example-vb"></a>Optimieren Sie die Beispiel-Eigenschaft (VB)
 Dieses Beispiel zeigt die [Feld](../../../ado/reference/ado-api/field-object.md) des Objekts dynamische **optimieren** Eigenschaft. Die ***Zip*** Feld der ***Autoren*** -Tabelle in der ***Pubs*** Datenbank ist nicht indiziert. Festlegen der [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft **"true"** auf die ***Zip*** Feld autorisiert ADO zum Erstellen eines Indexes, die die Leistung verbessert die [Suchen](../../../ado/reference/ado-api/find-method-ado.md)Methode.  
@@ -96,5 +95,4 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Optimieren Sie die Eigenschaft dynamisch (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Dynamische Eigenschaft Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

@@ -2,9 +2,12 @@
 title: Arbeiten mit Verzeichnissen und Pfaden in FileTables | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: fc785c40fae67d160fd8dff1947e964a58c78d67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Arbeiten mit Verzeichnissen und Pfaden in FileTables
-  Beschreibt die Verzeichnisstruktur, mit der die Dateien in FileTables gespeichert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt die Verzeichnisstruktur, mit der die Dateien in FileTables gespeichert werden.  
   
 ##  <a name="HowToDirectories"></a> Vorgehensweise: Arbeiten mit Verzeichnissen und Pfaden in FileTables  
  Sie können die folgenden drei Funktionen verwenden, um mit FileTable-Verzeichnissen in [!INCLUDE[tsql](../../includes/tsql-md.md)]zu arbeiten:  
@@ -38,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="BestPracticeRelativePaths"></a> Vorgehensweise: Relative Pfade für portablen Code verwenden  
  Um Code und Anwendungen vom aktuellen Computer und von der Datenbank unabhängig zu halten, sollten Sie keinen Code schreiben, der auf absoluten Dateipfaden basiert. Rufen Sie stattdessen den vollständigen Pfad für eine Datei mit der Funktion [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) und der Funktion [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)zur Laufzeit ab, wie im folgenden Beispiel gezeigt. Die **GetFileNamespacePath** -Funktion gibt standardmäßig den relativen Pfad der Datei unter dem Stammpfad der Datenbank zurück.  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  
@@ -97,7 +101,7 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**Verhalten**|  
+|*is_directory* **Wert**|*file_stream* **Wert**|**Verhalten**|  
 |FALSE|NULL|Dies ist eine ungültige Kombination, die von einer systemdefinierten Einschränkung abgefangen wird.|  
 |FALSE|\<Wert >|Das Element stellt eine Datei dar.|  
 |TRUE|NULL|Das Element stellt ein Verzeichnis dar.|  
@@ -110,11 +114,10 @@ GO
   
 -   Bei allen Zugriffen auf FILESTREAM- oder FileTable-Daten über Dateisystem-APIs sollten VNNs statt der Computernamen verwendet werden. Weitere Informationen finden Sie unter [FILESTREAM und FileTable bei AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktivieren der erforderlichen Komponenten für FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [Erstellen, Ändern und Löschen von FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Zugreifen auf FileTables mit Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Zugreifen auf FileTables mit Datei-E/A-APIs](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
-

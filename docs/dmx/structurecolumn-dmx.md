@@ -2,35 +2,32 @@
 title: StructureColumn (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- StructureColumn
-dev_langs:
-- DMX
-helpviewer_keywords:
-- StructureColumn function
+f1_keywords: StructureColumn
+dev_langs: DMX
+helpviewer_keywords: StructureColumn function
 ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3e7f727e1007c6502e6612ccef563f670837cf5c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt den Wert der Strukturspalte zurück, der dem angegebenen Fall entspricht, oder den Tabellenwert für eine geschachtelte Tabelle im angegebenen Fall.  
   
@@ -50,7 +47,7 @@ StructureColumn('structure column name')
   
  Wenn die referenzierte Miningstrukturspalte eine geschachtelte Tabelle ist, gibt auch die Funktion einen Tabellenwert zurück. Der zurückgegebene Tabellenwert kann in der FROM-Klausel einer untergeordneten SELECT-Anweisung verwendet werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Funktion ist polymorph und kann an beliebiger Stelle in Anweisungen verwendet werden, die Ausdrücke wie z B. die SELECT-Ausdrucksliste, den WHERE-Bedingungsausdruck und den ORDER BY-Ausdruck zulassen.  
   
  Der Name der Spalte in der Miningstruktur ist ein Zeichenfolgenwert und muss daher in einfache Anführungszeichen eingeschlossen werden: z. B. `StructureColumn('` **Spalte 1**`')`. Wenn mehrere Spalten den gleichen Namen haben, wird der Name entsprechend dem Kontext der einschließenden SELECT-Anweisung aufgelöst.  
@@ -149,10 +146,9 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

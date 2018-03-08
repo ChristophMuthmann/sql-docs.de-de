@@ -3,7 +3,7 @@ title: RDS-Programmiermodell mit Objekten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 46dcfe88b0405eaf34a52f2b25e131b5ba72eafe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f89c867cb836ec69fd5fe59adf16d93f4708d0f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten
 Das Ziel von RDS ist, erhalten Zugriff auf und Aktualisieren von Datenquellen über einen Mittler wie z. B. IIS. Das Programmiermodell gibt die Abfolge von Aktivitäten, die zu diesem Zweck erforderlich. Das Objektmodell gibt die Objekte, deren Methoden und Eigenschaften über das Programmiermodell auswirken.  
@@ -57,6 +56,5 @@ Das Ziel von RDS ist, erhalten Zugriff auf und Aktualisieren von Datenquellen ü
  [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

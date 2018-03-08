@@ -3,10 +3,12 @@ title: Serialisierbarkeit | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 19a70f6afcceeac41ef983a5756409fabcb428af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serializability"></a>Serialisierbarkeit
 Im Idealfall sollte Transaktionen *serialisierbar*. Transaktionen werden als serialisierbar, wenn die Ergebnisse der gleichzeitig ausgeführte Transaktionen sind identisch mit die Ergebnisse seriell ressourcenaufwändig – d. h. eine nach dem anderen. Es ist nicht wichtig, welche Transaktion führt zunächst nur, die das Ergebnis jeder Mischen von Transaktionen nicht wiedergibt.  
@@ -35,4 +36,3 @@ Im Idealfall sollte Transaktionen *serialisierbar*. Transaktionen werden als ser
  Warum ist Serialisierbarkeit wünschenswert? Das heißt, warum es wichtig ist, dass es, eine Transaktion angezeigt wird beendet wird, bevor die nächste Transaktion startet? Nehmen Sie das folgende Problem. Ein Vertriebsmitarbeiter ist Aufträge zur selben Zeit eingeben, die eine Clerk out Wechsel gesendet werden. Nehmen Sie an der Handlungsreisenden gibt eine Bestellung von Unternehmen X jedoch keinen commit; der Vertriebsmitarbeiter kommuniziert von Unternehmen X weiterhin für die Vertriebsmitarbeiter. Die clerkgröße fordert eine Liste mit allen offenen Bestellungen und ermittelt die Reihenfolge für Unternehmen X und sendet sie eine Rechnung. Nachdem die Vertreter des Unternehmens X entscheidet sich, dass die Reihenfolge zu ändern, damit die Handlungsreisenden war schon immer vor dem Commit der Transaktion geändert werden soll. Unternehmen X Ruft eine falsche Rechnung ab.  
   
  Wären die des Handlungsreisenden und des Sachbearbeiters Transaktionen serialisierbar, würde dieses Problem nie stattgefunden haben. Der Vertriebsmitarbeiter Transaktion würde abgeschlossen haben, bevor der Clerk Transaktionsbeginn in diesem Fall die Clerk haben, die richtige Abrechnung gesendet würde oder den Clerk Transaktion würde abgeschlossen haben, bevor die Handlungsreisenden Transaktion begonnen, in diesem Fall hat die Clerk würde keine Rechnung an Unternehmen X überhaupt gesendet haben.
-

@@ -2,11 +2,13 @@
 title: IMB DB2-Abonnenten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "74"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 402675d8725ca5e571261e700b9eb8ec2a035a90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="ibm-db2-subscribers"></a>IBM DB2-Abonnenten
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Pushabonnements für IBM DB2/AS 400, DB2/MVS und DB2/Universal Database über die OLE DB-Anbieter, die mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration-Server bereitgestellt werden.  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
     1.  Zeigen Sie im Menü **Start**auf **Programme**, dann auf **Microsoft OLE DB-Anbieter für DB2**, und klicken Sie dann auf **Data Access Tool**.  
   
-    2.  Folgen Sie im **Data Access Tool**den Anweisungen, um die Informationen zum DB2-Server anzugeben. Wenn Sie das Tool abgeschlossen haben, wird ein universeller Datenlink (Universal Data Link, UDL) mit einer zugeordneten Verbindungszeichenfolge erstellt (die UDL wird nicht tatsächlich von der Replikation verwendet, sondern die Verbindungszeichenfolge).  
+    2.  Folgen Sie im **Data Access Tool** den Anweisungen, um die Informationen zum DB2-Server anzugeben. Wenn Sie das Tool abgeschlossen haben, wird ein universeller Datenlink (Universal Data Link, UDL) mit einer zugeordneten Verbindungszeichenfolge erstellt (die UDL wird nicht tatsächlich von der Replikation verwendet, sondern die Verbindungszeichenfolge).  
   
     3.  Greifen Sie auf die Verbindungszeichenfolge zu: Klicken Sie mit der rechten Maustaste auf die UDL im Data Access Tool, und wählen Sie **Verbindungszeichenfolge anzeigen**aus.  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
      Die meisten Optionen in der Zeichenfolge beziehen sich speziell auf den DB2-Server, den Sie konfigurieren. Die Optionen `Process Binary as Character` und `Derive Parameters` sollten jedoch immer auf `False` festgelegt sein. Für die Option `Initial Catalog` ist ein Wert erforderlich, um die Abonnementdatenbank identifizieren zu können. Die Verbindungszeichenfolge wird beim Erstellen des Abonnements in Assistenten für neue Abonnements eingegeben.  
   
-3.  Erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, aktivieren Sie sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten, und erstellen Sie dann ein Pushabonnement für den Abonnenten. Weitere Informationen finden Sie unter [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, aktivieren Sie sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten, und erstellen Sie dann ein Pushabonnement für den Abonnenten. Weitere Informationen finden Sie unter [Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  Sie können auch ein benutzerdefiniertes Erstellungsskript für einen oder mehrere Artikel angeben. Beim Veröffentlichen einer Tabelle wird ein `CREATE TABLE`-Skript für diese Tabelle erstellt. Bei Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten wird das Skript im [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Dialekt erstellt und dann vom Verteilungs-Agent in einen allgemeineren SQL-Dialekt übersetzt, bevor es auf dem Abonnenten angewendet wird. Um ein benutzerdefiniertes Erstellungsskript anzugeben, ändern Sie entweder das vorhandene [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript, oder erstellen Sie ein vollständiges Skript, das den DB2 SQL-Dialekt verwendet. Wenn Sie ein DB2-Skript erstellen, verwenden Sie die **bypass_translation** -Direktive, damit der Verteilungs-Agent das Skript ohne Übersetzung auf dem Abonnenten anwendet.  
   
@@ -93,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Veröffentlichen Sie Tabellen nicht mithilfe der Transaktionsreplikation auf DB2-Abonnenten, wenn eine oder mehrere Fremdschlüsselspalten in der Tabelle den DECIMAL(32-38, 0-38)- oder NUMERIC(32-38, 0-38)-Datentyp aufweist. Bei der Transaktionsreplikation werden Zeilen anhand des Primärschlüssels identifiziert. Das kann zu Fehlern führen, weil diese Datentypen VARCHAR(41) auf dem Abonnenten zugeordnet sind. Tabellen mit Primärschlüsseln, die diesen Datentyp verwenden, können mithilfe der Momentaufnahmereplikation veröffentlicht werden.  
   
--   Wenn Sie Tabellen auf dem Abonnenten im Voraus erstellen möchten statt später durch die Replikation, verwenden Sie die Option replication support only. Weitere Informationen finden Sie unter [Initialisieren eines Transaktionsabonnements ohne Momentaufnahme](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Wenn Sie Tabellen auf dem Abonnenten im Voraus erstellen möchten statt später durch die Replikation, verwenden Sie die Option replication support only. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
 -   In[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden längere Tabellen- und Spaltennamen als DB2 unterstützt:  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 06/22/2017
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|DATE|  
-|**datetime**|TIMESTAMP|  
+|**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
 |**decimal(1-31, 0-31)**|DECIMAL(1-31, 0-31)|  
@@ -133,7 +135,7 @@ ms.lasthandoff: 06/22/2017
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
 |**real**|real|  
-|**smalldatetime**|TIMESTAMP|  
+|**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
 |**sql_variant**|–|  
@@ -171,9 +173,8 @@ ms.lasthandoff: 06/22/2017
   
      In einigen DB2-Umgebungen ist ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** nicht auf Ein-Byte-Zeichen beschränkt. Bei der Länge eines CHAR- oder VARCHAR-Elements muss dies berücksichtigt werden. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit **nchar** - und **nvarchar** -Spalten replizieren, müssen Sie gegebenenfalls eine größere maximale Länge für die Datentypen in einem benutzerdefinierten Erstellungsskript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

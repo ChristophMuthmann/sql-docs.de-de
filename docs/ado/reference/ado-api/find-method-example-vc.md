@@ -3,7 +3,7 @@ title: Suchen Sie die (VC++-Methodenbeispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 587289df9a029732fade5c761b07037126c4877e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa68bfc51fa7305ec97d8aacbb5a0c95ed409fa3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-example-vc"></a>Suchen Sie die (VC++-Methodenbeispiel)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [suchen](../../../ado/reference/ado-api/find-method-ado.md) -Methode zum Suchen und die Anzahl der Business Titel in die **Pubs** Datenbank. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter eine ähnliche Funktionalität nicht unterstützt.  
@@ -165,4 +164,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

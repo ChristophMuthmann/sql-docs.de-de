@@ -3,7 +3,7 @@ title: KEYSET-Cursor | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c59e2b203f6b33d94a1f615c53c2507964a13a65
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8def959d69c353449c2f862638d6edd54f786624
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keyset-cursors"></a>KEYSET-Cursor
 Das Keyset-Cursor bietet Funktionalität zwischen statischen und einen dynamischen Cursor in der Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor kann es nicht immer zum Ändern der Mitgliedschaft und Reihenfolge des Resultsets erkennen. Z. B. einen dynamischen Cursor erkennt er Änderungen auf die Werte der Zeilen im Resultset.  
@@ -49,4 +48,3 @@ Das Keyset-Cursor bietet Funktionalität zwischen statischen und einen dynamisch
  [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md)   
  [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
  [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)
-

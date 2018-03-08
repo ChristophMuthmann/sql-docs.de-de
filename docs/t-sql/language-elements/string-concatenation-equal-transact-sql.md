@@ -1,10 +1,13 @@
 ---
-title: += (Verketten) (Transact-SQL) | Microsoft Docs
+title: += (Verketten von Zeichenfolgen und Zuweisung) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,19 +19,18 @@ helpviewer_keywords:
 - string concatenation
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c557bcc1d3c2f314ce57e93701b11833f5a6fc6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a1e42125e49b0191b4ccdcc3628b75d025cccb6a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="string-concatenation---equal-transact-sql"></a>Verketten von Zeichenfolgen – gleich (Transact-SQL)
+# <a name="-string-concatenation-assignment-transact-sql"></a>+= (Zeichenfolge verketten Zuweisung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Verkettet zwei Zeichenfolgen und legt die Zeichenfolge auf das Ergebnis des Vorgangs fest. Angenommen, eine Variable @x ist gleich 'Adventure', klicken Sie dann @x += 'Works' nimmt den ursprünglichen Wert des @x'Works' der Zeichenfolge hinzugefügt, und setzt @x auf diesen neuen Wert 'AdventureWorks'.  
@@ -128,9 +130,8 @@ GO
   ```   
    
 ## <a name="see-also"></a>Siehe auch  
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+= &#40; Hinzufügen von EQUALS &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [+= &#40; Fügen Sie die Zuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ &#40; Verketten von Zeichenfolgen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   
-

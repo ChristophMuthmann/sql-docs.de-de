@@ -2,33 +2,33 @@
 title: "Erstellen, ändern oder Löschen einer Attributbeziehung | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - attributes [Analysis Services], member properties
 - member properties [Analysis Services], creating
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
-caps.latest.revision: 38
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e521c6eb3bbcb1c40dde10c5767ea024e6eaa3c1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369a8b08529f2238125bee5e9eef861404566d6e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Attributbeziehungen - erstellen, ändern oder Löschen der Beziehung
-  Auf der Registerkarte **Attributbeziehungen** des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie eine Attributbeziehung zwischen Attributen in einer Dimension erstellen, ändern oder löschen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Auf der Registerkarte **Attributbeziehungen** des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie eine Attributbeziehung zwischen Attributen in einer Dimension erstellen, ändern oder löschen.  
   
 ### <a name="to-create-an-attribute-relationship"></a>So erstellen Sie eine Attributbeziehung  
   
@@ -70,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Attributbeziehungen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   
-

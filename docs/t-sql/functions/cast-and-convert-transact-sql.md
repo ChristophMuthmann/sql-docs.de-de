@@ -3,8 +3,11 @@ title: CAST und CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,20 +37,19 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 136
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Konvertiert einen Ausdruck von einem Datentyp in einen anderen.  
 In den folgenden Beispielen werden z. B. dem Eingabedatentyp in zwei andere Datentypen mit anderen Genauigkeitsgraden ändern.
@@ -58,7 +60,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-|Original   |int    |decimal |  
+|Original   |int    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -87,7 +89,7 @@ Der Zieldatentyp. Dies schließt **Xml**, **"bigint"**, und **Sql_variant**. Ali
 *length*  
 Eine optionale ganze Zahl, die die Länge des Zieldatentyps angibt. Der Standardwert ist 30.
   
-*Stil*  
+*style*  
 Ist ein Ganzzahlausdruck, der angibt, wie die CONVERT-Funktion übersetzen *Ausdruck*. Wenn style NULL ist, wird NULL zurückgegeben. Der Bereich richtet sich nach *Data_type*. 
   
 ## <a name="return-types"></a>Rückgabetypen
@@ -166,7 +168,7 @@ Wenn *Ausdruck* ist **Money** oder **Smallmoney**, *Stil* kann einen der Werte i
 |**126**|Entspricht Format 2 bei der Konvertierung in char(n) oder varchar(n).|  
   
 ## <a name="xml-styles"></a>XML-Formate
-Wenn *Ausdruck* ist **Xml***, Stil* kann einen der Werte in der folgenden Tabelle gezeigt. Andere Werte werden als 0 verarbeitet.
+Wenn *Ausdruck* ist **Xml ***, Stil* kann einen der Werte in der folgenden Tabelle gezeigt. Andere Werte werden als 0 verarbeitet.
   
 |Wert|Ausgabe|  
 |---|---|
@@ -392,7 +394,7 @@ Computed
 ```  
   
 ### <a name="c-using-cast-to-concatenate"></a>C. Verwenden von CAST zur Verkettung  
-Im folgende Beispiel werden nicht auf Zeichen basierende Ausdrücke durch Verwenden von CAST verkettet. AdventureWorksDW wird verwendet.
+Im folgende Beispiel werden nicht auf Zeichen basierende Ausdrücke durch Verwenden von CAST verkettet. Uses AdventureWorksDW.
   
 ```sql
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
@@ -413,7 +415,7 @@ The list price is 364.09
 ```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Verwenden von CAST zur Generierung besser lesbaren Texts  
-Im folgenden Beispiel wird die Umwandlung in der SELECT-Liste zum Konvertieren der `Name` Spalte eine **char(10)** Spalte. AdventureWorksDW wird verwendet.
+Im folgenden Beispiel wird die Umwandlung in der SELECT-Liste zum Konvertieren der `Name` Spalte eine **char(10)** Spalte. Uses AdventureWorksDW.
   
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
@@ -625,7 +627,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-cast-and-convert"></a>J. Verwenden von CAST und CONVERT  
-In diesem Beispiel ruft den Namen des Produkts für diese Produkte mit einem `3` in die erste Ziffer ihrer Listenpreis und konvertiert ihre `ListPrice` auf **Int**. AdventureWorksDW wird verwendet.
+In diesem Beispiel ruft den Namen des Produkts für diese Produkte mit einem `3` in die erste Ziffer ihrer Listenpreis und konvertiert ihre `ListPrice` auf **Int**. Uses AdventureWorksDW.
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
@@ -633,7 +635,7 @@ FROM dbo.DimProduct
 WHERE CAST(ListPrice AS int) LIKE '3%';  
 ```  
   
-Dieses Beispiel zeigt die gleiche Abfragen, die mithilfe von CONVERT anstelle von CAST. AdventureWorksDW wird verwendet.
+Dieses Beispiel zeigt die gleiche Abfragen, die mithilfe von CONVERT anstelle von CAST. Uses AdventureWorksDW.
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
@@ -642,7 +644,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 ```  
   
 ### <a name="k-using-cast-with-arithmetic-operators"></a>K. Verwenden von CAST mit arithmetischen Operatoren  
-Im folgende Beispiel wird eine einzelne Spalte durch Dividieren den Einzelpreis des Produkts berechnet (`UnitPrice`) durch den Prozentsatz des Rabatts (`UnitPriceDiscountPct`). Dieses Ergebnis wird in einen `int`-Datentyp konvertiert, nachdem es auf die nächste ganze Zahl gerundet wurde. AdventureWorksDW wird verwendet.
+Im folgende Beispiel wird eine einzelne Spalte durch Dividieren den Einzelpreis des Produkts berechnet (`UnitPrice`) durch den Prozentsatz des Rabatts (`UnitPriceDiscountPct`). Dieses Ergebnis wird in einen `int`-Datentyp konvertiert, nachdem es auf die nächste ganze Zahl gerundet wurde. Uses AdventureWorksDW.
   
 ```sql
 SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,  
@@ -665,7 +667,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 ```  
   
 ### <a name="l-using-cast-with-the-like-clause"></a>L. Verwenden von CAST mit der LIKE-Klausel  
-Das folgende Beispiel konvertiert die **Money** Spalte `ListPrice` auf eine **Int** Typ, und klicken Sie dann auf eine **char(20)** geben, sodass sie mit der LIKE-Klausel verwendet werden kann. AdventureWorksDW wird verwendet.
+Das folgende Beispiel konvertiert die **Money** Spalte `ListPrice` auf eine **Int** Typ, und klicken Sie dann auf eine **char(20)** geben, sodass sie mit der LIKE-Klausel verwendet werden kann. Uses AdventureWorksDW.
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  
@@ -674,7 +676,7 @@ WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';
 ```  
   
 ### <a name="m-using-cast-and-convert-with-datetime-data"></a>M. Verwenden von CAST und CONVERT mit datetime-Daten  
-Das folgende Beispiel zeigt das aktuelle Datum und die Uhrzeit, verwendet Umwandlung in das aktuelle Datum und die Uhrzeit in einen Zeichendatentyp zu ändern, und klicken Sie dann mithilfe von CONVERT Datum und Uhrzeit im ISO 8601-Format anzeigen. AdventureWorksDW wird verwendet.
+Das folgende Beispiel zeigt das aktuelle Datum und die Uhrzeit, verwendet Umwandlung in das aktuelle Datum und die Uhrzeit in einen Zeichendatentyp zu ändern, und klicken Sie dann mithilfe von CONVERT Datum und Uhrzeit im ISO 8601-Format anzeigen. Uses AdventureWorksDW.
   
 ```sql
 SELECT TOP(1)  
@@ -692,7 +694,7 @@ UnconvertedDateTime     UsingCast                     UsingConvertTo_ISO8601
 07/20/2010 1:44:31 PM   2010-07-20 13:44:31.5879025   2010-07-20T13:44:31.5879025  
 ```  
   
-Das folgende Beispiel entspricht in etwa der Umkehrung des vorherigen Beispiels. Das Beispiel zeigt ein Datum und eine Uhrzeit als Zeichendaten, verwendet CAST so ändern Sie die Zeichendaten in der **"DateTime"** -Datentyp und dann verwendet, zu ändern, die Zeichendaten in konvertiert, die **"DateTime"** -Datentyp. AdventureWorksDW wird verwendet.
+Das folgende Beispiel entspricht in etwa der Umkehrung des vorherigen Beispiels. Das Beispiel zeigt ein Datum und eine Uhrzeit als Zeichendaten, verwendet CAST so ändern Sie die Zeichendaten in der **"DateTime"** -Datentyp und dann verwendet, zu ändern, die Zeichendaten in konvertiert, die **"DateTime"** -Datentyp. Uses AdventureWorksDW.
   
 ```sql
 SELECT TOP(1)   
@@ -711,9 +713,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
-

@@ -1,10 +1,13 @@
 ---
-title: Einrichten des Datenprofilerstellungs-Tasks | Microsoft Docs
+title: Einrichten von Datenprofilerstellungs-Tasks | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c32f01f1da74bf83f2c38b889934a37ea85d5817
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Einrichten von Datenprofilerstellungs-Tasks
   Bevor Sie ein Profil der Quelldaten überprüfen können, müssen Sie zunächst den Datenprofilerstellungs-Task einrichten und ausführen. Sie erstellen diesen Task in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket. Zum Konfigurieren des Datenprofilerstellungs-Tasks verwenden Sie den Editor für den Datenprofilerstellungs-Task. Mit diesem Editor können Sie auswählen, wo die Profile ausgegeben und welche Profile berechnet werden sollen. Nachdem Sie den Task eingerichtet haben, führen Sie das Paket aus, um die Datenprofile zu berechnen.  
@@ -108,4 +110,3 @@ ms.lasthandoff: 08/03/2017
  [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
   
-

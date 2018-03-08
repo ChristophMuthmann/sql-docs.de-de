@@ -3,33 +3,30 @@ title: SQLSpecialColumns-Funktion | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSpecialColumns
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSpecialColumns
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSpecialColumns
-helpviewer_keywords:
-- SQLSpecialColumns function [ODBC]
+f1_keywords: SQLSpecialColumns
+helpviewer_keywords: SQLSpecialColumns function [ODBC]
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae814d95d376e928e2fafc323dedc14a3a532aa8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns-Funktion
 **Konformität**  
@@ -205,4 +202,3 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

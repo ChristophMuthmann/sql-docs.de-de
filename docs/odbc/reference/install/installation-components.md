@@ -3,27 +3,28 @@ title: Installationskomponenten | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - installing ODBC components [ODBC], setup program
 - ODBC [ODBC], component installation
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: eb01be821c1d3fd1d08c7a21b605354836d78a54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1725c18d40fcb9a6de414722f972318337e39cb6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installation-components"></a>Installationskomponenten
 > [!NOTE]  
@@ -43,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   [Installationsprogramm-DLL](../../../odbc/reference/install/installer-dll.md)  
   
 -   [Setup-DLL für Treiber](../../../odbc/reference/install/driver-setup-dll.md)
-

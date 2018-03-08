@@ -3,7 +3,7 @@ title: Parameter Auflistungseigenschaften, Methoden und Ereignisse | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Parameters collection [ADO], members
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6c335592f59736e0ef8b5dfcfda7fa43bc79c7be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 63868674c6de8276d9f1b70f75d6cb500ab55efe
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Parameter Auflistungseigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="methods"></a>Methoden  
  [Append-Methode](../../../ado/reference/ado-api/append-method-ado.md)  
   
- [Delete-Methode (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+ [Delete-Methode (Parameters-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
  [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -44,5 +43,4 @@ ms.lasthandoff: 09/09/2017
  Keine.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
-
+ [Parameters-Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

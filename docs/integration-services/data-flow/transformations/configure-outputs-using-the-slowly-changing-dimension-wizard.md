@@ -1,10 +1,13 @@
 ---
-title: "Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche | Microsoft Docs"
+title: "Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0aa62acd9470c1d1d5e2764046ab3302f8edc46a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen
   Der Assistent für langsam veränderliche Dimensionen dient als Editor für die Transformation für langsam veränderliche Dimensionen. Das Erstellen und Konfigurieren des Datenflusses für langsam veränderliche Dimensionen kann eine komplexe Aufgabe sein. Der Assistent für langsam veränderliche Dimensionen bietet die einfachste Methode zum Erstellen des Datenflusses für die Ausgaben der Transformation für langsam veränderliche Dimensionen und führt durch die Schritte zum Zuordnen von Spalten, Auswählen von Geschäftsschlüsselspalten, Festlegen von Spaltenänderungsattributen und Konfigurieren der Unterstützung für abgeleitete Dimensionselemente.  
@@ -79,13 +81,12 @@ ms.lasthandoff: 08/03/2017
   
      Im folgenden Diagramm wird ein Beispiel eines Datenflusses dargestellt, der Änderungen für feste Attribute, veränderliche Attribute und Verlaufsattribute sowie abgeleitete Elemente und Änderungen an übereinstimmenden Datensätzen unterstützt.  
   
-     ![Datenfluss vom Assistenten für langsam veränderliche](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Datenfluss vom Assistenten für langsam veränderliche")  
+     ![Datenfluss vom Assistenten für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Datenfluss vom Assistenten für langsam veränderliche Dimensionen")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Aktualisieren von Ausgaben für die Transformation für langsam veränderliche Dimensionen  
  Die einfachste Methode, um die Konfiguration von Ausgaben für die Transformation für langsam veränderliche Dimensionen zu aktualisieren, ist die erneute Ausführung des Assistenten für langsam veränderliche Dimensionen und das Ändern der Eigenschaften auf den Seiten des Assistenten. Sie können die Transformation für langsam veränderliche Dimensionen auch im Dialogfeld **Erweiterter Editor** oder programmgesteuert aktualisieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
-

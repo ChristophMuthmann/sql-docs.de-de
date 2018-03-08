@@ -1,10 +1,13 @@
 ---
-title: -Datenprofil-Viewer | Microsoft Docs
+title: Datenprofil-Viewer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>Datenprofil-Viewer
   Das Anzeigen und Analysieren der Datenprofile ist der nächste Schritt bei der Datenprofilerstellung. Sie können diese Profile anzeigen, nachdem Sie den Datenprofilerstellungs-Task innerhalb eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets ausgeführt und die Datenprofile berechnet haben. Weitere Informationen zum Verwenden und Einrichten und Ausführen der Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -38,7 +40,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Klicken Sie mit der rechten Maustaste im **-Designer auf den Task** Datenprofilerstellung [!INCLUDE[ssIS](../../includes/ssis-md.md)] , und klicken Sie dann auf **Bearbeiten**. Klicken Sie auf der Seite **Allgemein** des **Editors für den Datenprofilerstellungs-Task** auf **Profil-Viewer öffnen**.  
   
--   In den Ordner  *\<Laufwerk >*: \Program Files (x86) | C:\Programme\Microsoft SQL Server\110\DTS\Binn programmieren, DataProfileViewer.exe ausführen.  
+-   Führen Sie im Ordner „*\<Laufwerk>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn“ die Datei „DataProfileViewer.exe“ aus.  
   
  Der Viewer verwendet mehrere Bereiche, um die von Ihnen angeforderten Profile und berechneten Ergebnisse mit optionaler Detail- und Drilldownfunktion anzuzeigen.  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 08/11/2017
  Weitere Informationen zum Verwenden des Datenprofil-Viewers finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md). Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks, der die Profilausgabe erstellt, die Sie im Datenprofil-Viewer analysieren, finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
   
 ### <a name="static-options"></a>Statische Optionen  
- **Öffnen**  
+ **Datei**  
  Klicken Sie, um nach der gespeicherten Datei zu suchen, die die Ausgabe des Datenprofilerstellungs-Tasks enthält.  
   
  Bereich**Profile**   
@@ -95,7 +97,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Profiltyp = Verteilungsprofil für Spaltenlänge  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Verteilungsprofil für Länge - \<Spalte > Bereich  
+##### <a name="column-length-distribution-profile---column-pane"></a>Verteilungsprofil für Spaltenlänge – Bereich \<Spalte>  
  **Mindestlänge**  
  Zeigt die Mindestlänge der Werte in dieser Spalte an.  
   
@@ -123,7 +125,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Profiltyp = Profil für Spalten-NULL-Verhältnis  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Profil für Spalten Null-Verhältnis - \<Spalte > Bereich  
+##### <a name="column-null-ratio-profile---column-pane"></a>Profil für NULL-Verhältnis der Spalte – Bereich \<Spalte>  
  **NULL-Anzahl**  
  Zeigt die Anzahl der Zeilen an, in denen die Spalte, für die ein Profil erstellt wurde, einen NULL-Wert aufweist.  
   
@@ -135,7 +137,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>Profiltyp = Spaltenmusterprofil  
   
-##### <a name="column-pattern-profile---column-pane"></a>Spaltenmusterprofil - \<Spalte > Bereich  
+##### <a name="column-pattern-profile---column-pane"></a>Spaltenmusterprofil – Bereich \<Spalte>  
  **Zeilenanzahl**  
  Zeigt die Anzahl der Zeilen in der Tabelle oder Sicht an.  
   
@@ -148,7 +150,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>Profiltyp = Spaltenstatistikprofil  
   
-##### <a name="column-statistics-profile---column-pane"></a>Spaltenstatistikprofil - \<Spalte > Bereich  
+##### <a name="column-statistics-profile---column-pane"></a>Spaltenstatistikprofil – Bereich \<Spalte>  
  **Minimum**  
  Zeigt den in der Spalte, für die ein Profil erstellt wurde, gefundenen Mindestwert an.  
   
@@ -163,7 +165,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Profiltyp = Verteilungsprofil für Spaltenwert  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Verteilungsprofil - \<Spalte > Bereich  
+##### <a name="column-value-distribution-profile---column-pane"></a>Verteilungsprofil für Spaltenwert – Bereich \<Spalte>  
  **Anzahl unterschiedlicher Werte**  
  Zeigt die Anzahl unterschiedlicher Werte an, die in der Spalte, für die ein Profil erstellt wurde, gefunden wurden.  
   
@@ -171,7 +173,7 @@ ms.lasthandoff: 08/11/2017
  Zeigt die Anzahl der Zeilen in der Tabelle oder Sicht an.  
   
 ##### <a name="detailed-value-distribution-pane"></a>Bereich 'Detaillierte Wertverteilung'  
- **Wert**  
+ **ReplTest1**  
  Zeigt die in der Spalte, für die ein Profil erstellt wurde, gefundenen unterschiedlichen Werte an.  
   
  **Count**  
@@ -182,15 +184,15 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>Profiltyp = Kandidatenschlüsselprofil  
   
-##### <a name="candidate-key-profile---table-pane"></a>Kandidatenschlüsselprofil - \<Tabelle > Bereich  
+##### <a name="candidate-key-profile---table-pane"></a>Kandidatenschlüsselprofil – Bereich \<Tabelle>  
  **Schlüsselspalten**  
  Zeigt die Spalten an, die als Kandidatenschlüssel für die Profilerstellung ausgewählt wurden.  
   
  **Schlüsselstärke**  
- Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
+ Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
   
 ##### <a name="key-violations-pane"></a>Bereich 'Schlüsselverletzungen'  
- **\<column1 >, \<column2 > usw..**  
+ **\<Spalte1>, \<Spalte2> usw.**  
  Zeigt die doppelten Werte an, die in der Spalte, für die ein Profil erstellt wurde, gefunden wurden.  
   
  **Count**  
@@ -213,17 +215,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Ein hoher Prozentsatz an fehlerhaften Werten in den Daten könnte zu unerwarteten Werten aus einem funktionalen Abhängigkeitsprofil führen. Beispiel: 90 % der Zeilen haben den Bundesstaatenwert "WI" für den PLZ-Wert "98052". Das Profil meldet Zeilen, die den korrekten Bundesstaatenwert "WA" aufweisen, als Verletzungen.  
   
- **\<Name der Determinanten Spalte >**  
+ **\<Name der determinanten Spalte>**  
  Zeigt den Wert der determinanten Spalte oder einer Kombination aus Spalten in dieser Instanz einer funktionalen Abhängigkeitsverletzung an.  
   
- **\<Name der abhängigen Spalte >**  
+ **\<Name der abhängigen Spalte>**  
  Zeigt den Wert der abhängigen Spalte in dieser Instanz einer funktionalen Abhängigkeitsverletzung an.  
   
  **Unterstützte Anzahl**  
  Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte festlegt.  
   
  **Verletzungsanzahl**  
- Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte nicht festlegt. (Hierbei handelt es sich um die Zeilen des abhängigen Werts, in dem der angezeigte Wert im ist der  **\<Name der abhängigen Spalte >** Spalte.)  
+ Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte nicht festlegt. (Dabei handelt es sich um die Zeilen, in denen der abhängige Wert der in der Spalte **\<dependent column name>** angezeigte Wert ist.)  
   
  **Unterstützter Prozentsatz**  
  Zeigt den Prozentsatz der Zeilen an, in denen die determinante Spalte die abhängige Spalte festlegt.  
@@ -241,10 +243,9 @@ ms.lasthandoff: 08/11/2017
  Zeigt die Stärke (als Prozentsatz) der Überlappung zwischen Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass es Fälle gibt, in denen der untergeordnete Wert nicht in den übergeordneten Werten enthalten ist.  
   
 ##### <a name="inclusion-violations-pane"></a>Bereich 'Inklusionsverletzungen'  
- **\<column1 >, \<column2 > usw..**  
+ **\<Spalte1>, \<Spalte2> usw.**  
  Zeigt die Werte aus der bzw. den untergeordneten Spalte(n) an, die nicht in der bzw. den übergeordneten Spalte(n) gefunden wurden.  
   
  **Count**  
  Zeigt die Anzahl der Zeilen an, in denen die angegebene Spalte den in der ersten Spalte angezeigten Wert aufweist.  
   
-

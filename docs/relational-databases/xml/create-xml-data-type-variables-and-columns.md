@@ -2,9 +2,12 @@
 title: Erstellen von Variablen und Spalten des XML-Datentyps | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d4ac6f45c25b13f71edf7e2003d8b4facefea6fb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
-  Der **xml** -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, als Parametertyp, als Funktionsrückgabestyp oder in [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)verwenden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Der **xml** -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, als Parametertyp, als Funktionsrückgabestyp oder in [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)verwenden.  
   
 ## <a name="creating-columns-and-variables"></a>Erstellen von Variablen und Spalten  
  Verwenden Sie zur Erstellung einer Spalte des `xml` -Typs als Teil einer Tabelle eine `CREATE TABLE` -Anweisung, wie im folgenden Beispiel gezeigt:  
@@ -71,7 +74,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch NULL- und NOT NULL-Einschränkungen für Spalten vom Typ **xml** . Beispiel:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch NULL- und NOT NULL-Einschränkungen für Spalten vom Typ **xml** . Zum Beispiel:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -147,4 +150,3 @@ INSERT INTO T values(1,'<Product />')
 -   Sie wollen vermeiden, dass Tabellenscans verlangsamt werden, weil die XML-Spalte in der Tabelle vorhanden ist. Dies beansprucht Speicherplatz, unabhängig davon, ob die Speicherung innerhalb oder außerhalb der Zeile erfolgt.  
   
   
-

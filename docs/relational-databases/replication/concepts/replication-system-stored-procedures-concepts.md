@@ -2,17 +2,17 @@
 title: Replication System Stored Procedures Concepts | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- TSQL
+applies_to: SQL Server 2016 Preview
+dev_langs: TSQL
 helpviewer_keywords:
 - stored procedures [SQL Server replication], programming
 - programming [SQL Server replication], system stored procedures
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - system stored procedures [SQL Server replication]
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 352901fe01e191aa43e48c4d7978f271b189f4e1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "41"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 71825bdd1242d925f7b27fd7dbd18f2b0d019b8e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglichen gespeicherte Systemprozeduren den programmgesteuerten Zugriff auf alle vom Benutzer konfigurierbaren Funktionen in einer Replikationstopologie. Gespeicherte Prozeduren können einzeln mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder dem sqlcmd-Befehlszeilenhilfsprogramm ausgeführt werden. Es ist jedoch nützlich, [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skriptdateien zu schreiben, mit denen eine logische Sequenz von Replikationstasks ausgeführt werden können.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Verwenden Sie die Skriptgenerierungsfunktionen, die in den Replikations-Assistenten bereitgestellt werden.  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]installiert haben. Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 -   Verwenden Sie Replikationsverwaltungsobjekte (RMO), um das Skript programmgesteuert zu generieren und ein RMO-Objekt zu erstellen.  
   
@@ -230,7 +230,7 @@ REM -- The following must be supplied on one line.
   
 -   Synchronisieren eines Pullabonnements  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konzepte für die Replikationsprogrammierung](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Erstellen von Skripts für die Replikation](../../../relational-databases/replication/scripting-replication.md)  

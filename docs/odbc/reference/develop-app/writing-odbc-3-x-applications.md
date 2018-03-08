@@ -3,10 +3,12 @@ title: Schreiben von ODBC 3.x-Clientanwendungen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,28 +20,27 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da096dd38c87131259f9ea626fa874c0b83b7b95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3941a679210a18b39ed201dd564b9613b48a2a58
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-odbc-3x-applications"></a>Schreiben von ODBC 3.x-Anwendungen
-Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3..* X*, sodass Funktionsweise mit ODBC-2 geschrieben werden soll.* X* und 3.* X* Treiber. Die Anwendung soll bedingten Code aus, um die ODBC 3. voll ausnützen integrieren. *x* Funktionen.  
+Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3.. *X*, sodass Funktionsweise mit ODBC-2 geschrieben werden soll. *X* und 3. *X* Treiber. Die Anwendung soll bedingten Code aus, um die ODBC 3. voll ausnützen integrieren. *x* Funktionen.  
   
  Das Attribut der SQL_ATTR_ODBC_VERSION-Umgebung sollte auf SQL_OV_ODBC2 festgelegt werden. Dadurch wird sichergestellt, dass der Treiber wie einer ODBC 2. verhält*.x* Treiber in Bezug auf die Änderungen, die im Abschnitt beschriebenen [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- Wenn keines der Features finden Sie im Abschnitt die Anwendung verwenden [Funktionsumfang](../../../odbc/reference/develop-app/new-features.md), bedingter Code sollte verwendet werden, um festzustellen, ob der Treiber eine ODBC-3 ist.* X* oder ODBC 2.*.x* Treiber. Die Anwendung verwendet **SQLGetDiagField** und **SQLGetDiagRec** zum Abrufen von ODBC 3..* X* SQLSTATEs während der Durchführung der Verarbeitung auf die bedingte Codefragmente Fehler. Die folgenden Punkte bezüglich der neuen Funktionalität sollten berücksichtigt werden:  
+ Wenn keines der Features finden Sie im Abschnitt die Anwendung verwenden [Funktionsumfang](../../../odbc/reference/develop-app/new-features.md), bedingter Code sollte verwendet werden, um festzustellen, ob der Treiber eine ODBC-3 ist. *X* oder ODBC 2.*.x* Treiber. Die Anwendung verwendet **SQLGetDiagField** und **SQLGetDiagRec** zum Abrufen von ODBC 3.. *X* SQLSTATEs während der Durchführung der Verarbeitung auf die bedingte Codefragmente Fehler. Die folgenden Punkte bezüglich der neuen Funktionalität sollten berücksichtigt werden:  
   
--   Eine Anwendung, die von der Änderung im Verhalten der Rowset-Größe betroffene vorsichtig nicht aufzurufenden **SQLFetch** Wenn die Arraygröße ist größer als 1. Ersetzen Sie diese Anwendungen sollten Aufrufe **SQLExtendedFetch** durch Aufrufe von **SQLSetStmtAttr** SQL_ATTR_ARRAY_STATUS_PTR-Anweisungsattribut festgelegt und **SQLFetchScroll**, sodass sie allgemeine Code aufweisen, die mit den beiden ODBC 3. arbeitet. *x* und ODBC 2.* X* Treiber. Da **SQLSetStmtAttr** mit SQL_ATTR_ROW_ARRAY_SIZE zugeordnet **SQLSetStmtAttr** mit SQL_ROWSET_SIZE setzen ODBC 2..* X* Treiber, Anwendungen können die SQL_ATTR_ROW_ARRAY_SIZE für ihre mehrzeilige Abrufvorgänge einfach setzen.  
+-   Eine Anwendung, die von der Änderung im Verhalten der Rowset-Größe betroffene vorsichtig nicht aufzurufenden **SQLFetch** Wenn die Arraygröße ist größer als 1. Ersetzen Sie diese Anwendungen sollten Aufrufe **SQLExtendedFetch** durch Aufrufe von **SQLSetStmtAttr** SQL_ATTR_ARRAY_STATUS_PTR-Anweisungsattribut festgelegt und **SQLFetchScroll**, sodass sie allgemeine Code aufweisen, die mit den beiden ODBC 3. arbeitet. *x* und ODBC 2. *X* Treiber. Da **SQLSetStmtAttr** mit SQL_ATTR_ROW_ARRAY_SIZE zugeordnet **SQLSetStmtAttr** mit SQL_ROWSET_SIZE setzen ODBC 2.. *X* Treiber, Anwendungen können die SQL_ATTR_ROW_ARRAY_SIZE für ihre mehrzeilige Abrufvorgänge einfach setzen.  
   
--   Die meisten Anwendungen, die ein Upgrade durchführen, sind nicht tatsächlich von Änderungen in SQLSTATE-Codes betroffen. Bei Anwendungen, die betroffen sind, können sie mechanische suchen und Ersetzen Sie in den meisten Fällen verwenden die Konvertierungstabelle Fehler im Abschnitt "SQLSTATE-Zuordnungen" ODBC 3. konvertieren. *x* Fehlercodes mit ODBC 2.*.x* Codes. Da die ODBC 3.*.x* -Treiber-Manager führt Zuordnung von ODBC 2..* X* SQLSTATEs ODBC-3.* X* SQLSTATEs diese Anwendungsentwickler benötigen nur die Kontrollkästchen für die ODBC 3..* X* SQLSTATEs und sich keine Sorgen einschließlich ODBC 2..* X* SQLSTATEs in bedingten Code.  
+-   Die meisten Anwendungen, die ein Upgrade durchführen, sind nicht tatsächlich von Änderungen in SQLSTATE-Codes betroffen. Bei Anwendungen, die betroffen sind, können sie mechanische suchen und Ersetzen Sie in den meisten Fällen verwenden die Konvertierungstabelle Fehler im Abschnitt "SQLSTATE-Zuordnungen" ODBC 3. konvertieren. *x* Fehlercodes mit ODBC 2.*.x* Codes. Da die ODBC 3.*.x* -Treiber-Manager führt Zuordnung von ODBC 2.. *X* SQLSTATEs ODBC-3. *X* SQLSTATEs diese Anwendungsentwickler benötigen nur die Kontrollkästchen für die ODBC 3.. *X* SQLSTATEs und sich keine Sorgen einschließlich ODBC 2.. *X* SQLSTATEs in bedingten Code.  
   
 -   Wenn eine Anwendung hervorragende Date, Time und Timestamp-Datentypen verwendet, kann die Anwendung selbst werden von einer ODBC 2. deklarieren. *x* Anwendung, und verwenden Sie ihren vorhandenen code anstatt Aufbereitung Code.  
   
@@ -89,17 +90,16 @@ Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3..* X*, sodass Funkt
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Zuordnungsfunktionen Ersatz für die Abwärtskompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
+-   [Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
   
--   [SQLCloseCursor aufrufen](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
+-   [Aufrufen von SQLCloseCursor](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
   
--   [SQLGetDiagField aufrufen](../../../odbc/reference/develop-app/calling-sqlgetdiagfield.md)  
+-   [Aufrufen von SQLGetDiagField](../../../odbc/reference/develop-app/calling-sqlgetdiagfield.md)  
   
--   [SQLSetPos aufrufen](../../../odbc/reference/develop-app/calling-sqlsetpos.md)  
+-   [Aufrufen von SQLSetPos](../../../odbc/reference/develop-app/calling-sqlsetpos.md)  
   
--   [Cursorvorgänge-Bibliothek](../../../odbc/reference/develop-app/cursor-library-operations.md)  
+-   [Cursorbibliotheksvorgänge](../../../odbc/reference/develop-app/cursor-library-operations.md)  
   
--   [Zuordnung der Cursor Attributes1 Informationstypen](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
+-   [Zuordnen der Informationstypen „Cursor Attributes1“](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
 -   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)
-

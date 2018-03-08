@@ -1,13 +1,14 @@
 ---
-title: Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten variieren | Microsoft Docs
+title: Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +22,16 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 00778c0861d701aee22b366e202c25f8be60871e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten
   Die Anzeigeoptionen für Polygone, Linien und Punkte in einer Kartenebene werden gesteuert, indem Optionen für die Ebene sowie Regeln für die Kartenelemente in der Ebene festgelegt werden oder indem Optionen für bestimmte eingebettete Kartenelemente in einer Ebene überschrieben werden.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 08/09/2017
   
  Um zu steuern, wo eine Legende angezeigt wird, verwenden Sie das Dialogfeld "Legendeneigenschaften", um eine Position relativ zum Kartenviewport anzugeben. Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
- Legenden werden automatisch erweitert, um den Legendentitel oder Legendentext anzuzeigen. Um den Text von Legendenelementen zu formatieren, verwenden Sie Kartenlegenden-Schlüsselwörter und benutzerdefinierte Formate. Weitere Informationen finden Sie unter [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
+ Legenden werden automatisch erweitert, um den Legendentitel oder Legendentext anzuzeigen. Um den Text von Legendenelementen zu formatieren, verwenden Sie Kartenlegenden-Schlüsselwörter und benutzerdefinierte Formate. Weitere Informationen finden Sie unter [So ändern Sie das Format des Inhalts einer Legende](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
   
  Die folgenden Tabellen zeigen Beispiele für unterschiedliche Formate an, die Sie verwenden können.  
   
@@ -134,10 +134,9 @@ ms.lasthandoff: 08/09/2017
 |`#TOVALUE`|Zeigt den tatsächlichen numerischen Wert des Datenfelds an.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Zeigt die tatsächlichen numerischen Werte des Anfangs und des Endes des Bereichs an.|10 - 790|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
- [Maps &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Karten-Assistent und Kartenebenen-Assistenten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   
-

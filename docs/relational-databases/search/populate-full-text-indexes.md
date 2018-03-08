@@ -2,9 +2,12 @@
 title: "Auffüllen von Volltextindizes | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -24,20 +27,20 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 78
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
-  Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
   
 ##  <a name="types"></a> Types of population  
 Ein Volltextindex unterstützt die folgenden Auffüllungstypen:
@@ -57,7 +60,7 @@ Geben Sie in der `CREATE FULLTEXT INDEX`-Anweisung die `CHANGE_TRACKING OFF, NO 
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Beispiel: Erstellen eines Volltextindexes ohne Ausführung der vollständigen Auffüllung  
  Im folgenden Beispiel wird ein Volltextindex für die `Production.Document` -Tabelle der `AdventureWorks` -Beispieldatenbank erstellt. In diesem Beispiel wird `WITH CHANGE_TRACKING OFF, NO POPULATION` verwendet, um die erste vollständige Auffüllung zu verzögern.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -76,7 +79,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Beispiel: Ausführen einer vollständigen Auffüllung für eine Tabelle  
  Im folgenden Beispiel wird eine vollständige Auffüllung der `Production.Document` -Tabelle der `AdventureWorks` -Beispieldatenbank ausgeführt.  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -109,7 +112,7 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
     **Beispiel: Umstellen eines Volltextindexes auf die automatische Änderungsnachverfolgung**  
     Im folgenden Beispiel wird der Volltextindex für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank so geändert, dass dieser die automatische Auffüllung mit Änderungsnachverfolgung verwendet.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -129,7 +132,7 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
     **Beispiel: Erstellen eines Volltextindexes mit manueller Änderungsnachverfolgung**  
     Im folgenden Beispiel wird ein Volltextindex mit Änderungsnachverfolgung und manueller Auffüllung für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank erstellt.  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -143,7 +146,7 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
     **Beispiel: Ausführen einer manuellen Auffüllung**  
     Im folgenden Beispiel wird eine manuelle Auffüllung des Volltextindexes mit Änderungsnachverfolgung für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank ausgeführt.  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  
@@ -226,7 +229,7 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
   
  `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
@@ -234,4 +237,3 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
   
-

@@ -3,29 +3,28 @@ title: SupportsStatementPooling-Methode (SQLServerDatabaseMetaData) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.supportsStatementPooling
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.supportsStatementPooling
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e424ed9489fead7f378af2def5862fbbee64889f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: baf8524bd039476a1bf931aa30dca5496ac4c7b0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="supportsstatementpooling-method-sqlserverdatabasemetadata"></a>supportsStatementPooling-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,4 +53,3 @@ public boolean supportsStatementPooling()
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

@@ -1,60 +1,59 @@
 ---
-title: Berichts-Viewer-Webpart auf einer SharePoint-Website | Microsoft Docs
+title: Berichts-Viewer-Webpart auf einer SharePoint-Website (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: b2555721c4ef08eee3108b06af1a919d2dfaa414
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Berichts-Viewer-Webpart auf einer SharePoint-Website
+# <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Berichts-Viewer-Webpart auf einer SharePoint-Website – Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Der Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart an. Sie können das Webpart verwenden, um anzuzeigen, navigieren, Drucken und Exportieren von Berichten auf einem Berichtsserver innerhalb einer SharePoint-Website. Der Berichts-Viewer-Webpart ist Berichtsdefinitionsdateien (RDL), die von einem Microsoft SQL Server Reporting Services-Berichtsserver verarbeitet werden zugeordnet. 
+Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart. Mit diesem Webpart können Sie Berichte auf einem Berichtsserver auf einer SharePoint-Website abrufen und drucken. Sie können die Berichte außerdem exportieren und in ihnen navigieren. Das Berichts-Viewer-Webpart ist Berichtsdefinitionsdateien (RDL-Dateien) zugeordnet, die von einem Microsoft SQL Server Reporting Services-Berichtsserver verarbeitet werden. 
 
-Die aktuelle Berichts-Viewer-Webpart kann auch paginierte Berichte für Power BI-Berichtsserver bereitgestellt. Das Webpart kann nicht mit Power BI-Berichten verwendet werden.
+Die neuste Version des Berichts-Viewer-Webparts kann außerdem paginierte Berichte warten, die für Power BI-Berichtsserver bereitgestellt werden. Das Webpart funktioniert nicht bei Power BI-Berichten.
 
-## <a name="why-the-report-viewer-web-part-is-re-introduced"></a>Warum das Berichts-Viewer-Webpart wieder eingeführt wird.
+## <a name="why-the-report-viewer-web-part-is-re-introduced"></a>Gründe für die Wiedereinführung des Berichts-Viewer-Webparts
 
-Der Berichts-Viewer-Webpart gab es als Teil der Reporting Services-Add-in für SharePoint-Produkte. Das Webpart wurde speziell für Berichtsserver im integrierten SharePoint-Modus. Im integrierten SharePoint-Modus wurde nach dem SQL Server 2016 als veraltet markiert.
+Das Berichts-Viewer-Webpart war bereits als Bestandteil des Reporting Services-Add-Ins für SharePoint-Produkte verfügbar. Das Webpart war für Berichtsserver im integrierten SharePoint-Modus konzipiert. Die Unterstützung des integrierten SharePoint-Modus wurde nach der Veröffentlichung von SQL Server 2016 eingestellt.
 
-Beginnend mit SQL Server-2017, besteht nur ein Installationsmodus für Reporting Services: **im einheitlichen Modus**. Sie können alle Berichte-Typen, die mit einer Seiten-Viewer Web Teil mit Einbetten der *Rs: einbetten = "true"* URL-Parameter. Einbetten von Berichten in SharePoint-Seiten ist eine Integration Story angefordert von Kunden und das aktualisierte Berichts-Viewer-Webpart in diesem Szenario für paginierte Berichte kann.
+Ab SQL Server 2017 gibt es nur noch einen Installationsmodus für Reporting Services: den **einheitlichen Modus**. Sie könnten alle Typen von Berichten mithilfe eines Seiten-Viewer-Webparts einbetten, der den URL-Parameter *rs:Embed=true* verwendet. Die Funktion zum Einbetten von Berichten in SharePoint-Seiten wurde von Kunden gefordert, und das aktualisierte Berichts-Viewer-Webpart ermöglicht dieses Szenario für paginierte Berichte.
 
-Während das Seiten-Viewer-Webpart zum Einbetten eines paginierten Berichts in einer SharePoint-Seite Suffixe, bietet das aktualisierte Berichts-Viewer-Webpart Zusatzfunktionen.
+Das Seiten-Viewer-Webpart reicht zwar aus, um einen paginierten Bericht in eine SharePoint-Seite einzubetten, jedoch bietet das aktualisierte Berichts-Viewer-Webpart zusätzliche Funktionen:
 
-* Bestimmte Symbolleistenschaltflächen ein-/ausblenden
-* Überschreiben Sie Berichtsparameterwerte
-* Filter-Webparts zu Berichtsparametern herstellen
+* Das Ein-/Ausblenden von bestimmten Symbolleistenschaltflächen
+* Das Überschreiben von Berichtsparameterwerten
+* Das Verbinden von Filterwebparts mit Berichtsparametern
 
-## <a name="download-the-report-viewer-web-part-solution-package"></a>Herunterladen des Berichts-Viewer Web Teil-Lösungspakets
+## <a name="download-the-report-viewer-web-part-solution-package"></a>Das Herunterladen des Projektmappenpakets des Berichts-Viewer-Webparts
 
-Der Berichts-Viewer-Webpart ist im Microsoft Download Center verfügbar.
+Das Berichts-Viewer-Webpart ist im Microsoft Download Center verfügbar.
 
-[Herunterladen von Berichts-Viewer Web Teil-Lösungspaket](https://www.microsoft.com/download/details.aspx?id=55949)
+[Herunterladen des Projektmappenpakets des Berichts-Viewer-Webparts](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="considerations-and-limitations"></a>Überlegungen und Einschränkungen
 
 Die aufgelisteten Elemente sind spezifisch für das aktualisierte Berichts-Viewer-Webpart.
 
-* Das Webpart kann nur verwendet werden, auf *klassischen* SharePoint-Seiten.
-* Nur paginierte Berichte der (Berichtsdefinitionssprache RDL) werden unterstützt, im Berichts-Viewer-Webpart eingebettet. Wenn Sie zum Einbetten von Power BI-Berichten oder mobile-Berichte suchen, können Sie mithilfe der *Rs: einbetten = "true"* URL-Parameter.
+* Das Webpart kann nur auf *klassischen* SharePoint-Seiten verwendet werden.
+* Das Einbetten von paginierten (RDL-) Berichten wird nur im Berichts-Viewer-Webpart unterstützt. Wenn Sie Power BI-Berichte oder mobile Berichte einbetten möchten, können Sie den URL-Parameter *rs:Embed=true* verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um mit dem aktualisierten Berichts-Viewer-Webpart beginnen, finden Sie unter [das Berichts-Viewer-Webpart auf einer SharePoint-Website bereitstellen](deploy-report-viewer-web-part.md).
-
+Die ersten Schritte mit dem aktualisierten Berichts-Viewer-Webpart werden unter [Bereitstellen des Berichts-Viewer-Webparts auf einer SharePoint-Website](deploy-report-viewer-web-part.md) beschrieben.

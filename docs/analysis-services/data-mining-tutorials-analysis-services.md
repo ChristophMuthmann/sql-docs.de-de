@@ -2,31 +2,32 @@
 title: Datamining-Lernprogramme (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- data mining [Analysis Services], designing
+applies_to: SQL Server 2016
+helpviewer_keywords: data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97b1f305fe41cc1bf67113cdad38fbe14f7f15a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierten Visualisierungen. Insbesondere dann, wenn Sie Computerlernen nicht gewohnt sind, sind die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine einfache Möglichkeit zum Entwerfen, Trainieren und Durchsuchen von Datamining-Modellen. Die Daten in Ihren Modellen können in einem Cube, einer relationalen Datenbank oder einer anderen Quelle, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt wird, gespeichert werden. Nach dem Erstellen eines Modells können Sie es produktiv nutzen durch Zugriff auf das Modell zum Erstellen von Vorhersageabfragen mithilfe von mehreren Clients, einschließlich [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und ASP.NET.  
   
 > [!NOTE]  
@@ -47,5 +48,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 
