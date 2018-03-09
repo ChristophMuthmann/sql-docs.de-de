@@ -4,7 +4,7 @@ description: "In diesem Schnellstart wird erläutert, wie Sie das Containerimage
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 971f6ed4b728f4be127bf9a23e8a7499ec308d90
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Schnellstart: Führen Sie die 2017 von SQL Server-Container-Image mit Docker
 
@@ -52,6 +52,8 @@ Dieses Image enthält SQL Server für Linux (basierend auf Ubuntu 16.04). Es kan
    ```
 
    Mit dem obenstehenden Befehl wird das neueste Containerimage von SQL Server 2017 mithilfe von Pull übertragen. Wenn Sie ein bestimmtes Image übertragen möchten, fügen Sie einen Doppelpunkt und den Tagnamen hinzu (z.B. `microsoft/mssql-server-linux:2017-GA`). Informationen zu allen verfügbaren Images finden Sie auf der [Docker-Hubseite zu „mssql-server-linux“](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   
+   Für die Bash-Befehle in diesem Artikel `sudo` verwendet wird. Auf MacOS `sudo` möglicherweise nicht erforderlich. Unter Linux, wenn Sie nicht möchten, verwenden Sie `sudo` um Docker auszuführen, können Sie konfigurieren eine **Docker** Gruppe und Hinzufügen von Benutzern zu dieser Gruppe. Weitere Informationen finden Sie unter [nach der Installation die Schritte für Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 1. Zum Ausführen des Containerimages in Docker können Sie eine Bash-Shell (Linux bzw. macOS) oder eine PowerShell-Eingabeaufforderung mit erhöhten Rechten verwenden. Nachfolgend finden Sie den dafür benötigten Befehl:
 

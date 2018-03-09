@@ -2,7 +2,7 @@
 title: "Schnellstart: Verbinden und Abfragen von SQL Server mithilfe von SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
 description: "Dieser Schnellstart veranschaulicht, wie SQL-Vorgänge Studio (Vorschau) eine Verbindung mit SQL Server, und führen Sie eine Abfrage"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Eine Verbindung herstellen Sie und Fragen Sie mithilfe des SQL Server ab[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Eine Verbindung herstellen Sie und Fragen Sie mithilfe des SQL Server ab [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen einer Verbindung mit SQL Server, und verwenden dann Transact-SQL (T-SQL)-Anweisungen zum Erstellen der *TutorialDB* verwendet [!INCLUDE[name-sos](../includes/name-sos-short.md)] Lernprogramme.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um diesen Schnellstart durchzuführen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], und der Zugriff auf einen SQL-Server.
 
@@ -92,7 +92,10 @@ Weiterhin mit der Abfrage-Editor verbunden ist die *master* Datenbank, aber wir 
 
 
 
-1. Fügen Sie den folgenden Ausschnitt in das Abfragefenster ein:
+1. Fügen Sie den folgenden Ausschnitt in das Abfragefenster ein, und klicken Sie auf **ausführen**:
+
+   > [!NOTE]
+   > Sie können fügen diese Option, um, oder überschreiben Sie die vorherige Abfrage im Editor. Beachten Sie, dass beim Klicken auf **ausführen** führt nur die Abfrage, die ausgewählt wird. Wenn nichts ausgewählt ist, klicken Sie auf **ausführen** führt alle Abfragen im Editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ Nachdem die Abfrage abgeschlossen ist, die neue **Kunden** Tabelle wird in der L
 
 ## <a name="insert-rows"></a>Einfügen von Zeilen
 
-1. Fügen Sie den folgenden Ausschnitt in das Abfragefenster ein:
+- Fügen Sie den folgenden Ausschnitt in das Abfragefenster ein, und klicken Sie auf **ausführen**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ Nachdem die Abfrage abgeschlossen ist, die neue **Kunden** Tabelle wird in der L
    GO
    ```
 
-1. Um die Abfrage auszuführen, klicken Sie auf **ausführen**.
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>Zeigen Sie die von einer Abfrage zurückgegebene Daten
-1. Fügen Sie den folgenden Ausschnitt in das Abfragefenster ein:
+1. Fügen Sie den folgenden Ausschnitt in das Abfragefenster ein, und klicken Sie auf **ausführen**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Um die Abfrage auszuführen, klicken Sie auf **ausführen**.
+1. Die Ergebnisse der Abfrage werden angezeigt:
 
    ![Select-Ergebnisse](media/quickstart-sql-server/select-results.png)
 

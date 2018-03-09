@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>Language elements (Sprachelemente)
 Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -33,12 +33,12 @@ Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) 
 * [Syntaxkonventionen](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [Objekt-Benennungsregeln](../relational-databases/databases/database-identifiers.md)
 * [Reservierte Schlüsselwörter](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [Sortierungen](https://msdn.microsoft.com/library/ff848763.aspx)
-* [Kommentare](../t-sql/language-elements/comment-transact-sql.md)
-* [Konstanten](../t-sql/data-types/constants-transact-sql.md)
+* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Datentypen](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [Ausdrücke](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Problemumgehung für IDENTITY-Eigenschaft](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -76,10 +76,10 @@ Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) 
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [WIRD [NICHT](../t-sql/queries/is-null-transact-sql.md)
+* [IST KEIN](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [ ODER ](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Bitweise Operatoren
 * [& (bitweises AND)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -235,7 +235,7 @@ Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) 
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transaktionen
-* [Transaktionen](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Diagnosesitzungen
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

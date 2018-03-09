@@ -1,7 +1,7 @@
 ---
-title: "Veröffentlichen und Nutzen von Python-Code | Microsoft Docs"
+title: "Veröffentlichen und Nutzen von Python-Code - SQL Server Machine Learning-Server (eigenständig) | Microsoft Docs"
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 03/07/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,39 +12,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>Veröffentlichen und Nutzen von Webdiensten Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Sie können eine funktionierende Lösung Python an einen Webdienst mithilfe der operationalisierung-Funktion im Microsoft Machine Learning-Server bereitstellen. Dieses Thema beschreibt die Schritte zum Veröffentlichen erfolgreich, und führen Sie die Projektmappe.
+Sie können eine funktionierende bereitstellen Python-Projektmappe an einen Webdienst mithilfe der operationalisierung-Funktion auf eine [SQL Server Machine Learning-Server (eigenständig)](../r/r-server-standalone.md) Instanz. Dieser Artikel beschreibt die Schritte zum Veröffentlichen erfolgreich, und führen Sie die Projektmappe.
 
-Die Zielgruppe für diesen Artikel ist die Datenanalysten, die Informationen zum Veröffentlichen von Python-Code oder Modelle als Webdienste, die im Microsoft Machine Learning-Server gehostet werden soll. Außerdem erfahren Sie, wie Anwendungen nutzen können die den Code oder Modelle. In diesem Artikel wird davon ausgegangen, dass Sie in Python versiert sind.
+Die Zielgruppe ist Datenanalysten, um zu erfahren, wie zum Veröffentlichen von Python-Code oder Modelle mit einem Machine Learning-Server, und wie der Code oder die Modelle in einer benutzerdefinierten Anwendung verwendet werden soll. 
 
-> [!IMPORTANT]
->
-> Dieses Beispiel wurde entwickelt, für die Version von Python, die mit Machine Learning-Server (eigenständig) enthalten ist, und verwendet Funktionen in Machine Learning-Serverversion **9.1.0**.
- > 
- > Klicken Sie auf den folgenden Link, um die gleichen Beispiel erneut veröffentlicht, mithilfe der neueren Bibliotheken in Machine Learning-Server finden Sie unter. Finden Sie unter [bereitstellen und Verwalten von Webdiensten in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
-
-**Gilt für: Microsoft R Server (eigenständig)**
+In diesem Artikel wird davon ausgegangen, dass Sie in Python versiert sind. Sie sollten auch einen eigenständiger Server verfügen, die unabhängig von anderen SQL Server-Funktionen installiert ist. Der Server muss [für operationalisierung konfiguriert](../operationalization-with-mrsdeploy.md) Webhosting-Dienst aktivieren. 
 
 ## <a name="overview-of-workflow"></a>Übersicht über Workflows
 
 Der Workflow bei der Veröffentlichung für die Nutzung eines Webdiensts Python kann wie folgt zusammengefasst werden:
 
-1. Erfüllen der [Voraussetzung](#prereq) die Python-Clientbibliothek aus dem Core Swagger-API-Dokument generieren.
-2. Authentifizierung und Header Logik für das Python-Skript hinzufügen.
-3. Erstellen Sie eine Python-Sitzung, Vorbereiten der Umgebung, und erstellen Sie eine Momentaufnahme die Umgebung beibehalten, um.
-4. Veröffentlichen Sie der Webdienst, und binden Sie diese Momentaufnahme.
-5. Probieren Sie den Webdienst aus, durch die Nutzung von es in Ihrer Sitzung.
-6. Diese Dienste zu verwalten.
+1. Stellen Sie sicher, dass Sie die eigenständigen Serverinstallation von Machine Learning-Server mit Python verfügen.
+2. Erfüllen der [Voraussetzung](#prereq) die Python-Clientbibliothek aus dem Core Swagger-API-Dokument generieren.
+3. Authentifizierung und Header Logik für das Python-Skript hinzufügen.
+4. Erstellen Sie eine Python-Sitzung, Vorbereiten der Umgebung, und erstellen Sie eine Momentaufnahme die Umgebung beibehalten, um.
+5. Veröffentlichen Sie der Webdienst, und binden Sie diese Momentaufnahme.
+6. Probieren Sie den Webdienst aus, durch die Nutzung von es in Ihrer Sitzung.
+7. Diese Dienste zu verwalten.
 
 ![Swagger-workflow](./media/data-scientist-python-workflow.png)
 
@@ -52,9 +47,9 @@ Dieser Artikel beschreibt jeden Schritt des Workflows und Python-Beispielcode ve
 
 ## <a name="sample-code"></a>Beispielcode
 
-In diesem Beispielcode wird vorausgesetzt, Sie wurden erfüllt die [Voraussetzungen](#prereq) zum Generieren von einer Python-Clientbibliothek aus dieser Swagger-Datei, und dass Sie verwendet haben Autorest.
+In diesem Beispielcode wird vorausgesetzt, dass [generiert die erforderliche Python-Clientbibliothek](#prereq) aus Swagger und dass Sie Autorest verwendet haben. Führen Sie diesen Code in einer Instanz von SQL Server Machine Learning-Server (eigenständig), die für operationalisierung konfiguriert wurde.
 
-Nachdem der Codeblock finden Sie eine schrittweise exemplarische Vorgehensweise mit ausführlicheren Beschreibungen zu den gesamten Prozess.
+Um diesen Code im Detail zu untersuchen, fahren Sie mit der [schrittweise erläuterten exemplarischen](#walkthrough) ausführlichere Beschreibungen der den Vorgang.
 
 > [!IMPORTANT]
 > Dieses Beispiel verwendet die lokale `admin` Konto für die Authentifizierung. Sie sollten jedoch die Anmeldeinformationen ersetzen und [Authentifizierungsmethode](#python-auth) von Ihrem Administrator konfiguriert werden.
@@ -289,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>Exemplarische Vorgehensweise
 
 In diesem Abschnitt wird beschrieben, wie der Code im Detail funktioniert.
 
 
-### <a name="prereq"></a>Schritt 1. Erstellen der erforderlichen Client-Bibliotheken
+### <a name="prereq"></a> Schritt 1. Erstellen der erforderlichen Client-Bibliotheken
 
-Bevor Sie beginnen können, die Python-Code und Modelle gestaltet Microsoft Machine Learning-Server veröffentlichen, müssen Sie eine Clientbibliothek, mit der in dieser Version bereitgestellte Swagger-Dokument generieren.
+Bevor Sie die publishing Python-Code und alle Modelle über Machine Learning-Server starten können, müssen Sie eine Clientbibliothek, mit der in dieser Version bereitgestellte Swagger-Dokument generieren.
 
 1. Eine Swagger-Code-Generators auf dem lokalen Computer installieren, und machen Sie sich damit vertraut. Sie werden zum Generieren von API-Client-Bibliotheken in Python verwendet. Beliebte umfassen [Azure AutoRest](https://github.com/Azure/autorest) (erfordert Node.js) und [Swagger Codegen](https://github.com/swagger-api/swagger-codegen). 
 
