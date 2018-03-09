@@ -8,15 +8,17 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - reindex
 - sql13.swb.maint.reindex.f1
-helpviewer_keywords: Rebuild Index Task dialog box
+helpviewer_keywords:
+- Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

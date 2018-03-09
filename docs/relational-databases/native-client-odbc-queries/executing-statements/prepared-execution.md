@@ -19,7 +19,7 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

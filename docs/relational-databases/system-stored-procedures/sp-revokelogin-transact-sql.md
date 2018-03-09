@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_revokelogin_TSQL
 - sp_revokelogin
-dev_langs: TSQL
-helpviewer_keywords: sp_revokelogin
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_revokelogin
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

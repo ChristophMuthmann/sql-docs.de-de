@@ -19,7 +19,7 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statement handles [ODBC]
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

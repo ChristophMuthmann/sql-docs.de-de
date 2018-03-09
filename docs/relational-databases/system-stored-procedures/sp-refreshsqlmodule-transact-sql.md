@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
 - sp_refreshsqlmodule
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - metadata [SQL Server], triggers
@@ -26,7 +28,7 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

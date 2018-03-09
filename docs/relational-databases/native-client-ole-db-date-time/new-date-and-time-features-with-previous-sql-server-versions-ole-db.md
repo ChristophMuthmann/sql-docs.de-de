@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

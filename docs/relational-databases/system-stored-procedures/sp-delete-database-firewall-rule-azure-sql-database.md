@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sp_delete_database_firewall_rule_TSQL
 - sys.sp_delete_database_firewall_rule
 - sys.sp_delete_database_firewall_rule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_database_firewall_rule procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_database_firewall_rule procedure
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

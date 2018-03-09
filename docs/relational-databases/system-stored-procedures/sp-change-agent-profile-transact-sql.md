@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_change_agent_profile
 - sp_change_agent_profile_TSQL
-helpviewer_keywords: sp_change_agent_profile
+helpviewer_keywords:
+- sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

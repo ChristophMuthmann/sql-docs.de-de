@@ -8,13 +8,16 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "125"
-helpviewer_keywords: 125 (Database Engine error)
+f1_keywords:
+- "125"
+helpviewer_keywords:
+- 125 (Database Engine error)
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

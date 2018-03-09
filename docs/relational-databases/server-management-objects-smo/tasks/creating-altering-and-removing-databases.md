@@ -17,7 +17,7 @@ helpviewer_keywords:
 - databases [SMO], modifying
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

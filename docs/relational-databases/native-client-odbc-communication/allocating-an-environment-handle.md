@@ -17,7 +17,7 @@ helpviewer_keywords:
 - handles [SQL Server Native Client]
 - environment handles [SQLNCLI]
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

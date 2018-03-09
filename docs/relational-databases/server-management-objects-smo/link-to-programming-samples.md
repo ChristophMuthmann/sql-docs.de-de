@@ -16,7 +16,7 @@ helpviewer_keywords:
 - SMO [SQL Server], samples
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - catalog views [SQL Server], examples
 - metadata [SQL Server], frequently asked questions
@@ -19,7 +21,7 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,10 +8,12 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SQL13.SWB.DATABASESTATES.F1
+f1_keywords:
+- SQL13.SWB.DATABASESTATES.F1
 helpviewer_keywords:
 - emergency database state [SQL Server]
 - verifying database states
@@ -27,7 +29,7 @@ helpviewer_keywords:
 - states [SQL Server]
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

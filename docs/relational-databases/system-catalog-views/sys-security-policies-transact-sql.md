@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -19,12 +20,13 @@ f1_keywords:
 - SECURITY_POLICIES_TSQL
 - SYS.SECURITY_POLICIES
 - SECURITY_POLICIES
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.security_policies catalog view
 - security_policies catalog view
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

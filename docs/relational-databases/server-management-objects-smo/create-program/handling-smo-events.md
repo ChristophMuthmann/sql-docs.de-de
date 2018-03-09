@@ -17,7 +17,7 @@ helpviewer_keywords:
 - SMO [SQL Server], events
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

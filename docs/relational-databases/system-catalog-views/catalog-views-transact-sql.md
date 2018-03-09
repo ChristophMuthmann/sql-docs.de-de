@@ -8,11 +8,14 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: sql13.SysViewExpandPortal.f1
-dev_langs: TSQL
+f1_keywords:
+- sql13.SysViewExpandPortal.f1
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - catalog metadata [SQL Server]
 - system views [SQL Server], catalog
@@ -22,7 +25,7 @@ helpviewer_keywords:
 - Database Engine [SQL Server], metadata
 - catalog views [SQL Server], about catalog views
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

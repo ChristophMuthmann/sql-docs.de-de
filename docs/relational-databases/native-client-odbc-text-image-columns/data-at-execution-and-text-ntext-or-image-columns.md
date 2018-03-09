@@ -24,7 +24,7 @@ helpviewer_keywords:
 - ODBC data-at-execution
 - image columns [ODBC]
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

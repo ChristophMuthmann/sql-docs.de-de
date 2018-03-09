@@ -8,7 +8,8 @@ ms.service:
 ms.component: compression
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-compression
+ms.technology:
+- dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,7 +25,7 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

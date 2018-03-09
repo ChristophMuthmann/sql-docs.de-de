@@ -8,17 +8,19 @@ ms.reviewer:
 ms.service: 
 ms.component: security
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: Security [SQL Server]
+f1_keywords:
+- Security [SQL Server]
 helpviewer_keywords:
 - SQL Server, security
 - security [SQL Server]
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

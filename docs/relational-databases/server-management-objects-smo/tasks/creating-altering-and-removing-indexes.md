@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: indexes [SMO]
+helpviewer_keywords:
+- indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

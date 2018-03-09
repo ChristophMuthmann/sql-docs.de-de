@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.default_constraints_TSQL
 - default_constraints
 - default_constraints_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.default_constraints catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.default_constraints catalog view
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

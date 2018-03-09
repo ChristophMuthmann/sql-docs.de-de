@@ -22,7 +22,7 @@ helpviewer_keywords:
 - fetching [ODBC]
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

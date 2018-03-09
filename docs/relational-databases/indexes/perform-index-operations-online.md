@@ -12,7 +12,7 @@ helpviewer_keywords:
 - online index operations
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard

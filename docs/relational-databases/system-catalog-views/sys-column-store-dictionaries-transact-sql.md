@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - column_store_dictionaries
 - column_store_dictionaries_TSQL
 - sys.column_store_dictionaries
-dev_langs: TSQL
-helpviewer_keywords: sys.column_store_dictionaries catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.column_store_dictionaries catalog view
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

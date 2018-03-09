@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLColumnPrivileges function
+helpviewer_keywords:
+- SQLColumnPrivileges function
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

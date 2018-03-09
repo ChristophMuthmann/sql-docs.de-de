@@ -8,16 +8,18 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - cursors [SQL Server], stored procedures
 - system stored procedures [SQL Server], cursors
 - server cursors [SQL Server]
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

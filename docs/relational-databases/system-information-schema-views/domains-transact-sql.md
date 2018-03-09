@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DOMAINS_TSQL
 - DOMAINS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DOMAINS view
 - INFORMATION_SCHEMA.DOMAINS view
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

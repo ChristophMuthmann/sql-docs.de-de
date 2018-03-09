@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - partition_functions
 - sys.partition_functions
 - partition_functions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.partition_functions catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.partition_functions catalog view
 ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

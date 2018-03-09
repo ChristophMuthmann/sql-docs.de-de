@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_revoke_publication_access_TSQL
 - sp_revoke_publication_access
-helpviewer_keywords: sp_revoke_publication_access
+helpviewer_keywords:
+- sp_revoke_publication_access
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

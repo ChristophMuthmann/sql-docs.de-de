@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 12306 (Database Engine error)
+helpviewer_keywords:
+- 12306 (Database Engine error)
 ms.assetid: 1f83d927-a215-4e43-98a9-4dab9d6e68bb
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

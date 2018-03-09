@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_change_users_login
 - sp_change_users_login_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_change_users_login
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_change_users_login
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

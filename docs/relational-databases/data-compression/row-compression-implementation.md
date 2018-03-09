@@ -8,14 +8,15 @@ ms.service:
 ms.component: compression
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-compression
+ms.technology:
+- dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

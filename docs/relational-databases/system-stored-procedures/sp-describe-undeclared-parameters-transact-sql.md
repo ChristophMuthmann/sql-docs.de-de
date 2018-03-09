@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
 - sp_describe_undeclared_parameters_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_describe_undeclared_parameters
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

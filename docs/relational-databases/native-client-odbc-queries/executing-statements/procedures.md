@@ -18,7 +18,7 @@ helpviewer_keywords:
 - statements [ODBC], stored procedures
 - ODBC applications, stored procedures
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

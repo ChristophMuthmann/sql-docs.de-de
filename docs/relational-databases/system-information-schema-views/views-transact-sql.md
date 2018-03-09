@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - VIEWS_TSQL
 - VIEWS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - VIEWS view
 - INFORMATION_SCHEMA.VIEWS view
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,16 +8,18 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 helpviewer_keywords:
 - system stored procedures [SQL Server], replication
 - replication stored procedures [SQL Server]
 - stored procedures [SQL Server replication]
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

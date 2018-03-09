@@ -8,10 +8,12 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.shrinkdatabase.f1
+f1_keywords:
+- sql13.swb.shrinkdatabase.f1
 helpviewer_keywords:
 - shrinking databases
 - databases [SQL Server], shrinking
@@ -19,7 +21,7 @@ helpviewer_keywords:
 - database shrinking [SQL Server]
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

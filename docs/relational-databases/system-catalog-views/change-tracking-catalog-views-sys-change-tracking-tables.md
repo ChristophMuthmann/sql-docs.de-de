@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - sys.change_tracking_tables
 - change_tracking_tables
 - sys.change_tracking_tables_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change tracking [SQL Server], sys.change_tracking_tables
 - sys.change_tracking_tables
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

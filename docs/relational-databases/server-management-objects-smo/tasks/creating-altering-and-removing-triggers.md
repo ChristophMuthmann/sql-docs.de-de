@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: triggers [SMO]
+helpviewer_keywords:
+- triggers [SMO]
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

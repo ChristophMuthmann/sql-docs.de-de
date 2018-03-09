@@ -16,7 +16,7 @@ helpviewer_keywords:
 - sparse columns, SQL Server Native Client
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

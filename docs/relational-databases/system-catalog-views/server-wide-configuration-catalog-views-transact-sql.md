@@ -8,15 +8,17 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - catalog views [SQL Server], server-wide configuration
 - server-wide configuration catalog views [SQL Server]
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

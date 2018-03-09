@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQLServer:Catalog Metadata
+helpviewer_keywords:
+- SQLServer:Catalog Metadata
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: dagiro
 ms.author: v-dagir
 manager: craigg

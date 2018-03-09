@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 5250 (Database Engine error)
+helpviewer_keywords:
+- 5250 (Database Engine error)
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

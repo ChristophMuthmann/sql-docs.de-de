@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_validate_replica_hosts_as_publishers_TSQL
 - sp_validate_replica_hosts_as_publishers
-helpviewer_keywords: sp_validate_replica_hosts_as_publishers
+helpviewer_keywords:
+- sp_validate_replica_hosts_as_publishers
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -19,7 +19,7 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

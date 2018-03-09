@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - mspublicationthresholds
 - mspublicationthresholds_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSpublicationthresholds system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSpublicationthresholds system table
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

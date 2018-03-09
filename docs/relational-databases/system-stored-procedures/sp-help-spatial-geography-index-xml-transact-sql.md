@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geography_index_xml_TSQL
 - sp_help_spatial_geography_index_xml
-dev_langs: TSQL
-helpviewer_keywords: sp_help_spatial_geography_index_xml procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_spatial_geography_index_xml procedure
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

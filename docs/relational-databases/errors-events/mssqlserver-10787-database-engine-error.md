@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 10787 (Database Engine error)
+helpviewer_keywords:
+- 10787 (Database Engine error)
 ms.assetid: fcc78e5f-e2cf-47df-8c3e-c169367f893b
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

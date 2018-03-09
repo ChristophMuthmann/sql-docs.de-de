@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_revokedbaccess_TSQL
 - sp_revokedbaccess
-dev_langs: TSQL
-helpviewer_keywords: sp_revokedbaccess
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_revokedbaccess
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -19,10 +20,12 @@ f1_keywords:
 - column_encryption_key_values_TSQL
 - sys.column_encryption_key_values
 - sys.column_encryption_key_values_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.column_encryption_key_values catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.column_encryption_key_values catalog view
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

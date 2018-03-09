@@ -8,16 +8,18 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
 - sql.swb.alwaysencryptedwizard.masterkey.f1
-helpviewer_keywords: Wizard, Always Encrypted
+helpviewer_keywords:
+- Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

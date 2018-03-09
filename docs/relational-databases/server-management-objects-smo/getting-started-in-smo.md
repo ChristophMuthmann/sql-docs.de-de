@@ -15,7 +15,7 @@ helpviewer_keywords:
 - SQL Server Management Objects, about SQL Server Management Objects
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

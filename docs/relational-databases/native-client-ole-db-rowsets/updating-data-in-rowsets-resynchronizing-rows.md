@@ -17,7 +17,7 @@ helpviewer_keywords:
 - resynchronizing rows
 - data updates [SQL Server], OLE DB
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

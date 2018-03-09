@@ -17,7 +17,7 @@ helpviewer_keywords:
 - SQL Server Management Objects, exceptions
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

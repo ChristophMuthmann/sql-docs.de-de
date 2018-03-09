@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: SQLSetDescField function
+helpviewer_keywords:
+- SQLSetDescField function
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

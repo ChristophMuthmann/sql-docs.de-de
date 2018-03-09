@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_getagentparameterlist
 - sp_getagentparameterlist_TSQL
-helpviewer_keywords: sp_getagentparameterlist
+helpviewer_keywords:
+- sp_getagentparameterlist
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

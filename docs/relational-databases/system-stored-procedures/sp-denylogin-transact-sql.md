@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_denylogin_TSQL
 - sp_denylogin
-dev_langs: TSQL
-helpviewer_keywords: sp_denylogin
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_denylogin
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

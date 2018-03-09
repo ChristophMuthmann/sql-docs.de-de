@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ROUTINES_TSQL
 - ROUTINES
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

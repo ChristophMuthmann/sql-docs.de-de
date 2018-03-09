@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLPutData function
+helpviewer_keywords:
+- SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

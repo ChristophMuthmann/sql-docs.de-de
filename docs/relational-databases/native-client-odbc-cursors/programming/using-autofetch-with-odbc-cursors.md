@@ -16,7 +16,7 @@ helpviewer_keywords:
 - autofetch option
 - cursors [ODBC], autofetch
 ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

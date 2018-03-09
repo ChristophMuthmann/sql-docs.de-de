@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLSpecialColumns function
+helpviewer_keywords:
+- SQLSpecialColumns function
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

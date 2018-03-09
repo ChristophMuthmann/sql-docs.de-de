@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: synonyms [SMO]
+helpviewer_keywords:
+- synonyms [SMO]
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

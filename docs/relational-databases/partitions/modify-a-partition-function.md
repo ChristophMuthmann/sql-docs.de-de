@@ -8,11 +8,12 @@ ms.service:
 ms.component: partitions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-partition
+ms.technology:
+- dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

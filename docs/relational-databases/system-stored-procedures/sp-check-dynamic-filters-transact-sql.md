@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - dynamic_filters_TSQL
 - sp_check_TSQL
@@ -26,9 +28,10 @@ f1_keywords:
 - sp_check_dynamic filter_TSQL
 - sp_check_for_sync_trigger_TSQL
 - sp_check
-helpviewer_keywords: sp_check_dynamic_filters
+helpviewer_keywords:
+- sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

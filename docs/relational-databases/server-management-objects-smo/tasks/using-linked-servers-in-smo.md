@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: linked servers [SQL Server], SMO
+helpviewer_keywords:
+- linked servers [SQL Server], SMO
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: IRowsetFind comparability [ODBC]
+helpviewer_keywords:
+- IRowsetFind comparability [ODBC]
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

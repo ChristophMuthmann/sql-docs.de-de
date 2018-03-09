@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 41399 (Database Engine error)
+helpviewer_keywords:
+- 41399 (Database Engine error)
 ms.assetid: 5e5acb07-16ca-4329-8210-cd2bab0c904f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

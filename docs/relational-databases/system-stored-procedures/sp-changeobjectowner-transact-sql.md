@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_changeobjectowner_TSQL
 - sp_changeobjectowner
-dev_langs: TSQL
-helpviewer_keywords: sp_changeobjectowner
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_changeobjectowner
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

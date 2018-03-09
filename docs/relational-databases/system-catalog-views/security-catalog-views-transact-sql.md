@@ -8,17 +8,19 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - cryptography [SQL Server], catalog views
 - encryption [SQL Server], catalog views
 - catalog views [SQL Server], security
 - security catalog views [SQL Server]
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

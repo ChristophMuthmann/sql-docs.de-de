@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.dm_db_log_info_TSQL
 - dm_db_log_info
 - dm_db_log_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_log_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_log_info dynamic management view
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: savjani
 ms.author: pariks
 manager: ajayj

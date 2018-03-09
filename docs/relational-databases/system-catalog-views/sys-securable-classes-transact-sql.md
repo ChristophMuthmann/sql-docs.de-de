@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - securable_classes
 - sys.securable_classes_TSQL
 - sys.securable_classes
-dev_langs: TSQL
-helpviewer_keywords: sys.securable_classes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.securable_classes catalog view
 ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

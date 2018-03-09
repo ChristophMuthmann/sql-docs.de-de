@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - system_components_surface_area_configuration
 - system_components_surface_area_configuration_TSQL
 - sys.system_components_surface_area_configuration
-dev_langs: TSQL
-helpviewer_keywords: sys.system_components_surface_area_configuration catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.system_components_surface_area_configuration catalog view
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

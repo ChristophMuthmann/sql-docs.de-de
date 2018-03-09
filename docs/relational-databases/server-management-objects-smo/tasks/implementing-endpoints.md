@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: endpoints [SMO]
+helpviewer_keywords:
+- endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

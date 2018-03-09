@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sql_dependencies_TSQL
 - sys.sql_dependencies_TSQL
 - sys.sql_dependencies
-dev_langs: TSQL
-helpviewer_keywords: sys.sql_dependencies catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sql_dependencies catalog view
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

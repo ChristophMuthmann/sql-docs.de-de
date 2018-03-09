@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PARAMETERS_TSQL
 - PARAMETERS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PARAMETERS view
 - INFORMATION_SCHEMA.PARAMETERS view
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

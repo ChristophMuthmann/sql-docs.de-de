@@ -15,7 +15,7 @@ helpviewer_keywords:
 - dependencies [SMO]
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

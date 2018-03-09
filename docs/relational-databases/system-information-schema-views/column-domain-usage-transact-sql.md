@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLUMN_DOMAIN_USAGE_TSQL
 - COLUMN_DOMAIN_USAGE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INFORMATION_SCHEMA.COLUMN_DOMAIN_USAGE view
 - COLUMN_DOMAIN_USAGE view
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

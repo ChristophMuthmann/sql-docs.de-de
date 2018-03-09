@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IBCPSession::BCPExec (OLE DB)
+apiname:
+- IBCPSession::BCPExec (OLE DB)
 apitype: COM
-helpviewer_keywords: BCPExec method
+helpviewer_keywords:
+- BCPExec method
 ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

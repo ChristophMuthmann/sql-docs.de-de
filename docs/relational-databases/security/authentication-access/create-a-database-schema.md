@@ -1,4 +1,4 @@
-﻿---
+---
 title: Erstellen eines Datenbankschemas | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/05/2017

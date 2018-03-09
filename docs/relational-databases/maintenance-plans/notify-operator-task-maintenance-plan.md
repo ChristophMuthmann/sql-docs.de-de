@@ -8,13 +8,16 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.maint.notifyoperator.f1
-helpviewer_keywords: Notify Operator Task dialog box
+f1_keywords:
+- sql13.swb.maint.notifyoperator.f1
+helpviewer_keywords:
+- Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

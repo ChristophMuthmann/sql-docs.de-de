@@ -19,7 +19,7 @@ helpviewer_keywords:
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

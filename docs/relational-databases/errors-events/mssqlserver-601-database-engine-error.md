@@ -8,13 +8,16 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "601"
-helpviewer_keywords: 601 (Database Engine error)
+f1_keywords:
+- "601"
+helpviewer_keywords:
+- 601 (Database Engine error)
 ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

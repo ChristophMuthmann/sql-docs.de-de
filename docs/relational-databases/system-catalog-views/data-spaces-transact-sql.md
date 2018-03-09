@@ -8,13 +8,16 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: data space catalog views [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- data space catalog views [SQL Server]
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

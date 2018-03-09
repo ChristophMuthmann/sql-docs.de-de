@@ -17,7 +17,7 @@ helpviewer_keywords:
 - network settings [SMO]
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 10773 (Database Engine error)
+helpviewer_keywords:
+- 10773 (Database Engine error)
 ms.assetid: 4a7d33e8-e98a-49f5-8d4b-8224f3c8e22d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

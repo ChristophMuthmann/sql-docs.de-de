@@ -8,15 +8,17 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.value.f1
 - sql13.swb.extendedpropertiesvalue.f1
-helpviewer_keywords: Value for Extended Property dialog box
+helpviewer_keywords:
+- Value for Extended Property dialog box
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

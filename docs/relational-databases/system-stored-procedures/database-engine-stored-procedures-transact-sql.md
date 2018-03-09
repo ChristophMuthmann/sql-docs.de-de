@@ -8,16 +8,18 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Database Engine [SQL Server], stored procedures
 - system stored procedures [SQL Server], Database Engine
 - stored procedures [SQL Server], Database Engine
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

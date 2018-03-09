@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_helprolemember_TSQL
 - sp_helprolemember
-dev_langs: TSQL
-helpviewer_keywords: sp_helprolemember
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

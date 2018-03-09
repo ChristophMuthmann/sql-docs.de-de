@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: object models [SMO]
+helpviewer_keywords:
+- object models [SMO]
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

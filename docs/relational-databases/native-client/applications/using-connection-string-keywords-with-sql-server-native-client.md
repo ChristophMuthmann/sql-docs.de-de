@@ -11,14 +11,15 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: sql13.swb.connecttoserver.options.registeredservers.f1
+f1_keywords:
+- sql13.swb.connecttoserver.options.registeredservers.f1
 helpviewer_keywords:
 - data access [SQL Server Native Client], connection string keywords
 - SQLNCLI, connection string keywords
 - connection strings [SQL Server Native Client]
 - SQL Server Native Client, connection string keywords
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-caps.latest.revision: "81"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.server_role_members_TSQL
 - server_role_members_TSQL
 - sys.server_role_members
-dev_langs: TSQL
-helpviewer_keywords: sys.server_role_members catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.server_role_members catalog view
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

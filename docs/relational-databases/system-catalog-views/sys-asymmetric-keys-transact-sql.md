@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.asymmetric_keys_TSQL
 - asymmetric_keys_TSQL
 - sys.asymmetric_keys
-dev_langs: TSQL
-helpviewer_keywords: sys.asymmetric_keys catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

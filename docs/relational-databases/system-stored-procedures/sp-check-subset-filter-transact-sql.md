@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_check_TSQL
 - sp_check_subset_filter
@@ -20,9 +22,10 @@ f1_keywords:
 - subset_TSQL
 - sp_check
 - sp_check_subset_filter_TSQL
-helpviewer_keywords: sp_check_subset_filter
+helpviewer_keywords:
+- sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLRowCount function
+helpviewer_keywords:
+- SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

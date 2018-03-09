@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_updatestats_TSQL
 - sp_updatestats
-dev_langs: TSQL
-helpviewer_keywords: sp_updatestats
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

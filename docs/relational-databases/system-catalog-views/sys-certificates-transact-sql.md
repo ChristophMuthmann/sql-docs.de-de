@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - certificates_TSQL
 - sys.certificates_TSQL
 - sys.certificates
-dev_langs: TSQL
-helpviewer_keywords: sys.certificates catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.certificates catalog view
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

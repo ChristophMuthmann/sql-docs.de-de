@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - SYS.QUERY_CONTEXT_SETTINGS_TSQL
 - SYS.QUERY_CONTEXT_SETTINGS
 - QUERY_CONTEXT_SETTINGS
-dev_langs: TSQL
-helpviewer_keywords: sys.query_context_settings catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.query_context_settings catalog view
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

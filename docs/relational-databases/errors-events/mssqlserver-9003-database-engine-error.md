@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 9003 (Database Engine error)
+helpviewer_keywords:
+- 9003 (Database Engine error)
 ms.assetid: 7fdfb391-5c6f-428b-b434-6c3d0b30fd7b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

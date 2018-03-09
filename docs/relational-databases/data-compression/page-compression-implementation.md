@@ -8,14 +8,15 @@ ms.service:
 ms.component: compression
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-compression
+ms.technology:
+- dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page compression [Database Engine]
 - compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

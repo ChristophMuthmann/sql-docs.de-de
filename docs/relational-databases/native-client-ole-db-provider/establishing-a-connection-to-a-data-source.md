@@ -18,7 +18,7 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

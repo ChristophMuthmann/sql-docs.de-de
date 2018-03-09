@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
 - sp_configure_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_configure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

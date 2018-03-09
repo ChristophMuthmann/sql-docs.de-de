@@ -8,11 +8,12 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

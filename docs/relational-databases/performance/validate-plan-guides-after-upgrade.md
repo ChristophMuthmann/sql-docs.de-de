@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-plan-guides
+ms.technology:
+- dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: plan guides [SQL Server], validating after upgrade
+helpviewer_keywords:
+- plan guides [SQL Server], validating after upgrade
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

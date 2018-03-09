@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_drop_agent_profile
 - sp_drop_agent_profile_TSQL
-helpviewer_keywords: sp_drop_agent_profile
+helpviewer_keywords:
+- sp_drop_agent_profile
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

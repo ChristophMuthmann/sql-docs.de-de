@@ -17,7 +17,7 @@ helpviewer_keywords:
 - data types [SMO]
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

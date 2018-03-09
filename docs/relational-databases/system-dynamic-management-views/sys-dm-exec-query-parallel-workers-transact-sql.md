@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - dm_exec_query_parallel_workers
 - sys.dm_exec_query_parallel_workers_TSQL
 - sys.dm_exec_query_parallel_workers
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_parallel_workers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_parallel_workers dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9f
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: pelopes
 ms.author: pelopes
 manager: ajayj

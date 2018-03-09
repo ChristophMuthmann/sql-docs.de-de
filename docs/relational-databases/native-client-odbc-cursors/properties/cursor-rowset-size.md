@@ -16,7 +16,7 @@ helpviewer_keywords:
 - ODBC cursors, rowset size
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

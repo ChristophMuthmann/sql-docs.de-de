@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 10001 (Database Engine error)
+helpviewer_keywords:
+- 10001 (Database Engine error)
 ms.assetid: f8fd2d8d-a4af-4b6a-ba51-9123b7e4c9bf
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

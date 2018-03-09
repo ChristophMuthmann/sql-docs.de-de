@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_helptrigger
 - sp_helptrigger_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_helptrigger
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

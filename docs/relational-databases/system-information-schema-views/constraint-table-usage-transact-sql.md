@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TABLE_USAGE_TSQL
 - CONSTRAINT_TABLE_USAGE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CONSTRAINT_TABLE_USAGE view
 - INFORMATION_SCHEMA.CONSTRAINT_TABLE_USAGE view
 ms.assetid: 5770b696-6c04-4d5c-a8db-9eb92022fa42
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

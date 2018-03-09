@@ -8,20 +8,22 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_rename_TSQL
 - sp_rename
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - renaming indexes
 - renaming columns
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

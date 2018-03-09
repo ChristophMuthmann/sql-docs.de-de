@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSpeer_request
 - MSpeer_request_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSpeer_request system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSpeer_request system table
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_srvrolepermission_TSQL
 - sp_srvrolepermission
-dev_langs: TSQL
-helpviewer_keywords: sp_srvrolepermission
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_srvrolepermission
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

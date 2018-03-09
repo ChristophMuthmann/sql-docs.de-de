@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_scriptpublicationcustomprocs
 - sp_scriptpublicationcustomprocs_TSQL
-helpviewer_keywords: sp_scriptpublicationcustomprocs
+helpviewer_keywords:
+- sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

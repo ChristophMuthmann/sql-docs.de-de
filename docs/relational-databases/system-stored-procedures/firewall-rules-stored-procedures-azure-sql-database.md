@@ -8,17 +8,19 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - firewall rules stored procedures
 - firewall_rules, setting
 - firewall_rules, Azure SQL Database
 - firewall systems, Azure SQL Database
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

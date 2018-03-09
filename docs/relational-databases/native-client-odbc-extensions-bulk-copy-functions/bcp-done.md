@@ -8,15 +8,19 @@ ms.service:
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: bcp_done
-apilocation: sqlncli11.dll
+apiname:
+- bcp_done
+apilocation:
+- sqlncli11.dll
 apitype: DLLExport
-helpviewer_keywords: bcp_done function
+helpviewer_keywords:
+- bcp_done function
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

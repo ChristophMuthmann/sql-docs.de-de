@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLFreeHandle function
+helpviewer_keywords:
+- SQLFreeHandle function
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

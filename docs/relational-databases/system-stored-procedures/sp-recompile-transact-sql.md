@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_recompile_TSQL
 - sp_recompile
-dev_langs: TSQL
-helpviewer_keywords: sp_recompile
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLMoreResults function
+helpviewer_keywords:
+- SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

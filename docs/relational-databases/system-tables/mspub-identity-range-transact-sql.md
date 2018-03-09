@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSpub_identity_range_TSQL
 - MSpub_identity_range
-dev_langs: TSQL
-helpviewer_keywords: MSpub_identity_range system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSpub_identity_range system table
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

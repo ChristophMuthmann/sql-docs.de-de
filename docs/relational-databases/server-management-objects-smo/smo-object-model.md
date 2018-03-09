@@ -16,7 +16,7 @@ helpviewer_keywords:
 - SMO [SQL Server], object model
 - SQL Server Management Objects, object model
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

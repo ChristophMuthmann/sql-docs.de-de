@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_testlinkedserver
 - sp_testlinkedserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_testlinkedserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_testlinkedserver
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

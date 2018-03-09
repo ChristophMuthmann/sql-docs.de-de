@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - database_usage_TSQL
 - sys.database_usage_TSQL
 - sys.database_usage
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database_usage
 - sys.database_usage
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

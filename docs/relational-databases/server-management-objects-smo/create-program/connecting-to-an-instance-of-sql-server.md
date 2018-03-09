@@ -17,7 +17,7 @@ helpviewer_keywords:
 - instances of SQL Server, connections
 - SMO [SQL Server], connections
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

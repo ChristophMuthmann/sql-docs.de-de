@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 5237 (Database Engine error)
+helpviewer_keywords:
+- 5237 (Database Engine error)
 ms.assetid: 9ff28935-d1eb-47ee-99b3-1a65cb948ce7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

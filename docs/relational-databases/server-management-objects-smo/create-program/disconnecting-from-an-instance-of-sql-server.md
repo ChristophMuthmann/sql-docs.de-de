@@ -17,7 +17,7 @@ helpviewer_keywords:
 - instances of SQL Server, disconnecting
 - disconnecting [SMO]
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

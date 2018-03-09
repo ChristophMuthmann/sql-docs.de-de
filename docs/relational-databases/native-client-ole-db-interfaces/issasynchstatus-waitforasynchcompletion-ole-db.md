@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
+apiname:
+- ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 apitype: COM
-helpviewer_keywords: WaitForAsynchCompletion method
+helpviewer_keywords:
+- WaitForAsynchCompletion method
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

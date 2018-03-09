@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.spatial_index_tessellations_TSQL
 - spatial_index_tessellations_TSQL
 - sys.spatial_index_tessellations
-dev_langs: TSQL
-helpviewer_keywords: sys.spatial_index_tessellations catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.spatial_index_tessellations catalog view
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

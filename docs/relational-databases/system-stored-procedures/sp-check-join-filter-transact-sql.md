@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - filter_TSQL
 - sp_check_TSQL
@@ -21,9 +23,10 @@ f1_keywords:
 - join_TSQL
 - filter
 - sp_check
-helpviewer_keywords: sp_check_join_filter
+helpviewer_keywords:
+- sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

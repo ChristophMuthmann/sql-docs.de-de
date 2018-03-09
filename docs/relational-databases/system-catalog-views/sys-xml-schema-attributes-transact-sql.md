@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - xml_schema_attributes
 - sys.xml_schema_attributes_TSQL
 - sys.xml_schema_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_attributes catalog view
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

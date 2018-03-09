@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLColAttribute function
+helpviewer_keywords:
+- SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -23,7 +23,7 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

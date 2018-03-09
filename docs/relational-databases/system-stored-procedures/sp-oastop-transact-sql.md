@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_OAStop
 - sp_OAStop_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_OAStop
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_OAStop
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

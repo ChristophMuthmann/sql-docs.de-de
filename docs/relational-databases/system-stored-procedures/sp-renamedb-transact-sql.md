@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_renamedb
 - sp_renamedb_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_renamedb
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_renamedb
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

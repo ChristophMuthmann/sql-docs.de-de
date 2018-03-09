@@ -16,7 +16,7 @@ helpviewer_keywords:
 - SMO [SQL Server], collections
 - collections [SMO]
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

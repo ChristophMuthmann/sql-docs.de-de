@@ -8,18 +8,21 @@ ms.service:
 ms.component: system-stored-procedur+I741es
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - posttracerttoken
 - posttracerttoken_TSQL
 - sp_posttracertoken
 - sp_posttracertoken_TSQL
-helpviewer_keywords: sp_posttracertoken
+helpviewer_keywords:
+- sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - destination_data_spaces_TSQL
 - destination_data_spaces
 - sys.destination_data_spaces_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.destination_data_spaces catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.destination_data_spaces catalog view
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

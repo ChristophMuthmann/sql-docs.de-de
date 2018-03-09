@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_settriggerorder
 - sp_settriggerorder_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_settriggerorder
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

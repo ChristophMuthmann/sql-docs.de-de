@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLEndTran function
+helpviewer_keywords:
+- SQLEndTran function
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

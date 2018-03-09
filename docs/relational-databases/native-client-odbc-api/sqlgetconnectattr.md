@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLGetConnectAttr function
+helpviewer_keywords:
+- SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

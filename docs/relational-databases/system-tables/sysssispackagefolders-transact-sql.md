@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackagefolders90
 - sysdtspackagefolders90_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysssispackagefolders system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysssispackagefolders system table
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
 manager: erikre

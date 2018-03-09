@@ -8,7 +8,8 @@ ms.prod_service: database-engine
 ms.service: 
 ms.component: databases
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:

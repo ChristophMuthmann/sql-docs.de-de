@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_prepexec
 - sp_cursor_prepexec_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_prepexec
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -17,7 +17,7 @@ helpviewer_keywords:
 - ODBC error handling, message types
 - errors [ODBC], types
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
