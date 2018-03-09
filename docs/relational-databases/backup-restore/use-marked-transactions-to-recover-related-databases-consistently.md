@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,7 +23,7 @@ helpviewer_keywords:
 - BEGIN TRAN...WITH MARK statement
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

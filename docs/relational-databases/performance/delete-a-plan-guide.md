@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-plan-guides
+ms.technology:
+- dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: plan guides [SQL Server], deleting
+helpviewer_keywords:
+- plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -17,7 +17,7 @@ helpviewer_keywords:
 - SQL Server Management Objects, method calling
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

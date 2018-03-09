@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -23,12 +24,13 @@ f1_keywords:
 - column_master_keys
 - sys.column_master_keys_TSQL
 - sys.column_master_keys
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.column_master_key_definitions catalog view
 - sys.column_master_keys catalog view
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

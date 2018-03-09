@@ -21,7 +21,7 @@ helpviewer_keywords:
 - errors [ODBC], about error handling
 - messages [ODBC]
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

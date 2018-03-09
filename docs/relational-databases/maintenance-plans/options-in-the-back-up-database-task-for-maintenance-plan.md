@@ -8,15 +8,17 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.logbackup.f1
 - sql13.swb.maint.backup.f1
-helpviewer_keywords: Back Up Database Task dialog box
+helpviewer_keywords:
+- Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

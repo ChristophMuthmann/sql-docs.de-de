@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ISSAsynchStatus (OLE DB)
+apiname:
+- ISSAsynchStatus (OLE DB)
 apitype: COM
-helpviewer_keywords: ISSAsynchStatus interface
+helpviewer_keywords:
+- ISSAsynchStatus interface
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

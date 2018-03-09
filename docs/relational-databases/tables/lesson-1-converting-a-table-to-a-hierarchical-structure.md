@@ -8,13 +8,16 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: HierarchyID
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- HierarchyID
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

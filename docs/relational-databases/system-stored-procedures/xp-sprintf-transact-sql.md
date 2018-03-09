@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xp_sprintf_TSQL
 - xp_sprintf
-dev_langs: TSQL
-helpviewer_keywords: xp_sprintf
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_sprintf
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

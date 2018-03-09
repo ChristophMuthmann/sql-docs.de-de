@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,7 +22,7 @@ helpviewer_keywords:
 - Transact-SQL restore sequence
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

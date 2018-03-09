@@ -8,10 +8,12 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - regular identifiers [SQL Server]
 - identifiers [SQL Server]
@@ -21,7 +23,7 @@ helpviewer_keywords:
 - Transact-SQL identifiers
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

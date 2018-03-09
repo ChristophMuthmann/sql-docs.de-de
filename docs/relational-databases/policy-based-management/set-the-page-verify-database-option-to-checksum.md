@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Best Practices [Database Engine]
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: 686b9a4a-ea61-4263-9ab8-f444a3077679
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

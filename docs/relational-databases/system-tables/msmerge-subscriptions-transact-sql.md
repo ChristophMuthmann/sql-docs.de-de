@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSmerge_subscriptions
 - MSmerge_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSmerge_subscriptions system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSmerge_subscriptions system table
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

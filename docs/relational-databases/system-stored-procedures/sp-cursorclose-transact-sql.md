@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_close_TSQL
 - sp_cursor_close
-dev_langs: TSQL
-helpviewer_keywords: sp_cursorclose
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_cursorclose
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

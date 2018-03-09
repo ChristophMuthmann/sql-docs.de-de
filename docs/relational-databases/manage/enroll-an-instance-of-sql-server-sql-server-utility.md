@@ -8,7 +8,8 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,9 +20,10 @@ f1_keywords:
 - sql13.SWB.makemanaged.Summary.F1
 - sql13.SWB.makemanaged.progress.F1
 - sql13.SWB.makemanaged.validation.F1
-helpviewer_keywords: Enroll instance
+helpviewer_keywords:
+- Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

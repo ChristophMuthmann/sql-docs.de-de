@@ -23,7 +23,7 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

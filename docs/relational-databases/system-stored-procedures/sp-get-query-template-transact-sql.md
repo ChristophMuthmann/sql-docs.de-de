@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_get_query_template
 - sp_get_query_template_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_get_query_template
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

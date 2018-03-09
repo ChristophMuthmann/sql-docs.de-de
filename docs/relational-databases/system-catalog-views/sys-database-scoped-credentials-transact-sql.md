@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,9 +17,10 @@ f1_keywords:
 - sys.database_scoped_credentials_TSQL
 - database_scoped_credentials
 - database_scoped_credentials_TSQL
-helpviewer_keywords: sys.database_scoped_credentials catalog view
+helpviewer_keywords:
+- sys.database_scoped_credentials catalog view
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

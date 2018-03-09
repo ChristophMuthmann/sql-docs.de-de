@@ -8,12 +8,14 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.backupdevice.contents.f1
+f1_keywords:
+- sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 10531 (Database Engine error)
+helpviewer_keywords:
+- 10531 (Database Engine error)
 ms.assetid: bb40e994-231c-44ce-933f-8d767fb2f450
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

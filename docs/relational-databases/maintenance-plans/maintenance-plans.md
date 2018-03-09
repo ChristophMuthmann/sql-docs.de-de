@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Wartungspläne| Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/01/2016
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="maintenance-plan-functionality"></a>Funktionalität von Wartungsplänen  
  Wartungspläne können zum Ausführen der folgenden Tasks erstellt werden:  
   
--   Reorganisieren der Daten auf den Daten- und Indexseiten durch erneutes Erstellen von Indizes mit einem neuen Füllfaktor. Durch das erneute Erstellen von Indizes mit einem neuen Füllfaktor wird sichergestellt, dass für den Inhalt von Datenbankseiten das Verhältnis zwischen der Menge an Daten und freiem Speicherplatz ausgewogen ist. Darüber hinaus wird das zukünftige Wachstum beschleunigt. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
+-   Erneutes Organisieren der Daten auf den Daten- und Indexseiten durch erneutes Erstellen von Indizes mit einem neuen Füllfaktor. Durch das erneute Erstellen von Indizes mit einem neuen Füllfaktor wird sichergestellt, dass für den Inhalt von Datenbankseiten das Verhältnis zwischen der Menge an Daten und freiem Speicherplatz ausgewogen ist. Darüber hinaus wird das zukünftige Wachstum beschleunigt. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
 -   Komprimieren von Datendateien durch Entfernen leerer Datenbankseiten.  
   

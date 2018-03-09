@@ -21,7 +21,7 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IRowsetFastLoad::Commit (OLE DB)
+apiname:
+- IRowsetFastLoad::Commit (OLE DB)
 apitype: COM
-helpviewer_keywords: Commit method
+helpviewer_keywords:
+- Commit method
 ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

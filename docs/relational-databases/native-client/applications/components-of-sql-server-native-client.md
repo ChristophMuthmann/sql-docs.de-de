@@ -17,7 +17,7 @@ helpviewer_keywords:
 - components [SQL Server Native Client]
 - SQLNCLI, about SQL Server Native Client
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

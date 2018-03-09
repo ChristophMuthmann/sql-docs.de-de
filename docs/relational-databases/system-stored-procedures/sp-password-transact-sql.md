@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_password
 - sp_password_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_password
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_password
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 17300 (Database Engine error)
+helpviewer_keywords:
+- 17300 (Database Engine error)
 ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

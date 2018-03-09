@@ -19,7 +19,7 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

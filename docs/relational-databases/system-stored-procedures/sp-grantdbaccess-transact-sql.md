@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_grantdbaccess
 - sp_grantdbaccess_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_grantdbaccess
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_grantdbaccess
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

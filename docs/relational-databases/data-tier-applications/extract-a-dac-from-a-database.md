@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,7 +24,7 @@ helpviewer_keywords:
 - data-tier application [SQL Server], extract
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

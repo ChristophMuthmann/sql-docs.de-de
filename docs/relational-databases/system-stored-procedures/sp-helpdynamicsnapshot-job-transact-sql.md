@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_helpdynamicsnapshot_TSQL
 - sp_helpdynamicsnapshot_job_TSQL
@@ -21,9 +23,10 @@ f1_keywords:
 - sp_helpdynamicsnapshot
 - sp_helpdynamicsnapshot_job
 - helpdynamicsnapshot_TSQL
-helpviewer_keywords: sp_helpdynamicsnapshot_job
+helpviewer_keywords:
+- sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

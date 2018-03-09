@@ -20,7 +20,7 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 - SQL_CUR_USE_ODBC option
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,11 +8,12 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

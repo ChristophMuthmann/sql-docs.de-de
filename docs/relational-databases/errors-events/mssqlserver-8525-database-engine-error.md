@@ -8,13 +8,16 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "8525"
-helpviewer_keywords: 8525 (Database Engine error)
+f1_keywords:
+- "8525"
+helpviewer_keywords:
+- 8525 (Database Engine error)
 ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

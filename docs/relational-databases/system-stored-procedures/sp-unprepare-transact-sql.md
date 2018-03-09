@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_unprepare_TSQL
 - sp_cursor_unprepare
-dev_langs: TSQL
-helpviewer_keywords: sp_unprepare
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_unprepare
 ms.assetid: 14320251-c551-49d8-b933-057406114978
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

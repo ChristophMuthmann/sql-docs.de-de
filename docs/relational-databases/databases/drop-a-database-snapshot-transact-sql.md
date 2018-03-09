@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - deleting database snapshots
 - database snapshots [SQL Server], deleting
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sql_expression_dependencies_TSQL
 - sql_expression_dependencies
 - sys.sql_expression_dependencies_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sql_expression_dependencies catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

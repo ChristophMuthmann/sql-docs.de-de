@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - Key Management with key vault
 - SQL Server Connector, about
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: "66"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -15,7 +15,7 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard

@@ -26,7 +26,7 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IRowsetFastLoad::InsertRow (OLE DB)
+apiname:
+- IRowsetFastLoad::InsertRow (OLE DB)
 apitype: COM
-helpviewer_keywords: InsertRow method
+helpviewer_keywords:
+- InsertRow method
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSlogreader_history_TSQL
 - MSlogreader_history
-dev_langs: TSQL
-helpviewer_keywords: MSlogreader_history system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

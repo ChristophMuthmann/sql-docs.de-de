@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: views [SMO]
+helpviewer_keywords:
+- views [SMO]
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

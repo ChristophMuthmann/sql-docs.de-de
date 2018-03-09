@@ -17,7 +17,7 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 - Execute method
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

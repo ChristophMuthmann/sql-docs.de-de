@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_control_plan_guide
 - sp_control_plan_guide_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_control_plan_guide
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

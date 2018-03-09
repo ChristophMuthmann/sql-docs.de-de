@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,7 +18,7 @@ helpviewer_keywords:
 - backups [SQL Server], errors
 - database backups [SQL Server], errors
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - crypt_properties_TSQL
 - sys.crypt_properties_TSQL
 - sys.crypt_properties
-dev_langs: TSQL
-helpviewer_keywords: sys.crypt_properties catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.crypt_properties catalog view
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

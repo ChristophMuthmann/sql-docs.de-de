@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - starting Windows System Monitor
 - Windows System Monitor [SQL Server], starting
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

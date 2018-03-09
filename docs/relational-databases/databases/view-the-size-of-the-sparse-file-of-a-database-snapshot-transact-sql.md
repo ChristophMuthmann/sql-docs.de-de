@@ -8,7 +8,8 @@ ms.component: databases
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - database snapshots [SQL Server], sparse files
 - space [SQL Server], database snapshots
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,17 +8,19 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SQL Server Integration Services system tables
 - system tables [SQL Server], Integration Services
 - system tables [Integration Services]
 - SSIS, system tables
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
 manager: erikre

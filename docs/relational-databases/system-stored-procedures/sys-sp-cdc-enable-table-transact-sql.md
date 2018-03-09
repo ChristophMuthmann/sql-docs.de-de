@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,13 +17,14 @@ f1_keywords:
 - sp_cdc_enable_table_TSQL
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

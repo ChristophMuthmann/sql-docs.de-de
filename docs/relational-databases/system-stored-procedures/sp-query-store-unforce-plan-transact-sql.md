@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - SP_QUERY_STORE_UNFORCE_PLAN
 - SYS.SP_QUERY_STORE_UNFORCE_PLAN
 - SYS.SP_QUERY_STORE_UNFORCE_PLAN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sp_query_store_unforce_plan
 - sp_query_store_unforce_plan
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,7 +19,7 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

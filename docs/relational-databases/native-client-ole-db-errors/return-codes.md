@@ -24,7 +24,7 @@ helpviewer_keywords:
 - FAILED macro
 - errors [OLE DB], return codes
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

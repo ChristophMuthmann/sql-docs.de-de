@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,8 +17,10 @@ f1_keywords:
 - sp_drop_trusted_assembly
 - sys.sp_drop_trusted_assembly_TSQL
 - sys.sp_drop_trusted_assembly
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_drop_trusted_assembly
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_drop_trusted_assembly
 ms.assetid: 
 caps.latest.revision: 
 author: edmacauley

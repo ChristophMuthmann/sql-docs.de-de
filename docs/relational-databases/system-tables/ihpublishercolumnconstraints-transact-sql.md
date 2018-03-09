@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHpublishercolumnconstraints
 - IHpublishercolumnconstraints_TSQL
-dev_langs: TSQL
-helpviewer_keywords: IHpublishercolumnconstraints system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHpublishercolumnconstraints system table
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

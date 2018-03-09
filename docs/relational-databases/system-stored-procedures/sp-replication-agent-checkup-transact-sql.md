@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_replication_agent_checkup_TSQL
 - sp_replication_agent_checkup
-helpviewer_keywords: sp_replication_agent_checkup
+helpviewer_keywords:
+- sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_bindrule_TSQL
 - sp_bindrule
-dev_langs: TSQL
-helpviewer_keywords: sp_bindrule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

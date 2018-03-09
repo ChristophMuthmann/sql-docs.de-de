@@ -8,15 +8,17 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_merge_agent_properties_TSQL
 - sp_MSchange_merge_agent_properties
-helpviewer_keywords: sp_MSchange_merge_agent_properties
+helpviewer_keywords:
+- sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

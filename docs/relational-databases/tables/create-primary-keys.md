@@ -8,12 +8,14 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: primary keys [SQL Server], creating
+helpviewer_keywords:
+- primary keys [SQL Server], creating
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHconstrainttypes_TSQL
 - IHconstrainttypes
-dev_langs: TSQL
-helpviewer_keywords: IHconstrainttypes system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHconstrainttypes system table
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

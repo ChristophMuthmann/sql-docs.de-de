@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,7 +19,7 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - deleting constraints
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

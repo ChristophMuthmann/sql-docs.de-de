@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 18456 (Database Engine error)
+helpviewer_keywords:
+- 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

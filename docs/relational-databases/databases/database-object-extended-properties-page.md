@@ -8,12 +8,14 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.common.extendedproperties.f1
+f1_keywords:
+- sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

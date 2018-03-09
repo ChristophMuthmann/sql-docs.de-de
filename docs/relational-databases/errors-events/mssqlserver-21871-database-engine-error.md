@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 21871 (Database Engine error)
+helpviewer_keywords:
+- 21871 (Database Engine error)
 ms.assetid: d3215378-9282-444f-a18b-00b96fd0133d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

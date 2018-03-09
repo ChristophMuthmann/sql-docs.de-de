@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSsubscription_agents
 - MSsubscription_agents_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSsubscription_agents system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSsubscription_agents system table
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

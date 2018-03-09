@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 5554 (Database Engine error)
+helpviewer_keywords:
+- 5554 (Database Engine error)
 ms.assetid: 7134bbe5-d240-4a98-85ce-b13cc8ae9b0e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dmf.viewfacet.f1
+f1_keywords:
+- sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

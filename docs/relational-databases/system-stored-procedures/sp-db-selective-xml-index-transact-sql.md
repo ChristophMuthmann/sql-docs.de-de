@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_db_selective_xml_index_TSQL
 - sp_db_selective_xml_index
-dev_langs: TSQL
-helpviewer_keywords: sp_db_selective_xml_index procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

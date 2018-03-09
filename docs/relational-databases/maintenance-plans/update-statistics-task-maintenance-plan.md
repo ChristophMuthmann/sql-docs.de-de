@@ -8,13 +8,16 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.maint.statistics.f1
-helpviewer_keywords: Updates Statistics Task dialog box
+f1_keywords:
+- sql13.swb.maint.statistics.f1
+helpviewer_keywords:
+- Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

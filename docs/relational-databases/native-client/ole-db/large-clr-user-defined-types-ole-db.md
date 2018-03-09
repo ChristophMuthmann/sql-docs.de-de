@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: large CLR user-defined types [OLE DB]
+helpviewer_keywords:
+- large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

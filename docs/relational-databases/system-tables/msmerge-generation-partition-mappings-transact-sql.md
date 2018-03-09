@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSmerge_generation_partition_mappings_TSQL
 - MSmerge_generation_partition_mappings
-dev_langs: TSQL
-helpviewer_keywords: MSmerge_generation_partition_mappings system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSmerge_generation_partition_mappings system table
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

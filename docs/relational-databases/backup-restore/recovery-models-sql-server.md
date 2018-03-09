@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,7 +31,7 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

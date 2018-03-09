@@ -21,7 +21,7 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ISSAsynchStatus::Abort (OLE DB)
+apiname:
+- ISSAsynchStatus::Abort (OLE DB)
 apitype: COM
-helpviewer_keywords: Abort method
+helpviewer_keywords:
+- Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

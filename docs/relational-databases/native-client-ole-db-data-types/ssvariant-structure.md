@@ -8,13 +8,16 @@ ms.service:
 ms.component: native-client-ole-db-data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: SSVARIANT
-helpviewer_keywords: SSVARIANT struct
+f1_keywords:
+- SSVARIANT
+helpviewer_keywords:
+- SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

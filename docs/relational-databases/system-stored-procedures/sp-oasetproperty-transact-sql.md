@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_OASetProperty
 - sp_OASetProperty_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_OASetProperty
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

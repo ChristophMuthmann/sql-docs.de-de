@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSdynamicsnapshotjobs_TSQL
 - MSdynamicsnapshotjobs
-dev_langs: TSQL
-helpviewer_keywords: MSdynamicsnapshotjobs system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSdynamicsnapshotjobs system table
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +18,7 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - functions [ODBC]
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

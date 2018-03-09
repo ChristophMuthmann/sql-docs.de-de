@@ -8,13 +8,16 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: managing data in a table
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: alerts [SQL Server], creating
+helpviewer_keywords:
+- alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

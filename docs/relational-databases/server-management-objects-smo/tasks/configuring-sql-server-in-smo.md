@@ -15,7 +15,7 @@ helpviewer_keywords:
 - SQL Server, configuring
 - configuration options [SMO]
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

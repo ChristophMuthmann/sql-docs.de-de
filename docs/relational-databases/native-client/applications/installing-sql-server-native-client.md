@@ -23,7 +23,7 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], installing SQL Server Native Client
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-caps.latest.revision: "44"
+caps.latest.revision: 
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: f981559ea90373bab72d25689196b50fcd97b0c4

@@ -8,7 +8,8 @@ ms.service:
 ms.component: resource-governor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,7 +18,7 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

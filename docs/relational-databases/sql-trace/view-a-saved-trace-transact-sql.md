@@ -8,7 +8,8 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - displaying traces
 - viewing traces
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

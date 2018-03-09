@@ -15,7 +15,7 @@ helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

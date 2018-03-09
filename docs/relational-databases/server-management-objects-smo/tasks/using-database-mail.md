@@ -16,7 +16,7 @@ helpviewer_keywords:
 - Database Mail [SMO]
 - mail [SMO]
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

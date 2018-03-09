@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: table-valued parameters (ODBC), metadata for prepared statements
+helpviewer_keywords:
+- table-valued parameters (ODBC), metadata for prepared statements
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

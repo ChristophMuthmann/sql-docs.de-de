@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: ICommand [SQL Server Native Client]
+helpviewer_keywords:
+- ICommand [SQL Server Native Client]
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

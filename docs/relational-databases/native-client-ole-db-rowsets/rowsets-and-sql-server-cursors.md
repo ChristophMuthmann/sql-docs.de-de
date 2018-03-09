@@ -18,7 +18,7 @@ helpviewer_keywords:
 - properties [OLE DB]
 - cursors [OLE DB]
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

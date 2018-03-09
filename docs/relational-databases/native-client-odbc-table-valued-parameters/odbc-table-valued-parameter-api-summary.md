@@ -15,7 +15,7 @@ helpviewer_keywords:
 - ODBC, API support for table-valued parameters
 - table-valued parameters (ODBC), API support
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

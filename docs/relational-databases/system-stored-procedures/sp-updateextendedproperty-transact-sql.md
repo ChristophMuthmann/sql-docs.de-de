@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_updateextendedproperty_TSQL
 - sp_updateextendedproperty
-dev_langs: TSQL
-helpviewer_keywords: sp_updateextendedproperty
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_updateextendedproperty
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

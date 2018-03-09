@@ -19,7 +19,7 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, data updates
 - data updates [SQL Server], OLE DB
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - remote_service_bindings_TSQL
 - remote_service_bindings
 - sys.remote_service_bindings
-dev_langs: TSQL
-helpviewer_keywords: sys.remote_service_bindings catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.remote_service_bindings catalog view
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

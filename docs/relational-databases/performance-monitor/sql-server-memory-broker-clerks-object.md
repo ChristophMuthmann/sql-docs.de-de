@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQLServer:Memory Broker Clerks
+helpviewer_keywords:
+- SQLServer:Memory Broker Clerks
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: dagiro
 ms.author: v-dagir
 manager: craigg

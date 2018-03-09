@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IBCPSession::BCPDone (OLE DB)
+apiname:
+- IBCPSession::BCPDone (OLE DB)
 apitype: COM
-helpviewer_keywords: BCPDone method
+helpviewer_keywords:
+- BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database
 ms.component: indexes
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,7 +24,7 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

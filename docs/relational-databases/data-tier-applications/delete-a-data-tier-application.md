@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,7 +23,7 @@ helpviewer_keywords:
 - wizard [DAC], delete
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLGetStmtAttr function
+helpviewer_keywords:
+- SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

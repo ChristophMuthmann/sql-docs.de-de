@@ -8,19 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - system stored procedures [SQL Server], security
 - stored procedures [SQL Server], security
 - security [SQL Server], stored procedures
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

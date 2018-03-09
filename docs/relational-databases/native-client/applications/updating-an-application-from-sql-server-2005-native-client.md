@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: SQL Server Native Client, updating applications
+helpviewer_keywords:
+- SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

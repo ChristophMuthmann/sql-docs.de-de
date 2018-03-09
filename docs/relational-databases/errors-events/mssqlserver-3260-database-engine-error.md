@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 3260 (Database Engine error)
+helpviewer_keywords:
+- 3260 (Database Engine error)
 ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

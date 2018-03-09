@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.server.permissions.f1--May use common.permissions
+f1_keywords:
+- sql13.swb.server.permissions.f1--May use common.permissions
 helpviewer_keywords:
 - security [SQL Server], denying access
 - hierarchies [SQL Server], permissions
@@ -20,7 +22,7 @@ helpviewer_keywords:
 - permissions [SQL Server], hierarchy
 - security [SQL Server], granting access
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

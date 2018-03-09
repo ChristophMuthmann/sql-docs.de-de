@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -20,9 +21,10 @@ f1_keywords:
 - sys.time_zone_info_TSQL
 - time_zone_info
 - time_zone_info_TSQL
-helpviewer_keywords: sys.time_zone_info system table
+helpviewer_keywords:
+- sys.time_zone_info system table
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

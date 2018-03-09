@@ -8,15 +8,17 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - system stored procedures [SQL Server], distributed queries
 - distributed queries [SQL Server], stored procedures
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

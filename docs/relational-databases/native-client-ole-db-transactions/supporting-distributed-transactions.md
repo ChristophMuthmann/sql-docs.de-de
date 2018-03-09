@@ -20,7 +20,7 @@ helpviewer_keywords:
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

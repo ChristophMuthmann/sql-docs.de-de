@@ -8,13 +8,16 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "12001"
-helpviewer_keywords: 11001 (Database Engine error)
+f1_keywords:
+- "12001"
+helpviewer_keywords:
+- 11001 (Database Engine error)
 ms.assetid: 53d4d63a-61e3-441f-bfe9-9d44f7a05fd4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

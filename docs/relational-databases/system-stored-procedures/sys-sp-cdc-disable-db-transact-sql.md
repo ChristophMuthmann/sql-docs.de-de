@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,13 +17,14 @@ f1_keywords:
 - sys.sp_cdc_disable_db_TSQL
 - sp_cdc_disable_db_TSQL
 - sys.sp_cdc_disable_db
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_cdc_disable_db
 - sys.sp_cdc_disable_db
 - change data capture [SQL Server], disabling databases
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

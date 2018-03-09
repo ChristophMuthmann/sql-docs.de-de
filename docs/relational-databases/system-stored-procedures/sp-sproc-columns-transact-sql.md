@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
 - sp_sproc_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_sproc_columns
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

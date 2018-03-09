@@ -24,7 +24,7 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

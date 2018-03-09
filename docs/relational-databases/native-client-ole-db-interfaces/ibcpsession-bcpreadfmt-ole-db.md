@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IBCPSession::BCPReadFmt (OLE DB)
+apiname:
+- IBCPSession::BCPReadFmt (OLE DB)
 apitype: COM
-helpviewer_keywords: BCPReadFmt method
+helpviewer_keywords:
+- BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

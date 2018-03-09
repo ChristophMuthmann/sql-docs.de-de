@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_enumeratependingschemachanges
 - sp_enumeratependingschemachanges_TSQL
-helpviewer_keywords: sp_enumeratependingschemachanges
+helpviewer_keywords:
+- sp_enumeratependingschemachanges
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

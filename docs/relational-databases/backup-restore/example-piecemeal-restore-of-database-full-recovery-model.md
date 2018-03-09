@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server], full recovery model
 - restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

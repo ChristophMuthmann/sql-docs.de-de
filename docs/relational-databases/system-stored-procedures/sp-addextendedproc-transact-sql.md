@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addextendedproc_TSQL
 - sp_addextendedproc
-dev_langs: TSQL
-helpviewer_keywords: sp_addextendedproc
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addextendedproc
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

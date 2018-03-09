@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: rules [SMO]
+helpviewer_keywords:
+- rules [SMO]
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 33081 (Database Engine error)
+helpviewer_keywords:
+- 33081 (Database Engine error)
 ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

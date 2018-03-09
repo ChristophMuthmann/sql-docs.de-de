@@ -15,7 +15,7 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

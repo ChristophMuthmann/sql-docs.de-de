@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_replflush
 - sp_replflush_TSQL
-helpviewer_keywords: sp_replflush
+helpviewer_keywords:
+- sp_replflush
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

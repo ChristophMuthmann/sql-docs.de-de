@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-plan-guides
+ms.technology:
+- dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,7 +23,7 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

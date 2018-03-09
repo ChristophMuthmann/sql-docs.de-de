@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLBrowseConnect function
+helpviewer_keywords:
+- SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

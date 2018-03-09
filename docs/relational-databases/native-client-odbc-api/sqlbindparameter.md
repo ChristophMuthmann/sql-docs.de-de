@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLBindParameter function
+helpviewer_keywords:
+- SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

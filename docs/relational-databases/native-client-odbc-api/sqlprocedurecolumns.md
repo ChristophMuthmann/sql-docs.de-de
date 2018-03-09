@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLProcedureColumns function
+helpviewer_keywords:
+- SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

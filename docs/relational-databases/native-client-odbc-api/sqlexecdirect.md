@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: SQLExecDirect function
+helpviewer_keywords:
+- SQLExecDirect function
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

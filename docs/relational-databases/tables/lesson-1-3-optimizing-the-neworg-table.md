@@ -8,13 +8,16 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: optimizing tables
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

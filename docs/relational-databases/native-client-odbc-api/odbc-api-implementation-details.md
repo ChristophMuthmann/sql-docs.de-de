@@ -17,7 +17,7 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

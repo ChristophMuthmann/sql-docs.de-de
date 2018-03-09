@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: table-valued parameters (ODBC), diagnostic records
+helpviewer_keywords:
+- table-valued parameters (ODBC), diagnostic records
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

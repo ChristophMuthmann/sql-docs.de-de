@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSsubscription_articles
 - MSsubscription_articles_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSsubscription_articles system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSsubscription_articles system table
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

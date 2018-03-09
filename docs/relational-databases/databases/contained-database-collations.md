@@ -1,4 +1,4 @@
-﻿---
+---
 title: Enthaltene Datenbanksortierungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017

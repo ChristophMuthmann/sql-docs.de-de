@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: foreign keys [SMO]
+helpviewer_keywords:
+- foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

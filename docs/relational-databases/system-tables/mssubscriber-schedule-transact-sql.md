@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriber_schedule
 - MSsubscriber_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSsubscriber_schedule system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

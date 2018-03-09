@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_helpdistributor_properties_TSQL
 - sp_helpdistributor_properties
-helpviewer_keywords: sp_helpdistributor_properties
+helpviewer_keywords:
+- sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

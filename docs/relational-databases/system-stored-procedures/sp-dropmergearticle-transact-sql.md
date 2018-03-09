@@ -8,15 +8,17 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergearticle
 - sp_dropmergearticle_TSQL
-helpviewer_keywords: sp_dropmergearticle
+helpviewer_keywords:
+- sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

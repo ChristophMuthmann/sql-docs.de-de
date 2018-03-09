@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: user-defined tables [SQL Server]
+helpviewer_keywords:
+- user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_db_vardecimal_storage_format
 - sp_db_vardecimal_storage_format_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_db_vardecimal_storage_format
 - decimal data type, compressing
@@ -23,7 +25,7 @@ helpviewer_keywords:
 - database compression [SQL Server]
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: partitions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-partition
+ms.technology:
+- dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -22,9 +23,10 @@ f1_keywords:
 - sql13.swb.managepartition.partitionaction.f1
 - sql13.swb.managepartition.summary.f1
 - sql13.swb.managepartition.selectoutput.f1
-helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
+helpviewer_keywords:
+- wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

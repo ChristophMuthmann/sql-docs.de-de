@@ -20,7 +20,7 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - CLSID
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

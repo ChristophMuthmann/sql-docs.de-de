@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -19,12 +20,13 @@ f1_keywords:
 - SECURITY_PREDICATES
 - SECURITY_PREDICATES_TSQL
 - SYS.SECURITY_PREDICATES_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.security_predicates catalog view
 - security_predicates catalog view
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

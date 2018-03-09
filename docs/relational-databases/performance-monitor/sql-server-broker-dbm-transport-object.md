@@ -8,14 +8,15 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

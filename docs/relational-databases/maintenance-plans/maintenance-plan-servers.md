@@ -8,14 +8,15 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.servers.f1
 - sql13.swb.maint.maintplanproperties.server.f1
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

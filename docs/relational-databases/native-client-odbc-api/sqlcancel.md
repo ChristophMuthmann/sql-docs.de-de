@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: SQLCancel function
+helpviewer_keywords:
+- SQLCancel function
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

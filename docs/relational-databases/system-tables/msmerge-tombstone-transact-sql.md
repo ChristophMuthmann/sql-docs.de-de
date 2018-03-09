@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSmerge_tombstone_TSQL
 - MSmerge_tombstone
-dev_langs: TSQL
-helpviewer_keywords: MSmerge_tombstone system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addapprole_TSQL
 - sp_addapprole
-dev_langs: TSQL
-helpviewer_keywords: sp_addapprole
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addapprole
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

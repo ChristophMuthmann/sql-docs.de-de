@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,7 +22,7 @@ helpviewer_keywords:
 - estimating database size
 - designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

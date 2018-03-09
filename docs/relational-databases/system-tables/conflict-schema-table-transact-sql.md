@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - conflict_
 - conflict_TSQL
-dev_langs: TSQL
-helpviewer_keywords: conflict_<schema>_<table>
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

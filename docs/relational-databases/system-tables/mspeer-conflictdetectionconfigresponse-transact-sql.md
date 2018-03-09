@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSpeer_conflictdetectionconfigresponse
 - MSpeer_conflictdetectionconfigresponse_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSpeer_conflictdetectionconfigureresponse
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geography_histogram_TSQL
 - sp_help_spatial_geography_histogram
-dev_langs: TSQL
-helpviewer_keywords: sp_help_spatial_geography_histogram
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_spatial_geography_histogram
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

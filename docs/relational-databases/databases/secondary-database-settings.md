@@ -8,12 +8,14 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

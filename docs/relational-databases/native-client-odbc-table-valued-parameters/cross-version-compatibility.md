@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: table-valued parameters (ODBC), cross-version compatibility
+helpviewer_keywords:
+- table-valued parameters (ODBC), cross-version compatibility
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

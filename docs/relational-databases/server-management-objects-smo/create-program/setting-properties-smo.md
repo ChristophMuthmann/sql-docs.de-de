@@ -16,7 +16,7 @@ helpviewer_keywords:
 - SQL Server Management Objects, properties
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

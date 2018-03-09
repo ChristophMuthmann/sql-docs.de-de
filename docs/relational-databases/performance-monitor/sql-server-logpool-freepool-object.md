@@ -8,12 +8,14 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQLServer:LogPool FreePool
+helpviewer_keywords:
+- SQLServer:LogPool FreePool
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dagiro
 ms.author: v-dagir
 manager: craigg

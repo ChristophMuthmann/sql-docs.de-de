@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_droplogin
 - sp_droplogin_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_droplogin
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_droplogin
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

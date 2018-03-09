@@ -8,7 +8,8 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - traces [SQL Server], scheduling
 - stopping traces
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

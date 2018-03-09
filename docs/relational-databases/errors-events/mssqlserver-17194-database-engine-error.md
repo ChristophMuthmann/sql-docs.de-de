@@ -8,13 +8,16 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "17194"
-helpviewer_keywords: 17194 (Database Engine error)
+f1_keywords:
+- "17194"
+helpviewer_keywords:
+- 17194 (Database Engine error)
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

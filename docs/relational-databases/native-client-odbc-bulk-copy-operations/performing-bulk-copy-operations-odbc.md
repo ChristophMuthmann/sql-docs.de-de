@@ -18,7 +18,7 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server Native Client]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

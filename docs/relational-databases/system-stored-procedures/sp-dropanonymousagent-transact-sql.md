@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_dropanonymousagent
 - sp_dropanonymousagent_TSQL
-helpviewer_keywords: sp_dropanonymousagent
+helpviewer_keywords:
+- sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

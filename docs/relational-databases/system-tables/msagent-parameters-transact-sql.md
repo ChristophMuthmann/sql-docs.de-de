@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSagent_parameters_TSQL
 - MSagent_parameters
-dev_langs: TSQL
-helpviewer_keywords: MSagent_parameters system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSagent_parameters system table
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

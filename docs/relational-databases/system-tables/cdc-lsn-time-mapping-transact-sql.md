@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - cdc.lsn_time_mapping
 - cdc.lsn_time_mapping_TSQL
-dev_langs: TSQL
-helpviewer_keywords: cdc.lsn_time_mapping
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- cdc.lsn_time_mapping
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

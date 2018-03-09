@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - http_endpoints
 - sys.http_endpoints_TSQL
 - http_endpoints_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.http_endpoints catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.http_endpoints catalog view
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

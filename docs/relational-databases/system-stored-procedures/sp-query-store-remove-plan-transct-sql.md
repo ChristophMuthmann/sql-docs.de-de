@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - SP_QUERY_STORE_REMOVE_PLAN_TSQL
 - SP_QUERY_STORE_REMOVE_PLAN
 - SYS.SP_QUERY_STORE_REMOVE_PLAN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sp_query_store_remove_plan
 - sp_query_store_remove_plan
 ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - restarting interrupted restore operation
 - restoring interrupted operation [SQL Server]
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

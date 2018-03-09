@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_validatemergesubscription
 - sp_validatemergesubscription_TSQL
-helpviewer_keywords: sp_validatemergesubscription
+helpviewer_keywords:
+- sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

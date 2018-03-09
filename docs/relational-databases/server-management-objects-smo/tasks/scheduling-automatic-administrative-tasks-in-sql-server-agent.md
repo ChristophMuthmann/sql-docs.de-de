@@ -16,7 +16,7 @@ helpviewer_keywords:
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

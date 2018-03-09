@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_resetstatus
 - sp_resetstatus_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_resetstatus
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_resetstatus
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

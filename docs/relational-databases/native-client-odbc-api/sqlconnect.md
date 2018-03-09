@@ -8,12 +8,14 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: SQLConnect function
+helpviewer_keywords:
+- SQLConnect function
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

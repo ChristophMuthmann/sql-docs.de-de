@@ -8,14 +8,15 @@ ms.service:
 ms.component: resource-governor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

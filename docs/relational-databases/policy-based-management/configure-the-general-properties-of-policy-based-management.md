@@ -8,13 +8,16 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dmf.PolicyManagement.f1
-helpviewer_keywords: Policy-Based Management, configure properties
+f1_keywords:
+- sql13.swb.dmf.PolicyManagement.f1
+helpviewer_keywords:
+- Policy-Based Management, configure properties
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

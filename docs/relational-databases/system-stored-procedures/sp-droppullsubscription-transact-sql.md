@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_droppullsubscription
 - sp_droppullsubscription_TSQL
-helpviewer_keywords: sp_droppullsubscription
+helpviewer_keywords:
+- sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

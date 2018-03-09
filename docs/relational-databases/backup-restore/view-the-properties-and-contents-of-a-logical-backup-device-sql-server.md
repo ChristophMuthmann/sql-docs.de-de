@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,7 +23,7 @@ helpviewer_keywords:
 - viewing backup properties
 - database backups [SQL Server], properties
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

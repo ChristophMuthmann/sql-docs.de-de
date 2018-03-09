@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_getbindtoken
 - sp_getbindtoken_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_getbindtoken
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

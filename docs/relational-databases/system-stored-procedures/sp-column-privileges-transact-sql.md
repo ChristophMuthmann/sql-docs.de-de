@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_TSQL
 - sp_column_privileges
-dev_langs: TSQL
-helpviewer_keywords: sp_column_privileges
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

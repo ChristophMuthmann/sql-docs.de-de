@@ -8,15 +8,17 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.SWB.POINTINTIMERESTORE.F1
 - sql13.swb.backuptimeline.f1
-helpviewer_keywords: Backup Timeline
+helpviewer_keywords:
+- Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

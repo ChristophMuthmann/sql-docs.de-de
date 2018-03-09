@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - plan_guides
 - sys.planguides
 - plan_guides_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.plan_guides catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.plan_guides catalog view
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

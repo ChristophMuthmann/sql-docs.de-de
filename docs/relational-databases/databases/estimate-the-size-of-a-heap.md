@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,7 +19,7 @@ helpviewer_keywords:
 - space [SQL Server], indexes
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

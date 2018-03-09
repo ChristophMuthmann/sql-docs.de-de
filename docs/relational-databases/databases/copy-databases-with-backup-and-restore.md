@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - backing up databases [SQL Server], copying databases
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

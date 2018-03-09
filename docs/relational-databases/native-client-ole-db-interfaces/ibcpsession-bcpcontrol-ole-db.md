@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IBCPSession::BCPControl (OLE DB)
+apiname:
+- IBCPSession::BCPControl (OLE DB)
 apitype: COM
-helpviewer_keywords: BCPControl method
+helpviewer_keywords:
+- BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

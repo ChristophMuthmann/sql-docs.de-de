@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: rows [OLE DB]
+helpviewer_keywords:
+- rows [OLE DB]
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

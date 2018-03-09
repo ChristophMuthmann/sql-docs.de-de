@@ -8,14 +8,15 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

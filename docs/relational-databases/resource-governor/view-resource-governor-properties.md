@@ -8,13 +8,16 @@ ms.service:
 ms.component: resource-governor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.rg.properties.f1
-helpviewer_keywords: Resource Governor, properties
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

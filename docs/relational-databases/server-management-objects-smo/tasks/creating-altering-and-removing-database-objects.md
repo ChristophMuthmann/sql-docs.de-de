@@ -15,7 +15,7 @@ helpviewer_keywords:
 - database objects [SMO]
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

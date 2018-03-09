@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - user_token
 - sys.user_token_TSQL
 - user_token_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - logins [SQL Server], security tokens
 - sys.user_token catalog view
@@ -24,7 +26,7 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - user_token catalog view
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

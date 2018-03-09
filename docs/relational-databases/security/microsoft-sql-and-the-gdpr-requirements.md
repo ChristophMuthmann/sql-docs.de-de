@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology: sql-security
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: barbkess
 ms.author: ronitr
 manager: craigg

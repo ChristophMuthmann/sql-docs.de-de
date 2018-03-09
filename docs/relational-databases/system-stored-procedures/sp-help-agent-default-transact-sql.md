@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_help_agent_default
 - sp_help_agent_default_TSQL
-helpviewer_keywords: sp_help_agent_default
+helpviewer_keywords:
+- sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

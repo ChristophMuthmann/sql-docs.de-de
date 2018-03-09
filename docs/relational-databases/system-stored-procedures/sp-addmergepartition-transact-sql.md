@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_addmergepartition
 - sp_addmergepartition_TSQL
-helpviewer_keywords: sp_addmergepartition
+helpviewer_keywords:
+- sp_addmergepartition
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

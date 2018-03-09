@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.allocation_units
 - allocation_units_TSQL
 - allocation_units
-dev_langs: TSQL
-helpviewer_keywords: sys.allocation_units catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

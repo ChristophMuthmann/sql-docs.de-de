@@ -8,12 +8,14 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.jobactivitymon.refresh.f1
+f1_keywords:
+- sql13.swb.jobactivitymon.refresh.f1
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

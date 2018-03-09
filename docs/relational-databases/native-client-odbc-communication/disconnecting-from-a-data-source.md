@@ -25,7 +25,7 @@ helpviewer_keywords:
 - ODBC functions
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

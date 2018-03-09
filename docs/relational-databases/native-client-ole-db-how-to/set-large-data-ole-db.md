@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: large data
+helpviewer_keywords:
+- large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

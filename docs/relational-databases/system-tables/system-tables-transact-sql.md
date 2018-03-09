@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - status information [SQL Server]
 - tables [SQL Server], system tables
@@ -23,7 +25,7 @@ helpviewer_keywords:
 - system tables [SQL Server], retrieving information from
 - retrieving system table information
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

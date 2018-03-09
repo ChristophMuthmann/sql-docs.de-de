@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: table-valued parameters, inserting data into
+helpviewer_keywords:
+- table-valued parameters, inserting data into
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

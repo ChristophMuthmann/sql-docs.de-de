@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - foreign_key_columns
 - sys.foreign_key_columns_TSQL
 - foreign_key_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.foreign_key_columns catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.foreign_key_columns catalog view
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

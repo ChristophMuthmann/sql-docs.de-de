@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide_from_handle_TSQL
 - sp_create_plan_guide_from_handle
-dev_langs: TSQL
-helpviewer_keywords: sp_create_plan_guide_from_handle
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

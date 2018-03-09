@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - cdc.ddl_history_TSQL
 - cdc.ddl_history
-dev_langs: TSQL
-helpviewer_keywords: cdc.ddl_history
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- cdc.ddl_history
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

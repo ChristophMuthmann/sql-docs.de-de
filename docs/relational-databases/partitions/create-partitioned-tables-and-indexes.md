@@ -8,7 +8,8 @@ ms.service:
 ms.component: partitions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-partition
+ms.technology:
+- dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,7 +31,7 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -19,7 +19,7 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

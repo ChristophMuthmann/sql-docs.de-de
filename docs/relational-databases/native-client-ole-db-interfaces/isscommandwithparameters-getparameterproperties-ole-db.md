@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ISSCommandWithParameters::GetParameterProperties (OLE DB)
+apiname:
+- ISSCommandWithParameters::GetParameterProperties (OLE DB)
 apitype: COM
-helpviewer_keywords: GetParameterProperties method
+helpviewer_keywords:
+- GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

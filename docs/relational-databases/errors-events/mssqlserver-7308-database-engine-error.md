@@ -8,14 +8,15 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - 7308 (Database Engine error)
 - single-threaded apartment mode
 ms.assetid: cca9eab9-afb9-463d-abfd-0802257e2c99
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

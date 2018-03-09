@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: date/time [ODBC], enhanced behavior with earlier SQL Server versions
+helpviewer_keywords:
+- date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

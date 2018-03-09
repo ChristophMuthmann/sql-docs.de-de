@@ -8,14 +8,15 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.restoredb.files.f1
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

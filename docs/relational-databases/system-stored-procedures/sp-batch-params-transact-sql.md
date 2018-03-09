@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
 - sp_batch_params_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_batch_params
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

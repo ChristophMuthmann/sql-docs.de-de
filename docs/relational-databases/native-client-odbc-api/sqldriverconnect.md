@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLDriverConnect function
+helpviewer_keywords:
+- SQLDriverConnect function
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_addqueued_artinfo
 - sp_addqueued_artinfo_TSQL
-helpviewer_keywords: sp_addqueued_artinfo
+helpviewer_keywords:
+- sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

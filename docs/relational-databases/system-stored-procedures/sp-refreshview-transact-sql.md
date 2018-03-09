@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshview
 - sp_refreshview_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_refreshview
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

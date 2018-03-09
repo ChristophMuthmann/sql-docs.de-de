@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,7 +24,7 @@ helpviewer_keywords:
 - credentials [SQL Server], about credentials
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

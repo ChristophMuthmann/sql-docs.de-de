@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_reinitsubscription
 - sp_reinitsubscription_TSQL
-helpviewer_keywords: sp_reinitsubscription
+helpviewer_keywords:
+- sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

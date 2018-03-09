@@ -8,12 +8,14 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: database master key [SQL Server], exporting
+helpviewer_keywords:
+- database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

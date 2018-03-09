@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - SYS.QUERY_STORE_PLAN
 - SYS.QUERY_STORE_PLAN_TSQL
 - QUERY_STORE_PLAN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query_store_plan catalog view
 - sys.query_store_plan catalog view
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

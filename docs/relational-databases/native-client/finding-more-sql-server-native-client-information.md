@@ -15,7 +15,7 @@ helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

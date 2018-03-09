@@ -8,12 +8,14 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.databaseproperties.changetracking.f1
+f1_keywords:
+- sql13.swb.databaseproperties.changetracking.f1
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

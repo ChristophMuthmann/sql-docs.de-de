@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity_TSQL
 - dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: edmaca
 manager: craigg

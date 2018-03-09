@@ -18,7 +18,7 @@ helpviewer_keywords:
 - parameters [SQL Server Native Client], OLE DB
 - commands [OLE DB]
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

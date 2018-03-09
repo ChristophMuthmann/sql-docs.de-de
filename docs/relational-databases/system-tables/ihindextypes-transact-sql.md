@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHindextypes
 - IHindextypes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: IHindextypes system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHindextypes system table
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

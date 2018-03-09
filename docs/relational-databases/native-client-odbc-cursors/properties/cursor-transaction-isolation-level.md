@@ -18,7 +18,7 @@ helpviewer_keywords:
 - ODBC cursors, isolation levels
 - row versioning [SQL Server], ODBC
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

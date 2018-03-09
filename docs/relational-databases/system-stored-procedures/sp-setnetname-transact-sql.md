@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_setnetname
 - sp_setnetname_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_setnetname
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -15,7 +15,7 @@ helpviewer_keywords:
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - firewall_rules
 - sys.firewall_rules_TSQL
 - firewall_rules_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

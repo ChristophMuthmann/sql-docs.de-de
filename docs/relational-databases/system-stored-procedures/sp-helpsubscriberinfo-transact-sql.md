@@ -8,15 +8,17 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriberinfo
 - sp_helpsubscriberinfo_TSQL
-helpviewer_keywords: sp_helpsubscriberinfo
+helpviewer_keywords:
+- sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

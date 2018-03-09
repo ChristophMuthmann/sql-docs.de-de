@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -19,9 +20,10 @@ f1_keywords:
 - sp_set_session_context_TSQL
 - sys.sp_set_session_context
 - sys.sp_set_session_context_TSQL
-helpviewer_keywords: sp_set_session_context
+helpviewer_keywords:
+- sp_set_session_context
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

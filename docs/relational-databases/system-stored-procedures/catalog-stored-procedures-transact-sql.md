@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ODBC applications, catalog stored procedures
 - isolating ODBC applications from changes
@@ -19,7 +21,7 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], catalog
 - catalog system stored procedures [SQL Server]
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

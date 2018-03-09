@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_deletetracertokenhistory
 - sp_deletetracertokenhistory_TSQL
-helpviewer_keywords: sp_deletetracertokenhistory
+helpviewer_keywords:
+- sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

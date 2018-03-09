@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,7 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

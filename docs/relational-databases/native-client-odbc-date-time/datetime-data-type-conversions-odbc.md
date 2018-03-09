@@ -16,7 +16,7 @@ helpviewer_keywords:
 - bindings [ODBC]
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

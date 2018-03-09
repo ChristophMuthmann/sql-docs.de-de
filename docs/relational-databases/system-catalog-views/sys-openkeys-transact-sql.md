@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.openkeys_TSQL
 - openkeys
 - sys.openkeys
-dev_langs: TSQL
-helpviewer_keywords: sys.openkeys catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.openkeys catalog view
 ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

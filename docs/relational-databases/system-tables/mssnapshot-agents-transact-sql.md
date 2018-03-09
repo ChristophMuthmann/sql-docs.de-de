@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSsnapshot_agents
 - MSsnapshot_agents_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSsnapshot_agents system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

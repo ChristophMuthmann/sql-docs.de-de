@@ -8,14 +8,15 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

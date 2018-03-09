@@ -7,13 +7,16 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: sql-database
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: Azure SQL Database catalog views
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Azure SQL Database catalog views
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.databaseproperties.filegroups.f1
+f1_keywords:
+- sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

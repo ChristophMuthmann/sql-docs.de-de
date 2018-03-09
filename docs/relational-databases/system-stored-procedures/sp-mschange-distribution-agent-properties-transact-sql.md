@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_MSchange_distribution_agent_properties
 - sp_MSchange_distribution_agent_properties_TSQL
-helpviewer_keywords: sp_MSchange_distribution_agent_properties
+helpviewer_keywords:
+- sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

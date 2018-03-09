@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 2533 (Database Engine error)
+helpviewer_keywords:
+- 2533 (Database Engine error)
 ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

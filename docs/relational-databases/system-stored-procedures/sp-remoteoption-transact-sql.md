@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_remoteoption_TSQL
 - sp_remoteoption
-dev_langs: TSQL
-helpviewer_keywords: sp_remoteoption
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_remoteoption
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

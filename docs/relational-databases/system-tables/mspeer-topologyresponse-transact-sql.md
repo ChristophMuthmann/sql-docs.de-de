@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSpeer_topologyresponse
 - MSpeer_topologyresponse_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSpeer_topologyresponse
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSpeer_topologyresponse
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

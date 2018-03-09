@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 33128 (Database Engine error)
+helpviewer_keywords:
+- 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

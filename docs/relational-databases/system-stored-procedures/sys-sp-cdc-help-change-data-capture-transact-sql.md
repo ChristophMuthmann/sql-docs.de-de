@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,13 +17,14 @@ f1_keywords:
 - sys.sp_cdc_help_change_data_capture_TSQL
 - sp_cdc_help_change_data_capture
 - sys.sp_cdc_help_change_data_capture
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

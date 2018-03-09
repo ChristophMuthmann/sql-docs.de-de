@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - server_trigger_events_TSQL
 - sys.server_trigger_events
 - server_trigger_events
-dev_langs: TSQL
-helpviewer_keywords: sys.server_trigger_events catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.server_trigger_events catalog view
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

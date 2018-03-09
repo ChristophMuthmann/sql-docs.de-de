@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - sys.sp_query_store_flush_db_TSQL
 - sp_query_store_flush_db
 - sys.sp_query_store_flush_db
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sp_query_store_flush_db
 - sp_query_store_flush_db
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

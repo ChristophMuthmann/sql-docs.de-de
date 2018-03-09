@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHpublishers
 - IHpublishers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: IHpublishers system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

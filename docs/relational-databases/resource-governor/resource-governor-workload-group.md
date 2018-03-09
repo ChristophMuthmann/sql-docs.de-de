@@ -8,7 +8,8 @@ ms.service:
 ms.component: resource-governor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - workload groups [SQL Server]
 - workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

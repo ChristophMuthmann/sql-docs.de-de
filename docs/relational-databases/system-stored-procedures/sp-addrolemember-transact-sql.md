@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addrolemember_TSQL
 - sp_addrolemember
-dev_langs: TSQL
-helpviewer_keywords: sp_addrolemember
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addrolemember
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

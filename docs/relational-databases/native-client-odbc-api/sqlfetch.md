@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: SQLFetch function
+helpviewer_keywords:
+- SQLFetch function
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

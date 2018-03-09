@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,12 +17,13 @@ f1_keywords:
 - internal_tables
 - sys.internal_tables_TSQL
 - internal_tables_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

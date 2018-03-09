@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changedistributiondb_TSQL
 - sp_changedistributiondb
-helpviewer_keywords: sp_changedistributiondb
+helpviewer_keywords:
+- sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

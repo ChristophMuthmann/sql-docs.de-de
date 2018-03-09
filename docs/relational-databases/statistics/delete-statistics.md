@@ -8,14 +8,15 @@ ms.service:
 ms.component: statistics
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-statistics
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - statistics [SQL Server], deleting
 - deleting statistics
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

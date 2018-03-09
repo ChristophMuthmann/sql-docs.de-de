@@ -17,7 +17,7 @@ helpviewer_keywords:
 - permissions [SMO]
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

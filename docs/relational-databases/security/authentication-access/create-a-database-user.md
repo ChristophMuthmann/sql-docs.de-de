@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,7 +26,7 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

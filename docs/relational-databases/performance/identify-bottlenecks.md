@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,7 +24,7 @@ helpviewer_keywords:
 - bottlenecks [SQL Server]
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

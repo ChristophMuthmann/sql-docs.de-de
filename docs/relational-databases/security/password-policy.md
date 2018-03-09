@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,7 +35,7 @@ helpviewer_keywords:
 - passwords [SQL Server], complexity
 - characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

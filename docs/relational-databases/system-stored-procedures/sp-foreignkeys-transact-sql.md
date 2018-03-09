@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_foreignkeys_TSQL
 - sp_foreignkeys
-dev_langs: TSQL
-helpviewer_keywords: sp_foreignkeys
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

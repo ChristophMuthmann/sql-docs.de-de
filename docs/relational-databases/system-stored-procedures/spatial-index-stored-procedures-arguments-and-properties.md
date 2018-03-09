@@ -8,13 +8,16 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: spatial indexes [SQL Server], stored procedures
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

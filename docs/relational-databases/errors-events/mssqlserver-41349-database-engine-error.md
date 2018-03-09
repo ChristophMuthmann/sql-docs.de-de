@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 41349 (Database Engine error)
+helpviewer_keywords:
+- 41349 (Database Engine error)
 ms.assetid: dd365112-a36a-4ba1-888a-b3bc149775e6
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

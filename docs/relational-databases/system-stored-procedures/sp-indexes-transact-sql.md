@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_indexes_TSQL
 - sp_indexes
-dev_langs: TSQL
-helpviewer_keywords: sp_indexes
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

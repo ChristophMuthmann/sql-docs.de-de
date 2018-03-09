@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_control_dbmasterkey_password
 - sp_control_dbmasterkey_password_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_control_dbmasterkey_password
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

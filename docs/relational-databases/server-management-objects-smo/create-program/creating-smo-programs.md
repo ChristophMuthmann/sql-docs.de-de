@@ -18,7 +18,7 @@ helpviewer_keywords:
 - SQL Server Management Objects, programming
 - SMO [SQL Server], programming
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

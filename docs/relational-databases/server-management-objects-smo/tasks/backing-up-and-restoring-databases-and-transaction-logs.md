@@ -21,7 +21,7 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

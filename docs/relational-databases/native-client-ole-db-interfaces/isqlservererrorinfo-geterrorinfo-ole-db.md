@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
+apiname:
+- ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 apitype: COM
-helpviewer_keywords: GetErrorInfo method
+helpviewer_keywords:
+- GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

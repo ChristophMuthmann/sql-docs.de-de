@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,14 +17,15 @@ f1_keywords:
 - sys.table_types
 - sys.table_types_TSQL
 - table_types
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - table types [SQL Server]
 - table-valued parameters, sys.table_types
 - sys.table_types
 - UDTT
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

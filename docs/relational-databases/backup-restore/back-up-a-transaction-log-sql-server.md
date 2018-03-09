@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], execution plans
 - tuning queries [SQL Server]
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

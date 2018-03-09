@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-plan-guides
+ms.technology:
+- dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,7 +18,7 @@ helpviewer_keywords:
 - plan guides [SQL Server], enabling
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

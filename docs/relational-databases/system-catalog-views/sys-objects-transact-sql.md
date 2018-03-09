@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,14 +17,15 @@ f1_keywords:
 - objects
 - sys.objects
 - objects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.objects catalog view
 - table-valued parameters, sys.objects catalog view
 - user-defined table types [SQL Server]
 - table types [SQL Server]
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
-caps.latest.revision: "62"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

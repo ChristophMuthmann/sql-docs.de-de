@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

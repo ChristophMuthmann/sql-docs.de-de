@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: data-compression
-ms.technology: dbe-data-compression
+ms.technology:
+- dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,7 +24,7 @@ helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

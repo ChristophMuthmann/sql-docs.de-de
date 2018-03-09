@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changearticle
 - sp_changearticle_TSQL
-helpviewer_keywords: sp_changearticle
+helpviewer_keywords:
+- sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

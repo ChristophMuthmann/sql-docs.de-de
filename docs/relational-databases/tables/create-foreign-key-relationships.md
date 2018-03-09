@@ -8,12 +8,14 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: relationships [SQL Server], creating
+helpviewer_keywords:
+- relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -15,7 +15,7 @@ helpviewer_keywords:
 - SMO [SQL Server], installing
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

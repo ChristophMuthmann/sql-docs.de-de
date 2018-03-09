@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - file deletion [SQL Server]
 - deleting data
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

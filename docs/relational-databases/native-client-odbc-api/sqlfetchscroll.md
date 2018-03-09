@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLFetchScroll function
+helpviewer_keywords:
+- SQLFetchScroll function
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

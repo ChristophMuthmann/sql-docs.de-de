@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSmerge_dynamic_snapshots_TSQL
 - MSmerge_dynamic_snapshots
-dev_langs: TSQL
-helpviewer_keywords: MSmerge_dynamic_snapshots system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSmerge_dynamic_snapshots system table
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

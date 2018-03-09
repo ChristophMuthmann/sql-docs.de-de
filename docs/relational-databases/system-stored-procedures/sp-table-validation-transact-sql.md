@@ -8,15 +8,17 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
 - sp_table_validation
-helpviewer_keywords: sp_table_validation
+helpviewer_keywords:
+- sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

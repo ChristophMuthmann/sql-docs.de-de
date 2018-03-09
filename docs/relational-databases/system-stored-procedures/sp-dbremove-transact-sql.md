@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbremove
 - sp_dbremove_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_dbremove
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_dbremove
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

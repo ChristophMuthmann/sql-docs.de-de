@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: cursors [ODBC], options
+helpviewer_keywords:
+- cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

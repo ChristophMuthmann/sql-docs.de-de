@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changesubstatus
 - sp_changesubstatus_TSQL
-helpviewer_keywords: sp_changesubstatus
+helpviewer_keywords:
+- sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

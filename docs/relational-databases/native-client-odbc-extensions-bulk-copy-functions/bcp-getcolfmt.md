@@ -8,15 +8,19 @@ ms.service:
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: bcp_getcolfmt
-apilocation: sqlncli11.dll
+apiname:
+- bcp_getcolfmt
+apilocation:
+- sqlncli11.dll
 apitype: DLLExport
-helpviewer_keywords: bcp_getcolfmt function
+helpviewer_keywords:
+- bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

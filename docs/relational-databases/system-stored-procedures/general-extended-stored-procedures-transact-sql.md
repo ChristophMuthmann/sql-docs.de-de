@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - external routines [SQL Server]
 - system stored procedures [SQL Server], extended
@@ -20,7 +22,7 @@ helpviewer_keywords:
 - stored procedures [SQL Server], extended
 - extending SQL Server functionality
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

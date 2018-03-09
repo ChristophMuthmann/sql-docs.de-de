@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_generatefilters
 - sp_generatefilters_TSQL
-helpviewer_keywords: sp_generatefilters
+helpviewer_keywords:
+- sp_generatefilters
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 3314 (Database Engine error)
+helpviewer_keywords:
+- 3314 (Database Engine error)
 ms.assetid: f3a5ca6a-b502-4cab-b3b1-4bc753763fa9
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

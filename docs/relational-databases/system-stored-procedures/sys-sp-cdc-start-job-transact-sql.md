@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sp_cdc_start_job_TSQL
 - sys.sp_cdc_start_job_TSQL
 - sys.sp_cdc_start_job
-dev_langs: TSQL
-helpviewer_keywords: sp_cdc_start_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_cdc_start_job
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

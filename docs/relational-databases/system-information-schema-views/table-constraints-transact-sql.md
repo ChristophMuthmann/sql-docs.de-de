@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_CONSTRAINTS
 - TABLE_CONSTRAINTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INFORMATION_SCHEMA.TABLE_CONSTRAINTS view
 - TABLE_CONSTRAINTS view
 ms.assetid: 687f3284-2849-4853-8a5c-fc936deceae0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

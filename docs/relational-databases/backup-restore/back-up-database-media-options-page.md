@@ -8,14 +8,15 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - swb.backupdatabase.mediaoptions.f1
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

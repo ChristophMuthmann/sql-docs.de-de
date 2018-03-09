@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addremotelogin_TSQL
 - sp_addremotelogin
-dev_langs: TSQL
-helpviewer_keywords: sp_addremotelogin
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addremotelogin
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

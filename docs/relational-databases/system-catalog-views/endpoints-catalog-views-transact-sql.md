@@ -8,15 +8,17 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - endpoints [SQL Server], catalog views
 - catalog views [SQL Server], endpoints
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

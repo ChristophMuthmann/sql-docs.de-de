@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_replicationdboption_TSQL
 - sp_replicationdboption
-helpviewer_keywords: sp_replicationdboption
+helpviewer_keywords:
+- sp_replicationdboption
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

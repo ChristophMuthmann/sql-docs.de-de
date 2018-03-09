@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_dropdynamicsnapshot_job_TSQL
 - sp_dropdynamicsnapshot_job
-helpviewer_keywords: sp_dropdynamicsnapshot_job
+helpviewer_keywords:
+- sp_dropdynamicsnapshot_job
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

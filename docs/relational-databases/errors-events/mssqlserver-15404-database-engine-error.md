@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 15404 (Database Engine error)
+helpviewer_keywords:
+- 15404 (Database Engine error)
 ms.assetid: 69677f02-bc81-4e4a-99b8-5c1bd1de36df
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

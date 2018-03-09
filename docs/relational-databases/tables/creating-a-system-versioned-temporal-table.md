@@ -8,11 +8,12 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

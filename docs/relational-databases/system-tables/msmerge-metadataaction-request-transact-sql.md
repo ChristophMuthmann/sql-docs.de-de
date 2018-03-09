@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSmerge_metadataaction_request
 - MSmerge_metadataaction_request_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSmerge_metadataaction_request system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

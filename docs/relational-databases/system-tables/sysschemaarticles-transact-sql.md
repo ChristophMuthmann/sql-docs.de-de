@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sysschemaarticles_TSQL
 - sysschemaarticles
-dev_langs: TSQL
-helpviewer_keywords: sysschemaarticles system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysschemaarticles system table
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

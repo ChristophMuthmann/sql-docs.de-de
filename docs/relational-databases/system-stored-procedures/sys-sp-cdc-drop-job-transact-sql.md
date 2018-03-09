@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sp_cdc_drop_job_TSQL
 - sp_cdc_drop_job
 - sys.sp_cdc_drop_job
-dev_langs: TSQL
-helpviewer_keywords: sp_cdc_drop_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

@@ -19,7 +19,7 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

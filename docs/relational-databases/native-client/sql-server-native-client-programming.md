@@ -20,7 +20,7 @@ helpviewer_keywords:
 - SQLNCLI
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-caps.latest.revision: "66"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

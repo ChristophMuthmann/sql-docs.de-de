@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MStracer_tokens_TSQL
 - MStracer_tokens
-dev_langs: TSQL
-helpviewer_keywords: MStracer_tokens system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MStracer_tokens system table
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

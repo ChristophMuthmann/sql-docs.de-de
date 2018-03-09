@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLDescribeParam function
+helpviewer_keywords:
+- SQLDescribeParam function
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

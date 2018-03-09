@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - server audit [SQL Server]
 - audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

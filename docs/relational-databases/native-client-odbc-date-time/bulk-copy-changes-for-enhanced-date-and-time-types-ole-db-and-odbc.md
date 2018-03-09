@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: ODBC, bulk copy operations
+helpviewer_keywords:
+- ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

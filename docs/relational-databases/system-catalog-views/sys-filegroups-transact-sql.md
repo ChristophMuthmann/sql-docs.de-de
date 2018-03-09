@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - filegroups
 - sys.filegroups
 - filegroups_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.filegroups catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.filegroups catalog view
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

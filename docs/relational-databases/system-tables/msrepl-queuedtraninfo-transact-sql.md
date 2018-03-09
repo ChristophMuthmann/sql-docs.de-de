@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSrepl_queuedtraninfo_TSQL
 - MSrepl_queuedtraninfo
-dev_langs: TSQL
-helpviewer_keywords: MSrepl_queuedtraninfo system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSrepl_queuedtraninfo system table
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

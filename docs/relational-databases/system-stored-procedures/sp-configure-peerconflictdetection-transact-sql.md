@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
 - sp_configure_peerconflictdetection
-helpviewer_keywords: sp_configure_peerconflictdetection
+helpviewer_keywords:
+- sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

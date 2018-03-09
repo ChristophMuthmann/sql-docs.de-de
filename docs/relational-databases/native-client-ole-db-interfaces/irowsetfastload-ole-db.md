@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: COM
-helpviewer_keywords: IRowsetFastLoad interface
+helpviewer_keywords:
+- IRowsetFastLoad interface
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

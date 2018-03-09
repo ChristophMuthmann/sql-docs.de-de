@@ -8,13 +8,16 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "-1"
-helpviewer_keywords: -1 (Database Engine error)
+f1_keywords:
+- "-1"
+helpviewer_keywords:
+- -1 (Database Engine error)
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

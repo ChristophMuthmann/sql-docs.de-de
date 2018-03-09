@@ -8,14 +8,15 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

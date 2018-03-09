@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLSetEnvAttr function
+helpviewer_keywords:
+- SQLSetEnvAttr function
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

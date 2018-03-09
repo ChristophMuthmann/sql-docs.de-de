@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - KEY_COLUMN_USAGE_TSQL
 - KEY_COLUMN_USAGE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INFORMATION_SCHEMA.KEY_COLUMN_USAGE view
 - KEY_COLUMN_USAGE view
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

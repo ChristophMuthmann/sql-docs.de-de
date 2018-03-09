@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_unregistercustomresolver_TSQL
 - sp_unregistercustomresolver
-helpviewer_keywords: sp_unregistercustomresolver
+helpviewer_keywords:
+- sp_unregistercustomresolver
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

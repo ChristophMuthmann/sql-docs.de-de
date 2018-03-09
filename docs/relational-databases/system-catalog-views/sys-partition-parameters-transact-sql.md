@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - partition_parameters
 - sys.partition_parameters_TSQL
 - sys.partition_parameters
-dev_langs: TSQL
-helpviewer_keywords: sys.partition_parameters catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.partition_parameters catalog view
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

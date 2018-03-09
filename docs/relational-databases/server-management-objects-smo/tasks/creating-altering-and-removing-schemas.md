@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: schemas [SMO]
+helpviewer_keywords:
+- schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

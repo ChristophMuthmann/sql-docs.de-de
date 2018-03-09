@@ -8,12 +8,14 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 12301 (Database Engine error)
+helpviewer_keywords:
+- 12301 (Database Engine error)
 ms.assetid: 69455df4-4ce9-4a6f-af5a-8bbc93e21245
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

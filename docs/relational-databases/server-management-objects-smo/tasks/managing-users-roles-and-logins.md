@@ -16,7 +16,7 @@ helpviewer_keywords:
 - roles [SMO]
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

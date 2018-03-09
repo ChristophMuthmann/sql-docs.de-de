@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - columns [SQL Server], adding
 - adding columns
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

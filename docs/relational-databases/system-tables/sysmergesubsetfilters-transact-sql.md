@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmergesubsetfilters
 - sysmergesubsetfilters_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmergesubsetfilters system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmergesubsetfilters system table
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

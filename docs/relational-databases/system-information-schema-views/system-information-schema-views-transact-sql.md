@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - information schema views
 - schemas [SQL Server], information schema views
@@ -19,7 +21,7 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

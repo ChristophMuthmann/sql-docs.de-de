@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLForeignKeys function
+helpviewer_keywords:
+- SQLForeignKeys function
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

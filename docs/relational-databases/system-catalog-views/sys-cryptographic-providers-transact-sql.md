@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.cryptographic_providers
 - sys.cryptographic_providers_TSQL
 - cryptographic_providers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.cryptographic_providers catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.cryptographic_providers catalog view
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

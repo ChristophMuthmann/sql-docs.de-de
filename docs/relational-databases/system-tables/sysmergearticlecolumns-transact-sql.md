@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sysmergearticlecolumns
 - sysmergearticlecolumns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmergearticlecolumns system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmergearticlecolumns system table
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

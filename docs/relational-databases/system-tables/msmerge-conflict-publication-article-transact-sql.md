@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSmerge_conflict_publication_article_TSQL
 - MSmerge_conflict_publication_article
-dev_langs: TSQL
-helpviewer_keywords: MSmerge_conflict_publication_article system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

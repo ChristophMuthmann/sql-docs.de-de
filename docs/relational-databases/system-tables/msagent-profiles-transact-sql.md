@@ -8,17 +8,21 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSagent_profiles
 - MSagent_profiles_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSagent_profiles system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

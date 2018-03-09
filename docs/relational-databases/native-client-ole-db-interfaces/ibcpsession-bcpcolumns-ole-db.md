@@ -8,14 +8,17 @@ ms.service:
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IBCPSession::BCPColumns (OLE DB)
+apiname:
+- IBCPSession::BCPColumns (OLE DB)
 apitype: COM
-helpviewer_keywords: BCPColumns method
+helpviewer_keywords:
+- BCPColumns method
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

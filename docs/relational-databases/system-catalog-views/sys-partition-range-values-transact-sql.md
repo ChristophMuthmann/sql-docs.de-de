@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - partition_range_values_TSQL
 - partition_range_values
 - sys.partition_range_values_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.partition_range_values catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.partition_range_values catalog view
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

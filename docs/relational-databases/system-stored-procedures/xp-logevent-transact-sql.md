@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xp_logevent
 - xp_logevent_TSQL
-dev_langs: TSQL
-helpviewer_keywords: xp_logevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_logevent
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

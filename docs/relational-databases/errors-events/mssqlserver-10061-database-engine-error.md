@@ -8,13 +8,16 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "10061"
-helpviewer_keywords: 10061 (Database Engine error)
+f1_keywords:
+- "10061"
+helpviewer_keywords:
+- 10061 (Database Engine error)
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

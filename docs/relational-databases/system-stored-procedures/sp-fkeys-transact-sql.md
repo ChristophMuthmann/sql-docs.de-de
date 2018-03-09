@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fkeys
 - sp_fkeys_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_fkeys
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

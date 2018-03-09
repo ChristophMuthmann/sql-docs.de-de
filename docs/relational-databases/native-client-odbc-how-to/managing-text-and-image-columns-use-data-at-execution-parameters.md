@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: data-at-execution
+helpviewer_keywords:
+- data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

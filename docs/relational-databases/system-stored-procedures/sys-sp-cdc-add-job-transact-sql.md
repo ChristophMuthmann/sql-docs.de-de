@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,10 +17,12 @@ f1_keywords:
 - sys.sp_cdc_add_job
 - sys.sp_cdc_add_job_TSQL
 - sp_cdc_add_job
-dev_langs: TSQL
-helpviewer_keywords: sp_cdc_add_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

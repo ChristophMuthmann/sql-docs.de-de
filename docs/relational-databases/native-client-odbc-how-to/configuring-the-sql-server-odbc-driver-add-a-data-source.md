@@ -11,9 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: data sources [ODBC]
+helpviewer_keywords:
+- data sources [ODBC]
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

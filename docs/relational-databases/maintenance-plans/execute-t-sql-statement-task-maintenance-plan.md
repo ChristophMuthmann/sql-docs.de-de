@@ -8,13 +8,16 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.maint.tsql.f1
-helpviewer_keywords: Execute T-SQL Statement Task dialog box
+f1_keywords:
+- sql13.swb.maint.tsql.f1
+helpviewer_keywords:
+- Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

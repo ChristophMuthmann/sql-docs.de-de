@@ -8,12 +8,14 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

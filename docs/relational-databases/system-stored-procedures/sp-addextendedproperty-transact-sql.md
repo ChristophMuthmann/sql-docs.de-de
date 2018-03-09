@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addextendedproperty
 - sp_addextendedproperty_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_addextendedproperty
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addextendedproperty
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

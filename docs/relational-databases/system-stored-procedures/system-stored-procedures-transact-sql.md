@@ -8,14 +8,17 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 f1_keywords:
 - sql13.TSQLSysNoExpandPortal.f1
 - sql13.TSQLSysNoExpandPortal.f1_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - stored procedures [SQL Server]
 - APIs [SQL Server]
@@ -23,7 +26,7 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], categories
 - system stored procedures [SQL Server]
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

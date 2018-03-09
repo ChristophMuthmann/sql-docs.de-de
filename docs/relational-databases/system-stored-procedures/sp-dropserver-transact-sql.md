@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dropserver_TSQL
 - sp_dropserver
-dev_langs: TSQL
-helpviewer_keywords: sp_dropserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_dropserver
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

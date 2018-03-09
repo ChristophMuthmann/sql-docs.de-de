@@ -21,7 +21,7 @@ helpviewer_keywords:
 - certificates [SMO]
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg

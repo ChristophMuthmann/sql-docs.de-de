@@ -8,18 +8,20 @@ ms.service:
 ms.component: system-information-schema-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_PRIVILEGES_TSQL
 - TABLE_PRIVILEGES
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INFORMATION_SCHEMA.TABLE_PRIVILEGES view
 - TABLE_PRIVILEGES view
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg

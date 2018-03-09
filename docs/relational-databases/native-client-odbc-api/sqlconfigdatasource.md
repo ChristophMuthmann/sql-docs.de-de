@@ -12,9 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
-helpviewer_keywords: SQLConfigDataSource function
+helpviewer_keywords:
+- SQLConfigDataSource function
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg

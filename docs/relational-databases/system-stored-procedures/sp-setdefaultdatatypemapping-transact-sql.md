@@ -8,16 +8,19 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_setdefaultdatatypemapping
 - sp_setdefaultdatatypemapping_TSQL
-helpviewer_keywords: sp_setdefaultdatatypemapping
+helpviewer_keywords:
+- sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
