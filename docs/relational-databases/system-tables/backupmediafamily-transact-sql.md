@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b2435ce3fe98104aaf3bbb857e89779adb221e4
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ac82ec09c8051fae6614f19aad5ad2fb518bf710
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ ms.lasthandoff: 02/03/2018
 |**media_family_id**|**uniqueidentifier**|Eindeutige ID, die die Medienfamilie kennzeichnet. Kann den Wert NULL haben.|  
 |**media_count**|**int**|Anzahl der Medien in der Medienfamilie. Kann den Wert NULL haben.|  
 |**logical_device_name**|**nvarchar(128)**|Der Name dieses Sicherungsmediums in **sys.backup_devices.name**. Wenn dies ein temporäres Sicherungsmedium ist (im Gegensatz zu einem dauerhaften Sicherungsmedium, die im vorhanden **backup_devices**), den Wert der **Logical_device_name** ist NULL.|  
-|**physical_device_name**|**nvarchar(260)**|Physischer Name des Sicherungsmediums. Kann den Wert NULL haben.|  
-|**device_type**|**tinyint**|Typ des Sicherungsmediums:<br /><br /> 2 = Datenträger<br /><br /> 5 = Band<br /><br /> 7 = Virtuelles Medium<br /><br /> 105 = ein dauerhaftes Sicherungsmedium.<br /><br /> Kann den Wert NULL haben.<br /><br /> Alle Medien-Namen und Nummern verwendbaren im **backup_devices**.|  
+|**physical_device_name**|**nvarchar(260)**|Physischer Name des Sicherungsmediums. Kann den Wert NULL haben. Dieses Feld ist für sicherungs-und Wiederherstellungsprozesses freigegeben. Sie können den ursprünglichen Sicherungsziel oder der ursprünglichen Restore-Quellpfad enthalten. Je nachdem, ob Backup- oder Restore zuerst auf einem Server für eine Datenbank ausgeführt wurde. Beachten Sie, dass aufeinander folgende Wiederherstellungen aus der gleichen Sicherungsdatei nicht den Pfad, unabhängig von deren Speicherort zum Zeitpunkt der Wiederherstellung aktualisiert werden. Aus diesem Grund **Physical_device_name** Feld kann nicht verwendet werden, um die verwendete Wiederherstellungspfad finden Sie unter.|  
+|**device_type**|**tinyint**|Typ des Sicherungsmediums:<br /><br /> 2 = Datenträger<br /><br /> 5 = Band<br /><br /> 7 = Virtuelles Medium<br /><br /> 9 = Azure-Speicher<br /><br /> 105 = ein dauerhaftes Sicherungsmedium.<br /><br /> Kann den Wert NULL haben.<br /><br /> Alle Medien-Namen und Nummern verwendbaren im **backup_devices**.|  
 |**physical_block_size**|**int**|Physische Blockgröße, die zum Schreiben der Medienfamilie verwendet wurde. Kann den Wert NULL haben.|  
 |**mirror**|**tinyint**|Spiegelnummer (0-3).|  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/03/2018
  Um die Anzahl der Zeilen in dieser Tabelle und in anderen Tabellen sicherungs- und Verlaufstabellen zu verringern, führen Sie die [Sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) gespeicherte Prozedur.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sichern und Wiederherstellen von Tabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

@@ -2,7 +2,7 @@
 title: "Schnellstart: Eine Verbindung herstellen und Abfragen einer Azure SQL Data Warehouse mit SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
 description: "Dieser Schnellstart veranschaulicht, wie SQL-Vorgänge Studio (Vorschau) zum Herstellen einer Verbindung mit einer SQL-Datenbank, und führen Sie eine Abfrage"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c00912cadb94abccf14779fc6969c3a70b02a7d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d4ed7d25abb2780c719c5b8201ecae54e8e86bf
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung herstellen und Abfragen von Daten in Azure SQL Data Warehouse
 
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen einer Verbindung mit Azure SQL Datawarehouse, und verwenden Sie Transact-SQL-Anweisungen erstellen, einfügen, und wählen Sie die Daten. 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 Um diesen Schnellstart durchzuführen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], und eine Azure SQL Datawarehouse.
 
 - [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
@@ -38,32 +38,34 @@ Denken Sie daran, den Servernamen und Anmeldeinformationen!
 
 Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen einer Verbindung mit Ihrem Azure SQL Data Warehouse-Server.
 
-1. Die erste Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Verbindung** Seite sollte geöffnet werden. Wenn die **Verbindung** keine Seite öffnen, klicken Sie auf die **neue Verbindung** Symbol in der **Server** Randleiste:
+1. Die erste Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Verbindung** Seite sollte geöffnet werden. Wenn Sie sehen die **Verbindung** auf **Verbindung hinzufügen**, oder die **neue Verbindung** Symbol in der **Server** Randleiste:
    
    ![Symbol "neue Verbindung"](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. In diesem Artikel verwendet *SQL-Anmeldung*, aber *Windows-Authentifizierung* wird ebenfalls unterstützt. Füllen Sie die Felder wie folgt aus:
+2. In diesem Artikel verwendet *SQL-Anmeldung*, aber *Windows-Authentifizierung* wird ebenfalls unterstützt. Ausfüllen der Felder, die wie folgt mithilfe der Servername, Benutzername und das Kennwort für *Ihrer* Azure SQL-Server:
 
-   | Einstellung       | Vorgeschlagener Wert | Description |
+   | Einstellung       | Empfohlener Wert | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | Der vollqualifizierte Servername | Der Name sollte etwa wie folgt sein: **sqldwsample.database.windows.net** |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Lernprogramm wird die SQL-Authentifizierung verwendet. |
-   | **User name** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Benutzername** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort speichern** | Ja oder Nein | Wählen Sie Ja aus, wenn Sie nicht, das Kennwort jedes Mal eingeben möchten. |
-   | **Datenbankname** | *leer lassen* | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
+   | **Datenbankname** | *Leer lassen* | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
    | **Gruppe "Server"** | Wählen Sie<Default> | Wenn Sie eine Servergruppe erstellt haben, können Sie mit einer bestimmten Servergruppe festlegen. | 
 
    ![Symbol "neue Verbindung"](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Wenn Sie eine Fehlermeldung zur Firewall erhalten, müssen Sie eine Firewallregel erstellen. Um eine Firewallregel erstellen, finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Wenn Ihr Server eine Firewallregel, die SQL-Vorgänge Studio eine Verbindung herstellen, sodass keine der **neue Firewallregel erstellen** bilden wird geöffnet. Füllen Sie das Formular zum Erstellen einer neuen Firewallregel. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
-4. Nach einer erfolgreichen auf Ihrem Server wird im Objekt-Explorer angezeigt.
+   ![Neue Firewallregel](media/quickstart-sql-dw/firewall.png)  
+
+4. Nach dem Öffnen einer erfolgreichen auf Ihrem Server in der *Server* Randleiste.
 
 ## <a name="create-the-tutorial-data-warehouse"></a>Erstellen Sie das Lernprogramm Datawarehouse
 1. Klicken Sie mit der rechten Maustaste auf dem Server im Objekt-Explorer, und wählen Sie **neue Abfrage.**
 
-1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor ein:
+1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor, und klicken Sie auf **ausführen**:
 
    ```sql
     IF NOT EXISTS (
@@ -78,7 +80,6 @@ Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen ei
     GO
    ```
 
-1. Um die Abfrage auszuführen, klicken Sie auf **ausführen**.
 
 ## <a name="create-a-table"></a>Erstellen einer Tabelle
 
@@ -89,7 +90,10 @@ Weiterhin mit der Abfrage-Editor verbunden ist die *master* Datenbank, aber wir 
    ![Kontext ändern](media/quickstart-sql-database/change-context.png)
 
 
-1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor ein:
+1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor, und klicken Sie auf **ausführen**:
+
+   > [!NOTE]
+   > Sie können fügen diese Option, um, oder überschreiben Sie die vorherige Abfrage im Editor. Beachten Sie, dass beim Klicken auf **ausführen** führt nur die Abfrage, die ausgewählt wird. Wenn nichts ausgewählt ist, klicken Sie auf **ausführen** führt alle Abfragen im Editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -108,11 +112,10 @@ Weiterhin mit der Abfrage-Editor verbunden ist die *master* Datenbank, aber wir 
    GO
    ```
 
-1. Um die Abfrage auszuführen, klicken Sie auf **ausführen**.
 
 ## <a name="insert-rows"></a>Einfügen von Zeilen
 
-1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor ein:
+1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor, und klicken Sie auf **ausführen**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -124,17 +127,16 @@ Weiterhin mit der Abfrage-Editor verbunden ist die *master* Datenbank, aber wir 
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-1. Um die Abfrage auszuführen, klicken Sie auf **ausführen**.
 
 ## <a name="view-the-result"></a>Zeigen Sie das Ergebnis an.
-1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor ein:
+1. Fügen Sie den folgenden Ausschnitt in den Abfrage-Editor, und klicken Sie auf **ausführen**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Um die Abfrage auszuführen, klicken Sie auf **ausführen**.
+1. Die Ergebnisse der Abfrage werden angezeigt:
 
    ![Select-Ergebnisse](media/quickstart-sql-dw/select-results.png)
 

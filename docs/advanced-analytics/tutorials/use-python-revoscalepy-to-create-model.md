@@ -1,8 +1,7 @@
 ---
 title: Verwenden von Python mit Revoscalepy zum Erstellen eines Modells | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 09/19/2017
+titleSuffix: SQL Server
+ms.date: 02/28/2018
 mms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,46 +14,74 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 1ced0d05a74f43c6b80be6717826ab288ee25374
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 02e4592398e0558ff01a968bef7c3d1dd199666c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Verwenden von Python mit Revoscalepy zum Erstellen eines Modells
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Beispiel wird veranschaulicht, wie ein lineares Regressionsmodell in SQL Server mithilfe eines Algorithmus aus können die **Revoscalepy** Paket.
-
-Die **Revoscalepy** -Paket für Python-Objekte, Transformationen enthält und Algorithmen, die ähnliche aus Gründen der **"revoscaler"** -Paket für die Sprache "R". Mit dieser Bibliothek können Sie einen computekontext erstellen, Verschieben von Daten zwischen remotecomputekontexten, Transformieren von Daten und Vorhersagemodellen mit gängigen Algorithmen wie z. B. logistische und lineare Regression und Entscheidungsstrukturen zu trainieren.
-
-Weitere Informationen finden Sie unter [neuerungen Revoscalepy?](../python/what-is-revoscalepy.md) und [Python-Funktion Referenz](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
+In dieser Lektion erfahren Sie, wie zum Ausführen von Python-Code von einem Remotecomputer aus zum Entwickeln-Client, um ein lineares Regressionsmodell in SQL Server zu erstellen. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-> [!IMPORTANT]
-> Zum Ausführen von Python-Code in SQL Server muss installiert sein CTP für SQL Server 2017 2.0 oder höher, und müssen Sie installieren und aktivieren Sie das Feature "" **Machine Learning Services** mit Python. Integration von Python unterstützt andere Versionen von SQL Server nicht.
++ In dieser Lektion verwendet unterschiedliche Daten als die vorherigen Lektionen. Sie müssen nicht zuerst die vorherigen Lektionen abgeschlossen. Jedoch wenn Sie die vorherigen Lektionen abgeschlossen haben und einen Server zum Ausführen von Python bereits konfiguriert haben, verwenden Sie dieses Servers und der Datenbank als computekontext verwenden.
+
++ Zum Ausführen von Python-Code mithilfe von SQL Server als einem Computer erfordert-Kontext für SQLServer 2017 oder höher. Darüber hinaus müssen Sie explizit zu installieren und aktivieren Sie das Feature "" **Machine Learning Services**, die Python-Language-Option auswählen.
+
+    Wenn Sie eine Vorabversion von SQL Server-2017 installiert haben, sollten Sie auf mindestens die RTM-Version aktualisieren. Höhere Dienstversionen wurde erweitern und die Python-Funktionalität. Einige Funktionen dieses Lernprogramm funktionieren möglicherweise nicht in frühen Versionen vor.
+
++ Dieses Beispiel verwendet eine vordefinierte Python-Umgebung, mit dem Namen `PYTEST_SQL_SERVER`. Die Umgebung konfiguriert wurde, dass enthalten **Revoscalepy** und anderen erforderlichen Bibliotheken. 
+
+    Wenn Sie keine Umgebung zum Ausführen von Python konfiguriert haben, müssen Sie dies separat tun. Eine Erläuterung zum Erstellen oder Ändern von Python-Umgebungen liegt außerhalb des gültigen Bereichs für dieses Lernprogramm. Weitere Informationen zum Einrichten von eines Python-Clients, der die richtigen Bibliotheken enthält, finden Sie unter [installieren Sie Python-Client](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) und [Link Python-Tools](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools).
+
+## <a name="remote-compute-contexts-and-revoscalepy"></a>Remote rechenkontexte und revoscalepy
+
+In diesem Beispiel wird veranschaulicht, wie eine Python-Modell zu erstellen, in einem _computekontext_, und Sie können Sie von einem Client aus arbeiten, aber wählen Sie eine remote-Umgebung, z. B. SQL Server, Spark oder Machine Learning-Servers, auf dem die Vorgänge werden tatsächlich ausgeführt. Verwenden rechenkontexte erleichtert es einmal Schreiben von Code und eine beliebige unterstützte Umgebung bereitgestellt.
+
+Zum Ausführen von Python-Code in SQL Server erfordert die **Revoscalepy** Paket. Dies ist eine spezielle Python-Paket bereitgestellt von Microsoft, ähnlich wie die **"revoscaler"** -Paket für die Sprache "R". Die **Revoscalepy** Paket unterstützt die Erstellung von rechenkontexte, und bietet die Infrastruktur für die Übergabe von Daten und Modellen zwischen einer lokalen Arbeitsstation und einem Remoteserver. Die **Revoscalepy** -Funktion, die Ausführung von Code in der Datenbank wird unterstützt [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
+
+Sie verwenden in dieser Lektion Daten in SQL Server zum Trainieren eines linearen Modells, basierend auf [Rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), eine Funktion in **Revoscalepy** , Regression sehr großer Datasets unterstützt. 
+
+In dieser Lektion wird auch die Grundlagen zum Einrichten und verwenden Sie dann eine **SQL Server-computekontext** in Python. Nähere Informationen dazu, wie rechenkontexte mit anderen Plattformen funktionieren, und welcher Kontexten compute unterstützt werden, finden Sie unter [computekontext für die Ausführung des Skripts in Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)
+
+## <a name="prepare-the-database-and-sample-data"></a>Vorbereiten der Daten der Datenbank und Beispiel
+
+1. In dieser Lektion wird die Datenbank verwendet `sqlpy`. Wenn Sie keine vorherigen Lektionen abgeschlossen haben, können Sie die Datenbank erstellen, durch Ausführen des folgenden Codes:
+
+    ```sql
+    CREATE DATABASE sqlpy;
+    GO;
+    USE sqlpy;
+    GO;
+    ```
+
+    > [!IMPORTANT]
+    > Wenn Sie eine andere Datenbank verwenden möchten, achten Sie darauf, dass Sie die Beispielcode bearbeiten und den Datenbanknamen in der Verbindungszeichenfolge ändern.
+
+2. Dieses Beispiel verwendet das Dataset Airline-Aktivität, die in R und Python verfügbar ist. Nachdem Sie eine Datenbank für die Python-Beispiele erstellt haben, eine Tabelle mit den Daten füllen, wie hier beschrieben: [Beispieldaten im "revoscaler"](https://docs.microsoft.com/machine-learning-server/r/sample-built-in-data).
+
+3. Ändern Sie den Namen dieser Umgebung auf dem Client mit einer Umgebung zur Verfügung.
 
 ## <a name="run-the-sample-code"></a>Führen Sie den Beispielcode
 
-Dieser Code führt die folgenden Schritte aus:
+Nachdem Sie die Datenbank vorbereitet haben, und haben, die Daten für das Training, die in einer Tabelle gespeichert eine Python-Entwicklungsumgebung zu öffnen und Ausführen des Codebeispiels.
 
-1. Importiert die erforderlichen Bibliotheken und Funktionen
-2. Erstellt eine Verbindung mit SQL Server und Datenquellenobjekte zum Arbeiten mit den Daten erstellt
-3. Ändert die Daten, sodass es von den logistic Regression-Algorithmus verwendet werden kann
+Der Code führt die folgenden Schritte aus:
+
+1. Importiert die erforderlichen Bibliotheken und Funktionen.
+2. Erstellt eine Verbindung mit SQL Server. Erstellt **Datenquelle** Objekte für die Arbeit mit den Daten.
+3. Ändert die Daten mit **Transformationen** , damit sie von den logistic Regression-Algorithmus verwendet werden kann.
 4. Aufrufe `rx_lin_mod` und definiert die Formel verwendet, um das Modell passt.
-5. Generiert eine Reihe von Vorhersagen auf Grundlage des ursprünglichen Datasets
-6. Erstellt eine Zusammenfassung, die basierend auf den vorhergesagten Werten
+5. Generiert einen Satz von Vorhersagen auf Grundlage der ursprünglichen Daten.
+6. Erstellt eine Zusammenfassung, die basierend auf den vorhergesagten Werten.
 
 Alle Vorgänge sind mit einer Instanz von SQL Server als computekontext.
 
-Im Allgemeinen ist der Prozess der aufrufenden Python in einen remote-computekontext ähnlich wie bei der Verwendung von R in einen remote-computekontext. Führen Sie das Beispiel als ein Python-Skript über die Befehlszeile oder mithilfe einer Python-Entwicklungsumgebung, die die bereitgestellten Python-Integrationskomponenten in dieser Version enthält. In Ihrem Code erstellen und verwenden eine Compute Context-Objekt, um anzugeben, wo bestimmte Berechnungen ausgeführt werden soll.
-
 > [!NOTE]
-> Achten Sie darauf, dass die Datenbank und die Umgebung Namen nach Bedarf ändern.
-> 
 > Eine Demonstration dieses Beispiels über die Befehlszeile ausgeführt wird, finden Sie in diesem Video: [SQL Server 2017 Advanced Analytics mit Python](https://www.youtube.com/watch?v=FcoY795jTcc)
-
 
 ### <a name="sample-code"></a>Beispielcode
 
@@ -69,7 +96,7 @@ import os
 def test_linmod_sql():
     sql_server = os.getenv('PYTEST_SQL_SERVER', '.')
     
-    sql_connection_string = 'Driver=SQL Server;Server=' + sqlServer + ';Database=PyTestDb;Trusted_Connection=True;'
+    sql_connection_string = 'Driver=SQL Server;Server=' + sqlServer + ';Database=sqlpy;Trusted_Connection=True;'
     print("connectionString={0!s}".format(sql_connection_string))
 
     data_source = RxSqlServerData(
@@ -105,42 +132,59 @@ def test_linmod_sql():
     summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)
 ```
 
-## <a name="discussion"></a>Erläuterung
+### <a name="defining-a-data-source-vs-defining-a-compute-context"></a>Definieren einer Datenquelle im Vergleich zu definieren einen computekontext.
 
-Nehmen wir den Code überprüfen, und markieren Sie einige wichtige Schritte.
+Eine Datenquelle unterscheidet sich von einen computekontext. Die _Datenquelle_ definiert die Daten in Ihrem Code verwendet. Die _computekontext_ definiert, in dem der Code ausgeführt wird. Allerdings verwenden einige der Informationen:
 
-### <a name="defining-a-data-source-and-compute-context"></a>Definieren eine Datenquelle aus, und computekontext
++ Python-Variablen, wie z. B. `sql_query` und `sql_connection_string`, die Quelle der Daten zu definieren. 
 
-Eine Datenquelle unterscheidet sich von einen computekontext. Die _Datenquelle_ definiert die Daten in Ihrem Code verwendet. Die _computekontext_ definiert, in dem der Code ausgeführt wird.
+    Diese Variablen zum Übergeben der [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) Konstruktor zum Implementieren der **Datenquellenobjekt** mit dem Namen `data_source`.
 
-1. Erstellen Sie die Python-Variablen, z. B. `sql_query` und `sql_connection_string`, die definiert, die Quelle und die Daten, die Sie verwenden möchten. Diese Variablen zum Übergeben der [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) Konstruktor zum Implementieren der **Datenquellenobjekt** mit dem Namen `data_source`.
-2. Erstellen Sie eine Compute Context-Objekt mithilfe der [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) Konstruktor. In diesem Beispiel übergeben Sie dieselbe Verbindungszeichenfolge, die Sie zuvor auf der Annahme definiert, die die Daten in der gleichen SQL Server-Instanz ist, die Sie als computekontext verwenden möchten. Allerdings können die Datenquelle und des computekontexts auf verschiedenen Servern sein. Das resultierende **compute Context-Objekt** lautet `sql_cc`.
-3. Wählen Sie den aktiven computekontext. Standardmäßig Vorgänge werden lokal ausgeführt wird, d. h., wenn Sie einen anderen computekontext nicht angeben, werden die Daten aus der Datenquelle abgerufen werden und das Modell Anpassung wird in der aktuellen Python-Umgebung ausgeführt.
++ Sie erstellen eine **compute Context-Objekt** mithilfe der [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) Konstruktor. Das resultierende **compute Context-Objekt** lautet `sql_cc`.
 
+    Dieses Beispiel verwendet die gleiche Verbindungszeichenfolge, mit denen Sie erneut in der Datenquelle, auf der Annahme, die die Daten in der gleichen SQL Server-Instanz ist, die Sie als computekontext verwenden möchten. 
+    
+    Allerdings können die Datenquelle und des computekontexts auf verschiedenen Servern sein.
+ 
 ### <a name="changing-compute-contexts"></a>Ändern rechenkontexte
+
+Nachdem Sie einen computekontext definiert haben, müssen Sie festlegen der **active computekontext**. 
+
+Wird standardmäßig die meisten Vorgänge werden lokal ausgeführt wird, d. h., wenn Sie einen anderen computekontext nicht angeben, werden die Daten aus der Datenquelle abgerufen werden und der Code in der aktuellen Python-Umgebung ausgeführt wird.
+
+Es gibt zwei Möglichkeiten zum Festlegen des aktiven computekontexts:
++ Als Argument einer Methode oder Funktion
++ Durch Aufrufen `rx_set_computecontext`
+
+#### <a name="set-compute-context-as-an-argument-of-a-method-or-function"></a>Legen Sie als Argument einer Methode oder Funktion-computekontext.
 
 In diesem Beispiel Festlegen des computekontexts mit dem Argument der einzelnen **Rx** Funktion.
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-Das gleiche gilt, in dem Aufruf von **Rxsummary**, wobei computekontext wiederverwendet wird.
+Diese computekontext wird im Aufruf wiederverwendet [Rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):.
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-Sie können auch mithilfe der Funktion [Rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context) zwischen rechenkontexte zu wechseln, die bereits definiert wurden.
+#### <a name="set-a-compute-context-explicitly-using-rxsetcomputecontext"></a>Legen Sie einen computekontext explizit mit rx_set_compute_context
 
-### <a name="setting-the-degree-of-parallelism"></a>Den Grad an Parallelität festlegen
+Die Funktion [Rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) können Sie zwischen wechseln von remotecomputekontexten, die bereits definiert wurden.
+
+Nachdem Sie festgelegt haben der aktiven computekontext, bleibt aktiv, bis Sie ihn ändern.
+
+### <a name="using-parallel-processing-and-streaming"></a>Verwenden parallele Verarbeitung und streaming
 
 Beim Festlegen des computekontexts können Sie auch Parameter, die steuern festlegen wie die Daten von der computekontext behandelt werden. Diese Parameter variieren je nach Typ der Datenquelle.
 
 Sie können für SQL Server-rechenkontexte legen Sie die Batchgröße oder Bereitstellen von Hinweisen zur den Grad der Parallelität in ausgeführten Aufgaben verwenden.
 
-Das Beispiel auf einem Computer mit vier Prozessoren ausgeführt wurde, damit wir setzen die *Num_tasks* Parameter 4. Wenn Sie diesen Wert auf 0 festlegen, verwendet SQL Server die Standardeinstellung, die so viele Aufgaben gleichzeitig wie möglich, unter dem aktuellen MAXDOP-Einstellungen für den Server ausgeführt wird. Hängt jedoch auch auf Servern mit vielen Prozessoren, die genaue Anzahl der Aufgaben, die möglicherweise viele andere Faktoren, z. B. Server-Einstellungen und andere Aufträge, die ausgeführt werden.
++ Das Beispiel auf einem Computer mit vier Prozessoren ausgeführt wurde daher das `num_tasks` Parameter auf 4 festgelegt ist, um maximale Nutzung von Ressourcen zu ermöglichen. 
++ Wenn Sie diesen Wert auf 0 festlegen, verwendet SQL Server die Standardeinstellung, die so viele Aufgaben gleichzeitig wie möglich, unter dem aktuellen MAXDOP-Einstellungen für den Server ausgeführt wird. Allerdings hängt die genaue Anzahl der Aufgaben, die möglicherweise viele andere Faktoren, z. B. Server-Einstellungen und andere Aufträge, die ausgeführt werden.
 
 ## <a name="related-samples"></a>Beispiele
 
-Diese Python-Beispiele und Lernprogramme für erweiterte Tipps und End-to-End-Demos angezeigt.
+Diese zusätzliche Python-Beispiele und Lernprogramme veranschaulichen End-to-End-Szenarien, die mit komplexen Datenquellen als auch die Verwendung von remote rechenkontexte.
 
 + [In der Datenbank Python für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md)
 + [Erstellen eines Vorhersagemodells über Python- und SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
-+ [Bereitstellen und Nutzen von Python-Modelle](../python/publish-consume-python-code.md)
++ [Erstellen eines Vorhersagemodells über Python- und SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
