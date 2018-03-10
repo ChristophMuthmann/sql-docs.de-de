@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/15/2018
