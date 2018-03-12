@@ -29,10 +29,10 @@ ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce69679a348fdb29b334f45fa5e3a61f8dd14e2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +59,15 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|ID der Ablaufverfolgung.|  
-|Eigenschaft|**int**|Eigenschaft der Ablaufverfolgung:<br /><br /> 1= Ablaufverfolgungsoptionen. Weitere Informationen finden Sie unter @options in [Sp_trace_create &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Dateiname<br /><br /> 3 = Maximale Größe<br /><br /> 4 = Beendigungszeit<br /><br /> 5 = Aktueller Status der Ablaufverfolgung 0 = beendet. 1 = aktiv|  
+|Eigenschaft|**int**|Eigenschaft der Ablaufverfolgung:<br /><br /> 1= Ablaufverfolgungsoptionen. Weitere Informationen finden Sie unter @options in [Sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Dateiname<br /><br /> 3 = Maximale Größe<br /><br /> 4 = Beendigungszeit<br /><br /> 5 = Aktueller Status der Ablaufverfolgung 0 = beendet. 1 = aktiv|  
 |Wert|**sql_variant**|Informationen zur Eigenschaft der angegebenen Ablaufverfolgung.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die ID einer bestimmten Ablaufverfolgung übergeben, gibt Fn_trace_getinfo Informationen zu dieser Ablaufverfolgung zurück. Wird eine ungültige ID übergeben, gibt die Funktion ein leeres Rowset zurück.  
   
- Fn_trace_getinfo fügt die Erweiterung trc an den Namen jeder Ablaufverfolgungsdatei, die im Resultset enthalten. Informationen zum Definieren einer Ablaufverfolgung finden Sie unter [Sp_trace_create &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Ähnliche Informationen zu Ablaufverfolgungsfiltern finden Sie unter [Sys. fn_trace_getfilterinfo &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
+ Fn_trace_getinfo fügt die Erweiterung trc an den Namen jeder Ablaufverfolgungsdatei, die im Resultset enthalten. Informationen zum Definieren einer Ablaufverfolgung finden Sie unter [Sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Ähnliche Informationen zu Ablaufverfolgungsfiltern finden Sie unter [Sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
   
- Ein vollständiges Beispiel der Verwendung von Ablaufverfolgung-gespeicherte Prozeduren finden Sie unter [Erstellen einer Ablaufverfolgung &#40; Transact-SQL &#41; ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ Ein vollständiges Beispiel der Verwendung von Ablaufverfolgung-gespeicherte Prozeduren finden Sie unter [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER TRACE-Berechtigung auf dem Server.  
