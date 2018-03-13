@@ -39,10 +39,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
@@ -102,11 +102,11 @@ ms.lasthandoff: 02/15/2018
 |Foreach-ADLS-Datei|Geben Sie das Azure Data Lake Store-Verzeichnis an, das die aufzuzählenden Dateien enthält.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Hinzufügen einer Enumeration zu einer Ablaufsteuerung mit einem Foreach-Schleifencontainer
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt den Foreach-Schleifencontainer ein. Dabei handelt es sich um ein Ablaufsteuerungselement, mit dem Sie auf einfache Weise eine Schleifenkonstruktion einschließen können, mit der Dateien und Objekte in der Ablaufsteuerung eines Pakets aufgezählt werden. Weitere Informationen finden Sie unter [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt den Foreach-Schleifencontainer ein. Dabei handelt es sich um ein Ablaufsteuerungselement, mit dem Sie auf einfache Weise eine Schleifenkonstruktion einschließen können, mit der Dateien und Objekte in der Ablaufsteuerung eines Pakets aufgezählt werden. Weitere Informationen finden Sie unter [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md).  
   
  Der Foreach-Schleifencontainer stellt keine Funktionalität bereit. Er stellt lediglich die Struktur bereit, in der Sie die wiederholbare Ablaufsteuerung erstellen, einen Enumeratortyp angeben und den Enumerator konfigurieren. Sie müssen mindestens einen Task in den Foreach-Schleifencontainer einschließen, um Containerfunktionalität bereitzustellen. Weitere Informationen finden Sie unter [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
- Der Foreach-Schleifencontainer kann eine Ablaufsteuerung mit mehreren Tasks und anderen Containern einschließen. Das Hinzufügen von Tasks und Containern zu einem Foreach-Schleifencontainer ist mit dem Hinzufügen von Tasks und Containern zu einem Paket vergleichbar, außer dass Sie die Tasks und Container nicht in das Paket, sondern in den Foreach-Schleifencontainer ziehen. Falls der Foreach-Schleifencontainer mehrere Tasks oder Container einschließt, können Sie diese wie bei einem Paket mithilfe von Rangfolgeneinschränkungen verbinden. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
+ Der Foreach-Schleifencontainer kann eine Ablaufsteuerung mit mehreren Tasks und anderen Containern einschließen. Das Hinzufügen von Tasks und Containern zu einem Foreach-Schleifencontainer ist mit dem Hinzufügen von Tasks und Containern zu einem Paket vergleichbar, außer dass Sie die Tasks und Container nicht in das Paket, sondern in den Foreach-Schleifencontainer ziehen. Falls der Foreach-Schleifencontainer mehrere Tasks oder Container einschließt, können Sie diese wie bei einem Paket mithilfe von Rangfolgeneinschränkungen verbinden. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>Hinzufügen und Konfigurieren eines Foreach-Schleifencontainers
   
@@ -186,14 +186,14 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Weitere Informationen für Foreach-Schleifencontainer und wie diese zu konfigurieren sind, finden Sie unter [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Foreach-Schleifencontainer an. Dieser Name wird als Bezeichnung des Tasksymbols und in Protokollen verwendet.  
   
 > [!NOTE]  
 >  Objektnamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Beschreibung**  
+ **Description**  
  Geben Sie eine Beschreibung des Foreach-Schleifencontainers an.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Foreach-Schleifen-Editor: Seite „Collection“
@@ -205,7 +205,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Enumerator**  
  Wählen Sie den Enumeratortyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Foreach-Datei-Enumerator**|Zählt Dateien auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Dateienumerator**die dynamischen Optionen angezeigt.|  
 |**Foreach-Element-Enumerator**|Zählt Werte in einem Element auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Elementenumerator**die dynamischen Optionen angezeigt.|  
@@ -346,7 +346,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **DocumentSourceType**  
  Wählen Sie den Quelltyp des XML-Dokuments aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -366,7 +366,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **EnumerationType**  
  Wählen Sie einen Enumerationstyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Navigator**|Die Aufzählung erfolgt mithilfe eines XPathNavigators.|  
 |**Node**|Zählt Knoten auf, die durch einen XPath-Vorgang zurückgegeben wurden.|  
@@ -376,7 +376,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **OuterXPathStringSourceType**  
  Wählen Sie den Quelltyp der XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar: 
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -399,7 +399,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **InnerXPathStringSourceType**  
  Wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -424,7 +424,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Verwandte Themen: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
- **Aufzählen**  
+ **Auflisten von**  
  Geben Sie das aufzuzählende SMO-Objekt an.  
   
  **Durchsuchen**  
@@ -500,7 +500,7 @@ Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.
   
  Das Lernprogramm für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Erstellen eines einfachen ETL-Pakets enthält eine Lektion, die Ihnen zeigt, wie Sie eine Foreach-Schleife hinzufügen und konfigurieren können.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Variable**  
  Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf **Neue Variable...**, um eine neue Variable zu erstellen.  
   
@@ -521,7 +521,7 @@ Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.
 ## <a name="schema-restrictions-dialog-box-adonet"></a>Dialogfeld „Schemaeinschränkungen“ (ADO.NET)
 Mit dem Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkungen fest, die für den Enumerator für das Foreach-ADO.NET-Schemarowset gelten.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Einschränkungen**  
  Wählen Sie die Einschränkungen aus, die für das Schema gelten.  
   
@@ -536,7 +536,7 @@ Mit dem Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkung
 ## <a name="for-each-item-columns-dialog-box"></a>ForEach-Elementspalten (Dialogfeld)
 Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die in den Elementen des ForEach-Elementenumerators enthalten sind.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Column**  
  Listet die Spalten auf.  
   
@@ -550,16 +550,16 @@ Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die 
  Wählen Sie eine Spalte aus, und klicken Sie auf **Entfernen**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO-Enumeration auswählen (Dialogfeld)
-Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen** , um das aufzuzählende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects-Objekt (SMO-Objekt) für die angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz anzugeben und den Enumerationstyp auszuwählen.  
+Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen**, um das aufzuzählende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects-Objekt (SMO-Objekt) für die angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz anzugeben und den Enumerationstyp auszuwählen.  
   
-### <a name="options"></a>Tastatur  
- **Aufzählen**  
+### <a name="options"></a>Optionen  
+ **Auflisten von**  
  Erweitern des Servers und Auswählen eines SMO-Objekts.  
   
  **Objekte**  
  Verwenden des Enumerationstyps Objekte.  
   
- **Vorauffüllen**  
+ **Vorab aufzufüllen**  
  Verwenden der Option **Vorauffüllen** mit dem Enumerationstyp „Objekte“.  
   
  **Namen**  
@@ -578,7 +578,7 @@ Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen** , um das aufzuzähle
   
  Das Paket sollte so konfiguriert sein, dass jeweils nur eine ausführbare Datei ausgeführt wird, um in der Schleife negative Auswirkungen einer unbestimmten Zeitvorgabe der parallelen Taskausführung zu vermeiden. Wenn beispielsweise ein Paket mehrere Tasks gleichzeitig ausführen kann, können bei einem Foreach-Schleifencontainer, der im Ordner vorhandene Dateien aufzählt, die Dateinamen abruft und dann mithilfe eines Tasks "SQL ausführen" die Dateinamen in eine Tabelle einfügt, Schreibkonflikte auftreten, falls zwei Instanzen des Tasks "SQL ausführen" versuchen, zur selben Zeit zu schreiben. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)   
  [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)  
   

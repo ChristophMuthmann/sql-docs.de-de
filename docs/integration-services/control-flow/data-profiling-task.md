@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
   Der Datenprofilerstellungs-Task berechnet verschiedene Profile, mit deren Hilfe Sie sich mit einer Datenquelle vertraut machen und Probleme bei den Daten identifizieren können, die behoben werden müssen.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/15/2018
 |**DataProfilingTaskTrace**|Stellt beschreibende Informationen zum Taskstatus zur Verfügung. Nachrichten beinhalten folgende Informationen:<br /><br /> Start der Anforderungsverarbeitung<br /><br /> Abfragestart<br /><br /> Abfrageende<br /><br /> Beenden der Anforderungsverarbeitung|  
   
 ## <a name="output-and-its-schema"></a>Ausgabe und zugehöriges Schema  
- Der Datenprofilerstellungs-Task gibt die ausgewählten Profile im XML-Format aus, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Sie können angeben, ob diese XML-Ausgabe in einer Datei oder einer Paketvariablen gespeichert wird. Sie können dieses Schema unter [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)(möglicherweise nur in englischer Sprache) online anzeigen. Auf der Webseite können Sie eine lokale Kopie des Schemas speichern. Anschließend können Sie die lokale Kopie des Schemas in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder einem anderen Schema-Editor, in einem XML-Editor oder einem Texteditor wie Notepad anzeigen.  
+ Der Datenprofilerstellungs-Task gibt die ausgewählten Profile im XML-Format aus, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Sie können angeben, ob diese XML-Ausgabe in einer Datei oder einer Paketvariablen gespeichert wird. Sie können dieses Schema auf online anzeigen [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Auf der Webseite können Sie eine lokale Kopie des Schemas speichern. Anschließend können Sie die lokale Kopie des Schemas in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder einem anderen Schema-Editor, in einem XML-Editor oder einem Texteditor wie Notepad anzeigen.  
   
  Dieses Schema für Datenqualitätsinformationen kann für Folgendes nützlich sein:  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/15/2018
   
 -   Erstellen von benutzerdefinierten Tools, die mit Datenqualitätsinformationen arbeiten.  
   
- Der Zielnamespace wird im Schema als [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)identifiziert.  
+ Der Zielnamespace im Schema als identifiziert [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Ausgabe im bedingten Workflow eines Pakets  
  Die Komponenten der Datenprofilerstellung umfassen keine integrierten Funktionen zur Implementierung bedingter Logik im Workflow des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets basierend auf der Ausgabe des Datenprofilerstellungs-Tasks. Sie können diese Logik, mit minimalem Programmieraufwand, problemlos in einem Skripttask hinzufügen. Mit diesem Code wird eine Xpath-Abfrage der XML-Ausgabe durchgeführt und das Ergebnis in einer Paketvariablen gespeichert. Die Rangfolgeneinschränkungen, mit denen der Skripttask mit nachfolgenden Tasks verbunden wird, können einen Ausdruck verwenden, um den Workflow zu bestimmen. Der Skripttask stellt beispielsweise fest, dass der Prozentsatz der NULL-Werte in einer Spalte einen bestimmten Schwellenwert überschreitet. Wenn diese Bedingung wahr ist, sollten Sie das Paket unterbrechen und das Problem beheben, bevor Sie fortfahren.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 02/15/2018
  [Seite Profilanforderungen](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  Auf der Seite **Profilanforderungen** geben Sie die Datenquelle an und wählen und konfigurieren die Datenprofile, die Sie berechnen möchten. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den verschiedenen Profilen zu erhalten, die Sie konfigurieren können:  
   
--   [Optionen für die Anforderung für Kandidatenschlüsselprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Kandidat Profiloptionen für Anforderung Key &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [Optionen für Anforderung für Verteilungsprofil für Spaltenlänge &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   

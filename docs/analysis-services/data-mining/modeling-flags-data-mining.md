@@ -30,14 +30,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Modellierungsflags (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Sie können Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dazu verwenden, für einen Data Mining-Algorithmus zusätzliche Informationen zu den Daten bereitzustellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
+  Sie können Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dazu verwenden, für einen Data Mining-Algorithmus zusätzliche Informationen zu den Daten bereitzustellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
   
  Einige Modellierungsflags werden auf der Ebene der Miningstruktur definiert, während andere auf der Ebene der Miningmodellspalte definiert werden. Beispielsweise wird das **NOT NULL** -Modellierungsflag für Miningstrukturspalten verwendet. Sie können zusätzliche Modellierungsflags für die Miningmodellspalten definieren, abhängig vom Algorithmus, den Sie zur Erstellung des Modells verwenden.  
   

@@ -35,14 +35,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Time Series-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus umfasst zwei separate Algorithmen zum Analysieren einer Zeitreihe:  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus umfasst zwei separate Algorithmen zum Analysieren einer Zeitreihe:  
   
 -   Der ARTXP-Algorithmus, der seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]im Produktumfang enthalten ist, wurde zur Vorhersage des nächsten wahrscheinlichen Werts in einer Reihe optimiert.  
   
@@ -53,7 +53,7 @@ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus 
  Dieses Thema enthält zusätzliche Informationen darüber, wie Sie die einzelnen Algorithmen implementieren und den Algorithmus durch Festlegen der Parameter anpassen können, um die Analyse und Vorhersageergebnisse zu optimieren.  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Implementierung des Microsoft Time Series-Algorithmus  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research entwickelte den ursprünglichen ARTXP-Algorithmus, der in SQL Server 2005 verwendet wurde. Die Implementierung basierte hierbei auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Daher kann der ARTXP-Algorithmus als autoregressives Strukturmodell zur Darstellung von periodischen Zeitreihendaten beschrieben werden. Dieser Algorithmus setzt eine variable Anzahl von Vergangenheitselementen mit jedem aktuellen Element, das vorhergesagt wird, in Beziehung. Der Name ARTXP leitet sich von der Tatsache ab, dass die autoregressive Strukturmethode (ein ART-Algorithmus) auf mehrere unbekannte frühere Zustände angewendet wird. Eine ausführliche Erklärung des ARTXP-Algorithmus finden Sie unter [Autoregressive Strukturmodelle zum Analysieren einer Zeitreihe](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]Research entwickelte den ursprünglichen ARTXP-Algorithmus, die in SQL Server 2005, die Implementierung basierte hierbei auf verwendet wurde die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Daher kann der ARTXP-Algorithmus als autoregressives Strukturmodell zur Darstellung von periodischen Zeitreihendaten beschrieben werden. Dieser Algorithmus setzt eine variable Anzahl von Vergangenheitselementen mit jedem aktuellen Element, das vorhergesagt wird, in Beziehung. Der Name ARTXP leitet sich von der Tatsache ab, dass die autoregressive Strukturmethode (ein ART-Algorithmus) auf mehrere unbekannte frühere Zustände angewendet wird. Eine ausführliche Erklärung des ARTXP-Algorithmus finden Sie unter [Autoregressive Strukturmodelle zum Analysieren einer Zeitreihe](http://go.microsoft.com/fwlink/?LinkId=45966).  
   
  Der ARIMA-Algorithmus wurde dem Microsoft Time Series-Algorithmus in SQL Server 2008 hinzugefügt, um die Genauigkeit bei langfristigen Vorhersagen zu verbessern. Es handelt sich um eine Implementierung des Prozesses zur Berechnung von autoregressiven integrierten gleitenden Durchschnitten, der von Box und Jenkins beschrieben wurde. Die ARIMA-Methode ermöglicht die Bestimmung von Abhängigkeiten bei Beobachtungen in einer Zeitreihe. Zufällige Schocks können als Teil des Modells eingebunden werden. Die ARIMA-Methode unterstützt auch multiplizierende Saisonabhängigkeit. Benutzern, die an weiteren Informationen zum ARIMA-Algorithmus interessiert sind, wird empfohlen, die grundlegenden Ausführungen zu diesem Thema von Box und Jenkins zu lesen. Dieser Abschnitt bietet spezielle Details zur Implementierung der ARIMA-Methode im Microsoft Time Series-Algorithmus.  
   
