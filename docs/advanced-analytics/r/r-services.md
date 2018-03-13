@@ -16,10 +16,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Wesentliche Vorteile:
 
 Mit SQL Server 2016 veröffentlichte Microsoft zwei Serverplattformen zur Integration der beliebten Open-Source-Sprache R mit Geschäftsanwendungen:
 
-+ **SQL Server R Services (Datenbankintern)**, für die Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R Services (In-Database)**, für die Integration mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, für Bereitstellungen für Großunternehmen R auf Windows- und Linux-Servern
 
 In SQL Server 2017 wurde der Name geändert, um die Unterstützung für die beliebte Programmiersprache Python anzudeuten.

@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlun
 ms.workload: Inactive
 ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>Veröffentlichen und Nutzen von Webdiensten Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
