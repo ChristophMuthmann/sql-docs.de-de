@@ -8,21 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
-caps.latest.revision: "5"
-author: MikeRayMSFT
+caps.latest.revision: 
+author: MashaMSFT
 ms.author: mblythe
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bc8441c110531b79632552211171ad420ee7e6a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea2fd7fc18676a6169f1243d29caa6efaf61f985
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-language-reference"></a>Replikationssprachreferenz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: "74"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d8ae90df79860b503830c9881fecd5f26b252e3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ac1123e75ef9b3ae6e79a2b8099b4de7572b2e3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

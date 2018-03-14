@@ -18,18 +18,19 @@ helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7595219fb959841de041650f7c8f104af464cc19
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
   
 > [!NOTE]  
 >  Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

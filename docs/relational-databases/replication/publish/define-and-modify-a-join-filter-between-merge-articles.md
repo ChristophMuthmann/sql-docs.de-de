@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - modifying filters, join
 - join filters
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
-caps.latest.revision: "46"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9046203c32967c53c5b663bda4c64ad4f01003e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e0ad590f14e8a9c774c9108028a58fa5a7ff008e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Verknüpfungsfilter zwischen Mergeartikeln in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] definiert und geändert werden. Die Mergereplikation unterstützt Joinfilter, die in der Regel in Verbindung mit parametrisierten Filtern verwendet werden, um die Tabellenpartitionierung auf andere verknüpfte Tabellenartikel auszuweiten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In diesem Thema wird beschrieben, wie Verknüpfungsfilter zwischen Mergeartikeln in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]definiert und geändert werden. Die Mergereplikation unterstützt Joinfilter, die in der Regel in Verbindung mit parametrisierten Filtern verwendet werden, um die Tabellenpartitionierung auf andere verknüpfte Tabellenartikel auszuweiten.  
   
  **In diesem Thema**  
   

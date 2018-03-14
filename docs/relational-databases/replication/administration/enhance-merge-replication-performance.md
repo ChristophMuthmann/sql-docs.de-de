@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - performance [SQL Server replication], merge replication
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: "47"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4490561c6902497eba6d8a775790df1e19026a29
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](../../../relational-databases/replication/administration/enhance-general-replication-performance.md) beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden im Zusammenhang mit einer Mergereplikation beschriebenen zusätzlichen Aspekte machen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden beschriebenen zusätzlichen Aspekte im Zusammenhang mit einer Mergereplikation machen.  
   
 ## <a name="database-design"></a>Datenbankentwurf  
   

@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: "62"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44c98b6b2a184c3e438a2e993adcc26a871069f3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird eine Reihe von Problemen aufgeführt, die bei der Konfiguration und Verwendung von Oracle-Verlegern auftreten können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In diesem Thema wird eine Reihe von Problemen aufgeführt, die bei der Konfiguration und Verwendung von Oracle-Verlegern auftreten können.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Fehler bezüglich Oracle-Client- und Netzwerksoftware  
  Dem Konto, unter dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem Verteiler ausgeführt wird, müssen Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt werden, in dem die Oracle-Clientnetzwerksoftware installiert ist. Wenn diese Berechtigungen nicht erteilt worden sind oder die Oracle-Clientkomponenten nicht ordnungsgemäß installiert sind, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  

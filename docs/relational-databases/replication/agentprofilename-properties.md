@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.profiles.perfprofileprops.f1
-helpviewer_keywords: Agent Profile Properties dialog box
+f1_keywords:
+- sql13.rep.profiles.perfprofileprops.f1
+helpviewer_keywords:
+- Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
-caps.latest.revision: "17"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3511ae543ca1b4a46d4bb3d9d43932c6c73d3b98
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: eed1846eed1dd67316b62a24fbbab3c25cbfdec1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt;-Eigenschaften
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe des Dialogfelds für die **Eigenschaften von Agentprofilen** können Sie die für jeden Agentparameter eines Profils angegebenen Werte anzeigen und die Werte für benutzerdefinierte Profile ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Mithilfe des Dialogfelds für die **Eigenschaften von Agentprofilen** können Sie die für jeden Agentparameter eines Profils angegebenen Werte anzeigen und die Werte für benutzerdefinierte Profile ändern.  
   
 ## <a name="options"></a>Tastatur  
  **Name**  
