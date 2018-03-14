@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten
  Sie können nun den SSIS-Designer in SQL Server Data Tools (SSDT) verwenden, um Pakete zu erstellen, zu verwalten und auszuführen, die auf SQL Server 2016, SQL Server 2014 oder SQL Server 2012 ausgerichtet sind. SSDT für Visual Studio 2015 können Sie unter [Download Latest SQL Server Data Tools (Herunterladen der aktuellen Version von SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) herunterladen. 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **Fehlermeldung:** Das COM-Objekt des Typs „System.__ComObject“ kann nicht in den Schnittstellentyp „Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100“ umgewandelt werden. Dieser Vorgang konnte nicht durchgeführt werden, da der QueryInterface-Aufruf an die COM-Komponente für die Schnittstelle mit der IID „{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}“ aufgrund des folgenden Fehlers nicht durchgeführt werden konnte: Schnittstelle nicht unterstützt (Ausnahme von HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
-**Lösung:** Wenn Ihre benutzerdefinierte Erweiterung auf SSIS-Interop-Assemblys wie Microsoft.SqlServer.DTSPipelineWrap oder Microsoft.SqlServer.DTSRuntimeWrap verweist, legen Sie den Wert der Eigenschaft **Interop-Typen einbetten** auf FALSE fest.
+**Lösung:** Wenn Ihre benutzerdefinierte Erweiterung auf SSIS-Interop-Assemblys wie Microsoft.SqlServer.DTSPipelineWrap oder Microsoft.SqlServer.DTSRuntimeWrap verweist, legen Sie den Wert der Eigenschaft **Interop-Typen einbetten** auf **False** fest.
 
 ![Interop-Typen einbetten](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

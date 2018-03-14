@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
 Sie können Ihre SQL Server Integration Services-Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben.
@@ -91,6 +91,8 @@ Sie können diese vertrauten Tools und Skriptoptionen verwenden, um Projekte ber
 -   Ein Befehlszeilentool
 -   PowerShell
 -   C# und das Objektmodell der SSIS-Verwaltung
+
+Erste Schritte finden Sie unter [Bereitstellen, Ausführen und Überwachen eines SSIS-Pakets in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="monitor-packages"></a>Überwachen von Paketen
 Sie können eines der folgenden Berichtstools in SSMS verwenden, um ausgeführte Pakete in SSMS zu überwachen.

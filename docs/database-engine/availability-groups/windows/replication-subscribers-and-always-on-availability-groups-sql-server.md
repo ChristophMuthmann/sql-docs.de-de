@@ -1,14 +1,15 @@
 ---
 title: "Replikationsabonnenten und Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e868d03cfe57b78affa81b00f5f91376ae9a89e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6020be0ea9568611a0e427917bc02c2a3a53cc3a
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Replikationsabonnenten und Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +34,7 @@ ms.lasthandoff: 01/18/2018
   Wenn für eine Always On-Verfügbarkeitsgruppe mit einer Datenbank, die einen Replikationsabonnenten darstellt, ein Failover ausgeführt wird, tritt u.U. ein Fehler beim Replikationsabonnement auf. Bei Transaktionsabonnenten setzt der Verteilungs-Agent die Replikation automatisch fort, wenn für das Abonnement der Name des Verfügbarkeitsgruppenlisteners des Abonnenten verwendet wird. Bei Mergeabonnenten muss der Abonnent vom Replikationsadministrator manuell neu konfiguriert werden, indem er das Abonnement neu erstellt.  
   
 ## <a name="what-is-supported"></a>Unterstützte Vorgänge  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation unterstützt das automatische Failover des Verlegers, das automatische Failover von Transaktionsabonnenten und das manuelle Failover von Mergeabonnenten. Das Failover eines Verteilers zu einer Verfügbarkeitsdatenbank wird nicht unterstützt. Always On kann nicht mit WebSync- und ssNoVersion Compact-Szenarien kombiniert werden.  
-  
- **Failover eines Mergepullabonnements**  
-  
- Ein Pullabonnement schlägt bei einem Verfügbarkeitsgruppenfailover fehl, da der Pull-Agent die Aufträge nicht finden kann, die in der **msdb** -Datenbank der Serverinstanz gespeichert sind, von der das primäre Replikat gehostet wird. Die Datenbank ist nicht verfügbar, da ein Serverinstanzfehler aufgetreten ist.  
-  
- **Failover eines Mergepushabonnements**  
-  
- Ein Pushabonnement schlägt bei einem Verfügbarkeitsgruppenfailover fehl, da der Push-Agent keine Verbindung mehr mit der ursprünglichen Abonnementdatenbank auf dem ursprünglichen Abonnenten herstellen kann.  
+ Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation unterstützt das automatische Failover des Verlegers und das automatische Failover transaktionale Abonnenten. Das Failover eines Verteilers zu einer Verfügbarkeitsdatenbank wird nicht unterstützt. Mergeabonnenten können Teil einer Verfügbarkeitsgruppe sein, jedoch sind manuelle Aktionen erforderlich, um den neuen Abonnenten nach einem Failover zu konfigurieren. Verfügbarkeitsgruppen können nicht mit WebSync- und ssNoVersion Compact-Szenarien kombiniert werden.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Erstellen eines Transaktionsabonnements in einer Always On-Umgebung  
  Führen Sie bei der Transaktionsreplikation folgende Schritte aus, um die Verfügbarkeitsgruppe eines Abonnenten zu konfigurieren und ein Failover auszuführen:  

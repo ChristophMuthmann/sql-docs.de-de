@@ -1,7 +1,7 @@
 ---
 title: "Änderungsprotokoll für SQL Server Reporting Services (2017 und höher) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/28/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
@@ -15,11 +15,11 @@ author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d4cf71c25d2c1a6f7aadb57d6417fc4818c9ff2f
-ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
+ms.openlocfilehash: 772657597afe4af97fc45a1736551d876c35d0c1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>Änderungsprotokoll für SQL Server Reporting Services
 
@@ -28,12 +28,21 @@ ms.lasthandoff: 01/10/2018
 In diesem Artikel werden Änderungen in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] beschrieben. 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
+  - *Version 14.0.600.689, veröffentlicht am 28. Februar 2018* 
+    - Fehlerbehebungen:
+      - Die Sichtbarkeit von Berichtsparametern in einem verknüpften Bericht wird nach dem Bearbeiten der zugehörigen Eigenschaften zurückgesetzt.
+      - Der URL-Parameter „rc:Toolbar = false“ funktioniert nicht in der Express Edition.
+      - Wenn Ausdrücke im Textfeld mit der Eigenschaft „CanGrow“ auf „false“ gesetzt sind, werden die Werte nicht angezeigt.
+      - Der Link „Weitere Informationen“ für den Product Key wurde zum Setup hinzugefügt.
+      - Das Webportal mit der benutzerdefinierten Formularauthentifizierung ignoriert Cookie mit variablem Ablauf.
+      - Beim Export nach Word wird eine ungleiche Zeilenhöhe erstellt, wenn der Zeileninhalt leer ist.
+
   - *Version 14.0.600.594, veröffentlicht am 9. Januar 2018*
     - Sicherheitsupdates
 
   - *Version 14.0.600.490, veröffentlicht am 1. November 2017* 
     - Fehlerbehebungen:
-        - Durch das SKU-Upgrade behobene Probleme
+      - Durch das SKU-Upgrade behobene Probleme
 
   - *Version 14.0.600.451, veröffentlicht am 30. September 2017* 
     - Erste Veröffentlichung
