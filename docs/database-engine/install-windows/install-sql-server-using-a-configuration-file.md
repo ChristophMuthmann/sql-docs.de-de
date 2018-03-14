@@ -11,17 +11,17 @@ ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
-ms.topic: home-page
+ms.topic: article
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ec39434faaccfb2d764f9d1376df337ed82e401
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88c353e8b2168806a88401bd783b91a2ce158be8
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installieren von SQL Server mithilfe einer Konfigurationsdatei
 

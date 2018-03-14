@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: "55"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eeef79d24cf2409dd44544a9668cfd926adedfb0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 35360f2cfd76745e0222845f3bac0dd868283657
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Oracle-Pushabonnements über den von Oracle bereitgestellten Oracle OLE DB-Anbieter.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Oracle-Pushabonnements über den von Oracle bereitgestellten Oracle OLE DB-Anbieter.  
   
 ## <a name="configuring-an-oracle-subscriber"></a>Konfigurieren eines Oracle-Abonnenten  
  Führen Sie zum Konfigurieren eines Oracle-Abonnenten folgende Schritte aus:  
