@@ -21,19 +21,19 @@ helpviewer_keywords:
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03651a97745cb661fc4eed487e261d88fd8d8c6a
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d8f879b708daa630f2809f249dfd305aeb114445
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-the-publisher"></a>Sichern des Verlegers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:  
+  Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:  
   
 -   Protokolllese-Agent  
   

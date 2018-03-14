@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], security
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: "44"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 67ac0cf3ce202f55bbbaa556f842fd9d43d25a0c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="security-and-protection-replication"></a>Sicherheit und Schutz (Replikation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Schützen Sie die Replikationsszenarien, die Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bereitstellen, vor böswilligen Angriffen, und verbessern Sie die Sicherheit Ihrer Daten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Schützen Sie die Replikationsszenarien, die Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bereitstellen, vor böswilligen Angriffen, und verbessern Sie die Sicherheit Ihrer Daten.  
   
  ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Sicherheitsübersicht**  
  [Mindern von Bedrohungen und Sicherheitsrisiken &#40;Replikation&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  

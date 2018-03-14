@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -39,21 +40,23 @@ f1_keywords:
 - sql13.swb.dbpublishingwizard.choosedbroles.f1
 - sql13.swb.dbpublishingwizard.chooseudtype.f1
 - sql13.swb.dbpublishingwizard.chooseschemas.f1
-helpviewer_keywords: New Publication Wizard
+helpviewer_keywords:
+- New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1be53dfe84e9731339dabdc68c67cf9d161fae69
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a8076ab657bab20688e25f9f6a4fcf66e9cc514b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zu den folgenden Seiten des Assistenten für neue Veröffentlichung:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dieser Abschnitt enthält Informationen zu den folgenden Seiten des Assistenten für neue Veröffentlichung:  
   
 -   [Oracle-Verleger](../../relational-databases/replication/oracle-publisher.md)  
   

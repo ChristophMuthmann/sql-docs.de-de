@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - merge replication join filters [SQL Server replication]
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211bde4093eff61342659558e231fb29c13e5bd7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a4e8494e274dc8f04aac972e7dd9bdfbc4f18baa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="join-filters"></a>Verknüpfungsfilter
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durch einen Joinfilter kann eine Tabelle auf der Grundlage der Filterkriterien einer verknüpften Tabelle in der Veröffentlichung gefiltert werden. In der Regel wird eine übergeordnete Tabelle mithilfe eines parametrisierten Filters gefiltert. Anschließend werden ein oder mehrere Joinfilter auf dieselbe Weise definiert, wie Sie einen Join zwischen Tabellen definieren. Die Joinfilter erweitern den parametrisierten Filter so, dass die Daten in den zugehörigen Tabellen nur dann repliziert werden, wenn sie der Joinfilterklausel entsprechen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Durch einen Joinfilter kann eine Tabelle auf der Grundlage der Filterkriterien einer verknüpften Tabelle in der Veröffentlichung gefiltert werden. In der Regel wird eine übergeordnete Tabelle mithilfe eines parametrisierten Filters gefiltert. Anschließend werden ein oder mehrere Joinfilter auf dieselbe Weise definiert, wie Sie einen Join zwischen Tabellen definieren. Die Joinfilter erweitern den parametrisierten Filter so, dass die Daten in den zugehörigen Tabellen nur dann repliziert werden, wenn sie der Joinfilterklausel entsprechen.  
   
  Joinfilter folgen normalerweise den Beziehungen zwischen Primär- und Fremdschlüssel, die für die Tabellen, auf die sie angewendet werden, definiert wurden. Sie sind jedoch nicht streng auf diese Primär-/Fremdschlüssel-Beziehungen festgelegt. Joinfilter können auf jeder Logik basieren, die miteinander in Beziehung stehende Daten in zwei Tabellen vergleicht.  
   

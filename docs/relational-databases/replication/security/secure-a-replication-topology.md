@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: replication [SQL Server], security
+helpviewer_keywords:
+- replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f5883fe3b649b2ad21deb3e9fde14c153df5416
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 06503486567ccc86fda076a12d4e147c9fa68fdc
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-a-replication-topology"></a>Sichern einer Replikationstopologie
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Für die Replikation erforderliche Sicherheitskonten, Anmeldungen und Kennwörter werden bei der Konfiguration der Replikation und bei der Erstellung von Veröffentlichungen und Abonnements bereitgestellt. Diese Sicherheitseinstellungen können später mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], gespeicherten Replikationsprozeduren und Replikationsverwaltungsobjekten (RMO) geändert werden. In den folgenden Themen wird das Ändern der Einstellungen für die Replikationssicherheit beschrieben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Für die Replikation erforderliche Sicherheitskonten, Anmeldungen und Kennwörter werden bei der Konfiguration der Replikation und bei der Erstellung von Veröffentlichungen und Abonnements bereitgestellt. Diese Sicherheitseinstellungen können später mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], gespeicherten Replikationsprozeduren und Replikationsverwaltungsobjekten (RMO) geändert werden. In den folgenden Themen wird das Ändern der Einstellungen für die Replikationssicherheit beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

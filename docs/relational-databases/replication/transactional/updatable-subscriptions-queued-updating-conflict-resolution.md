@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e3af47060eddfcf706d84a6488aa82d6787699fd
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Aktualisierbare Abonnements – Konfliktlösungsoptionen für das verzögerte Update über eine Warteschlange
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Da die verzögerte Aktualisierung von Abonnements über eine Warteschlange Änderungen an denselben Daten an mehreren Standorten zulässt, können Konflikte auftreten, wenn die Daten auf dem Verleger synchronisiert werden. Die Replikation erkennt alle Konflikte, wenn Änderungen mit dem Verleger synchronisiert werden, und löst die Konflikte anhand der Richtlinie zur Konfliktlösung, die Sie beim Erstellen der Veröffentlichung ausgewählt haben. Die folgenden Konflikte sind möglich:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Da die verzögerte Aktualisierung von Abonnements über eine Warteschlange Änderungen an denselben Daten an mehreren Standorten zulässt, können Konflikte auftreten, wenn die Daten auf dem Verleger synchronisiert werden. Die Replikation erkennt alle Konflikte, wenn Änderungen mit dem Verleger synchronisiert werden, und löst die Konflikte anhand der Richtlinie zur Konfliktlösung, die Sie beim Erstellen der Veröffentlichung ausgewählt haben. Die folgenden Konflikte sind möglich:  
   
 -   Update- und Einfügekonflikte. Diese Konflikte treten auf, wenn dieselben Daten an zwei verschiedenen Speicherorten geändert werden. Eine Änderung setzt sich dabei unbeabsichtigt gegen eine andere durch.  
   

@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication conflict viewer [SQL Server]
 - interactive resolver [SQL Server replication]
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bbc5ed6ee2bb4713430e00394869e915ddada9d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6628a7ab0a239604442aa8421ff78c2bcf29902f
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Replikationskonflikt-Viewer und interaktiver Konfliktlöser von Microsoft
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zum Replikationskonflikt-Viewer für Mergereplikationen und Transaktionsreplikationen und zum interaktiven Konfliktlöser für Mergereplikationen:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dieser Abschnitt enthält Informationen zum Replikationskonflikt-Viewer für Mergereplikationen und Transaktionsreplikationen und zum interaktiven Konfliktlöser für Mergereplikationen:  
   
 -   [Replikationskonflikt-Viewer von Microsoft &#40;Mergereplikation&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
   

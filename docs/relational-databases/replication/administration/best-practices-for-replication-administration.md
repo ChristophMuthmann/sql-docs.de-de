@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, best practices
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
-caps.latest.revision: "17"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1aade2a55ca0af319c84ddff35ced1f22b675839
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8095467cab3e2548db2afd626190b27b1f5a824f
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Neben den folgenden Hinweisen zu den bewährten Methoden in diesem Thema sollten Sie das Thema mit den häufig gestellten Fragen lesen, um die häufigen Fragen und Probleme kennen zu lernen: [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Neben den folgenden Hinweisen zu den bewährten Methoden in diesem Thema sollten Sie das Thema mit den häufig gestellten Fragen lesen, um die häufigen Fragen und Probleme kennen zu lernen: [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Eine Unterteilung der Hinweise zu den bewährten Methoden in zwei Bereiche bietet sich an:  
   

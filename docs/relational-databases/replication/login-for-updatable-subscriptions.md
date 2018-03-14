@@ -16,19 +16,19 @@ f1_keywords:
 - sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 38aa63a6e51c961b99f0d1b49cce4be893da3c8c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Anmeldename für aktualisierbare Abonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Wenn Sie im Assistenten auf der Seite **Aktualisierbare Abonnements** die Option **Replizieren** ausgewählt haben, müssen Sie mit dem Abonnenten ein Konto angeben, unter dem die Verbindungen mit dem Verleger für das sofortige Update hergestellt werden. 
+  Wenn Sie im Assistenten auf der Seite **Aktualisierbare Abonnements** die Option **Replizieren** ausgewählt haben, müssen Sie mit dem Abonnenten ein Konto angeben, unter dem die Verbindungen mit dem Verleger für das sofortige Update hergestellt werden. 
   
  Die Verbindungen werden durch die Trigger verwendet, die auf dem Abonnenten ausgelöst werden und die Änderungen zum Verleger weitergeben. Dieses Konto ist erforderlich, auch wenn Sie **Änderungen in die Warteschlange einreihen und Commit baldmöglichst ausführen** auf der Seite **Aktualisierbare Abonnements** ausgewählt haben. Der Assistent für neue Abonnements konfiguriert standardmäßig verzögerte Updates über eine Warteschlange mit der Möglichkeit, zur sofortigen Aktualisierung zu wechseln.  
   

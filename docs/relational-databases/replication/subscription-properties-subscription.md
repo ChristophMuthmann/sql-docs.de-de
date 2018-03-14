@@ -8,23 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
-caps.latest.revision: "19"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49bafece891f7ff954938c5c207adb127e4f13c7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 27d66afec8346019b848ce4bb2c1c347879fb7c2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-properties---ltsubscriptiongt"></a>Abonnementeigenschaften – &lt;Abonnement&gt;
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zum Dialogfeld **Abonnementeigenschaften**:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Dieser Abschnitt enthält Informationen zum Dialogfeld **Abonnementeigenschaften** :  
   
 -   [Abonnementeigenschaften - Abonnent](../../relational-databases/replication/subscription-properties-subscriber.md) enthält die Abonnementeigenschaften, die beim Abonnenten verfügbar sind (nur für Pullabonnements).  
   
