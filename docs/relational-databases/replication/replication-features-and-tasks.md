@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: "21"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0d0524be08e29d65d89566eecf23e0b880e7a471
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-features-and-tasks"></a>Replikationsfunktionen und -tasks
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Suchen Sie nach den Informationen, die am Entwurf und der Implementierung von Replikationslösungen beteiligte Personen – Designer, Entwickler, Analytiker oder Administratoren – benötigen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Suchen Sie nach den Informationen, die am Entwurf und der Implementierung von Replikationslösungen beteiligte Personen – Designer, Entwickler, Analytiker oder Administratoren – benötigen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

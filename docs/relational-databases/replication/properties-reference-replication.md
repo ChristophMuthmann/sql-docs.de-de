@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: F1 Help [SQL Server replication]
+helpviewer_keywords:
+- F1 Help [SQL Server replication]
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
-caps.latest.revision: "19"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9f95a8dc9bf49d315ee857ae08c1e29efc8ce72
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2f1617520f72aa1528e770dad769677e8764ac53
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="properties-reference-replication"></a>Eigenschaftenreferenz (Replikation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt der Dokumentation enthält Informationen zu den folgenden Replikations-Assistenten und Dialogfeldern:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dieser Abschnitt der Dokumentation enthält Informationen zu den folgenden Replikations-Assistenten und Dialogfeldern:  
   
 -   [Verteilungskonfigurations-Assistent](../../relational-databases/replication/configure-distribution-wizard.md)  
   

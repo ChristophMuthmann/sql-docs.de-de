@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.beta2.f1
-helpviewer_keywords: Replication Monitor, help
+f1_keywords:
+- sql13.rep.monitor.beta2.f1
+helpviewer_keywords:
+- Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
-caps.latest.revision: "26"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4875b39c775e1e62b81c325386833a3be7860b46
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5a1f56f75a546ac49df480209368d352e52d14e2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-monitor"></a>Replikationsmonitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt der Dokumentation enthält Informationen zum Replikationsmonitor. Die im Monitor angezeigten Seiten und Dialogfelder können Unterschiede aufweisen, abhängig vom Replikationstyp und der Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die überwacht wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dieser Abschnitt der Dokumentation enthält Informationen zum Replikationsmonitor. Die im Monitor angezeigten Seiten und Dialogfelder können Unterschiede aufweisen, abhängig vom Replikationstyp und der Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die überwacht wird.  
   
 -   [Replikationsmonitor (Hauptseite)](../../relational-databases/replication/replication-monitor-main-page.md)  
   
